@@ -167,7 +167,7 @@ class va {
         param0.field_f = param1;
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

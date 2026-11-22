@@ -15,7 +15,7 @@ final class uj {
             u.field_b.b(pc.field_b, -49);
           }
           if (param3 != -77) {
-            uj.a(-106);
+            uj.clearStaticReferences(-106);
           }
           pc.field_b.a(param1, param2, param0, 125);
           SoftwareRasterizer.a();
@@ -187,7 +187,7 @@ final class uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           return;
         }

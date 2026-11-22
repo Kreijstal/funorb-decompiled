@@ -58,7 +58,7 @@ final class tj {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_b = (float[][]) null;
         field_f = (int[][]) null;
     }

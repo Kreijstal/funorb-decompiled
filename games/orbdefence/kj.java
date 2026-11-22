@@ -22,7 +22,7 @@ abstract class kj extends pj implements c {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 56) {
           return;
         }
@@ -412,7 +412,7 @@ abstract class kj extends pj implements c {
           ld.field_a = param5;
           ba.field_c = param7;
           if (param2 != 45) {
-            kj.a((byte) -79);
+            kj.clearStaticReferences((byte) -79);
           }
           qf.field_m = param1;
           vg.field_l = param6;

@@ -126,7 +126,7 @@ final class kg extends nb implements ue, jk {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 300) {
           return;
         }

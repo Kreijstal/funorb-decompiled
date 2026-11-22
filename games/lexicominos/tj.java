@@ -59,7 +59,7 @@ abstract class tj extends ri implements nf {
         try {
           this.a(true);
           if (param0 != 10) {
-            tj.d(95);
+            tj.clearStaticReferences(95);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -76,7 +76,7 @@ abstract class tj extends ri implements nf {
         return this.a((byte) -126, this.field_g.field_u);
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_k = (String) null;
           field_j = null;

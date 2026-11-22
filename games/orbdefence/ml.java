@@ -63,7 +63,7 @@ final class ml {
         return 103 == this.field_k ? true : false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_e = null;
           field_f = null;

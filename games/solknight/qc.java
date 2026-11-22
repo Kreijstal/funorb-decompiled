@@ -17,7 +17,7 @@ final class qc extends IntrusiveNode {
     long field_n;
     static String[] field_h;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_l = null;
         field_h = null;
         field_s = null;
@@ -31,7 +31,7 @@ final class qc extends IntrusiveNode {
     final static void a(boolean param0, int param1) {
         td.field_h.a(param0, (byte) -75);
         if (param1 > -104) {
-          qc.b(false);
+          qc.clearStaticReferences(false);
         }
     }
 

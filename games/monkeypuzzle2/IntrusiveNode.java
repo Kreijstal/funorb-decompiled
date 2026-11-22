@@ -7,7 +7,7 @@ class IntrusiveNode {
     static String field_b;
     IntrusiveNode next;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -1733) {
           field_b = (String) null;

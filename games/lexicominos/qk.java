@@ -62,7 +62,7 @@ final class qk {
               } else {
                 var8 = al.field_F;
                 synchronized (var8) {
-                  al.field_F.a(8, var14, var10);
+                  al.field_F.decompress(8, var14, var10);
                 }
               }
               stackIn_21_0 = var7;

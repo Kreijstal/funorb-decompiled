@@ -159,7 +159,7 @@ final class MidiTrackReader {
         return true;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_c = null;
     }
 

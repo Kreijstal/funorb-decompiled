@@ -20,7 +20,7 @@ class IntrusiveNode {
         ed.a((byte) -120);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 12516) {
           field_e = null;
           field_b = null;
@@ -44,7 +44,7 @@ class IntrusiveNode {
         this.next = null;
         this.previous = null;
         if (obfuscationGuard != 10) {
-          IntrusiveNode.b(32);
+          IntrusiveNode.clearStaticReferences(32);
         }
     }
 

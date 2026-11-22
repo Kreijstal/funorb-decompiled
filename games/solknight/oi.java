@@ -21,7 +21,7 @@ final class oi {
         this.field_h[param0] = this.field_h[param0] + var2;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_f = null;
     }
 

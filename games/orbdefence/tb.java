@@ -35,7 +35,7 @@ final class tb {
         return param0 * var3 + (var5Lifetime1 * var4Lifetime1 + (var4Lifetime1 * var6Lifetime1 >> 16));
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

@@ -25,7 +25,7 @@ final class il {
           var7 = new gb(param1);
           var8 = new gb(param3);
           if (param5 < 88) {
-            il.a(40);
+            il.clearStaticReferences(40);
           }
           stackIn_3_0 = hc.a(param6, param0, var8, -30762, var7, param2, param4);
           return stackIn_3_0;
@@ -101,7 +101,7 @@ final class il {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

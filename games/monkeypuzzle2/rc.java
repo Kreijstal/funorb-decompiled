@@ -103,7 +103,7 @@ final class rc extends kc {
               if (1 != var3) {
                 var7 = oe.field_o;
                 synchronized (var7) {
-                  oe.field_o.a(57, var12, var9);
+                  oe.field_o.decompress(57, var12, var9);
                 }
               } else {
                 tg.a(var12, var5_int, param0, var4, 9);
@@ -184,7 +184,7 @@ final class rc extends kc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_j = null;
         if (param0 < 85) {

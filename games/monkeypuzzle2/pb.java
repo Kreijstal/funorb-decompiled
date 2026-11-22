@@ -30,7 +30,7 @@ final class pb implements ml {
         de.field_o = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_i = null;
         if (param0 <= 43) {

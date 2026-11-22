@@ -7,7 +7,7 @@ final class pa {
     static int field_d;
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 17) {
           return;

@@ -15,7 +15,7 @@ final class qa {
     private static float[] field_i;
     private static int[] field_e;
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_l = null;
         field_i = null;
         field_e = null;

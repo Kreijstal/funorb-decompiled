@@ -94,7 +94,7 @@ final class jh {
               if (var3 != 1) {
                 var7 = g.field_k;
                 synchronized (var7) {
-                  g.field_k.a((byte) 97, var9, var13);
+                  g.field_k.decompress((byte) 97, var9, var13);
                 }
               } else {
                 gi.a(var13, var5, param0, var4, 9);

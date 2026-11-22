@@ -27,7 +27,7 @@ final class l {
         return null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > 123) {
           field_j = null;
           field_f = null;

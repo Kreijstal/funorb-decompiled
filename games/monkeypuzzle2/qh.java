@@ -55,7 +55,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 8) {
           return;
         }

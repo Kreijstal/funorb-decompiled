@@ -38,7 +38,7 @@ final class fi {
         th.field_H.d((param4 - param3 >> 1) + param2 - 20, -10 + param6);
         uk.field_k.d(-18 + param3 + ((-param3 + param4 >> 1) + param2), param6 - 10);
         if (!param1) {
-          fi.a(-46);
+          fi.clearStaticReferences(-46);
         }
     }
 
@@ -116,7 +116,7 @@ final class fi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_j = null;
         if (param0 != -18120) {
@@ -142,7 +142,7 @@ final class fi {
           this.field_e[var2] = (byte) 0;
         }
         if (param0 < 95) {
-          fi.a(-125);
+          fi.clearStaticReferences(-125);
         }
         this.field_f = 0;
         this.field_c = 0;

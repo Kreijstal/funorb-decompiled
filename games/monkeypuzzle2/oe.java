@@ -15,7 +15,7 @@ final class oe {
     private boolean field_n;
     private int field_p;
     private rg field_r;
-    static hi field_o;
+    static GzipDecompressor field_o;
     private int field_k;
     private int field_e;
     private int field_g;
@@ -186,7 +186,7 @@ final class oe {
 
     static {
         field_l = new cd("email");
-        field_o = new hi();
+        field_o = new GzipDecompressor();
         field_d = false;
     }
 }

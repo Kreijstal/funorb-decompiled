@@ -58,7 +58,7 @@ final class rc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 870040769) {
           field_a = (sc) null;

@@ -45,7 +45,7 @@ final class ok {
         return new m[]{bb.field_J, mh.field_B, el.field_b};
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 != 28) {
           return;

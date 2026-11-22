@@ -12,7 +12,7 @@ final class uf extends fg {
     private long field_h;
     private long field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 >= -106) {
           field_k = (String) null;

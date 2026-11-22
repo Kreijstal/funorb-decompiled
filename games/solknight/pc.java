@@ -11,7 +11,7 @@ final class pc {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 >= -43) {
           return;

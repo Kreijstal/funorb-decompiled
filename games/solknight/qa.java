@@ -69,7 +69,7 @@ final class qa extends a {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_r = null;
         field_o = null;
         field_n = null;

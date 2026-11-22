@@ -482,7 +482,7 @@ abstract class ab extends GameApplet {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         if (param0 >= -7) {
           return;
@@ -765,7 +765,7 @@ abstract class ab extends GameApplet {
           pj.a(DelegatingCanvas.field_c, -16925, lh.field_o, jk.field_ub) &&
           td.a(-3, jk.field_ub)) {
           ProxyAuthenticationRequiredException.b(32);
-          kg.a(-15617);
+          GzipDecompressor.a(-15617);
           pe.field_m = te.field_J;
           kk.field_c = false;
           d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, jk.field_ub, lh.field_o);

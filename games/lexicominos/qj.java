@@ -11,7 +11,7 @@ final class qj extends re {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void g(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_db = (String) null;
         }
@@ -80,7 +80,7 @@ final class qj extends re {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 33) {
-            qj.g(true);
+            qj.clearStaticReferences(true);
           }
           stackIn_3_0 = hc.field_eb.a((byte) 127, param1, "");
           return stackIn_3_0;

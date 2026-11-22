@@ -64,7 +64,7 @@ final class lj {
         return this.field_c[param0] * 2;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = (float[][]) null;
         field_g = (int[][]) null;
     }

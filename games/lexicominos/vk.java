@@ -52,7 +52,7 @@ final class vk implements Iterator {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_d = (String) null;
         }

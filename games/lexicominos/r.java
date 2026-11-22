@@ -22,7 +22,7 @@ final class r extends nb implements ag, jk {
           var4 = param0;
           ((rl) ((Object) var3)).a(var4, -1, false);
           if (param1 < 103) {
-            r.h(89);
+            r.clearStaticReferences(89);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class r extends nb implements ag, jk {
         ((ol) (this.field_E.a((byte) 94))).e(param0 + 95);
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -100) {
           return;
         }

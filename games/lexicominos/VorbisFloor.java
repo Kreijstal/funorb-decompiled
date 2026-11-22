@@ -15,7 +15,7 @@ final class VorbisFloor {
     private static int[] field_i;
     private int[][] field_l;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_f = null;
         field_i = null;

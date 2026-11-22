@@ -8,7 +8,7 @@ final class pc extends tj {
     static String field_m;
     static String field_l;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         if (param0 >= -52) {
           return;

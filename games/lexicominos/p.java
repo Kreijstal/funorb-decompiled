@@ -34,7 +34,7 @@ final class p {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < -124) {
           field_b = null;
           field_d = null;

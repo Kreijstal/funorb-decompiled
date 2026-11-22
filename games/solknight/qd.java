@@ -86,10 +86,10 @@ final class qd {
         if (param0 == -13) {
           return;
         }
-        qd.a(28);
+        qd.clearStaticReferences(28);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 != 4) {
           return;
@@ -149,7 +149,7 @@ final class qd {
           te.field_N.position = 0;
         }
         if (param0 <= 124) {
-          qd.a(-104);
+          qd.clearStaticReferences(-104);
           return bf.c(100, te.field_O);
         }
         return bf.c(100, te.field_O);

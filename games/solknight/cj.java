@@ -6,7 +6,7 @@ final class cj {
     static String field_b;
     static IntrusiveDeque field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -26497) {
           return;

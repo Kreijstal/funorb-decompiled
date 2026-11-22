@@ -25,7 +25,7 @@ final class sd {
         try {
           var2_long = 0L;
           if (param0 != 37) {
-            sd.a((byte) 7);
+            sd.clearStaticReferences((byte) 7);
           }
           var4 = param1.length();
           for (var5 = 0; var4 > var5; var5++) {
@@ -71,7 +71,7 @@ final class sd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != 122) {
           field_a = (java.math.BigInteger) null;

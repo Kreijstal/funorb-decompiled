@@ -51,7 +51,7 @@ final class le {
 
     final int a(byte param0) {
         if (param0 < 39) {
-          le.a(-71);
+          le.clearStaticReferences(-71);
           if (this.field_c == null) {
             return 0;
           }
@@ -96,7 +96,7 @@ final class le {
         this.field_c = new int[param2 + 1];
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != -3390) {
@@ -122,7 +122,7 @@ final class le {
         if (param0 == 873698625) {
           return;
         }
-        le.a(-22);
+        le.clearStaticReferences(-22);
     }
 
     static {

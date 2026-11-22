@@ -22,7 +22,7 @@ final class mi {
         return this.field_a;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_d = null;
         if (param0 != -67) {

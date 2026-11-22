@@ -804,7 +804,7 @@ class jc implements td, rj {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = (int[][]) null;
         field_k = null;
         if (!param0) {

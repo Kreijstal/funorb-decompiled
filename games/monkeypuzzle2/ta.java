@@ -214,7 +214,7 @@ abstract class ta extends DualLinkNode {
         this.field_l = param1;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_m = null;
         field_z = null;
     }

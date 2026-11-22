@@ -162,7 +162,7 @@ final class vc extends nb implements jk {
         this.field_B = var4;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_G = null;
         if (param0 != -16531) {
           return;

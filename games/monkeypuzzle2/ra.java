@@ -8,7 +8,7 @@ final class ra extends pc {
     final void c(byte param0, UiWidget param1) {
         try {
           if (param0 <= 25) {
-            ra.f((byte) -87);
+            ra.clearStaticReferences((byte) -87);
           }
           super.c((byte) 43, param1);
         } catch (RuntimeException runtimeException) {
@@ -42,7 +42,7 @@ final class ra extends pc {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -96) {
           return;
         }

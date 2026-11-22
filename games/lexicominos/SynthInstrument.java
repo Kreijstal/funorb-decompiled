@@ -307,7 +307,7 @@ final class SynthInstrument {
         this.field_y.a(param0, this.field_q);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_g = null;
         field_i = null;
         field_m = null;

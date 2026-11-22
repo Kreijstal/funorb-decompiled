@@ -241,7 +241,7 @@ abstract class ld extends kf {
         }
         dc.field_o = -2147483648;
         be.field_I = -2147483648;
-        kg.field_c = 0;
+        GzipDecompressor.field_c = 0;
         bi.field_e = 2147483647;
     }
 

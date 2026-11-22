@@ -27,7 +27,7 @@ final class of extends s {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         field_H = null;
         if (param0 != -83) {

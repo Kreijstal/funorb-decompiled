@@ -12,7 +12,7 @@ final class ol {
     static BufferedSocket field_g;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 < 108) {
           field_h = (na) null;

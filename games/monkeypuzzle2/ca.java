@@ -670,7 +670,7 @@ final class ca extends rf {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           field_f = (Sprite) null;
         }

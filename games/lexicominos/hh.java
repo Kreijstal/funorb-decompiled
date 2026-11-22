@@ -69,7 +69,7 @@ final class hh extends mg {
         this.field_E = this.field_o;
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_M = null;
         field_N = null;
         field_G = null;

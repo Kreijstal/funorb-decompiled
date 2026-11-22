@@ -74,7 +74,7 @@ final class df {
             var1[var2] = (db) ((Object) new pi(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
           }
         }
-        gk.a(12428);
+        GzipDecompressor.a(12428);
         return var1;
     }
 
@@ -143,7 +143,7 @@ final class df {
         }
         this.field_i = fd.field_g;
         this.field_f = jf.field_P;
-        this.field_j = gk.field_c;
+        this.field_j = GzipDecompressor.field_c;
         this.field_h = oe.field_b;
         this.field_e = tf.field_a;
     }

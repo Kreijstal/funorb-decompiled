@@ -28,7 +28,7 @@ final class cb extends kd {
     int field_h;
     int field_F;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_A = null;
         field_D = null;
         if (param0 != 29152) {
@@ -129,7 +129,7 @@ final class cb extends kd {
 
     final void c(int param0) {
         if (param0 != 0) {
-          cb.a(-98);
+          cb.clearStaticReferences(-98);
         }
         this.field_r = null;
         this.field_C = null;

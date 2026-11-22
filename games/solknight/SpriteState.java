@@ -93,7 +93,7 @@ abstract class SpriteState extends DualLinkNode {
             var4 = param0.position;
             param0.b(var17.field_o, false);
             if (param1 >= -25) {
-              SpriteState.c(false);
+              SpriteState.clearStaticReferences(false);
             }
             for (var5 = 0; var17.field_h > var5; var5++) {
               if (var17.field_p[var5] != 0) {
@@ -222,7 +222,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_u = null;
         field_m = null;
         if (param0) {

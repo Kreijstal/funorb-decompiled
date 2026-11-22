@@ -33,7 +33,7 @@ final class vi extends kd {
           }
           var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
         }
-        gk.a(param0 ^ 27773);
+        GzipDecompressor.a(param0 ^ 27773);
         if (param0 != 23793) {
           return (db[]) null;
         }
@@ -87,7 +87,7 @@ final class vi extends kd {
             return stackIn_5_0;
           }
           var2 = new BinaryBitmapFont(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, be.field_f);
-          gk.a(12428);
+          GzipDecompressor.a(12428);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

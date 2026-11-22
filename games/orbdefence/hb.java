@@ -32,7 +32,7 @@ final class hb {
           gb.a(true, var2, param0);
         }
         if (param1 > -119) {
-          hb.a(108);
+          hb.clearStaticReferences(108);
         }
     }
 
@@ -154,7 +154,7 @@ final class hb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 98) {
           field_b = (String) null;
         }

@@ -144,7 +144,7 @@ final class bl {
           var6 = this.field_j.field_B + this.field_j.field_E;
           var7 = param3;
           if (param0) {
-            bl.b(21);
+            bl.clearStaticReferences(21);
           }
           if (var5_int + (var7 + 6) > ul.field_f) {
             var7 = -var5_int + ul.field_f - 6;
@@ -184,7 +184,7 @@ final class bl {
             this.a(param1, (byte) 84, param0, param3);
           }
           if (param2 != 0) {
-            bl.b(-79);
+            bl.clearStaticReferences(-79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,7 +201,7 @@ final class bl {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 13756) {
           return;
         }
@@ -312,7 +312,7 @@ final class bl {
         jg.field_n[24] = gb.field_g[5];
         jg.field_n[9] = eg.field_w[1];
         if (param0 < 14) {
-          bl.b(-55);
+          bl.clearStaticReferences(-55);
         }
         jg.field_n[20] = gb.field_g[1];
         jg.field_n[23] = gb.field_g[4];

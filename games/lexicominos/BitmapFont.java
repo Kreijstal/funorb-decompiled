@@ -840,7 +840,7 @@ abstract class BitmapFont extends ca {
         this.b(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_r = null;
         field_q = null;
     }

@@ -8,7 +8,7 @@ final class wh {
     private ad field_d;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -18728) {
           field_b = (ib) null;
           field_b = null;
@@ -115,7 +115,7 @@ final class wh {
           if (param0 < -66) {
             return;
           }
-          wh.a(-77);
+          wh.clearStaticReferences(-77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

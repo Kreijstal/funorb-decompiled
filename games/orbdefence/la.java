@@ -298,7 +298,7 @@ class la {
         this.field_t = ji.b(109);
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_u = null;
     }
 

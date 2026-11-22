@@ -146,7 +146,7 @@ final class db implements ml {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -13) {
           field_b = (String) null;
           field_e = null;

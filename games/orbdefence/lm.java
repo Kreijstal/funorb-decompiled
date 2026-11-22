@@ -1502,7 +1502,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "login_username_email");
                 if (var2 != null) {
-                  le.field_d = bk.a(var2, -12465);
+                  GzipDecompressor.field_d = bk.a(var2, -12465);
                 }
                 var2 = t.a(param0 + 15020, "login_username");
                 if (var2 != null) {

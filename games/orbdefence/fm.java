@@ -243,7 +243,7 @@ final class fm {
             }
             var1.c(0, 0);
             stackIn_49_0 = 40;
-            stackIn_49_1 = le.field_c;
+            stackIn_49_1 = GzipDecompressor.field_c;
             if (0 != wj.field_k.field_h) {
               stackIn_50_2 = 3;
             } else {
@@ -283,7 +283,7 @@ final class fm {
             oh.field_a.c(586, var1_int);
             if (vl.field_d > var1_int &&
               vl.field_d < field_b.field_k + var1_int) {
-              var2Lifetime5 = (40 * fm.a(le.field_c << 4, 2047) >> 16) + 40;
+              var2Lifetime5 = (40 * fm.a(GzipDecompressor.field_c << 4, 2047) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (269 - field_b.field_o < ua.field_a &&
                   269 > ua.field_a) {
@@ -414,7 +414,7 @@ final class fm {
         return wi.field_f[param0 & 2047];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != -64) {

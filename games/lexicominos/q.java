@@ -18,7 +18,7 @@ abstract class q {
         int var2 = -28 / ((-10 - param0) / 47);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 != 70) {
           field_d = (aj) null;

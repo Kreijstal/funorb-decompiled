@@ -94,7 +94,7 @@ abstract class wb implements ga {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 7312) {
           return;

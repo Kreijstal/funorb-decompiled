@@ -9,7 +9,7 @@ final class ui extends RuntimeException {
     static String field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -10013) {
           field_a = (int[][]) null;
           field_e = null;

@@ -5,7 +5,7 @@ final class ff {
     static ra field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 > -91) {

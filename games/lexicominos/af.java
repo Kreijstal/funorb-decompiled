@@ -5,7 +5,7 @@ final class af {
     static boolean field_b;
     static java.awt.Font field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 26) {
           return;
         }

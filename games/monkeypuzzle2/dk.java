@@ -171,12 +171,12 @@ final class dk {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 < 82) {
-          dk.a(41);
+          dk.clearStaticReferences(41);
         }
         ge.c(param0, param6, param5, param3, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_h = null;
         field_e = null;

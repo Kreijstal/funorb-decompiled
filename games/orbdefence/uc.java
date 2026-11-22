@@ -80,7 +80,7 @@ final class uc extends wj {
         return this.field_u;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_r = null;
         if (param0 >= -67) {

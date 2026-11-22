@@ -97,7 +97,7 @@ abstract class si extends ca {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_q = (String) null;
         }

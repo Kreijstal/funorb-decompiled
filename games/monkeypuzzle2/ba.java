@@ -32,7 +32,7 @@ abstract class ba {
 
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         field_a = (Sprite[][]) null;
         if (param0) {

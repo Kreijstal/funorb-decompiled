@@ -1385,7 +1385,7 @@ final class lj extends di {
             var9 = (int)var8.field_d;
             var12 = (ik) (this.field_j.a((long)var9, -1));
             if (var12 == null) {
-              var13 = le.a(var9, param0, 10);
+              var13 = GzipDecompressor.a(var9, param0, 10);
               if (var13 == null) {
                 var6_int = 0;
               } else {

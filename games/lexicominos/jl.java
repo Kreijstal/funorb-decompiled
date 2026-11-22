@@ -6,7 +6,7 @@ final class jl {
     static boolean field_c;
     static String[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -15699) {
           field_a = (ng) null;
           field_b = null;

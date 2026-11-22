@@ -7,7 +7,7 @@ final class ub {
     static String field_c;
     static boolean field_a;
 
-    final static void a(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != 250) {
           field_d = (String) null;
         }
@@ -29,7 +29,7 @@ final class ub {
           try {
             try {
               if (param0 >= -46) {
-                ub.a(-125);
+                ub.clearStaticReferences(-125);
               }
               var4 = Class.forName("hg");
               var5 = (ba) (var4.newInstance());

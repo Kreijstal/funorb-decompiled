@@ -225,7 +225,7 @@ class a implements ml, ui {
                 stackIn_20_0 = var18.a(85, var9);
               }
               var15 = stackIn_20_0;
-              hi.field_b.a(this.a((byte) 113, param3, param1, var14), this.field_e, this.field_e >>> 24, var13.field_f, 101, -var14 + var15, var13.field_a + (param1.field_e + param5 + (this.field_n + param1.field_i)));
+              GzipDecompressor.field_b.a(this.a((byte) 113, param3, param1, var14), this.field_e, this.field_e >>> 24, var13.field_f, 101, -var14 + var15, var13.field_a + (param1.field_e + param5 + (this.field_n + param1.field_i)));
             }
             tj.b(653);
           }
@@ -396,7 +396,7 @@ class a implements ml, ui {
           if (param1 == 30373) {
             return;
           }
-          a.a(false);
+          a.clearStaticReferences(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -609,7 +609,7 @@ class a implements ml, ui {
           }
           var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
           qi.a(param0.field_r + (param1 + param0.field_l), true, param0.field_p + param0.field_e + param2, param0.field_r + param1, param0.field_e + param2);
-          hi.field_b.a(13421772, this.field_k, var10, var11, var12, var10);
+          GzipDecompressor.field_b.a(13421772, this.field_k, var10, var11, var12, var10);
           tj.b(param4 ^ 653);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -626,7 +626,7 @@ class a implements ml, ui {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_d = null;
         if (!param0) {

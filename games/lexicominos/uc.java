@@ -176,7 +176,7 @@ class uc extends re implements jk {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_hb = null;
         if (param0 != 11331) {
           return;

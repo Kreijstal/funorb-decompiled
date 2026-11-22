@@ -569,7 +569,7 @@ final class ug extends hf {
         return (si) (var4);
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_r = null;
         field_A = null;

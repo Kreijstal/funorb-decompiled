@@ -65,7 +65,7 @@ final class vb extends kd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_l = null;
         if (param0 < 66) {

@@ -9,7 +9,7 @@ final class wc {
     static String field_d;
     static int field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_b = null;
         field_d = null;

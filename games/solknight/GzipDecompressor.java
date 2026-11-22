@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class kg {
+final class GzipDecompressor {
     static BitmapFont field_a;
     static ff field_f;
     private java.util.zip.Inflater field_d;
@@ -11,7 +11,7 @@ final class kg {
     static int field_e;
     static int field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_f = null;
         if (param0) {
@@ -28,14 +28,14 @@ final class kg {
         }
     }
 
-    public kg() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    private kg(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void a(byte param0, PacketBuffer param1, byte[] param2) {
+    final void decompress(byte param0, PacketBuffer param1, byte[] param2) {
         try {
           try {
             if (param1.payload[param1.position] != 31 ||
@@ -47,7 +47,7 @@ final class kg {
             }
             if (param0 != 97) {
               byte[] var5 = (byte[]) null;
-              this.a((byte) 118, (PacketBuffer) null, (byte[]) null);
+              this.decompress((byte) 118, (PacketBuffer) null, (byte[]) null);
             }
             try {
               this.field_d.setInput(param1.payload, 10 + param1.position, -param1.position + (-10 + (-8 + param1.payload.length)));

@@ -156,7 +156,7 @@ final class jk {
         sf.field_T = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 != 65) {
           return;

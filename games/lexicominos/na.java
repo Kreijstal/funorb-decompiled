@@ -90,7 +90,7 @@ final class na {
               if (param0 == -91) {
                 return null;
               }
-              na.a(true);
+              na.clearStaticReferences(true);
               return null;
             }
             fieldTemp$1 = this.field_c;
@@ -110,7 +110,7 @@ final class na {
             if (param0 == -91) {
               return null;
             }
-            na.a(true);
+            na.clearStaticReferences(true);
             return null;
           }
           fieldTemp$0 = this.field_c;
@@ -121,7 +121,7 @@ final class na {
         return var8;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_a = (db[]) null;
           field_a = null;

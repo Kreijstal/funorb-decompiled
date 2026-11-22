@@ -60,7 +60,7 @@ class ii extends vb {
           lg.field_n = (wl) ((Object) new fa());
           jc.field_c = new uj(param0);
           if (param8 != -2045) {
-            ii.b((byte) 62);
+            ii.clearStaticReferences((byte) 62);
           }
           c.field_h = new c(lg.field_n, jc.field_c);
         } catch (RuntimeException runtimeException) {
@@ -82,7 +82,7 @@ class ii extends vb {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 92) {
           return;
         }

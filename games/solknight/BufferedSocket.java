@@ -21,7 +21,7 @@ final class BufferedSocket implements Runnable {
     static int field_m;
     private int field_i;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_b = null;
         if (param0 < 64) {

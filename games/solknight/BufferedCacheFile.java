@@ -663,7 +663,7 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_m = null;
         field_l = null;

@@ -4,7 +4,7 @@
 final class gh {
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 41) {
           field_a = (int[]) null;
           field_a = null;

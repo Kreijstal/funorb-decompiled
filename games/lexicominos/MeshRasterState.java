@@ -27,7 +27,7 @@ final class MeshRasterState {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_b = null;
         field_i = null;

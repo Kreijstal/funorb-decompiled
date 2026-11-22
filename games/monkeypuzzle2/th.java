@@ -47,7 +47,7 @@ final class th extends wj {
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (param0) {
-          th.f((byte) 42);
+          th.clearStaticReferences((byte) 42);
           if (48 > param1) {
             if (param1 >= 65 &&
               param1 <= 90) {
@@ -137,7 +137,7 @@ final class th extends wj {
           if (var3_int > 0 &&
             130 >= var3_int) {
             if (param1 != 3917) {
-              th.f((byte) 97);
+              th.clearStaticReferences((byte) 97);
             }
             stackIn_12_0 = wj.field_i;
             return stackIn_12_0;
@@ -158,7 +158,7 @@ final class th extends wj {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_o = null;
         if (param0 != -107) {

@@ -3078,7 +3078,7 @@ final class nk {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 15) {
           field_q = (MouseInputListener) null;
         }

@@ -19,7 +19,7 @@ class mg extends a {
             eb.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 + param1.field_e);
           }
           if (param4 < 19) {
-            mg.c(88);
+            mg.clearStaticReferences(88);
           }
           super.a(param0, param1, param2, param3, 49);
         } catch (RuntimeException runtimeException) {
@@ -31,7 +31,7 @@ class mg extends a {
         this(ButtonWidget.field_z, param0);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         field_r = null;
         if (param0 != -1) {

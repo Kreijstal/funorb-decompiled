@@ -22,7 +22,7 @@ final class we {
         ug.field_A.a(26, 0, 0);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -63) {
           field_j = null;
           field_c = null;

@@ -19,7 +19,7 @@ final class ci implements td {
     private int field_l;
     static String field_m;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 == 1) {
           field_m = null;

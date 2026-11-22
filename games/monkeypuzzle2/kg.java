@@ -17,7 +17,7 @@ final class kg {
         return k.field_g == 11 ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_b = null;
         if (param0 != 0) {

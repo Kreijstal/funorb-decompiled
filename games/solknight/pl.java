@@ -48,7 +48,7 @@ final class pl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -5045) {
           field_d = (Archive) null;

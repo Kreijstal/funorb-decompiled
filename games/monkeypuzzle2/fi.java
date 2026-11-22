@@ -24,7 +24,7 @@ final class fi {
         PacketBuffer.a(-1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 > -125) {
           return;

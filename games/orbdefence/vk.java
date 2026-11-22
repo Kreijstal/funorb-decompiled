@@ -14,12 +14,12 @@ final class vk extends jc {
         kb.field_m = 0;
         tk.field_n = 0;
         h.field_A = og.field_b;
-        le.field_c = param0;
+        GzipDecompressor.field_c = param0;
         wj.field_k = new ml(2);
         wj.field_k.a(-1, ka.a(24316, ua.field_a, vl.field_d), 0, param1);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -52) {
           return;
         }
@@ -49,7 +49,7 @@ final class vk extends jc {
         int var8 = 0;
         try {
           if (param3 != -4394) {
-            vk.b((byte) 66);
+            vk.clearStaticReferences((byte) 66);
           }
           if (!param2.field_t) {
             stackIn_8_0 = (param2.d(-81)) ? 1 : 0;

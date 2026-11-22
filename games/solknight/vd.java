@@ -127,7 +127,7 @@ final class vd {
         var9 = SolKnight.field_L ? 1 : 0;
         try {
           if (param3 != 160) {
-            vd.a((byte) 114);
+            vd.clearStaticReferences((byte) 114);
           }
           var10 = new char[param2];
           var4 = var10;
@@ -164,7 +164,7 @@ final class vd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 <= 9) {
           field_e = (String) null;

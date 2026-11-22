@@ -48,7 +48,7 @@ abstract class ge {
         return param0 | param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_i = null;
         field_o = null;

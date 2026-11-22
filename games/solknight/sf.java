@@ -240,25 +240,25 @@ final class sf {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
-        vg.field_I[kg.field_c] = param2;
+        vg.field_I[GzipDecompressor.field_c] = param2;
         if (param1) {
           sf.b(32);
         }
-        RasterBuffer.field_e[kg.field_c] = kg.field_c;
-        qg.field_c[kg.field_c] = param0;
+        RasterBuffer.field_e[GzipDecompressor.field_c] = GzipDecompressor.field_c;
+        qg.field_c[GzipDecompressor.field_c] = param0;
         if (param0 > be.field_I) {
           dc.field_o = param0;
         }
         if (bb.field_G > param0) {
           bi.field_e = param0;
         }
-        eh.field_a[kg.field_c] = param5;
-        ld.field_M[kg.field_c] = param4;
-        ma.field_n[kg.field_c] = param3;
+        eh.field_a[GzipDecompressor.field_c] = param5;
+        ld.field_M[GzipDecompressor.field_c] = param4;
+        ma.field_n[GzipDecompressor.field_c] = param3;
         int var6 = param3 + (param4 + param5);
         int var7 = 0 != var6 ? param5 * 1000 / var6 : 0;
-        l.field_a[kg.field_c] = var7;
-        kg.field_c = kg.field_c + 1;
+        l.field_a[GzipDecompressor.field_c] = var7;
+        GzipDecompressor.field_c = GzipDecompressor.field_c + 1;
         if (!(dc.field_o >= var7)) {
           dc.field_o = var7;
         }

@@ -421,7 +421,7 @@ final class rf extends ta implements ff, ai, bf {
         return true;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_H = null;
         if (param0) {
           return;
@@ -532,7 +532,7 @@ final class rf extends ta implements ff, ai, bf {
           if (param2 == 101) {
             return;
           }
-          rf.c(true);
+          rf.clearStaticReferences(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

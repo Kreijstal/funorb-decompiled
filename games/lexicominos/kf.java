@@ -121,7 +121,7 @@ class kf extends w {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         field_A = null;
         field_y = null;

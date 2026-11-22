@@ -34,7 +34,7 @@ final class IterableNodeHashTable implements Iterable {
         cd.field_t.b((byte) 90);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != -1) {

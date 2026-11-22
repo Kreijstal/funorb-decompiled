@@ -34,7 +34,7 @@ final class ec implements Iterator {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_e = null;
         if (!param0) {

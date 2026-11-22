@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gk {
+final class GzipDecompressor {
     static volatile int field_b;
     static String field_c;
     static int field_e;
@@ -11,7 +11,7 @@ final class gk {
     static int[][] field_f;
     static sh field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 11) {
           return;
@@ -20,7 +20,7 @@ final class gk {
         field_c = null;
     }
 
-    final void a(int param0, byte[] param1, wf param2) {
+    final void decompress(int param0, byte[] param1, wf param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -32,7 +32,7 @@ final class gk {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 8) {
-              gk.a(-58);
+              GzipDecompressor.a(-58);
             }
             if (param2.field_j[param2.field_h] == 31 &&
               -117 == param2.field_j[param2.field_h + 1]) {
@@ -77,7 +77,7 @@ final class gk {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int floorModPositiveDivisor(int param0, int param1, byte param2) {
         int var3 = 0;
         int var3Lifetime1;
         if (param2 == 71) {
@@ -89,7 +89,7 @@ final class gk {
         return ((param0 >>> 31) + param0) % param1 + var3Lifetime1;
     }
 
-    public gk() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
@@ -103,11 +103,11 @@ final class gk {
           pb.field_h = null;
           return;
         }
-        gk.b(-80);
+        GzipDecompressor.clearStaticReferences(-80);
         pb.field_h = null;
     }
 
-    private gk(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     static {

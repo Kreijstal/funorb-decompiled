@@ -43,11 +43,11 @@ class ik implements rd, ub {
         if (!we.field_h.a("commonui", 10762)) {
           return pe.field_e + " - " + we.field_h.b("commonui", (byte) 118) + "%";
         }
-        if (!gk.field_a.c(-75)) {
+        if (!GzipDecompressor.field_a.c(-75)) {
           return li.field_P;
         }
-        if (!gk.field_a.a("commonui", 10762)) {
-          return v.field_t + " - " + gk.field_a.b("commonui", (byte) 118) + "%";
+        if (!GzipDecompressor.field_a.a("commonui", 10762)) {
+          return v.field_t + " - " + GzipDecompressor.field_a.b("commonui", (byte) 118) + "%";
         }
         if (!ej.field_d.c(-116)) {
           return ef.field_c;

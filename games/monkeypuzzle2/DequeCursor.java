@@ -11,7 +11,7 @@ final class DequeCursor {
     static String field_d;
     static int[] field_g;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 110) {
           return;

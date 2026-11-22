@@ -23,6 +23,6 @@ final class mb {
     static {
         field_z = "mb.A(";
         field_e = new IntrusiveDeque();
-        eg.a(50, -1937866142);
+        eg.clearStaticReferences(50, -1937866142);
     }
 }

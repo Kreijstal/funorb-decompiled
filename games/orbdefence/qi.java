@@ -60,7 +60,7 @@ final class qi {
         return true;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_c = null;
     }
 

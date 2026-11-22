@@ -35,7 +35,7 @@ final class lk {
         return lh.field_d[var4Lifetime1];
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (!param0) {
           field_b = (String) null;

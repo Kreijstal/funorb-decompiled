@@ -24,7 +24,7 @@ final class bf {
           ql.field_K = false;
           nk.field_z = lj.field_a;
           ef.field_a = GameAppletShell.field_j;
-          ck.field_a = gk.field_b;
+          ck.field_a = GzipDecompressor.field_b;
           lj.field_a = 0;
           var2 = -8 / ((param0 - 30) / 41);
         }

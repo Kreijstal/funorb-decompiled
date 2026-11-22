@@ -14,7 +14,7 @@ final class IterableNodeHashTable implements Iterable {
     int field_e;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 7903) {
           return;
         }
@@ -35,7 +35,7 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var4 = this.buckets[(int)((long)(this.field_e - 1) & key)];
         this.field_d = var4.previous;
         if (obfuscationGuard >= -83) {
-          IterableNodeHashTable.a(-1);
+          IterableNodeHashTable.clearStaticReferences(-1);
         }
         while (var4 != this.field_d) {
           if (~this.field_d.key == ~key) {

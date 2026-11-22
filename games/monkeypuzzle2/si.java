@@ -75,7 +75,7 @@ final class si extends fb {
         }
         var5 = var8.readUnsignedShort(17277);
         try {
-          var9 = hi.field_a.a(var5, param1 ^ -32769);
+          var9 = GzipDecompressor.field_a.a(var5, param1 ^ -32769);
           ba.field_h = var9.b((byte) -54);
           if (!i.field_h.equals(cl.field_e)) {
             stackIn_25_0 = var9.field_q;

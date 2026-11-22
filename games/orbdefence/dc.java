@@ -8,7 +8,7 @@ final class dc extends IntrusiveNode {
     int field_i;
     static qg[] field_h;
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

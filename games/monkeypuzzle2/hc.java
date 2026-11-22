@@ -12,7 +12,7 @@ final class hc {
     Sprite field_a;
     private int field_g;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -105) {
           field_h = (int[][]) null;
           field_h = (int[][]) null;
@@ -146,7 +146,7 @@ final class hc {
 
     final hc a(int param0, byte param1) {
         if (param1 != -3) {
-          hc.a((byte) 54);
+          hc.clearStaticReferences((byte) 54);
           this.field_f = param0;
           return this;
         }

@@ -338,7 +338,7 @@ final class ProxySocketConnector extends SocketConnector {
         return param0 | param1;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_n = null;
         field_j = null;

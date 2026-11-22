@@ -93,7 +93,7 @@ final class eg {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void clearStaticReferences(int param0, int param1) {
         if (param1 == -1937866142) {
           return;
         }
@@ -107,7 +107,7 @@ final class eg {
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         var4 = param3.indexOf(param2);
         if (param1 != 4) {
-          eg.a(47, -126);
+          eg.clearStaticReferences(47, -126);
         }
         while (true) {
           if (var4 == -1) {
@@ -122,7 +122,7 @@ final class eg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_h = null;
         field_d = null;

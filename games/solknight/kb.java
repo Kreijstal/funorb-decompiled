@@ -16,7 +16,7 @@ final class kb {
           v.a(2, param0);
           return var2;
         }
-        kb.a((byte) 96);
+        kb.clearStaticReferences((byte) 96);
         v.a(2, param0);
         return var2;
     }
@@ -44,7 +44,7 @@ final class kb {
         gd.a(param1, GameApplet.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_a = null;
         if (param0 == 15) {
@@ -61,7 +61,7 @@ final class kb {
 
     final static int a(int param0, boolean param1) {
         if (param1) {
-          kb.a((byte) -33);
+          kb.clearStaticReferences((byte) -33);
           return hk.field_c[2047 & param0];
         }
         return hk.field_c[2047 & param0];

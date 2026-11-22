@@ -8,7 +8,7 @@ abstract class rh extends ca {
     static dg field_r;
     static sc field_p;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 > -86) {
           field_p = (sc) null;
@@ -45,7 +45,7 @@ abstract class rh extends ca {
           do {
             var4 = param1.nextInt();
           } while (var3_int <= var4);
-          stackIn_12_0 = gk.a(var4, param2, (byte) 71);
+          stackIn_12_0 = GzipDecompressor.floorModPositiveDivisor(var4, param2, (byte) 71);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

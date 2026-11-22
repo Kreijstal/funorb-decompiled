@@ -30,7 +30,7 @@ final class dm {
     private int[] field_o;
     private static int[] field_u;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_w = null;
         field_r = null;
         field_b = null;

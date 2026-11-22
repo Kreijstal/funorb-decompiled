@@ -21,7 +21,7 @@ final class bg implements Iterable {
         di.field_x.b(117, field_b);
     }
 
-    final static void a(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 == 482) {
           return;
         }
@@ -78,7 +78,7 @@ final class bg implements Iterable {
           var2_int = param0.length();
           var3 = 0;
           if (param1 != -21637) {
-            bg.a((byte) -109);
+            bg.clearStaticReferences((byte) -109);
           }
           while (true) {
             if (var2_int <= var3) {
@@ -129,7 +129,7 @@ final class bg implements Iterable {
         return (Iterator) ((Object) new ec(this));
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = (int[][]) null;
         field_a = null;
         field_d = null;

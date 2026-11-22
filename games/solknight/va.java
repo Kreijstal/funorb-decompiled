@@ -34,10 +34,10 @@ abstract class va {
           if (ab.field_u) {
             return null;
           }
-          if (kk.field_d < kg.field_e) {
+          if (kk.field_d < GzipDecompressor.field_e) {
             return null;
           }
-          if (kk.field_d < kg.field_e + wi.field_l) {
+          if (kk.field_d < GzipDecompressor.field_e + wi.field_l) {
             return s.field_ib;
           }
           return null;
@@ -45,10 +45,10 @@ abstract class va {
         if (ab.field_u) {
           return null;
         }
-        if (kk.field_d < kg.field_e) {
+        if (kk.field_d < GzipDecompressor.field_e) {
           return null;
         }
-        if (kk.field_d < kg.field_e + wi.field_l) {
+        if (kk.field_d < GzipDecompressor.field_e + wi.field_l) {
           return s.field_ib;
         }
         return null;
@@ -85,7 +85,7 @@ abstract class va {
         return var8;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != 0) {
           field_g = (Sprite) null;

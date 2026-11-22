@@ -139,7 +139,7 @@ abstract class RasterBuffer {
           RasterBuffer.a((ki) null, 88);
         }
         if (param2) {
-          var4 = 2 * (le.field_c % bl.field_n.field_o);
+          var4 = 2 * (GzipDecompressor.field_c % bl.field_n.field_o);
           if (bl.field_n.field_o <= var4) {
             var4 = -var4 + bl.field_n.field_o + bl.field_n.field_o;
           }
@@ -206,7 +206,7 @@ abstract class RasterBuffer {
           RasterBuffer.a((ki) null, 88);
         }
         if (param2) {
-          var4 = 2 * (le.field_c % bl.field_n.field_o);
+          var4 = 2 * (GzipDecompressor.field_c % bl.field_n.field_o);
           if (bl.field_n.field_o <= var4) {
             var4 = -var4 + bl.field_n.field_o + bl.field_n.field_o;
           }

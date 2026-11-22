@@ -51,7 +51,7 @@ final class bh {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 != -21000) {
           return;

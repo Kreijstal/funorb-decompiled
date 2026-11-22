@@ -31,7 +31,7 @@ abstract class wb {
 
     abstract void b(int param0);
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         field_c = null;
         field_g = null;

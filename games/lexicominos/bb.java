@@ -230,7 +230,7 @@ final class bb extends nb implements jk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         field_C = null;
         field_K = null;

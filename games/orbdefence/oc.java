@@ -20,7 +20,7 @@ final class oc extends vi implements ib {
     }
 
     final static void g(byte param0) {
-        vh var1 = (vh) (le.field_a.a((byte) 38));
+        vh var1 = (vh) (GzipDecompressor.field_a.a((byte) 38));
         if (param0 != -105) {
           return;
         }

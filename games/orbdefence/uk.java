@@ -6,7 +6,7 @@ final class uk {
     static int field_a;
     static se field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

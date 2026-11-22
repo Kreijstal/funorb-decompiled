@@ -357,7 +357,7 @@ class UiWidget extends IntrusiveNode {
             if (param2 >= 105) {
               var12 = SecondaryNodeDequeIterator.a((byte) -128);
               if (var12 != null) {
-                hi.field_b.a(nj.field_a, 68, oa.field_G, var12);
+                GzipDecompressor.field_b.a(nj.field_a, 68, oa.field_G, var12);
               }
               return;
             }
@@ -365,7 +365,7 @@ class UiWidget extends IntrusiveNode {
             this.a(88, 31, (UiWidget) null, -103, 118, -124);
             var11 = SecondaryNodeDequeIterator.a((byte) -128);
             if (var11 != null) {
-              hi.field_b.a(nj.field_a, 68, oa.field_G, var11);
+              GzipDecompressor.field_b.a(nj.field_a, 68, oa.field_G, var11);
             }
             return;
           }
@@ -374,7 +374,7 @@ class UiWidget extends IntrusiveNode {
           if (var6 != 0) {
             var8 = SecondaryNodeDequeIterator.a((byte) -128);
             if (var8 != null) {
-              hi.field_b.a(nj.field_a, 68, oa.field_G, var8);
+              GzipDecompressor.field_b.a(nj.field_a, 68, oa.field_G, var8);
             }
             return;
           }
@@ -396,7 +396,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, of param1) {
-        this(param0, hi.field_b.field_a, param1);
+        this(param0, GzipDecompressor.field_b.field_a, param1);
     }
 
     String a(byte param0) {

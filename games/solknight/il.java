@@ -17,7 +17,7 @@ class il extends aa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 6054) {
-            il.c(10);
+            il.clearStaticReferences(10);
           }
           stackIn_3_0 = v.a(param1 - 6138, param0, 10, true);
           return stackIn_3_0;
@@ -65,7 +65,7 @@ class il extends aa {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2113536) {
           return;
         }

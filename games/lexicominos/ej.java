@@ -9,7 +9,7 @@ final class ej {
     static sh field_d;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -4) {
           field_a = (bj) null;

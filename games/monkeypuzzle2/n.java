@@ -7,7 +7,7 @@ final class n {
     static int field_a;
     static PcmSampleStream[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -6991) {
           return;
         }
@@ -63,14 +63,14 @@ final class n {
           if (param4 == -301) {
             return;
           }
-          n.a(54);
+          n.clearStaticReferences(54);
           return;
         }
         if (!jj.b(true)) {
           if (param4 == -301) {
             return;
           }
-          n.a(54);
+          n.clearStaticReferences(54);
           return;
         }
         var5 = (ki) (wd.field_h.d(4011));
@@ -89,7 +89,7 @@ final class n {
         if (param4 == -301) {
           return;
         }
-        n.a(54);
+        n.clearStaticReferences(54);
         return;
     }
 

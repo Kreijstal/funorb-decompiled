@@ -76,7 +76,7 @@ final class hj {
         return gf.field_Z == PacketBuffer.field_i ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_o = null;
         if (param0 != -37) {

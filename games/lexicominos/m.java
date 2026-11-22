@@ -6,7 +6,7 @@ final class m {
     static byte[][] field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (byte[][]) null;
         field_b = null;
         if (param0 != 1000) {

@@ -10,7 +10,7 @@ final class g {
     static int field_a;
     byte[] field_j;
     int field_b;
-    static kg field_k;
+    static GzipDecompressor field_k;
     int field_d;
     int field_f;
     int field_c;
@@ -129,6 +129,6 @@ final class g {
 
     static {
         field_e = "Checking";
-        field_k = new kg();
+        field_k = new GzipDecompressor();
     }
 }

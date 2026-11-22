@@ -41,7 +41,7 @@ final class n {
         return this;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_h = null;
         field_c = null;
@@ -226,7 +226,7 @@ final class n {
 
     final static boolean c(int param0) {
         if (param0 != -2147483648) {
-          n.b(29);
+          n.clearStaticReferences(29);
           if (null == da.field_a) {
             return false;
           }

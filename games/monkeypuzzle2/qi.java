@@ -33,7 +33,7 @@ final class qi extends WidgetContainer implements vc, ql {
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
           if (k.field_g == 11) {
-            ub.a(250);
+            ub.clearStaticReferences(250);
           }
           if (param1 >= -82) {
             field_A = (String) null;

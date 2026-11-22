@@ -19,7 +19,7 @@ final class bf {
     private int field_n;
     static oc field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_m = null;
         field_i = null;
         field_b = null;

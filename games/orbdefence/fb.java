@@ -7,7 +7,7 @@ final class fb extends IntrusiveNode {
     int[] field_g;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 < 120) {
           field_i = (ba) null;

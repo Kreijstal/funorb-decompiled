@@ -435,7 +435,7 @@ final class ce {
           }
           var2Lifetime63 = e.a("keycode_antirotate_1", true);
           if (null != var2Lifetime63) {
-            gk.field_e = var2Lifetime63[0] & 255;
+            GzipDecompressor.field_e = var2Lifetime63[0] & 255;
           }
           th.field_u = null;
           return;

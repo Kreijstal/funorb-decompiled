@@ -126,7 +126,7 @@ final class j {
         return param0 ^ param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -97) {
           return;
         }

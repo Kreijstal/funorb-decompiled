@@ -10,7 +10,7 @@ final class nh {
     static String field_a;
     private ki field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -51) {
           return;
         }
@@ -124,7 +124,7 @@ final class nh {
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
           if (param0 != 15968) {
-            nh.a((byte) 53);
+            nh.clearStaticReferences((byte) 53);
           }
           var2 = (d) (md.field_h.b((byte) -25));
           while (var2 != null) {

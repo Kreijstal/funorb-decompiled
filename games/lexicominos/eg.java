@@ -42,7 +42,7 @@ final class eg extends mg {
         ta var2 = new ta(this.field_D);
         al var3 = (al) (var2.a(250));
         if (param0) {
-          eg.i(-88);
+          eg.clearStaticReferences(-88);
         }
         while (var3 != null) {
           if (var3.a((byte) 26)) {
@@ -52,7 +52,7 @@ final class eg extends mg {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_E = null;
         field_F = null;
@@ -167,7 +167,7 @@ final class eg extends mg {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param4 <= 15) {
-            eg.i(69);
+            eg.clearStaticReferences(69);
           }
           stackIn_6_0 = lj.a(22076, param3.a(param1, -27493, param0));
           return stackIn_6_0;

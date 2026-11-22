@@ -64,7 +64,7 @@ final class ec {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 123) {
           field_b = (Calendar) null;
         }

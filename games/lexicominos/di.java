@@ -9,7 +9,7 @@ final class di extends id {
         this(ql.field_Q, param0);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -26,7 +26,7 @@ final class di extends id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 349) {
-            di.a(false);
+            di.clearStaticReferences(false);
           }
           stackIn_3_0 = nh.a('*', param1.field_u.length(), (byte) 67);
           return stackIn_3_0;

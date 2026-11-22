@@ -17,7 +17,7 @@ final class jb extends aa {
           param1.b(-1955895016, this.field_b);
           param1.a(64, this.field_c);
           if (param0 != -12518) {
-            jb.b(57);
+            jb.clearStaticReferences(57);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "jb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -31,7 +31,7 @@ final class jb extends aa {
         return dc.field_k;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_g = null;
         field_d = null;

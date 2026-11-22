@@ -5,7 +5,7 @@ final class ej {
     static int field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -95) {
           field_a = (String) null;
           field_a = null;

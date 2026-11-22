@@ -139,7 +139,7 @@ final class re {
         this.field_c = 256;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 > -62) {
           field_f = (String) null;

@@ -70,7 +70,7 @@ class IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 40) {
           field_a = (String) null;
         }
@@ -156,7 +156,7 @@ class IntrusiveNode {
           return false;
         }
         if (!param0) {
-          IntrusiveNode.a(-7);
+          IntrusiveNode.clearStaticReferences(-7);
         }
         return true;
     }

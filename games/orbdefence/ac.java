@@ -4,7 +4,7 @@
 final class ac {
     private static da field_a;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

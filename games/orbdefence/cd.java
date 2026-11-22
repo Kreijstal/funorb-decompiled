@@ -11,7 +11,7 @@ final class cd extends wj {
     int field_v;
     mg field_u;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         if (param0 == 61) {
           field_r = null;

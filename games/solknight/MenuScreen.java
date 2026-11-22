@@ -460,7 +460,7 @@ final class MenuScreen {
         return bb.field_P[this.field_d];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = (long[][]) null;
         if (param0 != 101) {
           field_c = (long[][]) null;
@@ -1204,10 +1204,10 @@ final class MenuScreen {
           }
         } else {
           if (il.b(param1 ^ -509)) {
-            BufferedSocket.field_b.a(kg.field_b, 25, -BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+            BufferedSocket.field_b.a(GzipDecompressor.field_b, 25, -BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
             BufferedSocket.field_b.a(mf.field_n, 25, 2 * BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
           } else {
-            BufferedSocket.field_b.a(kg.field_b, 320, 296, 16776960, -1);
+            BufferedSocket.field_b.a(GzipDecompressor.field_b, 320, 296, 16776960, -1);
           }
         }
     }

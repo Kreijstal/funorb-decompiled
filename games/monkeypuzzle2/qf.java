@@ -930,7 +930,7 @@ final class qf extends og {
         }
     }
 
-    public static void f() {
+    public static void clearStaticReferences() {
         field_v = null;
         field_j = null;
     }

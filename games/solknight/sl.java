@@ -225,7 +225,7 @@ final class sl extends IntrusiveNode {
         field_s = true;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_z = null;
         field_h = null;
         field_u = null;

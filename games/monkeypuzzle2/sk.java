@@ -70,7 +70,7 @@ final class sk extends WidgetContainer implements ql {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_D = null;
         if (param0) {
           return;

@@ -27,7 +27,7 @@ final class el {
         return (char)var2;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_c = (fc) null;
         }

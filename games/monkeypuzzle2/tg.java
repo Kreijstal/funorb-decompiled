@@ -4,7 +4,7 @@
 final class tg {
     private static l field_a;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

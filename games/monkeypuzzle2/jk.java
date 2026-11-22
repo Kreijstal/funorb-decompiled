@@ -269,7 +269,7 @@ abstract class jk extends UiWidget implements ga {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         if (param0 != 77) {
           return;

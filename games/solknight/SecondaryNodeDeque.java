@@ -11,7 +11,7 @@ final class SecondaryNodeDeque implements Iterable {
     static PlatformTask field_b;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -42,7 +42,7 @@ final class SecondaryNodeDeque implements Iterable {
           var4_int = param0.c(91, param3);
           var5 = param0.a(param2, -1, var4_int);
           if (param1 != -18362) {
-            SecondaryNodeDeque.b((byte) -114);
+            SecondaryNodeDeque.clearStaticReferences((byte) -114);
           }
           stackIn_3_0 = SecondaryNodeDeque.a(param0, param1 - 6521, var5, var4_int);
           return stackIn_3_0;
@@ -111,7 +111,7 @@ final class SecondaryNodeDeque implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -24883) {
-            SecondaryNodeDeque.b((byte) -114);
+            SecondaryNodeDeque.clearStaticReferences((byte) -114);
           }
           if (l.a(param1 ^ -24921, param2, param3, param0)) {
             stackIn_6_0 = fi.b(255);

@@ -17,7 +17,7 @@ final class fi implements td {
           var6_int = param1 + param2.field_s;
           var7 = param0 + param2.field_n;
           if (param3 != -4394) {
-            fi.a(-11);
+            fi.clearStaticReferences(-11);
           }
           tl.a(param2.field_r, var7, var6_int, param2.field_m, 127);
           var8 = wd.field_C[1];
@@ -89,7 +89,7 @@ final class fi implements td {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -8601) {
           return;
         }

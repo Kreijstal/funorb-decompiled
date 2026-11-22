@@ -68,7 +68,7 @@ final class lj {
             return null;
           }
           var2 = new CoverageBitmapFont(param1, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
-          gk.a(12428);
+          GzipDecompressor.a(12428);
           if (param0 == 22076) {
             stackIn_7_0 = var2;
             return stackIn_7_0;
@@ -89,7 +89,7 @@ final class lj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_b = (ei) null;
           field_b = null;

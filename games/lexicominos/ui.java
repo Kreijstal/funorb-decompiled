@@ -337,7 +337,7 @@ class ui extends cf {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_D = null;
         if (param0 != -1) {
           return;

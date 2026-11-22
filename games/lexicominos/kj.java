@@ -239,7 +239,7 @@ final class kj extends PcmStream {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 37) {
           return;
         }

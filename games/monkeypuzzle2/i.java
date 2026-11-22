@@ -36,7 +36,7 @@ final class i extends IntrusiveNode {
         return 1 + param0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         field_r = null;
         if (!param0) {

@@ -100,7 +100,7 @@ final class oi {
     }
 
     final static void a(int param0) {
-        hi.field_b = gg.b(-11451);
+        GzipDecompressor.field_b = gg.b(-11451);
         wg.field_j = new kj();
         if (param0 != -2) {
           oi.a(-67);

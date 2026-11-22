@@ -51,14 +51,14 @@ final class de {
           h.k(125);
           ul.a(param1.field_v, param1.field_s, param1.field_t);
           if (param0 >= -120) {
-            de.a(-128);
+            de.clearStaticReferences(-128);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "de.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -2079) {
           return;
         }

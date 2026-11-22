@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class le {
+final class GzipDecompressor {
     static im field_a;
     private java.util.zip.Inflater field_b;
     static int field_c;
     static String field_d;
 
-    public le() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         if (param0 != 1000000) {
@@ -21,7 +21,7 @@ final class le {
         }
     }
 
-    final void a(byte[] param0, int param1, mg param2) {
+    final void decompress(byte[] param0, int param1, mg param2) {
         try {
           try {
             if (param2.field_j[param2.field_i] != 31 ||
@@ -52,7 +52,7 @@ final class le {
         }
     }
 
-    private le(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     final static ik a(int param0, ki param1, int param2) {
@@ -68,7 +68,7 @@ final class le {
           var4 = param1.a(param0, true);
           var3 = var4;
           if (param2 != 10) {
-            le.a(-107);
+            GzipDecompressor.clearStaticReferences(-107);
           }
           if (var4 == null) {
             return null;

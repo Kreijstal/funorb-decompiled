@@ -24,7 +24,7 @@ class PcmPlayerService {
     private int field_i;
     private int field_c;
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_p = null;
     }
 

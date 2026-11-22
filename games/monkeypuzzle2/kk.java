@@ -306,7 +306,7 @@ final class kk {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 != -104) {
           field_h = (String) null;

@@ -427,7 +427,7 @@ final class il extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

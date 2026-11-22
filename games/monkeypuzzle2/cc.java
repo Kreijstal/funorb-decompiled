@@ -50,7 +50,7 @@ abstract class cc {
           if (param0 == 192) {
             return;
           }
-          cc.a(-77);
+          cc.clearStaticReferences(-77);
           return;
         }
         ge.d();
@@ -58,10 +58,10 @@ abstract class cc {
         if (param0 == 192) {
           return;
         }
-        cc.a(-77);
+        cc.clearStaticReferences(-77);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 256) {
           return;
         }

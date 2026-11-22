@@ -15,7 +15,7 @@ abstract class rk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 20) {
-            rk.a((byte) -79);
+            rk.clearStaticReferences((byte) -79);
           }
           stackIn_3_0 = param2.b(false, param0);
           return stackIn_3_0;
@@ -35,7 +35,7 @@ abstract class rk {
 
     abstract void a(int param0, byte[] param1);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 != 94) {

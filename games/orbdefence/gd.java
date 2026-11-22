@@ -38,7 +38,7 @@ final class gd {
         return ed.field_h;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 24) {
           return;
         }

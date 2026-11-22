@@ -23,7 +23,7 @@ final class fl {
             field_b = (String) null;
           }
           var2 = new mj(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
-          gk.a(12428);
+          GzipDecompressor.a(12428);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

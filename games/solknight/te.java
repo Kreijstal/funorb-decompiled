@@ -11,7 +11,7 @@ final class te extends si {
     static String field_J;
     static int field_M;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_L = null;
         field_N = null;
         field_K = null;
@@ -54,7 +54,7 @@ final class te extends si {
 
     final static String d(byte param0) {
         if (param0 != 18) {
-          te.a((byte) -93);
+          te.clearStaticReferences((byte) -93);
           return vc.field_c;
         }
         return vc.field_c;

@@ -35,7 +35,7 @@ final class oj {
         return var3;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
         field_l = null;
         field_h = null;

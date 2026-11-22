@@ -62,7 +62,7 @@ final class qg {
           }
           return var2Lifetime2;
         }
-        qg.a(-76);
+        qg.clearStaticReferences(-76);
         if (param1 == 0) {
           return 0;
         }
@@ -114,7 +114,7 @@ final class qg {
         return var2Lifetime1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 1) {

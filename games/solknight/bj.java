@@ -9,12 +9,12 @@ final class bj {
           throw new IllegalArgumentException();
         }
         if (param1 > -116) {
-          bj.a(-36);
+          bj.clearStaticReferences(-36);
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 50) {
           field_a = (kb) null;
           field_a = null;

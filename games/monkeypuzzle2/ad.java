@@ -14,7 +14,7 @@ final class ad {
     static String field_k;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_g = null;
         field_d = null;

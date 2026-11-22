@@ -6,7 +6,7 @@ final class cf {
     static int[] field_a;
     static boolean field_c;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 120) {
           field_b = (lk) null;
         }

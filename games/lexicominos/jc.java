@@ -20,7 +20,7 @@ final class jc extends java.awt.Canvas {
         int var1 = -24 / ((param0 - 43) / 46);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -14) {
           field_b = (ge) null;
           field_b = null;

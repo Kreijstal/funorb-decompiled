@@ -64,7 +64,7 @@ final class sj implements j {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           field_d = (ga) null;
           field_d = null;

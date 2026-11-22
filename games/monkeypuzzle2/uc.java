@@ -58,7 +58,7 @@ final class uc {
         uc.a(param0, param1, param4, param5, 0, 0, var10, ge.field_i, var13 * ge.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, ge.field_h - (var14 - var12));
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != -2355) {
           field_f = (String[]) null;

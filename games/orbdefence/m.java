@@ -8,7 +8,7 @@ final class m {
     static String field_e;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 <= 92) {
           return;

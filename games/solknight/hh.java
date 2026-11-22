@@ -20,7 +20,7 @@ final class hh extends pj {
         return -1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 32) {
           return;
         }
@@ -158,7 +158,7 @@ final class hh extends pj {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
               if (param0) {
-                hh.a((byte) -44);
+                hh.clearStaticReferences((byte) -44);
               }
               var4 = (String) (fd.a(param1, "getcookies", (byte) 116));
               stackIn_5_0 = var4;

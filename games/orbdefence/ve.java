@@ -12,7 +12,7 @@ final class ve extends ej {
     static int[] field_V;
     private boolean field_U;
 
-    public static void f(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

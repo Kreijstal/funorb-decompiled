@@ -79,7 +79,7 @@ final class td implements j {
             ta.b((byte) 105, var5);
             var6 = new String[2][var5];
             var20 = new int[2][var5 * 4];
-            var8 = kg.field_c;
+            var8 = GzipDecompressor.field_c;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
@@ -219,7 +219,7 @@ final class td implements j {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         if (param0) {
           field_h = (ce) null;

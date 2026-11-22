@@ -5,7 +5,7 @@ final class tl {
     static String field_a;
     static Sprite field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -17) {
           field_a = (String) null;
           field_b = null;
@@ -90,7 +90,7 @@ final class tl {
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param2 >= -75) {
-            tl.a((byte) 106);
+            tl.clearStaticReferences((byte) 106);
           }
           while (true) {
             param0--;

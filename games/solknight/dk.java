@@ -23,7 +23,7 @@ final class dk extends rj {
         return 0L;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -17) {
           field_h = (kb) null;
         }

@@ -439,7 +439,7 @@ final class fc {
               var8 = sa.field_c;
               var9 = wa.field_j;
               var10_ref_boolean__ = wa.field_j;
-              var11_int = gk.field_e;
+              var11_int = GzipDecompressor.field_e;
               var12 = wa.field_j;
               wa.field_j[83] = false;
               var12[99] = false;
@@ -772,7 +772,7 @@ final class fc {
             this.field_E = stackIn_61_1;
             stackIn_66_1 = (wa.field_j[sa.field_c]) || (wa.field_j[98]);
             this.field_A = stackIn_66_1;
-            this.field_x = wa.field_j[gk.field_e];
+            this.field_x = wa.field_j[GzipDecompressor.field_e];
           } else {
             if (0 == this.field_b) {
               if (this.field_g.field_g.field_a <= 9 && (!(this.field_g.field_a.field_a >= 1) ||

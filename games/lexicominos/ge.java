@@ -64,7 +64,7 @@ final class ge implements Runnable {
         this(param0, param1, 5000);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != -59) {
           field_e = (String) null;
@@ -223,7 +223,7 @@ final class ge implements Runnable {
             var18.field_n = new int[var18.field_p];
             var18.field_h = new int[var18.field_p];
             if (param0 > -120) {
-              ge.a((byte) -107);
+              ge.clearStaticReferences((byte) -107);
             }
             var18.field_i = new ei[var18.field_p];
             var18.field_k = new ei[var18.field_p];

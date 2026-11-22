@@ -45,7 +45,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_i = null;
         if (param0 > -125) {
@@ -209,10 +209,10 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
           if (!we.field_h.a("commonui", 10762)) {
             return 57;
           }
-          if (!gk.field_a.c(-91)) {
+          if (!GzipDecompressor.field_a.c(-91)) {
             return 71;
           }
-          if (!gk.field_a.a("commonui", 10762)) {
+          if (!GzipDecompressor.field_a.a("commonui", 10762)) {
             return 80;
           }
           if (!ej.field_d.c(108)) {
@@ -228,10 +228,10 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
           if (!we.field_h.a("commonui", 10762)) {
             return 40;
           }
-          if (!gk.field_a.c(76)) {
+          if (!GzipDecompressor.field_a.c(76)) {
             return 50;
           }
-          if (!gk.field_a.a("commonui", 10762)) {
+          if (!GzipDecompressor.field_a.a("commonui", 10762)) {
             return 60;
           }
           if (!ej.field_d.c(-84)) {

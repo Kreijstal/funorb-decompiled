@@ -7,7 +7,7 @@ final class qb {
     static am field_a;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 203) {
           return;

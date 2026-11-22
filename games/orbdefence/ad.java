@@ -140,7 +140,7 @@ final class ad {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         if (!param0) {
           field_e = (hj) null;

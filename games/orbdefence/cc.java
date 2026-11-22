@@ -25,7 +25,7 @@ final class cc extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         field_f = null;
         field_t = null;

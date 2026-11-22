@@ -69,7 +69,7 @@ final class wd {
           }
           tk.field_n = tk.field_n + 65536;
           while (tb.a(og.field_a, 723204176, tk.field_n) >= 65536) {
-            le.field_c = le.field_c + 1;
+            GzipDecompressor.field_c = GzipDecompressor.field_c + 1;
             tk.field_n = tk.field_n - og.field_a;
           }
           var2_int = -1;
@@ -266,7 +266,7 @@ final class wd {
         this.a((byte) -64);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 63) {
           return;
         }

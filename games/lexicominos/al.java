@@ -7,7 +7,7 @@ abstract class al extends nb {
     boolean field_D;
     private int field_E;
     static String field_G;
-    static gk field_F;
+    static GzipDecompressor field_F;
     static ei field_H;
 
     private final int g(int param0) {
@@ -109,7 +109,7 @@ abstract class al extends nb {
         return (w) (this);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 0) {
           return;
         }
@@ -195,6 +195,6 @@ abstract class al extends nb {
     static {
         field_G = "Create a free account to start using this feature";
         field_C = new ng();
-        field_F = new gk();
+        field_F = new GzipDecompressor();
     }
 }

@@ -541,7 +541,7 @@ final class sf extends IntrusiveNode {
         return new PcmSample(this.field_G, var12, this.field_i, this.field_J, this.field_L);
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_H = null;
         field_F = null;
         field_h = null;

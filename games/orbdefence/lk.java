@@ -28,7 +28,7 @@ final class lk {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = (float[][]) null;
         field_b = (int[][]) null;
     }

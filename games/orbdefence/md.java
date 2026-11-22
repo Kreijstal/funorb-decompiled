@@ -123,7 +123,7 @@ final class md extends rg {
         jd.field_g = null;
         m.field_a = null;
         if (param0 >= -102) {
-          md.d(89);
+          md.clearStaticReferences(89);
         }
         vc.field_g = null;
         wc.field_a = null;
@@ -164,7 +164,7 @@ final class md extends rg {
             return (java.net.Socket) (stackIn_6_0);
           }
           if (param0 != -1) {
-            md.d(31);
+            md.clearStaticReferences(31);
           }
           var4 = (java.net.InetSocketAddress) ((Object) var3);
           if (param1.type() != java.net.Proxy.Type.HTTP) {
@@ -374,7 +374,7 @@ final class md extends rg {
         this.field_c = java.net.ProxySelector.getDefault();
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_e = null;
         field_i = (byte[][]) null;
@@ -396,7 +396,7 @@ final class md extends rg {
         jd.field_g = null;
         m.field_a = null;
         if (param0 >= -102) {
-          md.d(89);
+          md.clearStaticReferences(89);
         }
         vc.field_g = null;
         wc.field_a = null;

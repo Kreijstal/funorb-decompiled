@@ -22,7 +22,7 @@ final class fb implements rd {
     static long[][] field_j;
     static boolean field_p;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = (long[][]) null;
         field_l = null;
         field_f = null;

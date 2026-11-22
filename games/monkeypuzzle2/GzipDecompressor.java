@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class hi {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_d;
     static wh field_a;
     static int field_c;
     static dk field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != -32) {
@@ -17,10 +17,10 @@ final class hi {
         }
     }
 
-    private hi(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -38,7 +38,7 @@ final class hi {
               }
               try {
                 if (param0 < 30) {
-                  hi.a(80);
+                  GzipDecompressor.clearStaticReferences(80);
                 }
                 this.field_d.setInput(param2.payload, param2.position + 10, -param2.position - 10 - 8 + param2.payload.length);
                 this.field_d.inflate(param1);
@@ -77,7 +77,7 @@ final class hi {
         }
     }
 
-    public hi() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 

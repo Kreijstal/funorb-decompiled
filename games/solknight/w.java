@@ -54,7 +54,7 @@ final class w {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -91,7 +91,7 @@ final class w {
         if (param6 <= -13) {
           return;
         }
-        w.a((byte) 9);
+        w.clearStaticReferences((byte) 9);
     }
 
     static {

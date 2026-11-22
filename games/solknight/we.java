@@ -217,7 +217,7 @@ final class we implements j {
             jh.field_b = Asteroid.a("menu_text", "benefits", kc.field_Q, (byte) -114);
             GameApplet.field_j = Asteroid.a("button_frame", "benefits", kc.field_Q, (byte) -121);
             kj.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
-            kg.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
+            GzipDecompressor.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
             sk.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
             var28 = SoftwareRasterizer.field_f;
             var2 = SoftwareRasterizer.field_a;
@@ -232,11 +232,11 @@ final class we implements j {
             var12 = new Sprite(195, 221);
             var6 = var12.field_p / 2;
             var12.a();
-            kg.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
+            GzipDecompressor.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
             sk.field_n.a(bb.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
-            kg.field_a.a(bb.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
+            GzipDecompressor.field_a.a(bb.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
             sk.field_n.a(bb.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
-            kg.field_a.a(le.field_b, var6, 180, 16777215, -1);
+            GzipDecompressor.field_a.a(le.field_b, var6, 180, 16777215, -1);
             sk.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
             pf.field_b.a();
@@ -265,14 +265,14 @@ final class we implements j {
             return;
           }
           if (ja.field_a != null &&
-            kg.field_a != null) {
+            GzipDecompressor.field_a != null) {
             var29 = SoftwareRasterizer.field_f;
             var2Lifetime1 = SoftwareRasterizer.field_a;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.b(lj.field_D);
             var14 = bb.a(tk.field_q, new String[]{eb.field_d[uf.field_q]}, -63);
-            var5 = kg.field_a.c(var14, jj.field_db);
-            var6Lifetime1 = kg.field_a.b(var14, jj.field_db, kg.field_a.field_F + kg.field_a.field_s);
+            var5 = GzipDecompressor.field_a.c(var14, jj.field_db);
+            var6Lifetime1 = GzipDecompressor.field_a.b(var14, jj.field_db, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             var7Lifetime1 = ji.field_a + (-var5 + jj.field_db) / 2;
             var8 = cl.field_o + (IterableNodeHashTable.field_h - var6Lifetime1) / 2;
             var5 += 6;
@@ -318,7 +318,7 @@ final class we implements j {
             ja.field_a.d();
             var9 = new Sprite(ja.field_a.field_q, ja.field_a.field_r);
             var9.a();
-            kg.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, kg.field_a.field_F + kg.field_a.field_s);
+            GzipDecompressor.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             UiWidget.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
             ja.field_a.a();
             var9.d(0, 0);

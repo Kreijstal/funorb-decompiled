@@ -20,10 +20,10 @@ final class cm extends WidgetContainer implements ql {
     }
 
     final static void a(int param0, byte param1) {
-        hi.field_c = param0 >> 4 & 3;
+        GzipDecompressor.field_c = param0 >> 4 & 3;
         int var2 = 51 / ((param1 + 78) / 35);
-        if (!(hi.field_c <= 2)) {
-          hi.field_c = 2;
+        if (!(GzipDecompressor.field_c <= 2)) {
+          GzipDecompressor.field_c = 2;
         }
         o.field_a = (14 & param0) >> 2;
         if (2 < o.field_a) {
@@ -99,7 +99,7 @@ final class cm extends WidgetContainer implements ql {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         field_E = null;
         field_G = null;
@@ -170,7 +170,7 @@ final class cm extends WidgetContainer implements ql {
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param3 != 7) {
-            cm.d((byte) 77);
+            cm.clearStaticReferences((byte) 77);
           }
           for (var6_int = 0; this.field_C.length > var6_int; var6_int++) {
             if (param4 == this.field_A[var6_int]) {

@@ -200,7 +200,7 @@ final class ti extends nb implements nf, jk {
         if (param0 <= 103) {
           field_M = -84L;
         }
-        gk.a(12428);
+        GzipDecompressor.a(12428);
         return var1;
     }
 
@@ -441,7 +441,7 @@ final class ti extends nb implements nf, jk {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_I = null;
         field_C = null;
         field_L = null;

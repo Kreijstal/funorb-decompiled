@@ -10,7 +10,7 @@ final class cf {
     static int field_d;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_a = null;
         if (param0 == 0) {

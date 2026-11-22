@@ -8,7 +8,7 @@ final class ae implements Runnable {
     int field_a;
     private boolean field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 == 3) {
           return;

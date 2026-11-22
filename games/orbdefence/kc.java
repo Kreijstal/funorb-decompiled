@@ -271,7 +271,7 @@ abstract class kc extends DualLinkNode {
         return this.field_H + var5 + this.field_B;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_w = null;
         field_o = null;
     }

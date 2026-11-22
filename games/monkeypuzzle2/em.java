@@ -114,9 +114,9 @@ final class em extends ButtonWidget {
     }
 
     private em(String param0, of param1) {
-        this(param0, hi.field_b.field_i, param1);
+        this(param0, GzipDecompressor.field_b.field_i, param1);
         try {
-          this.field_h = hi.field_b.field_l;
+          this.field_h = GzipDecompressor.field_b.field_l;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -184,7 +184,7 @@ final class em extends ButtonWidget {
     private em(String param0, ml param1, of param2) {
         super(param0, param1, param2);
         try {
-          this.field_h = hi.field_b.field_l;
+          this.field_h = GzipDecompressor.field_b.field_l;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

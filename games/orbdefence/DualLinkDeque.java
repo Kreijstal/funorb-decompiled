@@ -8,7 +8,7 @@ final class DualLinkDeque implements Iterable {
     static hj field_b;
     DualLinkNode field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_b = null;
         if (!param0) {

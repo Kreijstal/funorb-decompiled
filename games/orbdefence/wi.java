@@ -36,7 +36,7 @@ final class wi {
         wi.a(ul.field_i, ul.field_d, ul.field_e, ul.field_a);
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_g = null;
         field_e = null;

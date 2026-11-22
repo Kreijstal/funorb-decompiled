@@ -708,7 +708,7 @@ final class ki {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         if (param0) {
           return;

@@ -37,7 +37,7 @@ final class uf extends tj {
         field_n = -121;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_l = null;
         field_o = null;
         if (param0) {

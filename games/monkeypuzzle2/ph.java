@@ -7,7 +7,7 @@ final class ph {
     static String field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != 1) {

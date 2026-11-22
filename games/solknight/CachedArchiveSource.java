@@ -481,7 +481,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_r = null;
         if (param0 != 0) {

@@ -94,7 +94,7 @@ class ButtonWidget extends UiWidget {
     }
 
     ButtonWidget(String param0, of param1) {
-        this(param0, hi.field_b.field_i, param1);
+        this(param0, GzipDecompressor.field_b.field_i, param1);
     }
 
     void a(UiWidget param0, int param1, int param2, byte param3) {
@@ -309,7 +309,7 @@ class ButtonWidget extends UiWidget {
         this.field_w = true;
         this.field_A = false;
         this.field_x = true;
-        this.field_h = hi.field_b.field_g;
+        this.field_h = GzipDecompressor.field_b.field_g;
     }
 
     static {

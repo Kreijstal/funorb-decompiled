@@ -91,7 +91,7 @@ abstract class nf extends DualLinkNode {
               if (var3 != 1) {
                 var7 = tj.field_e;
                 synchronized (var7) {
-                  tj.field_e.a(var13, 693, var9);
+                  tj.field_e.decompress(var13, 693, var9);
                 }
               } else {
                 ac.a(var13, var5, param0, var4, 9);

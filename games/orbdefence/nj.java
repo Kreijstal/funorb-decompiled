@@ -158,7 +158,7 @@ final class nj extends IntrusiveNode {
         return new dl(this.field_A, var12, this.field_F, this.field_k, this.field_G);
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_v = null;
         field_x = null;
         field_w = null;

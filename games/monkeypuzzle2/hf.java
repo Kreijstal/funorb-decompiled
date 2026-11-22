@@ -37,7 +37,7 @@ abstract class hf implements kf {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 > -113) {
           return;
@@ -65,7 +65,7 @@ abstract class hf implements kf {
     public final void a(byte param0) {
         this.field_e = pf.a(0);
         if (param0 > -87) {
-          hf.a(-14);
+          hf.clearStaticReferences(-14);
         }
     }
 

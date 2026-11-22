@@ -31,7 +31,7 @@ final class hk {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_d = null;
         field_h = null;
         field_g = null;

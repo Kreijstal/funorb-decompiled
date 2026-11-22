@@ -22,7 +22,7 @@ final class dc extends a {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_l = null;
         field_q = null;

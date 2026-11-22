@@ -7,7 +7,7 @@ final class rj {
     static aj field_b;
     int field_d;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != 88) {
           field_b = (aj) null;

@@ -6,7 +6,7 @@ final class vf {
     static String[] field_b;
     static byte[][] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 1) {
           return;
@@ -17,7 +17,7 @@ final class vf {
 
     final static hj[] a(int param0, int param1, int param2, byte param3) {
         if (param3 >= -44) {
-          vf.a(45);
+          vf.clearStaticReferences(45);
         }
         return kd.a(1, param2, 119, param0, param1);
     }

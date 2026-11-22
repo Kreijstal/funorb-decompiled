@@ -688,7 +688,7 @@ final class se extends PcmStream {
         return null;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_x = null;
         field_z = null;
         if (param0) {

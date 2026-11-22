@@ -6,7 +6,7 @@ final class id {
     static String field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 <= 94) {

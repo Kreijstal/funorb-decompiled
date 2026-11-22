@@ -45,7 +45,7 @@ final class pf {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_b = null;
           field_a = null;
@@ -309,7 +309,7 @@ final class pf {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         ti.a(param2, 6, param4, this.field_d, param1, param3);
         if (param0 >= -63) {
-          pf.a(false);
+          pf.clearStaticReferences(false);
         }
     }
 

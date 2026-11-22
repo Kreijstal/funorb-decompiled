@@ -15,7 +15,7 @@ abstract class RasterBuffer {
 
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;
@@ -59,8 +59,8 @@ abstract class RasterBuffer {
           }
           if (decompiledFrameRemainder0) {
             if (!ab.field_u) {
-              if (kg.field_e <= kk.field_d) {
-                stackIn_17_0 = (kg.field_e + wi.field_l > kk.field_d) ? 1 : 0;
+              if (GzipDecompressor.field_e <= kk.field_d) {
+                stackIn_17_0 = (GzipDecompressor.field_e + wi.field_l > kk.field_d) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -72,12 +72,12 @@ abstract class RasterBuffer {
               kk.field_d = 0;
             } else {
               if (ab.field_u) {
-                kk.field_d = kg.field_e;
+                kk.field_d = GzipDecompressor.field_e;
               } else {
                 if (var2_int == 0) {
                   kk.field_d = 0;
                 } else {
-                  kk.field_d = kg.field_e;
+                  kk.field_d = GzipDecompressor.field_e;
                 }
               }
             }
@@ -92,7 +92,7 @@ abstract class RasterBuffer {
             kd.field_c = ql.field_v;
           }
           if (!ab.field_u &&
-            kg.field_e > kk.field_d &&
+            GzipDecompressor.field_e > kk.field_d &&
             ne.field_d) {
             kd.field_c = ql.field_v;
             bf.field_a = ch.field_b;

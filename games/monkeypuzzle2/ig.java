@@ -16,7 +16,7 @@ final class ig {
         ig.a(ge.field_a, ge.field_f, ge.field_j, ge.field_k);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_d = null;
         field_e = null;

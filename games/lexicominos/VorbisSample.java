@@ -727,7 +727,7 @@ final class VorbisSample extends kd {
         return new PcmSample(this.field_n, var1, this.field_r, this.field_I, this.field_y);
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_x = null;
         field_p = null;
         field_N = null;

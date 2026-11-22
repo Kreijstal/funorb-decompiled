@@ -8,7 +8,7 @@ final class jh {
     static ab field_a;
     static int field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         if (param0) {
           return;

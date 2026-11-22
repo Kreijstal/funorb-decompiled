@@ -2390,7 +2390,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("mouseoveranicon", 4);
                 if (var2 != null) {
-                  kg.field_b = Archive.a(true, var2);
+                  GzipDecompressor.field_b = Archive.a(true, var2);
                 }
                 var2 = vd.a("notyetachieved", 4);
                 if (null != var2) {

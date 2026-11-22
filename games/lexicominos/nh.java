@@ -17,7 +17,7 @@ final class nh {
         uh.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 60) {

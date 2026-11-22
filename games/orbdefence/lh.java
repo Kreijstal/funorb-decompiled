@@ -7,7 +7,7 @@ final class lh {
     static int field_c;
     static int field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -21248) {
           field_b = (be) null;

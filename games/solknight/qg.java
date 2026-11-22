@@ -7,7 +7,7 @@ final class qg {
     private int[] field_d;
     static int field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_c = (int[]) null;
         }

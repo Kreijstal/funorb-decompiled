@@ -77,7 +77,7 @@ final class ue extends s {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         if (param0 != -13) {
           return;

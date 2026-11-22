@@ -5,7 +5,7 @@ final class qd {
     static int field_b;
     static int[] field_a;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (param0) {
           field_a = (int[]) null;
@@ -66,9 +66,9 @@ final class qd {
         var4 = stackIn_9_0;
         ik.field_k = var8.c(false);
         if (var4 != 0) {
-          gk.field_c = var8.c(false);
+          GzipDecompressor.field_c = var8.c(false);
         } else {
-          gk.field_c = ik.field_k;
+          GzipDecompressor.field_c = ik.field_k;
         }
         if (1 == kb.field_a) {
           var8.b(-1698573656);
@@ -88,7 +88,7 @@ final class qd {
         try {
           var9 = hi.field_d.a(param0 + 27467, var5);
           oe.field_b = var9.c(-97);
-          if (gk.field_c.equals(og.field_c)) {
+          if (GzipDecompressor.field_c.equals(og.field_c)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_r;

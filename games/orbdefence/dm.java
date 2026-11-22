@@ -55,7 +55,7 @@ abstract class dm {
         ed[] var3 = this.field_c;
         int var4 = 0;
         if (param0 > -68) {
-          dm.a(-22);
+          dm.clearStaticReferences(-22);
         }
         while (var4 < var3.length) {
           var5 = var3[var4];
@@ -265,7 +265,7 @@ abstract class dm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_g = (int[]) null;
         }

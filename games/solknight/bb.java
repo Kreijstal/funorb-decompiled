@@ -326,7 +326,7 @@ final class bb extends WidgetContainer implements pi, ka {
         me.field_b = param2;
         je.field_d = 1;
         if (param0 != -14) {
-          bb.a((byte) -52);
+          bb.clearStaticReferences((byte) -52);
         }
     }
 
@@ -439,7 +439,7 @@ final class bb extends WidgetContainer implements pi, ka {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_P = null;
         if (param0 < 92) {
           return;

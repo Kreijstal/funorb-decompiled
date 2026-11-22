@@ -7,7 +7,7 @@ final class mf {
     static hj[] field_b;
     static boolean field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 84) {
           return;
         }

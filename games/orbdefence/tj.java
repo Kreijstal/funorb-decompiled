@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tj {
-    static le field_e;
+    static GzipDecompressor field_e;
     private int field_b;
     static String field_a;
     private boolean field_f;
@@ -43,7 +43,7 @@ final class tj {
 
     final int b(int param0) {
         if (param0 != 1) {
-          field_e = (le) null;
+          field_e = (GzipDecompressor) null;
         }
         return this.field_b + 1;
     }
@@ -66,7 +66,7 @@ final class tj {
         int var4;
         var4 = OrbDefence.field_D ? 1 : 0;
         if (param1 != -1) {
-          field_e = (le) null;
+          field_e = (GzipDecompressor) null;
         }
         var3 = this.field_c.length;
         while (var3 <= param0) {
@@ -304,6 +304,6 @@ final class tj {
 
     static {
         field_a = null;
-        field_e = new le();
+        field_e = new GzipDecompressor();
     }
 }

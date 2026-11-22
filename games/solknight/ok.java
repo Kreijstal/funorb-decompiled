@@ -65,7 +65,7 @@ final class ok {
         le.a(-35, "", (String) null);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -15739) {
           field_a = (jh) null;

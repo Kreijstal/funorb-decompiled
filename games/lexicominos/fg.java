@@ -9,7 +9,7 @@ final class fg {
     static String field_d;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_a = null;
         if (param0 == 24) {

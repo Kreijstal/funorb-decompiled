@@ -330,7 +330,7 @@ class id extends ik {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 96) {
           field_w = (oj[]) null;
         }

@@ -31,7 +31,7 @@ final class rk extends tb {
         this.field_h = this.field_h + (this.field_j - this.field_h);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_k = null;
         field_n = null;
@@ -163,7 +163,7 @@ final class rk extends tb {
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
           if (!param1) {
-            rk.a(true);
+            rk.clearStaticReferences(true);
           }
           if (param0 >= 2 &&
             param0 <= 36) {

@@ -180,7 +180,7 @@ class rj extends ButtonWidget {
         this.field_F = 0L;
         try {
           this.field_I = param2;
-          this.field_h = hi.field_b.field_o;
+          this.field_h = GzipDecompressor.field_b.field_o;
           this.a(true, -5905, param0);
           this.field_G = true;
           this.field_K = pf.a(0);

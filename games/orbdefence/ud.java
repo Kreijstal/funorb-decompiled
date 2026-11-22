@@ -14,7 +14,7 @@ final class ud extends IntrusiveNode {
     int field_o;
     int[] field_m;
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_p = (String) null;
           field_p = null;
@@ -27,7 +27,7 @@ final class ud extends IntrusiveNode {
         try {
           hf.a(param6, param7, param5, param3, param10, param2, param4, param11, param6, param0, 127, param9, param7, param1, param3);
           if (param8 != 5) {
-            ud.c(true);
+            ud.clearStaticReferences(true);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "ud.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');

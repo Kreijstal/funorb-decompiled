@@ -23,7 +23,7 @@ class fk extends kb {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (param0) {
           return;
@@ -47,7 +47,7 @@ class fk extends kb {
           qa.field_c.a((byte) 121, false);
           ul.a(param1, param4, param3, (byte) 109);
           if (param2 != 40) {
-            fk.b(false);
+            fk.clearStaticReferences(false);
           }
           kf.f(1);
           bk.field_c = c.field_m;

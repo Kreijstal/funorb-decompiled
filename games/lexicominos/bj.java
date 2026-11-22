@@ -9,7 +9,7 @@ final class bj {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (!param0) {
           field_a = (String) null;

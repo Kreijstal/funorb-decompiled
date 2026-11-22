@@ -12,7 +12,7 @@ final class ke {
     static String field_e;
     static PcmSample[] field_h;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         field_b = null;
         field_d = null;

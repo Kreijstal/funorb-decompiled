@@ -111,7 +111,7 @@ final class v extends ik {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         field_t = null;
         field_B = null;

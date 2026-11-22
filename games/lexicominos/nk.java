@@ -35,7 +35,7 @@ abstract class nk extends GameAppletShell {
         ij.field_l = param3;
         gf.field_e = param5;
         this.g(7);
-        vk.b(0);
+        vk.clearStaticReferences(0);
     }
 
     private final void h(int param0) {
@@ -258,10 +258,10 @@ abstract class nk extends GameAppletShell {
             eh.field_d = oj.a(false, th.field_m);
           }
           we.field_h = cl.a(true, (byte) -98, false, gf.field_e, 1);
-          gk.field_a = cl.a(true, (byte) -15, false, ij.field_l, 1);
+          GzipDecompressor.field_a = cl.a(true, (byte) -15, false, ij.field_l, 1);
           ej.field_d = cl.a(true, (byte) -37, false, ll.field_f, 1);
           wf.field_i = 2;
-          gg.field_d = gk.field_a;
+          gg.field_d = GzipDecompressor.field_a;
           th.field_p = we.field_h;
         }
         if (wf.field_i == 2) {
@@ -282,13 +282,13 @@ abstract class nk extends GameAppletShell {
           }
         }
         if (wf.field_i == 3 &&
-          cl.a(ej.field_d, we.field_h, gk.field_a, (byte) 127) &&
+          cl.a(ej.field_d, we.field_h, GzipDecompressor.field_a, (byte) 127) &&
           oh.a(ej.field_d, -109)) {
           qa.b(0);
           mg.e(0);
           u.field_tb = false;
           pb.field_j = qk.field_a;
-          fk.a(hl.field_F, we.field_h, (byte) 40, ej.field_d, gk.field_a);
+          fk.a(hl.field_F, we.field_h, (byte) 40, ej.field_d, GzipDecompressor.field_a);
           if (ki.field_e ||
             null != sc.field_c) {
             stackIn_102_0 = sc.field_c;
@@ -304,7 +304,7 @@ abstract class nk extends GameAppletShell {
             jh.field_c = kf.g(0);
           }
           vk.a(ej.field_d, param1 ^ 0, de.field_b, jh.field_c);
-          gk.field_a = null;
+          GzipDecompressor.field_a = null;
           we.field_h = null;
           ej.field_d = null;
           mc.a(-116, (java.applet.Applet) (this));

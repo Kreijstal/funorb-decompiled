@@ -26,7 +26,7 @@ final class id {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 >= -81) {
           field_a = (ba) null;

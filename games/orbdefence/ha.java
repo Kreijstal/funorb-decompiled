@@ -13,7 +13,7 @@ final class ha extends IntrusiveNode {
     int field_n;
     int field_h;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_l = null;
         if (param0 <= 91) {

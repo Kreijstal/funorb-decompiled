@@ -257,7 +257,7 @@ final class p {
             return stackIn_6_0;
           }
           if (param1 < 109) {
-            p.a(39);
+            p.clearStaticReferences(39);
           }
           if (param2) {
             stackIn_13_0 = bk.a(0, param0);
@@ -279,7 +279,7 @@ final class p {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != -14) {

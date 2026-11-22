@@ -11,7 +11,7 @@ final class fa {
         se var3 = null;
         try {
           if (param2 < 14) {
-            fa.a(false);
+            fa.clearStaticReferences(false);
           }
           var3 = uk.field_b;
           var3.i(param1, -74);
@@ -22,7 +22,7 @@ final class fa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

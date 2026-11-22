@@ -124,11 +124,11 @@ final class ol extends tj {
     final void e(int param0) {
         this.field_m = null;
         if (param0 <= 79) {
-          ol.c(false);
+          ol.clearStaticReferences(false);
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_l = null;
         if (param0) {
           return;
