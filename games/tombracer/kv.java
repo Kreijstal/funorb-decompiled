@@ -68,7 +68,7 @@ final class kv {
           jg.field_a.writeByte(param1, 0);
           jg.field_a.writeByte(param0, 0);
           jg.field_a.writeShort(-1477662136, param3);
-          jg.field_a.rsaEncryptContents(126, PooledObject.field_f, oca.field_a);
+          jg.field_a.rsaEncryptContents(126, PooledObject.field_f, ClientRsaModulus.modulus);
           ql.field_k.writeCipheredOpcode(18, param2 - 3083);
           fieldTemp$0 = ql.field_k.position + 1;
           ql.field_k.position = ql.field_k.position + 1;

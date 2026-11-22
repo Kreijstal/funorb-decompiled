@@ -444,7 +444,7 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           this.sweepSpeed = 16;
-          this.sweepRange = cba.degreesToAngle((byte) -123, 90.0, 8192);
+          this.sweepRange = EllipseShapeDecoder.degreesToAngle((byte) -123, 90.0, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -85,7 +85,7 @@ final class PlayerContextMenu {
         }
         var3 = var5.field_tb;
         if (var5.field_gc) {
-          this.field_f.addItem((byte) -102, 2, LegacyOpenGlFlowingWaterEffect.formatText(114, pba.field_d, new String[]{var3}));
+          this.field_f.addItem((byte) -102, 2, LegacyOpenGlFlowingWaterEffect.formatText(114, SmootherStepTable.field_d, new String[]{var3}));
           this.field_f.addItem((byte) -104, 3, LegacyOpenGlFlowingWaterEffect.formatText(123, NativeGraphicsHeap.field_i, new String[]{var3}));
         } else {
           if (var5.field_Bb) {

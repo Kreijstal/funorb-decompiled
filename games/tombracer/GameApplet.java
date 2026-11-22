@@ -89,9 +89,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (cba.field_a != null &&
-            cba.field_a != this) {
-            stackIn_8_0 = cba.field_a.getParameter(param0);
+          if (EllipseShapeDecoder.field_a != null &&
+            EllipseShapeDecoder.field_a != this) {
+            stackIn_8_0 = EllipseShapeDecoder.field_a.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -290,9 +290,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (cba.field_a != null &&
-            this != cba.field_a) {
-            stackIn_12_0 = cba.field_a.getAppletContext();
+          if (EllipseShapeDecoder.field_a != null &&
+            this != EllipseShapeDecoder.field_a) {
+            stackIn_12_0 = EllipseShapeDecoder.field_a.getAppletContext();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getAppletContext();
@@ -337,9 +337,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (DropdownList.field_x != null) {
           return null;
         }
-        if (cba.field_a != null &&
-          cba.field_a != this) {
-          return cba.field_a.getCodeBase();
+        if (EllipseShapeDecoder.field_a != null &&
+          EllipseShapeDecoder.field_a != this) {
+          return EllipseShapeDecoder.field_a.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -355,9 +355,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (null != cba.field_a &&
-            this != cba.field_a) {
-            stackIn_8_0 = cba.field_a.getDocumentBase();
+          if (null != EllipseShapeDecoder.field_a &&
+            this != EllipseShapeDecoder.field_a) {
+            stackIn_8_0 = EllipseShapeDecoder.field_a.getDocumentBase();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getDocumentBase();
@@ -512,8 +512,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = Corpse.field_j;
-                if (null != cba.field_a) {
-                  var1 = cba.field_a;
+                if (null != EllipseShapeDecoder.field_a) {
+                  var1 = EllipseShapeDecoder.field_a;
                 }
                 var2_ref = PlatformTaskDispatcher.field_b;
                 if (var2_ref != null) {
@@ -656,8 +656,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             OpenGlDisplayLists.field_b = true;
           }
-          if (null != cba.field_a) {
-            cba.field_a.destroy();
+          if (null != EllipseShapeDecoder.field_a) {
+            EllipseShapeDecoder.field_a.destroy();
           }
           try {
             if (param0 != 109) {
@@ -810,7 +810,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          cba.field_a = param0;
+          EllipseShapeDecoder.field_a = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -840,8 +840,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (null == nb.field_d) {
             if (DropdownList.field_x == null) {
-              if (null != cba.field_a) {
-                var2 = cba.field_a;
+              if (null != EllipseShapeDecoder.field_a) {
+                var2 = EllipseShapeDecoder.field_a;
                 if (var4 != 0) {
                   var2 = Corpse.field_j;
                   var2 = DropdownList.field_x;

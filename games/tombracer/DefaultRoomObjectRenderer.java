@@ -282,7 +282,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var6 = param2.getWidth(52);
           var8 = -126 % ((param1 + 50) / 56);
           var7 = param2.getHeight(false);
-          oq.drawRectangleOutline3D(-(var6 / 2) + var4_int, var5 - var7 / 2, 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5, true);
+          ShellListenerProvider.drawRectangleOutline3D(-(var6 / 2) + var4_int, var5 - var7 / 2, 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -801,13 +801,13 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var6 = param0.getX(3);
           var7 = param0.getY(param1 + 9553);
           if (var5 == 0) {
-            oq.drawRectangleOutline3D(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 + var4_int / 2, true);
+            ShellListenerProvider.drawRectangleOutline3D(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 + var4_int / 2, true);
             if (!TombRacer.field_G) {
               return;
             }
           }
           if (var5 == 1) {
-            oq.drawRectangleOutline3D(-(var4_int / 2) + var6, -(var4_int / 2) + var7, 0, 192, var6 + var4_int / 2, 5623039, var4_int / 2 + var7, true);
+            ShellListenerProvider.drawRectangleOutline3D(-(var4_int / 2) + var6, -(var4_int / 2) + var7, 0, 192, var6 + var4_int / 2, 5623039, var4_int / 2 + var7, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlantModel extends TrapModel {
-    static jua field_n;
+    static AccountServiceResult field_n;
     static int field_o;
     static String field_p;
     private int field_m;
@@ -196,7 +196,7 @@ final class PlantModel extends TrapModel {
     public static void releaseStatics(boolean param0) {
         field_n = null;
         if (param0) {
-          field_n = (jua) null;
+          field_n = (AccountServiceResult) null;
           field_p = null;
           return;
         }

@@ -34,8 +34,8 @@ final class FollowCamera implements Camera {
         try {
           LegacyOpenGlPostProcessEffect.a(param2);
           ej.field_a.hideAllDialogs(true);
-          vn.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, LoadProfileCommand.field_r, param1, param0);
-          um.field_l = new mpa(ej.field_a, vn.field_b);
+          MessageDialogs.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, LoadProfileCommand.field_r, param1, param0);
+          um.field_l = new mpa(ej.field_a, MessageDialogs.field_b);
           ej.field_a.pushDialog(um.field_l, 114);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

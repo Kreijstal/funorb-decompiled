@@ -1658,7 +1658,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (null != this.field_eb &&
-            !BeamShooterBehaviour.a((byte) -96, this.field_Y, this.field_h)) {
+            !BeamShooterBehaviour.requiresTexCoordData((byte) -96, this.field_Y, this.field_h)) {
             if (this.field_d != null &&
               !this.field_d.canDiscardCpuData(16440)) {
               this.field_N = true;
@@ -2674,7 +2674,7 @@ final class HardwareModel extends ToolkitModel {
             param0.field_O.field_b = true;
           }
           boolean decompiledFrameCompleted4 = true;
-          if (MovingSawComponent.a(this.field_h, (byte) -47, param4)) {
+          if (MovingSawComponent.hasMutableTexCoords(this.field_h, (byte) -47, param4)) {
             if (param2.field_eb == null ||
               !(this.field_I <= param2.field_eb.length)) {
               var11Lifetime3 = this.field_fb;
@@ -2711,7 +2711,7 @@ final class HardwareModel extends ToolkitModel {
             param0.field_t = this.field_t;
             param0.field_eb = this.field_eb;
           }
-          if (OpenGlShader.a(param4, -23611, this.field_h)) {
+          if (OpenGlShader.requiresTexCoordBufferCopy(param4, -23611, this.field_h)) {
             param0.field_d = param2.field_d;
             param0.field_d.field_e = this.field_d.field_e;
             param0.field_d.field_h = this.field_d.field_h;
@@ -4879,7 +4879,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (param3 ||
             S2CRoundDeadlinePacket.hasFlag2048(this.field_Y, this.field_h, 0)) {
-            this.field_d = new HardwareModelVertexStream(OpenGlShader.a(this.field_Y, -23611, this.field_h));
+            this.field_d = new HardwareModelVertexStream(OpenGlShader.requiresTexCoordBufferCopy(this.field_Y, -23611, this.field_h));
           }
           if (param3 ||
             S2CMatchResultPacket.hasFlag2048(this.field_h, this.field_Y, 128)) {

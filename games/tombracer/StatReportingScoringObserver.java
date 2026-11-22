@@ -113,7 +113,7 @@ final class StatReportingScoringObserver extends MatchScoringObserver {
             StatReportingScoringObserver.releaseStatics(true);
           }
           var3_int = 0;
-          var4 = jua.field_d;
+          var4 = AccountServiceResult.field_d;
           while (DefaultTileRenderable.field_g.length > var3_int) {
             var5 = CoinItemComponent.field_H[var3_int];
             if (var5 >= 0) {

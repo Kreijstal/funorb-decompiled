@@ -163,7 +163,7 @@ final class MovingSawComponent extends PathMoverComponent {
         return false;
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean hasMutableTexCoords(int param0, byte param1, int param2) {
         int var3 = -102 / ((-92 - param1) / 34);
         return false;
     }
@@ -172,7 +172,7 @@ final class MovingSawComponent extends PathMoverComponent {
         field_M = null;
         field_O = null;
         if (param0 < 112) {
-          MovingSawComponent.a(27, (byte) 64, 114);
+          MovingSawComponent.hasMutableTexCoords(27, (byte) 64, 114);
         }
     }
 

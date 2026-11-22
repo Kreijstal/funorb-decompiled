@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn {
+final class MessageDialogs {
     static IntrusiveDeque field_a;
     static String field_c;
     static LoginForm field_b;
@@ -23,7 +23,7 @@ final class vn {
         field_b = null;
         field_c = null;
         if (param0 != 0) {
-          vn.releaseStatics((byte) 63);
+          MessageDialogs.releaseStatics((byte) 63);
         }
     }
 

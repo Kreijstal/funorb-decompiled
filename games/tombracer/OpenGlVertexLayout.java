@@ -5,7 +5,7 @@ final class OpenGlVertexLayout extends mna {
     VertexStreamLayout[] field_f;
     static UiComponent field_e;
 
-    final static jua takeRegistrationResponse(int param0) {
+    final static AccountServiceResult takeRegistrationResponse(int param0) {
         if (LegacyOpenGlTexture.field_a == fta.field_c) {
           throw new IllegalStateException();
         }
@@ -14,7 +14,7 @@ final class OpenGlVertexLayout extends mna {
           return PlantModel.field_n;
         }
         if (param0 != 3239) {
-          return (jua) null;
+          return (AccountServiceResult) null;
         }
         return null;
     }

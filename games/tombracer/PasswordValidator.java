@@ -237,7 +237,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var5 = var4;
           if (ld.isPasswordLengthInvalid(false, var5)) {
-            stackIn_5_0 = dva.field_a;
+            stackIn_5_0 = PasswordLengthErrorText.text;
             return stackIn_5_0;
           }
           if (ArchiveNetworkClient.containsNonAlphanumeric((byte) -72, var5)) {
@@ -265,7 +265,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_25_0;
           }
           if (!UiComponent.containsForwardOrReversed(true, var5, var6)) {
-            return dva.field_a;
+            return PasswordLengthErrorText.text;
           }
           stackIn_29_0 = LegacyOpenGlTexture.field_j;
           return stackIn_29_0;

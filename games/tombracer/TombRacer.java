@@ -220,7 +220,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         TombRacer.releaseStatics(param0 + 3787);
         cq.releaseStatics(-90);
         GameKeyHandler.releaseStatics(127);
-        pba.releaseStatics(4096);
+        SmootherStepTable.releaseStatics(4096);
         IntrusiveDeque.releaseStatics((byte) 91);
         SoftwareRasterizer.releaseStatics();
         Transform3D.releaseStatics(27316);
@@ -237,7 +237,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         MusicVolumeControl.releaseStatics(false);
         SoftwareRasterBlitter.releaseStatics(false);
         dga.releaseStatics(-29262);
-        ke.releaseStatics(3712);
+        ClassicDisplayText.releaseStatics(3712);
         MenuScreen.releaseStatics(false);
         RemovedFromGameMenu.releaseStatics((byte) 126);
         MembersUpsellMenu.releaseStatics(-120);
@@ -285,7 +285,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         CompletedStatusText.releaseStatics(-124);
         nb.releaseStatics((byte) -95);
         eu.releaseStatics(114);
-        vn.releaseStatics((byte) 0);
+        MessageDialogs.releaseStatics((byte) 0);
         no.releaseStatics(true);
         GameAssetLoader.releaseStatics((byte) -35);
         PacketDiagnostics.releaseStatics((byte) 120);
@@ -300,7 +300,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         SoundCache.releaseStatics(-1);
         MusicPlayer.releaseStatics(true);
         PlayingSound.releaseStatics(0);
-        ru.releaseStatics(false);
+        RoundWinnerText.releaseStatics(false);
         dra.releaseStatics(-109);
         SoundEventPlayer.releaseStatics(-101);
         MenuEntry.releaseStatics(1);
@@ -309,7 +309,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         vha.releaseStatics(640);
         MatchOverlay.releaseStatics(17355);
         MessageOverlay.releaseStatics((byte) 96);
-        fda.releaseStatics(param0 + 3574);
+        TextSpewerDefaults.releaseStatics(param0 + 3574);
         du.releaseStatics(-6884);
         PlayerModel.releaseStatics((byte) 126);
         PenaltyNotice.releaseStatics(true);
@@ -361,7 +361,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         DefaultRoomObjectRenderer.releaseStatics(param0 ^ -14342);
         RoomComponentFactory.releaseStatics((byte) -114);
         PlayerSimulation.releaseStatics(param0 ^ param0);
-        dva.releaseStatics((byte) 53);
+        PasswordLengthErrorText.releaseStatics((byte) 53);
         MainRoomCatalog.releaseStatics(-116);
         CharacterChoice.releaseStatics(3);
         RaceStandings.releaseStatics((byte) -120);
@@ -370,7 +370,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         MatchStatistics.releaseStatics(false);
         ModelAnimator.releaseStatics((byte) 97);
         uma.releaseStatics(-1);
-        hu.releaseStatics((byte) 119);
+        FloatTrigTables.releaseStatics((byte) 119);
         GraphicsHeap.releaseStatics((byte) 86);
         GameFontMetrics.releaseStatics(-63);
         ModelData.releaseStatics((byte) -71);
@@ -491,8 +491,8 @@ public final class TombRacer extends TombRacerShell implements ls {
         apa.releaseStatics((byte) 7);
         wp.releaseStatics((byte) 97);
         bl.releaseStatics(123);
-        wb.releaseStatics((byte) -39);
-        qoa.releaseStatics((byte) 33);
+        LargeFontMetrics.releaseStatics((byte) -39);
+        SoundEffectArchive.releaseStatics((byte) 33);
         TriangleRasterizer.releaseStatics();
         VorbisSample.releaseStatics();
         uca.releaseStatics(65);
@@ -517,7 +517,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         ImageProducerRasterBuffer.releaseStatics(param0 + 3668);
         DateOfBirthPanel.releaseStatics(param0 ^ 3628);
         MiscItemBehaviour.releaseStatics(param0 ^ -3666);
-        cba.releaseStatics((byte) 109);
+        EllipseShapeDecoder.releaseStatics((byte) 109);
         TeleportState.releaseStatics(32);
         StatusEffect.releaseStatics(2907);
         StandingsPhase.releaseStatics((byte) 62);
@@ -839,7 +839,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         LegacyOpenGlReflectionEffect.releaseStatics(9681);
         LegacyOpenGlEnvironmentWaterEffect.releaseStatics((byte) -58);
         fca.releaseStatics(-1);
-        oca.releaseStatics(false);
+        ClientRsaModulus.releaseStatics(false);
         TextureFilter.releaseStatics(32768);
         HardwareGraphicsHeap.releaseStatics(-114);
         HardwareModelBillboard.releaseStatics((byte) 83);
@@ -1567,7 +1567,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         }
         LaserShooterComponent.ensureToolkitResources(17229);
         PendingRequestFactory.field_a = false;
-        if (oq.getSharedShellListener((byte) 124).isModal(~param0)) {
+        if (ShellListenerProvider.getSharedShellListener((byte) 124).isModal(~param0)) {
           return;
         }
         this.drawFrame(true, SecondaryNodeDequeIterator.field_a, (byte) 17);

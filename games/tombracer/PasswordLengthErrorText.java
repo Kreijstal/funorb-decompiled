@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dva {
-    static String field_a;
+final class PasswordLengthErrorText {
+    static String text;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
         if (param0 < 27) {
-          field_a = (String) null;
-          field_a = null;
+          text = (String) null;
+          text = null;
           return;
         }
-        field_a = null;
+        text = null;
     }
 
     static {
         field_z = "dva.A(";
-        field_a = "Passwords must be between 5 and 20 characters long";
+        text = "Passwords must be between 5 and 20 characters long";
     }
 }

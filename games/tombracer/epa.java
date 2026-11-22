@@ -65,7 +65,7 @@ final class epa extends MenuScreen {
                 param2 = SoundCache.field_d;
               }
               param0 = 2;
-              vn.field_b.setFieldText(ScrollControlWidget.field_E, 123);
+              MessageDialogs.field_b.setFieldText(ScrollControlWidget.field_E, 123);
             }
             if (param0 == 10) {
               ToolkitModel.openDisplayNameForm((byte) -33);
@@ -85,7 +85,7 @@ final class epa extends MenuScreen {
                 return;
               }
               if (!LoadProfileCommand.field_r) {
-                vn.field_b.clearFields((byte) -92);
+                MessageDialogs.field_b.clearFields((byte) -92);
                 return;
               }
             }

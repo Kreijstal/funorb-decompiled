@@ -239,7 +239,7 @@ final class TextureCombineSource {
         int var8Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var1_int = jua.field_d;
+          var1_int = AccountServiceResult.field_d;
           if (param0 != -83) {
             TextureCombineSource.a((byte) -23);
           }

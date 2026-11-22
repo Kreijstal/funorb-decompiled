@@ -17,7 +17,7 @@ final class re {
         BufferedSocket.field_g = SoftwareRasterizer.height;
         SceneLight.field_i = SoftwareRasterizer.width;
         NodeHashTable.a(16);
-        oca.field_b.a(0, 0, 20, C2SRoomResultPacket.field_a.field_G, -2 + (-40 + C2SRoomResultPacket.field_a.field_t));
+        ClientRsaModulus.field_b.a(0, 0, 20, C2SRoomResultPacket.field_a.field_G, -2 + (-40 + C2SRoomResultPacket.field_a.field_t));
         PerlinNoise2D.field_t.setBounds(HardwareWaterTextures.field_e.field_G, ToolkitSelector.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + ToolkitSelector.field_a;
         RasterShape.field_e.setBounds(HardwareWaterTextures.field_e.field_G, HardwareWaterTextures.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);

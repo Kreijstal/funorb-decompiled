@@ -227,14 +227,14 @@ final class WaveformOperator extends TextureOperator {
               param1 <= 105) {
               var4 = args;
               DrawOfferMenu.setUsernameSuggestions((byte) -109, var4);
-              SnakePitModel.field_t = IntIntHashTable.a(90, args);
+              SnakePitModel.field_t = IntIntHashTable.createAccountSuggestionsReply(90, args);
             } else {
-              SnakePitModel.field_t = doa.a(param2, param1, (byte) 114);
+              SnakePitModel.field_t = doa.createAccountFailureReply(param2, param1, (byte) 114);
             }
           } else {
             stackIn_4_0 = 97;
             stackIn_5_1 = !(QuickChatPhraseDefinition.field_n >= 13);
-            SnakePitModel.field_t = NanoTickClock.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
+            SnakePitModel.field_t = NanoTickClock.createAccountSuccessReply(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             DrawOfferMenu.setUsernameSuggestions((byte) -101, (String[]) null);
           }

@@ -106,9 +106,9 @@ final class NanoTickClock extends GameClock {
         field_h = null;
     }
 
-    final static jua a(byte param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessReply(byte param0, boolean param1) {
         int var3 = -49 / ((-41 - param0) / 63);
-        jua var2 = new jua(true);
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_a = param1 ? true : false;
         return var2;
     }
@@ -129,9 +129,9 @@ final class NanoTickClock extends GameClock {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static jua $cfr$intArgs$a$78544449ccb1(int param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessReply(int param0, boolean param1) {
         int var3 = -49 / ((-41 - param0) / 63);
-        jua var2 = new jua(true);
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_a = param1 ? true : false;
         return var2;
     }

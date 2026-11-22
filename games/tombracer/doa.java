@@ -4,16 +4,16 @@
 final class doa {
     private LegacyVertexArray field_a;
 
-    final static jua a(String param0, int param1, byte param2) {
-        jua var3 = null;
+    final static AccountServiceResult createAccountFailureReply(String param0, int param1, byte param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        jua stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new jua(false);
+          var3 = new AccountServiceResult(false);
           var3.field_b = param0;
           var3.field_f = param1;
           if (param2 != 114) {

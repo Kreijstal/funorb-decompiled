@@ -414,12 +414,12 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean requiresTexCoordData(byte param0, int param1, int param2) {
         boolean stackIn_7_0 = false;
         if (param0 > -58) {
           return true;
         }
-        stackIn_7_0 = (MovingSawComponent.a(param2, (byte) 2, param1)) || (OpenGlShader.a(param1, -23611, param2));
+        stackIn_7_0 = (MovingSawComponent.hasMutableTexCoords(param2, (byte) 2, param1)) || (OpenGlShader.requiresTexCoordBufferCopy(param1, -23611, param2));
         return stackIn_7_0;
     }
 

@@ -845,7 +845,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text5", (byte) 123);
                 if (null != var2) {
-                  pba.field_c = jaa.decodeText((byte) 90, var2);
+                  SmootherStepTable.field_c = jaa.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text6", (byte) 116);
                 if (var2 != null) {
@@ -1237,7 +1237,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_timeup", (byte) 114);
                 if (var2 != null) {
-                  hu.field_a = jaa.decodeText((byte) 126, var2);
+                  FloatTrigTables.field_a = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_chosen_character", (byte) 117);
                 if (var2 != null) {
@@ -1253,7 +1253,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("roundover_winner", (byte) 123);
                 if (null != var2) {
-                  ru.field_a = jaa.decodeText((byte) 47, var2);
+                  RoundWinnerText.text = jaa.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameover", (byte) 106);
                 if (null != var2) {
@@ -1289,7 +1289,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for", (byte) 127);
                 if (var2 != null) {
-                  cba.field_c = jaa.decodeText((byte) 28, var2);
+                  EllipseShapeDecoder.field_c = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("time_remaining", (byte) 100);
                 if (null != var2) {
@@ -1321,7 +1321,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for_sync", (byte) 104);
                 if (var2 != null) {
-                  hu.field_d = jaa.decodeText((byte) 87, var2);
+                  FloatTrigTables.field_d = jaa.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("treasure_values", (byte) 102);
                 if (null != var2) {

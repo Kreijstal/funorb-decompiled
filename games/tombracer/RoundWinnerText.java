@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ru {
-    static String field_a;
+final class RoundWinnerText {
+    static String text;
     private static String field_z;
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          field_a = (String) null;
-          field_a = null;
+          text = (String) null;
+          text = null;
           return;
         }
-        field_a = null;
+        text = null;
     }
 
     static {
         field_z = "ru.A(";
-        field_a = "<%0> wins the round!";
+        text = "<%0> wins the round!";
     }
 }

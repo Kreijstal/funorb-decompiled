@@ -53,10 +53,10 @@ final class fa {
             if (QueuedPlayerEvent.isFriend(false, mn.field_n)) {
               var2 = LegacyOpenGlFlowingWaterEffect.formatText(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
-                var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
+                var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{wp.field_a});
               }
             } else {
-              var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{wp.field_a});
             }
             if (OpenGlBufferObject.field_b) {
               TreasureValuesOverlay.addChatMessage(0, true, (String) null, (String) (var2), (String) null, 2);

@@ -506,7 +506,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     final static void resetConnectionStatics(int param0) {
-        qoa.field_a = false;
+        SoundEffectArchive.field_a = false;
         if (param0 != -18) {
           return;
         }

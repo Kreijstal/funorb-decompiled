@@ -156,7 +156,7 @@ final class RewardChoicePhase extends MatchPhase {
           var9 = (SwitchLinkList.getCanvasHeight(0) >> 1) - (HardwareModelIndexData.field_f.height() >> 1);
           HardwareModelIndexData.field_f.draw(var8, var9);
           if (var3 == 0) {
-            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, EllipseShapeDecoder.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
           } else {
             SocketConnector.drawWrappedText(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
             var10 = (-this.rewardChoice.getCurrentPlayerTicks(-1) + 750) / 50 + 1;

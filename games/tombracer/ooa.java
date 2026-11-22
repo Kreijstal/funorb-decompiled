@@ -10,8 +10,8 @@ final class ooa extends JavaKeyCodeMapPatches {
     final static String getAccountNameOrFallback(byte param0) {
         String var1 = "";
         if (param0 < -46) {
-          if (null != vn.field_b) {
-            var1 = vn.field_b.getUsername(39);
+          if (null != MessageDialogs.field_b) {
+            var1 = MessageDialogs.field_b.getUsername(39);
           }
           if (var1.length() == 0) {
             var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);
@@ -22,8 +22,8 @@ final class ooa extends JavaKeyCodeMapPatches {
           return var1;
         }
         ooa.getAccountNameOrFallback((byte) -83);
-        if (null != vn.field_b) {
-          var1 = vn.field_b.getUsername(39);
+        if (null != MessageDialogs.field_b) {
+          var1 = MessageDialogs.field_b.getUsername(39);
         }
         if (var1.length() == 0) {
           var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);

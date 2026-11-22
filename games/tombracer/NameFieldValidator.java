@@ -11,7 +11,7 @@ final class NameFieldValidator extends TextFieldValidator {
     }
 
     final ValidationState validateText(byte param0, String param1) {
-        jua var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         ValidationState stackIn_4_0 = null;
@@ -64,7 +64,7 @@ final class NameFieldValidator extends TextFieldValidator {
     final String validationMessageForText(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        jua var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
         Object stackIn_9_0 = null;

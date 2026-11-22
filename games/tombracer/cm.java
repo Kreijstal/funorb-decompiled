@@ -533,7 +533,7 @@ final class cm implements GamePacket {
                       if (var22_int == 1) {
                         var21 = rm.field_b;
                       } else {
-                        var21 = LegacyOpenGlFlowingWaterEffect.formatText(112, vn.field_c, new String[]{Integer.toString(var22_int)});
+                        var21 = LegacyOpenGlFlowingWaterEffect.formatText(112, MessageDialogs.field_c, new String[]{Integer.toString(var22_int)});
                       }
                     }
                     if (var12 != 0) {

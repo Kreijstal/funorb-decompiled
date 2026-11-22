@@ -6,12 +6,12 @@ final class OpenGlShader {
     long handle;
     private static String[] field_b;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresTexCoordBufferCopy(int param0, int param1, int param2) {
         if (param1 == -23611) {
-          return MovingSawComponent.a(param2, (byte) -128, param0) & S2CRoundDeadlinePacket.hasFlag2048(param0, param2, 0);
+          return MovingSawComponent.hasMutableTexCoords(param2, (byte) -128, param0) & S2CRoundDeadlinePacket.hasFlag2048(param0, param2, 0);
         }
         field_b = (String[]) null;
-        return MovingSawComponent.a(param2, (byte) -128, param0) & S2CRoundDeadlinePacket.hasFlag2048(param0, param2, 0);
+        return MovingSawComponent.hasMutableTexCoords(param2, (byte) -128, param0) & S2CRoundDeadlinePacket.hasFlag2048(param0, param2, 0);
     }
 
     protected final void finalize() throws Throwable {
@@ -27,8 +27,8 @@ final class OpenGlShader {
           if (param0 != 0) {
             field_b = (String[]) null;
           }
-          vn.field_b = new LoginForm(param1, param2, false, true, true);
-          um.field_l.transitionToContent(101, vn.field_b);
+          MessageDialogs.field_b = new LoginForm(param1, param2, false, true, true);
+          um.field_l.transitionToContent(101, MessageDialogs.field_b);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pr.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -37,7 +37,7 @@ final class OpenGlShader {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 28122) {
-          OpenGlShader.a(-61, 4, -35);
+          OpenGlShader.requiresTexCoordBufferCopy(-61, 4, -35);
         }
     }
 

@@ -52,16 +52,16 @@ final class IntIntHashTable {
         }
     }
 
-    final static jua a(int param0, String[] param1) {
-        jua var2 = null;
+    final static AccountServiceResult createAccountSuggestionsReply(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        jua stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new jua(false);
+          var2 = new AccountServiceResult(false);
           var2.field_c = param1;
           if (param0 <= 80) {
             IntIntHashTable.releaseStatics(3);

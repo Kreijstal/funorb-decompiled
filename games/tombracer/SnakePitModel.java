@@ -8,7 +8,7 @@ final class SnakePitModel extends TrapModel {
     private PitSnakeModel[] field_s;
     private SnakePitTile[][] field_r;
     static String field_m;
-    static jua field_t;
+    static AccountServiceResult field_t;
     private int field_u;
     static byte[] field_n;
 

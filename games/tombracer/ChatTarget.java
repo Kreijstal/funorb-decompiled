@@ -19,7 +19,7 @@ abstract class ChatTarget {
         var8 = TombRacer.field_G ? 1 : 0;
         if (~WallCrusherComponent.field_H != param2) {
           if (param3 == 0) {
-            vn.field_a = null;
+            MessageDialogs.field_a = null;
             WallCrusherComponent.field_H = param3;
             IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o == 0 &&
@@ -49,7 +49,7 @@ abstract class ChatTarget {
           }
         } else {
           if (param3 > 0) {
-            vn.field_a = new IntrusiveDeque();
+            MessageDialogs.field_a = new IntrusiveDeque();
             WallCrusherComponent.field_H = param3;
             IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o == 0 &&
@@ -62,7 +62,7 @@ abstract class ChatTarget {
             }
           } else {
             if (param3 == 0) {
-              vn.field_a = null;
+              MessageDialogs.field_a = null;
             }
             WallCrusherComponent.field_H = param3;
             IntNode.field_h = param1;

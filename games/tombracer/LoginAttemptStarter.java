@@ -12,7 +12,7 @@ final class LoginAttemptStarter {
         }
         try {
           ScrollControlWidget.field_E = param1;
-          vn.showMessageDialog(108, HardwareModel.field_bb, param0);
+          MessageDialogs.showMessageDialog(108, HardwareModel.field_bb, param0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

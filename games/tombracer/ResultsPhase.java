@@ -432,7 +432,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var15Lifetime1 = stackIn_162_0;
             stackIn_165_0 = (var15Lifetime1 == 0) ? 0 : 20;
-            var16 = stackIn_165_0 + Math.max(95 + wb.field_a.stringWidth("x" + var39, (byte) -103), wb.field_a.stringWidth("+" + var40, (byte) 87) + 70);
+            var16 = stackIn_165_0 + Math.max(95 + LargeFontMetrics.metrics.stringWidth("x" + var39, (byte) -103), LargeFontMetrics.metrics.stringWidth("+" + var40, (byte) 87) + 70);
             stackIn_167_0 = 40;
             stackIn_167_1 = (int)this.field_r[var8Lifetime3].field_q;
             if ((double)(-var16 + var3) <= this.field_r[var8Lifetime3].field_q) {
@@ -448,7 +448,7 @@ final class ResultsPhase extends MatchPhase {
             RoomEffectTraps.drawLeftTextWithShadow(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             RoomEffectTraps.drawLeftTextWithShadow(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
-              var19Lifetime1 = 25 + wb.field_a.stringWidth("x" + var39, (byte) 31) + var17Lifetime1;
+              var19Lifetime1 = 25 + LargeFontMetrics.metrics.stringWidth("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
               var41 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var41;
@@ -478,7 +478,7 @@ final class ResultsPhase extends MatchPhase {
               stackIn_137_0 = 0;
             }
             var15Lifetime1 = stackIn_137_0;
-            stackIn_139_0 = Math.max(95 + wb.field_a.stringWidth("x" + var36, (byte) 49), 70 + wb.field_a.stringWidth("+" + var37, (byte) 99));
+            stackIn_139_0 = Math.max(95 + LargeFontMetrics.metrics.stringWidth("x" + var36, (byte) 49), 70 + LargeFontMetrics.metrics.stringWidth("+" + var37, (byte) 99));
             if (var15Lifetime1 != 0) {
               stackIn_140_1 = 20;
             } else {
@@ -499,7 +499,7 @@ final class ResultsPhase extends MatchPhase {
             RoomEffectTraps.drawLeftTextWithShadow(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             RoomEffectTraps.drawLeftTextWithShadow(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
-              var19Lifetime1 = var17Lifetime1 + (wb.field_a.stringWidth("x" + var36, (byte) -122) + 25);
+              var19Lifetime1 = var17Lifetime1 + (LargeFontMetrics.metrics.stringWidth("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
               var38 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var38;
@@ -531,7 +531,7 @@ final class ResultsPhase extends MatchPhase {
               }
               var15Lifetime1 = stackIn_112_0;
               stackIn_115_0 = (var15Lifetime1 == 0) ? 0 : 20;
-              var16 = stackIn_115_0 + Math.max(95 + wb.field_a.stringWidth("x" + var33, (byte) 45), 70 + wb.field_a.stringWidth("+" + var34, (byte) 98));
+              var16 = stackIn_115_0 + Math.max(95 + LargeFontMetrics.metrics.stringWidth("x" + var33, (byte) 45), 70 + LargeFontMetrics.metrics.stringWidth("+" + var34, (byte) 98));
               stackIn_117_0 = 40;
               stackIn_117_1 = (int)this.field_r[var8Lifetime3].field_q;
               if (!((double)(-var16 + var3) <= this.field_r[var8Lifetime3].field_q)) {
@@ -547,7 +547,7 @@ final class ResultsPhase extends MatchPhase {
               RoomEffectTraps.drawLeftTextWithShadow(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               RoomEffectTraps.drawLeftTextWithShadow(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               if (var15Lifetime1 != 0) {
-                var19Lifetime1 = var17Lifetime1 + wb.field_a.stringWidth("x" + var33, (byte) 36) + 25;
+                var19Lifetime1 = var17Lifetime1 + LargeFontMetrics.metrics.stringWidth("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;
                 var35 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
                 var21 = var35;

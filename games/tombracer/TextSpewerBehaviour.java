@@ -57,7 +57,7 @@ final class TextSpewerBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.field_n = fda.field_a;
+          this.field_n = TextSpewerDefaults.messages;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oh.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

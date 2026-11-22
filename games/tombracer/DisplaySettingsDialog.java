@@ -189,7 +189,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
           this.field_T.field_E = 83;
           this.field_T.setCellSpacing(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
-          this.field_W = this.addIconButton(-82, DirectByteStorage.field_f, ke.field_a, (WidgetListener) (this));
+          this.field_W = this.addIconButton(-82, DirectByteStorage.field_f, ClassicDisplayText.text, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
             this.field_N = this.addIconButton(-87, RasterShape.field_a, NativeSceneLight.field_o, (WidgetListener) (this));
           }

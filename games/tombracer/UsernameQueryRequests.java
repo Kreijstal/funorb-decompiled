@@ -13,10 +13,10 @@ final class UsernameQueryRequests {
         field_b = null;
     }
 
-    final static jua requestOrReuseUsernameQuery(int param0, String param1) {
+    final static AccountServiceResult requestOrReuseUsernameQuery(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_9_0 = null;
-        jua stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -38,7 +38,7 @@ final class UsernameQueryRequests {
           wt.field_d = PlayerResultRow.field_y;
           uaa.field_a = param1;
           stackIn_9_0 = null;
-          return (jua) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

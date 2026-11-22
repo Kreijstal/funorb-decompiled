@@ -357,7 +357,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -102, "invite_accept_xs_game");
                 if (null != var2) {
-                  pba.field_d = jaa.decodeText((byte) 46, var2);
+                  SmootherStepTable.field_d = jaa.decodeText((byte) 46, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 109, "invite_decline_xs_game");
                 if (null != var2) {
@@ -745,7 +745,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "privatechat_friend_notlisted");
                 if (null != var2) {
-                  pba.field_a = jaa.decodeText((byte) 86, var2);
+                  SmootherStepTable.field_a = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -121, "chatviewscrolledup");
                 if (null != var2) {
@@ -777,7 +777,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_moreratedgames");
                 if (var2 != null) {
-                  vn.field_c = jaa.decodeText((byte) 89, var2);
+                  MessageDialogs.field_c = jaa.decodeText((byte) 89, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -68, "gameopt_needrating");
                 if (null != var2) {
@@ -1603,7 +1603,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -12, "create_alert_passlength");
                 if (null != var2) {
-                  dva.field_a = jaa.decodeText((byte) 54, var2);
+                  PasswordLengthErrorText.text = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_alert_passcontainsname");
                 if (var2 != null) {
@@ -2779,7 +2779,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -46, "graphics_config_fixed_size");
                 if (null != var2) {
-                  ke.field_a = jaa.decodeText((byte) 47, var2);
+                  ClassicDisplayText.text = jaa.decodeText((byte) 47, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -40, "graphics_config_resizable");
                 if (null != var2) {

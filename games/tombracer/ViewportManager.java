@@ -26,7 +26,7 @@ final class ViewportManager {
     final boolean canResizeViewport(byte param0) {
         if (param0 >= -113) {
           this.field_n = -43;
-          if (this.field_i > cba.field_d) {
+          if (this.field_i > EllipseShapeDecoder.field_d) {
             return false;
           }
           if (ReportAbuseDialog.field_ub > 0) {
@@ -34,7 +34,7 @@ final class ViewportManager {
           }
           return false;
         }
-        if (this.field_i > cba.field_d) {
+        if (this.field_i > EllipseShapeDecoder.field_d) {
           return false;
         }
         if (ReportAbuseDialog.field_ub > 0) {
@@ -157,7 +157,7 @@ final class ViewportManager {
               return;
             }
             this.field_q = this.field_k;
-            if (this.field_i > cba.field_d) {
+            if (this.field_i > EllipseShapeDecoder.field_d) {
               this.field_h = false;
             } else {
               this.applyRequestedSize(-102);
@@ -192,7 +192,7 @@ final class ViewportManager {
               return;
             }
             this.field_q = this.field_k;
-            if (this.field_i > cba.field_d) {
+            if (this.field_i > EllipseShapeDecoder.field_d) {
               this.field_h = false;
             } else {
               this.applyRequestedSize(-102);
@@ -223,7 +223,7 @@ final class ViewportManager {
             return;
           }
           this.field_q = this.field_k;
-          if (this.field_i > cba.field_d) {
+          if (this.field_i > EllipseShapeDecoder.field_d) {
             this.field_h = false;
           } else {
             this.applyRequestedSize(-102);
@@ -353,7 +353,7 @@ final class ViewportManager {
           if (ReportAbuseDialog.field_ub <= 0) {
             return false;
           }
-          if (this.field_i > cba.field_d) {
+          if (this.field_i > EllipseShapeDecoder.field_d) {
             return true;
           }
           return false;
@@ -361,7 +361,7 @@ final class ViewportManager {
         if (ReportAbuseDialog.field_ub <= 0) {
           return false;
         }
-        if (this.field_i > cba.field_d) {
+        if (this.field_i > EllipseShapeDecoder.field_d) {
           return true;
         }
         return false;

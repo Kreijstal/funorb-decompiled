@@ -55,7 +55,7 @@ final class MidiVoiceMixer extends PcmStream {
         LoadProfileCommand.field_r = param0 ? true : false;
         VertexAttribute.field_r = true;
         ej.field_a.hideAllDialogs(true);
-        vn.showMessageDialog(86, KeySwitchComponent.field_M, false);
+        MessageDialogs.showMessageDialog(86, KeySwitchComponent.field_M, false);
     }
 
     final static void drawAwtLoadingBar(byte param0, String param1, java.awt.Color param2, int param3, boolean param4) {

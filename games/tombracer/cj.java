@@ -42,7 +42,7 @@ final class cj implements WidgetPainter {
           var2_long = AdjustedWallClock.currentTimeMillis((byte) -107);
           if (WallCrusherComponent.field_H != 0 &&
             GameKeyHandler.field_b < 0) {
-            var4_ref_rha = (rha) (vn.field_a.first(-80));
+            var4_ref_rha = (rha) (MessageDialogs.field_a.first(-80));
             if (var4_ref_rha != null &&
               var2_long > var4_ref_rha.field_f) {
               var4_ref_rha.unlink(115);
@@ -90,7 +90,7 @@ final class cj implements WidgetPainter {
             for (var6 = 0; var6 < uca.field_d; var6++) {
               var5.field_g[var6] = WeaveOperator.field_q.payload[var6];
             }
-            vn.field_a.addLast((byte) -98, var5);
+            MessageDialogs.field_a.addLast((byte) -98, var5);
             GameKeyHandler.field_b = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

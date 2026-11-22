@@ -60,7 +60,7 @@ final class qna {
         int var7Lifetime1Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          qoa.field_a = true;
+          SoundEffectArchive.field_a = true;
           mq.field_a = param2;
           if (mq.field_a == 0) {
             var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, ClientMemoryVertexArray.field_c);
@@ -285,13 +285,13 @@ final class qna {
             }
             HardwareModelVertexStream.field_f = stackIn_110_0 + stackIn_111_1;
           }
-          jua.field_d = -(HardwareModelVertexStream.field_f >> 1) + IdolItemComponent.field_L;
+          AccountServiceResult.field_d = -(HardwareModelVertexStream.field_f >> 1) + IdolItemComponent.field_L;
           TripBeamComponent.field_K = new int[DefaultTileRenderable.field_g.length][];
           var4Lifetime3 = 0;
           if (param0 != 1) {
             qna.buildFullscreenDialog(-17, true, 122);
           }
-          var5Lifetime3 = jua.field_d;
+          var5Lifetime3 = AccountServiceResult.field_d;
           while (var4Lifetime3 < DefaultTileRenderable.field_g.length) {
             var6Lifetime1 = CoinItemComponent.field_H[var4Lifetime3];
             if (0 <= var6Lifetime1) {

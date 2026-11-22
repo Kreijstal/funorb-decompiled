@@ -74,9 +74,9 @@ final class kla {
             TextureOperator.field_l.dismiss((byte) -108);
           }
           var1 = ooa.getAccountNameOrFallback((byte) -107);
-          vn.field_b = new LoginForm(var1, (String) null, true, false, false);
+          MessageDialogs.field_b = new LoginForm(var1, (String) null, true, false, false);
           ej.field_a.pushDialog(um.field_l, 84);
-          um.field_l.transitionToContent(68, vn.field_b);
+          um.field_l.transitionToContent(68, MessageDialogs.field_b);
           um.field_l.finishTransition(true);
           return;
         }
@@ -86,9 +86,9 @@ final class kla {
           TextureOperator.field_l.dismiss((byte) -108);
         }
         var1Lifetime1 = ooa.getAccountNameOrFallback((byte) -107);
-        vn.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);
+        MessageDialogs.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);
         ej.field_a.pushDialog(um.field_l, 84);
-        um.field_l.transitionToContent(68, vn.field_b);
+        um.field_l.transitionToContent(68, MessageDialogs.field_b);
         um.field_l.finishTransition(true);
     }
 

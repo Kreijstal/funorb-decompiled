@@ -170,13 +170,13 @@ abstract class FixedPointPerlinNoise3D {
                 } else {
                   var16 = 0;
                 }
-                var19 = pba.field_b[var7];
+                var19 = SmootherStepTable.values[var7];
                 var24 = this.permutation[var16];
-                var17 = pba.field_b[var5];
+                var17 = SmootherStepTable.values[var5];
                 var20 = -4096 + var5;
                 var22 = -4096 + var7;
                 var21 = var6 - 4096;
-                var18 = pba.field_b[var6];
+                var18 = SmootherStepTable.values[var6];
                 var23 = this.permutation[var15];
                 var25 = this.permutation[var13 + var23];
                 var28 = this.permutation[var14 + var24];

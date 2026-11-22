@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cba {
+final class EllipseShapeDecoder {
     static int field_d;
     static java.applet.Applet field_a;
     static ModelData[] field_b;
@@ -19,7 +19,7 @@ final class cba {
         field_a = null;
         field_c = null;
         if (param0 <= 93) {
-          cba.releaseStatics((byte) 5);
+          EllipseShapeDecoder.releaseStatics((byte) 5);
         }
     }
 

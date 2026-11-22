@@ -43,8 +43,8 @@ final class OpenGlTransform3D extends Transform3D {
     }
 
     final void rotateX(int param0) {
-        float var2 = hu.field_c[param0 & 16383];
-        float var3 = hu.field_b[param0 & 16383];
+        float var2 = FloatTrigTables.cosine[param0 & 16383];
+        float var3 = FloatTrigTables.sine[param0 & 16383];
         float var4 = this.field_i;
         float var5 = this.field_r;
         float var6 = this.field_g;
@@ -160,8 +160,8 @@ final class OpenGlTransform3D extends Transform3D {
         float var8 = 0.0f;
         float var9 = 0.0f;
         if (0 != param0) {
-          var8 = hu.field_c[16383 & param0];
-          var9 = hu.field_b[16383 & param0];
+          var8 = FloatTrigTables.cosine[16383 & param0];
+          var9 = FloatTrigTables.sine[16383 & param0];
           this.field_h = 0.0f;
           this.field_j = 0.0f;
           this.field_k = (float)param3 * -var9;
@@ -199,8 +199,8 @@ final class OpenGlTransform3D extends Transform3D {
     }
 
     final void rotateY(int param0) {
-        float var2 = hu.field_c[param0 & 16383];
-        float var3 = hu.field_b[param0 & 16383];
+        float var2 = FloatTrigTables.cosine[param0 & 16383];
+        float var3 = FloatTrigTables.sine[param0 & 16383];
         float var4 = this.field_l;
         float var5 = this.field_k;
         float var6 = this.field_s;
@@ -292,8 +292,8 @@ final class OpenGlTransform3D extends Transform3D {
     }
 
     final void rotateZ(int param0) {
-        float var2 = hu.field_c[16383 & param0];
-        float var3 = hu.field_b[param0 & 16383];
+        float var2 = FloatTrigTables.cosine[16383 & param0];
+        float var3 = FloatTrigTables.sine[param0 & 16383];
         float var4 = this.field_l;
         float var5 = this.field_k;
         float var6 = this.field_s;
@@ -309,12 +309,12 @@ final class OpenGlTransform3D extends Transform3D {
     }
 
     final void setCamera(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = hu.field_c[16383 & param3];
-        float var8 = hu.field_b[param3 & 16383];
-        float var9 = hu.field_c[16383 & param4];
-        float var10 = hu.field_b[16383 & param4];
-        float var11 = hu.field_c[16383 & param5];
-        float var12 = hu.field_b[16383 & param5];
+        float var7 = FloatTrigTables.cosine[16383 & param3];
+        float var8 = FloatTrigTables.sine[param3 & 16383];
+        float var9 = FloatTrigTables.cosine[16383 & param4];
+        float var10 = FloatTrigTables.sine[16383 & param4];
+        float var11 = FloatTrigTables.cosine[16383 & param5];
+        float var12 = FloatTrigTables.sine[16383 & param5];
         float var13 = var8 * var11;
         float var14 = var12 * var8;
         this.field_i = var12 * -var9 + var13 * var10;

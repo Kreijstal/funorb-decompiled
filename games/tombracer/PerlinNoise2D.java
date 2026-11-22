@@ -145,7 +145,7 @@ final class PerlinNoise2D extends TextureOperator {
             }
             var11 = var11 & 4095;
             var17 = this.field_p[255 & var15] & 255;
-            var14 = pba.field_b[var11];
+            var14 = SmootherStepTable.values[var11];
             var18 = this.field_p[var16 & 255] & 255;
             if (!this.field_s) {
               for (var10 = 0; var10 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var10++) {
@@ -177,7 +177,7 @@ final class PerlinNoise2D extends TextureOperator {
               }
               var18 = 255 & this.field_p[255 & var16];
               var17 = this.field_p[var15 & 255] & 255;
-              var14 = pba.field_b[var11];
+              var14 = SmootherStepTable.values[var11];
               for (var10 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var10; var10++) {
                 var4_int = this.field_u * LobbyGameWidget.textureColumnCoords[var10];
                 var6 = this.noiseAt(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
@@ -200,7 +200,7 @@ final class PerlinNoise2D extends TextureOperator {
                 }
                 var18 = this.field_p[255 & var16] & 255;
                 var17 = this.field_p[255 & var15] & 255;
-                var14 = pba.field_b[var11];
+                var14 = SmootherStepTable.values[var11];
                 if (this.field_s &&
                   this.field_n - 1 == var7) {
                   for (var10 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var10; var10++) {
@@ -346,7 +346,7 @@ final class PerlinNoise2D extends TextureOperator {
         var10 = -4096 + param3;
         var12 = var12 & 255;
         var11 = -4096 + param4;
-        var15 = pba.field_b[param4];
+        var15 = SmootherStepTable.values[param4];
         var14 = 3 & this.field_p[param0 + var13];
         if (var14 > 1) {
           if (var14 == 2) {

@@ -162,7 +162,7 @@ final class rg extends SingleChildWidget {
           MusicVolumeControl.field_a[7] = fpa.snakeDeathMessages;
           MusicVolumeControl.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
           IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-          HazardEffect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, LegacyTextureCache.field_c};
+          HazardEffect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, SmootherStepTable.field_c, LegacyTextureCache.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, MouseWheelFactory.field_c};
           HazardEffect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
           IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
@@ -214,7 +214,7 @@ final class rg extends SingleChildWidget {
         MusicVolumeControl.field_a[7] = fpa.snakeDeathMessages;
         MusicVolumeControl.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
         IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-        HazardEffect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, LegacyTextureCache.field_c};
+        HazardEffect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, SmootherStepTable.field_c, LegacyTextureCache.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, MouseWheelFactory.field_c};
         HazardEffect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
         IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};

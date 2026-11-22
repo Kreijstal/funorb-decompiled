@@ -65,10 +65,10 @@ final class sb {
     final static void initAudioArchives(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           TextBlockLayout.field_a = param4;
-          qoa.field_b = param1;
+          SoundEffectArchive.archive = param1;
           S2CNextRoundPacket.field_a = param2;
           ControllerLocomotor.field_v = param3;
-          LegacyOpenGlTurbulentTextureEffect.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
+          LegacyOpenGlTurbulentTextureEffect.field_j = new SoundCache(SoundEffectArchive.archive, ControllerLocomotor.field_v);
           CauldronComponent.field_J = new PcmSample[237];
           int var5_int = -51 % ((param0 - 32) / 59);
           MenuEntry.field_j = new MusicTrack[4];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jua {
+final class AccountServiceResult {
     boolean field_e;
     String[] field_c;
     static int field_d;
@@ -10,7 +10,7 @@ final class jua {
     String field_b;
     private static String field_z;
 
-    jua(boolean param0) {
+    AccountServiceResult(boolean param0) {
         this.field_e = param0 ? true : false;
     }
 

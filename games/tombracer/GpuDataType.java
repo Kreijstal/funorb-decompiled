@@ -20,7 +20,7 @@ final class GpuDataType {
 
     final static boolean a(byte param0) {
         int var1 = -97 / ((param0 - 0) / 40);
-        return qoa.field_a;
+        return SoundEffectArchive.field_a;
     }
 
     public final String toString() {

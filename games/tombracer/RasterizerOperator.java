@@ -40,7 +40,7 @@ final class RasterizerOperator extends TextureOperator {
                     this.field_p[var4_int] = (RasterShape) ((Object) SwitchableId.decodeRasterShape(4, param1));
                   } else {
                     if (3 == var6) {
-                      this.field_p[var4_int] = (RasterShape) ((Object) cba.decodeRasterShape(64, param1));
+                      this.field_p[var4_int] = (RasterShape) ((Object) EllipseShapeDecoder.decodeRasterShape(64, param1));
                     }
                   }
                 }

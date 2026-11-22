@@ -88,9 +88,9 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           field_n = -21;
         }
         HardwareWaterTextures.field_e.addChild(-127, RasterShape.field_e);
-        oca.field_b = new lla(PbufferEntry.field_o, HardwareWaterTextures.field_e);
+        ClientRsaModulus.field_b = new lla(PbufferEntry.field_o, HardwareWaterTextures.field_e);
         C2SRoomResultPacket.field_a = new UiComponent(0L, (UiComponent) null);
-        C2SRoomResultPacket.field_a.addChild(-122, oca.field_b.field_a);
+        C2SRoomResultPacket.field_a.addChild(-122, ClientRsaModulus.field_b.field_a);
         C2SRoomResultPacket.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
         re.layoutMainScreen(-29040);
     }

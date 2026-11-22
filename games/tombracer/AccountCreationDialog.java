@@ -11,8 +11,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
 
     public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         if (param4 < 44) {
-          jua var7 = (jua) null;
-          this.a(-122, true, (jua) null);
+          AccountServiceResult var7 = (AccountServiceResult) null;
+          this.a(-122, true, (AccountServiceResult) null);
         }
         if (this.field_ib) {
           LegacyOpenGlFlowingWaterEffect.a(true, false, (byte) 101);
@@ -36,7 +36,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
     }
 
     final void h(boolean param0) {
-        this.a(7, param0, doa.a(RatingsScreen.field_v, 248, (byte) 114));
+        this.a(7, param0, doa.createAccountFailureReply(RatingsScreen.field_v, 248, (byte) 114));
     }
 
     final static String playTrackByName(String param0, int param1) {
@@ -91,7 +91,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
         field_gb = null;
     }
 
-    private final void a(int param0, boolean param1, jua param2) {
+    private final void a(int param0, boolean param1, AccountServiceResult param2) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -229,7 +229,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
     }
 
     final boolean updateFade(int param0) {
-        jua var2 = null;
+        AccountServiceResult var2 = null;
         if (this.field_B &&
           !this.field_eb) {
           var2 = OpenGlVertexLayout.takeRegistrationResponse(3239);

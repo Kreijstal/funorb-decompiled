@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qoa {
+final class SoundEffectArchive {
     static boolean field_a;
-    static ResourceArchive field_b;
+    static ResourceArchive archive;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
-        field_b = null;
+        archive = null;
         if (param0 <= 16) {
-          field_b = (ResourceArchive) null;
+          archive = (ResourceArchive) null;
         }
     }
 

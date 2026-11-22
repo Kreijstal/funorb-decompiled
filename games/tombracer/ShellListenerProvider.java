@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq {
+final class ShellListenerProvider {
     final static LevelSelectOverlay getSharedShellListener(byte param0) {
         if (param0 != 124) {
           return (LevelSelectOverlay) null;

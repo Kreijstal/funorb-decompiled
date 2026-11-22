@@ -31,7 +31,7 @@ final class MapWaypoint extends IntrusiveNode {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                cba.field_d = 1 + (int)(var3.longValue() / 1048576L);
+                EllipseShapeDecoder.field_d = 1 + (int)(var3.longValue() / 1048576L);
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

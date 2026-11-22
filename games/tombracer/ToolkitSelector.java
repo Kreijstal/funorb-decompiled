@@ -456,8 +456,8 @@ final class ToolkitSelector {
         if (param0 <= 16) {
           field_d = (GpuPrimitiveType) null;
         }
-        if (cba.field_a != null) {
-          return cba.field_a;
+        if (EllipseShapeDecoder.field_a != null) {
+          return EllipseShapeDecoder.field_a;
         }
         return (java.applet.Applet) ((Object) Corpse.field_j);
     }

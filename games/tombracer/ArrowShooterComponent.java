@@ -12,7 +12,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           if (param1 > -66) {
             field_K = (String) null;
           }
-          SingleChildWidget.field_v = param0.createFont(wb.field_a, MovingPlatformComponent.field_O, true);
+          SingleChildWidget.field_v = param0.createFont(LargeFontMetrics.metrics, MovingPlatformComponent.field_O, true);
           FloatPacketBuffer.field_j = param0.createFont(RatingsScreen.field_r, gga.field_O, true);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
