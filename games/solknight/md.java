@@ -19,7 +19,7 @@ final class md extends sk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -124) {
-            stackIn_4_0 = param1.b((byte) -117);
+            stackIn_4_0 = param1.isFullscreenAvailable((byte) -117);
             return stackIn_4_0;
           }
           return true;

@@ -49,7 +49,7 @@ final class sj extends dk {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            if (!ka.field_r.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_r.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

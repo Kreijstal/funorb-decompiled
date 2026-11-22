@@ -116,11 +116,11 @@ class DualLinkNode extends IntrusiveNode {
           }
           while (var2 < var1.field_h) {
             if (null != var4.field_k[var2] &&
-              var4.field_k[var2].field_c == 0) {
+              var4.field_k[var2].status == 0) {
               return false;
             }
             if (var4.field_s[var2] != null &&
-              var4.field_s[var2].field_c == 0) {
+              var4.field_s[var2].status == 0) {
               return false;
             }
             var2++;

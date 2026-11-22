@@ -657,7 +657,7 @@ final class GameEntity {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          re var4 = null;
+          PlatformTask var4 = null;
           int var5 = 0;
           DataInputStream var6 = null;
           int var7 = 0;
@@ -697,13 +697,13 @@ final class GameEntity {
               stackIn_14_3 = null;
               stackIn_14_6 = "" + al.field_b;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var8).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var8).toString()));
             var5 = -92 / ((param0 + 65) / 38);
-            while (var4.field_f == 0) {
+            while (var4.status == 0) {
               jj.a((byte) -120, 1L);
             }
-            if (1 == var4.field_f) {
-              var6 = (DataInputStream) (var4.field_b);
+            if (1 == var4.status) {
+              var6 = (DataInputStream) (var4.result);
               var6.read();
               var6.close();
             }

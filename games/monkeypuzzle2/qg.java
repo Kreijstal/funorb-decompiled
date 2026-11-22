@@ -5,7 +5,7 @@ final class qg {
     static String field_b;
     static int field_c;
     static long field_d;
-    static ic field_a;
+    static PlatformTask field_a;
 
     final static int a(byte param0, int param1) {
         int var2;

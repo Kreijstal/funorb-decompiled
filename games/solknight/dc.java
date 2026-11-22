@@ -93,19 +93,19 @@ final class dc extends a {
         int var5Lifetime1;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          if (!param1.b((byte) 31)) {
+          if (!param1.isFullscreenAvailable((byte) 31)) {
             stackIn_4_0 = new uj[]{};
             return stackIn_4_0;
           }
-          var8 = param1.a(7721);
-          while (0 == var8.field_c) {
+          var8 = param1.requestDisplayModes(7721);
+          while (0 == var8.status) {
             i.a((byte) 82, 10L);
           }
-          if (var8.field_c == 2) {
+          if (var8.status == 2) {
             stackIn_11_0 = new uj[]{};
             return stackIn_11_0;
           }
-          var10 = (int[]) (var8.field_e);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new uj[var10.length >> 2];

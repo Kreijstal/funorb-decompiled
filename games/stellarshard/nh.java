@@ -15,15 +15,15 @@ class nh extends sk {
     final static boolean a(int param0, boolean param1) {
         long dupTemp$2 = 0L;
         if (null == am.field_c) {
-          am.field_c = il.field_v.a(df.field_j, (byte) 34, ue.field_d);
+          am.field_c = il.field_v.requestDirectSocket(df.field_j, (byte) 34, ue.field_d);
         }
-        if (param0 == ~am.field_c.field_f) {
+        if (param0 == ~am.field_c.status) {
           return false;
         }
         dupTemp$2 = ih.a((byte) -98);
         t.field_d = dupTemp$2;
         PacketBuffer.field_o = dupTemp$2;
-        if (am.field_c.field_f != 1) {
+        if (am.field_c.status != 1) {
         }
         GzipDecompressor.field_d = lh.field_n;
         am.field_c = null;

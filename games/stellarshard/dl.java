@@ -8,7 +8,7 @@ final class dl extends dg {
     static Sprite[] field_C;
     private int field_J;
     private int field_E;
-    static re field_A;
+    static PlatformTask field_A;
     private int field_F;
     private boolean field_I;
     static String field_K;
@@ -23,7 +23,7 @@ final class dl extends dg {
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
         if (param0 != 1) {
-          field_A = (re) null;
+          field_A = (PlatformTask) null;
         }
         return 255 & param1;
     }
@@ -175,20 +175,20 @@ final class dl extends dg {
         a[] var4 = null;
         a var6 = null;
         int var7 = 0;
-        re var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = stellarshard.field_B;
         try {
-          if (!param0.a(-102)) {
+          if (!param0.isFullscreenAvailable(-102)) {
             stackIn_4_0 = new a[]{};
             return stackIn_4_0;
           }
-          var8 = param0.b(103);
-          while (var8.field_f == 0) {
+          var8 = param0.requestDisplayModes(103);
+          while (var8.status == 0) {
             jj.a((byte) -113, 10L);
           }
-          if (var8.field_f == 2) {
+          if (var8.status == 2) {
             stackIn_11_0 = new a[]{};
             return stackIn_11_0;
           }
@@ -196,7 +196,7 @@ final class dl extends dg {
             stackIn_14_0 = (a[]) null;
             return stackIn_14_0;
           }
-          var10 = (int[]) (var8.field_b);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new a[var10.length >> 2];

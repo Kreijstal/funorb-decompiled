@@ -204,7 +204,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (wh.field_c != null) {
             try {
-              wh.field_c.a((byte) 29);
+              wh.field_c.shutdown((byte) 29);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -875,9 +875,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dupTemp$0 = new PlatformTaskDispatcher(param3, param1, param4, true);
               wh.field_c = dupTemp$0;
               CachedArchiveSource.field_l = dupTemp$0;
-              var8 = wh.field_c.a(1, -95, (Runnable) (this));
+              var8 = wh.field_c.requestThreadStart(1, -95, (Runnable) (this));
               while (true) {
-                if (var8.field_c == 0) {
+                if (var8.status == 0) {
                   i.a((byte) 114, 10L);
                   if (var9 == 0) {
                     continue;

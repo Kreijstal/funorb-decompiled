@@ -322,7 +322,7 @@ class df {
         }
     }
 
-    final static df a(ka param0, java.awt.Component param1, int param2, int param3) {
+    final static df a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           al var4 = null;
           Throwable var4_ref = null;
@@ -362,7 +362,7 @@ class df {
                 field_q == null) {
                 field_q = new ck();
                 field_q.field_d = param0;
-                param0.a(field_d, 39, (Runnable) ((Object) field_q));
+                param0.requestThreadStart(field_d, 39, (Runnable) ((Object) field_q));
               }
               if (field_q != null) {
                 if (field_q.field_e[param2] != null) {

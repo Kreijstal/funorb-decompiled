@@ -3,7 +3,7 @@
  */
 final class df {
     static int field_d;
-    static be field_e;
+    static PlatformTaskDispatcher field_e;
     static String field_c;
     static boolean field_f;
     private String field_h;

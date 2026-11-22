@@ -202,10 +202,10 @@ final class pd {
         java.awt.Frame var7 = null;
         int var9 = 0;
         eg[] var10 = null;
-        ic var11 = null;
+        PlatformTask var11 = null;
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (!param2.a(2)) {
+          if (!param2.isFullscreenAvailable(2)) {
             return null;
           }
           if (param4 == param0) {
@@ -229,15 +229,15 @@ final class pd {
               return null;
             }
           }
-          var11 = param2.a(param3, param5, false, param1, param4);
-          while (var11.field_g == 0) {
+          var11 = param2.requestFullscreenEnter(param3, param5, false, param1, param4);
+          while (var11.status == 0) {
             em.a(10L, false);
           }
-          var7 = (java.awt.Frame) (var11.field_b);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
-          if (var11.field_g != 2) {
+          if (var11.status != 2) {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }

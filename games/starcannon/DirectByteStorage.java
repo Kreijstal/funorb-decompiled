@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DirectByteStorage extends ByteStorage {
-    static ka field_f;
+    static PlatformTaskDispatcher field_f;
     private java.nio.ByteBuffer buffer;
 
     final static void a(int param0, boolean param1) {
@@ -18,7 +18,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           if (param0 != -5361) {
-            field_f = (ka) null;
+            field_f = (PlatformTaskDispatcher) null;
           }
           this.buffer.position(0);
           this.buffer.put(param1);
@@ -86,7 +86,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           DelegatingCanvas.a(0, "", param1);
           if (param0 != 18065) {
-            field_f = (ka) null;
+            field_f = (PlatformTaskDispatcher) null;
           }
           wj.a(param1, 0);
         } catch (RuntimeException runtimeException) {

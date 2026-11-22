@@ -3,7 +3,7 @@
  */
 final class oa implements Runnable {
     volatile la[] field_c;
-    be field_g;
+    PlatformTaskDispatcher field_g;
     static String field_a;
     static im field_d;
     volatile boolean field_h;

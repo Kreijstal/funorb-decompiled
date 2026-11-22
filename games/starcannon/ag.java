@@ -140,7 +140,7 @@ abstract class ag extends GameApplet {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (ka.field_r.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_r.startsWith("win") &&
               sj.a(param1, (byte) -54)) {
               return;
             }

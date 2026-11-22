@@ -45,11 +45,11 @@ final class wk {
           }
           for (var2 = 0; var2 < var1.field_s; var2++) {
             if (null != var4.field_r[var2] &&
-              0 == var4.field_r[var2].field_f) {
+              0 == var4.field_r[var2].status) {
               return false;
             }
             if (null != var4.field_q[var2] &&
-              var4.field_q[var2].field_f == 0) {
+              var4.field_q[var2].status == 0) {
               return false;
             }
           }

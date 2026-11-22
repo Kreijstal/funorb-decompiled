@@ -140,7 +140,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, ka param2, boolean param3) {
+    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -180,10 +180,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             var18.field_n = param1.readUnsignedByte(7909);
             var18.field_k = param1.readInt((byte) -79);
             var18.field_r = new int[var18.field_n];
-            var18.field_i = new bk[var18.field_n];
+            var18.field_i = new PlatformTask[var18.field_n];
             var18.field_l = new byte[var18.field_n][][];
             var18.field_g = new int[var18.field_n];
-            var18.field_p = new bk[var18.field_n];
+            var18.field_p = new PlatformTask[var18.field_n];
             var18.field_q = new int[var18.field_n];
             if (param3) {
               return;
@@ -222,7 +222,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
                       var12[var17] = oe.a(var10[var17], param3);
                       var17++;
                     }
-                    var18.field_i[var5] = param2.a(oe.a(var20, false), var21, var12, 29389);
+                    var18.field_i[var5] = param2.requestDeclaredMethod(oe.a(var20, false), var21, var12, 29389);
                     var18.field_l[var5] = var22;
                   }
                 } else {
@@ -234,7 +234,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
                   }
                   var18.field_r[var5] = var6_int;
                   var18.field_q[var5] = var9;
-                  var18.field_p[var5] = param2.a(oe.a(var15, false), -92, var16);
+                  var18.field_p[var5] = param2.requestDeclaredField(oe.a(var15, false), -92, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

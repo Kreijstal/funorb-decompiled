@@ -207,7 +207,7 @@ class AudioMixer {
                 field_p == null) {
                 field_p = new qf();
                 field_p.field_h = param0;
-                param0.a((Runnable) ((Object) field_p), field_l, 0);
+                param0.requestThreadStart((Runnable) ((Object) field_p), field_l, 0);
               }
               if (field_p != null) {
                 if (field_p.field_e[param2] != null) {

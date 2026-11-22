@@ -32,7 +32,7 @@ final class lh {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -34 % ((-76 - param1) / 34);
-          stackIn_1_0 = param0.a(-54);
+          stackIn_1_0 = param0.isFullscreenAvailable(-54);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

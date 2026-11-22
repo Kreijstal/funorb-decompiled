@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class uj implements Runnable {
-    private be field_i;
-    private eb field_h;
-    private eb field_a;
+    private PlatformTaskDispatcher field_i;
+    private PlatformTask field_h;
+    private PlatformTask field_a;
     static qd field_b;
     private int field_d;
     private PacketBuffer field_e;
-    private eb field_f;
+    private PlatformTask field_f;
     private DataInputStream field_g;
     private java.net.URL field_c;
 
@@ -241,18 +241,18 @@ final class uj implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_a) {
-          if (this.field_a.field_g != null) {
+          if (this.field_a.result != null) {
             try {
-              ((DataInputStream) (this.field_a.field_g)).close();
+              ((DataInputStream) (this.field_a.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_a = null;
         }
         if (null != this.field_f) {
-          if (this.field_f.field_g != null) {
+          if (this.field_f.result != null) {
             try {
-              ((java.net.Socket) (this.field_f.field_g)).close();
+              ((java.net.Socket) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -278,17 +278,17 @@ final class uj implements Runnable {
           return true;
         }
         if (param0 >= -2) {
-          this.field_a = (eb) null;
+          this.field_a = (PlatformTask) null;
         }
         boolean decompiledFrameRemainder1 = true;
         if (0 == this.field_d) {
           if (this.field_a == null) {
-            this.field_a = this.field_i.a(this.field_c, (byte) -49);
+            this.field_a = this.field_i.requestUrlStream(this.field_c, (byte) -49);
           }
-          if (this.field_a.field_a == 0) {
+          if (this.field_a.status == 0) {
             return false;
           }
-          if (this.field_a.field_a != 1) {
+          if (this.field_a.status != 1) {
             this.field_a = null;
             decompiledFrameRemainder1 = false;
           }
@@ -297,12 +297,12 @@ final class uj implements Runnable {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_d == 1) {
             if (null == this.field_f) {
-              this.field_f = this.field_i.a(443, 0, this.field_c.getHost());
+              this.field_f = this.field_i.requestDirectSocket(443, 0, this.field_c.getHost());
             }
-            if (this.field_f.field_a == 0) {
+            if (this.field_f.status == 0) {
               return false;
             }
-            if (this.field_f.field_a != 1) {
+            if (this.field_f.status != 1) {
               this.field_f = null;
               decompiledFrameRemainder0 = false;
             }
@@ -311,10 +311,10 @@ final class uj implements Runnable {
             if (null == this.field_g) {
               try {
                 if (this.field_d == 0) {
-                  this.field_g = (DataInputStream) (this.field_a.field_g);
+                  this.field_g = (DataInputStream) (this.field_a.result);
                 }
                 if (this.field_d == 1) {
-                  var4 = (java.net.Socket) (this.field_f.field_g);
+                  var4 = (java.net.Socket) (this.field_f.result);
                   var4.setSoTimeout(10000);
                   var3 = var4.getOutputStream();
                   var3.write(17);
@@ -331,12 +331,12 @@ final class uj implements Runnable {
               }
             }
             if (null == this.field_h) {
-              this.field_h = this.field_i.a(314572800, 5, (Runnable) (this));
+              this.field_h = this.field_i.requestThreadStart(314572800, 5, (Runnable) (this));
             }
-            if (this.field_h.field_a == 0) {
+            if (this.field_h.status == 0) {
               return false;
             }
-            if (1 == this.field_h.field_a) {
+            if (1 == this.field_h.status) {
               return false;
             }
             this.finalize();
@@ -346,7 +346,7 @@ final class uj implements Runnable {
         return false;
     }
 
-    uj(be param0, java.net.URL param1, int param2) {
+    uj(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_i = param0;
           this.field_c = param1;

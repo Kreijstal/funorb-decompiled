@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ck implements Runnable {
     volatile df[] field_e;
-    ka field_d;
+    PlatformTaskDispatcher field_d;
     static int[][] field_h;
     volatile boolean field_a;
     volatile boolean field_c;
@@ -59,23 +59,23 @@ final class ck implements Runnable {
           }
           try {
             if (0 == KeyboardInput.field_a) {
-              bj.field_d = DirectByteStorage.field_f.a(va.field_s, 90, md.field_b);
+              bj.field_d = DirectByteStorage.field_f.requestDirectSocket(va.field_s, 90, md.field_b);
               KeyboardInput.field_a = KeyboardInput.field_a + 1;
             }
             if (param0 < 124) {
               field_h = (int[][]) null;
             }
             if (KeyboardInput.field_a == 1) {
-              if (2 == bj.field_d.field_b) {
+              if (2 == bj.field_d.status) {
                 stackIn_16_0 = ej.a(2, -1);
                 return stackIn_16_0;
               }
-              if (bj.field_d.field_b == 1) {
+              if (bj.field_d.status == 1) {
                 KeyboardInput.field_a = KeyboardInput.field_a + 1;
               }
             }
             if (KeyboardInput.field_a == 2) {
-              AccountCreationResultPanel.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.field_f), DirectByteStorage.field_f);
+              AccountCreationResultPanel.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.result), DirectByteStorage.field_f);
               var2 = new PacketBuffer(13);
               oe.a(wj.field_b, 32, var2, kc.field_M, ld.field_fb);
               var2.writeByte(15, -122);

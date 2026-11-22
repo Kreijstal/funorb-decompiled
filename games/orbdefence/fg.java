@@ -26,19 +26,19 @@ class fg extends jc {
           se var4 = null;
           se var5 = null;
           if (null == ia.field_f) {
-            ia.field_f = ef.field_i.a(eg.field_v, 0, jl.field_e);
+            ia.field_f = ef.field_i.requestDirectSocket(eg.field_v, 0, jl.field_e);
           }
-          if (ia.field_f.field_a == 0) {
+          if (ia.field_f.status == 0) {
             return false;
           }
           dupTemp$0 = ji.b(-85);
           p.field_a = dupTemp$0;
           of.field_L = dupTemp$0;
-          if (ia.field_f.field_a != 1) {
+          if (ia.field_f.status != 1) {
             dh.field_bb = ug.field_p;
           } else {
             try {
-              p.field_d = new cb((java.net.Socket) (ia.field_f.field_g), ef.field_i);
+              p.field_d = new cb((java.net.Socket) (ia.field_f.result), ef.field_i);
               var4 = cd.field_t;
               var5 = var4;
               uk.field_b.position = 0;
@@ -73,7 +73,7 @@ class fg extends jc {
         }
     }
 
-    final static void a(int param0, int param1, int param2, java.awt.Component param3, be param4, boolean param5, lj param6, boolean param7) {
+    final static void a(int param0, int param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, boolean param5, lj param6, boolean param7) {
         try {
           la.a(param2, param7, 10);
           cd.field_w = la.a(param4, param3, 0, param0);
@@ -99,7 +99,7 @@ class fg extends jc {
           wg.field_p = -1;
           if (param0 != 51) {
             lj var3 = (lj) null;
-            fg.a(127, -79, -7, (java.awt.Component) null, (be) null, false, (lj) null, false);
+            fg.a(127, -79, -7, (java.awt.Component) null, (PlatformTaskDispatcher) null, false, (lj) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "fg.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -37,7 +37,7 @@ final class el extends dk {
         }
     }
 
-    final static jk[] a(boolean param0, ka param1) {
+    final static jk[] a(boolean param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         jk[] stackIn_3_0 = null;
         jk[] stackIn_9_0 = null;
@@ -51,23 +51,23 @@ final class el extends dk {
         jk[] var4 = null;
         jk var6 = null;
         gi var7 = null;
-        bk var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         try {
-          if (!param1.a((byte) -68)) {
+          if (!param1.isFullscreenAvailable((byte) -68)) {
             stackIn_3_0 = new jk[]{};
             return stackIn_3_0;
           }
-          var8 = param1.a(-125);
-          while (var8.field_b == 0) {
+          var8 = param1.requestDisplayModes(-125);
+          while (var8.status == 0) {
             uc.a(-108, 10L);
           }
-          if (var8.field_b == 2) {
+          if (var8.status == 2) {
             stackIn_9_0 = new jk[]{};
             return stackIn_9_0;
           }
-          var10 = (int[]) (var8.field_f);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           if (param0) {

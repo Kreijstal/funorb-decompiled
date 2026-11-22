@@ -7,9 +7,9 @@ final class va extends IntrusiveNode {
     byte[][][] field_l;
     int field_k;
     static String field_u;
-    bk[] field_i;
+    PlatformTask[] field_i;
     int[] field_r;
-    bk[] field_p;
+    PlatformTask[] field_p;
     int field_n;
     static IntrusiveDeque field_h;
     static long field_j;

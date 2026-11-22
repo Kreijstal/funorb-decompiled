@@ -168,7 +168,7 @@ final class IterableNodeHashTable implements Iterable {
             stackIn_3_0 = (java.awt.Frame) null;
             return stackIn_3_0;
           }
-          if (!param2.b((byte) 98)) {
+          if (!param2.isFullscreenAvailable((byte) 98)) {
             return null;
           }
           if (param4 == 0) {
@@ -192,16 +192,16 @@ final class IterableNodeHashTable implements Iterable {
               return null;
             }
           }
-          var11 = param2.a(param5, param3, param4, (byte) -106, param1);
-          while (0 == var11.field_c) {
+          var11 = param2.requestFullscreenEnter(param5, param3, param4, (byte) -106, param1);
+          while (0 == var11.status) {
             i.a((byte) 89, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_36_0 = null;
             return (java.awt.Frame) (stackIn_36_0);
           }
-          if (var11.field_c != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           de.a(param2, var7, (byte) 119);

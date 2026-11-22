@@ -52,7 +52,7 @@ final class ha {
         }
     }
 
-    final static boolean a(int param0, ka param1) {
+    final static boolean a(int param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -63,7 +63,7 @@ final class ha {
           if (param0 <= 78) {
             field_d = -23;
           }
-          stackIn_3_0 = param1.a((byte) -68);
+          stackIn_3_0 = param1.isFullscreenAvailable((byte) -68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

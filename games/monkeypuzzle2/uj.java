@@ -387,19 +387,19 @@ final class uj implements Runnable {
     }
 
     uj(PlatformTaskDispatcher param0) {
-        ic var2 = null;
+        PlatformTask var2 = null;
         this.field_d = new dl();
         this.field_j = 0;
         this.field_e = false;
         try {
-          var2 = param0.a((Runnable) (this), 5, 0);
-          while (0 == var2.field_g) {
+          var2 = param0.requestThreadStart((Runnable) (this), 5, 0);
+          while (0 == var2.status) {
             em.a(10L, false);
           }
-          if (2 == var2.field_g) {
+          if (2 == var2.status) {
             throw new RuntimeException();
           }
-          this.field_a = (Thread) (var2.field_b);
+          this.field_a = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

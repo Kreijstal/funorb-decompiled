@@ -6,7 +6,7 @@ final class cf {
     static int[] field_b;
     static String field_g;
     private int[] field_f;
-    static eb field_a;
+    static PlatformTask field_a;
     static int field_d;
     static int[] field_e;
 
@@ -18,7 +18,7 @@ final class cf {
           field_e = null;
           return;
         }
-        field_a = (eb) null;
+        field_a = (PlatformTask) null;
         field_b = null;
         field_e = null;
     }

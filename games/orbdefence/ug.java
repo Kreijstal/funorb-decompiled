@@ -8,7 +8,7 @@ final class ug extends hi {
     static int field_q;
     static String field_r;
 
-    final static boolean a(byte param0, be param1) {
+    final static boolean a(byte param0, PlatformTaskDispatcher param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -18,7 +18,7 @@ final class ug extends hi {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -88 / ((2 - param0) / 56);
-          stackIn_1_0 = param1.b((byte) -72);
+          stackIn_1_0 = param1.isFullscreenAvailable((byte) -72);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

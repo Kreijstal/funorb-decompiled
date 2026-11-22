@@ -110,8 +110,8 @@ final class tj {
         return ee.field_d[var4];
     }
 
-    final static void a(be param0, java.awt.Frame param1, int param2) {
-        eb var3 = null;
+    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -124,11 +124,11 @@ final class tj {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a((byte) -120, param1);
-            while (var3.field_a == 0) {
+            var3 = param0.requestFullscreenExit((byte) -120, param1);
+            while (var3.status == 0) {
               hb.a(10L, 109);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               hb.a(100L, 101);
               continue;
             }

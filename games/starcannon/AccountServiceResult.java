@@ -96,7 +96,7 @@ final class AccountServiceResult {
             od.field_h[0] = 5;
           } else if (SecondaryNodeDeque.field_a != 2) {
             if (SecondaryNodeDeque.field_a == 3) {
-              if (!nb.field_e.field_n) {
+              if (!nb.field_e.privilegedTasksEnabled) {
                 var3_int = lb.a(qa.field_c, gi.field_f, wc.field_h, rh.field_h, -110);
               } else {
                 var3_int = lb.a(qa.field_c, gi.field_f, lc.field_fb, rh.field_h, -101);

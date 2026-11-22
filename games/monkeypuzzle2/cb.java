@@ -17,19 +17,19 @@ final class cb {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == qg.field_a) {
-            qg.field_a = IntrusiveDeque.field_g.a(di.field_d, 0, cg.field_g);
+            qg.field_a = IntrusiveDeque.field_g.requestDirectSocket(di.field_d, 0, cg.field_g);
           }
-          if (qg.field_a.field_g == 0) {
+          if (qg.field_a.status == 0) {
             return false;
           }
           dupTemp$1 = pf.a(0);
           qg.field_d = dupTemp$1;
           d.field_k = dupTemp$1;
-          if (qg.field_a.field_g != 1) {
+          if (qg.field_a.status != 1) {
             dk.field_h = ed.field_b;
           } else {
             try {
-              ol.field_g = new BufferedSocket((java.net.Socket) (qg.field_a.field_b), IntrusiveDeque.field_g);
+              ol.field_g = new BufferedSocket((java.net.Socket) (qg.field_a.result), IntrusiveDeque.field_g);
               gf.field_c.position = 0;
               var2_ref_hb = MonkeyPuzzle2.field_D;
               stackIn_10_0 = (!param1) ? -1 : -2;

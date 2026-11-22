@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i extends IntrusiveNode {
-    ic[] field_s;
+    PlatformTask[] field_s;
     static PcmStreamMixer field_p;
     static boolean field_i;
-    ic[] field_k;
+    PlatformTask[] field_k;
     byte[][][] field_f;
     static String field_h;
     static int field_n;

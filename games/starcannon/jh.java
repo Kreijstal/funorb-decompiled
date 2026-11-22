@@ -65,9 +65,9 @@ final class jh {
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == ah.field_e) {
-            ah.field_e = og.field_a.a(sj.field_I, -115, kl.field_a);
+            ah.field_e = og.field_a.requestDirectSocket(sj.field_I, -115, kl.field_a);
           }
-          if (0 == ah.field_e.field_b) {
+          if (0 == ah.field_e.status) {
             return false;
           }
           if (param0 != -68) {
@@ -76,11 +76,11 @@ final class jh {
           dupTemp$1 = dd.b(71);
           ca.field_Y = dupTemp$1;
           ik.field_p = dupTemp$1;
-          if (ah.field_e.field_b != 1) {
+          if (ah.field_e.status != 1) {
             r.field_c = PacketBuffer.field_h;
           } else {
             try {
-              m.field_b = new BufferedSocket((java.net.Socket) (ah.field_e.field_f), og.field_a);
+              m.field_b = new BufferedSocket((java.net.Socket) (ah.field_e.result), og.field_a);
               d.field_b.position = 0;
               var4 = se.field_p;
               var5 = var4;

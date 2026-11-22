@@ -8,7 +8,7 @@ final class nb {
     static qe field_b;
     static df field_f;
     static int field_g;
-    static ka field_e;
+    static PlatformTaskDispatcher field_e;
 
     final static void a(ue param0, byte param1) {
         int var3 = 0;

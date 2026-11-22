@@ -5,7 +5,7 @@ final class ef extends IntrusiveNode {
     static byte[][][] field_g;
     static int[] field_j;
     static String field_h;
-    static be field_i;
+    static PlatformTaskDispatcher field_i;
     byte[] field_l;
     static int field_k;
     int field_f;

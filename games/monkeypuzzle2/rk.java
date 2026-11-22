@@ -13,7 +13,7 @@ final class rk {
     String field_b;
 
     final static void exitFullscreenFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, boolean param2) {
-        ic var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -25,11 +25,11 @@ final class rk {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(param1, -120);
-            while (var3.field_g == 0) {
+            var3 = param0.requestFullscreenExit(param1, -120);
+            while (var3.status == 0) {
               em.a(10L, param2);
             }
-            if (var3.field_g != 1) {
+            if (var3.status != 1) {
               em.a(100L, false);
               continue;
             }

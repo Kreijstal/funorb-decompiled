@@ -60,11 +60,11 @@ final class de {
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(39, param1);
-            while (var3.field_c == 0) {
+            var3 = param0.requestFullscreenExit(39, param1);
+            while (var3.status == 0) {
               i.a((byte) 89, 10L);
             }
-            if (var3.field_c != 1) {
+            if (var3.status != 1) {
               i.a((byte) 30, 100L);
               continue;
             }

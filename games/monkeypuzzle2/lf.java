@@ -48,20 +48,20 @@ final class lf {
           }
           try {
             if (ii.field_T == 0) {
-              kd.field_a = rk.field_g.a(fi.field_d, 0, oh.field_c);
+              kd.field_a = rk.field_g.requestDirectSocket(fi.field_d, 0, oh.field_c);
               ii.field_T = ii.field_T + 1;
             }
             if (ii.field_T == 1) {
-              if (2 == kd.field_a.field_g) {
+              if (2 == kd.field_a.status) {
                 stackIn_14_0 = dh.a(true, -1);
                 return stackIn_14_0;
               }
-              if (kd.field_a.field_g == 1) {
+              if (kd.field_a.status == 1) {
                 ii.field_T = ii.field_T + 1;
               }
             }
             if (ii.field_T == 2) {
-              ProxyAuthenticationRequiredException.field_a = new BufferedSocket((java.net.Socket) (kd.field_a.field_b), rk.field_g);
+              ProxyAuthenticationRequiredException.field_a = new BufferedSocket((java.net.Socket) (kd.field_a.result), rk.field_g);
               var2 = new PacketBuffer(13);
               qi.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
               var2.writeByte(15, -49152);

@@ -315,20 +315,20 @@ final class ef implements Runnable {
         }
     }
 
-    ef(ka param0) {
-        bk var2 = null;
+    ef(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_a = new jh();
         this.field_h = 0;
         this.field_c = false;
         try {
-          var2 = param0.a(5, 118, (Runnable) (this));
-          while (var2.field_b == 0) {
+          var2 = param0.requestThreadStart(5, 118, (Runnable) (this));
+          while (var2.status == 0) {
             uc.a(-119, 10L);
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_g = (Thread) (var2.field_f);
+          this.field_g = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

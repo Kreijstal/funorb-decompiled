@@ -347,20 +347,20 @@ final class vl implements Runnable {
         }
     }
 
-    vl(be param0) {
-        eb var2 = null;
+    vl(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_e = new il();
         this.field_a = false;
         this.field_b = 0;
         try {
-          var2 = param0.a(314572800, 5, (Runnable) (this));
-          while (var2.field_a == 0) {
+          var2 = param0.requestThreadStart(314572800, 5, (Runnable) (this));
+          while (var2.status == 0) {
             hb.a(10L, 127);
           }
-          if (2 == var2.field_a) {
+          if (2 == var2.status) {
             throw new RuntimeException();
           }
-          this.field_c = (Thread) (var2.field_g);
+          this.field_c = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -195,11 +195,11 @@ final class wd {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, byte param1, int param2, int param3, be param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, byte param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
-        be var8 = null;
+        PlatformTaskDispatcher var8 = null;
         java.awt.Frame var9 = null;
         FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -210,8 +210,8 @@ final class wd {
           var9 = m.a(param5, param2, param3, -1, param0, param4);
           var6 = var9;
           if (param1 <= 34) {
-            var8 = (be) null;
-            wd.a(23, (byte) -51, 117, 29, (be) null, -42);
+            var8 = (PlatformTaskDispatcher) null;
+            wd.a(23, (byte) -51, 117, 29, (PlatformTaskDispatcher) null, -42);
           }
           if (var9 == null) {
             return null;

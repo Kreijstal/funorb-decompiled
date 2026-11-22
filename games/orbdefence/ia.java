@@ -5,7 +5,7 @@ abstract class ia {
     int field_g;
     static ba field_a;
     int field_h;
-    static eb field_f;
+    static PlatformTask field_f;
     int field_d;
     int field_c;
     int field_b;
@@ -39,7 +39,7 @@ abstract class ia {
           gi.field_f.a(0, param0);
         }
         if (param1 != -23235) {
-          field_f = (eb) null;
+          field_f = (PlatformTask) null;
         }
     }
 

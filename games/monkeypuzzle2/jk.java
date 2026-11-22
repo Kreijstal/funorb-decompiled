@@ -485,7 +485,7 @@ abstract class jk extends UiWidget implements ga {
             bi.field_B[0] = 5;
           } else if (ud.field_b != 2) {
             if (ud.field_b == 3) {
-              if (rc.field_k.field_q) {
+              if (rc.field_k.privilegedTasksEnabled) {
                 var3_int = aa.a(fe.field_a, rk.field_h, uc.field_d, true, vi.field_b);
               } else {
                 var3_int = aa.a(fe.field_a, rk.field_h, ld.field_b, true, vi.field_b);

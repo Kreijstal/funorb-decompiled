@@ -9,7 +9,7 @@ final class hj {
     static volatile int field_d;
     String field_f;
 
-    final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, String param7, int param8) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, String param7, int param8) {
         try {
           md.field_b = param7;
           int var9_int = 22 / ((param4 + 10) / 56);

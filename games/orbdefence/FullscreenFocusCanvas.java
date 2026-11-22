@@ -17,7 +17,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(be param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 > -85) {
             dl var4 = (dl) null;

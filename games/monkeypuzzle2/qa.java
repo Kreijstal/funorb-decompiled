@@ -9,13 +9,13 @@ final class qa implements Runnable {
     static Sprite field_i;
     private DataInputStream field_l;
     private int field_k;
-    private ic field_g;
+    private PlatformTask field_g;
     static IntrusiveDeque field_d;
     static String field_b;
     private PlatformTaskDispatcher field_h;
-    private ic field_j;
+    private PlatformTask field_j;
     static int field_a;
-    private ic field_c;
+    private PlatformTask field_c;
 
     final static void a(byte param0, gg param1, int param2, int param3) {
         AccountNameAvailabilityValidator.field_u = param1;
@@ -69,12 +69,12 @@ final class qa implements Runnable {
         }
         if (this.field_k == 0) {
           if (this.field_j == null) {
-            this.field_j = this.field_h.a((byte) 112, this.field_f);
+            this.field_j = this.field_h.requestUrlStream((byte) 112, this.field_f);
           }
-          if (this.field_j.field_g == 0) {
+          if (this.field_j.status == 0) {
             return false;
           }
-          if (this.field_j.field_g != 1) {
+          if (this.field_j.status != 1) {
             this.field_k = this.field_k + 1;
             this.field_j = null;
             return false;
@@ -82,12 +82,12 @@ final class qa implements Runnable {
         }
         if (1 == this.field_k) {
           if (this.field_g == null) {
-            this.field_g = this.field_h.a(this.field_f.getHost(), 0, 443);
+            this.field_g = this.field_h.requestDirectSocket(this.field_f.getHost(), 0, 443);
           }
-          if (this.field_g.field_g == 0) {
+          if (this.field_g.status == 0) {
             return false;
           }
-          if (1 != this.field_g.field_g) {
+          if (1 != this.field_g.status) {
             this.field_k = this.field_k + 1;
             this.field_g = null;
             return false;
@@ -97,10 +97,10 @@ final class qa implements Runnable {
         if (null == this.field_l) {
           try {
             if (0 == this.field_k) {
-              this.field_l = (DataInputStream) (this.field_j.field_b);
+              this.field_l = (DataInputStream) (this.field_j.result);
             }
             if (1 == this.field_k) {
-              var5 = (java.net.Socket) (this.field_g.field_b);
+              var5 = (java.net.Socket) (this.field_g.result);
               var5.setSoTimeout(10000);
               var4 = var5.getOutputStream();
               var4.write(17);
@@ -117,12 +117,12 @@ final class qa implements Runnable {
           }
         }
         if (this.field_c == null) {
-          this.field_c = this.field_h.a((Runnable) (this), 5, 0);
+          this.field_c = this.field_h.requestThreadStart((Runnable) (this), 5, 0);
         }
-        if (this.field_c.field_g == 0) {
+        if (this.field_c.status == 0) {
           return false;
         }
-        if (this.field_c.field_g == 1) {
+        if (this.field_c.status == 1) {
           return false;
         }
         this.finalize();
@@ -132,18 +132,18 @@ final class qa implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_j) {
-          if (null != this.field_j.field_b) {
+          if (null != this.field_j.result) {
             try {
-              ((DataInputStream) (this.field_j.field_b)).close();
+              ((DataInputStream) (this.field_j.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_j = null;
         }
         if (this.field_g != null) {
-          if (null != this.field_g.field_b) {
+          if (null != this.field_g.result) {
             try {
-              ((java.net.Socket) (this.field_g.field_b)).close();
+              ((java.net.Socket) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }

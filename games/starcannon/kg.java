@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kg {
-    static ka field_d;
+    static PlatformTaskDispatcher field_d;
     static int field_a;
     static String[] field_c;
     static int field_b;

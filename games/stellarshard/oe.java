@@ -22,10 +22,10 @@ final class oe {
         java.awt.Frame var7 = null;
         int var9 = 0;
         a[] var10 = null;
-        re var11 = null;
+        PlatformTask var11 = null;
         var9 = stellarshard.field_B;
         try {
-          if (!param0.a(param5 ^ -127)) {
+          if (!param0.isFullscreenAvailable(param5 ^ -127)) {
             return null;
           }
           if (param5 == ~param3) {
@@ -50,16 +50,16 @@ final class oe {
               return null;
             }
           }
-          var11 = param0.a(param5 ^ -2019341457, param4, param2, param1, param3);
-          while (var11.field_f == 0) {
+          var11 = param0.requestFullscreenEnter(param5 ^ -2019341457, param4, param2, param1, param3);
+          while (var11.status == 0) {
             jj.a((byte) -114, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_b);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_30_0 = null;
             return (java.awt.Frame) (stackIn_30_0);
           }
-          if (2 != var11.field_f) {
+          if (2 != var11.status) {
             return var7;
           }
           kf.exitFullscreenFrame(var7, param5 + 16711936, param0);

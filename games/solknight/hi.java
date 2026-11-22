@@ -101,12 +101,12 @@ final class hi {
               stackIn_14_2 = null;
               stackIn_14_5 = "" + d.field_c;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_a).append("&v2=").append(PlatformTaskDispatcher.field_x).append("&e=").append(var10).toString()), (byte) 68);
-            while (var4.field_c == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_a).append("&v2=").append(PlatformTaskDispatcher.field_x).append("&e=").append(var10).toString()), (byte) 68);
+            while (var4.status == 0) {
               i.a((byte) 27, 1L);
             }
-            if (var4.field_c == param2) {
-              var5 = (DataInputStream) (var4.field_e);
+            if (var4.status == param2) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

@@ -29,7 +29,7 @@ final class fb extends IntrusiveNode {
         return vb.field_f;
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, be param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -72,11 +72,11 @@ final class fb extends IntrusiveNode {
             var19.field_k = param0.readInt(0);
             var19.field_m = new int[var19.field_o];
             var19.field_n = new int[var19.field_o];
-            var19.field_i = new eb[var19.field_o];
+            var19.field_i = new PlatformTask[var19.field_o];
             var19.field_g = new byte[var19.field_o][][];
             var5 = 123 % ((param2 - 75) / 46);
             var19.field_l = new int[var19.field_o];
-            var19.field_h = new eb[var19.field_o];
+            var19.field_h = new PlatformTask[var19.field_o];
             for (var6 = 0; var19.field_o > var6; var6++) {
               try {
                 var7_int = param0.readUnsignedByte((byte) 90);
@@ -111,7 +111,7 @@ final class fb extends IntrusiveNode {
                       var13[var18] = ie.a(var11[var18], 73);
                       var18++;
                     }
-                    var19.field_i[var6] = param3.a(var13, -334290960, var9, ie.a(var21, 64));
+                    var19.field_i[var6] = param3.requestDeclaredMethod(var13, -334290960, var9, ie.a(var21, 64));
                     var19.field_g[var6] = var22;
                   }
                 } else {
@@ -125,7 +125,7 @@ final class fb extends IntrusiveNode {
                   }
                   var19.field_l[var6] = var7_int;
                   var19.field_n[var6] = var10;
-                  var19.field_h[var6] = param3.a(ie.a(var16, 43), var17, -128);
+                  var19.field_h[var6] = param3.requestDeclaredField(ie.a(var16, 43), var17, -128);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

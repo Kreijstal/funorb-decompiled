@@ -284,14 +284,14 @@ final class ae implements Runnable {
         this.field_b = false;
         this.field_a = 0;
         try {
-          var2 = param0.a(5, -51, (Runnable) (this));
-          while (var2.field_c == 0) {
+          var2 = param0.requestThreadStart(5, -51, (Runnable) (this));
+          while (var2.status == 0) {
             i.a((byte) 90, 10L);
           }
-          if (2 == var2.field_c) {
+          if (2 == var2.status) {
             throw new RuntimeException();
           }
-          this.field_c = (Thread) (var2.field_e);
+          this.field_c = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ae.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

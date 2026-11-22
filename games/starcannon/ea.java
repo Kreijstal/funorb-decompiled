@@ -113,7 +113,7 @@ final class ea {
         }
     }
 
-    final static void a(Object param0, int param1, ka param2) {
+    final static void a(Object param0, int param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;

@@ -4,11 +4,11 @@
 final class lb extends IntrusiveNode {
     int field_s;
     static th field_o;
-    re[] field_r;
+    PlatformTask[] field_r;
     int[] field_n;
     int field_l;
     int[] field_k;
-    re[] field_q;
+    PlatformTask[] field_q;
     byte[][][] field_m;
     int[] field_p;
     private static String field_z;

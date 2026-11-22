@@ -56,7 +56,7 @@ abstract class tk extends DualLinkNode {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           try {
-            if (!be.field_c.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_c.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

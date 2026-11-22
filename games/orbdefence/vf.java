@@ -22,7 +22,7 @@ final class vf {
         return kd.a(1, param2, 119, param0, param1);
     }
 
-    final static void a(Object param0, int param1, be param2) {
+    final static void a(Object param0, int param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;

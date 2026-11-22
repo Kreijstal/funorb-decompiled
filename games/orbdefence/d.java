@@ -49,20 +49,20 @@ final class d extends IntrusiveNode {
           }
           try {
             if (mc.field_j == 0) {
-              cf.field_a = lh.field_b.a(ta.field_z, 0, fm.field_c);
+              cf.field_a = lh.field_b.requestDirectSocket(ta.field_z, 0, fm.field_c);
               mc.field_j = mc.field_j + 1;
             }
             if (mc.field_j == 1) {
-              if (cf.field_a.field_a == 2) {
+              if (cf.field_a.status == 2) {
                 stackIn_17_0 = kk.a(-30179, -1);
                 return stackIn_17_0;
               }
-              if (1 == cf.field_a.field_a) {
+              if (1 == cf.field_a.status) {
                 mc.field_j = mc.field_j + 1;
               }
             }
             if (2 == mc.field_j) {
-              dd.field_A = new cb((java.net.Socket) (cf.field_a.field_g), lh.field_b);
+              dd.field_A = new cb((java.net.Socket) (cf.field_a.result), lh.field_b);
               var2 = new PacketBuffer(13);
               nl.a(20994, hc.field_f, tk.field_m, var2, s.field_x);
               var2.writeByte(15, -49);

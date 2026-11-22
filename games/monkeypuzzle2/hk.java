@@ -524,14 +524,14 @@ final class hk extends IntrusiveNode {
             var18.field_e = param0.readUnsignedByte((byte) 114);
             var18.field_l = param0.readInt(param2 ^ 80);
             var18.field_g = new int[var18.field_e];
-            var18.field_k = new ic[var18.field_e];
+            var18.field_k = new PlatformTask[var18.field_e];
             var18.field_f = new byte[var18.field_e][][];
             if (param2 != -1) {
               hk.a(-56, 123, -43, -34, -46);
             }
             var18.field_o = new int[var18.field_e];
             var18.field_q = new int[var18.field_e];
-            var18.field_s = new ic[var18.field_e];
+            var18.field_s = new PlatformTask[var18.field_e];
             for (var5 = 0; var5 < var18.field_e; var5++) {
               try {
                 var6_int = param0.readUnsignedByte((byte) 114);
@@ -566,7 +566,7 @@ final class hk extends IntrusiveNode {
                       var12[var17] = di.a(var10[var17], -112);
                       var17++;
                     }
-                    var18.field_s[var5] = param1.a(102, var12, di.a(var20, -63), var21);
+                    var18.field_s[var5] = param1.requestDeclaredMethod(102, var12, di.a(var20, -63), var21);
                     var18.field_f[var5] = var22;
                   }
                 } else {
@@ -580,7 +580,7 @@ final class hk extends IntrusiveNode {
                   }
                   var18.field_q[var5] = var6_int;
                   var18.field_g[var5] = var9;
-                  var18.field_k[var5] = param1.a(false, di.a(var15, param2 - 64), var16);
+                  var18.field_k[var5] = param1.requestDeclaredField(false, di.a(var15, param2 - 64), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

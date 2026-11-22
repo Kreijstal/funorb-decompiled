@@ -10,7 +10,7 @@ final class BufferedSocket implements Runnable {
     static int field_a;
     private PlatformTaskDispatcher field_f;
     private InputStream field_g;
-    private ic field_d;
+    private PlatformTask field_d;
     private int field_l;
     static int field_m;
     private byte[] field_c;
@@ -45,12 +45,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_d != null) {
-            while (this.field_d.field_g == 0) {
+            while (this.field_d.status == 0) {
               em.a(1L, false);
             }
-            if (1 == this.field_d.field_g) {
+            if (1 == this.field_d.status) {
               try {
-                ((Thread) (this.field_d.field_b)).join();
+                ((Thread) (this.field_d.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -223,7 +223,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_d) {
-              this.field_d = this.field_f.a((Runnable) (this), 3, 0);
+              this.field_d = this.field_f.requestThreadStart((Runnable) (this), 3, 0);
             }
             if (param2 < 12) {
               this.a((byte) 110);

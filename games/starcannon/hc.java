@@ -98,7 +98,7 @@ final class hc {
 
     final static void a(Throwable param0, String param1, byte param2) {
         try {
-          ka stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -110,7 +110,7 @@ final class hc {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          bk var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           String var6 = null;
           String var7 = null;
@@ -153,12 +153,12 @@ final class hc {
               stackIn_15_3 = null;
               stackIn_15_6 = re.field_q;
             }
-            var4 = ((ka) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(ka.field_l).append("&v2=").append(ka.field_o).append("&e=").append(var9).toString()));
-            while (var4.field_b == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_o).append("&e=").append(var9).toString()));
+            while (var4.status == 0) {
               uc.a(-94, 1L);
             }
-            if (var4.field_b == 1) {
-              var5 = (DataInputStream) (var4.field_f);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

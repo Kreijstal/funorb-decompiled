@@ -4,7 +4,7 @@
 final class kd {
     static String field_b;
     static String field_d;
-    static ic field_a;
+    static PlatformTask field_a;
     static String field_e;
     static int field_c;
     private static String field_z;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bj {
-    static bk field_d;
+    static PlatformTask field_d;
     static int field_b;
     static int[] field_a;
     static int[] field_c;

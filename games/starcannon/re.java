@@ -24,7 +24,7 @@ final class re extends IntrusiveNode {
         }
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, ka param1, int param2, boolean param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, PlatformTaskDispatcher param1, int param2, boolean param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

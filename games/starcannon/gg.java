@@ -5,9 +5,9 @@ import java.io.*;
 
 final class gg implements Runnable {
     private DataInputStream field_j;
-    private bk field_k;
-    private bk field_h;
-    private ka field_l;
+    private PlatformTask field_k;
+    private PlatformTask field_h;
+    private PlatformTaskDispatcher field_l;
     static o field_i;
     private PacketBuffer field_b;
     static Sprite[] field_f;
@@ -15,22 +15,22 @@ final class gg implements Runnable {
     static int[] field_d;
     private java.net.URL field_g;
     private int field_c;
-    private bk field_a;
+    private PlatformTask field_a;
 
     protected final void finalize() {
         if (null != this.field_h) {
-          if (this.field_h.field_f != null) {
+          if (this.field_h.result != null) {
             try {
-              ((DataInputStream) (this.field_h.field_f)).close();
+              ((DataInputStream) (this.field_h.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_h = null;
         }
         if (null != this.field_k) {
-          if (this.field_k.field_f != null) {
+          if (this.field_k.result != null) {
             try {
-              ((java.net.Socket) (this.field_k.field_f)).close();
+              ((java.net.Socket) (this.field_k.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -69,28 +69,28 @@ final class gg implements Runnable {
         }
         if (this.field_c == 0) {
           if (null == this.field_h) {
-            this.field_h = this.field_l.a((byte) -10, this.field_g);
+            this.field_h = this.field_l.requestUrlStream((byte) -10, this.field_g);
           }
-          if (this.field_h.field_b == 0) {
+          if (this.field_h.status == 0) {
             return false;
           }
-          if (this.field_h.field_b != 1) {
+          if (this.field_h.status != 1) {
             this.field_c = this.field_c + 1;
             this.field_h = null;
             return false;
           }
         }
         if (param0 > -86) {
-          this.field_l = (ka) null;
+          this.field_l = (PlatformTaskDispatcher) null;
         }
         if (this.field_c == 1) {
           if (null == this.field_k) {
-            this.field_k = this.field_l.a(443, -102, this.field_g.getHost());
+            this.field_k = this.field_l.requestDirectSocket(443, -102, this.field_g.getHost());
           }
-          if (0 == this.field_k.field_b) {
+          if (0 == this.field_k.status) {
             return false;
           }
-          if (1 != this.field_k.field_b) {
+          if (1 != this.field_k.status) {
             this.field_k = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -99,10 +99,10 @@ final class gg implements Runnable {
         if (null == this.field_j) {
           try {
             if (0 == this.field_c) {
-              this.field_j = (DataInputStream) (this.field_h.field_f);
+              this.field_j = (DataInputStream) (this.field_h.result);
             }
             if (this.field_c == 1) {
-              var4 = (java.net.Socket) (this.field_k.field_f);
+              var4 = (java.net.Socket) (this.field_k.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -121,12 +121,12 @@ final class gg implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_a) {
-              this.field_a = this.field_l.a(5, 104, (Runnable) (this));
+              this.field_a = this.field_l.requestThreadStart(5, 104, (Runnable) (this));
             }
-            if (this.field_a.field_b == 0) {
+            if (this.field_a.status == 0) {
               return false;
             }
-            if (this.field_a.field_b == 1) {
+            if (this.field_a.status == 1) {
               return false;
             }
             this.finalize();
@@ -135,12 +135,12 @@ final class gg implements Runnable {
           }
         }
         if (null == this.field_a) {
-          this.field_a = this.field_l.a(5, 104, (Runnable) (this));
+          this.field_a = this.field_l.requestThreadStart(5, 104, (Runnable) (this));
         }
-        if (this.field_a.field_b == 0) {
+        if (this.field_a.status == 0) {
           return false;
         }
-        if (this.field_a.field_b != 1) {
+        if (this.field_a.status != 1) {
           this.finalize();
           this.field_c = this.field_c + 1;
         }
@@ -201,7 +201,7 @@ final class gg implements Runnable {
         }
     }
 
-    gg(ka param0, java.net.URL param1, int param2) {
+    gg(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_l = param0;
           this.field_g = param1;

@@ -5,11 +5,11 @@ import java.io.*;
 
 final class BufferedSocket implements Runnable {
     private InputStream field_d;
-    private ka field_k;
+    private PlatformTaskDispatcher field_k;
     private OutputStream field_q;
     private boolean field_i;
     private int field_r;
-    private bk field_b;
+    private PlatformTask field_b;
     private boolean field_l;
     static p field_n;
     static String field_o;
@@ -33,12 +33,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_b != null) {
-            while (this.field_b.field_b == 0) {
+            while (this.field_b.status == 0) {
               uc.a(-113, 1L);
             }
-            if (this.field_b.field_b == 1) {
+            if (this.field_b.status == 1) {
               try {
-                ((Thread) (this.field_b.field_f)).join();
+                ((Thread) (this.field_b.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -125,7 +125,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    BufferedSocket(java.net.Socket param0, ka param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -390,7 +390,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (this.field_b == null) {
-              this.field_b = this.field_k.a(3, 115, (Runnable) (this));
+              this.field_b = this.field_k.requestThreadStart(3, 115, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -430,7 +430,7 @@ final class BufferedSocket implements Runnable {
         return ri.a(true, param2, param0, param3, false, param1);
     }
 
-    private BufferedSocket(java.net.Socket param0, ka param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_i = false;
         this.field_l = false;
         this.field_r = 0;

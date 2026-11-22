@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class og {
-    static ka field_a;
+    static PlatformTaskDispatcher field_a;
     static int field_f;
     static int field_b;
     static byte[][] field_c;
@@ -30,7 +30,7 @@ final class og {
           u.a(param0, 1);
           return var2;
         }
-        field_a = (ka) null;
+        field_a = (PlatformTaskDispatcher) null;
         u.a(param0, 1);
         return var2;
     }

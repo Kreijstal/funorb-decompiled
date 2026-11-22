@@ -673,7 +673,7 @@ final class kk {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          ic var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -715,19 +715,19 @@ final class kk {
               stackIn_15_3 = null;
               stackIn_15_6 = DequeCursor.field_f;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_m).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_m).append("&e=").append(var10).toString()));
             scanLoop1: while (true) {
-              if (0 == var4.field_g) {
+              if (0 == var4.status) {
                 em.a(1L, false);
                 if (var6 == 0) {
                   continue;
                 }
               } else {
-                if (var4.field_g != 1) {
+                if (var4.status != 1) {
                   break scanLoop1;
                 }
               }
-              var5 = (DataInputStream) (var4.field_b);
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
               break;

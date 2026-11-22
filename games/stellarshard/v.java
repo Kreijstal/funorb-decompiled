@@ -6,10 +6,10 @@ import java.io.*;
 final class v implements Runnable {
     private int field_c;
     static boolean field_b;
-    private re field_j;
+    private PlatformTask field_j;
     private DataInputStream field_i;
-    private re field_g;
-    private re field_a;
+    private PlatformTask field_g;
+    private PlatformTask field_a;
     private java.net.URL field_f;
     static boolean field_e;
     private PlatformTaskDispatcher field_d;
@@ -17,18 +17,18 @@ final class v implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_g) {
-          if (this.field_g.field_b != null) {
+          if (this.field_g.result != null) {
             try {
-              ((DataInputStream) (this.field_g.field_b)).close();
+              ((DataInputStream) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_g = null;
         }
         if (null != this.field_a) {
-          if (this.field_a.field_b != null) {
+          if (this.field_a.result != null) {
             try {
-              ((java.net.Socket) (this.field_a.field_b)).close();
+              ((java.net.Socket) (this.field_a.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -107,12 +107,12 @@ final class v implements Runnable {
         }
         if (this.field_c == 0) {
           if (null == this.field_g) {
-            this.field_g = this.field_d.a(5284, this.field_f);
+            this.field_g = this.field_d.requestUrlStream(5284, this.field_f);
           }
-          if (this.field_g.field_f == 0) {
+          if (this.field_g.status == 0) {
             return false;
           }
-          if (this.field_g.field_f != 1) {
+          if (this.field_g.status != 1) {
             this.field_c = this.field_c + 1;
             this.field_g = null;
             return false;
@@ -123,12 +123,12 @@ final class v implements Runnable {
         }
         if (this.field_c == 1) {
           if (null == this.field_a) {
-            this.field_a = this.field_d.a(this.field_f.getHost(), (byte) 34, 443);
+            this.field_a = this.field_d.requestDirectSocket(this.field_f.getHost(), (byte) 34, 443);
           }
-          if (this.field_a.field_f == 0) {
+          if (this.field_a.status == 0) {
             return false;
           }
-          if (1 != this.field_a.field_f) {
+          if (1 != this.field_a.status) {
             this.field_c = this.field_c + 1;
             this.field_a = null;
             return false;
@@ -137,10 +137,10 @@ final class v implements Runnable {
         if (this.field_i == null) {
           try {
             if (0 == this.field_c) {
-              this.field_i = (DataInputStream) (this.field_g.field_b);
+              this.field_i = (DataInputStream) (this.field_g.result);
             }
             if (this.field_c == 1) {
-              var4 = (java.net.Socket) (this.field_a.field_b);
+              var4 = (java.net.Socket) (this.field_a.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -157,12 +157,12 @@ final class v implements Runnable {
           }
         }
         if (this.field_j == null) {
-          this.field_j = this.field_d.a((Runnable) (this), 5, 0);
+          this.field_j = this.field_d.requestThreadStart((Runnable) (this), 5, 0);
         }
-        if (this.field_j.field_f == 0) {
+        if (this.field_j.status == 0) {
           return false;
         }
-        if (this.field_j.field_f == 1) {
+        if (this.field_j.status == 1) {
           return false;
         }
         this.finalize();

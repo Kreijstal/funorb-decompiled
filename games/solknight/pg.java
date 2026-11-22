@@ -206,20 +206,20 @@ final class pg {
           }
           try {
             if (0 == SocketConnector.field_f) {
-              SecondaryNodeDeque.field_b = NodeHashTableIterator.field_a.a(ProxySocketConnector.field_o, ue.field_a, -28148);
+              SecondaryNodeDeque.field_b = NodeHashTableIterator.field_a.requestDirectSocket(ProxySocketConnector.field_o, ue.field_a, -28148);
               SocketConnector.field_f = SocketConnector.field_f + 1;
             }
             if (SocketConnector.field_f == 1) {
-              if (2 == SecondaryNodeDeque.field_b.field_c) {
+              if (2 == SecondaryNodeDeque.field_b.status) {
                 stackIn_14_0 = ua.a(-1, (byte) -86);
                 return stackIn_14_0;
               }
-              if (SecondaryNodeDeque.field_b.field_c == 1) {
+              if (SecondaryNodeDeque.field_b.status == 1) {
                 SocketConnector.field_f = SocketConnector.field_f + 1;
               }
             }
             if (SocketConnector.field_f == 2) {
-              qf.field_a = new BufferedSocket((java.net.Socket) (SecondaryNodeDeque.field_b.field_e), NodeHashTableIterator.field_a);
+              qf.field_a = new BufferedSocket((java.net.Socket) (SecondaryNodeDeque.field_b.result), NodeHashTableIterator.field_a);
               var2 = new PacketBuffer(13);
               si.a(hj.field_x, (byte) 22, sa.field_o, q.field_a, var2);
               var2.writeByte(param0 + 35, 15);

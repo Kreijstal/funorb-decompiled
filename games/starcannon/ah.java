@@ -3,7 +3,7 @@
  */
 final class ah {
     static int field_c;
-    static bk field_e;
+    static PlatformTask field_e;
     int field_j;
     static qe field_d;
     String field_k;

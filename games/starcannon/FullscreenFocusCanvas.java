@@ -80,7 +80,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final void exitFullscreen(ka param0, byte param1) {
+    final void exitFullscreen(PlatformTaskDispatcher param0, byte param1) {
         try {
           int var3_int = -27 / ((param1 - 68) / 49);
           eg.exitFullscreenFrame(this.fullscreenFrame, (byte) -47, param0);

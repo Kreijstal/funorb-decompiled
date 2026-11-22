@@ -3,14 +3,14 @@
  */
 final class lh {
     static String field_a;
-    static be field_b;
+    static PlatformTaskDispatcher field_b;
     static int field_c;
     static int field_d;
 
     public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -21248) {
-          field_b = (be) null;
+          field_b = (PlatformTaskDispatcher) null;
           field_a = null;
           return;
         }

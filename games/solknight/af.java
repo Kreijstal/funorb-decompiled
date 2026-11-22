@@ -741,7 +741,7 @@ class af implements j, eg {
                       var12[var17] = k.a(var10[var17], (byte) -106);
                       var17++;
                     }
-                    var18.field_s[var5] = param0.a((byte) 113, var8, var12, k.a(var20, (byte) -101));
+                    var18.field_s[var5] = param0.requestDeclaredMethod((byte) 113, var8, var12, k.a(var20, (byte) -101));
                     var18.field_q[var5] = var21;
                   }
                 } else {
@@ -755,7 +755,7 @@ class af implements j, eg {
                   }
                   var18.field_r[var5] = var6_int;
                   var18.field_m[var5] = var9;
-                  var18.field_k[var5] = param0.a(0, k.a(var15, (byte) -115), var16);
+                  var18.field_k[var5] = param0.requestDeclaredField(0, k.a(var15, (byte) -115), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

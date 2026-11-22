@@ -126,11 +126,11 @@ final class kj extends jk {
           }
           for (var2 = param0; var2 < var1.field_e; var2++) {
             if (null != var4.field_k[var2] &&
-              var4.field_k[var2].field_g == 0) {
+              var4.field_k[var2].status == 0) {
               return false;
             }
             if (var4.field_s[var2] != null &&
-              0 == var4.field_s[var2].field_g) {
+              0 == var4.field_s[var2].status) {
               return false;
             }
           }

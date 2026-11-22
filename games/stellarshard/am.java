@@ -4,7 +4,7 @@
 final class am {
     static String field_i;
     static int field_f;
-    static re field_c;
+    static PlatformTask field_c;
     static int[] field_d;
     static pf field_g;
     static String field_b;

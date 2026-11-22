@@ -47,7 +47,7 @@ final class gj extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, lj param1, boolean param2, int param3, java.awt.Component param4, be param5) {
+    final static void a(int param0, lj param1, boolean param2, int param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
         try {
           fg.a(param0, param3, param0, param4, param5, true, param1, param2);
         } catch (RuntimeException runtimeException) {

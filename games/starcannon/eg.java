@@ -16,8 +16,8 @@ final class eg implements de {
     private int field_g;
     private int field_b;
 
-    final static void exitFullscreenFrame(java.awt.Frame param0, byte param1, ka param2) {
-        bk var3 = null;
+    final static void exitFullscreenFrame(java.awt.Frame param0, byte param1, PlatformTaskDispatcher param2) {
+        PlatformTask var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -27,11 +27,11 @@ final class eg implements de {
         RuntimeException var3_ref = null;
         try {
           while (true) {
-            var3 = param2.a(param0, param1 + 12297);
-            while (var3.field_b == 0) {
+            var3 = param2.requestFullscreenExit(param0, param1 + 12297);
+            while (var3.status == 0) {
               uc.a(-121, 10L);
             }
-            if (var3.field_b != 1) {
+            if (var3.status != 1) {
               uc.a(param1 - 51, 100L);
               continue;
             }

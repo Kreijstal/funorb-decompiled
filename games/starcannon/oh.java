@@ -52,7 +52,7 @@ final class oh {
         field_a = null;
     }
 
-    final static java.awt.Frame a(int param0, ka param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_4_0 = null;
         Object stackIn_34_0 = null;
@@ -65,12 +65,12 @@ final class oh {
         int var7_int = 0;
         java.awt.Frame var7 = null;
         jk[] var9 = null;
-        bk var10 = null;
+        PlatformTask var10 = null;
         try {
           if (param5 >= -91) {
             field_c = (int[]) null;
           }
-          if (!param1.a((byte) -68)) {
+          if (!param1.isFullscreenAvailable((byte) -68)) {
             stackIn_4_0 = null;
             return (java.awt.Frame) (stackIn_4_0);
           }
@@ -95,15 +95,15 @@ final class oh {
               return null;
             }
           }
-          var10 = param1.a(param4, param0, param2, param3, 2024561328);
-          while (0 == var10.field_b) {
+          var10 = param1.requestFullscreenEnter(param4, param0, param2, param3, 2024561328);
+          while (0 == var10.status) {
             uc.a(-119, 10L);
           }
-          var7 = (java.awt.Frame) (var10.field_f);
+          var7 = (java.awt.Frame) (var10.result);
           if (var7 == null) {
             return null;
           }
-          if (var10.field_b != 2) {
+          if (var10.status != 2) {
             return var7;
           }
           eg.exitFullscreenFrame(var7, (byte) -47, param1);

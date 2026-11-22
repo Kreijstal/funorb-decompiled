@@ -175,9 +175,9 @@ abstract class fb {
             var18.field_p = new int[var18.field_s];
             var18.field_n = new int[var18.field_s];
             var18.field_k = new int[var18.field_s];
-            var18.field_r = new re[var18.field_s];
+            var18.field_r = new PlatformTask[var18.field_s];
             var18.field_m = new byte[var18.field_s][][];
-            var18.field_q = new re[var18.field_s];
+            var18.field_q = new PlatformTask[var18.field_s];
             if (param3 != 20) {
               return;
             }
@@ -215,7 +215,7 @@ abstract class fb {
                       var12[var17] = he.b(var10[var17], -61);
                       var17++;
                     }
-                    var18.field_q[var5] = param2.a(var8, var12, param3 + 94, he.b(var7, ih.a(param3, -73)));
+                    var18.field_q[var5] = param2.requestDeclaredMethod(var8, var12, param3 + 94, he.b(var7, ih.a(param3, -73)));
                     var18.field_m[var5] = var20;
                   }
                 } else {
@@ -229,7 +229,7 @@ abstract class fb {
                   }
                   var18.field_k[var5] = var6_int;
                   var18.field_n[var5] = var9;
-                  var18.field_r[var5] = param2.a(he.b(var15, -112), 0, var16);
+                  var18.field_r[var5] = param2.requestDeclaredField(he.b(var15, -112), 0, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

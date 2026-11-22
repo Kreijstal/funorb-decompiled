@@ -6,9 +6,9 @@ final class ud extends IntrusiveNode {
     int[] field_n;
     int field_k;
     int[] field_l;
-    eb[] field_h;
+    PlatformTask[] field_h;
     static int field_f;
-    eb[] field_i;
+    PlatformTask[] field_i;
     static String field_p;
     byte[][][] field_g;
     int field_o;

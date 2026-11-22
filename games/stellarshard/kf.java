@@ -8,7 +8,7 @@ final class kf implements uk {
     static int[] field_b;
 
     final static void exitFullscreenFrame(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
-        re var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -21,11 +21,11 @@ final class kf implements uk {
         var4 = stellarshard.field_B;
         try {
           while (true) {
-            var3 = param2.a(param0, (byte) -107);
-            while (var3.field_f == 0) {
+            var3 = param2.requestFullscreenExit(param0, (byte) -107);
+            while (var3.status == 0) {
               jj.a((byte) -123, 10L);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               jj.a((byte) -128, 100L);
               continue;
             }

@@ -195,7 +195,7 @@ final class gb {
             gg.field_O[0] = 5;
           } else if (kg.field_m != 2) {
             if (3 == kg.field_m) {
-              if (wc.field_c.field_q) {
+              if (wc.field_c.privilegedTasksEnabled) {
                 var3_int = th.a(jd.field_a, am.field_c, li.field_c, vi.field_I, -62);
               } else {
                 var3_int = th.a(jd.field_a, dg.field_C, li.field_c, vi.field_I, -98);

@@ -68,7 +68,7 @@ class PcmPlayerService {
                 field_p == null) {
                 field_p = new sb();
                 field_p.field_b = param0;
-                param0.a(field_d, -30, (Runnable) ((Object) field_p));
+                param0.requestThreadStart(field_d, -30, (Runnable) ((Object) field_p));
               }
               if (field_p != null) {
                 if (field_p.field_a[param2] != null) {

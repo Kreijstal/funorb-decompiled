@@ -104,11 +104,11 @@ final class wl {
           }
           for (var2 = 0; var2 < var1.field_o; var2++) {
             if (var4.field_h[var2] != null &&
-              var4.field_h[var2].field_a == 0) {
+              var4.field_h[var2].status == 0) {
               return false;
             }
             if (var4.field_i[var2] != null &&
-              var4.field_i[var2].field_a == 0) {
+              var4.field_i[var2].status == 0) {
               return false;
             }
           }

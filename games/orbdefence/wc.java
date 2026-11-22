@@ -4,7 +4,7 @@
 final class wc {
     static int[] field_a;
     static String field_b;
-    static be field_c;
+    static PlatformTaskDispatcher field_c;
     private static String field_z;
 
     public static void a(byte param0) {

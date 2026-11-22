@@ -28,25 +28,25 @@ final class eg {
         int var5 = 0;
         eg var6 = null;
         int var7 = 0;
-        ic var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (!param0.a(2)) {
+          if (!param0.isFullscreenAvailable(2)) {
             stackIn_4_0 = new eg[]{};
             return stackIn_4_0;
           }
-          var8 = param0.b((byte) -66);
+          var8 = param0.requestDisplayModes((byte) -66);
           while (true) {
-            if (var8.field_g == 0) {
+            if (var8.status == 0) {
               em.a(10L, false);
               if (var7 == 0) {
                 continue;
               }
             } else {
-              if (var8.field_g != 2) {
-                var10 = (int[]) (var8.field_b);
+              if (var8.status != 2) {
+                var10 = (int[]) (var8.result);
                 var9 = var10;
                 var3 = var9;
                 var4 = new eg[var10.length >> 2];

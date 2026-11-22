@@ -93,7 +93,7 @@ final class BufferedSocket implements Runnable {
               field_c = (String[]) null;
             }
             if (this.field_d == null) {
-              this.field_d = this.field_k.a(3, -29, (Runnable) (this));
+              this.field_d = this.field_k.requestThreadStart(3, -29, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -530,12 +530,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_d) {
-            while (0 == this.field_d.field_c) {
+            while (0 == this.field_d.status) {
               i.a((byte) 56, 1L);
             }
-            if (this.field_d.field_c == 1) {
+            if (this.field_d.status == 1) {
               try {
-                ((Thread) (this.field_d.field_e)).join();
+                ((Thread) (this.field_d.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (InterruptedException) (Object) decompiledCaughtException;

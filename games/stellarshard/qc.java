@@ -238,7 +238,7 @@ final class qc {
             pk.field_j[0] = 5;
           } else if (rb.field_s != 2) {
             if (rb.field_s == 3) {
-              if (ic.field_d.field_p) {
+              if (ic.field_d.privilegedTasksEnabled) {
                 var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ei.field_E);
               } else {
                 var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ld.field_D);

@@ -434,7 +434,7 @@ final class ke {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (be.field_c.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_c.startsWith("win") &&
               tk.a(true, param0)) {
               return;
             }

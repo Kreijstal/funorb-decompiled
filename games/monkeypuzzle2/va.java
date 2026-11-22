@@ -131,7 +131,7 @@ class va {
                 field_g == null) {
                 field_g = new ff();
                 field_g.field_b = param0;
-                param0.a((Runnable) ((Object) field_g), field_a, 0);
+                param0.requestThreadStart((Runnable) ((Object) field_g), field_a, 0);
               }
               if (field_g != null) {
                 if (field_g.field_c[param2] != null) {

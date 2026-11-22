@@ -71,18 +71,18 @@ abstract class SpriteState extends DualLinkNode {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_h; var4++) {
               if (var13.field_k[var4] != null) {
-                if (2 == var13.field_k[var4].field_c) {
+                if (2 == var13.field_k[var4].status) {
                   var13.field_p[var4] = -5;
                 }
-                if (var13.field_k[var4].field_c == 0) {
+                if (var13.field_k[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (null != var13.field_s[var4]) {
-                if (var13.field_s[var4].field_c == 2) {
+                if (var13.field_s[var4].status == 2) {
                   var13.field_p[var4] = -6;
                 }
-                if (var13.field_s[var4].field_c == 0) {
+                if (var13.field_s[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -104,25 +104,25 @@ abstract class SpriteState extends DualLinkNode {
                   if (var6_int != 0) {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var15 = (java.lang.reflect.Field) (var17.field_k[var5].field_e);
+                        var15 = (java.lang.reflect.Field) (var17.field_k[var5].result);
                         var8 = var15.getModifiers();
                         param0.writeByte(-102, 0);
                         param0.writeInt(var8, false);
                       }
                     } else {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_k[var5].field_e);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_k[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_m[var5]);
                       param0.writeByte(-117, 0);
                     }
                   } else {
-                    var26 = (java.lang.reflect.Field) (var17.field_k[var5].field_e);
+                    var26 = (java.lang.reflect.Field) (var17.field_k[var5].result);
                     var8 = var26.getInt((Object) null);
                     param0.writeByte(-107, 0);
                     param0.writeInt(var8, false);
                   }
                   if (var6_int == 3) {
-                    var27 = (java.lang.reflect.Method) (var17.field_s[var5].field_e);
+                    var27 = (java.lang.reflect.Method) (var17.field_s[var5].result);
                     var25 = var17.field_q[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
@@ -143,7 +143,7 @@ abstract class SpriteState extends DualLinkNode {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var28 = (java.lang.reflect.Method) (var17.field_s[var5].field_e);
+                      var28 = (java.lang.reflect.Method) (var17.field_s[var5].result);
                       var8Lifetime1 = var28.getModifiers();
                       param0.writeByte(-102, 0);
                       param0.writeInt(var8Lifetime1, false);

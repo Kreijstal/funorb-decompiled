@@ -12,11 +12,11 @@ final class cb implements Runnable {
     private int field_h;
     static im field_b;
     static RasterBuffer field_a;
-    private eb field_f;
+    private PlatformTask field_f;
     private OutputStream field_i;
     private InputStream field_m;
     static int field_j;
-    private be field_k;
+    private PlatformTaskDispatcher field_k;
     static int field_e;
     private boolean field_o;
     private java.net.Socket field_n;
@@ -38,12 +38,12 @@ final class cb implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_f) {
-            while (this.field_f.field_a == 0) {
+            while (this.field_f.status == 0) {
               hb.a(1L, param0 + 120);
             }
-            if (this.field_f.field_a == 1) {
+            if (this.field_f.status == 1) {
               try {
-                ((Thread) (this.field_f.field_g)).join();
+                ((Thread) (this.field_f.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (InterruptedException) (Object) decompiledCaughtException;
@@ -193,7 +193,7 @@ final class cb implements Runnable {
         field_g = null;
     }
 
-    cb(java.net.Socket param0, be param1) throws IOException {
+    cb(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -231,7 +231,7 @@ final class cb implements Runnable {
               }
             }
             if (this.field_f == null) {
-              this.field_f = this.field_k.a(314572800, 3, (Runnable) (this));
+              this.field_f = this.field_k.requestThreadStart(314572800, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -340,7 +340,7 @@ final class cb implements Runnable {
         }
     }
 
-    private cb(java.net.Socket param0, be param1, int param2) throws IOException {
+    private cb(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_h = 0;
         this.field_l = 0;
         this.field_o = false;

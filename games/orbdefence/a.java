@@ -366,7 +366,7 @@ final class a extends ge {
         }
     }
 
-    final static db[] a(be param0, int param1) {
+    final static db[] a(PlatformTaskDispatcher param0, int param1) {
         int var6 = 0;
         db[] stackIn_3_0 = null;
         db[] stackIn_9_0 = null;
@@ -381,24 +381,24 @@ final class a extends ge {
         int var5 = 0;
         db var7 = null;
         int var8 = 0;
-        eb var9 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (!param0.b((byte) -120)) {
+          if (!param0.isFullscreenAvailable((byte) -120)) {
             stackIn_3_0 = new db[]{};
             return stackIn_3_0;
           }
-          var9 = param0.a((byte) 31);
-          while (0 == var9.field_a) {
+          var9 = param0.requestDisplayModes((byte) 31);
+          while (0 == var9.status) {
             hb.a(10L, 103);
           }
-          if (var9.field_a == 2) {
+          if (var9.status == 2) {
             stackIn_9_0 = new db[]{};
             return stackIn_9_0;
           }
-          var11 = (int[]) (var9.field_g);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new db[var11.length >> 2];

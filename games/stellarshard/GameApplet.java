@@ -27,7 +27,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           int var8_int = 0;
           Throwable var8 = null;
           RuntimeException var8_ref = null;
-          re var9 = null;
+          PlatformTask var9 = null;
           int var10 = 0;
           var10 = stellarshard.field_B;
           try {
@@ -54,9 +54,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param1, true);
               ic.field_d = dupTemp$0;
               fb.field_d = dupTemp$0;
-              var9 = ic.field_d.a((Runnable) (this), 1, 0);
+              var9 = ic.field_d.requestThreadStart((Runnable) (this), 1, 0);
               while (true) {
-                if (var9.field_f == 0) {
+                if (var9.status == 0) {
                   jj.a((byte) -127, 10L);
                   if (var10 == 0) {
                     continue;
@@ -666,7 +666,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (ic.field_d != null) {
             try {
-              ic.field_d.c(~param0);
+              ic.field_d.shutdown(~param0);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

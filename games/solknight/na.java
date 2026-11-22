@@ -111,18 +111,18 @@ final class na implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_i) {
-          if (null != this.field_i.field_e) {
+          if (null != this.field_i.result) {
             try {
-              ((DataInputStream) (this.field_i.field_e)).close();
+              ((DataInputStream) (this.field_i.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_i = null;
         }
         if (null != this.field_a) {
-          if (this.field_a.field_e != null) {
+          if (this.field_a.result != null) {
             try {
-              ((java.net.Socket) (this.field_a.field_e)).close();
+              ((java.net.Socket) (this.field_a.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -223,12 +223,12 @@ final class na implements Runnable {
         }
         if (this.field_c == 0) {
           if (null == this.field_i) {
-            this.field_i = this.field_h.a(this.field_e, (byte) 68);
+            this.field_i = this.field_h.requestUrlStream(this.field_e, (byte) 68);
           }
-          if (this.field_i.field_c == 0) {
+          if (this.field_i.status == 0) {
             return false;
           }
-          if (this.field_i.field_c != 1) {
+          if (this.field_i.status != 1) {
             this.field_i = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -236,12 +236,12 @@ final class na implements Runnable {
         }
         if (this.field_c == 1) {
           if (null == this.field_a) {
-            this.field_a = this.field_h.a(this.field_e.getHost(), 443, -28148);
+            this.field_a = this.field_h.requestDirectSocket(this.field_e.getHost(), 443, -28148);
           }
-          if (this.field_a.field_c == 0) {
+          if (this.field_a.status == 0) {
             return false;
           }
-          if (1 != this.field_a.field_c) {
+          if (1 != this.field_a.status) {
             this.field_c = this.field_c + 1;
             this.field_a = null;
             return false;
@@ -250,10 +250,10 @@ final class na implements Runnable {
         if (null == this.field_d) {
           try {
             if (this.field_c == 0) {
-              this.field_d = (DataInputStream) (this.field_i.field_e);
+              this.field_d = (DataInputStream) (this.field_i.result);
             }
             if (this.field_c == 1) {
-              var4 = (java.net.Socket) (this.field_a.field_e);
+              var4 = (java.net.Socket) (this.field_a.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -270,12 +270,12 @@ final class na implements Runnable {
           }
         }
         if (null == this.field_f) {
-          this.field_f = this.field_h.a(5, -90, (Runnable) (this));
+          this.field_f = this.field_h.requestThreadStart(5, -90, (Runnable) (this));
         }
-        if (this.field_f.field_c == 0) {
+        if (this.field_f.status == 0) {
           return false;
         }
-        if (this.field_f.field_c != 1) {
+        if (this.field_f.status != 1) {
           this.finalize();
           this.field_c = this.field_c + 1;
         }

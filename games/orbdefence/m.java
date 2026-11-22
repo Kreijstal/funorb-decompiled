@@ -17,7 +17,7 @@ final class m {
         field_d = null;
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, int param4, be param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -34,10 +34,10 @@ final class m {
         java.awt.Frame var7 = null;
         int var9 = 0;
         db[] var10 = null;
-        eb var11 = null;
+        PlatformTask var11 = null;
         var9 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (!param5.b((byte) -100)) {
+          if (!param5.isFullscreenAvailable((byte) -100)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -63,16 +63,16 @@ final class m {
               return null;
             }
           }
-          var11 = param5.a(param1, param0, param2, param3 + 28253, param4);
-          while (var11.field_a == 0) {
+          var11 = param5.requestFullscreenEnter(param1, param0, param2, param3 + 28253, param4);
+          while (var11.status == 0) {
             hb.a(10L, param3 + 122);
           }
-          var7 = (java.awt.Frame) (var11.field_g);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_33_0 = null;
             return (java.awt.Frame) (stackIn_33_0);
           }
-          if (var11.field_a != 2) {
+          if (var11.status != 2) {
             stackIn_38_0 = var7;
             return stackIn_38_0;
           }

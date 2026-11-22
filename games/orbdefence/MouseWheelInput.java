@@ -16,7 +16,7 @@ abstract class MouseWheelInput {
 
     final static void a(byte param0, Throwable param1, String param2) {
         try {
-          be stackIn_17_0;
+          PlatformTaskDispatcher stackIn_17_0;
           java.net.URL stackIn_17_1;
           java.net.URL stackIn_17_2;
           java.net.URL stackIn_17_3;
@@ -27,7 +27,7 @@ abstract class MouseWheelInput {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          eb var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -71,14 +71,14 @@ abstract class MouseWheelInput {
               stackIn_18_2 = null;
               stackIn_18_5 = "" + el.field_F;
             }
-            var4 = ((be) (Object) stackIn_17_0).a(new java.net.URL(stackIn_17_3, ((StringBuilder) (Object) stackIn_17_4).append(stackIn_18_5).append("&v1=").append(be.field_s).append("&v2=").append(be.field_j).append("&e=").append(var10).toString()), (byte) -49);
-            while (var4.field_a == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_17_0).requestUrlStream(new java.net.URL(stackIn_17_3, ((StringBuilder) (Object) stackIn_17_4).append(stackIn_18_5).append("&v1=").append(PlatformTaskDispatcher.field_s).append("&v2=").append(PlatformTaskDispatcher.field_j).append("&e=").append(var10).toString()), (byte) -49);
+            while (var4.status == 0) {
               hb.a(1L, 110);
             }
-            if (var4.field_a != 1) {
+            if (var4.status != 1) {
               return;
             }
-            var5 = (DataInputStream) (var4.field_g);
+            var5 = (DataInputStream) (var4.result);
             var5.read();
             var5.close();
             return;

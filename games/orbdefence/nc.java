@@ -15,7 +15,7 @@ final class nc extends sf {
         d.field_j = param2;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, be param7, int param8) {
+    final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
         try {
           tk.field_m = param2;
           ta.field_z = param5;
@@ -25,8 +25,8 @@ final class nc extends sf {
           s.field_x = param0;
           fm.field_c = param3;
           if (param4 <= 87) {
-            be var10 = (be) null;
-            nc.a(13, 122, -103, (String) null, (byte) 38, 59, -112, (be) null, -9);
+            PlatformTaskDispatcher var10 = (PlatformTaskDispatcher) null;
+            nc.a(13, 122, -103, (String) null, (byte) 38, 59, -112, (PlatformTaskDispatcher) null, -9);
           }
           hf.field_k = param8;
           kg.field_h = (ge) ((Object) new a());

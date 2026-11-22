@@ -254,19 +254,19 @@ final class rk implements Runnable {
     }
 
     rk(PlatformTaskDispatcher param0) {
-        re var2 = null;
+        PlatformTask var2 = null;
         this.field_d = new al();
         this.field_e = 0;
         this.field_a = false;
         try {
-          var2 = param0.a((Runnable) (this), 5, 0);
-          while (0 == var2.field_f) {
+          var2 = param0.requestThreadStart((Runnable) (this), 5, 0);
+          while (0 == var2.status) {
             jj.a((byte) -124, 10L);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_g = (Thread) (var2.field_b);
+          this.field_g = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

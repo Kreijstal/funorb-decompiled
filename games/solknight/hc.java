@@ -117,7 +117,7 @@ final class hc {
             fl.field_b[0] = 5;
           } else if (te.field_M != 2) {
             if (3 == te.field_M) {
-              if (!wh.field_c.field_h) {
+              if (!wh.field_c.privilegedTasksEnabled) {
                 var3_int = bk.a((byte) 3, ic.field_x, ke.field_H, si.field_A, w.field_c);
               } else {
                 var3_int = bk.a((byte) 3, tg.field_K, ke.field_H, si.field_A, w.field_c);

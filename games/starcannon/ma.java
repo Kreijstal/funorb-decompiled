@@ -26,11 +26,11 @@ final class ma {
           }
           for (var2 = param0; var2 < var1.field_n; var2++) {
             if (null != var3.field_p[var2] &&
-              var3.field_p[var2].field_b == 0) {
+              var3.field_p[var2].status == 0) {
               return false;
             }
             if (null != var3.field_i[var2] &&
-              var3.field_i[var2].field_b == 0) {
+              var3.field_i[var2].status == 0) {
               return false;
             }
           }

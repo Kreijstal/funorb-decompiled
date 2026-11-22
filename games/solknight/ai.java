@@ -39,19 +39,19 @@ final class ai {
             ai.a(false, (byte) 48);
           }
           if (null == bk.field_a) {
-            bk.field_a = qa.field_n.a(lc.field_l, ia.field_kb, param1 ^ 28119);
+            bk.field_a = qa.field_n.requestDirectSocket(lc.field_l, ia.field_kb, param1 ^ 28119);
           }
-          if (0 == bk.field_a.field_c) {
+          if (0 == bk.field_a.status) {
             return false;
           }
           dupTemp$1 = je.a(1);
           gf.field_Y = dupTemp$1;
           md.field_y = dupTemp$1;
-          if (bk.field_a.field_c != 1) {
+          if (bk.field_a.status != 1) {
             AccountRequestState.field_e = wc.field_f;
           } else {
             try {
-              MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.field_e), qa.field_n);
+              MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.result), qa.field_n);
               id.field_c.position = 0;
               var4 = te.field_N;
               var5 = var4;
