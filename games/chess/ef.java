@@ -14,7 +14,7 @@ final class ef extends IntrusiveNode {
         }
         try {
           fk.field_q.e(-3435);
-          mh.field_d.g();
+          mh.field_d.flushAndMarkDrainCheck();
           wf.field_R = param0;
           if (wf.field_R != null) {
             fk.field_q.a(false, wf.field_R, 59);

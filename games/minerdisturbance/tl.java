@@ -76,19 +76,19 @@ final class tl extends pc {
     final static void b(byte param0) {
         if (param0 > 67) {
           if (mj.field_o != null) {
-            mj.field_o.a();
+            mj.field_o.dispose();
           }
           if (null != im.field_b) {
-            im.field_b.a();
+            im.field_b.dispose();
           }
           return;
         }
         tl.b((byte) 89);
         if (mj.field_o != null) {
-          mj.field_o.a();
+          mj.field_o.dispose();
         }
         if (null != im.field_b) {
-          im.field_b.a();
+          im.field_b.dispose();
         }
     }
 

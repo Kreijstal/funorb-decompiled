@@ -42,7 +42,7 @@ final class ka extends od {
           }
           if ((this.field_o.field_E[param0.field_i] & 4) != 0 &&
             param0.field_l < 0) {
-            var4_int = this.field_o.field_G[param0.field_i] / id.field_m;
+            var4_int = this.field_o.field_G[param0.field_i] / AudioOutput.field_m;
             var5 = (var4_int + 1048575 - param0.field_j) / var4_int;
             param0.field_j = var4_int * param1 + param0.field_j & 1048575;
             if (var5 <= param1) {
@@ -174,7 +174,7 @@ final class ka extends od {
           }
           if (0 != (4 & this.field_o.field_E[param1.field_i]) &&
             param1.field_l < 0) {
-            var7_int = this.field_o.field_G[param1.field_i] / id.field_m;
+            var7_int = this.field_o.field_G[param1.field_i] / AudioOutput.field_m;
             while (true) {
               var8 = (-param1.field_j + var7_int + 1048575) / var7_int;
               if (var8 > param4) {
@@ -185,7 +185,7 @@ final class ka extends od {
               param4 = param4 - var8;
               param2 = param2 + var8;
               param1.field_j = param1.field_j + (-1048576 + var7_int * var8);
-              var9 = id.field_m / 100;
+              var9 = AudioOutput.field_m / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;

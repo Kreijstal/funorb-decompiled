@@ -303,7 +303,7 @@ final class wj extends ph {
           if (var1_floatLifetime5 != vb.field_Jb) {
             kd.field_v.a(ua.a((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
           }
-          eb.field_e.a(kd.field_v);
+          eb.field_e.setRootStream(kd.field_v);
           ik.field_b = false;
           var2 = ln.field_a.field_d;
           var3 = ln.field_a.field_a;

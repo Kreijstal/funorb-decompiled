@@ -10,8 +10,8 @@ final class ia {
         ml var1 = null;
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          el.field_sb.a();
-          k.field_J.a();
+          el.field_sb.serviceOutput();
+          k.field_J.serviceOutput();
           vb.field_k = vb.field_k - 1;
           if (param0 < 4) {
             field_c = -62;

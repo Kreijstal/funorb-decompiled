@@ -241,8 +241,8 @@ abstract class um extends UiWidget implements dq {
         gg var1Lifetime1;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          ri.field_r.b();
-          mh.field_d.b();
+          ri.field_r.serviceOutput();
+          mh.field_d.serviceOutput();
           eh.field_c = eh.field_c - 1;
           if (eh.field_c == param0) {
             eh.field_c = 200;

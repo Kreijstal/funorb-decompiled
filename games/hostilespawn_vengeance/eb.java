@@ -6,7 +6,7 @@ final class eb {
     static sc field_c;
     static String field_d;
     static int field_a;
-    static ug field_e;
+    static AudioOutput field_e;
     static String field_f;
 
     final static void a(PlatformTaskDispatcher param0, int param1, Object param2) {

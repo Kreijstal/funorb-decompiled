@@ -75,18 +75,18 @@ class fg extends jc {
 
     final static void a(int param0, int param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, boolean param5, lj param6, boolean param7) {
         try {
-          la.a(param2, param7, 10);
-          cd.field_w = la.a(param4, param3, 0, param0);
-          wf.field_b = la.a(param4, param3, 1, param1);
+          AudioOutput.configureAudio(param2, param7, 10);
+          cd.field_w = AudioOutput.createOutput(param4, param3, 0, param0);
+          wf.field_b = AudioOutput.createOutput(param4, param3, 1, param1);
           vb.field_f = new v();
           h.field_H = param1 * 1000 / param2;
-          wf.field_b.a(vb.field_f);
+          wf.field_b.setRootStream(vb.field_f);
           ml.field_c = param6;
           ml.field_c.b(ImageProducerRasterBuffer.field_g, 106);
           if (!param5) {
             field_u = -24;
           }
-          cd.field_w.a(ml.field_c);
+          cd.field_w.setRootStream(ml.field_c);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "fg.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

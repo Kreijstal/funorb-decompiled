@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j implements Runnable {
-    volatile fj[] field_g;
+    volatile AudioOutput[] field_g;
     PlatformTaskDispatcher field_c;
     static GameAppletShell field_h;
     static long field_f;
@@ -232,7 +232,7 @@ final class j implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        fj var2 = null;
+        AudioOutput var2 = null;
         int var4 = MinerDisturbance.field_ab;
         this.field_i = true;
         try {
@@ -240,7 +240,7 @@ final class j implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_g[var1_int];
               if (var2 != null) {
-                var2.e();
+                var2.serviceOutput();
               }
             }
             gf.a(10L, -10309);
@@ -272,7 +272,7 @@ final class j implements Runnable {
     }
 
     j() {
-        this.field_g = new fj[2];
+        this.field_g = new AudioOutput[2];
         this.field_b = false;
         this.field_i = false;
     }

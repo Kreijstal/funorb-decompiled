@@ -20,14 +20,14 @@ final class d extends ci {
 
     final static void a(vl param0, int param1, vl param2, PlatformTaskDispatcher param3, java.awt.Component param4, boolean param5, byte param6) {
         try {
-          md.a(param1, param5, 10);
-          mh.field_d = md.a(param3, param4, 0, 22050);
-          kn.field_F = md.a(param3, param4, 1, 2048);
+          AudioOutput.configureAudio(param1, param5, 10);
+          mh.field_d = AudioOutput.createOutput(param3, param4, 0, 22050);
+          kn.field_F = AudioOutput.createOutput(param3, param4, 1, 2048);
           h.field_s = new lb();
-          kn.field_F.b(h.field_s);
+          kn.field_F.setRootStream(h.field_s);
           fk.field_q = param2;
           fk.field_q.a(64 * bc.field_b / 80, (byte) -100);
-          mh.field_d.b(fk.field_q);
+          mh.field_d.setRootStream(fk.field_q);
           if (param6 > -21) {
             field_Mb = (SecondaryNodeHashTable) null;
           }

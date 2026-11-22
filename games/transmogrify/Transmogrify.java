@@ -1182,7 +1182,7 @@ public final class Transmogrify extends SessionGameApplet {
           lc.e(-122);
           ul.clearStaticReferences();
           ej.b(false);
-          qh.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           oj.clearStaticReferences(param0 ^ 111);
           ga.a(true);
           al.clearStaticReferences(-84);

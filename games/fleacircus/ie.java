@@ -1084,12 +1084,12 @@ final class ie extends sh {
           if (this.field_q <= 0) {
             if (this.field_o == 256 &&
               (this.field_s & 255) == 0) {
-              if (la.field_h) {
+              if (AudioOutput.field_h) {
                 return ie.a(0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, 0, param3, param2, this);
               }
               return ie.b(((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, 0, param3, param2, this);
             }
-            if (la.field_h) {
+            if (AudioOutput.field_h) {
               return ie.c(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, 0, param3, param2, this, this.field_o, param4);
             }
             return ie.a(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, 0, param3, param2, this, this.field_o, param4);
@@ -1101,13 +1101,13 @@ final class ie extends sh {
           this.field_q = this.field_q + param1;
           if (this.field_o == 256 &&
             (this.field_s & 255) == 0) {
-            if (!la.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = ie.b(((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, this.field_z, 0, var6, param2, this);
             } else {
               param1 = ie.b(0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, this.field_r, this.field_t, 0, var6, param2, this);
             }
           } else {
-            if (!la.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = ie.b(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, this.field_z, 0, var6, param2, this, this.field_o, param4);
             } else {
               param1 = ie.b(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, this.field_r, this.field_t, 0, var6, param2, this, this.field_o, param4);
@@ -1615,7 +1615,7 @@ final class ie extends sh {
           return null;
         }
         if (param0.field_l.length != 0) {
-          return new ie(param0, (int)((long)param0.field_k * 256L * (long)param1 / (long)(100 * la.field_a)), param2 << 6);
+          return new ie(param0, (int)((long)param0.field_k * 256L * (long)param1 / (long)(100 * AudioOutput.field_a)), param2 << 6);
         }
         return null;
     }
@@ -1654,12 +1654,12 @@ final class ie extends sh {
           if (this.field_q <= 0) {
             if (this.field_o == -256 &&
               (this.field_s & 255) == 0) {
-              if (la.field_h) {
+              if (AudioOutput.field_h) {
                 return ie.b(0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, 0, param3, param2, this);
               }
               return ie.a(((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, 0, param3, param2, this);
             }
-            if (la.field_h) {
+            if (AudioOutput.field_h) {
               return ie.a(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, 0, param3, param2, this, this.field_o, param4);
             }
             return ie.b(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, 0, param3, param2, this, this.field_o, param4);
@@ -1671,13 +1671,13 @@ final class ie extends sh {
           this.field_q = this.field_q + param1;
           if (this.field_o == -256 &&
             (this.field_s & 255) == 0) {
-            if (!la.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = ie.a(((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, this.field_z, 0, var6, param2, this);
             } else {
               param1 = ie.a(0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, this.field_r, this.field_t, 0, var6, param2, this);
             }
           } else {
-            if (!la.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = ie.d(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_x, this.field_z, 0, var6, param2, this, this.field_o, param4);
             } else {
               param1 = ie.a(0, 0, ((sf) (this.field_i)).field_l, param0, this.field_s, param1, this.field_p, this.field_u, this.field_r, this.field_t, 0, var6, param2, this, this.field_o, param4);

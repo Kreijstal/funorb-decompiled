@@ -83,7 +83,7 @@ final class di extends PcmStream {
         var8 = MinerDisturbance.field_ab;
         try {
           if (this.field_eb.e()) {
-            var4_int = this.field_eb.field_g * this.field_r / fj.field_r;
+            var4_int = this.field_eb.field_g * this.field_r / AudioOutput.field_r;
             while (true) {
               var5 = this.field_fb + (long)var4_int * (long)param2;
               if (-var5 + this.field_t >= 0L) {
@@ -252,7 +252,7 @@ final class di extends PcmStream {
         int var11 = 0;
         var11 = MinerDisturbance.field_ab;
         try {
-          param1.field_M = fj.field_r / 100;
+          param1.field_M = AudioOutput.field_r / 100;
           if (0 <= param1.field_G && (null == param1.field_w ||
             param1.field_w.k())) {
             param1.a((byte) -103);
@@ -643,7 +643,7 @@ final class di extends PcmStream {
           if (param0 < 0 ||
             param0 == var3.field_n) {
             if (null != var3.field_w) {
-              var3.field_w.g(fj.field_r / 100);
+              var3.field_w.g(AudioOutput.field_r / 100);
               if (var3.field_w.j()) {
                 this.field_z.field_r.b(var3.field_w);
               }
@@ -918,7 +918,7 @@ final class di extends PcmStream {
             var8 = Math.sin((double)(param1.field_A & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)((double)var6 * var8);
           }
-          var6Lifetime1 = (int)(0.5 + (double)(256 * param1.field_D.field_s) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)fj.field_r);
+          var6Lifetime1 = (int)(0.5 + (double)(256 * param1.field_D.field_s) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_r);
           stackIn_10_0 = (var6Lifetime1 < 1) ? 1 : var6Lifetime1;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1320,7 +1320,7 @@ final class di extends PcmStream {
         int var5;
         var6 = MinerDisturbance.field_ab;
         if (this.field_eb.e()) {
-          var2 = this.field_r * this.field_eb.field_g / fj.field_r;
+          var2 = this.field_r * this.field_eb.field_g / AudioOutput.field_r;
           while (true) {
             var3 = this.field_fb + (long)param0 * (long)var2;
             if (-var3 + this.field_t >= 0L) {

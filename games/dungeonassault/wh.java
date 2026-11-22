@@ -15,9 +15,9 @@ final class wh {
           return;
         }
         if (null != ub.field_n) {
-          ub.field_n.c();
+          ub.field_n.dispose();
           if (null != hm.field_n) {
-            hm.field_n.c();
+            hm.field_n.dispose();
             return;
           }
           return;
@@ -25,7 +25,7 @@ final class wh {
         if (null == hm.field_n) {
           return;
         }
-        hm.field_n.c();
+        hm.field_n.dispose();
     }
 
     public static void clearStaticReferences(int param0) {

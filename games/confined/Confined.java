@@ -52,7 +52,7 @@ public final class Confined extends i {
           wi.clearStaticReferences((byte) 12);
           jb.l(320);
           hl.clearStaticReferences(0);
-          dk.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           vk.a((byte) -111);
           dd.clearStaticReferences();
           hn.e(0);
@@ -318,16 +318,16 @@ public final class Confined extends i {
         RuntimeException var2 = null;
         try {
           this.a((byte) 19, 20, 13, 11, false, 10, 0, 14);
-          dk.a(22050, true, 10);
-          ei.field_ob = dk.a(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 0, 1024);
-          DirectByteStorage.field_h = dk.a(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 1, 22050);
+          AudioOutput.configureAudio(22050, true, 10);
+          ei.field_ob = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 0, 1024);
+          DirectByteStorage.field_h = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 1, 22050);
           if (param0 != -3998) {
             field_F = -38;
           }
           cb.field_a = new be();
-          ei.field_ob.b(cb.field_a);
+          ei.field_ob.setRootStream(cb.field_a);
           he.field_d = new be();
-          DirectByteStorage.field_h.b(he.field_d);
+          DirectByteStorage.field_h.setRootStream(he.field_d);
           ti.field_n = false;
           t.field_c = 10;
           this.a(true, (byte) 111, true, true, true);
@@ -356,8 +356,8 @@ public final class Confined extends i {
             qh.c(param0 ^ -5);
             gm.i((byte) -29);
           }
-          ei.field_ob.c();
-          DirectByteStorage.field_h.c();
+          ei.field_ob.serviceOutput();
+          DirectByteStorage.field_h.serviceOutput();
           stackIn_11_1 = 110;
           stackIn_12_2 = (dn.field_d != null);
           this.b(stackIn_11_1, stackIn_12_2);
@@ -1301,10 +1301,10 @@ public final class Confined extends i {
         try {
           qh.c(4);
           if (null != DirectByteStorage.field_h) {
-            DirectByteStorage.field_h.d();
+            DirectByteStorage.field_h.dispose();
           }
           if (null != ei.field_ob) {
-            ei.field_ob.d();
+            ei.field_ob.dispose();
           }
           if (param0 != -26129) {
             field_I = 96;

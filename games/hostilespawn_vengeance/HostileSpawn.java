@@ -779,7 +779,7 @@ public final class HostileSpawn extends NetworkGameClient {
           gj.a(20, ac.field_e, 56.0f);
           this.a((byte) -80);
           nd.field_e = new rd(ul.field_P, ph.field_F);
-          var2 = new nm(22050, ug.field_g);
+          var2 = new nm(22050, AudioOutput.field_g);
           em.field_a[10] = va.a(ul.field_P, "", "flamethrower_all").a().a(var2);
           em.field_a[11] = va.a(ul.field_P, "", "footstep1").a().a(var2);
           em.field_a[12] = va.a(ul.field_P, "", "footstep2").a().a(var2);
@@ -1156,7 +1156,7 @@ public final class HostileSpawn extends NetworkGameClient {
           tm.clearStaticReferences(true);
           gh.clearStaticReferences();
           dl.d(-1);
-          ug.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           ch.clearStaticReferences(false);
           sa.clearStaticReferences((byte) -121);
           ua.clearStaticReferences((byte) 60);
@@ -2314,7 +2314,7 @@ public final class HostileSpawn extends NetworkGameClient {
           kd.field_v.c(0.4000000059604645f);
           kd.field_v.a(0.6000000238418579f);
           kd.field_v.d(0.30000001192092896f);
-          eb.field_e.a(kd.field_v);
+          eb.field_e.setRootStream(kd.field_v);
           wj.field_O = wj.field_O / 4;
           uj.field_p = new oc();
           this.a(true, (byte) 44, true, true, true);

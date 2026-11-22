@@ -14,14 +14,14 @@ final class StickySpecial extends SpecialOrder {
     final static void a(int param0, int param1, int param2, boolean param3, PlatformTaskDispatcher param4, int param5, java.awt.Component param6, MidiPcmStream param7) {
         try {
           AudioOutput.configure(param0, param3, 10);
-          BoardChangeBatch.field_l = AudioOutput.a(param4, param6, 0, param1);
-          nia.field_m = AudioOutput.a(param4, param6, 1, param2);
+          BoardChangeBatch.field_l = AudioOutput.createOutput(param4, param6, 0, param1);
+          nia.field_m = AudioOutput.createOutput(param4, param6, 1, param2);
           saa.field_a = new PcmStreamMixer();
           SauceOfFlameSpecial.field_p = 1000 * param2 / param0;
-          nia.field_m.a(saa.field_a);
+          nia.field_m.setRootStream(saa.field_a);
           uf.field_c = param7;
           uf.field_c.a(23679, bs.field_k);
-          BoardChangeBatch.field_l.a(uf.field_c);
+          BoardChangeBatch.field_l.setRootStream(uf.field_c);
           if (param5 != 19299) {
             field_p = true;
           }

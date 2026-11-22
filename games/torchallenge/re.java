@@ -5,7 +5,7 @@ final class re extends lb {
     private Object field_y;
     static String field_z;
     static Sprite[][] field_v;
-    static kh field_B;
+    static AudioOutput field_B;
     static int[] field_w;
     static Sprite[][] field_x;
     static int field_A;
@@ -181,7 +181,7 @@ final class re extends lb {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
               param0.getAppletContext().showDocument(mc.a(var2, -1, param0), "_top");
               if (param1 != 7184) {
-                field_B = (kh) null;
+                field_B = (AudioOutput) null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

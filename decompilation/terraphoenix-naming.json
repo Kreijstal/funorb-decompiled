@@ -793,7 +793,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:PcmPlayerService.a([II)V#0"
+      "renamedSymbol": "B:PcmPlayerService.mixBlock([II)V#0"
     },
     {
       "symbol": "B:oh.a(IIIIIIIII)[Lci;#0",
@@ -3428,12 +3428,124 @@
       "renamedSymbol": "M:DirectByteStorage.getBytes(Z)[B"
     },
     {
+      "symbol": "M:nk.a()I",
+      "originalName": "a",
+      "to": "getQueuedFrames",
+      "evidence": "Device implementation returns capacity minus available bytes converted to mono/stereo frames. Base implementation returns retained capacity;retain each actual body and units. Original-body SHA256 ab1a12fb81255156c4da82890e668620f1c4acfc1515ffb681954157c48f11d6. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.getQueuedFrames()I"
+    },
+    {
+      "symbol": "M:nk.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Subtract and clamp activation countdown,then skip frames on the retained root stream when present. Original-body SHA256 3cb8f60d439184808b36d6fe3023291faf291806934324a3028fefcf8bbb5aa9. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:nk.a(IZI)V",
+      "originalName": "a",
+      "to": "configureAudio",
+      "evidence": "Validate sample rate8000..48000 and assign sample rate,stereo and service-priority configuration in original order. Original-body SHA256 d9f25e17cf3e349d94625d31609525afcedcd13cf4c15e17527cc8d995107ddd. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.configureAudio(IZI)V"
+    },
+    {
+      "symbol": "M:nk.a(Lhe;Ljava/awt/Component;II)Lnk;",
+      "originalName": "a",
+      "to": "createOutput",
+      "evidence": "Validate configuration and slot,clamp requested frame count,create backend/buffer,initialize,round/clamp capacity,open and register with shared service;preserve every original Throwable fallback,dispatcher guard and partial state. Original-body SHA256 ee45ffa827d98e796999fb68c3eb80ea7023742b04976761605a4dbb047b8003. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;"
+    },
+    {
+      "symbol": "M:nk.a(Ljava/awt/Component;)V",
+      "originalName": "a",
+      "to": "initializeDevice",
+      "evidence": "Inspect available mixers for vendor workaround when present,create signed16-bit little-endian mono/stereo AudioFormat at configured rate,and allocate the256-frame byte buffer in exact source order. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.initializeDevice(Ljava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:nk.a(Llj;)V",
+      "originalName": "a",
+      "to": "resetStreamScheduling",
+      "evidence": "Recursively clear stream active flags and retained sample scheduling positions using the actual first/next-child traversal methods. Original-body SHA256 722123589555645c8c636ca0c24a89bbd9b20ce29dc9feae28c7ed96b276c0af. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.resetStreamScheduling(LPcmStream;)V"
+    },
+    {
+      "symbol": "M:nk.a(Llj;I)V",
+      "originalName": "a",
+      "to": "enqueueByPriority",
+      "evidence": "Append the stream to the priority>>5 bucket via retained head/tail arrays and stream link/priority fields. Original-body SHA256 6e231e5456a850d530a329318ec61599324d96776125985ca0fcb66c7deeb64c. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.enqueueByPriority(LPcmStream;I)V"
+    },
+    {
+      "symbol": "M:nk.a([II)V",
+      "originalName": "a",
+      "to": "mixBlock",
+      "evidence": "Clear output and run the retained priority-bucket stream activation/cost scheduler,clean links,delegate root stream mixing and update timestamp. Preserve shared arrays,state and scheduling order. Original-body SHA256 ede0272294413b7d45ea6ee7d7b7252eaa2a63b7d33556a6b6d09fcfa14112fc. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.mixBlock([II)V"
+    },
+    {
+      "symbol": "M:nk.b()V",
+      "originalName": "b",
+      "to": "writeMixBlock",
+      "evidence": "Clamp signed24-bit mixed samples to the original bounds,write high16bits as little-endian bytes and emit the current256-frame mono/stereo block through the retained line. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.writeMixBlock()V"
+    },
+    {
+      "symbol": "M:nk.b(I)V",
+      "originalName": "b",
+      "to": "openDevice",
+      "evidence": "Create SourceDataLine.Info with requested frame capacity converted to bytes,obtain/open/start the line and retain capacity;on LineUnavailableException retry through the original bit-count/rounding helpers or clear line and rethrow as originally coded. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.openDevice(I)V"
+    },
+    {
+      "symbol": "M:nk.b(Llj;)V",
+      "originalName": "b",
+      "to": "setRootStream",
+      "evidence": "Assign the retained root PCM stream under the existing synchronization/modifiers. Original-body SHA256 acca938a36e3904eb545e0d4b52ddb779b503616ede3049857fd051b06aec938. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.setRootStream(LPcmStream;)V"
+    },
+    {
+      "symbol": "M:nk.c()V",
+      "originalName": "c",
+      "to": "serviceOutput",
+      "evidence": "Apply clock-drift skipping,reopen delay,queued-frame/drain tracking,adaptive capacity growth,256-frame mixing/writes and periodic drain/idle checks;preserve all time-helper guards and exception handling. Original-body SHA256 ba643c0b8f6916d88abe98112799a115aed955446c3202117bb8636657a26b6e. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.serviceOutput()V"
+    },
+    {
+      "symbol": "M:nk.d()V",
+      "originalName": "d",
+      "to": "closeDevice",
+      "evidence": "Device implementation closes and clears the retained line only when nonnull;the base implementation is empty. Preserve null state,close failures and exact ordering. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.closeDevice()V"
+    },
+    {
       "symbol": "M:nk.e()V",
       "originalName": "e",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 e8be3fce687a8d2f6a590e53bc42670fc84e2b29bedbb6c3f3b5d3464235d2ef.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmPlayerService.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:nk.f()V",
+      "originalName": "f",
+      "to": "dispose",
+      "evidence": "Deregister from shared service slots,stop/wait for the service when both slots are empty,close the device,null the mix buffer and mark disposed in exact original order. Original-body SHA256 1b28d5c24f6517abada1ea4cb0ca3388c6954fae765c2c28991bc10bbce47517. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerService.dispose()V"
     },
     {
       "symbol": "M:nl.a(Z)V",
@@ -3930,6 +4042,46 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 9bc7ccb880f760972c35f17269286c79c4779af4de8d9f92b5f6a8adfacb676e.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AdminCheatOverlay.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:ul.a()I",
+      "originalName": "a",
+      "to": "getQueuedFrames",
+      "evidence": "Device implementation returns capacity minus available bytes converted to mono/stereo frames. Base implementation returns retained capacity;retain each actual body and units. Original-body SHA256 ac599972134cddbd410ed0f3dcdcb07f32e2d9a3dfb82e2d79cd1dbd2a2dc66b. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.getQueuedFrames()I"
+    },
+    {
+      "symbol": "M:ul.a(Ljava/awt/Component;)V",
+      "originalName": "a",
+      "to": "initializeDevice",
+      "evidence": "Inspect available mixers for vendor workaround when present,create signed16-bit little-endian mono/stereo AudioFormat at configured rate,and allocate the256-frame byte buffer in exact source order. Original-body SHA256 256fb3f107a6dec8a6ff57f1e0f24e1cc2a641b9881c76c66e61996820796e94. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:ul.b()V",
+      "originalName": "b",
+      "to": "writeMixBlock",
+      "evidence": "Clamp signed24-bit mixed samples to the original bounds,write high16bits as little-endian bytes and emit the current256-frame mono/stereo block through the retained line. Original-body SHA256 9905cc71b67f9ab8ce9599dd0b1ea4d0793de09ca82cdb8c9ca7b7dac316e6f2. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.writeMixBlock()V"
+    },
+    {
+      "symbol": "M:ul.b(I)V",
+      "originalName": "b",
+      "to": "openDevice",
+      "evidence": "Create SourceDataLine.Info with requested frame capacity converted to bytes,obtain/open/start the line and retain capacity;on LineUnavailableException retry through the original bit-count/rounding helpers or clear line and rethrow as originally coded. Original-body SHA256 10aeb7e1395d7585e118ceee38aed5d09dffff39b324351e4451031cbb695f66. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.openDevice(I)V"
+    },
+    {
+      "symbol": "M:ul.d()V",
+      "originalName": "d",
+      "to": "closeDevice",
+      "evidence": "Device implementation closes and clears the retained line only when nonnull;the base implementation is empty. Preserve null state,close failures and exact ordering. Original-body SHA256 ffb1e0e5b3b167ab553d290adf9580032b1b7b593c3fd42aef591960e730e9a8. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.closeDevice()V"
     },
     {
       "symbol": "M:vb.a(B)V",
@@ -5621,7 +5773,7 @@
     },
     {
       "symbol": "B:nk.a([II)V#0",
-      "renamedSymbol": "B:PcmPlayerService.a([II)V#0",
+      "renamedSymbol": "B:PcmPlayerService.mixBlock([II)V#0",
       "originalName": "L3",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -142901,7 +143053,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#0",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#0",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -142912,7 +143064,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#1",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#1",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -142923,7 +143075,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#10",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#10",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -142934,7 +143086,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#2",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#2",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -142945,7 +143097,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#3",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#3",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -142956,7 +143108,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#4",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#4",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -142967,7 +143119,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#5",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#5",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -142978,7 +143130,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#6",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#6",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#6",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -142989,7 +143141,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#7",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#7",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -143000,7 +143152,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#8",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#8",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -143011,7 +143163,7 @@
     },
     {
       "symbol": "L:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#9",
-      "renamedSymbol": "L:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#9",
+      "renamedSymbol": "L:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -143022,7 +143174,7 @@
     },
     {
       "symbol": "L:nk.a(Llj;)V#0",
-      "renamedSymbol": "L:PcmPlayerService.a(LPcmStream;)V#0",
+      "renamedSymbol": "L:PcmPlayerService.resetStreamScheduling(LPcmStream;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -143033,7 +143185,7 @@
     },
     {
       "symbol": "L:nk.a(Llj;I)V#0",
-      "renamedSymbol": "L:PcmPlayerService.a(LPcmStream;I)V#0",
+      "renamedSymbol": "L:PcmPlayerService.enqueueByPriority(LPcmStream;I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -143044,7 +143196,7 @@
     },
     {
       "symbol": "L:nk.a(Llj;I)V#1",
-      "renamedSymbol": "L:PcmPlayerService.a(LPcmStream;I)V#1",
+      "renamedSymbol": "L:PcmPlayerService.enqueueByPriority(LPcmStream;I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -143055,7 +143207,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#0",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#0",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -143066,7 +143218,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#1",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#1",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -143077,7 +143229,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#10",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#10",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -143088,7 +143240,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#11",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#11",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -143099,7 +143251,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#12",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#12",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -143110,7 +143262,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#13",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#13",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -143121,7 +143273,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#14",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#14",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#14",
       "originalName": "var15_int",
       "renamedName": "var15_int",
       "declaration": {
@@ -143132,7 +143284,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#15",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#15",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -143143,7 +143295,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#16",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#16",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -143154,7 +143306,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#17",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#17",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#17",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -143165,7 +143317,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#18",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#18",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#18",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -143176,7 +143328,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#19",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#19",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#19",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -143187,7 +143339,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#2",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#2",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -143198,7 +143350,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#20",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#20",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#20",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -143209,7 +143361,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#3",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#3",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -143220,7 +143372,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#4",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#4",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#4",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -143231,7 +143383,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#5",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#5",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -143242,7 +143394,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#6",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#6",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#6",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -143253,7 +143405,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#7",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#7",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -143264,7 +143416,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#8",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#8",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -143275,7 +143427,7 @@
     },
     {
       "symbol": "L:nk.a([II)V#9",
-      "renamedSymbol": "L:PcmPlayerService.a([II)V#9",
+      "renamedSymbol": "L:PcmPlayerService.mixBlock([II)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -143286,7 +143438,7 @@
     },
     {
       "symbol": "L:nk.c()V#0",
-      "renamedSymbol": "L:PcmPlayerService.c()V#0",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -143297,7 +143449,7 @@
     },
     {
       "symbol": "L:nk.c()V#1",
-      "renamedSymbol": "L:PcmPlayerService.c()V#1",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -143308,7 +143460,7 @@
     },
     {
       "symbol": "L:nk.c()V#2",
-      "renamedSymbol": "L:PcmPlayerService.c()V#2",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -143319,7 +143471,7 @@
     },
     {
       "symbol": "L:nk.c()V#3",
-      "renamedSymbol": "L:PcmPlayerService.c()V#3",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#3",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -143330,7 +143482,7 @@
     },
     {
       "symbol": "L:nk.c()V#4",
-      "renamedSymbol": "L:PcmPlayerService.c()V#4",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -143341,7 +143493,7 @@
     },
     {
       "symbol": "L:nk.c()V#5",
-      "renamedSymbol": "L:PcmPlayerService.c()V#5",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -143352,7 +143504,7 @@
     },
     {
       "symbol": "L:nk.c()V#6",
-      "renamedSymbol": "L:PcmPlayerService.c()V#6",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#6",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -143363,7 +143515,7 @@
     },
     {
       "symbol": "L:nk.c()V#7",
-      "renamedSymbol": "L:PcmPlayerService.c()V#7",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#7",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -143374,7 +143526,7 @@
     },
     {
       "symbol": "L:nk.c()V#8",
-      "renamedSymbol": "L:PcmPlayerService.c()V#8",
+      "renamedSymbol": "L:PcmPlayerService.serviceOutput()V#8",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -143385,7 +143537,7 @@
     },
     {
       "symbol": "L:nk.f()V#0",
-      "renamedSymbol": "L:PcmPlayerService.f()V#0",
+      "renamedSymbol": "L:PcmPlayerService.dispose()V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -143396,7 +143548,7 @@
     },
     {
       "symbol": "L:nk.f()V#1",
-      "renamedSymbol": "L:PcmPlayerService.f()V#1",
+      "renamedSymbol": "L:PcmPlayerService.dispose()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -181500,7 +181652,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -181511,7 +181663,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#1",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#1",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -181522,7 +181674,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#10",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#10",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#10",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -181533,7 +181685,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#11",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#11",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#11",
       "originalName": "stackIn_16_5",
       "renamedName": "stackIn_16_5",
       "declaration": {
@@ -181544,7 +181696,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#12",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#12",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#12",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -181555,7 +181707,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#13",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#13",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#13",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -181566,7 +181718,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#14",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#14",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#14",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -181577,7 +181729,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#2",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#2",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -181588,7 +181740,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#3",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#3",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -181599,7 +181751,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#4",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#4",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -181610,7 +181762,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#5",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#5",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#5",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -181621,7 +181773,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#6",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#6",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -181632,7 +181784,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#7",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#7",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#7",
       "originalName": "stackIn_15_3",
       "renamedName": "stackIn_15_3",
       "declaration": {
@@ -181643,7 +181795,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#8",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#8",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#8",
       "originalName": "stackIn_15_4",
       "renamedName": "stackIn_15_4",
       "declaration": {
@@ -181654,7 +181806,7 @@
     },
     {
       "symbol": "L:ul.a(Ljava/awt/Component;)V#9",
-      "renamedSymbol": "L:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#9",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#9",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -181665,7 +181817,7 @@
     },
     {
       "symbol": "L:ul.b()V#0",
-      "renamedSymbol": "L:JavaSoundAudioOutput.b()V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.writeMixBlock()V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -181676,7 +181828,7 @@
     },
     {
       "symbol": "L:ul.b()V#1",
-      "renamedSymbol": "L:JavaSoundAudioOutput.b()V#1",
+      "renamedSymbol": "L:JavaSoundAudioOutput.writeMixBlock()V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -181687,7 +181839,7 @@
     },
     {
       "symbol": "L:ul.b()V#2",
-      "renamedSymbol": "L:JavaSoundAudioOutput.b()V#2",
+      "renamedSymbol": "L:JavaSoundAudioOutput.writeMixBlock()V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -181698,7 +181850,7 @@
     },
     {
       "symbol": "L:ul.b(I)V#0",
-      "renamedSymbol": "L:JavaSoundAudioOutput.b(I)V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.openDevice(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -181709,7 +181861,7 @@
     },
     {
       "symbol": "L:ul.b(I)V#1",
-      "renamedSymbol": "L:JavaSoundAudioOutput.b(I)V#1",
+      "renamedSymbol": "L:JavaSoundAudioOutput.openDevice(I)V#1",
       "originalName": "lineUnavailableException",
       "renamedName": "lineUnavailableException",
       "declaration": {
@@ -207724,9 +207876,9 @@
     },
     {
       "symbol": "M:nk.a()I",
-      "renamedSymbol": "M:PcmPlayerService.a()I",
+      "renamedSymbol": "M:PcmPlayerService.getQueuedFrames()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getQueuedFrames",
       "declaration": {
         "file": "nk.java",
         "start": 8445,
@@ -207735,9 +207887,9 @@
     },
     {
       "symbol": "M:nk.a(I)V",
-      "renamedSymbol": "M:PcmPlayerService.a(I)V",
+      "renamedSymbol": "M:PcmPlayerService.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "nk.java",
         "start": 1619,
@@ -207746,9 +207898,9 @@
     },
     {
       "symbol": "M:nk.a(IZI)V",
-      "renamedSymbol": "M:PcmPlayerService.a(IZI)V",
+      "renamedSymbol": "M:PcmPlayerService.configureAudio(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureAudio",
       "declaration": {
         "file": "nk.java",
         "start": 910,
@@ -207757,9 +207909,9 @@
     },
     {
       "symbol": "M:nk.a(Lhe;Ljava/awt/Component;II)Lnk;",
-      "renamedSymbol": "M:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;",
+      "renamedSymbol": "M:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createOutput",
       "declaration": {
         "file": "nk.java",
         "start": 1876,
@@ -207768,9 +207920,9 @@
     },
     {
       "symbol": "M:nk.a(Ljava/awt/Component;)V",
-      "renamedSymbol": "M:PcmPlayerService.a(Ljava/awt/Component;)V",
+      "renamedSymbol": "M:PcmPlayerService.initializeDevice(Ljava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeDevice",
       "declaration": {
         "file": "nk.java",
         "start": 8382,
@@ -207779,9 +207931,9 @@
     },
     {
       "symbol": "M:nk.a(Llj;)V",
-      "renamedSymbol": "M:PcmPlayerService.a(LPcmStream;)V",
+      "renamedSymbol": "M:PcmPlayerService.resetStreamScheduling(LPcmStream;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStreamScheduling",
       "declaration": {
         "file": "nk.java",
         "start": 626,
@@ -207790,9 +207942,9 @@
     },
     {
       "symbol": "M:nk.a(Llj;I)V",
-      "renamedSymbol": "M:PcmPlayerService.a(LPcmStream;I)V",
+      "renamedSymbol": "M:PcmPlayerService.enqueueByPriority(LPcmStream;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueueByPriority",
       "declaration": {
         "file": "nk.java",
         "start": 1192,
@@ -207801,9 +207953,9 @@
     },
     {
       "symbol": "M:nk.a([II)V",
-      "renamedSymbol": "M:PcmPlayerService.a([II)V",
+      "renamedSymbol": "M:PcmPlayerService.mixBlock([II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "mixBlock",
       "declaration": {
         "file": "nk.java",
         "start": 4356,
@@ -207812,9 +207964,9 @@
     },
     {
       "symbol": "M:nk.b()V",
-      "renamedSymbol": "M:PcmPlayerService.b()V",
+      "renamedSymbol": "M:PcmPlayerService.writeMixBlock()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "writeMixBlock",
       "declaration": {
         "file": "nk.java",
         "start": 8343,
@@ -207823,9 +207975,9 @@
     },
     {
       "symbol": "M:nk.b(I)V",
-      "renamedSymbol": "M:PcmPlayerService.b(I)V",
+      "renamedSymbol": "M:PcmPlayerService.openDevice(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "openDevice",
       "declaration": {
         "file": "nk.java",
         "start": 11770,
@@ -207834,9 +207986,9 @@
     },
     {
       "symbol": "M:nk.b(Llj;)V",
-      "renamedSymbol": "M:PcmPlayerService.b(LPcmStream;)V",
+      "renamedSymbol": "M:PcmPlayerService.setRootStream(LPcmStream;)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setRootStream",
       "declaration": {
         "file": "nk.java",
         "start": 1521,
@@ -207845,9 +207997,9 @@
     },
     {
       "symbol": "M:nk.c()V",
-      "renamedSymbol": "M:PcmPlayerService.c()V",
+      "renamedSymbol": "M:PcmPlayerService.serviceOutput()V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "serviceOutput",
       "declaration": {
         "file": "nk.java",
         "start": 8532,
@@ -207856,9 +208008,9 @@
     },
     {
       "symbol": "M:nk.d()V",
-      "renamedSymbol": "M:PcmPlayerService.d()V",
+      "renamedSymbol": "M:PcmPlayerService.closeDevice()V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "closeDevice",
       "declaration": {
         "file": "nk.java",
         "start": 1583,
@@ -207878,9 +208030,9 @@
     },
     {
       "symbol": "M:nk.f()V",
-      "renamedSymbol": "M:PcmPlayerService.f()V",
+      "renamedSymbol": "M:PcmPlayerService.dispose()V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "dispose",
       "declaration": {
         "file": "nk.java",
         "start": 11898,
@@ -213961,9 +214113,9 @@
     },
     {
       "symbol": "M:ul.a()I",
-      "renamedSymbol": "M:JavaSoundAudioOutput.a()I",
+      "renamedSymbol": "M:JavaSoundAudioOutput.getQueuedFrames()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getQueuedFrames",
       "declaration": {
         "file": "ul.java",
         "start": 415,
@@ -213972,9 +214124,9 @@
     },
     {
       "symbol": "M:ul.a(Ljava/awt/Component;)V",
-      "renamedSymbol": "M:JavaSoundAudioOutput.a(Ljava/awt/Component;)V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeDevice",
       "declaration": {
         "file": "ul.java",
         "start": 1063,
@@ -213983,9 +214135,9 @@
     },
     {
       "symbol": "M:ul.b()V",
-      "renamedSymbol": "M:JavaSoundAudioOutput.b()V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.writeMixBlock()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "writeMixBlock",
       "declaration": {
         "file": "ul.java",
         "start": 522,
@@ -213994,9 +214146,9 @@
     },
     {
       "symbol": "M:ul.b(I)V",
-      "renamedSymbol": "M:JavaSoundAudioOutput.b(I)V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.openDevice(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "openDevice",
       "declaration": {
         "file": "ul.java",
         "start": 2813,
@@ -214005,9 +214157,9 @@
     },
     {
       "symbol": "M:ul.d()V",
-      "renamedSymbol": "M:JavaSoundAudioOutput.d()V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.closeDevice()V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "closeDevice",
       "declaration": {
         "file": "ul.java",
         "start": 279,
@@ -259006,7 +259158,7 @@
     },
     {
       "symbol": "P:nk.a(I)V#0",
-      "renamedSymbol": "P:PcmPlayerService.a(I)V#0",
+      "renamedSymbol": "P:PcmPlayerService.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259017,7 +259169,7 @@
     },
     {
       "symbol": "P:nk.a(IZI)V#0",
-      "renamedSymbol": "P:PcmPlayerService.a(IZI)V#0",
+      "renamedSymbol": "P:PcmPlayerService.configureAudio(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259028,7 +259180,7 @@
     },
     {
       "symbol": "P:nk.a(IZI)V#1",
-      "renamedSymbol": "P:PcmPlayerService.a(IZI)V#1",
+      "renamedSymbol": "P:PcmPlayerService.configureAudio(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259039,7 +259191,7 @@
     },
     {
       "symbol": "P:nk.a(IZI)V#2",
-      "renamedSymbol": "P:PcmPlayerService.a(IZI)V#2",
+      "renamedSymbol": "P:PcmPlayerService.configureAudio(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -259050,7 +259202,7 @@
     },
     {
       "symbol": "P:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#0",
-      "renamedSymbol": "P:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#0",
+      "renamedSymbol": "P:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259061,7 +259213,7 @@
     },
     {
       "symbol": "P:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#1",
-      "renamedSymbol": "P:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#1",
+      "renamedSymbol": "P:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259072,7 +259224,7 @@
     },
     {
       "symbol": "P:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#2",
-      "renamedSymbol": "P:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#2",
+      "renamedSymbol": "P:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -259083,7 +259235,7 @@
     },
     {
       "symbol": "P:nk.a(Lhe;Ljava/awt/Component;II)Lnk;#3",
-      "renamedSymbol": "P:PcmPlayerService.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#3",
+      "renamedSymbol": "P:PcmPlayerService.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LPcmPlayerService;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -259094,7 +259246,7 @@
     },
     {
       "symbol": "P:nk.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "P:PcmPlayerService.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "P:PcmPlayerService.initializeDevice(Ljava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259105,7 +259257,7 @@
     },
     {
       "symbol": "P:nk.a(Llj;)V#0",
-      "renamedSymbol": "P:PcmPlayerService.a(LPcmStream;)V#0",
+      "renamedSymbol": "P:PcmPlayerService.resetStreamScheduling(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259116,7 +259268,7 @@
     },
     {
       "symbol": "P:nk.a(Llj;I)V#0",
-      "renamedSymbol": "P:PcmPlayerService.a(LPcmStream;I)V#0",
+      "renamedSymbol": "P:PcmPlayerService.enqueueByPriority(LPcmStream;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259127,7 +259279,7 @@
     },
     {
       "symbol": "P:nk.a(Llj;I)V#1",
-      "renamedSymbol": "P:PcmPlayerService.a(LPcmStream;I)V#1",
+      "renamedSymbol": "P:PcmPlayerService.enqueueByPriority(LPcmStream;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259138,7 +259290,7 @@
     },
     {
       "symbol": "P:nk.a([II)V#0",
-      "renamedSymbol": "P:PcmPlayerService.a([II)V#0",
+      "renamedSymbol": "P:PcmPlayerService.mixBlock([II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259149,7 +259301,7 @@
     },
     {
       "symbol": "P:nk.a([II)V#1",
-      "renamedSymbol": "P:PcmPlayerService.a([II)V#1",
+      "renamedSymbol": "P:PcmPlayerService.mixBlock([II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259160,7 +259312,7 @@
     },
     {
       "symbol": "P:nk.b(I)V#0",
-      "renamedSymbol": "P:PcmPlayerService.b(I)V#0",
+      "renamedSymbol": "P:PcmPlayerService.openDevice(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259171,7 +259323,7 @@
     },
     {
       "symbol": "P:nk.b(Llj;)V#0",
-      "renamedSymbol": "P:PcmPlayerService.b(LPcmStream;)V#0",
+      "renamedSymbol": "P:PcmPlayerService.setRootStream(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -273999,7 +274151,7 @@
     },
     {
       "symbol": "P:ul.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "P:JavaSoundAudioOutput.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "P:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274010,7 +274162,7 @@
     },
     {
       "symbol": "P:ul.b(I)V#0",
-      "renamedSymbol": "P:JavaSoundAudioOutput.b(I)V#0",
+      "renamedSymbol": "P:JavaSoundAudioOutput.openDevice(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -278183,7 +278335,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "e477c777bdfbb411d88a0eb8c7e7454d398e7b0e484969b98c0b1c4dea0cbaac",
+      "outputSha256": "080c5272586a981b47c9db7fff771409294043a561b95907c8f84baea1268a7d",
       "edits": [
         {
           "start": 78,
@@ -279469,11 +279621,25 @@
           "renamed": "PcmPlayerService"
         },
         {
+          "start": 78696,
+          "end": 78697,
+          "symbol": "M:nk.a(IZI)V",
+          "original": "a",
+          "renamed": "configureAudio"
+        },
+        {
           "start": 78738,
           "end": 78740,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 78741,
+          "end": 78742,
+          "symbol": "M:nk.a(Lhe;Ljava/awt/Component;II)Lnk;",
+          "original": "a",
+          "renamed": "createOutput"
         },
         {
           "start": 78743,
@@ -279488,6 +279654,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 78862,
+          "end": 78863,
+          "symbol": "M:nk.b(Llj;)V",
+          "original": "b",
+          "renamed": "setRootStream"
         },
         {
           "start": 78864,
@@ -280041,6 +280214,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 101018,
+          "end": 101019,
+          "symbol": "M:nk.f()V",
+          "original": "f",
+          "renamed": "dispose"
         },
         {
           "start": 101328,
@@ -285658,6 +285838,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 338327,
+          "end": 338328,
+          "symbol": "M:nk.c()V",
+          "original": "c",
+          "renamed": "serviceOutput"
         },
         {
           "start": 338628,
@@ -362382,7 +362569,7 @@
       "original": "nf.java",
       "renamed": "PcmPlayerPump.java",
       "inputSha256": "fdf78386e05a102d9dbaec0f3e6f54bd330f8aa31ee2e753179bde9d6ee3faf6",
-      "outputSha256": "e00f32d38c3c6636b835df26fb4a02d653ae4fdcae633affb4e7f9fb2d51ed7d",
+      "outputSha256": "27ebe1a2ed196d9e3cff8fbdb458339a0085bc37c5126c6881c19303f8da7e02",
       "edits": [
         {
           "start": 50,
@@ -362418,6 +362605,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 923,
+          "end": 924,
+          "symbol": "M:nk.c()V",
+          "original": "c",
+          "renamed": "serviceOutput"
         },
         {
           "start": 1049,
@@ -362813,7 +363007,7 @@
       "original": "nk.java",
       "renamed": "PcmPlayerService.java",
       "inputSha256": "501d89bfcb0a02ba1b8e3afc289101a4844f944cdc1ee26cd85c684077828b98",
-      "outputSha256": "b48be10e9855896dd30cad3c15d67725f0f40a9c6add22f18de1c17caae0772e",
+      "outputSha256": "fc517df627e8a4e7f312dd2b1fba09a351b77618377b7aeca78d64e1b5ac1bd9",
       "edits": [
         {
           "start": 44,
@@ -362851,6 +363045,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 626,
+          "end": 627,
+          "symbol": "M:nk.a(Llj;)V",
+          "original": "a",
+          "renamed": "resetStreamScheduling"
+        },
+        {
           "start": 628,
           "end": 630,
           "symbol": "C:lj",
@@ -362872,6 +363073,27 @@
           "renamed": "PcmPlayerService"
         },
         {
+          "start": 833,
+          "end": 834,
+          "symbol": "M:nk.a(Llj;)V",
+          "original": "a",
+          "renamed": "resetStreamScheduling"
+        },
+        {
+          "start": 910,
+          "end": 911,
+          "symbol": "M:nk.a(IZI)V",
+          "original": "a",
+          "renamed": "configureAudio"
+        },
+        {
+          "start": 1192,
+          "end": 1193,
+          "symbol": "M:nk.a(Llj;I)V",
+          "original": "a",
+          "renamed": "enqueueByPriority"
+        },
+        {
           "start": 1194,
           "end": 1196,
           "symbol": "C:lj",
@@ -362886,6 +363108,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 1521,
+          "end": 1522,
+          "symbol": "M:nk.b(Llj;)V",
+          "original": "b",
+          "renamed": "setRootStream"
+        },
+        {
           "start": 1523,
           "end": 1525,
           "symbol": "C:lj",
@@ -362893,11 +363122,32 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 1583,
+          "end": 1584,
+          "symbol": "M:nk.d()V",
+          "original": "d",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 1619,
+          "end": 1620,
+          "symbol": "M:nk.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
           "start": 1873,
           "end": 1875,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 1876,
+          "end": 1877,
+          "symbol": "M:nk.a(Lhe;Ljava/awt/Component;II)Lnk;",
+          "original": "a",
+          "renamed": "createOutput"
         },
         {
           "start": 1878,
@@ -362963,6 +363213,13 @@
           "renamed": "PcmPlayerService"
         },
         {
+          "start": 2916,
+          "end": 2917,
+          "symbol": "M:nk.a(Ljava/awt/Component;)V",
+          "original": "a",
+          "renamed": "initializeDevice"
+        },
+        {
           "start": 2943,
           "end": 2945,
           "symbol": "C:nk",
@@ -362989,6 +363246,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 3168,
+          "end": 3169,
+          "symbol": "M:nk.b(I)V",
+          "original": "b",
+          "renamed": "openDevice"
         },
         {
           "start": 3172,
@@ -363031,6 +363295,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 4356,
+          "end": 4357,
+          "symbol": "M:nk.a([II)V",
+          "original": "a",
+          "renamed": "mixBlock"
         },
         {
           "start": 4531,
@@ -363089,6 +363360,20 @@
           "renamed": "PcmPlayerService"
         },
         {
+          "start": 5132,
+          "end": 5133,
+          "symbol": "M:nk.a(Llj;)V",
+          "original": "a",
+          "renamed": "resetStreamScheduling"
+        },
+        {
+          "start": 5164,
+          "end": 5165,
+          "symbol": "M:nk.a(Llj;I)V",
+          "original": "a",
+          "renamed": "enqueueByPriority"
+        },
+        {
           "start": 5271,
           "end": 5273,
           "symbol": "B:nk.a([II)V#0",
@@ -363103,6 +363388,13 @@
           "original": "L3",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 6804,
+          "end": 6805,
+          "symbol": "M:nk.a(Llj;I)V",
+          "original": "a",
+          "renamed": "enqueueByPriority"
         },
         {
           "start": 7108,
@@ -363133,11 +363425,123 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 8343,
+          "end": 8344,
+          "symbol": "M:nk.b()V",
+          "original": "b",
+          "renamed": "writeMixBlock"
+        },
+        {
+          "start": 8382,
+          "end": 8383,
+          "symbol": "M:nk.a(Ljava/awt/Component;)V",
+          "original": "a",
+          "renamed": "initializeDevice"
+        },
+        {
+          "start": 8445,
+          "end": 8446,
+          "symbol": "M:nk.a()I",
+          "original": "a",
+          "renamed": "getQueuedFrames"
+        },
+        {
+          "start": 8532,
+          "end": 8533,
+          "symbol": "M:nk.c()V",
+          "original": "c",
+          "renamed": "serviceOutput"
+        },
+        {
+          "start": 8997,
+          "end": 8998,
+          "symbol": "M:nk.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 9595,
+          "end": 9596,
+          "symbol": "M:nk.b(I)V",
+          "original": "b",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 9722,
+          "end": 9723,
+          "symbol": "M:nk.a()I",
+          "original": "a",
+          "renamed": "getQueuedFrames"
+        },
+        {
+          "start": 10191,
+          "end": 10192,
+          "symbol": "M:nk.d()V",
+          "original": "d",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 10215,
+          "end": 10216,
+          "symbol": "M:nk.b(I)V",
+          "original": "b",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 10524,
+          "end": 10525,
+          "symbol": "M:nk.a([II)V",
+          "original": "a",
+          "renamed": "mixBlock"
+        },
+        {
+          "start": 10565,
+          "end": 10566,
+          "symbol": "M:nk.b()V",
+          "original": "b",
+          "renamed": "writeMixBlock"
+        },
+        {
+          "start": 10852,
+          "end": 10853,
+          "symbol": "M:nk.d()V",
+          "original": "d",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 11425,
+          "end": 11426,
+          "symbol": "M:nk.d()V",
+          "original": "d",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 11770,
+          "end": 11771,
+          "symbol": "M:nk.b(I)V",
+          "original": "b",
+          "renamed": "openDevice"
+        },
+        {
           "start": 11833,
           "end": 11834,
           "symbol": "M:nk.e()V",
           "original": "e",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 11898,
+          "end": 11899,
+          "symbol": "M:nk.f()V",
+          "original": "f",
+          "renamed": "dispose"
+        },
+        {
+          "start": 12461,
+          "end": 12462,
+          "symbol": "M:nk.d()V",
+          "original": "d",
+          "renamed": "closeDevice"
         },
         {
           "start": 12535,
@@ -382967,7 +383371,7 @@
       "original": "ul.java",
       "renamed": "JavaSoundAudioOutput.java",
       "inputSha256": "29c6a0b027ac195dd096f9d2699cfc813311e5f9fa5b78669c5af2011d9fd720",
-      "outputSha256": "03b12bb2a54ba8114a64e55756aa0e927ca08d80875d67223a662bccc4d20f53",
+      "outputSha256": "28dec527155037fa96d653b7e329992ecab330a2834dc362bd250c226fc59b46",
       "edits": [
         {
           "start": 50,
@@ -382984,11 +383388,53 @@
           "renamed": "PcmPlayerService"
         },
         {
+          "start": 279,
+          "end": 280,
+          "symbol": "M:ul.d()V",
+          "original": "d",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 415,
+          "end": 416,
+          "symbol": "M:ul.a()I",
+          "original": "a",
+          "renamed": "getQueuedFrames"
+        },
+        {
+          "start": 522,
+          "end": 523,
+          "symbol": "M:ul.b()V",
+          "original": "b",
+          "renamed": "writeMixBlock"
+        },
+        {
           "start": 1034,
           "end": 1036,
           "symbol": "M:ul.<init>()V",
           "original": "ul",
           "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 1063,
+          "end": 1064,
+          "symbol": "M:ul.a(Ljava/awt/Component;)V",
+          "original": "a",
+          "renamed": "initializeDevice"
+        },
+        {
+          "start": 2813,
+          "end": 2814,
+          "symbol": "M:ul.b(I)V",
+          "original": "b",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 3498,
+          "end": 3499,
+          "symbol": "M:ul.b(I)V",
+          "original": "b",
+          "renamed": "openDevice"
         }
       ]
     },
@@ -388100,10 +388546,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "bcf9b60de3ce9eedaabe658dfc2162fe36f1b9dfecc2db1616c95ecc28665e62",
+    "rulesSha256": "020bc9b8c38c061ea1a3ab5df7d2bf939fb9471b7608c26e25625af378d5dd6c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "ac1dbc9299c23897da753aa9bb3cb74a59e1de52b73cfcdaccc4a011a0b68fba",
+    "outputTreeSha256": "126540eff3bc8d924fac4eb882d65608f5b7312800c5a8db256b4b14de4c89c0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

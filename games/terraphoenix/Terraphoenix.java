@@ -2163,10 +2163,10 @@ public final class Terraphoenix extends GameShell {
             stackIn_17_0[stackIn_17_1] = stackIn_18_2 + var3 * 1;
             var3++;
           }
-          PcmPlayerService.a(22050, true, 10);
-          d.field_I = PcmPlayerService.a(DirectByteStorage.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
+          PcmPlayerService.configureAudio(22050, true, 10);
+          d.field_I = PcmPlayerService.createOutput(DirectByteStorage.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
           WidgetContainer.field_E = new vg();
-          d.field_I.b(WidgetContainer.field_E);
+          d.field_I.setRootStream(WidgetContainer.field_E);
           uk.field_b = new wl();
           uk.field_b.a(9, 128, -51);
           WidgetContainer.field_E.a(uk.field_b);
@@ -2756,7 +2756,7 @@ public final class Terraphoenix extends GameShell {
             ga.b((byte) 125);
           }
           if (d.field_I != null) {
-            d.field_I.f();
+            d.field_I.dispose();
           }
           var2_int = 117 / ((-52 - param0) / 56);
           le.b(true);
@@ -8834,7 +8834,7 @@ public final class Terraphoenix extends GameShell {
         int var3 = 0;
         var3 = field_V;
         try {
-          d.field_I.c();
+          d.field_I.serviceOutput();
           stackIn_4_1 = -107;
           stackIn_5_2 = (null != a.field_b);
           this.a(stackIn_4_1, stackIn_5_2);

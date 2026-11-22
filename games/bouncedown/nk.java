@@ -181,7 +181,7 @@ final class nk {
                         }
                         ((pk) (Object) stackIn_103_0).a(stackIn_104_1, true, 123);
                       }
-                      jl.field_d.d();
+                      jl.field_d.flushAndMarkDrainCheck();
                     }
                     break regionExit2;
                   case 7:
@@ -328,7 +328,7 @@ final class nk {
               var5 = jl.field_d;
               synchronized (var5) {
                 ld.field_l.a(wj.field_c, true, 89);
-                jl.field_d.d();
+                jl.field_d.flushAndMarkDrainCheck();
               }
             }
             jk.field_q = -1;

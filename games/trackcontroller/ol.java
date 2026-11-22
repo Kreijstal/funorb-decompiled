@@ -68,7 +68,7 @@ final class ol extends PcmStream {
         try {
           if ((4 & this.field_p.field_I[param0.field_D]) != 0 &&
             param0.field_v < 0) {
-            var4_int = this.field_p.field_M[param0.field_D] / oa.field_h;
+            var4_int = this.field_p.field_M[param0.field_D] / AudioOutput.field_h;
             var5 = (var4_int + (1048575 - param0.field_C)) / var4_int;
             param0.field_C = 1048575 & param0.field_C + param1 * var4_int;
             if (var5 <= param1) {
@@ -166,7 +166,7 @@ final class ol extends PcmStream {
         try {
           if ((this.field_p.field_I[param4.field_D] & 4) != 0 &&
             0 > param4.field_v) {
-            var7_int = this.field_p.field_M[param4.field_D] / oa.field_h;
+            var7_int = this.field_p.field_M[param4.field_D] / AudioOutput.field_h;
             while (true) {
               var8 = (-param4.field_C + 1048575 + var7_int) / var7_int;
               if (param3 < var8) {
@@ -177,7 +177,7 @@ final class ol extends PcmStream {
               param3 = param3 - var8;
               param1 = param1 + var8;
               param4.field_C = param4.field_C + (-1048576 + var7_int * var8);
-              var9 = oa.field_h / 100;
+              var9 = AudioOutput.field_h / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;

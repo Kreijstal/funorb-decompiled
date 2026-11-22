@@ -13,8 +13,8 @@ final class ja {
         ud var1Lifetime1;
         var2 = SolKnight.field_L ? 1 : 0;
         try {
-          kj.field_P.b();
-          ql.field_r.b();
+          kj.field_P.serviceOutput();
+          ql.field_r.serviceOutput();
           vg.field_M = vg.field_M - 1;
           if (param0 != 200) {
             ja.a((byte) -48);

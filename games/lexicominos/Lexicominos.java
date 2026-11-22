@@ -1179,16 +1179,16 @@ public final class Lexicominos extends nk {
     final void b(boolean param0) {
         try {
           this.a(12, 13, false, 10, 5000, 0, 11, 2);
-          AudioOutput.a(22050, true, 10);
-          ce.field_b = AudioOutput.a(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 0, 4096);
-          ik.field_h = AudioOutput.a(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
+          AudioOutput.configureAudio(22050, true, 10);
+          ce.field_b = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 0, 4096);
+          ik.field_h = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
           wj.field_j = new PcmStreamMixer();
-          ik.field_h.b(wj.field_j);
+          ik.field_h.setRootStream(wj.field_j);
           uh.field_n = new uh();
           uh.field_n.field_s = new hl(uh.field_n.field_A);
           uh.field_n.field_A.a(128, true, 9);
           uh.field_n.field_s.a(128, true, 9);
-          ce.field_b.b(uh.field_n);
+          ce.field_b.setRootStream(uh.field_n);
           this.a(false, param0, true, (byte) 18, false);
           ea.field_b = 0;
           g.field_n = 10640990;
@@ -1298,8 +1298,8 @@ public final class Lexicominos extends nk {
           if (param0 != 40) {
             discarded$1 = this.p(56);
           }
-          ce.field_b.a();
-          ik.field_h.a();
+          ce.field_b.dispose();
+          ik.field_h.dispose();
           if (ff.field_b != null) {
             af.a(-65);
           }
@@ -1529,8 +1529,8 @@ public final class Lexicominos extends nk {
         int var4 = 0;
         var4 = field_L ? 1 : 0;
         try {
-          ce.field_b.e();
-          ik.field_h.e();
+          ce.field_b.serviceOutput();
+          ik.field_h.serviceOutput();
           if (null != ff.field_b &&
             ff.field_b.focusLost) {
             af.a(-53);

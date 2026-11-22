@@ -10,11 +10,11 @@ final class fb implements Runnable {
     static int[] field_c;
     volatile boolean field_h;
     volatile boolean field_f;
-    volatile id[] field_i;
+    volatile AudioOutput[] field_i;
 
     public final void run() {
         int var1_int = 0;
-        id var2 = null;
+        AudioOutput var2 = null;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.field_f = true;
         try {
@@ -23,7 +23,7 @@ final class fb implements Runnable {
               var2 = this.field_i[var1_int];
               if (var2 == null) {
               } else {
-                var2.a();
+                var2.serviceOutput();
               }
             }
             kk.a(10L, true);
@@ -50,7 +50,7 @@ final class fb implements Runnable {
     }
 
     fb() {
-        this.field_i = new id[2];
+        this.field_i = new AudioOutput[2];
         this.field_h = false;
         this.field_f = false;
     }

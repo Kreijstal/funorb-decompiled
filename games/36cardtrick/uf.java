@@ -865,14 +865,14 @@ final class uf extends sf {
 
     private final void d(int param0) {
         if (this.field_O[param0] != null) {
-          this.field_O[param0].d(gd.field_m >> 7);
+          this.field_O[param0].d(AudioOutput.field_m >> 7);
           this.field_O[param0] = null;
         }
     }
 
     private final void a(int param0, int param1) {
         if (this.field_O[param0] != null) {
-          this.field_O[param0].i(param1 * 256 / gd.field_m);
+          this.field_O[param0].i(param1 * 256 / AudioOutput.field_m);
         }
     }
 
@@ -905,7 +905,7 @@ final class uf extends sf {
             param5 = 0;
           }
           stackIn_14_0 = this.field_J.field_D[param1];
-          stackIn_14_1 = param3 * 256 / gd.field_m;
+          stackIn_14_1 = param3 * 256 / AudioOutput.field_m;
           if (param2 == 0) {
             stackIn_15_2 = param4 * this.field_jb * this.field_B >> 12;
           } else {
@@ -921,7 +921,7 @@ final class uf extends sf {
           ((li) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.h(param2);
-            var7.b(gd.field_m >> 7, param4 * this.field_jb * this.field_B >> 12, param5);
+            var7.b(AudioOutput.field_m >> 7, param4 * this.field_jb * this.field_B >> 12, param5);
           }
           this.field_O[param0] = var7;
           if (this.field_h != null) {
@@ -971,7 +971,7 @@ final class uf extends sf {
               param2 = 256;
             }
           }
-          this.field_O[param0].b(gd.field_m >> 7, param1 * this.field_jb * this.field_B >> 12, param2);
+          this.field_O[param0].b(AudioOutput.field_m >> 7, param1 * this.field_jb * this.field_B >> 12, param2);
         }
     }
 
@@ -1043,7 +1043,7 @@ final class uf extends sf {
           !this.field_P) {
           return -1;
         }
-        int var3 = gd.field_m;
+        int var3 = AudioOutput.field_m;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_kb * this.field_hb);
     }

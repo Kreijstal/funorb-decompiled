@@ -87,7 +87,7 @@ final class PcmPlayerService implements Runnable {
             for (integerLocal1 = 0; integerLocal1 < 2; integerLocal1++) {
               pcmPlayerLocal2 = this.pcmPlayerArrayState0001[integerLocal1];
               if (pcmPlayerLocal2 != null) {
-                pcmPlayerLocal2.performAction0491();
+                pcmPlayerLocal2.serviceOutput();
               }
             }
             MixedSupport125.performAction1620(10L, -128);

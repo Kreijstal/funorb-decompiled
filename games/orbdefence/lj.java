@@ -218,7 +218,7 @@ final class lj extends di {
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
           if (this.field_S.b()) {
-            var4_int = this.field_K * this.field_S.field_f / la.field_c;
+            var4_int = this.field_K * this.field_S.field_f / AudioOutput.field_c;
             while (true) {
               var5 = (long)param2 * (long)var4_int + this.field_l;
               if (0L <= -var5 + this.field_R) {
@@ -357,7 +357,7 @@ final class lj extends di {
             var7 = Math.sin((double)(511 & param1.field_E) * 0.01227184630308513);
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)((double)(param1.field_D.field_h * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)la.field_c + 0.5);
+          var5Lifetime1 = (int)((double)(param1.field_D.field_h * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_c + 0.5);
           if (param0 != 54) {
             this.field_p = (int[]) null;
           }
@@ -768,7 +768,7 @@ final class lj extends di {
         boolean decompiledFrameCompleted0 = true;
         var6 = OrbDefence.field_D ? 1 : 0;
         if (this.field_S.b()) {
-          var2 = this.field_K * this.field_S.field_f / la.field_c;
+          var2 = this.field_K * this.field_S.field_f / AudioOutput.field_c;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_l;
             if (this.field_R - var3 >= 0L) {
@@ -811,7 +811,7 @@ final class lj extends di {
           if (param0 < 0 ||
             param0 == var3.field_F) {
             if (null != var3.field_l) {
-              var3.field_l.f(la.field_c / 100);
+              var3.field_l.f(AudioOutput.field_c / 100);
               if (var3.field_l.e()) {
                 this.field_O.field_m.a(var3.field_l);
               }
@@ -841,7 +841,7 @@ final class lj extends di {
         int var11 = 0;
         var11 = OrbDefence.field_D ? 1 : 0;
         try {
-          param1.field_w = la.field_c / 100;
+          param1.field_w = AudioOutput.field_c / 100;
           if (param1.field_n >= 0 && (null == param1.field_l ||
             param1.field_l.k())) {
             param1.d(param0 ^ 4165);
@@ -969,8 +969,8 @@ final class lj extends di {
         hf var1Lifetime1;
         var2 = OrbDefence.field_D ? 1 : 0;
         try {
-          cd.field_w.a();
-          wf.field_b.a();
+          cd.field_w.serviceOutput();
+          wf.field_b.serviceOutput();
           kg.field_f = kg.field_f - 1;
           if (kg.field_f == 0) {
             kg.field_f = 200;

@@ -358,7 +358,7 @@ final class PcmSampleStream extends PcmStream {
           return null;
         }
         if (param0.field_i.length != 0) {
-          return new PcmSampleStream(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_d)), param2 << 6);
+          return new PcmSampleStream(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_d)), param2 << 6);
         }
         return null;
     }
@@ -521,7 +521,7 @@ final class PcmSampleStream extends PcmStream {
           return null;
         }
         if (param0.field_i.length != 0) {
-          return new PcmSampleStream(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_d)), param2 << 6, param3 << 6);
+          return new PcmSampleStream(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_d)), param2 << 6, param3 << 6);
         }
         return null;
     }
@@ -668,12 +668,12 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_n <= 0) {
             if (this.field_u == 256 &&
               (this.field_o & 255) == 0) {
-              if (id.field_f) {
+              if (AudioOutput.field_f) {
                 return PcmSampleStream.a(0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, 0, param3, param2, this);
               }
               return PcmSampleStream.b(((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, 0, param3, param2, this);
             }
-            if (id.field_f) {
+            if (AudioOutput.field_f) {
               return PcmSampleStream.c(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, 0, param3, param2, this, this.field_u, param4);
             }
             return PcmSampleStream.b(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, 0, param3, param2, this, this.field_u, param4);
@@ -685,13 +685,13 @@ final class PcmSampleStream extends PcmStream {
           this.field_n = this.field_n + param1;
           if (this.field_u == 256 &&
             (this.field_o & 255) == 0) {
-            if (!id.field_f) {
+            if (!AudioOutput.field_f) {
               param1 = PcmSampleStream.a(((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, this.field_w, 0, var6, param2, this);
             } else {
               param1 = PcmSampleStream.b(0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, this.field_s, this.field_z, 0, var6, param2, this);
             }
           } else {
-            if (!id.field_f) {
+            if (!AudioOutput.field_f) {
               param1 = PcmSampleStream.d(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, this.field_w, 0, var6, param2, this, this.field_u, param4);
             } else {
               param1 = PcmSampleStream.a(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, this.field_s, this.field_z, 0, var6, param2, this, this.field_u, param4);
@@ -1722,12 +1722,12 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_n <= 0) {
             if (this.field_u == -256 &&
               (this.field_o & 255) == 0) {
-              if (id.field_f) {
+              if (AudioOutput.field_f) {
                 return PcmSampleStream.b(0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, 0, param3, param2, this);
               }
               return PcmSampleStream.a(((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, 0, param3, param2, this);
             }
-            if (id.field_f) {
+            if (AudioOutput.field_f) {
               return PcmSampleStream.b(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, 0, param3, param2, this, this.field_u, param4);
             }
             return PcmSampleStream.a(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, 0, param3, param2, this, this.field_u, param4);
@@ -1739,13 +1739,13 @@ final class PcmSampleStream extends PcmStream {
           this.field_n = this.field_n + param1;
           if (this.field_u == -256 &&
             (this.field_o & 255) == 0) {
-            if (!id.field_f) {
+            if (!AudioOutput.field_f) {
               param1 = PcmSampleStream.b(((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, this.field_w, 0, var6, param2, this);
             } else {
               param1 = PcmSampleStream.a(0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, this.field_s, this.field_z, 0, var6, param2, this);
             }
           } else {
-            if (!id.field_f) {
+            if (!AudioOutput.field_f) {
               param1 = PcmSampleStream.a(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_t, this.field_w, 0, var6, param2, this, this.field_u, param4);
             } else {
               param1 = PcmSampleStream.b(0, 0, ((vk) (this.field_i)).field_i, param0, this.field_o, param1, this.field_x, this.field_m, this.field_s, this.field_z, 0, var6, param2, this, this.field_u, param4);

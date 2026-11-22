@@ -86,7 +86,7 @@ final class mi extends IntrusiveNode {
               return;
             }
             gg.field_h.e(-398);
-            db.field_J.g();
+            db.field_J.flushAndMarkDrainCheck();
             AccountRequestState.field_b = param3;
             if (AccountRequestState.field_b != null) {
               gg.field_h.a(param2, 68, AccountRequestState.field_b);

@@ -104,7 +104,7 @@ final class IntrusiveDeque {
     final static void a(float param0, float param1, float param2, float param3, float param4, int param5, float param6) {
         if (null == bf.field_h) {
           bf.field_h = new ge(wa.field_j);
-          hm.field_n.a(bf.field_h);
+          hm.field_n.setRootStream(bf.field_h);
         }
         bf.field_h.f(param4);
         bf.field_h.e(param1);

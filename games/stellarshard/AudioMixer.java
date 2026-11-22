@@ -24,7 +24,7 @@ class AudioMixer {
     private int field_e;
     private PcmStream[] field_t;
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -55,8 +55,8 @@ class AudioMixer {
         if (this.field_r != null &&
           this.field_k <= 0) {
           this.field_k = this.field_k + (field_m >> 4);
-          AudioMixer.b(this.field_r);
-          this.a(this.field_r, this.field_r.a());
+          AudioMixer.resetStreamScheduling(this.field_r);
+          this.enqueueByPriority(this.field_r, this.field_r.a());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -99,7 +99,7 @@ class AudioMixer {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_n;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
                         var14Lifetime2 = var11.c();
                       }
                     }
@@ -147,19 +147,19 @@ class AudioMixer {
         this.field_n = ih.a((byte) -98);
     }
 
-    private final static void b(PcmStream param0) {
+    private final static void resetStreamScheduling(PcmStream param0) {
         param0.field_m = false;
         if (param0.field_l != null) {
           param0.field_l.field_k = 0;
         }
         PcmStream var1 = param0.d();
         while (var1 != null) {
-          AudioMixer.b(var1);
+          AudioMixer.resetStreamScheduling(var1);
           var1 = param0.c();
         }
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void setRootStream(PcmStream param0) {
         this.field_r = param0;
     }
 
@@ -167,7 +167,7 @@ class AudioMixer {
         field_p = null;
     }
 
-    final static AudioMixer a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioMixer createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -197,12 +197,12 @@ class AudioMixer {
               }
               ((AudioMixer) ((Object) stackIn_10_0)).field_f = new int[stackIn_10_1 * stackIn_11_2];
               ((AudioMixer) ((Object) var4)).field_i = param3;
-              ((AudioMixer) ((Object) var4)).a(param1);
+              ((AudioMixer) ((Object) var4)).initializeDevice(param1);
               ((AudioMixer) ((Object) var4)).field_a = (param3 & -1024) + 1024;
               if (((AudioMixer) ((Object) var4)).field_a > 16384) {
                 ((AudioMixer) ((Object) var4)).field_a = 16384;
               }
-              ((AudioMixer) ((Object) var4)).b(((AudioMixer) ((Object) var4)).field_a);
+              ((AudioMixer) ((Object) var4)).openDevice(((AudioMixer) ((Object) var4)).field_a);
               if (field_l > 0 &&
                 field_p == null) {
                 field_p = new qf();
@@ -231,10 +231,10 @@ class AudioMixer {
         }
     }
 
-    void b(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
-    final synchronized void a() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -250,7 +250,7 @@ class AudioMixer {
               this.field_n = var1 - 6000L;
             }
             while (var1 > this.field_n + 5000L) {
-              this.a(256);
+              this.skipFrames(256);
               this.field_n = this.field_n + (long)(256000 / field_m);
               var1 = ih.a((byte) -98);
             }
@@ -267,11 +267,11 @@ class AudioMixer {
               if (var1 < this.field_o) {
                 return;
               }
-              this.b(this.field_a);
+              this.openDevice(this.field_a);
               this.field_o = 0L;
               this.field_q = true;
             }
-            var3_int = this.c();
+            var3_int = this.getQueuedFrames();
             if (this.field_b - var3_int > this.field_h) {
               this.field_h = this.field_b - var3_int;
             }
@@ -284,8 +284,8 @@ class AudioMixer {
               if (this.field_a > 16384) {
                 this.field_a = 16384;
               }
-              this.f();
-              this.b(this.field_a);
+              this.closeDevice();
+              this.openDevice(this.field_a);
               var3_int = 0;
               this.field_q = true;
               if (var4 + 256 > this.field_a) {
@@ -294,8 +294,8 @@ class AudioMixer {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_f, 256);
-              this.b();
+              this.mixBlock(this.field_f, 256);
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_u) {
@@ -304,7 +304,7 @@ class AudioMixer {
               } else {
                 if (this.field_h == 0 &&
                   this.field_e == 0) {
-                  this.f();
+                  this.closeDevice();
                   this.field_o = var1 + 2000L;
                   return;
                 }
@@ -318,7 +318,7 @@ class AudioMixer {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.f();
+            this.closeDevice();
             this.field_o = var1 + 2000L;
           }
           return;
@@ -329,7 +329,7 @@ class AudioMixer {
         }
     }
 
-    final synchronized void e() {
+    final synchronized void dispose() {
         int var2 = 0;
         int var1;
         if (field_p != null) {
@@ -350,12 +350,12 @@ class AudioMixer {
             field_p = null;
           }
         }
-        this.f();
+        this.closeDevice();
         this.field_f = null;
         this.field_j = true;
     }
 
-    private final void a(int param0) {
+    private final void skipFrames(int param0) {
         this.field_k = this.field_k - param0;
         if (this.field_k < 0) {
           this.field_k = 0;
@@ -366,7 +366,7 @@ class AudioMixer {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configureAudio(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -376,7 +376,7 @@ class AudioMixer {
         field_l = param2;
     }
 
-    private final void a(PcmStream param0, int param1) {
+    private final void enqueueByPriority(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
         PcmStream var4 = this.field_g[var3];
         if (var4 == null) {
@@ -388,16 +388,16 @@ class AudioMixer {
         param0.field_n = param1;
     }
 
-    void b() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initializeDevice(java.awt.Component param0) throws Exception {
     }
 
-    void f() {
+    void closeDevice() {
     }
 
-    int c() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_a;
     }
 

@@ -576,7 +576,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           FullscreenFocusCanvas.a(param0 ^ -45);
           oa.b(-98);
           f.a(100);
-          id.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           wg.e(64);
           am.clearStaticReferences(117);
           me.a((byte) 127);
@@ -1074,10 +1074,10 @@ public final class CrazyCrystals extends NetworkGameClient {
             q.a(false);
           }
           if (hb.field_h != null) {
-            hb.field_h.d();
+            hb.field_h.dispose();
           }
           if (null != gf.field_c) {
-            gf.field_c.d();
+            gf.field_c.dispose();
           }
           ue.b((byte) -106);
           if (param0 != 241) {
@@ -1156,7 +1156,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                             IsaacRandom.field_e = new int[][]{new int[]{MouseWheelInput.field_g, vp.field_b, kp.field_j, tg.field_b}, new int[]{rk.field_d, pa.field_E, oo.field_i, ji.field_t}, new int[]{96, 97, 98, 99}};
                             fq.field_x = new wg();
                             fq.field_x.a(128, 9, (byte) -103);
-                            gf.field_c.b(fq.field_x);
+                            gf.field_c.setRootStream(fq.field_x);
                             aa.field_b = new bn(vm.field_k, ma.field_p);
                             decompiledFrameRemainder0 = false;
                           }
@@ -1711,11 +1711,11 @@ public final class CrazyCrystals extends NetworkGameClient {
           return;
         }
         try {
-          id.a(22050, true, 10);
-          hb.field_h = id.a(te.field_a, (java.awt.Component) ((Object) jd.field_D), 0, 0);
-          gf.field_c = id.a(te.field_a, (java.awt.Component) ((Object) jd.field_D), 1, 22050);
+          AudioOutput.configureAudio(22050, true, 10);
+          hb.field_h = AudioOutput.createOutput(te.field_a, (java.awt.Component) ((Object) jd.field_D), 0, 0);
+          gf.field_c = AudioOutput.createOutput(te.field_a, (java.awt.Component) ((Object) jd.field_D), 1, 22050);
           tb.field_d = new tj();
-          hb.field_h.b(tb.field_d);
+          hb.field_h.setRootStream(tb.field_d);
           this.a(true, false, true, true, -1);
           ao.field_e = 16760896;
           mc.field_s = 0;
@@ -1752,8 +1752,8 @@ public final class CrazyCrystals extends NetworkGameClient {
             q.a(false);
             cm.a(-15544);
           }
-          hb.field_h.c();
-          gf.field_c.c();
+          hb.field_h.serviceOutput();
+          gf.field_c.serviceOutput();
           stackIn_19_1 = (ph.field_E != null);
           this.a(stackIn_19_1, 15000);
           if (hb.field_g) {

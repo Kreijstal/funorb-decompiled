@@ -145,7 +145,7 @@ final class MidiPcmStream extends PcmStream {
             if (param0 < 0 ||
               var3.field_p == param0) {
               if (null != var3.field_v) {
-                var3.field_v.f(vn.field_t / 100);
+                var3.field_v.f(AudioOutput.field_t / 100);
                 if (var3.field_v.e()) {
                   this.field_R.field_o.b(var3.field_v);
                 }
@@ -447,7 +447,7 @@ final class MidiPcmStream extends PcmStream {
             var7 = Math.sin((double)(param1.field_E & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)((double)(256 * param1.field_I.field_n) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)vn.field_t + 0.5);
+          var5Lifetime1 = (int)((double)(256 * param1.field_I.field_n) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_t + 0.5);
           stackIn_13_0 = (var5Lifetime1 < 1) ? 1 : var5Lifetime1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -504,7 +504,7 @@ final class MidiPcmStream extends PcmStream {
         var8 = DungeonAssault.field_K;
         try {
           if (this.field_A.g()) {
-            var4_int = this.field_A.field_c * this.field_x / vn.field_t;
+            var4_int = this.field_A.field_c * this.field_x / AudioOutput.field_t;
             while (true) {
               var5 = this.field_z + (long)param2 * (long)var4_int;
               if (this.field_F - var5 >= 0L) {
@@ -859,7 +859,7 @@ final class MidiPcmStream extends PcmStream {
         int var12 = 0;
         var12 = DungeonAssault.field_K;
         try {
-          param3.field_H = vn.field_t / 100;
+          param3.field_H = AudioOutput.field_t / 100;
           if (param3.field_r >= 0 && (null == param3.field_v ||
             param3.field_v.f())) {
             param3.b(true);
@@ -1331,7 +1331,7 @@ final class MidiPcmStream extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         var6 = DungeonAssault.field_K;
         if (this.field_A.g()) {
-          var2 = this.field_x * this.field_A.field_c / vn.field_t;
+          var2 = this.field_x * this.field_A.field_c / AudioOutput.field_t;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_z;
             if (this.field_F - var3 >= 0L) {

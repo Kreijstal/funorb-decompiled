@@ -106,7 +106,7 @@ final class ke extends ui implements sg {
               return;
             }
             km.field_a.c((byte) 108);
-            mj.field_o.f();
+            mj.field_o.flushAndMarkDrainCheck();
             de.field_b = param0;
             if (de.field_b != null) {
               km.field_a.a(param1, de.field_b, (byte) 2);

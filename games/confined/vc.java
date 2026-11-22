@@ -458,12 +458,12 @@ final class vc extends gf {
           if (this.field_q <= 0) {
             if (this.field_B == -256 &&
               (this.field_t & 255) == 0) {
-              if (dk.field_j) {
+              if (AudioOutput.field_j) {
                 return vc.a(0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, 0, param3, param2, this);
               }
               return vc.a(((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, 0, param3, param2, this);
             }
-            if (dk.field_j) {
+            if (AudioOutput.field_j) {
               return vc.c(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, 0, param3, param2, this, this.field_B, param4);
             }
             return vc.a(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, 0, param3, param2, this, this.field_B, param4);
@@ -475,13 +475,13 @@ final class vc extends gf {
           this.field_q = this.field_q + param1;
           if (this.field_B == -256 &&
             (this.field_t & 255) == 0) {
-            if (!dk.field_j) {
+            if (!AudioOutput.field_j) {
               param1 = vc.a(((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, this.field_z, 0, var6, param2, this);
             } else {
               param1 = vc.a(0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, this.field_E, this.field_y, 0, var6, param2, this);
             }
           } else {
-            if (!dk.field_j) {
+            if (!AudioOutput.field_j) {
               param1 = vc.a(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, this.field_z, 0, var6, param2, this, this.field_B, param4);
             } else {
               param1 = vc.a(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, this.field_E, this.field_y, 0, var6, param2, this, this.field_B, param4);
@@ -874,12 +874,12 @@ final class vc extends gf {
           if (this.field_q <= 0) {
             if (this.field_B == 256 &&
               (this.field_t & 255) == 0) {
-              if (dk.field_j) {
+              if (AudioOutput.field_j) {
                 return vc.b(0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, 0, param3, param2, this);
               }
               return vc.b(((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, 0, param3, param2, this);
             }
-            if (dk.field_j) {
+            if (AudioOutput.field_j) {
               return vc.d(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, 0, param3, param2, this, this.field_B, param4);
             }
             return vc.b(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, 0, param3, param2, this, this.field_B, param4);
@@ -891,13 +891,13 @@ final class vc extends gf {
           this.field_q = this.field_q + param1;
           if (this.field_B == 256 &&
             (this.field_t & 255) == 0) {
-            if (!dk.field_j) {
+            if (!AudioOutput.field_j) {
               param1 = vc.b(((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, this.field_z, 0, var6, param2, this);
             } else {
               param1 = vc.b(0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, this.field_E, this.field_y, 0, var6, param2, this);
             }
           } else {
-            if (!dk.field_j) {
+            if (!AudioOutput.field_j) {
               param1 = vc.b(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_C, this.field_z, 0, var6, param2, this, this.field_B, param4);
             } else {
               param1 = vc.b(0, 0, ((bi) (this.field_n)).field_o, param0, this.field_t, param1, this.field_r, this.field_x, this.field_E, this.field_y, 0, var6, param2, this, this.field_B, param4);
@@ -1061,7 +1061,7 @@ final class vc extends gf {
           return null;
         }
         if (param0.field_o.length != 0) {
-          return new vc(param0, (int)((long)param0.field_n * 256L * (long)param1 / (long)(100 * dk.field_k)), param2 << 6);
+          return new vc(param0, (int)((long)param0.field_n * 256L * (long)param1 / (long)(100 * AudioOutput.field_k)), param2 << 6);
         }
         return null;
     }

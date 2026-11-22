@@ -195,7 +195,7 @@ final class db extends PcmStream {
           if (param1 < 0 ||
             var3.field_q == param1) {
             if (var3.field_J != null) {
-              var3.field_J.h(dd.field_u / 100);
+              var3.field_J.h(AudioOutput.field_u / 100);
               if (var3.field_J.l()) {
                 this.field_P.field_z.a(var3.field_J);
               }
@@ -315,7 +315,7 @@ final class db extends PcmStream {
         int var11 = 0;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
-          param1.field_H = dd.field_u / 100;
+          param1.field_H = AudioOutput.field_u / 100;
           if (0 <= param1.field_E && (null == param1.field_J ||
             param1.field_J.j())) {
             param1.a(-110);
@@ -514,7 +514,7 @@ final class db extends PcmStream {
         int var6;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (this.field_I.f()) {
-          var2 = this.field_I.field_c * this.field_A / dd.field_u;
+          var2 = this.field_I.field_c * this.field_A / AudioOutput.field_u;
           while (true) {
             var3 = (long)var2 * (long)param0 + this.field_r;
             if (0L <= -var3 + this.field_D) {
@@ -912,7 +912,7 @@ final class db extends PcmStream {
             var7 = Math.sin(0.01227184630308513 * (double)(param1.field_n & 511));
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_z.field_r * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)dd.field_u);
+          var5Lifetime1 = (int)(0.5 + (double)(param1.field_z.field_r * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_u);
           stackIn_13_0 = (var5Lifetime1 < 1) ? 1 : var5Lifetime1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -980,7 +980,7 @@ final class db extends PcmStream {
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           if (this.field_I.f()) {
-            var4_int = this.field_I.field_c * this.field_A / dd.field_u;
+            var4_int = this.field_I.field_c * this.field_A / AudioOutput.field_u;
             while (true) {
               var5 = this.field_r + (long)var4_int * (long)param2;
               if (this.field_D - var5 >= 0L) {

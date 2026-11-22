@@ -38,7 +38,7 @@ final class ug implements ci {
             var4 = (String) null;
             ug.a(-0.6929006576538086f, 125, (String) null);
           }
-          stackIn_3_0 = new jg(param0, gd.field_m * param2 / 1000);
+          stackIn_3_0 = new jg(param0, AudioOutput.field_m * param2 / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

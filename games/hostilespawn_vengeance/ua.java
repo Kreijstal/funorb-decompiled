@@ -4,7 +4,7 @@
 final class ua implements Runnable {
     volatile boolean field_e;
     volatile boolean field_d;
-    volatile ug[] field_g;
+    volatile AudioOutput[] field_g;
     PlatformTaskDispatcher field_b;
     static ji field_f;
     static String field_a;
@@ -12,7 +12,7 @@ final class ua implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        ug var2 = null;
+        AudioOutput var2 = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         this.field_e = true;
         try {
@@ -20,7 +20,7 @@ final class ua implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_g[var1_int];
               if (var2 != null) {
-                var2.f();
+                var2.serviceOutput();
               }
             }
             vj.a(10L, (byte) -49);
@@ -69,7 +69,7 @@ final class ua implements Runnable {
     }
 
     ua() {
-        this.field_g = new ug[2];
+        this.field_g = new AudioOutput[2];
         this.field_d = false;
         this.field_e = false;
     }

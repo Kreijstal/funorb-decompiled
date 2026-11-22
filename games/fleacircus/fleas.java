@@ -1006,7 +1006,7 @@ public final class fleas extends NetworkGameClient {
           tk.a(param0 ^ 93);
           fd.clearStaticReferences();
           gl.a((byte) 112);
-          la.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           th.b(false);
           tj.clearStaticReferences(false);
           pl.f(param0 + 1);
@@ -1892,7 +1892,7 @@ public final class fleas extends NetworkGameClient {
     private final void j(byte param0) {
         ci var2 = null;
         try {
-          var2 = new ci(22050, la.field_a);
+          var2 = new ci(22050, AudioOutput.field_a);
           ic.field_ab = qf.a(pb.field_a, "", "FLEA_drops").b().a(var2);
           fi.field_n = qf.a(pb.field_a, "", "FLEA_flea_die").b().a(var2);
           nb.field_f = qf.a(pb.field_a, "", "FLEA_escape").b().a(var2);

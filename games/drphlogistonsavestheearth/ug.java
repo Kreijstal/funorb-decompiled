@@ -134,7 +134,7 @@ final class ug extends PcmStream {
         int var11 = 0;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          param3.field_l = id.field_d / 100;
+          param3.field_l = AudioOutput.field_d / 100;
           if (param3.field_k >= 0 && (null == param3.field_D ||
             param3.field_D.m())) {
             param3.d(param2 ^ 9);
@@ -365,7 +365,7 @@ final class ug extends PcmStream {
             var7 = Math.sin(0.01227184630308513 * (double)(511 & param1.field_j));
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)((double)(256 * param1.field_C.field_j) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)id.field_d + 0.5);
+          var5Lifetime1 = (int)((double)(256 * param1.field_C.field_j) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_d + 0.5);
           if (param0 == 950080514) {
             stackIn_14_0 = (var5Lifetime1 < 1) ? 1 : var5Lifetime1;
             return stackIn_14_0;
@@ -939,7 +939,7 @@ final class ug extends PcmStream {
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (this.field_R.g()) {
-            var4_int = this.field_R.field_i * this.field_M / id.field_d;
+            var4_int = this.field_R.field_i * this.field_M / AudioOutput.field_d;
             while (true) {
               var5 = this.field_J + (long)param2 * (long)var4_int;
               if (-var5 + this.field_P >= 0L) {
@@ -998,7 +998,7 @@ final class ug extends PcmStream {
             if (param0 < 0 ||
               ~var3.field_u == ~param0) {
               if (var3.field_D != null) {
-                var3.field_D.k(id.field_d / 100);
+                var3.field_D.k(AudioOutput.field_d / 100);
                 if (var3.field_D.g()) {
                   this.field_H.field_r.a(var3.field_D);
                 }
@@ -1204,7 +1204,7 @@ final class ug extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_R.g()) {
-          var2 = this.field_R.field_i * this.field_M / id.field_d;
+          var2 = this.field_R.field_i * this.field_M / AudioOutput.field_d;
           while (true) {
             var3 = (long)var2 * (long)param0 + this.field_J;
             if (-var3 + this.field_P >= 0L) {

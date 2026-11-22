@@ -21,13 +21,13 @@ final class v {
 
     final static void a(int param0, boolean param1, int param2, PlatformTaskDispatcher param3, java.awt.Component param4) {
         try {
-          va.a(param0, param1, 10);
-          vh.field_B = va.a(param3, param4, 1, param2);
-          GameApplet.field_k = va.a(param3, param4, 0, 22050);
+          AudioOutput.configureAudio(param0, param1, 10);
+          vh.field_B = AudioOutput.createOutput(param3, param4, 1, param2);
+          GameApplet.field_k = AudioOutput.createOutput(param3, param4, 0, 22050);
           qb.field_c = new PcmStreamMixer();
-          vh.field_B.b(qb.field_c);
+          vh.field_B.setRootStream(qb.field_c);
           i.field_p = new PcmStreamMixer();
-          GameApplet.field_k.b(i.field_p);
+          GameApplet.field_k.setRootStream(i.field_p);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "v.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

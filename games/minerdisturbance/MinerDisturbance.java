@@ -4755,7 +4755,7 @@ public final class MinerDisturbance extends ob {
           nl.clearStaticReferences();
           gd.clearStaticReferences((byte) -114);
           ri.b((byte) -25);
-          fj.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           vd.e(98);
           qk.clearStaticReferences(-1003);
           ch.c(-104);

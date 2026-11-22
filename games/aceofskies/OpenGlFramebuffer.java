@@ -234,16 +234,16 @@ final class OpenGlFramebuffer implements up {
 
     final static void a(int param0, SystemTaskService param1, java.awt.Component param2, int param3, boolean param4, jt param5, int param6, int param7) {
         try {
-          AudioOutput.a(param3, param4, 10);
-          um.field_m = AudioOutput.a(param1, param2, 0, param6);
-          RendererBitmapFont.field_a = AudioOutput.a(param1, param2, 1, param7);
+          AudioOutput.configureAudio(param3, param4, 10);
+          um.field_m = AudioOutput.createOutput(param1, param2, 0, param6);
+          RendererBitmapFont.field_a = AudioOutput.createOutput(param1, param2, 1, param7);
           qn.pcmMixer = new PcmStreamMixer();
           int var8_int = -86 % ((param0 + 12) / 37);
           Vector2.field_c = param7;
-          RendererBitmapFont.field_a.a(qn.pcmMixer);
+          RendererBitmapFont.field_a.setRootStream(qn.pcmMixer);
           DualLinkNode.field_e = param5;
           DualLinkNode.field_e.a((byte) 125, RendererManager.field_c);
-          um.field_m.a(DualLinkNode.field_e);
+          um.field_m.setRootStream(DualLinkNode.field_e);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

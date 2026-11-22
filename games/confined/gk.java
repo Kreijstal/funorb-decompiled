@@ -113,7 +113,7 @@ class gk extends IntrusiveNode {
           this.field_n.d(0);
           return;
         }
-        var26 = (double)(256 * this.field_s.field_n) / (double)dk.field_k;
+        var26 = (double)(256 * this.field_s.field_n) / (double)AudioOutput.field_k;
         var28 = 2.0 * var26 / var22;
         var30 = var24 * var28 / 2.0;
         var32 = this.field_n;
@@ -217,7 +217,7 @@ class gk extends IntrusiveNode {
           var4 = var4 * var10;
           var6 = var6 * var10;
         }
-        var23 = (double)(param0 * this.field_s.field_n) / (double)dk.field_k;
+        var23 = (double)(param0 * this.field_s.field_n) / (double)AudioOutput.field_k;
         var25 = this.field_n;
         synchronized (var25) {
           this.field_n.d((int)(0.5 + var23));

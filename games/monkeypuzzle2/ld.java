@@ -21,8 +21,8 @@ final class ld {
         hk var1 = null;
         int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          vh.field_B.c();
-          GameApplet.field_k.c();
+          vh.field_B.serviceOutput();
+          GameApplet.field_k.serviceOutput();
           vg.field_J = vg.field_J - 1;
           if (param0) {
             ld.a(126);

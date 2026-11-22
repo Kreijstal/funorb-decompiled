@@ -352,7 +352,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != oe.field_a) {
-                    stackIn_97_0 = $cfr$lcmp(oe.field_a, pr.currentTimeMillis(14274));
+                    stackIn_97_0 = compareLongValues(oe.field_a, pr.currentTimeMillis(14274));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_97_0 <= 0)) {
@@ -1109,7 +1109,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_h = "You have 1 unread message!";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongValues(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -28,7 +28,7 @@ class PcmPlayerService {
         field_p = null;
     }
 
-    final static PcmPlayerService a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static PcmPlayerService createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -58,12 +58,12 @@ class PcmPlayerService {
               }
               ((PcmPlayerService) ((Object) stackIn_10_0)).field_a = new int[stackIn_10_1 * stackIn_11_2];
               ((PcmPlayerService) ((Object) var4)).field_h = param3;
-              ((PcmPlayerService) ((Object) var4)).a(param1);
+              ((PcmPlayerService) ((Object) var4)).initializeDevice(param1);
               ((PcmPlayerService) ((Object) var4)).field_t = (param3 & -1024) + 1024;
               if (((PcmPlayerService) ((Object) var4)).field_t > 16384) {
                 ((PcmPlayerService) ((Object) var4)).field_t = 16384;
               }
-              ((PcmPlayerService) ((Object) var4)).b(((PcmPlayerService) ((Object) var4)).field_t);
+              ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_t);
               if (field_d > 0 &&
                 field_p == null) {
                 field_p = new sb();
@@ -92,10 +92,10 @@ class PcmPlayerService {
         }
     }
 
-    void f() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -126,8 +126,8 @@ class PcmPlayerService {
         if (this.field_f != null &&
           this.field_c <= 0) {
           this.field_c = this.field_c + (field_s >> 4);
-          PcmPlayerService.b(this.field_f);
-          this.a(this.field_f, this.field_f.c());
+          PcmPlayerService.resetStreamScheduling(this.field_f);
+          this.enqueueByPriority(this.field_f, this.field_f.c());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -170,7 +170,7 @@ class PcmPlayerService {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
                         var14Lifetime2 = var11.b();
                       }
                     }
@@ -218,7 +218,7 @@ class PcmPlayerService {
         this.field_e = je.a(1);
     }
 
-    final synchronized void a() {
+    final synchronized void dispose() {
         int var2 = 0;
         int var1;
         if (field_p != null) {
@@ -239,12 +239,12 @@ class PcmPlayerService {
             field_p = null;
           }
         }
-        this.c();
+        this.closeDevice();
         this.field_a = null;
         this.field_j = true;
     }
 
-    private final void a(int param0) {
+    private final void skipFrames(int param0) {
         this.field_c = this.field_c - param0;
         if (this.field_c < 0) {
           this.field_c = 0;
@@ -255,35 +255,35 @@ class PcmPlayerService {
         }
     }
 
-    void c() {
+    void closeDevice() {
     }
 
-    private final static void b(PcmStream param0) {
+    private final static void resetStreamScheduling(PcmStream param0) {
         param0.field_k = false;
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
         PcmStream var1 = param0.a();
         while (var1 != null) {
-          PcmPlayerService.b(var1);
+          PcmPlayerService.resetStreamScheduling(var1);
           var1 = param0.b();
         }
     }
 
-    void g() throws Exception {
+    void flushDevice() throws Exception {
     }
 
-    int d() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_t;
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initializeDevice(java.awt.Component param0) throws Exception {
     }
 
-    void b(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configureAudio(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -293,13 +293,13 @@ class PcmPlayerService {
         field_d = param2;
     }
 
-    final synchronized void h() {
+    final synchronized void flushAndMarkDrainCheck() {
         try {
           this.field_n = true;
           try {
-            this.g();
+            this.flushDevice();
           } catch (Exception exception) {
-            this.c();
+            this.closeDevice();
             this.field_k = je.a(1) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -309,11 +309,11 @@ class PcmPlayerService {
         }
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void setRootStream(PcmStream param0) {
         this.field_f = param0;
     }
 
-    private final void a(PcmStream param0, int param1) {
+    private final void enqueueByPriority(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
         PcmStream var4 = this.field_b[var3];
         if (var4 == null) {
@@ -325,7 +325,7 @@ class PcmPlayerService {
         param0.field_j = param1;
     }
 
-    final synchronized void b() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -341,7 +341,7 @@ class PcmPlayerService {
               this.field_e = var1 - 6000L;
             }
             while (var1 > this.field_e + 5000L) {
-              this.a(256);
+              this.skipFrames(256);
               this.field_e = this.field_e + (long)(256000 / field_s);
               var1 = je.a(1);
             }
@@ -358,11 +358,11 @@ class PcmPlayerService {
               if (var1 < this.field_k) {
                 return;
               }
-              this.b(this.field_t);
+              this.openDevice(this.field_t);
               this.field_k = 0L;
               this.field_n = true;
             }
-            var3_int = this.d();
+            var3_int = this.getQueuedFrames();
             if (this.field_o - var3_int > this.field_i) {
               this.field_i = this.field_o - var3_int;
             }
@@ -375,8 +375,8 @@ class PcmPlayerService {
               if (this.field_t > 16384) {
                 this.field_t = 16384;
               }
-              this.c();
-              this.b(this.field_t);
+              this.closeDevice();
+              this.openDevice(this.field_t);
               var3_int = 0;
               this.field_n = true;
               if (var4 + 256 > this.field_t) {
@@ -385,8 +385,8 @@ class PcmPlayerService {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_a, 256);
-              this.f();
+              this.mixBlock(this.field_a, 256);
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_m) {
@@ -395,7 +395,7 @@ class PcmPlayerService {
               } else {
                 if (this.field_i == 0 &&
                   this.field_g == 0) {
-                  this.c();
+                  this.closeDevice();
                   this.field_k = var1 + 2000L;
                   return;
                 }
@@ -409,7 +409,7 @@ class PcmPlayerService {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.c();
+            this.closeDevice();
             this.field_k = var1 + 2000L;
           }
           return;

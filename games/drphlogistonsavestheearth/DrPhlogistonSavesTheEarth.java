@@ -542,7 +542,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           rl.clearStaticReferences();
           am.f(-112);
           ml.clearStaticReferences(!param0);
-          id.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           eb.a(5);
           ql.clearStaticReferences((byte) -114);
           of.g(1024);
@@ -2062,7 +2062,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                             }
                             ByteStorage.b(77);
                             cf.field_c = new cf(aa.field_b, DelegatingCanvas.field_b);
-                            qk.field_g = new ng(22050, id.field_d);
+                            qk.field_g = new ng(22050, AudioOutput.field_d);
                             this.j((byte) -30);
                             aa.field_b = null;
                             return false;

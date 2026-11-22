@@ -202,8 +202,8 @@ abstract class lq extends UiWidget implements e {
         cq var1Lifetime1;
         var2 = BachelorFridge.field_y;
         try {
-          BoardChangeBatch.field_l.f();
-          nia.field_m.f();
+          BoardChangeBatch.field_l.serviceOutput();
+          nia.field_m.serviceOutput();
           rq.field_f = rq.field_f - 1;
           if (0 == rq.field_f) {
             rq.field_f = 200;

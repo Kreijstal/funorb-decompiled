@@ -19,7 +19,7 @@ final class kc implements Runnable {
               var2 = this.field_b[var1_int];
               if (var2 == null) {
               } else {
-                var2.f();
+                var2.serviceOutput();
               }
             }
             gda.a(false, 10L);

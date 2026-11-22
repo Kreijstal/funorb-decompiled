@@ -328,7 +328,7 @@ final class fj extends PcmStream {
               }
             }
           }
-          if (kh.field_g) {
+          if (AudioOutput.field_g) {
             stackIn_35_0 = param2 << 1;
           } else {
             stackIn_35_0 = param2;
@@ -350,7 +350,7 @@ final class fj extends PcmStream {
                 }
                 this.field_B.mixInto(this.field_u, 0, param2);
                 this.field_v.mixInto(this.field_q, 0, param2);
-                if (kh.field_g) {
+                if (AudioOutput.field_g) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
                   stackIn_50_0 = localTemp$0;
@@ -378,7 +378,7 @@ final class fj extends PcmStream {
               this.field_u = new int[var6];
             }
             this.field_D.mixInto(this.field_u, 0, param2);
-            if (kh.field_g) {
+            if (AudioOutput.field_g) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_65_0 = localTemp$1;

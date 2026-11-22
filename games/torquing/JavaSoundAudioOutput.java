@@ -9,14 +9,14 @@ final class JavaSoundAudioOutput extends AudioOutput {
     private byte[] field_w;
     private static String field_A;
 
-    final void h() {
+    final void closeDevice() {
         if (this.field_v != null) {
           this.field_v.close();
           this.field_v = null;
         }
     }
 
-    final void c() {
+    final void writeMixBlock() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
@@ -34,7 +34,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_v.write(this.field_w, 0, var1 << 1);
     }
 
-    final int a() {
+    final int getQueuedFrames() {
         return this.field_z - (this.field_v.available() >> (field_r ? 2 : 1));
     }
 
@@ -42,7 +42,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_x = false;
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_y, param0 << (field_r ? 2 : 1));
@@ -52,7 +52,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_z = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (re.a(252645135, param0) != 1) {
-            this.a(qm.a((byte) -106, param0));
+            this.openDevice(qm.a((byte) -106, param0));
             return;
           }
           this.field_v = null;
@@ -60,7 +60,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final void a(java.awt.Component param0) {
+    final void initializeDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;
@@ -114,7 +114,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_w = new byte[stackIn_19_1 << stackIn_20_2];
     }
 
-    final void g() throws javax.sound.sampled.LineUnavailableException {
+    final void flushDevice() throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var1 = null;
         this.field_v.flush();
         if (this.field_x) {

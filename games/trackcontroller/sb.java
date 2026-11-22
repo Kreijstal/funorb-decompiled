@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sb {
-    static oa field_b;
+    static AudioOutput field_b;
     static long field_a;
     private static String field_z;
 

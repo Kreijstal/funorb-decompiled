@@ -192,7 +192,7 @@ final class ej extends PcmStream {
         try {
           if (param0 != (this.field_o.field_v[param1.field_u] & 4) &&
             param1.field_p < 0) {
-            var4_int = this.field_o.field_D[param1.field_u] / qh.field_p;
+            var4_int = this.field_o.field_D[param1.field_u] / AudioOutput.field_p;
             var5 = (-param1.field_n + (1048575 + var4_int)) / var4_int;
             param1.field_n = 1048575 & param1.field_n + var4_int * param2;
             if (var5 <= param2) {
@@ -251,7 +251,7 @@ final class ej extends PcmStream {
         try {
           if ((4 & this.field_o.field_v[param3.field_u]) != param2 &&
             param3.field_p < 0) {
-            var7_int = this.field_o.field_D[param3.field_u] / qh.field_p;
+            var7_int = this.field_o.field_D[param3.field_u] / AudioOutput.field_p;
             scanLoop1: while (true) {
               var8 = (1048575 + var7_int - param3.field_n) / var7_int;
               if (param5 < var8) {
@@ -264,7 +264,7 @@ final class ej extends PcmStream {
                 param4 = param4 + var8;
                 param5 = param5 - var8;
               }
-              var9 = qh.field_p / 100;
+              var9 = AudioOutput.field_p / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;

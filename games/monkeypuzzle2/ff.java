@@ -6,7 +6,7 @@ final class ff implements Runnable {
     static String field_a;
     static char[] field_e;
     PlatformTaskDispatcher field_b;
-    volatile va[] field_c;
+    volatile AudioOutput[] field_c;
     volatile boolean field_d;
     volatile boolean field_f;
 
@@ -226,7 +226,7 @@ final class ff implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        va var2 = null;
+        AudioOutput var2 = null;
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         this.field_d = true;
         try {
@@ -235,7 +235,7 @@ final class ff implements Runnable {
               var2 = this.field_c[var1_int];
               if (var2 == null) {
               } else {
-                var2.c();
+                var2.serviceOutput();
               }
             }
             em.a(10L, false);
@@ -258,7 +258,7 @@ final class ff implements Runnable {
     }
 
     ff() {
-        this.field_c = new va[2];
+        this.field_c = new AudioOutput[2];
         this.field_f = false;
         this.field_d = false;
     }

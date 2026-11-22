@@ -2108,7 +2108,7 @@ public final class Main extends c {
           tk.a(~param0);
           jd.a((byte) 23);
           gi.clearStaticReferences(1159353185);
-          gd.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           oj.a((byte) -105);
           lh.a(7865);
           cj.clearStaticReferences((byte) 110);

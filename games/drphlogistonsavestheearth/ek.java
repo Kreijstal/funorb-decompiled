@@ -116,10 +116,10 @@ final class ek extends IntrusiveNode {
 
     final static void d(int param0) {
         if (null != el.field_sb) {
-          el.field_sb.h();
+          el.field_sb.dispose();
           if (param0 == -2) {
             if (k.field_J != null) {
-              k.field_J.h();
+              k.field_J.dispose();
             }
             return;
           }
@@ -127,7 +127,7 @@ final class ek extends IntrusiveNode {
         }
         if (param0 == -2) {
           if (k.field_J != null) {
-            k.field_J.h();
+            k.field_J.dispose();
           }
           return;
         }

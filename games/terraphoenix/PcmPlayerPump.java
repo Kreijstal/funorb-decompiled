@@ -30,7 +30,7 @@ final class PcmPlayerPump implements Runnable {
               for (var1_int = 0; 2 > var1_int; var1_int++) {
                 var2 = this.field_d[var1_int];
                 if (var2 != null) {
-                  var2.c();
+                  var2.serviceOutput();
                 }
               }
               gi.a((byte) -68, 10L);

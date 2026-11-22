@@ -5,12 +5,12 @@ final class dd implements Runnable {
     volatile boolean field_b;
     volatile boolean field_c;
     PlatformTaskDispatcher field_d;
-    volatile e[] field_a;
+    volatile AudioOutput[] field_a;
     private static String field_z;
 
     public final void run() {
         int var1_int = 0;
-        e var2 = null;
+        AudioOutput var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
@@ -28,7 +28,7 @@ final class dd implements Runnable {
                 for (var1_int = 0; var1_int < 2; var1_int++) {
                   var2 = this.field_a[var1_int];
                   if (var2 != null) {
-                    var2.e();
+                    var2.serviceOutput();
                   }
                 }
                 SecondaryNodeDeque.a(10L, 19406);
@@ -67,7 +67,7 @@ final class dd implements Runnable {
     }
 
     dd() {
-        this.field_a = new e[2];
+        this.field_a = new AudioOutput[2];
         this.field_c = false;
         this.field_b = false;
     }

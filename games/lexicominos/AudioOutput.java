@@ -24,11 +24,11 @@ class AudioOutput {
     private int field_b;
     private long field_k;
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void setRootStream(PcmStream param0) {
         this.field_q = param0;
     }
 
-    final synchronized void e() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -44,7 +44,7 @@ class AudioOutput {
               this.field_i = var1 - 6000L;
             }
             while (var1 > this.field_i + 5000L) {
-              this.b(256);
+              this.skipFrames(256);
               this.field_i = this.field_i + (long)(256000 / field_r);
               var1 = rf.c(0);
             }
@@ -61,11 +61,11 @@ class AudioOutput {
               if (var1 < this.field_k) {
                 return;
               }
-              this.a(this.field_f);
+              this.openDevice(this.field_f);
               this.field_k = 0L;
               this.field_n = true;
             }
-            var3_int = this.c();
+            var3_int = this.getQueuedFrames();
             if (this.field_p - var3_int > this.field_d) {
               this.field_d = this.field_p - var3_int;
             }
@@ -78,8 +78,8 @@ class AudioOutput {
               if (this.field_f > 16384) {
                 this.field_f = 16384;
               }
-              this.d();
-              this.a(this.field_f);
+              this.closeDevice();
+              this.openDevice(this.field_f);
               var3_int = 0;
               this.field_n = true;
               if (var4 + 256 > this.field_f) {
@@ -88,8 +88,8 @@ class AudioOutput {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_s, 256);
-              this.f();
+              this.mixBlock(this.field_s, 256);
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_o) {
@@ -98,7 +98,7 @@ class AudioOutput {
               } else {
                 if (this.field_d == 0 &&
                   this.field_a == 0) {
-                  this.d();
+                  this.closeDevice();
                   this.field_k = var1 + 2000L;
                   return;
                 }
@@ -112,7 +112,7 @@ class AudioOutput {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.d();
+            this.closeDevice();
             this.field_k = var1 + 2000L;
           }
           return;
@@ -123,13 +123,13 @@ class AudioOutput {
         }
     }
 
-    void d() {
+    void closeDevice() {
     }
 
-    void f() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configureAudio(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -139,22 +139,22 @@ class AudioOutput {
         field_l = param2;
     }
 
-    void a(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
-    int c() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_f;
     }
 
-    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          sl var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          sl var5 = null;
-          sl stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          sl stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_r == 0) {
             throw new IllegalStateException();
@@ -165,7 +165,7 @@ class AudioOutput {
               param3 = 256;
             }
             try {
-              var5 = new sl();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
@@ -176,12 +176,12 @@ class AudioOutput {
               }
               ((AudioOutput) ((Object) stackIn_10_0)).field_s = new int[stackIn_10_1 * stackIn_11_2];
               ((AudioOutput) ((Object) var4)).field_m = param3;
-              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).initializeDevice(param1);
               ((AudioOutput) ((Object) var4)).field_f = (param3 & -1024) + 1024;
               if (((AudioOutput) ((Object) var4)).field_f > 16384) {
                 ((AudioOutput) ((Object) var4)).field_f = 16384;
               }
-              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_f);
+              ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_f);
               if (field_l > 0 &&
                 field_t == null) {
                 field_t = new fd();
@@ -210,7 +210,7 @@ class AudioOutput {
         }
     }
 
-    private final void b(int param0) {
+    private final void skipFrames(int param0) {
         this.field_h = this.field_h - param0;
         if (this.field_h < 0) {
           this.field_h = 0;
@@ -221,10 +221,10 @@ class AudioOutput {
         }
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initializeDevice(java.awt.Component param0) throws Exception {
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -255,8 +255,8 @@ class AudioOutput {
         if (this.field_q != null &&
           this.field_h <= 0) {
           this.field_h = this.field_h + (field_r >> 4);
-          AudioOutput.a(this.field_q);
-          this.a(this.field_q, this.field_q.c());
+          AudioOutput.resetStreamScheduling(this.field_q);
+          this.enqueueByPriority(this.field_q, this.field_q.c());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -299,7 +299,7 @@ class AudioOutput {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_h;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
                         var14Lifetime2 = var11.b();
                       }
                     }
@@ -347,7 +347,7 @@ class AudioOutput {
         this.field_i = rf.c(0);
     }
 
-    private final void a(PcmStream param0, int param1) {
+    private final void enqueueByPriority(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
         PcmStream var4 = this.field_e[var3];
         if (var4 == null) {
@@ -359,14 +359,14 @@ class AudioOutput {
         param0.field_h = param1;
     }
 
-    private final static void a(PcmStream param0) {
+    private final static void resetStreamScheduling(PcmStream param0) {
         param0.field_j = false;
         if (param0.field_k != null) {
           param0.field_k.field_h = 0;
         }
         PcmStream var1 = param0.d();
         while (var1 != null) {
-          AudioOutput.a(var1);
+          AudioOutput.resetStreamScheduling(var1);
           var1 = param0.b();
         }
     }
@@ -375,7 +375,7 @@ class AudioOutput {
         field_t = null;
     }
 
-    final synchronized void a() {
+    final synchronized void dispose() {
         int var2 = 0;
         int var1;
         if (field_t != null) {
@@ -396,7 +396,7 @@ class AudioOutput {
             field_t = null;
           }
         }
-        this.d();
+        this.closeDevice();
         this.field_s = null;
         this.field_c = true;
     }

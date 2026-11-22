@@ -110,7 +110,7 @@ class uf extends af {
               return;
             }
             ua.field_I.a((byte) 97);
-            kj.field_P.h();
+            kj.field_P.flushAndMarkDrainCheck();
             dj.field_j = param3;
             if (null != dj.field_j) {
               ua.field_I.a(param0, dj.field_j, true);

@@ -34,7 +34,7 @@ final class uc extends ng {
                 return;
               }
               SectorCacheStore.field_a.b((byte) 31);
-              bh.field_o.g();
+              bh.field_o.flushAndMarkDrainCheck();
               SpriteState.field_t = param0;
               if (SpriteState.field_t != null) {
                 SectorCacheStore.field_a.a(-8126, SpriteState.field_t, param2);

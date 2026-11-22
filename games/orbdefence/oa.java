@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oa implements Runnable {
-    volatile la[] field_c;
+    volatile AudioOutput[] field_c;
     PlatformTaskDispatcher field_g;
     static String field_a;
     static IntrusiveDeque field_d;
@@ -66,7 +66,7 @@ final class oa implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        la var2 = null;
+        AudioOutput var2 = null;
         int var4 = OrbDefence.field_D ? 1 : 0;
         this.field_b = true;
         try {
@@ -75,7 +75,7 @@ final class oa implements Runnable {
               var2 = this.field_c[var1_int];
               if (var2 == null) {
               } else {
-                var2.a();
+                var2.serviceOutput();
               }
             }
             hb.a(10L, 116);
@@ -101,7 +101,7 @@ final class oa implements Runnable {
     }
 
     oa() {
-        this.field_c = new la[2];
+        this.field_c = new AudioOutput[2];
         this.field_h = false;
         this.field_b = false;
     }

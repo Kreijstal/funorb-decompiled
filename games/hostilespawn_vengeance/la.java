@@ -120,9 +120,9 @@ final class la extends ca {
           return;
         }
         if (uj.field_m != null) {
-          uj.field_m.h();
+          uj.field_m.dispose();
           if (eb.field_e != null) {
-            eb.field_e.h();
+            eb.field_e.dispose();
             return;
           }
           return;
@@ -130,7 +130,7 @@ final class la extends ca {
         if (eb.field_e == null) {
           return;
         }
-        eb.field_e.h();
+        eb.field_e.dispose();
     }
 
     final void a(PacketBuffer param0, int param1) {

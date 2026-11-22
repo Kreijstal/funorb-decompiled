@@ -438,7 +438,7 @@ final class kb extends PcmStream {
         int var5;
         var6 = TorChallenge.field_F ? 1 : 0;
         if (this.field_P.d()) {
-          var2 = this.field_s * this.field_P.field_h / kh.field_p;
+          var2 = this.field_s * this.field_P.field_h / AudioOutput.field_p;
           while (true) {
             var3 = this.field_H + (long)var2 * (long)param0;
             if (this.field_x - var3 >= 0L) {
@@ -556,7 +556,7 @@ final class kb extends PcmStream {
           if (param1 < 0 ||
             param1 == var3.field_G) {
             if (var3.field_K != null) {
-              var3.field_K.g(kh.field_p / 100);
+              var3.field_K.g(AudioOutput.field_p / 100);
               if (var3.field_K.l()) {
                 this.field_I.field_u.addSubstream(var3.field_K);
               }
@@ -707,7 +707,7 @@ final class kb extends PcmStream {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           if (this.field_P.d()) {
-            var4_int = this.field_P.field_h * this.field_s / kh.field_p;
+            var4_int = this.field_P.field_h * this.field_s / AudioOutput.field_p;
             while (true) {
               var5 = this.field_H + (long)param2 * (long)var4_int;
               if (0L > -var5 + this.field_x) {
@@ -866,7 +866,7 @@ final class kb extends PcmStream {
             var7 = Math.sin(0.01227184630308513 * (double)(511 & param1.field_w));
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_k.field_j * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)kh.field_p);
+          var5Lifetime1 = (int)(0.5 + (double)(param1.field_k.field_j * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_p);
           stackIn_13_0 = (var5Lifetime1 < 1) ? 1 : var5Lifetime1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -912,7 +912,7 @@ final class kb extends PcmStream {
         int var12 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          param4.field_z = kh.field_p / 100;
+          param4.field_z = AudioOutput.field_p / 100;
           if (param4.field_F >= 0 && (null == param4.field_K ||
             param4.field_K.j())) {
             param4.a(1047574608);

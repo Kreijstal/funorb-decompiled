@@ -72,7 +72,7 @@ final class nc extends PcmStream {
           return null;
         }
         if (param0.field_k.length != 0) {
-          return new nc(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * kh.field_p)), param2 << 6);
+          return new nc(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_p)), param2 << 6);
         }
         return null;
     }
@@ -213,7 +213,7 @@ final class nc extends PcmStream {
           return null;
         }
         if (param0.field_k.length != 0) {
-          return new nc(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * kh.field_p)), param2 << 6, param3 << 6);
+          return new nc(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_p)), param2 << 6, param3 << 6);
         }
         return null;
     }
@@ -1305,12 +1305,12 @@ final class nc extends PcmStream {
           if (this.field_w <= 0) {
             if (this.field_s == 256 &&
               (this.field_A & 255) == 0) {
-              if (kh.field_g) {
+              if (AudioOutput.field_g) {
                 return nc.b(0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, 0, param3, param2, this);
               }
               return nc.b(((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, 0, param3, param2, this);
             }
-            if (kh.field_g) {
+            if (AudioOutput.field_g) {
               return nc.b(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, 0, param3, param2, this, this.field_s, param4);
             }
             return nc.a(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, 0, param3, param2, this, this.field_s, param4);
@@ -1322,13 +1322,13 @@ final class nc extends PcmStream {
           this.field_w = this.field_w + param1;
           if (this.field_s == 256 &&
             (this.field_A & 255) == 0) {
-            if (!kh.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = nc.a(((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, this.field_r, 0, var6, param2, this);
             } else {
               param1 = nc.b(0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, this.field_t, this.field_y, 0, var6, param2, this);
             }
           } else {
-            if (!kh.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = nc.a(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, this.field_r, 0, var6, param2, this, this.field_s, param4);
             } else {
               param1 = nc.b(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, this.field_t, this.field_y, 0, var6, param2, this, this.field_s, param4);
@@ -1710,12 +1710,12 @@ final class nc extends PcmStream {
           if (this.field_w <= 0) {
             if (this.field_s == -256 &&
               (this.field_A & 255) == 0) {
-              if (kh.field_g) {
+              if (AudioOutput.field_g) {
                 return nc.a(0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, 0, param3, param2, this);
               }
               return nc.a(((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, 0, param3, param2, this);
             }
-            if (kh.field_g) {
+            if (AudioOutput.field_g) {
               return nc.d(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, 0, param3, param2, this, this.field_s, param4);
             }
             return nc.b(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, 0, param3, param2, this, this.field_s, param4);
@@ -1727,13 +1727,13 @@ final class nc extends PcmStream {
           this.field_w = this.field_w + param1;
           if (this.field_s == -256 &&
             (this.field_A & 255) == 0) {
-            if (!kh.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = nc.b(((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, this.field_r, 0, var6, param2, this);
             } else {
               param1 = nc.a(0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, this.field_t, this.field_y, 0, var6, param2, this);
             }
           } else {
-            if (!kh.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = nc.c(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_o, this.field_r, 0, var6, param2, this, this.field_s, param4);
             } else {
               param1 = nc.a(0, 0, ((fe) (this.field_k)).field_k, param0, this.field_A, param1, this.field_v, this.field_n, this.field_t, this.field_y, 0, var6, param2, this, this.field_s, param4);

@@ -193,7 +193,7 @@ abstract class GraphicsRenderer {
                 return;
               }
               mg.field_d.d(-126);
-              um.field_m.e();
+              um.field_m.flushAndMarkDrainCheck();
               dt.field_c = param0;
               if (null != dt.field_c) {
                 mg.field_d.a(param2, -2029711608, dt.field_c);

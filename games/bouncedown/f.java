@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f {
-    static e field_a;
+    static AudioOutput field_a;
 
     final static boolean a(byte param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
@@ -51,7 +51,7 @@ final class f {
     final static void a(java.math.BigInteger param0, boolean param1, PacketBuffer param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           if (param1) {
-            field_a = (e) null;
+            field_a = (AudioOutput) null;
           }
           dk.a(param3.position, 0, param2, 0, param4, param0, param3.payload);
         } catch (RuntimeException runtimeException) {

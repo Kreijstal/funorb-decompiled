@@ -25,11 +25,11 @@ class ii extends DualLinkNode {
         li var1Lifetime1;
         var2 = TrackController.field_F ? 1 : 0;
         try {
-          sb.field_b.b();
+          sb.field_b.serviceOutput();
           if (param0 > -57) {
             field_o = 87;
           }
-          SpriteState.field_x.b();
+          SpriteState.field_x.serviceOutput();
           NodeHashTable.field_e = NodeHashTable.field_e - 1;
           if (0 == NodeHashTable.field_e) {
             NodeHashTable.field_e = 200;

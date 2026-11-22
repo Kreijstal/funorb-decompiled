@@ -7,7 +7,7 @@ final class jr implements Runnable {
     static wp field_e;
     static int[] field_f;
     PlatformTaskDispatcher field_c;
-    volatile dd[] field_d;
+    volatile AudioOutput[] field_d;
 
     final static String[] a(byte param0, char param1, String param2) {
         int var7 = 0;
@@ -64,7 +64,7 @@ final class jr implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        dd var2 = null;
+        AudioOutput var2 = null;
         int var4 = Vertigo2.field_L ? 1 : 0;
         this.field_b = true;
         try {
@@ -73,7 +73,7 @@ final class jr implements Runnable {
               var2 = this.field_d[var1_int];
               if (var2 == null) {
               } else {
-                var2.b();
+                var2.serviceOutput();
               }
             }
             um.a(true, 10L);
@@ -155,7 +155,7 @@ final class jr implements Runnable {
     }
 
     jr() {
-        this.field_d = new dd[2];
+        this.field_d = new AudioOutput[2];
         this.field_a = false;
         this.field_b = false;
     }

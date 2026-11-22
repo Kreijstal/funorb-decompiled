@@ -31,7 +31,7 @@ final class mi extends PcmStream {
         try {
           if ((this.field_w.field_Q[param2.field_n] & 4) != 0 &&
             param2.field_J < 0) {
-            var4_int = this.field_w.field_E[param2.field_n] / md.field_l;
+            var4_int = this.field_w.field_E[param2.field_n] / AudioOutput.field_l;
             var5 = (var4_int + (1048575 - param2.field_x)) / var4_int;
             param2.field_x = param1 * var4_int + param2.field_x & 1048575;
             if (param1 >= var5) {
@@ -93,7 +93,7 @@ final class mi extends PcmStream {
         try {
           if ((this.field_w.field_Q[param0.field_n] & 4) != 0 &&
             param0.field_J < 0) {
-            var7_int = this.field_w.field_E[param0.field_n] / md.field_l;
+            var7_int = this.field_w.field_E[param0.field_n] / AudioOutput.field_l;
             while (true) {
               var8 = (-param0.field_x + (var7_int + 1048575)) / var7_int;
               if (var8 > param3) {
@@ -104,7 +104,7 @@ final class mi extends PcmStream {
               param2 = param2 + var8;
               param3 = param3 - var8;
               param0.field_x = param0.field_x + (-1048576 + var8 * var7_int);
-              var9 = md.field_l / 100;
+              var9 = AudioOutput.field_l / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;

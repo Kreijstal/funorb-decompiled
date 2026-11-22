@@ -41,19 +41,19 @@ final class tk {
     final static void a(int param0) {
         if (param0 == -2919) {
           if (null != mh.field_d) {
-            mh.field_d.c();
+            mh.field_d.dispose();
           }
           if (null != kn.field_F) {
-            kn.field_F.c();
+            kn.field_F.dispose();
           }
           return;
         }
         field_e = 41;
         if (null != mh.field_d) {
-          mh.field_d.c();
+          mh.field_d.dispose();
         }
         if (null != kn.field_F) {
-          kn.field_F.c();
+          kn.field_F.dispose();
         }
     }
 

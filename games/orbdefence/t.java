@@ -367,7 +367,7 @@ final class t extends di {
               }
             }
           }
-          if (la.field_g) {
+          if (AudioOutput.field_g) {
             stackIn_33_0 = param2 << 1;
           } else {
             stackIn_33_0 = param2;
@@ -387,7 +387,7 @@ final class t extends di {
                 }
                 this.field_s.b(this.field_y, 0, param2);
                 this.field_v.b(this.field_u, 0, param2);
-                if (!la.field_g) {
+                if (!AudioOutput.field_g) {
                   stackIn_50_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -417,7 +417,7 @@ final class t extends di {
               this.field_u = new int[var6];
             }
             this.field_t.b(this.field_y, 0, param2);
-            if (la.field_g) {
+            if (AudioOutput.field_g) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_63_0 = localTemp$1;

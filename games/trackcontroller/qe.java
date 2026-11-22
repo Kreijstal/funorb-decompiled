@@ -118,7 +118,7 @@ final class qe extends PcmStream {
               }
             }
           }
-          if (!oa.field_k) {
+          if (!AudioOutput.field_k) {
             stackIn_33_0 = param2;
           } else {
             stackIn_33_0 = param2 << 1;
@@ -140,7 +140,7 @@ final class qe extends PcmStream {
                 }
                 this.field_w.mix(this.field_B, 0, param2);
                 this.field_r.mix(this.field_s, 0, param2);
-                if (!oa.field_k) {
+                if (!AudioOutput.field_k) {
                   stackIn_46_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -166,7 +166,7 @@ final class qe extends PcmStream {
               this.field_B = new int[var6];
             }
             this.field_A.mix(this.field_B, 0, param2);
-            if (!oa.field_k) {
+            if (!AudioOutput.field_k) {
               stackIn_60_0 = param1;
             } else {
               localTemp$1 = param1 << 1;

@@ -64,15 +64,15 @@ final class pe extends fd {
 
     final static void a(PlatformTaskDispatcher param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6, int param7) {
         try {
-          fj.a(param7, param4, 10);
-          mj.field_o = fj.a(param0, param5, 0, param1);
-          im.field_b = fj.a(param0, param5, 1, param2);
+          AudioOutput.configureAudio(param7, param4, 10);
+          mj.field_o = AudioOutput.createOutput(param0, param5, 0, param1);
+          im.field_b = AudioOutput.createOutput(param0, param5, 1, param2);
           hj.field_f = new hg();
           mj.field_p = param2 * 1000 / param7;
-          im.field_b.b(hj.field_f);
+          im.field_b.setRootStream(hj.field_f);
           km.field_a = param6;
           km.field_a.a((byte) -127, ee.field_J);
-          mj.field_o.b(km.field_a);
+          mj.field_o.setRootStream(km.field_a);
           int var8_int = -122 % ((param3 + 69) / 50);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "pe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');

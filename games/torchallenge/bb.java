@@ -10,7 +10,7 @@ final class bb implements Runnable {
     volatile boolean field_f;
     PlatformTaskDispatcher field_b;
     static int activeScreenId;
-    volatile kh[] field_a;
+    volatile AudioOutput[] field_a;
     volatile boolean field_e;
     static int field_i;
     static int[][] field_k;
@@ -78,7 +78,7 @@ final class bb implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        kh var2 = null;
+        AudioOutput var2 = null;
         int var4 = TorChallenge.field_F ? 1 : 0;
         this.field_f = true;
         try {
@@ -86,7 +86,7 @@ final class bb implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_a[var1_int];
               if (var2 != null) {
-                var2.h();
+                var2.serviceOutput();
               }
             }
             c.a(100, 10L);
@@ -112,7 +112,7 @@ final class bb implements Runnable {
     }
 
     bb() {
-        this.field_a = new kh[2];
+        this.field_a = new AudioOutput[2];
         this.field_e = false;
         this.field_f = false;
     }

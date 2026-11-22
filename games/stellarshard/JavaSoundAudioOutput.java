@@ -8,11 +8,11 @@ final class JavaSoundAudioOutput extends AudioMixer {
     private byte[] field_v;
     private static String field_z;
 
-    final int c() {
+    final int getQueuedFrames() {
         return this.field_x - (this.field_w.available() >> (field_d ? 2 : 1));
     }
 
-    final void b() {
+    final void writeMixBlock() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
@@ -33,7 +33,7 @@ final class JavaSoundAudioOutput extends AudioMixer {
     JavaSoundAudioOutput() {
     }
 
-    final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_y, param0 << (field_d ? 2 : 1));
@@ -43,7 +43,7 @@ final class JavaSoundAudioOutput extends AudioMixer {
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (dl.a(1, param0) != 1) {
-            this.b(u.a(7527, param0));
+            this.openDevice(u.a(7527, param0));
             return;
           }
           this.field_w = null;
@@ -51,14 +51,14 @@ final class JavaSoundAudioOutput extends AudioMixer {
         }
     }
 
-    final void f() {
+    final void closeDevice() {
         if (this.field_w != null) {
           this.field_w.close();
           this.field_w = null;
         }
     }
 
-    final void a(java.awt.Component param0) {
+    final void initializeDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;

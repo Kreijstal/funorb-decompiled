@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ck implements Runnable {
-    volatile df[] field_e;
+    volatile AudioOutput[] field_e;
     PlatformTaskDispatcher field_d;
     static int[][] field_h;
     volatile boolean field_a;
@@ -15,7 +15,7 @@ final class ck implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        df var2 = null;
+        AudioOutput var2 = null;
         int var4 = StarCannon.field_A;
         this.field_c = true;
         try {
@@ -23,7 +23,7 @@ final class ck implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_e[var1_int];
               if (var2 != null) {
-                var2.d();
+                var2.serviceOutput();
               }
             }
             uc.a(-94, 10L);
@@ -136,7 +136,7 @@ final class ck implements Runnable {
     }
 
     ck() {
-        this.field_e = new df[2];
+        this.field_e = new AudioOutput[2];
         this.field_a = false;
         this.field_c = false;
     }

@@ -74,7 +74,7 @@ final class eg implements de {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 29723) {
-            stackIn_4_0 = new ed(param2, param1 * df.field_n / 1000);
+            stackIn_4_0 = new ed(param2, param1 * AudioOutput.field_n / 1000);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ed) null;

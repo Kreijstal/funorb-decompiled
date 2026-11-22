@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class bk implements Runnable {
-    volatile vn[] field_g;
+    volatile AudioOutput[] field_g;
     static hd field_b;
     static String[] field_f;
     static String field_c;
@@ -193,7 +193,7 @@ final class bk implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        vn var2 = null;
+        AudioOutput var2 = null;
         int var4 = DungeonAssault.field_K;
         this.field_d = true;
         try {
@@ -202,7 +202,7 @@ final class bk implements Runnable {
               var2 = this.field_g[var1_int];
               if (var2 == null) {
               } else {
-                var2.a();
+                var2.serviceOutput();
               }
             }
             CombatState.a(0, 10L);
@@ -233,7 +233,7 @@ final class bk implements Runnable {
     }
 
     bk() {
-        this.field_g = new vn[2];
+        this.field_g = new AudioOutput[2];
         this.field_a = false;
         this.field_d = false;
     }

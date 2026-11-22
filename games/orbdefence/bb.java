@@ -406,7 +406,7 @@ final class bb extends di {
           return null;
         }
         if (param0.field_g.length != 0) {
-          return new bb(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * la.field_c)), param2 << 6);
+          return new bb(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * AudioOutput.field_c)), param2 << 6);
         }
         return null;
     }
@@ -506,12 +506,12 @@ final class bb extends di {
           if (this.field_m <= 0) {
             if (this.field_s == 256 &&
               (this.field_k & 255) == 0) {
-              if (la.field_g) {
+              if (AudioOutput.field_g) {
                 return bb.b(0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, 0, param3, param2, this);
               }
               return bb.a(((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, 0, param3, param2, this);
             }
-            if (la.field_g) {
+            if (AudioOutput.field_g) {
               return bb.d(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, 0, param3, param2, this, this.field_s, param4);
             }
             return bb.a(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, 0, param3, param2, this, this.field_s, param4);
@@ -523,13 +523,13 @@ final class bb extends di {
           this.field_m = this.field_m + param1;
           if (this.field_s == 256 &&
             (this.field_k & 255) == 0) {
-            if (!la.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = bb.a(((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, this.field_v, 0, var6, param2, this);
             } else {
               param1 = bb.b(0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, this.field_n, this.field_w, 0, var6, param2, this);
             }
           } else {
-            if (!la.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = bb.c(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, this.field_v, 0, var6, param2, this, this.field_s, param4);
             } else {
               param1 = bb.a(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, this.field_n, this.field_w, 0, var6, param2, this, this.field_s, param4);
@@ -1201,12 +1201,12 @@ final class bb extends di {
           if (this.field_m <= 0) {
             if (this.field_s == -256 &&
               (this.field_k & 255) == 0) {
-              if (la.field_g) {
+              if (AudioOutput.field_g) {
                 return bb.a(0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, 0, param3, param2, this);
               }
               return bb.b(((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, 0, param3, param2, this);
             }
-            if (la.field_g) {
+            if (AudioOutput.field_g) {
               return bb.a(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, 0, param3, param2, this, this.field_s, param4);
             }
             return bb.b(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, 0, param3, param2, this, this.field_s, param4);
@@ -1218,13 +1218,13 @@ final class bb extends di {
           this.field_m = this.field_m + param1;
           if (this.field_s == -256 &&
             (this.field_k & 255) == 0) {
-            if (!la.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = bb.b(((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, this.field_v, 0, var6, param2, this);
             } else {
               param1 = bb.a(0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, this.field_n, this.field_w, 0, var6, param2, this);
             }
           } else {
-            if (!la.field_g) {
+            if (!AudioOutput.field_g) {
               param1 = bb.b(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_t, this.field_v, 0, var6, param2, this, this.field_s, param4);
             } else {
               param1 = bb.b(0, 0, ((dl) (this.field_h)).field_g, param0, this.field_k, param1, this.field_r, this.field_u, this.field_n, this.field_w, 0, var6, param2, this, this.field_s, param4);

@@ -50,10 +50,10 @@ class hl extends lc {
           return;
         }
         if (db.field_J != null) {
-          db.field_J.d();
+          db.field_J.dispose();
         }
         if (null != tg.field_i) {
-          tg.field_i.d();
+          tg.field_i.dispose();
         }
     }
 

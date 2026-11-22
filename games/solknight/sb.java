@@ -27,7 +27,7 @@ final class sb implements Runnable {
               for (var1_int = 0; 2 > var1_int; var1_int++) {
                 var2 = this.field_a[var1_int];
                 if (var2 != null) {
-                  var2.b();
+                  var2.serviceOutput();
                 }
               }
               i.a((byte) 18, 10L);

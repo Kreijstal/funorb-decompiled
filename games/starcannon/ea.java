@@ -5,7 +5,7 @@ final class ea {
     static char[] field_c;
     static Sprite[] field_b;
     static n field_a;
-    static df field_d;
+    static AudioOutput field_d;
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;

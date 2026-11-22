@@ -111,7 +111,7 @@ final class fl {
           if (param1 != -11039) {
             field_c = true;
           }
-          stackIn_3_0 = new nd(param0, param2 * qh.field_p / 1000);
+          stackIn_3_0 = new nd(param0, param2 * AudioOutput.field_p / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

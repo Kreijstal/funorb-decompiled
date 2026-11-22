@@ -6,7 +6,7 @@ final class hm extends IntrusiveNode {
     static String field_l;
     boolean field_r;
     int field_o;
-    static vn field_n;
+    static AudioOutput field_n;
     int field_p;
     static int field_k;
     int field_i;

@@ -177,7 +177,7 @@ class w extends PcmStream {
           if (param1 < 0 ||
             param1 == var3.field_E) {
             if (var3.field_A != null) {
-              var3.field_A.h(ug.field_g / 100);
+              var3.field_A.h(AudioOutput.field_g / 100);
               if (var3.field_A.m()) {
                 this.field_B.field_q.b(var3.field_A);
               }
@@ -247,7 +247,7 @@ class w extends PcmStream {
         boolean decompiledFrameRemainder0 = true;
         var6 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_G.c()) {
-          var2 = this.field_p * this.field_G.field_f / ug.field_g;
+          var2 = this.field_p * this.field_G.field_f / AudioOutput.field_g;
           while (true) {
             var3 = this.field_N + (long)var2 * (long)param0;
             if (this.field_x - var3 < 0L) {
@@ -466,7 +466,7 @@ class w extends PcmStream {
         int var11 = 0;
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
-          param0.field_u = ug.field_g / 100;
+          param0.field_u = AudioOutput.field_g / 100;
           if (param3 != 31458) {
             this.a(50, -29, 123, -115);
           }
@@ -694,7 +694,7 @@ class w extends PcmStream {
             var7 = Math.sin((double)(param1.field_j & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(256 * param1.field_r.field_j) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)ug.field_g);
+          var5Lifetime1 = (int)(0.5 + (double)(256 * param1.field_r.field_j) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_g);
           stackIn_12_0 = (1 <= var5Lifetime1) ? var5Lifetime1 : 1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1121,7 +1121,7 @@ class w extends PcmStream {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (this.field_G.c()) {
-            var4_int = this.field_G.field_f * this.field_p / ug.field_g;
+            var4_int = this.field_G.field_f * this.field_p / AudioOutput.field_g;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_N;
               if (-var5 + this.field_x >= 0L) {

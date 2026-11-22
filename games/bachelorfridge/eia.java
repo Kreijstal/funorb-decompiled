@@ -44,10 +44,10 @@ final class eia {
           field_a = (qia) null;
         }
         if (null != BoardChangeBatch.field_l) {
-          BoardChangeBatch.field_l.b();
+          BoardChangeBatch.field_l.dispose();
         }
         if (null != nia.field_m) {
-          nia.field_m.b();
+          nia.field_m.dispose();
         }
     }
 

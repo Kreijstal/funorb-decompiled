@@ -183,19 +183,19 @@ abstract class ByteStorage {
     abstract byte[] getBytes(int param0);
 
     final static void a(int param0, ei param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, java.awt.Component param6, boolean param7) {
-        la.a(param4, param7, 10);
-        db.field_J = la.a(param5, param6, 0, param2);
+        AudioOutput.configureAudio(param4, param7, 10);
+        db.field_J = AudioOutput.createOutput(param5, param6, 0, param2);
         if (param3 < 2) {
           return;
         }
         try {
-          tg.field_i = la.a(param5, param6, 1, param0);
+          tg.field_i = AudioOutput.createOutput(param5, param6, 1, param0);
           qg.field_f = new ke();
           ng.field_c = param0 * 1000 / param4;
-          tg.field_i.b(qg.field_f);
+          tg.field_i.setRootStream(qg.field_f);
           gg.field_h = param1;
           gg.field_h.b(17, th.field_D);
-          db.field_J.b(gg.field_h);
+          db.field_J.setRootStream(gg.field_h);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "hd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

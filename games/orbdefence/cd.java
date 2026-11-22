@@ -5,7 +5,7 @@ final class cd extends wj {
     byte field_s;
     static int[] field_q;
     static String field_r;
-    static la field_w;
+    static AudioOutput field_w;
     static String field_x;
     static se field_t;
     int field_v;
@@ -155,7 +155,7 @@ final class cd extends wj {
           }
           var6 = ji.field_b - 125;
           if (param1) {
-            field_w = (la) null;
+            field_w = (AudioOutput) null;
           }
           if (0 < var6 &&
             var6 < 50) {
@@ -177,7 +177,7 @@ final class cd extends wj {
             t.field_j.a(15 + var3, var4 + 10, var5);
             var6 = ji.field_b - 125;
             if (param1) {
-              field_w = (la) null;
+              field_w = (AudioOutput) null;
               if (0 < var6 &&
                 var6 < 50) {
                 if (20 <= var6) {
@@ -264,7 +264,7 @@ final class cd extends wj {
           kf.field_a.d(var3, var4);
           var6 = ji.field_b - 125;
           if (param1) {
-            field_w = (la) null;
+            field_w = (AudioOutput) null;
             if (0 < var6 &&
               var6 < 50) {
               if (20 <= var6) {

@@ -6,7 +6,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static te field_j;
     static String field_m;
     static te field_g;
-    static va field_k;
+    static AudioOutput field_k;
     static String field_b;
     public static boolean field_c;
     public static int field_e;
@@ -1078,7 +1078,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               return;
             }
             if (param0 < 41) {
-              field_k = (va) null;
+              field_k = (AudioOutput) null;
             }
             this.field_l = true;
             System.out.println("error_game_" + param1);

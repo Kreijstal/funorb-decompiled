@@ -65,7 +65,7 @@ final class dl extends PcmStream {
         try {
           if ((this.field_s.field_C[param1.field_E] & 4) != 0 &&
             param1.field_h < 0) {
-            var4_int = this.field_s.field_l[param1.field_E] / ug.field_g;
+            var4_int = this.field_s.field_l[param1.field_E] / AudioOutput.field_g;
             var5 = (-param1.field_i + var4_int + 1048575) / var4_int;
             param1.field_i = 1048575 & param1.field_i + param0 * var4_int;
             if (var5 <= param0) {
@@ -3267,7 +3267,7 @@ final class dl extends PcmStream {
         try {
           if ((this.field_s.field_C[param2.field_E] & 4) != 0 &&
             param2.field_h < 0) {
-            var7_int = this.field_s.field_l[param2.field_E] / ug.field_g;
+            var7_int = this.field_s.field_l[param2.field_E] / AudioOutput.field_g;
             scanLoop1: while (true) {
               var8 = (1048575 + var7_int - param2.field_i) / var7_int;
               if (param5 < var8) {
@@ -3280,7 +3280,7 @@ final class dl extends PcmStream {
                 param4 = param4 + var8;
                 param2.field_i = param2.field_i + (-1048576 + var8 * var7_int);
               }
-              var9 = ug.field_g / 100;
+              var9 = AudioOutput.field_g / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;

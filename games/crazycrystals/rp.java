@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rp implements Runnable {
-    volatile id[] field_c;
+    volatile AudioOutput[] field_c;
     PlatformTaskDispatcher field_e;
     volatile boolean field_b;
     static String field_a;
@@ -14,7 +14,7 @@ final class rp implements Runnable {
     }
 
     rp() {
-        this.field_c = new id[2];
+        this.field_c = new AudioOutput[2];
         this.field_d = false;
         this.field_b = false;
     }
@@ -28,7 +28,7 @@ final class rp implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        id var2 = null;
+        AudioOutput var2 = null;
         int var4 = CrazyCrystals.field_B;
         this.field_b = true;
         try {
@@ -37,7 +37,7 @@ final class rp implements Runnable {
               var2 = this.field_c[var1_int];
               if (var2 == null) {
               } else {
-                var2.c();
+                var2.serviceOutput();
               }
             }
             fh.a(true, 10L);

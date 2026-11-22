@@ -6,7 +6,7 @@ final class nb {
     static qe field_c;
     static float field_a;
     static qe field_b;
-    static df field_f;
+    static AudioOutput field_f;
     static int field_g;
     static PlatformTaskDispatcher field_e;
 

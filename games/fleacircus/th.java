@@ -228,7 +228,7 @@ final class th extends sh {
               }
             }
           }
-          if (la.field_h) {
+          if (AudioOutput.field_h) {
             stackIn_33_0 = param2 << 1;
           } else {
             stackIn_33_0 = param2;
@@ -248,7 +248,7 @@ final class th extends sh {
                 }
                 this.field_C.b(this.field_q, 0, param2);
                 this.field_o.b(this.field_p, 0, param2);
-                if (!la.field_h) {
+                if (!AudioOutput.field_h) {
                   stackIn_49_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -278,7 +278,7 @@ final class th extends sh {
               this.field_p = new int[var6];
             }
             this.field_t.b(this.field_q, 0, param2);
-            if (la.field_h) {
+            if (AudioOutput.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_63_0 = localTemp$1;

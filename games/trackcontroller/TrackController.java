@@ -345,7 +345,7 @@ public final class TrackController extends GameShell {
         ha.d(4);
         fa.clearStaticReferences();
         ol.clearStaticReferences(param0 ^ -109);
-        oa.clearStaticReferences();
+        AudioOutput.clearStaticReferences();
         qe.clearStaticReferences(1048576);
         kb.a(14);
         cd.c(11352);
@@ -907,13 +907,13 @@ public final class TrackController extends GameShell {
               va.field_d[11] = cc.a(j.field_h, "", "block_disconnect_placeholder").b();
               va.field_d[12] = cc.a(j.field_h, "", "cannot_push_placeholder").b();
               var39 = va.field_d[10].field_j;
-              var35 = new byte[oa.field_h * 5 / 50];
+              var35 = new byte[AudioOutput.field_h * 5 / 50];
               var30 = var35;
               var4_ref_byte__ = var30;
               for (var5 = 0; var5 < var39.length; var5++) {
                 var4_ref_byte__[var5] = var39[var5];
               }
-              va.field_d[10] = new PcmSample(oa.field_h, var4_ref_byte__, 0, var35.length);
+              va.field_d[10] = new PcmSample(AudioOutput.field_h, var4_ref_byte__, 0, var35.length);
               for (var5 = 0; var5 < 13; var5++) {
                 if (nd.field_G[var5] == 0) {
                   nd.field_G[var5] = 96;

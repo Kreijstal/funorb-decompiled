@@ -90,10 +90,10 @@ class IntrusiveNode {
           field_a = (String) null;
         }
         if (null != sb.field_b) {
-          sb.field_b.f();
+          sb.field_b.dispose();
         }
         if (SpriteState.field_x != null) {
-          SpriteState.field_x.f();
+          SpriteState.field_x.dispose();
         }
     }
 

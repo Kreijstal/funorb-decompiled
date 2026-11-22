@@ -25,18 +25,18 @@ final class jb {
 
     final static void a(byte param0, boolean param1, MidiPlayer param2, int param3, java.awt.Component param4, int param5, PlatformTaskDispatcher param6, int param7) {
         try {
-          oa.a(param7, param1, 10);
-          sb.field_b = oa.a(param6, param4, 0, param3);
-          SpriteState.field_x = oa.a(param6, param4, 1, param5);
+          AudioOutput.configureAudio(param7, param1, 10);
+          sb.field_b = AudioOutput.createOutput(param6, param4, 0, param3);
+          SpriteState.field_x = AudioOutput.createOutput(param6, param4, 1, param5);
           ProxySocketConnector.field_e = new k();
           Archive.field_h = param5 * 1000 / param7;
-          SpriteState.field_x.a(ProxySocketConnector.field_e);
+          SpriteState.field_x.setRootStream(ProxySocketConnector.field_e);
           fj.field_P = param2;
           if (param0 >= -99) {
             field_d = -37;
           }
           fj.field_P.d(16384, kc.field_b);
-          sb.field_b.a(fj.field_P);
+          sb.field_b.setRootStream(fj.field_P);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

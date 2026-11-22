@@ -49,12 +49,12 @@ final class s extends gf {
 
     final static void n(int param0) {
         if (null != kj.field_P) {
-          kj.field_P.a();
+          kj.field_P.dispose();
         }
         if (param0 != 0) {
           s.o(-8);
           if (null != ql.field_r) {
-            ql.field_r.a();
+            ql.field_r.dispose();
             return;
           }
           return;
@@ -62,7 +62,7 @@ final class s extends gf {
         if (null == ql.field_r) {
           return;
         }
-        ql.field_r.a();
+        ql.field_r.dispose();
     }
 
     static {

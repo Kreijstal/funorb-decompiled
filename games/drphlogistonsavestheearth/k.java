@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class k extends si {
-    static id field_J;
+    static AudioOutput field_J;
     static int field_L;
     static int[] field_M;
     static rf field_H;
@@ -14,7 +14,7 @@ final class k extends si {
         field_J = null;
         field_H = null;
         if (param0 != 52) {
-          field_J = (id) null;
+          field_J = (AudioOutput) null;
         }
         field_I = null;
     }
@@ -43,7 +43,7 @@ final class k extends si {
         }
         this.field_z = null;
         if (param0 != 300) {
-          field_J = (id) null;
+          field_J = (AudioOutput) null;
         }
     }
 

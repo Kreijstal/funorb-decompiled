@@ -55,7 +55,7 @@ class PcmPlayerService {
         if (this.field_k != null &&
           this.field_a <= 0) {
           this.field_a = this.field_a + (field_j >> 4);
-          PcmPlayerService.b(this.field_k);
+          PcmPlayerService.resetStreamScheduling(this.field_k);
           this.addTimedStream(this.field_k, this.field_k.c());
           var4 = 0;
           var5 = 255;
@@ -366,14 +366,14 @@ class PcmPlayerService {
         this.field_i = true;
     }
 
-    private final static void b(PcmStream param0) {
+    private final static void resetStreamScheduling(PcmStream param0) {
         param0.field_j = false;
         if (param0.field_k != null) {
           param0.field_k.field_h = 0;
         }
         PcmStream var1 = param0.firstChild();
         while (var1 != null) {
-          PcmPlayerService.b(var1);
+          PcmPlayerService.resetStreamScheduling(var1);
           var1 = param0.nextChild();
         }
     }

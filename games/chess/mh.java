@@ -3,7 +3,7 @@
  */
 final class mh {
     static sa field_a;
-    static md field_d;
+    static AudioOutput field_d;
     private String field_b;
     private boolean field_h;
     static String field_e;

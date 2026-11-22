@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DirectByteStorage extends ByteStorage {
-    static dk field_h;
+    static AudioOutput field_h;
     private java.nio.ByteBuffer buffer;
     static int[] field_j;
 
@@ -41,7 +41,7 @@ final class DirectByteStorage extends ByteStorage {
             return false;
           }
           if (param2 < 35) {
-            field_h = (dk) null;
+            field_h = (AudioOutput) null;
           }
           lc.a(false, var4);
           return true;

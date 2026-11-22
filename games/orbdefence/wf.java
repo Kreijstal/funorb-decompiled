@@ -4,7 +4,7 @@
 final class wf {
     static f field_c;
     static int field_a;
-    static la field_b;
+    static AudioOutput field_b;
     private static String field_z;
 
     public static void a(int param0) {

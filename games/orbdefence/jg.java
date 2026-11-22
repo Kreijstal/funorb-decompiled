@@ -33,7 +33,7 @@ final class jg extends di {
         try {
           if ((this.field_j.field_o[param1.field_F] & 4) != 0 &&
             0 > param1.field_n) {
-            var4_int = this.field_j.field_L[param1.field_F] / la.field_c;
+            var4_int = this.field_j.field_L[param1.field_F] / AudioOutput.field_c;
             var5 = (var4_int + (1048575 - param1.field_i)) / var4_int;
             param1.field_i = 1048575 & param0 * var4_int + param1.field_i;
             if (var5 <= param0) {
@@ -108,7 +108,7 @@ final class jg extends di {
           }
           if ((4 & this.field_j.field_o[param4.field_F]) != 0 &&
             param4.field_n < 0) {
-            var7_int = this.field_j.field_L[param4.field_F] / la.field_c;
+            var7_int = this.field_j.field_L[param4.field_F] / AudioOutput.field_c;
             while (true) {
               var8 = (-param4.field_i + (1048575 + var7_int)) / var7_int;
               if (var8 > param5) {
@@ -119,7 +119,7 @@ final class jg extends di {
               param4.field_i = param4.field_i + (-1048576 + var8 * var7_int);
               param2 = param2 + var8;
               param5 = param5 - var8;
-              var9 = la.field_c / 100;
+              var9 = AudioOutput.field_c / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;

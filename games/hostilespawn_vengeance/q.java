@@ -22,11 +22,11 @@ final class q {
         int var2 = HostileSpawn.field_I ? 1 : 0;
         qb var1Lifetime1;
         try {
-          uj.field_m.f();
+          uj.field_m.serviceOutput();
           if (param0 != 14470) {
             field_l = (String) null;
           }
-          eb.field_e.f();
+          eb.field_e.serviceOutput();
           de.field_n = de.field_n - 1;
           if (de.field_n == 0) {
             de.field_n = 200;

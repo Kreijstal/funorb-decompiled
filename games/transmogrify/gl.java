@@ -153,10 +153,10 @@ final class gl extends fi {
           field_B = (pg) null;
         }
         if (null != re.field_h) {
-          re.field_h.d();
+          re.field_h.dispose();
         }
         if (u.field_a != null) {
-          u.field_a.d();
+          u.field_a.dispose();
         }
     }
 

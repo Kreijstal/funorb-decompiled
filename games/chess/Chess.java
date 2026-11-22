@@ -1596,7 +1596,7 @@ public final class Chess extends gb {
         hn.clearStaticReferences(false);
         IntrusiveNode.a((byte) -91);
         tn.a(-2);
-        md.clearStaticReferences();
+        AudioOutput.clearStaticReferences();
         vl.clearStaticReferences(-1);
         mc.a((byte) 47);
         pi.b(-107);

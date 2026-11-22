@@ -272,12 +272,12 @@ final class rc extends PcmStream {
           if (this.field_z <= 0) {
             if (this.field_r == 256 &&
               (this.field_t & 255) == 0) {
-              if (fj.field_u) {
+              if (AudioOutput.field_u) {
                 return rc.b(0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, 0, param3, param2, this);
               }
               return rc.b(((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, 0, param3, param2, this);
             }
-            if (fj.field_u) {
+            if (AudioOutput.field_u) {
               return rc.d(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, 0, param3, param2, this, this.field_r, param4);
             }
             return rc.a(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, 0, param3, param2, this, this.field_r, param4);
@@ -289,13 +289,13 @@ final class rc extends PcmStream {
           this.field_z = this.field_z + param1;
           if (this.field_r == 256 &&
             (this.field_t & 255) == 0) {
-            if (!fj.field_u) {
+            if (!AudioOutput.field_u) {
               param1 = rc.b(((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, this.field_y, 0, var6, param2, this);
             } else {
               param1 = rc.b(0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, this.field_B, this.field_F, 0, var6, param2, this);
             }
           } else {
-            if (!fj.field_u) {
+            if (!AudioOutput.field_u) {
               param1 = rc.b(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, this.field_y, 0, var6, param2, this, this.field_r, param4);
             } else {
               param1 = rc.b(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, this.field_B, this.field_F, 0, var6, param2, this, this.field_r, param4);
@@ -1175,12 +1175,12 @@ final class rc extends PcmStream {
           if (this.field_z <= 0) {
             if (this.field_r == -256 &&
               (this.field_t & 255) == 0) {
-              if (fj.field_u) {
+              if (AudioOutput.field_u) {
                 return rc.a(0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, 0, param3, param2, this);
               }
               return rc.a(((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, 0, param3, param2, this);
             }
-            if (fj.field_u) {
+            if (AudioOutput.field_u) {
               return rc.a(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, 0, param3, param2, this, this.field_r, param4);
             }
             return rc.b(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, 0, param3, param2, this, this.field_r, param4);
@@ -1192,13 +1192,13 @@ final class rc extends PcmStream {
           this.field_z = this.field_z + param1;
           if (this.field_r == -256 &&
             (this.field_t & 255) == 0) {
-            if (!fj.field_u) {
+            if (!AudioOutput.field_u) {
               param1 = rc.a(((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, this.field_y, 0, var6, param2, this);
             } else {
               param1 = rc.a(0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, this.field_B, this.field_F, 0, var6, param2, this);
             }
           } else {
-            if (!fj.field_u) {
+            if (!AudioOutput.field_u) {
               param1 = rc.c(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_D, this.field_y, 0, var6, param2, this, this.field_r, param4);
             } else {
               param1 = rc.a(0, 0, ((ji) (this.field_q)).field_r, param0, this.field_t, param1, this.field_s, this.field_C, this.field_B, this.field_F, 0, var6, param2, this, this.field_r, param4);
@@ -1217,7 +1217,7 @@ final class rc extends PcmStream {
           return null;
         }
         if (param0.field_r.length != 0) {
-          return new rc(param0, (int)((long)param0.field_s * 256L * (long)param1 / (long)(100 * fj.field_r)), param2 << 6);
+          return new rc(param0, (int)((long)param0.field_s * 256L * (long)param1 / (long)(100 * AudioOutput.field_r)), param2 << 6);
         }
         return null;
     }
@@ -1414,7 +1414,7 @@ final class rc extends PcmStream {
           return null;
         }
         if (param0.field_r.length != 0) {
-          return new rc(param0, (int)((long)param0.field_s * 256L * (long)param1 / (long)(100 * fj.field_r)), param2 << 6, param3 << 6);
+          return new rc(param0, (int)((long)param0.field_s * 256L * (long)param1 / (long)(100 * AudioOutput.field_r)), param2 << 6, param3 << 6);
         }
         return null;
     }

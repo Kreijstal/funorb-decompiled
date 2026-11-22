@@ -7,7 +7,7 @@ abstract class kn extends mf implements ra {
     static ug field_H;
     static String field_J;
     static String field_E;
-    static md field_F;
+    static AudioOutput field_F;
     static AccountRequestState field_D;
     static String field_K;
     mf field_M;

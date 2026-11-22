@@ -866,7 +866,7 @@ public final class Vertigo2 extends GameShell {
           pe.clearStaticReferences(true);
           qd.clearStaticReferences();
           rq.e(0);
-          dd.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           fk.e(-257);
           MenuSelectionCursor.clearStaticReferences(true);
           fh.h(-90);

@@ -3,7 +3,7 @@
  */
 final class gf {
     static PlatformTaskDispatcher field_b;
-    static id field_c;
+    static AudioOutput field_c;
     static String field_d;
     static int field_a;
     private static String field_z;

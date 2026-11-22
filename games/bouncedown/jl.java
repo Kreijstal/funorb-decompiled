@@ -8,7 +8,7 @@ final class jl {
     static int[] field_b;
     static long field_g;
     static int field_a;
-    static e field_d;
+    static AudioOutput field_d;
     static tg field_c;
 
     public static void a(int param0) {

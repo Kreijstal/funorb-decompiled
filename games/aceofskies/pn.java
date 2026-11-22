@@ -78,7 +78,7 @@ final class pn implements Runnable {
             for (int var1_int = 0; var1_int < 2; var1_int++) {
               AudioOutput var2 = this.field_c[var1_int];
               if (var2 != null) {
-                var2.h();
+                var2.serviceOutput();
               }
             }
             IntrusiveNode.a(10L, false);

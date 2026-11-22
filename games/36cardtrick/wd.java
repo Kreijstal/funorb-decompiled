@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd {
-    static gd field_e;
+    static AudioOutput field_e;
     static java.math.BigInteger field_c;
     static vg field_b;
     static String field_a;
@@ -33,7 +33,7 @@ final class wd {
           ah.field_c = new int[2 * param2];
         }
         if (param0 <= 3) {
-          field_e = (gd) null;
+          field_e = (AudioOutput) null;
         }
         if (null == p.field_n ||
           !(p.field_n.length >= param2)) {
@@ -236,7 +236,7 @@ final class wd {
 
     final static void a(int param0) {
         if (param0 != 31668) {
-          field_e = (gd) null;
+          field_e = (AudioOutput) null;
           if (cd.field_e == 10) {
             k.c(-128);
             cd.field_e = 11;

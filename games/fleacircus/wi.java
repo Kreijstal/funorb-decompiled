@@ -42,12 +42,12 @@ abstract class wi {
         ci var1 = null;
         ci var1Lifetime1;
         if (param0 == -14277) {
-          var1 = new ci(22050, la.field_a);
+          var1 = new ci(22050, AudioOutput.field_a);
           jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
           return;
         }
         wi.clearStaticReferences(true);
-        var1Lifetime1 = new ci(22050, la.field_a);
+        var1Lifetime1 = new ci(22050, AudioOutput.field_a);
         jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1Lifetime1);
     }
 

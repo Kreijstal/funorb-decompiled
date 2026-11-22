@@ -251,7 +251,7 @@ final class ri {
         PcmSample var6 = null;
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          ii.field_D = new o(22050, va.field_i);
+          ii.field_D = new o(22050, AudioOutput.field_i);
           wd.field_i = new ud(param2, param3);
           WeightedObjectCache.field_i = IterableNodeHashTable.a(2570, "music/Monkey Puzzle Panic", "", wd.field_i, param0);
           uh.field_e = IterableNodeHashTable.a(2570, "music/Monkey Puzzle TitleScreen", "", wd.field_i, param0);

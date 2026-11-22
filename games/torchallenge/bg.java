@@ -117,16 +117,16 @@ final class bg extends ic {
 
     final static void a(kb param0, int param1, int param2, int param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, boolean param7) {
         try {
-          kh.a(param1, param7, 10);
-          bh.field_o = kh.a(param5, param4, 0, param3);
-          re.field_B = kh.a(param5, param4, 1, param2);
+          AudioOutput.configureAudio(param1, param7, 10);
+          bh.field_o = AudioOutput.createOutput(param5, param4, 0, param3);
+          re.field_B = AudioOutput.createOutput(param5, param4, 1, param2);
           GameKeyHandler.field_a = new PcmStreamMixer();
           ea.field_f = param2 * 1000 / param1;
-          re.field_B.b(GameKeyHandler.field_a);
+          re.field_B.setRootStream(GameKeyHandler.field_a);
           SectorCacheStore.field_a = param0;
           SectorCacheStore.field_a.c(nk.field_h, false);
           int var8_int = -123 % ((param6 - 59) / 51);
-          bh.field_o.b(SectorCacheStore.field_a);
+          bh.field_o.setRootStream(SectorCacheStore.field_a);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "bg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

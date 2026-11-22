@@ -34,7 +34,7 @@ final class am extends IntrusiveNode {
                 return;
               }
               jk.field_D.f(16);
-              re.field_h.c();
+              re.field_h.flushAndMarkDrainCheck();
               d.field_e = param2;
               if (d.field_e != null) {
                 jk.field_D.a(-63, param0, d.field_e);

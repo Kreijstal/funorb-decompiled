@@ -421,7 +421,7 @@ public final class OrbDefence extends NetworkGameClient {
         he.c(22);
         qi.clearStaticReferences();
         jg.d(79);
-        la.clearStaticReferences();
+        AudioOutput.clearStaticReferences();
         t.clearStaticReferences(true);
         am.a((byte) 29);
         ml.clearStaticReferences(true);

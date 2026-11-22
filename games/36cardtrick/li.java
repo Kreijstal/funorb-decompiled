@@ -612,12 +612,12 @@ final class li extends je {
           if (this.field_x <= 0) {
             if (this.field_p == 256 &&
               (this.field_u & 255) == 0) {
-              if (gd.field_q) {
+              if (AudioOutput.field_q) {
                 return li.a(0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, this);
               }
               return li.b(((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, this);
             }
-            if (gd.field_q) {
+            if (AudioOutput.field_q) {
               return li.b(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, this, this.field_p, param4);
             }
             return li.a(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, this, this.field_p, param4);
@@ -629,13 +629,13 @@ final class li extends je {
           this.field_x = this.field_x + param1;
           if (this.field_p == 256 &&
             (this.field_u & 255) == 0) {
-            if (!gd.field_q) {
+            if (!AudioOutput.field_q) {
               param1 = li.a(((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, this);
             } else {
               param1 = li.a(0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, this);
             }
           } else {
-            if (!gd.field_q) {
+            if (!AudioOutput.field_q) {
               param1 = li.c(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, this, this.field_p, param4);
             } else {
               param1 = li.a(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, this, this.field_p, param4);
@@ -706,12 +706,12 @@ final class li extends je {
           if (this.field_x <= 0) {
             if (this.field_p == -256 &&
               (this.field_u & 255) == 0) {
-              if (gd.field_q) {
+              if (AudioOutput.field_q) {
                 return li.b(0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, this);
               }
               return li.a(((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, this);
             }
-            if (gd.field_q) {
+            if (AudioOutput.field_q) {
               return li.d(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, this, this.field_p, param4);
             }
             return li.b(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, this, this.field_p, param4);
@@ -723,13 +723,13 @@ final class li extends je {
           this.field_x = this.field_x + param1;
           if (this.field_p == -256 &&
             (this.field_u & 255) == 0) {
-            if (!gd.field_q) {
+            if (!AudioOutput.field_q) {
               param1 = li.b(((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, this);
             } else {
               param1 = li.b(0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, this);
             }
           } else {
-            if (!gd.field_q) {
+            if (!AudioOutput.field_q) {
               param1 = li.a(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, this, this.field_p, param4);
             } else {
               param1 = li.b(0, 0, ((ib) (this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, this, this.field_p, param4);
@@ -902,7 +902,7 @@ final class li extends je {
           return null;
         }
         if (param0.field_h.length != 0) {
-          return new li(param0, (int)((long)param0.field_l * 256L * (long)param1 / (long)(100 * gd.field_m)), param2 << 6);
+          return new li(param0, (int)((long)param0.field_l * 256L * (long)param1 / (long)(100 * AudioOutput.field_m)), param2 << 6);
         }
         return null;
     }

@@ -84,7 +84,7 @@ final class np extends ha {
             ti.field_e.c(vd.field_c);
           }
           vd.field_c = param0;
-          qd.field_b.e();
+          qd.field_b.flushAndMarkDrainCheck();
           if (param2 <= 117) {
             np.d(61);
           }

@@ -59,26 +59,26 @@ final class ae extends IntrusiveNode {
           String[] var2 = (String[]) null;
           ae.a((byte) 91, (String[]) null);
           if (bh.field_o != null) {
-            bh.field_o.b();
+            bh.field_o.dispose();
             if (null != re.field_B) {
-              re.field_B.b();
+              re.field_B.dispose();
             }
             return;
           }
           if (null != re.field_B) {
-            re.field_B.b();
+            re.field_B.dispose();
           }
           return;
         }
         if (bh.field_o == null) {
           if (null != re.field_B) {
-            re.field_B.b();
+            re.field_B.dispose();
           }
           return;
         }
-        bh.field_o.b();
+        bh.field_o.dispose();
         if (null != re.field_B) {
-          re.field_B.b();
+          re.field_B.dispose();
         }
     }
 

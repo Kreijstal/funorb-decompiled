@@ -62,7 +62,7 @@ final class wd extends oa {
 
     private final void a(int param0, int param1) {
         if (this.field_o[param0] != null) {
-          this.field_o[param0].e(param1 * 256 / df.field_n);
+          this.field_o[param0].e(param1 * 256 / AudioOutput.field_n);
         }
     }
 
@@ -924,7 +924,7 @@ final class wd extends oa {
               param2 = 256;
             }
           }
-          this.field_o[param0].b(df.field_n >> 7, param1 * this.field_D * this.field_cb >> 12, param2);
+          this.field_o[param0].b(AudioOutput.field_n >> 7, param1 * this.field_D * this.field_cb >> 12, param2);
         }
     }
 
@@ -993,7 +993,7 @@ final class wd extends oa {
 
     private final void d(int param0) {
         if (this.field_o[param0] != null) {
-          this.field_o[param0].h(df.field_n >> 7);
+          this.field_o[param0].h(AudioOutput.field_n >> 7);
           this.field_o[param0] = null;
         }
     }
@@ -1034,7 +1034,7 @@ final class wd extends oa {
             param5 = 0;
           }
           stackIn_14_0 = this.field_ab.field_L[param1];
-          stackIn_14_1 = param3 * 256 / df.field_n;
+          stackIn_14_1 = param3 * 256 / AudioOutput.field_n;
           if (param2 == 0) {
             stackIn_15_2 = param4 * this.field_D * this.field_cb >> 12;
           } else {
@@ -1050,7 +1050,7 @@ final class wd extends oa {
           ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.d(param2);
-            var7.b(df.field_n >> 7, param4 * this.field_D * this.field_cb >> 12, param5);
+            var7.b(AudioOutput.field_n >> 7, param4 * this.field_D * this.field_cb >> 12, param5);
           }
           this.field_o[param0] = var7;
           if (this.field_g != null) {
@@ -1068,7 +1068,7 @@ final class wd extends oa {
           !this.field_W) {
           return -1;
         }
-        int var3 = df.field_n;
+        int var3 = AudioOutput.field_n;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_q * this.field_db);
     }

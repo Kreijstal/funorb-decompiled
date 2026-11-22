@@ -361,7 +361,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ug.a([II)V#0"
+      "renamedSymbol": "B:AudioOutput.mixBlock([II)V#0"
     },
     {
       "symbol": "B:um.a([BZIII)Z#0",
@@ -426,6 +426,14 @@
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
       "renamedSymbol": "B:wj.a(B)V#0"
+    },
+    {
+      "symbol": "C:af",
+      "originalName": "af",
+      "to": "JavaSoundAudioOutput",
+      "evidence": "JavaSound-backed signed16-bit PCM output: SourceDataLine lifecycle,mono/stereo byte conversion,queued-frame count,guarded capacity retry and vendor-workaround flush when present. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:JavaSoundAudioOutput"
     },
     {
       "symbol": "C:am",
@@ -642,6 +650,14 @@
       "evidence": "Complete six-method instance contract,Frame/volatile flag declarations and complete canvas factory reviewed. Empty constructor,paint/update/focusGained no-ops,focusLost sets volatile flag,owned exit wrapper delegates reviewed Frame release helper; factory attaches canvas and focus listener to display Frame. Unrelated static helpers preserved. No owned/type-use native declarations. Exact same-spelling non-class literals,where present,are separately source-reviewed and pinned unchanged.",
       "confidence": "reviewed",
       "renamedSymbol": "C:FullscreenFocusCanvas"
+    },
+    {
+      "symbol": "C:ug",
+      "originalName": "ug",
+      "to": "AudioOutput",
+      "evidence": "PCM output controller: creates output devices,services adaptive frame buffers,schedules/mixes PCM stream children and disposes shared audio service membership. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AudioOutput"
     },
     {
       "symbol": "C:ui",
@@ -970,6 +986,54 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 aadcc96bda143381c784080c795677ba6489c3ba44adc44076274af9cf15bad5.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ab.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:af.a()V",
+      "originalName": "a",
+      "to": "writeMixBlock",
+      "evidence": "Clamp signed24-bit mixed samples to the original bounds,write high16bits as little-endian bytes and emit the current256-frame mono/stereo block through the retained line. Original-body SHA256 9820b0bbee1a160fc4cf1e03696fec03d4e4c82ea26fcd24c8bdb91243690a88. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.writeMixBlock()V"
+    },
+    {
+      "symbol": "M:af.a(I)V",
+      "originalName": "a",
+      "to": "openDevice",
+      "evidence": "Create SourceDataLine.Info with requested frame capacity converted to bytes,obtain/open/start the line and retain capacity;on LineUnavailableException retry through the original bit-count/rounding helpers or clear line and rethrow as originally coded. Original-body SHA256 f3efdf4b8b2b7c65572bd1e544f711d41fd5d936726c1650b3e10317d8ffe43b. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.openDevice(I)V"
+    },
+    {
+      "symbol": "M:af.a(Ljava/awt/Component;)V",
+      "originalName": "a",
+      "to": "initializeDevice",
+      "evidence": "Inspect available mixers for vendor workaround when present,create signed16-bit little-endian mono/stereo AudioFormat at configured rate,and allocate the256-frame byte buffer in exact source order. Original-body SHA256 2117be7614e5e89dd593b4b2662b74af822561481dc33668716f82c797f066ed. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:af.b()V",
+      "originalName": "b",
+      "to": "flushDevice",
+      "evidence": "Device implementation flushes the line and conditionally closes,reobtains,opens and restarts it for the retained vendor workaround;the base implementation is empty. This operation exists only in the28implementations that actually declare it. Original-body SHA256 4139ec618589a82cfee2162ffc541067d5adc75fddcc015f29705e2d25cd36fc. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.flushDevice()V"
+    },
+    {
+      "symbol": "M:af.c()V",
+      "originalName": "c",
+      "to": "closeDevice",
+      "evidence": "Device implementation closes and clears the retained line only when nonnull;the base implementation is empty. Preserve null state,close failures and exact ordering. Original-body SHA256 ffb1e0e5b3b167ab553d290adf9580032b1b7b593c3fd42aef591960e730e9a8. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.closeDevice()V"
+    },
+    {
+      "symbol": "M:af.d()I",
+      "originalName": "d",
+      "to": "getQueuedFrames",
+      "evidence": "Device implementation returns capacity minus available bytes converted to mono/stereo frames. Base implementation returns retained capacity;retain each actual body and units. Original-body SHA256 22b53c14b364b1a4ac1aa4decc7ba81d266c0c651978148612bb0c474bd7c370. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaSoundAudioOutput.getQueuedFrames()I"
     },
     {
       "symbol": "M:ak.a(I)V",
@@ -2332,12 +2396,140 @@
       "renamedSymbol": "M:uf.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ug.a()V",
+      "originalName": "a",
+      "to": "writeMixBlock",
+      "evidence": "Clamp signed24-bit mixed samples to the original bounds,write high16bits as little-endian bytes and emit the current256-frame mono/stereo block through the retained line. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.writeMixBlock()V"
+    },
+    {
+      "symbol": "M:ug.a(I)V",
+      "originalName": "a",
+      "to": "openDevice",
+      "evidence": "Create SourceDataLine.Info with requested frame capacity converted to bytes,obtain/open/start the line and retain capacity;on LineUnavailableException retry through the original bit-count/rounding helpers or clear line and rethrow as originally coded. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.openDevice(I)V"
+    },
+    {
+      "symbol": "M:ug.a(IZI)V",
+      "originalName": "a",
+      "to": "configureAudio",
+      "evidence": "Validate sample rate8000..48000 and assign sample rate,stereo and service-priority configuration in original order. Original-body SHA256 9d2312892a0a8e73a544b23417cc36b3cf005e9d942c6c3ab39127359bba8a7e. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.configureAudio(IZI)V"
+    },
+    {
+      "symbol": "M:ug.a(Lfd;Ljava/awt/Component;II)Lug;",
+      "originalName": "a",
+      "to": "createOutput",
+      "evidence": "Validate configuration and slot,clamp requested frame count,create backend/buffer,initialize,round/clamp capacity,open and register with shared service;preserve every original Throwable fallback,dispatcher guard and partial state. Original-body SHA256 ddb48724a8e4bb3492b89d3d26a0cb3b6759b8209c2fc81ceb01395da4005728. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;"
+    },
+    {
+      "symbol": "M:ug.a(Ljava/awt/Component;)V",
+      "originalName": "a",
+      "to": "initializeDevice",
+      "evidence": "Inspect available mixers for vendor workaround when present,create signed16-bit little-endian mono/stereo AudioFormat at configured rate,and allocate the256-frame byte buffer in exact source order. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.initializeDevice(Ljava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:ug.a(Ltj;)V",
+      "originalName": "a",
+      "to": "setRootStream",
+      "evidence": "Assign the retained root PCM stream under the existing synchronization/modifiers. Original-body SHA256 0b6c13beb2d981ed94907ee89050adb0f1ead5f6ddd4b101e038a20db4751515. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.setRootStream(LPcmStream;)V"
+    },
+    {
+      "symbol": "M:ug.a(Ltj;I)V",
+      "originalName": "a",
+      "to": "enqueueByPriority",
+      "evidence": "Append the stream to the priority>>5 bucket via retained head/tail arrays and stream link/priority fields. Original-body SHA256 2af6b516c5a10b1fd49a92fbda779710aa96e8812d0240e5c00f61844ace43b3. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.enqueueByPriority(LPcmStream;I)V"
+    },
+    {
+      "symbol": "M:ug.a([II)V",
+      "originalName": "a",
+      "to": "mixBlock",
+      "evidence": "Clear output and run the retained priority-bucket stream activation/cost scheduler,clean links,delegate root stream mixing and update timestamp. Preserve shared arrays,state and scheduling order. Original-body SHA256 2bb47afc146b5574cd0f5d70e588cda3f478198c2618c9f300820d2a05973e0e. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.mixBlock([II)V"
+    },
+    {
+      "symbol": "M:ug.b()V",
+      "originalName": "b",
+      "to": "flushDevice",
+      "evidence": "Device implementation flushes the line and conditionally closes,reobtains,opens and restarts it for the retained vendor workaround;the base implementation is empty. This operation exists only in the28implementations that actually declare it. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.flushDevice()V"
+    },
+    {
+      "symbol": "M:ug.b(I)V",
+      "originalName": "b",
+      "to": "skipFrames",
+      "evidence": "Subtract and clamp activation countdown,then skip frames on the retained root stream when present. Original-body SHA256 5e99b7fd6e590db9547c0f6e7407b51d04900fbb33ebcfa45c3f86b4da539147. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:ug.b(Ltj;)V",
+      "originalName": "b",
+      "to": "resetStreamScheduling",
+      "evidence": "Recursively clear stream active flags and retained sample scheduling positions using the actual first/next-child traversal methods. Original-body SHA256 df1a67cfe2f167191b786f9e1aa0ff25e20940ed030724bb4857955716fb85eb. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.resetStreamScheduling(LPcmStream;)V"
+    },
+    {
+      "symbol": "M:ug.c()V",
+      "originalName": "c",
+      "to": "closeDevice",
+      "evidence": "Device implementation closes and clears the retained line only when nonnull;the base implementation is empty. Preserve null state,close failures and exact ordering. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.closeDevice()V"
+    },
+    {
+      "symbol": "M:ug.d()I",
+      "originalName": "d",
+      "to": "getQueuedFrames",
+      "evidence": "Device implementation returns capacity minus available bytes converted to mono/stereo frames. Base implementation returns retained capacity;retain each actual body and units. Original-body SHA256 ce2fa4cfdc3cddbc2222a76d207c0bf21fe2474ec9a0d4d951ece79cb0b781dc. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.getQueuedFrames()I"
+    },
+    {
+      "symbol": "M:ug.e()V",
+      "originalName": "e",
+      "to": "flushAndMarkDrainCheck",
+      "evidence": "Mark fresh/drain-check state,invoke device flush,and on Exception close and schedule delayed reopen. Preserve actual source wrappers and partial updates. Original-body SHA256 a4f37556081a96f4d225fefff41cbced458a85a3ccc0ff5b027eed9b3031f85a. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.flushAndMarkDrainCheck()V"
+    },
+    {
+      "symbol": "M:ug.f()V",
+      "originalName": "f",
+      "to": "serviceOutput",
+      "evidence": "Apply clock-drift skipping,reopen delay,queued-frame/drain tracking,adaptive capacity growth,256-frame mixing/writes and periodic drain/idle checks;preserve all time-helper guards and exception handling. Original-body SHA256 124f571fde7fcc71c225e9f8a39ec5c78b0daf238e08c77fdc4c9e52664b023d. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.serviceOutput()V"
+    },
+    {
       "symbol": "M:ug.g()V",
       "originalName": "g",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 d47393edec886259138df780b7c0049619b9f975ea2d937e93afb130e8e0b003.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ug.clearStaticReferences()V"
+      "renamedSymbol": "M:AudioOutput.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:ug.h()V",
+      "originalName": "h",
+      "to": "dispose",
+      "evidence": "Deregister from shared service slots,stop/wait for the service when both slots are empty,close the device,null the mix buffer and mark disposed in exact original order. Original-body SHA256 e243952adfa633c65218a7bd2ae79da4c023725cd1de22049c8e76a62a91b4b6. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutput.dispose()V"
     },
     {
       "symbol": "M:uj.c(I)V",
@@ -3059,7 +3251,7 @@
     },
     {
       "symbol": "B:ug.a([II)V#0",
-      "renamedSymbol": "B:ug.a([II)V#0",
+      "renamedSymbol": "B:AudioOutput.mixBlock([II)V#0",
       "originalName": "L3",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -3235,9 +3427,9 @@
     },
     {
       "symbol": "C:af",
-      "renamedSymbol": "C:af",
+      "renamedSymbol": "C:JavaSoundAudioOutput",
       "originalName": "af",
-      "renamedName": "af",
+      "renamedName": "JavaSoundAudioOutput",
       "declaration": {
         "file": "af.java",
         "start": 50,
@@ -6480,9 +6672,9 @@
     },
     {
       "symbol": "C:ug",
-      "renamedSymbol": "C:ug",
+      "renamedSymbol": "C:AudioOutput",
       "originalName": "ug",
-      "renamedName": "ug",
+      "renamedName": "AudioOutput",
       "declaration": {
         "file": "ug.java",
         "start": 44,
@@ -7316,7 +7508,7 @@
     },
     {
       "symbol": "F:af.field_A:Ljava/lang/String;",
-      "renamedSymbol": "F:af.field_A:Ljava/lang/String;",
+      "renamedSymbol": "F:JavaSoundAudioOutput.field_A:Ljava/lang/String;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -7327,7 +7519,7 @@
     },
     {
       "symbol": "F:af.field_v:Z",
-      "renamedSymbol": "F:af.field_v:Z",
+      "renamedSymbol": "F:JavaSoundAudioOutput.field_v:Z",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -7338,7 +7530,7 @@
     },
     {
       "symbol": "F:af.field_w:I",
-      "renamedSymbol": "F:af.field_w:I",
+      "renamedSymbol": "F:JavaSoundAudioOutput.field_w:I",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -7349,7 +7541,7 @@
     },
     {
       "symbol": "F:af.field_x:Ljavax/sound/sampled/SourceDataLine;",
-      "renamedSymbol": "F:af.field_x:Ljavax/sound/sampled/SourceDataLine;",
+      "renamedSymbol": "F:JavaSoundAudioOutput.field_x:Ljavax/sound/sampled/SourceDataLine;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -7360,7 +7552,7 @@
     },
     {
       "symbol": "F:af.field_y:Ljavax/sound/sampled/AudioFormat;",
-      "renamedSymbol": "F:af.field_y:Ljavax/sound/sampled/AudioFormat;",
+      "renamedSymbol": "F:JavaSoundAudioOutput.field_y:Ljavax/sound/sampled/AudioFormat;",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -7371,7 +7563,7 @@
     },
     {
       "symbol": "F:af.field_z:[B",
-      "renamedSymbol": "F:af.field_z:[B",
+      "renamedSymbol": "F:JavaSoundAudioOutput.field_z:[B",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -12805,7 +12997,7 @@
     },
     {
       "symbol": "F:eb.field_e:Lug;",
-      "renamedSymbol": "F:eb.field_e:Lug;",
+      "renamedSymbol": "F:eb.field_e:LAudioOutput;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -35256,7 +35448,7 @@
     },
     {
       "symbol": "F:ua.field_g:[Lug;",
-      "renamedSymbol": "F:ua.field_g:[Lug;",
+      "renamedSymbol": "F:ua.field_g:[LAudioOutput;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -35542,7 +35734,7 @@
     },
     {
       "symbol": "F:ug.field_a:[Ltj;",
-      "renamedSymbol": "F:ug.field_a:[LPcmStream;",
+      "renamedSymbol": "F:AudioOutput.field_a:[LPcmStream;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -35553,7 +35745,7 @@
     },
     {
       "symbol": "F:ug.field_b:Z",
-      "renamedSymbol": "F:ug.field_b:Z",
+      "renamedSymbol": "F:AudioOutput.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -35564,7 +35756,7 @@
     },
     {
       "symbol": "F:ug.field_c:I",
-      "renamedSymbol": "F:ug.field_c:I",
+      "renamedSymbol": "F:AudioOutput.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -35575,7 +35767,7 @@
     },
     {
       "symbol": "F:ug.field_d:I",
-      "renamedSymbol": "F:ug.field_d:I",
+      "renamedSymbol": "F:AudioOutput.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -35586,7 +35778,7 @@
     },
     {
       "symbol": "F:ug.field_e:J",
-      "renamedSymbol": "F:ug.field_e:J",
+      "renamedSymbol": "F:AudioOutput.field_e:J",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -35597,7 +35789,7 @@
     },
     {
       "symbol": "F:ug.field_f:I",
-      "renamedSymbol": "F:ug.field_f:I",
+      "renamedSymbol": "F:AudioOutput.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -35608,7 +35800,7 @@
     },
     {
       "symbol": "F:ug.field_g:I",
-      "renamedSymbol": "F:ug.field_g:I",
+      "renamedSymbol": "F:AudioOutput.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -35619,7 +35811,7 @@
     },
     {
       "symbol": "F:ug.field_h:I",
-      "renamedSymbol": "F:ug.field_h:I",
+      "renamedSymbol": "F:AudioOutput.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -35630,7 +35822,7 @@
     },
     {
       "symbol": "F:ug.field_i:I",
-      "renamedSymbol": "F:ug.field_i:I",
+      "renamedSymbol": "F:AudioOutput.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -35641,7 +35833,7 @@
     },
     {
       "symbol": "F:ug.field_j:Lua;",
-      "renamedSymbol": "F:ug.field_j:Lua;",
+      "renamedSymbol": "F:AudioOutput.field_j:Lua;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -35652,7 +35844,7 @@
     },
     {
       "symbol": "F:ug.field_k:[Ltj;",
-      "renamedSymbol": "F:ug.field_k:[LPcmStream;",
+      "renamedSymbol": "F:AudioOutput.field_k:[LPcmStream;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -35663,7 +35855,7 @@
     },
     {
       "symbol": "F:ug.field_l:J",
-      "renamedSymbol": "F:ug.field_l:J",
+      "renamedSymbol": "F:AudioOutput.field_l:J",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -35674,7 +35866,7 @@
     },
     {
       "symbol": "F:ug.field_m:Ltj;",
-      "renamedSymbol": "F:ug.field_m:LPcmStream;",
+      "renamedSymbol": "F:AudioOutput.field_m:LPcmStream;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -35685,7 +35877,7 @@
     },
     {
       "symbol": "F:ug.field_n:I",
-      "renamedSymbol": "F:ug.field_n:I",
+      "renamedSymbol": "F:AudioOutput.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -35696,7 +35888,7 @@
     },
     {
       "symbol": "F:ug.field_o:Z",
-      "renamedSymbol": "F:ug.field_o:Z",
+      "renamedSymbol": "F:AudioOutput.field_o:Z",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -35707,7 +35899,7 @@
     },
     {
       "symbol": "F:ug.field_p:J",
-      "renamedSymbol": "F:ug.field_p:J",
+      "renamedSymbol": "F:AudioOutput.field_p:J",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -35718,7 +35910,7 @@
     },
     {
       "symbol": "F:ug.field_q:I",
-      "renamedSymbol": "F:ug.field_q:I",
+      "renamedSymbol": "F:AudioOutput.field_q:I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -35729,7 +35921,7 @@
     },
     {
       "symbol": "F:ug.field_r:I",
-      "renamedSymbol": "F:ug.field_r:I",
+      "renamedSymbol": "F:AudioOutput.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -35740,7 +35932,7 @@
     },
     {
       "symbol": "F:ug.field_s:Z",
-      "renamedSymbol": "F:ug.field_s:Z",
+      "renamedSymbol": "F:AudioOutput.field_s:Z",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -35751,7 +35943,7 @@
     },
     {
       "symbol": "F:ug.field_t:I",
-      "renamedSymbol": "F:ug.field_t:I",
+      "renamedSymbol": "F:AudioOutput.field_t:I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -35762,7 +35954,7 @@
     },
     {
       "symbol": "F:ug.field_u:[I",
-      "renamedSymbol": "F:ug.field_u:[I",
+      "renamedSymbol": "F:AudioOutput.field_u:[I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -36037,7 +36229,7 @@
     },
     {
       "symbol": "F:uj.field_m:Lug;",
-      "renamedSymbol": "F:uj.field_m:Lug;",
+      "renamedSymbol": "F:uj.field_m:LAudioOutput;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -42956,7 +43148,7 @@
     },
     {
       "symbol": "L:af.a()V#0",
-      "renamedSymbol": "L:af.a()V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.writeMixBlock()V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -42967,7 +43159,7 @@
     },
     {
       "symbol": "L:af.a()V#1",
-      "renamedSymbol": "L:af.a()V#1",
+      "renamedSymbol": "L:JavaSoundAudioOutput.writeMixBlock()V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -42978,7 +43170,7 @@
     },
     {
       "symbol": "L:af.a()V#2",
-      "renamedSymbol": "L:af.a()V#2",
+      "renamedSymbol": "L:JavaSoundAudioOutput.writeMixBlock()V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -42989,7 +43181,7 @@
     },
     {
       "symbol": "L:af.a(I)V#0",
-      "renamedSymbol": "L:af.a(I)V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.openDevice(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -43000,7 +43192,7 @@
     },
     {
       "symbol": "L:af.a(I)V#1",
-      "renamedSymbol": "L:af.a(I)V#1",
+      "renamedSymbol": "L:JavaSoundAudioOutput.openDevice(I)V#1",
       "originalName": "lineUnavailableException",
       "renamedName": "lineUnavailableException",
       "declaration": {
@@ -43011,7 +43203,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -43022,7 +43214,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#1",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#1",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -43033,7 +43225,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#10",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#10",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#10",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -43044,7 +43236,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#11",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#11",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#11",
       "originalName": "stackIn_17_5",
       "renamedName": "stackIn_17_5",
       "declaration": {
@@ -43055,7 +43247,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#12",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#12",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#12",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -43066,7 +43258,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#13",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#13",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#13",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -43077,7 +43269,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#14",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#14",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#14",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -43088,7 +43280,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#2",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#2",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -43099,7 +43291,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#3",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#3",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -43110,7 +43302,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#4",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#4",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#4",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -43121,7 +43313,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#5",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#5",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#5",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -43132,7 +43324,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#6",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#6",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#6",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -43143,7 +43335,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#7",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#7",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#7",
       "originalName": "stackIn_16_3",
       "renamedName": "stackIn_16_3",
       "declaration": {
@@ -43154,7 +43346,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#8",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#8",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#8",
       "originalName": "stackIn_16_4",
       "renamedName": "stackIn_16_4",
       "declaration": {
@@ -43165,7 +43357,7 @@
     },
     {
       "symbol": "L:af.a(Ljava/awt/Component;)V#9",
-      "renamedSymbol": "L:af.a(Ljava/awt/Component;)V#9",
+      "renamedSymbol": "L:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#9",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -43176,7 +43368,7 @@
     },
     {
       "symbol": "L:af.b()V#0",
-      "renamedSymbol": "L:af.b()V#0",
+      "renamedSymbol": "L:JavaSoundAudioOutput.flushDevice()V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -182095,7 +182287,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#0",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#0",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -182106,7 +182298,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#1",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#1",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -182117,7 +182309,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#10",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#10",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -182128,7 +182320,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#2",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#2",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -182139,7 +182331,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#3",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#3",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -182150,7 +182342,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#4",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#4",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -182161,7 +182353,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#5",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#5",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -182172,7 +182364,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#6",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#6",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#6",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -182183,7 +182375,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#7",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#7",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -182194,7 +182386,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#8",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#8",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -182205,7 +182397,7 @@
     },
     {
       "symbol": "L:ug.a(Lfd;Ljava/awt/Component;II)Lug;#9",
-      "renamedSymbol": "L:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#9",
+      "renamedSymbol": "L:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -182216,7 +182408,7 @@
     },
     {
       "symbol": "L:ug.a(Ltj;I)V#0",
-      "renamedSymbol": "L:ug.a(LPcmStream;I)V#0",
+      "renamedSymbol": "L:AudioOutput.enqueueByPriority(LPcmStream;I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -182227,7 +182419,7 @@
     },
     {
       "symbol": "L:ug.a(Ltj;I)V#1",
-      "renamedSymbol": "L:ug.a(LPcmStream;I)V#1",
+      "renamedSymbol": "L:AudioOutput.enqueueByPriority(LPcmStream;I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -182238,7 +182430,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#0",
-      "renamedSymbol": "L:ug.a([II)V#0",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -182249,7 +182441,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#1",
-      "renamedSymbol": "L:ug.a([II)V#1",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -182260,7 +182452,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#10",
-      "renamedSymbol": "L:ug.a([II)V#10",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -182271,7 +182463,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#11",
-      "renamedSymbol": "L:ug.a([II)V#11",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -182282,7 +182474,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#12",
-      "renamedSymbol": "L:ug.a([II)V#12",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -182293,7 +182485,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#13",
-      "renamedSymbol": "L:ug.a([II)V#13",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -182304,7 +182496,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#14",
-      "renamedSymbol": "L:ug.a([II)V#14",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#14",
       "originalName": "var15_int",
       "renamedName": "var15_int",
       "declaration": {
@@ -182315,7 +182507,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#15",
-      "renamedSymbol": "L:ug.a([II)V#15",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -182326,7 +182518,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#16",
-      "renamedSymbol": "L:ug.a([II)V#16",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -182337,7 +182529,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#17",
-      "renamedSymbol": "L:ug.a([II)V#17",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#17",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -182348,7 +182540,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#18",
-      "renamedSymbol": "L:ug.a([II)V#18",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#18",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -182359,7 +182551,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#19",
-      "renamedSymbol": "L:ug.a([II)V#19",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#19",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -182370,7 +182562,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#2",
-      "renamedSymbol": "L:ug.a([II)V#2",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -182381,7 +182573,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#20",
-      "renamedSymbol": "L:ug.a([II)V#20",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#20",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -182392,7 +182584,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#3",
-      "renamedSymbol": "L:ug.a([II)V#3",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -182403,7 +182595,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#4",
-      "renamedSymbol": "L:ug.a([II)V#4",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#4",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -182414,7 +182606,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#5",
-      "renamedSymbol": "L:ug.a([II)V#5",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -182425,7 +182617,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#6",
-      "renamedSymbol": "L:ug.a([II)V#6",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#6",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -182436,7 +182628,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#7",
-      "renamedSymbol": "L:ug.a([II)V#7",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -182447,7 +182639,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#8",
-      "renamedSymbol": "L:ug.a([II)V#8",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -182458,7 +182650,7 @@
     },
     {
       "symbol": "L:ug.a([II)V#9",
-      "renamedSymbol": "L:ug.a([II)V#9",
+      "renamedSymbol": "L:AudioOutput.mixBlock([II)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -182469,7 +182661,7 @@
     },
     {
       "symbol": "L:ug.b(Ltj;)V#0",
-      "renamedSymbol": "L:ug.b(LPcmStream;)V#0",
+      "renamedSymbol": "L:AudioOutput.resetStreamScheduling(LPcmStream;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -182480,7 +182672,7 @@
     },
     {
       "symbol": "L:ug.e()V#0",
-      "renamedSymbol": "L:ug.e()V#0",
+      "renamedSymbol": "L:AudioOutput.flushAndMarkDrainCheck()V#0",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -182491,7 +182683,7 @@
     },
     {
       "symbol": "L:ug.e()V#1",
-      "renamedSymbol": "L:ug.e()V#1",
+      "renamedSymbol": "L:AudioOutput.flushAndMarkDrainCheck()V#1",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -182502,7 +182694,7 @@
     },
     {
       "symbol": "L:ug.e()V#2",
-      "renamedSymbol": "L:ug.e()V#2",
+      "renamedSymbol": "L:AudioOutput.flushAndMarkDrainCheck()V#2",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -182513,7 +182705,7 @@
     },
     {
       "symbol": "L:ug.f()V#0",
-      "renamedSymbol": "L:ug.f()V#0",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -182524,7 +182716,7 @@
     },
     {
       "symbol": "L:ug.f()V#1",
-      "renamedSymbol": "L:ug.f()V#1",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -182535,7 +182727,7 @@
     },
     {
       "symbol": "L:ug.f()V#2",
-      "renamedSymbol": "L:ug.f()V#2",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -182546,7 +182738,7 @@
     },
     {
       "symbol": "L:ug.f()V#3",
-      "renamedSymbol": "L:ug.f()V#3",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#3",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -182557,7 +182749,7 @@
     },
     {
       "symbol": "L:ug.f()V#4",
-      "renamedSymbol": "L:ug.f()V#4",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -182568,7 +182760,7 @@
     },
     {
       "symbol": "L:ug.f()V#5",
-      "renamedSymbol": "L:ug.f()V#5",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -182579,7 +182771,7 @@
     },
     {
       "symbol": "L:ug.f()V#6",
-      "renamedSymbol": "L:ug.f()V#6",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#6",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -182590,7 +182782,7 @@
     },
     {
       "symbol": "L:ug.f()V#7",
-      "renamedSymbol": "L:ug.f()V#7",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#7",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -182601,7 +182793,7 @@
     },
     {
       "symbol": "L:ug.f()V#8",
-      "renamedSymbol": "L:ug.f()V#8",
+      "renamedSymbol": "L:AudioOutput.serviceOutput()V#8",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -182612,7 +182804,7 @@
     },
     {
       "symbol": "L:ug.h()V#0",
-      "renamedSymbol": "L:ug.h()V#0",
+      "renamedSymbol": "L:AudioOutput.dispose()V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -182623,7 +182815,7 @@
     },
     {
       "symbol": "L:ug.h()V#1",
-      "renamedSymbol": "L:ug.h()V#1",
+      "renamedSymbol": "L:AudioOutput.dispose()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -201378,9 +201570,9 @@
     },
     {
       "symbol": "M:af.<init>()V",
-      "renamedSymbol": "M:af.<init>()V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.<init>()V",
       "originalName": "af",
-      "renamedName": "af",
+      "renamedName": "JavaSoundAudioOutput",
       "declaration": {
         "file": "af.java",
         "start": 540,
@@ -201389,9 +201581,9 @@
     },
     {
       "symbol": "M:af.a()V",
-      "renamedSymbol": "M:af.a()V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.writeMixBlock()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeMixBlock",
       "declaration": {
         "file": "af.java",
         "start": 3025,
@@ -201400,9 +201592,9 @@
     },
     {
       "symbol": "M:af.a(I)V",
-      "renamedSymbol": "M:af.a(I)V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.openDevice(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openDevice",
       "declaration": {
         "file": "af.java",
         "start": 3548,
@@ -201411,9 +201603,9 @@
     },
     {
       "symbol": "M:af.a(Ljava/awt/Component;)V",
-      "renamedSymbol": "M:af.a(Ljava/awt/Component;)V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeDevice",
       "declaration": {
         "file": "af.java",
         "start": 599,
@@ -201422,9 +201614,9 @@
     },
     {
       "symbol": "M:af.b()V",
-      "renamedSymbol": "M:af.b()V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.flushDevice()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "flushDevice",
       "declaration": {
         "file": "af.java",
         "start": 2386,
@@ -201433,9 +201625,9 @@
     },
     {
       "symbol": "M:af.c()V",
-      "renamedSymbol": "M:af.c()V",
+      "renamedSymbol": "M:JavaSoundAudioOutput.closeDevice()V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "closeDevice",
       "declaration": {
         "file": "af.java",
         "start": 414,
@@ -201444,9 +201636,9 @@
     },
     {
       "symbol": "M:af.d()I",
-      "renamedSymbol": "M:af.d()I",
+      "renamedSymbol": "M:JavaSoundAudioOutput.getQueuedFrames()I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "getQueuedFrames",
       "declaration": {
         "file": "af.java",
         "start": 307,
@@ -225611,9 +225803,9 @@
     },
     {
       "symbol": "M:ug.<init>()V",
-      "renamedSymbol": "M:ug.<init>()V",
+      "renamedSymbol": "M:AudioOutput.<init>()V",
       "originalName": "ug",
-      "renamedName": "ug",
+      "renamedName": "AudioOutput",
       "declaration": {
         "file": "ug.java",
         "start": 13086,
@@ -225622,9 +225814,9 @@
     },
     {
       "symbol": "M:ug.a()V",
-      "renamedSymbol": "M:ug.a()V",
+      "renamedSymbol": "M:AudioOutput.writeMixBlock()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeMixBlock",
       "declaration": {
         "file": "ug.java",
         "start": 6687,
@@ -225633,9 +225825,9 @@
     },
     {
       "symbol": "M:ug.a(I)V",
-      "renamedSymbol": "M:ug.a(I)V",
+      "renamedSymbol": "M:AudioOutput.openDevice(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openDevice",
       "declaration": {
         "file": "ug.java",
         "start": 11534,
@@ -225644,9 +225836,9 @@
     },
     {
       "symbol": "M:ug.a(IZI)V",
-      "renamedSymbol": "M:ug.a(IZI)V",
+      "renamedSymbol": "M:AudioOutput.configureAudio(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureAudio",
       "declaration": {
         "file": "ug.java",
         "start": 11596,
@@ -225655,9 +225847,9 @@
     },
     {
       "symbol": "M:ug.a(Lfd;Ljava/awt/Component;II)Lug;",
-      "renamedSymbol": "M:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;",
+      "renamedSymbol": "M:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createOutput",
       "declaration": {
         "file": "ug.java",
         "start": 3905,
@@ -225666,9 +225858,9 @@
     },
     {
       "symbol": "M:ug.a(Ljava/awt/Component;)V",
-      "renamedSymbol": "M:ug.a(Ljava/awt/Component;)V",
+      "renamedSymbol": "M:AudioOutput.initializeDevice(Ljava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeDevice",
       "declaration": {
         "file": "ug.java",
         "start": 12522,
@@ -225677,9 +225869,9 @@
     },
     {
       "symbol": "M:ug.a(Ltj;)V",
-      "renamedSymbol": "M:ug.a(LPcmStream;)V",
+      "renamedSymbol": "M:AudioOutput.setRootStream(LPcmStream;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setRootStream",
       "declaration": {
         "file": "ug.java",
         "start": 7406,
@@ -225688,9 +225880,9 @@
     },
     {
       "symbol": "M:ug.a(Ltj;I)V",
-      "renamedSymbol": "M:ug.a(LPcmStream;I)V",
+      "renamedSymbol": "M:AudioOutput.enqueueByPriority(LPcmStream;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueueByPriority",
       "declaration": {
         "file": "ug.java",
         "start": 6377,
@@ -225699,9 +225891,9 @@
     },
     {
       "symbol": "M:ug.a([II)V",
-      "renamedSymbol": "M:ug.a([II)V",
+      "renamedSymbol": "M:AudioOutput.mixBlock([II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "mixBlock",
       "declaration": {
         "file": "ug.java",
         "start": 7482,
@@ -225710,9 +225902,9 @@
     },
     {
       "symbol": "M:ug.b()V",
-      "renamedSymbol": "M:ug.b()V",
+      "renamedSymbol": "M:AudioOutput.flushDevice()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "flushDevice",
       "declaration": {
         "file": "ug.java",
         "start": 12191,
@@ -225721,9 +225913,9 @@
     },
     {
       "symbol": "M:ug.b(I)V",
-      "renamedSymbol": "M:ug.b(I)V",
+      "renamedSymbol": "M:AudioOutput.skipFrames(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "ug.java",
         "start": 11945,
@@ -225732,9 +225924,9 @@
     },
     {
       "symbol": "M:ug.b(Ltj;)V",
-      "renamedSymbol": "M:ug.b(LPcmStream;)V",
+      "renamedSymbol": "M:AudioOutput.resetStreamScheduling(LPcmStream;)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetStreamScheduling",
       "declaration": {
         "file": "ug.java",
         "start": 12251,
@@ -225743,9 +225935,9 @@
     },
     {
       "symbol": "M:ug.c()V",
-      "renamedSymbol": "M:ug.c()V",
+      "renamedSymbol": "M:AudioOutput.closeDevice()V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "closeDevice",
       "declaration": {
         "file": "ug.java",
         "start": 605,
@@ -225754,9 +225946,9 @@
     },
     {
       "symbol": "M:ug.d()I",
-      "renamedSymbol": "M:ug.d()I",
+      "renamedSymbol": "M:AudioOutput.getQueuedFrames()I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "getQueuedFrames",
       "declaration": {
         "file": "ug.java",
         "start": 11863,
@@ -225765,9 +225957,9 @@
     },
     {
       "symbol": "M:ug.e()V",
-      "renamedSymbol": "M:ug.e()V",
+      "renamedSymbol": "M:AudioOutput.flushAndMarkDrainCheck()V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "flushAndMarkDrainCheck",
       "declaration": {
         "file": "ug.java",
         "start": 12605,
@@ -225776,9 +225968,9 @@
     },
     {
       "symbol": "M:ug.f()V",
-      "renamedSymbol": "M:ug.f()V",
+      "renamedSymbol": "M:AudioOutput.serviceOutput()V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "serviceOutput",
       "declaration": {
         "file": "ug.java",
         "start": 646,
@@ -225787,7 +225979,7 @@
     },
     {
       "symbol": "M:ug.g()V",
-      "renamedSymbol": "M:ug.clearStaticReferences()V",
+      "renamedSymbol": "M:AudioOutput.clearStaticReferences()V",
       "originalName": "g",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -225798,9 +225990,9 @@
     },
     {
       "symbol": "M:ug.h()V",
-      "renamedSymbol": "M:ug.h()V",
+      "renamedSymbol": "M:AudioOutput.dispose()V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "dispose",
       "declaration": {
         "file": "ug.java",
         "start": 6745,
@@ -230715,7 +230907,7 @@
     },
     {
       "symbol": "P:af.a(I)V#0",
-      "renamedSymbol": "P:af.a(I)V#0",
+      "renamedSymbol": "P:JavaSoundAudioOutput.openDevice(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -230726,7 +230918,7 @@
     },
     {
       "symbol": "P:af.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "P:af.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "P:JavaSoundAudioOutput.initializeDevice(Ljava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289840,7 +290032,7 @@
     },
     {
       "symbol": "P:ug.a(I)V#0",
-      "renamedSymbol": "P:ug.a(I)V#0",
+      "renamedSymbol": "P:AudioOutput.openDevice(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289851,7 +290043,7 @@
     },
     {
       "symbol": "P:ug.a(IZI)V#0",
-      "renamedSymbol": "P:ug.a(IZI)V#0",
+      "renamedSymbol": "P:AudioOutput.configureAudio(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289862,7 +290054,7 @@
     },
     {
       "symbol": "P:ug.a(IZI)V#1",
-      "renamedSymbol": "P:ug.a(IZI)V#1",
+      "renamedSymbol": "P:AudioOutput.configureAudio(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -289873,7 +290065,7 @@
     },
     {
       "symbol": "P:ug.a(IZI)V#2",
-      "renamedSymbol": "P:ug.a(IZI)V#2",
+      "renamedSymbol": "P:AudioOutput.configureAudio(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -289884,7 +290076,7 @@
     },
     {
       "symbol": "P:ug.a(Lfd;Ljava/awt/Component;II)Lug;#0",
-      "renamedSymbol": "P:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#0",
+      "renamedSymbol": "P:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289895,7 +290087,7 @@
     },
     {
       "symbol": "P:ug.a(Lfd;Ljava/awt/Component;II)Lug;#1",
-      "renamedSymbol": "P:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#1",
+      "renamedSymbol": "P:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -289906,7 +290098,7 @@
     },
     {
       "symbol": "P:ug.a(Lfd;Ljava/awt/Component;II)Lug;#2",
-      "renamedSymbol": "P:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#2",
+      "renamedSymbol": "P:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -289917,7 +290109,7 @@
     },
     {
       "symbol": "P:ug.a(Lfd;Ljava/awt/Component;II)Lug;#3",
-      "renamedSymbol": "P:ug.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lug;#3",
+      "renamedSymbol": "P:AudioOutput.createOutput(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioOutput;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -289928,7 +290120,7 @@
     },
     {
       "symbol": "P:ug.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "P:ug.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "P:AudioOutput.initializeDevice(Ljava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289939,7 +290131,7 @@
     },
     {
       "symbol": "P:ug.a(Ltj;)V#0",
-      "renamedSymbol": "P:ug.a(LPcmStream;)V#0",
+      "renamedSymbol": "P:AudioOutput.setRootStream(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289950,7 +290142,7 @@
     },
     {
       "symbol": "P:ug.a(Ltj;I)V#0",
-      "renamedSymbol": "P:ug.a(LPcmStream;I)V#0",
+      "renamedSymbol": "P:AudioOutput.enqueueByPriority(LPcmStream;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289961,7 +290153,7 @@
     },
     {
       "symbol": "P:ug.a(Ltj;I)V#1",
-      "renamedSymbol": "P:ug.a(LPcmStream;I)V#1",
+      "renamedSymbol": "P:AudioOutput.enqueueByPriority(LPcmStream;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -289972,7 +290164,7 @@
     },
     {
       "symbol": "P:ug.a([II)V#0",
-      "renamedSymbol": "P:ug.a([II)V#0",
+      "renamedSymbol": "P:AudioOutput.mixBlock([II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289983,7 +290175,7 @@
     },
     {
       "symbol": "P:ug.a([II)V#1",
-      "renamedSymbol": "P:ug.a([II)V#1",
+      "renamedSymbol": "P:AudioOutput.mixBlock([II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -289994,7 +290186,7 @@
     },
     {
       "symbol": "P:ug.b(I)V#0",
-      "renamedSymbol": "P:ug.b(I)V#0",
+      "renamedSymbol": "P:AudioOutput.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -290005,7 +290197,7 @@
     },
     {
       "symbol": "P:ug.b(Ltj;)V#0",
-      "renamedSymbol": "P:ug.b(LPcmStream;)V#0",
+      "renamedSymbol": "P:AudioOutput.resetStreamScheduling(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -298314,7 +298506,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "d11dc3139bb9668ef2dd3de7f871760a03b9a8934240d50c7350af4b57db762d",
+      "outputSha256": "9dd9277f2a5f1b51fe150af616403a2d0ee3923be350134741a62f8298229de6",
       "edits": [
         {
           "start": 78,
@@ -298904,6 +299096,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 34716,
+          "end": 34718,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 40199,
           "end": 40201,
           "symbol": "C:wg",
@@ -299231,6 +299430,13 @@
           "symbol": "M:gh.f()V",
           "original": "f",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 53724,
+          "end": 53726,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 53727,
@@ -300642,6 +300848,13 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 95765,
+          "end": 95766,
+          "symbol": "M:ug.a(Ltj;)V",
+          "original": "a",
+          "renamed": "setRootStream"
+        },
+        {
           "start": 96135,
           "end": 96137,
           "symbol": "C:wg",
@@ -301371,10 +301584,81 @@
     },
     {
       "original": "af.java",
-      "renamed": "af.java",
+      "renamed": "JavaSoundAudioOutput.java",
       "inputSha256": "029200286e14f7c348f9aa69d0b2b1716fc99485a9e69f88f0241cc0f1ffbb61",
-      "outputSha256": "029200286e14f7c348f9aa69d0b2b1716fc99485a9e69f88f0241cc0f1ffbb61",
-      "edits": []
+      "outputSha256": "2c82df4571b7f69858d0f5402a597540c19a54b2b20afda65655b6f31ecbee9a",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 307,
+          "end": 308,
+          "symbol": "M:af.d()I",
+          "original": "d",
+          "renamed": "getQueuedFrames"
+        },
+        {
+          "start": 414,
+          "end": 415,
+          "symbol": "M:af.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 540,
+          "end": 542,
+          "symbol": "M:af.<init>()V",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 599,
+          "end": 600,
+          "symbol": "M:af.a(Ljava/awt/Component;)V",
+          "original": "a",
+          "renamed": "initializeDevice"
+        },
+        {
+          "start": 2386,
+          "end": 2387,
+          "symbol": "M:af.b()V",
+          "original": "b",
+          "renamed": "flushDevice"
+        },
+        {
+          "start": 3025,
+          "end": 3026,
+          "symbol": "M:af.a()V",
+          "original": "a",
+          "renamed": "writeMixBlock"
+        },
+        {
+          "start": 3548,
+          "end": 3549,
+          "symbol": "M:af.a(I)V",
+          "original": "a",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 4239,
+          "end": 4240,
+          "symbol": "M:af.a(I)V",
+          "original": "a",
+          "renamed": "openDevice"
+        }
+      ]
     },
     {
       "original": "ag.java",
@@ -302008,7 +302292,7 @@
       "original": "b.java",
       "renamed": "b.java",
       "inputSha256": "c999b406823fb422e591ed635ab8c60338bf02b006fcf3fa29f925dabd27d67d",
-      "outputSha256": "3cf8c3fc7e52b8634b56ba02a9d8b9eedfe3cf42adbc9c746fb1e3adfb4cbd9a",
+      "outputSha256": "f1fe20dbe76bc1538dfc6d1359f127f626e43fd18b48ec4070309d21ada7daab",
       "edits": [
         {
           "start": 60,
@@ -302016,6 +302300,34 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 11193,
+          "end": 11195,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 11524,
+          "end": 11526,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 12138,
+          "end": 12140,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 12534,
+          "end": 12536,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 18045,
@@ -302086,6 +302398,41 @@
           "symbol": "M:am.b(I)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 44454,
+          "end": 44456,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 51839,
+          "end": 51841,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 52170,
+          "end": 52172,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 52783,
+          "end": 52785,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 53179,
+          "end": 53181,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 58395,
@@ -305076,7 +305423,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "68fb9d86e52749ceed581d13c0c28ab9eb215d4f29706062895ad328bef8b8ec",
-      "outputSha256": "47a38f7704cf459eb10816fae8eba9ca295a9cbd14b925475fa98205c2c1eb53",
+      "outputSha256": "cb2dadf0997741e28ae5b72b54775bcf5509fdeba5402e9803014982ddb025cf",
       "edits": [
         {
           "start": 61,
@@ -305140,6 +305487,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 2215,
+          "end": 2217,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 3859,
@@ -305571,6 +305925,13 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 121614,
+          "end": 121616,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 121638,
           "end": 121640,
           "symbol": "B:dl.a(I[ILtm;III)V#0",
@@ -305585,6 +305946,13 @@
           "original": "L2",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 122119,
+          "end": 122121,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 124272,
@@ -306008,8 +306376,15 @@
       "original": "eb.java",
       "renamed": "eb.java",
       "inputSha256": "a62bf983be2ee1178014e59e98237acda74178da6f9118f1f531eaff42324bce",
-      "outputSha256": "deaa7f8ba7ca085ec7b06e7392f2d5a826c7f9684ea0fa6780a3a6f0daac4096",
+      "outputSha256": "5fcc462a6683af13bd54ce658af53cdc9eb46607967fac85565d9c4c37622d9b",
       "edits": [
+        {
+          "start": 163,
+          "end": 165,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
         {
           "start": 227,
           "end": 229,
@@ -310045,7 +310420,7 @@
       "original": "gd.java",
       "renamed": "gd.java",
       "inputSha256": "bb469f727dee39795dc9fa51ec34df85c20a5d569d768ba4a7c526016340590a",
-      "outputSha256": "d63f0de00bc73202cc3984e05965dda054a4c16b26115c61388f0b8b487e32b3",
+      "outputSha256": "dc7f5f8be017a629d07b34cb041791b6cb068247cb2425fec575c6624004c5b0",
       "edits": [
         {
           "start": 61,
@@ -310076,11 +310451,214 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 900,
+          "end": 902,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1604,
+          "end": 1606,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1669,
+          "end": 1671,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1734,
+          "end": 1736,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1799,
+          "end": 1801,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1864,
+          "end": 1866,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1929,
+          "end": 1931,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 1994,
+          "end": 1996,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 2059,
+          "end": 2061,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 2161,
+          "end": 2163,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 2225,
+          "end": 2227,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 2289,
+          "end": 2291,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 2353,
+          "end": 2355,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 5284,
+          "end": 5286,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 6450,
+          "end": 6452,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 13524,
+          "end": 13526,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 13913,
           "end": 13915,
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 14000,
+          "end": 14002,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14061,
+          "end": 14063,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14122,
+          "end": 14124,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14183,
+          "end": 14185,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14244,
+          "end": 14246,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14305,
+          "end": 14307,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14366,
+          "end": 14368,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14427,
+          "end": 14429,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14521,
+          "end": 14523,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14581,
+          "end": 14583,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14641,
+          "end": 14643,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14701,
+          "end": 14703,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 14735,
+          "end": 14737,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         }
       ]
     },
@@ -314639,7 +315217,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "e643b9178840e48d8193514d4b1f95e3a5dcc03cb70696ef643b141cdfbeb267",
-      "outputSha256": "f72b49b1a3300143f881832483f5eec6dfc2dce7e72abc5804a406898ca29e79",
+      "outputSha256": "2ea67ad6c728bda71f2d5b533ad46e3c28ac9556662dcfbb573e3e997a0a590e",
       "edits": [
         {
           "start": 61,
@@ -314689,6 +315267,27 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 15040,
+          "end": 15042,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 15817,
+          "end": 15819,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 16910,
+          "end": 16912,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 17920,
@@ -314782,8 +315381,15 @@
       "original": "kh.java",
       "renamed": "kh.java",
       "inputSha256": "f15f6e452b4d584ef23915f618c78ef3ddab37178acc0a3731acb2cfefe8d46d",
-      "outputSha256": "9cc5336fe756698214628064b42a904e18b4a922dc5d21d24697fb93dcfe215f",
+      "outputSha256": "20a0cee81212efe768f03056d3e78bfc088509ba1a2cb543451d1fa4b1e25edd",
       "edits": [
+        {
+          "start": 1378,
+          "end": 1379,
+          "symbol": "M:ug.e()V",
+          "original": "e",
+          "renamed": "flushAndMarkDrainCheck"
+        },
         {
           "start": 2045,
           "end": 2047,
@@ -314797,6 +315403,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 5887,
+          "end": 5889,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 6017,
@@ -315335,7 +315948,7 @@
       "original": "la.java",
       "renamed": "la.java",
       "inputSha256": "9c4938e7a667f8f2d8096a971fc2c715420b7aea6adf454e1ef9ce49e8df3342",
-      "outputSha256": "33299a52b6836220a89c07748025686786144ec4c0a79e362264a0abc68bd893",
+      "outputSha256": "e5d40e1b9b3b62ee7b1ce598760c3255c2580038dd28f6ffbb0b7db0b67a3f17",
       "edits": [
         {
           "start": 482,
@@ -315378,6 +315991,27 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 4246,
+          "end": 4247,
+          "symbol": "M:ug.h()V",
+          "original": "h",
+          "renamed": "dispose"
+        },
+        {
+          "start": 4310,
+          "end": 4311,
+          "symbol": "M:ug.h()V",
+          "original": "h",
+          "renamed": "dispose"
+        },
+        {
+          "start": 4456,
+          "end": 4457,
+          "symbol": "M:ug.h()V",
+          "original": "h",
+          "renamed": "dispose"
         },
         {
           "start": 4485,
@@ -325116,8 +325750,22 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "edbdddee6a01474c4ccf413ce3f38df7d4925b0086670b86e96f936ef26b862d",
-      "outputSha256": "71f0357dc0e6f4b5adb3e06311bfa3e018ab97fa961d152091484f4fc86cba19",
+      "outputSha256": "59c8575d18c9a5c2f5de361719401ff681781894bde7be9b7835173f66439a7b",
       "edits": [
+        {
+          "start": 571,
+          "end": 572,
+          "symbol": "M:ug.f()V",
+          "original": "f",
+          "renamed": "serviceOutput"
+        },
+        {
+          "start": 679,
+          "end": 680,
+          "symbol": "M:ug.f()V",
+          "original": "f",
+          "renamed": "serviceOutput"
+        },
         {
           "start": 822,
           "end": 823,
@@ -328841,7 +329489,7 @@
       "original": "s.java",
       "renamed": "s.java",
       "inputSha256": "0e0364d37cf4b8ca250802da03866708af3083f89e76d76c24052c1009e2d67e",
-      "outputSha256": "3a63df2db365d3213c0c08f78720afdf754f0ea61fa196c990c9fdb51220816e",
+      "outputSha256": "bed67947322db80dfdde1c285f243dca2ab764a27f955ebf6a531a69bd69df9d",
       "edits": [
         {
           "start": 247,
@@ -328858,11 +329506,67 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 423,
+          "end": 425,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 426,
+          "end": 427,
+          "symbol": "M:ug.a(IZI)V",
+          "original": "a",
+          "renamed": "configureAudio"
+        },
+        {
+          "start": 472,
+          "end": 474,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 475,
+          "end": 476,
+          "symbol": "M:ug.a(Lfd;Ljava/awt/Component;II)Lug;",
+          "original": "a",
+          "renamed": "createOutput"
+        },
+        {
+          "start": 528,
+          "end": 530,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 531,
+          "end": 532,
+          "symbol": "M:ug.a(Lfd;Ljava/awt/Component;II)Lug;",
+          "original": "a",
+          "renamed": "createOutput"
+        },
+        {
+          "start": 646,
+          "end": 647,
+          "symbol": "M:ug.a(Ltj;)V",
+          "original": "a",
+          "renamed": "setRootStream"
+        },
+        {
           "start": 810,
           "end": 812,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 955,
+          "end": 956,
+          "symbol": "M:ug.a(Ltj;)V",
+          "original": "a",
+          "renamed": "setRootStream"
         },
         {
           "start": 1040,
@@ -331550,8 +332254,15 @@
       "original": "ua.java",
       "renamed": "ua.java",
       "inputSha256": "686f3093c2b98f5fb97be0a6b9285099d3c7fb69bb010210dffb6331f86ef324",
-      "outputSha256": "b986bd6561c6a382f4181d350e19a5aed43fa38acc4f8cd4aadef53d43bdd664",
+      "outputSha256": "beec1bcb12e99aad3c887ad80c1c2560e57e738a8715348b60148a88e55bcffa",
       "edits": [
+        {
+          "start": 148,
+          "end": 150,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
         {
           "start": 166,
           "end": 168,
@@ -331560,11 +332271,32 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 318,
+          "end": 320,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 619,
+          "end": 620,
+          "symbol": "M:ug.f()V",
+          "original": "f",
+          "renamed": "serviceOutput"
+        },
+        {
           "start": 1044,
           "end": 1045,
           "symbol": "M:ua.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1831,
+          "end": 1833,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         }
       ]
     },
@@ -331840,10 +332572,17 @@
     },
     {
       "original": "ug.java",
-      "renamed": "ug.java",
+      "renamed": "AudioOutput.java",
       "inputSha256": "93a98d4592c20b6e54c30d18f336ee104a74a867e403ad19c7800a44e51d2003",
-      "outputSha256": "b5b0b62a3d4e26350a18237c17543638b50aa324037c3b87b83ef739898991c7",
+      "outputSha256": "995ec76eb567bdbe4b3a6131884fed28e6da8c645f859f960e0b60b0ae4eadf6",
       "edits": [
+        {
+          "start": 44,
+          "end": 46,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
         {
           "start": 105,
           "end": 107,
@@ -331866,6 +332605,97 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 605,
+          "end": 606,
+          "symbol": "M:ug.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 646,
+          "end": 647,
+          "symbol": "M:ug.f()V",
+          "original": "f",
+          "renamed": "serviceOutput"
+        },
+        {
+          "start": 1116,
+          "end": 1117,
+          "symbol": "M:ug.b(I)V",
+          "original": "b",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 1719,
+          "end": 1720,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 1846,
+          "end": 1847,
+          "symbol": "M:ug.d()I",
+          "original": "d",
+          "renamed": "getQueuedFrames"
+        },
+        {
+          "start": 2315,
+          "end": 2316,
+          "symbol": "M:ug.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 2339,
+          "end": 2340,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 2648,
+          "end": 2649,
+          "symbol": "M:ug.a([II)V",
+          "original": "a",
+          "renamed": "mixBlock"
+        },
+        {
+          "start": 2689,
+          "end": 2690,
+          "symbol": "M:ug.a()V",
+          "original": "a",
+          "renamed": "writeMixBlock"
+        },
+        {
+          "start": 2976,
+          "end": 2977,
+          "symbol": "M:ug.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 3549,
+          "end": 3550,
+          "symbol": "M:ug.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 3902,
+          "end": 3904,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 3905,
+          "end": 3906,
+          "symbol": "M:ug.a(Lfd;Ljava/awt/Component;II)Lug;",
+          "original": "a",
+          "renamed": "createOutput"
+        },
+        {
           "start": 3907,
           "end": 3909,
           "symbol": "C:fd",
@@ -331873,11 +332703,144 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 3995,
+          "end": 3997,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 4058,
+          "end": 4060,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 4084,
+          "end": 4086,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 4182,
+          "end": 4184,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 4521,
+          "end": 4523,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 4776,
+          "end": 4778,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 4869,
+          "end": 4871,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 4924,
+          "end": 4926,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 4945,
+          "end": 4946,
+          "symbol": "M:ug.a(Ljava/awt/Component;)V",
+          "original": "a",
+          "renamed": "initializeDevice"
+        },
+        {
+          "start": 4972,
+          "end": 4974,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 5048,
+          "end": 5050,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 5106,
+          "end": 5108,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 5176,
+          "end": 5178,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 5197,
+          "end": 5198,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 5201,
+          "end": 5203,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 5401,
           "end": 5402,
           "symbol": "M:fd.a(ILjava/lang/Runnable;I)Lkk;",
           "original": "a",
           "renamed": "requestThreadStart"
+        },
+        {
+          "start": 5673,
+          "end": 5675,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 5767,
+          "end": 5769,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 6014,
+          "end": 6016,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 6377,
+          "end": 6378,
+          "symbol": "M:ug.a(Ltj;I)V",
+          "original": "a",
+          "renamed": "enqueueByPriority"
         },
         {
           "start": 6379,
@@ -331894,11 +332857,46 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 6687,
+          "end": 6688,
+          "symbol": "M:ug.a()V",
+          "original": "a",
+          "renamed": "writeMixBlock"
+        },
+        {
+          "start": 6745,
+          "end": 6746,
+          "symbol": "M:ug.h()V",
+          "original": "h",
+          "renamed": "dispose"
+        },
+        {
+          "start": 7308,
+          "end": 7309,
+          "symbol": "M:ug.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 7406,
+          "end": 7407,
+          "symbol": "M:ug.a(Ltj;)V",
+          "original": "a",
+          "renamed": "setRootStream"
+        },
+        {
           "start": 7408,
           "end": 7410,
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 7482,
+          "end": 7483,
+          "symbol": "M:ug.a([II)V",
+          "original": "a",
+          "renamed": "mixBlock"
         },
         {
           "start": 7657,
@@ -331943,6 +332941,27 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 8255,
+          "end": 8257,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 8258,
+          "end": 8259,
+          "symbol": "M:ug.b(Ltj;)V",
+          "original": "b",
+          "renamed": "resetStreamScheduling"
+        },
+        {
+          "start": 8290,
+          "end": 8291,
+          "symbol": "M:ug.a(Ltj;I)V",
+          "original": "a",
+          "renamed": "enqueueByPriority"
+        },
+        {
           "start": 8397,
           "end": 8399,
           "symbol": "B:ug.a([II)V#0",
@@ -331957,6 +332976,13 @@
           "original": "L3",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 9930,
+          "end": 9931,
+          "symbol": "M:ug.a(Ltj;I)V",
+          "original": "a",
+          "renamed": "enqueueByPriority"
         },
         {
           "start": 10234,
@@ -331994,6 +333020,48 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 11534,
+          "end": 11535,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "openDevice"
+        },
+        {
+          "start": 11596,
+          "end": 11597,
+          "symbol": "M:ug.a(IZI)V",
+          "original": "a",
+          "renamed": "configureAudio"
+        },
+        {
+          "start": 11863,
+          "end": 11864,
+          "symbol": "M:ug.d()I",
+          "original": "d",
+          "renamed": "getQueuedFrames"
+        },
+        {
+          "start": 11945,
+          "end": 11946,
+          "symbol": "M:ug.b(I)V",
+          "original": "b",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12191,
+          "end": 12192,
+          "symbol": "M:ug.b()V",
+          "original": "b",
+          "renamed": "flushDevice"
+        },
+        {
+          "start": 12251,
+          "end": 12252,
+          "symbol": "M:ug.b(Ltj;)V",
+          "original": "b",
+          "renamed": "resetStreamScheduling"
+        },
+        {
           "start": 12253,
           "end": 12255,
           "symbol": "C:tj",
@@ -332006,6 +333074,55 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 12455,
+          "end": 12457,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
+          "start": 12458,
+          "end": 12459,
+          "symbol": "M:ug.b(Ltj;)V",
+          "original": "b",
+          "renamed": "resetStreamScheduling"
+        },
+        {
+          "start": 12522,
+          "end": 12523,
+          "symbol": "M:ug.a(Ljava/awt/Component;)V",
+          "original": "a",
+          "renamed": "initializeDevice"
+        },
+        {
+          "start": 12605,
+          "end": 12606,
+          "symbol": "M:ug.e()V",
+          "original": "e",
+          "renamed": "flushAndMarkDrainCheck"
+        },
+        {
+          "start": 12689,
+          "end": 12690,
+          "symbol": "M:ug.b()V",
+          "original": "b",
+          "renamed": "flushDevice"
+        },
+        {
+          "start": 12753,
+          "end": 12754,
+          "symbol": "M:ug.c()V",
+          "original": "c",
+          "renamed": "closeDevice"
+        },
+        {
+          "start": 13086,
+          "end": 13088,
+          "symbol": "M:ug.<init>()V",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 13269,
@@ -332204,7 +333321,7 @@
       "original": "uj.java",
       "renamed": "uj.java",
       "inputSha256": "fcd0fb32d823ee005cc275c840031430285f5d4f3371401e4c2d027fde39d3af",
-      "outputSha256": "6b972cdb3dabc37f7bdf77203631f2b41d5d306aa76cd3f1e67bc34171d974cf",
+      "outputSha256": "59116e82de1a97505aa7fbb08c112c1653ee6b1149a00214171db2964fda44b0",
       "edits": [
         {
           "start": 61,
@@ -332219,6 +333336,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 168,
+          "end": 170,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 292,
@@ -332240,6 +333364,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 1048,
+          "end": 1050,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 1678,
@@ -334359,7 +335490,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "5b37270c1fb69d06a090370f79024eefdddbe171d8f2e0dcf5ad107df2032421",
-      "outputSha256": "fe61120bd6d2296b5372ec2c6b20a3beb94d3cc2dc09182116488443e1e61a74",
+      "outputSha256": "dd5f906b3f0f7b9e02e457748848bb3ff512de26ac5fd4fae849abddaa400b2b",
       "edits": [
         {
           "start": 54,
@@ -334404,6 +335535,13 @@
           "renamed": "beginForward"
         },
         {
+          "start": 5768,
+          "end": 5770,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 6067,
           "end": 6068,
           "symbol": "M:am.b(I)V",
@@ -334439,6 +335577,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 8039,
+          "end": 8041,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 9646,
           "end": 9648,
           "symbol": "C:wg",
@@ -334472,6 +335617,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 16336,
+          "end": 16338,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 16585,
@@ -334530,6 +335682,13 @@
           "renamed": "nextForward"
         },
         {
+          "start": 24665,
+          "end": 24667,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
+        },
+        {
           "start": 25230,
           "end": 25232,
           "symbol": "C:wg",
@@ -334584,6 +335743,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 40148,
+          "end": 40150,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "AudioOutput"
         },
         {
           "start": 41381,
@@ -335294,7 +336460,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "446521b20edcd033dab4d5f42e85bec8436e981cee505d1554c82e8583f89fd8",
-      "outputSha256": "8ab7e768ef4b3d07cfc8d5952f42cf7abc19d5d143a4dd122cf734d9f936ba53",
+      "outputSha256": "a9dde79c632ecf46c57632e8238b2bff8a9edf99df27b61411ef524ca4ea660b",
       "edits": [
         {
           "start": 275,
@@ -335337,6 +336503,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "GameCanvas"
+        },
+        {
+          "start": 9926,
+          "end": 9927,
+          "symbol": "M:ug.a(Ltj;)V",
+          "original": "a",
+          "renamed": "setRootStream"
         },
         {
           "start": 11311,
@@ -335907,10 +337080,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "70c1fe8cc8d04aee95e635741e84f5b760f2816427b1d2aab75d57b0f74b227b",
+    "rulesSha256": "728d68f507fd81f22843166736260ecc55e5b71a2b342bc93a3958f6a1222c71",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "2fac7ae672c12aa5cccf14bf167155e1174646799803de735936f838cd5b9a16",
+    "outputTreeSha256": "5ca9cc5f365d4546b316bbb84e13c3d3f6599b9a0ab6440e563adb80932b02fc",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

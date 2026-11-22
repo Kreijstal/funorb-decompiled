@@ -241,7 +241,7 @@ final class nm extends gk {
           this.field_n.d(0);
           return;
         }
-        var40 = (double)(this.field_s.field_n * 256) / (double)dk.field_k;
+        var40 = (double)(this.field_s.field_n * 256) / (double)AudioOutput.field_k;
         var42 = var40 * 2.0 / var36;
         var44 = var38 * var42 / 2.0;
         stackIn_34_0 = this.field_n;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class im {
-    static fj field_b;
+    static AudioOutput field_b;
     static int field_c;
     static id[] field_a;
 

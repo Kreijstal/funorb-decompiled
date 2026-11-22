@@ -1533,8 +1533,8 @@ public final class StarCannon extends ag {
         int var2Lifetime1;
         var5 = null;
         var4 = field_A;
-        nb.field_f.d();
-        ea.field_d.d();
+        nb.field_f.serviceOutput();
+        ea.field_d.serviceOutput();
         if (null != n.field_a &&
           n.field_a.focusLost) {
           re.a(0);
@@ -3227,7 +3227,7 @@ public final class StarCannon extends ag {
         m.b(-98);
         lh.a((byte) -113);
         wd.clearStaticReferences();
-        df.clearStaticReferences();
+        AudioOutput.clearStaticReferences();
         eh.g((byte) 101);
         ef.a((byte) 27);
         td.clearStaticReferences(-12539);
@@ -3600,13 +3600,13 @@ public final class StarCannon extends ag {
         hh.field_b[4] = null;
         AccountServiceResult.field_b = 16777215;
         sd.field_a = 33023;
-        df.a(22050, false, 10);
-        nb.field_f = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 0, 512);
-        ea.field_d = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 1, 22050);
+        AudioOutput.configureAudio(22050, false, 10);
+        nb.field_f = AudioOutput.createOutput(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 0, 512);
+        ea.field_d = AudioOutput.createOutput(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 1, 22050);
         jk.field_k = new PcmStreamMixer();
         ti.field_f = new PcmStreamMixer();
-        nb.field_f.a(jk.field_k);
-        ea.field_d.a(ti.field_f);
+        nb.field_f.setRootStream(jk.field_k);
+        ea.field_d.setRootStream(ti.field_f);
         se.field_m = 0;
         bi.field_b = false;
         mc.field_b = 128;
@@ -3625,10 +3625,10 @@ public final class StarCannon extends ag {
           re.a(param0 ^ -25109);
         }
         if (null != nb.field_f) {
-          nb.field_f.b();
+          nb.field_f.dispose();
         }
         if (null != ea.field_d) {
-          ea.field_d.b();
+          ea.field_d.dispose();
         }
         la.a(2);
         if (param0 != -25109) {

@@ -115,7 +115,7 @@ final class wg extends od {
             var7 = Math.sin((double)(param0.field_p & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(256 * param0.field_t.field_j) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)id.field_m);
+          var5Lifetime1 = (int)(0.5 + (double)(256 * param0.field_t.field_j) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_m);
           if (param1) {
             this.field_w = (pl[][]) null;
           }
@@ -614,7 +614,7 @@ final class wg extends od {
         var8 = CrazyCrystals.field_B;
         try {
           if (this.field_u.d()) {
-            var4_int = this.field_K * this.field_u.field_c / id.field_m;
+            var4_int = this.field_K * this.field_u.field_c / AudioOutput.field_m;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_B;
               if (-var5 + this.field_A >= 0L) {
@@ -715,7 +715,7 @@ final class wg extends od {
           if (param1 < 0 ||
             var3.field_i == param1) {
             if (var3.field_v != null) {
-              var3.field_v.d(id.field_m / 100);
+              var3.field_v.d(AudioOutput.field_m / 100);
               if (var3.field_v.e()) {
                 this.field_m.field_l.b(var3.field_v);
               }
@@ -971,7 +971,7 @@ final class wg extends od {
         int var12 = 0;
         var12 = CrazyCrystals.field_B;
         try {
-          param3.field_k = id.field_m / 100;
+          param3.field_k = AudioOutput.field_m / 100;
           if (param3.field_l >= 0 && (param3.field_v == null ||
             param3.field_v.h())) {
             param3.d(12426);
@@ -1161,7 +1161,7 @@ final class wg extends od {
         boolean decompiledFrameRemainder0 = true;
         var6 = CrazyCrystals.field_B;
         if (this.field_u.d()) {
-          var2 = this.field_K * this.field_u.field_c / id.field_m;
+          var2 = this.field_K * this.field_u.field_c / AudioOutput.field_m;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_B;
             if (this.field_A - var3 < 0L) {

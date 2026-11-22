@@ -3,7 +3,7 @@
  */
 final class vi implements Runnable {
     volatile boolean field_e;
-    volatile md[] field_c;
+    volatile AudioOutput[] field_c;
     PlatformTaskDispatcher field_b;
     volatile boolean field_f;
     static int field_d;
@@ -79,7 +79,7 @@ final class vi implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        md var2 = null;
+        AudioOutput var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -95,7 +95,7 @@ final class vi implements Runnable {
               for (var1_int = 0; var1_int < 2; var1_int++) {
                 var2 = this.field_c[var1_int];
                 if (var2 != null) {
-                  var2.b();
+                  var2.serviceOutput();
                 }
               }
               bc.a(10L, (byte) -121);
@@ -123,7 +123,7 @@ final class vi implements Runnable {
     }
 
     vi() {
-        this.field_c = new md[2];
+        this.field_c = new AudioOutput[2];
         this.field_f = false;
         this.field_e = false;
     }

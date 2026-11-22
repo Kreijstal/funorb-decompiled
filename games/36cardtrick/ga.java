@@ -3,7 +3,7 @@
  */
 final class ga implements Runnable {
     PlatformTaskDispatcher field_a;
-    volatile gd[] field_e;
+    volatile AudioOutput[] field_e;
     volatile boolean field_d;
     volatile boolean field_c;
     static ha[] field_b;
@@ -118,7 +118,7 @@ final class ga implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        gd var2 = null;
+        AudioOutput var2 = null;
         int var4 = Main.field_T;
         this.field_c = true;
         try {
@@ -126,7 +126,7 @@ final class ga implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_e[var1_int];
               if (var2 != null) {
-                var2.f();
+                var2.serviceOutput();
               }
             }
             wk.a((byte) -123, 10L);
@@ -141,7 +141,7 @@ final class ga implements Runnable {
     }
 
     ga() {
-        this.field_e = new gd[2];
+        this.field_e = new AudioOutput[2];
         this.field_d = false;
         this.field_c = false;
     }

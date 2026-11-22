@@ -80,17 +80,17 @@ final class oa {
     }
 
     final static void a(java.awt.Component param0, int param1, byte param2, PlatformTaskDispatcher param3, boolean param4) {
-        gd.a(param1, param4, 10);
-        wd.field_e = gd.a(param3, param0, 0, 22050);
-        cb.field_g = gd.a(param3, param0, 1, 1024);
+        AudioOutput.configureAudio(param1, param4, 10);
+        wd.field_e = AudioOutput.createOutput(param3, param0, 0, 22050);
+        cb.field_g = AudioOutput.createOutput(param3, param0, 1, 1024);
         AccountCreationResultPanel.field_tb = new qj();
         if (param2 <= 66) {
           return;
         }
         try {
-          cb.field_g.b(AccountCreationResultPanel.field_tb);
+          cb.field_g.setRootStream(AccountCreationResultPanel.field_tb);
           sh.field_e = new qj();
-          wd.field_e.b(sh.field_e);
+          wd.field_e.setRootStream(sh.field_e);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "oa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

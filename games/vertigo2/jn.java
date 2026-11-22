@@ -123,18 +123,18 @@ final class jn {
 
     final static void a(int param0, int param1, java.awt.Component param2, int param3, boolean param4, int param5, db param6, PlatformTaskDispatcher param7) {
         try {
-          dd.a(param0, param4, 10);
-          ri.field_r = dd.a(param7, param2, 0, param3);
-          mh.field_d = dd.a(param7, param2, 1, param1);
+          AudioOutput.configureAudio(param0, param4, 10);
+          ri.field_r = AudioOutput.createOutput(param7, param2, 0, param3);
+          mh.field_d = AudioOutput.createOutput(param7, param2, 1, param1);
           MouseWheelInput.field_g = new PcmStreamMixer();
           wp.field_a = param1 * 1000 / param0;
-          mh.field_d.a(MouseWheelInput.field_g);
+          mh.field_d.setRootStream(MouseWheelInput.field_g);
           qc.field_v = param6;
           qc.field_v.c(-82, nd.field_k);
           if (param5 != 18246) {
             field_c = 51;
           }
-          ri.field_r.a(qc.field_v);
+          ri.field_r.setRootStream(qc.field_v);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jn.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }

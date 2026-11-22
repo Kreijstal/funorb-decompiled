@@ -24,12 +24,12 @@ final class kg extends od {
           if (this.field_v <= 0) {
             if (this.field_m == -256 &&
               (this.field_p & 255) == 0) {
-              if (id.field_o) {
+              if (AudioOutput.field_o) {
                 return kg.a(0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, 0, param3, param2, this);
               }
               return kg.a(((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, 0, param3, param2, this);
             }
-            if (id.field_o) {
+            if (AudioOutput.field_o) {
               return kg.a(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, 0, param3, param2, this, this.field_m, param4);
             }
             return kg.a(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, 0, param3, param2, this, this.field_m, param4);
@@ -41,13 +41,13 @@ final class kg extends od {
           this.field_v = this.field_v + param1;
           if (this.field_m == -256 &&
             (this.field_p & 255) == 0) {
-            if (!id.field_o) {
+            if (!AudioOutput.field_o) {
               param1 = kg.a(((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, this.field_j, 0, var6, param2, this);
             } else {
               param1 = kg.b(0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, this.field_t, this.field_r, 0, var6, param2, this);
             }
           } else {
-            if (!id.field_o) {
+            if (!AudioOutput.field_o) {
               param1 = kg.d(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, this.field_j, 0, var6, param2, this, this.field_m, param4);
             } else {
               param1 = kg.a(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, this.field_t, this.field_r, 0, var6, param2, this, this.field_m, param4);
@@ -362,7 +362,7 @@ final class kg extends od {
           return null;
         }
         if (param0.field_k.length != 0) {
-          return new kg(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_m)), param2 << 6);
+          return new kg(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_m)), param2 << 6);
         }
         return null;
     }
@@ -476,12 +476,12 @@ final class kg extends od {
           if (this.field_v <= 0) {
             if (this.field_m == 256 &&
               (this.field_p & 255) == 0) {
-              if (id.field_o) {
+              if (AudioOutput.field_o) {
                 return kg.b(0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, 0, param3, param2, this);
               }
               return kg.b(((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, 0, param3, param2, this);
             }
-            if (id.field_o) {
+            if (AudioOutput.field_o) {
               return kg.c(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, 0, param3, param2, this, this.field_m, param4);
             }
             return kg.b(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, 0, param3, param2, this, this.field_m, param4);
@@ -493,13 +493,13 @@ final class kg extends od {
           this.field_v = this.field_v + param1;
           if (this.field_m == 256 &&
             (this.field_p & 255) == 0) {
-            if (!id.field_o) {
+            if (!AudioOutput.field_o) {
               param1 = kg.b(((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, this.field_j, 0, var6, param2, this);
             } else {
               param1 = kg.a(0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, this.field_t, this.field_r, 0, var6, param2, this);
             }
           } else {
-            if (!id.field_o) {
+            if (!AudioOutput.field_o) {
               param1 = kg.b(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_s, this.field_j, 0, var6, param2, this, this.field_m, param4);
             } else {
               param1 = kg.b(0, 0, ((ko) (this.field_h)).field_k, param0, this.field_p, param1, this.field_u, this.field_q, this.field_t, this.field_r, 0, var6, param2, this, this.field_m, param4);
@@ -518,7 +518,7 @@ final class kg extends od {
           return null;
         }
         if (param0.field_k.length != 0) {
-          return new kg(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_m)), param2, param3);
+          return new kg(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_m)), param2, param3);
         }
         return null;
     }

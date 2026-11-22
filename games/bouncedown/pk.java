@@ -70,7 +70,7 @@ final class pk extends wf {
         var8 = Bounce.field_N;
         try {
           if (this.field_w.d()) {
-            var4_int = this.field_w.field_b * this.field_n / e.field_r;
+            var4_int = this.field_w.field_b * this.field_n / AudioOutput.field_r;
             while (true) {
               var5 = (long)param2 * (long)var4_int + this.field_P;
               if (0L <= -var5 + this.field_L) {
@@ -396,7 +396,7 @@ final class pk extends wf {
         int var12 = 0;
         var12 = Bounce.field_N;
         try {
-          param3.field_j = e.field_r / 100;
+          param3.field_j = AudioOutput.field_r / 100;
           var6_int = 83 % ((param4 - 37) / 52);
           if (0 <= param3.field_C && (param3.field_i == null ||
             param3.field_i.e())) {
@@ -568,7 +568,7 @@ final class pk extends wf {
         boolean decompiledFrameCompleted0 = true;
         var6 = Bounce.field_N;
         if (this.field_w.d()) {
-          var2 = this.field_n * this.field_w.field_b / e.field_r;
+          var2 = this.field_n * this.field_w.field_b / AudioOutput.field_r;
           while (true) {
             var3 = (long)var2 * (long)param0 + this.field_P;
             if (-var3 + this.field_L >= 0L) {
@@ -650,7 +650,7 @@ final class pk extends wf {
             if (param0 < 0 ||
               param0 == var3.field_E) {
               if (null != var3.field_i) {
-                var3.field_i.i(e.field_r / 100);
+                var3.field_i.i(AudioOutput.field_r / 100);
                 if (var3.field_i.k()) {
                   this.field_o.field_l.a(var3.field_i);
                 }
@@ -1169,7 +1169,7 @@ final class pk extends wf {
             stackIn_10_0 = -85;
             return stackIn_10_0;
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param0.field_w.field_k * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)e.field_r);
+          var5Lifetime1 = (int)(0.5 + (double)(param0.field_w.field_k * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_r);
           stackIn_14_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

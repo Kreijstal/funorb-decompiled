@@ -7,7 +7,7 @@ final class hj implements Runnable {
     PlatformTaskDispatcher field_d;
     static char[] field_f;
     volatile boolean field_e;
-    volatile oa[] field_a;
+    volatile AudioOutput[] field_a;
 
     public static void a(int param0) {
         field_c = null;
@@ -53,7 +53,7 @@ final class hj implements Runnable {
     public final void run() {
         int var1_int = 0;
         Exception var1 = null;
-        oa var2 = null;
+        AudioOutput var2 = null;
         Throwable var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -67,7 +67,7 @@ final class hj implements Runnable {
               for (var1_int = 0; 2 > var1_int; var1_int++) {
                 var2 = this.field_a[var1_int];
                 if (var2 != null) {
-                  var2.b();
+                  var2.serviceOutput();
                 }
               }
               wl.a(10L, false);
@@ -585,7 +585,7 @@ final class hj implements Runnable {
     }
 
     hj() {
-        this.field_a = new oa[2];
+        this.field_a = new AudioOutput[2];
         this.field_b = false;
         this.field_e = false;
     }

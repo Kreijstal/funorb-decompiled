@@ -5,7 +5,7 @@ final class mh {
     static boolean field_a;
     static int[] field_c;
     static String field_b;
-    static dd field_d;
+    static AudioOutput field_d;
 
     final static void a(boolean param0, byte param1, int param2) {
         int var3;
@@ -71,7 +71,7 @@ final class mh {
         field_d = null;
         field_b = null;
         if (param0 != -1) {
-          field_d = (dd) null;
+          field_d = (AudioOutput) null;
         }
     }
 

@@ -70,11 +70,11 @@ final class h extends hl {
         gi var1 = null;
         int var2 = Main.field_T;
         try {
-          wd.field_e.f();
+          wd.field_e.serviceOutput();
           if (param0 != -84) {
             field_F = -57;
           }
-          cb.field_g.f();
+          cb.field_g.serviceOutput();
           bi.field_d = bi.field_d - 1;
           if (bi.field_d == 0) {
             bi.field_d = 200;

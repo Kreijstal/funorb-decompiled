@@ -7,7 +7,7 @@ final class vh extends ButtonWidget {
     private int field_D;
     static float[] field_H;
     static int field_I;
-    static va field_B;
+    static AudioOutput field_B;
     static Sprite[] field_E;
     static String field_L;
     static String field_K;

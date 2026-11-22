@@ -284,7 +284,7 @@ final class MidiPlayer extends PcmStream {
             var8 = Math.sin((double)(param0.field_r & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)(var8 * (double)var6);
           }
-          var6Lifetime1 = (int)(0.5 + (double)(256 * param0.field_n.field_l) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)oa.field_h);
+          var6Lifetime1 = (int)(0.5 + (double)(256 * param0.field_n.field_l) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_h);
           stackIn_11_0 = (1 <= var6Lifetime1) ? var6Lifetime1 : 1;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -390,7 +390,7 @@ final class MidiPlayer extends PcmStream {
         var8 = TrackController.field_F ? 1 : 0;
         try {
           if (this.field_P.a()) {
-            var4_int = this.field_m * this.field_P.field_e / oa.field_h;
+            var4_int = this.field_m * this.field_P.field_e / AudioOutput.field_h;
             while (true) {
               var5 = this.field_C + (long)param2 * (long)var4_int;
               if (-var5 + this.field_H >= 0L) {
@@ -433,7 +433,7 @@ final class MidiPlayer extends PcmStream {
         int var6;
         var6 = TrackController.field_F ? 1 : 0;
         if (this.field_P.a()) {
-          var2 = this.field_m * this.field_P.field_e / oa.field_h;
+          var2 = this.field_m * this.field_P.field_e / AudioOutput.field_h;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_C;
             if (-var3 + this.field_H >= 0L) {
@@ -746,7 +746,7 @@ final class MidiPlayer extends PcmStream {
         int var11 = 0;
         var11 = TrackController.field_F ? 1 : 0;
         try {
-          param4.field_w = oa.field_h / 100;
+          param4.field_w = AudioOutput.field_h / 100;
           if (0 <= param4.field_v && (null == param4.field_l ||
             param4.field_l.j())) {
             param4.e(-95);
@@ -882,7 +882,7 @@ final class MidiPlayer extends PcmStream {
           if (0 > param0 ||
             param0 == var3.field_D) {
             if (null != var3.field_l) {
-              var3.field_l.h(oa.field_h / 100);
+              var3.field_l.h(AudioOutput.field_h / 100);
               if (var3.field_l.i()) {
                 this.field_G.field_o.a(var3.field_l);
               }

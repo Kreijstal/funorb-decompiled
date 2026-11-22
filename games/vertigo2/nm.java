@@ -11,9 +11,9 @@ abstract class nm extends WidgetContainer {
 
     final static void k(int param0) {
         if (null != ri.field_r) {
-          ri.field_r.d();
+          ri.field_r.dispose();
           if (null != mh.field_d) {
-            mh.field_d.d();
+            mh.field_d.dispose();
           }
           if (param0 != 8) {
             nm.b(false, 116);
@@ -22,7 +22,7 @@ abstract class nm extends WidgetContainer {
           return;
         }
         if (null != mh.field_d) {
-          mh.field_d.d();
+          mh.field_d.dispose();
         }
         if (param0 == 8) {
           return;

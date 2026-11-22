@@ -696,7 +696,7 @@ public final class DungeonAssault extends NetworkGameClient {
           lp.clearStaticReferences((byte) 16);
           vm.clearStaticReferences();
           hg.d(26609);
-          vn.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           cb.clearStaticReferences(27525);
           ae.clearStaticReferences((byte) -4);
           ko.d(-125);

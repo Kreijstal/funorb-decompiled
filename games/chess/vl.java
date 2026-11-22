@@ -53,7 +53,7 @@ final class vl extends PcmStream {
         int var6;
         var6 = Chess.field_G;
         if (this.field_v.e()) {
-          var2 = this.field_v.field_h * this.field_w / md.field_l;
+          var2 = this.field_v.field_h * this.field_w / AudioOutput.field_l;
           while (true) {
             var3 = (long)sampleCount * (long)var2 + this.field_N;
             if (this.field_J - var3 >= 0L) {
@@ -146,7 +146,7 @@ final class vl extends PcmStream {
         int var11 = 0;
         var11 = Chess.field_G;
         try {
-          param4.field_B = md.field_l / 100;
+          param4.field_B = AudioOutput.field_l / 100;
           if (0 <= param4.field_J && (null == param4.field_j ||
             param4.field_j.h())) {
             param4.c((byte) 124);
@@ -440,7 +440,7 @@ final class vl extends PcmStream {
           if (param0 < 0 ||
             param0 == var3.field_n) {
             if (var3.field_j != null) {
-              var3.field_j.d(md.field_l / 100);
+              var3.field_j.d(AudioOutput.field_l / 100);
               if (var3.field_j.g()) {
                 this.field_B.field_p.a(var3.field_j);
               }
@@ -855,7 +855,7 @@ final class vl extends PcmStream {
         var8 = Chess.field_G;
         try {
           if (this.field_v.e()) {
-            var4_int = this.field_w * this.field_v.field_h / md.field_l;
+            var4_int = this.field_w * this.field_v.field_h / AudioOutput.field_l;
             while (true) {
               var5 = this.field_N + (long)var4_int * (long)param2;
               if (this.field_J - var5 >= 0L) {
@@ -1232,7 +1232,7 @@ final class vl extends PcmStream {
             var7 = Math.sin((double)(511 & param1.field_F) * 0.01227184630308513);
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)((double)(256 * param1.field_H.field_n) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)md.field_l + 0.5);
+          var5Lifetime1 = (int)((double)(256 * param1.field_H.field_n) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_l + 0.5);
           stackIn_14_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

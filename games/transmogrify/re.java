@@ -19,7 +19,7 @@ final class re {
     int field_c;
     int[] field_B;
     byte[] field_o;
-    static qh field_h;
+    static AudioOutput field_h;
     int[] field_t;
     int field_u;
     int field_r;

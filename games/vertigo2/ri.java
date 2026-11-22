@@ -11,7 +11,7 @@ final class ri extends IntrusiveNode {
     int field_n;
     static String field_z;
     static String field_x;
-    static dd field_r;
+    static AudioOutput field_r;
     int field_u;
     static String field_o;
     boolean field_v;

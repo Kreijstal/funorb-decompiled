@@ -9,8 +9,8 @@ final class we {
     final static void a(int param0) {
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          um.field_m.h();
-          RendererBitmapFont.field_a.h();
+          um.field_m.serviceOutput();
+          RendererBitmapFont.field_a.serviceOutput();
           ad.field_U = ad.field_U - 1;
           if (0 == ad.field_U) {
             ad.field_U = 200;

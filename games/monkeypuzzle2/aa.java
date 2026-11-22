@@ -264,10 +264,10 @@ abstract class aa {
 
     final static void a(int param0) {
         if (vh.field_B != null) {
-          vh.field_B.b();
+          vh.field_B.dispose();
         }
         if (null != GameApplet.field_k) {
-          GameApplet.field_k.b();
+          GameApplet.field_k.dispose();
         }
         if (param0 != -11449) {
           aa.c(26);

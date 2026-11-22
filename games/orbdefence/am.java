@@ -34,28 +34,28 @@ final class am {
             if (null == wf.field_b) {
               return;
             }
-            wf.field_b.c();
+            wf.field_b.dispose();
             return;
           }
-          cd.field_w.c();
+          cd.field_w.dispose();
           if (null != wf.field_b) {
-            wf.field_b.c();
+            wf.field_b.dispose();
             return;
           }
           return;
         }
         if (null != cd.field_w) {
-          cd.field_w.c();
+          cd.field_w.dispose();
           if (null == wf.field_b) {
             return;
           }
-          wf.field_b.c();
+          wf.field_b.dispose();
           return;
         }
         if (null == wf.field_b) {
           return;
         }
-        wf.field_b.c();
+        wf.field_b.dispose();
     }
 
     final static String b(int param0) {

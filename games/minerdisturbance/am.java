@@ -163,7 +163,7 @@ final class am extends jc {
         wm var4 = null;
         wm var5 = null;
         try {
-          var4 = new wm(22050, fj.field_r);
+          var4 = new wm(22050, AudioOutput.field_r);
           var5 = var4;
           re.field_a = new ji[62];
           re.field_a[0] = jd.a(param0, "", "md_slugger").a().a(var5);

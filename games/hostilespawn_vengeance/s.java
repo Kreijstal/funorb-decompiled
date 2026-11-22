@@ -13,19 +13,19 @@ final class s {
 
     final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, kd param4, java.awt.Component param5, boolean param6, int param7) {
         try {
-          ug.a(param3, param6, 10);
-          uj.field_m = ug.a(param1, param5, 0, param0);
-          eb.field_e = ug.a(param1, param5, 1, param2);
+          AudioOutput.configureAudio(param3, param6, 10);
+          uj.field_m = AudioOutput.createOutput(param1, param5, 0, param0);
+          eb.field_e = AudioOutput.createOutput(param1, param5, 1, param2);
           oa.field_b = new wm();
           tm.field_v = param2;
-          eb.field_e.a(oa.field_b);
+          eb.field_e.setRootStream(oa.field_b);
           ha.field_w = param4;
           if (param7 >= -84) {
             java.awt.Component var9 = (java.awt.Component) null;
             s.a(-53, (PlatformTaskDispatcher) null, 23, -48, (kd) null, (java.awt.Component) null, false, -17);
           }
           ha.field_w.a(ga.field_b, true);
-          uj.field_m.a(ha.field_w);
+          uj.field_m.setRootStream(ha.field_w);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "s.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

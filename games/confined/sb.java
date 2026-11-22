@@ -10,7 +10,7 @@ final class sb implements Runnable {
     static double field_g;
     static int field_f;
     static double[] field_a;
-    volatile dk[] field_k;
+    volatile AudioOutput[] field_k;
     PlatformTaskDispatcher field_c;
     volatile boolean field_j;
 
@@ -25,7 +25,7 @@ final class sb implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        dk var2 = null;
+        AudioOutput var2 = null;
         int var4 = Confined.field_J ? 1 : 0;
         this.field_j = true;
         try {
@@ -33,7 +33,7 @@ final class sb implements Runnable {
             for (var1_int = 0; 2 > var1_int; var1_int++) {
               var2 = this.field_k[var1_int];
               if (var2 != null) {
-                var2.c();
+                var2.serviceOutput();
               }
             }
             jd.a(1, 10L);
@@ -123,7 +123,7 @@ final class sb implements Runnable {
     }
 
     sb() {
-        this.field_k = new dk[2];
+        this.field_k = new AudioOutput[2];
         this.field_d = false;
         this.field_j = false;
     }

@@ -125,7 +125,7 @@ final class qf extends og {
 
     private final void e(int param0) {
         if (this.field_R[param0] != null) {
-          this.field_R[param0].f(va.field_i >> 7);
+          this.field_R[param0].f(AudioOutput.field_i >> 7);
           this.field_R[param0] = null;
         }
     }
@@ -978,7 +978,7 @@ final class qf extends og {
           !this.field_P) {
           return -1;
         }
-        int var3 = va.field_i;
+        int var3 = AudioOutput.field_i;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_O * this.field_p);
     }
@@ -1003,7 +1003,7 @@ final class qf extends og {
               param2 = 256;
             }
           }
-          this.field_R[param0].b(va.field_i >> 7, param1 * this.field_r * this.field_M >> 12, param2);
+          this.field_R[param0].b(AudioOutput.field_i >> 7, param1 * this.field_r * this.field_M >> 12, param2);
         }
     }
 
@@ -1018,7 +1018,7 @@ final class qf extends og {
 
     private final void a(int param0, int param1) {
         if (this.field_R[param0] != null) {
-          this.field_R[param0].i(param1 * 256 / va.field_i);
+          this.field_R[param0].i(param1 * 256 / AudioOutput.field_i);
         }
     }
 
@@ -1051,7 +1051,7 @@ final class qf extends og {
             param5 = 0;
           }
           stackIn_13_0 = this.field_X.field_h[param1];
-          stackIn_13_1 = param3 * 256 / va.field_i;
+          stackIn_13_1 = param3 * 256 / AudioOutput.field_i;
           if (param2 == 0) {
             stackIn_14_2 = param4 * this.field_r * this.field_M >> 12;
           } else {
@@ -1067,7 +1067,7 @@ final class qf extends og {
           ((PcmSampleStream) (Object) stackIn_19_0).a(stackIn_20_1);
           if (param2 != 0) {
             var7.e(param2);
-            var7.b(va.field_i >> 7, param4 * this.field_r * this.field_M >> 12, param5);
+            var7.b(AudioOutput.field_i >> 7, param4 * this.field_r * this.field_M >> 12, param5);
           }
           this.field_R[param0] = var7;
           if (this.field_f != null) {

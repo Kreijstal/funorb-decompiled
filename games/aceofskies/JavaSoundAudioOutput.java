@@ -9,7 +9,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
     private int field_x;
     private static String field_A;
 
-    final void c() {
+    final void writeMixBlock() {
         int var1 = 256;
         if (field_r) {
           var1 = var1 << 1;
@@ -25,14 +25,14 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_w.write(this.field_y, 0, var1 << 1);
     }
 
-    final void f() {
+    final void closeDevice() {
         if (this.field_w != null) {
           this.field_w.close();
           this.field_w = null;
         }
     }
 
-    final int g() {
+    final int getQueuedFrames() {
         return this.field_x - (this.field_w.available() >> (field_r ? 2 : 1));
     }
 
@@ -40,7 +40,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_z = false;
     }
 
-    final void b() throws javax.sound.sampled.LineUnavailableException {
+    final void flushDevice() throws javax.sound.sampled.LineUnavailableException {
         this.field_w.flush();
         if (this.field_z) {
           this.field_w.close();
@@ -52,7 +52,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         try {
           javax.sound.sampled.DataLine.Info var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_v, param0 << (field_r ? 2 : 1));
           this.field_w = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
@@ -61,7 +61,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (hh.a(0, param0) != 1) {
-            this.a(fk.a(param0, 36));
+            this.openDevice(fk.a(param0, 36));
             return;
           }
           this.field_w = null;
@@ -69,7 +69,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final void a(java.awt.Component param0) {
+    final void initializeDevice(java.awt.Component param0) {
         int stackIn_17_5 = 0;
         int stackIn_20_2 = 0;
         javax.sound.sampled.Mixer.Info[] var2 = javax.sound.sampled.AudioSystem.getMixerInfo();

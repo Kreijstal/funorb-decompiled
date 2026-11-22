@@ -252,7 +252,7 @@ final class UrlLoader implements Runnable {
               break;
             }
             if (this.field_k.position == this.field_k.payload.length) {
-              throw UrlLoader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_e));
+              throw UrlLoader.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -413,7 +413,7 @@ final class UrlLoader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

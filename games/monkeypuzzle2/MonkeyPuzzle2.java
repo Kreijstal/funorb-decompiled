@@ -102,7 +102,7 @@ public final class MonkeyPuzzle2 extends bi {
           IntrusiveNode.clearStaticReferences(-1733);
           hk.clearStaticReferences((byte) 85);
           qf.clearStaticReferences();
-          va.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           lg.b(-24358);
           ce.a(65);
           dl.clearStaticReferences((byte) 54);

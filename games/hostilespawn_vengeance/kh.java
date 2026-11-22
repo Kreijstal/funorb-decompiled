@@ -42,7 +42,7 @@ final class kh extends w {
                 return;
               }
               uh.field_l.e(param2 ^ -4580);
-              uj.field_m.e();
+              uj.field_m.flushAndMarkDrainCheck();
               id.field_t = param0;
               if (null != id.field_t) {
                 uh.field_l.a(param3, (byte) 38, id.field_t);
@@ -166,7 +166,7 @@ final class kh extends w {
             ji var5 = (ji) null;
             this.a(false, (byte) 48, false, (ji) null);
           }
-          var4_int = param1 * ug.field_g / 1000;
+          var4_int = param1 * AudioOutput.field_g / 1000;
           this.a(var4_int, -17, param0);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "kh.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

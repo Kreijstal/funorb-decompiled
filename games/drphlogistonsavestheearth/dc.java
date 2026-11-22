@@ -15,14 +15,14 @@ abstract class dc implements qi {
           if (param4 > -91) {
             field_b = (String) null;
           }
-          id.a(param1, param2, 10);
-          el.field_sb = id.a(param0, param5, 0, 22050);
-          k.field_J = id.a(param0, param5, 1, 1024);
+          AudioOutput.configureAudio(param1, param2, 10);
+          el.field_sb = AudioOutput.createOutput(param0, param5, 0, 22050);
+          k.field_J = AudioOutput.createOutput(param0, param5, 1, 1024);
           ej.field_a = new ec();
-          k.field_J.a(ej.field_a);
+          k.field_J.setRootStream(ej.field_a);
           s.field_a = param3;
           param3.a(SecondaryNodeDequeIterator.field_b * 128 / 80, (byte) -13);
-          el.field_sb.a(param3);
+          el.field_sb.setRootStream(param3);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dc.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

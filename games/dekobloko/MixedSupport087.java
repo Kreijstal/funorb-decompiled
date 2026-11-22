@@ -29,7 +29,7 @@ final class MixedSupport087 {
               UiComponentPart033.midiSynthesizerState0001.performAction0692(integerArgument1);
               GameAssets.pcmStreamMixerState0004.addListener(UiComponentPart033.midiSynthesizerState0001);
             }
-            SceneWidgetNode.pcmPlayerState0002.performAction0477();
+            SceneWidgetNode.pcmPlayerState0002.flushAndMarkDrainCheck();
             PcmPlayerService.musicTrackState0005 = musicTrackArgument2;
           }
           return;

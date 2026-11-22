@@ -44,8 +44,8 @@ final class NodeHashTableIterator implements Iterator {
         sa var1Lifetime1;
         var2 = MinerDisturbance.field_ab;
         try {
-          mj.field_o.e();
-          im.field_b.e();
+          mj.field_o.serviceOutput();
+          im.field_b.serviceOutput();
           sa.field_s = sa.field_s - 1;
           if (sa.field_s == 0) {
             sa.field_s = 200;

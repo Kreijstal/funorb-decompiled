@@ -55,7 +55,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_w, param0 << (field_q ? 2 : 1));
@@ -65,7 +65,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_v = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (rfa.a(false, param0) != 1) {
-            this.a(ul.a(-126, param0));
+            this.openDevice(ul.a(-126, param0));
             return;
           }
           this.field_z = null;

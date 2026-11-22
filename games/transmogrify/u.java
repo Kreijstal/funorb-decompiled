@@ -5,7 +5,7 @@ final class u {
     static tf field_c;
     static int field_d;
     static int field_b;
-    static qh field_a;
+    static AudioOutput field_a;
 
     final static int a(int param0, int param1) {
         param1--;
@@ -93,7 +93,7 @@ final class u {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param3) {
-            field_a = (qh) null;
+            field_a = (AudioOutput) null;
           }
           if (param2.a((byte) -125)) {
             stackIn_6_0 = param1 + " - " + param2.b(-22884) + "%";

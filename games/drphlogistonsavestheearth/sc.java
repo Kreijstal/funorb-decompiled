@@ -313,7 +313,7 @@ final class sc {
         }
         try {
           s.field_a.a((byte) -114);
-          el.field_sb.g();
+          el.field_sb.flushAndMarkDrainCheck();
           hj.field_g = param2;
           s.field_a.a(hj.field_g, param1, (byte) 120);
           if (param0 != -1) {

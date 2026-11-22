@@ -11,7 +11,7 @@ final class tg {
     static boolean field_j;
     static String field_a;
     static long field_k;
-    static la field_i;
+    static AudioOutput field_i;
     static e field_e;
 
     final static int a(ad param0, int param1, ad param2) {

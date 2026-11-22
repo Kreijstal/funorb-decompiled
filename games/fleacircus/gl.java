@@ -119,7 +119,7 @@ final class gl extends sh {
         try {
           if ((this.field_p.field_q[param1.field_o] & 4) != 0 &&
             0 > param1.field_q) {
-            var4_int = this.field_p.field_p[param1.field_o] / la.field_a;
+            var4_int = this.field_p.field_p[param1.field_o] / AudioOutput.field_a;
             var5 = (1048575 + var4_int - param1.field_x) / var4_int;
             param1.field_x = param1.field_x + param0 * var4_int & 1048575;
             if (var5 <= param0) {
@@ -184,7 +184,7 @@ final class gl extends sh {
           }
           if ((this.field_p.field_q[param0.field_o] & 4) != 0 &&
             param0.field_q < 0) {
-            var7_int = this.field_p.field_p[param0.field_o] / la.field_a;
+            var7_int = this.field_p.field_p[param0.field_o] / AudioOutput.field_a;
             while (true) {
               var8 = (-param0.field_x + 1048575 + var7_int) / var7_int;
               if (var8 > param1) {
@@ -195,7 +195,7 @@ final class gl extends sh {
               param4 = param4 + var8;
               param1 = param1 - var8;
               param0.field_x = param0.field_x + (-1048576 + var8 * var7_int);
-              var9 = la.field_a / 100;
+              var9 = AudioOutput.field_a / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;

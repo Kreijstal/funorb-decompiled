@@ -151,8 +151,8 @@ final class go extends qe {
           if (param0 != 14) {
             field_A = (String[]) null;
           }
-          ub.field_n.a();
-          hm.field_n.a();
+          ub.field_n.serviceOutput();
+          hm.field_n.serviceOutput();
           lj.field_r = lj.field_r - 1;
           if (lj.field_r == 0) {
             lj.field_r = 200;

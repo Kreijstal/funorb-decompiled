@@ -458,13 +458,13 @@ public final class Torquing extends tg {
         PcmStreamMixer var3 = null;
         try {
           this.a(11, 11, false, param0 + 477, 9, 15, 10, 0);
-          AudioOutput.a(22050, true, 10);
-          qd.field_b = AudioOutput.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
-          ResourceArchive.field_c = AudioOutput.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
+          AudioOutput.configureAudio(22050, true, 10);
+          qd.field_b = AudioOutput.createOutput(nk.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
+          ResourceArchive.field_c = AudioOutput.createOutput(nk.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
           var2 = new PcmStreamMixer();
-          ResourceArchive.field_c.a(var2);
+          ResourceArchive.field_c.setRootStream(var2);
           var3 = new PcmStreamMixer();
-          qd.field_b.a(var3);
+          qd.field_b.setRootStream(var3);
           ql.a(param0 ^ 1618865635, var3, var2);
           this.a(true, false, true, true, false);
           GzipDecompressor.field_b = vi.field_a.length;
@@ -1812,8 +1812,8 @@ public final class Torquing extends tg {
         int var3Lifetime2;
         var4 = field_u;
         try {
-          ResourceArchive.field_c.b();
-          qd.field_b.b();
+          ResourceArchive.field_c.serviceOutput();
+          qd.field_b.serviceOutput();
           if (dg.field_i != null &&
             dg.field_i.focusLost) {
             ug.a(-95);
@@ -2131,10 +2131,10 @@ public final class Torquing extends tg {
     final void b(int param0) {
         try {
           if (ResourceArchive.field_c != null) {
-            ResourceArchive.field_c.f();
+            ResourceArchive.field_c.dispose();
           }
           if (null != qd.field_b) {
-            qd.field_b.f();
+            qd.field_b.dispose();
           }
           if (dg.field_i != null) {
             ug.a(-120);

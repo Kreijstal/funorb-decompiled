@@ -8,7 +8,7 @@ final class ec implements Runnable {
     PlatformTaskDispatcher field_f;
     volatile boolean field_g;
     static fh field_b;
-    volatile la[] field_c;
+    volatile AudioOutput[] field_c;
     static String field_d;
     static String field_e;
     static String field_a;
@@ -244,7 +244,7 @@ final class ec implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        la var2 = null;
+        AudioOutput var2 = null;
         int var4 = fleas.field_A ? 1 : 0;
         this.field_h = true;
         try {
@@ -252,7 +252,7 @@ final class ec implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_c[var1_int];
               if (var2 != null) {
-                var2.a();
+                var2.serviceOutput();
               }
             }
             vh.a(10L, -108);
@@ -267,7 +267,7 @@ final class ec implements Runnable {
     }
 
     ec() {
-        this.field_c = new la[2];
+        this.field_c = new AudioOutput[2];
         this.field_g = false;
         this.field_h = false;
     }

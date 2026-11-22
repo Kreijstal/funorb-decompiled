@@ -24,7 +24,7 @@ final class ge extends PcmStream {
 
     final synchronized void d(float param0) {
         this.field_r = param0;
-        this.field_p = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_r * (float)vn.field_t));
+        this.field_p = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_r * (float)AudioOutput.field_t));
     }
 
     final synchronized void b(float param0) {
@@ -115,7 +115,7 @@ final class ge extends PcmStream {
           for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
             var5 = ge.a(var5, this.field_y[var6Lifetime1].field_a, this.field_y[var6Lifetime1].field_b, var4);
           }
-          if (vn.field_g) {
+          if (AudioOutput.field_g) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 8; var6Lifetime2++) {
               var5 = ge.a(var5, this.field_s[var6Lifetime2].field_c, this.field_s[var6Lifetime2].field_a, var4);
             }
@@ -143,7 +143,7 @@ final class ge extends PcmStream {
           var8 = (int)(this.field_p * 4096.0f);
           var9 = (int)(this.field_n * 4096.0f);
           var10 = (int)(this.field_o * 65536.0f);
-          if (!vn.field_g) {
+          if (!AudioOutput.field_g) {
             var11 = (int)(this.field_q * 4096.0f);
             for (var12 = 0; var12 < var4; var12++) {
               var13 = this.field_z[var12] >> var6Lifetime4;
@@ -291,7 +291,7 @@ final class ge extends PcmStream {
 
     private final void e() {
         int var1;
-        if (!vn.field_g) {
+        if (!AudioOutput.field_g) {
           if (this.field_s != null) {
             for (var1 = 0; var1 < 8; var1++) {
               this.field_x[var1].a();
@@ -312,19 +312,19 @@ final class ge extends PcmStream {
               this.field_y[var1].a();
             }
             this.field_s = new we[8];
-            this.field_s[0] = new we(1139 * vn.field_t / 44100);
-            this.field_s[1] = new we(1211 * vn.field_t / 44100);
-            this.field_s[2] = new we(1300 * vn.field_t / 44100);
-            this.field_s[3] = new we(1379 * vn.field_t / 44100);
-            this.field_s[4] = new we(1445 * vn.field_t / 44100);
-            this.field_s[5] = new we(1514 * vn.field_t / 44100);
-            this.field_s[6] = new we(1580 * vn.field_t / 44100);
-            this.field_s[7] = new we(1640 * vn.field_t / 44100);
+            this.field_s[0] = new we(1139 * AudioOutput.field_t / 44100);
+            this.field_s[1] = new we(1211 * AudioOutput.field_t / 44100);
+            this.field_s[2] = new we(1300 * AudioOutput.field_t / 44100);
+            this.field_s[3] = new we(1379 * AudioOutput.field_t / 44100);
+            this.field_s[4] = new we(1445 * AudioOutput.field_t / 44100);
+            this.field_s[5] = new we(1514 * AudioOutput.field_t / 44100);
+            this.field_s[6] = new we(1580 * AudioOutput.field_t / 44100);
+            this.field_s[7] = new we(1640 * AudioOutput.field_t / 44100);
             this.field_u = new el[4];
-            this.field_u[0] = new el(579 * vn.field_t / 44100);
-            this.field_u[1] = new el(464 * vn.field_t / 44100);
-            this.field_u[2] = new el(364 * vn.field_t / 44100);
-            this.field_u[3] = new el(248 * vn.field_t / 44100);
+            this.field_u[0] = new el(579 * AudioOutput.field_t / 44100);
+            this.field_u[1] = new el(464 * AudioOutput.field_t / 44100);
+            this.field_u[2] = new el(364 * AudioOutput.field_t / 44100);
+            this.field_u[3] = new el(248 * AudioOutput.field_t / 44100);
             this.field_z = new int[512];
           }
         }
@@ -354,20 +354,20 @@ final class ge extends PcmStream {
 
     ge(PcmStream param0) {
         this.field_x = new we[8];
-        this.field_x[0] = new we(1116 * vn.field_t / 44100);
-        this.field_x[1] = new we(1188 * vn.field_t / 44100);
-        this.field_x[2] = new we(1277 * vn.field_t / 44100);
-        this.field_x[3] = new we(1356 * vn.field_t / 44100);
-        this.field_x[4] = new we(1422 * vn.field_t / 44100);
-        this.field_x[5] = new we(1491 * vn.field_t / 44100);
-        this.field_x[6] = new we(1557 * vn.field_t / 44100);
-        this.field_x[7] = new we(1617 * vn.field_t / 44100);
+        this.field_x[0] = new we(1116 * AudioOutput.field_t / 44100);
+        this.field_x[1] = new we(1188 * AudioOutput.field_t / 44100);
+        this.field_x[2] = new we(1277 * AudioOutput.field_t / 44100);
+        this.field_x[3] = new we(1356 * AudioOutput.field_t / 44100);
+        this.field_x[4] = new we(1422 * AudioOutput.field_t / 44100);
+        this.field_x[5] = new we(1491 * AudioOutput.field_t / 44100);
+        this.field_x[6] = new we(1557 * AudioOutput.field_t / 44100);
+        this.field_x[7] = new we(1617 * AudioOutput.field_t / 44100);
         this.field_y = new el[4];
-        this.field_y[0] = new el(556 * vn.field_t / 44100);
-        this.field_y[1] = new el(441 * vn.field_t / 44100);
-        this.field_y[2] = new el(341 * vn.field_t / 44100);
-        this.field_y[3] = new el(225 * vn.field_t / 44100);
-        if (!vn.field_g) {
+        this.field_y[0] = new el(556 * AudioOutput.field_t / 44100);
+        this.field_y[1] = new el(441 * AudioOutput.field_t / 44100);
+        this.field_y[2] = new el(341 * AudioOutput.field_t / 44100);
+        this.field_y[3] = new el(225 * AudioOutput.field_t / 44100);
+        if (!AudioOutput.field_g) {
           this.field_z = new int[256];
         }
         this.e();

@@ -3,7 +3,7 @@
  */
 final class ef implements Runnable {
     volatile boolean field_a;
-    volatile qh[] field_f;
+    volatile AudioOutput[] field_f;
     static tf field_e;
     PlatformTaskDispatcher field_b;
     volatile boolean field_d;
@@ -19,7 +19,7 @@ final class ef implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        qh var2 = null;
+        AudioOutput var2 = null;
         int var4 = Transmogrify.field_A ? 1 : 0;
         this.field_d = true;
         try {
@@ -28,7 +28,7 @@ final class ef implements Runnable {
               var2 = this.field_f[var1_int];
               if (var2 == null) {
               } else {
-                var2.a();
+                var2.serviceOutput();
               }
             }
             pg.a(10L, -108);
@@ -44,7 +44,7 @@ final class ef implements Runnable {
     }
 
     ef() {
-        this.field_f = new qh[2];
+        this.field_f = new AudioOutput[2];
         this.field_a = false;
         this.field_d = false;
     }

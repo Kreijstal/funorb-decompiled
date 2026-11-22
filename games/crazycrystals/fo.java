@@ -213,7 +213,7 @@ final class fo extends IntrusiveNode {
             if (var1 != null) {
               var2 = gf.field_c;
               synchronized (var2) {
-                gf.field_c.a();
+                gf.field_c.flushAndMarkDrainCheck();
                 fq.field_x.a(88, var1, true);
               }
               om.field_x = null;

@@ -4,7 +4,7 @@
 final class ei extends ug implements el {
     private rg field_hb;
     static e field_lb;
-    static dk field_ob;
+    static AudioOutput field_ob;
     static nf[] field_mb;
     static String field_ib;
     static int field_jb;
@@ -13,7 +13,7 @@ final class ei extends ug implements el {
 
     final static void a(int param0, boolean param1) {
         if (param0 > -29) {
-          field_ob = (dk) null;
+          field_ob = (AudioOutput) null;
         }
         if (kc.field_o) {
           KeyboardInput.field_a = bk.a(320, true, param1, oj.field_B);

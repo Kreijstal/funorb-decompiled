@@ -137,7 +137,7 @@ public final class Bounce extends GameClient {
           Slime.clearStaticReferences(100);
           qf.b(-107);
           i.a(118);
-          e.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           mj.c(4);
           IntrusiveNode.a((byte) 110);
           CipherPacketBuffer.clearStaticReferences(0);
@@ -609,7 +609,7 @@ public final class Bounce extends GameClient {
                   }
                   ((pk) (Object) stackIn_241_0).a(stackIn_242_1, true, 54);
                 }
-                jl.field_d.d();
+                jl.field_d.flushAndMarkDrainCheck();
               }
             }
             if (ka.field_o != null &&
@@ -713,7 +713,7 @@ public final class Bounce extends GameClient {
               var2_ref = jl.field_d;
               synchronized (var2_ref) {
                 ld.field_l.a(AccountCreationResultPanel.field_mb, true, 124);
-                jl.field_d.d();
+                jl.field_d.flushAndMarkDrainCheck();
               }
             }
           }
@@ -879,8 +879,8 @@ public final class Bounce extends GameClient {
         int var2_intLifetime2;
         var3 = field_N;
         try {
-          f.field_a.e();
-          jl.field_d.e();
+          f.field_a.serviceOutput();
+          jl.field_d.serviceOutput();
           stackIn_5_1 = (sj.field_f != null);
           this.a(stackIn_5_1, -73);
           if (ri.field_z) {
@@ -1148,10 +1148,10 @@ public final class Bounce extends GameClient {
         RuntimeException var2 = null;
         try {
           if (null != f.field_a) {
-            f.field_a.a();
+            f.field_a.dispose();
           }
           if (jl.field_d != null) {
-            jl.field_d.a();
+            jl.field_d.dispose();
           }
           if (param0 != -111) {
             this.field_E = true;
@@ -1235,7 +1235,7 @@ public final class Bounce extends GameClient {
             ed.a((byte) -127);
             hg.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
             this.e(4);
-            var3 = new u(22050, e.field_r);
+            var3 = new u(22050, AudioOutput.field_r);
             il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().a(var3);
             il.field_a[3] = ei.a(pa.field_c, "", "slime_grows").b().a(var3);
             il.field_a[4] = ei.a(pa.field_c, "", "slime_jump").b().a(var3);
@@ -1316,7 +1316,7 @@ public final class Bounce extends GameClient {
             synchronized (var3_ref2) {
               ld.field_l.g(jd.field_a / 2, 100);
               ld.field_l.a(AccountCreationResultPanel.field_mb, true, 85);
-              jl.field_d.d();
+              jl.field_d.flushAndMarkDrainCheck();
             }
             if (!jh.b(767564065)) {
               bh.field_d = lf.a(-97, 4);
@@ -1404,11 +1404,11 @@ public final class Bounce extends GameClient {
 
     final void c(byte param0) {
         this.a(9, 0, 10, 3, 7, 8764, false, 8);
-        e.a(22050, true, 10);
-        f.field_a = e.a(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
-        jl.field_d = e.a(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 1, 22050);
+        AudioOutput.configureAudio(22050, true, 10);
+        f.field_a = AudioOutput.createOutput(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
+        jl.field_d = AudioOutput.createOutput(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 1, 22050);
         nj.field_l = new rb();
-        f.field_a.a(nj.field_l);
+        f.field_a.setRootStream(nj.field_l);
         bk.field_c = 1;
         ca.field_a = new int[1];
         eh.field_b = null;
@@ -1418,7 +1418,7 @@ public final class Bounce extends GameClient {
         }
         try {
           ld.field_l.b((byte) 114, 128, 9);
-          jl.field_d.a(ld.field_l);
+          jl.field_d.setRootStream(ld.field_l);
           ff.field_C = 0.0;
           eg.field_n = 0;
           this.a(true, false, 22422, false, false);
@@ -1732,7 +1732,7 @@ public final class Bounce extends GameClient {
                   var5 = jl.field_d;
                   synchronized (var5) {
                     ld.field_l.a(AccountCreationResultPanel.field_mb, true, param0 ^ 98);
-                    jl.field_d.d();
+                    jl.field_d.flushAndMarkDrainCheck();
                   }
                 }
                 break;

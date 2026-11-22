@@ -210,7 +210,7 @@ final class gh {
                 return;
               }
               qc.field_v.a(true);
-              ri.field_r.c();
+              ri.field_r.flushAndMarkDrainCheck();
               fo.field_e = param0;
               if (null != fo.field_e) {
                 qc.field_v.a(-15, fo.field_e, param2);

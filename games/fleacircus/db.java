@@ -8,14 +8,14 @@ abstract class db extends gj {
     static int field_H;
     static dd field_I;
     static String field_F;
-    static la field_J;
+    static AudioOutput field_J;
     private f field_L;
     private int field_K;
 
     final void a(int param0, byte param1, int param2) {
         this.a(-param2 + ll.field_m >> 1, param2, -param0 + ca.field_Q >> 1, param0, 80);
         if (param1 > -126) {
-          field_J = (la) null;
+          field_J = (AudioOutput) null;
         }
     }
 
@@ -157,7 +157,7 @@ abstract class db extends gj {
             var8Lifetime1 = param0.indexOf("<%", var5Lifetime1);
             if (var8Lifetime1 < 0) {
               if (!param2) {
-                field_J = (la) null;
+                field_J = (AudioOutput) null;
               }
               discarded$0 = var6.append(param0.substring(var7));
               stackIn_29_0 = var6.toString();

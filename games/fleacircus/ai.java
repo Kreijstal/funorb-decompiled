@@ -109,8 +109,8 @@ final class ai extends r {
         pd var1Lifetime1;
         var2 = fleas.field_A ? 1 : 0;
         try {
-          db.field_J.a();
-          tg.field_i.a();
+          db.field_J.serviceOutput();
+          tg.field_i.serviceOutput();
           gg.field_g = gg.field_g - 1;
           if (param0 != -20846) {
             ai.clearStaticReferences((byte) -57);

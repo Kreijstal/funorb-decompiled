@@ -559,7 +559,7 @@ final class gh extends ea implements Cloneable {
           var4 = gf.field_c;
           synchronized (var4) {
             fq.field_x.d(62);
-            gf.field_c.a();
+            gf.field_c.flushAndMarkDrainCheck();
           }
           om.field_x = null;
           if (param0 != null) {

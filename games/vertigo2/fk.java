@@ -287,7 +287,7 @@ final class fk extends PcmStream {
               }
             }
           }
-          if (dd.field_h) {
+          if (AudioOutput.field_h) {
             stackIn_34_0 = param2 << 1;
           } else {
             stackIn_34_0 = param2;
@@ -309,7 +309,7 @@ final class fk extends PcmStream {
                 }
                 this.field_v.b(this.field_t, 0, param2);
                 this.field_H.b(this.field_F, 0, param2);
-                if (!dd.field_h) {
+                if (!AudioOutput.field_h) {
                   stackIn_48_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -335,7 +335,7 @@ final class fk extends PcmStream {
               this.field_F = new int[var6];
             }
             this.field_z.b(this.field_t, 0, param2);
-            if (dd.field_h) {
+            if (AudioOutput.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_63_0 = localTemp$1;

@@ -42,7 +42,7 @@ final class ka extends wf {
         try {
           if ((this.field_p.field_l[param3.field_E] & 4) != 0 &&
             param3.field_C < 0) {
-            var7_int = this.field_p.field_K[param3.field_E] / e.field_r;
+            var7_int = this.field_p.field_K[param3.field_E] / AudioOutput.field_r;
             while (true) {
               var8 = (var7_int + 1048575 - param3.field_u) / var7_int;
               if (var8 > param2) {
@@ -53,7 +53,7 @@ final class ka extends wf {
               param2 = param2 - var8;
               param3.field_u = param3.field_u + (var8 * var7_int - 1048576);
               param5 = param5 + var8;
-              var9 = e.field_r / 100;
+              var9 = AudioOutput.field_r / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;
@@ -122,7 +122,7 @@ final class ka extends wf {
         try {
           if ((this.field_p.field_l[param0.field_E] & 4) != 0 &&
             param0.field_C < 0) {
-            var4_int = this.field_p.field_K[param0.field_E] / e.field_r;
+            var4_int = this.field_p.field_K[param0.field_E] / AudioOutput.field_r;
             var5 = (-param0.field_u + (1048575 + var4_int)) / var4_int;
             param0.field_u = param0.field_u + var4_int * param1 & 1048575;
             if (var5 <= param1) {

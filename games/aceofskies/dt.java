@@ -8,13 +8,13 @@ final class dt {
 
     final static void a(int param0) {
         if (null != um.field_m) {
-          um.field_m.d();
+          um.field_m.dispose();
         }
         if (param0 != 0) {
           field_b = (String) null;
         }
         if (null != RendererBitmapFont.field_a) {
-          RendererBitmapFont.field_a.d();
+          RendererBitmapFont.field_a.dispose();
         }
     }
 

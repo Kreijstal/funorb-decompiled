@@ -512,12 +512,12 @@ final class pi extends wf {
           if (this.field_l <= 0) {
             if (this.field_t == -256 &&
               (this.field_u & 255) == 0) {
-              if (e.field_s) {
+              if (AudioOutput.field_s) {
                 return pi.b(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this);
               }
               return pi.b(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this);
             }
-            if (e.field_s) {
+            if (AudioOutput.field_s) {
               return pi.a(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this, this.field_t, param4);
             }
             return pi.a(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this, this.field_t, param4);
@@ -529,13 +529,13 @@ final class pi extends wf {
           this.field_l = this.field_l + param1;
           if (this.field_t == -256 &&
             (this.field_u & 255) == 0) {
-            if (!e.field_s) {
+            if (!AudioOutput.field_s) {
               param1 = pi.b(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this);
             } else {
               param1 = pi.b(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this);
             }
           } else {
-            if (!e.field_s) {
+            if (!AudioOutput.field_s) {
               param1 = pi.b(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this, this.field_t, param4);
             } else {
               param1 = pi.a(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this, this.field_t, param4);
@@ -764,12 +764,12 @@ final class pi extends wf {
           if (this.field_l <= 0) {
             if (this.field_t == 256 &&
               (this.field_u & 255) == 0) {
-              if (e.field_s) {
+              if (AudioOutput.field_s) {
                 return pi.a(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this);
               }
               return pi.a(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this);
             }
-            if (e.field_s) {
+            if (AudioOutput.field_s) {
               return pi.d(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this, this.field_t, param4);
             }
             return pi.b(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this, this.field_t, param4);
@@ -781,13 +781,13 @@ final class pi extends wf {
           this.field_l = this.field_l + param1;
           if (this.field_t == 256 &&
             (this.field_u & 255) == 0) {
-            if (!e.field_s) {
+            if (!AudioOutput.field_s) {
               param1 = pi.a(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this);
             } else {
               param1 = pi.a(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this);
             }
           } else {
-            if (!e.field_s) {
+            if (!AudioOutput.field_s) {
               param1 = pi.c(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this, this.field_t, param4);
             } else {
               param1 = pi.b(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this, this.field_t, param4);
@@ -1723,7 +1723,7 @@ final class pi extends wf {
           return null;
         }
         if (param0.field_h.length != 0) {
-          return new pi(param0, (int)((long)param0.field_k * 256L * (long)param1 / (long)(100 * e.field_r)), param2 << 6);
+          return new pi(param0, (int)((long)param0.field_k * 256L * (long)param1 / (long)(100 * AudioOutput.field_r)), param2 << 6);
         }
         return null;
     }

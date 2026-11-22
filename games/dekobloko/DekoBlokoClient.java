@@ -899,13 +899,13 @@ public final class DekoBlokoClient extends FunOrbClient {
         RuntimeException runtimeExceptionLocal2 = null;
         try {
           if (SceneWidgetNode.pcmPlayerState0002 != null) {
-            SceneWidgetNode.pcmPlayerState0002.performAction0490();
+            SceneWidgetNode.pcmPlayerState0002.dispose();
           }
           if (integerArgument1 != 0) {
             return;
           }
           if (null != MixedSupport019.pcmPlayerState0001) {
-            MixedSupport019.pcmPlayerState0001.performAction0490();
+            MixedSupport019.pcmPlayerState0001.dispose();
           }
           if (null != MixedSupport020.fullscreenCanvasState0001) {
             MixedSupport118.performAction1548(false);
@@ -1863,13 +1863,13 @@ public final class DekoBlokoClient extends FunOrbClient {
     final void performAction0304(boolean booleanArgument1) {
         try {
           this.performAction0105(5, 94, 31, 0, 1, 12, 2, booleanArgument1);
-          PcmPlayer.performAction0479(22050, true, 10);
-          SceneWidgetNode.pcmPlayerState0002 = PcmPlayer.computePcmPlayer0480(GzipDecompressor.platformServiceState0003, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001), 0, 22050);
-          MixedSupport019.pcmPlayerState0001 = PcmPlayer.computePcmPlayer0480(GzipDecompressor.platformServiceState0003, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001), 1, 1024);
+          PcmPlayer.configureAudio(22050, true, 10);
+          SceneWidgetNode.pcmPlayerState0002 = PcmPlayer.createOutput(GzipDecompressor.platformServiceState0003, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001), 0, 22050);
+          MixedSupport019.pcmPlayerState0001 = PcmPlayer.createOutput(GzipDecompressor.platformServiceState0003, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001), 1, 1024);
           SecondaryNodeDequeIterator.pcmStreamMixerState0001 = new PcmStreamMixer();
-          MixedSupport019.pcmPlayerState0001.performAction0487(SecondaryNodeDequeIterator.pcmStreamMixerState0001);
+          MixedSupport019.pcmPlayerState0001.setRootStream(SecondaryNodeDequeIterator.pcmStreamMixerState0001);
           GameAssets.pcmStreamMixerState0004 = new PcmStreamMixer();
-          SceneWidgetNode.pcmPlayerState0002.performAction0487(GameAssets.pcmStreamMixerState0004);
+          SceneWidgetNode.pcmPlayerState0002.setRootStream(GameAssets.pcmStreamMixerState0004);
           this.performAction0111(false, true, true, false, true, true, false);
           ByteStorage.integerArrayState0158[66] = 2;
           ByteStorage.integerArrayState0158[74] = 1;

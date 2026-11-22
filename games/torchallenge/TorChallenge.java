@@ -1897,7 +1897,7 @@ public final class TorChallenge extends GameClientBase {
           dl.clearStaticReferences(false);
           pc.clearStaticReferences();
           pg.c(16);
-          kh.clearStaticReferences();
+          AudioOutput.clearStaticReferences();
           fj.b(false);
           a.clearStaticReferences((byte) 106);
           rl.clearStaticReferences((byte) -82);

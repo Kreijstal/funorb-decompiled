@@ -3,7 +3,7 @@
  */
 final class mj extends IntrusiveNode {
     static int[] field_n;
-    static fj field_o;
+    static AudioOutput field_o;
     int field_r;
     static int field_p;
     int field_q;

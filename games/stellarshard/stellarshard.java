@@ -319,8 +319,8 @@ public final class stellarshard extends rb implements cf {
           if (param0 < 21) {
             return;
           }
-          GameApplet.field_h.a();
-          PacketBuffer.field_m.a();
+          GameApplet.field_h.serviceOutput();
+          PacketBuffer.field_m.serviceOutput();
           stackIn_6_1 = 119;
           stackIn_7_2 = (DualLinkDequeIterator.field_e != null);
           this.b(stackIn_6_1, stackIn_7_2);
@@ -651,13 +651,13 @@ public final class stellarshard extends rb implements cf {
               stackIn_62_0 = 22050;
               stackIn_62_1 = 0;
             }
-            AudioMixer.a(stackIn_62_0, stackIn_62_1 != 0, 10);
-            GameApplet.field_h = AudioMixer.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
-            PacketBuffer.field_m = AudioMixer.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
+            AudioMixer.configureAudio(stackIn_62_0, stackIn_62_1 != 0, 10);
+            GameApplet.field_h = AudioMixer.createOutput(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
+            PacketBuffer.field_m = AudioMixer.createOutput(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
             ll.field_c = new hl();
             nj.field_o = new hl();
-            GameApplet.field_h.a(ll.field_c);
-            PacketBuffer.field_m.a(nj.field_o);
+            GameApplet.field_h.setRootStream(ll.field_c);
+            PacketBuffer.field_m.setRootStream(nj.field_o);
             MouseWheelInput.field_e = param0;
             DualLinkDequeIterator.field_i = false;
             wh.field_c = 0;
@@ -2821,13 +2821,13 @@ public final class stellarshard extends rb implements cf {
             qd.field_j.requestFocus();
           }
           if (null != GameApplet.field_h) {
-            GameApplet.field_h.e();
+            GameApplet.field_h.dispose();
           }
           if (param0 <= 47) {
             return;
           }
           if (null != PacketBuffer.field_m) {
-            PacketBuffer.field_m.e();
+            PacketBuffer.field_m.dispose();
           }
           t.a(false);
           return;

@@ -212,7 +212,7 @@ final class hda extends k {
                 return;
               }
               uf.field_c.b(true);
-              BoardChangeBatch.field_l.c();
+              BoardChangeBatch.field_l.flushAndMarkDrainCheck();
               uw.field_o = param1;
               if (uw.field_o != null) {
                 uf.field_c.a(uw.field_o, (byte) -115, param2);

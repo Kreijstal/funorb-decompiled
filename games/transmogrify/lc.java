@@ -145,7 +145,7 @@ final class lc extends PcmStream {
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           if (this.field_I.e()) {
-            var4_int = this.field_w * this.field_I.field_h / qh.field_p;
+            var4_int = this.field_w * this.field_I.field_h / AudioOutput.field_p;
             while (true) {
               var5 = (long)param2 * (long)var4_int + this.field_O;
               if (-var5 + this.field_s >= 0L) {
@@ -575,7 +575,7 @@ final class lc extends PcmStream {
           if (param0 < 0 ||
             var4.field_u == param0) {
             if (var4.field_y != null) {
-              var4.field_y.f(qh.field_p / 100);
+              var4.field_y.f(AudioOutput.field_p / 100);
               if (var4.field_y.e()) {
                 this.field_m.field_m.a(var4.field_y);
               }
@@ -858,7 +858,7 @@ final class lc extends PcmStream {
             var7 = Math.sin((double)(param0.field_l & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)((double)(256 * param0.field_t.field_h) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)qh.field_p + 0.5);
+          var5Lifetime1 = (int)((double)(256 * param0.field_t.field_h) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_p + 0.5);
           stackIn_12_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1210,7 +1210,7 @@ final class lc extends PcmStream {
         int var11 = 0;
         var11 = Transmogrify.field_A ? 1 : 0;
         try {
-          param4.field_r = qh.field_p / 100;
+          param4.field_r = AudioOutput.field_p / 100;
           if (0 <= param4.field_p && (param4.field_y == null ||
             param4.field_y.l())) {
             param4.b(false);
@@ -1420,7 +1420,7 @@ final class lc extends PcmStream {
         int var6;
         var6 = Transmogrify.field_A ? 1 : 0;
         if (this.field_I.e()) {
-          var2 = this.field_w * this.field_I.field_h / qh.field_p;
+          var2 = this.field_w * this.field_I.field_h / AudioOutput.field_p;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_O;
             if (0L <= -var3 + this.field_s) {

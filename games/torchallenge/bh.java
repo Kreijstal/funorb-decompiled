@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bh extends ma {
-    static kh field_o;
+    static AudioOutput field_o;
     private dj field_s;
     static int field_t;
     static boolean field_p;

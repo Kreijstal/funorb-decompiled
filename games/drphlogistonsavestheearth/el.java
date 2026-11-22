@@ -4,7 +4,7 @@
 final class el extends jf {
     static he[] field_vb;
     static he field_ub;
-    static id field_sb;
+    static AudioOutput field_sb;
     static long field_rb;
     static int field_tb;
 

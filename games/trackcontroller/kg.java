@@ -44,7 +44,7 @@ final class kg {
               return;
             }
             fj.field_P.f(11795);
-            sb.field_b.c();
+            sb.field_b.flushAndMarkDrainCheck();
             GameShell.field_n = param3;
             if (GameShell.field_n != null) {
               fj.field_P.a(GameShell.field_n, 14526, param0);

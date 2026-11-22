@@ -4,7 +4,7 @@
 final class cb extends IntrusiveNode {
     static jd field_j;
     static String field_h;
-    static gd field_g;
+    static AudioOutput field_g;
     static int field_i;
 
     public static void clearStaticReferences(int param0) {

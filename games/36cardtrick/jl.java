@@ -34,10 +34,10 @@ final class jl extends ff {
           return;
         }
         if (null != wd.field_e) {
-          wd.field_e.c();
+          wd.field_e.dispose();
         }
         if (null != cb.field_g) {
-          cb.field_g.c();
+          cb.field_g.dispose();
         }
     }
 

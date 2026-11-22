@@ -290,12 +290,12 @@ final class b extends PcmStream {
           if (this.field_t <= 0) {
             if (this.field_x == -256 &&
               (this.field_n & 255) == 0) {
-              if (ug.field_b) {
+              if (AudioOutput.field_b) {
                 return b.b(0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, 0, param3, param2, this);
               }
               return b.b(((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, 0, param3, param2, this);
             }
-            if (ug.field_b) {
+            if (AudioOutput.field_b) {
               return b.d(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, 0, param3, param2, this, this.field_x, param4);
             }
             return b.b(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, 0, param3, param2, this, this.field_x, param4);
@@ -307,13 +307,13 @@ final class b extends PcmStream {
           this.field_t = this.field_t + param1;
           if (this.field_x == -256 &&
             (this.field_n & 255) == 0) {
-            if (!ug.field_b) {
+            if (!AudioOutput.field_b) {
               param1 = b.a(((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, this.field_l, 0, var6, param2, this);
             } else {
               param1 = b.a(0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, this.field_y, this.field_q, 0, var6, param2, this);
             }
           } else {
-            if (!ug.field_b) {
+            if (!AudioOutput.field_b) {
               param1 = b.b(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, this.field_l, 0, var6, param2, this, this.field_x, param4);
             } else {
               param1 = b.b(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, this.field_y, this.field_q, 0, var6, param2, this, this.field_x, param4);
@@ -1235,7 +1235,7 @@ final class b extends PcmStream {
           return null;
         }
         if (param0.field_k.length != 0) {
-          return new b(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * ug.field_g)), param2 << 6);
+          return new b(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_g)), param2 << 6);
         }
         return null;
     }
@@ -1425,12 +1425,12 @@ final class b extends PcmStream {
           if (this.field_t <= 0) {
             if (this.field_x == 256 &&
               (this.field_n & 255) == 0) {
-              if (ug.field_b) {
+              if (AudioOutput.field_b) {
                 return b.a(0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, 0, param3, param2, this);
               }
               return b.a(((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, 0, param3, param2, this);
             }
-            if (ug.field_b) {
+            if (AudioOutput.field_b) {
               return b.c(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, 0, param3, param2, this, this.field_x, param4);
             }
             return b.a(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, 0, param3, param2, this, this.field_x, param4);
@@ -1442,13 +1442,13 @@ final class b extends PcmStream {
           this.field_t = this.field_t + param1;
           if (this.field_x == 256 &&
             (this.field_n & 255) == 0) {
-            if (!ug.field_b) {
+            if (!AudioOutput.field_b) {
               param1 = b.b(((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, this.field_l, 0, var6, param2, this);
             } else {
               param1 = b.b(0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, this.field_y, this.field_q, 0, var6, param2, this);
             }
           } else {
-            if (!ug.field_b) {
+            if (!AudioOutput.field_b) {
               param1 = b.a(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_z, this.field_l, 0, var6, param2, this, this.field_x, param4);
             } else {
               param1 = b.a(0, 0, ((jb) (this.field_j)).field_k, param0, this.field_n, param1, this.field_v, this.field_w, this.field_y, this.field_q, 0, var6, param2, this, this.field_x, param4);
