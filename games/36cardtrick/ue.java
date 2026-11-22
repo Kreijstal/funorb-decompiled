@@ -4,7 +4,7 @@
 final class ue {
     private int[] field_c;
     static int field_d;
-    static bk field_b;
+    static IntrusiveDeque field_b;
     static qk field_a;
 
     public static void a(int param0) {
@@ -240,6 +240,6 @@ final class ue {
     }
 
     static {
-        field_b = new bk();
+        field_b = new IntrusiveDeque();
     }
 }

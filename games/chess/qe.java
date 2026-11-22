@@ -168,13 +168,13 @@ final class qe extends uk {
               this.field_M.e();
               wb.b(var11Lifetime1, var13Lifetime1, var10Lifetime1, var12Lifetime1);
               wb.f(0, 0, 640, 480, 0);
-              decompiledFrameRemainder0 = (jc.field_f == -1);
+              decompiledFrameRemainder0 = (IntrusiveDeque.field_f == -1);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (this.field_z[var7Lifetime1] != null))) {
                 decompiledFrameRemainder0 = !(!this.field_z[var7Lifetime1].c(0, 0, var5, var6));
               }
             } else {
-              decompiledFrameRemainder0 = (jc.field_f == -1);
+              decompiledFrameRemainder0 = (IntrusiveDeque.field_f == -1);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (this.field_z[var7Lifetime1] != null))) {
                 decompiledFrameRemainder0 = !(!this.field_z[var7Lifetime1].c(0, 0, var5, var6));
@@ -515,7 +515,7 @@ final class qe extends uk {
               }
             }
             var13.a(param0, var12);
-            if (jc.field_f == -1 &&
+            if (IntrusiveDeque.field_f == -1 &&
               this.field_j == -1 &&
               this.field_S.c(0, 0, hn.field_k, rf.field_b)) {
               this.field_j = var11;
@@ -940,7 +940,7 @@ final class qe extends uk {
         wa.b(var30, 16711680, var22Lifetime1);
         qk.field_k.e();
         if (param5) {
-          if (jc.field_f == -1) {
+          if (IntrusiveDeque.field_f == -1) {
             hd.field_f.b(0, 0, 64);
           } else {
             hd.field_f.d(0, 0);

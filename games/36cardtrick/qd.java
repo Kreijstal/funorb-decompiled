@@ -4,13 +4,13 @@
 final class qd {
     static int field_c;
     private IntrusiveNode field_d;
-    private bk field_e;
+    private IntrusiveDeque field_e;
     static String field_b;
     static volatile int field_a;
 
     final IntrusiveNode b(byte param0) {
-        IntrusiveNode var2 = this.field_e.field_a.next;
-        if (var2 == this.field_e.field_a) {
+        IntrusiveNode var2 = this.field_e.sentinel.next;
+        if (var2 == this.field_e.sentinel) {
           this.field_d = null;
           return null;
         }
@@ -42,13 +42,13 @@ final class qd {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_e.field_a.next;
+            var3 = this.field_e.sentinel.next;
           }
           if (param0 != 25755) {
             var4 = (IntrusiveNode) null;
             this.a((byte) 72, (IntrusiveNode) null);
           }
-          if (this.field_e.field_a == var3) {
+          if (this.field_e.sentinel == var3) {
             this.field_d = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -82,11 +82,11 @@ final class qd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_e.field_a.previous;
+            var3 = this.field_e.sentinel.previous;
           } else {
             var3 = param1;
           }
-          if (var3 == this.field_e.field_a) {
+          if (var3 == this.field_e.sentinel) {
             this.field_d = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
@@ -150,7 +150,7 @@ final class qd {
 
     final IntrusiveNode a(byte param0) {
         IntrusiveNode var2 = this.field_d;
-        if (this.field_e.field_a == var2) {
+        if (this.field_e.sentinel == var2) {
           this.field_d = null;
           return null;
         }
@@ -162,13 +162,13 @@ final class qd {
     }
 
     final IntrusiveNode c(byte param0) {
-        IntrusiveNode var2 = this.field_e.field_a.previous;
-        if (this.field_e.field_a == var2) {
+        IntrusiveNode var2 = this.field_e.sentinel.previous;
+        if (this.field_e.sentinel == var2) {
           this.field_d = null;
           return null;
         }
         if (param0 != -13) {
-          this.field_e = (bk) null;
+          this.field_e = (IntrusiveDeque) null;
         }
         this.field_d = var2.previous;
         return var2;
@@ -179,7 +179,7 @@ final class qd {
         if (param0 != 28869) {
           return (IntrusiveNode) null;
         }
-        if (this.field_e.field_a == var2) {
+        if (this.field_e.sentinel == var2) {
           this.field_d = null;
           return null;
         }
@@ -199,7 +199,7 @@ final class qd {
         return mh.field_a;
     }
 
-    qd(bk param0) {
+    qd(IntrusiveDeque param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {

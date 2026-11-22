@@ -168,7 +168,7 @@ abstract class gb extends GameAppletShell {
             this.a("reconnect", -58);
           }
           dh.c(12);
-          jc.a(var2, n.field_c, (byte) 85);
+          IntrusiveDeque.a(var2, n.field_c, (byte) 85);
           bg.field_ab = true;
           ma.field_E = 15000L + ud.a(param0 + 2);
           return var2;
@@ -189,7 +189,7 @@ abstract class gb extends GameAppletShell {
         if (param0 == -29025) {
           qf.field_g = null;
           cf.field_Nb = false;
-          if (dk.field_g) {
+          if (SecondaryNodeHashTable.field_g) {
             ArchiveProvider.field_d.n(24528);
           } else {
             var1 = gm.field_d;
@@ -200,7 +200,7 @@ abstract class gb extends GameAppletShell {
               } else {
                 qf.field_g = oc.a(rc.field_c, new String[]{Integer.toString(var1)}, (byte) -113);
               }
-              qf.field_g = tb.a((byte) 96, new CharSequence[]{(CharSequence) ((Object) qf.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) bl.field_a)});
+              qf.field_g = tb.a((byte) 96, new CharSequence[]{(CharSequence) ((Object) qf.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IterableNodeHashTable.field_a)});
             }
             ArchiveProvider.field_d.k((byte) -123);
             ri.g(127);
@@ -428,7 +428,7 @@ abstract class gb extends GameAppletShell {
             this.field_n = false;
             si.d(65280);
             dh.c(12);
-            jc.a(2, fe.field_e, (byte) 97);
+            IntrusiveDeque.a(2, fe.field_e, (byte) 97);
             ia.a((byte) -121);
             bg.field_ab = true;
             ma.field_E = 15000L + ud.a(2);
@@ -475,19 +475,19 @@ abstract class gb extends GameAppletShell {
             if (rm.field_Q >= 10) {
               dh.c(12);
               if (cf.field_Lb == 3) {
-                jc.a(256, ti.field_b, (byte) 109);
+                IntrusiveDeque.a(256, ti.field_b, (byte) 109);
               } else {
                 if (cf.field_Lb == 4) {
-                  jc.a(256, fb.field_F, (byte) -49);
+                  IntrusiveDeque.a(256, fb.field_F, (byte) -49);
                 } else {
                   if (cf.field_Lb != 2) {
                     if (5 == cf.field_Lb) {
-                      jc.a(5, rb.field_a, (byte) -126);
+                      IntrusiveDeque.a(5, rb.field_a, (byte) -126);
                     } else {
-                      jc.a(256, wh.field_d, (byte) -66);
+                      IntrusiveDeque.a(256, wh.field_d, (byte) -66);
                     }
                   } else {
-                    jc.a(256, b.field_h, (byte) 122);
+                    IntrusiveDeque.a(256, b.field_h, (byte) 122);
                   }
                 }
               }
@@ -710,7 +710,7 @@ abstract class gb extends GameAppletShell {
               var5_intLifetime2 = ji.a(this.field_y, false, si.f(1633075718), ob.d((byte) -119), (byte) 82, this.field_z);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
-                  jc.a(var5_intLifetime2, n.field_c, (byte) 81);
+                  IntrusiveDeque.a(var5_intLifetime2, n.field_c, (byte) 81);
                   n.field_c = null;
                 } else {
                   gi.field_e = sj.field_i;

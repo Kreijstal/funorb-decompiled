@@ -4,7 +4,7 @@
 final class uk {
     private int field_h;
     private int field_a;
-    static bc field_d;
+    static IntrusiveDeque field_d;
     private IntrusiveNode field_e;
     private IntrusiveNode[] field_c;
     static String field_b;
@@ -189,7 +189,7 @@ final class uk {
     }
 
     static {
-        field_d = new bc();
+        field_d = new IntrusiveDeque();
         field_b = "Close";
     }
 }

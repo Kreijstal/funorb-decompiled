@@ -35,7 +35,7 @@ final class ck {
     int[] field_k;
     boolean[] field_h;
     int field_B;
-    static vl field_u;
+    static IntrusiveDeque field_u;
     static bd[][] field_y;
     byte field_n;
     int field_c;

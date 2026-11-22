@@ -18,7 +18,7 @@ final class cn {
         RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
         try {
-          var5 = (pi) (hc.field_b.g(32073));
+          var5 = (pi) (hc.field_b.beginForward(32073));
           var1 = var5;
           if (var1 == null) {
             return false;

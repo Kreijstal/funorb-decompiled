@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ih extends ej {
-    static vl field_x;
+    static IntrusiveDeque field_x;
     static String field_z;
     static String field_u;
     static bd field_v;
@@ -502,7 +502,7 @@ final class ih extends ej {
 
     public static void f(int param0) {
         if (param0 != 200) {
-          field_x = (vl) null;
+          field_x = (IntrusiveDeque) null;
         }
         field_x = null;
         field_u = null;
@@ -565,7 +565,7 @@ final class ih extends ej {
         field_u = "Activate the reactor on this level, or seal off the breach from environmental controls.";
         field_s = false;
         field_z = "This door is sealed from the other side. I'll have to find another way around.";
-        field_x = new vl();
+        field_x = new IntrusiveDeque();
         field_w = 9;
     }
 }

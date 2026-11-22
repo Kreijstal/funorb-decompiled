@@ -76,8 +76,8 @@ final class mn extends pd {
         if (param0) {
           field_l = (String[]) null;
         }
-        be.field_d.a((byte) -21);
-        be.field_d = null;
+        SecondaryNodeDeque.field_d.a((byte) -21);
+        SecondaryNodeDeque.field_d = null;
         tl.field_a.a((byte) -87);
         tl.field_a = null;
         jo.field_p.a((byte) -96);

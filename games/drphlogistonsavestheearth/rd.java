@@ -11,7 +11,7 @@ final class rd extends wh {
     static he[] field_A;
     static int field_z;
     static int[] field_y;
-    static vd field_C;
+    static IntrusiveDeque field_C;
     static int field_B;
 
     final boolean a(byte param0) {
@@ -74,18 +74,18 @@ final class rd extends wh {
     final static void h(int param0) {
         if (param0 != 300) {
           rd.g(37);
-          if (dg.field_e <= 10) {
+          if (SecondaryNodeDeque.field_e <= 10) {
             lc.a(0, (byte) 24);
             return;
           }
-          lc.a(dg.field_e - 10, (byte) 24);
+          lc.a(SecondaryNodeDeque.field_e - 10, (byte) 24);
           return;
         }
-        if (dg.field_e <= 10) {
+        if (SecondaryNodeDeque.field_e <= 10) {
           lc.a(0, (byte) 24);
           return;
         }
-        lc.a(dg.field_e - 10, (byte) 24);
+        lc.a(SecondaryNodeDeque.field_e - 10, (byte) 24);
     }
 
     rd(Object param0, int param1) {
@@ -102,6 +102,6 @@ final class rd extends wh {
         field_J = new int[]{100, 100, 100, 100, 100, 300, 300, 200, 200, 100, 100, 200, 300, 200, 1000};
         ah.a((byte) 127, 50);
         field_y = new int[8192];
-        field_C = new vd();
+        field_C = new IntrusiveDeque();
     }
 }

@@ -8,7 +8,7 @@ abstract class hd {
     int field_h;
     int field_j;
     int field_i;
-    static jc field_l;
+    static IntrusiveDeque field_l;
     static km field_f;
     static String field_e;
     static ci field_c;
@@ -118,7 +118,7 @@ abstract class hd {
     abstract void a(int param0, int param1, int param2);
 
     static {
-        field_l = new jc();
+        field_l = new IntrusiveDeque();
         field_f = new km(640, 480);
     }
 }

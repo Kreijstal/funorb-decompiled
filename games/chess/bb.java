@@ -5,7 +5,7 @@ final class bb {
     static int field_b;
     static java.awt.Color field_e;
     static String field_c;
-    static jc field_d;
+    static IntrusiveDeque field_d;
     static String field_a;
 
     final static void a(ResourceArchive param0, rk[] param1, ResourceArchive param2, byte param3, int[] param4) {
@@ -283,7 +283,7 @@ final class bb {
           jf.field_f.field_hb = wk.a(param0, 1, "downbutton_mouseheld", "lobby");
           jf.field_f.field_nb = wk.a(param0, 1, "downbutton_disabled", "lobby");
           ia.field_o = new pd(0L, wk.field_f, jf.field_f, bj.field_ob, bf.field_K);
-          cn.field_b = new ok(0L, (ci) null, gm.field_b, ia.field_o, pa.field_m, (String) null, (String) null);
+          SecondaryNodeDeque.field_b = new ok(0L, (ci) null, gm.field_b, ia.field_o, pa.field_m, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -321,7 +321,7 @@ final class bb {
         int var9;
         var9 = Chess.field_G;
         if (param6 != 1) {
-          field_d = (jc) null;
+          field_d = (IntrusiveDeque) null;
         }
         if (param3 > param5) {
           if (param3 < param7) {

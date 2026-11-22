@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    private ng field_a;
+    private IntrusiveDeque field_a;
     static String field_b;
     static int field_g;
     static String field_d;
@@ -11,8 +11,8 @@ final class ta {
     static long field_e;
 
     final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_a.field_b.previous;
-        if (this.field_a.field_b == var2) {
+        IntrusiveNode var2 = this.field_a.sentinel.previous;
+        if (this.field_a.sentinel == var2) {
           this.field_c = null;
           return null;
         }
@@ -38,9 +38,9 @@ final class ta {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_a.field_b.next;
+            var3 = this.field_a.sentinel.next;
           }
-          if (var3 == this.field_a.field_b) {
+          if (var3 == this.field_a.sentinel) {
             this.field_c = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
@@ -70,7 +70,7 @@ final class ta {
         if (param0 != 31842) {
           return (IntrusiveNode) null;
         }
-        if (var2 != this.field_a.field_b) {
+        if (var2 != this.field_a.sentinel) {
           this.field_c = var2.previous;
           return var2;
         }
@@ -83,7 +83,7 @@ final class ta {
         if (param0 >= -49) {
           return (IntrusiveNode) null;
         }
-        if (this.field_a.field_b == var2) {
+        if (this.field_a.sentinel == var2) {
           this.field_c = null;
           return null;
         }
@@ -137,17 +137,17 @@ final class ta {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 250) {
-          this.field_a = (ng) null;
-          var2 = this.field_a.field_b.next;
-          if (this.field_a.field_b != var2) {
+          this.field_a = (IntrusiveDeque) null;
+          var2 = this.field_a.sentinel.next;
+          if (this.field_a.sentinel != var2) {
             this.field_c = var2.next;
             return var2;
           }
           this.field_c = null;
           return null;
         }
-        var2Lifetime1 = this.field_a.field_b.next;
-        if (this.field_a.field_b != var2Lifetime1) {
+        var2Lifetime1 = this.field_a.sentinel.next;
+        if (this.field_a.sentinel != var2Lifetime1) {
           this.field_c = var2Lifetime1.next;
           return var2Lifetime1;
         }
@@ -185,7 +185,7 @@ final class ta {
         ch.field_e = param2;
     }
 
-    ta(ng param0) {
+    ta(IntrusiveDeque param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
@@ -215,11 +215,11 @@ final class ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_a.field_b.previous;
+            var3 = this.field_a.sentinel.previous;
           } else {
             var3 = param0;
           }
-          if (var3 == this.field_a.field_b) {
+          if (var3 == this.field_a.sentinel) {
             this.field_c = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);

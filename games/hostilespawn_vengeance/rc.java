@@ -248,10 +248,10 @@ final class rc {
           if (var2 != 0) {
             if (var2 == 1) {
               var3 = var9.d(param0 ^ 8193);
-              var4 = (m) (wk.field_g.g(-90));
+              var4 = (m) (wk.field_g.beginForward(-90));
               while (var4 != null) {
                 if (~var3 != ~var4.field_o) {
-                  var4 = (m) (wk.field_g.a(12684));
+                  var4 = (m) (wk.field_g.nextForward(12684));
                   continue;
                 }
                 break;
@@ -266,7 +266,7 @@ final class rc {
               le.c((byte) 117);
             }
           } else {
-            var3_ref_uj = (uj) (ve.field_b.g(param0 ^ -65));
+            var3_ref_uj = (uj) (ve.field_b.beginForward(param0 ^ -65));
             if (var3_ref_uj == null) {
               le.c((byte) 51);
               return;

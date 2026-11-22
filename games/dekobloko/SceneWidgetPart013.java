@@ -82,15 +82,15 @@ final class SceneWidgetPart013 extends SceneWidget {
 
     final boolean computeBoolean1713(byte byteArgument1) {
         if (byteArgument1 > 98) {
-          return !this.computeBoolean0133((byte) -68) ? true : false;
+          return !this.isSecondaryLinked((byte) -68) ? true : false;
         }
         SceneWidgetPart013.computeBoolean1711((byte) 106);
-        return !this.computeBoolean0133((byte) -68) ? true : false;
+        return !this.isSecondaryLinked((byte) -68) ? true : false;
     }
 
     final int computeInteger1710(int integerArgument1) {
         int integerLocal1 = 113 / ((integerArgument1 - 24) / 54);
-        return (int)this.computeLong0132((byte) 57);
+        return (int)this.getSecondaryKey((byte) 57);
     }
 
     final static void performAction1707(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int[] integerArrayArgument8, int integerArgument9, int integerArgument10) {

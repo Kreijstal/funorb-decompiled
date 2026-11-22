@@ -71,10 +71,10 @@ final class ui {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_35_0 = vd.field_a;
+                stackIn_35_0 = IntrusiveDeque.field_a;
                 return stackIn_35_0;
               }
-              stackIn_20_0 = vd.field_a;
+              stackIn_20_0 = IntrusiveDeque.field_a;
               return stackIn_20_0;
             }
             stackIn_15_0 = p.field_b;

@@ -6,7 +6,7 @@ final class ae extends RuntimeException {
     static String field_a;
     String field_h;
     static aa[] field_e;
-    static dk field_f;
+    static SecondaryNodeHashTable field_f;
     static java.security.SecureRandom field_j;
     static String field_d;
     static String field_i;

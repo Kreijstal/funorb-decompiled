@@ -287,10 +287,10 @@ final class sf {
           var2 = var27.readUnsignedByte(param0 + 31764);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(param0 - 788751188);
-            var4_ref_vb = (vb) (je.field_i.h(-11151));
+            var4_ref_vb = (vb) (je.field_i.beginForward(-11151));
             while (var4_ref_vb != null) {
               if (var4_ref_vb.field_i != var3) {
-                var4_ref_vb = (vb) (je.field_i.e(0));
+                var4_ref_vb = (vb) (je.field_i.nextForward(0));
                 continue;
               }
               break;
@@ -386,10 +386,10 @@ final class sf {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(-788751192);
             var4 = var27.readLong((byte) -53);
-            var6 = (bg) (gf.field_h.h(param0 ^ 11149));
+            var6 = (bg) (gf.field_h.beginForward(param0 ^ 11149));
             while (var6 != null) {
               if (var6.field_i != var3Lifetime1) {
-                var6 = (bg) (gf.field_h.e(param0 + 4));
+                var6 = (bg) (gf.field_h.nextForward(param0 + 4));
                 continue;
               }
               break;

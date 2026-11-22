@@ -456,9 +456,9 @@ final class qm {
         if (hm.field_g) {
           dn.a(true);
           df.a((byte) 102);
-          if (6 == jc.field_f &&
+          if (6 == IntrusiveDeque.field_f &&
             vk.field_b == 0) {
-            jc.field_f = 0;
+            IntrusiveDeque.field_f = 0;
             uk.a(qk.field_h, false, 28333, 0);
           }
         }

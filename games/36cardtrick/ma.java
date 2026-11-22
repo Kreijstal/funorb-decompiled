@@ -154,7 +154,7 @@ final class ma {
         int var3;
         var3 = Main.field_T;
         d.field_a = null;
-        ed.field_c = 0;
+        IterableNodeHashTable.field_c = 0;
         tf.field_r = null;
         var2 = ak.field_O;
         ak.field_O = ej.field_kb;

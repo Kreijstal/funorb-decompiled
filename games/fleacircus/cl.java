@@ -3,7 +3,7 @@
  */
 final class cl {
     static String field_c;
-    static vc field_e;
+    static IntrusiveDeque field_e;
     static String field_a;
     static int field_b;
     static int[] field_d;
@@ -47,7 +47,7 @@ final class cl {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -114);
             }
-            var16_ref = (ia) (rj.field_i.c((byte) 47));
+            var16_ref = (ia) (rj.field_i.beginForward((byte) 47));
             if (var16_ref == null) {
               k.c(-28354);
               return;
@@ -59,7 +59,7 @@ final class cl {
             return;
           }
           if (var2 == 1) {
-            var12 = (hi) (bf.field_e.c((byte) 47));
+            var12 = (hi) (bf.field_e.beginForward((byte) 47));
             if (var12 != null) {
               var12.unlink(-1);
               return;
@@ -72,7 +72,7 @@ final class cl {
             k.c(-28354);
             return;
           }
-          var14 = (ia) (rj.field_i.c((byte) 47));
+          var14 = (ia) (rj.field_i.beginForward((byte) 47));
           if (var14 == null) {
             k.c(-28354);
             return;

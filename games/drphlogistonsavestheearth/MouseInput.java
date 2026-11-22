@@ -198,12 +198,12 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     }
 
     final static void a(boolean param0) {
-        ek var1 = (ek) (tg.field_g.a((byte) -114));
+        ek var1 = (ek) (tg.field_g.removeLast((byte) -114));
         if (var1 == null) {
           var1 = new ek();
         }
         var1.a(wj.field_j, wj.field_l, wj.field_b, wj.field_c, (byte) 69, wj.field_k, wj.field_g, wj.field_e);
-        hl.field_c.a(var1, 255);
+        hl.field_c.addLast(var1, 255);
         if (!param0) {
           field_f = (String) null;
           return;

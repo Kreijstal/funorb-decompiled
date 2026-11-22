@@ -81,10 +81,10 @@ final class UiComponentPart009 extends InteractiveComponent {
         RuntimeException caughtExceptionLocal5 = null;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          mixedSupport020Local4 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1741((byte) 113));
+          mixedSupport020Local4 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.beginBackward((byte) 113));
           while (mixedSupport020Local4 != null) {
             MixedSupport039.performAction0525((byte) 104, mixedSupport020Local4, integerArgument2);
-            mixedSupport020Local4 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1745(true));
+            mixedSupport020Local4 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.nextBackward(true));
           }
           if (integerArgument1 == 640) {
             return;

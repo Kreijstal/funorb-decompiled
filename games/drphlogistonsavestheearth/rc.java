@@ -18,7 +18,7 @@ final class rc {
             nl var4 = (nl) null;
             rc.a(-11, (nl) null, 100);
           }
-          gf.field_A.a(param1, 255);
+          gf.field_A.addLast(param1, 255);
           fc.a(-121, param1, param0);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "rc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

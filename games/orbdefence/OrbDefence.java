@@ -103,7 +103,7 @@ public final class OrbDefence extends NetworkGameClient {
         var2Lifetime1 = -59 / ((54 - param0) / 39);
         if (!n.b((byte) -70)) {
           while (true) {
-            var3_ref_ha = (ha) (MouseWheelInput.field_b.e(0));
+            var3_ref_ha = (ha) (MouseWheelInput.field_b.removeFirst(0));
             if (var3_ref_ha == null) {
               break;
             }
@@ -371,7 +371,7 @@ public final class OrbDefence extends NetworkGameClient {
     final void a(boolean param0) {
         OrbDefence.clearStaticReferences((byte) -119);
         kg.c(96);
-        im.a(9);
+        IntrusiveDeque.a(9);
         wf.a(71);
         jm.clearStaticReferences(-1178583839);
         KeyboardListener.c(118);
@@ -704,7 +704,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (param0 >= -72) {
           field_C = (String) null;
         }
-        var3 = (kg) (oj.field_r.b((byte) 120));
+        var3 = (kg) (oj.field_r.beginForward((byte) 120));
         if (var3 != null) {
           var5 = lc.field_x;
           if (var5 >= 80) {
@@ -1091,12 +1091,12 @@ public final class OrbDefence extends NetworkGameClient {
         if (param0) {
           return;
         }
-        if (oj.field_r.b((byte) -55) != null) {
+        if (oj.field_r.beginForward((byte) -55) != null) {
           fieldTemp$0 = lc.field_x + 1;
           lc.field_x = lc.field_x + 1;
           if (fieldTemp$0 == 335) {
             lc.field_x = 0;
-            oj.field_r.e(0);
+            oj.field_r.removeFirst(0);
           }
         }
         if (0 != lc.field_r) {

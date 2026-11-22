@@ -112,7 +112,7 @@ final class fj {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = Chess.field_G;
-        ac.field_j.field_Kb.field_I.e(-31023);
+        ac.field_j.field_Kb.field_I.clear(-31023);
         var4 = null;
         var5 = 0;
         if (param3 != 8) {

@@ -987,8 +987,8 @@ final class un {
         }
         vk.field_b = vk.field_b | var4;
         wc.field_w = wc.field_w | var4;
-        hd.field_l.a((IntrusiveNode) (new ef(param1)), (byte) 98);
-        tg.field_e.a((IntrusiveNode) (new ac(param1, param2, this.field_D, this.field_E, this.field_j, this.field_r)), (byte) 98);
+        hd.field_l.addFirst((IntrusiveNode) (new ef(param1)), (byte) 98);
+        tg.field_e.addFirst((IntrusiveNode) (new ac(param1, param2, this.field_D, this.field_E, this.field_j, this.field_r)), (byte) 98);
     }
 
     final void h(int param0) {
@@ -1142,7 +1142,7 @@ final class un {
         this.a(param1, -2);
         if (this.field_b &&
           !hl.field_h &&
-          qb.field_a >= 400 && (-1 == jc.field_f ||
+          qb.field_a >= 400 && (-1 == IntrusiveDeque.field_f ||
           -1 == qk.field_h)) {
           ec.field_d.field_C = true;
           if (!(!ec.field_d.field_d)) {

@@ -186,7 +186,7 @@ class UiComponentPart025 extends InteractiveComponent {
         int integerLocal3;
         UiComponent uiComponentLocal4;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        networkSupport010Local1 = (NetworkSupport010) (this.nodeDequeState0025.computeHashNode1741((byte) 49));
+        networkSupport010Local1 = (NetworkSupport010) (this.nodeDequeState0025.beginBackward((byte) 49));
         if (integerArgument1 != 1) {
           uiComponentLocal4 = (UiComponent) null;
           this.performAction0218((UiComponent) null, 8, -16, -10);
@@ -202,7 +202,7 @@ class UiComponentPart025 extends InteractiveComponent {
             }
             networkSupport010Local2 = networkSupport010Local2.networkSupport010State0001;
           }
-          networkSupport010Local1 = (NetworkSupport010) (this.nodeDequeState0025.computeHashNode1745(true));
+          networkSupport010Local1 = (NetworkSupport010) (this.nodeDequeState0025.nextBackward(true));
         }
         return null;
     }
@@ -326,7 +326,7 @@ class UiComponentPart025 extends InteractiveComponent {
             if (objectLocal12 != null) {
               ((NetworkSupport010) (objectLocal12)).networkSupport010State0001 = networkSupport010Local16;
             }
-            this.nodeDequeState0025.performAction1735(networkSupport010Local16, 2777);
+            this.nodeDequeState0025.addFirst(networkSupport010Local16, 2777);
             objectLocal12 = networkSupport010Local16;
           }
         }

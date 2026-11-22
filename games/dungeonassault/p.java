@@ -1260,7 +1260,7 @@ final class p extends qe {
         var6 = CipherPacketBuffer.field_x;
         var4 = var6;
         if (!gm.field_d.field_H) {
-          var4 = var6 + dh.field_c;
+          var4 = var6 + SecondaryNodeDeque.field_c;
         }
         this.field_b = (kl) ((Object) new lf(oa.field_h, var4));
         return;

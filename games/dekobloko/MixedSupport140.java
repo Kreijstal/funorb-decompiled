@@ -106,7 +106,7 @@ abstract class MixedSupport140 extends DualNode {
           longLocal7 = MixedSupport062.computeLong0734(integerArgument2 + 4);
           if (MixedSupport126.integerState0792 != 0 &&
             UiComponentPart009.integerState0150 < 0) {
-            renderingSupport001Local9 = (RenderingSupport001) (MixedSupport018.nodeDequeState0006.computeHashNode1741((byte) -98));
+            renderingSupport001Local9 = (RenderingSupport001) (MixedSupport018.nodeDequeState0006.beginBackward((byte) -98));
             if (renderingSupport001Local9 != null &&
               renderingSupport001Local9.longState0004 < longLocal7) {
               renderingSupport001Local9.unlink((byte) 112);
@@ -157,7 +157,7 @@ abstract class MixedSupport140 extends DualNode {
             for (integerLocal2 = 0; NetworkSupport012.integerState0759 > integerLocal2; integerLocal2++) {
               renderingSupport001Local11.byteArrayState0003[integerLocal2] = UiComponentPart006.cipherPacketBufferState0001.payload[integerLocal2];
             }
-            MixedSupport018.nodeDequeState0006.performAction1735(renderingSupport001Local11, integerArgument2 ^ 2777);
+            MixedSupport018.nodeDequeState0006.addFirst(renderingSupport001Local11, integerArgument2 ^ 2777);
             UiComponentPart009.integerState0150 = -1;
           }
         } catch (java.lang.RuntimeException caughtParameterLocal13) {

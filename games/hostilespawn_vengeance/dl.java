@@ -7,7 +7,7 @@ final class dl extends PcmStream {
     static String field_p;
     static int[] field_o;
     static bd field_r;
-    vl field_t;
+    IntrusiveDeque field_t;
     static bd field_n;
     static String field_m;
     wm field_q;
@@ -20,7 +20,7 @@ final class dl extends PcmStream {
         PcmStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (tm) (this.field_t.g(-56));
+          var1 = (tm) (this.field_t.beginForward(-56));
           if (var1 == null) {
             stackIn_2_0 = null;
             return (PcmStream) (stackIn_2_0);
@@ -124,7 +124,7 @@ final class dl extends PcmStream {
                 }
                 case 1: {
                     try {
-                        var1 = (tm) (this.field_t.a(12684));
+                        var1 = (tm) (this.field_t.nextForward(12684));
                         if (null != var1) {
                             /* Inlined CFG state: 5. */
                             {
@@ -3348,7 +3348,7 @@ final class dl extends PcmStream {
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           this.field_q.c(param0);
-          var3 = (tm) (this.field_t.g(-91));
+          var3 = (tm) (this.field_t.beginForward(-91));
           while (var3 != null) {
             if (var4 != 0) {
               return;
@@ -3371,7 +3371,7 @@ final class dl extends PcmStream {
                 var3.field_u = var3.field_u - var2_int;
               }
             }
-            var3 = (tm) (this.field_t.a(12684));
+            var3 = (tm) (this.field_t.nextForward(12684));
             continue;
           }
           return;
@@ -3415,7 +3415,7 @@ final class dl extends PcmStream {
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
           this.field_q.b(param0, param1, param2);
-          var6 = (tm) (this.field_t.g(-62));
+          var6 = (tm) (this.field_t.beginForward(-62));
           while (null != var6) {
             if (var7 != 0) {
               return;
@@ -3439,7 +3439,7 @@ final class dl extends PcmStream {
                 break;
               }
             }
-            var6 = (tm) (this.field_t.a(12684));
+            var6 = (tm) (this.field_t.nextForward(12684));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3462,7 +3462,7 @@ final class dl extends PcmStream {
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_t = new vl();
+        this.field_t = new IntrusiveDeque();
         this.field_q = new wm();
         try {
           this.field_s = param0;

@@ -1630,7 +1630,7 @@ final class lm {
                 }
                 var2 = t.a(param0 + 15020, "create_alert_doublespace");
                 if (null != var2) {
-                  im.field_b = bk.a(var2, -12465);
+                  IntrusiveDeque.field_b = bk.a(var2, -12465);
                 }
                 var2 = t.a(param0 + 15020, "create_alert_passchars");
                 if (null != var2) {

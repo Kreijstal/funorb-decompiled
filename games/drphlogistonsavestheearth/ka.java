@@ -251,18 +251,18 @@ final class ka extends hj {
         RuntimeException var2 = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var4 = (bg) (gf.field_h.h(-11151));
+          var4 = (bg) (gf.field_h.beginForward(-11151));
           while (var4 != null) {
             DirectByteStorage.a(param0, var4, -125);
-            var4 = (bg) (gf.field_h.e(0));
+            var4 = (bg) (gf.field_h.nextForward(0));
           }
           if (param1 >= -23) {
             field_m = (int[]) null;
           }
-          var5 = (vb) (je.field_i.h(-11151));
+          var5 = (vb) (je.field_i.beginForward(-11151));
           while (var5 != null) {
             mh.a(param0, (byte) 52, var5);
-            var5 = (vb) (je.field_i.e(0));
+            var5 = (vb) (je.field_i.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

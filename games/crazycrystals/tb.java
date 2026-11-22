@@ -5,7 +5,7 @@ abstract class tb {
     static dl[] field_e;
     static int field_g;
     bh[] field_h;
-    static wb field_b;
+    static IntrusiveDeque field_b;
     static tj field_d;
     static String field_f;
     static String field_c;
@@ -299,7 +299,7 @@ abstract class tb {
             }
             var2 = 1;
           }
-          lb.field_l.a(0, be.a(-1013410975, to.field_a, dp.field_h), be.a(-1013410975, qh.field_i, IsaacRandom.field_h));
+          lb.field_l.a(0, SecondaryNodeDeque.a(-1013410975, to.field_a, dp.field_h), SecondaryNodeDeque.a(-1013410975, qh.field_i, IsaacRandom.field_h));
           if (lb.field_l.a(param0)) {
             var1_int = 1;
           }
@@ -338,6 +338,6 @@ abstract class tb {
     static {
         field_c = "Player Name: ";
         field_f = "Dig through the earth to let the rocks fall. Take your time; you can support the rocks!";
-        field_b = new wb();
+        field_b = new IntrusiveDeque();
     }
 }

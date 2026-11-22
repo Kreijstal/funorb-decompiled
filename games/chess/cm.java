@@ -8,7 +8,7 @@ abstract class cm extends DualLinkNode {
     static String[] field_r;
     static int field_u;
     static rk field_s;
-    static dk field_v;
+    static SecondaryNodeHashTable field_v;
 
     abstract boolean g(int param0);
 

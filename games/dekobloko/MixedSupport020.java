@@ -141,7 +141,7 @@ final class MixedSupport020 extends HashNode {
           integerLocal58 = stackIntegerLocal7;
           nodeDequeLocal23 = sceneWidgetPart008Argument4.sceneWidgetState0090.nodeDequeState0034;
           objectLocal25 = null;
-          sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.computeHashNode1741((byte) 25));
+          sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.beginBackward((byte) 25));
           while (sceneWidgetPart012Local26 != null) {
             integerLocal27 = 0;
             if (sceneWidgetPart012Local26.nodeDequeState0034 == null) {
@@ -459,7 +459,7 @@ final class MixedSupport020 extends HashNode {
                 MixedSupport117.stringState0515 = (String) (objectLocal55);
               }
             }
-            sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.computeHashNode1745(true));
+            sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal64) {

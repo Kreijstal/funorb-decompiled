@@ -49,10 +49,10 @@ final class h extends IntrusiveNode {
           if (param1 != 0) {
             return;
           }
-          var4 = (pg) (nd.field_h.g(-18110));
+          var4 = (pg) (nd.field_h.beginBackward(-18110));
           while (var4 != null) {
             tm.a(false, var4, param0);
-            var4 = (pg) (nd.field_h.a((byte) -122));
+            var4 = (pg) (nd.field_h.nextBackward((byte) -122));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -336,7 +336,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             EmailValidationError.sceneWidgetState0060.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(98, SceneWidgetPart013.stringState0587, new String[]{MixedSupport033.stringState0159});
             MixedSupport066.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = null;
             objectLocal20 = null;
-            sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.computeHashNode1741((byte) -108));
+            sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.beginBackward((byte) -108));
             while (true) {
               if (null != sceneWidgetPart014Local21) {
                 integerLocal22 = 0;
@@ -440,7 +440,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                     MixedSupport117.stringState0515 = sceneWidgetPart014Local21.stringState0605;
                   }
                   objectLocal20 = sceneWidgetPart014Local21;
-                  sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.computeHashNode1745(true));
+                  sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.nextBackward(true));
                   continue;
                 }
               } else {

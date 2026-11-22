@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cf {
-    static vc field_d;
+    static IntrusiveDeque field_d;
     static String field_b;
     static kc field_c;
     static String field_a;
@@ -15,7 +15,7 @@ final class cf {
           field_b = null;
           return;
         }
-        field_d = (vc) null;
+        field_d = (IntrusiveDeque) null;
         field_c = null;
         field_b = null;
     }
@@ -30,7 +30,7 @@ final class cf {
 
     static {
         field_b = "Waiting for patches";
-        field_d = new vc();
+        field_d = new IntrusiveDeque();
         field_c = null;
         field_a = "to keep fullscreen or";
     }

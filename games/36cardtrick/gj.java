@@ -28,7 +28,7 @@ final class gj implements Runnable {
           var9 = rd.field_j;
           var2 = var9.readUnsignedByte(-128);
           if (var2 == 0) {
-            var8 = (pf) (ua.field_G.a((byte) 74));
+            var8 = (pf) (ua.field_G.beginForward((byte) 74));
             if (var8 == null) {
               mc.a((byte) -128);
               return;
@@ -54,10 +54,10 @@ final class gj implements Runnable {
             return;
           }
           var3 = var9.readInt((byte) 124);
-          var4_ref_rh = (rh) (de.field_e.a((byte) 74));
+          var4_ref_rh = (rh) (de.field_e.beginForward((byte) 74));
           while (var4_ref_rh != null) {
             if (var4_ref_rh.field_i != var3) {
-              var4_ref_rh = (rh) (de.field_e.b((byte) -120));
+              var4_ref_rh = (rh) (de.field_e.nextForward((byte) -120));
               continue;
             }
             break;

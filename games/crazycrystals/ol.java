@@ -9,7 +9,7 @@ final class ol extends om {
     static int[] field_y;
     static int[] field_C;
     static int field_B;
-    private wb field_A;
+    private IntrusiveDeque field_A;
     static uf[] field_D;
 
     final void h(int param0) {
@@ -29,14 +29,14 @@ final class ol extends om {
 
     public ol() {
         super(0, 0, oj.field_y, pk.field_c, (wo) null, (bi) null);
-        this.field_A = new wb();
+        this.field_A = new IntrusiveDeque();
     }
 
     final void b(boolean param0) {
         int var4 = CrazyCrystals.field_B;
         tm var2 = new tm(this.field_A);
         if (param0) {
-          this.field_A = (wb) null;
+          this.field_A = (IntrusiveDeque) null;
         }
         ab var3 = (ab) (var2.a((byte) 124));
         while (var3 != null) {
@@ -144,7 +144,7 @@ final class ol extends om {
             throw new IllegalArgumentException();
           }
           var3 = (ab) (param1);
-          this.field_A.a(82, var3);
+          this.field_A.addFirst(82, var3);
           var3.field_C = true;
           var3.a(true, (qm) (this));
           if (param0 != -3264) {

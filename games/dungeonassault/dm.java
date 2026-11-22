@@ -16,7 +16,7 @@ final class dm {
           return false;
         }
         if (!tl.field_l) {
-          return !dh.a((byte) -125) ? true : false;
+          return !SecondaryNodeDeque.a((byte) -125) ? true : false;
         }
         return false;
     }

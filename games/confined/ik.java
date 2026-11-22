@@ -5,7 +5,7 @@ final class ik extends ah {
     static int[] field_cb;
     private oi field_bb;
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -30,7 +30,7 @@ final class ik extends ah {
           this.field_bb.field_p = -(this.field_C * var9) + this.field_D;
           this.field_bb.field_v = -var9;
           this.field_bb.field_m = -var5;
-          param0.a((IntrusiveNode) (this.field_bb), (byte) 99);
+          param0.addLast((IntrusiveNode) (this.field_bb), (byte) 99);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ik.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -179,7 +179,7 @@ final class ik extends ah {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -258,8 +258,8 @@ final class ik extends ah {
           ri.a((IntrusiveNode) (this), param0 - 26402, new mm(this.field_A, (ee) (this), this.field_ab, mg.field_b[var2]));
         }
         if (param0 != 26402) {
-          mn var4 = (mn) null;
-          this.a((mn) null, (byte) 88);
+          PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
+          this.a((PrimaryNodeDeque) null, (byte) 88);
         }
     }
 

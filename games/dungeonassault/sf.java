@@ -602,7 +602,7 @@ final class sf implements cl {
                     var15Lifetime1 == 0) {
                     if (((var14Lifetime1 != 0)) &&
                       ((var15Lifetime1 == 0))) {
-                      qi.field_i.h(var9 + (-var4_int + (-BoundedRandomAccessFile.field_a.field_y - 2 >> 1)), -1 + var10 + (-BoundedRandomAccessFile.field_a.field_v + var6 >> 1));
+                      IterableNodeHashTable.field_i.h(var9 + (-var4_int + (-BoundedRandomAccessFile.field_a.field_y - 2 >> 1)), -1 + var10 + (-BoundedRandomAccessFile.field_a.field_v + var6 >> 1));
                     }
                     decompiledFrameRemainder1 = false;
                   }

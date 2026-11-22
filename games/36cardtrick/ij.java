@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij {
-    static bk field_h;
+    static IntrusiveDeque field_h;
     static String[] field_a;
     static String field_d;
     static boolean field_g;
@@ -139,7 +139,7 @@ final class ij {
     }
 
     static {
-        field_h = new bk();
+        field_h = new IntrusiveDeque();
         field_a = new String[16];
         field_d = "Friends can be added in multiplayer<nbsp>games";
         field_e = 0;

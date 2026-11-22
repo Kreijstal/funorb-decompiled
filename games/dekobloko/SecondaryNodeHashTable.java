@@ -87,7 +87,7 @@ final class SecondaryNodeHashTable {
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (null != dualNodeArgument1.dualNodeState0004) {
-            dualNodeArgument1.performAction0134((byte) 75);
+            dualNodeArgument1.unlinkSecondary((byte) 75);
           }
           dualNodeLocal1 = this.dualNodeArrayState0001[(int)((long)(this.integerState0541 - 1) & longArgument3)];
           dualNodeArgument1.dualNodeState0003 = dualNodeLocal1;
@@ -156,7 +156,7 @@ final class SecondaryNodeHashTable {
             sceneWidgetArgument2.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport057.nodeDequeState0010 = sceneWidgetArgument2.nodeDequeState0034;
-          MixedSupport057.nodeDequeState0010.performAction1742(118);
+          MixedSupport057.nodeDequeState0010.clear(118);
           MixedSupport090.secondaryNodeHashTableState0004 = new SecondaryNodeHashTable(integerArgument5);
           ReturnedShape.integerState0693 = -1;
           UiComponentPart006.integerState0137 = -1;
@@ -166,13 +166,13 @@ final class SecondaryNodeHashTable {
             sceneWidgetArgument1.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport051.nodeDequeState0009 = sceneWidgetArgument1.nodeDequeState0034;
-          MixedSupport051.nodeDequeState0009.performAction1742(integerArgument3 ^ 105);
+          MixedSupport051.nodeDequeState0009.clear(integerArgument3 ^ 105);
           MixedSupport121.secondaryNodeHashTableState0005 = new SecondaryNodeHashTable(integerArgument10);
           if (sceneWidgetArgument6.nodeDequeState0034 == null) {
             sceneWidgetArgument6.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport091.nodeDequeState0021 = sceneWidgetArgument6.nodeDequeState0034;
-          MixedSupport091.nodeDequeState0021.performAction1742(121);
+          MixedSupport091.nodeDequeState0021.clear(121);
           GameApplet.secondaryNodeHashTableState0002 = new SecondaryNodeHashTable(integerArgument9);
           MixedSupport089.integerState0547 = integerArgument8;
           SceneWidgetNode.longState0023 = 0L;

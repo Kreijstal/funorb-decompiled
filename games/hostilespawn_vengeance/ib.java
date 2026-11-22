@@ -6,7 +6,7 @@ final class ib {
     static String[] field_b;
     static long field_d;
     static int field_c;
-    static vl field_a;
+    static IntrusiveDeque field_a;
 
     final static boolean a(byte param0) {
         RuntimeException var1 = null;
@@ -1661,6 +1661,6 @@ final class ib {
     static {
         field_b = new String[]{"By rating", "By win percentage"};
         field_c = 0;
-        field_a = new vl();
+        field_a = new IntrusiveDeque();
     }
 }

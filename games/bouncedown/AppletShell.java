@@ -553,7 +553,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               var8 = ck.field_e.requestThreadStart(1, (byte) -102, (Runnable) (this));
               while (true) {
                 if (0 == var8.status) {
-                  wh.a(10L, 19406);
+                  SecondaryNodeDeque.a(10L, 19406);
                   if (var9 == 0) {
                     continue;
                   }
@@ -942,7 +942,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (this == og.field_c &&
             !FullscreenFocusCanvas.field_d) {
             ua.field_d = fa.a(112);
-            wh.a(5000L, 19406);
+            SecondaryNodeDeque.a(5000L, 19406);
             jj.field_a = null;
             this.a(false, (byte) -57);
             return;

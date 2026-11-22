@@ -94,14 +94,14 @@ final class ca extends IntrusiveNode {
         int stackIn_45_0 = 0;
         int var6;
         int var7;
-        rc.field_b[be.field_c] = param3;
-        wp.field_d[be.field_c] = be.field_c;
-        mh.field_l[be.field_c] = param2;
+        rc.field_b[SecondaryNodeDeque.field_c] = param3;
+        wp.field_d[SecondaryNodeDeque.field_c] = SecondaryNodeDeque.field_c;
+        mh.field_l[SecondaryNodeDeque.field_c] = param2;
         if (param2 >= ae.field_F) {
           if (param2 <= uo.field_m) {
-            dk.field_l[be.field_c] = param0;
-            j.field_i[be.field_c] = param1;
-            cd.field_u[be.field_c] = param5;
+            dk.field_l[SecondaryNodeDeque.field_c] = param0;
+            j.field_i[SecondaryNodeDeque.field_c] = param1;
+            cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
             if (var6 == 0) {
               stackIn_45_0 = 0;
@@ -109,8 +109,8 @@ final class ca extends IntrusiveNode {
               stackIn_45_0 = 1000 * param0 / var6;
             }
             var7 = stackIn_45_0;
-            jk.field_g[be.field_c] = var7;
-            be.field_c = be.field_c + 1;
+            jk.field_g[SecondaryNodeDeque.field_c] = var7;
+            SecondaryNodeDeque.field_c = SecondaryNodeDeque.field_c + 1;
             if (db.field_i > var7) {
               db.field_i = var7;
             }
@@ -124,9 +124,9 @@ final class ca extends IntrusiveNode {
             return;
           }
           em.field_i = param2;
-          dk.field_l[be.field_c] = param0;
-          j.field_i[be.field_c] = param1;
-          cd.field_u[be.field_c] = param5;
+          dk.field_l[SecondaryNodeDeque.field_c] = param0;
+          j.field_i[SecondaryNodeDeque.field_c] = param1;
+          cd.field_u[SecondaryNodeDeque.field_c] = param5;
           var6 = param5 + param1 + param0;
           if (var6 == 0) {
             stackIn_32_0 = 0;
@@ -137,9 +137,9 @@ final class ca extends IntrusiveNode {
         } else {
           db.field_i = param2;
           if (param2 <= uo.field_m) {
-            dk.field_l[be.field_c] = param0;
-            j.field_i[be.field_c] = param1;
-            cd.field_u[be.field_c] = param5;
+            dk.field_l[SecondaryNodeDeque.field_c] = param0;
+            j.field_i[SecondaryNodeDeque.field_c] = param1;
+            cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
             if (var6 == 0) {
               stackIn_5_0 = 0;
@@ -149,9 +149,9 @@ final class ca extends IntrusiveNode {
             var7 = stackIn_5_0;
           } else {
             em.field_i = param2;
-            dk.field_l[be.field_c] = param0;
-            j.field_i[be.field_c] = param1;
-            cd.field_u[be.field_c] = param5;
+            dk.field_l[SecondaryNodeDeque.field_c] = param0;
+            j.field_i[SecondaryNodeDeque.field_c] = param1;
+            cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
             if (var6 == 0) {
               stackIn_18_0 = 0;
@@ -161,8 +161,8 @@ final class ca extends IntrusiveNode {
             var7 = stackIn_18_0;
           }
         }
-        jk.field_g[be.field_c] = var7;
-        be.field_c = be.field_c + 1;
+        jk.field_g[SecondaryNodeDeque.field_c] = var7;
+        SecondaryNodeDeque.field_c = SecondaryNodeDeque.field_c + 1;
         if (db.field_i > var7) {
           db.field_i = var7;
         }

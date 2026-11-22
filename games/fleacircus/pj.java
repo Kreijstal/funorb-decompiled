@@ -46,10 +46,10 @@ final class pj extends cb {
           if (param0 <= 62) {
             return;
           }
-          var3 = (hg) (ak.field_d.c((byte) 47));
+          var3 = (hg) (ak.field_d.beginForward((byte) 47));
           while (var3 != null) {
             if (var3.field_m != var2) {
-              var3 = (hg) (ak.field_d.b((byte) -105));
+              var3 = (hg) (ak.field_d.nextForward((byte) -105));
               continue;
             }
             break;

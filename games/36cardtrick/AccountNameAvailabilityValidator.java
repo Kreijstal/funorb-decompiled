@@ -264,7 +264,7 @@ final class AccountNameAvailabilityValidator extends cg {
         long var10 = 0L;
         long var12 = 0L;
         int var14 = 0;
-        bk discarded$0 = new bk();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_o = new long[11];
         field_n = new long[32];
         field_k = new long[8][256];

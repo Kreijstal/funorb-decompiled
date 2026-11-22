@@ -87,7 +87,7 @@ abstract class ByteStorage {
           if (param2 != 8) {
             return true;
           }
-          var3 = bc.a(param1, param2 - 111);
+          var3 = IntrusiveDeque.a(param1, param2 - 111);
           stackIn_8_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

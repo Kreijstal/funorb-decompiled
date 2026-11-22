@@ -4,7 +4,7 @@
 final class fm extends kn {
     static ci field_T;
     static String field_P;
-    private jc field_N;
+    private IntrusiveDeque field_N;
     static int field_S;
     static String field_U;
     static String field_Q;
@@ -66,7 +66,7 @@ final class fm extends kn {
           throw new IllegalArgumentException();
         }
         eh var3 = (eh) (param0);
-        this.field_N.a(var3, 91);
+        this.field_N.addLast(var3, 91);
         var3.field_P = true;
         if (param1 >= -8) {
           return;
@@ -95,7 +95,7 @@ final class fm extends kn {
 
     public fm() {
         super(0, 0, hk.field_I, e.field_O, (jm) null, (rg) null);
-        this.field_N = new jc();
+        this.field_N = new IntrusiveDeque();
     }
 
     final mf a(int param0) {
@@ -140,14 +140,14 @@ final class fm extends kn {
           return;
         }
         try {
-          var4 = (ci) (param0.field_I.g(-18110));
+          var4 = (ci) (param0.field_I.beginBackward(-18110));
           var2 = var4;
           while (var4 != null) {
             var4.field_pb = 0;
             var4.field_vb = 0;
             var4.field_N = 0;
             var4.field_V = 0;
-            var4 = (ci) (param0.field_I.a((byte) -102));
+            var4 = (ci) (param0.field_I.nextBackward((byte) -102));
             var2Lifetime1 = var4;
           }
           param0.field_N = 0;

@@ -534,10 +534,10 @@ class PacketBuffer extends IntrusiveNode {
           var2 = var28.l(32270);
           if (var2 == 0) {
             var3 = var28.e(8);
-            var4 = (ic) (ch.field_p.g(-102));
+            var4 = (ic) (ch.field_p.beginForward(-102));
             while (var4 != null) {
               if (var3 != var4.field_j) {
-                var4 = (ic) (ch.field_p.a(12684));
+                var4 = (ic) (ch.field_p.nextForward(12684));
                 continue;
               }
               break;
@@ -633,10 +633,10 @@ class PacketBuffer extends IntrusiveNode {
           if (var2 == 1) {
             var3Lifetime1 = var28.e(8);
             var4_long = var28.c(10818);
-            var6_ref_jd = (jd) (ib.field_a.g(param0 ^ -67));
+            var6_ref_jd = (jd) (ib.field_a.beginForward(param0 ^ -67));
             while (var6_ref_jd != null) {
               if (var3Lifetime1 != var6_ref_jd.field_u) {
-                var6_ref_jd = (jd) (ib.field_a.a(param0 ^ 12748));
+                var6_ref_jd = (jd) (ib.field_a.nextForward(param0 ^ 12748));
                 continue;
               }
               break;

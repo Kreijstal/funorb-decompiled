@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tl {
-    static ng field_h;
+    static IntrusiveDeque field_h;
     int field_b;
     static float field_g;
     int field_f;
@@ -11,35 +11,35 @@ final class tl {
     private int field_e;
     int field_c;
 
-    final static void a(boolean param0, ng param1) {
+    final static void a(boolean param0, IntrusiveDeque param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         IntrusiveNode var3 = null;
         int var4 = 0;
-        ng var5 = null;
+        IntrusiveDeque var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
-          var2 = param1.field_b;
+          var2 = param1.sentinel;
           do {
             var3 = var2.next;
             var2.previous = var3;
             var2 = var3;
-          } while (var2 != param1.field_b);
-          var2 = param1.field_b;
+          } while (var2 != param1.sentinel);
+          var2 = param1.sentinel;
           do {
             var3 = var2.previous;
             var3.next = var2;
             var2 = var3;
-          } while (param1.field_b != var2);
+          } while (param1.sentinel != var2);
           if (!param0) {
             return;
           }
-          var5 = (ng) null;
-          tl.a(true, (ng) null);
+          var5 = (IntrusiveDeque) null;
+          tl.a(true, (IntrusiveDeque) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,8 +58,8 @@ final class tl {
     public static void a(int param0) {
         field_h = null;
         if (param0 != 3) {
-          ng var2 = (ng) null;
-          tl.a(false, (ng) null);
+          IntrusiveDeque var2 = (IntrusiveDeque) null;
+          tl.a(false, (IntrusiveDeque) null);
         }
     }
 
@@ -118,6 +118,6 @@ final class tl {
     }
 
     static {
-        field_h = new ng();
+        field_h = new IntrusiveDeque();
     }
 }

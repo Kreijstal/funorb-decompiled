@@ -276,7 +276,7 @@ class UiComponent extends HashNode {
           return;
         }
         try {
-          RenderingSupport002.nodeDequeState0004.performAction1735(networkSupport005Argument2, 2777);
+          RenderingSupport002.nodeDequeState0004.addFirst(networkSupport005Argument2, 2777);
           MixedSupport070.performAction0912(integerArgument1, -15016, networkSupport005Argument2);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ce.GC(" + integerArgument1 + ',' + (networkSupport005Argument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');

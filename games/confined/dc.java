@@ -623,7 +623,7 @@ abstract class dc extends DualLinkNode {
         }
     }
 
-    final void a(mn param0, int param1) {
+    final void a(PrimaryNodeDeque param0, int param1) {
         int var22_int = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
@@ -670,12 +670,12 @@ abstract class dc extends DualLinkNode {
           stackIn_9_0 = (!(this.field_X > this.field_eb)) ? 0 : 1;
           var5Lifetime1 = stackIn_9_0;
           if (var5Lifetime1 != 0) {
-            stackIn_12_0 = param0.a(-116);
+            stackIn_12_0 = param0.beginForward(-116);
           } else {
-            stackIn_12_0 = param0.a(false);
+            stackIn_12_0 = param0.beginBackward(false);
           }
           var6 = (oi) (stackIn_12_0);
-          var7 = param0.field_a;
+          var7 = param0.sentinel;
           var8 = this.field_cb;
           var10 = this.field_L;
           var12 = this.field_X;
@@ -703,7 +703,7 @@ abstract class dc extends DualLinkNode {
               while (var6 != null) {
                 if (var12 > var6.field_p) {
                   var7 = var6;
-                  var6 = (oi) (param0.a((byte) -90));
+                  var6 = (oi) (param0.nextBackward((byte) -90));
                   continue;
                 }
                 break;
@@ -713,7 +713,7 @@ abstract class dc extends DualLinkNode {
             } else {
               while (var6 != null) {
                 if (var6.field_p > var12) {
-                  var6 = (oi) (param0.d(2123));
+                  var6 = (oi) (param0.nextForward(2123));
                   continue;
                 }
                 break;
@@ -721,7 +721,7 @@ abstract class dc extends DualLinkNode {
               if (var6 != null) {
                 stackIn_23_0 = var6;
               } else {
-                stackIn_23_0 = param0.field_a;
+                stackIn_23_0 = param0.sentinel;
               }
               ri.a((IntrusiveNode) (stackIn_23_0), 0, var23_ref);
             }
@@ -742,7 +742,7 @@ abstract class dc extends DualLinkNode {
             while (var6 != null) {
               if (var12 > var6.field_p) {
                 var7 = var6;
-                var6 = (oi) (param0.a((byte) 125));
+                var6 = (oi) (param0.nextBackward((byte) 125));
                 continue;
               }
               break;
@@ -753,7 +753,7 @@ abstract class dc extends DualLinkNode {
           }
           while (var6 != null) {
             if (var12 < var6.field_p) {
-              var6 = (oi) (param0.d(param1 ^ 2127));
+              var6 = (oi) (param0.nextForward(param1 ^ 2127));
               continue;
             }
             break;
@@ -761,7 +761,7 @@ abstract class dc extends DualLinkNode {
           if (var6 != null) {
             stackIn_40_0 = var6;
           } else {
-            stackIn_40_0 = param0.field_a;
+            stackIn_40_0 = param0.sentinel;
           }
           ri.a((IntrusiveNode) (stackIn_40_0), 0, var24_ref);
           return;

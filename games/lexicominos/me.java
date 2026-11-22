@@ -114,7 +114,7 @@ final class me extends DualLinkNode {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 19);
             }
-            var15 = (vi) (ci.field_f.a(true));
+            var15 = (vi) (ci.field_f.beginForward(true));
             if (var15 == null) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-49);
               return;
@@ -126,7 +126,7 @@ final class me extends DualLinkNode {
           } else {
             if (var2 != 1) {
               if (var2 == 2) {
-                var13 = (vi) (ci.field_f.a(true));
+                var13 = (vi) (ci.field_f.beginForward(true));
                 if (var13 == null) {
                   ck.$cfr$intArgs$b$e683eeaaf5b5(-68);
                   return;
@@ -140,7 +140,7 @@ final class me extends DualLinkNode {
                 ck.$cfr$intArgs$b$e683eeaaf5b5(-32);
               }
             } else {
-              var12 = (vb) (jl.field_a.a(true));
+              var12 = (vb) (jl.field_a.beginForward(true));
               if (var12 == null) {
                 ck.$cfr$intArgs$b$e683eeaaf5b5(-125);
                 return;

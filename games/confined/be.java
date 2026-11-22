@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be extends gf {
-    private mn field_s;
-    private mn field_q;
+    private PrimaryNodeDeque field_s;
+    private PrimaryNodeDeque field_q;
     private int field_r;
     private int field_t;
 
@@ -12,14 +12,14 @@ final class be extends gf {
           this.e();
           param0.field_n = this;
           param0.b();
-          this.a(this.field_q.field_a.field_h, param0);
+          this.a(this.field_q.sentinel.field_h, param0);
           return;
         }
         throw new RuntimeException();
     }
 
     final synchronized void a(gf param0) {
-        this.field_s.a(param0, -1);
+        this.field_s.addFirst(param0, -1);
     }
 
     final synchronized void b(gf param0) {
@@ -43,10 +43,10 @@ final class be extends gf {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        gf var4 = (gf) (this.field_s.a(86));
+        gf var4 = (gf) (this.field_s.beginForward(86));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (gf) (this.field_s.d(2123));
+          var4 = (gf) (this.field_s.nextForward(2123));
         }
     }
 
@@ -54,8 +54,8 @@ final class be extends gf {
         param0.unlink(true);
         param0.a();
         param0.field_n = null;
-        IntrusiveNode var2 = this.field_q.field_a.field_h;
-        if (var2 == this.field_q.field_a) {
+        IntrusiveNode var2 = this.field_q.sentinel.field_h;
+        if (var2 == this.field_q.sentinel) {
           this.field_t = -1;
         } else {
           this.field_t = ((bl) (var2)).field_m;
@@ -65,10 +65,10 @@ final class be extends gf {
     private final void e() {
         bl var1 = null;
         if (this.field_r > 0) {
-          var1 = (bl) (this.field_q.a(-119));
+          var1 = (bl) (this.field_q.beginForward(-119));
           while (var1 != null) {
             var1.field_m = var1.field_m - this.field_r;
-            var1 = (bl) (this.field_q.d(2123));
+            var1 = (bl) (this.field_q.nextForward(2123));
           }
           this.field_t = this.field_t - this.field_r;
           this.field_r = 0;
@@ -97,7 +97,7 @@ final class be extends gf {
           param2 = param2 - var4;
           this.field_r = this.field_r + var4;
           this.e();
-          var5 = (bl) (this.field_q.a(-125));
+          var5 = (bl) (this.field_q.beginForward(-125));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -118,14 +118,14 @@ final class be extends gf {
     }
 
     final gf a() {
-        return (gf) (this.field_s.a(-123));
+        return (gf) (this.field_s.beginForward(-123));
     }
 
     private final void a(IntrusiveNode param0, bl param1) {
         while (true) {
-          if (param0 == this.field_q.field_a) {
+          if (param0 == this.field_q.sentinel) {
             ri.a(param0, 0, param1);
-            this.field_t = ((bl) (this.field_q.field_a.field_h)).field_m;
+            this.field_t = ((bl) (this.field_q.sentinel.field_h)).field_m;
             return;
           }
           if (((bl) (param0)).field_m <= param1.field_m) {
@@ -135,20 +135,20 @@ final class be extends gf {
           break;
         }
         ri.a(param0, 0, param1);
-        this.field_t = ((bl) (this.field_q.field_a.field_h)).field_m;
+        this.field_t = ((bl) (this.field_q.sentinel.field_h)).field_m;
         return;
     }
 
     private final void c(int param0) {
-        gf var2 = (gf) (this.field_s.a(-119));
+        gf var2 = (gf) (this.field_s.beginForward(-119));
         while (var2 != null) {
           var2.b(param0);
-          var2 = (gf) (this.field_s.d(2123));
+          var2 = (gf) (this.field_s.nextForward(2123));
         }
     }
 
     final gf d() {
-        return (gf) (this.field_s.d(2123));
+        return (gf) (this.field_s.nextForward(2123));
     }
 
     final synchronized void b(int param0) {
@@ -172,7 +172,7 @@ final class be extends gf {
           param0 = param0 - var2;
           this.field_r = this.field_r + var2;
           this.e();
-          var3 = (bl) (this.field_q.a(22));
+          var3 = (bl) (this.field_q.beginForward(22));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -189,8 +189,8 @@ final class be extends gf {
     }
 
     public be() {
-        this.field_s = new mn();
-        this.field_q = new mn();
+        this.field_s = new PrimaryNodeDeque();
+        this.field_q = new PrimaryNodeDeque();
         this.field_r = 0;
         this.field_t = -1;
     }

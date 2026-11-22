@@ -302,7 +302,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           }
           if (!UiComponentPart023.computeBoolean1242(-30146)) {
             scanLoop1: while (true) {
-              objectLocal26 = (NetworkSupport005) (NodeHashTable.nodeDequeState0031.computeHashNode1732(4));
+              objectLocal26 = (NetworkSupport005) (NodeHashTable.nodeDequeState0031.removeLast(4));
               if (objectLocal26 != null) {
                 UiComponent.performAction0216(4, (NetworkSupport005) (objectLocal26), -697);
                 if (integerLocal51 != 0) {
@@ -311,7 +311,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 continue;
               }
               do {
-                objectLocal26 = (MixedSupport038) (PlayerNameAvailabilityValidator.nodeDequeState0011.computeHashNode1732(4));
+                objectLocal26 = (MixedSupport038) (PlayerNameAvailabilityValidator.nodeDequeState0011.removeLast(4));
                 if (objectLocal26 == null) {
                   if (integerLocal51 == 0) {
                     break scanLoop1;
@@ -407,7 +407,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                         while (integerLocal27 < 31) {
                           stackBooleanLocal4 = MixedSupport107.computeBoolean1404(-18, integerLocal27, (int[]) (objectLocal26));
                           if (stackBooleanLocal4) {
-                            ComponentContainer.gameSessionState0002.mixedSupport028State0001.bucketBoardArrayState0001[ComponentContainer.gameSessionState0002.integerState0612].nodeDequeState0017.performAction1735(new MixedSupport136(integerLocal27), 2777);
+                            ComponentContainer.gameSessionState0002.mixedSupport028State0001.bucketBoardArrayState0001[ComponentContainer.gameSessionState0002.integerState0612].nodeDequeState0017.addFirst(new MixedSupport136(integerLocal27), 2777);
                           }
                           integerLocal27++;
                         }
@@ -465,10 +465,10 @@ public final class DekoBlokoClient extends FunOrbClient {
                     gameSessionLocal47.booleanState0143 = integerLocal38 != 0;
                     if (integerLocal38 == 0) {
                       if (integerLocal40 != 0) {
-                        gameSessionLocal47.nodeDequeState0024.performAction1735(new RenderingSupport006(TextLayout.stringState0083, 10, true), 2777);
+                        gameSessionLocal47.nodeDequeState0024.addFirst(new RenderingSupport006(TextLayout.stringState0083, 10, true), 2777);
                       }
                     } else {
-                      gameSessionLocal47.nodeDequeState0024.performAction1735(new RenderingSupport006(MixedSupport013.stringState0062, 8, true), 2777);
+                      gameSessionLocal47.nodeDequeState0024.addFirst(new RenderingSupport006(MixedSupport013.stringState0062, 8, true), 2777);
                     }
                     integerLocal48 = 0;
                     integerLocal49 = 0;
@@ -613,7 +613,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       cipherPacketBufferLocal35.writeByte(true, integerLocal30);
                       cipherPacketBufferLocal35.writeBytes(false, integerLocal31, UiComponentPart006.cipherPacketBufferState0001.payload, UiComponentPart006.cipherPacketBufferState0001.position);
                       cipherPacketBufferLocal35.position = 0;
-                      ((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal27].nodeDequeState0014.performAction1735(cipherPacketBufferLocal35, 2777);
+                      ((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal27].nodeDequeState0014.addFirst(cipherPacketBufferLocal35, 2777);
                       cachedMixedSupport075Local1 = ((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal27];
                       cachedMixedSupport075Local1.integerState0420 = cachedMixedSupport075Local1.integerState0420 + integerLocal30;
                       continue scanLoop2;
@@ -628,7 +628,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       mixedSupport142Local33.integerState0881 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -83);
                       mixedSupport142Local33.returnedShapeState0001 = ((GameSession) (objectLocal26)).returnedShapeCache.computeReturnedShape1181(true, true, UiComponentPart006.cipherPacketBufferState0001);
                       mixedSupport142Local33.integerState0879 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -64);
-                      ((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal27].nodeDequeState0014.performAction1735(mixedSupport142Local33, 2777);
+                      ((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal27].nodeDequeState0014.addFirst(mixedSupport142Local33, 2777);
                       integerLocal34 = UiComponentPart006.cipherPacketBufferState0001.readVarInt(117);
                       integerLocal36 = UiComponentPart006.cipherPacketBufferState0001.readVarInt(127) + integerLocal34;
                       if (integerLocal36 > integerLocal34) {
@@ -696,7 +696,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       if (~integerLocal27 != ~((GameSession) (objectLocal26)).integerState0612) {
                         continue scanLoop2;
                       }
-                      ((GameSession) (objectLocal26)).nodeDequeState0024.performAction1735(new RenderingSupport006(MixedSupport014.stringState0070, 13, true), 2777);
+                      ((GameSession) (objectLocal26)).nodeDequeState0024.addFirst(new RenderingSupport006(MixedSupport014.stringState0070, 13, true), 2777);
                       ((GameSession) (objectLocal26)).booleanState0142 = true;
                       continue scanLoop2;
                     }
@@ -719,13 +719,13 @@ public final class DekoBlokoClient extends FunOrbClient {
                     }
                     if (HashNode.integerState0070 == 68) {
                       ((GameSession) (objectLocal26)).integerState0607 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -35);
-                      ((GameSession) (objectLocal26)).nodeDequeState0024.performAction1735(new RenderingSupport006(MixedSupport028.stringState0140, 12, false), 2777);
+                      ((GameSession) (objectLocal26)).nodeDequeState0024.addFirst(new RenderingSupport006(MixedSupport028.stringState0140, 12, false), 2777);
                       continue scanLoop2;
                     }
                     if (HashNode.integerState0070 == 69) {
                       ((GameSession) (objectLocal26)).integerState0607 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -78);
                       ((GameSession) (objectLocal26)).booleanState0143 = true;
-                      ((GameSession) (objectLocal26)).nodeDequeState0024.performAction1735(new RenderingSupport006(MixedSupport013.stringState0062, 8, false), 2777);
+                      ((GameSession) (objectLocal26)).nodeDequeState0024.addFirst(new RenderingSupport006(MixedSupport013.stringState0062, 8, false), 2777);
                       continue scanLoop2;
                     }
                     if (HashNode.integerState0070 == 76) {
@@ -740,7 +740,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                         stackObjectLocal11 = null;
                         stackObjectLocal12 = objectLocal26;
                         if (stackObjectLocal11 != ((GameSession) (stackObjectLocal12)).mixedSupport028State0001.bucketBoardArrayState0001[integerLocal30]) {
-                          while (!((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal30].nodeDequeState0014.computeBoolean1738(-24)) {
+                          while (!((GameSession) (objectLocal26)).mixedSupport075ArrayState0001[integerLocal30].nodeDequeState0014.isEmpty(-24)) {
                             ((GameSession) (objectLocal26)).computeBoolean1320(39, integerLocal30);
                           }
                         }
@@ -2030,7 +2030,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           }
           longLocal44 = MixedSupport062.computeLong0734(4);
           objectLocal45 = null;
-          sceneWidgetPart013Local46 = (SceneWidgetPart013) (nodeDequeLocal43.computeHashNode1741((byte) -101));
+          sceneWidgetPart013Local46 = (SceneWidgetPart013) (nodeDequeLocal43.beginBackward((byte) -101));
           while (null != sceneWidgetPart013Local46) {
             integerLocal47 = 0;
             if (integerLocal82 != 0) {
@@ -2541,7 +2541,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 MixedSupport053.performAction0622(0, booleanArgument5, sceneWidgetPart013Local46, stringLocal68);
               }
             }
-            sceneWidgetPart013Local46 = (SceneWidgetPart013) (nodeDequeLocal43.computeHashNode1745(true));
+            sceneWidgetPart013Local46 = (SceneWidgetPart013) (nodeDequeLocal43.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal114) {

@@ -7,7 +7,7 @@ class g extends lk implements u {
     static String field_B;
     static kc[] field_C;
     static int[][] field_y;
-    bk field_z;
+    IntrusiveDeque field_z;
     static int field_A;
 
     void a(int param0, int param1, int param2, int param3) {
@@ -43,7 +43,7 @@ class g extends lk implements u {
         var4 = Main.field_T;
         var2 = new qd(this.field_z);
         if (param0 != -1) {
-          this.field_z = (bk) null;
+          this.field_z = (IntrusiveDeque) null;
         }
         var3 = (lk) (var2.b((byte) -33));
         while (var3 != null) {
@@ -57,7 +57,7 @@ class g extends lk implements u {
 
     final void b(lk param0, byte param1) {
         try {
-          this.field_z.a(param0, param1 ^ 27284);
+          this.field_z.addLast(param0, param1 ^ 27284);
           if (param1 != 118) {
             field_y = (int[][]) null;
           }
@@ -126,7 +126,7 @@ class g extends lk implements u {
         try {
           var3 = new qd(this.field_z);
           if (param0 <= 71) {
-            this.field_z = (bk) null;
+            this.field_z = (IntrusiveDeque) null;
           }
           var4 = (lk) (var3.b((byte) -33));
           while (var4 != null) {
@@ -235,7 +235,7 @@ class g extends lk implements u {
         try {
           var7 = new qd(this.field_z);
           if (param0) {
-            this.field_z = (bk) null;
+            this.field_z = (IntrusiveDeque) null;
           }
           var8 = (lk) (var7.b((byte) -33));
           while (var8 != null) {
@@ -274,7 +274,7 @@ class g extends lk implements u {
         RuntimeException decompiledCaughtException = null;
         var7 = Main.field_T;
         try {
-          if (this.field_z.a(2220)) {
+          if (this.field_z.isEmpty(2220)) {
             return false;
           }
           if (param1 != -28) {
@@ -367,7 +367,7 @@ class g extends lk implements u {
         RuntimeException decompiledCaughtException = null;
         var7 = Main.field_T;
         try {
-          if (this.field_z.a(2220)) {
+          if (this.field_z.isEmpty(2220)) {
             return false;
           }
           var8 = new qd(this.field_z);
@@ -560,7 +560,7 @@ class g extends lk implements u {
 
     g(int param0, int param1, int param2, int param3, ci param4) {
         super(param0, param1, param2, param3, param4, (pl) null);
-        this.field_z = new bk();
+        this.field_z = new IntrusiveDeque();
     }
 
     final StringBuilder a(Hashtable param0, boolean param1, int param2, StringBuilder param3) {

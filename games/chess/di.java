@@ -498,7 +498,7 @@ final class di extends ci {
           wb.g(qa.field_f.field_a.field_mb, qa.field_f.field_a.field_V, qa.field_f.field_a.field_M, qa.field_f.field_a.field_pb);
           qa.field_f.field_a.a(false, param1);
         }
-        cn.a(16384, param1);
+        SecondaryNodeDeque.a(16384, param1);
     }
 
     final static void k(int param0) {
@@ -547,7 +547,7 @@ final class di extends ci {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_em = ei.field_v[var3];
             var4_ref_em.a(32767);
-            cn.a((byte) 25, var3);
+            SecondaryNodeDeque.a((byte) 25, var3);
             var5 = var4_ref_em.field_K + var4_ref_em.field_P >> 1;
             var6 = var4_ref_em.field_v + var4_ref_em.field_I >> 1;
             var7 = var4_ref_em.field_n + var4_ref_em.field_x >> 1;
@@ -592,7 +592,7 @@ final class di extends ci {
             }
             var2[var16] = -2147483648;
             var17 = ei.field_v[var16];
-            cn.a((byte) 25, var16);
+            SecondaryNodeDeque.a((byte) 25, var16);
             for (var18 = 0; var18 < 3; var18++) {
               ArchiveProvider.field_b[var18] = ArchiveProvider.field_b[var18] + ql.field_a[var15][var18];
             }

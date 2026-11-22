@@ -14,7 +14,7 @@ final class be {
         if (param1) {
           return (km[]) null;
         }
-        return jc.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
+        return IntrusiveDeque.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
     }
 
     public static void clearStaticReferences(byte param0) {

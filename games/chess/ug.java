@@ -38,10 +38,10 @@ final class ug {
 
     final static r a(byte param0, long param1) {
         if (param0 <= -75) {
-          return (r) (d.field_Mb.a(param1, 3000));
+          return (r) (d.field_Mb.get(param1, 3000));
         }
         ug.a((byte) -33, -47L);
-        return (r) (d.field_Mb.a(param1, 3000));
+        return (r) (d.field_Mb.get(param1, 3000));
     }
 
     static {

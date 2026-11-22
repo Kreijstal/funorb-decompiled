@@ -59,7 +59,7 @@ final class f extends IntrusiveNode {
             if (hh.field_b == tl.field_O) {
               if (param2) {
                 var11 = (String) null;
-                dl.field_H = tc.a(ld.field_b, param3, (String) null, 0, false);
+                dl.field_H = IterableNodeHashTable.a(ld.field_b, param3, (String) null, 0, false);
               } else {
                 dl.field_H = wi.a(param4, 7957, false, param3);
               }
@@ -206,7 +206,7 @@ final class f extends IntrusiveNode {
             if (null == uj.field_j) {
               if (dk.field_b) {
                 if (30000L < of.a((byte) -96)) {
-                  cc.field_p = dg.field_a;
+                  cc.field_p = SecondaryNodeDeque.field_a;
                 } else {
                   cc.field_p = lf.field_f;
                 }

@@ -80,10 +80,10 @@ final class RenderingSupport007 {
           integerLocal13 = cipherPacketBufferLocal38.readUnsignedByte((byte) -106);
           if (integerLocal13 == 0) {
             integerLocal14 = cipherPacketBufferLocal38.readUnsignedShort(byteArgument1 - 45);
-            mixedSupport068Local15 = (MixedSupport068) (SecondaryNodeDequeIterator.nodeDequeState0007.computeHashNode1741((byte) -104));
+            mixedSupport068Local15 = (MixedSupport068) (SecondaryNodeDequeIterator.nodeDequeState0007.beginBackward((byte) -104));
             while (mixedSupport068Local15 != null) {
               if (~mixedSupport068Local15.integerState0358 != ~integerLocal14) {
-                mixedSupport068Local15 = (MixedSupport068) (SecondaryNodeDequeIterator.nodeDequeState0007.computeHashNode1745(true));
+                mixedSupport068Local15 = (MixedSupport068) (SecondaryNodeDequeIterator.nodeDequeState0007.nextBackward(true));
                 continue;
               }
               break;
@@ -181,10 +181,10 @@ final class RenderingSupport007 {
           if (integerLocal13 == 1) {
             integerLocal39 = cipherPacketBufferLocal38.readUnsignedShort(3);
             longLocal16 = cipherPacketBufferLocal38.readLong((byte) -108);
-            mixedSupport072Local19 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.computeHashNode1741((byte) 114));
+            mixedSupport072Local19 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.beginBackward((byte) 114));
             while (mixedSupport072Local19 != null) {
               if (mixedSupport072Local19.integerState0411 != integerLocal39) {
-                mixedSupport072Local19 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.computeHashNode1745(true));
+                mixedSupport072Local19 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.nextBackward(true));
                 continue;
               }
               break;
@@ -1256,15 +1256,15 @@ final class RenderingSupport007 {
                 sceneWidgetPart012Local40.integerState0786 = integerLocal15;
                 sceneWidgetPart012Local40.integerState0785 = MixedSupport089.integerState0547;
               }
-              sceneWidgetPart012Local40.performAction0134((byte) 95);
+              sceneWidgetPart012Local40.unlinkSecondary((byte) 95);
               return;
             }
             if (integerLocal9 == 7) {
-              sceneWidgetPart012Local46 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1741((byte) 43));
+              sceneWidgetPart012Local46 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.beginBackward((byte) 43));
               while (sceneWidgetPart012Local46 != null) {
                 sceneWidgetPart012Local46.unlink((byte) 108);
-                sceneWidgetPart012Local46.performAction0134((byte) 112);
-                sceneWidgetPart012Local46 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1745(true));
+                sceneWidgetPart012Local46.unlinkSecondary((byte) 112);
+                sceneWidgetPart012Local46 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.nextBackward(true));
               }
               MixedSupport019.integerState0113 = 0;
               return;
@@ -1293,15 +1293,15 @@ final class RenderingSupport007 {
                 sceneWidgetPart013Local44.integerState0846 = MixedSupport089.integerState0547;
                 sceneWidgetPart013Local44.integerState0844 = integerLocal13;
               }
-              sceneWidgetPart013Local44.performAction0134((byte) 98);
+              sceneWidgetPart013Local44.unlinkSecondary((byte) 98);
               return;
             }
             if (integerLocal9 == 10) {
-              sceneWidgetPart013Local45 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1741((byte) 121));
+              sceneWidgetPart013Local45 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.beginBackward((byte) 121));
               while (sceneWidgetPart013Local45 != null) {
                 sceneWidgetPart013Local45.unlink((byte) 115);
-                sceneWidgetPart013Local45.performAction0134((byte) 118);
-                sceneWidgetPart013Local45 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1745(true));
+                sceneWidgetPart013Local45.unlinkSecondary((byte) 118);
+                sceneWidgetPart013Local45 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.nextBackward(true));
               }
               return;
             }
@@ -1346,7 +1346,7 @@ final class RenderingSupport007 {
                     stackSceneWidgetPart012Local1.booleanState0186 = stackBooleanLocal2;
                     sceneWidgetPart012Local18.integerState0780 = ((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readUnsignedByte((byte) -29);
                     sceneWidgetPart012Local18.integerState0782 = ((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readUnsignedByte((byte) -79);
-                    MixedSupport091.nodeDequeState0021.performAction1735(sceneWidgetPart012Local18, 2777);
+                    MixedSupport091.nodeDequeState0021.addFirst(sceneWidgetPart012Local18, 2777);
                     return;
                   }
                   if (19 == integerLocal9) {
@@ -1363,7 +1363,7 @@ final class RenderingSupport007 {
                       sceneWidgetPart012Local36.integerState0786 = integerLocal54;
                       sceneWidgetPart012Local36.integerState0785 = MixedSupport089.integerState0547;
                     }
-                    sceneWidgetPart012Local36.performAction0134((byte) 84);
+                    sceneWidgetPart012Local36.unlinkSecondary((byte) 84);
                     MixedSupport016.sceneWidgetPart013State0001.integerState0843 = MixedSupport016.sceneWidgetPart013State0001.integerState0843 - 1;
                     return;
                   }
@@ -1444,11 +1444,11 @@ final class RenderingSupport007 {
             ResourceSupport004.performAction1249(sceneWidgetPart013Local34, (byte) -50);
             return;
           }
-          sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.computeHashNode1741((byte) 117));
+          sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.beginBackward((byte) 117));
           while (sceneWidgetPart012Local12 != null) {
             sceneWidgetPart012Local12.unlink((byte) 110);
-            sceneWidgetPart012Local12.performAction0134((byte) 73);
-            sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.computeHashNode1745(true));
+            sceneWidgetPart012Local12.unlinkSecondary((byte) 73);
+            sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.nextBackward(true));
           }
           sceneWidgetPart012Local47 = (SceneWidgetPart012) (MixedSupport090.secondaryNodeHashTableState0004.first(-9443));
           while (sceneWidgetPart012Local47 != null) {
@@ -1470,7 +1470,7 @@ final class RenderingSupport007 {
           if (4 == integerLocal9) {
             integerLocal50 = ((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readUnsignedShort(3);
             MixedSupport016.sceneWidgetPart013State0001 = new SceneWidgetPart013(MixedSupport063.integerState0336);
-            MixedSupport016.sceneWidgetPart013State0001.performAction0130((long)integerLocal50, (byte) 111);
+            MixedSupport016.sceneWidgetPart013State0001.setSecondaryKey((long)integerLocal50, (byte) 111);
             MouseInput.performAction1806(false, cipherPacketBufferLocal7, MixedSupport016.sceneWidgetPart013State0001, (byte) -49);
             SceneWidgetNode.longState0023 = 0L;
           } else {

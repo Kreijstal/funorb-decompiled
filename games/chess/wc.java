@@ -189,10 +189,10 @@ class wc extends hl {
           var2 = var27.readUnsignedByte(param0 ^ 127);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(674914976);
-            var4_ref = (fd) (fb.field_L.g(-18110));
+            var4_ref = (fd) (fb.field_L.beginBackward(-18110));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_j) {
-                var4_ref = (fd) (fb.field_L.a((byte) -93));
+                var4_ref = (fd) (fb.field_L.nextBackward((byte) -93));
                 continue;
               }
               break;
@@ -280,10 +280,10 @@ class wc extends hl {
             if (var2 == 1) {
               var3 = var27.readUnsignedShort(674914976);
               var27.readLong((byte) -13);
-              var4 = (ak) (nc.field_O.g(-18110));
+              var4 = (ak) (nc.field_O.beginBackward(-18110));
               while (var4 != null) {
                 if (~var3 != ~var4.field_s) {
-                  var4 = (ak) (nc.field_O.a((byte) -102));
+                  var4 = (ak) (nc.field_O.nextBackward((byte) -102));
                   continue;
                 }
                 break;

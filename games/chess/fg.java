@@ -5,7 +5,7 @@ import java.io.*;
 
 final class fg {
     static String field_a;
-    static jc field_c;
+    static IntrusiveDeque field_c;
     static boolean field_b;
     static ok field_d;
 
@@ -102,6 +102,6 @@ final class fg {
 
     static {
         field_a = "Show all private chat";
-        field_c = new jc();
+        field_c = new IntrusiveDeque();
     }
 }

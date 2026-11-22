@@ -311,7 +311,7 @@ final class aa {
         boolean decompiledFrameRemainder0 = true;
         var4 = Chess.field_G;
         if (vg.field_a != 13) {
-          if (jc.field_f == 5) {
+          if (IntrusiveDeque.field_f == 5) {
             this.e(-36);
             if (var4 != 0) {
               this.field_e.c((byte) 127);
@@ -336,12 +336,12 @@ final class aa {
             var3 = stackIn_19_0;
             uk.a(qk.field_h, false, 28333, var3);
             if ((var4 != 0) &&
-              (7 != jc.field_f)) {
+              (7 != IntrusiveDeque.field_f)) {
               var2 = pg.field_s;
               uk.a(qk.field_h, false, 28333, var2);
             }
           } else {
-            if (7 != jc.field_f) {
+            if (7 != IntrusiveDeque.field_f) {
               var2 = pg.field_s;
               uk.a(qk.field_h, false, 28333, var2);
             }
@@ -833,7 +833,7 @@ final class aa {
             if (0 > this.field_e.field_h) {
               this.field_e.field_h = -1 + this.field_e.field_f;
             }
-          } while (ak.field_q[jc.field_f][this.field_e.field_h] == 35);
+          } while (ak.field_q[IntrusiveDeque.field_f][this.field_e.field_h] == 35);
           this.field_e.field_e = false;
         }
         if (!this.field_e.b(false)) {
@@ -844,7 +844,7 @@ final class aa {
               if (this.field_e.field_f <= this.field_e.field_h) {
                 this.field_e.field_h = 0;
               }
-            } while (ak.field_q[jc.field_f][this.field_e.field_h] == 35);
+            } while (ak.field_q[IntrusiveDeque.field_f][this.field_e.field_h] == 35);
             this.field_e.field_e = false;
           }
         }
@@ -1551,7 +1551,7 @@ final class aa {
                   }
                   if (this.field_c != 7) {
                     if (this.field_c != 6 &&
-                      4 != jc.field_f) {
+                      4 != IntrusiveDeque.field_f) {
                       break regionExit2;
                     }
                     hj.a(this.field_c, this.field_c, false);
@@ -2472,7 +2472,7 @@ final class aa {
         if (decompiledSharedTail0) {
           stackIn_10_0 = AccountNameAvailabilityValidator.i(23156).field_t;
           stackIn_10_1 = AccountNameAvailabilityValidator.i(23156).b(0);
-          stackIn_11_2 = (jc.field_f == -1);
+          stackIn_11_2 = (IntrusiveDeque.field_f == -1);
           ((qe) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2, qb.field_a, 0, (byte) -104, true);
         }
     }

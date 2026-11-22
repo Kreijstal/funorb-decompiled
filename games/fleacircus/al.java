@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class al {
-    static vc field_e;
+    static IntrusiveDeque field_e;
     static String field_c;
     static int field_f;
     static String field_d;
@@ -124,7 +124,7 @@ final class al {
 
     static {
         field_c = "This entry doesn't match";
-        field_e = new vc();
+        field_e = new IntrusiveDeque();
         field_d = "Mouse over an icon for details";
         field_b = new int[8192];
         field_a = "Unfortunately you are not eligible to create an account.";

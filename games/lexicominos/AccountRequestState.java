@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class AccountRequestState {
-    static ng field_b;
+    static IntrusiveDeque field_b;
     static int field_f;
     static nc field_d;
     static int field_g;
@@ -126,7 +126,7 @@ final class AccountRequestState {
 
     static {
         field_d = null;
-        field_b = new ng();
+        field_b = new IntrusiveDeque();
         field_e = false;
     }
 }

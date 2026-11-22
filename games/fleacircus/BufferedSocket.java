@@ -88,7 +88,7 @@ final class BufferedSocket implements Runnable {
                 rd.a(var3, 79, 5);
                 ej.a((byte) -39);
               } else {
-                mi.field_r.a(false, var3);
+                mi.field_r.addLast(false, var3);
                 ej.a((byte) -39);
               }
             }
@@ -248,7 +248,7 @@ final class BufferedSocket implements Runnable {
         if (param0 >= -79) {
           field_j = (wk) null;
         }
-        stackIn_9_0 = ((vc.field_b &&
+        stackIn_9_0 = ((IntrusiveDeque.field_b &&
           mf.field_a == null) ||
           qh.c((byte) 33));
         return stackIn_9_0;
@@ -413,18 +413,18 @@ final class BufferedSocket implements Runnable {
         RuntimeException var2 = null;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          var4 = (ql) (sd.field_d.c((byte) 47));
+          var4 = (ql) (sd.field_d.beginForward((byte) 47));
           while (var4 != null) {
             qb.a(param0, (byte) 90, var4);
-            var4 = (ql) (sd.field_d.b((byte) -105));
+            var4 = (ql) (sd.field_d.nextForward((byte) -105));
           }
-          var5 = (fi) (lk.field_O.c((byte) 47));
+          var5 = (fi) (lk.field_O.beginForward((byte) 47));
           if (param1 != -1115925337) {
             BufferedSocket.g(-22);
           }
           while (var5 != null) {
             rd.a(param0, var5, (byte) -118);
-            var5 = (fi) (lk.field_O.b((byte) -105));
+            var5 = (fi) (lk.field_O.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

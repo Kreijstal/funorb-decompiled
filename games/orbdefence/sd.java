@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sd {
-    static im field_a;
+    static IntrusiveDeque field_a;
     static hj[] field_f;
     static int field_h;
     static String field_d;
@@ -92,7 +92,7 @@ final class sd {
     }
 
     static {
-        field_a = new im();
+        field_a = new IntrusiveDeque();
         field_d = "Damage";
         field_g = 0;
         field_e = new int[8192];

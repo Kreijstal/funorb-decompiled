@@ -19,14 +19,14 @@ final class ug extends hf {
     private dl field_f;
     private na field_k;
     static java.awt.Canvas field_y;
-    private ng field_l;
+    private IntrusiveDeque field_l;
     private int field_o;
     static int field_m;
     private boolean field_D;
     private boolean field_d;
     static String field_s;
     static long field_x;
-    private ng field_v;
+    private IntrusiveDeque field_v;
     private boolean field_e;
     private long field_h;
 
@@ -44,7 +44,7 @@ final class ug extends hf {
         if (param0 > -68) {
           this.a(true);
         }
-        IntrusiveNode var2 = this.field_l.a(true);
+        IntrusiveNode var2 = this.field_l.beginForward(true);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 < 0) {
@@ -68,7 +68,7 @@ final class ug extends hf {
               }
             }
           }
-          var2 = this.field_l.f(2);
+          var2 = this.field_l.nextForward(2);
         }
     }
 
@@ -95,7 +95,7 @@ final class ug extends hf {
           }
           if (this.field_D) {
             var2_int = 1;
-            var3 = this.field_v.a(true);
+            var3 = this.field_v.beginForward(true);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_w[var4] == 0) {
@@ -106,7 +106,7 @@ final class ug extends hf {
               } else {
                 var3.unlink((byte) -116);
               }
-              var3 = this.field_v.f(2);
+              var3 = this.field_v.nextForward(2);
             }
             while (this.field_o < this.field_z.field_m.length) {
               if (this.field_z.field_m[this.field_o] == 0) {
@@ -121,7 +121,7 @@ final class ug extends hf {
                   var7 = new IntrusiveNode();
                   var7.key = (long)this.field_o;
                   var2_int = 0;
-                  this.field_v.b(123, var7);
+                  this.field_v.addLast(123, var7);
                 }
                 this.field_o = this.field_o + 1;
                 continue;
@@ -138,7 +138,7 @@ final class ug extends hf {
           else {
             if (this.field_d) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_v.a(true);
+              var3Lifetime1 = this.field_v.beginForward(true);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_w[var4Lifetime1] != 1) {
@@ -149,7 +149,7 @@ final class ug extends hf {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_v.f(2);
+                var3Lifetime1 = this.field_v.nextForward(2);
               }
               while (this.field_z.field_m.length > this.field_o) {
                 if (0 == this.field_z.field_m[this.field_o]) {
@@ -163,7 +163,7 @@ final class ug extends hf {
                   if (this.field_w[this.field_o] != 1) {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_o;
-                    this.field_v.b(105, var6);
+                    this.field_v.addLast(105, var6);
                     var2_intLifetime1 = 0;
                   }
                   this.field_o = this.field_o + 1;
@@ -222,11 +222,11 @@ final class ug extends hf {
           return;
         }
         if (param0 != 11002) {
-          this.field_v = (ng) null;
+          this.field_v = (IntrusiveDeque) null;
         }
         this.field_d = true;
         if (this.field_v == null) {
-          this.field_v = new ng();
+          this.field_v = new IntrusiveDeque();
         }
     }
 
@@ -597,7 +597,7 @@ final class ug extends hf {
         RuntimeException var10 = null;
         this.field_k = new na(16);
         this.field_o = 0;
-        this.field_l = new ng();
+        this.field_l = new IntrusiveDeque();
         this.field_h = 0L;
         try {
           this.field_j = param0;
@@ -606,7 +606,7 @@ final class ug extends hf {
             this.field_D = false;
           } else {
             this.field_D = true;
-            this.field_v = new ng();
+            this.field_v = new IntrusiveDeque();
           }
           this.field_i = param3;
           this.field_n = param7;

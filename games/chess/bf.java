@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class bf extends ma implements ee {
-    static dk field_M;
+    static SecondaryNodeHashTable field_M;
     private ri field_L;
     static ci field_K;
     static String field_N;

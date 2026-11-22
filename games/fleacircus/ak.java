@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ak {
-    static vc field_d;
+    static IntrusiveDeque field_d;
     static int field_e;
     static int field_c;
     static String field_g;
@@ -35,7 +35,7 @@ final class ak {
         String var8 = null;
         int var5 = fleas.field_A ? 1 : 0;
         if (!param0) {
-          field_d = (vc) null;
+          field_d = (IntrusiveDeque) null;
         }
         String var6 = "(" + hc.field_j + " " + rj.field_k + " " + vi.field_a + ") " + be.field_a;
         String var1 = var6;
@@ -311,7 +311,7 @@ final class ak {
     }
 
     static {
-        field_d = new vc();
+        field_d = new IntrusiveDeque();
         field_e = 0;
         field_g = "<%0>Wall:<%1> Fleas can walk on these, but can't climb up the sides.";
         field_c = 0;

@@ -468,7 +468,7 @@ final class BucketBoard {
                 UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal28;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal28;
                 this.integerState0475 = this.integerState0475 + integerLocal27;
-                this.nodeDequeState0018.performAction1735(new MixedSupport112(false, this.computeInteger0982(0, integerLocal23, 81), this.computeInteger0977(true, integerLocal23, 0), integerLocal27, MixedSupport001.integerArrayState0002, -1 + integerLocal23, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23), " = <b>", Integer.toString(integerLocal27)}), 2777);
+                this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(0, integerLocal23, 81), this.computeInteger0977(true, integerLocal23, 0), integerLocal27, MixedSupport001.integerArrayState0002, -1 + integerLocal23, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23), " = <b>", Integer.toString(integerLocal27)}), 2777);
               } else {
                 if (this.nodeDequeState0018 != null) {
                   integerLocal27 = UiComponentPart022.computeInteger1205(integerLocal26, 65);
@@ -482,9 +482,9 @@ final class BucketBoard {
                   MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal33;
                   UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal33;
                   if (0 < integerLocal28) {
-                    this.nodeDequeState0018.performAction1735(new MixedSupport112(false, this.computeInteger0982(integerLocal26, integerLocal23, 65), this.computeInteger0977(true, integerLocal23, integerLocal26), integerLocal28, MixedSupport001.integerArrayState0002, integerLocal23 - integerLocal26 - 1, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23 - integerLocal26), " = <b>", Integer.toString(integerLocal28)}), 2777);
+                    this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(integerLocal26, integerLocal23, 65), this.computeInteger0977(true, integerLocal23, integerLocal26), integerLocal28, MixedSupport001.integerArrayState0002, integerLocal23 - integerLocal26 - 1, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23 - integerLocal26), " = <b>", Integer.toString(integerLocal28)}), 2777);
                   }
-                  this.nodeDequeState0018.performAction1735(new MixedSupport112(false, this.computeInteger0982(0, integerLocal26, 112), this.computeInteger0977(true, integerLocal26, 0), integerLocal27, MixedSupport009.integerArrayState0015, -4 + integerLocal26, 16 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal26), " = <b>", Integer.toString(integerLocal27)}), 2777);
+                  this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(0, integerLocal26, 112), this.computeInteger0977(true, integerLocal26, 0), integerLocal27, MixedSupport009.integerArrayState0015, -4 + integerLocal26, 16 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal26), " = <b>", Integer.toString(integerLocal27)}), 2777);
                 }
               }
             }
@@ -1325,7 +1325,7 @@ final class BucketBoard {
                 if (0 < integerLocal17) {
                   integerLocal1 = RenderingSupport004.integerState0257;
                   RenderingSupport004.integerState0257 = RenderingSupport004.integerState0257 - 1;
-                  this.nodeDequeState0018.performAction1735(new MixedSupport112(true, this.boardWidth * 128, -384 + integerLocal1 * 256, integerLocal17, LoginCredentials.integerArrayState0115, -2 + integerLocal16, 0, new String[]{NodeHashTableIterator.substituteIndexedPlaceholders(85, MixedSupport094.stringState0395, new String[]{Integer.toString(integerLocal16)}), " = <b>", Integer.toString(integerLocal17)}), 2777);
+                  this.nodeDequeState0018.addFirst(new MixedSupport112(true, this.boardWidth * 128, -384 + integerLocal1 * 256, integerLocal17, LoginCredentials.integerArrayState0115, -2 + integerLocal16, 0, new String[]{NodeHashTableIterator.substituteIndexedPlaceholders(85, MixedSupport094.stringState0395, new String[]{Integer.toString(integerLocal16)}), " = <b>", Integer.toString(integerLocal17)}), 2777);
                 }
                 integerLocal18 = MixedSupport076.computeInteger0952(32085, this.integerState0491);
                 if (0 < integerLocal18) {
@@ -1494,7 +1494,7 @@ final class BucketBoard {
                 UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal47;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal47;
                 this.integerState0475 = this.integerState0475 + integerLocal18;
-                this.nodeDequeState0018.performAction1735(new MixedSupport112(true, this.boardWidth * 128, this.boardWidth * -32, integerLocal18, NetworkSupport008.integerArrayState0176, -1 + MixedSupport051.computeInteger0604(integerLocal16, 63), 26, new String[]{" = <b>", Integer.toString(integerLocal18)}), 2777);
+                this.nodeDequeState0018.addFirst(new MixedSupport112(true, this.boardWidth * 128, this.boardWidth * -32, integerLocal18, NetworkSupport008.integerArrayState0176, -1 + MixedSupport051.computeInteger0604(integerLocal16, 63), 26, new String[]{" = <b>", Integer.toString(integerLocal18)}), 2777);
               }
             }
           }
@@ -1559,7 +1559,7 @@ final class BucketBoard {
               integerLocal16 = this.mixedSupport112State0001.integerState0730;
               MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal16;
               UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal16;
-              this.nodeDequeState0018.performAction1735(this.mixedSupport112State0001, 2777);
+              this.nodeDequeState0018.addFirst(this.mixedSupport112State0001, 2777);
               this.mixedSupport112State0001 = null;
             }
             if (this.pieceCollides((byte) -117)) {
@@ -1788,7 +1788,7 @@ final class BucketBoard {
               UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + 2000;
               MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + 2000;
               this.integerState0494 = this.integerState0494 + 2000;
-              this.nodeDequeState0018.performAction1735(new MixedSupport112(true, 128 + 256 * (integerArgument2 % this.boardWidth), integerArgument2 / this.boardWidth * 256 + 128, 2000, (int[]) null, 13684944, integerLocal1, new String[]{" = <b>", Integer.toString(2000)}), 2777);
+              this.nodeDequeState0018.addFirst(new MixedSupport112(true, 128 + 256 * (integerArgument2 % this.boardWidth), integerArgument2 / this.boardWidth * 256 + 128, 2000, (int[]) null, 13684944, integerLocal1, new String[]{" = <b>", Integer.toString(2000)}), 2777);
             }
           }
         }
@@ -2688,7 +2688,7 @@ final class BucketBoard {
           break;
         }
         if (this.nodeDequeState0017 != null &&
-          this.nodeDequeState0017.computeHashNode1741((byte) 70) != null) {
+          this.nodeDequeState0017.beginBackward((byte) 70) != null) {
           stackIntegerLocal3 = -1;
           stackIntegerLocal4 = ~this.integerState0496;
           if (stackIntegerLocal3 == stackIntegerLocal4) {
@@ -2700,7 +2700,7 @@ final class BucketBoard {
           this.integerState0496 = this.integerState0496 + 1;
           if (335 == this.integerState0496) {
             this.integerState0496 = 0;
-            this.nodeDequeState0017.computeHashNode1732(integerArgument1 + 21146);
+            this.nodeDequeState0017.removeLast(integerArgument1 + 21146);
           }
         }
         stackIntegerLocal5 = (!this.computeBoolean0987(integerArgument1 ^ 21190)) ? 0 : 1;

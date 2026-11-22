@@ -229,7 +229,7 @@ final class ij extends gj implements da {
         int var5Lifetime1;
         var6 = fleas.field_A ? 1 : 0;
         try {
-          this.field_C.f(1);
+          this.field_C.clear(1);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

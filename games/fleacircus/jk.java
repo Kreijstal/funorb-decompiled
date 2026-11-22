@@ -9,7 +9,7 @@ final class jk extends hm {
     static int field_l;
     static int field_r;
     private java.net.ProxySelector field_k;
-    static vc field_m;
+    static IntrusiveDeque field_m;
     static String field_o;
     static String field_p;
     static String field_q;
@@ -424,7 +424,7 @@ final class jk extends hm {
         field_l = 1;
         field_o = "<%0>Entrance:<%1> Fleas enter the level from the bottom of this.";
         field_r = 0;
-        field_m = new vc();
+        field_m = new IntrusiveDeque();
         field_i = "Not yet achieved";
         field_p = "Visit the Account Management section on the main site to view.";
         field_q = "<%0>Water:<%1> Fleas drown in water. Keep the fleas away!";

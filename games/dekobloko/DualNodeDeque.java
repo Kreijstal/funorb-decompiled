@@ -29,7 +29,7 @@ final class DualNodeDeque {
         return integerLocal1;
     }
 
-    final DualNode computeDualNode0032(byte byteArgument1) {
+    final DualNode nextForward(byte byteArgument1) {
         DualNode dualNodeLocal1 = this.dualNodeState0002;
         if (dualNodeLocal1 == this.dualNodeState0001) {
           this.dualNodeState0002 = null;
@@ -42,7 +42,7 @@ final class DualNodeDeque {
         return dualNodeLocal1;
     }
 
-    final void performAction0031(DualNode dualNodeArgument1, int integerArgument2) {
+    final void addLast(DualNode dualNodeArgument1, int integerArgument2) {
         DualNode dualNodeLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -51,7 +51,7 @@ final class DualNodeDeque {
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (dualNodeArgument1.dualNodeState0004 != null) {
-            dualNodeArgument1.performAction0134((byte) 101);
+            dualNodeArgument1.unlinkSecondary((byte) 101);
           }
           dualNodeArgument1.dualNodeState0003 = this.dualNodeState0001;
           dualNodeArgument1.dualNodeState0004 = this.dualNodeState0001.dualNodeState0004;
@@ -59,7 +59,7 @@ final class DualNodeDeque {
           dualNodeArgument1.dualNodeState0003.dualNodeState0004 = dualNodeArgument1;
           if (integerArgument2 != -7267) {
             dualNodeLocal1 = (DualNode) null;
-            this.performAction0031((DualNode) null, 54);
+            this.addLast((DualNode) null, 54);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -76,19 +76,19 @@ final class DualNodeDeque {
         }
     }
 
-    final DualNode computeDualNode0028(byte byteArgument1) {
+    final DualNode removeFirst(byte byteArgument1) {
         DualNode dualNodeLocal1 = this.dualNodeState0001.dualNodeState0003;
         if (this.dualNodeState0001 == dualNodeLocal1) {
           return null;
         }
-        dualNodeLocal1.performAction0134((byte) 94);
+        dualNodeLocal1.unlinkSecondary((byte) 94);
         int integerLocal2 = 27 / ((1 - byteArgument1) / 39);
         return dualNodeLocal1;
     }
 
-    final DualNode computeDualNode0033(int integerArgument1) {
+    final DualNode beginForward(int integerArgument1) {
         if (integerArgument1 != -2198) {
-          this.computeDualNode0033(61);
+          this.beginForward(61);
         }
         DualNode dualNodeLocal1 = this.dualNodeState0001.dualNodeState0003;
         if (this.dualNodeState0001 == dualNodeLocal1) {
@@ -191,7 +191,7 @@ final class DualNodeDeque {
         stringState0007 = null;
     }
 
-    final int computeInteger0029(int integerArgument1) {
+    final int countWithOffset(int integerArgument1) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal2 = integerArgument1;
         DualNode dualNodeLocal3 = this.dualNodeState0001.dualNodeState0003;

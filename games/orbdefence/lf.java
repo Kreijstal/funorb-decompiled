@@ -5,7 +5,7 @@ final class lf {
     static int field_e;
     static String field_c;
     static int field_d;
-    static im field_b;
+    static IntrusiveDeque field_b;
     static ki field_a;
 
     public static void a(int param0) {

@@ -10,7 +10,7 @@ final class rb extends gj implements da {
 
     final static void a(int param0, int param1, byte param2) {
         af.field_b = param0;
-        vc.field_f = param1;
+        IntrusiveDeque.field_f = param1;
         if (param2 < 61) {
           rb.a(-16, 15, (byte) 71);
         }

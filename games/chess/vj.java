@@ -6,7 +6,7 @@ abstract class vj {
     int field_e;
     java.awt.Image field_j;
     int field_i;
-    static jc field_c;
+    static IntrusiveDeque field_c;
     int[] field_b;
     static ci field_g;
     static lh field_d;
@@ -72,7 +72,7 @@ abstract class vj {
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
     static {
-        field_c = new jc();
+        field_c = new IntrusiveDeque();
         field_f = new long[32];
     }
 }

@@ -12,7 +12,7 @@ abstract class wi {
     boolean field_i;
     boolean field_c;
     static vj field_p;
-    static vc field_j;
+    static IntrusiveDeque field_j;
     boolean field_k;
     static String field_m;
     int field_n;
@@ -90,7 +90,7 @@ abstract class wi {
         field_h = "Log in";
         field_b = 0;
         field_m = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
-        field_j = new vc();
+        field_j = new IntrusiveDeque();
         field_f = new AccountRequestState();
     }
 }

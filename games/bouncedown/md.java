@@ -7,7 +7,7 @@ final class md extends gj {
     int field_p;
     byte[] field_s;
     static int field_w;
-    static bc field_t;
+    static IntrusiveDeque field_t;
     static String field_v;
     static PlatformTask field_q;
 
@@ -92,7 +92,7 @@ final class md extends gj {
     static {
         field_u = "Sound ";
         field_w = 256;
-        field_t = new bc();
+        field_t = new IntrusiveDeque();
         field_v = "You have <%0> unread messages!";
     }
 }

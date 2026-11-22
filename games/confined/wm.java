@@ -14,7 +14,7 @@ final class wm extends hf {
     private oi field_kb;
     private hm[] field_cb;
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         try {
           this.a(-116, cd.field_o[(this.field_eb & 15) >> 1], param1, param3);
           if (param2 >= -5) {
@@ -47,7 +47,7 @@ final class wm extends hf {
               if (var4.a(this.field_cb, false, 15.0)) {
                 this.field_A.field_B.field_Db = this.field_A.field_B.field_Db + 2.0;
                 var4.field_Q.field_m = 96;
-                this.field_A.field_F.a((IntrusiveNode) (var4), (byte) 72);
+                this.field_A.field_F.addLast((IntrusiveNode) (var4), (byte) 72);
               }
             }
             var3_int++;
@@ -199,14 +199,14 @@ final class wm extends hf {
         return var3;
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         try {
           int var3_int = 111 % ((-2 - param1) / 62);
           this.field_kb.field_o = this.field_t;
           this.field_kb.field_p = this.field_D;
           this.field_kb.field_t = this.field_E;
           this.field_kb.field_u = 100.0 * this.field_C;
-          param0.a((IntrusiveNode) (this.field_kb), (byte) -74);
+          param0.addLast((IntrusiveNode) (this.field_kb), (byte) -74);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "wm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -223,7 +223,7 @@ final class wm extends hf {
           if (param1 <= 27) {
             field_hb = -83;
           }
-          stackIn_3_0 = mn.field_e.a(-98, "", param0);
+          stackIn_3_0 = PrimaryNodeDeque.field_e.a(-98, "", param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

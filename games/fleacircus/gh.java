@@ -187,7 +187,7 @@ final class gh extends r {
           var1_int = rb.field_H;
           var2 = 0;
           var3 = -21 / ((param0 - 22) / 57);
-          if (2 == vc.field_a) {
+          if (2 == IntrusiveDeque.field_a) {
             var4_long = lj.a((byte) -48) - sd.field_h;
             var2 = (int)((10999L - var4_long) / 1000L);
             if (var2 < 0) {
@@ -206,7 +206,7 @@ final class gh extends r {
               }
             }
             var7 = fb.field_d[var4];
-            if (vc.field_a == 2 &&
+            if (IntrusiveDeque.field_a == 2 &&
               var2 == 1) {
               if (j.field_o.length < uk.field_a.length) {
                 stackIn_18_0 = uk.field_a.length;

@@ -65,7 +65,7 @@ abstract class cc extends kn {
         }
         gl.field_u[dk.field_e] = rc.a(re.field_a[17], 100, oc.field_f);
         mg.a(1963987425, gl.field_u[dk.field_e]);
-        sd.field_c[dk.field_e] = param0;
+        IterableNodeHashTable.field_c[dk.field_e] = param0;
         if (param1 == 136989569) {
           return;
         }

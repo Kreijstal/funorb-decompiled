@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gl extends sh {
-    vc field_n;
+    IntrusiveDeque field_n;
     private ei field_p;
     static bi field_m;
     ke field_o;
@@ -20,7 +20,7 @@ final class gl extends sh {
         var7 = fleas.field_A ? 1 : 0;
         try {
           this.field_o.b(param0, param1, param2);
-          var6 = (tk) (this.field_n.c((byte) 47));
+          var6 = (tk) (this.field_n.beginForward((byte) 47));
           while (var6 != null) {
             if (!this.field_p.a(var6, -1)) {
               var4_int = param1;
@@ -36,7 +36,7 @@ final class gl extends sh {
                 var5 = var5 - var6.field_u;
               } while (!this.field_p.a(var5, var4_int, -30686, var6, param0));
             }
-            var6 = (tk) (this.field_n.b((byte) -105));
+            var6 = (tk) (this.field_n.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class gl extends sh {
         boolean stackIn_4_0 = false;
         var4 = fleas.field_A ? 1 : 0;
         this.field_o.a(param0);
-        var3 = (tk) (this.field_n.c((byte) 47));
+        var3 = (tk) (this.field_n.beginForward((byte) 47));
         while (var3 != null) {
           stackIn_4_0 = this.field_p.a(var3, -1);
           boolean decompiledFrameCompleted0 = true;
@@ -89,14 +89,14 @@ final class gl extends sh {
               var3.field_u = var3.field_u - var2;
             }
           }
-          var3 = (tk) (this.field_n.b((byte) -105));
+          var3 = (tk) (this.field_n.nextForward((byte) -105));
         }
     }
 
     final sh c() {
         tk var1_ref = null;
         do {
-          var1_ref = (tk) (this.field_n.b((byte) -105));
+          var1_ref = (tk) (this.field_n.nextForward((byte) -105));
           if (var1_ref == null) {
             return null;
           }
@@ -284,7 +284,7 @@ final class gl extends sh {
     }
 
     gl(ei param0) {
-        this.field_n = new vc();
+        this.field_n = new IntrusiveDeque();
         this.field_o = new ke();
         try {
           this.field_p = param0;
@@ -298,7 +298,7 @@ final class gl extends sh {
     }
 
     final sh d() {
-        tk var1 = (tk) (this.field_n.c((byte) 47));
+        tk var1 = (tk) (this.field_n.beginForward((byte) 47));
         if (var1 == null) {
           return null;
         }

@@ -108,10 +108,10 @@ final class ml extends dk {
         RuntimeException decompiledCaughtException = null;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          var4 = (hg) (ak.field_d.c((byte) 47));
+          var4 = (hg) (ak.field_d.beginForward((byte) 47));
           while (var4 != null) {
             ec.a(var4, (byte) 30, param0);
-            var4 = (hg) (ak.field_d.b((byte) -105));
+            var4 = (hg) (ak.field_d.nextForward((byte) -105));
           }
           if (param1 == 960240129) {
             return;
@@ -146,13 +146,13 @@ final class ml extends dk {
         RuntimeException var1 = null;
         var2 = fleas.field_A ? 1 : 0;
         try {
-          var3 = (ql) (mi.field_r.c((byte) 47));
+          var3 = (ql) (mi.field_r.beginForward((byte) 47));
           if (param0 >= -36) {
             field_N = (String[]) null;
           }
           while (var3 != null) {
             rd.a(var3, 115, 5);
-            var3 = (ql) (mi.field_r.b((byte) -105));
+            var3 = (ql) (mi.field_r.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

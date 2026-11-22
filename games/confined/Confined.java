@@ -56,7 +56,7 @@ public final class Confined extends i {
           vk.a((byte) -111);
           dd.clearStaticReferences();
           hn.e(0);
-          mn.b(103);
+          PrimaryNodeDeque.b(103);
           eg.b((byte) 80);
           sg.e((byte) 109);
           pm.e((byte) 45);
@@ -384,7 +384,7 @@ public final class Confined extends i {
             }
             if (!tj.a(true)) {
               do {
-                var2 = (sf) (ra.field_c.c(param0 ^ -2));
+                var2 = (sf) (ra.field_c.removeFirst(param0 ^ -2));
                 if (var2 == null) {
                   if (var3 == 0) {
                     break;
@@ -657,16 +657,16 @@ public final class Confined extends i {
           if (decompiledFrameRemainder1) {
             IntrusiveDeque.field_c.c(0, 376);
             if (0 < qn.field_v.field_B.field_ub) {
-              mn.a(ic.field_d, 8, (byte) -30, 384, 14, qn.field_v.field_B.field_ub);
+              PrimaryNodeDeque.a(ic.field_d, 8, (byte) -30, 384, 14, qn.field_v.field_B.field_ub);
             }
             if (qn.field_v.field_B.field_tb > 0) {
-              mn.a(s.field_L, 48, (byte) -30, 384, 15, qn.field_v.field_B.field_tb);
+              PrimaryNodeDeque.a(s.field_L, 48, (byte) -30, 384, 15, qn.field_v.field_B.field_tb);
             }
             if (qn.field_v.field_B.field_zb > 0) {
-              mn.a(qn.field_x, 88, (byte) -30, 384, 16, qn.field_v.field_B.field_zb);
+              PrimaryNodeDeque.a(qn.field_x, 88, (byte) -30, 384, 16, qn.field_v.field_B.field_zb);
             }
             if (qn.field_v.field_B.field_ab > 0) {
-              mn.a(cf.field_db, 128, (byte) -30, 384, 17, qn.field_v.field_B.field_ab);
+              PrimaryNodeDeque.a(cf.field_db, 128, (byte) -30, 384, 17, qn.field_v.field_B.field_ab);
             }
             if (qn.field_v.field_B.field_cb) {
               ul.a(8, ek.field_k, 10, param0 ^ -55445, 432);
@@ -1209,8 +1209,8 @@ public final class Confined extends i {
             var2 = new m(jd.field_b, AccountCreationResultPanel.field_Bb);
             AccountCreationResultPanel.field_Bb = null;
             jd.field_b = null;
-            GameAppletShell.field_c = gi.a(var2, (byte) -65, mn.field_b, "music/music", "");
-            mn.field_b = null;
+            GameAppletShell.field_c = gi.a(var2, (byte) -65, PrimaryNodeDeque.field_b, "music/music", "");
+            PrimaryNodeDeque.field_b = null;
             h.field_R = new dd(GameAppletShell.field_c);
             h.field_R.b(64 * hd.field_f >> 7);
             h.field_R.b(DirectByteStorage.field_j[0], 32);

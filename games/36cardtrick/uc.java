@@ -18,9 +18,9 @@ final class uc extends pe {
     private vb field_n;
     private int field_c;
     private boolean field_s;
-    private bk field_e;
+    private IntrusiveDeque field_e;
     private boolean field_w;
-    private bk field_j;
+    private IntrusiveDeque field_j;
     private long field_i;
     private boolean field_g;
 
@@ -334,7 +334,7 @@ final class uc extends pe {
           if (this.b((byte) -71) == null) {
             return;
           }
-          var2 = this.field_e.a((byte) 74);
+          var2 = this.field_e.beginForward((byte) 74);
           while (var2 != null) {
             var3 = (int)var2.key;
             if (var3 >= 0) {
@@ -358,7 +358,7 @@ final class uc extends pe {
             } else {
               var2.unlink(109);
             }
-            var2 = this.field_e.b((byte) -99);
+            var2 = this.field_e.nextForward((byte) -99);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,7 +396,7 @@ final class uc extends pe {
             }
             if (this.field_s) {
               var2_int = 1;
-              var3 = this.field_j.a((byte) 74);
+              var3 = this.field_j.beginForward((byte) 74);
               while (var3 != null) {
                 var4 = (int)var3.key;
                 if (this.field_t[var4] == 0) {
@@ -407,7 +407,7 @@ final class uc extends pe {
                 } else {
                   var3.unlink(98);
                 }
-                var3 = this.field_j.b((byte) -101);
+                var3 = this.field_j.nextForward((byte) -101);
               }
               while (this.field_l.field_q.length > this.field_c) {
                 if (this.field_l.field_q[this.field_c] == 0) {
@@ -422,7 +422,7 @@ final class uc extends pe {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_c;
                     var2_int = 0;
-                    this.field_j.a(var7, param0 + 30390);
+                    this.field_j.addLast(var7, param0 + 30390);
                   }
                   this.field_c = this.field_c + 1;
                   continue;
@@ -439,7 +439,7 @@ final class uc extends pe {
             else {
               if (this.field_w) {
                 var2_intLifetime1 = 1;
-                var3Lifetime1 = this.field_j.a((byte) 74);
+                var3Lifetime1 = this.field_j.beginForward((byte) 74);
                 while (var3Lifetime1 != null) {
                   var4Lifetime1 = (int)var3Lifetime1.key;
                   if (1 != this.field_t[var4Lifetime1]) {
@@ -450,7 +450,7 @@ final class uc extends pe {
                   } else {
                     var3Lifetime1.unlink(124);
                   }
-                  var3Lifetime1 = this.field_j.b((byte) -104);
+                  var3Lifetime1 = this.field_j.nextForward((byte) -104);
                 }
                 while (this.field_l.field_q.length > this.field_c) {
                   if (this.field_l.field_q[this.field_c] == 0) {
@@ -464,7 +464,7 @@ final class uc extends pe {
                     if (this.field_t[this.field_c] != 1) {
                       var6 = new IntrusiveNode();
                       var6.key = (long)this.field_c;
-                      this.field_j.a(var6, 27362);
+                      this.field_j.addLast(var6, 27362);
                       var2_intLifetime1 = 0;
                     }
                     this.field_c = this.field_c + 1;
@@ -664,7 +664,7 @@ final class uc extends pe {
           }
           this.field_w = true;
           if (null == this.field_j) {
-            this.field_j = new bk();
+            this.field_j = new IntrusiveDeque();
           }
           if (param0 != -25350) {
             this.field_m = (gj) null;
@@ -726,7 +726,7 @@ final class uc extends pe {
         RuntimeException var10 = null;
         this.field_n = new vb(16);
         this.field_c = 0;
-        this.field_e = new bk();
+        this.field_e = new IntrusiveDeque();
         this.field_i = 0L;
         try {
           this.field_d = param0;
@@ -735,7 +735,7 @@ final class uc extends pe {
             this.field_s = false;
           } else {
             this.field_s = true;
-            this.field_j = new bk();
+            this.field_j = new IntrusiveDeque();
           }
           this.field_m = param4;
           this.field_k = param5;

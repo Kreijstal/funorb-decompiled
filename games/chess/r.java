@@ -22,7 +22,7 @@ final class r extends ci {
     String field_Rb;
     boolean field_ac;
     ci field_Gb;
-    static dk field_Ib;
+    static SecondaryNodeHashTable field_Ib;
     ci field_Kb;
     ci field_Ub;
     long field_Nb;
@@ -94,12 +94,12 @@ final class r extends ci {
     final static void k(int param0) {
         h var1 = null;
         if (param0 == 3029) {
-          var1 = (h) (ni.field_c.c(101));
+          var1 = (h) (ni.field_c.removeFirst(101));
           if (var1 == null) {
             var1 = new h();
           }
           var1.a(wb.field_h, wb.field_c, 0, wb.field_d, wb.field_j, wb.field_i, wb.field_b, wb.field_a);
-          tm.field_a.a((IntrusiveNode) (var1), (byte) -39);
+          tm.field_a.addFirst((IntrusiveNode) (var1), (byte) -39);
           return;
         }
     }
@@ -110,7 +110,7 @@ final class r extends ci {
           de.field_c = param3;
           bb.field_b = param0;
           if (param1 > -46) {
-            field_Ib = (dk) null;
+            field_Ib = (SecondaryNodeHashTable) null;
           }
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "r.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

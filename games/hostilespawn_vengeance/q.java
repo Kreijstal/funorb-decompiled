@@ -30,20 +30,20 @@ final class q {
           de.field_n = de.field_n - 1;
           if (de.field_n == 0) {
             de.field_n = 200;
-            var1 = (qb) (jn.field_H.g(param0 ^ -14500));
+            var1 = (qb) (jn.field_H.beginForward(param0 ^ -14500));
             while (var1 != null) {
               if (!var1.field_j.isLinked(3000)) {
                 var1.unlink(param0 ^ -14511);
               }
-              var1 = (qb) (jn.field_H.a(12684));
+              var1 = (qb) (jn.field_H.nextForward(12684));
             }
             if (ej.field_g != null) {
-              var1Lifetime1 = (qb) (ej.field_g.g(-27));
+              var1Lifetime1 = (qb) (ej.field_g.beginForward(-27));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_j.isLinked(param0 - 11470)) {
                   var1Lifetime1.unlink(-17);
                 }
-                var1Lifetime1 = (qb) (ej.field_g.a(12684));
+                var1Lifetime1 = (qb) (ej.field_g.nextForward(12684));
               }
             }
           }

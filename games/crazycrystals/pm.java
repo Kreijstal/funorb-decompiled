@@ -3,7 +3,7 @@
  */
 final class pm {
     private boolean field_g;
-    static wb field_c;
+    static IntrusiveDeque field_c;
     dl[] field_k;
     private int field_e;
     static am field_b;
@@ -326,6 +326,6 @@ final class pm {
     }
 
     static {
-        field_c = new wb();
+        field_c = new IntrusiveDeque();
     }
 }

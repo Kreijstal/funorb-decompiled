@@ -76,7 +76,7 @@ final class mc extends vd implements qk {
         int var5Lifetime1;
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
-          this.field_z.d(5719);
+          this.field_z.clear(5719);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

@@ -3,7 +3,7 @@
  */
 final class de {
     int field_d;
-    static bk field_e;
+    static IntrusiveDeque field_e;
     static int field_c;
     int field_a;
     static int field_b;
@@ -141,6 +141,6 @@ final class de {
     }
 
     static {
-        field_e = new bk();
+        field_e = new IntrusiveDeque();
     }
 }

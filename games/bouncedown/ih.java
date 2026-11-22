@@ -12,7 +12,7 @@ class ih extends fd {
     private int field_G;
     private boolean field_eb;
     private int field_L;
-    static bc field_w;
+    static IntrusiveDeque field_w;
     static String field_P;
     private int field_M;
     private int field_hb;
@@ -70,18 +70,18 @@ class ih extends fd {
         RuntimeException var2_ref = null;
         var3 = Bounce.field_N;
         try {
-          var4 = (ke) (uk.field_d.a((byte) -107));
+          var4 = (ke) (uk.field_d.beginForward((byte) -107));
           while (var4 != null) {
             qh.a(var4, param0, -22762);
-            var4 = (ke) (uk.field_d.d((byte) -127));
+            var4 = (ke) (uk.field_d.nextForward((byte) -127));
           }
           if (param1 != -1) {
             field_X = -78;
           }
-          var2 = ne.field_r.a((byte) -59);
+          var2 = ne.field_r.beginForward((byte) -59);
           while (var2 != null) {
             ea.a(2, param0);
-            var2 = ne.field_r.d((byte) -24);
+            var2 = ne.field_r.nextForward((byte) -24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

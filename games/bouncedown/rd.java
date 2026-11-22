@@ -44,7 +44,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (nj.field_o != null) {
-            wh.field_d = 0;
+            SecondaryNodeDeque.field_d = 0;
             DelegatingCanvas.field_a = param0.getX();
             q.field_H = param0.getY();
             cl.field_o = true;
@@ -90,7 +90,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (nj.field_o == null) {
             return;
           }
-          wh.field_d = 0;
+          SecondaryNodeDeque.field_d = 0;
           DelegatingCanvas.field_a = param0.getX();
           q.field_H = param0.getY();
           cl.field_o = true;
@@ -118,7 +118,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (nj.field_o != null) {
-            wh.field_d = 0;
+            SecondaryNodeDeque.field_d = 0;
             hb.field_B = param0.getX();
             nc.field_b = param0.getY();
             fa.a(-49);
@@ -166,7 +166,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != nj.field_o) {
-            wh.field_d = 0;
+            SecondaryNodeDeque.field_d = 0;
             c.field_c = 0;
             cl.field_o = true;
             var2_int = param0.getModifiers();
@@ -232,7 +232,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null == nj.field_o) {
             return;
           }
-          wh.field_d = 0;
+          SecondaryNodeDeque.field_d = 0;
           DelegatingCanvas.field_a = param0.getX();
           q.field_H = param0.getY();
           cl.field_o = true;
@@ -254,7 +254,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (nj.field_o != null) {
-            wh.field_d = 0;
+            SecondaryNodeDeque.field_d = 0;
             DelegatingCanvas.field_a = -1;
             q.field_H = -1;
             cl.field_o = true;

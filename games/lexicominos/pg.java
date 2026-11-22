@@ -98,7 +98,7 @@ final class pg {
           var9 = ig.field_a;
           var2 = var9.readUnsignedByte(true);
           if (0 == var2) {
-            var3_ref_pb = (pb) (tl.field_h.a(true));
+            var3_ref_pb = (pb) (tl.field_h.beginForward(true));
             if (var3_ref_pb == null) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-116);
               return;
@@ -124,10 +124,10 @@ final class pg {
             return;
           }
           var3 = var9.readInt((byte) 19);
-          var4 = (tg) (bg.field_c.a(true));
+          var4 = (tg) (SecondaryNodeDeque.field_c.beginForward(true));
           while (var4 != null) {
             if (var4.field_k != var3) {
-              var4 = (tg) (bg.field_c.f(2));
+              var4 = (tg) (SecondaryNodeDeque.field_c.nextForward(2));
               continue;
             }
             break;
@@ -155,7 +155,7 @@ final class pg {
     }
 
     final static void a(byte param0) {
-        al.field_C = new ng();
+        al.field_C = new IntrusiveDeque();
         if (param0 < 75) {
           pg.c(-8);
         }

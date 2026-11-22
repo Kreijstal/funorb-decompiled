@@ -246,7 +246,7 @@ final class wa extends pj implements kd, ke {
             this.field_m = this.field_m + (var7.a(this.field_J, -40 + this.field_w, var7.field_x) + 5);
           }
           var8 = ij.field_b;
-          var9 = dg.a(nb.a(-117), (byte) -87);
+          var9 = SecondaryNodeDeque.a(nb.a(-117), (byte) -87);
           if (var9 == p.field_d) {
             var8 = rc.field_c;
           } else {

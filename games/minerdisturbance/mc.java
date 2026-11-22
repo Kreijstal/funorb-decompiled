@@ -840,7 +840,7 @@ final class mc {
             vh.field_a[ah.field_f].g(this.field_v, 0);
           }
         }
-        qc.field_d.f(-(qc.field_d.field_x >> 1) + 320, this.field_v);
+        SecondaryNodeDeque.field_d.f(-(SecondaryNodeDeque.field_d.field_x >> 1) + 320, this.field_v);
         if (this.field_v >= 0) {
           if (this.field_c > 40) {
             stackIn_10_0 = 30;
@@ -848,8 +848,8 @@ final class mc {
             stackIn_10_0 = (int)(Math.sin((double)(this.field_c * 6)) * 20.0 + Math.cos((double)(this.field_c * 12)) * 14.0) + 35;
           }
           var2 = stackIn_10_0;
-          var3 = 345 - (qc.field_d.field_x >> 1);
-          var4 = 320 + (qc.field_d.field_x >> 1) - 25;
+          var3 = 345 - (SecondaryNodeDeque.field_d.field_x >> 1);
+          var4 = 320 + (SecondaryNodeDeque.field_d.field_x >> 1) - 25;
           while (var3 < var4) {
             SoftwareRasterizer.a(var3 << 4, this.field_v + 42 << 4, 800, var2, s.field_I);
             var3 += 50;
@@ -991,7 +991,7 @@ final class mc {
         stackIn_81_1 = (this.field_f == 0) && (this.field_c % 10 < 5);
         stackIn_83_0 = this;
         stackIn_83_2 = -123;
-        stackIn_83_3 = sd.field_e;
+        stackIn_83_3 = IterableNodeHashTable.field_e;
         stackIn_83_4 = 450;
         stackIn_84_5 = (this.field_a == -5);
         stackIn_86_0 = this;

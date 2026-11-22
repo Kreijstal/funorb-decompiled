@@ -82,18 +82,18 @@ abstract class ResourceSupport003 {
         RuntimeException runtimeExceptionLocal5 = null;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1741((byte) -112));
+          networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.beginBackward((byte) -112));
           while (networkSupport005Local3 != null) {
             MixedSupport070.performAction0912(integerArgument2, -15016, networkSupport005Local3);
-            networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1745(true));
+            networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.nextBackward(true));
           }
           if (booleanArgument1) {
             ResourceSupport003.performAction1165(true, -48);
           }
-          hashNodeLocal1 = PcmPlayerService.nodeDequeState0028.computeHashNode1741((byte) 109);
+          hashNodeLocal1 = PcmPlayerService.nodeDequeState0028.beginBackward((byte) 109);
           while (hashNodeLocal1 != null) {
             MixedSupport050.performAction0597(integerArgument2, 47);
-            hashNodeLocal1 = PcmPlayerService.nodeDequeState0028.computeHashNode1745(true);
+            hashNodeLocal1 = PcmPlayerService.nodeDequeState0028.nextBackward(true);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {

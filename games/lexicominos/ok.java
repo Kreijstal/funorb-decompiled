@@ -36,7 +36,7 @@ final class ok {
     static char[] field_q;
     int[][] field_a;
     int field_u;
-    static ng field_b;
+    static IntrusiveDeque field_b;
     static int[] field_G;
     static String field_d;
 
@@ -78,7 +78,7 @@ final class ok {
     static {
         field_k = new rb();
         field_q = new char[128];
-        field_b = new ng();
+        field_b = new IntrusiveDeque();
         field_d = "Please enter your age in years";
     }
 }

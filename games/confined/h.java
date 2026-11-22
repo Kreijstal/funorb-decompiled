@@ -41,7 +41,7 @@ final class h extends ee {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         if (this.field_N) {
           return;
         }
@@ -63,7 +63,7 @@ final class h extends ee {
         return true;
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         try {
           int var3_int = 61 / ((-2 - param1) / 62);
           this.field_ab.a(-117, param0);
@@ -238,7 +238,7 @@ final class h extends ee {
     final void g(int param0) {
         if (param0 != 26402) {
           oi var3 = (oi) null;
-          this.a((mn) null, -0.7945570901746162, -12, (vg) null, (oi) null);
+          this.a((PrimaryNodeDeque) null, -0.7945570901746162, -12, (vg) null, (oi) null);
         }
         ka var2 = this.a((byte) -116, MouseWheelInput.field_a, 2.0);
         var2.field_M.field_w = this.field_C * 4.0;

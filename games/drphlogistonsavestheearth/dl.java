@@ -4,7 +4,7 @@
 final class dl extends si {
     int field_K;
     static bb field_L;
-    static vd field_M;
+    static IntrusiveDeque field_M;
     static String field_I;
     static u field_H;
     static String field_J;
@@ -213,7 +213,7 @@ final class dl extends si {
 
     static {
         field_L = new bb();
-        field_M = new vd();
+        field_M = new IntrusiveDeque();
         field_H = null;
         field_I = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_J = "Connection lost. <%0>";

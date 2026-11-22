@@ -3,37 +3,37 @@
  */
 import java.util.*;
 
-final class bl implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static le field_d;
-    IntrusiveNode[] field_e;
-    private IntrusiveNode field_c;
+    IntrusiveNode[] buckets;
+    private IntrusiveNode lookupCursor;
     static String field_b;
     static volatile int field_g;
     static String field_a;
-    int field_f;
+    int bucketCount;
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long param0, byte param1) {
         IntrusiveNode var4;
         int var5_int;
         IntrusiveNode var5;
         int var6;
         var6 = Chess.field_G;
-        var4 = this.field_e[(int)((long)(this.field_f - 1) & param0)];
-        this.field_c = var4.previous;
+        var4 = this.buckets[(int)((long)(this.bucketCount - 1) & param0)];
+        this.lookupCursor = var4.previous;
         while (true) {
-          if (var4 == this.field_c) {
+          if (var4 == this.lookupCursor) {
             var5_int = 80 / ((3 - param1) / 34);
-            this.field_c = null;
+            this.lookupCursor = null;
             return null;
           }
-          if (~this.field_c.key != ~param0) {
-            this.field_c = this.field_c.previous;
+          if (~this.lookupCursor.key != ~param0) {
+            this.lookupCursor = this.lookupCursor.previous;
             continue;
           }
           break;
         }
-        var5 = this.field_c;
-        this.field_c = this.field_c.previous;
+        var5 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.previous;
         return var5;
     }
 
@@ -64,7 +64,7 @@ final class bl implements Iterable {
         try {
           var3 = new mn();
           if (param0 != 0) {
-            bl.clearStaticReferences(-105);
+            IterableNodeHashTable.clearStaticReferences(-105);
           }
           ((wn) ((Object) var3)).field_c = param1;
           ((wn) ((Object) var3)).field_a = param2;
@@ -84,16 +84,16 @@ final class bl implements Iterable {
         }
     }
 
-    bl(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
-        this.field_e = new IntrusiveNode[param0];
-        this.field_f = param0;
+        this.buckets = new IntrusiveNode[param0];
+        this.bucketCount = param0;
         for (var2 = 0; param0 > var2; var2++) {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
-          this.field_e[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.next = var3;
           var3.previous = var3;
         }
@@ -243,19 +243,19 @@ final class bl implements Iterable {
         }
     }
 
-    final void a(IntrusiveNode param0, long param1, int param2) {
+    final void put(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.next) {
             param0.unlink(-2193);
           }
-          var5 = this.field_e[(int)(param1 & (long)(this.field_f - 1))];
+          var5 = this.buckets[(int)(param1 & (long)(this.bucketCount - 1))];
           param0.next = var5.next;
           param0.previous = var5;
           param0.next.previous = param0;
           param0.previous.next = param0;
           if (param2 != 31313) {
-            bl.clearStaticReferences(-20);
+            IterableNodeHashTable.clearStaticReferences(-20);
           }
           param0.key = param1;
         } catch (RuntimeException runtimeException) {

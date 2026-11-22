@@ -5,14 +5,14 @@ import java.util.*;
 
 class gj extends UiComponent implements wg {
     static dd[] field_E;
-    vc field_C;
+    IntrusiveDeque field_C;
     static rk field_A;
     static String field_D;
     static String[] field_B;
 
     gj(int param0, int param1, int param2, int param3, ComponentLayout param4) {
         super(param0, param1, param2, param3, param4, (kd) null);
-        this.field_C = new vc();
+        this.field_C = new IntrusiveDeque();
     }
 
     final boolean a(UiComponent param0, int param1) {
@@ -246,7 +246,7 @@ class gj extends UiComponent implements wg {
         RuntimeException decompiledCaughtException = null;
         var7 = fleas.field_A ? 1 : 0;
         try {
-          if (this.field_C.a(-1092895903)) {
+          if (this.field_C.isEmpty(-1092895903)) {
             return false;
           }
           if (param0 != 32) {
@@ -338,7 +338,7 @@ class gj extends UiComponent implements wg {
 
     final void a(UiComponent param0, byte param1) {
         try {
-          this.field_C.a(false, param0);
+          this.field_C.addLast(false, param0);
           if (param1 >= -27) {
             this.g(121);
           }
@@ -449,7 +449,7 @@ class gj extends UiComponent implements wg {
         RuntimeException decompiledCaughtException = null;
         var7 = fleas.field_A ? 1 : 0;
         try {
-          if (this.field_C.a(param1 ^ 1092889578)) {
+          if (this.field_C.isEmpty(param1 ^ 1092889578)) {
             return false;
           }
           var8 = new we(this.field_C);

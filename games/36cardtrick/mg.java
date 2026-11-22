@@ -155,8 +155,8 @@ final class mg {
           fh.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
           kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
           ia.field_c = new kc[22];
-          var1_int = qa.field_b.a(bk.field_c[3]);
-          var2 = qa.field_b.a(bk.field_c[4]);
+          var1_int = qa.field_b.a(IntrusiveDeque.field_c[3]);
+          var2 = qa.field_b.a(IntrusiveDeque.field_c[4]);
           if (var1_int < var2) {
             var1_int = var2;
           }
@@ -167,7 +167,7 @@ final class mg {
             vj.c(0, 0, 207, 34, 6962948);
             vj.g(4, 4, 203, 30);
             field_j[4].b(0, 0);
-            var6 = bk.field_c[var1_intLifetime1];
+            var6 = IntrusiveDeque.field_c[var1_intLifetime1];
             var3 = qa.field_b.a(var6);
             var4 = -var3 + 207 >> 1;
             if (var1_intLifetime1 == 3 ||
@@ -185,7 +185,7 @@ final class mg {
             vj.c(0, 0, 207, 34, 6962948);
             vj.g(2, 2, 118, 29);
             field_j[4].b(0, 0);
-            var7 = bk.field_c[var1_intLifetime2];
+            var7 = IntrusiveDeque.field_c[var1_intLifetime2];
             var3Lifetime1 = qa.field_b.a(var7);
             var4Lifetime1 = 120 - var3Lifetime1 >> 1;
             a.a(16777214, var7, param0 ^ -97, var4Lifetime1, 16777215, 23);
@@ -245,10 +245,10 @@ final class mg {
           var2 = var27.readUnsignedByte(-121);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort((byte) 72);
-            var4_ref_uh = (uh) (tl.field_a.a((byte) 74));
+            var4_ref_uh = (uh) (tl.field_a.beginForward((byte) 74));
             while (var4_ref_uh != null) {
               if (var3 != var4_ref_uh.field_g) {
-                var4_ref_uh = (uh) (tl.field_a.b((byte) -119));
+                var4_ref_uh = (uh) (tl.field_a.nextForward((byte) -119));
                 continue;
               }
               break;
@@ -344,10 +344,10 @@ final class mg {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort((byte) 72);
             var4 = var27.readLong(true);
-            var6 = (ad) (od.field_b.a((byte) 74));
+            var6 = (ad) (od.field_b.beginForward((byte) 74));
             while (var6 != null) {
               if (var6.field_p != var3Lifetime1) {
-                var6 = (ad) (od.field_b.b((byte) -122));
+                var6 = (ad) (od.field_b.nextForward((byte) -122));
                 continue;
               }
               break;

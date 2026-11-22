@@ -29,15 +29,15 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         var3 = CrazyCrystals.field_B;
         try {
-          var4 = (ca) (gn.field_Q.g(32073));
+          var4 = (ca) (gn.field_Q.beginForward(32073));
           while (var4 != null) {
             nh.a(param0, (byte) -99, var4);
-            var4 = (ca) (gn.field_Q.a(false));
+            var4 = (ca) (gn.field_Q.nextForward(false));
           }
-          var2 = pm.field_c.g(32073);
+          var2 = pm.field_c.beginForward(32073);
           while (var2 != null) {
             eq.b(2, param0);
-            var2 = pm.field_c.a(param1);
+            var2 = pm.field_c.nextForward(param1);
           }
           if (!param1) {
             return;

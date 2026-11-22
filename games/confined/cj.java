@@ -105,7 +105,7 @@ final class cj implements fe {
 
     static {
         field_b = new int[8192];
-        mn discarded$0 = new mn();
+        PrimaryNodeDeque discarded$0 = new PrimaryNodeDeque();
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
     }
 }

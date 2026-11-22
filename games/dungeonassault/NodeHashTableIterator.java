@@ -11,7 +11,7 @@ final class NodeHashTableIterator implements Iterator {
     static String field_b;
     static String field_e;
     private IntrusiveNode nextNode;
-    private qi table;
+    private IterableNodeHashTable table;
     private int nextBucketIndex;
 
     private final void reset(byte param0) {
@@ -20,7 +20,7 @@ final class NodeHashTableIterator implements Iterator {
         if (param0 <= 51) {
           field_i = (String) null;
         }
-        this.nextNode = this.table.field_d[0].previous;
+        this.nextNode = this.table.buckets[0].previous;
     }
 
     public final void remove() {
@@ -83,20 +83,20 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = DungeonAssault.field_K;
-        if (this.table.field_d[-1 + this.nextBucketIndex] != this.nextNode) {
+        if (this.table.buckets[-1 + this.nextBucketIndex] != this.nextNode) {
           var1 = this.nextNode;
           this.lastReturned = var1;
           this.nextNode = var1.previous;
           return var1;
         }
         do {
-          if (this.table.field_g <= this.nextBucketIndex) {
+          if (this.table.bucketCount <= this.nextBucketIndex) {
             return null;
           }
           fieldTemp$0 = this.nextBucketIndex;
           this.nextBucketIndex = this.nextBucketIndex + 1;
-          var1 = this.table.field_d[fieldTemp$0].previous;
-        } while (this.table.field_d[this.nextBucketIndex - 1] == var1);
+          var1 = this.table.buckets[fieldTemp$0].previous;
+        } while (this.table.buckets[this.nextBucketIndex - 1] == var1);
         this.lastReturned = var1;
         this.nextNode = var1.previous;
         return var1;
@@ -106,22 +106,22 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = DungeonAssault.field_K;
-        if (this.table.field_d[this.nextBucketIndex - 1] != this.nextNode) {
+        if (this.table.buckets[this.nextBucketIndex - 1] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.nextBucketIndex >= this.table.field_g) {
+          if (this.nextBucketIndex >= this.table.bucketCount) {
             return false;
           }
           fieldTemp$0 = this.nextBucketIndex;
           this.nextBucketIndex = this.nextBucketIndex + 1;
-          if (this.table.field_d[fieldTemp$0].previous == this.table.field_d[-1 + this.nextBucketIndex]) {
-            this.nextNode = this.table.field_d[this.nextBucketIndex - 1];
+          if (this.table.buckets[fieldTemp$0].previous == this.table.buckets[-1 + this.nextBucketIndex]) {
+            this.nextNode = this.table.buckets[this.nextBucketIndex - 1];
             continue;
           }
           break;
         }
-        this.nextNode = this.table.field_d[-1 + this.nextBucketIndex].previous;
+        this.nextNode = this.table.buckets[-1 + this.nextBucketIndex].previous;
         return true;
     }
 
@@ -180,7 +180,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    NodeHashTableIterator(qi param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.lastReturned = null;
         try {
           this.table = param0;

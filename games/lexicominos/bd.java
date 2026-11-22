@@ -57,18 +57,18 @@ final class bd extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          var4 = (tg) (bg.field_c.a(true));
+          var4 = (tg) (SecondaryNodeDeque.field_c.beginForward(true));
           while (var4 != null) {
             p.a(var4, param0, (byte) 24);
-            var4 = (tg) (bg.field_c.f(2));
+            var4 = (tg) (SecondaryNodeDeque.field_c.nextForward(2));
           }
           if (param1 != -4584) {
             return;
           }
-          var2 = tl.field_h.a(true);
+          var2 = tl.field_h.beginForward(true);
           while (var2 != null) {
             dd.a(53, param0);
-            var2 = tl.field_h.f(2);
+            var2 = tl.field_h.nextForward(2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

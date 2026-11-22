@@ -223,7 +223,7 @@ final class lf extends gj {
           IntrusiveNode var3 = (IntrusiveNode) null;
           lf.a((IntrusiveNode) null, (IntrusiveNode) null, 33);
         }
-        ne.field_r.a(1, var2);
+        ne.field_r.addLast(1, var2);
         ea.a(2, param1);
         return var2;
     }

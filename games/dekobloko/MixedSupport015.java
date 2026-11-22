@@ -13,7 +13,7 @@ final class MixedSupport015 {
 
     final static MixedSupport033 computeMixedSupport0330201(int integerArgument1, byte byteArgument2) {
         MixedSupport033 mixedSupport033Local1 = new MixedSupport033();
-        PcmPlayerService.nodeDequeState0028.performAction1735(mixedSupport033Local1, 2777);
+        PcmPlayerService.nodeDequeState0028.addFirst(mixedSupport033Local1, 2777);
         MixedSupport050.performAction0597(integerArgument1, 65);
         if (byteArgument2 <= -81) {
           return mixedSupport033Local1;

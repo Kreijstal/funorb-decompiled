@@ -272,7 +272,7 @@ final class uj extends IntrusiveNode {
           var2 = var9.readUnsignedByte(-128);
           var3 = var9.readUnsignedByte(-128);
           if (var2 == 0) {
-            var4_ref_pa = (pa) (ve.field_Nb.g(-18110));
+            var4_ref_pa = (pa) (ve.field_Nb.beginBackward(-18110));
             if (var4_ref_pa == null) {
               si.d(65280);
               return;
@@ -292,11 +292,11 @@ final class uj extends IntrusiveNode {
           }
           if (1 == var2) {
             var4 = var9.readSignedSmart(false);
-            var5 = (dc) (GameAppletShell.field_j.g(-18110));
+            var5 = (dc) (GameAppletShell.field_j.beginBackward(-18110));
             while (var5 != null) {
               if (~var5.field_j != ~var3 ||
                 var4 != var5.field_l) {
-                var5 = (dc) (GameAppletShell.field_j.a((byte) -128));
+                var5 = (dc) (GameAppletShell.field_j.nextBackward((byte) -128));
                 continue;
               }
               break;

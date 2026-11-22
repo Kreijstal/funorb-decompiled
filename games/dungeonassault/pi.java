@@ -187,7 +187,7 @@ final class pi {
         if (param0 != 80) {
           field_g = (String) null;
         }
-        if (ol.field_i != dh.field_b) {
+        if (ol.field_i != SecondaryNodeDeque.field_b) {
           return null;
         }
         ol.field_i = sp.field_e;

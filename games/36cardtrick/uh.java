@@ -18,7 +18,7 @@ final class uh extends IntrusiveNode {
 
     final static dh a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         dh var8 = new dh(param5, param3, param0, param6, param4, param7);
-        vb.field_c.a(var8, 27362);
+        vb.field_c.addLast(var8, 27362);
         if (param1 > 49) {
           ke.a(var8, param2, 21719);
           return var8;

@@ -508,10 +508,10 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[10] = jh.field_b;
         GameAppletShell.field_g[8] = ck.field_c[1];
         GameAppletShell.field_g[23] = pm.field_d;
-        GameAppletShell.field_g[14] = sd.field_e;
+        GameAppletShell.field_g[14] = IterableNodeHashTable.field_e;
         GameAppletShell.field_g[15] = ee.field_E;
         GameAppletShell.field_g[22] = jc.field_D;
-        GameAppletShell.field_g[24] = sd.field_e;
+        GameAppletShell.field_g[24] = IterableNodeHashTable.field_e;
         e.field_i = new String[35][][];
         GameAppletShell.field_g[7] = ck.field_c[0];
         GameAppletShell.field_g[9] = ck.field_c[2];

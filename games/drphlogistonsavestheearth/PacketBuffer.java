@@ -669,7 +669,7 @@ class PacketBuffer extends IntrusiveNode {
           return;
         }
         try {
-          ff.field_O.a(new ml(param1, param1), 255);
+          ff.field_O.addLast(new ml(param1, param1), 255);
           ej.field_a.a(param1);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "od.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

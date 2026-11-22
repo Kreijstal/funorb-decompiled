@@ -489,9 +489,9 @@ final class dg {
 
     final static void a(byte param0) {
         lo.field_b = null;
-        ec.field_l.a(22800);
+        ec.field_l.clear(22800);
         ke.field_b[jo.field_o] = 0;
-        so.field_h.a(22800);
+        so.field_h.clear(22800);
         fk.field_s = 0;
         if (param0 <= -25) {
           pc.field_y = 0;

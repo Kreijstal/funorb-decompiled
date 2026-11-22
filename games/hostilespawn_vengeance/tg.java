@@ -55,7 +55,7 @@ final class tg {
     }
 
     final static void b(int param0) {
-        cl var1 = (cl) (ne.field_q.g(-64));
+        cl var1 = (cl) (ne.field_q.beginForward(-64));
         if (param0 != -4309) {
           field_a = false;
         }

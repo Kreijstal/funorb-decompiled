@@ -3,7 +3,7 @@
  */
 final class ec extends ln {
     static String field_n;
-    static wb field_l;
+    static IntrusiveDeque field_l;
     static int[] field_i;
     static boolean field_g;
     static am field_k;
@@ -97,7 +97,7 @@ final class ec extends ln {
     static {
         field_i = new int[4];
         field_n = "Spider";
-        field_l = new wb();
+        field_l = new IntrusiveDeque();
         field_h = new oi();
     }
 }

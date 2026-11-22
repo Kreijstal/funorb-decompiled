@@ -13,18 +13,18 @@ final class ud {
         if (param1 > -55) {
           return (sj) null;
         }
-        var5 = (sj) (il.field_b.a(true));
+        var5 = (sj) (il.field_b.beginForward(true));
         while (var5 != null) {
           if (param4 == var5.field_h) {
             return var5;
           }
-          var5 = (sj) (il.field_b.f(2));
+          var5 = (sj) (il.field_b.nextForward(2));
         }
         var5Lifetime1 = new sj();
         var5Lifetime1.field_h = param4;
         var5Lifetime1.field_m = param0;
         var5Lifetime1.field_o = param2;
-        il.field_b.b(116, var5Lifetime1);
+        il.field_b.addLast(116, var5Lifetime1);
         uh.a(var5Lifetime1, (byte) -121, param3);
         return var5Lifetime1;
     }

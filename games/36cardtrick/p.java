@@ -67,7 +67,7 @@ final class p extends cg {
             stackIn_10_0 = gi.field_g;
             return stackIn_10_0;
           }
-          stackIn_8_0 = bk.field_b;
+          stackIn_8_0 = IntrusiveDeque.field_b;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

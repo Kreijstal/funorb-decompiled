@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static vl field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     static boolean[] field_c;
     static String field_d;
@@ -42,7 +42,7 @@ final class ve {
     }
 
     static {
-        field_b = new vl();
+        field_b = new IntrusiveDeque();
         field_d = "to keep fullscreen or";
     }
 }

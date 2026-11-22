@@ -3,7 +3,7 @@
  */
 final class gm {
     static int field_f;
-    static vl field_d;
+    static IntrusiveDeque field_d;
     private boolean field_b;
     bd[] field_c;
     private int field_i;

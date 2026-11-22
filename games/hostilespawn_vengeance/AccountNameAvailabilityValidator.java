@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountNameAvailabilityValidator extends hi {
-    static vl field_v;
+    static IntrusiveDeque field_v;
     static boolean field_o;
     private boolean nameAvailable;
     static cb field_t;
@@ -159,7 +159,7 @@ final class AccountNameAvailabilityValidator extends hi {
 
     static {
         field_o = false;
-        field_v = new vl();
+        field_v = new IntrusiveDeque();
         field_p = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
     }
 }

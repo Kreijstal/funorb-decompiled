@@ -234,7 +234,7 @@ abstract class l {
           l.a(116);
         }
         if (AccountNameAvailabilityValidator.field_n == 10 ||
-          !dh.a(false)) {
+          !SecondaryNodeDeque.a(false)) {
           tk.a((byte) -86);
           AccountNameAvailabilityValidator.field_n = 11;
         }

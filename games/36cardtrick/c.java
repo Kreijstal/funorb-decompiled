@@ -1697,7 +1697,7 @@ abstract class c extends fj {
                 }
                 var2 = hc.a("create_alert_email_unavailable", (byte) -127);
                 if (var2 != null) {
-                  bk.field_b = GzipInflater.a(var2, (byte) 118);
+                  IntrusiveDeque.field_b = GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("create_alert_invaliddate", (byte) -127);
                 if (var2 != null) {
@@ -1725,7 +1725,7 @@ abstract class c extends fj {
                 }
                 var2 = hc.a("create_account_success", (byte) -127);
                 if (null != var2) {
-                  bk.field_e = GzipInflater.a(var2, (byte) 125);
+                  IntrusiveDeque.field_e = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("invalid_name", (byte) -127);
                 if (null != var2) {
@@ -1866,7 +1866,7 @@ abstract class c extends fj {
                 }
                 var2 = hc.a("loading_graphics", (byte) -127);
                 if (var2 != null) {
-                  bk.field_f = GzipInflater.a(var2, (byte) 121);
+                  IntrusiveDeque.field_f = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("loading_models", (byte) -127);
                 if (var2 != null) {
@@ -3407,7 +3407,7 @@ abstract class c extends fj {
             eg.field_f = Main.field_V.pollRotation(-119);
           }
           if (g.j(7)) {
-            var3_int = 1200 * va.a(22018);
+            var3_int = 1200 * SecondaryNodeDeque.a(22018);
             if (this.field_v ||
               !(var3_int >= mk.h(-1)) &&
               !(dj.c(0) <= var3_int)) {
@@ -3788,7 +3788,7 @@ abstract class c extends fj {
             this.c(false);
           }
           rd.field_j.b(0, var5, 28040, var4);
-          bk.a(mk.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
+          IntrusiveDeque.a(mk.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

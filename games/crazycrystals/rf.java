@@ -3,7 +3,7 @@
  */
 class rf extends pc {
     private fo field_D;
-    private wb field_B;
+    private IntrusiveDeque field_B;
     static int field_G;
     static dl field_C;
     private String[] field_F;
@@ -28,7 +28,7 @@ class rf extends pc {
         int var16;
         int var7Lifetime1;
         var16 = CrazyCrystals.field_B;
-        this.field_B = new wb();
+        this.field_B = new IntrusiveDeque();
         var2 = 0;
         var3 = (fi) ((Object) this.field_i);
         var4 = var3.a((qm) (this), 1);
@@ -69,7 +69,7 @@ class rf extends pc {
             if (var10 != null) {
               ((fo) (var10)).field_k = var15;
             }
-            this.field_B.b(0, var15);
+            this.field_B.addLast(0, var15);
             var10 = var15;
           }
         }
@@ -333,7 +333,7 @@ class rf extends pc {
     final void b(int param0, int param1, int param2, int param3) {
         this.a(((fi) ((Object) this.field_i)).c((qm) (this), -1), param2, param0, param3, (byte) -52);
         if (param1 != 47) {
-          this.field_B = (wb) null;
+          this.field_B = (IntrusiveDeque) null;
         }
     }
 
@@ -376,7 +376,7 @@ class rf extends pc {
         var6 = CrazyCrystals.field_B;
         try {
           if (param0 != 47) {
-            this.field_B = (wb) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           if (null == this.field_F ||
             param2 >= this.field_F.length) {
@@ -455,7 +455,7 @@ class rf extends pc {
           var7 = (java.net.URL) null;
           rf.a(-35, (String) null, true, (String) null, (java.net.URL) null);
         }
-        var4 = (fo) (this.field_B.g(32073));
+        var4 = (fo) (this.field_B.beginForward(32073));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -467,7 +467,7 @@ class rf extends pc {
             }
             var5 = var5.field_k;
           }
-          var4 = (fo) (this.field_B.a(false));
+          var4 = (fo) (this.field_B.nextForward(false));
         }
         return null;
     }

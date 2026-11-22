@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-final class ed implements Iterable {
-    private IntrusiveNode field_d;
+final class IterableNodeHashTable implements Iterable {
+    private IntrusiveNode lookupCursor;
     static int[] field_e;
     static int field_c;
-    int field_a;
-    IntrusiveNode[] field_b;
+    int bucketCount;
+    IntrusiveNode[] buckets;
 
-    final void a(int param0, long param1, IntrusiveNode param2) {
+    final void put(int param0, long param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.previous) {
             param2.unlink(83);
           }
-          var5 = this.field_b[(int)(param1 & (long)(-1 + this.field_a))];
+          var5 = this.buckets[(int)(param1 & (long)(-1 + this.bucketCount))];
           param2.next = var5;
           param2.previous = var5.previous;
           if (param0 >= -94) {
-            this.field_d = (IntrusiveNode) null;
+            this.lookupCursor = (IntrusiveNode) null;
           }
           param2.previous.next = param2;
           param2.next.previous = param2;
@@ -34,32 +34,32 @@ final class ed implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final IntrusiveNode a(byte param0, long param1) {
+    final IntrusiveNode get(byte param0, long param1) {
         int var4;
         IntrusiveNode var5;
         IntrusiveNode var6;
         int var7;
         var7 = Main.field_T;
         var4 = -24 / ((21 - param0) / 48);
-        var5 = this.field_b[(int)((long)(-1 + this.field_a) & param1)];
-        this.field_d = var5.next;
+        var5 = this.buckets[(int)((long)(-1 + this.bucketCount) & param1)];
+        this.lookupCursor = var5.next;
         while (true) {
-          if (var5 == this.field_d) {
-            this.field_d = null;
+          if (var5 == this.lookupCursor) {
+            this.lookupCursor = null;
             return null;
           }
-          if (this.field_d.key != param1) {
-            this.field_d = this.field_d.next;
+          if (this.lookupCursor.key != param1) {
+            this.lookupCursor = this.lookupCursor.next;
             continue;
           }
           break;
         }
-        var6 = this.field_d;
-        this.field_d = this.field_d.next;
+        var6 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.next;
         return var6;
     }
 
-    private ed() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

@@ -108,9 +108,9 @@ final class kj {
     final static boolean a(boolean param0) {
         if (param0) {
           kj.a(-55);
-          return qc.field_b;
+          return SecondaryNodeDeque.field_b;
         }
-        return qc.field_b;
+        return SecondaryNodeDeque.field_b;
     }
 
     final static byte a(char param0, int param1) {

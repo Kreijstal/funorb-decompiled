@@ -9,7 +9,7 @@ class fb extends mf {
     static String field_F;
     private boolean field_E;
     static String field_D;
-    static jc field_L;
+    static IntrusiveDeque field_L;
     boolean field_H;
     static String field_G;
     static int field_K;
@@ -290,7 +290,7 @@ class fb extends mf {
         field_D = "<%0>'s game";
         field_F = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_G = "Seriously offensive language";
-        field_L = new jc();
+        field_L = new IntrusiveDeque();
         field_K = 0;
     }
 }

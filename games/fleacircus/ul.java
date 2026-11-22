@@ -147,7 +147,7 @@ final class ul extends gj implements nk, da {
         fa var6 = tl.field_p;
         fa var7 = var6;
         if (param0) {
-          var2 = (kb) (pb.field_f.c((byte) 47));
+          var2 = (kb) (pb.field_f.beginForward((byte) 47));
           if (var2 == null) {
           } else {
             var4 = hi.field_q;

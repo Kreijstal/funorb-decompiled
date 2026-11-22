@@ -105,7 +105,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
             integerLocal2 += 2;
           }
           nodeDequeLocal3 = new NodeDeque();
-          nodeDequeArgument1.performAction1734(-128, hashNodeLocal1, nodeDequeLocal3);
+          nodeDequeArgument1.movePrefixToFront(-128, hashNodeLocal1, nodeDequeLocal3);
           FullscreenCanvas.mergeSortTileRegions(nodeDequeArgument1, -117, (1 + integerArgument3) / 2);
           FullscreenCanvas.mergeSortTileRegions(nodeDequeLocal3, -127, integerArgument3 / 2);
           hashNodeLocal4 = nodeDequeArgument1.hashNodeState0009.previous;

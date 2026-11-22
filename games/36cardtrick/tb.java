@@ -77,16 +77,16 @@ final class tb implements ci {
         RuntimeException var2_ref = null;
         var4 = Main.field_T;
         try {
-          var5 = (dh) (vb.field_c.a((byte) 74));
+          var5 = (dh) (vb.field_c.beginForward((byte) 74));
           while (var5 != null) {
             ke.a(var5, param0, 21719);
-            var5 = (dh) (vb.field_c.b((byte) -104));
+            var5 = (dh) (vb.field_c.nextForward((byte) -104));
           }
-          var2 = ue.field_b.a((byte) 74);
+          var2 = ue.field_b.beginForward((byte) 74);
           var3 = -54 / ((param1 + 65) / 51);
           while (var2 != null) {
             fl.b(1, param0);
-            var2 = ue.field_b.b((byte) -104);
+            var2 = ue.field_b.nextForward((byte) -104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

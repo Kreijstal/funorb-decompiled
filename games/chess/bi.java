@@ -30,7 +30,7 @@ final class bi {
         int var1 = gd.a(5);
         if (param0 > 87) {
           var2 = rb.a(0);
-          bl.field_d.a(ai.field_j - tn.field_m, (tn.field_m << 1) + var1, var2 + (tm.field_d << 1), true, -tm.field_d + ak.field_j);
+          IterableNodeHashTable.field_d.a(ai.field_j - tn.field_m, (tn.field_m << 1) + var1, var2 + (tm.field_d << 1), true, -tm.field_d + ak.field_j);
           di.f((byte) 118);
           return;
         }

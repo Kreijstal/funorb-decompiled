@@ -104,18 +104,18 @@ final class MixedSupport143 {
         RuntimeException runtimeExceptionLocal5 = null;
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          mixedSupport038Local2 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1741((byte) 119));
+          mixedSupport038Local2 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.beginBackward((byte) 119));
           while (mixedSupport038Local2 != null) {
             MixedSupport081.performAction1031(true, mixedSupport038Local2, integerArgument2);
-            mixedSupport038Local2 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1745(true));
+            mixedSupport038Local2 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.nextBackward(true));
           }
           if (integerArgument1 != 3) {
             return;
           }
-          mixedSupport113Local3 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.computeHashNode1741((byte) 80));
+          mixedSupport113Local3 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.beginBackward((byte) 80));
           while (mixedSupport113Local3 != null) {
             ReturnedShapeCache.performAction1177(integerArgument1 ^ -87, integerArgument2, mixedSupport113Local3);
-            mixedSupport113Local3 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.computeHashNode1745(true));
+            mixedSupport113Local3 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {

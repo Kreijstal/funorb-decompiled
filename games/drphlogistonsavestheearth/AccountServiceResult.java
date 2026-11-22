@@ -9,7 +9,7 @@ final class AccountServiceResult {
     static he[] field_c;
     boolean success;
     boolean field_d;
-    static vd field_f;
+    static IntrusiveDeque field_f;
 
     public static void clearStaticReferences(int param0) {
         field_f = null;

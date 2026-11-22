@@ -222,7 +222,7 @@ final class hd extends vg {
                 var18.field_p[var5] = -5;
               }
             }
-            g.field_t.a(var18, 255);
+            g.field_t.addLast(var18, 255);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

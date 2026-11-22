@@ -18,7 +18,7 @@ final class td implements Runnable {
     private PlatformTaskDispatcher field_g;
     static int[] field_d;
     static long field_c;
-    static vl field_o;
+    static IntrusiveDeque field_o;
     static String field_p;
     private java.net.Socket field_n;
     private byte[] field_l;
@@ -383,7 +383,7 @@ final class td implements Runnable {
             return;
           }
           if (param0 != -1) {
-            field_o = (vl) null;
+            field_o = (IntrusiveDeque) null;
           }
           while (param3 > 0) {
             var5_int = this.field_b.read(param1, param2, param3);
@@ -412,6 +412,6 @@ final class td implements Runnable {
         field_a = new java.util.zip.CRC32();
         field_d = new int[]{5};
         field_p = "Oh, a blast door. A rocket launcher would be useful at this point.";
-        field_o = new vl();
+        field_o = new IntrusiveDeque();
     }
 }

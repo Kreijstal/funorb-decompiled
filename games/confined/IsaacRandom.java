@@ -3,7 +3,7 @@
  */
 final class IsaacRandom {
     private int field_c;
-    static mn field_a;
+    static PrimaryNodeDeque field_a;
     private int[] field_e;
     private int field_i;
     private int field_g;
@@ -50,7 +50,7 @@ final class IsaacRandom {
         }
     }
 
-    final static void a(boolean param0, mn param1) {
+    final static void a(boolean param0, PrimaryNodeDeque param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -69,11 +69,11 @@ final class IsaacRandom {
             return;
           }
           while (true) {
-            var2 = (oi) (param1.a(false));
+            var2 = (oi) (param1.beginBackward(false));
             if (var2 == null) {
               return;
             }
-            var3 = (oi) (param1.a((byte) -124));
+            var3 = (oi) (param1.nextBackward((byte) -124));
             var4 = 1;
             while (var3 != null) {
               if (var3.field_p + var3.field_n < var2.field_n + var2.field_p) {
@@ -82,13 +82,13 @@ final class IsaacRandom {
               } else {
                 var2 = var3;
               }
-              var3 = (oi) (param1.a((byte) -127));
+              var3 = (oi) (param1.nextBackward((byte) -127));
             }
             if (var4 != 0) {
               return;
             }
-            var3Lifetime1 = (oi) (param1.a(-113));
-            var2Lifetime1 = (oi) (param1.d(2123));
+            var3Lifetime1 = (oi) (param1.beginForward(-113));
+            var2Lifetime1 = (oi) (param1.nextForward(2123));
             var4Lifetime1 = 1;
             while (var2Lifetime1 != null) {
               if (var2Lifetime1.field_n + var2Lifetime1.field_p > var3Lifetime1.field_n + var3Lifetime1.field_p) {
@@ -97,7 +97,7 @@ final class IsaacRandom {
               } else {
                 var3Lifetime1 = var2Lifetime1;
               }
-              var2Lifetime1 = (oi) (param1.d(2123));
+              var2Lifetime1 = (oi) (param1.nextForward(2123));
             }
             if (var4Lifetime1 != 0) {
               return;
@@ -383,7 +383,7 @@ final class IsaacRandom {
         this.field_g = 256;
     }
 
-    final static void a(mn param0, byte param1) {
+    final static void a(PrimaryNodeDeque param0, byte param1) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -401,11 +401,11 @@ final class IsaacRandom {
             return;
           }
           do {
-            var2 = (oi) (param0.a(false));
+            var2 = (oi) (param0.beginBackward(false));
             if (var2 == null) {
               return;
             }
-            var3 = (oi) (param0.a((byte) -30));
+            var3 = (oi) (param0.nextBackward((byte) -30));
             var4 = 1;
             while (var3 != null) {
               if (!(var3.field_p - var3.field_n < -var2.field_n + var2.field_p)) {
@@ -414,13 +414,13 @@ final class IsaacRandom {
                 ri.a(var3, 0, var2);
                 var4 = 0;
               }
-              var3 = (oi) (param0.a((byte) -96));
+              var3 = (oi) (param0.nextBackward((byte) -96));
             }
             if (var4 != 0) {
               return;
             }
-            var3Lifetime1 = (oi) (param0.a(59));
-            var2Lifetime1 = (oi) (param0.d(2123));
+            var3Lifetime1 = (oi) (param0.beginForward(59));
+            var2Lifetime1 = (oi) (param0.nextForward(2123));
             var4 = 1;
             while (var2Lifetime1 != null) {
               if (!(var3Lifetime1.field_p - var3Lifetime1.field_n < -var2Lifetime1.field_n + var2Lifetime1.field_p)) {
@@ -429,7 +429,7 @@ final class IsaacRandom {
                 var4 = 0;
                 ri.a(var3Lifetime1, 0, var2Lifetime1);
               }
-              var2Lifetime1 = (oi) (param0.d(2123));
+              var2Lifetime1 = (oi) (param0.nextForward(2123));
             }
           } while (var4 == 0);
           return;
@@ -514,7 +514,7 @@ final class IsaacRandom {
     }
 
     static {
-        field_a = new mn();
+        field_a = new PrimaryNodeDeque();
         field_f = true;
     }
 }

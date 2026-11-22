@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class vm extends jb implements ha {
-    static jc field_h;
+    static IntrusiveDeque field_h;
     static int[] field_i;
     private qn field_j;
     static String field_g;
@@ -69,7 +69,7 @@ abstract class vm extends jb implements ha {
                 var7Lifetime4 = var9 + "; Discard;";
               }
               if (param1 != 11440) {
-                field_h = (jc) null;
+                field_h = (IntrusiveDeque) null;
               }
               u.a((byte) -81, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -341,7 +341,7 @@ abstract class vm extends jb implements ha {
 
     static {
         field_i = new int[5];
-        field_h = new jc();
+        field_h = new IntrusiveDeque();
         field_g = "Rankings";
     }
 }

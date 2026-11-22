@@ -16,7 +16,7 @@ abstract class jj extends db {
     static String field_X;
     static int[] field_Z;
     private int field_Q;
-    static vc field_S;
+    static IntrusiveDeque field_S;
     static BufferedSocket field_M;
 
     public static void clearStaticReferences(boolean param0) {
@@ -240,6 +240,6 @@ abstract class jj extends db {
         field_X = "You are not currently logged in to the<nbsp>game.";
         field_Y = "to over <%0> great games";
         field_Z = new int[12];
-        field_S = new vc();
+        field_S = new IntrusiveDeque();
     }
 }

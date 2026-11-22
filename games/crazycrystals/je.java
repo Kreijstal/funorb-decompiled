@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class je {
-    static wb field_a;
+    static IntrusiveDeque field_a;
     static String field_h;
     static int field_j;
     static String[] field_i;
@@ -38,7 +38,7 @@ final class je {
         field_z = "je.A(";
         field_e = 0;
         field_h = "Last Ball";
-        field_a = new wb();
+        field_a = new IntrusiveDeque();
         field_b = new mb("");
     }
 }

@@ -65,7 +65,7 @@ final class tc {
     }
 
     final static void a(int param0) {
-        mj var1 = (mj) (nd.field_b.b((byte) -58));
+        mj var1 = (mj) (nd.field_b.beginForward((byte) -58));
         if (var1 == null) {
           th.a(109);
           return;

@@ -101,14 +101,14 @@ final class pd extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        ul var1 = (ul) (vb.field_m.a(31334));
+        ul var1 = (ul) (vb.field_m.removeLast(31334));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.a(var1.field_h, var1.field_j, var1.field_n);
         SoftwareRasterizer.g(var1.field_l, var1.field_i, var1.field_p, var1.field_m);
         var1.field_h = null;
-        pb.field_k.b(125, var1);
+        pb.field_k.addLast(125, var1);
         if (param0 == -22949) {
           return;
         }

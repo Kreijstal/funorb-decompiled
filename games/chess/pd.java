@@ -7,7 +7,7 @@ final class pd extends ci {
     static String field_Jb;
     static int field_Tb;
     static ln field_Rb;
-    static jc field_Sb;
+    static IntrusiveDeque field_Sb;
     private ci field_Ib;
     static volatile int field_Eb;
     private ci field_Hb;
@@ -177,7 +177,7 @@ final class pd extends ci {
             var3 != 0) {
             return false;
           }
-          if (dk.c(false)) {
+          if (SecondaryNodeHashTable.c(false)) {
             IsaacCipher.a(param0 ^ -17303, vg.field_f, hd.field_e, param1, DirectByteStorage.field_i, (String) null);
           }
           return true;

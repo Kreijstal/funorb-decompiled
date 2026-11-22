@@ -28,7 +28,7 @@ final class pg extends IntrusiveNode {
           return;
         }
         tl.field_Fb = param1;
-        rh.field_c.field_I.e(param0 ^ 31039);
+        rh.field_c.field_I.clear(param0 ^ 31039);
         rh.field_c.a((byte) 126, tl.field_Fb);
         if (param0 != -18) {
           return;

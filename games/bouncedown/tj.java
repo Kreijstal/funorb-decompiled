@@ -374,7 +374,7 @@ abstract class tj extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_v = wh.a(1, var7, 16);
+                                field_v = SecondaryNodeDeque.a(1, var7, 16);
                               }
                             } else {
                               field_w = -1;
@@ -384,7 +384,7 @@ abstract class tj extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_w = wh.a(1, var6, 16);
+                          field_w = SecondaryNodeDeque.a(1, var6, 16);
                         }
                       } else {
                         field_C = -1;
@@ -394,7 +394,7 @@ abstract class tj extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_C = wh.a(1, var5, 16);
+                    field_C = SecondaryNodeDeque.a(1, var5, 16);
                   }
                 } else {
                   field_u = field_r;
@@ -408,7 +408,7 @@ abstract class tj extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_J = wh.a(1, var3, 16);
+            field_J = SecondaryNodeDeque.a(1, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ final class jc implements ComponentLayout {
     static int field_f;
     static ResourceArchive field_e;
     static String[] field_a;
-    static vc field_c;
+    static IntrusiveDeque field_c;
     static long field_b;
 
     final static int a(int param0, int param1) {

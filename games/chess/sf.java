@@ -34,7 +34,7 @@ final class sf extends hl {
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
-        ef var6 = (ef) (hd.field_l.g(-18110));
+        ef var6 = (ef) (hd.field_l.beginBackward(-18110));
         ef var1 = var6;
         if (param0 != 16777215) {
           return;

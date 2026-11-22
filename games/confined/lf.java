@@ -3,7 +3,7 @@
  */
 final class lf extends mf {
     private ul field_l;
-    static mn field_k;
+    static PrimaryNodeDeque field_k;
     static int[] field_m;
     static nf field_j;
     static String field_h;
@@ -195,7 +195,7 @@ final class lf extends mf {
 
     static {
         field_m = new int[]{5, 18, 39, 52};
-        field_k = new mn();
+        field_k = new PrimaryNodeDeque();
         field_h = "Special energy weapons";
     }
 }

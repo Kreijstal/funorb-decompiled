@@ -104,9 +104,9 @@ abstract class ab extends DualLinkNode {
             stackIn_11_0 = oc.a(kj.field_f, new String[]{param2}, (byte) -114);
             return stackIn_11_0;
           }
-          me.field_e.b(var8, (byte) 123);
+          me.field_e.beginBackwardFrom(var8, (byte) 123);
           while (true) {
-            var7 = (ve) (me.field_e.a((byte) -110));
+            var7 = (ve) (me.field_e.nextBackward((byte) -110));
             if (var7 != null) {
               var7.field_Ib = var7.field_Ib - 1;
               continue;
@@ -150,17 +150,17 @@ abstract class ab extends DualLinkNode {
           ByteStorage.field_a = null;
           wc.field_v = 0;
           wg.field_w = 0;
-          me.field_e.e(-31023);
-          cl.field_e.e(-31023);
-          var1 = bf.field_M.a(false);
+          me.field_e.clear(-31023);
+          cl.field_e.clear(-31023);
+          var1 = bf.field_M.first(false);
           while (var1 != null) {
             var1.unlinkSecondary(-1);
-            var1 = bf.field_M.a(0);
+            var1 = bf.field_M.next(0);
           }
-          var1Lifetime1 = r.field_Ib.a(false);
+          var1Lifetime1 = r.field_Ib.first(false);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(-1);
-            var1Lifetime1 = r.field_Ib.a(0);
+            var1Lifetime1 = r.field_Ib.next(0);
           }
           ld.field_g = 0;
           if (param0 < -40) {
@@ -177,7 +177,7 @@ abstract class ab extends DualLinkNode {
 
     final static void h(int param0) {
         fm.field_R = new String[38];
-        fm.field_R[16] = cn.field_a;
+        fm.field_R[16] = SecondaryNodeDeque.field_a;
         fm.field_R[17] = aa.field_a;
         fm.field_R[7] = jg.field_L;
         fm.field_R[27] = ec.field_g;

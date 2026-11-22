@@ -341,18 +341,18 @@ final class bg extends IntrusiveNode {
         if (param3 > -104) {
           return (vb) null;
         }
-        vb var5 = (vb) (je.field_i.h(-11151));
+        vb var5 = (vb) (je.field_i.beginForward(-11151));
         while (var5 != null) {
           if (~param1 == ~var5.field_i) {
             return var5;
           }
-          var5 = (vb) (je.field_i.e(0));
+          var5 = (vb) (je.field_i.nextForward(0));
         }
         var5 = new vb();
         var5.field_i = param1;
         var5.field_h = param0;
         var5.field_m = param4;
-        je.field_i.a(var5, 255);
+        je.field_i.addLast(var5, 255);
         mh.a(param2, (byte) -79, var5);
         return var5;
     }

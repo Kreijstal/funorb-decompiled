@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dl {
-    static mn field_b;
+    static PrimaryNodeDeque field_b;
     static String field_a;
     static nf[] field_d;
     static String[] field_c;
@@ -366,7 +366,7 @@ final class dl {
     }
 
     static {
-        field_b = new mn();
+        field_b = new PrimaryNodeDeque();
         field_a = "Loading graphics";
     }
 }

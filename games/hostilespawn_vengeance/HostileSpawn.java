@@ -1084,7 +1084,7 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           HostileSpawn.k((byte) 127);
           t.clearStaticReferences(-15154);
-          vl.clearStaticReferences(param0 + 51);
+          IntrusiveDeque.clearStaticReferences(param0 + 51);
           cm.a((byte) -105);
           kd.c((byte) -13);
           r.clearStaticReferences(13496);
@@ -1604,10 +1604,10 @@ public final class HostileSpawn extends NetworkGameClient {
                 }
                 sg.field_j = null;
                 MouseWheelInput.b((byte) -43);
-                var3 = (hm) (vl.field_c.g(param0 - 68));
+                var3 = (hm) (IntrusiveDeque.field_c.beginForward(param0 - 68));
                 while (var3 != null) {
                   jh.a(125, 4, var3);
-                  var3 = (hm) (vl.field_c.a(12684));
+                  var3 = (hm) (IntrusiveDeque.field_c.nextForward(12684));
                   if (var4 != 0) {
                     decompiledFrameCompleted2 = false;
                     break;
@@ -1649,7 +1649,7 @@ public final class HostileSpawn extends NetworkGameClient {
             boolean decompiledFrameCompleted0 = true;
             if (!ta.p(3)) {
               while (true) {
-                var2 = (m) (tm.field_o.c(18120));
+                var2 = (m) (tm.field_o.removeFirst(18120));
                 if (null == var2) {
                   break;
                 }
@@ -1982,7 +1982,7 @@ public final class HostileSpawn extends NetworkGameClient {
           if (param0 >= -113) {
             discarded$1 = this.q(-36);
           }
-          var2 = (t) (ac.field_i.g(-54));
+          var2 = (t) (ac.field_i.beginForward(-54));
           if (null != var2) {
             var4 = this.field_D;
             if (80 <= var4) {
@@ -2244,12 +2244,12 @@ public final class HostileSpawn extends NetworkGameClient {
           if (param0 != 76) {
             field_K = (int[]) null;
           }
-          if (null != ac.field_i.g(-103)) {
+          if (null != ac.field_i.beginForward(-103)) {
             fieldTemp$0 = this.field_D + 1;
             this.field_D = this.field_D + 1;
             if (fieldTemp$0 == 335) {
               this.field_D = 0;
-              ac.field_i.c(18120);
+              ac.field_i.removeFirst(18120);
             }
           }
           ca.field_c = ca.field_c + 10;

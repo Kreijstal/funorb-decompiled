@@ -49,7 +49,7 @@ final class ao extends IntrusiveNode {
         if (hf.field_sb <= 0) {
           return false;
         }
-        if (!dh.a(false)) {
+        if (!SecondaryNodeDeque.a(false)) {
           return true;
         }
         return false;

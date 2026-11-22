@@ -3,7 +3,7 @@
  */
 final class ha {
     int field_b;
-    static bk field_d;
+    static IntrusiveDeque field_d;
     private static cc field_a;
     static String field_c;
 
@@ -296,7 +296,7 @@ final class ha {
     }
 
     static {
-        field_d = new bk();
+        field_d = new IntrusiveDeque();
         field_a = new cc();
         field_c = "Please check if address is correct";
     }

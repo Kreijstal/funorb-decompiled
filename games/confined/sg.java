@@ -22,7 +22,7 @@ final class sg extends DualLinkNode {
         int var6 = 0;
         int var2;
         int var3_int;
-        mn var3;
+        PrimaryNodeDeque var3;
         int var4;
         PacketBuffer var6_ref_kg;
         int var7;
@@ -67,7 +67,7 @@ final class sg extends DualLinkNode {
         if (var2 == 0) {
           return false;
         }
-        var3 = new mn();
+        var3 = new PrimaryNodeDeque();
         var4Lifetime1 = rn.field_f.d(this.field_w, (byte) -121);
         this.field_t = new cm[var4Lifetime1];
         var28 = rn.field_f.a((byte) -115, this.field_w);
@@ -77,10 +77,10 @@ final class sg extends DualLinkNode {
           var8.position = 1;
           var9 = var8.readUnsignedShort((byte) 25);
           var10 = null;
-          var11 = (ij) (var3.a(47));
+          var11 = (ij) (var3.beginForward(47));
           while (var11 != null) {
             if (var9 != var11.field_v) {
-              var11 = (ij) (var3.d(2123));
+              var11 = (ij) (var3.nextForward(2123));
               continue;
             }
             var10 = var11;
@@ -88,7 +88,7 @@ final class sg extends DualLinkNode {
           }
           if (var10 == null) {
             var10 = new ij(var9, un.field_a.c(var9, (byte) 125));
-            var3.a((IntrusiveNode) (var10), (byte) -112);
+            var3.addLast((IntrusiveNode) (var10), (byte) -112);
           }
           this.field_t[var28[var6]] = new cm(var29, (ij) (var10));
         }

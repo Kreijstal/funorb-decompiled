@@ -6,7 +6,7 @@ final class nk extends PacketBuffer {
     private int field_s;
     private IsaacCipher field_p;
     static int[][] field_r;
-    static jc field_t;
+    static IntrusiveDeque field_t;
     static String field_v;
     static String[] field_x;
     static GameAppletShell field_w;

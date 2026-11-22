@@ -11,7 +11,7 @@ final class ab implements td {
     private int field_i;
     static ml field_j;
     private int field_e;
-    static im field_h;
+    static IntrusiveDeque field_h;
     static hj[] field_g;
     static int field_f;
     static int field_l;
@@ -62,7 +62,7 @@ final class ab implements td {
     public static void clearStaticReferences(boolean param0) {
         field_j = null;
         if (param0) {
-          field_h = (im) null;
+          field_h = (IntrusiveDeque) null;
           field_g = null;
           field_h = null;
           return;
@@ -128,7 +128,7 @@ final class ab implements td {
 
     static {
         field_j = new ml(1);
-        field_h = new im();
+        field_h = new IntrusiveDeque();
         field_l = -1;
     }
 }

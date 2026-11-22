@@ -59,7 +59,7 @@ final class ak extends ga implements el {
         int var6 = 0;
         var6 = Confined.field_J ? 1 : 0;
         try {
-          this.field_N.e(31);
+          this.field_N.clear(31);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;
@@ -154,15 +154,15 @@ final class ak extends ga implements el {
         }
     }
 
-    final static void a(double param0, double[] param1, dj param2, int param3, oi param4, mn param5) {
+    final static void a(double param0, double[] param1, dj param2, int param3, oi param4, PrimaryNodeDeque param5) {
         double var7_double = 0.0;
         double var9 = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
         try {
           if (param3 != 4825) {
-            mn var15 = (mn) null;
-            ak.a(1.1248923326487368, (double[]) null, (dj) null, -35, (oi) null, (mn) null);
+            PrimaryNodeDeque var15 = (PrimaryNodeDeque) null;
+            ak.a(1.1248923326487368, (double[]) null, (dj) null, -35, (oi) null, (PrimaryNodeDeque) null);
           }
           var7_double = param2.field_E + param2.field_C * param1[9];
           var9 = param2.field_C * param1[10] + param2.field_t;
@@ -172,7 +172,7 @@ final class ak extends ga implements el {
           param4.field_o = var9;
           param4.field_t = var7_double;
           param4.field_u = var13 * 25.0;
-          param5.a((IntrusiveNode) (param4), (byte) -65);
+          param5.addLast((IntrusiveNode) (param4), (byte) -65);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ak.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

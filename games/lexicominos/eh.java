@@ -61,7 +61,7 @@ final class eh {
           return;
         }
         try {
-          jl.field_a.b(param2 + 105, param0);
+          jl.field_a.addLast(param2 + 105, param0);
           vi.a(param1, param0, 1);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "eh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

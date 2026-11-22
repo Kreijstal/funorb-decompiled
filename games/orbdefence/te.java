@@ -9,7 +9,7 @@ class te extends s {
     static String field_L;
     private cc field_H;
     static String[] field_N;
-    private im field_I;
+    private IntrusiveDeque field_I;
     static fk field_M;
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -99,7 +99,7 @@ class te extends s {
         pj var17;
         int var7Lifetime1;
         var16 = OrbDefence.field_D ? 1 : 0;
-        this.field_I = new im();
+        this.field_I = new IntrusiveDeque();
         var2 = 0;
         var3 = (rj) ((Object) this.field_j);
         var4 = var3.a((pj) (this), true);
@@ -141,7 +141,7 @@ class te extends s {
             if (var10 != null) {
               ((cc) (var10)).field_p = var15;
             }
-            this.field_I.a(-92, var15);
+            this.field_I.addLast(-92, var15);
             var10 = var15;
           }
         }
@@ -238,7 +238,7 @@ class te extends s {
     private final cc a(int param0, int param1, int param2) {
         cc var5 = null;
         int var6 = OrbDefence.field_D ? 1 : 0;
-        cc var4 = (cc) (this.field_I.b((byte) -22));
+        cc var4 = (cc) (this.field_I.beginForward((byte) -22));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -249,7 +249,7 @@ class te extends s {
             }
             var5 = var5.field_p;
           }
-          var4 = (cc) (this.field_I.d(param0 ^ -853));
+          var4 = (cc) (this.field_I.nextForward(param0 ^ -853));
         }
         if (param0 == -2) {
           return null;

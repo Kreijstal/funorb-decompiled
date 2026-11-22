@@ -78,9 +78,9 @@ abstract class mf extends DualLinkNode {
             var1 != 3 &&
             var1 != 6) {
             r.field_d = 7;
-            tc.field_d = -1;
+            IterableNodeHashTable.field_d = -1;
           } else {
-            tc.field_d = -1;
+            IterableNodeHashTable.field_d = -1;
             r.field_d = 6;
           }
           sd.field_a.field_X = 0;
@@ -204,9 +204,9 @@ abstract class mf extends DualLinkNode {
             var1 != 3 &&
             var1 != 6) {
             r.field_d = 7;
-            tc.field_d = -1;
+            IterableNodeHashTable.field_d = -1;
           } else {
-            tc.field_d = -1;
+            IterableNodeHashTable.field_d = -1;
             r.field_d = 6;
           }
           sd.field_a.field_X = 0;

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode lastReturned;
-    private va deque;
+    private SecondaryNodeDeque deque;
     private DualLinkNode nextNode;
     static int field_e;
     static boolean field_a;
@@ -20,7 +20,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (var1 == this.deque.field_a) {
+        if (var1 == this.deque.sentinel) {
           this.nextNode = null;
           var1 = null;
         } else {
@@ -31,7 +31,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_a;
+        return this.nextNode != this.deque.sentinel;
     }
 
     final static void a(byte param0) {
@@ -40,11 +40,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
         ij.field_g = true;
     }
 
-    SecondaryNodeDequeIterator(va param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
-          this.nextNode = this.deque.field_a.secondaryNext;
+          this.nextNode = this.deque.sentinel.secondaryNext;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');

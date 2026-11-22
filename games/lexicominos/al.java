@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class al extends nb {
-    static ng field_C;
+    static IntrusiveDeque field_C;
     private eg field_B;
     boolean field_D;
     private int field_E;
@@ -194,7 +194,7 @@ abstract class al extends nb {
 
     static {
         field_G = "Create a free account to start using this feature";
-        field_C = new ng();
+        field_C = new IntrusiveDeque();
         field_F = new GzipDecompressor();
     }
 }

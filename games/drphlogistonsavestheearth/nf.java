@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nf extends ei {
-    static vd field_x;
+    static IntrusiveDeque field_x;
     private kl field_r;
     static he[] field_p;
     static int field_w;
@@ -66,7 +66,7 @@ final class nf extends ei {
 
     final static int c(boolean param0) {
         if (param0) {
-          field_x = (vd) null;
+          field_x = (IntrusiveDeque) null;
           return dk.field_c;
         }
         return dk.field_c;
@@ -85,7 +85,7 @@ final class nf extends ei {
         if (param0 >= 125) {
           return qf.field_c;
         }
-        field_x = (vd) null;
+        field_x = (IntrusiveDeque) null;
         return qf.field_c;
     }
 
@@ -168,7 +168,7 @@ final class nf extends ei {
 
     static {
         field_w = 0;
-        field_x = new vd();
+        field_x = new IntrusiveDeque();
         field_q = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

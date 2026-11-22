@@ -18,10 +18,10 @@ final class jh extends wb implements qk {
         RuntimeException var2 = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var5 = (cl) (ne.field_q.g(-101));
+          var5 = (cl) (ne.field_q.beginForward(-101));
           while (var5 != null) {
             DualLinkNode.a(var5, param0, 10);
-            var5 = (cl) (ne.field_q.a(12684));
+            var5 = (cl) (ne.field_q.nextForward(12684));
           }
           if (param1 >= -82) {
             var4 = (byte[]) null;
@@ -37,7 +37,7 @@ final class jh extends wb implements qk {
 
     final static void a(int param0, int param1, hm param2) {
         try {
-          ih.field_x.a(param2, 98);
+          ih.field_x.addLast(param2, 98);
           int var3_int = -116 / ((param0 - 59) / 53);
           MouseInput.a(param1, 2, param2);
         } catch (RuntimeException runtimeException) {

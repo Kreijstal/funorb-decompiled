@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class v extends di {
-    private im field_m;
-    private im field_l;
+    private IntrusiveDeque field_m;
+    private IntrusiveDeque field_l;
     private int field_j;
     private int field_k;
 
     private final void a(rk param0) {
         param0.unlink(57);
         param0.a();
-        IntrusiveNode var2 = this.field_l.field_d.field_e;
-        if (var2 == this.field_l.field_d) {
+        IntrusiveNode var2 = this.field_l.sentinel.field_e;
+        if (var2 == this.field_l.sentinel) {
           this.field_k = -1;
         } else {
           this.field_k = ((rk) (var2)).field_f;
@@ -19,16 +19,16 @@ final class v extends di {
     }
 
     final synchronized void a(di param0) {
-        this.field_m.a(param0, 9);
+        this.field_m.addFirst(param0, 9);
     }
 
     private final void e() {
         rk var1 = null;
         if (this.field_j > 0) {
-          var1 = (rk) (this.field_l.b((byte) -68));
+          var1 = (rk) (this.field_l.beginForward((byte) -68));
           while (var1 != null) {
             var1.field_f = var1.field_f - this.field_j;
-            var1 = (rk) (this.field_l.d(853));
+            var1 = (rk) (this.field_l.nextForward(853));
           }
           this.field_k = this.field_k - this.field_j;
           this.field_j = 0;
@@ -56,7 +56,7 @@ final class v extends di {
           param0 = param0 - var2;
           this.field_j = this.field_j + var2;
           this.e();
-          var3 = (rk) (this.field_l.b((byte) 114));
+          var3 = (rk) (this.field_l.beginForward((byte) 114));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -73,22 +73,22 @@ final class v extends di {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        di var4 = (di) (this.field_m.b((byte) 120));
+        di var4 = (di) (this.field_m.beginForward((byte) 120));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (di) (this.field_m.d(853));
+          var4 = (di) (this.field_m.nextForward(853));
         }
     }
 
     final di d() {
-        return (di) (this.field_m.d(853));
+        return (di) (this.field_m.nextForward(853));
     }
 
     private final void a(IntrusiveNode param0, rk param1) {
         while (true) {
-          if (param0 == this.field_l.field_d) {
+          if (param0 == this.field_l.sentinel) {
             vk.$cfr$intArgs$a$0b89e0d19fbb(param1, -65, param0);
-            this.field_k = ((rk) (this.field_l.field_d.field_e)).field_f;
+            this.field_k = ((rk) (this.field_l.sentinel.field_e)).field_f;
             return;
           }
           if (((rk) (param0)).field_f <= param1.field_f) {
@@ -98,7 +98,7 @@ final class v extends di {
           break;
         }
         vk.$cfr$intArgs$a$0b89e0d19fbb(param1, -65, param0);
-        this.field_k = ((rk) (this.field_l.field_d.field_e)).field_f;
+        this.field_k = ((rk) (this.field_l.sentinel.field_e)).field_f;
         return;
     }
 
@@ -107,10 +107,10 @@ final class v extends di {
     }
 
     private final void d(int param0) {
-        di var2 = (di) (this.field_m.b((byte) 118));
+        di var2 = (di) (this.field_m.beginForward((byte) 118));
         while (var2 != null) {
           var2.c(param0);
-          var2 = (di) (this.field_m.d(853));
+          var2 = (di) (this.field_m.nextForward(853));
         }
     }
 
@@ -136,7 +136,7 @@ final class v extends di {
           param2 = param2 - var4;
           this.field_j = this.field_j + var4;
           this.e();
-          var5 = (rk) (this.field_l.b((byte) 126));
+          var5 = (rk) (this.field_l.beginForward((byte) 126));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -153,12 +153,12 @@ final class v extends di {
     }
 
     final di a() {
-        return (di) (this.field_m.b((byte) 127));
+        return (di) (this.field_m.beginForward((byte) 127));
     }
 
     public v() {
-        this.field_m = new im();
-        this.field_l = new im();
+        this.field_m = new IntrusiveDeque();
+        this.field_l = new IntrusiveDeque();
         this.field_j = 0;
         this.field_k = -1;
     }

@@ -39,10 +39,10 @@ final class fl extends IntrusiveNode {
           rf.field_b = cb.field_b;
           lf.field_O = rc.field_d;
           rc.field_d = false;
-          th.field_d = bl.field_g;
+          th.field_d = IterableNodeHashTable.field_g;
           re.field_m = ub.field_b;
           ag.field_f = pd.field_Eb;
-          bl.field_g = 0;
+          IterableNodeHashTable.field_g = 0;
         }
     }
 

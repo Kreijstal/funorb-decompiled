@@ -139,7 +139,7 @@ class kf extends w {
         RuntimeException decompiledCaughtException = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          var4 = (pd) (al.field_C.a(param0));
+          var4 = (pd) (al.field_C.beginForward(param0));
           var1 = var4;
           if (var1 == null) {
             return false;

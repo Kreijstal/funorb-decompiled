@@ -115,7 +115,7 @@ final class pg {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param2.field_e.peekEvent()) {
-              wh.a(1L, 19406);
+              SecondaryNodeDeque.a(1L, 19406);
               continue;
             }
             break;

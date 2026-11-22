@@ -43,7 +43,7 @@ final class bb extends nb implements jk {
         int var6 = 0;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
-          this.field_A.g(-81);
+          this.field_A.clear(-81);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

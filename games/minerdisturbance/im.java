@@ -45,7 +45,7 @@ final class im {
             return false;
           }
           var2_long = sf.a((byte) 116);
-          if (qc.field_f != param1 &&
+          if (SecondaryNodeDeque.field_f != param1 &&
             qh.field_a < 0) {
             var4_ref_jn = (jn) (mc.field_m.beginForward(74));
             if (var4_ref_jn != null &&
@@ -76,7 +76,7 @@ final class im {
             if (!kj.b(-9319)) {
               return false;
             }
-            if (0 == qc.field_f) {
+            if (0 == SecondaryNodeDeque.field_f) {
               lc.field_s = rd.field_a;
               rd.field_a = ud.field_a;
               ud.field_a = oj.field_K;
@@ -84,7 +84,7 @@ final class im {
               qh.field_a = -1;
               return true;
             }
-            var4 = qc.field_f;
+            var4 = SecondaryNodeDeque.field_f;
             if (ci.field_k != 0.0) {
               var4 = (int)((double)var4 + dk.field_a.nextGaussian() * ci.field_k);
               if (0 > var4) {

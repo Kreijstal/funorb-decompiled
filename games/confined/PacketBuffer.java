@@ -131,7 +131,7 @@ class PacketBuffer extends IntrusiveNode {
               fieldTemp$1 = Confined.field_E;
               Confined.field_E = Confined.field_E + 1;
               var5_ref.field_lb = fieldTemp$1;
-              vg.field_J.a((IntrusiveNode) (var5_ref), (byte) -97);
+              vg.field_J.addLast((IntrusiveNode) (var5_ref), (byte) -97);
             }
             var5_ref.field_ob = var4_ref_String;
             return;
@@ -187,7 +187,7 @@ class PacketBuffer extends IntrusiveNode {
             fieldTemp$0 = c.field_k;
             c.field_k = c.field_k + 1;
             var6.field_lb = fieldTemp$0;
-            il.field_fb.a((IntrusiveNode) (var6), (byte) -103);
+            il.field_fb.addLast((IntrusiveNode) (var6), (byte) -103);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -195,7 +195,7 @@ class PacketBuffer extends IntrusiveNode {
           var6.field_kb = (String) (var3Lifetime1);
           var6.field_ob = var4_ref_StringLifetime1;
           var6.unlink(true);
-          var7 = (fg) (il.field_fb.a(56));
+          var7 = (fg) (il.field_fb.beginForward(56));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_57_0 = var6;
@@ -205,12 +205,12 @@ class PacketBuffer extends IntrusiveNode {
                 break scanLoop1;
               }
               if (tb.a(stackIn_57_0, stackIn_57_1, stackIn_57_2)) {
-                var7 = (fg) (il.field_fb.d(param0 ^ -2169));
+                var7 = (fg) (il.field_fb.nextForward(param0 ^ -2169));
                 continue;
               }
             }
             if (var7 == null) {
-              il.field_fb.a((IntrusiveNode) (var6), (byte) 89);
+              il.field_fb.addLast((IntrusiveNode) (var6), (byte) 89);
               if (var8 == 0) {
                 return;
               }

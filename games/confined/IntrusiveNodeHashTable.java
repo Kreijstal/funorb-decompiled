@@ -11,7 +11,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     private IntrusiveNode field_g;
     static int[] field_c;
     static nf[] field_h;
-    static mn field_e;
+    static PrimaryNodeDeque field_e;
     static String field_b;
     static String field_d;
     static java.awt.Font field_f;
@@ -88,7 +88,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         field_c = new int[]{0, 64, 256, 128};
         field_a = new si(3);
         field_b = "Name";
-        field_e = new mn();
+        field_e = new PrimaryNodeDeque();
         field_d = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }
 }

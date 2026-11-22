@@ -102,7 +102,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (!AccountServiceResult.a(22084)) {
           if (dk.field_c >= 10) {
             if (!l.a(true)) {
-              dh.b(-128);
+              SecondaryNodeDeque.b(-128);
             } else {
               if (AccountNameAvailabilityValidator.field_n != 0) {
                 td.a(CombatState.field_r, param0 + 119);
@@ -635,7 +635,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (bn.field_j != null) {
           CombatState.field_r = bn.field_j.pollRotation(6);
         }
-        if (dh.a((byte) -120)) {
+        if (SecondaryNodeDeque.a((byte) -120)) {
           var3 = 1200 * eg.c(1);
           if (this.field_v ||
             !(ib.b((byte) 31) <= var3) &&

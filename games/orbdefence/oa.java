@@ -5,7 +5,7 @@ final class oa implements Runnable {
     volatile la[] field_c;
     PlatformTaskDispatcher field_g;
     static String field_a;
-    static im field_d;
+    static IntrusiveDeque field_d;
     volatile boolean field_h;
     volatile boolean field_b;
     static String[] field_i;
@@ -96,7 +96,7 @@ final class oa implements Runnable {
         field_a = null;
         field_f = null;
         if (param0 != 90) {
-          field_d = (im) null;
+          field_d = (IntrusiveDeque) null;
         }
     }
 
@@ -108,7 +108,7 @@ final class oa implements Runnable {
 
     static {
         field_a = "No highscores";
-        field_d = new im();
+        field_d = new IntrusiveDeque();
         field_i = new String[]{"<b>OBJECTIVE:<br><br>The Norbs are coming to attack your orbs and it is up to you to stop them! Build up your defences to push back the Norb advance. If the orbs are lost, you will fail!<br><br><b>CONTROLS:<br><br><img=0> - move your view<br><img=1> - select a turret type<br><img=2> - send in the next Norb wave<br><img=3> - construct or upgrade a turret.<br><img=4> - remove an existing turret.", "<b>ENERGY:<br><br>You gain energy over time from all your remaining orbs. You also gain energy from each Norb you destroy.<br><br>The more powerful turrets use lots of energy to construct, so you will have to save it up. If you manage to destroy one of the Norb bosses, you will be rewarded with a massive energy boost!", "<b>DEFENCES:<br><br><b><%0>Fast blast:<br><%0>Cheap, but weak.<br><b><%0>Chain shot:<br><%0>Short-ranged, yet bounces.<br><b><%0>Big shot:<br><%0>Powerful, with a large area of effect.<br><b><%0>Ice shot:<br><%0>Slows down Norbs.<br><b><%0>Beam blast:<br><%0>The pinnacle of anti-Norb defences!", "<b>NORMAL NORBS:<br><br><b><%0>Normo:<br><%0>Easy energy!<br><b><%0>Swarmo:<br><%0>Massively swarming!<br><b><%0>Zoomo:<br><%0>Fast and spinny!<br><b><%0>Tougho:<br><%0>Lots of health!", "<b>NASTY NORBS:<br><br><b><%0>Flybo:<br><%0>Cannot be hit by big shot or beam blast turrets!<br><b><%0>Bombo:<br><%0>Explodes on death!<br><b><%0>Chompo:<br><%0>Eats your turrets!<br><b><%0>Irono:<br><%0>Immune to big shots and ice shots!", "<b>TIPS:<br><br>If even one Norb reaches one of your orbs, it will be destroyed and become a new spawn point for more Norbs!<br><br>Turrets with a flashing light can be upgraded by clicking on them.<br><br>The Norbs are not as stupid as they might look; they will not always stay on the same route!", "<b>NEW NORBS:<br><br><b><%0>Sneako:<br><%0>Invisible unless hit with an electroshock turret!<br><b><%0>Splitto:<br><%0>Releases a swarm when destroyed!<br><br><b>NEW DEFENCES:<br><br><b><%0>Electroshock:<br><%0>Stuns groups of Norbs (and reveals sneakos)!<br><b><%0>Barrier:<br><%0>Deters Norbs, but takes damage if attacked!"};
         field_e = "Connection restored.";
         field_f = "Use this alternative as your account name";

@@ -6,7 +6,7 @@ import java.util.*;
 final class sj {
     static int field_c;
     static KeyboardInputHandler field_d;
-    static bk field_a;
+    static IntrusiveDeque field_a;
     static Calendar field_b;
 
     final static int a(int param0, int param1, Random param2) {
@@ -31,7 +31,7 @@ final class sj {
           }
           var3_int = -2147483648 - (int)(4294967296L % (long)param1);
           if (param0 != 10999) {
-            field_a = (bk) null;
+            field_a = (IntrusiveDeque) null;
           }
           do {
             var4 = param2.nextInt();
@@ -313,7 +313,7 @@ final class sj {
         var5 = Main.field_T;
         try {
           if (param0 <= 23) {
-            field_a = (bk) null;
+            field_a = (IntrusiveDeque) null;
           }
           jc.field_P = gg.field_b;
           if (255 != param3) {
@@ -351,7 +351,7 @@ final class sj {
 
     static {
         field_d = new KeyboardInputHandler();
-        field_a = new bk();
+        field_a = new IntrusiveDeque();
         field_b = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
     }
 }

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class af extends sa {
-    static mn field_cb;
+    static PrimaryNodeDeque field_cb;
     static String field_ab;
     static int field_Z;
     static String field_bb;
     static String field_U;
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         if (param2 >= -5) {
           return;
         }
@@ -131,7 +131,7 @@ final class af extends sa {
 
     static {
         field_bb = "<col=FFFFFF>Nuclear missiles:</col> awarded after every boss.";
-        field_cb = new mn();
+        field_cb = new PrimaryNodeDeque();
         field_U = "Loading sound effects";
     }
 }

@@ -78,7 +78,7 @@ final class la {
           if (param1 != 2) {
             field_a = (he) null;
           }
-          dg.field_d = param5;
+          SecondaryNodeDeque.field_d = param5;
           ue.field_a = param2;
           wd.field_c = param4;
           wa.field_N = param3;
@@ -234,7 +234,7 @@ final class la {
               fieldTemp$0 = fg.field_j;
               fg.field_j = fg.field_j + 1;
               var5.field_tb = fieldTemp$0;
-              fb.field_g.a(var5, 255);
+              fb.field_g.addLast(var5, 255);
             }
             var5.field_V = var4_ref_String;
             return;
@@ -287,7 +287,7 @@ final class la {
             fieldTemp$1 = al.field_f;
             al.field_f = al.field_f + 1;
             var6_ref.field_tb = fieldTemp$1;
-            sh.field_a.a(var6_ref, 255);
+            sh.field_a.addLast(var6_ref, 255);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -295,7 +295,7 @@ final class la {
           var6_ref.field_V = var4_ref_StringLifetime1;
           var6_ref.field_qb = (String) (var3Lifetime1);
           var6_ref.unlink(param0 - 16176);
-          var7_ref = (hg) (sh.field_a.h(param0 ^ -11152));
+          var7_ref = (hg) (sh.field_a.beginForward(param0 ^ -11152));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
@@ -305,7 +305,7 @@ final class la {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (na.$cfr$intArgs$a$0163a84c1fcf(stackIn_58_0, stackIn_58_1, stackIn_58_2))) {
-                var7_ref = (hg) (sh.field_a.e(0));
+                var7_ref = (hg) (sh.field_a.nextForward(0));
                 continue;
               }
             }
@@ -323,7 +323,7 @@ final class la {
             }
             break;
           }
-          sh.field_a.a(var6_ref, 255);
+          sh.field_a.addLast(var6_ref, 255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

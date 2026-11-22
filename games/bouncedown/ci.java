@@ -10,7 +10,7 @@ final class ci extends lc implements gl, rc {
     private boolean field_B;
     private wd field_D;
     private wd field_K;
-    static bc field_F;
+    static IntrusiveDeque field_F;
     static tg[] field_G;
     private boolean field_C;
     static AccountServiceResult field_L;
@@ -445,6 +445,6 @@ final class ci extends lc implements gl, rc {
     }
 
     static {
-        field_F = new bc();
+        field_F = new IntrusiveDeque();
     }
 }

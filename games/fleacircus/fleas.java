@@ -954,7 +954,7 @@ public final class fleas extends NetworkGameClient {
           cf.clearStaticReferences(21230);
           lc.clearStaticReferences((byte) 99);
           pg.a(-12);
-          vc.clearStaticReferences(-29943);
+          IntrusiveDeque.clearStaticReferences(-29943);
           ei.f(-16257);
           cl.a(-2);
           l.clearStaticReferences(-29049);
@@ -1687,7 +1687,7 @@ public final class fleas extends NetworkGameClient {
           }
           if (!qh.c((byte) 79)) {
             do {
-              var2 = (hi) (a.field_e.e(-22033));
+              var2 = (hi) (a.field_e.removeFirst(-22033));
               if (null == var2) {
                 if (var3 == 0) {
                   break;

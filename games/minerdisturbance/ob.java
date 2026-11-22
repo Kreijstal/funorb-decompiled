@@ -618,7 +618,7 @@ abstract class ob extends GameAppletShell {
                 } else {
                   jn.field_n = ne.field_Q;
                   mc.c(-100);
-                  qc.field_b = false;
+                  SecondaryNodeDeque.field_b = false;
                   fh.field_b = 10;
                 }
               }
@@ -626,7 +626,7 @@ abstract class ob extends GameAppletShell {
           }
           if (var4 == 4) {
             if (!v.field_e) {
-              qc.field_b = true;
+              SecondaryNodeDeque.field_b = true;
               fh.field_b = 10;
             } else {
               kn.a(13569, bm.c(-89));

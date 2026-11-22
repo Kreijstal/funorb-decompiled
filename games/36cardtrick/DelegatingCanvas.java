@@ -64,7 +64,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     final static void a(int param0) {
         w var2 = null;
-        cb var1 = (cb) (ha.field_d.a((byte) 74));
+        cb var1 = (cb) (ha.field_d.beginForward((byte) 74));
         w var2Lifetime1;
         if (param0 != 0) {
           qk var3 = (qk) null;

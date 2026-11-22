@@ -3,7 +3,7 @@
  */
 class fk extends kb {
     static int field_e;
-    static ng field_i;
+    static IntrusiveDeque field_i;
     private long field_g;
     static long field_h;
     static String[] field_c;

@@ -63,7 +63,7 @@ final class td {
     final static boolean a(int[] param0, boolean param1) {
         int var5_int = 0;
         int var6 = 0;
-        ng stackIn_12_0 = null;
+        IntrusiveDeque stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -88,7 +88,7 @@ final class td {
             0 > kk.field_r) {
             stackIn_12_0 = eb.field_f;
             stackIn_13_1 = !(param1);
-            var4_ref_c = (c) (((ng) (Object) stackIn_12_0).a(stackIn_13_1));
+            var4_ref_c = (c) (((IntrusiveDeque) (Object) stackIn_12_0).beginForward(stackIn_13_1));
             if (var4_ref_c != null &&
               var2_long > var4_ref_c.field_l) {
               var4_ref_c.unlink((byte) -119);
@@ -136,7 +136,7 @@ final class td {
             for (var6 = 0; a.field_c > var6; var6++) {
               var5.field_h[var6] = ig.field_a.payload[var6];
             }
-            eb.field_f.b(125, var5);
+            eb.field_f.addLast(125, var5);
             kk.field_r = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

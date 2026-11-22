@@ -4,7 +4,7 @@
 final class tm {
     static MouseInputHandler field_b;
     private IntrusiveNode field_h;
-    private wb field_g;
+    private IntrusiveDeque field_g;
     static am field_f;
     static String field_c;
     static int field_e;
@@ -12,18 +12,18 @@ final class tm {
     static int[] field_a;
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_g.field_a.field_b;
+        IntrusiveNode var2 = this.field_g.sentinel.field_b;
         if (param0 <= 27) {
           IntrusiveNode var3 = (IntrusiveNode) null;
           this.a((byte) 51, (IntrusiveNode) null);
-          if (this.field_g.field_a == var2) {
+          if (this.field_g.sentinel == var2) {
             this.field_h = null;
             return null;
           }
           this.field_h = var2.field_b;
           return var2;
         }
-        if (this.field_g.field_a == var2) {
+        if (this.field_g.sentinel == var2) {
           this.field_h = null;
           return null;
         }
@@ -42,14 +42,14 @@ final class tm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_g.field_a.field_b;
+            var3 = this.field_g.sentinel.field_b;
           } else {
             var3 = param1;
           }
           if (param0 <= 36) {
             tm.clearStaticReferences(-1);
           }
-          if (this.field_g.field_a == var3) {
+          if (this.field_g.sentinel == var3) {
             this.field_h = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -73,7 +73,7 @@ final class tm {
 
     final IntrusiveNode c(int param0) {
         IntrusiveNode var2 = this.field_h;
-        if (var2 == this.field_g.field_a) {
+        if (var2 == this.field_g.sentinel) {
           this.field_h = null;
           return null;
         }
@@ -94,11 +94,11 @@ final class tm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_g.field_a.field_d;
+            var3 = this.field_g.sentinel.field_d;
           } else {
             var3 = param0;
           }
-          if (var3 == this.field_g.field_a) {
+          if (var3 == this.field_g.sentinel) {
             this.field_h = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
@@ -176,17 +176,17 @@ final class tm {
     }
 
     final IntrusiveNode d(int param0) {
-        IntrusiveNode var2 = this.field_g.field_a.field_d;
+        IntrusiveNode var2 = this.field_g.sentinel.field_d;
         if (param0 <= 8) {
           field_a = (int[]) null;
-          if (var2 != this.field_g.field_a) {
+          if (var2 != this.field_g.sentinel) {
             this.field_h = var2.field_d;
             return var2;
           }
           this.field_h = null;
           return null;
         }
-        if (var2 != this.field_g.field_a) {
+        if (var2 != this.field_g.sentinel) {
           this.field_h = var2.field_d;
           return var2;
         }
@@ -246,7 +246,7 @@ final class tm {
     final IntrusiveNode b(int param0) {
         int var3 = 109 / ((52 - param0) / 43);
         IntrusiveNode var2 = this.field_h;
-        if (var2 == this.field_g.field_a) {
+        if (var2 == this.field_g.sentinel) {
           this.field_h = null;
           return null;
         }
@@ -254,7 +254,7 @@ final class tm {
         return var2;
     }
 
-    tm(wb param0) {
+    tm(IntrusiveDeque param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

@@ -6,7 +6,7 @@ final class eg {
     static bb field_h;
     static PcmSampleStream field_a;
     static int field_e;
-    static vd field_c;
+    static IntrusiveDeque field_c;
     static String field_b;
     static String field_g;
     static nh field_d;
@@ -98,7 +98,7 @@ final class eg {
         field_i = 0;
         field_h = new bb();
         field_e = 4;
-        field_c = new vd();
+        field_c = new IntrusiveDeque();
         field_b = "Please try again in a few minutes.";
         field_g = "Change display name";
     }

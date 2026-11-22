@@ -9,11 +9,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static String field_d;
     static String field_b;
     private DualLinkNode nextNode;
-    private cn deque;
+    private SecondaryNodeDeque deque;
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (var1 == this.deque.field_c) {
+        if (var1 == this.deque.sentinel) {
           var1 = null;
           this.nextNode = null;
         } else {
@@ -24,7 +24,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_c;
+        return this.nextNode != this.deque.sentinel;
     }
 
     public static void clearStaticReferences(boolean param0) {
@@ -52,12 +52,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
         var2.writeByte(1, (byte) 122);
     }
 
-    SecondaryNodeDequeIterator(cn param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
           this.lastReturned = null;
-          this.nextNode = this.deque.field_c.secondaryNext;
+          this.nextNode = this.deque.sentinel.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

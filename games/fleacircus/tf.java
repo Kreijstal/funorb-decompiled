@@ -4,7 +4,7 @@
 final class tf extends dk {
     int field_F;
     static ob field_H;
-    static vc field_E;
+    static IntrusiveDeque field_E;
     static ob field_G;
 
     tf(UiComponent param0) {

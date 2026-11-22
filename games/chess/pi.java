@@ -39,10 +39,10 @@ final class pi {
           if (param0 < 102) {
             field_d = (dh) null;
           }
-          var3 = (pg) (nd.field_h.g(-18110));
+          var3 = (pg) (nd.field_h.beginBackward(-18110));
           while (var3 != null) {
             if (var2 != var3.field_q) {
-              var3 = (pg) (nd.field_h.a((byte) -102));
+              var3 = (pg) (nd.field_h.nextBackward((byte) -102));
               continue;
             }
             break;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lk extends UiComponent {
-    static vc field_O;
+    static IntrusiveDeque field_O;
     int field_I;
     private int field_N;
     private dd[] field_E;
@@ -207,12 +207,12 @@ final class lk extends UiComponent {
             }
           } else {
             if (var2 != 0 &&
-              vc.field_a != 2) {
+              IntrusiveDeque.field_a != 2) {
               md.i(-109);
             }
           }
           if (var3 == 0 &&
-            2 == vc.field_a) {
+            2 == IntrusiveDeque.field_a) {
             var4 = -sd.field_h + lj.a((byte) -38);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
@@ -387,7 +387,7 @@ final class lk extends UiComponent {
     }
 
     static {
-        field_O = new vc();
+        field_O = new IntrusiveDeque();
         field_J = 0;
         field_A = new fh(6, 0, 4, 2);
     }

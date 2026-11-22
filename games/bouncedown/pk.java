@@ -278,7 +278,7 @@ final class pk extends wf {
         kl var3;
         int var4;
         var4 = Bounce.field_N;
-        var3 = (kl) (this.field_o.field_m.a((byte) -102));
+        var3 = (kl) (this.field_o.field_m.beginForward((byte) -102));
         if (param0 != 0) {
           this.field_t = (int[]) null;
         }
@@ -290,7 +290,7 @@ final class pk extends wf {
               this.field_C[var3.field_E][var3.field_r] = null;
               var3.field_C = 0;
             }
-            var3 = (kl) (this.field_o.field_m.d((byte) -46));
+            var3 = (kl) (this.field_o.field_m.nextForward((byte) -46));
             continue;
           }
           break;
@@ -351,7 +351,7 @@ final class pk extends wf {
         boolean decompiledFrameCompleted0 = true;
         var4 = Bounce.field_N;
         if ((2 & this.field_l[param0]) != 0) {
-          var3 = (kl) (this.field_o.field_m.a((byte) -67));
+          var3 = (kl) (this.field_o.field_m.beginForward((byte) -67));
           while (var3 != null) {
             stackIn_13_0 = var3.field_E;
             stackIn_13_1 = param0;
@@ -364,7 +364,7 @@ final class pk extends wf {
               var3.field_C < 0) {
               var3.field_C = 0;
             }
-            var3 = (kl) (this.field_o.field_m.d((byte) 123));
+            var3 = (kl) (this.field_o.field_m.nextForward((byte) 123));
           }
         }
         if (decompiledFrameCompleted0) {
@@ -641,7 +641,7 @@ final class pk extends wf {
         kl var3;
         int var4;
         var4 = Bounce.field_N;
-        var3 = (kl) (this.field_o.field_m.a((byte) -49));
+        var3 = (kl) (this.field_o.field_m.beginForward((byte) -49));
         if (param1 != 2099140935) {
           this.f(75);
         }
@@ -661,7 +661,7 @@ final class pk extends wf {
               }
               var3.unlink(2);
             }
-            var3 = (kl) (this.field_o.field_m.d((byte) 75));
+            var3 = (kl) (this.field_o.field_m.nextForward((byte) 75));
             continue;
           }
           break;
@@ -804,7 +804,7 @@ final class pk extends wf {
           var9 = Bounce.field_N;
           this.b(param3, param2, 64, 0);
           if ((this.field_l[param3] & 2) != 0) {
-            var5 = (kl) (this.field_o.field_m.b((byte) 60));
+            var5 = (kl) (this.field_o.field_m.beginBackward((byte) 60));
             while (var5 != null) {
               stackOut_3_0 = var5;
               stackIn_9_0 = stackOut_3_0;
@@ -823,7 +823,7 @@ final class pk extends wf {
                 var5.field_h = var6_int - var5.field_l;
                 return;
               }
-              var5 = (kl) (this.field_o.field_m.a(-18158));
+              var5 = (kl) (this.field_o.field_m.nextBackward(-18158));
             }
           }
           stackIn_9_0 = this.field_u.a(48, (long)this.field_z[param3]);
@@ -895,7 +895,7 @@ final class pk extends wf {
           }
           this.field_O[param3][var7.field_z] = var7;
         }
-        this.field_o.field_m.a(1, var7);
+        this.field_o.field_m.addLast(1, var7);
         this.field_C[param3][param2] = var7;
         return;
     }
@@ -1220,7 +1220,7 @@ final class pk extends wf {
         boolean decompiledFrameCompleted0 = true;
         this.field_C[param0][param1] = null;
         if (param3 != (2 & this.field_l[param0])) {
-          var6 = (kl) (this.field_o.field_m.a((byte) -73));
+          var6 = (kl) (this.field_o.field_m.beginForward((byte) -73));
           while (true) {
             if (var6 != null) {
               if (var7 != 0) {
@@ -1232,7 +1232,7 @@ final class pk extends wf {
                 var6 != var8) {
                 var8.field_C = 0;
               } else {
-                var6 = (kl) (this.field_o.field_m.d((byte) 73));
+                var6 = (kl) (this.field_o.field_m.nextForward((byte) 73));
                 continue;
               }
             }
@@ -1301,7 +1301,7 @@ final class pk extends wf {
         boolean decompiledFrameCompleted0 = true;
         var4 = Bounce.field_N;
         if (0 != (4 & this.field_l[param1])) {
-          var3 = (kl) (this.field_o.field_m.a((byte) -71));
+          var3 = (kl) (this.field_o.field_m.beginForward((byte) -71));
           while (var3 != null) {
             stackIn_9_0 = var3.field_E;
             stackIn_9_1 = param1;
@@ -1312,7 +1312,7 @@ final class pk extends wf {
             if (stackIn_9_0 == stackIn_9_1) {
               var3.field_u = 0;
             }
-            var3 = (kl) (this.field_o.field_m.d((byte) -40));
+            var3 = (kl) (this.field_o.field_m.nextForward((byte) -40));
           }
         }
         if (decompiledFrameCompleted0) {

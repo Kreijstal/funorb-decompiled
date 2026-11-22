@@ -22,7 +22,7 @@ final class fb extends ih {
           if (param0 != 102) {
             return false;
           }
-          var4 = (hh) (ob.field_c.a((byte) -46));
+          var4 = (hh) (ob.field_c.beginForward((byte) -46));
           var1 = var4;
           if (var1 == null) {
             return false;

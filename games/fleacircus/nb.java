@@ -24,14 +24,14 @@ final class nb {
             nb.clearStaticReferences((byte) -101);
           }
           if (!qh.c((byte) 65)) {
-            if (!vc.field_b) {
+            if (!IntrusiveDeque.field_b) {
               if (fg.field_x == null) {
                 fg.field_x = ed.a(16777215, 4);
               }
               if (fg.field_x.field_n) {
                 fleas.field_L = fleas.field_L & ~fg.field_x.field_k;
                 kh.field_b = kh.field_b | fg.field_x.field_k;
-                vc.field_b = true;
+                IntrusiveDeque.field_b = true;
                 fg.field_x = null;
               }
             }

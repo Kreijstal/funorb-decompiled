@@ -45,7 +45,7 @@ abstract class gj {
         RuntimeException var4 = null;
         var5 = DungeonAssault.field_K;
         try {
-          ol.field_i = dh.field_b;
+          ol.field_i = SecondaryNodeDeque.field_b;
           if (param0 != 255) {
             if (100 > param0) {
               MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);

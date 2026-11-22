@@ -29,33 +29,33 @@ final class kf extends IntrusiveNode {
             return 1;
           }
           try {
-            if (ed.field_c == 0) {
+            if (IterableNodeHashTable.field_c == 0) {
               d.field_a = bi.field_b.requestDirectSocket(al.field_c, (byte) -122, ak.field_O);
-              ed.field_c = ed.field_c + 1;
+              IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
             }
             if (param0 <= 58) {
               kf.clearStaticReferences((byte) 115);
             }
-            if (ed.field_c == 1) {
+            if (IterableNodeHashTable.field_c == 1) {
               if (d.field_a.status == 2) {
                 stackIn_14_0 = ma.a(2, -1);
                 return stackIn_14_0;
               }
               if (1 == d.field_a.status) {
-                ed.field_c = ed.field_c + 1;
+                IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
               }
             }
-            if (2 == ed.field_c) {
+            if (2 == IterableNodeHashTable.field_c) {
               tf.field_r = new jd((java.net.Socket) (d.field_a.result), bi.field_b);
               var2 = new PacketBuffer(13);
               nf.a(var2, false, cc.field_c, eh.field_l, pf.field_h);
               var2.writeByte(-9469, 15);
               var2.writeInt(-246, oj.field_d);
               tf.field_r.a(0, (byte) -89, 13, var2.payload);
-              ed.field_c = ed.field_c + 1;
+              IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
               lc.field_b = id.a(70) + 30000L;
             }
-            if (ed.field_c == 3) {
+            if (IterableNodeHashTable.field_c == 3) {
               if (tf.field_r.b(-108) <= 0) {
                 if (id.a(120) > lc.field_b) {
                   stackIn_29_0 = ma.a(2, -2);
@@ -67,16 +67,16 @@ final class kf extends IntrusiveNode {
                   stackIn_24_0 = ma.a(2, var1_int);
                   return stackIn_24_0;
                 }
-                ed.field_c = ed.field_c + 1;
+                IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
               }
             }
-            if (4 != ed.field_c) {
+            if (4 != IterableNodeHashTable.field_c) {
               return -1;
             }
             dg.field_H.a(tf.field_r, ii.field_d, false);
             d.field_a = null;
             tf.field_r = null;
-            ed.field_c = 0;
+            IterableNodeHashTable.field_c = 0;
             stackIn_33_0 = 0;
             return stackIn_33_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

@@ -15,18 +15,18 @@ final class h extends kj {
     static String field_L;
 
     final static void k(int param0) {
-        vh var1 = (vh) (ml.field_f.a((byte) 42));
+        vh var1 = (vh) (ml.field_f.removeLast((byte) 42));
         if (var1 == null) {
           var1 = new vh();
         }
         if (param0 > 120) {
           var1.a(ul.field_b, 95, ul.field_i, ul.field_a, ul.field_f, ul.field_l, ul.field_d, ul.field_e);
-          GzipDecompressor.field_a.a(-115, var1);
+          GzipDecompressor.field_a.addLast(-115, var1);
           return;
         }
         h.l(-54);
         var1.a(ul.field_b, 95, ul.field_i, ul.field_a, ul.field_f, ul.field_l, ul.field_d, ul.field_e);
-        GzipDecompressor.field_a.a(-115, var1);
+        GzipDecompressor.field_a.addLast(-115, var1);
     }
 
     h(int param0, int param1, int param2, int param3, pj param4, boolean param5, int param6, int param7, kc param8, int param9, String param10) {

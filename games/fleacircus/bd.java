@@ -170,10 +170,10 @@ class bd extends oh implements da {
           var2 = var28.readUnsignedByte(false);
           if (0 == var2) {
             var3 = var28.readUnsignedShort((byte) 108);
-            var4 = (ll) (jj.field_S.c((byte) 47));
+            var4 = (ll) (jj.field_S.beginForward((byte) 47));
             while (var4 != null) {
               if (~var3 != ~var4.field_k) {
-                var4 = (ll) (jj.field_S.b((byte) -105));
+                var4 = (ll) (jj.field_S.nextForward((byte) -105));
                 continue;
               }
               break;
@@ -267,10 +267,10 @@ class bd extends oh implements da {
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort((byte) -53);
             var4_long = var28.readLong(-102);
-            var6_ref_bh = (bh) (wi.field_j.c((byte) 47));
+            var6_ref_bh = (bh) (wi.field_j.beginForward((byte) 47));
             while (var6_ref_bh != null) {
               if (~var3 != ~var6_ref_bh.field_s) {
-                var6_ref_bh = (bh) (wi.field_j.b((byte) -105));
+                var6_ref_bh = (bh) (wi.field_j.nextForward((byte) -105));
                 continue;
               }
               break;

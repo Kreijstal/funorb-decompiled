@@ -84,12 +84,12 @@ final class fi {
           for (var1_int = 0; 41 > var1_int; var1_int += 40) {
             var2 = og.field_f[var1_int][0];
             var3 = we.field_b[var1_int][0];
-            var4 = bg.field_f[var1_int][0];
+            var4 = SecondaryNodeDeque.field_f[var1_int][0];
             var5 = 0;
             for (var6 = 1; var6 < 10; var6++) {
               var7 = og.field_f[var1_int][var6];
               var8 = we.field_b[var1_int][var6];
-              var9 = bg.field_f[var1_int][var6];
+              var9 = SecondaryNodeDeque.field_f[var1_int][var6];
               var10 = ce.field_c[-1 + var6];
               var11 = var7 - (var2 - 1);
               if (var11 > 0) {

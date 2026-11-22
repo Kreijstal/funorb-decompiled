@@ -475,7 +475,7 @@ final class ge {
 
     final static f a(int param0, byte param1) {
         f var2 = new f();
-        ql.field_i.a(var2, 255);
+        ql.field_i.addLast(var2, 255);
         if (param1 >= -74) {
           ge.a(103, (byte) 124);
         }

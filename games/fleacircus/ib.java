@@ -178,7 +178,7 @@ final class ib implements ComponentLayout {
               fieldTemp$1 = ij.field_I;
               ij.field_I = ij.field_I + 1;
               var5_ref.field_mb = fieldTemp$1;
-              cl.field_e.a(false, var5_ref);
+              cl.field_e.addLast(false, var5_ref);
             }
             var5_ref.field_jb = var4_ref_String;
             return;
@@ -234,7 +234,7 @@ final class ib implements ComponentLayout {
             fieldTemp$0 = gk.field_A;
             gk.field_A = gk.field_A + 1;
             var6.field_mb = fieldTemp$0;
-            tf.field_E.a(false, var6);
+            tf.field_E.addLast(false, var6);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -242,7 +242,7 @@ final class ib implements ComponentLayout {
           var6.field_lb = (String) (var3Lifetime1);
           var6.field_jb = var4_ref_StringLifetime1;
           var6.unlink(-1);
-          var7 = (gm) (tf.field_E.c((byte) 47));
+          var7 = (gm) (tf.field_E.beginForward((byte) 47));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackOut_45_0 = hm.a(var7, var6, true);
@@ -252,12 +252,12 @@ final class ib implements ComponentLayout {
                 break scanLoop1;
               }
               if (stackIn_46_0) {
-                var7 = (gm) (tf.field_E.b((byte) -105));
+                var7 = (gm) (tf.field_E.nextForward((byte) -105));
                 continue;
               }
             }
             if (var7 == null) {
-              tf.field_E.a(false, var6);
+              tf.field_E.addLast(false, var6);
               if (var8 == 0) {
                 return;
               }

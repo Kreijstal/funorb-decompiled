@@ -6,11 +6,11 @@ final class ka extends wf {
     private pk field_p;
     static mj field_o;
     static int field_n;
-    bc field_m;
+    IntrusiveDeque field_m;
     rb field_l;
 
     final wf d() {
-        kl var1 = (kl) (this.field_m.a((byte) -52));
+        kl var1 = (kl) (this.field_m.beginForward((byte) -52));
         if (var1 == null) {
           return null;
         }
@@ -184,7 +184,7 @@ final class ka extends wf {
         var7 = Bounce.field_N;
         try {
           this.field_l.a(param0, param1, param2);
-          var6 = (kl) (this.field_m.a((byte) -49));
+          var6 = (kl) (this.field_m.beginForward((byte) -49));
           while (var6 != null) {
             stackIn_4_0 = this.field_p.a(var6, 8335400);
             boolean decompiledFrameCompleted0 = true;
@@ -205,7 +205,7 @@ final class ka extends wf {
                 var6.field_j = var6.field_j - var5;
               }
             }
-            var6 = (kl) (this.field_m.d((byte) 127));
+            var6 = (kl) (this.field_m.nextForward((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,7 +243,7 @@ final class ka extends wf {
     final wf c() {
         kl var1;
         while (true) {
-          var1 = (kl) (this.field_m.d((byte) -94));
+          var1 = (kl) (this.field_m.nextForward((byte) -94));
           if (var1 == null) {
             return null;
           }
@@ -260,7 +260,7 @@ final class ka extends wf {
         boolean stackIn_4_0 = false;
         var4 = Bounce.field_N;
         this.field_l.a(param0);
-        var3 = (kl) (this.field_m.a((byte) -91));
+        var3 = (kl) (this.field_m.beginForward((byte) -91));
         while (var3 != null) {
           stackIn_4_0 = this.field_p.a(var3, 8335400);
           boolean decompiledFrameCompleted0 = true;
@@ -279,12 +279,12 @@ final class ka extends wf {
               var3.field_j = var3.field_j - var2;
             }
           }
-          var3 = (kl) (this.field_m.d((byte) -101));
+          var3 = (kl) (this.field_m.nextForward((byte) -101));
         }
     }
 
     ka(pk param0) {
-        this.field_m = new bc();
+        this.field_m = new IntrusiveDeque();
         this.field_l = new rb();
         try {
           this.field_p = param0;

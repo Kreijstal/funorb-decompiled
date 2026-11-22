@@ -305,7 +305,7 @@ final class bd extends g implements qh {
         int var6 = 0;
         var6 = Main.field_T;
         try {
-          this.field_z.c(29026);
+          this.field_z.clear(29026);
           if (param0 >= -101) {
             return;
           }

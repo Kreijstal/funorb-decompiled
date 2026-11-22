@@ -25,10 +25,10 @@ class GameDomainSupport006 extends MixedSupport043 {
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           sceneWidgetPart012Argument2.unlink((byte) 111);
-          sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1741((byte) -61));
+          sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.beginBackward((byte) -61));
           while (sceneWidgetPart012Local1 != null) {
             if (sceneWidgetPart012Local1.computeBoolean1607(-985, sceneWidgetPart012Argument2)) {
-              sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1745(true));
+              sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.nextBackward(true));
               continue;
             }
             break;
@@ -40,7 +40,7 @@ class GameDomainSupport006 extends MixedSupport043 {
             MixedSupport043.performAction0540(114, sceneWidgetPart012Argument2, sceneWidgetPart012Local1);
             return;
           }
-          MixedSupport057.nodeDequeState0010.performAction1735(sceneWidgetPart012Argument2, 2777);
+          MixedSupport057.nodeDequeState0010.addFirst(sceneWidgetPart012Argument2, 2777);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -78,7 +78,7 @@ class GameDomainSupport006 extends MixedSupport043 {
           if (integerArgument1 != 3) {
             booleanState0227 = false;
           }
-          MixedSupport016.nodeDequeState0003.performAction1735(mixedSupport038Argument3, 2777);
+          MixedSupport016.nodeDequeState0003.addFirst(mixedSupport038Argument3, 2777);
           MixedSupport081.performAction1031(true, mixedSupport038Argument3, integerArgument2);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wk.M(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport038Argument3 != null ? "{...}" : "null") + ')');

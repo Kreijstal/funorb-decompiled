@@ -23,7 +23,7 @@ final class e {
 
     final static void b(byte param0) {
         vl.field_f = new am(kg.a(hk.field_e, 100, 0));
-        be.field_d = new am(kg.a(rh.field_g, 100, 0));
+        SecondaryNodeDeque.field_d = new am(kg.a(rh.field_g, 100, 0));
         if (param0 >= -95) {
           field_a = (String) null;
         }

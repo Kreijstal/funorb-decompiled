@@ -83,14 +83,14 @@ final class eh {
         if (param0) {
           eh.clearStaticReferences(false);
         }
-        hk var1 = (hk) (ak.field_i.b(-27493));
+        hk var1 = (hk) (ak.field_i.removeLast(-27493));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         si.a(var1.field_i, var1.field_j, var1.field_p);
         si.d(var1.field_m, var1.field_o, var1.field_r, var1.field_n);
         var1.field_i = null;
-        ij.field_J.a(var1, 114);
+        ij.field_J.addLast(var1, 114);
     }
 
     final static int a(byte param0) {

@@ -61,7 +61,7 @@ abstract class em extends DualLinkNode {
           var2 = var9.readUnsignedByte((byte) -54);
           var3 = var9.readUnsignedByte((byte) -54);
           if (var2 == 0) {
-            var4 = (jb) (sd.field_a.beginForward(param0 ^ -62));
+            var4 = (jb) (IterableNodeHashTable.field_a.beginForward(param0 ^ -62));
             if (var4 == null) {
               si.a(-36);
               return;

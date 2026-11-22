@@ -143,7 +143,7 @@ final class eg extends fg {
             var4 = (se) null;
             eg.a((se) null, -102);
           }
-          stackIn_3_0 = im.a('*', param1.field_l.length(), 77);
+          stackIn_3_0 = IntrusiveDeque.a('*', param1.field_l.length(), 77);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

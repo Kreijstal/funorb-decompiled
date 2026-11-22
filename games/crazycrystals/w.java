@@ -9,7 +9,7 @@ final class w extends IntrusiveNode {
         sc var4 = new sc();
         var4.field_k = param1;
         var4.field_f = param3;
-        hd.field_c.b(param0, var4);
+        hd.field_c.addLast(param0, var4);
         ed.a((byte) 121, param2, var4);
         return var4;
     }

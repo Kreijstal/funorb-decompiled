@@ -1128,7 +1128,7 @@ final class dj extends ee {
                   this.a(false, var3, var18 * 3, ac.field_c);
                   this.field_Ab[var18].a(ud.field_o, var11, this.field_bb[2 + var18 * 3], var14, var16, dh.field_sb, rn.field_c, this.field_bb[var18 * 3], false, this.field_bb[1 + 3 * var18]);
                   this.field_Ab[var18].field_Q.field_m = this.field_Q * 96 >> 3;
-                  this.field_A.field_b.a((IntrusiveNode) (this.field_Ab[var18]), (byte) -64);
+                  this.field_A.field_b.addLast((IntrusiveNode) (this.field_Ab[var18]), (byte) -64);
                   var18++;
                 } while (var32 == 0);
                 while (var18 < 5) {
@@ -1145,7 +1145,7 @@ final class dj extends ee {
                     if (null != var19.field_Q.field_Q) {
                       var19.field_Q.field_Q.field_m = this.field_Q * 96 >> 3;
                     }
-                    this.field_A.field_b.a((IntrusiveNode) (var19.field_Q), (byte) 79);
+                    this.field_A.field_b.addLast((IntrusiveNode) (var19.field_Q), (byte) 79);
                   }
                   var18++;
                 }
@@ -1176,7 +1176,7 @@ final class dj extends ee {
                     var11 += 4;
                     this.field_Lb.b(118);
                     this.field_S.field_Q.field_m = 48;
-                    this.field_A.field_F.a((IntrusiveNode) (this.field_S), (byte) 116);
+                    this.field_A.field_F.addLast((IntrusiveNode) (this.field_S), (byte) 116);
                   }
                   var12 = 0;
                   while (var12 < 5) {
@@ -1191,7 +1191,7 @@ final class dj extends ee {
                       if (var13.field_X.a((hm[]) null, false, 3.0)) {
                         var13.field_X.field_Q.field_m = 32;
                         this.field_A.field_t = true;
-                        this.field_A.field_F.a((IntrusiveNode) (var13.field_X), (byte) -95);
+                        this.field_A.field_F.addLast((IntrusiveNode) (var13.field_X), (byte) -95);
                         var13.field_Z.b(118);
                         var11++;
                       }
@@ -1422,7 +1422,7 @@ final class dj extends ee {
         }
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         int var3_int = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -1592,7 +1592,7 @@ final class dj extends ee {
               }
               break;
             }
-            this.field_A.field_g.a((IntrusiveNode) (this), -1);
+            this.field_A.field_g.addFirst((IntrusiveNode) (this), -1);
           }
           if (decompiledFrameCompleted0) {
             stackIn_40_0 = param0 ? 1 : 0;
@@ -2063,7 +2063,7 @@ final class dj extends ee {
         RuntimeException var3 = null;
         try {
           if (param1 > -81) {
-            this.a((mn) null, (byte) 65);
+            this.a((PrimaryNodeDeque) null, (byte) 65);
           }
           param0.a(this, (byte) 80);
           return;
@@ -2108,7 +2108,7 @@ final class dj extends ee {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -2166,7 +2166,7 @@ final class dj extends ee {
             this.field_Bb.a(param3, param1, (byte) 125);
           }
           if (param2 >= -5) {
-            this.a((mn) null, (byte) -40);
+            this.a((PrimaryNodeDeque) null, (byte) -40);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,7 +5,7 @@ final class nh extends og implements vd {
     private String[] field_B;
     private pc[] field_D;
     private fd field_E;
-    static wb field_A;
+    static IntrusiveDeque field_A;
     static String field_z;
     static int[] field_H;
     static int field_F;
@@ -264,7 +264,7 @@ final class nh extends og implements vd {
         }
         vc var5 = ai.field_h;
         if (null != this.field_B) {
-          var5.a(wb.field_b, this.field_r + param2, this.field_j + param0, this.field_g, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_o);
+          var5.a(IntrusiveDeque.field_b, this.field_r + param2, this.field_j + param0, this.field_g, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_o);
         }
     }
 
@@ -300,7 +300,7 @@ final class nh extends og implements vd {
         int var6 = 0;
         var6 = CrazyCrystals.field_B;
         try {
-          this.field_v.a(param1 ^ 22800);
+          this.field_v.clear(param1 ^ 22800);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -340,7 +340,7 @@ final class nh extends og implements vd {
     }
 
     static {
-        field_A = new wb();
+        field_A = new IntrusiveDeque();
         field_C = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
     }
 }

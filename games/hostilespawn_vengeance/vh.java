@@ -223,16 +223,16 @@ final class vh {
         RuntimeException var2 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var5 = (hm) (ih.field_x.g(-77));
+          var5 = (hm) (ih.field_x.beginForward(-77));
           while (var5 != null) {
             MouseInput.a(param1, 2, var5);
-            var5 = (hm) (ih.field_x.a(12684));
+            var5 = (hm) (ih.field_x.nextForward(12684));
           }
           var2_int = 109 / ((param0 + 73) / 52);
-          var3 = ei.field_h.g(-79);
+          var3 = ei.field_h.beginForward(-79);
           while (var3 != null) {
             AccountCreationResultPanel.d(-9420, param1);
-            var3 = ei.field_h.a(12684);
+            var3 = ei.field_h.nextForward(12684);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

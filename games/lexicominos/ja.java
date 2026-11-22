@@ -69,17 +69,17 @@ final class ja {
     }
 
     final static void b(byte param0) {
-        ul var1 = (ul) (pb.field_k.a(31334));
+        ul var1 = (ul) (pb.field_k.removeLast(31334));
         if (var1 == null) {
           var1 = new ul();
         }
         var1.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_c, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g);
         if (param0 < -110) {
-          vb.field_m.b(103, var1);
+          vb.field_m.addLast(103, var1);
           return;
         }
         ja.a(112);
-        vb.field_m.b(103, var1);
+        vb.field_m.addLast(103, var1);
     }
 
     final static boolean a(int param0) {

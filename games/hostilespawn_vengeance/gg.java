@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gg extends fc {
-    private vl field_B;
+    private IntrusiveDeque field_B;
     static String field_E;
     static String[] field_D;
     static String[] field_C;
@@ -81,7 +81,7 @@ final class gg extends fc {
             throw new IllegalArgumentException();
           }
           var3 = (ul) (param0);
-          this.field_B.a((byte) -102, var3);
+          this.field_B.addFirst((byte) -102, var3);
           var3.field_F = true;
           var3.a((byte) -90, (ag) (this));
           if (param1 < 78) {
@@ -137,7 +137,7 @@ final class gg extends fc {
 
     public gg() {
         super(0, 0, mm.field_q, fb.field_f, (nn) null, (mh) null);
-        this.field_B = new vl();
+        this.field_B = new IntrusiveDeque();
     }
 
     final void f(byte param0) {

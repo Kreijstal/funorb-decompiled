@@ -17,6 +17,6 @@ final class ii {
     static {
         field_z = "ii.A(";
         field_a = new int[8192];
-        vd discarded$0 = new vd();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

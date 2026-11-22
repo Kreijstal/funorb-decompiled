@@ -41,7 +41,7 @@ final class th extends ah {
         field_fb = null;
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -112,7 +112,7 @@ final class th extends ah {
         }
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -137,7 +137,7 @@ final class th extends ah {
           this.field_db.field_w = true;
           this.field_db.field_v = -var9;
           this.field_db.field_p = this.field_D - this.field_C * var9;
-          param0.a((IntrusiveNode) (this.field_db), (byte) 125);
+          param0.addLast((IntrusiveNode) (this.field_db), (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "th.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -39,19 +39,19 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException decompiledCaughtException = null;
         try {
           wk.field_g = wk.a(param0, 1, "display_name_changed", "basic");
-          ea.field_bb = new ok(0L, cn.field_b, tn.field_l, ef.field_m);
-          fg.field_d = new ok(0L, cn.field_b, d.field_Lb, vc.field_b);
+          ea.field_bb = new ok(0L, SecondaryNodeDeque.field_b, tn.field_l, ef.field_m);
+          fg.field_d = new ok(0L, SecondaryNodeDeque.field_b, d.field_Lb, vc.field_b);
           hb.field_a = new ci(0L, (ci) null);
           oj.field_c = new ci(0L, qn.field_P);
           oj.field_c.field_fb = param1;
           le.field_e = new ci(0L, bo.field_e, ei.field_s);
           kf.field_t = new ci(0L, DualLinkNode.field_j, hm.field_b);
-          dk.field_h = new ci(0L, sj.field_k);
+          SecondaryNodeHashTable.field_h = new ci(0L, sj.field_k);
           hb.field_a.a((byte) 123, oj.field_c);
           hb.field_a.a((byte) 124, le.field_e);
           hb.field_a.a((byte) 123, kf.field_t);
           hb.field_a.a((byte) 125, ea.field_bb);
-          hb.field_a.a((byte) 127, dk.field_h);
+          hb.field_a.a((byte) 127, SecondaryNodeHashTable.field_h);
           ea.field_bb.field_Kb.field_Jb.a(qn.field_P, param1 + 2147483647);
           var2 = ea.field_bb.field_Kb.field_Jb;
           ea.field_bb.field_Kb.field_Jb.field_cb = 1;

@@ -8,7 +8,7 @@ final class e {
     static String field_d;
     int field_b;
 
-    final static void a(mn param0, byte param1) {
+    final static void a(PrimaryNodeDeque param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dc var3 = null;
@@ -25,11 +25,11 @@ final class e {
         try {
           var2_int = 34 / ((-84 - param1) / 37);
           do {
-            var3 = (dc) (param0.a(false));
+            var3 = (dc) (param0.beginBackward(false));
             if (var3 == null) {
               return;
             }
-            var4 = (dc) (param0.a((byte) 82));
+            var4 = (dc) (param0.nextBackward((byte) 82));
             var5 = 1;
             while (var4 != null) {
               if (var4.field_I > var3.field_I) {
@@ -38,14 +38,14 @@ final class e {
               } else {
                 var3 = var4;
               }
-              var4 = (dc) (param0.a((byte) -52));
+              var4 = (dc) (param0.nextBackward((byte) -52));
             }
             if (var5 != 0) {
               return;
             }
-            var4Lifetime1 = (dc) (param0.a(60));
+            var4Lifetime1 = (dc) (param0.beginForward(60));
             var5 = 1;
-            var3Lifetime1 = (dc) (param0.d(2123));
+            var3Lifetime1 = (dc) (param0.nextForward(2123));
             while (var3Lifetime1 != null) {
               if (var4Lifetime1.field_I > var3Lifetime1.field_I) {
                 ri.a(var4Lifetime1, 0, var3Lifetime1);
@@ -53,7 +53,7 @@ final class e {
               } else {
                 var4Lifetime1 = var3Lifetime1;
               }
-              var3Lifetime1 = (dc) (param0.d(2123));
+              var3Lifetime1 = (dc) (param0.nextForward(2123));
             }
           } while (var5 == 0);
           return;

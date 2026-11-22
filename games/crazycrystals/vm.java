@@ -9,7 +9,7 @@ final class vm {
     static String field_e;
     static String field_h;
     private lm[] field_f;
-    static wb field_g;
+    static IntrusiveDeque field_g;
     private int field_a;
     float field_b;
     private int field_i;
@@ -148,7 +148,7 @@ final class vm {
     static {
         field_e = "Return to game";
         field_h = "Email (Login):";
-        field_g = new wb();
+        field_g = new IntrusiveDeque();
         field_d = new int[8192];
     }
 

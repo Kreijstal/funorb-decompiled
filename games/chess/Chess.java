@@ -47,7 +47,7 @@ public final class Chess extends gb {
         String[] var20 = null;
         try {
           var20 = (String[]) null;
-          bl.a(args, param12, (byte) 31, param5, param6, param13, param2, param15, param14, param9, param3, param18, param16, param8, param10, (String[]) null, param4, param1, param11, param7);
+          IterableNodeHashTable.a(args, param12, (byte) 31, param5, param6, param13, param2, param15, param14, param9, param3, param18, param16, param8, param10, (String[]) null, param4, param1, param11, param7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,7 +187,7 @@ public final class Chess extends gb {
         if (param0 != 0) {
           field_D = (String) null;
         }
-        return cn.field_f;
+        return SecondaryNodeDeque.field_f;
     }
 
     final void b(byte param0) {
@@ -327,7 +327,7 @@ public final class Chess extends gb {
                 this.a(true, 101);
               }
               if (!ga.a(true)) {
-                ae.field_e[jc.field_f].a((byte) 114, true, -1);
+                ae.field_e[IntrusiveDeque.field_f].a((byte) 114, true, -1);
               }
             }
           } else {
@@ -341,7 +341,7 @@ public final class Chess extends gb {
         }
         if (!vi.a(-3)) {
           while (true) {
-            var12 = (ac) (tg.field_e.f(1184188328));
+            var12 = (ac) (tg.field_e.removeLast(1184188328));
             if (var12 == null) {
               break;
             }
@@ -376,7 +376,7 @@ public final class Chess extends gb {
                       uk.a(qk.field_h, false, 28333, 0);
                     }
                     de.a(-31645);
-                    ae.field_e[jc.field_f].a((byte) 122, false, 0);
+                    ae.field_e[IntrusiveDeque.field_f].a((byte) 122, false, 0);
                     pk.field_j = false;
                     hl.field_h = false;
                     hj.field_i = false;
@@ -412,7 +412,7 @@ public final class Chess extends gb {
           }
           if (wg.field_B == 14) {
             de.a(-31645);
-            hg.a(rl.field_a.length, 1024, AccountServiceResult.a(false), ak.a(8, 1045), IntrusiveNode.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(11520), ai.field_h);
+            hg.a(rl.field_a.length, 1024, AccountServiceResult.a(false), ak.a(8, 1045), IntrusiveNode.b((byte) 19), ak.a(2000, 1045), true, 150, SecondaryNodeDeque.a(11520), ai.field_h);
             il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
             wn.field_f = true;
             qk.field_h = -2;
@@ -449,7 +449,7 @@ public final class Chess extends gb {
             var3Lifetime1 = 1 << var2Lifetime1Lifetime1;
             wc.field_w = wc.field_w | var3Lifetime1;
             vk.field_b = vk.field_b | var3Lifetime1;
-            hd.field_l.a((IntrusiveNode) (new ef(var2Lifetime1Lifetime1)), (byte) -108);
+            hd.field_l.addFirst((IntrusiveNode) (new ef(var2Lifetime1Lifetime1)), (byte) -108);
             continue;
           }
           if (wg.field_B != 57 &&
@@ -685,12 +685,12 @@ public final class Chess extends gb {
           cg.a(-12, (java.awt.Canvas) (var6));
           return;
         }
-        if (qk.field_h == jc.field_f) {
-          DualLinkNode.a(wn.field_e, jc.field_f, (byte) -86, true);
+        if (qk.field_h == IntrusiveDeque.field_f) {
+          DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, true);
         } else {
           qd.field_w.a(-0.1, (double)r.field_Eb / 300.0, true);
           if (nc.field_T < 16) {
-            DualLinkNode.a(wn.field_e, jc.field_f, (byte) -86, false);
+            DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, false);
           } else {
             DualLinkNode.a(ma.field_D, qk.field_h, (byte) -86, false);
           }
@@ -1182,8 +1182,8 @@ public final class Chess extends gb {
         if (param0 != 106) {
           return;
         }
-        if (jc.field_f != 2 &&
-          11 != jc.field_f) {
+        if (IntrusiveDeque.field_f != 2 &&
+          11 != IntrusiveDeque.field_f) {
           var2 = 1;
           if (null != pd.field_Rb) {
             stackIn_10_0 = (DelegatingCanvas.a(-1, pd.field_Rb.field_Xb)) ? 1 : 0;
@@ -1218,10 +1218,10 @@ public final class Chess extends gb {
               oc.field_p.f(-110)) {
               continue;
             }
-            ae.field_e[jc.field_f].b((byte) 113);
+            ae.field_e[IntrusiveDeque.field_f].b((byte) 113);
           }
         }
-        ae.field_e[jc.field_f].a((byte) -115);
+        ae.field_e[IntrusiveDeque.field_f].a((byte) -115);
     }
 
     private final void a(int param0, String param1, String param2, boolean param3, int param4, int param5) {
@@ -1326,7 +1326,7 @@ public final class Chess extends gb {
           if (n.field_e != ka.field_h) {
             if (n.field_e == on.field_d) {
               if (vi.a(-3)) {
-                jc.field_f = cc.field_z;
+                IntrusiveDeque.field_f = cc.field_z;
               } else {
                 gf.field_d = vc.a(-127, 4);
                 if (cb.field_e != null) {
@@ -1344,7 +1344,7 @@ public final class Chess extends gb {
                   de.a(-31645);
                 }
               }
-              var3 = jc.field_f;
+              var3 = IntrusiveDeque.field_f;
               uk.a(qk.field_h, false, 28333, var3);
               n.field_e = GzipInflater.field_d;
               nc.field_T = 31;
@@ -1369,13 +1369,13 @@ public final class Chess extends gb {
           var3 = 0;
           var4 = 0;
           if (!param0) {
-            if (jc.field_f != qk.field_h) {
+            if (IntrusiveDeque.field_f != qk.field_h) {
               nc.field_T = nc.field_T + 1;
               if (nc.field_T == 32) {
                 de.a(-31645);
               }
             } else {
-              if (jc.field_f == -1) {
+              if (IntrusiveDeque.field_f == -1) {
                 if (!pk.field_j) {
                   oc.field_p.a((byte) -39, true);
                   while (kf.d(18954)) {
@@ -1387,15 +1387,15 @@ public final class Chess extends gb {
                   var4 = 1;
                   var3 = 1;
                 }
-                if (-1 != jc.field_f &&
-                  da.a(jc.field_f, true)) {
-                  ae.field_e[jc.field_f].a((byte) -110);
+                if (-1 != IntrusiveDeque.field_f &&
+                  da.a(IntrusiveDeque.field_f, true)) {
+                  ae.field_e[IntrusiveDeque.field_f].a((byte) -110);
                 }
               } else {
-                if (jc.field_f != -2) {
-                  if (da.a(jc.field_f, true)) {
+                if (IntrusiveDeque.field_f != -2) {
+                  if (da.a(IntrusiveDeque.field_f, true)) {
                     if (!pk.field_j) {
-                      ae.field_e[jc.field_f].a((byte) -125);
+                      ae.field_e[IntrusiveDeque.field_f].a((byte) -125);
                     } else {
                       this.l((byte) 106);
                     }
@@ -1404,7 +1404,7 @@ public final class Chess extends gb {
                   var3 = 1;
                 }
               }
-              if (jc.field_f == 3) {
+              if (IntrusiveDeque.field_f == 3) {
                 var3 = 1;
                 var4 = 1;
               }
@@ -1475,7 +1475,7 @@ public final class Chess extends gb {
         if (-4 == qk.field_h) {
           qn.field_U.f(9, -87);
           r.field_bc = true;
-          qk.field_h = jc.field_f;
+          qk.field_h = IntrusiveDeque.field_f;
         }
         var3Lifetime1 = 107 / ((param1 + 51) / 45);
         if (qk.field_h == -5) {
@@ -1483,7 +1483,7 @@ public final class Chess extends gb {
             db.a(11, pd.field_Rb.g((byte) -121), 28113);
           }
           fi.field_a = true;
-          qk.field_h = jc.field_f;
+          qk.field_h = IntrusiveDeque.field_f;
         }
     }
 
@@ -1545,7 +1545,7 @@ public final class Chess extends gb {
         int var3 = field_G;
         Chess.clearStaticReferences(2137);
         ef.a(27706);
-        jc.clearStaticReferences(-31);
+        IntrusiveDeque.clearStaticReferences(-31);
         ic.clearStaticReferences(false);
         dn.clearStaticReferences(82);
         me.a(18854);
@@ -1624,7 +1624,7 @@ public final class Chess extends gb {
         in.b((byte) 23);
         an.clearStaticReferences((byte) -109);
         ln.k(0);
-        dk.clearStaticReferences(12000);
+        SecondaryNodeHashTable.clearStaticReferences(12000);
         ce.clearStaticReferences(true);
         ArchiveIndex.a(87);
         GzipInflater.clearStaticReferences(-6145);
@@ -1778,8 +1778,8 @@ public final class Chess extends gb {
         ml.clearStaticReferences((byte) -122);
         kb.i(-15237);
         ji.i(5849);
-        bl.clearStaticReferences(0);
-        cn.clearStaticReferences(7043);
+        IterableNodeHashTable.clearStaticReferences(0);
+        SecondaryNodeDeque.clearStaticReferences(7043);
         cm.a(false);
         hg.clearStaticReferences((byte) -76);
         el.e((byte) 125);
@@ -1899,7 +1899,7 @@ public final class Chess extends gb {
               ae.field_e[var3Lifetime1] = new aa(var3Lifetime1);
             }
             qk.field_h = 0;
-            jc.field_f = 0;
+            IntrusiveDeque.field_f = 0;
             bf.a(true, 50);
             if (vi.a(-3)) {
               return true;

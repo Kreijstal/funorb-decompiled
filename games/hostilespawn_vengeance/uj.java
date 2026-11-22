@@ -11,7 +11,7 @@ final class uj extends IntrusiveNode {
     static bd field_r;
     static int field_n;
     static String field_q;
-    static vl field_o;
+    static IntrusiveDeque field_o;
     static String field_h;
 
     public static void clearStaticReferences(int param0) {

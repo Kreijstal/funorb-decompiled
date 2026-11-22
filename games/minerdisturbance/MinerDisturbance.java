@@ -3694,7 +3694,7 @@ public final class MinerDisturbance extends ob {
           }
           regionExit8: {
             var14Lifetime1 = stackIn_2669_0;
-            if (d.field_b && (qd.field_O[qc.field_c] ||
+            if (d.field_b && (qd.field_O[SecondaryNodeDeque.field_c] ||
               var8Lifetime4 != 0 &&
               qd.field_O[99] &&
               !qd.field_O[96] &&
@@ -4156,7 +4156,7 @@ public final class MinerDisturbance extends ob {
                 vh.field_a = new Sprite[2];
                 vh.field_a[0] = jn.a("shop_background", -29553, "shop", fl.field_f);
                 vh.field_a[1] = jn.a("shop_background_ice", -29553, "shop", fl.field_f);
-                qc.field_d = jn.a("shop_sign", -29553, "shop", fl.field_f);
+                SecondaryNodeDeque.field_d = jn.a("shop_sign", -29553, "shop", fl.field_f);
                 hd.field_d = new Sprite[9];
                 hd.field_d[0] = jn.a("frame_topleft", -29553, "", fl.field_f);
                 hd.field_d[1] = jn.a("frame_top", -29553, "", fl.field_f);
@@ -4896,8 +4896,8 @@ public final class MinerDisturbance extends ob {
           se.n(-13673);
           ph.a(0);
           bg.clearStaticReferences(15917);
-          sd.clearStaticReferences(-1);
-          qc.clearStaticReferences(2207);
+          IterableNodeHashTable.clearStaticReferences(-1);
+          SecondaryNodeDeque.clearStaticReferences(2207);
           bl.b((byte) 79);
           oh.i(-116);
           ic.b(29);

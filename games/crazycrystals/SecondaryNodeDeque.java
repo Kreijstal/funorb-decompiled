@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class be implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static String field_b;
     static int field_c;
-    DualLinkNode field_f;
+    DualLinkNode sentinel;
     static db field_e;
     static am field_d;
     static String field_a;
@@ -66,12 +66,12 @@ final class be implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void addLast(byte param0, DualLinkNode param1) {
         if (param1.field_g != null) {
           param1.unlinkSecondary(1);
         }
-        param1.field_g = this.field_f.field_g;
-        param1.field_j = this.field_f;
+        param1.field_g = this.sentinel.field_g;
+        param1.field_j = this.sentinel;
         if (param0 < 7) {
           return;
         }
@@ -83,13 +83,13 @@ final class be implements Iterable {
         }
     }
 
-    private be() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_f.field_j;
-        if (var2 == this.field_f) {
+    final DualLinkNode removeFirst(int param0) {
+        DualLinkNode var2 = this.sentinel.field_j;
+        if (var2 == this.sentinel) {
           return null;
         }
         if (param0 == 30244) {
@@ -97,7 +97,7 @@ final class be implements Iterable {
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
-        this.a((byte) 94, (DualLinkNode) null);
+        this.addLast((byte) 94, (DualLinkNode) null);
         var2.unlinkSecondary(1);
         return var2;
     }

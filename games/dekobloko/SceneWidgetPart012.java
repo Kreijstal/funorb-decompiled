@@ -122,10 +122,10 @@ final class SceneWidgetPart012 extends SceneWidget {
 
     final boolean computeBoolean1611(byte byteArgument1) {
         if (byteArgument1 > 29) {
-          return !this.computeBoolean0133((byte) -68) ? true : false;
+          return !this.isSecondaryLinked((byte) -68) ? true : false;
         }
         this.integerState0784 = 50;
-        return !this.computeBoolean0133((byte) -68) ? true : false;
+        return !this.isSecondaryLinked((byte) -68) ? true : false;
     }
 
     final static void performAction1609(boolean booleanArgument1, java.awt.Canvas canvasArgument2) {

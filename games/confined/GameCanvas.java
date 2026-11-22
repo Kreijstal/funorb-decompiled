@@ -3,7 +3,7 @@
  */
 final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_f;
-    static mn field_b;
+    static PrimaryNodeDeque field_b;
     java.awt.Frame field_e;
     static mi field_a;
     static String field_c;
@@ -115,7 +115,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     }
 
     static {
-        field_b = new mn();
+        field_b = new PrimaryNodeDeque();
         field_c = "Please try again in a few minutes.";
         field_g = "You have <%0> unread messages!";
     }

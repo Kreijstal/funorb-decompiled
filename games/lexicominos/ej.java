@@ -71,7 +71,7 @@ final class ej {
             if (param0 != -17) {
               field_b = (db[]) null;
             }
-            var13 = (pd) (al.field_C.a(true));
+            var13 = (pd) (al.field_C.beginForward(true));
             var17 = var13;
             if (var17 == null) {
               return;

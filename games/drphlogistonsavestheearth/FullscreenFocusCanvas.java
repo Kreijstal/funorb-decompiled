@@ -257,39 +257,39 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime17 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,0", param1 - 128);
           if (null != var2Lifetime17) {
-            tc.field_b[0] = mj.a((byte) 106, var2Lifetime17);
+            IterableNodeHashTable.field_b[0] = mj.a((byte) 106, var2Lifetime17);
           }
           var2Lifetime18 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,1", param1 ^ 132);
           if (null != var2Lifetime18) {
-            tc.field_b[1] = mj.a((byte) 109, var2Lifetime18);
+            IterableNodeHashTable.field_b[1] = mj.a((byte) 109, var2Lifetime18);
           }
           var2Lifetime19 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,2", 126);
           if (null != var2Lifetime19) {
-            tc.field_b[2] = mj.a((byte) 38, var2Lifetime19);
+            IterableNodeHashTable.field_b[2] = mj.a((byte) 38, var2Lifetime19);
           }
           var2Lifetime20 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,3", 127);
           if (null != var2Lifetime20) {
-            tc.field_b[3] = mj.a((byte) 127, var2Lifetime20);
+            IterableNodeHashTable.field_b[3] = mj.a((byte) 127, var2Lifetime20);
           }
           var2Lifetime21 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,4", 124);
           if (null != var2Lifetime21) {
-            tc.field_b[4] = mj.a((byte) -109, var2Lifetime21);
+            IterableNodeHashTable.field_b[4] = mj.a((byte) -109, var2Lifetime21);
           }
           var2Lifetime22 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,5", 122);
           if (var2Lifetime22 != null) {
-            tc.field_b[5] = mj.a((byte) -108, var2Lifetime22);
+            IterableNodeHashTable.field_b[5] = mj.a((byte) -108, var2Lifetime22);
           }
           var2Lifetime23 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,6", 125);
           if (null != var2Lifetime23) {
-            tc.field_b[6] = mj.a((byte) -96, var2Lifetime23);
+            IterableNodeHashTable.field_b[6] = mj.a((byte) -96, var2Lifetime23);
           }
           var2Lifetime24 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,7", 126);
           if (var2Lifetime24 != null) {
-            tc.field_b[7] = mj.a((byte) 115, var2Lifetime24);
+            IterableNodeHashTable.field_b[7] = mj.a((byte) 115, var2Lifetime24);
           }
           var2Lifetime25 = NodeHashTableIterator.a("LEVEL_SELECT_NAMES,8", 124);
           if (null != var2Lifetime25) {
-            tc.field_b[8] = mj.a((byte) 16, var2Lifetime25);
+            IterableNodeHashTable.field_b[8] = mj.a((byte) 16, var2Lifetime25);
           }
           var2Lifetime26 = NodeHashTableIterator.a("LEVEL_SELECT_DESC,0", param1 ^ 128);
           if (var2Lifetime26 != null) {
@@ -724,7 +724,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime133 = NodeHashTableIterator.a("keycode_coil", 122);
           if (var2Lifetime133 != null) {
-            vd.field_f = 255 & var2Lifetime133[0];
+            IntrusiveDeque.field_f = 255 & var2Lifetime133[0];
           }
           var2Lifetime134 = NodeHashTableIterator.a("keycode_missile", 122);
           if (var2Lifetime134 != null) {

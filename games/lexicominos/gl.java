@@ -20,7 +20,7 @@ final class gl {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new nc(param1, param0, param4, param2, param6, param8, param7);
-          ok.field_b.b(114, var9);
+          ok.field_b.addLast(114, var9);
           ga.a(var9, param3, 104);
           if (param5 != 56) {
             field_b = (String) null;
@@ -75,7 +75,7 @@ final class gl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ng.a(param5, param8, (byte) 115, param0);
+          IntrusiveDeque.a(param5, param8, (byte) 115, param0);
           if (param12 != 0) {
             field_b = (String) null;
           }

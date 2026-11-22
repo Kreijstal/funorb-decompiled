@@ -139,7 +139,7 @@ final class bf {
             var2_int = oi.b(0, 3);
             var3 = oi.b(0, 3);
             dm.field_d[var2_int].c(41, 48);
-            qi.field_f[var3].c(-qi.field_f[0].field_y + 599, 48);
+            IterableNodeHashTable.field_f[var3].c(-IterableNodeHashTable.field_f[0].field_y + 599, 48);
             df.field_c.c(41 + dm.field_d[var2_int].field_y, 48);
           }
           gf.b(kd.field_g);
@@ -267,9 +267,9 @@ final class bf {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               dj.a(var15, (byte) 123);
               if (var6_intLifetime1 != 0) {
-                oc.a(var6_intLifetime1, (byte) -59, dh.field_g, cm.field_P, fm.field_g, ln.field_e);
+                oc.a(var6_intLifetime1, (byte) -59, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, ln.field_e);
               } else {
-                oc.a(var6_intLifetime1, (byte) -66, dh.field_g, cm.field_P, fm.field_g, ln.field_e);
+                oc.a(var6_intLifetime1, (byte) -66, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, ln.field_e);
               }
             }
             kj.a(var5, 0);

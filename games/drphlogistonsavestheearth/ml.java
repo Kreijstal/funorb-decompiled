@@ -137,7 +137,7 @@ final class ml extends IntrusiveNode {
           this.field_i = param0;
           this.field_k = param0.e();
           this.field_o = param1;
-          this.field_i.e(dg.field_e * this.field_k / 80);
+          this.field_i.e(SecondaryNodeDeque.field_e * this.field_k / 80);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

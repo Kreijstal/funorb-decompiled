@@ -56,10 +56,10 @@ final class pe extends IntrusiveNode {
         try {
           var14 = kd.field_n;
           var2 = var14.readUnsignedByte(255);
-          var3 = (hb) (vm.field_g.g(32073));
+          var3 = (hb) (vm.field_g.beginForward(32073));
           while (var3 != null) {
             if (var3.field_f != var2) {
-              var3 = (hb) (vm.field_g.a(false));
+              var3 = (hb) (vm.field_g.nextForward(false));
               continue;
             }
             break;
@@ -90,7 +90,7 @@ final class pe extends IntrusiveNode {
             go.a(var5, 240);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
-            var8 = be.field_c;
+            var8 = SecondaryNodeDeque.field_c;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {

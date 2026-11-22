@@ -15,11 +15,11 @@ final class of {
         }
     }
 
-    final static ng a(char[][] param0, int param1, ij param2) {
+    final static IntrusiveDeque a(char[][] param0, int param1, ij param2) {
         int var7 = 0;
         int var10 = 0;
         ij stackIn_12_0 = null;
-        ng stackIn_20_0 = null;
+        IntrusiveDeque stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -34,12 +34,12 @@ final class of {
         ij var9 = null;
         ij var11 = null;
         int var12 = 0;
-        ng var13 = null;
+        IntrusiveDeque var13 = null;
         ij var14 = null;
         var12 = Lexicominos.field_L ? 1 : 0;
         try {
-          var13 = new ng();
-          var13.b(param1 ^ 118, param2);
+          var13 = new IntrusiveDeque();
+          var13.addLast(param1 ^ 118, param2);
           var4 = param0.length;
           var5 = param0[param1].length;
           var6 = new ij[var4];
@@ -61,7 +61,7 @@ final class of {
                 }
                 if (var11 == null) {
                   var11 = new ij();
-                  var13.b(111, var11);
+                  var13.addLast(111, var11);
                 }
                 var11.a(var9, var7, -1009900016, var10, var10 - var8 - 1);
                 var9 = var11;

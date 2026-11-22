@@ -5,7 +5,7 @@ final class mi extends IntrusiveNode {
     int field_i;
     int field_j;
     int field_l;
-    static vc field_r;
+    static IntrusiveDeque field_r;
     static String field_p;
     mi field_q;
     int field_m;
@@ -110,6 +110,6 @@ final class mi extends IntrusiveNode {
     static {
         field_p = "Loading music";
         field_k = "Back";
-        field_r = new vc();
+        field_r = new IntrusiveDeque();
     }
 }

@@ -13,7 +13,7 @@ abstract class kn extends mf implements ra {
     mf field_M;
     static km field_G;
     static boolean field_L;
-    static jc field_I;
+    static IntrusiveDeque field_I;
 
     public static void e(byte param0) {
         field_I = null;

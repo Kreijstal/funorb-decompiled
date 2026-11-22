@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class dg implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static int field_c;
     static int field_e;
-    DualLinkNode field_b;
+    DualLinkNode sentinel;
     static String field_a;
     static int field_d;
 
@@ -34,7 +34,7 @@ final class dg implements Iterable {
         field_a = null;
         if (!param0) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          dg.a((java.applet.Applet) null, (byte) -57);
+          SecondaryNodeDeque.a((java.applet.Applet) null, (byte) -57);
         }
     }
 
@@ -44,14 +44,14 @@ final class dg implements Iterable {
         }
         param1 = param1 & 8191;
         if (4096 > param1) {
-          return param1 >= 2048 ? tc.field_a[-param1 + 4096] : tc.field_a[param1];
+          return param1 >= 2048 ? IterableNodeHashTable.field_a[-param1 + 4096] : IterableNodeHashTable.field_a[param1];
         }
-        return param1 < 6144 ? -tc.field_a[param1 - 4096] : -tc.field_a[-param1 + 8192];
+        return param1 < 6144 ? -IterableNodeHashTable.field_a[param1 - 4096] : -IterableNodeHashTable.field_a[-param1 + 8192];
     }
 
-    final DualLinkNode b(boolean param0) {
-        DualLinkNode var2 = this.field_b.secondaryNext;
-        if (this.field_b == var2) {
+    final DualLinkNode removeFirst(boolean param0) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (this.sentinel == var2) {
           return null;
         }
         var2.unlinkSecondary(64);
@@ -74,14 +74,14 @@ final class dg implements Iterable {
         }
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addLast(DualLinkNode param0, byte param1) {
         try {
           int var3_int = -94 % ((10 - param1) / 40);
           if (param0.secondaryPrevious != null) {
             param0.unlinkSecondary(64);
           }
-          param0.secondaryPrevious = this.field_b.secondaryPrevious;
-          param0.secondaryNext = this.field_b;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
@@ -107,7 +107,7 @@ final class dg implements Iterable {
         try {
           var2 = le.a(param0, "jagex-last-login-method", 43);
           if (param1 >= -25) {
-            dg.a(-9, -29);
+            SecondaryNodeDeque.a(-9, -29);
           }
           if (var2 == null) {
             stackIn_6_0 = mf.field_A;
@@ -137,7 +137,7 @@ final class dg implements Iterable {
         }
     }
 
-    private dg() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

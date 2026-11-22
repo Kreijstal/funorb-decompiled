@@ -36,21 +36,21 @@ class HashNode {
           if (integerArgument2 > -116) {
             return;
           }
-          objectLocal1 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.computeHashNode1741((byte) -114));
+          objectLocal1 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.beginBackward((byte) -114));
           do {
             if (objectLocal1 == null) {
-              objectLocal1 = NetworkSupport002.nodeDequeState0002.computeHashNode1741((byte) 99);
+              objectLocal1 = NetworkSupport002.nodeDequeState0002.beginBackward((byte) 99);
               break;
             }
             SceneWidget.performAction1765(124, integerArgument1, (MixedSupport034) (objectLocal1));
-            objectLocal1 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.computeHashNode1745(true));
+            objectLocal1 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.nextBackward(true));
           } while (integerLocal2 == 0);
           while (true) {
             if (objectLocal1 == null) {
               return;
             }
             ResourceSupport001.performAction0044(-1, integerArgument1);
-            objectLocal1 = NetworkSupport002.nodeDequeState0002.computeHashNode1745(true);
+            objectLocal1 = NetworkSupport002.nodeDequeState0002.nextBackward(true);
             if (integerLocal2 != 0) {
               return;
             }

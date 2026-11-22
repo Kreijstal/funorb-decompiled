@@ -46,10 +46,10 @@ final class eb {
           return;
         }
         try {
-          var3 = (nl) (dl.field_M.h(param0 ^ -11163));
+          var3 = (nl) (dl.field_M.beginForward(param0 ^ -11163));
           while (var3 != null) {
             rc.a(5, var3, -11659);
-            var3 = (nl) (dl.field_M.e(0));
+            var3 = (nl) (dl.field_M.nextForward(0));
           }
           vi.field_c = ck.a(0, 5, 1, true);
         } catch (RuntimeException runtimeException) {

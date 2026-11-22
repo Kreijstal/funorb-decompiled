@@ -41,7 +41,7 @@ final class MixedSupport098 {
             sceneWidgetState0096 = (SceneWidget) null;
           }
           if (integerLocal3 == 0) {
-            mixedSupport053Local9 = (MixedSupport053) (NetworkSupport002.nodeDequeState0002.computeHashNode1741((byte) 80));
+            mixedSupport053Local9 = (MixedSupport053) (NetworkSupport002.nodeDequeState0002.beginBackward((byte) 80));
             if (mixedSupport053Local9 == null) {
               NodeHashTable.performAction1498(67);
               return;
@@ -62,10 +62,10 @@ final class MixedSupport098 {
           } else {
             if (integerLocal3 == 1) {
               integerLocal4 = cipherPacketBufferLocal10.readInt(7553);
-              mixedSupport034Local6 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.computeHashNode1741((byte) 46));
+              mixedSupport034Local6 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.beginBackward((byte) 46));
               while (mixedSupport034Local6 != null) {
                 if (integerLocal4 != mixedSupport034Local6.integerState0218) {
-                  mixedSupport034Local6 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.computeHashNode1745(true));
+                  mixedSupport034Local6 = (MixedSupport034) (MixedSupport112.nodeDequeState0030.nextBackward(true));
                   continue;
                 }
                 break;

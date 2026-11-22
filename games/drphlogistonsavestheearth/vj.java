@@ -952,20 +952,20 @@ final class vj {
           }
           try {
             if (hf.field_C == 0) {
-              tc.field_e = MouseWheelInput.field_e.requestDirectSocket(g.field_r, LevelSession.field_ib, 35);
+              IterableNodeHashTable.field_e = MouseWheelInput.field_e.requestDirectSocket(g.field_r, LevelSession.field_ib, 35);
               hf.field_C = hf.field_C + 1;
             }
             if (hf.field_C == 1) {
-              if (tc.field_e.status == 2) {
+              if (IterableNodeHashTable.field_e.status == 2) {
                 stackIn_12_0 = uj.a((byte) 85, -1);
                 return stackIn_12_0;
               }
-              if (tc.field_e.status == 1) {
+              if (IterableNodeHashTable.field_e.status == 1) {
                 hf.field_C = hf.field_C + 1;
               }
             }
             if (hf.field_C == 2) {
-              ea.field_a = new qe((java.net.Socket) (tc.field_e.result), MouseWheelInput.field_e);
+              ea.field_a = new qe((java.net.Socket) (IterableNodeHashTable.field_e.result), MouseWheelInput.field_e);
               var3 = new PacketBuffer(13);
               FullscreenFocusCanvas.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
               var3.writeByte(15, (byte) -92);
@@ -999,7 +999,7 @@ final class vj {
             p.field_a.a(ea.field_a, uf.field_i, (byte) -102);
             ea.field_a = null;
             hf.field_C = 0;
-            tc.field_e = null;
+            IterableNodeHashTable.field_e = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

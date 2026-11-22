@@ -3,7 +3,7 @@
  */
 final class g extends ei {
     static boolean[] field_p;
-    static vd field_t;
+    static IntrusiveDeque field_t;
     static int[] field_s;
     static String field_r;
     static he[] field_q;
@@ -24,7 +24,7 @@ final class g extends ei {
           if (param0 > 47) {
             return null;
           }
-          field_t = (vd) null;
+          field_t = (IntrusiveDeque) null;
           stackIn_6_0 = null;
           return (String) (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class g extends ei {
     final static boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param1 > -32) {
-          field_t = (vd) null;
+          field_t = (IntrusiveDeque) null;
         }
         stackIn_8_0 = (param4 <= param6) && (param0 + param4 > param6) && (param5 >= param3) && (param3 + param2 > param5);
         return stackIn_8_0;
@@ -238,6 +238,6 @@ final class g extends ei {
     static {
         field_p = new boolean[64];
         field_s = new int[]{64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 128, 64, 64, 64, 64, 64, 64, 16, 10, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 64, 64, 64, 64, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 10, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16};
-        field_t = new vd();
+        field_t = new IntrusiveDeque();
     }
 }

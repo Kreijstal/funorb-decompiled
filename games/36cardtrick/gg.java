@@ -73,14 +73,14 @@ final class gg {
     }
 
     final static void a(int param0) {
-        eh var1 = (eh) (ai.field_k.b(-114));
+        eh var1 = (eh) (ai.field_k.removeLast(-114));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         vj.a(var1.field_h, var1.field_i, var1.field_g);
         vj.g(var1.field_k, var1.field_n, var1.field_m, var1.field_j);
         var1.field_h = null;
-        lk.field_g.a(var1, 27362);
+        lk.field_g.addLast(var1, 27362);
         if (param0 == 14756) {
           return;
         }

@@ -5,7 +5,7 @@ import java.util.*;
 
 public final class DrPhlogistonSavesTheEarth extends GameClientShell {
     static nh field_J;
-    static vd field_F;
+    static IntrusiveDeque field_F;
     static long field_I;
     static String field_L;
     static int field_K;
@@ -336,7 +336,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           boolean decompiledFrameCompleted0 = true;
           if (!oh.a(0)) {
             while (true) {
-              var2 = (je) (nf.field_x.d(180479896));
+              var2 = (je) (nf.field_x.removeFirst(180479896));
               if (var2 == null) {
                 break;
               }
@@ -480,7 +480,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException var2 = null;
         try {
           DrPhlogistonSavesTheEarth.u(-16387);
-          vd.clearStaticReferences(true);
+          IntrusiveDeque.clearStaticReferences(true);
           dk.clearStaticReferences(24);
           tb.a((byte) 35);
           ul.a((byte) 8);
@@ -680,8 +680,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           pi.j(2147483647);
           jk.j(7624);
           sa.clearStaticReferences(250);
-          tc.clearStaticReferences(-9292);
-          dg.a(true);
+          IterableNodeHashTable.clearStaticReferences(-9292);
+          SecondaryNodeDeque.a(true);
           wh.c((byte) -86);
           rd.g(-125);
           ka.c(26713);
@@ -762,7 +762,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != df.field_m) {
             FullscreenFocusCanvas.a(df.field_m, 255);
             df.field_m = null;
-            tc.a((byte) 86);
+            IterableNodeHashTable.a((byte) 86);
           }
           kf.field_d = al.a(3, 1);
           aa.field_b = al.a(3, 2);
@@ -1030,7 +1030,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         var3 = field_D ? 1 : 0;
         try {
           if (param0 != -8755) {
-            field_F = (vd) null;
+            field_F = (IntrusiveDeque) null;
           }
           if (ul.field_a == 0) {
             if (~r.field_d != ~hl.field_f) {
@@ -1858,7 +1858,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               uf.field_j = ij.a("alienspacemineseeking", (byte) 89, kf.field_d, "");
               ng.field_f = ij.a("alienparamine", (byte) 112, kf.field_d, "");
               LoginMenuScreen.field_M = ij.a("alienminer", (byte) 77, kf.field_d, "");
-              vd.field_g = ij.a("alienminer_door", (byte) 63, kf.field_d, "");
+              IntrusiveDeque.field_g = ij.a("alienminer_door", (byte) 63, kf.field_d, "");
               we.field_b = be.b(eh.a("", (byte) -36, kf.field_d, "alienasteroid_1"), 64);
               ee.field_b = be.b(eh.a("", (byte) -92, kf.field_d, "alienasteroid_2"), 64);
               ae.field_lb = be.b(eh.a("", (byte) -81, kf.field_d, "alienasteroid_3"), 64);
@@ -2094,7 +2094,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != DelegatingCanvas.field_b) {
             qk.field_g = null;
             DelegatingCanvas.field_b = null;
-            tc.a((byte) 86);
+            IterableNodeHashTable.a((byte) 86);
             return false;
           }
           if (null != df.field_a) {
@@ -2117,7 +2117,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             cf.field_c = null;
             df.field_a = null;
             ui.field_a = null;
-            tc.a((byte) 86);
+            IterableNodeHashTable.a((byte) 86);
             return false;
           }
           if (null != kf.field_d) {
@@ -2149,7 +2149,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               kf.field_d = null;
             }
             this.field_H = this.field_H + 1;
-            tc.a((byte) 86);
+            IterableNodeHashTable.a((byte) 86);
             return false;
           }
           if (null != mh.field_a) {
@@ -2157,7 +2157,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             do {
               if (var3_int >= 9) {
                 mh.field_a = null;
-                tc.a((byte) 86);
+                IterableNodeHashTable.a((byte) 86);
                 break;
               }
               bi.field_K[var3_int] = new mk(mh.field_a.a("", "AchirdAttacks_level_" + (1 + var3_int) + ".lvl", 24874), var3_int % 3 + 1);
@@ -2196,7 +2196,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             ri.field_f = ge.a(4, (byte) -79);
             vi.field_c = ck.a(0, 5, 1, true);
           }
-          tc.a((byte) 86);
+          IterableNodeHashTable.a((byte) 86);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2428,6 +2428,6 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
     static {
         field_L = "Resume Game";
         field_E = "Retry";
-        field_F = new vd();
+        field_F = new IntrusiveDeque();
     }
 }

@@ -19,25 +19,25 @@ final class vf implements jm {
         }
         try {
           if (null != bb.field_d) {
-            bb.field_d.e(-31023);
+            bb.field_d.clear(-31023);
             bb.field_d = null;
           }
           d.field_Mb = null;
           if (null != nk.field_t) {
-            nk.field_t.e(-31023);
+            nk.field_t.clear(-31023);
             nk.field_t = null;
           }
           ae.field_f = null;
           if (null != pd.field_Sb) {
-            pd.field_Sb.e(-31023);
+            pd.field_Sb.clear(-31023);
             pd.field_Sb = null;
           }
           cm.field_v = null;
           if (null != d.field_Mb) {
-            var3 = (r) (d.field_Mb.a(false));
+            var3 = (r) (d.field_Mb.first(false));
             while (var3 != null) {
               var3.unlinkSecondary(-1);
-              var3 = (r) (d.field_Mb.a(0));
+              var3 = (r) (d.field_Mb.next(0));
             }
             d.field_Mb = null;
           }

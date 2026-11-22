@@ -10,7 +10,7 @@ final class cb implements Runnable {
     private byte[] field_c;
     private int field_l;
     private int field_h;
-    static im field_b;
+    static IntrusiveDeque field_b;
     static RasterBuffer field_a;
     private PlatformTask field_f;
     private OutputStream field_i;
@@ -360,6 +360,6 @@ final class cb implements Runnable {
 
     static {
         field_g = "Achieved";
-        field_b = new im();
+        field_b = new IntrusiveDeque();
     }
 }

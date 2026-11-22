@@ -36,7 +36,7 @@ final class ta {
           var9 = dh.field_N;
           var2 = var9.readUnsignedByte(param0 ^ 31764);
           if (var2 == 0) {
-            var8 = (uj) (md.field_e.h(param0 ^ -11147));
+            var8 = (uj) (md.field_e.beginForward(param0 ^ -11147));
             if (var8 == null) {
               eg.a((byte) 126);
               return;
@@ -57,10 +57,10 @@ final class ta {
           } else {
             if (var2 == 1) {
               var3 = var9.readInt(51);
-              var4_ref_jl = (jl) (DrPhlogistonSavesTheEarth.field_F.h(-11151));
+              var4_ref_jl = (jl) (DrPhlogistonSavesTheEarth.field_F.beginForward(-11151));
               while (var4_ref_jl != null) {
                 if (~var3 != ~var4_ref_jl.field_j) {
-                  var4_ref_jl = (jl) (DrPhlogistonSavesTheEarth.field_F.e(param0 - 4));
+                  var4_ref_jl = (jl) (DrPhlogistonSavesTheEarth.field_F.nextForward(param0 - 4));
                   continue;
                 }
                 break;

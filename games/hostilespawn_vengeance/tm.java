@@ -10,7 +10,7 @@ final class tm extends IntrusiveNode {
     int field_E;
     int field_z;
     int field_C;
-    static vl field_o;
+    static IntrusiveDeque field_o;
     int field_n;
     nf field_p;
     int field_F;
@@ -98,7 +98,7 @@ final class tm extends IntrusiveNode {
     }
 
     static {
-        field_o = new vl();
+        field_o = new IntrusiveDeque();
         field_q = 0;
         field_s = "Where am I? This must be the station medical bay. I'd better find the lift.";
     }

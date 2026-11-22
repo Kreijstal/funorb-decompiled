@@ -4,7 +4,7 @@
 final class je extends IntrusiveNode {
     int field_m;
     static int[] field_k;
-    static vd field_i;
+    static IntrusiveDeque field_i;
     int field_p;
     int field_l;
     int field_h;
@@ -52,7 +52,7 @@ final class je extends IntrusiveNode {
 
     static {
         field_k = new int[8192];
-        field_i = new vd();
+        field_i = new IntrusiveDeque();
         field_j = 250;
     }
 }

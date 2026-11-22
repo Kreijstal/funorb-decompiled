@@ -33,7 +33,7 @@ final class ob {
             field_b = (vb) null;
           }
           if (fl.a(param0, param2, param3, (byte) -98)) {
-            stackIn_6_0 = vd.b((byte) -22);
+            stackIn_6_0 = IntrusiveDeque.b((byte) -22);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

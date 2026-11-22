@@ -6,7 +6,7 @@ final class nc extends fb {
     int field_M;
     static GzipInflater field_N;
     int field_U;
-    static jc field_O;
+    static IntrusiveDeque field_O;
     private ml field_S;
     static String field_Q;
     static String field_P;
@@ -140,7 +140,7 @@ final class nc extends fb {
         r var1Lifetime1;
         var2 = Chess.field_G;
         try {
-          var1 = (r) (bb.field_d.g(-18110));
+          var1 = (r) (bb.field_d.beginBackward(-18110));
           while (var1 != null) {
             if (var1.field_Sb > 0) {
               var1.field_Sb = var1.field_Sb - 1;
@@ -151,9 +151,9 @@ final class nc extends fb {
                 }
               }
             }
-            var1 = (r) (bb.field_d.a((byte) -94));
+            var1 = (r) (bb.field_d.nextBackward((byte) -94));
           }
-          var1_ref = (ln) (nk.field_t.g(-18110));
+          var1_ref = (ln) (nk.field_t.beginBackward(-18110));
           while (var1_ref != null) {
             if (var1_ref.field_Hb > 0) {
               var1_ref.field_Hb = var1_ref.field_Hb - 1;
@@ -164,17 +164,17 @@ final class nc extends fb {
                 }
               }
             }
-            var1_ref = (ln) (nk.field_t.a((byte) -114));
+            var1_ref = (ln) (nk.field_t.nextBackward((byte) -114));
           }
           if (param0 != 20579) {
             nc.j(-85);
           }
-          var1Lifetime1 = (r) (pd.field_Sb.g(-18110));
+          var1Lifetime1 = (r) (pd.field_Sb.beginBackward(-18110));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Sb > 0) {
               var1Lifetime1.field_Sb = var1Lifetime1.field_Sb - 1;
               if (0 != var1Lifetime1.field_Sb) {
-                var1Lifetime1 = (r) (pd.field_Sb.a((byte) -125));
+                var1Lifetime1 = (r) (pd.field_Sb.nextBackward((byte) -125));
                 continue;
               }
               var1Lifetime1.field_Mb = 0;
@@ -182,7 +182,7 @@ final class nc extends fb {
                 var1Lifetime1.unlink(-2193);
               }
             }
-            var1Lifetime1 = (r) (pd.field_Sb.a((byte) -125));
+            var1Lifetime1 = (r) (pd.field_Sb.nextBackward((byte) -125));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class nc extends fb {
 
     static {
         field_N = new GzipInflater();
-        field_O = new jc();
+        field_O = new IntrusiveDeque();
         field_Q = "Connection timed out. Please try using a different server.";
         field_P = "Loading fonts";
     }

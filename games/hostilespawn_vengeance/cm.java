@@ -13,7 +13,7 @@ final class cm {
         }
         var4.field_l = param2;
         var4.field_h = new int[param3];
-        ke.field_B.a(var4, 103);
+        ke.field_B.addLast(var4, 103);
         km.a(var4, param0 - 19874, param1);
         return var4;
     }
@@ -44,7 +44,7 @@ final class cm {
           }
           om.a(var3, 5, -119);
         } else {
-          ei.field_q.a(var3, 87);
+          ei.field_q.addLast(var3, 87);
         }
     }
 

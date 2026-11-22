@@ -5,15 +5,15 @@ final class eg {
     private int field_a;
     static String field_f;
     static String[] field_b;
-    private dh field_c;
+    private SecondaryNodeDeque field_c;
     private int field_e;
-    private qi field_h;
+    private IterableNodeHashTable field_h;
     static String field_g;
     static int field_d;
 
     final Object a(int param0, long param1) {
         pb var6 = null;
-        wf var7 = (wf) (this.field_h.a(1, param1));
+        wf var7 = (wf) (this.field_h.get(1, param1));
         pb var6Lifetime1;
         if (var7 == null) {
           return null;
@@ -30,21 +30,21 @@ final class eg {
         }
         if (var7.c((byte) 21)) {
           var6 = new pb(var5, var7.field_A);
-          this.field_h.a(var7.key, (byte) -128, var6);
-          this.field_c.a(var6, false);
+          this.field_h.put(var7.key, (byte) -128, var6);
+          this.field_c.addLast(var6, false);
           ((wf) ((Object) var6)).field_o = 0L;
           var7.unlink(false);
           var7.unlinkSecondary((byte) -2);
           return var5;
         }
-        this.field_c.a(var7, false);
+        this.field_c.addLast(var7, false);
         var7.field_o = 0L;
         if (DungeonAssault.field_K == 0) {
           return var5;
         }
         var6Lifetime1 = new pb(var5, var7.field_A);
-        this.field_h.a(var7.key, (byte) -128, var6Lifetime1);
-        this.field_c.a(var6Lifetime1, false);
+        this.field_h.put(var7.key, (byte) -128, var6Lifetime1);
+        this.field_c.addLast(var6Lifetime1, false);
         ((wf) ((Object) var6Lifetime1)).field_o = 0L;
         var7.unlink(false);
         var7.unlinkSecondary((byte) -2);
@@ -94,12 +94,12 @@ final class eg {
         wf var4 = null;
         wf var4Lifetime1;
         if (param1 == -110) {
-          var4 = (wf) (this.field_h.a(1, param0));
+          var4 = (wf) (this.field_h.get(1, param0));
           this.a(var4, (byte) 85);
           return;
         }
-        this.field_h = (qi) null;
-        var4Lifetime1 = (wf) (this.field_h.a(1, param0));
+        this.field_h = (IterableNodeHashTable) null;
+        var4Lifetime1 = (wf) (this.field_h.get(1, param0));
         this.a(var4Lifetime1, (byte) 85);
     }
 
@@ -411,7 +411,7 @@ final class eg {
             eg.a((String) null, (String) null, (String) null, true);
           }
           while (0 > this.field_e) {
-            var9 = (wf) (this.field_c.b(true));
+            var9 = (wf) (this.field_c.removeFirst(true));
             this.a(var9, (byte) 120);
             if (var7 == 0) {
               continue;
@@ -419,8 +419,8 @@ final class eg {
             break;
           }
           var6 = new pb(param0, param1);
-          this.field_h.a(param3, (byte) -128, var6);
-          this.field_c.a(var6, false);
+          this.field_h.put(param3, (byte) -128, var6);
+          this.field_c.addLast(var6, false);
           ((wf) ((Object) var6)).field_o = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -11,7 +11,7 @@ final class sd {
     static java.applet.Applet field_j;
     static volatile boolean field_g;
     static long field_h;
-    static vc field_d;
+    static IntrusiveDeque field_d;
 
     public static void a(int param0) {
         field_i = null;
@@ -69,6 +69,6 @@ final class sd {
         field_i = new PacketBuffer(256);
         field_g = true;
         field_b = "Names can only contain letters, numbers, spaces and underscores";
-        field_d = new vc();
+        field_d = new IntrusiveDeque();
     }
 }

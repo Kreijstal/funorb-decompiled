@@ -9,7 +9,7 @@ final class mj extends IntrusiveNode {
     int field_h;
     static df field_l;
     static int field_f;
-    static im field_m;
+    static IntrusiveDeque field_m;
 
     public static void a(byte param0) {
         field_i = null;
@@ -42,6 +42,6 @@ final class mj extends IntrusiveNode {
     static {
         field_k = "Cancel";
         field_l = new df("email");
-        field_m = new im();
+        field_m = new IntrusiveDeque();
     }
 }

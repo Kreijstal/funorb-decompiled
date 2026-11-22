@@ -66,7 +66,7 @@ final class rh extends IntrusiveNode {
               fieldTemp$1 = de.field_b;
               de.field_b = de.field_b + 1;
               var5_ref.field_eb = fieldTemp$1;
-              cd.field_b.a(var5_ref, 27362);
+              cd.field_b.addLast(var5_ref, 27362);
             }
             var5_ref.field_gb = var4_ref_String;
             return;
@@ -119,7 +119,7 @@ final class rh extends IntrusiveNode {
             fieldTemp$0 = ok.field_b;
             ok.field_b = ok.field_b + 1;
             var6.field_eb = fieldTemp$0;
-            kh.field_c.a(var6, param0 ^ 27362);
+            kh.field_c.addLast(var6, param0 ^ 27362);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -127,10 +127,10 @@ final class rh extends IntrusiveNode {
           var6.field_gb = var4_ref_StringLifetime1;
           var6.field_cb = (String) (var3Lifetime1);
           var6.unlink(82);
-          var7 = (aa) (kh.field_c.a((byte) 74));
+          var7 = (aa) (kh.field_c.beginForward((byte) 74));
           while (null != var7) {
             if (rl.a((byte) 127, var7, var6)) {
-              var7 = (aa) (kh.field_c.b((byte) -109));
+              var7 = (aa) (kh.field_c.nextForward((byte) -109));
               if (var8 == 0) {
                 continue;
               }
@@ -138,7 +138,7 @@ final class rh extends IntrusiveNode {
             break;
           }
           if (null == var7) {
-            kh.field_c.a(var6, param0 ^ 27362);
+            kh.field_c.addLast(var6, param0 ^ 27362);
             if (var8 == 0) {
               return;
             }

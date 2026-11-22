@@ -115,7 +115,7 @@ final class qd extends IntrusiveNode {
         }
         try {
           cf.field_Nb = true;
-          ArchiveProvider.field_d = new vn(jh.field_e, tk.field_a, param1, dk.field_g, ag.field_e);
+          ArchiveProvider.field_d = new vn(jh.field_e, tk.field_a, param1, SecondaryNodeHashTable.field_g, ag.field_e);
           jh.field_e.b(ArchiveProvider.field_d, (byte) -27);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

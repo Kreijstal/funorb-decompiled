@@ -3,7 +3,7 @@
  */
 final class ij extends vd implements kn, qk {
     private ph field_H;
-    static vl field_J;
+    static IntrusiveDeque field_J;
     private ph field_E;
     private sf field_G;
     static int field_F;
@@ -43,7 +43,7 @@ final class ij extends vd implements kn, qk {
     public static void e(byte param0) {
         field_J = null;
         if (param0 != 75) {
-          field_J = (vl) null;
+          field_J = (IntrusiveDeque) null;
         }
     }
 
@@ -116,7 +116,7 @@ final class ij extends vd implements kn, qk {
             var5_int = si.field_j - param2;
           }
           if (param4) {
-            field_J = (vl) null;
+            field_J = (IntrusiveDeque) null;
           }
           var6 = param0;
           if (si.field_a < var6 + param2) {
@@ -396,7 +396,7 @@ final class ij extends vd implements kn, qk {
     }
 
     static {
-        field_J = new vl();
+        field_J = new IntrusiveDeque();
         og discarded$0 = new og();
     }
 }

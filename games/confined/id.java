@@ -262,7 +262,7 @@ abstract class id extends ee {
         }
     }
 
-    void a(mn param0, byte param1) {
+    void a(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_fb.a(-104, param0);
           int var3_int = 70 / ((-2 - param1) / 62);
@@ -637,7 +637,7 @@ abstract class id extends ee {
           this.field_mb.a(16736448, param0 ^ 11878, 50.0, 0.5);
           if (this.field_mb.a((hm[]) null, false, this.field_lb)) {
             this.field_nb.b(param0 - 11760);
-            this.field_A.field_F.a((IntrusiveNode) (this.field_mb), (byte) -84);
+            this.field_A.field_F.addLast((IntrusiveNode) (this.field_mb), (byte) -84);
             this.field_Q = this.field_Q + 4.0;
           }
           this.field_pb.field_m = (int)(Math.sqrt(this.field_Q) * 16.0);
@@ -678,19 +678,19 @@ abstract class id extends ee {
         RuntimeException var2_ref = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          var5 = (bj) (lf.field_k.a(-124));
+          var5 = (bj) (lf.field_k.beginForward(-124));
           while (var5 != null) {
             lf.a(param1, 74, var5);
-            var5 = (bj) (lf.field_k.d(2123));
+            var5 = (bj) (lf.field_k.nextForward(2123));
           }
           if (param0 != -1) {
             var4 = (PlatformTaskDispatcher) null;
             id.a(-71, (PlatformTaskDispatcher) null, 89, -73, -25, -28);
           }
-          var2 = (qn) (na.field_T.a(59));
+          var2 = (qn) (na.field_T.beginForward(59));
           while (var2 != null) {
             dh.a(param1, var2, param0 ^ -21822);
-            var2 = (qn) (na.field_T.d(2123));
+            var2 = (qn) (na.field_T.nextForward(2123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

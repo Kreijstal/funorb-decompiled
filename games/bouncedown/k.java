@@ -4,7 +4,7 @@
 final class k extends lc implements rc {
     private wd field_z;
     private wd field_A;
-    static bc field_B;
+    static IntrusiveDeque field_B;
     private wd field_F;
     static int field_C;
     static String field_E;
@@ -132,7 +132,7 @@ final class k extends lc implements rc {
     }
 
     static {
-        field_B = new bc();
+        field_B = new IntrusiveDeque();
         field_C = 0;
         field_E = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_H = true;

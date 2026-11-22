@@ -42,13 +42,13 @@ abstract class ue {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          var4 = (sc) (hd.field_c.g(32073));
+          var4 = (sc) (hd.field_c.beginForward(32073));
           if (param1 > -81) {
             ue.a(106, 48);
           }
           while (var4 != null) {
             ed.a((byte) 105, param0, var4);
-            var4 = (sc) (hd.field_c.a(false));
+            var4 = (sc) (hd.field_c.nextForward(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

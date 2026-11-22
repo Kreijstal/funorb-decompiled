@@ -20,7 +20,7 @@ final class kb extends IntrusiveNode {
           return;
         }
         try {
-          vc.a((byte) 125, param2);
+          IntrusiveDeque.a((byte) 125, param2);
           ed.a(param2, (byte) -111);
           kl.b(param0 ^ -31208);
           aa.c((byte) -65);

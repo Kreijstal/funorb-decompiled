@@ -9,7 +9,7 @@ final class Slime {
     int field_f;
     int field_t;
     double field_c;
-    static bc field_k;
+    static IntrusiveDeque field_k;
     int field_h;
     private int field_s;
     double field_d;
@@ -622,7 +622,7 @@ final class Slime {
         field_k = null;
         field_b = null;
         if (param0 != 100) {
-          field_k = (bc) null;
+          field_k = (IntrusiveDeque) null;
         }
     }
 
@@ -671,12 +671,12 @@ final class Slime {
           }
         }
         if (param7 != 100000) {
-          field_k = (bc) null;
+          field_k = (IntrusiveDeque) null;
         }
     }
 
     static {
         field_b = "Open in popup window";
-        field_k = new bc();
+        field_k = new IntrusiveDeque();
     }
 }

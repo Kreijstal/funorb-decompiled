@@ -3,7 +3,7 @@
  */
 final class vb {
     private int field_d;
-    static bk field_e;
+    static IntrusiveDeque field_e;
     private IntrusiveNode field_i;
     private IntrusiveNode field_g;
     static int[] field_a;
@@ -12,7 +12,7 @@ final class vb {
     static int field_b;
     static kc field_k;
     static ej field_h;
-    static bk field_c;
+    static IntrusiveDeque field_c;
 
     final IntrusiveNode b(int param0) {
         if (param0 >= -31) {
@@ -220,7 +220,7 @@ final class vb {
 
     static {
         field_a = new int[]{65527, 65528};
-        field_e = new bk();
-        field_c = new bk();
+        field_e = new IntrusiveDeque();
+        field_c = new IntrusiveDeque();
     }
 }

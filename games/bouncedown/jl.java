@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static bc field_f;
+    static IntrusiveDeque field_f;
     static Bounce field_h;
     static String field_e;
     static int[] field_b;
@@ -79,7 +79,7 @@ final class jl {
     }
 
     static {
-        field_f = new bc();
+        field_f = new IntrusiveDeque();
         field_e = "Data server full or too many connections from your address. Please try again in a few minutes.";
     }
 }

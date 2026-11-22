@@ -134,13 +134,13 @@ final class ja {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = dg.a(-20870, param0);
+        int var3 = SecondaryNodeDeque.a(-20870, param0);
         int var4 = u.a(param0, (byte) 74);
         if (param2 != 32767) {
           fg var11 = (fg) null;
           ja.a((fg) null, (byte) -56);
         }
-        int var5 = dg.a(-20870, param1);
+        int var5 = SecondaryNodeDeque.a(-20870, param1);
         int var6 = u.a(param1, (byte) 74);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);

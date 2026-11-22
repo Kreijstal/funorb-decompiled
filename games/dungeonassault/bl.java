@@ -99,12 +99,12 @@ final class bl {
           db.field_v = ah.a(np.field_A, 200, "roman12bold", "", hj.field_Z);
           df.field_c = rc.a("", sb.field_a, "main_center", (byte) 71);
           dm.field_d = new cn[3];
-          qi.field_f = new cn[3];
+          IterableNodeHashTable.field_f = new cn[3];
           for (var1_int = 0; var1_int < 3; var1_int++) {
             dm.field_d[var1_int] = rc.a("", sb.field_a, "main_left_0" + (var1_int + 1), (byte) 71);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 3; var1_intLifetime1++) {
-            qi.field_f[var1_intLifetime1] = rc.a("", sb.field_a, "main_right_0" + (var1_intLifetime1 + 1), (byte) 71);
+            IterableNodeHashTable.field_f[var1_intLifetime1] = rc.a("", sb.field_a, "main_right_0" + (var1_intLifetime1 + 1), (byte) 71);
           }
           tm.field_p = oh.a(hj.field_Z, "", 11091, "menu_block");
           of.field_j = oh.a(hj.field_Z, "", 11091, "menu_button");
@@ -356,15 +356,15 @@ final class bl {
           la.field_b.a(new q[]{fb.field_f, rf.a(10)}, new int[]{9, 10});
           fl.field_i = fn.a(2);
           wm.field_h = fl.field_i.b();
-          dh.field_a = rj.a((byte) 127);
+          SecondaryNodeDeque.field_a = rj.a((byte) 127);
           sm.field_g = BoundedRandomAccessFile.a(true);
           fo.field_a = wo.a(5, 1, 6, 5, 16744448);
           BoundedRandomAccessFile.field_a = fo.field_a.d();
           BoundedRandomAccessFile.field_a.g();
           i.field_v = BoundedRandomAccessFile.field_a.d();
           i.field_v.g();
-          qi.field_i = i.field_v.d();
-          qi.field_i.g();
+          IterableNodeHashTable.field_i = i.field_v.d();
+          IterableNodeHashTable.field_i.g();
           qe.a(gd.field_E, jj.field_b, wl.field_d, pk.field_o, tb.field_c, kd.field_f);
           ao.field_n = oh.a(hj.field_Z, "", 11091, "scroll_top");
           rn.field_c = oh.a(hj.field_Z, "", 11091, "scroll_bottom");

@@ -14,8 +14,8 @@ final class a extends kb {
         field_e = null;
         field_f = null;
         if (!param0) {
-          ng var2 = (ng) null;
-          a.a((byte) 42, (ng) null);
+          IntrusiveDeque var2 = (IntrusiveDeque) null;
+          a.a((byte) 42, (IntrusiveDeque) null);
         }
     }
 
@@ -87,7 +87,7 @@ final class a extends kb {
         return cg.field_l;
     }
 
-    final static void a(byte param0, ng param1) {
+    final static void a(byte param0, IntrusiveDeque param1) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int[] var2 = null;
@@ -104,27 +104,27 @@ final class a extends kb {
         int var3Lifetime1;
         var5 = Lexicominos.field_L ? 1 : 0;
         try {
-          var6 = new int[param1.b(2)];
+          var6 = new int[param1.size(2)];
           var2 = var6;
           var3 = 0;
           if (param0 > -88) {
             a.b(false);
           }
-          var4 = (bd) (param1.a(true));
+          var4 = (bd) (param1.beginForward(true));
           while (var4 != null) {
             incrementValue$4 = var3;
             var3++;
             var6[incrementValue$4] = var4.field_h;
-            var4 = (bd) (param1.f(2));
+            var4 = (bd) (param1.nextForward(2));
           }
           var3Lifetime1 = 0;
           dd.a(var2, -23588);
-          var4Lifetime1 = (bd) (param1.a(true));
+          var4Lifetime1 = (bd) (param1.beginForward(true));
           while (var4Lifetime1 != null) {
             incrementValue$3 = var3Lifetime1;
             var3Lifetime1++;
             var4Lifetime1.field_h = var2[incrementValue$3];
-            var4Lifetime1 = (bd) (param1.f(2));
+            var4Lifetime1 = (bd) (param1.nextForward(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

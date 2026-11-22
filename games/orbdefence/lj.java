@@ -54,7 +54,7 @@ final class lj extends di {
         }
         {
           if ((this.field_o[param3] & 2) != 0) {
-            var6 = (he) (this.field_O.field_k.b((byte) -75));
+            var6 = (he) (this.field_O.field_k.beginForward((byte) -75));
             while (var6 != null) {
               if (var8.field_F == var6.field_F &&
                 var6.field_n < 0 &&
@@ -62,7 +62,7 @@ final class lj extends di {
                 var8.field_n = 0;
                 break;
               }
-              var6 = (he) (this.field_O.field_k.d(853));
+              var6 = (he) (this.field_O.field_k.nextForward(853));
             }
           } else {
             var8.field_n = 0;
@@ -78,18 +78,18 @@ final class lj extends di {
           return;
         }
         if (0 != (this.field_o[param1] & 2)) {
-          var3 = (he) (this.field_O.field_k.b((byte) 121));
+          var3 = (he) (this.field_O.field_k.beginForward((byte) 121));
           while (var3 != null) {
             if (var3.field_F == param1) {
               if (null != this.field_I[param1][var3.field_h]) {
-                var3 = (he) (this.field_O.field_k.d(853));
+                var3 = (he) (this.field_O.field_k.nextForward(853));
                 continue;
               }
               if (var3.field_n < 0) {
                 var3.field_n = 0;
               }
             }
-            var3 = (he) (this.field_O.field_k.d(853));
+            var3 = (he) (this.field_O.field_k.nextForward(853));
           }
         }
     }
@@ -258,12 +258,12 @@ final class lj extends di {
         he var3 = null;
         int var4 = OrbDefence.field_D ? 1 : 0;
         if ((this.field_o[param1] & 4) != 0) {
-          var3 = (he) (this.field_O.field_k.b((byte) 115));
+          var3 = (he) (this.field_O.field_k.beginForward((byte) 115));
           while (var3 != null) {
             if (param1 == var3.field_F) {
               var3.field_i = 0;
             }
-            var3 = (he) (this.field_O.field_k.d(853));
+            var3 = (he) (this.field_O.field_k.nextForward(853));
           }
         }
         if (param0 < 103) {
@@ -656,7 +656,7 @@ final class lj extends di {
         var10 = OrbDefence.field_D ? 1 : 0;
         this.b(64, param1, -16257, param0);
         if ((2 & this.field_o[param0]) != 0) {
-          var5 = (he) (this.field_O.field_k.d((byte) -122));
+          var5 = (he) (this.field_O.field_k.beginBackward((byte) -122));
           while (var5 != null) {
             if (param0 == var5.field_F &&
               var5.field_n < 0) {
@@ -669,7 +669,7 @@ final class lj extends di {
               var5.field_h = param1;
               return;
             }
-            var5 = (he) (this.field_O.field_k.b(10708));
+            var5 = (he) (this.field_O.field_k.nextBackward(10708));
           }
         }
         var11 = (ik) (this.field_j.a((long)this.field_F[param0], -1));
@@ -717,7 +717,7 @@ final class lj extends di {
           }
           this.field_t[param0][var7.field_f] = var7;
         }
-        this.field_O.field_k.a(-73, var7);
+        this.field_O.field_k.addLast(-73, var7);
         this.field_I[param0][param1] = var7;
         return;
     }
@@ -806,7 +806,7 @@ final class lj extends di {
         if (param1 >= -66) {
           return;
         }
-        he var3 = (he) (this.field_O.field_k.b((byte) 114));
+        he var3 = (he) (this.field_O.field_k.beginForward((byte) 114));
         while (var3 != null) {
           if (param0 < 0 ||
             param0 == var3.field_F) {
@@ -822,7 +822,7 @@ final class lj extends di {
             }
             var3.unlink(57);
           }
-          var3 = (he) (this.field_O.field_k.d(853));
+          var3 = (he) (this.field_O.field_k.nextForward(853));
         }
     }
 
@@ -974,20 +974,20 @@ final class lj extends di {
           kg.field_f = kg.field_f - 1;
           if (kg.field_f == 0) {
             kg.field_f = 200;
-            var1 = (hf) (ba.field_b.b((byte) -28));
+            var1 = (hf) (ba.field_b.beginForward((byte) -28));
             while (var1 != null) {
               if (!var1.field_f.isLinked(true)) {
                 var1.unlink(57);
               }
-              var1 = (hf) (ba.field_b.d(853));
+              var1 = (hf) (ba.field_b.nextForward(853));
             }
             if (bg.field_a != null) {
-              var1Lifetime1 = (hf) (bg.field_a.b((byte) 126));
+              var1Lifetime1 = (hf) (bg.field_a.beginForward((byte) 126));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_f.isLinked(true)) {
                   var1Lifetime1.unlink(57);
                 }
-                var1Lifetime1 = (hf) (bg.field_a.d(853));
+                var1Lifetime1 = (hf) (bg.field_a.nextForward(853));
               }
             }
           }
@@ -1439,14 +1439,14 @@ final class lj extends di {
         if (param0 != -12) {
           return;
         }
-        he var3 = (he) (this.field_O.field_k.b((byte) 126));
+        he var3 = (he) (this.field_O.field_k.beginForward((byte) 126));
         while (var3 != null) {
           if ((param1 < 0 || param1 == var3.field_F) &&
             var3.field_n < 0) {
             this.field_I[var3.field_F][var3.field_h] = null;
             var3.field_n = 0;
           }
-          var3 = (he) (this.field_O.field_k.d(853));
+          var3 = (he) (this.field_O.field_k.nextForward(853));
         }
     }
 

@@ -22,13 +22,13 @@ final class cf extends hf {
         field_cb = null;
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_eb.field_o = this.field_t;
           this.field_eb.field_p = this.field_D;
           this.field_eb.field_u = 0.5;
           this.field_eb.field_t = this.field_E;
-          param0.a((IntrusiveNode) (this.field_eb), (byte) 93);
+          param0.addLast((IntrusiveNode) (this.field_eb), (byte) 93);
           int var3_int = -39 % ((-2 - param1) / 62);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "cf.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -40,8 +40,8 @@ final class cf extends hf {
         this.field_hb = this.field_hb + 1;
         this.field_fb = this.field_D;
         if (param0 != 11878) {
-          mn var4 = (mn) null;
-          this.a((mn) null, (byte) -102);
+          PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
+          this.a((PrimaryNodeDeque) null, (byte) -102);
           this.field_ab = this.field_t;
           super.a(param0 + 0, param1);
           if (this.field_D >= this.field_A.field_x.field_r[this.field_A.field_x.field_a - 1]) {
@@ -194,7 +194,7 @@ final class cf extends hf {
         this.d(10797);
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         int var7_int = 0;
         double var8 = 0.0;
         double stackIn_10_1 = 0.0;

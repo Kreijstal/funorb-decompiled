@@ -60,7 +60,7 @@ final class hb {
           var2 = var9.readUnsignedByte((byte) 90);
           var3 = var9.readUnsignedByte((byte) 90);
           if (var2 == 0) {
-            var4 = (fb) (PacketBuffer.field_l.b((byte) -41));
+            var4 = (fb) (PacketBuffer.field_l.beginForward((byte) -41));
             if (var4 == null) {
               th.a(113);
               return;
@@ -80,11 +80,11 @@ final class hb {
           }
           if (1 == var2) {
             var4_int = var9.readSignedSmart(true);
-            var5_ref_qf = (qf) (vb.field_h.b((byte) -124));
+            var5_ref_qf = (qf) (vb.field_h.beginForward((byte) -124));
             while (var5_ref_qf != null) {
               if (var5_ref_qf.field_j != var3 ||
                 var4_int != var5_ref_qf.field_i) {
-                var5_ref_qf = (qf) (vb.field_h.d(853));
+                var5_ref_qf = (qf) (vb.field_h.nextForward(853));
                 continue;
               }
               break;

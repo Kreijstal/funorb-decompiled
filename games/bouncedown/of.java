@@ -4,7 +4,7 @@
 final class of {
     static String field_a;
     static String[] field_d;
-    static bc field_b;
+    static IntrusiveDeque field_b;
     static int field_c;
 
     final static void a(boolean param0, boolean param1, byte param2) {
@@ -24,7 +24,7 @@ final class of {
     public static void clearStaticReferences(boolean param0) {
         field_d = null;
         if (!param0) {
-          field_b = (bc) null;
+          field_b = (IntrusiveDeque) null;
           field_b = null;
           field_a = null;
           return;
@@ -36,6 +36,6 @@ final class of {
     static {
         field_a = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_d = new String[]{"All scores", "My scores", "Best each"};
-        field_b = new bc();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class qc implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static Sprite field_d;
     static int field_f;
     static bg field_a;
-    DualLinkNode field_e;
+    DualLinkNode sentinel;
     static boolean field_b;
     static int field_c;
 
@@ -49,28 +49,28 @@ final class qc implements Iterable {
         return (Sprite) (var3);
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         if (param0 != 609) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_e.field_t;
-        if (var2 == this.field_e) {
+        DualLinkNode var2 = this.sentinel.field_t;
+        if (var2 == this.sentinel) {
           return null;
         }
         var2.unlinkSecondary((byte) -99);
         return var2;
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void addLast(byte param0, DualLinkNode param1) {
         try {
           if (null != param1.field_q) {
             param1.unlinkSecondary((byte) -120);
           }
-          param1.field_q = this.field_e.field_q;
-          param1.field_t = this.field_e;
+          param1.field_q = this.sentinel.field_q;
+          param1.field_t = this.sentinel;
           param1.field_q.field_t = param1;
           if (param0 != -37) {
-            this.a(113);
+            this.removeFirst(113);
           }
           param1.field_t.field_q = param1;
         } catch (RuntimeException runtimeException) {
@@ -90,7 +90,7 @@ final class qc implements Iterable {
         field_a = null;
     }
 
-    private qc() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

@@ -34,10 +34,10 @@ final class cc extends IntrusiveNode {
           var13 = e.field_c;
           var15 = var13;
           var2 = var15.readUnsignedByte(32);
-          var3 = (cc) (uc.field_bb.a(77));
+          var3 = (cc) (uc.field_bb.beginForward(77));
           while (var3 != null) {
             if (var2 != var3.field_o) {
-              var3 = (cc) (uc.field_bb.d(param0 ^ 2123));
+              var3 = (cc) (uc.field_bb.nextForward(param0 ^ 2123));
               continue;
             }
             break;

@@ -32,7 +32,7 @@ final class vk extends jc {
         if (param0 != 0) {
           return;
         }
-        ab.field_h = new im();
+        ab.field_h = new IntrusiveDeque();
     }
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {

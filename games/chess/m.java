@@ -104,15 +104,15 @@ final class m {
           if (param1 != 0) {
             field_a = (bn) null;
           }
-          var4 = (dc) (GameAppletShell.field_j.g(param1 - 18110));
+          var4 = (dc) (GameAppletShell.field_j.beginBackward(param1 - 18110));
           while (var4 != null) {
             bh.a(var4, (byte) 46, param0);
-            var4 = (dc) (GameAppletShell.field_j.a((byte) -92));
+            var4 = (dc) (GameAppletShell.field_j.nextBackward((byte) -92));
           }
-          var5 = (pa) (ve.field_Nb.g(param1 ^ -18110));
+          var5 = (pa) (ve.field_Nb.beginBackward(param1 ^ -18110));
           while (var5 != null) {
             ri.a(param1 - 1281, var5, param0);
-            var5 = (pa) (ve.field_Nb.a((byte) -111));
+            var5 = (pa) (ve.field_Nb.nextBackward((byte) -111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

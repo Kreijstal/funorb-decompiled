@@ -44,7 +44,7 @@ final class ka {
         try {
           ug.field_A.a(rk.field_g, true, mk.field_m, (byte) 124);
           ug.field_A.f(true);
-          while (ji.a((byte) -72)) {
+          while (IterableNodeHashTable.a((byte) -72)) {
             ug.field_A.a((byte) 86, pe.field_b, da.field_b);
           }
           if (param0 != 2) {

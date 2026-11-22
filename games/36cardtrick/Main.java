@@ -9,7 +9,7 @@ public final class Main extends c {
     static String field_y;
     static PlatformTaskDispatcher field_W;
     ad field_P;
-    private bk field_X;
+    private IntrusiveDeque field_X;
     private boolean field_L;
     int field_D;
     int field_C;
@@ -114,7 +114,7 @@ public final class Main extends c {
               this.a(stackIn_26_1, stackIn_27_2, (double)var17 + var14 * (double)(-var17 + var8) + var12 * (double)(-var16 + var7), 0);
             }}
           if (param0 != 16777215) {
-            this.field_X = (bk) null;
+            this.field_X = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -618,11 +618,11 @@ public final class Main extends c {
                 nb.field_e = nb.field_e & ~SecondaryNodeDequeIterator.field_e;
                 ue.field_d = ue.field_d & ~SecondaryNodeDequeIterator.field_e;
                 db.field_m = db.field_m | SecondaryNodeDequeIterator.field_e;
-                var2 = (dh) (ij.field_h.a((byte) 74));
+                var2 = (dh) (ij.field_h.beginForward((byte) 74));
                 while (true) {
                   if (var2 != null) {
                     ii.a(var2, 4, 8192);
-                    var2 = (dh) (ij.field_h.b((byte) -98));
+                    var2 = (dh) (ij.field_h.nextForward((byte) -98));
                     if (var3 == 0) {
                       continue;
                     }
@@ -658,12 +658,12 @@ public final class Main extends c {
                     } else {
                       this.p(-97283608);
                     }
-                    if (this.field_X.a((byte) 74) != null) {
+                    if (this.field_X.beginForward((byte) 74) != null) {
                       fieldTemp$1 = this.field_B + 1;
                       this.field_B = this.field_B + 1;
                       if (fieldTemp$1 == 335) {
                         this.field_B = 0;
-                        this.field_X.d(-89);
+                        this.field_X.removeFirst(-89);
                       }
                     }
                     decompiledFrameRemainder0 = (0 != dl.field_h);
@@ -1311,7 +1311,7 @@ public final class Main extends c {
             }
           }
           qa.field_b.c(var3, 148, 134, 16777215, -1);
-          var4 = (hh) (this.field_X.a((byte) 74));
+          var4 = (hh) (this.field_X.beginForward((byte) 74));
           if (null != var4) {
             var6 = this.field_B;
             if (80 <= var6) {
@@ -1636,7 +1636,7 @@ public final class Main extends c {
                         stackIn_63_0 = 1;
                         return stackIn_63_0;
                       }
-                      ug.a(70.0f, 58, tg.a((byte) 87, "", kf.field_j, mh.field_c, bk.field_f));
+                      ug.a(70.0f, 58, tg.a((byte) 87, "", kf.field_j, mh.field_c, IntrusiveDeque.field_f));
                       stackIn_47_0 = 0;
                       return stackIn_47_0;
                     }
@@ -1656,7 +1656,7 @@ public final class Main extends c {
               stackIn_15_0 = 0;
               return stackIn_15_0;
             }
-            ug.a(3.0f, 73, tg.a((byte) 87, "basic", kf.field_j, hf.field_H, bk.field_f));
+            ug.a(3.0f, 73, tg.a((byte) 87, "basic", kf.field_j, hf.field_H, IntrusiveDeque.field_f));
             stackIn_9_0 = 0;
             return stackIn_9_0;
           }
@@ -2064,7 +2064,7 @@ public final class Main extends c {
         try {
           Main.u(-24711);
           hh.a(20364);
-          bk.clearStaticReferences(false);
+          IntrusiveDeque.clearStaticReferences(false);
           qk.c(124);
           fb.a(8);
           mh.a((byte) -41);
@@ -2234,7 +2234,7 @@ public final class Main extends c {
           qi.d((byte) 77);
           wc.i(param0 - 21693);
           de.a(false);
-          ed.a(3663);
+          IterableNodeHashTable.a(3663);
           tf.g(-1);
           q.c(0);
           Crc32Table.clearStaticReferences(120);
@@ -2658,7 +2658,7 @@ public final class Main extends c {
           var3 = id.a(96);
           if (qf.field_G != 0 &&
             vd.field_u < 0) {
-            var5_ref_kf = (kf) (jl.field_e.a((byte) 74));
+            var5_ref_kf = (kf) (jl.field_e.beginForward((byte) 74));
             if (var5_ref_kf != null &&
               var3 > var5_ref_kf.field_g) {
               var5_ref_kf.unlink(119);
@@ -2718,7 +2718,7 @@ public final class Main extends c {
                     continue;
                   }
                 } else {
-                  jl.field_e.a(var6, 27362);
+                  jl.field_e.addLast(var6, 27362);
                   vd.field_u = -1;
                 }
                 break;
@@ -2990,7 +2990,7 @@ public final class Main extends c {
                 if (this.field_O >= 3 &&
                   this.field_O <= 5 &&
                   th.a(246 - this.field_O, param0 ^ 0, 9 + this.field_O)) {
-                  this.field_X.a(new hh(9 + this.field_O), 27362);
+                  this.field_X.addLast(new hh(9 + this.field_O), 27362);
                 }
               }
             }
@@ -3026,7 +3026,7 @@ public final class Main extends c {
         this.field_P = null;
         this.field_D = 0;
         this.field_L = false;
-        this.field_X = new bk();
+        this.field_X = new IntrusiveDeque();
         this.field_B = 0;
         this.field_O = 0;
         this.field_C = 1;

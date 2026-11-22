@@ -4,7 +4,7 @@
 final class vb {
     static bi field_f;
     static int[] field_e;
-    private mn field_b;
+    private PrimaryNodeDeque field_b;
     private IntrusiveNode field_c;
     static long field_d;
     static double[] field_a;
@@ -84,9 +84,9 @@ final class vb {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_b.field_a.field_h;
+            var3 = this.field_b.sentinel.field_h;
           }
-          if (this.field_b.field_a == var3) {
+          if (this.field_b.sentinel == var3) {
             this.field_c = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
@@ -126,11 +126,11 @@ final class vb {
             this.field_c = (IntrusiveNode) null;
           }
           if (param0 == null) {
-            var3 = this.field_b.field_a.field_a;
+            var3 = this.field_b.sentinel.field_a;
           } else {
             var3 = param0;
           }
-          if (var3 == this.field_b.field_a) {
+          if (var3 == this.field_b.sentinel) {
             this.field_c = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -208,8 +208,8 @@ final class vb {
     }
 
     final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_b.field_a.field_a;
-        if (var2 == this.field_b.field_a) {
+        IntrusiveNode var2 = this.field_b.sentinel.field_a;
+        if (var2 == this.field_b.sentinel) {
           this.field_c = null;
           return null;
         }
@@ -220,7 +220,7 @@ final class vb {
         return var2;
     }
 
-    vb(mn param0) {
+    vb(PrimaryNodeDeque param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
@@ -232,8 +232,8 @@ final class vb {
         if (param0 != 120) {
           vb.b((byte) -33);
         }
-        IntrusiveNode var2 = this.field_b.field_a.field_h;
-        if (this.field_b.field_a == var2) {
+        IntrusiveNode var2 = this.field_b.sentinel.field_h;
+        if (this.field_b.sentinel == var2) {
           this.field_c = null;
           return null;
         }
@@ -255,7 +255,7 @@ final class vb {
           field_d = -121L;
         }
         IntrusiveNode var2 = this.field_c;
-        if (this.field_b.field_a == var2) {
+        if (this.field_b.sentinel == var2) {
           this.field_c = null;
           return null;
         }
@@ -266,7 +266,7 @@ final class vb {
     final IntrusiveNode b(int param0) {
         int var2 = -88 % ((param0 - 17) / 35);
         IntrusiveNode var3 = this.field_c;
-        if (var3 == this.field_b.field_a) {
+        if (var3 == this.field_b.sentinel) {
           this.field_c = null;
           return null;
         }

@@ -175,8 +175,8 @@ final class hf {
           while (q.g((byte) -15)) {
             q.field_N.a((byte) -109, lh.field_f, gk.field_d);
           }
-          if (m.field_g != -1) {
-            var1_int = m.field_g;
+          if (IterableNodeHashTable.field_g != -1) {
+            var1_int = IterableNodeHashTable.field_g;
             oh.a(-101, -1);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;

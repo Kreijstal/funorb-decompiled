@@ -11,7 +11,7 @@ final class tg {
     int field_j;
     jm field_c;
     static boolean field_p;
-    static jc field_e;
+    static IntrusiveDeque field_e;
     int field_q;
     int field_v;
     private boolean field_g;
@@ -289,7 +289,7 @@ final class tg {
 
     static {
         field_u = new km(270, 70);
-        field_e = new jc();
+        field_e = new IntrusiveDeque();
         field_d = new tk();
         field_i = "You have resigned.";
         field_b = "(<%0> players want to join)";

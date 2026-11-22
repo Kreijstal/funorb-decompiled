@@ -296,7 +296,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           }
           var3 = var10.readUnsignedByte(true);
           if (var2 == 0) {
-            var4 = (mc) (vh.field_a.a(true));
+            var4 = (mc) (vh.field_a.beginForward(true));
             if (var4 == null) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-72);
               return;
@@ -316,11 +316,11 @@ final class AccountCreationResultPanel extends uc implements jk {
           }
           if (1 == var2) {
             var4_int = var10.readSignedSmart((byte) -10);
-            var5_ref_wa = (wa) (AccountRequestState.field_b.a(true));
+            var5_ref_wa = (wa) (AccountRequestState.field_b.beginForward(true));
             while (var5_ref_wa != null) {
               if (var3 != var5_ref_wa.field_o ||
                 var5_ref_wa.field_h != var4_int) {
-                var5_ref_wa = (wa) (AccountRequestState.field_b.f(2));
+                var5_ref_wa = (wa) (AccountRequestState.field_b.nextForward(2));
                 continue;
               }
               break;
@@ -379,7 +379,7 @@ final class AccountCreationResultPanel extends uc implements jk {
               vg.field_b = ud.field_a;
             } else {
               while (vg.field_b != ud.field_a) {
-                var2 = ji.field_e[ud.field_a];
+                var2 = IterableNodeHashTable.field_e[ud.field_a];
                 ud.field_a = 1 + ud.field_a & 127;
                 if (var2 >= 0) {
                   wa.field_j[var2] = true;

@@ -15,7 +15,7 @@ final class oj extends IntrusiveNode {
     private int field_l;
     static dh field_q;
     static fk field_j;
-    static im field_r;
+    static IntrusiveDeque field_r;
 
     final void a(byte param0) {
         if (0 > this.field_g) {
@@ -278,6 +278,6 @@ final class oj extends IntrusiveNode {
     static {
         field_o = "BIG SHOT";
         field_j = new fk(2);
-        field_r = new im();
+        field_r = new IntrusiveDeque();
     }
 }

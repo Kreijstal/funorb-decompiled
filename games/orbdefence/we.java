@@ -112,7 +112,7 @@ final class we extends ta implements ai {
         int var6 = 0;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
-          this.field_x.a(false);
+          this.field_x.clear(false);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

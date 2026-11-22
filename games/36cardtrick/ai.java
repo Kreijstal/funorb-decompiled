@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ai extends cg {
-    static bk field_k;
+    static IntrusiveDeque field_k;
     static String field_l;
     static int[] field_j;
     static int field_m;
@@ -174,7 +174,7 @@ final class ai extends cg {
 
     static {
         field_l = "to keep fullscreen or";
-        field_k = new bk();
+        field_k = new IntrusiveDeque();
         field_j = new int[8192];
     }
 }

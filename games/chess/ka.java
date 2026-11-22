@@ -91,18 +91,18 @@ final class ka implements jm {
         RuntimeException var2 = null;
         var3 = Chess.field_G;
         try {
-          var5 = (ak) (nc.field_O.g(-18110));
+          var5 = (ak) (nc.field_O.beginBackward(-18110));
           if (param0 > -31) {
             return;
           }
           while (var5 != null) {
             sj.a(0, param1, var5);
-            var5 = (ak) (nc.field_O.a((byte) -112));
+            var5 = (ak) (nc.field_O.nextBackward((byte) -112));
           }
-          var4 = (fd) (fb.field_L.g(-18110));
+          var4 = (fd) (fb.field_L.beginBackward(-18110));
           while (var4 != null) {
             pk.a(param1, -90, var4);
-            var4 = (fd) (fb.field_L.a((byte) -121));
+            var4 = (fd) (fb.field_L.nextBackward((byte) -121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

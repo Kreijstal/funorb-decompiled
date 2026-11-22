@@ -26,7 +26,7 @@ final class ha extends um {
         ce.field_p = -1;
         bl.field_l = null;
         pp.field_K = new IntrusiveDeque();
-        ti.field_A = sj.a(dh.field_a, 37);
+        ti.field_A = sj.a(SecondaryNodeDeque.field_a, 37);
         ti.field_A.field_v = 1;
         tk.field_k = sj.a(fl.field_i, 107);
         PacketBuffer.field_n = sj.a(wm.field_h, 59);

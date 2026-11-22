@@ -3,7 +3,7 @@
  */
 final class sh extends am {
     static volatile int field_K;
-    private mn field_J;
+    private PrimaryNodeDeque field_J;
 
     final void i(byte param0) {
         int var4 = Confined.field_J ? 1 : 0;
@@ -23,7 +23,7 @@ final class sh extends am {
 
     public sh() {
         super(0, 0, tg.field_L, qk.field_c, (fe) null, (uk) null);
-        this.field_J = new mn();
+        this.field_J = new PrimaryNodeDeque();
     }
 
     final oe h(int param0) {
@@ -55,7 +55,7 @@ final class sh extends am {
         }
         this.field_H = null;
         if (param0 <= 103) {
-          this.field_J = (mn) null;
+          this.field_J = (PrimaryNodeDeque) null;
         }
     }
 
@@ -71,7 +71,7 @@ final class sh extends am {
             throw new IllegalArgumentException();
           }
           var3 = (oe) (param0);
-          this.field_J.a(var3, -1);
+          this.field_J.addFirst(var3, -1);
           var3.field_H = true;
           var3.a((fj) (this), param1 ^ 418);
           if (param1 != 0) {

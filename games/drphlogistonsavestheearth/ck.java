@@ -42,7 +42,7 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var4 = (lc) (g.field_t.h(-11151));
+          var4 = (lc) (g.field_t.beginForward(-11151));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -94,7 +94,7 @@ final class ck {
         h var4 = new h();
         var4.field_h = param0;
         var4.field_j = new int[param2];
-        eg.field_c.a(var4, 255);
+        eg.field_c.addLast(var4, 255);
         if (!param3) {
           return (h) null;
         }
@@ -127,7 +127,7 @@ final class ck {
         for (var2 = 0; var2 < 10; var2++) {
           var4 = this.field_i[var2];
           for (var3 = 0; var3 < 1; var3++) {
-            vd.field_b[var3] = var4;
+            IntrusiveDeque.field_b[var3] = var4;
           }
           if (this.field_h[var2] >= 0.0) {
             var5 = this.field_a[var2];
@@ -135,7 +135,7 @@ final class ck {
               wj.c((int)this.field_m[var2], (int)this.field_g[var2], (int)this.field_h[var2], this.field_i[var2], 128);
             } else {
               if (var5 == 1) {
-                wj.a((int)this.field_m[var2] << 4, (int)this.field_g[var2] << 4, (int)this.field_h[var2] << 4, 0, vd.field_b);
+                wj.a((int)this.field_m[var2] << 4, (int)this.field_g[var2] << 4, (int)this.field_h[var2] << 4, 0, IntrusiveDeque.field_b);
               }
             }
           }

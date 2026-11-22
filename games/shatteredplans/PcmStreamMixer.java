@@ -31,8 +31,8 @@ final class PcmStreamMixer extends PcmStream {
     private final void fireListener(PcmMixerListener param0) {
         param0.unlink((byte) -122);
         param0.a();
-        IntrusiveNode var2 = this.field_o.field_h.next;
-        if (var2 == this.field_o.field_h) {
+        IntrusiveNode var2 = this.field_o.sentinel.next;
+        if (var2 == this.field_o.sentinel) {
           this.field_m = -1;
         } else {
           this.field_m = ((PcmMixerListener) (var2)).field_h;
@@ -86,9 +86,9 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void a(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
-          if (param0 == this.field_o.field_h) {
+          if (param0 == this.field_o.sentinel) {
             wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
-            this.field_m = ((PcmMixerListener) (this.field_o.field_h.next)).field_h;
+            this.field_m = ((PcmMixerListener) (this.field_o.sentinel.next)).field_h;
             return;
           }
           if (((PcmMixerListener) (param0)).field_h <= param1.field_h) {
@@ -98,7 +98,7 @@ final class PcmStreamMixer extends PcmStream {
           break;
         }
         wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
-        this.field_m = ((PcmMixerListener) (this.field_o.field_h.next)).field_h;
+        this.field_m = ((PcmMixerListener) (this.field_o.sentinel.next)).field_h;
         return;
     }
 

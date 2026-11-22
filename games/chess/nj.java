@@ -247,7 +247,7 @@ final class nj extends hl {
 
     final static void a(km[] param0, byte param1, int param2, int param3) {
         try {
-          bl.field_d = new le(param0);
+          IterableNodeHashTable.field_d = new le(param0);
           tn.field_m = param3;
           tm.field_d = param2;
           bi.a(115);
@@ -420,7 +420,7 @@ final class nj extends hl {
     final static void a(boolean param0, int param1, String param2, boolean param3) {
         bo.a((byte) 123);
         jh.field_e.i(0);
-        ResourceArchive.field_b = new wf(pi.field_a, (String) null, dk.field_g, param0, param3);
+        ResourceArchive.field_b = new wf(pi.field_a, (String) null, SecondaryNodeHashTable.field_g, param0, param3);
         if (param1 != 2) {
           return;
         }

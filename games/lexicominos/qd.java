@@ -23,7 +23,7 @@ final class qd {
 
     final static vb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         vb var8 = new vb(param5, param4, param7, param3, param2, param0);
-        jl.field_a.b(param1 - 11680, var8);
+        jl.field_a.addLast(param1 - 11680, var8);
         if (param1 == 11803) {
           vi.a(param6, var8, 1);
           return var8;

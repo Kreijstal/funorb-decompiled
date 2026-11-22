@@ -53,19 +53,19 @@ final class jd extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var5 = (m) (wk.field_g.g(-107));
+          var5 = (m) (wk.field_g.beginForward(-107));
           while (var5 != null) {
             fj.a(param0, var5, true);
-            var5 = (m) (wk.field_g.a(12684));
+            var5 = (m) (wk.field_g.nextForward(12684));
           }
           if (param1 != 65535) {
             var4 = (String) null;
             jd.a((byte) 125, (String) null, (ResourceArchive) null, (String) null);
           }
-          var2 = ve.field_b.g(-68);
+          var2 = ve.field_b.beginForward(-68);
           while (var2 != null) {
             pe.a((byte) 51, param0);
-            var2 = ve.field_b.a(param1 ^ 52851);
+            var2 = ve.field_b.nextForward(param1 ^ 52851);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

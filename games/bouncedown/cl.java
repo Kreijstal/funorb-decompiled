@@ -180,7 +180,7 @@ final class cl extends al {
           var2 = var9.readUnsignedByte((byte) -118);
           var3 = var9.readUnsignedByte((byte) -113);
           if (0 == var2) {
-            var4 = (id) (AccountRequestState.field_d.a((byte) -105));
+            var4 = (id) (AccountRequestState.field_d.beginForward((byte) -105));
             if (var4 == null) {
               kc.a((byte) 18);
               return;
@@ -199,11 +199,11 @@ final class cl extends al {
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart(128);
-              var5_ref_jc = (jc) (m.field_e.a((byte) -53));
+              var5_ref_jc = (jc) (IterableNodeHashTable.field_e.beginForward((byte) -53));
               while (var5_ref_jc != null) {
                 if (var3 != var5_ref_jc.field_l ||
                   var5_ref_jc.field_j != var4_int) {
-                  var5_ref_jc = (jc) (m.field_e.d((byte) 90));
+                  var5_ref_jc = (jc) (IterableNodeHashTable.field_e.nextForward((byte) 90));
                   continue;
                 }
                 break;

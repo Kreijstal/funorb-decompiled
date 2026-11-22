@@ -105,7 +105,7 @@ final class fl {
           var22 = null;
           var12 = Main.field_T;
           try {
-            var13 = (fd) (vb.field_e.a((byte) 74));
+            var13 = (fd) (vb.field_e.beginForward((byte) 74));
             var17 = var13;
             if (var17 == null) {
               return;

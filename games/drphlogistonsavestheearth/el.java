@@ -30,13 +30,13 @@ final class el extends jf {
         RuntimeException var2 = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var4 = (kc) (rd.field_C.h(-11151));
+          var4 = (kc) (rd.field_C.beginForward(-11151));
           if (param0) {
             return;
           }
           while (var4 != null) {
             rh.a(125, var4, param1);
-            var4 = (kc) (rd.field_C.e(0));
+            var4 = (kc) (rd.field_C.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

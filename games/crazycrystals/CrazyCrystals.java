@@ -295,7 +295,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 qk.field_F = qk.field_F + 5;
                 var3_ref_we = new we(jo.field_o, uo.field_o, we.field_h, b.field_a, je.field_j, fp.field_a);
                 if (rc.a(-89)) {
-                  ec.field_l.b(0, var3_ref_we);
+                  ec.field_l.addLast(0, var3_ref_we);
                   if (var20 != 0) {
                     lj.a(5, var3_ref_we, -93);
                   }
@@ -580,7 +580,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           wg.e(64);
           am.clearStaticReferences(117);
           me.a((byte) 127);
-          wb.clearStaticReferences(118);
+          IntrusiveDeque.clearStaticReferences(118);
           sg.a(true);
           fq.b(true);
           vh.b((byte) -114);
@@ -778,7 +778,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ed.f((byte) 87);
           sj.a(21732);
           IntrusiveNodeHashTable.clearStaticReferences(32);
-          be.a((byte) -48);
+          SecondaryNodeDeque.a((byte) -48);
           ib.g(31438);
           qd.i(400);
           wf.c(0);
@@ -1612,7 +1612,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             return;
           }
           if (null == dc.a(true, "menu", (byte) 121)) {
-            td.a(84.0f, be.field_b, false);
+            td.a(84.0f, SecondaryNodeDeque.field_b, false);
             this.a(-121);
             vp.a(124);
             return;

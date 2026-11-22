@@ -19,7 +19,7 @@ final class lb {
         try {
           var1_int = 0;
           var2 = 0;
-          while (ji.a((byte) -72)) {
+          while (IterableNodeHashTable.a((byte) -72)) {
             bc.field_H.a((byte) -43);
             if (bc.field_H.b(true)) {
               var1_int = 1;

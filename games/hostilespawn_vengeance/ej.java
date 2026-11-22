@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ej {
-    static vl field_g;
+    static IntrusiveDeque field_g;
     bh field_b;
     bh field_j;
     static String field_o;

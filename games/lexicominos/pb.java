@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pb extends IntrusiveNode {
-    static ng field_k;
+    static IntrusiveDeque field_k;
     static int[] field_h;
     static String field_j;
     static BitmapFont field_i;
@@ -33,6 +33,6 @@ final class pb extends IntrusiveNode {
     }
 
     static {
-        field_k = new ng();
+        field_k = new IntrusiveDeque();
     }
 }

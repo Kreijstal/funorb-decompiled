@@ -13,7 +13,7 @@ final class md {
         }
         ef.field_tb = 0;
         rm.field_f = new eg(0);
-        hc.field_u = mn.field_c;
+        hc.field_u = PrimaryNodeDeque.field_c;
         KeyboardInput.field_f = -1;
     }
 
@@ -66,10 +66,10 @@ final class md {
           var2 = var28.readUnsignedByte(32);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 25);
-            var4 = (qn) (na.field_T.a(86));
+            var4 = (qn) (na.field_T.beginForward(86));
             while (var4 != null) {
               if (var3 != var4.field_w) {
-                var4 = (qn) (na.field_T.d(2123));
+                var4 = (qn) (na.field_T.nextForward(2123));
                 continue;
               }
               break;
@@ -165,10 +165,10 @@ final class md {
           if (1 == var2) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 25);
             var4_long = var28.readLong((byte) -68);
-            var6_ref_bj = (bj) (lf.field_k.a(82));
+            var6_ref_bj = (bj) (lf.field_k.beginForward(82));
             while (var6_ref_bj != null) {
               if (var6_ref_bj.field_p != var3Lifetime1) {
-                var6_ref_bj = (bj) (lf.field_k.d(2123));
+                var6_ref_bj = (bj) (lf.field_k.nextForward(2123));
                 continue;
               }
               break;
@@ -242,7 +242,7 @@ final class md {
           var23 = null;
           var12 = Confined.field_J ? 1 : 0;
           try {
-            var13 = (dg) (af.field_cb.a(26));
+            var13 = (dg) (af.field_cb.beginForward(26));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -457,7 +457,7 @@ final class md {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 61);
             }
-            var16_ref = (gd) (ra.field_d.a(-120));
+            var16_ref = (gd) (ra.field_d.beginForward(-120));
             if (var16_ref == null) {
               dc.d(105);
               return;
@@ -469,7 +469,7 @@ final class md {
             return;
           }
           if (1 == var2) {
-            var12 = (sf) (sm.field_y.a(-125));
+            var12 = (sf) (sm.field_y.beginForward(-125));
             if (var12 == null) {
               dc.d(118);
               return;
@@ -480,7 +480,7 @@ final class md {
               mb.a("A1: " + ui.a(10), true, (Throwable) null);
               dc.d(122);
             } else {
-              var14 = (gd) (ra.field_d.a(121));
+              var14 = (gd) (ra.field_d.beginForward(121));
               if (var14 == null) {
                 dc.d(126);
                 return;

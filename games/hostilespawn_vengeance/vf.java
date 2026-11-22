@@ -271,10 +271,10 @@ final class vf extends ph {
         RuntimeException var1 = null;
         var2 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (ne) (ei.field_q.g(param0 + 8183));
+          var4 = (ne) (ei.field_q.beginForward(param0 + 8183));
           while (var4 != null) {
             om.a(var4, 5, param0 + 8140);
-            var4 = (ne) (ei.field_q.a(12684));
+            var4 = (ne) (ei.field_q.nextForward(12684));
           }
           el.field_h[0] = cm.a(128, 5, 0, 1);
           el.field_h[1] = cm.a(128, 5, 1, 1);

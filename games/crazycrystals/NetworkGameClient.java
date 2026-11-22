@@ -580,7 +580,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (eq.field_j == 1) {
           if (ul.field_g != 0) {
-            be.field_e = mi.c(kj.field_b, -96);
+            SecondaryNodeDeque.field_e = mi.c(kj.field_b, -96);
           }
           rb.field_k = de.a(false, true, tp.field_b, 1, param1 - 14988);
           ok.field_c = de.a(false, true, sl.field_q, 1, 12);
@@ -590,19 +590,19 @@ abstract class NetworkGameClient extends GameAppletShell {
           lo.field_a = ok.field_c;
         }
         if (eq.field_j == 2) {
-          if (be.field_e != null &&
-            be.field_e.a((byte) 102)) {
-            if (!be.field_e.c("", -93)) {
-              be.field_e = null;
+          if (SecondaryNodeDeque.field_e != null &&
+            SecondaryNodeDeque.field_e.a((byte) 102)) {
+            if (!SecondaryNodeDeque.field_e.c("", -93)) {
+              SecondaryNodeDeque.field_e = null;
             } else {
-              if (be.field_e.a(-20402, "")) {
-                ByteStorage.a(be.field_e, param1 ^ -15041);
-                be.field_e = null;
+              if (SecondaryNodeDeque.field_e.a(-20402, "")) {
+                ByteStorage.a(SecondaryNodeDeque.field_e, param1 ^ -15041);
+                SecondaryNodeDeque.field_e = null;
                 vp.a(106);
               }
             }
           }
-          if (null == be.field_e) {
+          if (null == SecondaryNodeDeque.field_e) {
             eq.field_j = 3;
           }
         }

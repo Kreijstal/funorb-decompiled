@@ -4,7 +4,7 @@
 final class ak {
     int field_e;
     int field_d;
-    static vl field_i;
+    static IntrusiveDeque field_i;
     int field_k;
     int field_j;
     static bd field_a;
@@ -39,7 +39,7 @@ final class ak {
     }
 
     static {
-        field_i = new vl();
+        field_i = new IntrusiveDeque();
         field_f = 0;
         field_c = new int[]{5, 17, 18};
         field_g = "Email is valid";

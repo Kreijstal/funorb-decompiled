@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class bh extends mf implements ra {
-    static jc field_D;
+    static IntrusiveDeque field_D;
     mf[] field_E;
     static ci field_G;
     static String field_H;
@@ -61,7 +61,7 @@ abstract class bh extends mf implements ra {
             }
           }
           if (param1 >= -6) {
-            field_D = (jc) null;
+            field_D = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -576,7 +576,7 @@ abstract class bh extends mf implements ra {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, boolean param8, boolean param9, boolean param10, boolean param11) {
         ic.a(param11, param10, false, param3, param4, param7, param6, param9, param2, param5, param8, 16777215, param1, 16777215);
         if (param0 >= -102) {
-          field_D = (jc) null;
+          field_D = (IntrusiveDeque) null;
         }
     }
 
@@ -741,6 +741,6 @@ abstract class bh extends mf implements ra {
     }
 
     static {
-        field_D = new jc();
+        field_D = new IntrusiveDeque();
     }
 }

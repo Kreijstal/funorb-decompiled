@@ -10,10 +10,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void normalizeListenerDelays() {
         PcmMixerListener pcmMixerListenerLocal1 = null;
         if (this.integerState0513 > 0) {
-          pcmMixerListenerLocal1 = (PcmMixerListener) (this.nodeDequeState0020.computeHashNode1741((byte) -59));
+          pcmMixerListenerLocal1 = (PcmMixerListener) (this.nodeDequeState0020.beginBackward((byte) -59));
           while (pcmMixerListenerLocal1 != null) {
             pcmMixerListenerLocal1.integerState0698 = pcmMixerListenerLocal1.integerState0698 - this.integerState0513;
-            pcmMixerListenerLocal1 = (PcmMixerListener) (this.nodeDequeState0020.computeHashNode1745(true));
+            pcmMixerListenerLocal1 = (PcmMixerListener) (this.nodeDequeState0020.nextBackward(true));
           }
           this.integerState0512 = this.integerState0512 - this.integerState0513;
           this.integerState0513 = 0;
@@ -42,7 +42,7 @@ final class PcmStreamMixer extends PcmStream {
           integerArgument3 = integerArgument3 - integerLocal1;
           this.integerState0513 = this.integerState0513 + integerLocal1;
           this.normalizeListenerDelays();
-          pcmMixerListenerLocal2 = (PcmMixerListener) (this.nodeDequeState0020.computeHashNode1741((byte) -109));
+          pcmMixerListenerLocal2 = (PcmMixerListener) (this.nodeDequeState0020.beginBackward((byte) -109));
           objectLocal5 = pcmMixerListenerLocal2;
           synchronized (objectLocal5) {
             integerLocal3 = pcmMixerListenerLocal2.onMixerTick(this);
@@ -59,10 +59,10 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void skipSubStreams(int integerArgument1) {
-        PcmStream pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.computeHashNode1741((byte) -69));
+        PcmStream pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.beginBackward((byte) -69));
         while (pcmStreamLocal1 != null) {
           pcmStreamLocal1.skip(integerArgument1);
-          pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.computeHashNode1745(true));
+          pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.nextBackward(true));
         }
     }
 
@@ -87,7 +87,7 @@ final class PcmStreamMixer extends PcmStream {
           integerArgument1 = integerArgument1 - integerLocal1;
           this.integerState0513 = this.integerState0513 + integerLocal1;
           this.normalizeListenerDelays();
-          pcmMixerListenerLocal2 = (PcmMixerListener) (this.nodeDequeState0020.computeHashNode1741((byte) -54));
+          pcmMixerListenerLocal2 = (PcmMixerListener) (this.nodeDequeState0020.beginBackward((byte) -54));
           objectLocal5 = pcmMixerListenerLocal2;
           synchronized (objectLocal5) {
             integerLocal3 = pcmMixerListenerLocal2.onMixerTick(this);
@@ -108,7 +108,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream nextSubStream() {
-        return (PcmStream) (this.nodeDequeState0019.computeHashNode1745(true));
+        return (PcmStream) (this.nodeDequeState0019.nextBackward(true));
     }
 
     final void addSampleStream(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
@@ -116,7 +116,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final synchronized void addSubStream(PcmStream pcmStreamArgument1) {
-        this.nodeDequeState0019.performAction1739(pcmStreamArgument1, 7143);
+        this.nodeDequeState0019.addLast(pcmStreamArgument1, 7143);
     }
 
     private final void removeListener(PcmMixerListener pcmMixerListenerArgument1) {
@@ -177,14 +177,14 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream firstSubStream() {
-        return (PcmStream) (this.nodeDequeState0019.computeHashNode1741((byte) 126));
+        return (PcmStream) (this.nodeDequeState0019.beginBackward((byte) 126));
     }
 
     private final void fillSubStreams(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
-        PcmStream pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.computeHashNode1741((byte) -106));
+        PcmStream pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.beginBackward((byte) -106));
         while (pcmStreamLocal1 != null) {
           pcmStreamLocal1.fillOrSkip(integerArrayArgument1, integerArgument2, integerArgument3);
-          pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.computeHashNode1745(true));
+          pcmStreamLocal1 = (PcmStream) (this.nodeDequeState0019.nextBackward(true));
         }
     }
 

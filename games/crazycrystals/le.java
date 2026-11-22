@@ -41,7 +41,7 @@ final class le extends ln {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -75);
             }
-            var15 = (dp) (pm.field_c.g(32073));
+            var15 = (dp) (pm.field_c.beginForward(32073));
             if (var15 == null) {
               jj.a(4);
               return;
@@ -53,7 +53,7 @@ final class le extends ln {
             return;
           }
           if (var2 == 1) {
-            var11 = (ca) (gn.field_Q.g(param0 ^ 18166));
+            var11 = (ca) (gn.field_Q.beginForward(param0 ^ 18166));
             if (var11 == null) {
               jj.a(4);
               return;
@@ -61,7 +61,7 @@ final class le extends ln {
             var11.unlink(false);
           } else {
             if (var2 == 2) {
-              var13 = (dp) (pm.field_c.g(param0 ^ 18166));
+              var13 = (dp) (pm.field_c.beginForward(param0 ^ 18166));
               if (var13 == null) {
                 jj.a(param0 - 15291);
                 return;

@@ -61,10 +61,10 @@ final class he extends IntrusiveNode {
         try {
           var14 = jc.field_g;
           var2 = var14.readUnsignedByte((byte) -77);
-          var3_ref = (qg) (cf.field_b.a((byte) -60));
+          var3_ref = (qg) (cf.field_b.beginForward((byte) -60));
           while (var3_ref != null) {
             if (~var3_ref.field_h != ~var2) {
-              var3_ref = (qg) (cf.field_b.d((byte) -22));
+              var3_ref = (qg) (cf.field_b.nextForward((byte) -22));
               continue;
             }
             break;
@@ -79,9 +79,9 @@ final class he extends IntrusiveNode {
           var4 = var14.readUnsignedByte((byte) -127);
           if (var4 != 0) {
             var5 = var3_ref.field_i;
-            wh.field_c[0] = ja.field_b;
+            SecondaryNodeDeque.field_c[0] = ja.field_b;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              wh.field_c[var6_int] = var14.readString(true);
+              SecondaryNodeDeque.field_c[var6_int] = var14.readString(true);
             }
             ng.a(-15936, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -100,12 +100,12 @@ final class he extends IntrusiveNode {
             var10 = 0;
             while (var8 > var9) {
               var11 = w.field_f[var9];
-              var6[0][var10] = wh.field_c[var11];
+              var6[0][var10] = SecondaryNodeDeque.field_c[var11];
               var18[0][4 * var10] = sj.field_j[var11];
               var18[0][var10 * 4 + 1] = nh.field_S[var11];
               var18[0][var10 * 4 + 2] = gk.field_i[var11];
               var18[0][4 * var10 + 3] = DelegatingCanvas.field_c[var11];
-              if (s.a(wh.field_c[var11], param0 - 3) &&
+              if (s.a(SecondaryNodeDeque.field_c[var11], param0 - 3) &&
                 gk.field_i[var11] + nh.field_S[var11] + DelegatingCanvas.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -118,12 +118,12 @@ final class he extends IntrusiveNode {
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = w.field_f[var9Lifetime1 + var5];
-              var6[1][var13] = wh.field_c[var11Lifetime1];
+              var6[1][var13] = SecondaryNodeDeque.field_c[var11Lifetime1];
               var18[1][4 * var13] = sj.field_j[var11Lifetime1];
               var18[1][4 * var13 + 1] = nh.field_S[var11Lifetime1];
               var18[1][4 * var13 + 2] = gk.field_i[var11Lifetime1];
               var18[1][3 + 4 * var13] = DelegatingCanvas.field_c[var11Lifetime1];
-              if (s.a(wh.field_c[var11Lifetime1], -97) &&
+              if (s.a(SecondaryNodeDeque.field_c[var11Lifetime1], -97) &&
                 nh.field_S[var11Lifetime1] - (-gk.field_i[var11Lifetime1] - DelegatingCanvas.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;

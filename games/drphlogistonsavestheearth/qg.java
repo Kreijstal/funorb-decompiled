@@ -118,7 +118,7 @@ final class qg extends kl implements ud {
           var6 = -127 / ((param4 - 40) / 53);
           var5_int = param3.a(param2, (byte) -104);
           var7 = param3.a((byte) -66, param1, var5_int);
-          stackIn_1_0 = tc.a(var7, param3, var5_int, param0, 65245);
+          stackIn_1_0 = IterableNodeHashTable.a(var7, param3, var5_int, param0, 65245);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class qg extends kl implements ud {
               var6 = u.a(sg.field_f[var3_int], true, true);
               var4 = var4 + ig.field_h;
               var7 = -(var6 >> 1) + ji.field_f;
-              if (g.a((dg.field_d << 1) + var6, (byte) -108, ni.field_p + (wa.field_N << 1), var4, var7 - dg.field_d, param0, param2)) {
+              if (g.a((SecondaryNodeDeque.field_d << 1) + var6, (byte) -108, ni.field_p + (wa.field_N << 1), var4, var7 - SecondaryNodeDeque.field_d, param0, param2)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

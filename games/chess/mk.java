@@ -64,7 +64,7 @@ final class mk {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        jc var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         ln var12 = null;
@@ -139,7 +139,7 @@ final class mk {
             field_d = (int[]) null;
           }
           var11 = null;
-          var12 = (ln) (var8.g(-18110));
+          var12 = (ln) (var8.beginBackward(-18110));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_I == null) {
@@ -536,7 +536,7 @@ final class mk {
                   stackIn_165_0 = gm.field_a;
                 }
               } else {
-                stackIn_165_0 = dk.field_l;
+                stackIn_165_0 = SecondaryNodeHashTable.field_l;
               }
               pc.field_Mb = stackIn_165_0;
             }
@@ -551,7 +551,7 @@ final class mk {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_L != 0) {
               if (var12.m(-23901)) {
-                var12 = (ln) (var8.a((byte) -126));
+                var12 = (ln) (var8.nextBackward((byte) -126));
                 continue;
               }
               if (0 != var12.field_Rb.field_L) {
@@ -568,7 +568,7 @@ final class mk {
                 ml.a(var32, var12, (byte) 94, param6);
               }
             }
-            var12 = (ln) (var8.a((byte) -126));
+            var12 = (ln) (var8.nextBackward((byte) -126));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -597,6 +597,6 @@ final class mk {
 
     static {
         field_b = 0L;
-        jc discarded$0 = new jc();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

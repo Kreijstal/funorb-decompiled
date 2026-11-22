@@ -115,10 +115,10 @@ final class uk {
           var2 = var27.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(98203176);
-            var4 = (gj) (cb.field_b.b((byte) -126));
+            var4 = (gj) (cb.field_b.beginForward((byte) -126));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (gj) (cb.field_b.d(param0 + 785));
+                var4 = (gj) (cb.field_b.nextForward(param0 + 785));
                 continue;
               }
               break;
@@ -214,10 +214,10 @@ final class uk {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(98203176);
             var4_long = var27.readLong((byte) -89);
-            var6_ref_vg = (vg) (kk.field_X.b((byte) 124));
+            var6_ref_vg = (vg) (kk.field_X.beginForward((byte) 124));
             while (var6_ref_vg != null) {
               if (~var3Lifetime1 != ~var6_ref_vg.field_t) {
-                var6_ref_vg = (vg) (kk.field_X.d(853));
+                var6_ref_vg = (vg) (kk.field_X.nextForward(853));
                 continue;
               }
               break;

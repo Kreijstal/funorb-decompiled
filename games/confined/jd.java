@@ -6,7 +6,7 @@ final class jd {
     static mi field_b;
     static int[] field_h;
     static int[] field_e;
-    static mn field_f;
+    static PrimaryNodeDeque field_f;
     static int field_g;
     static boolean field_c;
     static bi field_a;
@@ -73,6 +73,6 @@ final class jd {
           field_h[var0Lifetime1] = (int)Math.floor(768.5 - 9.0 * var1Lifetime1 + (double)var0Lifetime1 * 0.0234375);
         }
         field_e = new int[8192];
-        field_f = new mn();
+        field_f = new PrimaryNodeDeque();
     }
 }

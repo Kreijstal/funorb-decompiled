@@ -86,7 +86,7 @@ final class nl extends fb {
     final fb a(int param0) {
         this.field_i = this.field_i + 1;
         if (this.field_i == 24) {
-          be.field_d.a(96, 12 * this.field_a.field_A, this.field_a.field_t * 12, 0, (byte) -111);
+          SecondaryNodeDeque.field_d.a(96, 12 * this.field_a.field_A, this.field_a.field_t * 12, 0, (byte) -111);
         }
         if (this.field_i == 48) {
           this.field_h.field_j = (ea) ((Object) this.field_a);

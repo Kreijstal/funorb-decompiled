@@ -15,19 +15,19 @@ final class il {
     final static void a(ci param0, ci param1, byte param2) {
         try {
           if (param0.field_I == null) {
-            param0.field_I = new jc();
+            param0.field_I = new IntrusiveDeque();
           }
           if (param1.field_I == null) {
-            param1.field_I = new jc();
+            param1.field_I = new IntrusiveDeque();
           }
           if (null == bf.field_M) {
-            bf.field_M = new dk(64);
+            bf.field_M = new SecondaryNodeHashTable(64);
           }
           if (param2 != 15) {
             field_a = 90;
           }
           if (r.field_Ib == null) {
-            r.field_Ib = new dk(64);
+            r.field_Ib = new SecondaryNodeHashTable(64);
           }
           me.field_e = param0.field_I;
           cl.field_e = param1.field_I;

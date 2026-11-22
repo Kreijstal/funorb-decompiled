@@ -15,7 +15,7 @@ final class ge {
         if (param0 <= 118) {
           return;
         }
-        jk.field_m = new vc();
+        jk.field_m = new IntrusiveDeque();
     }
 
     public static void a(byte param0) {

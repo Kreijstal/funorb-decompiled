@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb extends IntrusiveNode {
-    static im field_h;
+    static IntrusiveDeque field_h;
     static int[] field_g;
     static v field_f;
     static int field_i;
@@ -22,7 +22,7 @@ final class vb extends IntrusiveNode {
 
     static {
         field_g = new int[9];
-        field_h = new im();
+        field_h = new IntrusiveDeque();
         field_i = -1;
     }
 }

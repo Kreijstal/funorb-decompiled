@@ -86,18 +86,18 @@ final class dj extends pj implements ke {
         RuntimeException var2 = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var5 = (nl) (gf.field_A.h(-11151));
+          var5 = (nl) (gf.field_A.beginForward(-11151));
           if (param0) {
             field_N = -49;
           }
           while (var5 != null) {
             fc.a(-105, var5, param1);
-            var5 = (nl) (gf.field_A.e(0));
+            var5 = (nl) (gf.field_A.nextForward(0));
           }
-          var4 = (h) (eg.field_c.h(-11151));
+          var4 = (h) (eg.field_c.beginForward(-11151));
           while (var4 != null) {
             bj.a(param1, -81, var4);
-            var4 = (h) (eg.field_c.e(0));
+            var4 = (h) (eg.field_c.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

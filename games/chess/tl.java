@@ -117,7 +117,7 @@ final class tl extends ci {
 
     final static void a(ac param0, int param1, byte param2) {
         try {
-          vn.field_vb.a((IntrusiveNode) (param0), (byte) 119);
+          vn.field_vb.addFirst((IntrusiveNode) (param0), (byte) 119);
           GameAppletShell.a(param0, param2 ^ 14994, param1);
           if (param2 != 117) {
             field_Gb = (PlatformTask) null;
@@ -172,12 +172,12 @@ final class tl extends ci {
         if (param0 != 31553) {
           tl.a(-57, -23, 14, -33);
         }
-        if (hd.field_l.g(-18110) != null) {
+        if (hd.field_l.beginBackward(-18110) != null) {
           fieldTemp$0 = fb.field_K + 1;
           fb.field_K = fb.field_K + 1;
           if (fieldTemp$0 == 335) {
             fb.field_K = 0;
-            hd.field_l.f(1184188328);
+            hd.field_l.removeLast(1184188328);
           }
         }
     }

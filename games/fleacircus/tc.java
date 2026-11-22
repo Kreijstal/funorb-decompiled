@@ -182,7 +182,7 @@ final class tc {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < vc.field_d; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < IntrusiveDeque.field_d; var13Lifetime1++) {
             var14Lifetime1 = pk.field_J[var13Lifetime1];
             var15Lifetime1 = param7.field_Q[var14Lifetime1];
             var16 = param7.field_M[var14Lifetime1];

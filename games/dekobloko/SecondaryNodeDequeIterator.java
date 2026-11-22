@@ -28,7 +28,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (this.dualNodeState0005 == null) {
           throw new IllegalStateException();
         }
-        this.dualNodeState0005.performAction0134((byte) 81);
+        this.dualNodeState0005.unlinkSecondary((byte) 81);
         this.dualNodeState0005 = null;
     }
 
@@ -76,18 +76,18 @@ final class SecondaryNodeDequeIterator implements Iterator {
         RuntimeException runtimeExceptionLocal5 = null;
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          mixedSupport072Local2 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.computeHashNode1741((byte) -80));
+          mixedSupport072Local2 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.beginBackward((byte) -80));
           while (mixedSupport072Local2 != null) {
             MixedSupport043.performAction0541((byte) -125, integerArgument2, mixedSupport072Local2);
-            mixedSupport072Local2 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.computeHashNode1745(true));
+            mixedSupport072Local2 = (MixedSupport072) (GameDomainSupport005.nodeDequeState0023.nextBackward(true));
           }
           if (integerArgument1 > -47) {
             integerState0138 = 100;
           }
-          mixedSupport068Local3 = (MixedSupport068) (nodeDequeState0007.computeHashNode1741((byte) -121));
+          mixedSupport068Local3 = (MixedSupport068) (nodeDequeState0007.beginBackward((byte) -121));
           while (mixedSupport068Local3 != null) {
             SceneWidgetPart014.performAction1783(mixedSupport068Local3, integerArgument2, 60);
-            mixedSupport068Local3 = (MixedSupport068) (nodeDequeState0007.computeHashNode1745(true));
+            mixedSupport068Local3 = (MixedSupport068) (nodeDequeState0007.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {

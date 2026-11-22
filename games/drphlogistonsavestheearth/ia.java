@@ -18,12 +18,12 @@ final class ia {
           }
           if (vb.field_k == 0) {
             vb.field_k = 200;
-            var1 = (ml) (ff.field_O.h(-11151));
+            var1 = (ml) (ff.field_O.beginForward(-11151));
             while (var1 != null) {
               if (!var1.field_o.isLinked(-1387)) {
                 var1.unlink(-16175);
               }
-              var1 = (ml) (ff.field_O.e(0));
+              var1 = (ml) (ff.field_O.nextForward(0));
             }
           }
         } catch (RuntimeException runtimeException) {

@@ -1092,8 +1092,8 @@ public final class Lexicominos extends nk {
           gl.clearStaticReferences(-116);
           hh.clearStaticReferences(225);
           l.h(4);
-          ji.b((byte) -70);
-          bg.clearStaticReferences((byte) 70);
+          IterableNodeHashTable.b((byte) -70);
+          SecondaryNodeDeque.clearStaticReferences((byte) 70);
           rh.clearStaticReferences(-119);
           gj.d(-8601);
           ch.d(-123);
@@ -1226,7 +1226,7 @@ public final class Lexicominos extends nk {
         try {
           if (!AccountRequestState.a((byte) -119)) {
             do {
-              var2 = (vb) (rb.field_b.a((byte) 56));
+              var2 = (vb) (rb.field_b.removeFirst((byte) 56));
               if (var2 == null) {
                 if (var4 == 0) {
                   break;
@@ -1615,7 +1615,7 @@ public final class Lexicominos extends nk {
                   var3 = aa.a((nk) (this), stackIn_94_1, -96);
                   boolean decompiledSharedTail0 = (var3 != 2364824);
                   if (!decompiledSharedTail0) {
-                    bg.clearStaticReferences(482);
+                    SecondaryNodeDeque.clearStaticReferences(482);
                     decompiledSharedTail0 = (var4 != 0);
                   }
                   if ((decompiledSharedTail0) && (1 == var3 ||
@@ -1734,7 +1734,7 @@ public final class Lexicominos extends nk {
                   }
                 }
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!ji.a((byte) -72)))) {
+                while (!(decompiledNaturalLoopExit0 = (!IterableNodeHashTable.a((byte) -72)))) {
                   if (da.field_b == 13) {
                     if (vb.field_i >= 2) {
                       ob.a(0, sk.field_a, (byte) 22, ' ');
@@ -1862,7 +1862,7 @@ public final class Lexicominos extends nk {
                   th.field_r == 0) {
                   sc.field_g = 0;
                   MouseWheelInput.field_a = 0;
-                  rb.field_b.g(-105);
+                  rb.field_b.clear(-105);
                 }
                 aa.field_j = th.field_r;
                 if (aa.field_j == -1) {
@@ -2351,7 +2351,7 @@ public final class Lexicominos extends nk {
           }
           var5_int = og.field_f[param0][0];
           var6 = we.field_b[param0][0];
-          var7 = bg.field_f[param0][0];
+          var7 = SecondaryNodeDeque.field_f[param0][0];
           var8 = 0;
           var9 = 1;
           scanLoop1: while (true) {
@@ -2360,7 +2360,7 @@ public final class Lexicominos extends nk {
             if (stackIn_6_0 < stackIn_6_1) {
               var10 = og.field_f[param0][var9];
               var11 = we.field_b[param0][var9];
-              var12 = bg.field_f[param0][var9];
+              var12 = SecondaryNodeDeque.field_f[param0][var9];
               var13 = ce.field_c[var9 - 1];
               var14 = 1 + (var10 - var5_int);
               if (var29 != 0) {

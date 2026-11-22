@@ -55,7 +55,7 @@ final class hm {
           a.a(param0, param4, (byte) 103);
           la.a(param16, 2, param9, param17, param11, param18);
           ia.a(param2, 0, param13, param10);
-          vd.a(param19, param6, param14, param3);
+          IntrusiveDeque.a(param19, param6, param14, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

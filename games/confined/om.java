@@ -35,35 +35,35 @@ final class om extends IntrusiveNode {
         var5 = null;
         var6 = Confined.field_J ? 1 : 0;
         if (param4 == -30) {
-          var5_ref = (qn) (na.field_T.a(97));
+          var5_ref = (qn) (na.field_T.beginForward(97));
           while (var5_ref != null) {
             if (param0 == var5_ref.field_w) {
               return var5_ref;
             }
-            var5_ref = (qn) (na.field_T.d(2123));
+            var5_ref = (qn) (na.field_T.nextForward(2123));
           }
           var7 = new qn();
           var7.field_s = param1;
           var7.field_w = param0;
           var7.field_o = param3;
-          na.field_T.a((IntrusiveNode) (var7), (byte) 105);
+          na.field_T.addLast((IntrusiveNode) (var7), (byte) 105);
           dh.a(param2, var7, 21821);
           return var7;
         }
         om.b(true);
-        var5_refLifetime1 = (qn) (na.field_T.a(97));
+        var5_refLifetime1 = (qn) (na.field_T.beginForward(97));
         while (var5_refLifetime1 != null) {
           if (param0 == var5_refLifetime1.field_w) {
             return var5_refLifetime1;
           }
-          var5_refLifetime1 = (qn) (na.field_T.d(2123));
+          var5_refLifetime1 = (qn) (na.field_T.nextForward(2123));
         }
         var8 = new qn();
         var5_refLifetime2 = var8;
         var8.field_s = param1;
         var8.field_w = param0;
         var8.field_o = param3;
-        na.field_T.a((IntrusiveNode) (var8), (byte) 105);
+        na.field_T.addLast((IntrusiveNode) (var8), (byte) 105);
         dh.a(param2, var8, 21821);
         return var8;
     }

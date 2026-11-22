@@ -11,7 +11,7 @@ final class qb {
     private int field_d;
     private int[] field_f;
     static uf field_h;
-    static bc field_g;
+    static IntrusiveDeque field_g;
 
     final int b(byte param0) {
         int fieldTemp$0 = 0;
@@ -123,7 +123,7 @@ final class qb {
           ne.field_w = 0;
           return 0;
         }
-        field_g = (bc) null;
+        field_g = (IntrusiveDeque) null;
         var2Lifetime1 = ne.field_w;
         if (var2Lifetime1 == 0) {
           return 0;
@@ -201,7 +201,7 @@ final class qb {
           l.a(param0, false, param1 + 1402584396);
           return;
         }
-        field_g = (bc) null;
+        field_g = (IntrusiveDeque) null;
         l.a(param0, false, param1 + 1402584396);
     }
 
@@ -536,6 +536,6 @@ final class qb {
 
     static {
         field_h = new uf();
-        field_g = new bc();
+        field_g = new IntrusiveDeque();
     }
 }

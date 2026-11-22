@@ -18,7 +18,7 @@ final class r {
     }
 
     final static void a(bj param0, int param1, int param2) {
-        lf.field_k.a((IntrusiveNode) (param0), (byte) 67);
+        lf.field_k.addLast((IntrusiveNode) (param0), (byte) 67);
         if (param1 != -1) {
           return;
         }

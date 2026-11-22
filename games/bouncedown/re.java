@@ -38,7 +38,7 @@ final class re {
           if (param0 != 109) {
             field_a = (tg) null;
           }
-          uk.field_d.a(1, param1);
+          uk.field_d.addLast(1, param1);
           qh.a(param1, param2, -22762);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "re.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

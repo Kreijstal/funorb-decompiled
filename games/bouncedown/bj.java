@@ -197,7 +197,7 @@ final class bj extends ak {
                 var18.field_i[var5] = -5;
               }
             }
-            ob.field_c.a(1, var18);
+            ob.field_c.addLast(1, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

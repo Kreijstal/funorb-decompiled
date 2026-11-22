@@ -9,7 +9,7 @@ final class fg extends IntrusiveNode {
     int field_v;
     PlatformTask[] field_s;
     int[] field_r;
-    static vc field_t;
+    static IntrusiveDeque field_t;
     static PlatformTaskDispatcher field_q;
     int[] field_p;
     static PlatformTaskDispatcher field_i;
@@ -170,7 +170,7 @@ final class fg extends IntrusiveNode {
 
     static {
         field_u = new int[150];
-        field_t = new vc();
+        field_t = new IntrusiveDeque();
         field_m = null;
     }
 }

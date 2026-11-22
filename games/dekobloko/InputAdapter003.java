@@ -50,7 +50,7 @@ final class InputAdapter003 {
             return stackStringLocal9;
           }
           sceneWidgetPart014Local4.unlink((byte) 109);
-          sceneWidgetPart014Local4.performAction0134((byte) 74);
+          sceneWidgetPart014Local4.unlinkSecondary((byte) 74);
           MixedSupport029.integerState0182 = MixedSupport029.integerState0182 - 1;
           cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
           cipherPacketBufferLocal2.performAction1641(integerArgument3, -4);

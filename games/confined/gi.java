@@ -78,7 +78,7 @@ final class gi extends ah {
         }
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -103,13 +103,13 @@ final class gi extends ah {
           this.field_cb.field_m = -var4;
           this.field_cb.field_x = -var6;
           this.field_cb.field_u = 50.0;
-          param0.a((IntrusiveNode) (this.field_cb), (byte) 123);
+          param0.addLast((IntrusiveNode) (this.field_cb), (byte) 123);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gi.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

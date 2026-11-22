@@ -11,7 +11,7 @@ final class vm extends hf {
     private oi field_eb;
     static String field_bb;
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         try {
           if (param2 >= -5) {
             field_ab = (String) null;
@@ -37,7 +37,7 @@ final class vm extends hf {
     final void g(int param0) {
         if (param0 != 26402) {
           oi var3 = (oi) null;
-          this.a((mn) null, -0.40409225463452153, 117, (vg) null, (oi) null);
+          this.a((PrimaryNodeDeque) null, -0.40409225463452153, 117, (vg) null, (oi) null);
         }
         this.a((byte) -120, jg.field_e, 3.0);
     }
@@ -51,14 +51,14 @@ final class vm extends hf {
         }
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         try {
           int var3_int = 68 % ((-2 - param1) / 62);
           this.field_eb.field_p = this.field_D;
           this.field_eb.field_u = 0.5;
           this.field_eb.field_t = this.field_E;
           this.field_eb.field_o = this.field_t;
-          param0.a((IntrusiveNode) (this.field_eb), (byte) -93);
+          param0.addLast((IntrusiveNode) (this.field_eb), (byte) -93);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "vm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -117,20 +117,20 @@ final class ai extends r {
           }
           if (gg.field_g == 0) {
             gg.field_g = 200;
-            var1 = (pd) (bk.field_d.c((byte) 47));
+            var1 = (pd) (bk.field_d.beginForward((byte) 47));
             while (var1 != null) {
               if (!var1.field_n.isLinked((byte) -54)) {
                 var1.unlink(param0 + 20845);
               }
-              var1 = (pd) (bk.field_d.b((byte) -105));
+              var1 = (pd) (bk.field_d.nextForward((byte) -105));
             }
             if (jc.field_c != null) {
-              var1Lifetime1 = (pd) (jc.field_c.c((byte) 47));
+              var1Lifetime1 = (pd) (jc.field_c.beginForward((byte) 47));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_n.isLinked((byte) -54)) {
                   var1Lifetime1.unlink(-1);
                 }
-                var1Lifetime1 = (pd) (jc.field_c.b((byte) -105));
+                var1Lifetime1 = (pd) (jc.field_c.nextForward((byte) -105));
               }
             }
           }

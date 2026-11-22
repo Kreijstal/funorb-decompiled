@@ -40,7 +40,7 @@ final class wf {
         var3 = Main.field_T;
         try {
           mf.field_i = param0;
-          var2 = (gi) (aj.field_s.a((byte) 74));
+          var2 = (gi) (aj.field_s.beginForward((byte) 74));
           if (param1 >= -9) {
             var4 = (java.applet.Applet) null;
             wf.a((byte) -32, (java.applet.Applet) null);
@@ -51,7 +51,7 @@ final class wf {
             } else {
               var2.unlink(103);
             }
-            var2 = (gi) (aj.field_s.b((byte) -111));
+            var2 = (gi) (aj.field_s.nextForward((byte) -111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

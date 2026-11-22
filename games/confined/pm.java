@@ -68,7 +68,7 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(int param0, vg param1);
 
-    final void a(int param0, boolean param1, double param2, byte param3, od param4, da param5, vg param6, oi param7, mn param8, int param9) {
+    final void a(int param0, boolean param1, double param2, byte param3, od param4, da param5, vg param6, oi param7, PrimaryNodeDeque param8, int param9) {
         od stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -551,7 +551,7 @@ abstract class pm extends DualLinkNode {
         }
     }
 
-    final void a(od param0, da param1, oi param2, byte param3, double param4, mn param5, vg param6, int param7) {
+    final void a(od param0, da param1, oi param2, byte param3, double param4, PrimaryNodeDeque param5, vg param6, int param7) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -644,7 +644,7 @@ abstract class pm extends DualLinkNode {
         }
     }
 
-    final void a(int param0, od param1, int param2, da param3, int param4, oi param5, double param6, vg param7, mn param8) {
+    final void a(int param0, od param1, int param2, da param3, int param4, oi param5, double param6, vg param7, PrimaryNodeDeque param8) {
         try {
           this.a(param4, false, param6, (byte) 44, param1, param3, param7, param5, param8, param0);
           if (param2 != 27902) {
@@ -668,7 +668,7 @@ abstract class pm extends DualLinkNode {
         }
     }
 
-    private final sk a(double param0, od param1, double[] param2, int param3, vg param4, double param5, oi param6, mn param7) {
+    private final sk a(double param0, od param1, double[] param2, int param3, vg param4, double param5, oi param6, PrimaryNodeDeque param7) {
         double localTemp$0 = 0.0;
         sk stackIn_20_0 = null;
         sk stackIn_25_0 = null;
@@ -848,7 +848,7 @@ abstract class pm extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2384) {
-            discarded$1 = this.a((mn) null, (oi) null, (vg) null, (od) null, (double[]) null, -98, -0.5432285346715034);
+            discarded$1 = this.a((PrimaryNodeDeque) null, (oi) null, (vg) null, (od) null, (double[]) null, -98, -0.5432285346715034);
           }
           var9 = new mb(this, param2, param4, param3, param1);
           ri.a((IntrusiveNode) (this), 0, var9);
@@ -869,7 +869,7 @@ abstract class pm extends DualLinkNode {
         }
     }
 
-    void a(mn param0, byte param1) {
+    void a(PrimaryNodeDeque param0, byte param1) {
         try {
           int var3_int = 26 / ((-2 - param1) / 62);
         } catch (RuntimeException runtimeException) {
@@ -877,7 +877,7 @@ abstract class pm extends DualLinkNode {
         }
     }
 
-    private final sk a(mn param0, oi param1, vg param2, od param3, double[] param4, int param5, double param6) {
+    private final sk a(PrimaryNodeDeque param0, oi param1, vg param2, od param3, double[] param4, int param5, double param6) {
         RuntimeException var9 = null;
         sk stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -956,7 +956,7 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(int param0, mb param1);
 
-    abstract void a(mn param0, double param1, int param2, vg param3, oi param4);
+    abstract void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4);
 
     final void a(nf param0, boolean param1, double param2, vg param3) {
         nf stackIn_6_0;
@@ -1210,8 +1210,8 @@ abstract class pm extends DualLinkNode {
         try {
           this.a(true, (ee) (param1));
           if (param0 != 640) {
-            mn var4 = (mn) null;
-            this.a(107, (od) null, 5, (da) null, -102, (oi) null, -0.8503192618374721, (vg) null, (mn) null);
+            PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
+            this.a(107, (od) null, 5, (da) null, -102, (oi) null, -0.8503192618374721, (vg) null, (PrimaryNodeDeque) null);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "pm.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -62,7 +62,7 @@ final class sk {
         rc var2 = null;
         if (param1 == 125) {
           var2 = new rc();
-          ue.field_b.a(var2, param1 + 27237);
+          ue.field_b.addLast(var2, param1 + 27237);
           fl.b(1, param0);
           return var2;
         }

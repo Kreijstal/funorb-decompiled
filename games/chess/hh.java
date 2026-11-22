@@ -52,7 +52,7 @@ final class hh extends IntrusiveNode {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (ve) (r.field_Ib.a((long)var2.hashCode(), 3000));
+          var3 = (ve) (r.field_Ib.get((long)var2.hashCode(), 3000));
           while (true) {
             if (var3 == null) {
               return null;
@@ -63,7 +63,7 @@ final class hh extends IntrusiveNode {
               var4 = var3.field_Fb;
             }
             if (!var4.equals(var2)) {
-              var3 = (ve) (r.field_Ib.b(true));
+              var3 = (ve) (r.field_Ib.nextWithSameKey(true));
               continue;
             }
             break;

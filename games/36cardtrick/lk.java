@@ -4,7 +4,7 @@
 import java.util.*;
 
 class lk extends IntrusiveNode {
-    static bk field_g;
+    static IntrusiveDeque field_g;
     String field_n;
     int field_m;
     String field_r;
@@ -71,7 +71,7 @@ class lk extends IntrusiveNode {
 
     boolean d(int param0) {
         if (param0 < 44) {
-          field_g = (bk) null;
+          field_g = (IntrusiveDeque) null;
           return false;
         }
         return false;
@@ -642,7 +642,7 @@ class lk extends IntrusiveNode {
     }
 
     static {
-        field_g = new bk();
+        field_g = new IntrusiveDeque();
         field_p = "Connection lost. <%0>";
         field_t = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_u = new String[]{"Complete level<nbsp>1", "Complete level<nbsp>2", "Complete level<nbsp>3", "Complete level<nbsp>4", "Complete level<nbsp>5", "Complete a level with no more than 18<nbsp>misses", "Complete a level with no more than 12<nbsp>misses", "Complete a level with no more than 9<nbsp>misses", "Complete a level with 1:00 remaining", "Complete a level with 1:30 remaining", "Complete a level with 2:00 remaining", "Complete a level with 2:30 remaining", "Manage 3 hits in a row (not counting the last two of a<nbsp>level)", "Manage 4 hits in a row (not counting the last two of a<nbsp>level)", "Manage 5 hits in a row (not counting the last two of a<nbsp>level)"};

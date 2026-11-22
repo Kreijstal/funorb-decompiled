@@ -130,7 +130,7 @@ final class ah extends pj implements fh, ke {
           var5Lifetime1 = wd.field_e[11] >> 8;
           var6Lifetime1 = vb.field_n << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = dg.a(-20870, var6Lifetime1) >> 8;
+          var8Lifetime1 = SecondaryNodeDeque.a(-20870, var6Lifetime1) >> 8;
           var9Lifetime1 = u.a(var6Lifetime1, (byte) 74) >> 8;
           if (ck.field_c != -1 &&
             ob.field_g != -1) {

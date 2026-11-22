@@ -5,7 +5,7 @@ final class f extends dk {
     static dd field_E;
     static el field_G;
     static String field_H;
-    private vc field_I;
+    private IntrusiveDeque field_I;
     static int[] field_F;
 
     final static void d(byte param0) {
@@ -30,13 +30,13 @@ final class f extends dk {
 
     public f() {
         super(0, 0, ll.field_m, ca.field_Q, (ComponentLayout) null, (kd) null);
-        this.field_I = new vc();
+        this.field_I = new IntrusiveDeque();
     }
 
     final void d(boolean param0) {
         int var4 = fleas.field_A ? 1 : 0;
         if (!param0) {
-          this.field_I = (vc) null;
+          this.field_I = (IntrusiveDeque) null;
         }
         we var2 = new we(this.field_I);
         db var3 = (db) (var2.b(78));
@@ -103,7 +103,7 @@ final class f extends dk {
             throw new IllegalArgumentException();
           }
           var3 = (db) (param0);
-          this.field_I.b(true, var3);
+          this.field_I.addFirst(true, var3);
           if (param1 != -35) {
             field_G = (el) null;
           }

@@ -261,7 +261,7 @@ final class pd extends IntrusiveNode {
         }
         if (this.field_y == 6 &&
           null != this.field_p) {
-          this.field_s.field_h.a(param0 ^ -113, new me((double)this.field_p.field_g, (double)this.field_p.field_h, 0.04 * (-0.5 + Math.random()), 0.04 * (-0.5 + Math.random()), 1));
+          this.field_s.field_h.addLast(param0 ^ -113, new me((double)this.field_p.field_g, (double)this.field_p.field_h, 0.04 * (-0.5 + Math.random()), 0.04 * (-0.5 + Math.random()), 1));
           this.field_B = this.field_B + 1;
           if (this.field_n) {
             this.field_B = this.field_B + 1;

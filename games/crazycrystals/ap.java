@@ -297,7 +297,7 @@ final class ap extends ob {
               fieldTemp$0 = hl.field_h;
               hl.field_h = hl.field_h + 1;
               var5.field_db = fieldTemp$0;
-              g.field_b.b(0, var5);
+              g.field_b.addLast(0, var5);
             }
             var5.field_fb = var4_ref_String;
             return;
@@ -350,7 +350,7 @@ final class ap extends ob {
             fieldTemp$1 = ob.field_g;
             ob.field_g = ob.field_g + 1;
             var6_ref.field_db = fieldTemp$1;
-            df.field_b.b(0, var6_ref);
+            df.field_b.addLast(0, var6_ref);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -358,7 +358,7 @@ final class ap extends ob {
           var6_ref.field_cb = (String) (var3Lifetime1);
           var6_ref.field_fb = var4_ref_StringLifetime1;
           var6_ref.unlink(param0);
-          var7_ref = (ce) (df.field_b.g(32073));
+          var7_ref = (ce) (df.field_b.beginForward(32073));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
@@ -366,7 +366,7 @@ final class ap extends ob {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (ll.a(stackIn_67_0, 0, var7_ref))) {
-                var7_ref = (ce) (df.field_b.a(false));
+                var7_ref = (ce) (df.field_b.nextForward(false));
                 continue;
               }
             }
@@ -382,7 +382,7 @@ final class ap extends ob {
             }
             break;
           }
-          df.field_b.b(0, var6_ref);
+          df.field_b.addLast(0, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

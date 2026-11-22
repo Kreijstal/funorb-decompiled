@@ -78,7 +78,7 @@ final class lb {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
-            var14 = (dc) (mj.field_m.b((byte) 117));
+            var14 = (dc) (mj.field_m.beginForward((byte) 117));
             if (var14 == null) {
               th.a(124);
               return;
@@ -89,7 +89,7 @@ final class lb {
             var14.unlink(57);
           } else {
             if (var2 == 1) {
-              var11 = (ha) (oa.field_d.b((byte) 122));
+              var11 = (ha) (oa.field_d.beginForward((byte) 122));
               if (var11 == null) {
                 th.a(103);
                 return;
@@ -100,7 +100,7 @@ final class lb {
                 MouseWheelInput.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
                 th.a(107);
               } else {
-                var15 = (dc) (mj.field_m.b((byte) 118));
+                var15 = (dc) (mj.field_m.beginForward((byte) 118));
                 if (var15 == null) {
                   th.a(121);
                   return;

@@ -193,7 +193,7 @@ class e {
           if (var1 != 0) {
             field_k.field_c = true;
             while (field_k.field_b) {
-              wh.a(50L, 19406);
+              SecondaryNodeDeque.a(50L, 19406);
             }
             field_k = null;
           }

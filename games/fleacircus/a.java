@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static vc field_e;
+    static IntrusiveDeque field_e;
     static dd field_f;
     static ResourceArchive field_a;
     static dd[] field_b;
@@ -44,7 +44,7 @@ final class a {
     }
 
     static {
-        field_e = new vc();
+        field_e = new IntrusiveDeque();
         field_h = "Type your password again to make sure it's correct";
         field_c = "End Game";
     }

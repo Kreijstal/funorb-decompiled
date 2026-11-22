@@ -41,8 +41,8 @@ final class th extends PacketBuffer {
           if (param0 < 56) {
             return;
           }
-          if (null != bg.field_b) {
-            bg.field_b.field_C.a(param1, false);
+          if (null != SecondaryNodeDeque.field_b) {
+            SecondaryNodeDeque.field_b.field_C.a(param1, false);
           }
           if (null == hd.field_a) {
             return;

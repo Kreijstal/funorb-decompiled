@@ -30,7 +30,7 @@ final class ab {
           if (param0 != 0) {
             return;
           }
-          dh.a(32, vf.field_w, wi.field_kb, qc.field_w);
+          SecondaryNodeDeque.a(32, vf.field_w, wi.field_kb, qc.field_w);
           gf.a(ib.field_a);
           gf.e(vf.field_w, qc.field_w, vf.field_w + 200, wi.field_kb + qc.field_w + 3);
           if (-1 == ce.field_p) {

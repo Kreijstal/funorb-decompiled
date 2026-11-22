@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ec extends PcmStream {
-    private vd field_o;
-    private vd field_m;
+    private IntrusiveDeque field_o;
+    private IntrusiveDeque field_m;
     private int field_n;
     private int field_l;
 
@@ -29,7 +29,7 @@ final class ec extends PcmStream {
           param2 = param2 - var4;
           this.field_l = this.field_l + var4;
           this.e();
-          var5 = (ak) (this.field_m.h(-11151));
+          var5 = (ak) (this.field_m.beginForward(-11151));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -46,7 +46,7 @@ final class ec extends PcmStream {
     }
 
     final PcmStream c() {
-        return (PcmStream) (this.field_o.e(0));
+        return (PcmStream) (this.field_o.nextForward(0));
     }
 
     final int d() {
@@ -54,16 +54,16 @@ final class ec extends PcmStream {
     }
 
     final synchronized void a(PcmStream param0) {
-        this.field_o.a(79, param0);
+        this.field_o.addFirst(79, param0);
     }
 
     private final void e() {
         ak var1 = null;
         if (this.field_l > 0) {
-          var1 = (ak) (this.field_m.h(-11151));
+          var1 = (ak) (this.field_m.beginForward(-11151));
           while (var1 != null) {
             var1.field_h = var1.field_h - this.field_l;
-            var1 = (ak) (this.field_m.e(0));
+            var1 = (ak) (this.field_m.nextForward(0));
           }
           this.field_n = this.field_n - this.field_l;
           this.field_l = 0;
@@ -71,22 +71,22 @@ final class ec extends PcmStream {
     }
 
     final PcmStream a() {
-        return (PcmStream) (this.field_o.h(-11151));
+        return (PcmStream) (this.field_o.beginForward(-11151));
     }
 
     private final void e(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_o.h(-11151));
+        PcmStream var2 = (PcmStream) (this.field_o.beginForward(-11151));
         while (var2 != null) {
           var2.d(param0);
-          var2 = (PcmStream) (this.field_o.e(0));
+          var2 = (PcmStream) (this.field_o.nextForward(0));
         }
     }
 
     private final void a(ak param0) {
         param0.unlink(-16175);
         param0.a();
-        IntrusiveNode var2 = this.field_m.field_c.next;
-        if (var2 == this.field_m.field_c) {
+        IntrusiveNode var2 = this.field_m.sentinel.next;
+        if (var2 == this.field_m.sentinel) {
           this.field_n = -1;
         } else {
           this.field_n = ((ak) (var2)).field_h;
@@ -94,10 +94,10 @@ final class ec extends PcmStream {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_o.h(-11151));
+        PcmStream var4 = (PcmStream) (this.field_o.beginForward(-11151));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (PcmStream) (this.field_o.e(0));
+          var4 = (PcmStream) (this.field_o.nextForward(0));
         }
     }
 
@@ -107,9 +107,9 @@ final class ec extends PcmStream {
 
     private final void a(IntrusiveNode param0, ak param1) {
         while (true) {
-          if (param0 == this.field_m.field_c) {
+          if (param0 == this.field_m.sentinel) {
             tf.a(param1, 16709, param0);
-            this.field_n = ((ak) (this.field_m.field_c.next)).field_h;
+            this.field_n = ((ak) (this.field_m.sentinel.next)).field_h;
             return;
           }
           if (((ak) (param0)).field_h <= param1.field_h) {
@@ -119,7 +119,7 @@ final class ec extends PcmStream {
           break;
         }
         tf.a(param1, 16709, param0);
-        this.field_n = ((ak) (this.field_m.field_c.next)).field_h;
+        this.field_n = ((ak) (this.field_m.sentinel.next)).field_h;
         return;
     }
 
@@ -144,7 +144,7 @@ final class ec extends PcmStream {
           param0 = param0 - var2;
           this.field_l = this.field_l + var2;
           this.e();
-          var3 = (ak) (this.field_m.h(-11151));
+          var3 = (ak) (this.field_m.beginForward(-11151));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -161,8 +161,8 @@ final class ec extends PcmStream {
     }
 
     public ec() {
-        this.field_o = new vd();
-        this.field_m = new vd();
+        this.field_o = new IntrusiveDeque();
+        this.field_m = new IntrusiveDeque();
         this.field_n = -1;
         this.field_l = 0;
     }

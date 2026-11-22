@@ -61,7 +61,7 @@ final class q {
           }
           var2 = var10.readUnsignedByte(false);
           if (var2 == 0) {
-            var9 = (kf) (ByteStorage.field_a.c((byte) 47));
+            var9 = (kf) (ByteStorage.field_a.beginForward((byte) 47));
             if (var9 == null) {
               k.c(-28354);
               return;
@@ -87,10 +87,10 @@ final class q {
             return;
           }
           var3 = var10.readInt((byte) 122);
-          var4_ref_oa = (oa) (cf.field_d.c((byte) 47));
+          var4_ref_oa = (oa) (cf.field_d.beginForward((byte) 47));
           while (var4_ref_oa != null) {
             if (var3 != var4_ref_oa.field_i) {
-              var4_ref_oa = (oa) (cf.field_d.b((byte) -105));
+              var4_ref_oa = (oa) (cf.field_d.nextForward((byte) -105));
               continue;
             }
             break;

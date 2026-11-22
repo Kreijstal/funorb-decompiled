@@ -70,16 +70,16 @@ final class ResourceSupport004 extends MixedSupport115 {
           if (byteArgument2 != -50) {
             return;
           }
-          sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1741((byte) -99));
+          sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.beginBackward((byte) -99));
           while (sceneWidgetPart013Local1 != null) {
             if (sceneWidgetPart013Local1.computeBoolean1708(sceneWidgetPart013Argument1, false)) {
-              sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1745(true));
+              sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.nextBackward(true));
               continue;
             }
             break;
           }
           if (sceneWidgetPart013Local1 == null) {
-            MixedSupport051.nodeDequeState0009.performAction1735(sceneWidgetPart013Argument1, 2777);
+            MixedSupport051.nodeDequeState0009.addFirst(sceneWidgetPart013Argument1, 2777);
             return;
           }
           stackIntegerLocal4 = 114;

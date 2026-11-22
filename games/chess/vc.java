@@ -148,7 +148,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static bk a(int param0, int param1) {
         int var2 = -56 % ((param0 + 30) / 39);
         bk var3 = new bk();
-        bh.field_D.a((IntrusiveNode) (var3), (byte) 109);
+        bh.field_D.addFirst((IntrusiveNode) (var3), (byte) 109);
         el.a(4, param1);
         return var3;
     }
@@ -172,7 +172,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        jc var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         ve var6 = null;
         int var7 = 0;
@@ -205,7 +205,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
           fg.field_d.field_Kb.field_Jb.field_db = null;
           fg.field_d.field_tb = true;
           var5 = null;
-          var6 = (ve) (var4.g(-18110));
+          var6 = (ve) (var4.beginBackward(-18110));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_I == null) {
@@ -268,7 +268,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var14 = ag.field_f;
               var17.field_b.a(true, var13, 0, var14, 0);
             }
-            var6 = (ve) (var4.a((byte) -106));
+            var6 = (ve) (var4.nextBackward((byte) -106));
           }
           if (fg.field_d.field_Hb.field_L != 0) {
             me.field_a = new kd(fg.field_d.field_Hb.field_U, fg.field_d.field_Hb.field_wb, fg.field_d.field_Hb.field_M, fg.field_d.field_Hb.field_pb, ki.field_N, od.field_V, qn.field_P, qn.field_P);

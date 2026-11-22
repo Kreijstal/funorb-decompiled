@@ -11,11 +11,11 @@ final class bk extends IntrusiveNode {
 
     final static ln a(int param0, int param1) {
         if (param0 <= -115) {
-          return null != ae.field_f ? (ln) (ae.field_f.a((long)param1, 3000)) : null;
+          return null != ae.field_f ? (ln) (ae.field_f.get((long)param1, 3000)) : null;
         }
         String var3 = (String) null;
         bk.a((byte) -107, true, (String) null, (ol) null, (String) null, 55, (String) null);
-        return null != ae.field_f ? (ln) (ae.field_f.a((long)param1, 3000)) : null;
+        return null != ae.field_f ? (ln) (ae.field_f.get((long)param1, 3000)) : null;
     }
 
     final static void a(int param0) {
@@ -54,7 +54,7 @@ final class bk extends IntrusiveNode {
             lg.field_a = null;
             ih.field_Q = param6;
             DelegatingCanvas.field_a = ci.field_ub;
-            cn.field_f = param5;
+            SecondaryNodeDeque.field_f = param5;
             jd.field_d = param2;
             oc.field_o = param4;
             wc.field_E = param1;

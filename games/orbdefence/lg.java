@@ -80,7 +80,7 @@ final class lg {
 
     final static dc a(int param0, boolean param1) {
         dc var2 = new dc();
-        mj.field_m.a(-125, var2);
+        mj.field_m.addLast(-125, var2);
         if (param1) {
           return (dc) null;
         }

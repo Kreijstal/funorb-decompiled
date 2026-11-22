@@ -9,7 +9,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
     private java.awt.image.ImageConsumer field_k;
     static int field_m;
     static int field_l;
-    static vc field_n;
+    static IntrusiveDeque field_n;
 
     final void a(java.awt.Graphics param0, int param1, int param2, byte param3) {
         try {
@@ -26,7 +26,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          field_n = (vc) null;
+          field_n = (IntrusiveDeque) null;
           field_i = null;
           field_n = null;
           return;

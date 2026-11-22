@@ -334,7 +334,7 @@ final class gg {
           }
           var2 = var9.readUnsignedByte(param0 ^ -46);
           if (var2 == 0) {
-            var8 = (uj) (vm.field_h.g(param0 ^ -18154));
+            var8 = (uj) (vm.field_h.beginBackward(param0 ^ -18154));
             if (var8 == null) {
               si.d(65280);
               return;
@@ -355,10 +355,10 @@ final class gg {
           } else {
             if (var2 == 1) {
               var3 = var9.readInt((byte) -117);
-              var4_ref_om = (om) (fg.field_c.g(-18110));
+              var4_ref_om = (om) (fg.field_c.beginBackward(-18110));
               while (var4_ref_om != null) {
                 if (var3 != var4_ref_om.field_k) {
-                  var4_ref_om = (om) (fg.field_c.a((byte) -125));
+                  var4_ref_om = (om) (fg.field_c.nextBackward((byte) -125));
                   continue;
                 }
                 break;

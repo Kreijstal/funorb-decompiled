@@ -12,7 +12,7 @@ final class vg extends pm {
     double field_T;
     double field_L;
     static sh field_Z;
-    static mn field_J;
+    static PrimaryNodeDeque field_J;
     private da field_S;
     double field_H;
     double field_N;
@@ -150,7 +150,7 @@ final class vg extends pm {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         try {
           if (param2 > -5) {
             this.field_R = 2.2622491296623233;
@@ -166,7 +166,7 @@ final class vg extends pm {
         this.field_D = this.field_C * param6 + param5;
         if (param0 != 256) {
           oi var15 = (oi) null;
-          this.a((mn) null, 0.17170823466232027, -123, (vg) null, (oi) null);
+          this.a((PrimaryNodeDeque) null, 0.17170823466232027, -123, (vg) null, (oi) null);
         }
     }
 

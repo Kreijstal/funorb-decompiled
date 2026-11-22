@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class dh implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static AccountRequestState field_b;
     static String field_c;
     static String field_f;
-    DualLinkNode field_d;
+    DualLinkNode sentinel;
     static cn field_a;
     static int field_g;
     static String field_e;
@@ -20,7 +20,7 @@ final class dh implements Iterable {
         return true;
     }
 
-    final void a(DualLinkNode param0, boolean param1) {
+    final void addLast(DualLinkNode param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -28,8 +28,8 @@ final class dh implements Iterable {
           if (null != param0.field_l) {
             param0.unlinkSecondary((byte) -2);
           }
-          param0.field_n = this.field_d;
-          param0.field_l = this.field_d.field_l;
+          param0.field_n = this.sentinel;
+          param0.field_l = this.sentinel.field_l;
           param0.field_l.field_n = param0;
           param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
@@ -74,7 +74,7 @@ final class dh implements Iterable {
           if (param0 <= -123) {
             return;
           }
-          dh.a(true);
+          SecondaryNodeDeque.a(true);
           return;
         }
         if (MouseWheelInput.field_d != -hh.field_b + 250) {
@@ -82,19 +82,19 @@ final class dh implements Iterable {
           if (param0 <= -123) {
             return;
           }
-          dh.a(true);
+          SecondaryNodeDeque.a(true);
           return;
         }
         MouseWheelInput.field_d = MouseWheelInput.field_d + 1;
         if (param0 <= -123) {
           return;
         }
-        dh.a(true);
+        SecondaryNodeDeque.a(true);
     }
 
-    final DualLinkNode b(boolean param0) {
-        DualLinkNode var2 = this.field_d.field_n;
-        if (this.field_d == var2) {
+    final DualLinkNode removeFirst(boolean param0) {
+        DualLinkNode var2 = this.sentinel.field_n;
+        if (this.sentinel == var2) {
           return null;
         }
         var2.unlinkSecondary((byte) -2);
@@ -102,7 +102,7 @@ final class dh implements Iterable {
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
-        this.a((DualLinkNode) null, false);
+        this.addLast((DualLinkNode) null, false);
         return var2;
     }
 
@@ -135,12 +135,12 @@ final class dh implements Iterable {
           field_e = null;
           return;
         }
-        dh.a(-80);
+        SecondaryNodeDeque.a(-80);
         field_f = null;
         field_e = null;
     }
 
-    private dh() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

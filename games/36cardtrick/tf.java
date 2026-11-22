@@ -4,7 +4,7 @@
 final class tf extends pd {
     private Object field_n;
     static fe field_o;
-    static bk field_q;
+    static IntrusiveDeque field_q;
     static String field_m;
     static String[] field_p;
     static jd field_r;
@@ -276,7 +276,7 @@ final class tf extends pd {
 
     static {
         field_o = new fe(3);
-        field_q = new bk();
+        field_q = new IntrusiveDeque();
         field_m = "End Game";
     }
 }

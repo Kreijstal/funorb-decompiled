@@ -82,15 +82,15 @@ final class am {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           var2_int = 6 % ((param1 - 15) / 33);
-          var3 = (ha) (oa.field_d.b((byte) -111));
+          var3 = (ha) (oa.field_d.beginForward((byte) -111));
           while (var3 != null) {
             tl.a(-128, var3, param0);
-            var3 = (ha) (oa.field_d.d(853));
+            var3 = (ha) (oa.field_d.nextForward(853));
           }
-          var2 = mj.field_m.b((byte) -123);
+          var2 = mj.field_m.beginForward((byte) -123);
           while (var2 != null) {
             tg.a(-126, param0);
-            var2 = mj.field_m.d(853);
+            var2 = mj.field_m.nextForward(853);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -12,7 +12,7 @@ final class sa {
     static String field_h;
     static int field_c;
 
-    final static ij[] a(int param0, ng param1) {
+    final static ij[] a(int param0, IntrusiveDeque param1) {
         int incrementValue$0 = 0;
         ij[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
@@ -27,15 +27,15 @@ final class sa {
         int var6 = 0;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
-          var2 = new ij[param1.b(2)];
+          var2 = new ij[param1.size(2)];
           var3 = param0;
-          var4 = (ij) (param1.a(true));
+          var4 = (ij) (param1.beginForward(true));
           while (null != var4) {
             var4.field_i = var3;
             incrementValue$0 = var3;
             var3++;
             var2[incrementValue$0] = var4;
-            var5 = (mk) (var4.field_k.a(true));
+            var5 = (mk) (var4.field_k.beginForward(true));
             while (var5 != null) {
               while (null != var5.field_k.field_m) {
                 var5.field_k = var5.field_k.field_m;
@@ -55,9 +55,9 @@ final class sa {
                   }
                 }
               }
-              var5 = (mk) (var4.field_k.f(param0 ^ 2));
+              var5 = (mk) (var4.field_k.nextForward(param0 ^ 2));
             }
-            var4 = (ij) (param1.f(2));
+            var4 = (ij) (param1.nextForward(2));
           }
           stackIn_17_0 = var2;
           return stackIn_17_0;

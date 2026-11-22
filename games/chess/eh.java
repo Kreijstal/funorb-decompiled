@@ -8,7 +8,7 @@ abstract class eh extends ma {
     static int[] field_L;
     static dm field_K;
     boolean field_P;
-    static jc field_R;
+    static IntrusiveDeque field_R;
     private int field_N;
     static ci field_M;
     static java.util.zip.CRC32 field_O;
@@ -229,7 +229,7 @@ abstract class eh extends ma {
             return stackIn_5_0;
           }
           if (param0 != 28207) {
-            field_R = (jc) null;
+            field_R = (IntrusiveDeque) null;
           }
           var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
           do {
@@ -269,7 +269,7 @@ abstract class eh extends ma {
 
     static {
         field_K = null;
-        field_R = new jc();
+        field_R = new IntrusiveDeque();
         field_O = new java.util.zip.CRC32();
     }
 }

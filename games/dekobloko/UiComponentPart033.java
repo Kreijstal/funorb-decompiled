@@ -297,7 +297,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
         int integerLocal17;
         integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         objectLocal2 = null;
-        MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.nodeDequeState0034.performAction1742(115);
+        MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.nodeDequeState0034.clear(115);
         integerLocal3 = 0;
         integerLocal4 = 0;
         for (integerLocal5 = MixedSupport058.integerState0317 - 1; integerLocal5 >= 0; integerLocal5--) {

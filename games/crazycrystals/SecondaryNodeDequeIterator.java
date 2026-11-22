@@ -5,13 +5,13 @@ import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode nextNode;
-    private be deque;
+    private SecondaryNodeDeque deque;
     static int field_b;
     static String[] field_c;
     private DualLinkNode lastReturned;
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_f;
+        return this.nextNode != this.deque.sentinel;
     }
 
     public static void a(boolean param0) {
@@ -48,7 +48,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (var1 != this.deque.field_f) {
+        if (var1 != this.deque.sentinel) {
           this.nextNode = ((DualLinkNode) (var1)).field_j;
         } else {
           var1 = null;
@@ -58,11 +58,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    SecondaryNodeDequeIterator(be param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
-          this.nextNode = this.deque.field_f.field_j;
+          this.nextNode = this.deque.sentinel.field_j;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ')');

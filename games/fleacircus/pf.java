@@ -152,9 +152,9 @@ final class pf {
         int var7Lifetime1Lifetime1;
         var9 = fleas.field_A ? 1 : 0;
         try {
-          vc.field_a = param0;
+          IntrusiveDeque.field_a = param0;
           d.field_L = true;
-          if (vc.field_a == 0) {
+          if (IntrusiveDeque.field_a == 0) {
             var3_int = nb.a(ResourceArchive.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
             var4 = var3_int + 3;
             m.field_c = new int[var4];
@@ -173,7 +173,7 @@ final class pf {
             fb.field_d[-1 + var4] = ja.field_O;
             m.field_c[-1 + var4] = 1;
             em.field_e[1] = 5;
-          } else if (vc.field_a == 1) {
+          } else if (IntrusiveDeque.field_a == 1) {
             var3_int = nb.a(ResourceArchive.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
             var4 = 2 + var3_int;
             fb.field_d = new String[var4];
@@ -189,8 +189,8 @@ final class pf {
             fb.field_d[-1 + var4] = ja.field_O;
             m.field_c[var4 - 1] = 0;
             em.field_e[0] = 5;
-          } else if (vc.field_a != 2) {
-            if (vc.field_a == 3) {
+          } else if (IntrusiveDeque.field_a != 2) {
+            if (IntrusiveDeque.field_a == 3) {
               if (!fg.field_q.privilegedTasksEnabled) {
                 var3_int = nb.a(sa.field_b, vh.field_l, pb.field_e, sc.field_d, 1);
               } else {
@@ -210,7 +210,7 @@ final class pf {
               fb.field_d[var4 - 1] = ja.field_O;
               m.field_c[-1 + var4] = 0;
               em.field_e[0] = 5;
-            } else if (vc.field_a == 4) {
+            } else if (IntrusiveDeque.field_a == 4) {
               var3_int = nb.a(oc.field_c, vh.field_l, pb.field_e, sc.field_d, 1);
               var4 = var3_int + 2;
               fb.field_d = new String[var4];
@@ -227,7 +227,7 @@ final class pf {
               m.field_c[-1 + var4] = 0;
               em.field_e[0] = 5;
             } else {
-              if (vc.field_a != 5) {
+              if (IntrusiveDeque.field_a != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = nb.a(tg.field_a, vh.field_l, pb.field_e, sc.field_d, 1);
@@ -351,7 +351,7 @@ final class pf {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (vc.field_a == 2) {
+          if (IntrusiveDeque.field_a == 2) {
             var10 = j.field_o;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -382,7 +382,7 @@ final class pf {
             }
             em.field_d = stackIn_115_0 + stackIn_116_1;
           }
-          rb.field_H = vc.field_f - (em.field_d >> 1);
+          rb.field_H = IntrusiveDeque.field_f - (em.field_d >> 1);
           vh.field_j = new int[fb.field_d.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = rb.field_H;
@@ -403,7 +403,7 @@ final class pf {
             }
             var4Lifetime3++;
           }
-          if (vc.field_a == 2) {
+          if (IntrusiveDeque.field_a == 2) {
             bk.field_a.a(-1, -1, param2, -101);
           } else {
             bk.field_a.a(bg.a(ag.field_f, kc.field_b, 112), 0, param2, param1 - 85);

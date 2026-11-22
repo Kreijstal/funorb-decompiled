@@ -18,7 +18,7 @@ abstract class ib extends DualLinkNode {
 
     final static void e(int param0) {
         CipherPacketBuffer var3 = null;
-        sc var1 = (sc) (hd.field_c.g(32073));
+        sc var1 = (sc) (hd.field_c.beginForward(32073));
         int var2 = -21 / ((param0 - 61) / 40);
         if (var1 != null) {
           var3 = kd.field_n;

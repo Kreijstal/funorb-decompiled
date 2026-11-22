@@ -129,7 +129,7 @@ final class MixedSupport076 extends ResourceSupport003 {
         if (null == this.computeResourceSupport0010949(true)) {
           return;
         }
-        HashNode hashNodeLocal5 = this.nodeDequeState0016.computeHashNode1741((byte) -113);
+        HashNode hashNodeLocal5 = this.nodeDequeState0016.beginBackward((byte) -113);
         while (hashNodeLocal5 != null) {
           integerLocal1 = (int)hashNodeLocal5.key;
           if (integerLocal1 < 0) {
@@ -153,7 +153,7 @@ final class MixedSupport076 extends ResourceSupport003 {
               }
             }
           }
-          hashNodeLocal5 = this.nodeDequeState0016.computeHashNode1745(true);
+          hashNodeLocal5 = this.nodeDequeState0016.nextBackward(true);
         }
         if (integerArgument1 != 16322) {
           this.performAction0951(-71);
@@ -405,7 +405,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           }
           if (this.booleanState0099) {
             integerLocal5 = 1;
-            hashNodeLocal7 = this.nodeDequeState0015.computeHashNode1741((byte) 54);
+            hashNodeLocal7 = this.nodeDequeState0015.beginBackward((byte) 54);
             while (hashNodeLocal7 != null) {
               integerLocal8 = (int)hashNodeLocal7.key;
               if (this.byteArrayState0013[integerLocal8] == 0) {
@@ -416,7 +416,7 @@ final class MixedSupport076 extends ResourceSupport003 {
               } else {
                 integerLocal5 = 0;
               }
-              hashNodeLocal7 = this.nodeDequeState0015.computeHashNode1745(true);
+              hashNodeLocal7 = this.nodeDequeState0015.nextBackward(true);
             }
             scanLoop1: while (true) {
               if (this.integerState0434 < this.resourceSupport001State0002.integerArrayState0011.length) {
@@ -431,7 +431,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                   if (0 == this.byteArrayState0013[this.integerState0434]) {
                     hashNodeLocal10 = new HashNode();
                     hashNodeLocal10.key = (long)this.integerState0434;
-                    this.nodeDequeState0015.performAction1735(hashNodeLocal10, 2777);
+                    this.nodeDequeState0015.addFirst(hashNodeLocal10, 2777);
                     integerLocal5 = 0;
                   }
                 }
@@ -449,7 +449,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           else {
             if (this.booleanState0100) {
               integerLocal12 = 1;
-              hashNodeLocal14 = this.nodeDequeState0015.computeHashNode1741((byte) 77);
+              hashNodeLocal14 = this.nodeDequeState0015.beginBackward((byte) 77);
               while (hashNodeLocal14 != null) {
                 integerLocal13 = (int)hashNodeLocal14.key;
                 if (1 != this.byteArrayState0013[integerLocal13]) {
@@ -460,7 +460,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                 } else {
                   hashNodeLocal14.unlink((byte) 102);
                 }
-                hashNodeLocal14 = this.nodeDequeState0015.computeHashNode1745(true);
+                hashNodeLocal14 = this.nodeDequeState0015.nextBackward(true);
               }
               scanLoop2: while (true) {
                 if (this.integerState0434 < this.resourceSupport001State0002.integerArrayState0011.length) {
@@ -475,7 +475,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                     if (1 != this.byteArrayState0013[this.integerState0434]) {
                       hashNodeLocal11 = new HashNode();
                       hashNodeLocal11.key = (long)this.integerState0434;
-                      this.nodeDequeState0015.performAction1735(hashNodeLocal11, 2777);
+                      this.nodeDequeState0015.addFirst(hashNodeLocal11, 2777);
                       integerLocal12 = 0;
                     }
                   }

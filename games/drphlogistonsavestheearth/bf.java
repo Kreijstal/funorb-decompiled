@@ -2451,7 +2451,7 @@ final class bf {
                 break;
               }
             case 7:
-              this.field_r = vd.field_g;
+              this.field_r = IntrusiveDeque.field_g;
               if (var11 == 0) {
                 break;
               }

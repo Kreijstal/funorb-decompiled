@@ -211,7 +211,7 @@ final class ah {
                 var19.field_n[var6] = -5;
               }
             }
-            hc.field_b.b(0, var19);
+            hc.field_b.addLast(0, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

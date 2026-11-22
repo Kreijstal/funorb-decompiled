@@ -4,7 +4,7 @@
 final class jl extends ff {
     private String field_d;
     static int field_h;
-    static bk field_e;
+    static IntrusiveDeque field_e;
     private String field_f;
     static long field_c;
     static de field_g;
@@ -20,7 +20,7 @@ final class jl extends ff {
     final void a(int param0, PacketBuffer param1) {
         try {
           if (param0 != -1) {
-            field_e = (bk) null;
+            field_e = (IntrusiveDeque) null;
           }
           param1.writePrefixedString(744825352, this.field_f);
           param1.writeBase38String(this.field_d, 15045);

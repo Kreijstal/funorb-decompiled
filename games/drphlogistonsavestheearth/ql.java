@@ -11,7 +11,7 @@ final class ql {
     private int field_h;
     static int[] field_b;
     private int field_j;
-    static vd field_i;
+    static IntrusiveDeque field_i;
 
     final void a(int param0, byte param1) {
         int var3;
@@ -316,7 +316,7 @@ final class ql {
         this.field_a = 0;
         this.field_g = param2 ? true : false;
         if (param1 != 3) {
-          field_i = (vd) null;
+          field_i = (IntrusiveDeque) null;
           if (this.field_g) {
             this.field_f = param0;
             return;
@@ -589,6 +589,6 @@ final class ql {
 
     static {
         field_b = new int[]{100, 10, 45, 20, 20, 3200, 1, 50, 20, 50, 200, 10000, 80, 50, 65, 40, 65, 10000, 15000, 150, 50, 50, 150, 100, 100, 200, 150, 175, 100, 50, 50, 100, 100, 100, 100, 100, 2400, 20, 15, 30, 4, 40, 200, 200, 500, 500, 50, 45, 1, 1, 1, 20, 20, 20, 20, 20, 1, 1, 1, 45, 45, 80, 80, 130, 1, 250, 50, 150, 200, 100, 100, 200, 150, 175, 100, 50, 50};
-        field_i = new vd();
+        field_i = new IntrusiveDeque();
     }
 }

@@ -31,18 +31,18 @@ final class i {
         RuntimeException var2_ref = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var4 = (je) (aa.field_e.h(-11151));
+          var4 = (je) (aa.field_e.beginForward(-11151));
           if (param1 != 0) {
             field_c = (int[]) null;
           }
           while (var4 != null) {
             hl.a(var4, 122, param0);
-            var4 = (je) (aa.field_e.e(param1 ^ 0));
+            var4 = (je) (aa.field_e.nextForward(param1 ^ 0));
           }
-          var2 = ql.field_i.h(-11151);
+          var2 = ql.field_i.beginForward(-11151);
           while (var2 != null) {
             bj.a(param1 ^ 2591, param0);
-            var2 = ql.field_i.e(0);
+            var2 = ql.field_i.nextForward(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

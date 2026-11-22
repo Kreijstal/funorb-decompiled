@@ -4,7 +4,7 @@
 import java.util.*;
 
 class nb extends w implements dh {
-    ng field_A;
+    IntrusiveDeque field_A;
     static int field_x;
     static fh field_z;
     static String field_y;
@@ -85,7 +85,7 @@ class nb extends w implements dh {
           if (param0 != 119) {
             this.f(8);
           }
-          if (this.field_A.e(95)) {
+          if (this.field_A.isEmpty(95)) {
             return false;
           }
           var8 = new ta(this.field_A);
@@ -188,7 +188,7 @@ class nb extends w implements dh {
         RuntimeException decompiledCaughtException = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (this.field_A.e(-114)) {
+          if (this.field_A.isEmpty(-114)) {
             return false;
           }
           var3 = new ta(this.field_A);
@@ -262,7 +262,7 @@ class nb extends w implements dh {
 
     nb(int param0, int param1, int param2, int param3, rd param4) {
         super(param0, param1, param2, param3, param4, (vd) null);
-        this.field_A = new ng();
+        this.field_A = new IntrusiveDeque();
     }
 
     public static void d(boolean param0) {
@@ -538,7 +538,7 @@ class nb extends w implements dh {
     final void b(byte param0, w param1) {
         try {
           int var3_int = 34 % ((-8 - param0) / 56);
-          this.field_A.b(116, param1);
+          this.field_A.addLast(116, param1);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "nb.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

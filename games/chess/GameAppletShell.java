@@ -3,7 +3,7 @@
  */
 public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static int[] field_d;
-    static jc field_j;
+    static IntrusiveDeque field_j;
     boolean field_g;
     static km field_e;
     static String field_k;
@@ -1001,7 +1001,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     static {
         field_d = new int[4];
-        field_j = new jc();
+        field_j = new IntrusiveDeque();
         field_k = "Back";
     }
 

@@ -1086,7 +1086,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime193 = tf.a(0, "INSTRUCTIONS_BODIES_7_3");
           if (var2Lifetime193 != null) {
-            vc.field_g = ab.a(0, var2Lifetime193);
+            IntrusiveDeque.field_g = ab.a(0, var2Lifetime193);
           }
           var2Lifetime194 = tf.a(0, "INSTRUCTIONS_BODIES_7_4");
           if (null != var2Lifetime194) {

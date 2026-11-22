@@ -66,7 +66,7 @@ final class sa extends IntrusiveNode {
           var23 = null;
           var12 = Bounce.field_N;
           try {
-            var14 = (hh) (ob.field_c.a((byte) -83));
+            var14 = (hh) (ob.field_c.beginForward((byte) -83));
             var19 = var14;
             if (param0 != -97) {
               var13 = (String) null;

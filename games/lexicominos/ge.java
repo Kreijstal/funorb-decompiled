@@ -101,10 +101,10 @@ final class ge implements Runnable {
           if (param0 <= 105) {
             ge.f(-123);
           }
-          var3 = (f) (dj.field_c.a(true));
+          var3 = (f) (dj.field_c.beginForward(true));
           while (var3 != null) {
             if (var3.field_k != var2) {
-              var3 = (f) (dj.field_c.f(2));
+              var3 = (f) (dj.field_c.nextForward(2));
               continue;
             }
             break;
@@ -301,7 +301,7 @@ final class ge implements Runnable {
                 var18.field_n[var5] = -5;
               }
             }
-            al.field_C.b(124, var18);
+            al.field_C.addLast(124, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

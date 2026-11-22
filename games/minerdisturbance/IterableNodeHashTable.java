@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class sd implements Iterable {
-    private IntrusiveNode field_h;
+final class IterableNodeHashTable implements Iterable {
+    private IntrusiveNode lookupCursor;
     static int[] field_g;
-    int field_f;
+    int bucketCount;
     static String field_e;
     static AccountServiceResult field_d;
-    IntrusiveNode[] field_b;
+    IntrusiveNode[] buckets;
     static int[] field_c;
     static IntrusiveDeque field_a;
 
@@ -26,11 +26,11 @@ final class sd implements Iterable {
         field_a = null;
     }
 
-    final void a(long param0, boolean param1, IntrusiveNode param2) {
+    final void put(long param0, boolean param1, IntrusiveNode param2) {
         if (null != param2.field_c) {
           param2.unlink(34);
         }
-        IntrusiveNode var5 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
+        IntrusiveNode var5 = this.buckets[(int)(param0 & (long)(this.bucketCount - 1))];
         if (!param1) {
           return;
         }
@@ -45,20 +45,20 @@ final class sd implements Iterable {
         }
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = MinerDisturbance.field_ab;
-        IntrusiveNode var4 = this.field_b[(int)((long)(-1 + this.field_f) & param1)];
-        this.field_h = var4.field_f;
-        while (this.field_h != var4) {
-          if (~param1 == ~this.field_h.field_d) {
-            var5 = this.field_h;
-            this.field_h = this.field_h.field_f;
+        IntrusiveNode var4 = this.buckets[(int)((long)(-1 + this.bucketCount) & param1)];
+        this.lookupCursor = var4.field_f;
+        while (this.lookupCursor != var4) {
+          if (~param1 == ~this.lookupCursor.field_d) {
+            var5 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.field_f;
             return var5;
           }
-          this.field_h = this.field_h.field_f;
+          this.lookupCursor = this.lookupCursor.field_f;
         }
-        this.field_h = null;
+        this.lookupCursor = null;
         if (param0 >= -53) {
           return (IntrusiveNode) null;
         }
@@ -69,7 +69,7 @@ final class sd implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    private sd() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class md extends rg {
-    static im field_h;
+    static IntrusiveDeque field_h;
     private java.net.ProxySelector field_c;
     static int field_j;
     static int field_g;
@@ -234,7 +234,7 @@ final class md extends rg {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           if (param0 != -20767) {
-            field_h = (im) null;
+            field_h = (IntrusiveDeque) null;
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
@@ -387,7 +387,7 @@ final class md extends rg {
     static {
         field_g = 0;
         field_e = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-        field_h = new im();
+        field_h = new IntrusiveDeque();
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

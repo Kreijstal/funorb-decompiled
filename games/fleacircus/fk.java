@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fk extends dl {
-    static vc field_z;
+    static IntrusiveDeque field_z;
     static String field_B;
     PacketBuffer field_A;
     static boolean field_D;
@@ -110,7 +110,7 @@ final class fk extends dl {
     }
 
     static {
-        field_z = new vc();
+        field_z = new IntrusiveDeque();
         field_B = "(Including <%0>)";
         field_x = "Waiting for sound effects";
     }

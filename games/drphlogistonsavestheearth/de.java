@@ -18,22 +18,22 @@ final class de extends wd {
     private gb field_k;
     private boolean field_h;
     private int field_w;
-    private vd field_n;
+    private IntrusiveDeque field_n;
     private boolean field_p;
-    private vd field_A;
+    private IntrusiveDeque field_A;
     private long field_o;
     private boolean field_r;
 
     final void f(int param0) {
         if (param0 <= 49) {
-          this.field_n = (vd) null;
+          this.field_n = (IntrusiveDeque) null;
         }
         if (this.field_j == null) {
           return;
         }
         this.field_h = true;
         if (this.field_A == null) {
-          this.field_A = new vd();
+          this.field_A = new IntrusiveDeque();
         }
     }
 
@@ -53,7 +53,7 @@ final class de extends wd {
         if (this.a((byte) -101) == null) {
           return;
         }
-        var2 = this.field_n.h(-11151);
+        var2 = this.field_n.beginForward(-11151);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0 &&
@@ -68,11 +68,11 @@ final class de extends wd {
             if (this.field_m[var3] == 1) {
               var2.unlink(-16175);
             }
-            var2 = this.field_n.e(0);
+            var2 = this.field_n.nextForward(0);
             continue;
           }
           var2.unlink(-16175);
-          var2 = this.field_n.e(0);
+          var2 = this.field_n.nextForward(0);
         }
     }
 
@@ -145,7 +145,7 @@ final class de extends wd {
           }
           if (this.field_p) {
             var2_int = 1;
-            var3 = this.field_A.h(param0 ^ -11248);
+            var3 = this.field_A.beginForward(param0 ^ -11248);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_m[var4] == 0) {
@@ -156,7 +156,7 @@ final class de extends wd {
               } else {
                 var3.unlink(-16175);
               }
-              var3 = this.field_A.e(param0 - 97);
+              var3 = this.field_A.nextForward(param0 - 97);
             }
             scanLoop1: while (true) {
               if (this.field_w < this.field_g.field_k.length) {
@@ -172,7 +172,7 @@ final class de extends wd {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_w;
                     var2_int = 0;
-                    this.field_A.a(var6, 255);
+                    this.field_A.addLast(var6, 255);
                   }
                 }
                 this.field_w = this.field_w + 1;
@@ -189,7 +189,7 @@ final class de extends wd {
           else {
             if (this.field_h) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_A.h(-11151);
+              var3Lifetime1 = this.field_A.beginForward(-11151);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_m[var4Lifetime1] != 1) {
@@ -200,7 +200,7 @@ final class de extends wd {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_A.e(0);
+                var3Lifetime1 = this.field_A.nextForward(0);
               }
               scanLoop2: while (true) {
                 if (this.field_g.field_k.length > this.field_w) {
@@ -216,7 +216,7 @@ final class de extends wd {
                       var7 = new IntrusiveNode();
                       var7.key = (long)this.field_w;
                       var2_intLifetime1 = 0;
-                      this.field_A.a(var7, 255);
+                      this.field_A.addLast(var7, 255);
                     }
                   }
                   this.field_w = this.field_w + 1;
@@ -545,7 +545,7 @@ final class de extends wd {
         RuntimeException var10 = null;
         this.field_v = new tg(16);
         this.field_w = 0;
-        this.field_n = new vd();
+        this.field_n = new IntrusiveDeque();
         this.field_o = 0L;
         try {
           this.field_j = param1;
@@ -554,7 +554,7 @@ final class de extends wd {
             this.field_p = false;
           } else {
             this.field_p = true;
-            this.field_A = new vd();
+            this.field_A = new IntrusiveDeque();
           }
           stackIn_7_1 = (param8);
           this.field_r = stackIn_7_1;

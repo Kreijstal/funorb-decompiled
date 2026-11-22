@@ -938,7 +938,7 @@ final class db extends qe {
         var3 = 10;
         var4 = 88;
         le.field_f.h(40 + var3, var4 - 28);
-        dh.a(32, 360, 220, 120);
+        SecondaryNodeDeque.a(32, 360, 220, 120);
         gf.b(var11);
         gf.b(80, 250, 256, 85, 1118481, 128);
         gf.e(80, 250, 256, 85, 5592405, 128);

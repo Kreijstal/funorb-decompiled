@@ -7,7 +7,7 @@ final class ff extends pj implements ke {
     private hf field_L;
     private hf field_M;
     static vj field_P;
-    static vd field_O;
+    static IntrusiveDeque field_O;
     static double[] field_N;
     static he[] field_R;
     static he[][] field_Q;
@@ -236,7 +236,7 @@ final class ff extends pj implements ke {
 
     static {
         field_K = "Cancel";
-        field_O = new vd();
+        field_O = new IntrusiveDeque();
         field_N = new double[]{0.0, 5.0, 8.0, 10.0, 10.0, 1.5, 0.0, 5.0, 4.5, 3.0, 1.5, 1.5, 0.0, 0.0, 0.0, 3.0, 3.0, 1.5, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 5.0, 8.0, 3.5, 5.0, 2.5, 0.0, 0.0, 0.0, 0.0, 8.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         field_Q = new he[77][];
     }

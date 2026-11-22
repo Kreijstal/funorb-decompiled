@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class pg {
-    private va field_g;
+    private SecondaryNodeDeque field_g;
     private int field_d;
     static Random field_a;
-    private ed field_c;
+    private IterableNodeHashTable field_c;
     private int field_e;
     static String field_f;
     static String field_b;
@@ -23,15 +23,15 @@ final class pg {
           if (!param0) {
             pg.a(false, 127);
           }
-          var4 = (ad) (od.field_b.a((byte) 74));
+          var4 = (ad) (od.field_b.beginForward((byte) 74));
           while (var4 != null) {
             aa.a(var4, 3298, param1);
-            var4 = (ad) (od.field_b.b((byte) -103));
+            var4 = (ad) (od.field_b.nextForward((byte) -103));
           }
-          var5 = (uh) (tl.field_a.a((byte) 74));
+          var5 = (uh) (tl.field_a.beginForward((byte) 74));
           while (var5 != null) {
             DirectByteArrayStore.a(-64, var5, param1);
-            var5 = (uh) (tl.field_a.b((byte) -113));
+            var5 = (uh) (tl.field_a.nextForward((byte) -113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,12 +78,12 @@ final class pg {
           this.a(param0, (byte) 124);
           this.field_e = this.field_e - param1;
           while (this.field_e < 0) {
-            var8 = (pd) (this.field_g.a(false));
+            var8 = (pd) (this.field_g.removeFirst(false));
             this.a((byte) 107, var8);
           }
           var6 = new tf(param3, param1);
-          this.field_c.a(-102, param0, var6);
-          this.field_g.a(param2 - 112, var6);
+          this.field_c.put(-102, param0, var6);
+          this.field_g.addLast(param2 - 112, var6);
           ((pd) ((Object) var6)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "pg.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -149,7 +149,7 @@ final class pg {
     }
 
     final Object a(long param0, int param1) {
-        pd var7 = (pd) (this.field_c.a((byte) 120, param0));
+        pd var7 = (pd) (this.field_c.get((byte) 120, param0));
         if (var7 == null) {
           return null;
         }
@@ -161,13 +161,13 @@ final class pg {
           return null;
         }
         if (!var7.f(param1 ^ 0)) {
-          this.field_g.a(-91, var7);
+          this.field_g.addLast(-91, var7);
           var7.field_j = 0L;
           return var5;
         }
         tf var6 = new tf(var5, var7.field_k);
-        this.field_c.a(-96, var7.key, var6);
-        this.field_g.a(-82, var6);
+        this.field_c.put(-96, var7.key, var6);
+        this.field_g.addLast(-82, var6);
         ((pd) ((Object) var6)).field_j = 0L;
         var7.unlink(105);
         var7.unlinkSecondary(12);
@@ -182,7 +182,7 @@ final class pg {
         if (param1 != 124) {
           return;
         }
-        pd var4 = (pd) (this.field_c.a((byte) 83, param0));
+        pd var4 = (pd) (this.field_c.get((byte) 83, param0));
         this.a((byte) 107, var4);
     }
 

@@ -82,7 +82,7 @@ final class se {
           var2 = var10.readUnsignedByte(false);
           var3 = var10.readUnsignedByte(false);
           if (var2 == 0) {
-            var4_ref_fi = (fi) (lk.field_O.c((byte) 47));
+            var4_ref_fi = (fi) (lk.field_O.beginForward((byte) 47));
             if (var4_ref_fi == null) {
               k.c(-28354);
               return;
@@ -103,11 +103,11 @@ final class se {
           }
           if (var2 == 1) {
             var4 = var10.readSignedSmart(255);
-            var5 = (ql) (sd.field_d.c((byte) 47));
+            var5 = (ql) (sd.field_d.beginForward((byte) 47));
             while (var5 != null) {
               if (var5.field_i != var3 ||
                 var5.field_m != var4) {
-                var5 = (ql) (sd.field_d.b((byte) -105));
+                var5 = (ql) (sd.field_d.nextForward((byte) -105));
                 continue;
               }
               break;

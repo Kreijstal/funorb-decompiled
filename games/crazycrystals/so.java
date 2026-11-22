@@ -6,7 +6,7 @@ final class so {
     static long[] field_a;
     static dl field_d;
     static am field_g;
-    static wb field_h;
+    static IntrusiveDeque field_h;
     static int[] field_f;
     static j field_c;
     static int field_e;
@@ -123,7 +123,7 @@ final class so {
             field_a[var15] = SecondaryIntrusiveDeque.a(ao.a(field_b[7][7 + var1], 255L), SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(ao.a(field_b[5][var1 + 5], 16711680L), SecondaryIntrusiveDeque.a(ao.a(4278190080L, field_b[4][var1 + 4]), SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(ao.a(280375465082880L, field_b[2][var1 + 2]), SecondaryIntrusiveDeque.a(ao.a(field_b[0][var1], -72057594037927936L), ao.a(field_b[1][1 + var1], 71776119061217280L))), ao.a(1095216660480L, field_b[3][var1 + 3])))), ao.a(field_b[6][var1 + 6], 65280L)));
             var15++;
         }
-        field_h = new wb();
+        field_h = new IntrusiveDeque();
         field_e = 0;
     }
 }

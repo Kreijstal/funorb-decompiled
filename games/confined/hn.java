@@ -10,16 +10,16 @@ final class hn {
     static String field_e;
     lc field_x;
     static od field_f;
-    mn field_g;
+    PrimaryNodeDeque field_g;
     dj field_B;
     static int[] field_C;
     vb field_N;
     vb field_w;
-    mn field_b;
-    mn field_F;
-    mn field_z;
+    PrimaryNodeDeque field_b;
+    PrimaryNodeDeque field_F;
+    PrimaryNodeDeque field_z;
     double field_E;
-    mn field_u;
+    PrimaryNodeDeque field_u;
     int field_o;
     double field_s;
     boolean field_P;
@@ -56,9 +56,9 @@ final class hn {
         pm var8;
         int var9;
         var9 = Confined.field_J ? 1 : 0;
-        var2 = (pm) (this.field_g.a(88));
+        var2 = (pm) (this.field_g.beginForward(88));
         var3 = 1;
-        var4 = (kh) (this.field_b.a(param0 ^ 115));
+        var4 = (kh) (this.field_b.beginForward(param0 ^ 115));
         if (param0 != -2) {
           hn.g(-46);
         }
@@ -73,7 +73,7 @@ final class hn {
             }
             while (var2 != null) {
               if (var2.field_D + var2.field_C < var4.field_X) {
-                var2 = (pm) (this.field_g.d(2123));
+                var2 = (pm) (this.field_g.nextForward(2123));
                 continue;
               }
               break;
@@ -126,7 +126,7 @@ final class hn {
               var4.field_S.a(var4, 124);
             }
           }
-          var4 = (kh) (this.field_b.d(2123));
+          var4 = (kh) (this.field_b.nextForward(2123));
         }
     }
 
@@ -137,47 +137,47 @@ final class hn {
         kh var5;
         hm var6;
         var4 = Confined.field_J ? 1 : 0;
-        var5 = (kh) (this.field_b.a(param0 ^ 22168));
+        var5 = (kh) (this.field_b.beginForward(param0 ^ 22168));
         while (var5 != null) {
           if (!var5.a(this.field_m, -1073453180)) {
             var5.unlink(true);
           }
-          var5 = (kh) (this.field_b.d(2123));
+          var5 = (kh) (this.field_b.nextForward(2123));
         }
-        var6 = (hm) (this.field_F.a(50));
+        var6 = (hm) (this.field_F.beginForward(50));
         while (var6 != null) {
           if (!var6.a(this.field_m, -1073453180)) {
             var6.unlink(true);
           }
-          var6 = (hm) (this.field_F.d(2123));
+          var6 = (hm) (this.field_F.nextForward(2123));
         }
         e.a(this.field_b, (byte) -121);
         e.a(this.field_F, (byte) 123);
-        var2 = (dc) (this.field_b.a(param0 - 22095));
-        var3 = (dc) (this.field_F.a(116));
+        var2 = (dc) (this.field_b.beginForward(param0 - 22095));
+        var3 = (dc) (this.field_F.beginForward(116));
         while (var2 != null) {
           if (null != var3) {
             if (!(var2.field_I < var3.field_I)) {
               this.field_k.a(var3, (byte) 126);
-              var3 = (dc) (this.field_F.d(2123));
+              var3 = (dc) (this.field_F.nextForward(2123));
               continue;
             }
             this.field_k.a(var2, (byte) 115);
-            var2 = (dc) (this.field_b.d(2123));
+            var2 = (dc) (this.field_b.nextForward(2123));
             continue;
           }
           break;
         }
         while (null != var2) {
           this.field_k.a(var2, (byte) 116);
-          var2 = (dc) (this.field_b.d(2123));
+          var2 = (dc) (this.field_b.nextForward(2123));
         }
         if (param0 != 22189) {
           return;
         }
         while (var3 != null) {
           this.field_k.a(var3, (byte) 114);
-          var3 = (dc) (this.field_F.d(param0 ^ 24294));
+          var3 = (dc) (this.field_F.nextForward(param0 ^ 24294));
         }
         this.field_q = 1.7976931348623157e+308;
     }
@@ -186,7 +186,7 @@ final class hn {
         int stackIn_6_0 = 0;
         double[] var2;
         int var3;
-        mn var4;
+        PrimaryNodeDeque var4;
         int var5;
         double var6;
         pm var8;
@@ -223,9 +223,9 @@ final class hn {
         var5 = stackIn_6_0;
         var6 = -this.field_A + this.field_E;
         this.field_x.a(false, 64.0, var4, this.field_m);
-        var8 = (pm) (this.field_g.a(false));
+        var8 = (pm) (this.field_g.beginBackward(false));
         this.h(22189);
-        var9 = (oi) (var4.a(85));
+        var9 = (oi) (var4.beginForward(85));
         for (var10 = -2 + this.field_x.field_a; var10 >= 0; var10--) {
           var11_double = this.field_x.field_r[var10 + 1];
           while (var8 != null) {
@@ -238,14 +238,14 @@ final class hn {
               }
               while (var9 != null) {
                 if (var8.field_D < -var9.field_n + var9.field_p) {
-                  var9 = (oi) (var4.d(2123));
+                  var9 = (oi) (var4.nextForward(2123));
                   continue;
                 }
                 break;
               }
               this.a(true, var5 != 0, var8.field_D, false);
               var8.a(var4, 64.0, -31, this.field_m, var9);
-              var8 = (pm) (this.field_g.a((byte) -76));
+              var8 = (pm) (this.field_g.nextBackward((byte) -76));
               continue;
             }
             break;
@@ -268,14 +268,14 @@ final class hn {
           }
           while (var9 != null) {
             if (var8.field_D < var9.field_p - var9.field_n) {
-              var9 = (oi) (var4.d(2123));
+              var9 = (oi) (var4.nextForward(2123));
               continue;
             }
             break;
           }
           this.a(true, var5 != 0, var8.field_D, false);
           var8.a(var4, 64.0, -77, this.field_m, var9);
-          var8 = (pm) (this.field_g.a((byte) -113));
+          var8 = (pm) (this.field_g.nextBackward((byte) -113));
         }
         if (var5 != 0) {
           this.a(true, var5 != 0, var6, true);
@@ -290,14 +290,14 @@ final class hn {
           this.field_a = null;
         }
         if (md.a(-85)) {
-          var8Lifetime1 = (pm) (this.field_g.a(false));
+          var8Lifetime1 = (pm) (this.field_g.beginBackward(false));
           while (var8Lifetime1 != null) {
             var8Lifetime1.a(this.field_m, false);
-            var8Lifetime1 = (pm) (this.field_g.a((byte) 74));
+            var8Lifetime1 = (pm) (this.field_g.nextBackward((byte) 74));
           }
         }
         if (this.field_G > 0) {
-          var10Lifetime1 = ((an) (this.field_u.a(-126))).field_s;
+          var10Lifetime1 = ((an) (this.field_u.beginForward(-126))).field_s;
           var11 = this.field_G;
           var12 = 0;
           if (var11 <= 40) {
@@ -333,11 +333,11 @@ final class hn {
           this.field_a = (kl) null;
         }
         do {
-          var2 = (kh) (this.field_b.a(false));
+          var2 = (kh) (this.field_b.beginBackward(false));
           if (var2 == null) {
             return;
           }
-          var3 = (kh) (this.field_b.a((byte) -37));
+          var3 = (kh) (this.field_b.nextBackward((byte) -37));
           var4 = 1;
           while (var3 != null) {
             if (!(var3.field_X > var2.field_X)) {
@@ -346,14 +346,14 @@ final class hn {
               ri.a(var3, param0 - 134217727, var2);
               var4 = 0;
             }
-            var3 = (kh) (this.field_b.a((byte) -95));
+            var3 = (kh) (this.field_b.nextBackward((byte) -95));
           }
           if (var4 != 0) {
             return;
           }
-          var3Lifetime1 = (kh) (this.field_b.a(11));
+          var3Lifetime1 = (kh) (this.field_b.beginForward(11));
           var4 = 1;
-          var2Lifetime1 = (kh) (this.field_b.d(2123));
+          var2Lifetime1 = (kh) (this.field_b.nextForward(2123));
           while (var2Lifetime1 != null) {
             if (var3Lifetime1.field_X > var2Lifetime1.field_X) {
               ri.a(var3Lifetime1, param0 - 134217727, var2Lifetime1);
@@ -361,7 +361,7 @@ final class hn {
             } else {
               var3Lifetime1 = var2Lifetime1;
             }
-            var2Lifetime1 = (kh) (this.field_b.d(2123));
+            var2Lifetime1 = (kh) (this.field_b.nextForward(2123));
           }
         } while (var4 == 0);
     }
@@ -484,7 +484,7 @@ final class hn {
         var11 = Confined.field_J ? 1 : 0;
         var12 = this.a((byte) -26);
         this.b((byte) 120);
-        var3 = (pm) (this.field_g.a(8));
+        var3 = (pm) (this.field_g.beginForward(8));
         var4 = null;
         var5 = null;
         var6 = 0;
@@ -515,15 +515,15 @@ final class hn {
                 }
                 var10 = var4;
                 if (var10 == null) {
-                  var10 = this.field_g.field_a;
+                  var10 = this.field_g.sentinel;
                 }
                 var10 = ((IntrusiveNode) (var10)).field_h;
-                if (var10 == this.field_g.field_a) {
+                if (var10 == this.field_g.sentinel) {
                   var10 = null;
                 }
                 var3.field_y = (pm) (var10);
               }
-              var3 = (pm) (this.field_g.d(2123));
+              var3 = (pm) (this.field_g.nextForward(2123));
               continue;
             }
             break;
@@ -545,10 +545,10 @@ final class hn {
           }
           var10Lifetime1 = var5;
           if (var10Lifetime1 == null) {
-            var10Lifetime1 = this.field_g.field_a;
+            var10Lifetime1 = this.field_g.sentinel;
           }
           var10Lifetime1 = ((IntrusiveNode) (var10Lifetime1)).field_h;
-          if (var10Lifetime1 == this.field_g.field_a) {
+          if (var10Lifetime1 == this.field_g.sentinel) {
             var10Lifetime1 = null;
           }
           this.field_x.field_y[var6] = (pm) (var10Lifetime1);
@@ -569,15 +569,15 @@ final class hn {
             }
             var8_ref = var4;
             if (var8_ref == null) {
-              var8_ref = this.field_g.field_a;
+              var8_ref = this.field_g.sentinel;
             }
             var8_ref = ((IntrusiveNode) (var8_ref)).field_h;
-            if (var8_ref == this.field_g.field_a) {
+            if (var8_ref == this.field_g.sentinel) {
               var8_ref = null;
             }
             var3.field_y = (pm) (var8_ref);
           }
-          var3 = (pm) (this.field_g.d(2123));
+          var3 = (pm) (this.field_g.nextForward(2123));
         }
         var8 = -38 / ((param0 + 45) / 43);
     }
@@ -593,32 +593,32 @@ final class hn {
         return 0;
     }
 
-    private final mn a(boolean param0) {
+    private final PrimaryNodeDeque a(boolean param0) {
         int var4 = Confined.field_J ? 1 : 0;
-        mn var8 = new mn();
-        pm var5 = (pm) (this.field_g.a(false));
+        PrimaryNodeDeque var8 = new PrimaryNodeDeque();
+        pm var5 = (pm) (this.field_g.beginBackward(false));
         while (var5 != null) {
           var5.a(var8, (byte) -86);
-          var5 = (pm) (this.field_g.a((byte) -59));
+          var5 = (pm) (this.field_g.nextBackward((byte) -59));
         }
         fd.c((byte) 35);
-        kh var6 = (kh) (this.field_b.a(false));
+        kh var6 = (kh) (this.field_b.beginBackward(false));
         while (var6 != null) {
           var6.a(var8, 4);
-          var6 = (kh) (this.field_b.a((byte) 71));
+          var6 = (kh) (this.field_b.nextBackward((byte) 71));
         }
-        hm var7 = (hm) (this.field_F.a(false));
+        hm var7 = (hm) (this.field_F.beginBackward(false));
         while (var7 != null) {
           var7.a(var8, 4);
-          var7 = (hm) (this.field_F.a((byte) -107));
+          var7 = (hm) (this.field_F.nextBackward((byte) -107));
         }
         if (!param0) {
           this.a(-0.5612003772515823, -102, (byte) -63);
         }
-        oi var3 = (oi) (var8.a(-121));
+        oi var3 = (oi) (var8.beginForward(-121));
         while (var3 != null) {
           var3.field_n = 4.0 * Math.sqrt(var3.field_u);
-          var3 = (oi) (var8.d(2123));
+          var3 = (oi) (var8.nextForward(2123));
         }
         this.a((byte) 115, var8);
         return var8;
@@ -632,7 +632,7 @@ final class hn {
         if (param0 != 1) {
           return;
         }
-        var2 = (pm) (this.field_g.a(-123));
+        var2 = (pm) (this.field_g.beginForward(-123));
         while (var2 != null) {
           if (var2.g((byte) 103)) {
             this.field_N.b(var2, param0 + 5);
@@ -647,7 +647,7 @@ final class hn {
               var3 = (pm) (this.field_N.b(124));
             }
           }
-          var2 = (pm) (this.field_g.d(param0 ^ 2122));
+          var2 = (pm) (this.field_g.nextForward(param0 ^ 2122));
         }
     }
 
@@ -682,7 +682,7 @@ final class hn {
         if (this.field_x.field_a <= 1) {
           return;
         }
-        var3 = (pm) (this.field_g.a(25));
+        var3 = (pm) (this.field_g.beginForward(25));
         while (var3 != null) {
           if (var3.i(8)) {
             while (this.field_x.field_a - 2 > var2) {
@@ -731,7 +731,7 @@ final class hn {
               var4 = incrementValue$7;
             }
           }
-          var3 = (pm) (this.field_g.d(2123));
+          var3 = (pm) (this.field_g.nextForward(2123));
         }
         if (param0 <= 14) {
           this.h(-25);
@@ -751,11 +751,11 @@ final class hn {
           this.field_y = false;
         }
         while (true) {
-          var2 = (pm) (this.field_g.a(false));
+          var2 = (pm) (this.field_g.beginBackward(false));
           if (var2 == null) {
             return;
           }
-          var3 = (pm) (this.field_g.a((byte) 83));
+          var3 = (pm) (this.field_g.nextBackward((byte) 83));
           var4 = 1;
           while (var3 != null) {
             if (var3.field_D > var2.field_D) {
@@ -764,13 +764,13 @@ final class hn {
             } else {
               var2 = var3;
             }
-            var3 = (pm) (this.field_g.a((byte) -101));
+            var3 = (pm) (this.field_g.nextBackward((byte) -101));
           }
           if (var4 != 0) {
             return;
           }
-          var3Lifetime1 = (pm) (this.field_g.a(-127));
-          var2Lifetime1 = (pm) (this.field_g.d(2123));
+          var3Lifetime1 = (pm) (this.field_g.beginForward(-127));
+          var2Lifetime1 = (pm) (this.field_g.nextForward(2123));
           var4Lifetime1 = 1;
           while (var2Lifetime1 != null) {
             if (var2Lifetime1.field_D < var3Lifetime1.field_D) {
@@ -779,7 +779,7 @@ final class hn {
             } else {
               var3Lifetime1 = var2Lifetime1;
             }
-            var2Lifetime1 = (pm) (this.field_g.d(2123));
+            var2Lifetime1 = (pm) (this.field_g.nextForward(2123));
           }
           if (var4Lifetime1 != 0) {
             return;
@@ -798,11 +798,11 @@ final class hn {
           this.field_h = -41;
         }
         do {
-          var2 = (pm) (this.field_g.a(false));
+          var2 = (pm) (this.field_g.beginBackward(false));
           if (var2 == null) {
             return;
           }
-          var3 = (pm) (this.field_g.a((byte) -78));
+          var3 = (pm) (this.field_g.nextBackward((byte) -78));
           var4 = 1;
           while (var3 != null) {
             if (var3.field_C + var3.field_D > var2.field_C + var2.field_D) {
@@ -811,13 +811,13 @@ final class hn {
             } else {
               var2 = var3;
             }
-            var3 = (pm) (this.field_g.a((byte) -68));
+            var3 = (pm) (this.field_g.nextBackward((byte) -68));
           }
           if (var4 != 0) {
             return;
           }
-          var3Lifetime1 = (pm) (this.field_g.a(47));
-          var2Lifetime1 = (pm) (this.field_g.d(2123));
+          var3Lifetime1 = (pm) (this.field_g.beginForward(47));
+          var2Lifetime1 = (pm) (this.field_g.nextForward(2123));
           var4 = 1;
           while (var2Lifetime1 != null) {
             if (var2Lifetime1.field_D + var2Lifetime1.field_C < var3Lifetime1.field_D + var3Lifetime1.field_C) {
@@ -826,7 +826,7 @@ final class hn {
             } else {
               var3Lifetime1 = var2Lifetime1;
             }
-            var2Lifetime1 = (pm) (this.field_g.d(2123));
+            var2Lifetime1 = (pm) (this.field_g.nextForward(2123));
           }
         } while (var4 == 0);
     }
@@ -918,11 +918,11 @@ final class hn {
         var6 = Confined.field_J ? 1 : 0;
         var7 = new wd();
         while (true) {
-          var3 = (pm) (this.field_g.a(false));
+          var3 = (pm) (this.field_g.beginBackward(false));
           if (var3 == null) {
             return var7;
           }
-          var4 = (pm) (this.field_g.a((byte) -96));
+          var4 = (pm) (this.field_g.nextBackward((byte) -96));
           var5 = 1;
           while (var4 != null) {
             if (var4.field_D - var4.field_C > var3.field_D - var3.field_C) {
@@ -931,12 +931,12 @@ final class hn {
             } else {
               var3 = var4;
             }
-            var4 = (pm) (this.field_g.a((byte) 99));
+            var4 = (pm) (this.field_g.nextBackward((byte) 99));
           }
           if (var5 == 0) {
-            var4Lifetime1 = (pm) (this.field_g.a(18));
+            var4Lifetime1 = (pm) (this.field_g.beginForward(18));
             var5 = 1;
-            var3Lifetime2 = (pm) (this.field_g.d(2123));
+            var3Lifetime2 = (pm) (this.field_g.nextForward(2123));
             while (var3Lifetime2 != null) {
               if (var3Lifetime2.field_D - var3Lifetime2.field_C < var4Lifetime1.field_D - var4Lifetime1.field_C) {
                 var5 = 0;
@@ -944,7 +944,7 @@ final class hn {
               } else {
                 var4Lifetime1 = var3Lifetime2;
               }
-              var3Lifetime2 = (pm) (this.field_g.d(2123));
+              var3Lifetime2 = (pm) (this.field_g.nextForward(2123));
             }
             if (var5 == 0) {
               continue;
@@ -955,10 +955,10 @@ final class hn {
         if (param0 >= -18) {
           this.field_a = (kl) null;
         }
-        var3Lifetime1 = (pm) (this.field_g.a(-124));
+        var3Lifetime1 = (pm) (this.field_g.beginForward(-124));
         while (var3Lifetime1 != null) {
           var7.a(var3Lifetime1, (byte) 120);
-          var3Lifetime1 = (pm) (this.field_g.d(2123));
+          var3Lifetime1 = (pm) (this.field_g.nextForward(2123));
         }
         return var7;
     }
@@ -982,11 +982,11 @@ final class hn {
           this.j(8);
         }
         while (true) {
-          var8 = (pm) (this.field_g.a(false));
+          var8 = (pm) (this.field_g.beginBackward(false));
           if (var8 == null) {
             return;
           }
-          var9 = (pm) (this.field_g.a((byte) 71));
+          var9 = (pm) (this.field_g.nextBackward((byte) 71));
           var10 = 1;
           while (var9 != null) {
             if (var9.field_E * var2 + var4 * var9.field_t + var9.field_D * var6 > var6 * var8.field_D + (var4 * var8.field_t + var8.field_E * var2)) {
@@ -995,14 +995,14 @@ final class hn {
             } else {
               var8 = var9;
             }
-            var9 = (pm) (this.field_g.a((byte) 57));
+            var9 = (pm) (this.field_g.nextBackward((byte) 57));
           }
           if (var10 != 0) {
             return;
           }
-          var9Lifetime1 = (pm) (this.field_g.a(-119));
+          var9Lifetime1 = (pm) (this.field_g.beginForward(-119));
           var10Lifetime1 = 1;
-          var8Lifetime1 = (pm) (this.field_g.d(2123));
+          var8Lifetime1 = (pm) (this.field_g.nextForward(2123));
           while (var8Lifetime1 != null) {
             if (!(var9Lifetime1.field_D * var6 + (var9Lifetime1.field_t * var4 + var2 * var9Lifetime1.field_E) > var6 * var8Lifetime1.field_D + (var8Lifetime1.field_E * var2 + var4 * var8Lifetime1.field_t))) {
               var9Lifetime1 = var8Lifetime1;
@@ -1010,7 +1010,7 @@ final class hn {
               var10Lifetime1 = 0;
               ri.a(var9Lifetime1, param0 ^ 938, var8Lifetime1);
             }
-            var8Lifetime1 = (pm) (this.field_g.d(2123));
+            var8Lifetime1 = (pm) (this.field_g.nextForward(2123));
           }
           if (var10Lifetime1 != 0) {
             return;
@@ -1020,17 +1020,17 @@ final class hn {
 
     final void c(int param0) {
         int var3 = Confined.field_J ? 1 : 0;
-        gk var4 = (gk) (this.field_z.a(100));
+        gk var4 = (gk) (this.field_z.beginForward(100));
         while (var4 != null) {
           var4.f(128);
-          var4 = (gk) (this.field_z.d(2123));
+          var4 = (gk) (this.field_z.nextForward(2123));
         }
         if (param0 >= -84) {
           this.o(-17);
         }
     }
 
-    private final void a(byte param0, mn param1) {
+    private final void a(byte param0, PrimaryNodeDeque param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -1046,8 +1046,8 @@ final class hn {
         var8 = Confined.field_J ? 1 : 0;
         try {
           IsaacRandom.a(true, param1);
-          var3 = (pm) (this.field_g.a(false));
-          var4 = (oi) (param1.a(19));
+          var3 = (pm) (this.field_g.beginBackward(false));
+          var4 = (oi) (param1.beginForward(19));
           var5 = null;
           var6 = 107 % ((53 - param0) / 48);
           while (var3 != null) {
@@ -1057,27 +1057,27 @@ final class hn {
                   ((oi) (var5)).field_p - ((oi) (var5)).field_n >= -var4.field_n + var4.field_p) {
                   var5 = var4;
                 }
-                var4 = (oi) (param1.d(2123));
+                var4 = (oi) (param1.nextForward(2123));
                 continue;
               }
               break;
             }
             var3.field_v = (oi) (var5);
-            var3 = (pm) (this.field_g.a((byte) 117));
+            var3 = (pm) (this.field_g.nextBackward((byte) 117));
           }
           IsaacRandom.a(param1, (byte) 87);
-          var3Lifetime1 = (pm) (this.field_g.a(13));
+          var3Lifetime1 = (pm) (this.field_g.beginForward(13));
           while (var3Lifetime1 != null) {
             var7 = var3Lifetime1.field_v;
             if (var7 == null) {
-              var7 = param1.field_a;
+              var7 = param1.sentinel;
             }
             var7 = ((IntrusiveNode) (var7)).field_h;
-            if (param1.field_a == var7) {
+            if (param1.sentinel == var7) {
               var7 = null;
             }
             var3Lifetime1.field_v = (oi) (var7);
-            var3Lifetime1 = (pm) (this.field_g.d(2123));
+            var3Lifetime1 = (pm) (this.field_g.nextForward(2123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1102,7 +1102,7 @@ final class hn {
         double var11 = 0.0;
         double var13 = 0.0;
         if (param1 <= 19) {
-          this.field_z = (mn) null;
+          this.field_z = (PrimaryNodeDeque) null;
         }
         if (this.field_L > 0) {
           var4 = this.field_E + this.field_A;
@@ -1174,11 +1174,11 @@ final class hn {
         if (this.field_B.field_z) {
           this.field_B.c(false);
         }
-        this.field_b.e(param0 + 123);
-        this.field_F.e(44);
+        this.field_b.clear(param0 + 123);
+        this.field_F.clear(44);
         if (this.field_L > 0) {
           var2 = this.field_A * this.field_A;
-          var4_ref_pm = (pm) (this.field_g.a(-124));
+          var4_ref_pm = (pm) (this.field_g.beginForward(-124));
           while (var4_ref_pm != null) {
             if (var4_ref_pm instanceof ee) {
               var5 = -this.field_s + var4_ref_pm.field_E;
@@ -1207,7 +1207,7 @@ final class hn {
                 var13.field_G = var13.field_G + var7 * var14;
               }
             }
-            var4_ref_pm = (pm) (this.field_g.d(2123));
+            var4_ref_pm = (pm) (this.field_g.nextForward(2123));
           }
           this.field_A = this.field_A + this.field_H;
           this.field_L = this.field_L - 1;
@@ -1218,7 +1218,7 @@ final class hn {
         }
         this.k(-100);
         var2_int = param0;
-        var3 = (pm) (this.field_g.a(94));
+        var3 = (pm) (this.field_g.beginForward(94));
         while (var3 != null) {
           while (-2 + this.field_x.field_a > var2_int) {
             if (this.field_x.field_r[var2_int + 1] <= var3.field_D) {
@@ -1235,12 +1235,12 @@ final class hn {
             break;
           }
           var3.a(param0 ^ 11878, var2_int);
-          var3 = (pm) (this.field_g.d(2123));
+          var3 = (pm) (this.field_g.nextForward(2123));
         }
         this.field_m.k(param0 ^ 3230);
         if (null != this.field_K) {
           var2Lifetime1 = this.field_x.field_r[this.field_x.field_a - 1];
-          var4_ref_pm = (pm) (this.field_g.a(80));
+          var4_ref_pm = (pm) (this.field_g.beginForward(80));
           while (var4_ref_pm != null) {
             if (this.field_B != var4_ref_pm &&
               var4_ref_pm != this.field_m &&
@@ -1248,7 +1248,7 @@ final class hn {
               var4_ref_pm.field_D >= var2Lifetime1) {
               var4_ref_pm.field_D = var2Lifetime1;
             }
-            var4_ref_pm = (pm) (this.field_g.d(param0 + 2123));
+            var4_ref_pm = (pm) (this.field_g.nextForward(param0 + 2123));
           }
         }
         this.k(param0 ^ -99);
@@ -1256,12 +1256,12 @@ final class hn {
         this.d((byte) 100);
         this.l(param0 + 1);
         this.i(320);
-        var2_ref_pm = (pm) (this.field_g.a(60));
+        var2_ref_pm = (pm) (this.field_g.beginForward(60));
         while (var2_ref_pm != null) {
           if (var2_ref_pm.field_z) {
             var2_ref_pm.unlink(true);
           }
-          var2_ref_pm = (pm) (this.field_g.d(param0 ^ 2123));
+          var2_ref_pm = (pm) (this.field_g.nextForward(param0 ^ 2123));
         }
         if (!of.field_a &&
           null != this.field_Q &&
@@ -1279,29 +1279,29 @@ final class hn {
           var2Lifetime2 = this.field_B.field_E;
           var4 = this.field_B.field_t;
           var6 = this.field_B.field_D;
-          var30 = (pm) (this.field_g.a(117));
+          var30 = (pm) (this.field_g.beginForward(117));
           while (var30 != null) {
             var30.a(var2Lifetime2, (byte) 46, var6, var4);
-            var30 = (pm) (this.field_g.d(2123));
+            var30 = (pm) (this.field_g.nextForward(2123));
           }
-          var31 = (kh) (this.field_b.a(param0 + 93));
+          var31 = (kh) (this.field_b.beginForward(param0 + 93));
           while (var31 != null) {
             var31.a((byte) 83, var2Lifetime2, var6, var4);
-            var31 = (kh) (this.field_b.d(param0 + 2123));
+            var31 = (kh) (this.field_b.nextForward(param0 + 2123));
           }
-          var32 = (hm) (this.field_F.a(74));
+          var32 = (hm) (this.field_F.beginForward(74));
           while (var32 != null) {
             var32.a((byte) 112, var2Lifetime2, var6, var4);
-            var32 = (hm) (this.field_F.d(2123));
+            var32 = (hm) (this.field_F.nextForward(2123));
           }
-          var8 = (pm) (this.field_g.a(84));
+          var8 = (pm) (this.field_g.beginForward(84));
           while (var8 != null) {
             if (this.field_B != var8 &&
               var8 != this.field_m &&
               !(var8 instanceof h)) {
               var8.unlink(true);
             }
-            var8 = (pm) (this.field_g.d(param0 ^ 2123));
+            var8 = (pm) (this.field_g.nextForward(param0 ^ 2123));
           }
         } else {
           if (!this.field_B.field_z &&
@@ -1314,20 +1314,20 @@ final class hn {
             this.field_x.field_c = 0.0;
             var26.field_u = 0.0;
             this.field_x.a(var4, var2Lifetime2, var6, 14497);
-            var27 = (pm) (this.field_g.a(24));
+            var27 = (pm) (this.field_g.beginForward(24));
             while (var27 != null) {
               var27.a(var2Lifetime2, (byte) 46, var6, var4);
-              var27 = (pm) (this.field_g.d(param0 + 2123));
+              var27 = (pm) (this.field_g.nextForward(param0 + 2123));
             }
-            var28 = (kh) (this.field_b.a(33));
+            var28 = (kh) (this.field_b.beginForward(33));
             while (var28 != null) {
               var28.a((byte) -107, var2Lifetime2, var6, var4);
-              var28 = (kh) (this.field_b.d(param0 ^ 2123));
+              var28 = (kh) (this.field_b.nextForward(param0 ^ 2123));
             }
-            var29 = (hm) (this.field_F.a(-128));
+            var29 = (hm) (this.field_F.beginForward(-128));
             while (var29 != null) {
               var29.a((byte) 78, var2Lifetime2, var6, var4);
-              var29 = (hm) (this.field_F.d(param0 + 2123));
+              var29 = (hm) (this.field_F.nextForward(param0 + 2123));
             }
             this.field_E = this.field_E - var6;
             this.field_r = this.field_r - var4;
@@ -1348,10 +1348,10 @@ final class hn {
         if (null != this.field_K) {
           this.field_K.a(46);
         }
-        var33 = (gk) (this.field_z.a(41));
+        var33 = (gk) (this.field_z.beginForward(41));
         while (var33 != null) {
           var33.b(-25071);
-          var33 = (gk) (this.field_z.d(2123));
+          var33 = (gk) (this.field_z.nextForward(2123));
         }
         if (this.field_n != null) {
           if (!this.field_n.isLinked((byte) 115)) {
@@ -1368,11 +1368,11 @@ final class hn {
           this.field_c == 0) {
           di.a(param0 ^ -30867, 243, 12);
         }
-        if (this.field_u.a(102) != null) {
+        if (this.field_u.beginForward(102) != null) {
           this.field_G = this.field_G + 1;
           if (this.field_G == 230) {
             this.field_G = 0;
-            this.field_u.c(1);
+            this.field_u.removeFirst(1);
           }
         }
     }
@@ -1408,12 +1408,12 @@ final class hn {
     final void j(int param0) {
         int var4 = Confined.field_J ? 1 : 0;
         int var3 = 14 % ((38 - param0) / 63);
-        gk var2 = (gk) (this.field_z.a(11));
+        gk var2 = (gk) (this.field_z.beginForward(11));
         while (var2 != null) {
           if (var2.field_t != null) {
             var2.a((byte) -77);
           }
-          var2 = (gk) (this.field_z.d(2123));
+          var2 = (gk) (this.field_z.nextForward(2123));
         }
         if (null != this.field_n) {
           this.field_n.a((byte) -124);
@@ -1434,7 +1434,7 @@ final class hn {
         if (param0 != 1) {
           this.d((byte) 64);
         }
-        var3 = (kh) (this.field_b.a(78));
+        var3 = (kh) (this.field_b.beginForward(78));
         while (var3 != null) {
           if (!(var3.field_K >= 0.0)) {
             while (this.field_x.field_a - 1 > 1 + var2) {
@@ -1448,10 +1448,10 @@ final class hn {
             var10 = this.field_x.field_y[1 + var4];
             var5 = var10;
             if (var5 == null) {
-              var5 = (pm) (this.field_g.a(false));
+              var5 = (pm) (this.field_g.beginBackward(false));
             } else {
-              this.field_g.a(var10, false);
-              var5 = (pm) (this.field_g.a((byte) 57));
+              this.field_g.beginBackwardFrom(var10, false);
+              var5 = (pm) (this.field_g.nextBackward((byte) 57));
             }
             var6 = 0;
             var3.field_y = 1.7976931348623157e+308;
@@ -1466,7 +1466,7 @@ final class hn {
                     if (var3.a(0, var6 != 0, var5)) {
                       var6 = 1;
                     }
-                    var5 = (pm) (this.field_g.a((byte) 84));
+                    var5 = (pm) (this.field_g.nextBackward((byte) 84));
                     continue;
                   }
                   break;
@@ -1485,7 +1485,7 @@ final class hn {
                 if (var3.a(0, var6 != 0, var5)) {
                   var6 = 1;
                 }
-                var5 = (pm) (this.field_g.a((byte) 67));
+                var5 = (pm) (this.field_g.nextBackward((byte) 67));
                 continue;
               }
               break;
@@ -1497,18 +1497,18 @@ final class hn {
               var3.field_S.a(var3, param0 + 123);
             }
           }
-          var3 = (kh) (this.field_b.d(2123));
+          var3 = (kh) (this.field_b.nextForward(2123));
         }
     }
 
     hn() {
-        this.field_g = new mn();
+        this.field_g = new PrimaryNodeDeque();
         this.field_N = new vb(this.field_g);
         this.field_w = new vb(this.field_g);
-        this.field_b = new mn();
-        this.field_F = new mn();
-        this.field_z = new mn();
-        this.field_u = new mn();
+        this.field_b = new PrimaryNodeDeque();
+        this.field_F = new PrimaryNodeDeque();
+        this.field_z = new PrimaryNodeDeque();
+        this.field_u = new PrimaryNodeDeque();
         this.field_i = false;
         this.field_y = true;
         this.field_M = true;
@@ -1519,7 +1519,7 @@ final class hn {
         this.field_O = new wd();
         this.field_x = new lc(h.field_V[0], ag.field_g[0], 17, 4.0, vb.field_a[0], 0.0);
         this.field_B = new dj(this);
-        this.field_g.a((IntrusiveNode) (this.field_B), (byte) -113);
+        this.field_g.addLast((IntrusiveNode) (this.field_B), (byte) -113);
         this.field_m = new vg(this, 0.0, 0.0, 0.0);
         this.field_m.field_ab = 0.0;
         this.field_m.field_P = 0.0;
@@ -1530,7 +1530,7 @@ final class hn {
         this.field_m.field_N = 1.0;
         this.field_m.field_V = 0.0;
         this.field_m.field_U = 1.0;
-        this.field_g.a(this.field_m, -1);
+        this.field_g.addFirst(this.field_m, -1);
         this.field_J.a(12631, false);
         bd.field_h = 40;
         we.field_g = 120;

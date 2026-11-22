@@ -300,7 +300,7 @@ final class ug extends PcmStream {
           this.d(-16);
         }
         if ((this.field_C[param0] & 2) != 0) {
-          var3 = (cc) (this.field_H.field_q.h(param1 + 5445));
+          var3 = (cc) (this.field_H.field_q.beginForward(param1 + 5445));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -310,7 +310,7 @@ final class ug extends PcmStream {
               0 > var3.field_k) {
               var3.field_k = 0;
             }
-            var3 = (cc) (this.field_H.field_q.e(0));
+            var3 = (cc) (this.field_H.field_q.nextForward(0));
           }
         }
     }
@@ -463,7 +463,7 @@ final class ug extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if ((4 & this.field_C[param0]) != 0) {
-          var3 = (cc) (this.field_H.field_q.h(param1 ^ -12545));
+          var3 = (cc) (this.field_H.field_q.beginForward(param1 ^ -12545));
           while (var3 != null) {
             stackIn_10_0 = var3.field_u;
             stackIn_10_1 = param0;
@@ -474,7 +474,7 @@ final class ug extends PcmStream {
             if (stackIn_10_0 == stackIn_10_1) {
               var3.field_i = 0;
             }
-            var3 = (cc) (this.field_H.field_q.e(0));
+            var3 = (cc) (this.field_H.field_q.nextForward(0));
           }
         }
         if (decompiledFrameCompleted0) {
@@ -492,7 +492,7 @@ final class ug extends PcmStream {
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var3 = (cc) (this.field_H.field_q.h(-11151));
+        var3 = (cc) (this.field_H.field_q.beginForward(-11151));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_10_0 = ~param0;
@@ -504,7 +504,7 @@ final class ug extends PcmStream {
               this.field_s[var3.field_u][var3.field_F] = null;
               var3.field_k = 0;
             }
-            var3 = (cc) (this.field_H.field_q.e(0));
+            var3 = (cc) (this.field_H.field_q.nextForward(0));
             continue;
           }
           break;
@@ -989,7 +989,7 @@ final class ug extends PcmStream {
         cc var3;
         int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var3 = (cc) (this.field_H.field_q.h(-11151));
+        var3 = (cc) (this.field_H.field_q.beginForward(-11151));
         if (param1 < 3) {
           return;
         }
@@ -1009,7 +1009,7 @@ final class ug extends PcmStream {
               }
               var3.unlink(-16175);
             }
-            var3 = (cc) (this.field_H.field_q.e(0));
+            var3 = (cc) (this.field_H.field_q.nextForward(0));
             continue;
           }
           break;
@@ -1265,7 +1265,7 @@ final class ug extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         this.field_s[param2][param1] = null;
         if ((2 & this.field_C[param2]) != 0) {
-          var6 = (cc) (this.field_H.field_q.h(-11151));
+          var6 = (cc) (this.field_H.field_q.beginForward(-11151));
           while (true) {
             if (var6 != null) {
               if (var7 != 0) {
@@ -1277,7 +1277,7 @@ final class ug extends PcmStream {
                 var6 != var8) {
                 var8.field_k = 0;
               } else {
-                var6 = (cc) (this.field_H.field_q.e(0));
+                var6 = (cc) (this.field_H.field_q.nextForward(0));
                 continue;
               }
             }
@@ -1307,7 +1307,7 @@ final class ug extends PcmStream {
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.a((byte) 91, param2, param3, 64);
         if ((this.field_C[param3] & 2) != 0) {
-          var5 = (cc) (this.field_H.field_q.b(param0 ^ 2861));
+          var5 = (cc) (this.field_H.field_q.beginBackward(param0 ^ 2861));
           while (var5 != null) {
             if (param3 == var5.field_u &&
               0 > var5.field_k) {
@@ -1320,7 +1320,7 @@ final class ug extends PcmStream {
               var5.field_s = -var5.field_h + var6_int;
               return;
             }
-            var5 = (cc) (this.field_H.field_q.c(-113));
+            var5 = (cc) (this.field_H.field_q.nextBackward(-113));
             if (var9 == 0) {
               continue;
             }
@@ -1380,7 +1380,7 @@ final class ug extends PcmStream {
           }
           this.field_G[param3][var7.field_z] = var7;
         }
-        this.field_H.field_q.a(var7, 255);
+        this.field_H.field_q.addLast(var7, 255);
         this.field_s[param3][param2] = var7;
         return;
     }

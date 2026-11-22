@@ -31,7 +31,7 @@ final class tb {
           var2_long = lj.a((byte) -83);
           if (ja.field_P != 0 &&
             0 > il.field_h) {
-            var4_ref_ha = (ha) (bj.field_n.c((byte) 47));
+            var4_ref_ha = (ha) (bj.field_n.beginForward((byte) 47));
             if (var4_ref_ha != null &&
               var4_ref_ha.field_q < var2_long) {
               var4_ref_ha.unlink(-1);
@@ -83,7 +83,7 @@ final class tb {
             for (var6 = 0; pd.field_l > var6; var6++) {
               var5.field_r[var6] = AccountRequestState.field_a.payload[var6];
             }
-            bj.field_n.a(false, var5);
+            bj.field_n.addLast(false, var5);
             il.field_h = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

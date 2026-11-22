@@ -22,7 +22,7 @@ final class UiComponentPart026 extends UiComponentPart030 {
         animatedTileRegionLocal2.integerState0818 = integerArgument2;
         animatedTileRegionLocal2.integerState0815 = integerArgument1;
         animatedTileRegionLocal2.integerState0811 = integerArgument7;
-        nodeDequeLocal1.performAction1735(animatedTileRegionLocal2, 2777);
+        nodeDequeLocal1.addFirst(animatedTileRegionLocal2, 2777);
         int integerLocal3 = -11 / ((integerArgument8 - 10) / 35);
         animatedTileRegionLocal2.performAction1667(11976, integerArgument4);
         return nodeDequeLocal1;
@@ -66,10 +66,10 @@ final class UiComponentPart026 extends UiComponentPart030 {
           if (integerArgument1 != -20494) {
             stringState0460 = (String) null;
           }
-          mixedSupport129Local2 = (MixedSupport129) (UiComponentPart025.nodeDequeState0026.computeHashNode1741((byte) 125));
+          mixedSupport129Local2 = (MixedSupport129) (UiComponentPart025.nodeDequeState0026.beginBackward((byte) 125));
           while (mixedSupport129Local2 != null) {
             RenderingSupport006.performAction0748(mixedSupport129Local2, (byte) -70, integerArgument2);
-            mixedSupport129Local2 = (MixedSupport129) (UiComponentPart025.nodeDequeState0026.computeHashNode1745(true));
+            mixedSupport129Local2 = (MixedSupport129) (UiComponentPart025.nodeDequeState0026.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal5) {
@@ -275,7 +275,7 @@ final class UiComponentPart026 extends UiComponentPart030 {
             if (integerArgument3 != 4210752) {
               stringState0460 = (String) null;
             }
-            MixedSupport002.nodeDequeState0001.performAction1735(mixedSupport071Local29, 2777);
+            MixedSupport002.nodeDequeState0001.addFirst(mixedSupport071Local29, 2777);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal39) {
             caughtExceptionLocal11 = caughtParameterLocal39;

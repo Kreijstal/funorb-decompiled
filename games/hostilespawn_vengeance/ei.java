@@ -4,7 +4,7 @@
 final class ei extends IntrusiveNode {
     static bd field_p;
     static bd field_m;
-    static vl field_q;
+    static IntrusiveDeque field_q;
     static int field_l;
     static boolean field_i;
     static bd field_n;
@@ -12,7 +12,7 @@ final class ei extends IntrusiveNode {
     long field_j;
     int field_s;
     static String field_k;
-    static vl field_h;
+    static IntrusiveDeque field_h;
     static eg field_o;
     static boolean field_t;
 
@@ -1142,8 +1142,8 @@ final class ei extends IntrusiveNode {
         field_i = false;
         field_l = 0;
         field_k = "Passwords must be between 5 and 20 characters long";
-        field_q = new vl();
+        field_q = new IntrusiveDeque();
         field_t = true;
-        field_h = new vl();
+        field_h = new IntrusiveDeque();
     }
 }

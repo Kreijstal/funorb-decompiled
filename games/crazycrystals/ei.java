@@ -233,7 +233,7 @@ final class ei extends om {
           }
         }
         ae.field_F = 2147483647;
-        be.field_c = 0;
+        SecondaryNodeDeque.field_c = 0;
         em.field_i = -2147483648;
         uo.field_m = -2147483648;
         db.field_i = 2147483647;

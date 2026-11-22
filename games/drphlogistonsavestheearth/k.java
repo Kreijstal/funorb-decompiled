@@ -6,7 +6,7 @@ final class k extends si {
     static int field_L;
     static int[] field_M;
     static rf field_H;
-    private vd field_K;
+    private IntrusiveDeque field_K;
     static int[] field_I;
 
     public static void clearStaticReferences(byte param0) {
@@ -114,7 +114,7 @@ final class k extends si {
 
     public k() {
         super(0, 0, di.field_a, qe.field_l, (cg) null, (fd) null);
-        this.field_K = new vd();
+        this.field_K = new IntrusiveDeque();
     }
 
     final void a(byte param0, vg param1) {
@@ -124,7 +124,7 @@ final class k extends si {
             throw new IllegalArgumentException();
           }
           var3 = (bd) (param1);
-          this.field_K.a(48, var3);
+          this.field_K.addFirst(48, var3);
           if (param0 > -82) {
             field_M = (int[]) null;
           }

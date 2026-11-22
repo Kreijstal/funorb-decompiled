@@ -31,7 +31,7 @@ final class sg {
             return stackIn_2_0;
           }
           var2 = new pd(param1, param1);
-          bk.field_d.a(false, var2);
+          bk.field_d.addLast(false, var2);
           qg.field_f.a(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;

@@ -6,11 +6,11 @@ import java.util.*;
 final class NodeHashTableIterator implements Iterator {
     static Sprite field_b;
     static int field_f;
-    private IntrusiveNode field_c;
-    private IntrusiveNode field_a;
-    private IterableNodeHashTable field_g;
+    private IntrusiveNode lastReturned;
+    private IntrusiveNode nextNode;
+    private IterableNodeHashTable table;
     static String field_e;
-    private int field_d;
+    private int nextBucketIndex;
     static int field_h;
 
     public static void clearStatics(int param0) {
@@ -23,11 +23,11 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     public final void remove() {
-        if (null == this.field_c) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_c.unlink((byte) -90);
-        this.field_c = null;
+        this.lastReturned.unlink((byte) -90);
+        this.lastReturned = null;
     }
 
     final static AnimatedPanel a(int param0) {
@@ -106,22 +106,22 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (this.field_g.field_f[-1 + this.field_d] != this.field_a) {
+        if (this.table.field_f[-1 + this.nextBucketIndex] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.field_g.field_d <= this.field_d) {
+          if (this.table.field_d <= this.nextBucketIndex) {
             return false;
           }
-          fieldTemp$0 = this.field_d;
-          this.field_d = this.field_d + 1;
-          if (this.field_g.field_f[fieldTemp$0].next == this.field_g.field_f[this.field_d - 1]) {
-            this.field_a = this.field_g.field_f[-1 + this.field_d];
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (this.table.field_f[fieldTemp$0].next == this.table.field_f[this.nextBucketIndex - 1]) {
+            this.nextNode = this.table.field_f[-1 + this.nextBucketIndex];
             continue;
           }
           break;
         }
-        this.field_a = this.field_g.field_f[this.field_d - 1].next;
+        this.nextNode = this.table.field_f[this.nextBucketIndex - 1].next;
         return true;
     }
 
@@ -142,42 +142,42 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (this.field_g.field_f[-1 + this.field_d] != this.field_a) {
-          var1 = this.field_a;
-          this.field_a = var1.next;
-          this.field_c = var1;
+        if (this.table.field_f[-1 + this.nextBucketIndex] != this.nextNode) {
+          var1 = this.nextNode;
+          this.nextNode = var1.next;
+          this.lastReturned = var1;
           return var1;
         }
         do {
-          if (this.field_g.field_d <= this.field_d) {
+          if (this.table.field_d <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_d;
-          this.field_d = this.field_d + 1;
-          var1 = this.field_g.field_f[fieldTemp$0].next;
-        } while (this.field_g.field_f[-1 + this.field_d] == var1);
-        this.field_c = var1;
-        this.field_a = var1.next;
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var1 = this.table.field_f[fieldTemp$0].next;
+        } while (this.table.field_f[-1 + this.nextBucketIndex] == var1);
+        this.lastReturned = var1;
+        this.nextNode = var1.next;
         return var1;
     }
 
     NodeHashTableIterator(IterableNodeHashTable param0) {
-        this.field_c = null;
+        this.lastReturned = null;
         try {
-          this.field_g = param0;
-          this.c(-107);
+          this.table = param0;
+          this.reset(-107);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(int param0) {
-        this.field_c = null;
+    private final void reset(int param0) {
+        this.lastReturned = null;
         if (param0 > -77) {
           this.next();
         }
-        this.field_d = 1;
-        this.field_a = this.field_g.field_f[0].next;
+        this.nextBucketIndex = 1;
+        this.nextNode = this.table.field_f[0].next;
     }
 
     static {

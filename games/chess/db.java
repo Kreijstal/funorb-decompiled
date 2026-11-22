@@ -30,7 +30,7 @@ final class db extends vm {
               return;
             }
             if ((oc.field_p.field_A | 1 << oc.field_p.field_a) == -1 + (1 << oc.field_p.field_B.field_h)) {
-              fm.field_R[36] = jc.field_c;
+              fm.field_R[36] = IntrusiveDeque.field_c;
               return;
             }
             fm.field_R[36] = hk.field_J;
@@ -62,7 +62,7 @@ final class db extends vm {
             return;
           }
           if ((oc.field_p.field_A | 1 << oc.field_p.field_a) == -1 + (1 << oc.field_p.field_B.field_h)) {
-            fm.field_R[36] = jc.field_c;
+            fm.field_R[36] = IntrusiveDeque.field_c;
             return;
           }
           fm.field_R[36] = hk.field_J;

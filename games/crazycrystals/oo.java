@@ -223,14 +223,14 @@ final class oo extends se {
             return 80;
           }
         } else {
-          if (be.field_e != null) {
-            if (!be.field_e.a((byte) 102)) {
+          if (SecondaryNodeDeque.field_e != null) {
+            if (!SecondaryNodeDeque.field_e.a((byte) 102)) {
               return 14;
             }
-            if (!be.field_e.c("", -46)) {
+            if (!SecondaryNodeDeque.field_e.c("", -46)) {
               return 29;
             }
-            if (!be.field_e.a(-20402, "")) {
+            if (!SecondaryNodeDeque.field_e.a(-20402, "")) {
               return 29;
             }
           }

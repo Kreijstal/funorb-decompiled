@@ -4,7 +4,7 @@
 class qa extends hf {
     static int[] field_I;
     private fk field_P;
-    private vd field_Q;
+    private IntrusiveDeque field_Q;
     static String field_N;
     static he[] field_S;
     private String[] field_R;
@@ -57,7 +57,7 @@ class qa extends hf {
         int var16;
         int var7Lifetime1;
         var16 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        this.field_Q = new vd();
+        this.field_Q = new IntrusiveDeque();
         var2 = 0;
         var3 = (va) ((Object) this.field_l);
         var4 = var3.a((vg) (this), true);
@@ -97,7 +97,7 @@ class qa extends hf {
               ((fk) (var10)).field_k = var15;
             }
             var10 = var15;
-            this.field_Q.a(var15, 255);
+            this.field_Q.addLast(var15, 255);
           }
         }
     }
@@ -109,7 +109,7 @@ class qa extends hf {
           super.a(param0, param1, param2, (byte) -128);
           this.field_P = null;
           if (param3 >= -127) {
-            this.field_Q = (vd) null;
+            this.field_Q = (IntrusiveDeque) null;
           }
           if (this.field_n) {
             var5_int = ck.field_c - param1 - this.field_o;
@@ -242,7 +242,7 @@ class qa extends hf {
     private final fk a(int param0, int param1, byte param2) {
         fk var5_ref_fk = null;
         int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        fk var4 = (fk) (this.field_Q.h(-11151));
+        fk var4 = (fk) (this.field_Q.beginForward(-11151));
         while (var4 != null) {
           var5_ref_fk = var4;
           while (var5_ref_fk != null) {
@@ -254,7 +254,7 @@ class qa extends hf {
             }
             var5_ref_fk = var5_ref_fk.field_k;
           }
-          var4 = (fk) (this.field_Q.e(0));
+          var4 = (fk) (this.field_Q.nextForward(0));
         }
         int var5 = 85 % ((59 - param2) / 51);
         return null;

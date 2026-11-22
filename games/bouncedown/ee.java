@@ -47,7 +47,7 @@ final class ee {
           if (param0 != -1) {
             return false;
           }
-          var3 = bc.a(param2, 41);
+          var3 = IntrusiveDeque.a(param2, 41);
           stackIn_8_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

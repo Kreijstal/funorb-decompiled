@@ -334,9 +334,9 @@ final class t extends ma implements mj {
                   }
                 }
                 if (param1) {
-                  if (jc.field_g != null) {
-                    if (jc.field_g[var7] != null) {
-                      stackIn_192_0 = (!jc.field_g[var7][var9]) ? 0 : 1;
+                  if (IntrusiveDeque.field_g != null) {
+                    if (IntrusiveDeque.field_g[var7] != null) {
+                      stackIn_192_0 = (!IntrusiveDeque.field_g[var7][var9]) ? 0 : 1;
                     } else {
                       stackIn_192_0 = 0;
                     }
@@ -638,7 +638,7 @@ final class t extends ma implements mj {
         int var6 = 0;
         var6 = Chess.field_G;
         try {
-          this.field_I.e(-31023);
+          this.field_I.clear(-31023);
           if (param0 != null &&
             0 != param0.length) {
             var3_int = param0.length;
@@ -658,7 +658,7 @@ final class t extends ma implements mj {
               this.field_R[var5].a(var5 * 16 + 20, 34, 15, 80, 0);
               this.b(this.field_R[var5], 95);
             }
-            this.field_R[var3_int] = new fb(cn.field_d, (rg) (this));
+            this.field_R[var3_int] = new fb(SecondaryNodeDeque.field_d, (rg) (this));
             this.field_R[var3_int].field_n = (jm) ((Object) var4);
             this.field_R[var3_int].a((var3_int + 1) * 16 + 20, 34, 15, 100, 0);
             this.b(this.field_R[var3_int], 95);

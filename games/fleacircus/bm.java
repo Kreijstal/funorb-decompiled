@@ -123,18 +123,18 @@ final class bm extends gj implements da {
 
     final static ll a(boolean param0, int param1, int param2, int param3, int param4) {
         int var6 = fleas.field_A ? 1 : 0;
-        ll var5 = (ll) (jj.field_S.c((byte) 47));
+        ll var5 = (ll) (jj.field_S.beginForward((byte) 47));
         while (var5 != null) {
           if (var5.field_k == param4) {
             return var5;
           }
-          var5 = (ll) (jj.field_S.b((byte) -105));
+          var5 = (ll) (jj.field_S.nextForward((byte) -105));
         }
         var5 = new ll();
         var5.field_k = param4;
         var5.field_t = param2;
         var5.field_q = param3;
-        jj.field_S.a(param0, var5);
+        jj.field_S.addLast(param0, var5);
         ak.a(-14722, var5, param1);
         return var5;
     }

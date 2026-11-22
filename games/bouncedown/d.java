@@ -250,7 +250,7 @@ final class d extends wd {
               fieldTemp$0 = bi.field_g;
               bi.field_g = bi.field_g + 1;
               var5.field_mb = fieldTemp$0;
-              wg.field_v.a(1, var5);
+              wg.field_v.addLast(1, var5);
             }
             var5.field_ob = var4_ref_String;
             return;
@@ -306,7 +306,7 @@ final class d extends wd {
             fieldTemp$1 = kc.field_a;
             kc.field_a = kc.field_a + 1;
             var6_ref.field_mb = fieldTemp$1;
-            oa.field_b.a(1, var6_ref);
+            oa.field_b.addLast(1, var6_ref);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -314,7 +314,7 @@ final class d extends wd {
           var6_ref.field_ob = var4_ref_StringLifetime1;
           var6_ref.field_kb = (String) (var3Lifetime1);
           var6_ref.unlink(2);
-          var7_ref = (fb) (oa.field_b.a((byte) -76));
+          var7_ref = (fb) (oa.field_b.beginForward((byte) -76));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackIn_62_0 = var7_ref;
@@ -322,7 +322,7 @@ final class d extends wd {
                 break scanLoop1;
               }
               if (ja.a(stackIn_62_0, 200, var6_ref)) {
-                var7_ref = (fb) (oa.field_b.d((byte) -114));
+                var7_ref = (fb) (oa.field_b.nextForward((byte) -114));
                 continue;
               }
             }
@@ -335,7 +335,7 @@ final class d extends wd {
               return;
             }
           }
-          oa.field_b.a(1, var6_ref);
+          oa.field_b.addLast(1, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

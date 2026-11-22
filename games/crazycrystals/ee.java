@@ -17,8 +17,8 @@ final class ee extends lk {
     private int field_s;
     private byte[] field_h;
     private fc field_g;
-    private wb field_j;
-    private wb field_n;
+    private IntrusiveDeque field_j;
+    private IntrusiveDeque field_n;
     private int field_o;
     private boolean field_d;
     private boolean field_f;
@@ -49,7 +49,7 @@ final class ee extends lk {
           }
           if (this.field_d) {
             var2 = 1;
-            var3 = this.field_j.g(32073);
+            var3 = this.field_j.beginForward(32073);
             while (var3 != null) {
               var4 = (int)var3.field_e;
               if (0 == this.field_h[var4]) {
@@ -60,7 +60,7 @@ final class ee extends lk {
               } else {
                 var3.unlink(false);
               }
-              var3 = this.field_j.a(false);
+              var3 = this.field_j.nextForward(false);
             }
             scanLoop1: while (true) {
               if (this.field_o < this.field_p.field_f.length) {
@@ -76,7 +76,7 @@ final class ee extends lk {
                     var6 = new IntrusiveNode();
                     var6.field_e = (long)this.field_o;
                     var2 = 0;
-                    this.field_j.b(0, var6);
+                    this.field_j.addLast(0, var6);
                   }
                 }
                 this.field_o = this.field_o + 1;
@@ -93,7 +93,7 @@ final class ee extends lk {
           else {
             if (this.field_f) {
               var2Lifetime2 = 1;
-              var3Lifetime1 = this.field_j.g(32073);
+              var3Lifetime1 = this.field_j.beginForward(32073);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.field_e;
                 if (1 != this.field_h[var4Lifetime1]) {
@@ -104,7 +104,7 @@ final class ee extends lk {
                 } else {
                   var2Lifetime2 = 0;
                 }
-                var3Lifetime1 = this.field_j.a(false);
+                var3Lifetime1 = this.field_j.nextForward(false);
               }
               scanLoop2: while (true) {
                 if (this.field_o < this.field_p.field_f.length) {
@@ -120,7 +120,7 @@ final class ee extends lk {
                       var7 = new IntrusiveNode();
                       var7.field_e = (long)this.field_o;
                       var2Lifetime2 = 0;
-                      this.field_j.b(0, var7);
+                      this.field_j.addLast(0, var7);
                     }
                   }
                   this.field_o = this.field_o + 1;
@@ -525,7 +525,7 @@ final class ee extends lk {
         if (this.a(630779105) == null) {
           return;
         }
-        var2 = this.field_n.g(32073);
+        var2 = this.field_n.beginForward(32073);
         while (var2 != null) {
           var3 = (int)var2.field_e;
           if (var3 >= 0) {
@@ -549,7 +549,7 @@ final class ee extends lk {
           } else {
             var2.unlink(false);
           }
-          var2 = this.field_n.a(false);
+          var2 = this.field_n.nextForward(false);
         }
     }
 
@@ -576,9 +576,9 @@ final class ee extends lk {
             return false;
           }
           var2_long = lo.a((byte) -98);
-          if (0 != wb.field_d &&
+          if (0 != IntrusiveDeque.field_d &&
             sm.field_i < 0) {
-            var4_ref_mo = (mo) (bn.field_i.g(32073));
+            var4_ref_mo = (mo) (bn.field_i.beginForward(32073));
             if (var4_ref_mo != null &&
               var4_ref_mo.field_k < var2_long) {
               var4_ref_mo.unlink(false);
@@ -621,7 +621,7 @@ final class ee extends lk {
             if (!ol.f((byte) 60)) {
               return false;
             }
-            if (wb.field_d == 0) {
+            if (IntrusiveDeque.field_d == 0) {
               fl.field_m = ea.field_n;
               ea.field_n = qn.field_u;
               qn.field_u = bf.field_b;
@@ -629,7 +629,7 @@ final class ee extends lk {
               sm.field_i = -1;
               return true;
             }
-            var4 = wb.field_d;
+            var4 = IntrusiveDeque.field_d;
             if (0.0 != kk.field_b) {
               var4 = (int)((double)var4 + og.field_w.nextGaussian() * kk.field_b);
               if (var4 < 0) {
@@ -640,7 +640,7 @@ final class ee extends lk {
             for (var6 = 0; var6 < rk.field_b; var6++) {
               var5.field_g[var6] = kd.field_n.payload[var6];
             }
-            bn.field_i.b(param1 ^ 64, var5);
+            bn.field_i.addLast(param1 ^ 64, var5);
             sm.field_i = -1;
             stackIn_21_0 = sm.field_i;
           }
@@ -664,7 +664,7 @@ final class ee extends lk {
         }
         this.field_f = true;
         if (this.field_j == null) {
-          this.field_j = new wb();
+          this.field_j = new IntrusiveDeque();
         }
         int var2 = 42 % ((param0 - 7) / 45);
     }
@@ -686,7 +686,7 @@ final class ee extends lk {
         RuntimeException var10 = null;
         this.field_g = new fc(16);
         this.field_o = 0;
-        this.field_n = new wb();
+        this.field_n = new IntrusiveDeque();
         this.field_c = 0L;
         try {
           this.field_l = param1;
@@ -695,7 +695,7 @@ final class ee extends lk {
             this.field_d = false;
           } else {
             this.field_d = true;
-            this.field_j = new wb();
+            this.field_j = new IntrusiveDeque();
           }
           this.field_s = param7;
           this.field_i = param2;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class vn extends bj implements mj {
-    static jc field_vb;
+    static IntrusiveDeque field_vb;
     static String field_Eb;
     static int[] field_sb;
     private boolean field_zb;
@@ -204,7 +204,7 @@ class vn extends bj implements mj {
         String var3 = null;
         String var2 = null;
         String var5 = null;
-        if (!dk.field_g) {
+        if (!SecondaryNodeHashTable.field_g) {
           throw new IllegalStateException();
         }
         if (param0 != 10) {
@@ -298,6 +298,6 @@ class vn extends bj implements mj {
         field_Eb = "This game option has not yet been unlocked for use.";
         field_sb = new int[]{682, 910};
         field_Db = -1;
-        field_vb = new jc();
+        field_vb = new IntrusiveDeque();
     }
 }

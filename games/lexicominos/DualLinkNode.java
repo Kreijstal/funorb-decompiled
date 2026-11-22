@@ -6,7 +6,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode secondaryPrevious;
     static boolean field_k;
     long field_j;
-    static ng field_n;
+    static IntrusiveDeque field_n;
     static long field_h;
     static String field_o;
     static AccountRequestState field_i;
@@ -71,7 +71,7 @@ class DualLinkNode extends IntrusiveNode {
         if (param0 == 81) {
           return MouseWheelInput.field_c == field_i ? true : false;
         }
-        field_n = (ng) null;
+        field_n = (IntrusiveDeque) null;
         return MouseWheelInput.field_c == field_i ? true : false;
     }
 
@@ -241,7 +241,7 @@ class DualLinkNode extends IntrusiveNode {
 
     static {
         field_h = 20000000L;
-        field_n = new ng();
+        field_n = new IntrusiveDeque();
         field_o = "Logging in...";
         field_i = new AccountRequestState();
     }

@@ -455,7 +455,7 @@ final class v extends pj implements ra, ke, fh {
         this.field_Q = new qg("", (fd) null, 3);
         int var1 = 1;
         this.field_T = new nc("", (fd) null, var1 != 0);
-        this.field_R = new hf(vd.field_d, (fd) null);
+        this.field_R = new hf(IntrusiveDeque.field_d, (fd) null);
         this.field_L = new hf(ej.field_c, (fd) null);
         this.field_K.field_v = bj.field_c;
         this.field_P.field_v = fm.field_i;

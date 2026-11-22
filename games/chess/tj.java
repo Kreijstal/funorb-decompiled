@@ -165,7 +165,7 @@ final class tj extends vm {
           var2_long = ud.a(2);
           if (0 != fh.field_d &&
             0 > da.field_p) {
-            var4_ref_tf = (tf) (kn.field_I.g(-18110));
+            var4_ref_tf = (tf) (kn.field_I.beginBackward(-18110));
             if (var4_ref_tf != null &&
               var4_ref_tf.field_m < var2_long) {
               var4_ref_tf.unlink(-2193);
@@ -227,7 +227,7 @@ final class tj extends vm {
             for (var6 = 0; var6 < sb.field_sb; var6++) {
               var5.field_j[var6] = tk.field_h.data[var6];
             }
-            kn.field_I.a((IntrusiveNode) (var5), (byte) -122);
+            kn.field_I.addFirst((IntrusiveNode) (var5), (byte) -122);
             da.field_p = -1;
             stackIn_20_0 = da.field_p;
           }

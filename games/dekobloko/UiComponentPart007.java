@@ -149,7 +149,7 @@ final class UiComponentPart007 extends ComponentContainer implements CallbackCon
         int integerLocal10 = 0;
         integerLocal10 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          this.nodeDequeState0013.performAction1742(126);
+          this.nodeDequeState0013.clear(126);
           if (stringArrayArgument2 != null &&
             stringArrayArgument2.length != 0) {
             if (integerArgument1 != 32) {

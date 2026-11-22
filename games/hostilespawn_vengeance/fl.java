@@ -3,7 +3,7 @@
  */
 final class fl {
     static String field_b;
-    private vl field_c;
+    private IntrusiveDeque field_c;
     private IntrusiveNode field_a;
     static String field_d;
 
@@ -23,11 +23,11 @@ final class fl {
             return stackIn_2_0;
           }
           if (param0 == null) {
-            var3 = this.field_c.field_b.field_g;
+            var3 = this.field_c.sentinel.field_g;
           } else {
             var3 = param0;
           }
-          if (this.field_c.field_b == var3) {
+          if (this.field_c.sentinel == var3) {
             this.field_a = null;
             stackIn_9_0 = null;
             return (IntrusiveNode) (stackIn_9_0);
@@ -97,7 +97,7 @@ final class fl {
 
     final IntrusiveNode a(boolean param0) {
         IntrusiveNode var2 = this.field_a;
-        if (this.field_c.field_b == var2) {
+        if (this.field_c.sentinel == var2) {
           this.field_a = null;
           return null;
         }
@@ -114,8 +114,8 @@ final class fl {
         if (param0 != 0) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_c.field_b.field_f;
-        if (var2 == this.field_c.field_b) {
+        IntrusiveNode var2 = this.field_c.sentinel.field_f;
+        if (var2 == this.field_c.sentinel) {
           this.field_a = null;
           return null;
         }
@@ -137,11 +137,11 @@ final class fl {
             this.field_a = (IntrusiveNode) null;
           }
           if (param1 == null) {
-            var3 = this.field_c.field_b.field_f;
+            var3 = this.field_c.sentinel.field_f;
           } else {
             var3 = param1;
           }
-          if (this.field_c.field_b != var3) {
+          if (this.field_c.sentinel != var3) {
             this.field_a = var3.field_f;
             stackIn_9_0 = var3;
             return stackIn_9_0;
@@ -165,7 +165,7 @@ final class fl {
 
     final IntrusiveNode c(int param0) {
         IntrusiveNode var2 = this.field_a;
-        if (var2 == this.field_c.field_b) {
+        if (var2 == this.field_c.sentinel) {
           this.field_a = null;
           return null;
         }
@@ -178,7 +178,7 @@ final class fl {
         return var2;
     }
 
-    fl(vl param0) {
+    fl(IntrusiveDeque param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -187,8 +187,8 @@ final class fl {
     }
 
     final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_c.field_b.field_g;
-        if (this.field_c.field_b == var2) {
+        IntrusiveNode var2 = this.field_c.sentinel.field_g;
+        if (this.field_c.sentinel == var2) {
           this.field_a = null;
           return null;
         }

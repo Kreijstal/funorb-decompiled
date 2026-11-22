@@ -70,7 +70,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
             UiComponent uiComponentLocal1 = (UiComponent) null;
             this.computeBoolean0221(false, (UiComponent) null);
           }
-          this.nodeDequeState0013.performAction1735(uiComponentArgument1, 2777);
+          this.nodeDequeState0013.addFirst(uiComponentArgument1, 2777);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "kf.KC(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
@@ -325,7 +325,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
         RuntimeException caughtExceptionLocal10 = null;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (this.nodeDequeState0013.computeBoolean1738(-105)) {
+          if (this.nodeDequeState0013.isEmpty(-105)) {
             return false;
           }
           mixedSupport108Local6 = new MixedSupport108(this.nodeDequeState0013);
@@ -587,7 +587,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
         RuntimeException caughtExceptionLocal10 = null;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (this.nodeDequeState0013.computeBoolean1738(-15)) {
+          if (this.nodeDequeState0013.isEmpty(-15)) {
             return false;
           }
           mixedSupport108Local6 = new MixedSupport108(this.nodeDequeState0013);

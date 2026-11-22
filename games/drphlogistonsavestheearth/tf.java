@@ -152,7 +152,7 @@ final class tf extends ca {
               var9 = stackIn_47_0;
               var1_int = var1_int + ig.field_h;
               if (var9 != null) {
-                var9.a(ni.field_p + (wa.field_N << 1), var8Lifetime1 - dg.field_d, var7Lifetime1 + (dg.field_d << 1), var1_int, 7453);
+                var9.a(ni.field_p + (wa.field_N << 1), var8Lifetime1 - SecondaryNodeDeque.field_d, var7Lifetime1 + (SecondaryNodeDeque.field_d << 1), var1_int, 7453);
               }
               var1_int = var1_int + wa.field_N;
             }

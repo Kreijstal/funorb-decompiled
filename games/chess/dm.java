@@ -136,7 +136,7 @@ abstract class dm {
           }
           wb.a(var16, var5, var6);
           ng.field_c = vc.a((byte) 88, vj.field_g, va.field_d, wk.field_c, var4);
-          rh.field_c.field_I = new jc();
+          rh.field_c.field_I = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

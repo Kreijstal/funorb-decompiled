@@ -3,7 +3,7 @@
  */
 final class ua extends hl {
     static long field_E;
-    static bk field_G;
+    static IntrusiveDeque field_G;
     static java.awt.Image field_F;
 
     public static void a(int param0) {
@@ -45,6 +45,6 @@ final class ua extends hl {
     }
 
     static {
-        field_G = new bk();
+        field_G = new IntrusiveDeque();
     }
 }

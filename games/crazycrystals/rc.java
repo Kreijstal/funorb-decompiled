@@ -22,7 +22,7 @@ final class rc {
         if (!rc.a(-126)) {
           mb.a(var7, 4, 0);
         } else {
-          so.field_h.b(0, var7);
+          so.field_h.addLast(0, var7);
         }
         fk.field_s = fk.field_s + (param0 << param5);
         pc.field_y = pc.field_y + (1 << param5);

@@ -7,7 +7,7 @@ final class cf {
     static mi field_f;
     static i field_d;
     static int field_a;
-    static bc field_b;
+    static IntrusiveDeque field_b;
     static int field_e;
     private static String field_z;
 
@@ -25,6 +25,6 @@ final class cf {
     static {
         field_z = "cf.A(";
         field_f = new mi(1);
-        field_b = new bc();
+        field_b = new IntrusiveDeque();
     }
 }

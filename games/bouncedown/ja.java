@@ -73,7 +73,7 @@ final class ja {
     }
 
     static {
-        bc discarded$0 = new bc();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_a = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_d = 64;
         field_c = new int[1024];

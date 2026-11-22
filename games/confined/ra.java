@@ -3,13 +3,13 @@
  */
 abstract class ra implements dm {
     private long field_a;
-    static mn field_c;
-    static mn field_d;
+    static PrimaryNodeDeque field_c;
+    static PrimaryNodeDeque field_d;
     static String field_b;
 
     public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          field_c = (mn) null;
+          field_c = (PrimaryNodeDeque) null;
         }
         field_d = null;
         field_b = null;
@@ -120,8 +120,8 @@ abstract class ra implements dm {
     abstract String b(byte param0);
 
     static {
-        field_c = new mn();
-        field_d = new mn();
+        field_c = new PrimaryNodeDeque();
+        field_d = new PrimaryNodeDeque();
         field_b = "Enter the name you'd prefer. This is the name displayed to other players.";
     }
 }

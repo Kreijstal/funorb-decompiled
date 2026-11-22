@@ -4,7 +4,7 @@
 final class ci {
     private DualLinkNode field_d;
     private DualLinkNode field_c;
-    static ng field_f;
+    static IntrusiveDeque field_f;
     static int[] field_b;
     static sh field_e;
     static sh field_a;
@@ -35,7 +35,7 @@ final class ci {
           var2_int = param0.length();
           var3 = new char[var2_int];
           if (param1 != -79) {
-            field_f = (ng) null;
+            field_f = (IntrusiveDeque) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var3[-1 + (var2_int - var4)] = param0.charAt(var4);
@@ -130,7 +130,7 @@ final class ci {
           }
           return true;
         }
-        field_f = (ng) null;
+        field_f = (IntrusiveDeque) null;
         if (param1 >= 32) {
           if (param1 <= 126) {
             return true;
@@ -208,6 +208,6 @@ final class ci {
     }
 
     static {
-        field_f = new ng();
+        field_f = new IntrusiveDeque();
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wg {
-    static bk field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     private static String field_z;
 
@@ -13,6 +13,6 @@ final class wg {
 
     static {
         field_z = "wg.A(";
-        field_b = new bk();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -37,7 +37,7 @@ final class ge {
           var5 = 0;
           var3_intLifetime1 = var5;
           while (var5 < 25) {
-            if (sd.field_c[var5] == param0 &&
+            if (IterableNodeHashTable.field_c[var5] == param0 &&
               null != gl.field_u[var5]) {
               kf.a(gl.field_u[var5], (byte) -111);
               gl.field_u[var5] = null;

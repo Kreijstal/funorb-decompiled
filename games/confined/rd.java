@@ -280,7 +280,7 @@ final class rd extends id {
         return;
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         int var3_int = 0;
         double[] var8 = null;
         RuntimeException stackIn_9_0 = null;
@@ -305,7 +305,7 @@ final class rd extends id {
             this.field_ib.field_v = -var8[8];
             this.field_ib.field_u = (double)(-this.field_ob + 256) * 0.390625;
             this.field_ib.field_x = -var8[7];
-            param0.a((IntrusiveNode) (this.field_ib), (byte) 86);
+            param0.addLast((IntrusiveNode) (this.field_ib), (byte) 86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -682,7 +682,7 @@ final class rd extends id {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -712,7 +712,7 @@ final class rd extends id {
           this.a(this.field_ob, jk.field_c[this.field_Sb], 27902, this.field_Eb, 512, param4, param1, param3, param0);
           if (param2 >= -5) {
             var28 = (oi) null;
-            this.a((mn) null, 0.8438752622488864, -63, (vg) null, (oi) null);
+            this.a((PrimaryNodeDeque) null, 0.8438752622488864, -63, (vg) null, (oi) null);
           }
           this.field_fb.a(param3, param1, (byte) 125);
           if (this.field_V >= 10) {

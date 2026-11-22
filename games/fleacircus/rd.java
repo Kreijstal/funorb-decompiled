@@ -37,7 +37,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(ql param0, int param1, int param2) {
-        sd.field_d.a(false, param0);
+        sd.field_d.addLast(false, param0);
         if (param1 < 57) {
           return;
         }

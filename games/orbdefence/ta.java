@@ -5,7 +5,7 @@ import java.util.*;
 
 class ta extends pj implements c {
     static int field_z;
-    im field_x;
+    IntrusiveDeque field_x;
     static String field_y;
 
     final boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, pj param6) {
@@ -35,7 +35,7 @@ class ta extends pj implements c {
           if (!param0) {
             return false;
           }
-          this.field_x = (im) null;
+          this.field_x = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,7 +183,7 @@ class ta extends pj implements c {
           var4 = (pj) (var3.b(true));
         }
         if (param0 != -20598) {
-          this.field_x = (im) null;
+          this.field_x = (IntrusiveDeque) null;
         }
         return var2;
     }
@@ -330,7 +330,7 @@ class ta extends pj implements c {
         RuntimeException decompiledCaughtException = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (this.field_x.c(-3088)) {
+          if (this.field_x.isEmpty(-3088)) {
             return false;
           }
           var3 = new km(this.field_x);
@@ -611,7 +611,7 @@ class ta extends pj implements c {
             pj var4 = (pj) null;
             this.a((pj) null, true);
           }
-          this.field_x.a(-100, param0);
+          this.field_x.addLast(-100, param0);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "ta.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -767,7 +767,7 @@ class ta extends pj implements c {
 
     ta(int param0, int param1, int param2, int param3, td param4) {
         super(param0, param1, param2, param3, param4, (ag) null);
-        this.field_x = new im();
+        this.field_x = new IntrusiveDeque();
     }
 
     final void h(int param0) {
@@ -799,7 +799,7 @@ class ta extends pj implements c {
           if (param1) {
             this.i(24);
           }
-          if (this.field_x.c(-3088)) {
+          if (this.field_x.isEmpty(-3088)) {
             return false;
           }
           var3 = new km(this.field_x);

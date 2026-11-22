@@ -562,7 +562,7 @@ final class pc extends ci {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        jc var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         r var18_ref = null;
@@ -787,7 +787,7 @@ final class pc extends ci {
                   var16 = 0;
                 }
                 var17 = se.field_S.field_Kb.field_I;
-                var18_ref = (r) (var17.g(-18110));
+                var18_ref = (r) (var17.beginBackward(-18110));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
@@ -829,7 +829,7 @@ final class pc extends ci {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (r) (var17.a((byte) -107));
+                      var18_ref = (r) (var17.nextBackward((byte) -107));
                       continue;
                     }
                   }
@@ -955,7 +955,7 @@ final class pc extends ci {
               }
               var8.field_db = oc.a(pa.field_n, new String[]{Integer.toString(var9)}, (byte) -119);
             }
-            ec.field_j.field_db = oc.a(dk.field_a, new String[]{Integer.toString(pd.field_Rb.field_Xb), Integer.toString(pd.field_Rb.field_hc)}, (byte) -44);
+            ec.field_j.field_db = oc.a(SecondaryNodeHashTable.field_a, new String[]{Integer.toString(pd.field_Rb.field_Xb), Integer.toString(pd.field_Rb.field_hc)}, (byte) -44);
           }
           stackIn_184_0 = fm.field_T;
           stackIn_185_1 = (param0) && (!param3) && (!jh.field_a);

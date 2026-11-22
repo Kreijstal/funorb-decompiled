@@ -71,10 +71,10 @@ final class ik extends wi {
           if (param1 != 110) {
             ik.a(-105, (byte) 117);
           }
-          var2 = (vh) (al.field_e.c((byte) 47));
+          var2 = (vh) (al.field_e.beginForward((byte) 47));
           while (var2 != null) {
             fleas.a(param0, var2, param1 ^ 108);
-            var2 = (vh) (al.field_e.b((byte) -105));
+            var2 = (vh) (al.field_e.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

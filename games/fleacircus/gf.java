@@ -167,7 +167,7 @@ final class gf {
 
     final static void a(int param0) {
         ih var2 = null;
-        vh var1 = (vh) (al.field_e.c((byte) 47));
+        vh var1 = (vh) (al.field_e.beginForward((byte) 47));
         ih var2Lifetime1;
         if (param0 > -5) {
           gf.c(126);

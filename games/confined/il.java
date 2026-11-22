@@ -7,7 +7,7 @@ final class il extends hf {
     static String[] field_db;
     static pm field_gb;
     private gk field_eb;
-    static mn field_fb;
+    static PrimaryNodeDeque field_fb;
     static int field_cb;
 
     final void a(int param0, double param1, double param2, double param3, double param4, double param5, double param6) {
@@ -136,14 +136,14 @@ final class il extends hf {
         }
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_ab.field_u = this.field_C * 100.0 * this.field_bb;
           this.field_ab.field_t = this.field_E;
           this.field_ab.field_p = this.field_D;
           int var3_int = 117 / ((-2 - param1) / 62);
           this.field_ab.field_o = this.field_t;
-          param0.a((IntrusiveNode) (this.field_ab), (byte) -106);
+          param0.addLast((IntrusiveNode) (this.field_ab), (byte) -106);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "il.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -284,7 +284,7 @@ final class il extends hf {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
@@ -630,7 +630,7 @@ final class il extends hf {
         try {
           param0.a(false, this);
           if (param1 > -81) {
-            field_fb = (mn) null;
+            field_fb = (PrimaryNodeDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "il.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

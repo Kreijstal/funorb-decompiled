@@ -3,7 +3,7 @@
  */
 final class AccountRequestState {
     static String field_c;
-    static mn field_b;
+    static PrimaryNodeDeque field_b;
     static String field_d;
     static String field_e;
     static int field_a;
@@ -125,7 +125,7 @@ final class AccountRequestState {
             }
           }
           if (param1 != -116) {
-            field_b = (mn) null;
+            field_b = (PrimaryNodeDeque) null;
           }
           stackIn_69_0 = var6_int;
           return stackIn_69_0;
@@ -168,7 +168,7 @@ final class AccountRequestState {
         field_d = "<%0> metres to Level <%1>";
         field_a = 0;
         field_e = "\"There's light at the end of the tunnel.\" - Ian T";
-        field_b = new mn();
+        field_b = new PrimaryNodeDeque();
         field_f = true;
     }
 }

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static ng field_a;
+    static IntrusiveDeque field_a;
     static boolean field_c;
     static String[] field_b;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != -15699) {
-          field_a = (ng) null;
+          field_a = (IntrusiveDeque) null;
           field_b = null;
           field_a = null;
           return;
@@ -29,6 +29,6 @@ final class jl {
 
     static {
         field_b = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
-        field_a = new ng();
+        field_a = new IntrusiveDeque();
     }
 }

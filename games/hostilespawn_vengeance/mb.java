@@ -213,7 +213,7 @@ final class mb extends ce {
             mb.c(-95);
           }
           if (var2 == 0) {
-            var4 = (de) (ke.field_B.g(-76));
+            var4 = (de) (ke.field_B.beginForward(-76));
             if (var4 == null) {
               le.c((byte) 122);
               return;
@@ -238,11 +238,11 @@ final class mb extends ce {
             return;
           }
           var4_int = var10.i(param0 - 1);
-          var5_ref_ne = (ne) (AccountNameAvailabilityValidator.field_v.g(-106));
+          var5_ref_ne = (ne) (AccountNameAvailabilityValidator.field_v.beginForward(-106));
           while (var5_ref_ne != null) {
             if (var3 != var5_ref_ne.field_i ||
               var4_int != var5_ref_ne.field_m) {
-              var5_ref_ne = (ne) (AccountNameAvailabilityValidator.field_v.a(12684));
+              var5_ref_ne = (ne) (AccountNameAvailabilityValidator.field_v.nextForward(12684));
               continue;
             }
             break;

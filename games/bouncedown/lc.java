@@ -6,7 +6,7 @@ import java.util.*;
 class lc extends lk implements ik {
     static int[] field_x;
     static int field_y;
-    bc field_w;
+    IntrusiveDeque field_w;
 
     void a(int param0, int param1, int param2, lk param3) {
         RuntimeException runtimeException = null;
@@ -111,7 +111,7 @@ class lc extends lk implements ik {
           if (param6) {
             return false;
           }
-          this.field_w = (bc) null;
+          this.field_w = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,7 +166,7 @@ class lc extends lk implements ik {
         RuntimeException decompiledCaughtException = null;
         var7 = Bounce.field_N;
         try {
-          if (this.field_w.f((byte) -93)) {
+          if (this.field_w.isEmpty((byte) -93)) {
             return false;
           }
           var9 = new ea(this.field_w);
@@ -218,7 +218,7 @@ class lc extends lk implements ik {
         try {
           var7 = new ea(this.field_w);
           if (param4 != 34) {
-            this.field_w = (bc) null;
+            this.field_w = (IntrusiveDeque) null;
           }
           var8 = (lk) (var7.a(22092));
           while (var8 != null) {
@@ -247,9 +247,9 @@ class lc extends lk implements ik {
     final void b(lk param0, boolean param1) {
         try {
           if (!param1) {
-            this.field_w = (bc) null;
+            this.field_w = (IntrusiveDeque) null;
           }
-          this.field_w.a(1, param0);
+          this.field_w.addLast(1, param0);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "lc.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -391,7 +391,7 @@ class lc extends lk implements ik {
         RuntimeException decompiledCaughtException = null;
         var7 = Bounce.field_N;
         try {
-          if (this.field_w.f((byte) -93)) {
+          if (this.field_w.isEmpty((byte) -93)) {
             return false;
           }
           var9 = new ea(this.field_w);
@@ -431,7 +431,7 @@ class lc extends lk implements ik {
 
     lc(int param0, int param1, int param2, int param3, fc param4) {
         super(param0, param1, param2, param3, param4, (sk) null);
-        this.field_w = new bc();
+        this.field_w = new IntrusiveDeque();
     }
 
     public static void clearStaticReferences(int param0) {
@@ -483,7 +483,7 @@ class lc extends lk implements ik {
           if (param4 == 28455) {
             return false;
           }
-          this.field_w = (bc) null;
+          this.field_w = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -574,7 +574,7 @@ class lc extends lk implements ik {
               if (!param1) {
                 return false;
               }
-              this.field_w = (bc) null;
+              this.field_w = (IntrusiveDeque) null;
               return false;
             }
             if (!var4.a(param0, false)) {

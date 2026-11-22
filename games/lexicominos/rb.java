@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rb {
-    static ng field_b;
+    static IntrusiveDeque field_b;
     static byte[][] field_c;
     static dg field_d;
     static String field_e;
@@ -159,7 +159,7 @@ final class rb {
     }
 
     final static void a(boolean param0) {
-        cg var1 = (cg) (DualLinkNode.field_n.a(true));
+        cg var1 = (cg) (DualLinkNode.field_n.beginForward(true));
         if (var1 == null) {
           ck.$cfr$intArgs$b$e683eeaaf5b5(-120);
           return;
@@ -184,7 +184,7 @@ final class rb {
         field_b = null;
         field_d = null;
         if (param0 != 50) {
-          field_b = (ng) null;
+          field_b = (IntrusiveDeque) null;
         }
         field_e = null;
         field_c = (byte[][]) null;
@@ -207,7 +207,7 @@ final class rb {
 
     static {
         field_c = new byte[250][];
-        field_b = new ng();
+        field_b = new IntrusiveDeque();
         field_d = new dg();
         field_e = "This password contains your email address, and would be easy to guess";
     }

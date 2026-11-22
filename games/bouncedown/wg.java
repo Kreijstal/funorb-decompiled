@@ -3,7 +3,7 @@
  */
 final class wg extends tc {
     static qj field_u;
-    static bc field_v;
+    static IntrusiveDeque field_v;
 
     wg(int param0) {
         this(sg.field_a, param0);

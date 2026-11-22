@@ -103,7 +103,7 @@ final class rg {
                 param0 = ci.a(new String[]{param0}, am.field_a, param2 + 260);
               }
               if (ud.field_U) {
-                param0 = be.field_a;
+                param0 = SecondaryNodeDeque.field_a;
               }
               sp.field_a.a(param1, 1833, param0);
             }

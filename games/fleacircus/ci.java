@@ -127,7 +127,7 @@ final class ci {
         if (param1 == param0) {
           return;
         }
-        var3 = vc.a(param1, -1, param0);
+        var3 = IntrusiveDeque.a(param1, -1, param0);
         param0 = param0 / var3;
         param1 = param1 / var3;
         this.field_d = param0;

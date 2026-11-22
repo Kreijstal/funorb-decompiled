@@ -4,7 +4,7 @@
 class dg extends hl {
     private fk field_M;
     static boolean field_F;
-    private bk field_L;
+    private IntrusiveDeque field_L;
     private String[] field_K;
     static de field_G;
     static String field_E;
@@ -27,7 +27,7 @@ class dg extends hl {
           if (param0 > 71) {
             return false;
           }
-          this.field_L = (bk) null;
+          this.field_L = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ class dg extends hl {
         int var16;
         int var7Lifetime1;
         var16 = Main.field_T;
-        this.field_L = new bk();
+        this.field_L = new IntrusiveDeque();
         if (param0 != 5) {
           return;
         }
@@ -198,7 +198,7 @@ class dg extends hl {
               ((fk) (var10)).field_m = var15;
             }
             var10 = var15;
-            this.field_L.a(var15, 27362);
+            this.field_L.addLast(var15, 27362);
           }
         }
     }
@@ -208,7 +208,7 @@ class dg extends hl {
         fk var5;
         int var6;
         var6 = Main.field_T;
-        var4 = (fk) (this.field_L.a((byte) 74));
+        var4 = (fk) (this.field_L.beginForward((byte) 74));
         if (param1 <= 97) {
           field_F = true;
         }
@@ -223,7 +223,7 @@ class dg extends hl {
             }
             var5 = var5.field_m;
           }
-          var4 = (fk) (this.field_L.b((byte) -122));
+          var4 = (fk) (this.field_L.nextForward((byte) -122));
         }
         return null;
     }

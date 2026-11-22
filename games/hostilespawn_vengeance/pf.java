@@ -61,7 +61,7 @@ final class pf {
     }
 
     final static void b(int param0) {
-        hk var1 = (hk) (ij.field_J.b(-27493));
+        hk var1 = (hk) (ij.field_J.removeLast(-27493));
         if (var1 == null) {
           var1 = new hk();
         }
@@ -69,7 +69,7 @@ final class pf {
           pf.b((byte) 22);
         }
         var1.a(si.field_e, si.field_i, si.field_a, -12131, si.field_j, si.field_l, si.field_b, si.field_k);
-        ak.field_i.a(var1, 114);
+        ak.field_i.addLast(var1, 114);
     }
 
     final static void a(int param0, boolean param1, p param2, int param3) {

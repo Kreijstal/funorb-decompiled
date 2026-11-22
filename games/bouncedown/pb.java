@@ -291,7 +291,7 @@ final class pb {
             stackIn_2_0 = (he) null;
             return stackIn_2_0;
           }
-          of.field_b.a(1, var9);
+          of.field_b.addLast(1, var9);
           mi.a(param5, -99, var9);
           stackIn_4_0 = var9;
           return stackIn_4_0;

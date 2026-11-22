@@ -13,10 +13,10 @@ final class DirectByteStorage extends ByteStorage {
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           var2_int = -95 % ((25 - param0) / 50);
-          var3 = (cg) (DualLinkNode.field_n.a(true));
+          var3 = (cg) (DualLinkNode.field_n.beginForward(true));
           while (var3 != null) {
             Lexicominos.a(-17800, var3, param1);
-            var3 = (cg) (DualLinkNode.field_n.f(2));
+            var3 = (cg) (DualLinkNode.field_n.nextForward(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

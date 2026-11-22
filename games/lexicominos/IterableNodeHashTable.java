@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class ji implements Iterable {
-    private IntrusiveNode field_c;
+final class IterableNodeHashTable implements Iterable {
+    private IntrusiveNode lookupCursor;
     static int[] field_e;
-    IntrusiveNode[] field_f;
-    int field_d;
+    IntrusiveNode[] buckets;
+    int bucketCount;
     static String field_b;
     static int[] field_a;
 
@@ -15,13 +15,13 @@ final class ji implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(IntrusiveNode param0, int param1, long param2) {
+    final void put(IntrusiveNode param0, int param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.previous) {
             param0.unlink((byte) -119);
           }
-          var5 = this.field_f[(int)((long)(this.field_d - param1) & param2)];
+          var5 = this.buckets[(int)((long)(this.bucketCount - param1) & param2)];
           param0.next = var5;
           param0.previous = var5.previous;
           param0.previous.next = param0;
@@ -51,7 +51,7 @@ final class ji implements Iterable {
             return false;
           }
           if (param0 != -72) {
-            ji.a((byte) 25);
+            IterableNodeHashTable.a((byte) 25);
           }
           da.field_b = gj.field_x[tj.field_h];
           pe.field_b = ok.field_q[tj.field_h];
@@ -61,7 +61,7 @@ final class ji implements Iterable {
         return stackIn_7_0;
     }
 
-    final IntrusiveNode a(byte param0, long param1) {
+    final IntrusiveNode get(byte param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -69,43 +69,43 @@ final class ji implements Iterable {
         IntrusiveNode var5Lifetime1;
         var6 = Lexicominos.field_L ? 1 : 0;
         if (param0 == 42) {
-          var4 = this.field_f[(int)(param1 & (long)(-1 + this.field_d))];
-          this.field_c = var4.next;
+          var4 = this.buckets[(int)(param1 & (long)(-1 + this.bucketCount))];
+          this.lookupCursor = var4.next;
           while (true) {
-            if (var4 == this.field_c) {
-              this.field_c = null;
+            if (var4 == this.lookupCursor) {
+              this.lookupCursor = null;
               return null;
             }
-            if (~param1 != ~this.field_c.key) {
-              this.field_c = this.field_c.next;
+            if (~param1 != ~this.lookupCursor.key) {
+              this.lookupCursor = this.lookupCursor.next;
               continue;
             }
             break;
           }
-          var5 = this.field_c;
-          this.field_c = this.field_c.next;
+          var5 = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.next;
           return var5;
         }
         this.iterator();
-        var4Lifetime1 = this.field_f[(int)(param1 & (long)(-1 + this.field_d))];
-        this.field_c = var4Lifetime1.next;
+        var4Lifetime1 = this.buckets[(int)(param1 & (long)(-1 + this.bucketCount))];
+        this.lookupCursor = var4Lifetime1.next;
         while (true) {
-          if (var4Lifetime1 == this.field_c) {
-            this.field_c = null;
+          if (var4Lifetime1 == this.lookupCursor) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~param1 != ~this.field_c.key) {
-            this.field_c = this.field_c.next;
+          if (~param1 != ~this.lookupCursor.key) {
+            this.lookupCursor = this.lookupCursor.next;
             continue;
           }
           break;
         }
-        var5Lifetime1 = this.field_c;
-        this.field_c = this.field_c.next;
+        var5Lifetime1 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.next;
         return var5Lifetime1;
     }
 
-    private ji() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

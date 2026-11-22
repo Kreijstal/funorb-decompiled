@@ -76,7 +76,7 @@ final class ValidationIndicator extends FocusableWidget {
             }
             break;
           }
-          param0.field_h = var7.field_h;
+          param0.sentinel = var7.sentinel;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

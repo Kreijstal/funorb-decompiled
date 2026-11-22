@@ -613,7 +613,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (2 == am.field_g) {
             lb.field_l.a((byte) 41, param2, -1, -1);
           } else {
-            lb.field_l.a((byte) 41, param2, be.a(-1013410975, qh.field_i, IsaacRandom.field_h), 0);
+            lb.field_l.a((byte) 41, param2, SecondaryNodeDeque.a(-1013410975, qh.field_i, IsaacRandom.field_h), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

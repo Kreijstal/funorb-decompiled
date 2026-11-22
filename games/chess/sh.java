@@ -12,7 +12,7 @@ final class sh {
     final static void a(byte param0) {
         bo.a((byte) 33);
         if (param0 == -59) {
-          dk.field_g = true;
+          SecondaryNodeHashTable.field_g = true;
           bc.field_d = true;
           jh.field_e.i(param0 ^ -59);
           qd.a(-1845, qi.field_n, false);

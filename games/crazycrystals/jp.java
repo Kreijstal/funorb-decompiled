@@ -16,35 +16,35 @@ final class jp {
         var5 = null;
         var6 = CrazyCrystals.field_B;
         if (param1 >= 114) {
-          var5_ref = (ak) (hd.field_d.g(32073));
+          var5_ref = (ak) (hd.field_d.beginForward(32073));
           while (var5_ref != null) {
             if (param0 == var5_ref.field_g) {
               return var5_ref;
             }
-            var5_ref = (ak) (hd.field_d.a(false));
+            var5_ref = (ak) (hd.field_d.nextForward(false));
           }
           var7 = new ak();
           var7.field_j = param4;
           var7.field_h = param3;
           var7.field_g = param0;
-          hd.field_d.b(0, var7);
+          hd.field_d.addLast(0, var7);
           j.a(var7, param2, false);
           return var7;
         }
         field_b = (String) null;
-        var5_refLifetime1 = (ak) (hd.field_d.g(32073));
+        var5_refLifetime1 = (ak) (hd.field_d.beginForward(32073));
         while (var5_refLifetime1 != null) {
           if (param0 == var5_refLifetime1.field_g) {
             return var5_refLifetime1;
           }
-          var5_refLifetime1 = (ak) (hd.field_d.a(false));
+          var5_refLifetime1 = (ak) (hd.field_d.nextForward(false));
         }
         var8 = new ak();
         var5_refLifetime2 = var8;
         var8.field_j = param4;
         var8.field_h = param3;
         var8.field_g = param0;
-        hd.field_d.b(0, var8);
+        hd.field_d.addLast(0, var8);
         j.a(var8, param2, false);
         return var8;
     }

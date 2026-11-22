@@ -717,7 +717,7 @@ abstract class ea extends pn {
         pp var4 = new pp();
         var4.field_g = new int[param1];
         var4.field_f = param0;
-        nh.field_A.b(0, var4);
+        nh.field_A.addLast(0, var4);
         pk.a(param3, var4, (byte) 113);
         return var4;
     }

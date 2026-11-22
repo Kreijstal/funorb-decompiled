@@ -678,7 +678,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.f(467);
                 v.field_B = pj.a(bk.field_d, (byte) 99, AccountCreationResultPanel.field_sb, (java.awt.Component) ((Object) ug.field_y));
                 this.b(false);
-                bg.field_a = v.c(65476);
+                SecondaryNodeDeque.field_a = v.c(65476);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (rf.field_a != 0L) {
@@ -690,7 +690,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    jj.field_c = bg.field_a.a((byte) 91, DualLinkNode.field_h);
+                    jj.field_c = SecondaryNodeDeque.field_a.a((byte) 91, DualLinkNode.field_h);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;

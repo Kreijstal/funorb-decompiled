@@ -10,7 +10,7 @@ class ma extends mf implements ra {
     static String field_F;
     static int[] field_J;
     static long field_E;
-    jc field_I;
+    IntrusiveDeque field_I;
 
     private final void b(boolean param0) {
         int var4 = Chess.field_G;
@@ -38,7 +38,7 @@ class ma extends mf implements ra {
         RuntimeException decompiledCaughtException = null;
         var7 = Chess.field_G;
         try {
-          if (this.field_I.h(-93)) {
+          if (this.field_I.isEmpty(-93)) {
             return false;
           }
           var8 = new qj(this.field_I);
@@ -81,7 +81,7 @@ class ma extends mf implements ra {
           if (param1 != 95) {
             field_D = true;
           }
-          this.field_I.a((IntrusiveNode) (param0), (byte) 109);
+          this.field_I.addFirst((IntrusiveNode) (param0), (byte) 109);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ma.EB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -289,7 +289,7 @@ class ma extends mf implements ra {
         RuntimeException decompiledCaughtException = null;
         var7 = Chess.field_G;
         try {
-          if (this.field_I.h(-25)) {
+          if (this.field_I.isEmpty(-25)) {
             return false;
           }
           var8 = new qj(this.field_I);
@@ -398,7 +398,7 @@ class ma extends mf implements ra {
 
     ma(int param0, int param1, int param2, int param3, jm param4) {
         super(param0, param1, param2, param3, param4, (rg) null);
-        this.field_I = new jc();
+        this.field_I = new IntrusiveDeque();
     }
 
     final boolean a(int param0, int param1, int param2, mf param3, int param4, int param5, int param6) {

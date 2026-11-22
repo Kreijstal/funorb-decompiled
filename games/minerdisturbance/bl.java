@@ -207,7 +207,7 @@ abstract class bl extends DualLinkNode {
         try {
           var4_int = -121 / ((-15 - param2) / 55);
           if (cn.a(param0, 258, param3, param1)) {
-            stackIn_4_0 = qc.c(255);
+            stackIn_4_0 = SecondaryNodeDeque.c(255);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;

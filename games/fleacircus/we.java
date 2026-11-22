@@ -4,7 +4,7 @@
 final class we {
     static int field_c;
     private IntrusiveNode field_a;
-    private vc field_b;
+    private IntrusiveDeque field_b;
 
     final static void a(int param0, int param1) {
         ByteStorage.field_c = param0 * 100 / 150;
@@ -14,9 +14,9 @@ final class we {
     }
 
     final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_b.field_e.field_h;
+        IntrusiveNode var2 = this.field_b.sentinel.field_h;
         int var3 = -111 / ((-1 - param0) / 58);
-        if (this.field_b.field_e == var2) {
+        if (this.field_b.sentinel == var2) {
           this.field_a = null;
           return null;
         }
@@ -39,9 +39,9 @@ final class we {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_b.field_e.field_h;
+            var3 = this.field_b.sentinel.field_h;
           }
-          if (this.field_b.field_e != var3) {
+          if (this.field_b.sentinel != var3) {
             this.field_a = var3.field_h;
             stackIn_7_0 = var3;
             return stackIn_7_0;
@@ -64,8 +64,8 @@ final class we {
     }
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_b.field_e.field_a;
-        if (this.field_b.field_e == var2) {
+        IntrusiveNode var2 = this.field_b.sentinel.field_a;
+        if (this.field_b.sentinel == var2) {
           this.field_a = null;
           return null;
         }
@@ -78,12 +78,12 @@ final class we {
     }
 
     final static void a(int param0) {
-        uh var1 = (uh) (fk.field_z.a((byte) -60));
+        uh var1 = (uh) (fk.field_z.removeLast((byte) -60));
         if (var1 == null) {
           var1 = new uh();
         }
         var1.a(3, gb.field_a, gb.field_l, gb.field_k, gb.field_h, gb.field_i, gb.field_b, gb.field_d);
-        fg.field_t.a(false, var1);
+        fg.field_t.addLast(false, var1);
         if (param0 < -56) {
           return;
         }
@@ -92,7 +92,7 @@ final class we {
 
     final IntrusiveNode c(int param0) {
         IntrusiveNode var2 = this.field_a;
-        if (this.field_b.field_e == var2) {
+        if (this.field_b.sentinel == var2) {
           this.field_a = null;
           return null;
         }
@@ -118,12 +118,12 @@ final class we {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_b.field_e.field_a;
+            var3 = this.field_b.sentinel.field_a;
           }
           if (param0 >= -107) {
             this.field_a = (IntrusiveNode) null;
           }
-          if (this.field_b.field_e == var3) {
+          if (this.field_b.sentinel == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -149,9 +149,9 @@ final class we {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (!param0) {
-          this.field_b = (vc) null;
+          this.field_b = (IntrusiveDeque) null;
           var2 = this.field_a;
-          if (var2 == this.field_b.field_e) {
+          if (var2 == this.field_b.sentinel) {
             this.field_a = null;
             return null;
           }
@@ -159,7 +159,7 @@ final class we {
           return var2;
         }
         var2Lifetime1 = this.field_a;
-        if (var2Lifetime1 == this.field_b.field_e) {
+        if (var2Lifetime1 == this.field_b.sentinel) {
           this.field_a = null;
           return null;
         }
@@ -176,7 +176,7 @@ final class we {
         return param1 < 6144 ? -dk.field_D[-param1 + 6144] : dk.field_D[param1 - 6144];
     }
 
-    we(vc param0) {
+    we(IntrusiveDeque param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

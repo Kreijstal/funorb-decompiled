@@ -7,7 +7,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode lastReturned;
     static String field_c;
     static String field_d;
-    private dg deque;
+    private SecondaryNodeDeque deque;
     static int field_b;
     private DualLinkNode nextNode;
 
@@ -21,7 +21,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (this.deque.field_b != var1) {
+        if (this.deque.sentinel != var1) {
           this.nextNode = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.nextNode = null;
@@ -32,7 +32,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_b;
+        return this.nextNode != this.deque.sentinel;
     }
 
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
@@ -106,11 +106,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
         field_c = null;
     }
 
-    SecondaryNodeDequeIterator(dg param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
-          this.nextNode = this.deque.field_b.secondaryNext;
+          this.nextNode = this.deque.sentinel.secondaryNext;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');

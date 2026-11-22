@@ -1588,7 +1588,7 @@ final class re {
                   stackIn_151_0[stackIn_151_1] = stackIn_152_2;
                   if (ta.p(3)) {
                     stackIn_156_0 = (w.field_r != 0);
-                    stackIn_159_1 = !(ei.field_q.e(-20049));
+                    stackIn_159_1 = !(ei.field_q.isEmpty(-20049));
                     if (wb.a(stackIn_156_0, stackIn_159_1, false, rg.a((byte) -51)) != null) {
                       this.field_s = 9;
                     }
@@ -3696,16 +3696,16 @@ final class re {
         }
         if (param1 == 9) {
           stackIn_15_0 = (w.field_r != 0);
-          stackIn_18_1 = (ei.field_q.e(-20049)) ? false : true;
+          stackIn_18_1 = (ei.field_q.isEmpty(-20049)) ? false : true;
           if (wb.a(stackIn_15_0, stackIn_18_1, false, rg.a((byte) -117)) != null) {
             stackIn_21_0 = new String[]{ch.field_d.toLowerCase()};
             stackIn_21_1 = 74;
             stackIn_21_2 = new StringBuilder();
             stackIn_22_3 = (w.field_r == 0) ? false : true;
-            stackIn_25_4 = (ei.field_q.e(-20049)) ? false : true;
+            stackIn_25_4 = (ei.field_q.isEmpty(-20049)) ? false : true;
             stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(cj.a(wb.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
             stackIn_28_3 = (0 == w.field_r) ? false : true;
-            stackIn_31_4 = (ei.field_q.e(-20049)) ? false : true;
+            stackIn_31_4 = (ei.field_q.isEmpty(-20049)) ? false : true;
             var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(cj.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
             al.field_Z.a(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
           }

@@ -46,7 +46,7 @@ final class ji {
           var2 = var10.readUnsignedByte(32);
           var3 = var10.readUnsignedByte(32);
           if (var2 == 0) {
-            var4_ref_ca = (ca) (dl.field_b.a(-117));
+            var4_ref_ca = (ca) (dl.field_b.beginForward(-117));
             if (var4_ref_ca == null) {
               dc.d(107);
               return;
@@ -65,11 +65,11 @@ final class ji {
           } else {
             if (var2 == 1) {
               var4 = var10.readSignedSmart(1647);
-              var5_ref_om = (om) (jd.field_f.a(-116));
+              var5_ref_om = (om) (jd.field_f.beginForward(-116));
               while (var5_ref_om != null) {
                 if (~var3 != ~var5_ref_om.field_n ||
                   var4 != var5_ref_om.field_v) {
-                  var5_ref_om = (om) (jd.field_f.d(2123));
+                  var5_ref_om = (om) (jd.field_f.nextForward(2123));
                   continue;
                 }
                 break;

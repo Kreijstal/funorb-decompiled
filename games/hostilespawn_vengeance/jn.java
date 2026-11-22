@@ -11,7 +11,7 @@ final class jn extends fc {
     static String[] field_I;
     static int field_J;
     static vm field_G;
-    static vl field_H;
+    static IntrusiveDeque field_H;
 
     final static void l(int param0) {
         ji var2 = null;
@@ -194,6 +194,6 @@ final class jn extends fc {
         field_E = "Life signs detected! Proceed with caution.";
         field_I = new String[]{"Showing by rating", "Showing by win percentage"};
         field_K = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
-        field_H = new vl();
+        field_H = new IntrusiveDeque();
     }
 }

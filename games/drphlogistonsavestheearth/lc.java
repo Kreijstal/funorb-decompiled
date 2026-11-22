@@ -280,18 +280,18 @@ final class lc extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          dg.field_e = param0;
+          SecondaryNodeDeque.field_e = param0;
           if (param1 != 24) {
             return;
           }
-          var2 = (ml) (ff.field_O.h(-11151));
+          var2 = (ml) (ff.field_O.beginForward(-11151));
           while (var2 != null) {
             if (var2.field_o.isLinked(-1387)) {
-              var2.field_i.e(var2.field_k * dg.field_e / 80);
+              var2.field_i.e(var2.field_k * SecondaryNodeDeque.field_e / 80);
             } else {
               var2.unlink(-16175);
             }
-            var2 = (ml) (ff.field_O.e(0));
+            var2 = (ml) (ff.field_O.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

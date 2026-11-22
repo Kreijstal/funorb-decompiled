@@ -7,7 +7,7 @@ final class wk {
     static int[] field_d;
     static bd[] field_b;
     static int field_c;
-    static vl field_g;
+    static IntrusiveDeque field_g;
     static bd field_a;
     static String field_e;
 
@@ -102,7 +102,7 @@ final class wk {
 
     final static ri a(int param0, int param1) {
         ri var2 = new ri();
-        ei.field_h.a(var2, 88);
+        ei.field_h.addLast(var2, 88);
         if (param1 == -2178) {
           AccountCreationResultPanel.d(param1 ^ 11338, param0);
           return var2;
@@ -166,6 +166,6 @@ final class wk {
           field_d[var0] = var0 * 257 + (var1 << 16);
         }
         field_e = "Names can only contain letters, numbers, spaces and underscores";
-        field_g = new vl();
+        field_g = new IntrusiveDeque();
     }
 }

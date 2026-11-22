@@ -5,7 +5,7 @@ final class uc extends sa {
     static String field_Z;
     static nf[] field_U;
     static nf[] field_db;
-    static mn field_bb;
+    static PrimaryNodeDeque field_bb;
     static int[] field_ab;
     static String field_cb;
 
@@ -60,7 +60,7 @@ final class uc extends sa {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         if (this.field_N) {
           return;
         }
@@ -97,7 +97,7 @@ final class uc extends sa {
 
     static {
         field_Z = "NORMAL";
-        field_bb = new mn();
+        field_bb = new PrimaryNodeDeque();
         field_cb = "Waiting for music";
     }
 }

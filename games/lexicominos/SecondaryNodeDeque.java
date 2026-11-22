@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class bg implements Iterable {
-    static ng field_c;
+final class SecondaryNodeDeque implements Iterable {
+    static IntrusiveDeque field_c;
     static pj field_b;
     static int[][] field_f;
     static fh field_d;
     static tb field_a;
-    DualLinkNode field_e;
+    DualLinkNode sentinel;
 
     final static void a(boolean param0) {
         field_b = new pj();
@@ -28,7 +28,7 @@ final class bg implements Iterable {
         field_a = (tb) null;
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addLast(DualLinkNode param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -38,8 +38,8 @@ final class bg implements Iterable {
           if (null != param0.secondaryPrevious) {
             param0.unlinkSecondary(12);
           }
-          param0.secondaryNext = this.field_e;
-          param0.secondaryPrevious = this.field_e.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
           if (param1 == 25) {
@@ -78,7 +78,7 @@ final class bg implements Iterable {
           var2_int = param0.length();
           var3 = 0;
           if (param1 != -21637) {
-            bg.clearStaticReferences((byte) -109);
+            SecondaryNodeDeque.clearStaticReferences((byte) -109);
           }
           while (true) {
             if (var2_int <= var3) {
@@ -111,14 +111,14 @@ final class bg implements Iterable {
         }
     }
 
-    private bg() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode removeFirst(byte param0) {
         int var2 = 10 % ((42 - param0) / 37);
-        DualLinkNode var3 = this.field_e.secondaryNext;
-        if (this.field_e != var3) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        if (this.sentinel != var3) {
           var3.unlinkSecondary(12);
           return var3;
         }
@@ -141,7 +141,7 @@ final class bg implements Iterable {
     }
 
     static {
-        field_c = new ng();
+        field_c = new IntrusiveDeque();
         field_f = new int[][]{new int[]{464, 469, 473, 475, 475, 472, 471, 468, 469, 471}, new int[]{464, 469, 473, 475, 475, 473, 471, 469, 470, 471}, new int[]{464, 469, 473, 475, 476, 473, 472, 470, 471, 472}, new int[]{464, 469, 473, 476, 477, 475, 473, 471, 472, 475}, new int[]{464, 469, 474, 477, 478, 477, 475, 474, 475, 479}, new int[]{464, 469, 475, 478, 481, 480, 478, 478, 479, 484}, new int[]{464, 469, 476, 480, 484, 483, 482, 482, 483, 489}, new int[]{464, 469, 476, 481, 486, 486, 485, 485, 486, 493}, new int[]{464, 469, 477, 482, 488, 488, 487, 487, 488, 495}, new int[]{464, 470, 477, 483, 490, 490, 489, 488, 489, 496}, new int[]{464, 470, 478, 484, 491, 492, 490, 489, 489, 497}, new int[]{464, 470, 478, 485, 493, 493, 491, 489, 489, 496}, new int[]{464, 470, 479, 486, 495, 495, 492, 490, 489, 496}, new int[]{464, 470, 480, 488, 497, 496, 493, 490, 489, 495}, new int[]{464, 470, 481, 490, 500, 498, 494, 489, 488, 494}, new int[]{464, 470, 481, 492, 502, 500, 495, 489, 487, 493}, new int[]{464, 470, 481, 492, 503, 500, 495, 488, 486, 491}, new int[]{464, 470, 479, 491, 503, 501, 495, 487, 486, 491}, new int[]{464, 470, 478, 489, 502, 501, 495, 488, 487, 493}, new int[]{464, 470, 476, 487, 500, 501, 496, 489, 489, 495}, new int[]{464, 470, 476, 486, 499, 501, 496, 489, 489, 495}, new int[]{464, 470, 475, 485, 499, 502, 496, 489, 489, 494}, new int[]{464, 469, 475, 485, 500, 503, 498, 490, 489, 493}, new int[]{464, 469, 476, 485, 500, 506, 501, 493, 492, 494}, new int[]{464, 469, 476, 485, 501, 510, 507, 498, 496, 496}, new int[]{464, 469, 476, 485, 501, 514, 512, 505, 501, 499}, new int[]{464, 469, 477, 485, 499, 517, 517, 510, 506, 502}, new int[]{464, 469, 477, 484, 497, 517, 519, 513, 509, 504}, new int[]{464, 469, 477, 484, 495, 515, 520, 515, 511, 505}, new int[]{464, 469, 477, 483, 492, 513, 519, 516, 512, 506}, new int[]{464, 469, 477, 483, 491, 512, 518, 517, 514, 508}, new int[]{464, 469, 476, 482, 489, 509, 517, 519, 517, 514}, new int[]{464, 469, 476, 481, 487, 507, 516, 524, 527, 527}, new int[]{464, 469, 475, 480, 484, 502, 513, 530, 538, 546}, new int[]{464, 469, 475, 479, 482, 496, 507, 530, 544, 560}, new int[]{464, 468, 474, 477, 479, 489, 497, 518, 533, 552}, new int[]{464, 468, 474, 476, 477, 482, 487, 499, 510, 523}, new int[]{464, 468, 473, 475, 476, 477, 479, 484, 489, 497}, new int[]{464, 468, 473, 475, 475, 474, 474, 474, 477, 481}, new int[]{464, 468, 473, 475, 475, 473, 471, 469, 471, 473}, new int[]{464, 468, 473, 475, 475, 472, 471, 468, 469, 470}};
     }
 }

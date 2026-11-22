@@ -4,7 +4,7 @@
 final class ni {
     static String[] field_b;
     static String[] field_a;
-    static jc field_c;
+    static IntrusiveDeque field_c;
     static int field_d;
 
     final static void a(int param0, int param1, java.math.BigInteger param2, PacketBuffer param3, int param4, java.math.BigInteger param5, byte[] param6) {
@@ -118,6 +118,6 @@ final class ni {
     static {
         field_a = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
         field_b = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
-        field_c = new jc();
+        field_c = new IntrusiveDeque();
     }
 }

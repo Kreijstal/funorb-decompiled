@@ -4,7 +4,7 @@
 final class qh extends vf {
     private pn field_v;
     static vf field_y;
-    static mn field_w;
+    static PrimaryNodeDeque field_w;
     static fi field_x;
     private pn[] field_B;
     static String field_u;

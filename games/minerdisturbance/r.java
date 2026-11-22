@@ -172,7 +172,7 @@ final class r {
     }
 
     final static void a(int param0) {
-        if (!qc.field_b) {
+        if (!SecondaryNodeDeque.field_b) {
           throw new IllegalStateException();
         }
         if (param0 != -14475) {

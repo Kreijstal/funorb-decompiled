@@ -69,7 +69,7 @@ final class oh {
 
     final static void a(int param0, int param1) {
         int var2 = -56 / ((param0 - 26) / 52);
-        m.field_g = param1;
+        IterableNodeHashTable.field_g = param1;
     }
 
     oh(tg[] param0) {

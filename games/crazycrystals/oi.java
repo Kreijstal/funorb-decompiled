@@ -3,7 +3,7 @@
  */
 final class oi {
     static String field_b;
-    static wb field_a;
+    static IntrusiveDeque field_a;
     static j field_c;
     static ob field_d;
 
@@ -21,6 +21,6 @@ final class oi {
 
     static {
         field_b = "Unpacking graphics";
-        field_a = new wb();
+        field_a = new IntrusiveDeque();
     }
 }

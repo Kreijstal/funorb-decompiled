@@ -198,18 +198,18 @@ final class UiComponentPart001 extends InteractiveComponent {
     final static MixedSupport020 computeMixedSupport0200055(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         MixedSupport020 mixedSupport020Local1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1741((byte) 19));
+        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.beginBackward((byte) 19));
         while (mixedSupport020Local3 != null) {
           if (integerArgument4 == mixedSupport020Local3.integerState0115) {
             return mixedSupport020Local3;
           }
-          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1745(true));
+          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.nextBackward(true));
         }
         if (byteArgument3 == -111) {
           mixedSupport020Local1 = new MixedSupport020();
           mixedSupport020Local1.integerState0116 = integerArgument2;
           mixedSupport020Local1.integerState0115 = integerArgument4;
-          UiComponentPart020.nodeDequeState0022.performAction1735(mixedSupport020Local1, byteArgument3 + 2888);
+          UiComponentPart020.nodeDequeState0022.addFirst(mixedSupport020Local1, byteArgument3 + 2888);
           MixedSupport039.performAction0525((byte) 8, mixedSupport020Local1, integerArgument1);
           return mixedSupport020Local1;
         }
@@ -217,7 +217,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         MixedSupport020 mixedSupport020Local4 = new MixedSupport020();
         mixedSupport020Local4.integerState0116 = integerArgument2;
         mixedSupport020Local4.integerState0115 = integerArgument4;
-        UiComponentPart020.nodeDequeState0022.performAction1735(mixedSupport020Local4, byteArgument3 + 2888);
+        UiComponentPart020.nodeDequeState0022.addFirst(mixedSupport020Local4, byteArgument3 + 2888);
         MixedSupport039.performAction0525((byte) 8, mixedSupport020Local4, integerArgument1);
         return mixedSupport020Local4;
     }

@@ -68,7 +68,7 @@ final class CacheWorkQueue implements Runnable {
           while (!this.booleanState0080) {
             objectLocal6 = this.dualNodeDequeState0005;
             synchronized (objectLocal6) {
-              archiveRequestManagerLocal3 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0028((byte) 79));
+              archiveRequestManagerLocal3 = (ArchiveRequestManager) (this.dualNodeDequeState0005.removeFirst((byte) 79));
               if (archiveRequestManagerLocal3 != null) {
                 this.integerState0333 = this.integerState0333 - 1;
                 regionSelectorLocal4 = 1;
@@ -115,7 +115,7 @@ final class CacheWorkQueue implements Runnable {
     private final void performAction0739(byte byteArgument1, ArchiveRequestManager archiveRequestManagerArgument2) {
         synchronized (this.dualNodeDequeState0005) {
           int integerLocal1 = 78 % ((byteArgument1 + 34) / 50);
-          this.dualNodeDequeState0005.performAction0031(archiveRequestManagerArgument2, -7267);
+          this.dualNodeDequeState0005.addLast(archiveRequestManagerArgument2, -7267);
           this.integerState0333 = this.integerState0333 + 1;
           this.dualNodeDequeState0005.notifyAll();
         }
@@ -225,7 +225,7 @@ final class CacheWorkQueue implements Runnable {
           archiveRequestManagerLocal1.integerState0207 = 1;
           objectLocal3 = this.dualNodeDequeState0005;
           synchronized (objectLocal3) {
-            archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0033(-2198));
+            archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.beginForward(-2198));
             while (archiveRequestManagerLocal5 != null) {
               if (archiveRequestManagerLocal5.longState0003 == (long)integerArgument1 &&
                 mixedSupport069Argument2 == archiveRequestManagerLocal5.mixedSupport069State0001 &&
@@ -235,7 +235,7 @@ final class CacheWorkQueue implements Runnable {
                 stackArchiveRequestManagerLocal7 = archiveRequestManagerLocal1;
                 return stackArchiveRequestManagerLocal7;
               }
-              archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0032((byte) 20));
+              archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.nextForward((byte) 20));
             }
           }
           integerLocal4 = 84 % ((integerArgument3 - 77) / 46);

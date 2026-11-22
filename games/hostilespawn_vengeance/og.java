@@ -114,18 +114,18 @@ final class og {
         RuntimeException var2 = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (ne) (AccountNameAvailabilityValidator.field_v.g(-97));
+          var4 = (ne) (AccountNameAvailabilityValidator.field_v.beginForward(-97));
           while (var4 != null) {
             bl.a(1, var4, param1);
-            var4 = (ne) (AccountNameAvailabilityValidator.field_v.a(12684));
+            var4 = (ne) (AccountNameAvailabilityValidator.field_v.nextForward(12684));
           }
           if (param0 != -22248) {
             og.a(-73, 61);
           }
-          var5 = (de) (ke.field_B.g(-47));
+          var5 = (de) (ke.field_B.beginForward(-47));
           while (var5 != null) {
             km.a(var5, -19746, param1);
-            var5 = (de) (ke.field_B.a(12684));
+            var5 = (de) (ke.field_B.nextForward(12684));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

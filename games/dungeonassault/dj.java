@@ -309,12 +309,12 @@ final class dj {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          dh.field_g = param0.readUnsignedShort(0) << 5;
+          SecondaryNodeDeque.field_g = param0.readUnsignedShort(0) << 5;
           if (param1 < 122) {
             dj.a((byte) -97);
           }
           var2_int = param0.readUnsignedByte(true);
-          dh.field_g = dh.field_g + (var2_int >> 3);
+          SecondaryNodeDeque.field_g = SecondaryNodeDeque.field_g + (var2_int >> 3);
           cm.field_P = var2_int << 18 & 1835008;
           cm.field_P = cm.field_P + (param0.readUnsignedShort(0) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(true);

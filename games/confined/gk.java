@@ -20,7 +20,7 @@ class gk extends IntrusiveNode {
         if (!this.field_x) {
           cb.field_a.a(this.field_n);
         }
-        this.field_t.field_A.field_z.a((IntrusiveNode) (this), (byte) -66);
+        this.field_t.field_A.field_z.addLast((IntrusiveNode) (this), (byte) -66);
         if (param0 == 209) {
           return;
         }
@@ -367,7 +367,7 @@ class gk extends IntrusiveNode {
           this.field_n = vc.a(param2, 0, 0);
           this.field_n.c(param3);
           this.field_n.c(param4);
-          param0.field_z.a((IntrusiveNode) (this), (byte) 106);
+          param0.field_z.addLast((IntrusiveNode) (this), (byte) 106);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

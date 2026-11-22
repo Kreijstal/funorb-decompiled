@@ -91,7 +91,7 @@ final class pa {
               fieldTemp$1 = sc.field_b;
               sc.field_b = sc.field_b + 1;
               var5_ref.field_hb = fieldTemp$1;
-              fk.field_i.b(param0 + 86, var5_ref);
+              fk.field_i.addLast(param0 + 86, var5_ref);
             }
             var5_ref.field_R = var4_ref_String;
             return;
@@ -112,7 +112,7 @@ final class pa {
             if (4 == var2) {
               vl.field_b = 1;
               var3 = var1.readString(false);
-              ji.field_b = ((String) (var3)).intern();
+              IterableNodeHashTable.field_b = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte(true);
               wh.a(var4, (byte) 63);
               return;
@@ -147,7 +147,7 @@ final class pa {
             fieldTemp$0 = ad.field_c;
             ad.field_c = ad.field_c + 1;
             var6.field_hb = fieldTemp$0;
-            SecondaryNodeDequeIterator.field_e.b(105, var6);
+            SecondaryNodeDequeIterator.field_e.addLast(105, var6);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -155,10 +155,10 @@ final class pa {
           var6.field_jb = (String) (var3Lifetime1);
           var6.field_R = var4_ref_StringLifetime1;
           var6.unlink((byte) -117);
-          var7 = (hc) (SecondaryNodeDequeIterator.field_e.a(true));
+          var7 = (hc) (SecondaryNodeDequeIterator.field_e.beginForward(true));
           while (var7 != null) {
             if (bl.a((byte) 111, var7, var6)) {
-              var7 = (hc) (SecondaryNodeDequeIterator.field_e.f(2));
+              var7 = (hc) (SecondaryNodeDequeIterator.field_e.nextForward(2));
               if (var8 == 0) {
                 continue;
               }
@@ -171,7 +171,7 @@ final class pa {
               return;
             }
           }
-          SecondaryNodeDequeIterator.field_e.b(114, var6);
+          SecondaryNodeDequeIterator.field_e.addLast(114, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

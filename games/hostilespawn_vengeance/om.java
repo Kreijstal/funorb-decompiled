@@ -266,7 +266,7 @@ final class om {
 
     final static void a(ne param0, int param1, int param2) {
         try {
-          AccountNameAvailabilityValidator.field_v.a(param0, 121);
+          AccountNameAvailabilityValidator.field_v.addLast(param0, 121);
           if (param2 > -94) {
             field_a = false;
           }

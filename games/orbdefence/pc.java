@@ -282,7 +282,7 @@ final class pc extends hl {
           var10 = cd.field_t;
           var2 = var10.readUnsignedByte((byte) 90);
           if (var2 == 0) {
-            var9 = (vb) (e.field_b.b((byte) -28));
+            var9 = (vb) (e.field_b.beginForward((byte) -28));
             if (var9 == null) {
               th.a(119);
               return;
@@ -303,10 +303,10 @@ final class pc extends hl {
           } else {
             if (var2 == 1) {
               var3 = var10.readInt(0);
-              var4_ref_ef = (ef) (sd.field_a.b((byte) -113));
+              var4_ref_ef = (ef) (sd.field_a.beginForward((byte) -113));
               while (var4_ref_ef != null) {
                 if (var4_ref_ef.field_f != var3) {
-                  var4_ref_ef = (ef) (sd.field_a.d(853));
+                  var4_ref_ef = (ef) (sd.field_a.nextForward(853));
                   continue;
                 }
                 break;

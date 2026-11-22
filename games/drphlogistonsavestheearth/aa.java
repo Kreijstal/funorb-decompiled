@@ -3,7 +3,7 @@
  */
 final class aa {
     static String[] field_a;
-    static vd field_e;
+    static IntrusiveDeque field_e;
     static vj field_b;
     static double[] field_c;
     static long field_d;
@@ -25,7 +25,7 @@ final class aa {
     static {
         field_z = "aa.A(";
         field_a = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
-        field_e = new vd();
+        field_e = new IntrusiveDeque();
         field_c = new double[]{50.0, 150.0, 50.0, 5.0, 5.0, 50.0, 1.0, 50.0, 1.0, 1.0, 1.0, 50.0, 1.0, 1.0, 1.0, 50.0, 50.0, 50.0, 50.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 100.0, 100.0, 100.0, 100.0, 50.0, 1.0, 25.0, 150.0, 50.0, 5.0, 1.0, 50.0, 1.0, 1.0, 1.0, 1.0, 50.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
     }
 }

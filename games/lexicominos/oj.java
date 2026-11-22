@@ -158,14 +158,14 @@ final class oj {
         field_j = null;
     }
 
-    final ng a(char[][] param0, int param1) {
+    final IntrusiveDeque a(char[][] param0, int param1) {
         int var5_int = 0;
-        ng stackIn_24_0 = null;
+        IntrusiveDeque stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ng var3 = null;
+        IntrusiveDeque var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         char[] var5 = null;
@@ -174,7 +174,7 @@ final class oj {
         int var8 = 0;
         char[] var9 = null;
         int[] var10 = null;
-        ng var11 = null;
+        IntrusiveDeque var11 = null;
         int var12 = 0;
         int[] var13 = null;
         char[] var15 = null;
@@ -185,7 +185,7 @@ final class oj {
         int var7Lifetime1;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          var11 = new ng();
+          var11 = new IntrusiveDeque();
           var3 = var11;
           var16 = new int[param0[0].length];
           var13 = var16;
@@ -195,7 +195,7 @@ final class oj {
             this.a(var16, false, param0[var5_int]);
             for (var6 = 0; var16.length > var6; var6++) {
               if (var16[var6] != 0) {
-                var11.b(121, pc.a(var5_int, var16[var6], (byte) 14, var6, 1));
+                var11.addLast(121, pc.a(var5_int, var16[var6], (byte) 14, var6, 1));
               }
             }
           }
@@ -212,7 +212,7 @@ final class oj {
             var7Lifetime1 = var12;
             while (var12 < var18.length) {
               if (0 != var20[var12]) {
-                var3.b(param1 - 17053, pc.a(-var12 + param0.length - 1, 1, (byte) 14, var6Lifetime1, var20[var12]));
+                var3.addLast(param1 - 17053, pc.a(-var12 + param0.length - 1, 1, (byte) 14, var6Lifetime1, var20[var12]));
               }
               var12++;
             }

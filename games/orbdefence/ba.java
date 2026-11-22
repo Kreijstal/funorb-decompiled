@@ -8,7 +8,7 @@ final class ba {
     static int field_c;
     static String field_g;
     int field_d;
-    static im field_b;
+    static IntrusiveDeque field_b;
 
     final static qg[] a(int param0) {
         qg[] var1 = null;
@@ -17,7 +17,7 @@ final class ba {
         qg[] var1Lifetime1;
         int var2Lifetime1;
         if (param0 != 17867) {
-          field_b = (im) null;
+          field_b = (IntrusiveDeque) null;
         } else {
           var1 = new qg[ec.field_K];
           for (var2 = 0; ec.field_K > var2; var2++) {
@@ -113,6 +113,6 @@ final class ba {
     static {
         field_g = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_a = new e();
-        field_b = new im();
+        field_b = new IntrusiveDeque();
     }
 }

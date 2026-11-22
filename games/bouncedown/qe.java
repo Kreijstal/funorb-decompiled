@@ -38,7 +38,7 @@ final class qe extends ng {
           }
           var4 = jl.field_a;
           while (var3_int < se.field_E.length) {
-            var5 = m.field_a[var3_int];
+            var5 = IterableNodeHashTable.field_a[var3_int];
             if (var5 < 0) {
               var4 = var4 + k.field_D;
             } else {

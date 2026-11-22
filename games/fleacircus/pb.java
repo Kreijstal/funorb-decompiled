@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pb {
-    static vc field_f;
+    static IntrusiveDeque field_f;
     static String field_b;
     static String field_h;
     static fa field_e;
@@ -23,15 +23,15 @@ final class pb {
           if (param1 != 0) {
             field_b = (String) null;
           }
-          var4 = (bh) (wi.field_j.c((byte) 47));
+          var4 = (bh) (wi.field_j.beginForward((byte) 47));
           while (var4 != null) {
             s.a(param1 ^ -4471, param0, var4);
-            var4 = (bh) (wi.field_j.b((byte) -105));
+            var4 = (bh) (wi.field_j.nextForward((byte) -105));
           }
-          var5 = (ll) (jj.field_S.c((byte) 47));
+          var5 = (ll) (jj.field_S.beginForward((byte) 47));
           while (var5 != null) {
             ak.a(-14722, var5, param0);
-            var5 = (ll) (jj.field_S.b((byte) -105));
+            var5 = (ll) (jj.field_S.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,6 +85,6 @@ final class pb {
         field_d = 0;
         field_h = "Tiles you can place";
         field_i = 100;
-        field_f = new vc();
+        field_f = new IntrusiveDeque();
     }
 }

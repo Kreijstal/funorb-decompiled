@@ -24,7 +24,7 @@ final class ik extends IntrusiveNode {
             ik.a((byte) -6, 55);
           }
           var2 = new hf(param0, param0);
-          ba.field_b.a(-85, var2);
+          ba.field_b.addLast(-85, var2);
           vb.field_f.a(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -101,15 +101,15 @@ final class ik extends IntrusiveNode {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           var2_int = 56 % ((15 - param0) / 44);
-          var3 = (ef) (sd.field_a.b((byte) -13));
+          var3 = (ef) (sd.field_a.beginForward((byte) -13));
           while (var3 != null) {
             jk.a(param1, var3, false);
-            var3 = (ef) (sd.field_a.d(853));
+            var3 = (ef) (sd.field_a.nextForward(853));
           }
-          var2 = e.field_b.b((byte) -101);
+          var2 = e.field_b.beginForward((byte) -101);
           while (var2 != null) {
             lg.a(param1, 78);
-            var2 = e.field_b.d(853);
+            var2 = e.field_b.nextForward(853);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

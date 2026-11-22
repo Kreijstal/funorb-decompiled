@@ -7,7 +7,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode lastReturned;
     static String field_k;
     static long[] field_b;
-    private dh deque;
+    private SecondaryNodeDeque deque;
     static rj field_l;
     static String field_c;
     static String field_g;
@@ -20,7 +20,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (this.deque.field_d == var1) {
+        if (this.deque.sentinel == var1) {
           var1 = null;
           this.nextNode = null;
         } else {
@@ -170,7 +170,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_d;
+        return this.nextNode != this.deque.sentinel;
     }
 
     final static ab a(int param0, String param1) {
@@ -272,11 +272,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
     }
 
-    SecondaryNodeDequeIterator(dh param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
-          this.nextNode = this.deque.field_d.field_n;
+          this.nextNode = this.deque.sentinel.field_n;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');

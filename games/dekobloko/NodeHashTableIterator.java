@@ -64,7 +64,7 @@ final class NodeHashTableIterator implements Iterator {
           integerLocal4 = cipherPacketBufferLocal12.readUnsignedByte((byte) -44);
           integerLocal5 = cipherPacketBufferLocal12.readUnsignedByte((byte) -117);
           if (integerLocal4 == 0) {
-            mixedSupport113Local7 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.computeHashNode1741((byte) -68));
+            mixedSupport113Local7 = (MixedSupport113) (UiComponentPart010.nodeDequeState0008.beginBackward((byte) -68));
             if (mixedSupport113Local7 == null) {
               NodeHashTable.performAction1498(78);
               return;
@@ -85,11 +85,11 @@ final class NodeHashTableIterator implements Iterator {
           }
           if (integerLocal4 == 1) {
             integerLocal6 = cipherPacketBufferLocal12.readSignedSmart((byte) -2);
-            mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1741((byte) -124));
+            mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.beginBackward((byte) -124));
             while (mixedSupport038Local8 != null) {
               if (integerLocal5 != mixedSupport038Local8.integerState0230 ||
                 integerLocal6 != mixedSupport038Local8.integerState0227) {
-                mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1745(true));
+                mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.nextBackward(true));
                 continue;
               }
               break;

@@ -89,10 +89,10 @@ abstract class NetworkSupport003 {
 
     final int computeInteger0352(byte byteArgument1) {
         if (byteArgument1 < -73) {
-          return this.dualNodeDequeState0001.computeInteger0029(0) + this.dualNodeDequeState0002.computeInteger0029(0);
+          return this.dualNodeDequeState0001.countWithOffset(0) + this.dualNodeDequeState0002.countWithOffset(0);
         }
         integerArrayState0031 = (int[]) null;
-        return this.dualNodeDequeState0001.computeInteger0029(0) + this.dualNodeDequeState0002.computeInteger0029(0);
+        return this.dualNodeDequeState0001.countWithOffset(0) + this.dualNodeDequeState0002.countWithOffset(0);
     }
 
     final static void performAction0345(String stringArgument1, int integerArgument2, int integerArgument3) {
@@ -180,12 +180,12 @@ abstract class NetworkSupport003 {
           if (!(this.computeInteger0352((byte) -109) < 20)) {
             throw new RuntimeException();
           }
-          this.dualNodeDequeState0001.performAction0031(resourceSupport004Local2, -7267);
+          this.dualNodeDequeState0001.addLast(resourceSupport004Local2, -7267);
         } else {
           if (!(20 > this.computeInteger0353(0))) {
             throw new RuntimeException();
           }
-          this.dualNodeDequeState0003.performAction0031(resourceSupport004Local2, -7267);
+          this.dualNodeDequeState0003.addLast(resourceSupport004Local2, -7267);
         }
         return resourceSupport004Local2;
     }
@@ -194,10 +194,10 @@ abstract class NetworkSupport003 {
 
     final int computeInteger0353(int integerArgument1) {
         if (integerArgument1 == 0) {
-          return this.dualNodeDequeState0003.computeInteger0029(0) + this.dualNodeDequeState0004.computeInteger0029(0);
+          return this.dualNodeDequeState0003.countWithOffset(0) + this.dualNodeDequeState0004.countWithOffset(0);
         }
         this.resourceSupport004State0001 = (ResourceSupport004) null;
-        return this.dualNodeDequeState0003.computeInteger0029(0) + this.dualNodeDequeState0004.computeInteger0029(0);
+        return this.dualNodeDequeState0003.countWithOffset(0) + this.dualNodeDequeState0004.countWithOffset(0);
     }
 
     final static void performAction0348(boolean booleanArgument1, boolean booleanArgument2, byte byteArgument3) {

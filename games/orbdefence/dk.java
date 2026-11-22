@@ -97,7 +97,7 @@ final class dk {
           var23 = null;
           var13 = OrbDefence.field_D ? 1 : 0;
           try {
-            var14 = (ud) (ab.field_h.b((byte) 114));
+            var14 = (ud) (ab.field_h.beginForward((byte) 114));
             var18 = var14;
             if (var18 == null) {
               return;

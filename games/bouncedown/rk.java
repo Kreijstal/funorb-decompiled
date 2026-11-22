@@ -12,18 +12,18 @@ final class rk {
         RuntimeException var2 = null;
         var3 = Bounce.field_N;
         try {
-          var5 = (he) (of.field_b.a((byte) -105));
+          var5 = (he) (of.field_b.beginForward((byte) -105));
           if (param1 != -29) {
             return;
           }
           while (var5 != null) {
             mi.a(param0, -115, var5);
-            var5 = (he) (of.field_b.d((byte) -18));
+            var5 = (he) (of.field_b.nextForward((byte) -18));
           }
-          var4 = (sa) (jl.field_f.a((byte) -58));
+          var4 = (sa) (jl.field_f.beginForward((byte) -58));
           while (var4 != null) {
             ha.a(-17765, var4, param0);
-            var4 = (sa) (jl.field_f.d((byte) -29));
+            var4 = (sa) (jl.field_f.nextForward((byte) -29));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

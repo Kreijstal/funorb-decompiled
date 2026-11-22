@@ -150,7 +150,7 @@ final class cl extends gb {
     }
 
     final static void d(byte param0) {
-        ek var1 = (ek) (hl.field_c.a((byte) -106));
+        ek var1 = (ek) (hl.field_c.removeLast((byte) -106));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -160,7 +160,7 @@ final class cl extends gb {
         if (param0 > -64) {
           field_n = (he[]) null;
         }
-        tg.field_g.a(var1, 255);
+        tg.field_g.addLast(var1, 255);
     }
 
     public cl() {

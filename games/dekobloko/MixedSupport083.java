@@ -333,7 +333,7 @@ final class MixedSupport083 {
                   integerLocal43 = 0;
                 }
                 nodeDequeLocal45 = ValidationStatus.sceneWidgetPart008State0006.sceneWidgetState0090.nodeDequeState0034;
-                sceneWidgetPart012Local48 = (SceneWidgetPart012) (nodeDequeLocal45.computeHashNode1741((byte) 83));
+                sceneWidgetPart012Local48 = (SceneWidgetPart012) (nodeDequeLocal45.beginBackward((byte) 83));
                 scanLoop3: while (true) {
                   boolean frameRemainderLocal64 = true;
                   if (sceneWidgetPart012Local48 != null) {
@@ -376,7 +376,7 @@ final class MixedSupport083 {
                       }
                     }
                     if (frameRemainderLocal64) {
-                      sceneWidgetPart012Local48 = (SceneWidgetPart012) (nodeDequeLocal45.computeHashNode1745(true));
+                      sceneWidgetPart012Local48 = (SceneWidgetPart012) (nodeDequeLocal45.nextBackward(true));
                       continue;
                     }
                   }

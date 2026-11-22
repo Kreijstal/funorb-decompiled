@@ -29,7 +29,7 @@ final class ld extends IntrusiveNode {
           }
           var2 = var9.readUnsignedByte((byte) -125);
           if (0 == var2) {
-            var8 = (bi) (GameClient.field_n.a((byte) -123));
+            var8 = (bi) (GameClient.field_n.beginForward((byte) -123));
             if (var8 == null) {
               kc.a((byte) 18);
               return;
@@ -55,10 +55,10 @@ final class ld extends IntrusiveNode {
             return;
           }
           var3 = var9.readInt(-3);
-          var4_ref_gf = (gf) (Slime.field_k.a((byte) -92));
+          var4_ref_gf = (gf) (Slime.field_k.beginForward((byte) -92));
           while (var4_ref_gf != null) {
             if (var3 != var4_ref_gf.field_i) {
-              var4_ref_gf = (gf) (Slime.field_k.d((byte) -73));
+              var4_ref_gf = (gf) (Slime.field_k.nextForward((byte) -73));
               continue;
             }
             break;

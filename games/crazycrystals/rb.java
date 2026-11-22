@@ -83,7 +83,7 @@ final class rb extends ue {
               decompiledFrameRemainder0 = false;
             }
             else {
-              wb.a(0, wl.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
+              IntrusiveDeque.a(0, wl.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
               sj.a(wl.a("crystal", ga.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
               var3 = new dl(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
               var3.a();

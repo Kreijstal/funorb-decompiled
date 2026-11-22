@@ -84,7 +84,7 @@ final class wb {
     }
 
     final static void a(boolean param0, int param1, je param2) {
-        aa.field_e.a(param2, 255);
+        aa.field_e.addLast(param2, 255);
         if (!param0) {
           return;
         }

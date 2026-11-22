@@ -7,7 +7,7 @@ final class nd implements jm {
     private lh field_m;
     private int field_a;
     private int field_d;
-    static jc field_h;
+    static IntrusiveDeque field_h;
     private int field_n;
     private int field_g;
     private int field_j;
@@ -102,7 +102,7 @@ final class nd implements jm {
     }
 
     static {
-        field_h = new jc();
+        field_h = new IntrusiveDeque();
         field_b = "Send private Quick Chat to <%0>";
         field_l = 0;
     }

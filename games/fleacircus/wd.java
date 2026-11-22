@@ -23,15 +23,15 @@ final class wd {
           if (param0 != -29250) {
             field_c = -7;
           }
-          var4 = (hi) (bf.field_e.c((byte) 47));
+          var4 = (hi) (bf.field_e.beginForward((byte) 47));
           while (var4 != null) {
             sc.a(param1, var4, param0 + 29251);
-            var4 = (hi) (bf.field_e.b((byte) -105));
+            var4 = (hi) (bf.field_e.nextForward((byte) -105));
           }
-          var2 = rj.field_i.c((byte) 47);
+          var2 = rj.field_i.beginForward((byte) 47);
           while (var2 != null) {
             ki.a(param1, 1);
-            var2 = rj.field_i.b((byte) -105);
+            var2 = rj.field_i.nextForward((byte) -105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

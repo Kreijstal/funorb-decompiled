@@ -154,13 +154,13 @@ final class ge extends k implements mj {
         var4 = null;
         var5 = Chess.field_G;
         try {
-          var4_ref = (pg) (nd.field_h.g(-18110));
+          var4_ref = (pg) (nd.field_h.beginBackward(-18110));
           while (var4_ref != null) {
             if (var4_ref.field_q == param2) {
               stackIn_7_0 = var4_ref;
               return stackIn_7_0;
             }
-            var4_ref = (pg) (nd.field_h.a((byte) -111));
+            var4_ref = (pg) (nd.field_h.nextBackward((byte) -111));
           }
           var6 = new pg();
           var4_refLifetime1 = var6;
@@ -170,7 +170,7 @@ final class ge extends k implements mj {
             return stackIn_11_0;
           }
           var4_refLifetime1.field_q = param2;
-          nd.field_h.a((IntrusiveNode) (var4_refLifetime1), (byte) 102);
+          nd.field_h.addFirst((IntrusiveNode) (var4_refLifetime1), (byte) 102);
           tm.a(false, var4_refLifetime1, param1);
           stackIn_13_0 = var4_refLifetime1;
           return stackIn_13_0;

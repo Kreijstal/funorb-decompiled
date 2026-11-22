@@ -7,7 +7,7 @@ final class mi extends PcmStream {
     static wg field_q;
     static Calendar field_u;
     static int field_v;
-    jc field_x;
+    IntrusiveDeque field_x;
     static String[] field_t;
     static String field_n;
     private vl field_w;
@@ -171,7 +171,7 @@ final class mi extends PcmStream {
         var7 = Chess.field_G;
         try {
           this.field_p.a(param0, param1, param2);
-          var6 = (qd) (this.field_x.g(-18110));
+          var6 = (qd) (this.field_x.beginBackward(-18110));
           while (var6 != null) {
             stackIn_4_0 = this.field_w.a((byte) -25, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -192,7 +192,7 @@ final class mi extends PcmStream {
                 var6.field_B = var6.field_B - var5;
               }
             }
-            var6 = (qd) (this.field_x.a((byte) -112));
+            var6 = (qd) (this.field_x.nextBackward((byte) -112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -212,9 +212,9 @@ final class mi extends PcmStream {
     final static r a(int param0, long param1) {
         if (param0 != 134217727) {
           field_o = (String) null;
-          return (r) (cm.field_v.a(param1, 3000));
+          return (r) (cm.field_v.get(param1, 3000));
         }
-        return (r) (cm.field_v.a(param1, 3000));
+        return (r) (cm.field_v.get(param1, 3000));
     }
 
     final static void a(byte param0, boolean param1) {
@@ -345,7 +345,7 @@ final class mi extends PcmStream {
     }
 
     final PcmStream a() {
-        qd var1 = (qd) (this.field_x.g(-18110));
+        qd var1 = (qd) (this.field_x.beginBackward(-18110));
         if (var1 == null) {
           return null;
         }
@@ -359,7 +359,7 @@ final class mi extends PcmStream {
         qd var1_ref = null;
         int var2 = Chess.field_G;
         do {
-          var1_ref = (qd) (this.field_x.a((byte) -125));
+          var1_ref = (qd) (this.field_x.nextBackward((byte) -125));
           if (var1_ref == null) {
             return null;
           }
@@ -373,7 +373,7 @@ final class mi extends PcmStream {
         int var4;
         var4 = Chess.field_G;
         this.field_p.skip(sampleCount);
-        var3 = (qd) (this.field_x.g(-18110));
+        var3 = (qd) (this.field_x.beginBackward(-18110));
         while (var3 != null) {
           if (!this.field_w.a((byte) -25, var3)) {
             var2 = sampleCount;
@@ -387,12 +387,12 @@ final class mi extends PcmStream {
               var2 = var2 - var3.field_B;
             } while (!this.field_w.a(35, var2, (int[]) null, 0, var3));
           }
-          var3 = (qd) (this.field_x.a((byte) -127));
+          var3 = (qd) (this.field_x.nextBackward((byte) -127));
         }
     }
 
     mi(vl param0) {
-        this.field_x = new jc();
+        this.field_x = new IntrusiveDeque();
         this.field_p = new lb();
         try {
           this.field_w = param0;

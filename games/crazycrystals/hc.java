@@ -3,7 +3,7 @@
  */
 final class hc {
     static ni field_a;
-    static wb field_b;
+    static IntrusiveDeque field_b;
     static String field_c;
 
     final static void a(boolean param0, boolean param1) {
@@ -33,7 +33,7 @@ final class hc {
     }
 
     static {
-        field_b = new wb();
+        field_b = new IntrusiveDeque();
         field_c = "Click on the hole!";
     }
 }

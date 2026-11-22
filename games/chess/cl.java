@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cl {
-    static jc field_e;
+    static IntrusiveDeque field_e;
     static long field_b;
     static km field_g;
     static int field_d;

@@ -92,7 +92,7 @@ final class hc {
         ke var8 = null;
         if (param5 <= -125) {
           var8 = new ke(param0, param2, param3, param1, param7, param6);
-          uk.field_d.a(1, var8);
+          uk.field_d.addLast(1, var8);
           qh.a(var8, param4, -22762);
           return var8;
         }

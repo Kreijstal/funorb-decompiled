@@ -44,7 +44,7 @@ class le extends cf {
     bd[] field_Bb;
     boolean field_Db;
     int field_mb;
-    vl field_I;
+    IntrusiveDeque field_I;
     boolean field_Eb;
     private boolean field_y;
     private int field_rb;
@@ -175,10 +175,10 @@ class le extends cf {
         stackIn_41_1 = (this.field_Eb) && (ig.field_L == this.field_W) && (param3);
         this.field_S = stackIn_41_1;
         if (this.field_I != null) {
-          var13 = (le) (this.field_I.b((byte) 117));
+          var13 = (le) (this.field_I.beginBackward((byte) 117));
           while (var13 != null) {
             var13.a(this.field_K, this.field_sb, this.field_mb, param3, (byte) 48, this.field_qb);
-            var13 = (le) (this.field_I.a((byte) 110));
+            var13 = (le) (this.field_I.nextBackward((byte) 110));
           }
         }
         if (this.field_Eb) {
@@ -384,10 +384,10 @@ class le extends cf {
           }
         }
         if (this.field_I != null) {
-          var24_ref = (le) (this.field_I.g(-24));
+          var24_ref = (le) (this.field_I.beginForward(-24));
           while (var24_ref != null) {
             var24_ref.a(param0, var21 + this.field_mb, param2, (byte) -88, param4, this.field_qb, this.field_lb, this.field_K + var20, param8, param9, this.field_sb);
-            var24_ref = (le) (this.field_I.a(12684));
+            var24_ref = (le) (this.field_I.nextForward(12684));
           }
         }
         si.d(var12, var13, var15, var16);
@@ -404,12 +404,12 @@ class le extends cf {
     final void a(boolean param0, le param1) {
         try {
           if (this.field_I == null) {
-            this.field_I = new vl();
+            this.field_I = new IntrusiveDeque();
           }
           if (param0) {
             this.a(true, false);
           }
-          this.field_I.a(param1, 92);
+          this.field_I.addLast(param1, 92);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "le.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

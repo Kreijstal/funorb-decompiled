@@ -9,7 +9,7 @@ final class bo {
     static ci field_e;
 
     final static void a(byte param0) {
-        dk.field_g = false;
+        SecondaryNodeHashTable.field_g = false;
         cf.field_Nb = false;
         uk.a(false, -1);
         DelegatingCanvas.field_a = ji.field_T;

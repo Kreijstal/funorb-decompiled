@@ -43,7 +43,7 @@ final class ba extends ma implements nn, mj {
 
     final static void a(ak param0, int param1, int param2) {
         try {
-          nc.field_O.a((IntrusiveNode) (param0), (byte) 114);
+          nc.field_O.addFirst((IntrusiveNode) (param0), (byte) 114);
           if (param1 > -58) {
             field_Q = (byte[]) null;
           }

@@ -120,7 +120,7 @@ abstract class GameClientShell extends GameAppletShell {
                   }
                 }
               } else {
-                dl.a(vd.field_e, 256, 66);
+                dl.a(IntrusiveDeque.field_e, 256, 66);
               }
               dd.field_j = true;
             }
@@ -163,7 +163,7 @@ abstract class GameClientShell extends GameAppletShell {
               if (bi.field_I.a(255, "")) {
                 LoginMenuScreen.a(7, bi.field_I);
                 bi.field_I = null;
-                tc.a((byte) 86);
+                IterableNodeHashTable.a((byte) 86);
               }
             } else {
               bi.field_I = null;
@@ -200,7 +200,7 @@ abstract class GameClientShell extends GameAppletShell {
           ig.field_t = null;
           AccountCreationResultPanel.field_Jb = null;
           DirectByteStorage.a(79, (java.applet.Applet) (this));
-          tc.a((byte) 86);
+          IterableNodeHashTable.a((byte) 86);
           hj.field_f = 10;
         }
         if (10 == hj.field_f) {
@@ -297,7 +297,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (dd.field_j) {
           return -1;
         }
-        var2 = f.a(this.field_u, -50, true, fl.a(false), vd.f(-61), this.field_y);
+        var2 = f.a(this.field_u, -50, true, fl.a(false), IntrusiveDeque.f(-61), this.field_y);
         if (var2 == -1) {
           return -1;
         }
@@ -670,7 +670,7 @@ abstract class GameClientShell extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), ug.f(109), vd.f(-51), fa.a(true));
+            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), ug.f(109), IntrusiveDeque.f(-51), fa.a(true));
             if (var5_intLifetime1 != -1) {
               wh.a(var5_intLifetime1, cc.field_p, (byte) 117, td.field_m);
               cc.field_p = null;
@@ -686,7 +686,7 @@ abstract class GameClientShell extends GameAppletShell {
             if (param1) {
               dd.field_j = false;
             } else {
-              var5_intLifetime2 = f.a(this.field_u, -73, false, fl.a(false), vd.f(89), this.field_y);
+              var5_intLifetime2 = f.a(this.field_u, -73, false, fl.a(false), IntrusiveDeque.f(89), this.field_y);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   dl.a(cc.field_p, var5_intLifetime2, 79);

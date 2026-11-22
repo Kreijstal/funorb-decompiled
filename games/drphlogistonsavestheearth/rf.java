@@ -243,7 +243,7 @@ abstract class rf extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        vd.a(' ', field_Q, 0, false);
+        IntrusiveDeque.a(' ', field_Q, 0, false);
         var4 = 0;
         var5 = 0;
         var6 = -1;

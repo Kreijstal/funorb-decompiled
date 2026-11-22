@@ -94,10 +94,10 @@ final class fm implements cg {
         try {
           var14 = dh.field_N;
           var2 = var14.readUnsignedByte(31760);
-          var3 = (b) (u.field_f.h(-11151));
+          var3 = (b) (u.field_f.beginForward(-11151));
           while (var3 != null) {
             if (var2 != var3.field_j) {
-              var3 = (b) (u.field_f.e(0));
+              var3 = (b) (u.field_f.nextForward(0));
               continue;
             }
             break;

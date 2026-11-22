@@ -427,7 +427,7 @@ final class kb extends IntrusiveNode {
         var10 = OrbDefence.field_D ? 1 : 0;
         try {
           if (-param1.field_h + param1.field_o <= 0) {
-            this.field_f.field_h.a(-74, new me((double)param1.field_u, (double)param1.field_z, 1));
+            this.field_f.field_h.addLast(-74, new me((double)param1.field_u, (double)param1.field_z, 1));
             return;
           }
           if (null != this.field_p) {
@@ -491,7 +491,7 @@ final class kb extends IntrusiveNode {
               }
               var6Lifetime1 = 0;
               while (var6Lifetime1 < var5) {
-                this.field_f.field_b.a(-91, new oj(param1.field_u, param1.field_z, this.field_p, var6Lifetime1));
+                this.field_f.field_b.addLast(-91, new oj(param1.field_u, param1.field_z, this.field_p, var6Lifetime1));
                 var6Lifetime1++;
                 if (var10 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -500,7 +500,7 @@ final class kb extends IntrusiveNode {
               }
             }
             if (decompiledFrameCompleted1) {
-              this.field_f.field_h.a(-99, new me((double)param1.field_u, (double)param1.field_z, 1));
+              this.field_f.field_h.addLast(-99, new me((double)param1.field_u, (double)param1.field_z, 1));
             }
             boolean decompiledFrameCompleted0 = true;
             if (!(this.field_f.field_x <= 11) ||
@@ -546,7 +546,7 @@ final class kb extends IntrusiveNode {
                   this.field_f.field_f.field_c > var6Lifetime1Lifetime1 &&
                   0 <= var7 &&
                   this.field_f.field_f.field_t > var7) {
-                  this.field_f.field_h.a(-107, new me((double)param1.field_u, (double)param1.field_z, 0.05 * (double)(var6Lifetime1Lifetime1 - param1.field_u), 0.05 * (double)(-param1.field_z + var7), 1));
+                  this.field_f.field_h.addLast(-107, new me((double)param1.field_u, (double)param1.field_z, 0.05 * (double)(var6Lifetime1Lifetime1 - param1.field_u), 0.05 * (double)(-param1.field_z + var7), 1));
                   var8 = this.field_f.field_f.field_c * var7 + var6Lifetime1Lifetime1;
                   if (this.field_f.field_f.field_o[var8] == 7) {
                     var9 = this.field_f.a(var8, -66);
@@ -664,7 +664,7 @@ final class kb extends IntrusiveNode {
               if (~this.field_r[var3].field_c != ~var2_int) {
                 return;
               }
-              var4 = (pd) (this.field_f.field_r.b((byte) 117));
+              var4 = (pd) (this.field_f.field_r.beginForward((byte) 117));
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var4))) {
                 stackIn_58_0 = -1;
@@ -697,7 +697,7 @@ final class kb extends IntrusiveNode {
                       }
                     }
                   }
-                  var4 = (pd) (this.field_f.field_r.d(param0 ^ 857));
+                  var4 = (pd) (this.field_f.field_r.nextForward(param0 ^ 857));
                   continue;
                 }
                 break;
@@ -774,7 +774,7 @@ final class kb extends IntrusiveNode {
                   var3 = 1;
                 }
                 if (this.field_t < 5 + var3) {
-                  this.field_f.field_h.a(-114, new me((double)this.field_x + (-5.0 + (double)this.field_t) * (double)(this.field_g - this.field_x) / (double)var3, (double)(-this.field_A + this.field_h) * ((double)this.field_t - 5.0) / (double)var3 + (double)this.field_A, 6));
+                  this.field_f.field_h.addLast(-114, new me((double)this.field_x + (-5.0 + (double)this.field_t) * (double)(this.field_g - this.field_x) / (double)var3, (double)(-this.field_A + this.field_h) * ((double)this.field_t - 5.0) / (double)var3 + (double)this.field_A, 6));
                 }
               }
             }
@@ -789,14 +789,14 @@ final class kb extends IntrusiveNode {
                 var3Lifetime1 = 1;
               }
               if (-45 + (this.field_n + var3Lifetime1) > this.field_t) {
-                this.field_f.field_h.a(-90, new me((double)this.field_x + (double)(-this.field_x + this.field_g) * ((double)this.field_t - ((double)this.field_n - 45.0)) / (double)var3Lifetime1, (double)this.field_A + (double)(-this.field_A + this.field_h) * (45.0 - (double)this.field_n + (double)this.field_t) / (double)var3Lifetime1, 8));
+                this.field_f.field_h.addLast(-90, new me((double)this.field_x + (double)(-this.field_x + this.field_g) * ((double)this.field_t - ((double)this.field_n - 45.0)) / (double)var3Lifetime1, (double)this.field_A + (double)(-this.field_A + this.field_h) * (45.0 - (double)this.field_n + (double)this.field_t) / (double)var3Lifetime1, 8));
               }
             }
             if (2 == this.field_C) {
               if (this.field_t == 50) {
                 var3_double = 0.0;
                 while (6.283185307179586 > var3_double) {
-                  this.field_f.field_h.a(-82, new me((double)this.field_x + Math.random() - 0.5, (double)this.field_A + Math.random() - 0.5, 0.05 * Math.sin(var3_double), Math.cos(var3_double) * 0.05, 1));
+                  this.field_f.field_h.addLast(-82, new me((double)this.field_x + Math.random() - 0.5, (double)this.field_A + Math.random() - 0.5, 0.05 * Math.sin(var3_double), Math.cos(var3_double) * 0.05, 1));
                   var3_double = var3_double + 0.8;
                   if (var7 != 0) {
                     return;
@@ -816,7 +816,7 @@ final class kb extends IntrusiveNode {
                   var4 = var3Lifetime2 / 2;
                   var5 = this.field_t - (var4 + 50);
                   var6 = (int)(0.5 * Math.sqrt((double)(-(var5 * var5) + var4 * var4)));
-                  this.field_f.field_h.a(-119, new me((double)this.field_x + (double)(-this.field_x + this.field_g) * ((double)this.field_t - 50.0) / (double)var3Lifetime2, (double)(-var6) + ((double)(-this.field_A + this.field_h) * ((double)this.field_t - 50.0) / (double)var3Lifetime2 + (double)this.field_A), 4));
+                  this.field_f.field_h.addLast(-119, new me((double)this.field_x + (double)(-this.field_x + this.field_g) * ((double)this.field_t - 50.0) / (double)var3Lifetime2, (double)(-var6) + ((double)(-this.field_A + this.field_h) * ((double)this.field_t - 50.0) / (double)var3Lifetime2 + (double)this.field_A), 4));
                 }
               }
             }
@@ -1356,10 +1356,10 @@ final class kb extends IntrusiveNode {
               boolean decompiledFrameCompleted6 = true;
               if (3 == this.field_C &&
                 this.field_t == this.field_n - 45) {
-                this.field_f.field_h.a(-109, new me((double)this.field_x, (double)this.field_A, 9));
+                this.field_f.field_h.addLast(-109, new me((double)this.field_x, (double)this.field_A, 9));
                 var2_int = 2 + this.field_F;
                 var3 = this.field_F * 2 + 2;
-                var4_ref_pd = (pd) (this.field_f.field_r.b((byte) -15));
+                var4_ref_pd = (pd) (this.field_f.field_r.beginForward((byte) -15));
                 while (var4_ref_pd != null) {
                   var5 = -var4_ref_pd.field_u + this.field_x;
                   var6 = this.field_A - var4_ref_pd.field_z;
@@ -1377,7 +1377,7 @@ final class kb extends IntrusiveNode {
                       var4_ref_pd.field_i = 50 * (this.field_F + 1);
                     }
                   }
-                  var4_ref_pd = (pd) (this.field_f.field_r.d(853));
+                  var4_ref_pd = (pd) (this.field_f.field_r.nextForward(853));
                 }
               }
               if (decompiledFrameCompleted6) {
@@ -1391,7 +1391,7 @@ final class kb extends IntrusiveNode {
                   var2_int = 2;
                   var3 = 1;
                   var4 = 0;
-                  var5_ref_pd = (pd) (this.field_f.field_r.b((byte) -82));
+                  var5_ref_pd = (pd) (this.field_f.field_r.beginForward((byte) -82));
                   while (var5_ref_pd != null) {
                     var6 = this.field_A - var5_ref_pd.field_z;
                     var7 = -var5_ref_pd.field_u + this.field_x;
@@ -1413,13 +1413,13 @@ final class kb extends IntrusiveNode {
                         stackIn_154_1 = ~var8;
                         if (stackIn_154_0 == stackIn_154_1) {
                           this.a(var3, var5_ref_pd, param0 ^ 127);
-                          this.field_f.field_h.a(-69, new me((double)this.field_x, (double)this.field_A, 0.1 * ((double)var5_ref_pd.field_u + Math.random() - 0.5 - (double)this.field_x), ((double)var5_ref_pd.field_z + Math.random() - 0.5 - (double)this.field_A) * 0.1, 7));
+                          this.field_f.field_h.addLast(-69, new me((double)this.field_x, (double)this.field_A, 0.1 * ((double)var5_ref_pd.field_u + Math.random() - 0.5 - (double)this.field_x), ((double)var5_ref_pd.field_z + Math.random() - 0.5 - (double)this.field_A) * 0.1, 7));
                           var4++;
                         }
                         var9++;
                       }
                     }
-                    var5_ref_pd = (pd) (this.field_f.field_r.d(853));
+                    var5_ref_pd = (pd) (this.field_f.field_r.nextForward(853));
                   }
                 }
                 if (decompiledFrameCompleted5) {
@@ -1430,7 +1430,7 @@ final class kb extends IntrusiveNode {
                   var2_int = 4;
                   var3 = 1;
                   var4 = 0;
-                  var5_ref_pdLifetime1 = (pd) (this.field_f.field_r.b((byte) -12));
+                  var5_ref_pdLifetime1 = (pd) (this.field_f.field_r.beginForward((byte) -12));
                   while (null != var5_ref_pdLifetime1) {
                     var6 = -var5_ref_pdLifetime1.field_z + this.field_A;
                     var7 = -var5_ref_pdLifetime1.field_u + this.field_x;
@@ -1452,13 +1452,13 @@ final class kb extends IntrusiveNode {
                         stackIn_185_1 = this.field_i[var9];
                         if (stackIn_185_0 == stackIn_185_1) {
                           this.a(var3, var5_ref_pdLifetime1, 73);
-                          this.field_f.field_h.a(param0 - 163, new me((double)this.field_x, (double)this.field_A, ((double)var5_ref_pdLifetime1.field_u + Math.random() - 0.5 - (double)this.field_x) * 0.1, 0.1 * ((double)var5_ref_pdLifetime1.field_z + Math.random() - 0.5 - (double)this.field_A), 7));
+                          this.field_f.field_h.addLast(param0 - 163, new me((double)this.field_x, (double)this.field_A, ((double)var5_ref_pdLifetime1.field_u + Math.random() - 0.5 - (double)this.field_x) * 0.1, 0.1 * ((double)var5_ref_pdLifetime1.field_z + Math.random() - 0.5 - (double)this.field_A), 7));
                           var4++;
                         }
                         var9++;
                       }
                     }
-                    var5_ref_pdLifetime1 = (pd) (this.field_f.field_r.d(853));
+                    var5_ref_pdLifetime1 = (pd) (this.field_f.field_r.nextForward(853));
                   }
                 }
               }
@@ -1487,7 +1487,7 @@ final class kb extends IntrusiveNode {
                   var3 = 90;
                   var2_int = 4;
                 }
-                var4_ref_pd = (pd) (this.field_f.field_r.b((byte) 119));
+                var4_ref_pd = (pd) (this.field_f.field_r.beginForward((byte) 119));
                 while (var4_ref_pd != null) {
                   var5 = -var4_ref_pd.field_z + this.field_A;
                   var6 = -var4_ref_pd.field_u + this.field_x;
@@ -1513,7 +1513,7 @@ final class kb extends IntrusiveNode {
                       var8++;
                     }
                   }
-                  var4_ref_pd = (pd) (this.field_f.field_r.d(853));
+                  var4_ref_pd = (pd) (this.field_f.field_r.nextForward(853));
                 }
               }
             }
@@ -1544,7 +1544,7 @@ final class kb extends IntrusiveNode {
             var2 = null;
             if (4 != this.field_C) {
               var3 = 10000;
-              var4_ref_pd = (pd) (this.field_f.field_r.b((byte) 124));
+              var4_ref_pd = (pd) (this.field_f.field_r.beginForward((byte) 124));
               while (var4_ref_pd != null) {
                 var5 = this.field_h - var4_ref_pd.field_z;
                 var6 = this.field_g - var4_ref_pd.field_u;
@@ -1580,7 +1580,7 @@ final class kb extends IntrusiveNode {
                     var8++;
                   }
                 }
-                var4_ref_pd = (pd) (this.field_f.field_r.d(param0 ^ 780));
+                var4_ref_pd = (pd) (this.field_f.field_r.nextForward(param0 ^ 780));
               }
             } else {
               var3_ref_pd = this.field_E;
@@ -1611,7 +1611,7 @@ final class kb extends IntrusiveNode {
               }
               if ((decompiledFrameCompleted1) &&
                 (null == var2)) {
-                var3_ref_pdLifetime1 = (pd) (this.field_f.field_r.b((byte) 127));
+                var3_ref_pdLifetime1 = (pd) (this.field_f.field_r.beginForward((byte) 127));
                 while (var3_ref_pdLifetime1 != null) {
                   var5 = this.field_h - var3_ref_pdLifetime1.field_z;
                   var6 = -var3_ref_pdLifetime1.field_u + this.field_g;
@@ -1640,7 +1640,7 @@ final class kb extends IntrusiveNode {
                       var8++;
                     }
                   }
-                  var3_ref_pdLifetime1 = (pd) (this.field_f.field_r.d(853));
+                  var3_ref_pdLifetime1 = (pd) (this.field_f.field_r.nextForward(853));
                 }
               }
             }
@@ -1728,7 +1728,7 @@ final class kb extends IntrusiveNode {
                 this.field_E = (pd) (var2);
                 this.field_A = ((pd) (var2)).field_z;
                 this.a(var3, (pd) (var2), param0 ^ 71);
-                this.field_f.field_h.a(-122, new me((double)this.field_x, (double)this.field_A, 7));
+                this.field_f.field_h.addLast(-122, new me((double)this.field_x, (double)this.field_A, 7));
                 decompiledFrameRemainder6 = (var10 != 0);
               }
               if ((decompiledFrameRemainder6) &&

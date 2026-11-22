@@ -619,7 +619,7 @@ final class c extends sc {
         byte[] var2Lifetime196;
         byte[] var2Lifetime197;
         try {
-          mn.field_e = param1;
+          PrimaryNodeDeque.field_e = param1;
           var2 = wm.a("keycode_energyweapon1", (byte) 101);
           if (null != var2) {
             ql.field_u = 255 & var2[0];
@@ -849,7 +849,7 @@ final class c extends sc {
           }
           var2Lifetime56 = wm.a("clickToSkip", (byte) 83);
           if (var2Lifetime56 != null) {
-            mn.field_c = va.a(0, var2Lifetime56);
+            PrimaryNodeDeque.field_c = va.a(0, var2Lifetime56);
           }
           var2Lifetime57 = wm.a("oneMetreToLevelN", (byte) 88);
           if (var2Lifetime57 != null) {
@@ -1415,7 +1415,7 @@ final class c extends sc {
           if (null != var2Lifetime197) {
             va.a(0, var2Lifetime197);
           }
-          mn.field_e = null;
+          PrimaryNodeDeque.field_e = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

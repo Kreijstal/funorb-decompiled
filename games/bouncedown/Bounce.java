@@ -267,8 +267,8 @@ public final class Bounce extends GameClient {
           bj.clearStaticReferences(-119);
           se.a(true);
           eh.a((byte) 106);
-          m.a(-1);
-          wh.clearStaticReferences((byte) -53);
+          IterableNodeHashTable.a(-1);
+          SecondaryNodeDeque.clearStaticReferences((byte) -53);
           eg.d(54);
           t.clearStaticReferences(-32504);
           ra.b((byte) 120);
@@ -432,12 +432,12 @@ public final class Bounce extends GameClient {
             }
             fb.field_nb = false;
           }
-          if (ci.field_F.a((byte) -75) != null) {
+          if (ci.field_F.beginForward((byte) -75) != null) {
             fieldTemp$0 = this.field_H + 1;
             this.field_H = this.field_H + 1;
             if (fieldTemp$0 == 335) {
               this.field_H = 0;
-              ci.field_F.c((byte) -52);
+              ci.field_F.removeFirst((byte) -52);
             }
           }
           ae.field_f = ae.field_f + 1;
@@ -921,10 +921,10 @@ public final class Bounce extends GameClient {
                 ka.field_o.field_l = true;
               }
               ed.a((byte) -127);
-              var2 = (ke) (m.field_c.a((byte) -104));
+              var2 = (ke) (IterableNodeHashTable.field_c.beginForward((byte) -104));
               while (null != var2) {
                 re.a((byte) 109, var2, 4);
-                var2 = (ke) (m.field_c.d((byte) 70));
+                var2 = (ke) (IterableNodeHashTable.field_c.nextForward((byte) 70));
                 if (var3 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1392,7 +1392,7 @@ public final class Bounce extends GameClient {
           ag.field_c = 16777215;
           ub.field_a = null;
           DirectByteStorage.field_f = 16697912;
-          bc.field_a = 16741888;
+          IntrusiveDeque.field_a = 16741888;
           vc.e((byte) -44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1801,7 +1801,7 @@ public final class Bounce extends GameClient {
               od.field_f.b(Integer.toString(fa.field_c), var7 + (320 - var6_int / 2), 473, 16777215, -1);
             }
           }
-          var5_ref = (ab) (ci.field_F.a((byte) -48));
+          var5_ref = (ab) (ci.field_F.beginForward((byte) -48));
           if (var5_ref != null) {
             var7Lifetime1 = this.field_H;
             if (var7Lifetime1 < 80) {

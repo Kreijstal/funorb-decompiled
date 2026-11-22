@@ -863,8 +863,8 @@ public final class DungeonAssault extends NetworkGameClient {
           oi.h(119);
           bj.h(31029);
           ad.clearStaticReferences(1);
-          qi.clearStaticReferences(true);
-          dh.a(20);
+          IterableNodeHashTable.clearStaticReferences(true);
+          SecondaryNodeDeque.a(20);
           wf.d((byte) -28);
           pb.e((byte) -78);
           ha.c(64);

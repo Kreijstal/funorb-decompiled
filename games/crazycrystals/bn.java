@@ -7,7 +7,7 @@ final class bn {
     private db field_e;
     static String field_f;
     private fc field_b;
-    static wb field_i;
+    static IntrusiveDeque field_i;
     static int field_c;
     static lg field_g;
     private fc field_a;

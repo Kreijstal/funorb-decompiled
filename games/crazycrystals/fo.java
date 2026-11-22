@@ -20,18 +20,18 @@ final class fo extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          var4 = (hp) (cf.field_c.g(32073));
+          var4 = (hp) (cf.field_c.beginForward(32073));
           while (var4 != null) {
             tb.a(param0, var4, (byte) -125);
-            var4 = (hp) (cf.field_c.a(false));
+            var4 = (hp) (cf.field_c.nextForward(false));
           }
-          var5 = (ak) (hd.field_d.g(32073));
+          var5 = (ak) (hd.field_d.beginForward(32073));
           if (param1 != -98) {
             field_m = (int[]) null;
           }
           while (var5 != null) {
             j.a(var5, param0, false);
-            var5 = (ak) (hd.field_d.a(false));
+            var5 = (ak) (hd.field_d.nextForward(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

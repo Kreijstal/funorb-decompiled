@@ -142,7 +142,7 @@ final class hl extends PcmStream {
         if (param0 <= 39) {
           this.field_I = false;
         }
-        var3 = (cb) (this.field_y.field_n.a(true));
+        var3 = (cb) (this.field_y.field_n.beginForward(true));
         while (var3 != null) {
           if (var4 == 0) {
             if (param1 < 0 ||
@@ -159,7 +159,7 @@ final class hl extends PcmStream {
               }
               var3.unlink((byte) -116);
             }
-            var3 = (cb) (this.field_y.field_n.f(2));
+            var3 = (cb) (this.field_y.field_n.nextForward(2));
             continue;
           }
           break;
@@ -557,7 +557,7 @@ final class hl extends PcmStream {
           decompiledFrameRemainder0 = (var7 != 0);
         }
         if (decompiledFrameRemainder0) {
-          var6 = (cb) (this.field_y.field_n.a(true));
+          var6 = (cb) (this.field_y.field_n.beginForward(true));
           while (var6 != null) {
             if (var7 != 0) {
               break;
@@ -567,7 +567,7 @@ final class hl extends PcmStream {
               var6 != var8) {
               var8.field_h = 0;
             } else {
-              var6 = (cb) (this.field_y.field_n.f(param3 ^ 2));
+              var6 = (cb) (this.field_y.field_n.nextForward(param3 ^ 2));
               continue;
             }
             break;
@@ -617,7 +617,7 @@ final class hl extends PcmStream {
         RuntimeException var2 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          var4 = (wa) (AccountRequestState.field_b.a(true));
+          var4 = (wa) (AccountRequestState.field_b.beginForward(true));
           do {
             if (var4 == null) {
               if (param1 != -2212) {
@@ -626,12 +626,12 @@ final class hl extends PcmStream {
               break;
             }
             na.a((byte) -126, var4, param0);
-            var4 = (wa) (AccountRequestState.field_b.f(2));
+            var4 = (wa) (AccountRequestState.field_b.nextForward(2));
           } while (var3 == 0);
-          var5 = (mc) (vh.field_a.a(true));
+          var5 = (mc) (vh.field_a.beginForward(true));
           while (var5 != null) {
             fj.a(param0, var5, false);
-            var5 = (mc) (vh.field_a.f(param1 ^ -2210));
+            var5 = (mc) (vh.field_a.nextForward(param1 ^ -2210));
             if (var3 != 0) {
               return;
             }
@@ -785,7 +785,7 @@ final class hl extends PcmStream {
             }
             var3 = var28.readUnsignedShort(-1698573656);
             var4_long = var28.readLong((byte) -102);
-            var6_ref_nc = (nc) (ok.field_b.a(true));
+            var6_ref_nc = (nc) (ok.field_b.beginForward(true));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var6_ref_nc != null) {
@@ -793,7 +793,7 @@ final class hl extends PcmStream {
                 decompiledFrameRemainder0 = (var26 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (stackIn_14_0 != ~var6_ref_nc.field_j)) {
-                  var6_ref_nc = (nc) (ok.field_b.f(param0 + 2));
+                  var6_ref_nc = (nc) (ok.field_b.nextForward(param0 + 2));
                   continue;
                 }
               }
@@ -813,7 +813,7 @@ final class hl extends PcmStream {
             }
           }
           var3Lifetime1 = var28.readUnsignedShort(param0 - 1698573656);
-          var4 = (sj) (il.field_b.a(true));
+          var4 = (sj) (il.field_b.beginForward(true));
           scanLoop1: while (true) {
             if (var4 != null) {
               stackIn_27_0 = ~var3Lifetime1;
@@ -822,7 +822,7 @@ final class hl extends PcmStream {
               }
               if (stackIn_27_0 != ~var4.field_h ||
                 var26 != 0) {
-                var4 = (sj) (il.field_b.f(param0 + 2));
+                var4 = (sj) (il.field_b.nextForward(param0 + 2));
                 continue;
               }
             }
@@ -989,7 +989,7 @@ final class hl extends PcmStream {
         int var5;
         int stackIn_11_0 = 0;
         var5 = Lexicominos.field_L ? 1 : 0;
-        var3 = (cb) (this.field_y.field_n.a(true));
+        var3 = (cb) (this.field_y.field_n.beginForward(true));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_11_0 = param1;
@@ -1000,7 +1000,7 @@ final class hl extends PcmStream {
               this.field_R[var3.field_z][var3.field_q] = null;
               var3.field_h = 0;
             }
-            var3 = (cb) (this.field_y.field_n.f(2));
+            var3 = (cb) (this.field_y.field_n.nextForward(2));
             continue;
           }
           break;
@@ -1276,7 +1276,7 @@ final class hl extends PcmStream {
           return;
         }
         if (0 != (4 & this.field_q[param1])) {
-          var3 = (cb) (this.field_y.field_n.a(true));
+          var3 = (cb) (this.field_y.field_n.beginForward(true));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -1284,7 +1284,7 @@ final class hl extends PcmStream {
             if (~var3.field_z == ~param1) {
               var3.field_E = 0;
             }
-            var3 = (cb) (this.field_y.field_n.f(2));
+            var3 = (cb) (this.field_y.field_n.nextForward(2));
           }
         }
     }
@@ -1297,7 +1297,7 @@ final class hl extends PcmStream {
           return;
         }
         if ((this.field_q[param0] & 2) != 0) {
-          var3 = (cb) (this.field_y.field_n.a(true));
+          var3 = (cb) (this.field_y.field_n.beginForward(true));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -1307,7 +1307,7 @@ final class hl extends PcmStream {
               var3.field_h < 0) {
               var3.field_h = 0;
             }
-            var3 = (cb) (this.field_y.field_n.f(param1 - 16382));
+            var3 = (cb) (this.field_y.field_n.nextForward(param1 - 16382));
           }
         }
     }
@@ -1480,7 +1480,7 @@ final class hl extends PcmStream {
           var9 = Lexicominos.field_L ? 1 : 0;
           this.a(64, param3, param0, 0);
           if ((this.field_q[param0] & 2) != 0) {
-            var5 = (cb) (this.field_y.field_n.c(2));
+            var5 = (cb) (this.field_y.field_n.beginBackward(2));
             while (var5 != null) {
               stackOut_3_0 = var5;
               stackIn_9_0 = stackOut_3_0;
@@ -1499,7 +1499,7 @@ final class hl extends PcmStream {
                 var5.field_l = var6_int - var5.field_o;
                 return;
               }
-              var5 = (cb) (this.field_y.field_n.d(0));
+              var5 = (cb) (this.field_y.field_n.nextBackward(0));
             }
           }
           stackIn_9_0 = this.field_A.a((long)this.field_E[param0], (byte) 118);
@@ -1555,7 +1555,7 @@ final class hl extends PcmStream {
           }
           this.field_L[param0][var7.field_u] = var7;
         }
-        this.field_y.field_n.b(115, var7);
+        this.field_y.field_n.addLast(115, var7);
         this.field_R[param0][param3] = var7;
         return;
     }

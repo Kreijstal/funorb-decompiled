@@ -84,7 +84,7 @@ final class wi {
           } else {
             var6 = param0;
           }
-          stackIn_6_0 = tc.a(var4_long, param3, (String) (var6), 0, param2);
+          stackIn_6_0 = IterableNodeHashTable.a(var4_long, param3, (String) (var6), 0, param2);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

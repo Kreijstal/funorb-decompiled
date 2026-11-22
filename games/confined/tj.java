@@ -21,10 +21,10 @@ final class tj extends tk {
     private we field_h;
     private jf field_q;
     private boolean field_m;
-    private mn field_r;
+    private PrimaryNodeDeque field_r;
     private int field_j;
     private boolean field_k;
-    private mn field_C;
+    private PrimaryNodeDeque field_C;
     private long field_t;
     private boolean field_w;
 
@@ -391,7 +391,7 @@ final class tj extends tk {
           }
           if (this.field_m) {
             var2 = 1;
-            var3 = this.field_r.a(-125);
+            var3 = this.field_r.beginForward(-125);
             while (var3 != null) {
               var4 = (int)var3.field_i;
               if (this.field_p[var4] == 0) {
@@ -402,7 +402,7 @@ final class tj extends tk {
               } else {
                 var2 = 0;
               }
-              var3 = this.field_r.d(2123);
+              var3 = this.field_r.nextForward(2123);
             }
             scanLoop1: while (true) {
               if (this.field_j < this.field_h.field_t.length) {
@@ -417,7 +417,7 @@ final class tj extends tk {
                   if (0 == this.field_p[this.field_j]) {
                     var7 = new IntrusiveNode();
                     var7.field_i = (long)this.field_j;
-                    this.field_r.a(var7, (byte) -98);
+                    this.field_r.addLast(var7, (byte) -98);
                     var2 = 0;
                   }
                 }
@@ -435,7 +435,7 @@ final class tj extends tk {
           else {
             if (this.field_k) {
               var2Lifetime2 = 1;
-              var3Lifetime1 = this.field_r.a(87);
+              var3Lifetime1 = this.field_r.beginForward(87);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.field_i;
                 if (this.field_p[var4Lifetime1] != 1) {
@@ -446,7 +446,7 @@ final class tj extends tk {
                 } else {
                   var2Lifetime2 = 0;
                 }
-                var3Lifetime1 = this.field_r.d(2123);
+                var3Lifetime1 = this.field_r.nextForward(2123);
               }
               scanLoop2: while (true) {
                 if (this.field_j < this.field_h.field_t.length) {
@@ -461,7 +461,7 @@ final class tj extends tk {
                     if (this.field_p[this.field_j] != 1) {
                       var6 = new IntrusiveNode();
                       var6.field_i = (long)this.field_j;
-                      this.field_r.a(var6, (byte) -84);
+                      this.field_r.addLast(var6, (byte) -84);
                       var2Lifetime2 = 0;
                     }
                   }
@@ -622,7 +622,7 @@ final class tj extends tk {
         if (param0 >= -106) {
           return;
         }
-        IntrusiveNode var2 = this.field_C.a(-115);
+        IntrusiveNode var2 = this.field_C.beginForward(-115);
         while (var2 != null) {
           var3 = (int)var2.field_i;
           if (var3 < 0) {
@@ -646,7 +646,7 @@ final class tj extends tk {
               }
             }
           }
-          var2 = this.field_C.d(2123);
+          var2 = this.field_C.nextForward(2123);
         }
     }
 
@@ -669,7 +669,7 @@ final class tj extends tk {
           field_A = (int[]) null;
         }
         if (null == this.field_r) {
-          this.field_r = new mn();
+          this.field_r = new PrimaryNodeDeque();
         }
     }
 
@@ -697,7 +697,7 @@ final class tj extends tk {
         RuntimeException var10 = null;
         this.field_i = new vh(16);
         this.field_j = 0;
-        this.field_C = new mn();
+        this.field_C = new PrimaryNodeDeque();
         this.field_t = 0L;
         try {
           this.field_u = param0;
@@ -706,7 +706,7 @@ final class tj extends tk {
             this.field_m = false;
           } else {
             this.field_m = true;
-            this.field_r = new mn();
+            this.field_r = new PrimaryNodeDeque();
           }
           this.field_q = param3;
           stackIn_7_1 = (param8);

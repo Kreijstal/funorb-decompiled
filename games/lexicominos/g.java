@@ -159,18 +159,18 @@ final class g extends tj {
         RuntimeException var2 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          var5 = (nc) (ok.field_b.a(true));
+          var5 = (nc) (ok.field_b.beginForward(true));
           if (param1 >= -38) {
             field_m = (wg) null;
           }
           while (var5 != null) {
             ga.a(var5, param0, 74);
-            var5 = (nc) (ok.field_b.f(2));
+            var5 = (nc) (ok.field_b.nextForward(2));
           }
-          var4 = (sj) (il.field_b.a(true));
+          var4 = (sj) (il.field_b.beginForward(true));
           while (var4 != null) {
             uh.a(var4, (byte) -123, param0);
-            var4 = (sj) (il.field_b.f(2));
+            var4 = (sj) (il.field_b.nextForward(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

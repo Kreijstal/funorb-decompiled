@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class u {
-    static vd field_f;
+    static IntrusiveDeque field_f;
     static String field_e;
     static he[] field_a;
     static he[] field_c;
@@ -17,9 +17,9 @@ abstract class u {
         }
         param0 = param0 & 8191;
         if (param0 >= 4096) {
-          return param0 < 6144 ? -tc.field_a[6144 - param0] : tc.field_a[param0 - 6144];
+          return param0 < 6144 ? -IterableNodeHashTable.field_a[6144 - param0] : IterableNodeHashTable.field_a[param0 - 6144];
         }
-        return param0 < 2048 ? tc.field_a[2048 - param0] : -tc.field_a[param0 - 2048];
+        return param0 < 2048 ? IterableNodeHashTable.field_a[2048 - param0] : -IterableNodeHashTable.field_a[param0 - 2048];
     }
 
     final static boolean a(String param0, boolean param1, String param2) {
@@ -166,7 +166,7 @@ abstract class u {
           var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           try {
             if (param1 >= -62) {
-              field_f = (vd) null;
+              field_f = (IntrusiveDeque) null;
             }
             var9 = new byte[24];
             var7 = var9;
@@ -233,7 +233,7 @@ abstract class u {
     abstract db b(byte param0);
 
     static {
-        field_f = new vd();
+        field_f = new IntrusiveDeque();
         field_e = "Player";
         field_b = new vh();
     }

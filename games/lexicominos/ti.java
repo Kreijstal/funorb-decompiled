@@ -217,7 +217,7 @@ final class ti extends nb implements nf, jk {
             this.g(0);
           } else {
             if (param4 == this.field_H) {
-              bg.a(false);
+              SecondaryNodeDeque.a(false);
             } else {
               if (this.field_E == param4) {
                 if (!this.field_J) {

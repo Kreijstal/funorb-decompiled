@@ -4,16 +4,16 @@
 import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
-    private bg deque;
+    private SecondaryNodeDeque deque;
     private DualLinkNode lastReturned;
     private DualLinkNode nextNode;
     static int field_c;
     static sh field_b;
-    static ng field_e;
+    static IntrusiveDeque field_e;
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (var1 != this.deque.field_e) {
+        if (var1 != this.deque.sentinel) {
           this.nextNode = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.nextNode = null;
@@ -23,12 +23,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    SecondaryNodeDequeIterator(bg param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
           this.lastReturned = null;
-          this.nextNode = this.deque.field_e.secondaryNext;
+          this.nextNode = this.deque.sentinel.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -58,7 +58,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_e;
+        return this.nextNode != this.deque.sentinel;
     }
 
     static {

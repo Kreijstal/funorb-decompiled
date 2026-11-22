@@ -146,10 +146,10 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           while (true) {
             var3 = param0.requestFullscreenExit(param1, (byte) 4);
             while (var3.status == 0) {
-              wh.a(10L, 19406);
+              SecondaryNodeDeque.a(10L, 19406);
             }
             if (var3.status != 1) {
-              wh.a(100L, 19406);
+              SecondaryNodeDeque.a(100L, 19406);
               continue;
             }
             break;

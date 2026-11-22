@@ -4,7 +4,7 @@
 class ja extends bb {
     static int field_P;
     private String[] field_K;
-    private vc field_N;
+    private IntrusiveDeque field_N;
     static String field_L;
     static String field_O;
     private mi field_M;
@@ -30,7 +30,7 @@ class ja extends bb {
         UiComponent var17;
         int var7Lifetime1;
         var16 = fleas.field_A ? 1 : 0;
-        this.field_N = new vc();
+        this.field_N = new IntrusiveDeque();
         var2 = 0;
         if (param0 != 424) {
           var17 = (UiComponent) null;
@@ -73,7 +73,7 @@ class ja extends bb {
               ((mi) (var10)).field_q = var15;
             }
             var10 = var15;
-            this.field_N.a(false, var15);
+            this.field_N.addLast(false, var15);
           }
         }
     }
@@ -120,7 +120,7 @@ class ja extends bb {
         mi var5;
         int var6;
         var6 = fleas.field_A ? 1 : 0;
-        var4 = (mi) (this.field_N.c((byte) 47));
+        var4 = (mi) (this.field_N.beginForward((byte) 47));
         if (param2 != -1) {
           return (mi) null;
         }
@@ -135,7 +135,7 @@ class ja extends bb {
             }
             var5 = var5.field_q;
           }
-          var4 = (mi) (this.field_N.b((byte) -105));
+          var4 = (mi) (this.field_N.nextForward((byte) -105));
         }
         return null;
     }

@@ -4,7 +4,7 @@
 final class df {
     static int field_c;
     static String field_a;
-    static wb field_b;
+    static IntrusiveDeque field_b;
     private static String field_z;
 
     public static void a(int param0) {

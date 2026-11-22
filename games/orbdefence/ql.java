@@ -51,16 +51,16 @@ final class ql {
         RuntimeException var2 = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          var5 = (qf) (vb.field_h.b((byte) 119));
+          var5 = (qf) (vb.field_h.beginForward((byte) 119));
           while (var5 != null) {
             DualLinkDequeIterator.a(-30329, var5, param0);
-            var5 = (qf) (vb.field_h.d(853));
+            var5 = (qf) (vb.field_h.nextForward(853));
           }
           var2_int = -104 / ((param1 + 19) / 32);
-          var3 = (fb) (PacketBuffer.field_l.b((byte) 122));
+          var3 = (fb) (PacketBuffer.field_l.beginForward((byte) 122));
           while (var3 != null) {
             ia.a(-86, param0, var3);
-            var3 = (fb) (PacketBuffer.field_l.d(853));
+            var3 = (fb) (PacketBuffer.field_l.nextForward(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

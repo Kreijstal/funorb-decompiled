@@ -4,9 +4,9 @@
 final class ij extends IntrusiveNode {
     static int field_p;
     static db[] field_n;
-    ng field_s;
+    IntrusiveDeque field_s;
     static int field_l;
-    ng field_k;
+    IntrusiveDeque field_k;
     static boolean[] field_o;
     int field_i;
     static int field_j;
@@ -142,14 +142,14 @@ final class ij extends IntrusiveNode {
             return stackIn_7_0;
           }
           if (param0 != 23446) {
-            this.field_k = (ng) null;
+            this.field_k = (IntrusiveDeque) null;
           }
           if (this == param1) {
             return this;
           }
-          this.field_s.a(param1.field_s, 82);
+          this.field_s.moveAllTo(param1.field_s, 82);
           this.field_s = null;
-          this.field_k.a(param1.field_k, param0 - 23345);
+          this.field_k.moveAllTo(param1.field_k, param0 - 23345);
           this.field_m = param1;
           this.field_k = null;
           this.unlink((byte) -128);
@@ -232,14 +232,14 @@ final class ij extends IntrusiveNode {
             this.a(param0.field_m, param1, -1009900016, param3, param4);
             return;
           }
-          this.field_s.b(116, new bd((param3 << 16) + param1));
+          this.field_s.addLast(116, new bd((param3 << 16) + param1));
           if (param2 != -1009900016) {
             return;
           }
           if (param0 == this) {
             return;
           }
-          param0.field_k.b(param2 ^ -1009899913, new mk(param4, this));
+          param0.field_k.addLast(param2 ^ -1009899913, new mk(param4, this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -332,8 +332,8 @@ final class ij extends IntrusiveNode {
     }
 
     ij() {
-        this.field_s = new ng();
-        this.field_k = new ng();
+        this.field_s = new IntrusiveDeque();
+        this.field_k = new IntrusiveDeque();
         this.field_i = -1;
         this.field_q = 1073741823;
         this.field_m = null;

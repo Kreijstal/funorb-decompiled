@@ -543,7 +543,7 @@ final class ql {
           var19_double = var14 + var16 * Math.random();
           var12.a(var19_double, 0.4, 0, var13);
           var21_ref_u = new u(this.field_i, pn.field_h, fa.field_R, var19_double);
-          this.field_i.field_g.a((IntrusiveNode) (var21_ref_u), (byte) 100);
+          this.field_i.field_g.addLast((IntrusiveNode) (var21_ref_u), (byte) 100);
           if (!this.field_c) {
             var22_double = Math.random() * (double)this.field_y;
             var24_int = 0;
@@ -553,7 +553,7 @@ final class ql {
                 if ((double)var24_int > var22_double) {
                   var26 = (int)(Math.random() * (double)bf.field_L[var25].length);
                   var27_ref_rd = this.a(0.0, 0, 0.0, 0.0, false, bf.field_L[var25][var26], var21_ref_u, this.field_o, 583, var25, (rd) null, false, new boolean[]{true});
-                  this.field_i.field_g.a((IntrusiveNode) (var27_ref_rd), (byte) -93);
+                  this.field_i.field_g.addLast((IntrusiveNode) (var27_ref_rd), (byte) -93);
                   this.field_a[var25] = this.field_a[var25] - 1;
                   break;
                 }
@@ -605,7 +605,7 @@ final class ql {
                 } else {
                   var31.d((byte) -123, var26Lifetime1);
                 }
-                this.field_i.field_g.a((IntrusiveNode) (var31), (byte) 67);
+                this.field_i.field_g.addLast((IntrusiveNode) (var31), (byte) 67);
                 if (var22 == 1) {
                   if ((32768 & this.field_q) != 0) {
                     if (var23 != null) {
@@ -648,7 +648,7 @@ final class ql {
           } else {
             this.field_i.field_o = 0;
             this.field_i.field_Q = new wc(this.field_i, var13, var12.field_r[-1 + var12.field_a], this.field_v, this.field_h);
-            this.field_i.field_g.a((IntrusiveNode) (this.field_i.field_Q), (byte) 97);
+            this.field_i.field_g.addLast((IntrusiveNode) (this.field_i.field_Q), (byte) 97);
           }
         }
     }

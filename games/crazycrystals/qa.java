@@ -285,7 +285,7 @@ final class qa {
         if (param0 != 121) {
           field_h = (String) null;
         }
-        pm.field_c.b(0, var2);
+        pm.field_c.addLast(0, var2);
         eq.b(param0 ^ 123, param1);
         return var2;
     }

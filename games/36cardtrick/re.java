@@ -726,7 +726,7 @@ final class re {
                                             }
                                             nb.field_e = 0;
                                             db.field_m = 0;
-                                            ij.field_h.c(29026);
+                                            ij.field_h.clear(29026);
                                             this.field_d.a(11246, 0, 5, param0);
                                             break regionExit1;
                                         }

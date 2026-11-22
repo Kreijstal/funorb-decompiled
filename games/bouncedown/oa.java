@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class oa {
-    static bc field_b;
+    static IntrusiveDeque field_b;
     int field_e;
     static AccountServiceResult field_c;
     String field_d;

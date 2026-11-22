@@ -343,7 +343,7 @@ final class UiComponentPart013 extends ComponentContainer implements CallbackCon
             RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = null;
             RenderingSupport003.sceneWidgetPart010State0001.booleanState0212 = true;
             objectLocal13 = null;
-            sceneWidgetPart014Local14 = (SceneWidgetPart014) (nodeDequeLocal12.computeHashNode1741((byte) 95));
+            sceneWidgetPart014Local14 = (SceneWidgetPart014) (nodeDequeLocal12.beginBackward((byte) 95));
             while (sceneWidgetPart014Local14 != null) {
               integerLocal15 = 0;
               if (null == sceneWidgetPart014Local14.nodeDequeState0034) {
@@ -406,7 +406,7 @@ final class UiComponentPart013 extends ComponentContainer implements CallbackCon
                 integerLocal22 = TextLineMetrics.integerState0535;
                 mixedSupport099Local25.sceneWidgetPart002State0002.performAction0561(integerLocal22, integerLocal21, 89, 0, 0);
               }
-              sceneWidgetPart014Local14 = (SceneWidgetPart014) (nodeDequeLocal12.computeHashNode1745(booleanArgument1));
+              sceneWidgetPart014Local14 = (SceneWidgetPart014) (nodeDequeLocal12.nextBackward(booleanArgument1));
             }
             if (RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0891 != 0) {
               MixedSupport139.sceneWidgetPart004State0001 = new SceneWidgetPart004(RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0892, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0886, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0896, RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0106.integerState0915, ResourceSupport004.stringState0429, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);

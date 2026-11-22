@@ -371,9 +371,9 @@ final class UiComponentPart024 extends UiComponentPart032 {
           MixedSupport048.mixedSupport072State0001 = null;
           ComponentContainer.gameSessionState0002 = new GameSession(false, 0, false, 0, 0, 3, 0, (String[]) null, 0, false, booleanArgument2, booleanArgument1);
           if (!booleanArgument2) {
-            ComponentContainer.gameSessionState0002.nodeDequeState0024.performAction1735(new RenderingSupport006(MixedSupport116.stringState0511, 10, false), 2777);
+            ComponentContainer.gameSessionState0002.nodeDequeState0024.addFirst(new RenderingSupport006(MixedSupport116.stringState0511, 10, false), 2777);
           } else {
-            ComponentContainer.gameSessionState0002.nodeDequeState0024.performAction1735(new RenderingSupport006(UiComponentPart016.stringState0296, 10, false), 2777);
+            ComponentContainer.gameSessionState0002.nodeDequeState0024.addFirst(new RenderingSupport006(UiComponentPart016.stringState0296, 10, false), 2777);
           }
           MixedSupport007.booleanState0005 = booleanArgument3;
           UiComponentPart012.booleanState0059 = false;

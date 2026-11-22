@@ -167,10 +167,10 @@ final class dk {
         }
         kb.field_a = kb.field_a | var3;
         ui.field_g = ui.field_g | var3;
-        ci.field_F.a(1, new ab(param1));
+        ci.field_F.addLast(1, new ab(param1));
         if (!bf.field_k) {
           if (jh.b(767564065)) {
-            m.field_c.a(1, new ke(param1, param2, qf.field_c, vg.field_j, nb.field_a, ve.field_a));
+            IterableNodeHashTable.field_c.addLast(1, new ke(param1, param2, qf.field_c, vg.field_j, nb.field_a, ve.field_a));
           } else {
             hc.a(param1, vg.field_j, param2, qf.field_c, 4, (byte) -127, ve.field_a, nb.field_a);
           }

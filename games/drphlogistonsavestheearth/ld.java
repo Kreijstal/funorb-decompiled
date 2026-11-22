@@ -276,7 +276,7 @@ final class ld {
     private final void c(int param0, boolean param1) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
-        tc.field_d = 0;
+        IterableNodeHashTable.field_d = 0;
         var3 = -111 % ((18 - param0) / 61);
         if (qk.field_c &&
           hb.field_g <= 0 && (this.field_c == 2 ||
@@ -1134,7 +1134,7 @@ final class ld {
             if (var8 != 10) {
               stackIn_63_0 = SecondaryNodeDequeIterator.field_b;
             } else {
-              stackIn_63_0 = dg.field_e;
+              stackIn_63_0 = SecondaryNodeDeque.field_e;
             }
             var17Lifetime2 = stackIn_63_0;
             rk.field_a.a(var16, -1 + (var4 + var6 / 4), var14Lifetime3);
@@ -1167,7 +1167,7 @@ final class ld {
             wj.a(this.b(param2, true) - var19Lifetime1, -var19Lifetime1 + this.a((byte) -90, param2), var18.field_y + 10, 2 * var19Lifetime1 + var18.field_w, 4227327, (int)(ji.a(65535, (double)lf.field_b / 10.0) * 128.0 + 128.0));
             var18.b(this.b(param2, true), this.a((byte) -74, param2), (int)(224.0 - 32.0 * ji.a(65535, (double)lf.field_b / 10.0)), 16777215);
             if (gf.field_D >= var14Lifetime1) {
-              stackIn_82_0 = tc.field_b[var14Lifetime1];
+              stackIn_82_0 = IterableNodeHashTable.field_b[var14Lifetime1];
             } else {
               stackIn_82_0 = s.field_f;
             }
@@ -1217,7 +1217,7 @@ final class ld {
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_c == 8 &&
           9 == gf.field_D) {
-          tc.field_d = 5;
+          IterableNodeHashTable.field_d = 5;
         }
         if (11 == this.field_c) {
           stackIn_6_0 = 21;
@@ -1239,7 +1239,7 @@ final class ld {
         }
         if (this.field_c == 0 ||
           -2 == this.field_c) {
-          tc.field_d = this.field_c;
+          IterableNodeHashTable.field_d = this.field_c;
           qk.field_c = false;
         }
         if (this.field_a == 0) {
@@ -1276,13 +1276,13 @@ final class ld {
           if (this.field_c == 1) {
             r.field_d = -1;
             stackIn_47_0 = (hb.field_g <= 0) ? 11 : 0;
-            tc.field_d = stackIn_47_0;
+            IterableNodeHashTable.field_d = stackIn_47_0;
             continue;
           }
           if (this.field_c == 5) {
             continue;
           }
-          r.field_d = tc.field_d;
+          r.field_d = IterableNodeHashTable.field_d;
         }
         this.field_e.a(0, this.a(ob.field_g, false, ck.field_c), this.a(ih.field_R, false, ae.field_gb));
         if (-1 != this.field_e.field_f) {
@@ -1389,7 +1389,7 @@ final class ld {
               bf.field_h = null;
               ob.field_b = null;
               ek.a(-126, param2, 10);
-              tc.field_d = 0;
+              IterableNodeHashTable.field_d = 0;
             }
           }
         } else {
@@ -1409,15 +1409,15 @@ final class ld {
                           ej.field_h = 0;
                           gf.field_D = 0;
                           hi.field_j = 0;
-                          nf.field_x.g(255);
+                          nf.field_x.clear(255);
                         }
                       } else {
                         if (var7 == 6) {
                           if (this.field_e.e(param1 ^ -700)) {
-                            if (tc.field_d == 5) {
+                            if (IterableNodeHashTable.field_d == 5) {
                               this.c(79, param2);
                             } else {
-                              ek.a(-48, param2, tc.field_d);
+                              ek.a(-48, param2, IterableNodeHashTable.field_d);
                             }
                           }
                         } else {
@@ -1510,19 +1510,19 @@ final class ld {
                                                           var6 = 1;
                                                         }
                                                         if (this.field_e.h(-62)) {
-                                                          var7 = dg.field_e;
+                                                          var7 = SecondaryNodeDeque.field_e;
                                                           rd.h(param1 + 220);
                                                           stackIn_212_0 = (!this.b(var7, -90)) ? 0 : 1;
                                                           var6 = stackIn_212_0;
                                                         }
                                                         if (this.field_e.b(param1 ^ 43)) {
-                                                          var7 = dg.field_e;
-                                                          dg.a((byte) 34);
+                                                          var7 = SecondaryNodeDeque.field_e;
+                                                          SecondaryNodeDeque.a((byte) 34);
                                                           stackIn_217_0 = (!this.b(var7, -59)) ? 0 : 1;
                                                           var6 = stackIn_217_0;
                                                         }
                                                         if (var6 != 0) {
-                                                          eg.field_a.j(dg.field_e);
+                                                          eg.field_a.j(SecondaryNodeDeque.field_e);
                                                           if (eg.field_a.m()) {
                                                             eg.field_a.i(-1);
                                                             PacketBuffer.a(param1 - 1630758088, eg.field_a);
@@ -1763,7 +1763,7 @@ final class ld {
                                 ek.a(param1 - 190, param2, 5);
                               }
                               stackIn_100_0 = (hb.field_g <= 0) ? 11 : 0;
-                              tc.field_d = stackIn_100_0;
+                              IterableNodeHashTable.field_d = stackIn_100_0;
                             }
                           }
                         }
@@ -1786,13 +1786,13 @@ final class ld {
                     kc.field_r = DirectByteStorage.field_g * (1 + DirectByteStorage.field_g) / 2;
                     al.a((byte) -43);
                     ek.a(param1 ^ -57, param2, 3);
-                    tc.field_d = this.field_c;
+                    IterableNodeHashTable.field_d = this.field_c;
                   }
                 }
               } else {
                 if (this.field_e.e(-748)) {
                   ek.a(param1 ^ -127, param2, 4);
-                  tc.field_d = this.field_c;
+                  IterableNodeHashTable.field_d = this.field_c;
                 }
               }
             } else {
@@ -1804,7 +1804,7 @@ final class ld {
             if (this.field_e.e(-748)) {
               ek.a(-112, param2, -1);
               stackIn_71_0 = (hb.field_g > 0) ? 0 : 11;
-              tc.field_d = stackIn_71_0;
+              IterableNodeHashTable.field_d = stackIn_71_0;
             }
           }
         }
@@ -1819,8 +1819,8 @@ final class ld {
 
     private final boolean b(int param0, int param1) {
         int var3 = 0;
-        if (dg.field_e != param0) {
-          eg.field_a.j(dg.field_e);
+        if (SecondaryNodeDeque.field_e != param0) {
+          eg.field_a.j(SecondaryNodeDeque.field_e);
           eg.field_a.i(-1);
           PacketBuffer.a(-1630758008, eg.field_a);
         }
@@ -2049,7 +2049,7 @@ final class ld {
         var5 = var4.field_x + var4.field_S;
         var6 = 0;
         var7 = 0;
-        stackIn_3_0 = (!tc.field_i) ? 0 : 1;
+        stackIn_3_0 = (!IterableNodeHashTable.field_i) ? 0 : 1;
         var7Lifetime1 = stackIn_3_0;
         if (null != sd.field_a) {
           var6 = sd.field_a.levelNumber;

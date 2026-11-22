@@ -120,7 +120,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           objectLocal36 = null;
           integerLocal27 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
-            mixedSupport071Local28 = (MixedSupport071) (MixedSupport002.nodeDequeState0001.computeHashNode1741((byte) -54));
+            mixedSupport071Local28 = (MixedSupport071) (MixedSupport002.nodeDequeState0001.beginBackward((byte) -54));
             mixedSupport071Local32 = mixedSupport071Local28;
             if (mixedSupport071Local32 == null) {
               return;

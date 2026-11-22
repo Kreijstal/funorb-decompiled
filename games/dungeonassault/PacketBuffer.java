@@ -1973,7 +1973,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_warlock", false);
                 if (null != var2) {
-                  qi.field_c = dj.a(var2, false);
+                  IterableNodeHashTable.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_death_knight", false);
                 if (null != var2) {
@@ -2603,7 +2603,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_room_armoured_message", false);
                 if (null != var2) {
-                  qi.field_h = dj.a(var2, param1);
+                  IterableNodeHashTable.field_h = dj.a(var2, param1);
                 }
                 var2 = gm.a("fatal_monster", param1);
                 if (var2 != null) {
@@ -3717,7 +3717,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_traps", false);
                 if (var2 != null) {
-                  dh.field_e = dj.a(var2, param1);
+                  SecondaryNodeDeque.field_e = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_guardians", false);
                 if (var2 != null) {
@@ -3789,7 +3789,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_warning_activate_dungeon", false);
                 if (var2 != null) {
-                  dh.field_c = dj.a(var2, false);
+                  SecondaryNodeDeque.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("text_dungeon_builder_hint", false);
                 if (var2 != null) {

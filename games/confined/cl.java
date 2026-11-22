@@ -42,7 +42,7 @@ final class cl extends ee {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         double var7_double = 0.0;
         if (param2 > -5) {
           return;

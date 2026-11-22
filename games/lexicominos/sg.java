@@ -1727,10 +1727,10 @@ final class sg {
               eh.a(0, lg.field_c, 10 + 24 * ((12 - sj.field_l.length()) / 2), 0, sj.field_l, var2_intLifetime1);
               eh.a(0, lg.field_c, 10 + (-eb.field_a.length() + 12) / 2 * 24, 0, eb.field_a, 24 + var2_intLifetime1);
               eh.a(0, lg.field_c, 10 + 24 * ((-td.field_g.length() + 12) / 2), param0 - 48, td.field_g, 48 + var2_intLifetime1);
-              var11 = (gd) (this.field_m.field_j.a(true));
+              var11 = (gd) (this.field_m.field_j.beginForward(true));
               while (var11 != null) {
                 var11.a((byte) -34);
-                var11 = (gd) (this.field_m.field_j.f(2));
+                var11 = (gd) (this.field_m.field_j.nextForward(2));
               }
               SoftwareRasterizer.b();
             }
@@ -1985,7 +1985,7 @@ final class sg {
         java.awt.Component var4 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          while (ji.a((byte) -72)) {
+          while (IterableNodeHashTable.a((byte) -72)) {
             if (da.field_b != 13) {
               this.a(-17253);
               if (this.field_c.field_d == -1) {

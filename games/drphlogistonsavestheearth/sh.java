@@ -3,7 +3,7 @@
  */
 final class sh {
     static boolean field_e;
-    static vd field_a;
+    static IntrusiveDeque field_a;
     static he[][] field_c;
     static nh field_b;
     static String field_d;

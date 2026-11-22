@@ -99,14 +99,14 @@ class ka extends pm {
         }
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_I.field_t = this.field_E;
           this.field_I.field_o = this.field_t;
           this.field_I.field_p = this.field_D;
           this.field_I.field_u = this.field_C * (this.field_C * (64.0 / (double)uc.field_db.length)) * ((double)uc.field_db.length - this.field_K);
           int var3_int = -113 % ((-2 - param1) / 62);
-          param0.a((IntrusiveNode) (this.field_I), (byte) -108);
+          param0.addLast((IntrusiveNode) (this.field_I), (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ka.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -128,7 +128,7 @@ class ka extends pm {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         try {
           if (param2 >= -5) {
             field_G = (String) null;

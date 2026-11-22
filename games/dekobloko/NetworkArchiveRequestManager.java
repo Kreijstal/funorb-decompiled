@@ -53,17 +53,17 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.resourceSupport004State0001 = null;
             this.packetBufferState0003.position = 0;
             while (true) {
-              resourceSupport004Local8 = (ResourceSupport004) (this.dualNodeDequeState0002.computeDualNode0028((byte) -111));
+              resourceSupport004Local8 = (ResourceSupport004) (this.dualNodeDequeState0002.removeFirst((byte) -111));
               if (resourceSupport004Local8 != null) {
-                this.dualNodeDequeState0001.performAction0031(resourceSupport004Local8, -7267);
+                this.dualNodeDequeState0001.addLast(resourceSupport004Local8, -7267);
                 continue;
               }
               break;
             }
             while (true) {
-              resourceSupport004Local12 = (ResourceSupport004) (this.dualNodeDequeState0004.computeDualNode0028((byte) -71));
+              resourceSupport004Local12 = (ResourceSupport004) (this.dualNodeDequeState0004.removeFirst((byte) -71));
               if (resourceSupport004Local12 != null) {
-                this.dualNodeDequeState0003.performAction0031(resourceSupport004Local12, -7267);
+                this.dualNodeDequeState0003.addLast(resourceSupport004Local12, -7267);
                 continue;
               }
               break;
@@ -429,26 +429,26 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           }
           try {
             this.bufferedSocketState0001.performAction1376((byte) -124);
-            resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.computeDualNode0033(-2198));
+            resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.beginForward(-2198));
             while (resourceSupport004Local6 != null) {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 1);
               this.packetBufferState0002.writeLong40(-71, resourceSupport004Local6.longState0003);
               this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
-              this.dualNodeDequeState0002.performAction0031(resourceSupport004Local6, -7267);
-              resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.computeDualNode0032((byte) 20));
+              this.dualNodeDequeState0002.addLast(resourceSupport004Local6, -7267);
+              resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.nextForward((byte) 20));
             }
             if (byteArgument1 != -56) {
               return false;
             }
-            resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.computeDualNode0033(-2198));
+            resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.beginForward(-2198));
             while (resourceSupport004Local24 != null) {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 0);
               this.packetBufferState0002.writeLong40(-98, resourceSupport004Local24.longState0003);
               this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
-              this.dualNodeDequeState0004.performAction0031(resourceSupport004Local24, -7267);
-              resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.computeDualNode0032((byte) 20));
+              this.dualNodeDequeState0004.addLast(resourceSupport004Local24, -7267);
+              resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.nextForward((byte) 20));
             }
             for (integerLocal1 = 0; integerLocal1 < 100; integerLocal1++) {
               integerLocal8 = this.bufferedSocketState0001.computeInteger1377(0);
@@ -489,7 +489,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                     this.resourceSupport004State0001.integerState0582 = 0;
                   }
                 } else {
-                  this.resourceSupport004State0001.performAction0134((byte) 116);
+                  this.resourceSupport004State0001.unlinkSecondary((byte) 116);
                   this.resourceSupport004State0001.booleanState0173 = false;
                   this.resourceSupport004State0001 = null;
                 }
@@ -520,24 +520,24 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                     longLocal19 = (long)integerLocal14 + ((long)integerLocal13 << 32);
                     objectLocal20 = null;
                     if (integerLocal18 == 0) {
-                      resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0002.computeDualNode0033(-2198));
+                      resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0002.beginForward(-2198));
                       while (resourceSupport004Local21 != null) {
                         if (~resourceSupport004Local21.longState0003 == ~longLocal19) {
                           frameCompletedLocal27 = false;
                           break;
                         }
-                        resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0002.computeDualNode0032((byte) 20));
+                        resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0002.nextForward((byte) 20));
                       }
                       frameRemainderLocal26 = !(frameCompletedLocal27);
                     }
                     if ((frameRemainderLocal26) &&
                       (frameCompletedLocal27)) {
-                      resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0004.computeDualNode0033(byteArgument1 - 2142));
+                      resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0004.beginForward(byteArgument1 - 2142));
                       while (resourceSupport004Local21 != null) {
                         if (resourceSupport004Local21.longState0003 == longLocal19) {
                           break;
                         }
-                        resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0004.computeDualNode0032((byte) 20));
+                        resourceSupport004Local21 = (ResourceSupport004) (this.dualNodeDequeState0004.nextForward((byte) 20));
                       }
                     }
                     if (resourceSupport004Local21 == null) {
@@ -654,7 +654,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
 
     final static void performAction1287(int integerArgument1, byte byteArgument2, MixedSupport072 mixedSupport072Argument3) {
         try {
-          GameDomainSupport005.nodeDequeState0023.performAction1735(mixedSupport072Argument3, 2777);
+          GameDomainSupport005.nodeDequeState0023.addFirst(mixedSupport072Argument3, 2777);
           if (byteArgument2 != 85) {
             stringState0438 = (String) null;
           }

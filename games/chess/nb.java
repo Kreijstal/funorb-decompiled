@@ -236,7 +236,7 @@ final class nb extends ci {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -99);
             }
-            var15 = (bk) (bh.field_D.g(-18110));
+            var15 = (bk) (bh.field_D.beginBackward(-18110));
             if (var15 == null) {
               si.d(65280);
               return;
@@ -249,7 +249,7 @@ final class nb extends ci {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var13 = (bk) (bh.field_D.g(-18110));
+              var13 = (bk) (bh.field_D.beginBackward(-18110));
               if (var13 == null) {
                 si.d(65280);
                 return;
@@ -263,7 +263,7 @@ final class nb extends ci {
               si.d(65280);
             }
           } else {
-            var11 = (ac) (vn.field_vb.g(-18110));
+            var11 = (ac) (vn.field_vb.beginBackward(-18110));
             if (var11 == null) {
               si.d(65280);
               return;

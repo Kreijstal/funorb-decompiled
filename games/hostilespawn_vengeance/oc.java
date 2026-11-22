@@ -128,7 +128,7 @@ final class oc {
               fieldTemp$0 = vd.field_A;
               vd.field_A = vd.field_A + 1;
               var5.field_Gb = fieldTemp$0;
-              uj.field_o.a(var5, 121);
+              uj.field_o.addLast(var5, 121);
             }
             var5.field_Ib = var4_ref_String;
             return;
@@ -181,7 +181,7 @@ final class oc {
             fieldTemp$1 = rc.field_d;
             rc.field_d = rc.field_d + 1;
             var6_ref.field_Gb = fieldTemp$1;
-            gm.field_d.a(var6_ref, 103);
+            gm.field_d.addLast(var6_ref, 103);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -189,7 +189,7 @@ final class oc {
           var6_ref.field_Ib = var4_ref_StringLifetime1;
           var6_ref.field_Mb = (String) (var3Lifetime1);
           var6_ref.unlink(-23);
-          var7_ref = (vb) (gm.field_d.g(-97));
+          var7_ref = (vb) (gm.field_d.beginForward(-97));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
@@ -197,7 +197,7 @@ final class oc {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (td.a(stackIn_65_0, true, var6_ref))) {
-                var7_ref = (vb) (gm.field_d.a(12684));
+                var7_ref = (vb) (gm.field_d.nextForward(12684));
                 continue;
               }
             }
@@ -213,7 +213,7 @@ final class oc {
             }
             break;
           }
-          gm.field_d.a(var6_ref, 115);
+          gm.field_d.addLast(var6_ref, 115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

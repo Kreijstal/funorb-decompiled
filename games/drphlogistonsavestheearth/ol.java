@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ol {
-    private dg field_b;
+    private SecondaryNodeDeque field_b;
     static int field_h;
     private int field_g;
     static boolean field_d;
     static String[] field_i;
     static int[] field_f;
-    private tc field_e;
+    private IterableNodeHashTable field_e;
     static ma field_a;
     private int field_c;
     static String field_j;
@@ -83,7 +83,7 @@ final class ol {
 
     final Object a(boolean param0, long param1) {
         rd var6 = null;
-        wh var7 = (wh) (this.field_e.a(param1, -1));
+        wh var7 = (wh) (this.field_e.get(param1, -1));
         if (var7 == null) {
           return null;
         }
@@ -96,12 +96,12 @@ final class ol {
         }
         if (param0) {
           if (!var7.a((byte) 28)) {
-            this.field_b.a(var7, (byte) -100);
+            this.field_b.addLast(var7, (byte) -100);
             var7.secondaryKey = 0L;
           } else {
             var6 = new rd(var5, var7.field_w);
-            this.field_e.a(var7.key, var6, 46);
-            this.field_b.a(var6, (byte) -76);
+            this.field_e.put(var7.key, var6, 46);
+            this.field_b.addLast(var6, (byte) -76);
             ((wh) ((Object) var6)).secondaryKey = 0L;
             var7.unlink(-16175);
             var7.unlinkSecondary(64);
@@ -125,12 +125,12 @@ final class ol {
           }
           this.field_c = this.field_c - param1;
           while (0 > this.field_c) {
-            var6 = (wh) (this.field_b.b(false));
+            var6 = (wh) (this.field_b.removeFirst(false));
             this.a(-1, var6);
           }
           var6_ref = new rd(param3, param1);
-          this.field_e.a(param0, var6_ref, 39);
-          this.field_b.a(var6_ref, (byte) -40);
+          this.field_e.put(param0, var6_ref, 39);
+          this.field_b.addLast(var6_ref, (byte) -40);
           ((wh) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ol.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -138,7 +138,7 @@ final class ol {
     }
 
     private final void a(int param0, long param1) {
-        wh var4 = (wh) (this.field_e.a(param1, param0));
+        wh var4 = (wh) (this.field_e.get(param1, param0));
         this.a(param0 ^ 0, var4);
     }
 

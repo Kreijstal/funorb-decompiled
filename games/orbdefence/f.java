@@ -3,16 +3,16 @@
  */
 final class f {
     private int field_c;
-    im field_h;
+    IntrusiveDeque field_h;
     int field_t;
     kd field_f;
     int field_m;
     int field_g;
     boolean field_k;
     int field_u;
-    im field_o;
+    IntrusiveDeque field_o;
     int field_s;
-    im field_r;
+    IntrusiveDeque field_r;
     int field_x;
     boolean field_a;
     private int field_d;
@@ -21,7 +21,7 @@ final class f {
     static hj[] field_w;
     int field_p;
     lb[] field_e;
-    im field_b;
+    IntrusiveDeque field_b;
     int field_i;
     private boolean field_n;
     int field_l;
@@ -57,7 +57,7 @@ final class f {
                   var5_int < this.field_f.field_c &&
                   var6 >= 0 &&
                   var6 < this.field_f.field_t) {
-                  this.field_h.a(-81, new me((double)param1, (double)param3, (double)(-param1 + var5_int) * 0.05, (double)(var6 - param3) * 0.05, 1));
+                  this.field_h.addLast(-81, new me((double)param1, (double)param3, (double)(-param1 + var5_int) * 0.05, (double)(var6 - param3) * 0.05, 1));
                 }
                 var6++;
               }
@@ -169,7 +169,7 @@ final class f {
           }
           this.field_i = this.field_i + 1;
           if (this.field_x % 11 == 0 &&
-            !this.field_r.c(-3088) &&
+            !this.field_r.isEmpty(-3088) &&
             this.field_x > 0) {
             this.field_g = this.field_i + 500;
           }
@@ -181,7 +181,7 @@ final class f {
           }
           if (!this.field_k &&
             99 == this.field_x &&
-            this.field_r.c(-3088)) {
+            this.field_r.isEmpty(-3088)) {
             if (0 < this.field_e[0].field_f &&
               this.field_m == 0) {
               this.field_d = this.field_d + 1;
@@ -230,7 +230,7 @@ final class f {
           if ((decompiledFrameCompleted1) && (!this.field_k &&
             this.field_i >= this.field_g &&
             99 > this.field_x && (this.field_x % 11 != 0 ||
-            this.field_r.c(param0 - 3186)))) {
+            this.field_r.isEmpty(param0 - 3186)))) {
             this.field_v = (this.field_f.field_k * 2 + 200) * (this.field_x + 1) / 99;
             if (3 == this.field_m ||
               this.field_m == 5) {
@@ -412,7 +412,7 @@ final class f {
                   }
                   var10 = var8 / this.field_f.field_c;
                   var11 = new pd(var9, var10, this, var3Lifetime2, this.field_v);
-                  this.field_r.a(param0 ^ -22, var11);
+                  this.field_r.addLast(param0 ^ -22, var11);
                   var11.field_m = 9 * var7_int;
                   var11.field_n = var4 != 0;
                   if (0 == this.field_x) {
@@ -517,16 +517,16 @@ final class f {
           scanLoop1: while (true) {
             if (var2_intLifetime1 == 0) {
               var2_intLifetime1 = 1;
-              stackIn_421_0 = this.field_r.field_d.field_e;
+              stackIn_421_0 = this.field_r.sentinel.field_e;
               if (var12 != 0) {
                 break scanLoop1;
               }
               var3_ref_ca = stackIn_421_0;
               scanLoop2: while (true) {
-                stackIn_399_0 = this.field_r.field_d;
+                stackIn_399_0 = this.field_r.sentinel;
                 stackIn_399_1 = var3_ref_ca;
                 while (stackIn_399_0 != stackIn_399_1) {
-                  stackIn_399_0 = this.field_r.field_d;
+                  stackIn_399_0 = this.field_r.sentinel;
                   stackIn_399_1 = var3_ref_ca.field_e;
                   if (stackIn_399_0 != stackIn_399_1) {
                     var4_ref_pd = (pd) (var3_ref_ca.field_e);
@@ -553,7 +553,7 @@ final class f {
               }
               continue;
             }
-            stackIn_421_0 = this.field_b.b((byte) -112);
+            stackIn_421_0 = this.field_b.beginForward((byte) -112);
             break;
           }
           var3_ref_oj = (oj) (stackIn_421_0);
@@ -563,10 +563,10 @@ final class f {
               break;
             }
             var3_ref_oj.a((byte) 44);
-            var3_ref_oj = (oj) (this.field_b.d(853));
+            var3_ref_oj = (oj) (this.field_b.nextForward(853));
           } while (var12 == 0);
           var3Lifetime1 = 0;
-          var4_ref_pdLifetime1 = (pd) (this.field_r.b((byte) 114));
+          var4_ref_pdLifetime1 = (pd) (this.field_r.beginForward((byte) 114));
           scanLoop3: while (true) {
             if (var4_ref_pdLifetime1 != null) {
               var4_ref_pdLifetime1.c(1);
@@ -593,7 +593,7 @@ final class f {
                         var10Lifetime1 = (var9Lifetime1 - var7_intLifetime1) * this.field_f.field_c + (var4_ref_pdLifetime1.field_t + var8Lifetime1) - var6Lifetime1;
                         this.field_f.field_o[var10Lifetime1] = 10;
                         this.field_f.field_j[var10Lifetime1] = this.field_f.field_j[var10Lifetime1] + 40;
-                        this.field_h.a(-83, new me((double)(var10Lifetime1 % this.field_f.field_c), (double)(var10Lifetime1 / this.field_f.field_c), 1));
+                        this.field_h.addLast(-83, new me((double)(var10Lifetime1 % this.field_f.field_c), (double)(var10Lifetime1 / this.field_f.field_c), 1));
                         var9Lifetime1++;
                       }
                       var8Lifetime1++;
@@ -612,12 +612,12 @@ final class f {
                   md.field_f = 240;
                   var3Lifetime1 = 1;
                 }
-                var4_ref_pdLifetime1 = (pd) (this.field_r.d(853));
+                var4_ref_pdLifetime1 = (pd) (this.field_r.nextForward(853));
                 continue;
               }
             } else {
               if (var3Lifetime1 != 0) {
-                var4_ref_pdLifetime1 = (pd) (this.field_r.b((byte) 115));
+                var4_ref_pdLifetime1 = (pd) (this.field_r.beginForward((byte) 115));
                 while (null != var4_ref_pdLifetime1) {
                   stackIn_476_0 = ~var4_ref_pdLifetime1.field_m;
                   stackIn_476_1 = -1;
@@ -627,7 +627,7 @@ final class f {
                   if (stackIn_476_0 > stackIn_476_1) {
                     var4_ref_pdLifetime1.field_m = 0;
                   }
-                  var4_ref_pdLifetime1 = (pd) (this.field_r.d(853));
+                  var4_ref_pdLifetime1 = (pd) (this.field_r.nextForward(853));
                 }
               }
               stackIn_476_0 = gd.field_c;
@@ -643,7 +643,7 @@ final class f {
             this.field_c = 91;
           }
           var4Lifetime1 = 0;
-          var5_ref = (kb) (this.field_o.b((byte) -96));
+          var5_ref = (kb) (this.field_o.beginForward((byte) -96));
           while (true) {
             if (var5_ref == null) {
               stackIn_491_0 = var4Lifetime1;
@@ -658,7 +658,7 @@ final class f {
                 var6Lifetime2 = var5_ref.f(param0 ^ 52);
                 var4Lifetime1 = var4Lifetime1 + var6Lifetime2;
               }
-              var5_ref = (kb) (this.field_o.d(param0 + 755));
+              var5_ref = (kb) (this.field_o.nextForward(param0 + 755));
               continue;
             }
             break;
@@ -667,7 +667,7 @@ final class f {
             f.a(18, 237, (byte) -25);
           }
           this.a(-1);
-          var5Lifetime1 = (pd) (this.field_r.d((byte) -122));
+          var5Lifetime1 = (pd) (this.field_r.beginBackward((byte) -122));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var5Lifetime1))) {
             stackOut_496_0 = var5Lifetime1;
@@ -690,7 +690,7 @@ final class f {
                       var7 = new pd(var5Lifetime1.field_u, var5Lifetime1.field_z, this, 11, 10);
                       var7.field_l = var5Lifetime1.field_l / 4;
                       var7.field_o = var7.field_l;
-                      this.field_r.a(param0 - 212, var7);
+                      this.field_r.addLast(param0 - 212, var7);
                       var6Lifetime3++;
                     }
                   }
@@ -708,19 +708,19 @@ final class f {
                       var7Lifetime1.field_l = 1;
                     }
                     var7Lifetime1.field_o = var7Lifetime1.field_l;
-                    this.field_r.a(-104, var7Lifetime1);
+                    this.field_r.addLast(-104, var7Lifetime1);
                     var6Lifetime3Lifetime1++;
                   }
                   break;
                 }
               }
-              var5Lifetime1 = (pd) (this.field_r.b(param0 + 10610));
+              var5Lifetime1 = (pd) (this.field_r.nextBackward(param0 + 10610));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_527_0 = this.field_b.d((byte) -122);
+            stackIn_527_0 = this.field_b.beginBackward((byte) -122);
           }
           var5_ref2 = (oj) (stackIn_527_0);
           while (var5_ref2 != null) {
@@ -730,7 +730,7 @@ final class f {
             if (200 <= var5_ref2.field_g) {
               var5_ref2.unlink(57);
             }
-            var5_ref2 = (oj) (this.field_b.b(10708));
+            var5_ref2 = (oj) (this.field_b.nextBackward(10708));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -764,9 +764,9 @@ final class f {
             return;
           }
           lb.field_g = lb.field_g | var3_int;
-          oj.field_r.a(-74, new kg(param0));
+          oj.field_r.addLast(-74, new kg(param0));
           if (!DirectByteStorage.field_d) {
-            MouseWheelInput.field_b.a(-105, new ha(param0, param1, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b - wf.field_c.field_e[0].field_d));
+            MouseWheelInput.field_b.addLast(-105, new ha(param0, param1, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b - wf.field_c.field_e[0].field_d));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -819,7 +819,7 @@ final class f {
         int stackIn_65_0Lifetime1Lifetime1;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          var2 = (kb) (this.field_o.b((byte) 127));
+          var2 = (kb) (this.field_o.beginForward((byte) 127));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2 == null))) {
             stackIn_66_0 = ~this.field_f.field_o[var2.field_h * this.field_f.field_c + var2.field_g];
@@ -916,7 +916,7 @@ final class f {
                   }
                 }
               }
-              var2 = (kb) (this.field_o.d(853));
+              var2 = (kb) (this.field_o.nextForward(853));
               continue;
             }
             break;
@@ -1095,10 +1095,10 @@ final class f {
                 continue;
               }
             } else {
-              var2 = (kb) (this.field_o.b((byte) 127));
+              var2 = (kb) (this.field_o.beginForward((byte) 127));
               while (null != var2) {
                 var2.e(123);
-                var2 = (kb) (this.field_o.d(853));
+                var2 = (kb) (this.field_o.nextForward(853));
                 if (var4 == 0) {
                   continue;
                 }
@@ -1108,11 +1108,11 @@ final class f {
             }
             break;
           }
-          var3 = (me) (this.field_h.b((byte) 126));
+          var3 = (me) (this.field_h.beginForward((byte) 126));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
             var3.a((byte) 32);
-            stackIn_16_0 = (me) (this.field_h.d(853));
+            stackIn_16_0 = (me) (this.field_h.nextForward(853));
             if (var4 == 0) {
               var3 = stackIn_16_0;
               continue;
@@ -1120,7 +1120,7 @@ final class f {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_16_0 = (me) (this.field_h.b((byte) -96));
+            stackIn_16_0 = (me) (this.field_h.beginForward((byte) -96));
           }
           var2_ref = stackIn_16_0;
           while (var2_ref != null) {
@@ -1130,7 +1130,7 @@ final class f {
             if (var2_ref.field_m == -1) {
               var2_ref.unlink(57);
             }
-            var2_ref = (me) (this.field_h.d(853));
+            var2_ref = (me) (this.field_h.nextForward(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1158,7 +1158,7 @@ final class f {
         int stackIn_8_1Lifetime1;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          var3 = (kb) (this.field_o.b((byte) 119));
+          var3 = (kb) (this.field_o.beginForward((byte) 119));
           var4 = -127 % ((-2 - param1) / 44);
           while (true) {
             if (null != var3) {
@@ -1192,7 +1192,7 @@ final class f {
                 }
                 break;
               }
-              var3 = (kb) (this.field_o.d(853));
+              var3 = (kb) (this.field_o.nextForward(853));
               if (var8 == 0) {
                 continue;
               }
@@ -1309,7 +1309,7 @@ final class f {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oa.field_d.a(-114, param1);
+          oa.field_d.addLast(-114, param1);
           tl.a(-127, param1, param0);
           var3_int = 75 / ((param2 - 30) / 33);
           return;
@@ -1354,10 +1354,10 @@ final class f {
         try {
           this.field_m = param0;
           this.field_f = new kd(am.field_d[param0]);
-          this.field_r = new im();
-          this.field_o = new im();
-          this.field_h = new im();
-          this.field_b = new im();
+          this.field_r = new IntrusiveDeque();
+          this.field_o = new IntrusiveDeque();
+          this.field_h = new IntrusiveDeque();
+          this.field_b = new IntrusiveDeque();
           this.field_q = 1;
           this.field_e = new lb[this.field_q];
           var2_int = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kj extends PcmStream {
-    ng field_n;
+    IntrusiveDeque field_n;
     static long[] field_q;
     private hl field_l;
     static String field_p;
@@ -14,7 +14,7 @@ final class kj extends PcmStream {
         int var2;
         var2 = Lexicominos.field_L ? 1 : 0;
         while (true) {
-          var1 = (cb) (this.field_n.f(2));
+          var1 = (cb) (this.field_n.nextForward(2));
           if (var1 == null) {
             return null;
           }
@@ -171,7 +171,7 @@ final class kj extends PcmStream {
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         this.field_m.a(param0);
-        var3 = (cb) (this.field_n.a(true));
+        var3 = (cb) (this.field_n.beginForward(true));
         while (var3 != null) {
           if (!this.field_l.b(var3, 0)) {
             var2 = param0;
@@ -185,7 +185,7 @@ final class kj extends PcmStream {
               var2 = var2 - var3.field_m;
             } while (!this.field_l.a((int[]) null, 0, var3, var2, 120));
           }
-          var3 = (cb) (this.field_n.f(2));
+          var3 = (cb) (this.field_n.nextForward(2));
         }
     }
 
@@ -206,7 +206,7 @@ final class kj extends PcmStream {
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           this.field_m.b(param0, param1, param2);
-          var6 = (cb) (this.field_n.a(true));
+          var6 = (cb) (this.field_n.beginForward(true));
           while (var6 != null) {
             if (!this.field_l.b(var6, 0)) {
               var5 = param2;
@@ -222,7 +222,7 @@ final class kj extends PcmStream {
                 var4_int = var4_int + var6.field_m;
               } while (!this.field_l.a(param0, var4_int, var6, var5, 82));
             }
-            var6 = (cb) (this.field_n.f(2));
+            var6 = (cb) (this.field_n.nextForward(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -273,7 +273,7 @@ final class kj extends PcmStream {
           }
           ti.field_L.a(ha.field_d, true, wc.field_a, (byte) 124);
           ti.field_L.f(true);
-          while (ji.a((byte) -72)) {
+          while (IterableNodeHashTable.a((byte) -72)) {
             ti.field_L.a((byte) 86, pe.field_b, da.field_b);
           }
           return;
@@ -285,7 +285,7 @@ final class kj extends PcmStream {
     }
 
     final PcmStream d() {
-        cb var1 = (cb) (this.field_n.a(true));
+        cb var1 = (cb) (this.field_n.beginForward(true));
         if (var1 == null) {
           return null;
         }
@@ -296,7 +296,7 @@ final class kj extends PcmStream {
     }
 
     kj(hl param0) {
-        this.field_n = new ng();
+        this.field_n = new IntrusiveDeque();
         this.field_m = new PcmStreamMixer();
         try {
           this.field_l = param0;

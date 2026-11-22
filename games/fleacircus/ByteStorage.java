@@ -8,7 +8,7 @@ abstract class ByteStorage {
     static int[] field_h;
     static String field_f;
     static String field_e;
-    static vc field_a;
+    static IntrusiveDeque field_a;
     static String field_d;
 
     final static void a(int param0, int param1, int param2) {
@@ -145,7 +145,7 @@ abstract class ByteStorage {
         int var2Lifetime1;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          var4 = (fg) (jk.field_m.c((byte) 47));
+          var4 = (fg) (jk.field_m.beginForward((byte) 47));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -206,7 +206,7 @@ abstract class ByteStorage {
         field_h = new int[2];
         field_e = "Music: ";
         field_f = "Passwords must be between 5 and 20 letters and numbers";
-        field_a = new vc();
+        field_a = new IntrusiveDeque();
         field_d = "<%0>Recessed Wall:<%1> Fleas pass through these normally, but the green switches turn them into normal walls, killing any fleas still on these squares when that happens.";
     }
 }

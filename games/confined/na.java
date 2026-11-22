@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class na extends rg {
-    private mn field_R;
+    private PrimaryNodeDeque field_R;
     static AccountRequestState field_S;
     static String field_U;
-    static mn field_T;
+    static PrimaryNodeDeque field_T;
     private nn field_P;
     private String[] field_V;
     static String field_Q;
@@ -54,9 +54,9 @@ class na extends rg {
         int var6;
         var6 = Confined.field_J ? 1 : 0;
         if (param0 != 5971) {
-          field_T = (mn) null;
+          field_T = (PrimaryNodeDeque) null;
         }
-        var4 = (nn) (this.field_R.a(115));
+        var4 = (nn) (this.field_R.beginForward(115));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -68,7 +68,7 @@ class na extends rg {
             }
             var5 = var5.field_s;
           }
-          var4 = (nn) (this.field_R.d(2123));
+          var4 = (nn) (this.field_R.nextForward(2123));
         }
         return null;
     }
@@ -190,7 +190,7 @@ class na extends rg {
         fj var17;
         int var7Lifetime1;
         var16 = Confined.field_J ? 1 : 0;
-        this.field_R = new mn();
+        this.field_R = new PrimaryNodeDeque();
         var2 = 0;
         var3 = (pj) ((Object) this.field_n);
         var4 = var3.a((fj) (this), (byte) -119);
@@ -232,7 +232,7 @@ class na extends rg {
             if (var10 != null) {
               ((nn) (var10)).field_s = var15;
             }
-            this.field_R.a((IntrusiveNode) (var15), (byte) 88);
+            this.field_R.addLast((IntrusiveNode) (var15), (byte) 88);
             var10 = var15;
           }
         }
@@ -402,6 +402,6 @@ class na extends rg {
     static {
         field_Q = "Cloak";
         field_U = "Next";
-        field_T = new mn();
+        field_T = new PrimaryNodeDeque();
     }
 }

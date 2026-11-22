@@ -173,8 +173,8 @@ final class rn extends rd {
         if (param0 < ~eq.field_j) {
           return hd.field_b;
         }
-        if (null != be.field_e) {
-          if (!be.field_e.a((byte) 102)) {
+        if (null != SecondaryNodeDeque.field_e) {
+          if (!SecondaryNodeDeque.field_e.a((byte) 102)) {
             return jg.field_h;
           }
           return ge.field_a;

@@ -5,7 +5,7 @@ final class ef extends IntrusiveNode {
     int field_k;
     static String field_l;
     static sa field_j;
-    static jc field_n;
+    static IntrusiveDeque field_n;
     static String field_m;
 
     final static void a(pf param0, int param1) {
@@ -46,7 +46,7 @@ final class ef extends IntrusiveNode {
     static {
         field_l = "Hide chat";
         field_j = new sa();
-        field_n = new jc();
+        field_n = new IntrusiveDeque();
         field_m = "Remove friend";
     }
 }

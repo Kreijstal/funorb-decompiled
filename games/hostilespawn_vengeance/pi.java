@@ -48,19 +48,19 @@ final class pi {
 
     final static ic a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = HostileSpawn.field_I ? 1 : 0;
-        ic var5 = (ic) (ch.field_p.g(-23));
+        ic var5 = (ic) (ch.field_p.beginForward(-23));
         while (var5 != null) {
           if (~param3 == ~var5.field_j) {
             return var5;
           }
-          var5 = (ic) (ch.field_p.a(12684));
+          var5 = (ic) (ch.field_p.nextForward(12684));
         }
         ic var7 = new ic();
         if (param1 == 6413) {
           var7.field_q = param0;
           var7.field_j = param3;
           var7.field_h = param4;
-          ch.field_p.a(var7, 112);
+          ch.field_p.addLast(var7, 112);
           rl.a(param2, var7, param1 + 746031541);
           return var7;
         }
@@ -68,7 +68,7 @@ final class pi {
         var7.field_q = param0;
         var7.field_j = param3;
         var7.field_h = param4;
-        ch.field_p.a(var7, 112);
+        ch.field_p.addLast(var7, 112);
         rl.a(param2, var7, param1 + 746031541);
         return var7;
     }

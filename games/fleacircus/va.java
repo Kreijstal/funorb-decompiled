@@ -213,7 +213,7 @@ final class va {
         try {
           var10 = -124 % ((param5 - 37) / 55);
           var9 = new bh(param1, param3, param4, param2, param0, param8, param7);
-          wi.field_j.a(false, var9);
+          wi.field_j.addLast(false, var9);
           s.a(-4471, param6, var9);
           stackIn_1_0 = var9;
           return stackIn_1_0;

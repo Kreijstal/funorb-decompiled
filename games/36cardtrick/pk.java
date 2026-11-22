@@ -43,7 +43,7 @@ final class pk {
             stackIn_2_0 = (ad) null;
             return stackIn_2_0;
           }
-          od.field_b.a(var9, 27362);
+          od.field_b.addLast(var9, 27362);
           aa.a(var9, 3298, param8);
           stackIn_4_0 = var9;
           return stackIn_4_0;

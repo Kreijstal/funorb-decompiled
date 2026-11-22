@@ -148,7 +148,7 @@ final class uj implements Runnable {
           var3 = ji.b(125);
           if (0 != hf.field_i &&
             vb.field_i < 0) {
-            var5_ref_hc = (hc) (t.field_q.b((byte) 121));
+            var5_ref_hc = (hc) (t.field_q.beginForward((byte) 121));
             if (var5_ref_hc != null &&
               var5_ref_hc.field_h < var3) {
               var5_ref_hc.unlink(57);
@@ -196,7 +196,7 @@ final class uj implements Runnable {
             for (var7 = 0; var7 < GameAppletShell.field_c; var7++) {
               var6.field_m[var7] = cd.field_t.payload[var7];
             }
-            t.field_q.a(-97, var6);
+            t.field_q.addLast(-97, var6);
             vb.field_i = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

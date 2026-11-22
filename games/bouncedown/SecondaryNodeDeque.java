@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class wh implements Iterable {
-    DualLinkNode field_a;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode sentinel;
     static String[] field_c;
     static volatile int field_d;
     static eh field_b;
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -19,14 +19,14 @@ final class wh implements Iterable {
           if (param1.field_i != null) {
             param1.unlinkSecondary(param0 - 6875);
           }
-          param1.field_l = this.field_a;
-          param1.field_i = this.field_a.field_i;
+          param1.field_l = this.sentinel;
+          param1.field_i = this.sentinel.field_i;
           param1.field_i.field_l = param1;
           param1.field_l.field_i = param1;
           if (param0 == 6753) {
             return;
           }
-          this.field_a = (DualLinkNode) null;
+          this.sentinel = (DualLinkNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,12 +46,12 @@ final class wh implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         if (param0 != 14) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_a.field_l;
-        if (this.field_a != var2) {
+        DualLinkNode var2 = this.sentinel.field_l;
+        if (this.sentinel != var2) {
           var2.unlinkSecondary(92);
           return var2;
         }
@@ -98,7 +98,7 @@ final class wh implements Iterable {
         field_b = null;
     }
 
-    private wh() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
@@ -107,7 +107,7 @@ final class wh implements Iterable {
           return;
         }
         if (param1 != 19406) {
-          wh.clearStaticReferences((byte) -4);
+          SecondaryNodeDeque.clearStaticReferences((byte) -4);
           if (param0 % 10L == 0L) {
             ba.a((byte) -123, -1L + param0);
             ba.a((byte) -126, 1L);

@@ -19,10 +19,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param0 != -34) {
             ImageProducerRasterBuffer.a((byte) -53, 0);
           }
-          var4 = (mj) (nd.field_b.b((byte) -77));
+          var4 = (mj) (nd.field_b.beginForward((byte) -77));
           while (var4 != null) {
             nk.a(param1, var4, 14);
-            var4 = (mj) (nd.field_b.d(853));
+            var4 = (mj) (nd.field_b.nextForward(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

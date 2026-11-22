@@ -5,8 +5,8 @@ final class hk {
     private int field_f;
     static ec field_i;
     private int field_b;
-    private sd field_g;
-    private qc field_h;
+    private IterableNodeHashTable field_g;
+    private SecondaryNodeDeque field_h;
     static Sprite[] field_a;
     static String field_d;
     static int field_e;
@@ -101,7 +101,7 @@ final class hk {
     final Object a(long param0, byte param1) {
         Object var8 = null;
         oh var6 = null;
-        bl var7 = (bl) (this.field_g.a(-94, param0));
+        bl var7 = (bl) (this.field_g.get(-94, param0));
         oh var6Lifetime1;
         if (var7 == null) {
           return null;
@@ -116,13 +116,13 @@ final class hk {
             return null;
           }
           if (!var7.h(0)) {
-            this.field_h.a((byte) -37, var7);
+            this.field_h.addLast((byte) -37, var7);
             var7.field_p = 0L;
             return var8;
           }
           var6 = new oh(var8, var7.field_y);
-          this.field_g.a(var7.field_d, true, var6);
-          this.field_h.a((byte) -37, var6);
+          this.field_g.put(var7.field_d, true, var6);
+          this.field_h.addLast((byte) -37, var6);
           ((bl) ((Object) var6)).field_p = 0L;
           var7.unlink(34);
           var7.unlinkSecondary((byte) -121);
@@ -136,13 +136,13 @@ final class hk {
           return null;
         }
         if (!var7.h(0)) {
-          this.field_h.a((byte) -37, var7);
+          this.field_h.addLast((byte) -37, var7);
           var7.field_p = 0L;
           return var9;
         }
         var6Lifetime1 = new oh(var9, var7.field_y);
-        this.field_g.a(var7.field_d, true, var6Lifetime1);
-        this.field_h.a((byte) -37, var6Lifetime1);
+        this.field_g.put(var7.field_d, true, var6Lifetime1);
+        this.field_h.addLast((byte) -37, var6Lifetime1);
         ((bl) ((Object) var6Lifetime1)).field_p = 0L;
         var7.unlink(34);
         var7.unlinkSecondary((byte) -121);
@@ -160,12 +160,12 @@ final class hk {
           this.a(-4924, param3);
           this.field_b = this.field_b - param1;
           while (this.field_b < 0) {
-            var6 = (bl) (this.field_h.a(609));
+            var6 = (bl) (this.field_h.removeFirst(609));
             this.a(-127, var6);
           }
           var6_ref = new oh(param0, param1);
-          this.field_g.a(param3, true, var6_ref);
-          this.field_h.a((byte) -37, var6_ref);
+          this.field_g.put(param3, true, var6_ref);
+          this.field_h.addLast((byte) -37, var6_ref);
           ((bl) ((Object) var6_ref)).field_p = (long)param2;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "hk.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -177,12 +177,12 @@ final class hk {
         Object var4 = null;
         bl var5Lifetime1;
         if (param0 == -4924) {
-          var5 = (bl) (this.field_g.a(param0 + 4856, param1));
+          var5 = (bl) (this.field_g.get(param0 + 4856, param1));
           this.a(param0 + 4846, var5);
           return;
         }
         hk.b(34);
-        var5Lifetime1 = (bl) (this.field_g.a(param0 + 4856, param1));
+        var5Lifetime1 = (bl) (this.field_g.get(param0 + 4856, param1));
         this.a(param0 + 4846, var5Lifetime1);
     }
 

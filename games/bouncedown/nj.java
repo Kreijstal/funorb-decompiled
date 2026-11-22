@@ -145,9 +145,9 @@ final class nj extends al {
             var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, gk.field_a);
             var4 = 3 + var3_int;
             se.field_E = new String[var4];
-            m.field_a = new int[var4];
+            IterableNodeHashTable.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              m.field_a[var5] = -1;
+              IterableNodeHashTable.field_a[var5] = -1;
             }
             CipherPacketBuffer.field_n = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -155,18 +155,18 @@ final class nj extends al {
             }
             se.field_E[var4 - 3] = "";
             se.field_E[-2 + var4] = tb.field_o;
-            m.field_a[var4 - 2] = 0;
+            IterableNodeHashTable.field_a[var4 - 2] = 0;
             CipherPacketBuffer.field_n[0] = 4;
             se.field_E[-1 + var4] = uk.field_b;
-            m.field_a[var4 - 1] = 1;
+            IterableNodeHashTable.field_a[var4 - 1] = 1;
             CipherPacketBuffer.field_n[1] = 5;
           } else if (1 == ne.field_u) {
             var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, gk.field_a);
             var4 = var3_int + 2;
             se.field_E = new String[var4];
-            m.field_a = new int[var4];
+            IterableNodeHashTable.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              m.field_a[var5] = -1;
+              IterableNodeHashTable.field_a[var5] = -1;
             }
             CipherPacketBuffer.field_n = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -174,7 +174,7 @@ final class nj extends al {
             }
             se.field_E[var4 - 2] = "";
             se.field_E[-1 + var4] = uk.field_b;
-            m.field_a[var4 - 1] = 0;
+            IterableNodeHashTable.field_a[var4 - 1] = 0;
             CipherPacketBuffer.field_n[0] = 5;
           } else if (2 != ne.field_u) {
             if (ne.field_u == 3) {
@@ -185,9 +185,9 @@ final class nj extends al {
               }
               var4 = 2 + var3_int;
               se.field_E = new String[var4];
-              m.field_a = new int[var4];
+              IterableNodeHashTable.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                m.field_a[var5] = -1;
+                IterableNodeHashTable.field_a[var5] = -1;
               }
               CipherPacketBuffer.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -195,15 +195,15 @@ final class nj extends al {
               }
               se.field_E[-2 + var4] = "";
               se.field_E[-1 + var4] = uk.field_b;
-              m.field_a[var4 - 1] = 0;
+              IterableNodeHashTable.field_a[var4 - 1] = 0;
               CipherPacketBuffer.field_n[0] = 5;
             } else if (ne.field_u == 4) {
               var3_int = r.a(ba.field_E, ClientException.field_g, of.field_a, 1, gk.field_a);
               var4 = var3_int + 2;
-              m.field_a = new int[var4];
+              IterableNodeHashTable.field_a = new int[var4];
               se.field_E = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                m.field_a[var5] = -1;
+                IterableNodeHashTable.field_a[var5] = -1;
               }
               CipherPacketBuffer.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -211,7 +211,7 @@ final class nj extends al {
               }
               se.field_E[var4 - 2] = "";
               se.field_E[var4 - 1] = uk.field_b;
-              m.field_a[-1 + var4] = 0;
+              IterableNodeHashTable.field_a[-1 + var4] = 0;
               CipherPacketBuffer.field_n[0] = 5;
             } else {
               if (5 != ne.field_u) {
@@ -220,9 +220,9 @@ final class nj extends al {
               var3_int = r.a(ba.field_E, ClientException.field_g, pe.field_g, param1 + 25699, gk.field_a);
               var4 = 3 + var3_int;
               se.field_E = new String[var4];
-              m.field_a = new int[var4];
+              IterableNodeHashTable.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                m.field_a[var5] = -1;
+                IterableNodeHashTable.field_a[var5] = -1;
               }
               CipherPacketBuffer.field_n = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -230,10 +230,10 @@ final class nj extends al {
               }
               se.field_E[-3 + var4] = "";
               se.field_E[var4 - 2] = wa.field_f;
-              m.field_a[-2 + var4] = 0;
+              IterableNodeHashTable.field_a[-2 + var4] = 0;
               CipherPacketBuffer.field_n[0] = 3;
               se.field_E[-1 + var4] = uk.field_b;
-              m.field_a[var4 - 1] = 1;
+              IterableNodeHashTable.field_a[var4 - 1] = 1;
               CipherPacketBuffer.field_n[1] = 5;
             }
           } else {
@@ -283,17 +283,17 @@ final class nj extends al {
             var6 = stackIn_60_0;
             var7 = var6 + (7 + var5);
             se.field_E = new String[var7];
-            m.field_a = new int[var7];
+            IterableNodeHashTable.field_a = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              m.field_a[var8] = -1;
+              IterableNodeHashTable.field_a[var8] = -1;
             }
-            m.field_a[1] = 0;
+            IterableNodeHashTable.field_a[1] = 0;
             se.field_E[0] = AccountNameAvailabilityValidator.field_l;
             se.field_E[1] = eb.field_F;
             CipherPacketBuffer.field_n = new int[2];
             CipherPacketBuffer.field_n[0] = 5;
             CipherPacketBuffer.field_n[1] = 2;
-            m.field_a[3] = 1;
+            IterableNodeHashTable.field_a[3] = 1;
             se.field_E[4] = ma.field_u;
             se.field_E[5] = "";
             se.field_E[3] = ab.field_g;
@@ -309,7 +309,7 @@ final class nj extends al {
               stackIn_67_0[stackIn_67_1] = stackIn_68_2;
             }
             se.field_E[6 + var5] = null;
-            m.field_a[var5 + 6] = -2;
+            IterableNodeHashTable.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_72_0 = se.field_E;
               stackIn_72_1 = var8Lifetime3 + (7 + var5);
@@ -330,7 +330,7 @@ final class nj extends al {
           }
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < se.field_E.length; var4Lifetime1++) {
-            stackIn_91_0 = !(m.field_a[var4Lifetime1] < 0);
+            stackIn_91_0 = !(IterableNodeHashTable.field_a[var4Lifetime1] < 0);
             var5Lifetime1 = vh.a(stackIn_91_0, se.field_E[var4Lifetime1], true);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -360,7 +360,7 @@ final class nj extends al {
           bb.field_b = bi.field_h - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < se.field_E.length; var4Lifetime2++) {
             stackIn_115_0 = ef.field_a;
-            if (m.field_a[var4Lifetime2] >= 0) {
+            if (IterableNodeHashTable.field_a[var4Lifetime2] >= 0) {
               stackIn_116_1 = pb.field_j;
             } else {
               stackIn_116_1 = k.field_D;
@@ -372,7 +372,7 @@ final class nj extends al {
           var4Lifetime3 = 0;
           var5Lifetime3 = jl.field_a;
           while (se.field_E.length > var4Lifetime3) {
-            var6Lifetime1 = m.field_a[var4Lifetime3];
+            var6Lifetime1 = IterableNodeHashTable.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = vh.a(true, se.field_E[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + hj.field_a;

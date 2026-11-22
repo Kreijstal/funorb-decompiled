@@ -108,7 +108,7 @@ final class le {
           if (var2 == null &&
             !fl.field_j &&
             ac.field_l == null) {
-            var2 = dk.field_e;
+            var2 = SecondaryNodeHashTable.field_e;
           }
           if (var2 != null) {
             fj.a((String) (var2), 0, -1, (String) null, AccountNameAvailabilityValidator.field_l);
@@ -156,7 +156,7 @@ final class le {
               var4 = var4 + var3 + var8Lifetime1;
               if (!qf.field_b) {
                 if (kh.field_o) {
-                  var4 = "<col=999999>" + var4 + cn.field_e + "</col>";
+                  var4 = "<col=999999>" + var4 + SecondaryNodeDeque.field_e + "</col>";
                   var5 = "";
                   if (var10 != 0) {
                     var4 = "<col=999999>" + var4 + FullscreenFocusCanvas.field_e + "</col>";
@@ -174,7 +174,7 @@ final class le {
                   if (qf.field_b) {
                     var1 = "Broken!";
                   } else {
-                    var1 = cn.field_e;
+                    var1 = SecondaryNodeDeque.field_e;
                   }
                 }
                 if (BoundedRandomAccessFile.field_f.field_L != 0 &&

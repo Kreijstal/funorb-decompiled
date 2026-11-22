@@ -16,11 +16,11 @@ final class ak extends jl {
     private wj field_q;
     private int field_k;
     private vl field_j;
-    private im field_x;
+    private IntrusiveDeque field_x;
     private boolean field_s;
     private boolean field_h;
     private int field_o;
-    private im field_m;
+    private IntrusiveDeque field_m;
     private long field_v;
     private boolean field_u;
 
@@ -325,7 +325,7 @@ final class ak extends jl {
           if (null == this.a(-23879)) {
             return;
           }
-          var2 = this.field_x.b((byte) -16);
+          var2 = this.field_x.beginForward((byte) -16);
           while (var2 != null) {
             var3 = (int)var2.field_d;
             if (var3 >= 0) {
@@ -349,7 +349,7 @@ final class ak extends jl {
             } else {
               var2.unlink(57);
             }
-            var2 = this.field_x.d(853);
+            var2 = this.field_x.nextForward(853);
           }
           if (param0 != 57) {
             ak.b(-86);
@@ -369,7 +369,7 @@ final class ak extends jl {
         try {
           this.field_h = true;
           if (null == this.field_m) {
-            this.field_m = new im();
+            this.field_m = new IntrusiveDeque();
           }
           int var2_int = 123 % ((param0 + 14) / 40);
         } catch (RuntimeException runtimeException) {
@@ -425,7 +425,7 @@ final class ak extends jl {
             return null;
           }
           if (param0 != -15861) {
-            this.field_m = (im) null;
+            this.field_m = (IntrusiveDeque) null;
           }
           var4 = var3.f(0);
           var3.unlink(param0 + 15918);
@@ -470,7 +470,7 @@ final class ak extends jl {
             }
             if (this.field_s) {
               var2_int = 1;
-              var3 = this.field_m.b((byte) -12);
+              var3 = this.field_m.beginForward((byte) -12);
               while (var3 != null) {
                 var4 = (int)var3.field_d;
                 if (this.field_g[var4] == 0) {
@@ -481,7 +481,7 @@ final class ak extends jl {
                 } else {
                   var2_int = 0;
                 }
-                var3 = this.field_m.d(853);
+                var3 = this.field_m.nextForward(853);
               }
               while (this.field_i.field_d.length > this.field_o) {
                 if (this.field_i.field_d[this.field_o] == 0) {
@@ -495,7 +495,7 @@ final class ak extends jl {
                   if (this.field_g[this.field_o] == 0) {
                     var7 = new IntrusiveNode();
                     var7.field_d = (long)this.field_o;
-                    this.field_m.a(-121, var7);
+                    this.field_m.addLast(-121, var7);
                     var2_int = 0;
                   }
                   this.field_o = this.field_o + 1;
@@ -513,7 +513,7 @@ final class ak extends jl {
             else {
               if (this.field_h) {
                 var2_intLifetime1 = 1;
-                var3Lifetime1 = this.field_m.b((byte) -17);
+                var3Lifetime1 = this.field_m.beginForward((byte) -17);
                 while (var3Lifetime1 != null) {
                   var4Lifetime1 = (int)var3Lifetime1.field_d;
                   if (1 != this.field_g[var4Lifetime1]) {
@@ -524,7 +524,7 @@ final class ak extends jl {
                   } else {
                     var2_intLifetime1 = 0;
                   }
-                  var3Lifetime1 = this.field_m.d(853);
+                  var3Lifetime1 = this.field_m.nextForward(853);
                 }
                 while (this.field_o < this.field_i.field_d.length) {
                   if (0 == this.field_i.field_d[this.field_o]) {
@@ -540,7 +540,7 @@ final class ak extends jl {
                     if (this.field_g[this.field_o] != 1) {
                       var6 = new IntrusiveNode();
                       var6.field_d = (long)this.field_o;
-                      this.field_m.a(-90, var6);
+                      this.field_m.addLast(-90, var6);
                       var2_intLifetime1 = 0;
                     }
                     this.field_o = this.field_o + 1;
@@ -655,14 +655,14 @@ final class ak extends jl {
         RuntimeException var10 = null;
         this.field_p = new mh(16);
         this.field_o = 0;
-        this.field_x = new im();
+        this.field_x = new IntrusiveDeque();
         this.field_v = 0L;
         try {
           this.field_l = param1;
           this.field_t = param0;
           if (null != this.field_l) {
             this.field_s = true;
-            this.field_m = new im();
+            this.field_m = new IntrusiveDeque();
           } else {
             this.field_s = false;
           }

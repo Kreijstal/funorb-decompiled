@@ -3,7 +3,7 @@
  */
 final class gn extends en implements vd {
     private pc field_V;
-    static wb field_Q;
+    static IntrusiveDeque field_Q;
     static java.math.BigInteger field_S;
     static String field_U;
 
@@ -54,7 +54,7 @@ final class gn extends en implements vd {
           var4.field_i = (wo) ((Object) new ve());
           var5 = this.field_f - 6;
           if (param2 <= 115) {
-            field_Q = (wb) null;
+            field_Q = (IntrusiveDeque) null;
           }
           this.field_f = this.field_f + 38;
           var4.a(30, 15, var5, -16 + (-14 + this.field_g), (byte) -52);
@@ -161,7 +161,7 @@ final class gn extends en implements vd {
     }
 
     static {
-        field_Q = new wb();
+        field_Q = new IntrusiveDeque();
         field_S = new java.math.BigInteger("65537");
         field_U = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }

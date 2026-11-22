@@ -71,7 +71,7 @@ class w extends PcmStream {
         if (param1 != 116) {
           w.a(true);
         }
-        var3 = (tm) (this.field_B.field_t.g(-4));
+        var3 = (tm) (this.field_B.field_t.beginForward(-4));
         while (var3 != null) {
           if ((param0 < 0 ||
             var3.field_E == param0) &&
@@ -79,7 +79,7 @@ class w extends PcmStream {
             this.field_q[var3.field_E][var3.field_z] = null;
             var3.field_h = 0;
           }
-          var3 = (tm) (this.field_B.field_t.a(12684));
+          var3 = (tm) (this.field_B.field_t.nextForward(12684));
         }
     }
 
@@ -172,7 +172,7 @@ class w extends PcmStream {
           int[] var5 = (int[]) null;
           this.b((int[]) null, -11, 107);
         }
-        tm var3 = (tm) (this.field_B.field_t.g(-95));
+        tm var3 = (tm) (this.field_B.field_t.beginForward(-95));
         while (var3 != null) {
           if (param1 < 0 ||
             param1 == var3.field_E) {
@@ -188,7 +188,7 @@ class w extends PcmStream {
             }
             var3.unlink(123);
           }
-          var3 = (tm) (this.field_B.field_t.a(12684));
+          var3 = (tm) (this.field_B.field_t.nextForward(12684));
         }
     }
 
@@ -366,14 +366,14 @@ class w extends PcmStream {
         if ((2 & this.field_C[param1]) == 0) {
           var8.field_h = 0;
         } else {
-          var6 = (tm) (this.field_B.field_t.g(-23));
+          var6 = (tm) (this.field_B.field_t.beginForward(-23));
           while (var6 != null) {
             if (var6.field_E == var8.field_E && 0 > var6.field_h &&
               var6 != var8) {
               var8.field_h = 0;
               break;
             }
-            var6 = (tm) (this.field_B.field_t.a(param3 ^ 12723));
+            var6 = (tm) (this.field_B.field_t.nextForward(param3 ^ 12723));
           }
         }
     }
@@ -591,18 +591,18 @@ class w extends PcmStream {
         int var4;
         var4 = HostileSpawn.field_I ? 1 : 0;
         if (0 != (this.field_C[param0] & 2)) {
-          var3 = (tm) (this.field_B.field_t.g(-64));
+          var3 = (tm) (this.field_B.field_t.beginForward(-64));
           while (var3 != null) {
             if (var3.field_E == param0) {
               if (this.field_q[param0][var3.field_z] != null) {
-                var3 = (tm) (this.field_B.field_t.a(12684));
+                var3 = (tm) (this.field_B.field_t.nextForward(12684));
                 continue;
               }
               if (0 > var3.field_h) {
                 var3.field_h = 0;
               }
             }
-            var3 = (tm) (this.field_B.field_t.a(12684));
+            var3 = (tm) (this.field_B.field_t.nextForward(12684));
           }
         }
         if (param1) {
@@ -619,12 +619,12 @@ class w extends PcmStream {
         tm var3 = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         if ((param1 & this.field_C[param0]) != 0) {
-          var3 = (tm) (this.field_B.field_t.g(-53));
+          var3 = (tm) (this.field_B.field_t.beginForward(-53));
           while (var3 != null) {
             if (var3.field_E == param0) {
               var3.field_i = 0;
             }
-            var3 = (tm) (this.field_B.field_t.a(12684));
+            var3 = (tm) (this.field_B.field_t.nextForward(12684));
           }
         }
     }
@@ -738,7 +738,7 @@ class w extends PcmStream {
         var9 = HostileSpawn.field_I ? 1 : 0;
         this.a(64, param2, param3, (byte) 63);
         if ((2 & this.field_C[param2]) != 0) {
-          var5 = (tm) (this.field_B.field_t.b((byte) 117));
+          var5 = (tm) (this.field_B.field_t.beginBackward((byte) 117));
           while (var5 != null) {
             if (var5.field_E == param2 &&
               var5.field_h < 0) {
@@ -751,7 +751,7 @@ class w extends PcmStream {
               var5.field_F = -var5.field_y + var6_int;
               return;
             }
-            var5 = (tm) (this.field_B.field_t.a((byte) 124));
+            var5 = (tm) (this.field_B.field_t.nextBackward((byte) 124));
           }
         }
         var10 = (nf) (this.field_I.a(false, (long)this.field_n[param2]));
@@ -800,7 +800,7 @@ class w extends PcmStream {
           }
           this.field_P[param2][var7.field_m] = var7;
         }
-        this.field_B.field_t.a(var7, param0 ^ 74);
+        this.field_B.field_t.addLast(var7, param0 ^ 74);
         this.field_q[param2][param3] = var7;
         return;
     }

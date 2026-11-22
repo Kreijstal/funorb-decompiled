@@ -113,10 +113,10 @@ abstract class ByteArrayStore {
             ByteArrayStore.a(-72);
           }
           var2 = var14.readUnsignedByte(param0 ^ 28154);
-          var3 = (mf) (wg.field_b.a((byte) 74));
+          var3 = (mf) (wg.field_b.beginForward((byte) 74));
           while (var3 != null) {
             if (var3.field_k != var2) {
-              var3 = (mf) (wg.field_b.b((byte) -115));
+              var3 = (mf) (wg.field_b.nextForward((byte) -115));
               continue;
             }
             break;

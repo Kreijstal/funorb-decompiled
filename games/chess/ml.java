@@ -277,7 +277,7 @@ final class ml {
           }
           pi.field_d.b((byte) -97);
           if (param3) {
-            if (cn.field_g == pi.field_d.field_d) {
+            if (SecondaryNodeDeque.field_g == pi.field_d.field_d) {
               var13 = pi.field_d;
               var14 = oc.a(qc.field_c, new String[]{param0}, (byte) -54);
               var13.field_b.a((byte) -12, var14, 16);

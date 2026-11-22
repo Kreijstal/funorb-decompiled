@@ -8,7 +8,7 @@ final class ve extends ci {
     ci field_Mb;
     String field_Fb;
     String field_Kb;
-    static jc field_Nb;
+    static IntrusiveDeque field_Nb;
     String field_Lb;
     int field_Ib;
     ci field_Jb;
@@ -96,7 +96,7 @@ final class ve extends ci {
             return stackIn_17_0;
           }
           if (param0 != -76) {
-            field_Nb = (jc) null;
+            field_Nb = (IntrusiveDeque) null;
           }
           if (DelegatingCanvas.field_a != ci.field_ub) {
             return -1;
@@ -119,7 +119,7 @@ final class ve extends ci {
     }
 
     static {
-        field_Nb = new jc();
+        field_Nb = new IntrusiveDeque();
         field_Gb = new int[8192];
         field_Qb = "Waiting for models";
         field_Hb = new int[16384];

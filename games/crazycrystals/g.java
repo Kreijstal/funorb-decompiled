@@ -4,7 +4,7 @@
 final class g {
     static String field_a;
     static String field_c;
-    static wb field_b;
+    static IntrusiveDeque field_b;
 
     public static void clearStaticReferences(byte param0) {
         field_b = null;

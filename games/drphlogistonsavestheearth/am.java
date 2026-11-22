@@ -5,7 +5,7 @@ final class am extends PcmStream {
     static int field_p;
     static PacketBuffer field_n;
     private ug field_s;
-    vd field_q;
+    IntrusiveDeque field_q;
     static int field_l;
     ec field_r;
     static String field_m;
@@ -20,7 +20,7 @@ final class am extends PcmStream {
         int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         while (true) {
-          var1 = (cc) (this.field_q.e(0));
+          var1 = (cc) (this.field_q.nextForward(0));
           if (var1 == null) {
             return null;
           }
@@ -31,7 +31,7 @@ final class am extends PcmStream {
     }
 
     final PcmStream a() {
-        cc var1 = (cc) (this.field_q.h(-11151));
+        cc var1 = (cc) (this.field_q.beginForward(-11151));
         if (var1 == null) {
           return null;
         }
@@ -374,7 +374,7 @@ final class am extends PcmStream {
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           this.field_r.b(param0, param1, param2);
-          var6 = (cc) (this.field_q.h(-11151));
+          var6 = (cc) (this.field_q.beginForward(-11151));
           while (var6 != null) {
             if (!this.field_s.a(-128, var6)) {
               var4_int = param1;
@@ -390,7 +390,7 @@ final class am extends PcmStream {
                 var4_int = var4_int + var6.field_l;
               } while (!this.field_s.a(var4_int, param0, -128, var6, var5));
             }
-            var6 = (cc) (this.field_q.e(0));
+            var6 = (cc) (this.field_q.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -423,7 +423,7 @@ final class am extends PcmStream {
         boolean stackIn_3_0 = false;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.field_r.d(param0);
-        var3 = (cc) (this.field_q.h(-11151));
+        var3 = (cc) (this.field_q.beginForward(-11151));
         while (var3 != null) {
           stackIn_3_0 = this.field_s.a(-124, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -442,7 +442,7 @@ final class am extends PcmStream {
               var3.field_l = var3.field_l - var2;
             }
           }
-          var3 = (cc) (this.field_q.e(0));
+          var3 = (cc) (this.field_q.nextForward(0));
         }
     }
 
@@ -459,7 +459,7 @@ final class am extends PcmStream {
     }
 
     am(ug param0) {
-        this.field_q = new vd();
+        this.field_q = new IntrusiveDeque();
         this.field_r = new ec();
         try {
           this.field_s = param0;

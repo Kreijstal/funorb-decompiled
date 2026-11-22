@@ -75,14 +75,14 @@ final class MixedSupport126 {
         if (integerArgument4 > 95) {
           mixedSupport113Local1.integerArrayState0202 = new int[integerArgument1];
           mixedSupport113Local1.integerState0731 = integerArgument3;
-          UiComponentPart010.nodeDequeState0008.performAction1735(mixedSupport113Local1, 2777);
+          UiComponentPart010.nodeDequeState0008.addFirst(mixedSupport113Local1, 2777);
           ReturnedShapeCache.performAction1177(-102, integerArgument2, mixedSupport113Local1);
           return mixedSupport113Local1;
         }
         stringState0549 = (String) null;
         mixedSupport113Local1.integerArrayState0202 = new int[integerArgument1];
         mixedSupport113Local1.integerState0731 = integerArgument3;
-        UiComponentPart010.nodeDequeState0008.performAction1735(mixedSupport113Local1, 2777);
+        UiComponentPart010.nodeDequeState0008.addFirst(mixedSupport113Local1, 2777);
         ReturnedShapeCache.performAction1177(-102, integerArgument2, mixedSupport113Local1);
         return mixedSupport113Local1;
     }

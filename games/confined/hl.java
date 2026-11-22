@@ -5,7 +5,7 @@ final class hl implements de {
     static String[] field_h;
     static String field_b;
     private ma[] field_e;
-    private mn field_f;
+    private PrimaryNodeDeque field_f;
     private mi field_a;
     private int field_g;
     private int field_c;
@@ -22,7 +22,7 @@ final class hl implements de {
         }
         if (var5.field_t != null) {
           if (param0 == var5.field_o) {
-            this.field_f.a(var5, -1);
+            this.field_f.addFirst(var5, -1);
             return var5.field_t;
           }
           var5.unlink(true);
@@ -33,18 +33,18 @@ final class hl implements de {
           return null;
         }
         if (this.field_c == 0) {
-          var8 = (ma) (this.field_f.b((byte) 101));
+          var8 = (ma) (this.field_f.removeLast((byte) 101));
           var8.a();
-          this.field_f.a(var5, -1);
+          this.field_f.addFirst(var5, -1);
           return var5.field_t;
         }
         this.field_c = this.field_c - 1;
-        this.field_f.a(var5, -1);
+        this.field_f.addFirst(var5, -1);
         return var5.field_t;
     }
 
     final static void a(int param0) {
-        g var1 = (g) (IsaacRandom.field_a.a(-115));
+        g var1 = (g) (IsaacRandom.field_a.beginForward(-115));
         if (var1 == null) {
           dc.d(120);
           return;
@@ -151,7 +151,7 @@ final class hl implements de {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        this.field_f = new mn();
+        this.field_f = new PrimaryNodeDeque();
         this.field_g = 128;
         this.field_c = 0;
         try {

@@ -13,7 +13,7 @@ final class m {
     private vh field_j;
     static String field_h;
     static long field_b;
-    static mn field_d;
+    static PrimaryNodeDeque field_d;
 
     final bi a(int param0, int param1, int param2) {
         if (param2 != 256) {
@@ -182,6 +182,6 @@ final class m {
         field_g = new va();
         field_h = "If we could get#our hands on their#technology#we could become#supreme rulers#of the galaxy.";
         field_k = new java.awt.Color(10040319);
-        field_d = new mn();
+        field_d = new PrimaryNodeDeque();
     }
 }

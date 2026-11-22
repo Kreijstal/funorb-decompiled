@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GzipDecompressor {
-    static im field_a;
+    static IntrusiveDeque field_a;
     private java.util.zip.Inflater field_b;
     static int field_c;
     static String field_d;
@@ -17,7 +17,7 @@ final class GzipDecompressor {
         field_d = null;
         field_a = null;
         if (param0 != 1000000) {
-          field_a = (im) null;
+          field_a = (IntrusiveDeque) null;
         }
     }
 
@@ -91,7 +91,7 @@ final class GzipDecompressor {
 
     static {
         field_c = 0;
-        field_a = new im();
+        field_a = new IntrusiveDeque();
         field_d = "Login: ";
     }
 }

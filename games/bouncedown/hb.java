@@ -204,7 +204,7 @@ final class hb extends ak {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(Slime.a(param0, -1789));
             }
-            var15 = (ld) (ne.field_r.a((byte) -86));
+            var15 = (ld) (ne.field_r.beginForward((byte) -86));
             if (var15 == null) {
               kc.a((byte) 18);
               return;
@@ -216,7 +216,7 @@ final class hb extends ak {
             return;
           }
           if (1 == var2) {
-            var11 = (ke) (uk.field_d.a((byte) -72));
+            var11 = (ke) (uk.field_d.beginForward((byte) -72));
             if (var11 != null) {
               var11.unlink(2);
               return;
@@ -229,7 +229,7 @@ final class hb extends ak {
             kc.a((byte) 18);
             return;
           }
-          var13 = (ld) (ne.field_r.a((byte) -118));
+          var13 = (ld) (ne.field_r.beginForward((byte) -118));
           if (var13 == null) {
             kc.a((byte) 18);
             return;

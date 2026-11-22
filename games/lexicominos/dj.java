@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj {
-    static ng field_c;
+    static IntrusiveDeque field_c;
     static int field_b;
     static String field_a;
 
@@ -21,7 +21,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 44) {
-            field_c = (ng) null;
+            field_c = (IntrusiveDeque) null;
           }
           stackIn_5_0 = (sg.a((byte) 79, param1) != null);
           return stackIn_5_0;
@@ -42,6 +42,6 @@ final class dj {
     static {
         field_b = 50;
         field_a = "Play free version";
-        field_c = new ng();
+        field_c = new IntrusiveDeque();
     }
 }

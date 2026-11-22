@@ -325,7 +325,7 @@ final class ed {
         if (param0 != 16777215) {
           ed.c(18);
         }
-        rj.field_i.a(false, var2);
+        rj.field_i.addLast(false, var2);
         ki.a(param1, 1);
         return var2;
     }

@@ -10,7 +10,7 @@ final class ok implements wo {
     private vc field_h;
     static MouseWheelInput field_g;
     static db field_c;
-    static wb field_a;
+    static IntrusiveDeque field_a;
 
     final static void a(int param0) {
         MouseWheelInput.field_a = null;
@@ -298,6 +298,6 @@ final class ok implements wo {
     static {
         field_i = "Create";
         field_b = new fp();
-        field_a = new wb();
+        field_a = new IntrusiveDeque();
     }
 }

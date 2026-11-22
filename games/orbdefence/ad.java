@@ -40,10 +40,10 @@ final class ad {
           var13 = cd.field_t;
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) 90);
-          var3 = (d) (md.field_h.b((byte) -66));
+          var3 = (d) (md.field_h.beginForward((byte) -66));
           while (var3 != null) {
             if (var3.field_f != var2) {
-              var3 = (d) (md.field_h.d(853));
+              var3 = (d) (md.field_h.nextForward(853));
               continue;
             }
             break;

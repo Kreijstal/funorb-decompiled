@@ -3,7 +3,7 @@
  */
 final class AccountRequestState {
     static int field_e;
-    static bc field_d;
+    static IntrusiveDeque field_d;
     static pc field_a;
     static tg field_b;
     static String field_c;
@@ -78,7 +78,7 @@ final class AccountRequestState {
     }
 
     static {
-        field_d = new bc();
+        field_d = new IntrusiveDeque();
         field_c = "This entry doesn't match";
     }
 }

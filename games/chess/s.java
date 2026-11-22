@@ -178,7 +178,7 @@ final class s extends ma implements wl, mj {
         mn.field_h.writeByte(param0, (byte) 71);
         mn.field_h.writeByte(param1, (byte) -91);
         mn.field_h.writeShort(param3, 115);
-        mn.field_h.applyRsa(dk.field_k, se.field_M, (byte) 86);
+        mn.field_h.applyRsa(SecondaryNodeHashTable.field_k, se.field_M, (byte) 86);
         qn.field_U.f(18, -116);
         int fieldTemp$0 = qn.field_U.position + 1;
         qn.field_U.position = qn.field_U.position + 1;
@@ -243,7 +243,7 @@ final class s extends ma implements wl, mj {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        jc var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         r var12 = null;
@@ -334,7 +334,7 @@ final class s extends ma implements wl, mj {
           var9Lifetime1 = stackIn_44_0;
           var10 = param1.field_Kb.field_I;
           var11 = null;
-          var12 = (r) (var10.g(-18110));
+          var12 = (r) (var10.beginBackward(-18110));
           if (param0 != 21487) {
             field_M = (ci) null;
           }
@@ -519,7 +519,7 @@ final class s extends ma implements wl, mj {
             if (var12.field_Db) {
               if (var12.l(param0 ^ 21486)) {
                 var11 = var12;
-                var12 = (r) (var10.a((byte) -126));
+                var12 = (r) (var10.nextBackward((byte) -126));
                 continue;
               }
               var24 = null;
@@ -543,7 +543,7 @@ final class s extends ma implements wl, mj {
                     if (var6 <= var12.field_Pb) {
                       if (0 != (var8 & ~var12.field_Wb)) {
                         var25_int = ie.a(var8 & ~var12.field_Wb, (byte) -59);
-                        var24 = oc.a(jc.field_b, new String[]{var20}, (byte) -94);
+                        var24 = oc.a(IntrusiveDeque.field_b, new String[]{var20}, (byte) -94);
                         if (var25_int > 0 &&
                           la.field_b != null &&
                           var25_int <= la.field_b.length &&
@@ -670,7 +670,7 @@ final class s extends ma implements wl, mj {
               }
             }
             var11 = var12;
-            var12 = (r) (var10.a((byte) -126));
+            var12 = (r) (var10.nextBackward((byte) -126));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

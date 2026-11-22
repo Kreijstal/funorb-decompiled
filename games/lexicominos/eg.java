@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eg extends mg {
-    private ng field_D;
+    private IntrusiveDeque field_D;
     static String field_E;
     static String field_F;
     static sh field_C;
@@ -98,7 +98,7 @@ final class eg extends mg {
 
     public eg() {
         super(0, 0, ql.field_O, kg.field_C, (rd) null, (vd) null);
-        this.field_D = new ng();
+        this.field_D = new IntrusiveDeque();
     }
 
     final w f(int param0) {
@@ -130,7 +130,7 @@ final class eg extends mg {
             throw new IllegalArgumentException();
           }
           var3 = (al) (param1);
-          this.field_D.a(param0 + 14484, var3);
+          this.field_D.addFirst(param0 + 14484, var3);
           var3.field_D = true;
           var3.a((byte) 44, (w) (this));
           if (param0 != -14579) {

@@ -16,16 +16,16 @@ final class go extends ln {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          pj.a(ae.field_F, param0, be.field_c, true, uo.field_m, (byte) 119, 0);
-          for (var2_int = 0; be.field_c > var2_int; var2_int++) {
+          pj.a(ae.field_F, param0, SecondaryNodeDeque.field_c, true, uo.field_m, (byte) 119, 0);
+          for (var2_int = 0; SecondaryNodeDeque.field_c > var2_int; var2_int++) {
             wp.field_d[var2_int + param0] = var2_int;
           }
           if (param1 != 240) {
             return;
           }
-          pj.a(db.field_i, param0 + param0, be.field_c + param0, false, em.field_i, (byte) 119, param0);
-          if (param0 < be.field_c) {
-            be.field_c = param0;
+          pj.a(db.field_i, param0 + param0, SecondaryNodeDeque.field_c + param0, false, em.field_i, (byte) 119, param0);
+          if (param0 < SecondaryNodeDeque.field_c) {
+            SecondaryNodeDeque.field_c = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

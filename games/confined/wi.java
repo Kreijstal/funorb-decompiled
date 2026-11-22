@@ -51,15 +51,15 @@ final class wi {
           if (param1 >= -39) {
             wi.a(41, 111);
           }
-          var4 = (sf) (sm.field_y.a(-128));
+          var4 = (sf) (sm.field_y.beginForward(-128));
           while (var4 != null) {
             nh.a(var4, 0, param0);
-            var4 = (sf) (sm.field_y.d(2123));
+            var4 = (sf) (sm.field_y.nextForward(2123));
           }
-          var2 = ra.field_d.a(107);
+          var2 = ra.field_d.beginForward(107);
           while (var2 != null) {
             BoundedRandomAccessFile.a(-87, param0);
-            var2 = ra.field_d.d(2123);
+            var2 = ra.field_d.nextForward(2123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class wi {
         RuntimeException decompiledCaughtException = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          var4 = (dg) (af.field_cb.a(-115));
+          var4 = (dg) (af.field_cb.beginForward(-115));
           var1 = var4;
           if (var1 == null) {
             return false;

@@ -51,7 +51,7 @@ class DualNode extends HashNode {
         }
     }
 
-    final void performAction0130(long longArgument1, byte byteArgument2) {
+    final void setSecondaryKey(long longArgument1, byte byteArgument2) {
         if (this.dualNodeState0004 != null) {
           throw new RuntimeException();
         }
@@ -74,9 +74,9 @@ class DualNode extends HashNode {
         }
     }
 
-    final long computeLong0132(byte byteArgument1) {
+    final long getSecondaryKey(byte byteArgument1) {
         if (byteArgument1 != 57) {
-          this.computeLong0132((byte) 121);
+          this.getSecondaryKey((byte) 121);
           return this.longState0003;
         }
         return this.longState0003;
@@ -92,7 +92,7 @@ class DualNode extends HashNode {
             DualNode.performAction0127((byte) 85, (SceneWidgetPart005) null);
           }
           SceneWidgetPart007.sceneWidgetPart005State0002 = sceneWidgetPart005Argument2;
-          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1742(110);
+          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.clear(110);
           MixedSupport059.sceneWidgetState0055.performAction1768(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
           GameDomainSupport004.booleanState0087 = true;
         } catch (RuntimeException runtimeException) {
@@ -100,7 +100,7 @@ class DualNode extends HashNode {
         }
     }
 
-    final void performAction0134(byte byteArgument1) {
+    final void unlinkSecondary(byte byteArgument1) {
         if (null == this.dualNodeState0004) {
           return;
         }
@@ -119,7 +119,7 @@ class DualNode extends HashNode {
     protected DualNode() {
     }
 
-    final boolean computeBoolean0133(byte byteArgument1) {
+    final boolean isSecondaryLinked(byte byteArgument1) {
         if (byteArgument1 == -68) {
           return this.dualNodeState0004 != null ? true : false;
         }

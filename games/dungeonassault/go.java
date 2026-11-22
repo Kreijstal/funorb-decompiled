@@ -2854,7 +2854,7 @@ final class go extends qe {
                           var18Lifetime1 = var10 + " " + ri.field_c;
                           var10 = var18Lifetime1;
                           if (var15 == var13) {
-                            var10 = var18Lifetime1 + " <col=FF8000>" + jk.a(new String[]{var6.field_h.field_z}, qi.field_h, 30496) + "</col>";
+                            var10 = var18Lifetime1 + " <col=FF8000>" + jk.a(new String[]{var6.field_h.field_z}, IterableNodeHashTable.field_h, 30496) + "</col>";
                           }
                           if (var13 == 0 &&
                             var12 != 0) {

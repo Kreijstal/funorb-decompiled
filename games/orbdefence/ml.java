@@ -11,7 +11,7 @@ final class ml {
     int field_h;
     private int field_k;
     private int field_l;
-    static im field_f;
+    static IntrusiveDeque field_f;
     static uj field_e;
     static int field_j;
 
@@ -216,7 +216,7 @@ final class ml {
           this.field_h = param1;
           this.field_g = false;
           if (param0 != 0) {
-            field_f = (im) null;
+            field_f = (IntrusiveDeque) null;
             return;
           }
           return;
@@ -224,7 +224,7 @@ final class ml {
         if (param0 == 0) {
           return;
         }
-        field_f = (im) null;
+        field_f = (IntrusiveDeque) null;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -528,6 +528,6 @@ final class ml {
 
     static {
         field_a = new qd();
-        field_f = new im();
+        field_f = new IntrusiveDeque();
     }
 }

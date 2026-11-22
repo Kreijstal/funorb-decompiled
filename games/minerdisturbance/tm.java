@@ -213,7 +213,7 @@ final class tm extends IntrusiveNode {
                   var24Lifetime1Lifetime1 = param0.field_b[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_D[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_o[var23Lifetime2];
-                  sd.field_g[var23Lifetime2] = var9 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16);
+                  IterableNodeHashTable.field_g[var23Lifetime2] = var9 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16);
                   kk.field_c[var23Lifetime2] = (var16 * var25Lifetime1Lifetime1 + (var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1) >> 16) + var10;
                   mj.field_n[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_p[var23Lifetime2];

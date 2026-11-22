@@ -109,7 +109,7 @@ final class ca {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        jc var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         ve var7 = null;
@@ -157,7 +157,7 @@ final class ca {
             oj.field_c.field_db = oc.a(gf.field_g, new String[]{ByteStorage.field_a}, (byte) -59);
             ea.field_bb.field_Kb.field_Jb.field_db = null;
             var6 = null;
-            var7 = (ve) (var4.g(-18110));
+            var7 = (ve) (var4.beginBackward(-18110));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var7 != null) {
@@ -261,7 +261,7 @@ final class ca {
                     pc.field_Mb = var7.field_Ob;
                   }
                   var6 = var7;
-                  var7 = (ve) (var4.a((byte) -120));
+                  var7 = (ve) (var4.nextBackward((byte) -120));
                   continue;
                 }
               } else {

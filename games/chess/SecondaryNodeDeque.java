@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class cn implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static String field_a;
-    DualLinkNode field_c;
+    DualLinkNode sentinel;
     static ok field_b;
     static String field_e;
     static String field_d;
@@ -121,7 +121,7 @@ final class cn implements Iterable {
                 var4 = 1;
               }
               if (param0 != 25) {
-                cn.clearStaticReferences(114);
+                SecondaryNodeDeque.clearStaticReferences(114);
               }
               if (param1 == 14) {
                 var4 = -1;
@@ -177,7 +177,7 @@ final class cn implements Iterable {
           var4 = 1;
         }
         if (param0 != 25) {
-          cn.clearStaticReferences(114);
+          SecondaryNodeDeque.clearStaticReferences(114);
         }
         if (param1 == 14) {
           var4 = -1;
@@ -202,7 +202,7 @@ final class cn implements Iterable {
 
     final static ci a(int param0) {
         if (param0 != 11520) {
-          cn.clearStaticReferences(-30);
+          SecondaryNodeDeque.clearStaticReferences(-30);
           return jg.k(110);
         }
         return jg.k(110);
@@ -219,7 +219,7 @@ final class cn implements Iterable {
         }
     }
 
-    final void a(DualLinkNode param0, boolean param1) {
+    final void addLast(DualLinkNode param0, boolean param1) {
         try {
           if (param1) {
             this.iterator();
@@ -227,8 +227,8 @@ final class cn implements Iterable {
           if (null != param0.secondaryPrevious) {
             param0.unlinkSecondary(-1);
           }
-          param0.secondaryNext = this.field_c;
-          param0.secondaryPrevious = this.field_c.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
@@ -236,17 +236,17 @@ final class cn implements Iterable {
         }
     }
 
-    final DualLinkNode c(int param0) {
-        DualLinkNode var2 = this.field_c.secondaryNext;
+    final DualLinkNode removeFirst(int param0) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
         if (param0 != -14336) {
           field_g = 116;
-          if (var2 != this.field_c) {
+          if (var2 != this.sentinel) {
             var2.unlinkSecondary(-1);
             return var2;
           }
           return null;
         }
-        if (var2 != this.field_c) {
+        if (var2 != this.sentinel) {
           var2.unlinkSecondary(-1);
           return var2;
         }
@@ -257,10 +257,10 @@ final class cn implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    cn() {
-        this.field_c = new DualLinkNode();
-        this.field_c.secondaryPrevious = this.field_c;
-        this.field_c.secondaryNext = this.field_c;
+    SecondaryNodeDeque() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
     static {

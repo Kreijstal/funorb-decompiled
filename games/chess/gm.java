@@ -203,7 +203,7 @@ abstract class gm {
                 }
                 var2 = cd.a("ticketing_gotowebsite", -81);
                 if (null != var2) {
-                  bl.field_a = ad.a(-29410, var2);
+                  IterableNodeHashTable.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("ticketing_waitingformessages", -128);
                 if (null != var2) {
@@ -259,7 +259,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_x_left_lobby", -111);
                 if (var2 != null) {
-                  bl.field_b = ad.a(-29410, var2);
+                  IterableNodeHashTable.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_x_lost_con", -118);
                 if (var2 != null) {
@@ -327,7 +327,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_lobby_rating", -82);
                 if (var2 != null) {
-                  jc.field_e = ad.a(-29410, var2);
+                  IntrusiveDeque.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_lobby_friend_add", -120);
                 if (var2 != null) {
@@ -635,7 +635,7 @@ abstract class gm {
                 }
                 var2 = cd.a("players_x_of_y", -104);
                 if (var2 != null) {
-                  dk.field_a = ad.a(-29410, var2);
+                  SecondaryNodeHashTable.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("message_lobby", -84);
                 if (var2 != null) {
@@ -723,7 +723,7 @@ abstract class gm {
                 }
                 var2 = cd.a("you_can_join", -104);
                 if (null != var2) {
-                  dk.field_l = ad.a(-29410, var2);
+                  SecondaryNodeHashTable.field_l = ad.a(-29410, var2);
                 }
                 var2 = cd.a("you_can_ask_to_join", -95);
                 if (var2 != null) {
@@ -847,7 +847,7 @@ abstract class gm {
                 }
                 var2 = cd.a("chatviewscrolledup", -119);
                 if (var2 != null) {
-                  dk.field_e = ad.a(-29410, var2);
+                  SecondaryNodeHashTable.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("thisisrunescapeclan", -83);
                 if (var2 != null) {
@@ -931,7 +931,7 @@ abstract class gm {
                 }
                 var2 = cd.a("gameopt_playerhasntunlocked", -115);
                 if (null != var2) {
-                  jc.field_b = ad.a(-29410, var2);
+                  IntrusiveDeque.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_youhaventunlocked", -101);
                 if (null != var2) {
@@ -1541,7 +1541,7 @@ abstract class gm {
                 }
                 var2 = cd.a("create_more_suggestions", -108);
                 if (null != var2) {
-                  cn.field_d = ad.a(-29410, var2);
+                  SecondaryNodeDeque.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_select_alternative", -108);
                 if (null != var2) {
@@ -2010,7 +2010,7 @@ abstract class gm {
                 }
                 var2 = cd.a("achievements", -120);
                 if (null != var2) {
-                  cn.field_a = ad.a(-29410, var2);
+                  SecondaryNodeDeque.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("achievementsthisgame", -74);
                 if (null != var2) {
@@ -2454,7 +2454,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mp_rematchnewgame_unrated", -128);
                 if (var2 != null) {
-                  jc.field_c = ad.a(-29410, var2);
+                  IntrusiveDeque.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mp_x_wantstodraw", -127);
                 if (var2 != null) {
@@ -2550,7 +2550,7 @@ abstract class gm {
                 }
                 var2 = cd.a("click_to_quickchat", -81);
                 if (var2 != null) {
-                  cn.field_e = ad.a(-29410, var2);
+                  SecondaryNodeDeque.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("autorespond", -108);
                 if (null != var2) {

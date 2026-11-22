@@ -4,7 +4,7 @@
 import java.io.*;
 
 class ci extends ei {
-    jc field_I;
+    IntrusiveDeque field_I;
     int field_U;
     private boolean field_W;
     int field_bb;
@@ -79,11 +79,11 @@ class ci extends ei {
         }
         if (!param2) {
           var9 = 0;
-          var10_ref_ci = (ci) (this.field_I.g(-18110));
+          var10_ref_ci = (ci) (this.field_I.beginBackward(-18110));
           while (var10_ref_ci != null) {
             var10_ref_ci.field_vb = -var10_ref_ci.field_V + var9;
             var9 = var9 + (var10_ref_ci.field_pb - (-var10_ref_ci.field_N - param0));
-            var10_ref_ci = (ci) (this.field_I.a((byte) -96));
+            var10_ref_ci = (ci) (this.field_I.nextBackward((byte) -96));
           }
           var8 = var9 - param0;
         }
@@ -427,10 +427,10 @@ class ci extends ei {
           }
         }
         if (this.field_I != null) {
-          var23_ref = (ci) (this.field_I.g(-18110));
+          var23_ref = (ci) (this.field_I.beginBackward(-18110));
           while (var23_ref != null) {
             var23_ref.a(param0, var20 + this.field_wb, this.field_ob, param3, this.field_M, param5, (byte) 76, param7, this.field_pb, param9, this.field_U + var19);
-            var23_ref = (ci) (this.field_I.a((byte) -110));
+            var23_ref = (ci) (this.field_I.nextBackward((byte) -110));
           }
         }
         wb.b(var12, var13, var14, var15);
@@ -460,13 +460,13 @@ class ci extends ei {
           this.field_V = -29;
         }
         if (this.field_I != null) {
-          var4 = (ci) (this.field_I.g(-18110));
+          var4 = (ci) (this.field_I.beginBackward(-18110));
           while (var4 != null) {
             var5 = var4.field_M + var4.field_mb;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (ci) (this.field_I.a((byte) -109));
+            var4 = (ci) (this.field_I.nextBackward((byte) -109));
           }
         }
         return var3;
@@ -494,9 +494,9 @@ class ci extends ei {
         RuntimeException var3 = null;
         try {
           if (null == this.field_I) {
-            this.field_I = new jc();
+            this.field_I = new IntrusiveDeque();
           }
-          this.field_I.a((IntrusiveNode) (param1), (byte) 87);
+          this.field_I.addFirst((IntrusiveNode) (param1), (byte) 87);
           if (param0 < 122) {
             this.field_rb = false;
           }
@@ -539,7 +539,7 @@ class ci extends ei {
         RuntimeException decompiledCaughtException = null;
         var3 = Chess.field_G;
         try {
-          var4 = (fl) (vj.field_c.g(-18110));
+          var4 = (fl) (vj.field_c.beginBackward(-18110));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -622,11 +622,11 @@ class ci extends ei {
           this.a(true, -11, false, true, -127, false, (byte) -40, true, -4, true, 43);
         }
         if (this.field_I != null) {
-          var4 = (ci) (this.field_I.b(28937));
+          var4 = (ci) (this.field_I.beginForward(28937));
           while (var4 != null) {
             var4.field_W = true;
             var4.h(0);
-            var4 = (ci) (this.field_I.a(true));
+            var4 = (ci) (this.field_I.nextForward(true));
           }
         }
     }
@@ -716,10 +716,10 @@ class ci extends ei {
         stackIn_40_1 = (this.field_Db) && (this.field_kb == wh.field_f) && (param1);
         this.field_F = stackIn_40_1;
         if (this.field_I != null) {
-          var13 = (ci) (this.field_I.b(28937));
+          var13 = (ci) (this.field_I.beginForward(28937));
           while (var13 != null) {
             var13.a(this.field_U, param1, this.field_M, this.field_wb, this.field_pb, 127);
-            var13 = (ci) (this.field_I.a(true));
+            var13 = (ci) (this.field_I.nextForward(true));
           }
         }
         if (var12 != 0) {
@@ -806,7 +806,7 @@ class ci extends ei {
     final void a(boolean param0, byte param1) {
         gd.field_e = !param0 ? true : false;
         if (param1 != 88) {
-          this.field_I = (jc) null;
+          this.field_I = (IntrusiveDeque) null;
         }
         fg.field_b = !param0 ? true : false;
         this.a(0, true, wb.field_h, 0, wb.field_c, 122);

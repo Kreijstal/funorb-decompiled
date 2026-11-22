@@ -9,7 +9,7 @@ final class lg {
     static int field_b;
 
     final static void a(int param0) {
-        pe var1 = (pe) (ok.field_a.d(-125));
+        pe var1 = (pe) (ok.field_a.removeLast(-125));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -17,7 +17,7 @@ final class lg {
         kh.d(var1.field_f, var1.field_l, var1.field_o, var1.field_j);
         var1.field_k = null;
         if (param0 == 1) {
-          wb.field_e.b(0, var1);
+          IntrusiveDeque.field_e.addLast(0, var1);
           return;
         }
     }

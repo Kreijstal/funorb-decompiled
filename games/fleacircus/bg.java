@@ -156,7 +156,7 @@ final class bg {
     }
 
     final static void a(hi param0, int param1, int param2) {
-        bf.field_e.a(false, param0);
+        bf.field_e.addLast(false, param0);
         if (param2 > -37) {
           return;
         }

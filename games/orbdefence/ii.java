@@ -6,7 +6,7 @@ class ii extends sh {
     private long field_b;
     private String field_f;
     static String field_a;
-    static im field_c;
+    static IntrusiveDeque field_c;
     static String field_e;
 
     final void a(PacketBuffer param0, int param1) {

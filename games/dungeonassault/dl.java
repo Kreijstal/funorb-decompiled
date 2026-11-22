@@ -56,7 +56,7 @@ final class dl {
         int var3;
         var3 = DungeonAssault.field_K;
         ba.field_f = 0;
-        qi.field_e = null;
+        IterableNodeHashTable.field_e = null;
         pe.field_l = null;
         var2 = lk.field_T;
         lk.field_T = bf.field_k;

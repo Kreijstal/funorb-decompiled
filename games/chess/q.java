@@ -586,21 +586,21 @@ final class q {
         RuntimeException decompiledCaughtException = null;
         var3 = Chess.field_G;
         try {
-          var2 = (ac) (vn.field_vb.g(-18110));
+          var2 = (ac) (vn.field_vb.beginBackward(-18110));
           do {
             if (null == var2) {
-              var2 = bh.field_D.g(-18110);
+              var2 = bh.field_D.beginBackward(-18110);
               break;
             }
             GameAppletShell.a((ac) (var2), 15079, param0);
-            var2 = (ac) (vn.field_vb.a((byte) -106));
+            var2 = (ac) (vn.field_vb.nextBackward((byte) -106));
           } while (var3 == 0);
           if (param1 < 30) {
             field_c = (String) null;
           }
           while (null != var2) {
             el.a(4, param0);
-            var2 = bh.field_D.a((byte) -117);
+            var2 = bh.field_D.nextBackward((byte) -117);
             if (var3 != 0) {
               return;
             }

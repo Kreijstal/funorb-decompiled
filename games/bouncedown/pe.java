@@ -13,18 +13,18 @@ final class pe {
 
     final static sa a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Bounce.field_N;
-        sa var5 = (sa) (jl.field_f.a((byte) -50));
+        sa var5 = (sa) (jl.field_f.beginForward((byte) -50));
         while (var5 != null) {
           if (~param4 == ~var5.field_n) {
             return var5;
           }
-          var5 = (sa) (jl.field_f.d((byte) -24));
+          var5 = (sa) (jl.field_f.nextForward((byte) -24));
         }
         var5 = new sa();
         var5.field_n = param4;
         var5.field_g = param1;
         var5.field_m = param2;
-        jl.field_f.a(1, var5);
+        jl.field_f.addLast(1, var5);
         ha.a(-17765, var5, param0);
         if (param3 == -16947) {
           return var5;

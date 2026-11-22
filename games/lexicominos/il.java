@@ -6,7 +6,7 @@ import java.io.*;
 final class il {
     static int field_c;
     static String field_a;
-    static ng field_b;
+    static IntrusiveDeque field_b;
 
     final static int a(int param0, String param1, String param2, String param3, boolean param4, int param5, int param6) {
         gb var7 = null;
@@ -112,6 +112,6 @@ final class il {
     static {
         field_c = -1;
         field_a = "Play the game without logging in just yet";
-        field_b = new ng();
+        field_b = new IntrusiveDeque();
     }
 }

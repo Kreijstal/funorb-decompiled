@@ -88,16 +88,16 @@ final class hg extends hc {
     }
 
     final static a d(byte param0) {
-        String var1 = vd.f(-120);
+        String var1 = IntrusiveDeque.f(-120);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
         if (param0 <= -11) {
-          return new a(vd.f(-52), ByteStorage.b((byte) -94));
+          return new a(IntrusiveDeque.f(-52), ByteStorage.b((byte) -94));
         }
         hg.a(-53, 13, (byte) 24);
-        return new a(vd.f(-52), ByteStorage.b((byte) -94));
+        return new a(IntrusiveDeque.f(-52), ByteStorage.b((byte) -94));
     }
 
     static long a(long param0, long param1) {

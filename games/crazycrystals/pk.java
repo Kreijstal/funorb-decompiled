@@ -157,7 +157,7 @@ final class pk {
           var9 = kd.field_n;
           var2 = var9.readUnsignedByte(255);
           if (var2 == 0) {
-            var8 = (w) (je.field_a.g(32073));
+            var8 = (w) (je.field_a.beginForward(32073));
             if (var8 == null) {
               jj.a(4);
               return;
@@ -178,10 +178,10 @@ final class pk {
           } else {
             if (var2 == 1) {
               var3 = var9.readInt((byte) -114);
-              var4_ref_qp = (qp) (oi.field_a.g(32073));
+              var4_ref_qp = (qp) (oi.field_a.beginForward(32073));
               while (var4_ref_qp != null) {
                 if (var3 != var4_ref_qp.field_h) {
-                  var4_ref_qp = (qp) (oi.field_a.a(false));
+                  var4_ref_qp = (qp) (oi.field_a.nextForward(false));
                   continue;
                 }
                 break;

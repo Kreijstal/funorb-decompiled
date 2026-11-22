@@ -92,7 +92,7 @@ final class oa {
             return stackIn_2_0;
           }
           var9 = new jd(param2, param6, param4, param3, param7, param8, param0);
-          ib.field_a.a(var9, 117);
+          ib.field_a.addLast(var9, 117);
           ea.a(var9, param1, 62);
           stackIn_4_0 = var9;
           return stackIn_4_0;

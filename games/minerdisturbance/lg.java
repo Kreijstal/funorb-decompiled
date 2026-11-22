@@ -1927,7 +1927,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "keycode_mine_down");
                 if (var2 != null) {
-                  qc.field_c = var2[0] & 255;
+                  SecondaryNodeDeque.field_c = var2[0] & 255;
                 }
                 var2 = lh.b(-1, "keycode_mine_down_right");
                 if (null != var2) {

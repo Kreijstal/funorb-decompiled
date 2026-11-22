@@ -3,7 +3,7 @@
  */
 final class sk extends kj {
     static java.awt.Color field_H;
-    private im field_B;
+    private IntrusiveDeque field_B;
     static String field_G;
     static String field_C;
     static tl field_E;
@@ -54,7 +54,7 @@ final class sk extends kj {
     final void n(int param0) {
         int var4 = OrbDefence.field_D ? 1 : 0;
         if (param0 != 7920) {
-          this.field_B = (im) null;
+          this.field_B = (IntrusiveDeque) null;
         }
         km var2 = new km(this.field_B);
         sg var3 = (sg) (var2.d(27935));
@@ -85,7 +85,7 @@ final class sk extends kj {
 
     public sk() {
         super(0, 0, ed.field_a, lh.field_d, (td) null, (ag) null);
-        this.field_B = new im();
+        this.field_B = new IntrusiveDeque();
     }
 
     final void l(int param0) {
@@ -142,7 +142,7 @@ final class sk extends kj {
             throw new IllegalArgumentException();
           }
           var3 = (sg) (param1);
-          this.field_B.a(var3, 9);
+          this.field_B.addFirst(var3, 9);
           var3.field_A = true;
           var3.a(-81, (pj) (this));
           if (param0 != 74) {

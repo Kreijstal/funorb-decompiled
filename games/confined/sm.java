@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sm extends rl {
-    static mn field_y;
+    static PrimaryNodeDeque field_y;
     ae field_B;
     static od field_A;
     int field_z;
@@ -48,7 +48,7 @@ final class sm extends rl {
         var8 = Confined.field_J ? 1 : 0;
         try {
           if (param4 != 87) {
-            field_y = (mn) null;
+            field_y = (PrimaryNodeDeque) null;
           }
           while (true) {
             param3--;
@@ -187,6 +187,6 @@ final class sm extends rl {
     }
 
     static {
-        field_y = new mn();
+        field_y = new PrimaryNodeDeque();
     }
 }

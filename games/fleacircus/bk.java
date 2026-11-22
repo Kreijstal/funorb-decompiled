@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static vc field_d;
+    static IntrusiveDeque field_d;
     static boolean field_e;
     static String field_c;
     static pl field_a;
@@ -385,7 +385,7 @@ final class bk {
 
     static {
         field_c = "Quit";
-        field_d = new vc();
+        field_d = new IntrusiveDeque();
         field_a = new pl(1);
     }
 }

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od {
-    private m field_b;
+    private IterableNodeHashTable field_b;
     private int field_a;
     static String field_c;
     private int field_d;
     static ie field_f;
-    private wh field_e;
+    private SecondaryNodeDeque field_e;
 
     private final void a(Object param0, long param1, boolean param2, int param3) {
         eg var6 = null;
@@ -20,15 +20,15 @@ final class od {
           this.a(-101, param1);
           this.field_a = this.field_a - param3;
           while (this.field_a < 0) {
-            var6 = (eg) (this.field_e.a(14));
+            var6 = (eg) (this.field_e.removeFirst(14));
             this.a(0, var6);
           }
           var6_ref = new t(param0, param3);
           if (param2) {
             this.field_a = -61;
           }
-          this.field_b.a(-110, param1, var6_ref);
-          this.field_e.a(6753, var6_ref);
+          this.field_b.put(-110, param1, var6_ref);
+          this.field_e.addLast(6753, var6_ref);
           ((eg) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "od.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -37,7 +37,7 @@ final class od {
 
     final Object a(long param0, int param1) {
         t var6 = null;
-        eg var7 = (eg) (this.field_b.a((byte) -35, param0));
+        eg var7 = (eg) (this.field_b.get((byte) -35, param0));
         t var6Lifetime1;
         if (var7 == null) {
           return null;
@@ -51,12 +51,12 @@ final class od {
         }
         if (param1 == 1872) {
           if (!var7.c((byte) -125)) {
-            this.field_e.a(6753, var7);
+            this.field_e.addLast(6753, var7);
             var7.field_j = 0L;
           } else {
             var6 = new t(var5, var7.field_m);
-            this.field_b.a(param1 ^ -1828, var7.field_d, var6);
-            this.field_e.a(6753, var6);
+            this.field_b.put(param1 ^ -1828, var7.field_d, var6);
+            this.field_e.addLast(6753, var6);
             ((eg) ((Object) var6)).field_j = 0L;
             var7.unlink(param1 - 1870);
             var7.unlinkSecondary(89);
@@ -65,12 +65,12 @@ final class od {
         }
         this.field_a = -101;
         if (!var7.c((byte) -125)) {
-          this.field_e.a(6753, var7);
+          this.field_e.addLast(6753, var7);
           var7.field_j = 0L;
         } else {
           var6Lifetime1 = new t(var5, var7.field_m);
-          this.field_b.a(param1 ^ -1828, var7.field_d, var6Lifetime1);
-          this.field_e.a(6753, var6Lifetime1);
+          this.field_b.put(param1 ^ -1828, var7.field_d, var6Lifetime1);
+          this.field_e.addLast(6753, var6Lifetime1);
           ((eg) ((Object) var6Lifetime1)).field_j = 0L;
           var7.unlink(param1 - 1870);
           var7.unlinkSecondary(89);
@@ -83,12 +83,12 @@ final class od {
         Object var4 = null;
         eg var5Lifetime1;
         if (param0 <= -37) {
-          var5 = (eg) (this.field_b.a((byte) 118, param1));
+          var5 = (eg) (this.field_b.get((byte) 118, param1));
           this.a(0, var5);
           return;
         }
         od.clearStaticReferences(-67);
-        var5Lifetime1 = (eg) (this.field_b.a((byte) 118, param1));
+        var5Lifetime1 = (eg) (this.field_b.get((byte) 118, param1));
         this.a(0, var5Lifetime1);
     }
 

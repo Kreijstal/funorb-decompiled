@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class tl {
-    static bk field_a;
+    static IntrusiveDeque field_a;
     int field_d;
     String field_c;
     static int field_b;
@@ -113,6 +113,6 @@ abstract class tl {
     }
 
     static {
-        field_a = new bk();
+        field_a = new IntrusiveDeque();
     }
 }

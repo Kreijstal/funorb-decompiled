@@ -60,7 +60,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
             for (integerLocal1 = 0; integerLocal11 > integerLocal1; integerLocal1++) {
               integerArrayLocal13[integerLocal1] = ((PacketBuffer) ((Object) cipherPacketBufferLocal10)).readInt(7553);
             }
-            mixedSupport033Local15 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1741((byte) 92));
+            mixedSupport033Local15 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.beginBackward((byte) 92));
             if (mixedSupport033Local15 == null) {
               NodeHashTable.performAction1498(95);
               return;
@@ -70,7 +70,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
             mixedSupport033Local15.unlink((byte) 112);
           } else {
             if (integerLocal5 == 1) {
-              networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1741((byte) -66));
+              networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.beginBackward((byte) -66));
               if (networkSupport005Local16 == null) {
                 NodeHashTable.performAction1498(127);
                 return;
@@ -78,7 +78,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
               networkSupport005Local16.unlink((byte) 106);
             } else {
               if (integerLocal5 == 2) {
-                cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1741((byte) -64));
+                cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.beginBackward((byte) -64));
                 mixedSupport033Local14 = cachedMixedSupport033Local2;
                 mixedSupport033Local6 = cachedMixedSupport033Local2;
                 if (mixedSupport033Local14 == null) {

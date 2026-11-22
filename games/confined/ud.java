@@ -27,15 +27,15 @@ final class ud extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          var4 = (om) (jd.field_f.a(88));
+          var4 = (om) (jd.field_f.beginForward(88));
           while (var4 != null) {
             vg.a(7932, param0, var4);
-            var4 = (om) (jd.field_f.d(param1 + 2005));
+            var4 = (om) (jd.field_f.nextForward(param1 + 2005));
           }
-          var5 = (ca) (dl.field_b.a(param1 ^ 96));
+          var5 = (ca) (dl.field_b.beginForward(param1 ^ 96));
           while (var5 != null) {
             kd.a((byte) -115, param0, var5);
-            var5 = (ca) (dl.field_b.d(2123));
+            var5 = (ca) (dl.field_b.nextForward(2123));
           }
           if (param1 == 118) {
             return;

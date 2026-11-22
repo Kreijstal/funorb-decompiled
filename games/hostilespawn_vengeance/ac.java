@@ -5,7 +5,7 @@ final class ac {
     private ResourceArchive field_h;
     private dn field_d;
     private ResourceArchive field_b;
-    static vl field_i;
+    static IntrusiveDeque field_i;
     static String field_f;
     static int field_a;
     static nd field_c;
@@ -265,7 +265,7 @@ final class ac {
         RuntimeException decompiledCaughtException = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (ng) (td.field_o.g(-92));
+          var4 = (ng) (td.field_o.beginForward(-92));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -303,7 +303,7 @@ final class ac {
     }
 
     static {
-        field_i = new vl();
+        field_i = new IntrusiveDeque();
         field_j = new int[8192];
         field_f = "This level is locked down. Activate the five security consoles to reactivate the lift.";
         field_c = new nd(1, 2, 2, 0);

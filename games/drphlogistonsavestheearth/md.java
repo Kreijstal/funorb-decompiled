@@ -4,7 +4,7 @@
 final class md {
     static int field_d;
     static nh field_f;
-    static vd field_e;
+    static IntrusiveDeque field_e;
     static int[] field_c;
     static rf field_a;
     static String field_b;
@@ -24,7 +24,7 @@ final class md {
     static {
         field_z = "md.A(";
         field_c = new int[75];
-        field_e = new vd();
+        field_e = new IntrusiveDeque();
         field_b = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 }

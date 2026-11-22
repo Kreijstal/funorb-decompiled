@@ -570,7 +570,7 @@ final class lc {
         }
     }
 
-    final void a(boolean param0, double param1, mn param2, vg param3) {
+    final void a(boolean param0, double param1, PrimaryNodeDeque param2, vg param3) {
         int var6_int = 0;
         int var8 = 0;
         int var11 = 0;
@@ -612,7 +612,7 @@ final class lc {
           if (param0) {
             this.field_H = -0.12402089679050932;
           }
-          var6 = (oi) (param2.a(-118));
+          var6 = (oi) (param2.beginForward(-118));
           while (true) {
             if (var6 == null) {
               var6_double = (double)ua.a(true);
@@ -685,7 +685,7 @@ final class lc {
               }
               break;
             }
-            var6 = (oi) (param2.d(2123));
+            var6 = (oi) (param2.nextForward(2123));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

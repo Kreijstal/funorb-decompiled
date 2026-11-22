@@ -33,7 +33,7 @@ final class uk implements cg {
           var2 = var9.readUnsignedByte(31760);
           var3 = var9.readUnsignedByte(31760);
           if (0 == var2) {
-            var4 = (h) (eg.field_c.h(-11151));
+            var4 = (h) (eg.field_c.beginForward(-11151));
             if (var4 == null) {
               eg.a((byte) 126);
               return;
@@ -53,11 +53,11 @@ final class uk implements cg {
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart(param0 + 33464);
-              var5_ref_nl = (nl) (gf.field_A.h(-11151));
+              var5_ref_nl = (nl) (gf.field_A.beginForward(-11151));
               while (var5_ref_nl != null) {
                 if (var3 != var5_ref_nl.field_j ||
                   var5_ref_nl.field_l != var4_int) {
-                  var5_ref_nl = (nl) (gf.field_A.e(0));
+                  var5_ref_nl = (nl) (gf.field_A.nextForward(0));
                   continue;
                 }
                 break;

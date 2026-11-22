@@ -7,7 +7,7 @@ final class vb extends IntrusiveNode {
     int field_q;
     static ja field_r;
     int field_n;
-    static ng field_m;
+    static IntrusiveDeque field_m;
     int field_p;
     static aj field_l;
     int field_j;
@@ -31,7 +31,7 @@ final class vb extends IntrusiveNode {
         var16 = Lexicominos.field_L ? 1 : 0;
         try {
           if (param5 != -95) {
-            field_m = (ng) null;
+            field_m = (IntrusiveDeque) null;
           }
           while (true) {
             param2--;
@@ -135,7 +135,7 @@ final class vb extends IntrusiveNode {
     }
 
     static {
-        field_m = new ng();
+        field_m = new IntrusiveDeque();
         field_l = new aj(4, 1, 1, 1);
         field_k = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
     }

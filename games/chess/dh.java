@@ -263,7 +263,7 @@ final class dh {
     }
 
     final static void c(byte param0) {
-        hh var1 = (hh) (eh.field_R.g(-18110));
+        hh var1 = (hh) (eh.field_R.beginBackward(-18110));
         if (var1 == null) {
           si.d(65280);
           return;
@@ -522,10 +522,10 @@ final class dh {
         ln var7 = null;
         nk var4 = null;
         nk var4Lifetime1;
-        if (param2 != cn.field_g) {
-          var6 = (ln) (ae.field_f.a((long)cn.field_g, 3000));
+        if (param2 != SecondaryNodeDeque.field_g) {
+          var6 = (ln) (ae.field_f.get((long)SecondaryNodeDeque.field_g, 3000));
           var7 = var6;
-          cn.field_g = param2;
+          SecondaryNodeDeque.field_g = param2;
           if (var7 != null) {
             var7.field_ec = null;
           } else {

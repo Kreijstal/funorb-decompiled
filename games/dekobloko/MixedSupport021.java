@@ -33,19 +33,19 @@ final class MixedSupport021 {
           UiComponentPart018.integerState0502 = 0;
           MixedSupport033.stringState0159 = null;
           MixedSupport029.integerState0182 = 0;
-          UiComponentPart025.nodeDequeState0027.performAction1742(111);
-          CipherPacketBuffer.nodeDequeState0033.performAction1742(117);
+          UiComponentPart025.nodeDequeState0027.clear(111);
+          CipherPacketBuffer.nodeDequeState0033.clear(117);
           if (!booleanArgument1) {
             MixedSupport021.performAction0325(true);
           }
           dualNodeLocal1 = MixedSupport081.secondaryNodeHashTableState0003.first(-9443);
           while (dualNodeLocal1 != null) {
-            dualNodeLocal1.performAction0134((byte) 105);
+            dualNodeLocal1.unlinkSecondary((byte) 105);
             dualNodeLocal1 = MixedSupport081.secondaryNodeHashTableState0003.next(-112);
           }
           dualNodeLocal3 = MixedSupport054.secondaryNodeHashTableState0001.first(-9443);
           while (dualNodeLocal3 != null) {
-            dualNodeLocal3.performAction0134((byte) 100);
+            dualNodeLocal3.unlinkSecondary((byte) 100);
             dualNodeLocal3 = MixedSupport054.secondaryNodeHashTableState0001.next(104);
           }
           ThemeTips.integerState0351 = 0;

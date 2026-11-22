@@ -6,7 +6,7 @@ final class t extends di {
     private fj field_w;
     private fj field_l;
     private int field_n;
-    static im field_q;
+    static IntrusiveDeque field_q;
     private fj field_z;
     private int field_m;
     private lj field_t;
@@ -189,7 +189,7 @@ final class t extends di {
         try {
           var4_int = param1.a(param0, 0);
           if (param3 > -59) {
-            field_q = (im) null;
+            field_q = (IntrusiveDeque) null;
           }
           var5 = param1.a(param2, 5187, var4_int);
           stackIn_3_0 = ua.a(param1, var4_int, 91, var5);
@@ -458,7 +458,7 @@ final class t extends di {
         }
         m.a(param2, 0);
         if (!param1) {
-          field_q = (im) null;
+          field_q = (IntrusiveDeque) null;
         }
     }
 

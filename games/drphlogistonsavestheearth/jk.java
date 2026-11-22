@@ -409,9 +409,9 @@ final class jk extends si {
               var8Lifetime1 = -(var7Lifetime2 >> 1) + ji.field_f;
               var5Lifetime3 = var5Lifetime3 + ig.field_h;
               cj.field_f[var4Lifetime3] = new int[4];
-              cj.field_f[var4Lifetime3][0] = -dg.field_d + var8Lifetime1;
+              cj.field_f[var4Lifetime3][0] = -SecondaryNodeDeque.field_d + var8Lifetime1;
               cj.field_f[var4Lifetime3][1] = var5Lifetime3;
-              cj.field_f[var4Lifetime3][2] = var7Lifetime2 + (dg.field_d << 1);
+              cj.field_f[var4Lifetime3][2] = var7Lifetime2 + (SecondaryNodeDeque.field_d << 1);
               var5Lifetime3 = var5Lifetime3 + (ni.field_p + (wa.field_N << 1) + ig.field_h);
               cj.field_f[var4Lifetime3][3] = (wa.field_N << 1) + ni.field_p;
             } else {

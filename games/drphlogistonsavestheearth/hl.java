@@ -5,7 +5,7 @@ final class hl {
     static boolean field_d;
     private DualLinkNode field_g;
     private DualLinkNode field_a;
-    static vd field_c;
+    static IntrusiveDeque field_c;
     static int field_f;
     static String field_e;
     static boolean field_b;
@@ -187,7 +187,7 @@ final class hl {
     final DualLinkNode a(boolean param0) {
         DualLinkNode var2 = this.field_g.secondaryNext;
         if (!param0) {
-          field_c = (vd) null;
+          field_c = (IntrusiveDeque) null;
         }
         if (this.field_g == var2) {
           this.field_a = null;
@@ -206,7 +206,7 @@ final class hl {
 
     static {
         field_d = false;
-        field_c = new vd();
+        field_c = new IntrusiveDeque();
         field_e = "Loading levels";
         field_b = false;
     }

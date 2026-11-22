@@ -29,7 +29,7 @@ final class g extends ph {
 
     final static void a(m param0, int param1, int param2) {
         try {
-          wk.field_g.a(param0, 124);
+          wk.field_g.addLast(param0, 124);
           fj.a(param1, param0, true);
           if (param2 != -7347) {
             g.j(101);

@@ -44,20 +44,20 @@ final class MixedSupport074 {
         }
         if (objectLocal3 != null) {
           if (!mixedSupport140Local2.computeBoolean1623((byte) -83)) {
-            this.iterableNodeCollectionState0002.performAction1655((byte) 4, mixedSupport140Local2);
+            this.iterableNodeCollectionState0002.addLast((byte) 4, mixedSupport140Local2);
             mixedSupport140Local2.longState0003 = 0L;
           } else {
             mixedSupport125Local1 = new MixedSupport125(objectLocal3, mixedSupport140Local2.integerState0858);
             this.nodeHashTableState0002.put(mixedSupport140Local2.key, false, mixedSupport125Local1);
-            this.iterableNodeCollectionState0002.performAction1655((byte) 4, mixedSupport125Local1);
+            this.iterableNodeCollectionState0002.addLast((byte) 4, mixedSupport125Local1);
             ((MixedSupport140) ((Object) mixedSupport125Local1)).longState0003 = 0L;
             mixedSupport140Local2.unlink((byte) 106);
-            mixedSupport140Local2.performAction0134((byte) 125);
+            mixedSupport140Local2.unlinkSecondary((byte) 125);
           }
           return objectLocal3;
         }
         mixedSupport140Local2.unlink((byte) 119);
-        mixedSupport140Local2.performAction0134((byte) 92);
+        mixedSupport140Local2.unlinkSecondary((byte) 92);
         this.integerState0417 = this.integerState0417 + mixedSupport140Local2.integerState0858;
         return null;
     }
@@ -84,12 +84,12 @@ final class MixedSupport074 {
           this.performAction0923(byteArgument2 - 77, longArgument1);
           this.integerState0417 = this.integerState0417 - integerArgument3;
           while (this.integerState0417 < 0) {
-            mixedSupport140Local1 = (MixedSupport140) (this.iterableNodeCollectionState0002.computeDualNode1654((byte) 67));
+            mixedSupport140Local1 = (MixedSupport140) (this.iterableNodeCollectionState0002.removeFirst((byte) 67));
             this.performAction0924(-122, mixedSupport140Local1);
           }
           mixedSupport125Local2 = new MixedSupport125(objectArgument4, integerArgument3);
           this.nodeHashTableState0002.put(longArgument1, false, mixedSupport125Local2);
-          this.iterableNodeCollectionState0002.performAction1655((byte) 4, mixedSupport125Local2);
+          this.iterableNodeCollectionState0002.addLast((byte) 4, mixedSupport125Local2);
           if (byteArgument2 != 77) {
             MixedSupport074.performAction0922((byte) -109);
           }
@@ -162,7 +162,7 @@ final class MixedSupport074 {
             return;
           }
           mixedSupport140Argument2.unlink((byte) 105);
-          mixedSupport140Argument2.performAction0134((byte) 76);
+          mixedSupport140Argument2.unlinkSecondary((byte) 76);
           this.integerState0417 = this.integerState0417 + mixedSupport140Argument2.integerState0858;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {

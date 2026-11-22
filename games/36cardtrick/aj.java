@@ -9,7 +9,7 @@ final class aj {
     int field_c;
     ci field_n;
     int field_g;
-    static bk field_s;
+    static IntrusiveDeque field_s;
     ci field_r;
     int field_d;
     private int field_k;
@@ -332,7 +332,7 @@ final class aj {
     }
 
     static {
-        field_s = new bk();
+        field_s = new IntrusiveDeque();
         field_p = new java.awt.Color(10040319);
         field_q = new td();
     }

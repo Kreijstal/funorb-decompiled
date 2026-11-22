@@ -1904,7 +1904,7 @@ final class wb {
                 }
                 var2 = ha.a("waitingfor_textures", (byte) 84);
                 if (var2 != null) {
-                  mn.field_g = va.a(0, var2);
+                  PrimaryNodeDeque.field_g = va.a(0, var2);
                 }
                 var2 = ha.a("waitingfor_animations", (byte) 125);
                 if (var2 != null) {

@@ -183,9 +183,9 @@ final class cp extends gd {
           if (null == mj.field_f) {
             mj.field_f = "0";
           }
-          dh.field_f = param1.getParameter("overxachievements");
-          if (dh.field_f == null) {
-            dh.field_f = "0";
+          SecondaryNodeDeque.field_f = param1.getParameter("overxachievements");
+          if (SecondaryNodeDeque.field_f == null) {
+            SecondaryNodeDeque.field_f = "0";
           }
           var6 = param1.getParameter("currency");
           if (var6 == null) {

@@ -254,10 +254,10 @@ final class n {
           if (param1 != -1) {
             return;
           }
-          var4 = (f) (dj.field_c.a(true));
+          var4 = (f) (dj.field_c.beginForward(true));
           while (var4 != null) {
             ch.a(18391, param0, var4);
-            var4 = (f) (dj.field_c.f(2));
+            var4 = (f) (dj.field_c.nextForward(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

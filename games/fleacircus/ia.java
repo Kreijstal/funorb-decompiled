@@ -101,19 +101,19 @@ final class ia extends IntrusiveNode {
           if (!param0) {
             ia.a(17, 35, -72);
           }
-          var2 = (pd) (bk.field_d.c((byte) 47));
+          var2 = (pd) (bk.field_d.beginForward((byte) 47));
           while (var2 != null) {
             if (!var2.field_n.isLinked((byte) -54)) {
               var2.unlink(-1);
             } else {
               var2.field_m.h(gf.field_d * var2.field_j + 128 >> 8);
             }
-            var2 = (pd) (bk.field_d.b((byte) -105));
+            var2 = (pd) (bk.field_d.nextForward((byte) -105));
           }
           if (jc.field_c == null) {
             return;
           }
-          var2Lifetime1 = (pd) (jc.field_c.c((byte) 47));
+          var2Lifetime1 = (pd) (jc.field_c.beginForward((byte) 47));
           while (var2Lifetime1 != null) {
             stackIn_15_0 = var2Lifetime1.field_n.isLinked((byte) -54);
             if (stackIn_15_0) {
@@ -121,7 +121,7 @@ final class ia extends IntrusiveNode {
             } else {
               var2Lifetime1.unlink(-1);
             }
-            var2Lifetime1 = (pd) (jc.field_c.b((byte) -105));
+            var2Lifetime1 = (pd) (jc.field_c.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,14 +138,14 @@ final class ia extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        uh var1 = (uh) (fg.field_t.a((byte) 100));
+        uh var1 = (uh) (fg.field_t.removeLast((byte) 100));
         if (param0 > -52) {
           field_q = (int[]) null;
           if (var1 != null) {
             gb.a(var1.field_r, var1.field_i, var1.field_p);
             gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
             var1.field_r = null;
-            fk.field_z.a(false, var1);
+            fk.field_z.addLast(false, var1);
             return;
           }
           throw new IllegalStateException();
@@ -154,7 +154,7 @@ final class ia extends IntrusiveNode {
           gb.a(var1.field_r, var1.field_i, var1.field_p);
           gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
           var1.field_r = null;
-          fk.field_z.a(false, var1);
+          fk.field_z.addLast(false, var1);
           return;
         }
         throw new IllegalStateException();

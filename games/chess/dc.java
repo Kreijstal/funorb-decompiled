@@ -110,7 +110,7 @@ final class dc extends IntrusiveNode {
 
     final static boolean a(int param0) {
         int var1 = -31 % ((71 - param0) / 53);
-        return dk.field_g;
+        return SecondaryNodeHashTable.field_g;
     }
 
     private dc() throws Throwable {

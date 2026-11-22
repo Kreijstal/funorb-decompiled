@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PcmStreamMixer extends PcmStream {
-    private ng field_m;
-    private ng field_l;
+    private IntrusiveDeque field_m;
+    private IntrusiveDeque field_l;
     private int field_o;
     private int field_n;
 
     private final void e() {
         hg var1 = null;
         if (this.field_o > 0) {
-          var1 = (hg) (this.field_l.a(true));
+          var1 = (hg) (this.field_l.beginForward(true));
           while (var1 != null) {
             var1.field_h = var1.field_h - this.field_o;
-            var1 = (hg) (this.field_l.f(2));
+            var1 = (hg) (this.field_l.nextForward(2));
           }
           this.field_n = this.field_n - this.field_o;
           this.field_o = 0;
@@ -21,14 +21,14 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream b() {
-        return (PcmStream) (this.field_m.f(2));
+        return (PcmStream) (this.field_m.nextForward(2));
     }
 
     private final void a(IntrusiveNode param0, hg param1) {
         while (true) {
-          if (param0 == this.field_l.field_b) {
+          if (param0 == this.field_l.sentinel) {
             vf.a(param0, 0, param1);
-            this.field_n = ((hg) (this.field_l.field_b.next)).field_h;
+            this.field_n = ((hg) (this.field_l.sentinel.next)).field_h;
             return;
           }
           if (((hg) (param0)).field_h <= param1.field_h) {
@@ -38,20 +38,20 @@ final class PcmStreamMixer extends PcmStream {
           break;
         }
         vf.a(param0, 0, param1);
-        this.field_n = ((hg) (this.field_l.field_b.next)).field_h;
+        this.field_n = ((hg) (this.field_l.sentinel.next)).field_h;
         return;
     }
 
     private final void b(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_m.a(true));
+        PcmStream var2 = (PcmStream) (this.field_m.beginForward(true));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (PcmStream) (this.field_m.f(2));
+          var2 = (PcmStream) (this.field_m.nextForward(2));
         }
     }
 
     final synchronized void a(PcmStream param0) {
-        this.field_m.a(-68, param0);
+        this.field_m.addFirst(-68, param0);
     }
 
     final void a(PcmSample param0, int param1, int param2) {
@@ -79,7 +79,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_o = this.field_o + var2;
           this.e();
-          var3 = (hg) (this.field_l.a(true));
+          var3 = (hg) (this.field_l.beginForward(true));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -100,14 +100,14 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream d() {
-        return (PcmStream) (this.field_m.a(true));
+        return (PcmStream) (this.field_m.beginForward(true));
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_m.a(true));
+        PcmStream var4 = (PcmStream) (this.field_m.beginForward(true));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (PcmStream) (this.field_m.f(2));
+          var4 = (PcmStream) (this.field_m.nextForward(2));
         }
     }
 
@@ -133,7 +133,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_o = this.field_o + var4;
           this.e();
-          var5 = (hg) (this.field_l.a(true));
+          var5 = (hg) (this.field_l.beginForward(true));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -152,8 +152,8 @@ final class PcmStreamMixer extends PcmStream {
     private final void a(hg param0) {
         param0.unlink((byte) -119);
         param0.a();
-        IntrusiveNode var2 = this.field_l.field_b.next;
-        if (var2 == this.field_l.field_b) {
+        IntrusiveNode var2 = this.field_l.sentinel.next;
+        if (var2 == this.field_l.sentinel) {
           this.field_n = -1;
         } else {
           this.field_n = ((hg) (var2)).field_h;
@@ -161,8 +161,8 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     public PcmStreamMixer() {
-        this.field_m = new ng();
-        this.field_l = new ng();
+        this.field_m = new IntrusiveDeque();
+        this.field_l = new IntrusiveDeque();
         this.field_o = 0;
         this.field_n = -1;
     }

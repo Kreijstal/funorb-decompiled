@@ -24,7 +24,7 @@ final class ca {
 
     final static void a(qk param0, qj param1, int param2, int param3) {
         try {
-          vb.field_b = va.a(22018) * param2 / 1000;
+          vb.field_b = SecondaryNodeDeque.a(22018) * param2 / 1000;
           ch.a(-114, param0);
           kk.a(-16998, param0);
           ab.a(param0, 0);

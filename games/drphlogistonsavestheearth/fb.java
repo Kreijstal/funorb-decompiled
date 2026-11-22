@@ -5,7 +5,7 @@ final class fb implements Runnable {
     static el field_e;
     static int[] field_b;
     static String field_a;
-    static vd field_g;
+    static IntrusiveDeque field_g;
     PlatformTaskDispatcher field_d;
     static int[] field_c;
     volatile boolean field_h;

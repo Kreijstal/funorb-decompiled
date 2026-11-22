@@ -18,11 +18,11 @@ final class rb extends ArchiveProvider {
     private int field_g;
     private ej field_h;
     private dh field_t;
-    private vl field_w;
+    private IntrusiveDeque field_w;
     private int field_A;
     private boolean field_z;
     private boolean field_o;
-    private vl field_u;
+    private IntrusiveDeque field_u;
     private long field_k;
     private boolean field_f;
 
@@ -267,7 +267,7 @@ final class rb extends ArchiveProvider {
           }
           if (this.field_o) {
             var2_int = 1;
-            var3 = this.field_w.g(-81);
+            var3 = this.field_w.beginForward(-81);
             while (var3 != null) {
               var4 = (int)var3.field_c;
               if (this.field_r[var4] == 0) {
@@ -278,7 +278,7 @@ final class rb extends ArchiveProvider {
               } else {
                 var3.unlink(126);
               }
-              var3 = this.field_w.a(12684);
+              var3 = this.field_w.nextForward(12684);
             }
             scanLoop1: while (true) {
               if (this.field_A < this.field_x.field_o.length) {
@@ -294,7 +294,7 @@ final class rb extends ArchiveProvider {
                     var7 = new IntrusiveNode();
                     var7.field_c = (long)this.field_A;
                     var2_int = 0;
-                    this.field_w.a(var7, 90);
+                    this.field_w.addLast(var7, 90);
                   }
                 }
                 this.field_A = this.field_A + 1;
@@ -311,7 +311,7 @@ final class rb extends ArchiveProvider {
           else {
             if (this.field_z) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_w.g(-100);
+              var3Lifetime1 = this.field_w.beginForward(-100);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.field_c;
                 if (1 != this.field_r[var4Lifetime1]) {
@@ -322,7 +322,7 @@ final class rb extends ArchiveProvider {
                 } else {
                   var3Lifetime1.unlink(-124);
                 }
-                var3Lifetime1 = this.field_w.a(param0 + 12685);
+                var3Lifetime1 = this.field_w.nextForward(param0 + 12685);
               }
               while (this.field_A < this.field_x.field_o.length) {
                 if (this.field_x.field_o[this.field_A] == 0) {
@@ -336,7 +336,7 @@ final class rb extends ArchiveProvider {
                   if (this.field_r[this.field_A] != 1) {
                     var6 = new IntrusiveNode();
                     var6.field_c = (long)this.field_A;
-                    this.field_w.a(var6, 81);
+                    this.field_w.addLast(var6, 81);
                     var2_intLifetime1 = 0;
                   }
                   this.field_A = this.field_A + 1;
@@ -506,7 +506,7 @@ final class rb extends ArchiveProvider {
         if (null == this.c(3)) {
           return;
         }
-        IntrusiveNode var2 = this.field_u.g(-6);
+        IntrusiveNode var2 = this.field_u.beginForward(-6);
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {
@@ -530,7 +530,7 @@ final class rb extends ArchiveProvider {
               }
             }
           }
-          var2 = this.field_u.a(12684);
+          var2 = this.field_u.nextForward(12684);
         }
     }
 
@@ -552,7 +552,7 @@ final class rb extends ArchiveProvider {
         }
         this.field_z = true;
         if (null == this.field_w) {
-          this.field_w = new vl();
+          this.field_w = new IntrusiveDeque();
         }
     }
 
@@ -573,7 +573,7 @@ final class rb extends ArchiveProvider {
         RuntimeException var10 = null;
         this.field_i = new jm(16);
         this.field_A = 0;
-        this.field_u = new vl();
+        this.field_u = new IntrusiveDeque();
         this.field_k = 0L;
         try {
           this.field_g = param0;
@@ -582,7 +582,7 @@ final class rb extends ArchiveProvider {
             this.field_o = false;
           } else {
             this.field_o = true;
-            this.field_w = new vl();
+            this.field_w = new IntrusiveDeque();
           }
           this.field_l = param5;
           this.field_v = param6;

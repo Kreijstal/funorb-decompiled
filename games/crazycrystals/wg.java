@@ -478,12 +478,12 @@ final class wg extends od {
         pl var3 = null;
         int var4 = CrazyCrystals.field_B;
         if (0 != (4 & this.field_E[param1])) {
-          var3 = (pl) (this.field_m.field_k.g(32073));
+          var3 = (pl) (this.field_m.field_k.beginForward(32073));
           while (var3 != null) {
             if (~var3.field_i == ~param1) {
               var3.field_j = 0;
             }
-            var3 = (pl) (this.field_m.field_k.a(false));
+            var3 = (pl) (this.field_m.field_k.nextForward(false));
           }
         }
         if (param0 < 21) {
@@ -707,7 +707,7 @@ final class wg extends od {
         pl var3;
         int var4;
         var4 = CrazyCrystals.field_B;
-        var3 = (pl) (this.field_m.field_k.g(32073));
+        var3 = (pl) (this.field_m.field_k.beginForward(32073));
         if (param0 != -33) {
           this.c(12, -19);
         }
@@ -726,7 +726,7 @@ final class wg extends od {
             }
             var3.unlink(false);
           }
-          var3 = (pl) (this.field_m.field_k.a(false));
+          var3 = (pl) (this.field_m.field_k.nextForward(false));
         }
     }
 
@@ -746,7 +746,7 @@ final class wg extends od {
         var9 = CrazyCrystals.field_B;
         this.a(param3, false, 64, param2);
         if ((2 & this.field_E[param3]) != 0) {
-          var5 = (pl) (this.field_m.field_k.a((byte) -119));
+          var5 = (pl) (this.field_m.field_k.beginBackward((byte) -119));
           while (var5 != null) {
             if (var5.field_i == param3 &&
               0 > var5.field_l) {
@@ -759,7 +759,7 @@ final class wg extends od {
               var5.field_y = param2;
               return;
             }
-            var5 = (pl) (this.field_m.field_k.e(0));
+            var5 = (pl) (this.field_m.field_k.nextBackward(0));
           }
         }
         var10 = (dk) (this.field_D.a((long)this.field_L[param3], param1 ^ 0));
@@ -813,7 +813,7 @@ final class wg extends od {
           }
           this.field_w[param3][var7.field_C] = var7;
         }
-        this.field_m.field_k.b(param1 + 0, var7);
+        this.field_m.field_k.addLast(param1 + 0, var7);
         this.field_z[param3][param2] = var7;
         return;
     }
@@ -927,14 +927,14 @@ final class wg extends od {
         if ((this.field_E[param0] & 2) == 0) {
           var8.field_l = 0;
         } else {
-          var6 = (pl) (this.field_m.field_k.g(32073));
+          var6 = (pl) (this.field_m.field_k.beginForward(32073));
           while (var6 != null) {
             if (var8.field_i == var6.field_i && var6.field_l < 0 &&
               var8 != var6) {
               var8.field_l = 0;
               break;
             }
-            var6 = (pl) (this.field_m.field_k.a(false));
+            var6 = (pl) (this.field_m.field_k.nextForward(false));
           }
         }
     }
@@ -943,13 +943,13 @@ final class wg extends od {
         pl var3_ref_pl = null;
         int var4 = CrazyCrystals.field_B;
         if (0 != (2 & this.field_E[param1])) {
-          var3_ref_pl = (pl) (this.field_m.field_k.g(32073));
+          var3_ref_pl = (pl) (this.field_m.field_k.beginForward(32073));
           while (var3_ref_pl != null) {
             if (var3_ref_pl.field_i == param1 && this.field_z[param1][var3_ref_pl.field_y] == null &&
               !(0 <= var3_ref_pl.field_l)) {
               var3_ref_pl.field_l = 0;
             }
-            var3_ref_pl = (pl) (this.field_m.field_k.a(false));
+            var3_ref_pl = (pl) (this.field_m.field_k.nextForward(false));
           }
         }
         int var3 = 109 % ((23 - param0) / 57);
@@ -1193,7 +1193,7 @@ final class wg extends od {
         int var5;
         var5 = CrazyCrystals.field_B;
         var4 = -22 % ((param1 - 56) / 34);
-        var3 = (pl) (this.field_m.field_k.g(32073));
+        var3 = (pl) (this.field_m.field_k.beginForward(32073));
         while (var3 != null) {
           if ((param0 < 0 ||
             var3.field_i == param0) &&
@@ -1201,7 +1201,7 @@ final class wg extends od {
             this.field_z[var3.field_i][var3.field_y] = null;
             var3.field_l = 0;
           }
-          var3 = (pl) (this.field_m.field_k.a(false));
+          var3 = (pl) (this.field_m.field_k.nextForward(false));
         }
     }
 

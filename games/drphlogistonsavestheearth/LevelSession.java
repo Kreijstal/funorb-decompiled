@@ -12,7 +12,7 @@ final class LevelSession {
     private boolean field_ab;
     private boolean field_W;
     static String field_Y;
-    private vd field_I;
+    private IntrusiveDeque field_I;
     static int field_ib;
     static int field_e;
     private int field_r;
@@ -349,7 +349,7 @@ final class LevelSession {
         int stackIn_3_0 = 0;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         stackIn_3_0 = (hb.field_g > 0) ? 0 : 11;
-        tc.field_d = stackIn_3_0;
+        IterableNodeHashTable.field_d = stackIn_3_0;
         if (ej.field_h != 0) {
           ek.a(-76, false, 9);
           if (var3 != 0) {
@@ -513,7 +513,7 @@ final class LevelSession {
         this.field_U = false;
         nf.field_u = 0;
         this.field_J = 0;
-        dg.field_c = 0;
+        SecondaryNodeDeque.field_c = 0;
         lh.field_m = 0;
         this.field_Z = 0;
         this.field_ab = false;
@@ -717,7 +717,7 @@ final class LevelSession {
         this.field_S = 0;
         var2 = e.a(110, (int)this.field_N);
         if (this.field_w <= 0) {
-          tc.field_i = false;
+          IterableNodeHashTable.field_i = false;
           var3 = 0;
           scanLoop2: while (true) {
             if (var3 < this.field_n.length) {
@@ -727,9 +727,9 @@ final class LevelSession {
               if (this.field_n[var3] != null &&
                 !this.field_n[var3].field_s) {
                 var4 = this.field_n[var3].field_Q;
-                stackIn_29_0 = tc.field_i;
+                stackIn_29_0 = IterableNodeHashTable.field_i;
                 stackIn_31_1 = (var4 == 5) || (var4 == 11) || (var4 == 17) || (var4 == 18);
-                tc.field_i = stackIn_29_0 | stackIn_31_1;
+                IterableNodeHashTable.field_i = stackIn_29_0 | stackIn_31_1;
               }
               var3++;
               if (var5 == 0) {
@@ -1174,12 +1174,12 @@ final class LevelSession {
         if (~ab.field_b != ~this.levelNumber) {
           this.c((byte) 111);
         }
-        if (null != this.field_I.h(-11151)) {
+        if (null != this.field_I.beginForward(-11151)) {
           fieldTemp$0 = this.field_bb + 1;
           this.field_bb = this.field_bb + 1;
           if (fieldTemp$0 == 335) {
             this.field_bb = 0;
-            this.field_I.d(180479896);
+            this.field_I.removeFirst(180479896);
           }
         }
         while (true) {
@@ -1436,7 +1436,7 @@ final class LevelSession {
             this.a(14, 241, (byte) -112);
           }
         }
-        if (0 == (dg.field_c >> this.levelNumber & 1) &&
+        if (0 == (SecondaryNodeDeque.field_c >> this.levelNumber & 1) &&
           2 >= this.levelNumber && this.field_w > 0) {
           this.a(13, 242, (byte) -96);
         }
@@ -1663,7 +1663,7 @@ final class LevelSession {
         if (decompiledFrameRemainder3) {
           if (!ck.field_f[lb.field_A] ||
             ib.field_t == 1) {
-            if ((!ck.field_f[vd.field_f] ||
+            if ((!ck.field_f[IntrusiveDeque.field_f] ||
               2 == ib.field_t) &&
               (decompiledFrameRemainder3 = !(!ck.field_f[lf.field_c])) &&
               (decompiledFrameRemainder3 = (ib.field_t != 3))) {
@@ -1752,13 +1752,13 @@ final class LevelSession {
             PacketBuffer.a(-1630758008, this.field_M);
           }
           this.field_M.h(this.field_u + 196);
-          this.field_M.j((int)((25.0 + (double)this.field_u / 2.0) * (double)dg.field_e / 80.0));
+          this.field_M.j((int)((25.0 + (double)this.field_u / 2.0) * (double)SecondaryNodeDeque.field_e / 80.0));
           this.field_u = this.field_u + 1;
           if (this.field_u > 200) {
             this.field_u = 200;
             this.field_E = this.field_E + 1;
             var2 = (int)(Math.exp((double)(-this.field_E) / 100.0) * 125.0);
-            this.field_M.j(dg.field_e * var2 / 80);
+            this.field_M.j(SecondaryNodeDeque.field_e * var2 / 80);
           }
           if (this.field_u > 50) {
             ni.field_w = true;
@@ -2536,7 +2536,7 @@ final class LevelSession {
             gf.field_D = Math.max(1 + sd.field_a.levelNumber, gf.field_D);
             var4 = new nl(0, -1 + gf.field_D, 0, 0, 0, 0);
             if (oh.a(param0 - 1)) {
-              dl.field_M.a(var4, param0 + 254);
+              dl.field_M.addLast(var4, param0 + 254);
               if (var3 != 0) {
                 rc.a(5, var4, -11659);
               }
@@ -2673,7 +2673,7 @@ final class LevelSession {
         fj var7;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var3 = -108 / ((param0 - 60) / 54);
-        var7 = (fj) (this.field_I.h(-11151));
+        var7 = (fj) (this.field_I.beginForward(-11151));
         var2 = var7;
         if (var2 != null) {
           var5 = this.field_bb;
@@ -3339,14 +3339,14 @@ final class LevelSession {
           if (var4 == 0) {
             var3_int = stackIn_24_0;
             while (var3_int < 20) {
-              vi.field_h[var2][var3_int].a((int)vj.field_f[var2], 3, lh.field_n[var2], -21, 1, (int)tc.field_f[var2]);
-              tc.field_f[var2] = tc.field_f[var2] + 0.3;
+              vi.field_h[var2][var3_int].a((int)vj.field_f[var2], 3, lh.field_n[var2], -21, 1, (int)IterableNodeHashTable.field_f[var2]);
+              IterableNodeHashTable.field_f[var2] = IterableNodeHashTable.field_f[var2] + 0.3;
               vj.field_f[var2] = vj.field_f[var2] + 0.6;
               stackIn_8_0 = compareDoublesNaNResultNegative(vj.field_f[var2], 305.0);
               if (stackIn_8_0 > 0) {
                 nd.field_M = 256;
-                this.a((int)vj.field_f[var2], -84, (int)tc.field_f[var2]);
-                tc.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
+                this.a((int)vj.field_f[var2], -84, (int)IterableNodeHashTable.field_f[var2]);
+                IterableNodeHashTable.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
                 vj.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
                 if (hi.a(5, 4, this.field_l) >= 4) {
                   lh.field_n[var2] = 2102528;
@@ -3354,8 +3354,8 @@ final class LevelSession {
                   lh.field_n[var2] = 1052688;
                 }
               }
-              if (640.0 < tc.field_f[var2]) {
-                tc.field_f[var2] = 0.0;
+              if (640.0 < IterableNodeHashTable.field_f[var2]) {
+                IterableNodeHashTable.field_f[var2] = 0.0;
               }
               var3_int++;
             }
@@ -3649,7 +3649,7 @@ final class LevelSession {
                       stackIn_39_0 = var4;
                       stackIn_40_1 = !(param0);
                       if (((bf) (Object) stackIn_39_0).a(stackIn_40_1)) {
-                        dg.field_c = dg.field_c | 1 << this.levelNumber;
+                        SecondaryNodeDeque.field_c = SecondaryNodeDeque.field_c | 1 << this.levelNumber;
                       }
                     }
                     if (var12.field_I == 23) {
@@ -4145,9 +4145,9 @@ final class LevelSession {
         }
         hi.field_j = hi.field_j | var4;
         ej.field_h = ej.field_h | var4;
-        this.field_I.a(new fj(param0), 255);
+        this.field_I.addLast(new fj(param0), 255);
         if (!this.field_W) {
-          nf.field_x.a(new je(param0, param1, this.field_Q, this.field_P, this.field_p, this.field_C), 255);
+          nf.field_x.addLast(new je(param0, param1, this.field_Q, this.field_P, this.field_p, this.field_C), 255);
         }
     }
 
@@ -4205,7 +4205,7 @@ final class LevelSession {
         this.field_F = false;
         this.field_ab = false;
         this.field_W = false;
-        this.field_I = new vd();
+        this.field_I = new IntrusiveDeque();
         this.field_o = 10;
         this.field_c = 0.0;
         this.field_A = 1;
@@ -4260,7 +4260,7 @@ final class LevelSession {
         } while (var4 == 0);
         scanLoop1: while (true) {
           if (var2 < 2) {
-            tc.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
+            IterableNodeHashTable.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
             vj.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
             stackIn_16_0 = 0;
             if (var4 != 0) {
@@ -4295,7 +4295,7 @@ final class LevelSession {
             qe.field_a = -150;
             this.field_f = 0;
             this.levelNumber = -1 + param0;
-            this.field_M = PcmSampleStream.a(nl.field_r[5], 256, dg.field_e * 24 / 80);
+            this.field_M = PcmSampleStream.a(nl.field_r[5], 256, SecondaryNodeDeque.field_e * 24 / 80);
             this.field_M.c(0, nl.field_r[5].field_i.length);
             this.field_M.f(-1);
             this.field_z = PcmSampleStream.a(nl.field_r[7], 256, 48);

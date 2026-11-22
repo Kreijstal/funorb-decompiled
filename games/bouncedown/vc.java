@@ -6,7 +6,7 @@ class vc extends wd {
     static String field_B;
     private ui field_E;
     static PlatformTaskDispatcher field_G;
-    private bc field_C;
+    private IntrusiveDeque field_C;
     private String[] field_D;
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
@@ -34,7 +34,7 @@ class vc extends wd {
         int var16;
         int var7Lifetime1;
         var16 = Bounce.field_N;
-        this.field_C = new bc();
+        this.field_C = new IntrusiveDeque();
         var2 = 0;
         var3 = (sf) ((Object) this.field_j);
         var4 = var3.b((lk) (this), param0);
@@ -73,7 +73,7 @@ class vc extends wd {
               ((ui) (var10)).field_n = var15;
             }
             var10 = var15;
-            this.field_C.a(1, var15);
+            this.field_C.addLast(1, var15);
           }
         }
     }
@@ -314,7 +314,7 @@ class vc extends wd {
         ui var5;
         int var6;
         var6 = Bounce.field_N;
-        var4 = (ui) (this.field_C.a((byte) -57));
+        var4 = (ui) (this.field_C.beginForward((byte) -57));
         if (param0 != 1) {
           field_G = (PlatformTaskDispatcher) null;
         }
@@ -329,7 +329,7 @@ class vc extends wd {
             }
             var5 = var5.field_n;
           }
-          var4 = (ui) (this.field_C.d((byte) -59));
+          var4 = (ui) (this.field_C.nextForward((byte) -59));
         }
         return null;
     }

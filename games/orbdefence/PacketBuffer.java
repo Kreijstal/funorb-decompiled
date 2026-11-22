@@ -9,7 +9,7 @@ class PacketBuffer extends IntrusiveNode {
     byte[] payload;
     static FullscreenFocusCanvas field_k;
     static int field_f;
-    static im field_l;
+    static IntrusiveDeque field_l;
 
     final void writeByte(int param0, int param1) {
         if (param1 > -3) {
@@ -792,6 +792,6 @@ class PacketBuffer extends IntrusiveNode {
         field_h = "Awesomo";
         field_m = new AccountRequestState();
         field_f = 64;
-        field_l = new im();
+        field_l = new IntrusiveDeque();
     }
 }

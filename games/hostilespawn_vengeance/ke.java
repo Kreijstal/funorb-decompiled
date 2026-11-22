@@ -9,7 +9,7 @@ final class ke extends cn {
     private int field_y;
     private int field_A;
     static int[] field_z;
-    static vl field_B;
+    static IntrusiveDeque field_B;
     static int[] field_v;
     static String field_x;
 
@@ -99,7 +99,7 @@ final class ke extends cn {
     static {
         field_z = new int[128];
         field_w = "Night is falling. I'd better hurry.";
-        field_B = new vl();
+        field_B = new IntrusiveDeque();
         field_v = new int[8192];
         field_x = "Type your password again to make sure it's correct";
     }

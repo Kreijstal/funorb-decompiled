@@ -4,7 +4,7 @@
 final class me {
     static km field_d;
     static kd field_a;
-    static jc field_e;
+    static IntrusiveDeque field_e;
     static hg field_b;
     static rk[] field_c;
 

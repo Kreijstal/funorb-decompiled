@@ -54,12 +54,12 @@ final class hg extends IntrusiveNode {
         int fieldTemp$0 = 0;
         vh.field_o = vh.field_o ^ PacketBuffer.field_j;
         pg.field_d = pg.field_d ^ PacketBuffer.field_j;
-        if (null != pb.field_f.c((byte) 47)) {
+        if (null != pb.field_f.beginForward((byte) 47)) {
           fieldTemp$0 = hi.field_q + 1;
           hi.field_q = hi.field_q + 1;
           if (fieldTemp$0 == 335) {
             hi.field_q = 0;
-            pb.field_f.e(-22033);
+            pb.field_f.removeFirst(-22033);
           }
         }
         if (param0 > -74) {
@@ -92,8 +92,8 @@ final class hg extends IntrusiveNode {
         }
         fleas.field_L = fleas.field_L | var4;
         kh.field_b = kh.field_b | var4;
-        pb.field_f.a(false, new kb(param1));
-        a.field_e.a(false, new hi(param1, param2, lj.field_h, se.field_b, dh.field_d, e.field_b));
+        pb.field_f.addLast(false, new kb(param1));
+        a.field_e.addLast(false, new hi(param1, param2, lj.field_h, se.field_b, dh.field_d, e.field_b));
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

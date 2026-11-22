@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od {
-    static bk field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     private static String field_z;
 
@@ -17,6 +17,6 @@ final class od {
 
     static {
         field_z = "od.A(";
-        field_b = new bk();
+        field_b = new IntrusiveDeque();
     }
 }

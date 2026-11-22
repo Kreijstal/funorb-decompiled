@@ -21,37 +21,37 @@ final class hc {
         RuntimeException var1 = null;
         var2 = Main.field_T;
         try {
-          if (bk.field_c != null) {
+          if (IntrusiveDeque.field_c != null) {
             return;
           }
-          bk.field_c = new String[22];
-          bk.field_c[3] = td.field_a;
-          bk.field_c[0] = tj.field_J;
-          bk.field_c[5] = field_e;
-          bk.field_c[15] = bl.field_g;
-          bk.field_c[12] = ii.field_f;
-          bk.field_c[9] = field_a;
-          bk.field_c[13] = dd.field_e;
-          bk.field_c[1] = sg.field_e;
-          bk.field_c[14] = gg.field_c;
-          bk.field_c[16] = q.field_f;
-          bk.field_c[17] = db.field_b;
-          bk.field_c[10] = tf.field_m;
+          IntrusiveDeque.field_c = new String[22];
+          IntrusiveDeque.field_c[3] = td.field_a;
+          IntrusiveDeque.field_c[0] = tj.field_J;
+          IntrusiveDeque.field_c[5] = field_e;
+          IntrusiveDeque.field_c[15] = bl.field_g;
+          IntrusiveDeque.field_c[12] = ii.field_f;
+          IntrusiveDeque.field_c[9] = field_a;
+          IntrusiveDeque.field_c[13] = dd.field_e;
+          IntrusiveDeque.field_c[1] = sg.field_e;
+          IntrusiveDeque.field_c[14] = gg.field_c;
+          IntrusiveDeque.field_c[16] = q.field_f;
+          IntrusiveDeque.field_c[17] = db.field_b;
+          IntrusiveDeque.field_c[10] = tf.field_m;
           if (!param0) {
             return;
           }
-          bk.field_c[2] = rf.field_e;
-          bk.field_c[4] = lf.field_d;
-          bk.field_c[11] = Main.field_y;
-          bk.field_c[8] = pg.field_b;
-          bk.field_c[7] = id.field_f;
-          bk.field_c[6] = n.field_D;
-          bk.field_c[20] = jk.field_d[2];
-          bk.field_c[19] = jk.field_d[1];
-          bk.field_c[21] = n.field_D;
-          bk.field_c[18] = jk.field_d[0];
-          for (var1_int = 0; bk.field_c.length > var1_int; var1_int++) {
-            bk.field_c[var1_int] = bk.field_c[var1_int].toUpperCase();
+          IntrusiveDeque.field_c[2] = rf.field_e;
+          IntrusiveDeque.field_c[4] = lf.field_d;
+          IntrusiveDeque.field_c[11] = Main.field_y;
+          IntrusiveDeque.field_c[8] = pg.field_b;
+          IntrusiveDeque.field_c[7] = id.field_f;
+          IntrusiveDeque.field_c[6] = n.field_D;
+          IntrusiveDeque.field_c[20] = jk.field_d[2];
+          IntrusiveDeque.field_c[19] = jk.field_d[1];
+          IntrusiveDeque.field_c[21] = n.field_D;
+          IntrusiveDeque.field_c[18] = jk.field_d[0];
+          for (var1_int = 0; IntrusiveDeque.field_c.length > var1_int; var1_int++) {
+            IntrusiveDeque.field_c[var1_int] = IntrusiveDeque.field_c[var1_int].toUpperCase();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bf {
-    static vc field_e;
+    static IntrusiveDeque field_e;
     private DualLinkNode field_c;
     static wh field_a;
     static int field_b;
@@ -224,7 +224,7 @@ final class bf {
     }
 
     static {
-        field_e = new vc();
+        field_e = new IntrusiveDeque();
         field_b = 0;
         field_a = new wh("");
         field_f = "Waiting for graphics";

@@ -56,7 +56,7 @@ final class gm extends ah {
         this.field_eb = null;
     }
 
-    final void a(mn param0, byte param1) {
+    final void a(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -81,7 +81,7 @@ final class gm extends ah {
           this.field_db.field_m = -var4;
           this.field_db.field_x = -var6;
           this.field_db.field_p = -(var8 * this.field_C * 0.8) + this.field_D;
-          param0.a((IntrusiveNode) (this.field_db), (byte) -88);
+          param0.addLast((IntrusiveNode) (this.field_db), (byte) -88);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -90,7 +90,7 @@ final class gm extends ah {
     final void g(int param0) {
         if (param0 != 26402) {
           oi var3 = (oi) null;
-          this.a((mn) null, 0.183731807417079, -74, (vg) null, (oi) null);
+          this.a((PrimaryNodeDeque) null, 0.183731807417079, -74, (vg) null, (oi) null);
           if (null != this.field_eb) {
             this.field_eb.f((byte) -125);
             fl.a(this.a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
@@ -146,7 +146,7 @@ final class gm extends ah {
         q.a(4, false, (byte) -101);
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

@@ -5,7 +5,7 @@ import java.util.*;
 
 class vd extends ag implements ai {
     static ResourceArchive field_C;
-    vl field_z;
+    IntrusiveDeque field_z;
     static bd[][] field_y;
     static int field_D;
     static int[] field_B;
@@ -526,7 +526,7 @@ class vd extends ag implements ai {
         RuntimeException var3_ref = null;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (this.field_z.e(-20049)) {
+          if (this.field_z.isEmpty(-20049)) {
             return false;
           }
           var3 = new fl(this.field_z);
@@ -577,7 +577,7 @@ class vd extends ag implements ai {
 
     vd(int param0, int param1, int param2, int param3, nn param4) {
         super(param0, param1, param2, param3, param4, (mh) null);
-        this.field_z = new vl();
+        this.field_z = new IntrusiveDeque();
     }
 
     final void c(byte param0) {
@@ -665,7 +665,7 @@ class vd extends ag implements ai {
         boolean stackOut_12_0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (this.field_z.e(-20049)) {
+          if (this.field_z.isEmpty(-20049)) {
             return false;
           }
           var3 = new fl(this.field_z);
@@ -803,7 +803,7 @@ class vd extends ag implements ai {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_z.a(param1, 119);
+          this.field_z.addLast(param1, 119);
           if (param0 != 51448) {
             this.c((byte) -54);
           }

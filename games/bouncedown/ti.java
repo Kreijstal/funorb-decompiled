@@ -121,7 +121,7 @@ final class ti extends ba implements wc {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).requestUrlStream(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var10).toString()), false);
             while (0 == var4.status) {
-              wh.a(1L, 19406);
+              SecondaryNodeDeque.a(1L, 19406);
             }
             if (1 != var4.status) {
               return;
@@ -178,9 +178,9 @@ final class ti extends ba implements wc {
             }
           }
           for (var3 = 0; se.field_E.length > var3; var3++) {
-            var4 = m.field_a[var3];
+            var4 = IterableNodeHashTable.field_a[var3];
             if (var4 < 0) {
-              var5 = bc.field_a;
+              var5 = IntrusiveDeque.field_a;
             } else {
               if (var4 != cf.field_f.field_b) {
                 var5 = DirectByteStorage.field_f;
@@ -268,7 +268,7 @@ final class ti extends ba implements wc {
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
-        bc.field_a = param2;
+        IntrusiveDeque.field_a = param2;
         DirectByteStorage.field_f = param0;
         ag.field_c = param1;
         if (param3 != 102) {

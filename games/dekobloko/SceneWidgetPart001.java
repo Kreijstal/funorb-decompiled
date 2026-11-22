@@ -157,10 +157,10 @@ final class SceneWidgetPart001 extends SceneWidget {
           if (byteArgument1 != -93) {
             SceneWidgetPart001.performAction0159(40);
           }
-          animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.computeHashNode1741((byte) -119));
+          animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.beginBackward((byte) -119));
           while (animatedTileRegionLocal2 != null) {
             animatedTileRegionLocal2.performAction1667(11976, integerArgument2);
-            animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.computeHashNode1745(true));
+            animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {

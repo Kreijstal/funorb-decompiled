@@ -5,7 +5,7 @@ import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
     private int nextBucketIndex;
-    private ed table;
+    private IterableNodeHashTable table;
     private IntrusiveNode lastReturned;
     static sg field_e;
     private IntrusiveNode nextNode;
@@ -25,24 +25,24 @@ final class NodeHashTableIterator implements Iterator {
     private final void reset(byte param0) {
         if (param0 == 64) {
           this.nextBucketIndex = 1;
-          this.nextNode = this.table.field_b[0].next;
+          this.nextNode = this.table.buckets[0].next;
           this.lastReturned = null;
           return;
         }
         NodeHashTableIterator.createAccountSuccessResult(-8, false);
         this.nextBucketIndex = 1;
-        this.nextNode = this.table.field_b[0].next;
+        this.nextNode = this.table.buckets[0].next;
         this.lastReturned = null;
     }
 
     final static uh a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Main.field_T;
-        uh var5 = (uh) (tl.field_a.a((byte) 74));
+        uh var5 = (uh) (tl.field_a.beginForward((byte) 74));
         while (var5 != null) {
           if (var5.field_g == param3) {
             return var5;
           }
-          var5 = (uh) (tl.field_a.b((byte) -123));
+          var5 = (uh) (tl.field_a.nextForward((byte) -123));
         }
         uh var7 = new uh();
         var5 = var7;
@@ -50,12 +50,12 @@ final class NodeHashTableIterator implements Iterator {
         var7.field_h = param4;
         var7.field_k = param0;
         if (param2 == 25404) {
-          tl.field_a.a(var5, 27362);
+          tl.field_a.addLast(var5, 27362);
           DirectByteArrayStore.a(-91, var5, param1);
           return var5;
         }
         field_f = (char[]) null;
-        tl.field_a.a(var5, 27362);
+        tl.field_a.addLast(var5, 27362);
         DirectByteArrayStore.a(-91, var5, param1);
         return var5;
     }
@@ -65,23 +65,23 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$1 = 0;
         int var2;
         var2 = Main.field_T;
-        if (this.table.field_b[this.nextBucketIndex - 1] != this.nextNode) {
+        if (this.table.buckets[this.nextBucketIndex - 1] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.nextBucketIndex >= this.table.field_a) {
+          if (this.nextBucketIndex >= this.table.bucketCount) {
             return false;
           }
-          fieldTemp$0 = this.table.field_b;
+          fieldTemp$0 = this.table.buckets;
           fieldTemp$1 = this.nextBucketIndex;
           this.nextBucketIndex = this.nextBucketIndex + 1;
-          if (fieldTemp$0[fieldTemp$1].next == this.table.field_b[this.nextBucketIndex - 1]) {
-            this.nextNode = this.table.field_b[-1 + this.nextBucketIndex];
+          if (fieldTemp$0[fieldTemp$1].next == this.table.buckets[this.nextBucketIndex - 1]) {
+            this.nextNode = this.table.buckets[-1 + this.nextBucketIndex];
             continue;
           }
           break;
         }
-        this.nextNode = this.table.field_b[-1 + this.nextBucketIndex].next;
+        this.nextNode = this.table.buckets[-1 + this.nextBucketIndex].next;
         return true;
     }
 
@@ -92,21 +92,21 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = Main.field_T;
-        if (this.table.field_b[-1 + this.nextBucketIndex] != this.nextNode) {
+        if (this.table.buckets[-1 + this.nextBucketIndex] != this.nextNode) {
           var4 = this.nextNode;
           this.lastReturned = var4;
           this.nextNode = var4.next;
           return var4;
         }
         do {
-          if (this.table.field_a <= this.nextBucketIndex) {
+          if (this.table.bucketCount <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.table.field_b;
+          fieldTemp$0 = this.table.buckets;
           fieldTemp$1 = this.nextBucketIndex;
           this.nextBucketIndex = this.nextBucketIndex + 1;
           var3 = fieldTemp$0[fieldTemp$1].next;
-        } while (this.table.field_b[this.nextBucketIndex - 1] == var3);
+        } while (this.table.buckets[this.nextBucketIndex - 1] == var3);
         this.lastReturned = var3;
         this.nextNode = var3.next;
         return var3;
@@ -130,7 +130,7 @@ final class NodeHashTableIterator implements Iterator {
         this.lastReturned = null;
     }
 
-    NodeHashTableIterator(ed param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.lastReturned = null;
         try {
           this.table = param0;

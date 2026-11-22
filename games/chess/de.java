@@ -61,7 +61,7 @@ final class de {
           var24 = null;
           var12 = Chess.field_G;
           try {
-            var14 = (fl) (vj.field_c.g(param1 ^ -18175));
+            var14 = (fl) (vj.field_c.beginBackward(param1 ^ -18175));
             var18 = var14;
             if (var18 == null) {
               return;
@@ -250,16 +250,16 @@ final class de {
     }
 
     final static void a(int param0) {
-        if (qk.field_h == jc.field_f) {
+        if (qk.field_h == IntrusiveDeque.field_f) {
           return;
         }
-        if (0 <= jc.field_f) {
-          ae.field_e[jc.field_f].c((byte) -57);
+        if (0 <= IntrusiveDeque.field_f) {
+          ae.field_e[IntrusiveDeque.field_f].c((byte) -57);
         }
         if (param0 != -31645) {
           return;
         }
-        jc.field_f = qk.field_h;
+        IntrusiveDeque.field_f = qk.field_h;
         if (lc.field_q) {
           oc.field_p = null;
           lc.field_q = false;
@@ -268,7 +268,7 @@ final class de {
         wn.field_e = ma.field_D;
         if (mf.field_o) {
           cb.field_e = null;
-          tg.field_e = new jc();
+          tg.field_e = new IntrusiveDeque();
           wc.field_w = 0;
           mf.field_o = false;
           vk.field_b = 0;

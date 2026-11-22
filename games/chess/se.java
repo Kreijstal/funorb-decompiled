@@ -14,7 +14,7 @@ class se extends fb {
     private re field_R;
     static nb field_S;
     static byte[][][] field_Y;
-    private jc field_O;
+    private IntrusiveDeque field_O;
 
     void a(int param0, int param1, mf param2, int param3) {
         int var5_int = 0;
@@ -159,7 +159,7 @@ class se extends fb {
         int var16;
         int var7Lifetime1;
         var16 = Chess.field_G;
-        this.field_O = new jc();
+        this.field_O = new IntrusiveDeque();
         var2 = 0;
         if (param0 < 27) {
           return;
@@ -200,7 +200,7 @@ class se extends fb {
             if (var10 != null) {
               ((re) (var10)).field_q = var15;
             }
-            this.field_O.a((IntrusiveNode) (var15), (byte) -124);
+            this.field_O.addFirst((IntrusiveNode) (var15), (byte) -124);
             var10 = var15;
           }
         }
@@ -404,7 +404,7 @@ class se extends fb {
         if (param0 < 83) {
           this.f((byte) -35);
         }
-        var4 = (re) (this.field_O.g(-18110));
+        var4 = (re) (this.field_O.beginBackward(-18110));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -416,7 +416,7 @@ class se extends fb {
             }
             var5 = var5.field_q;
           }
-          var4 = (re) (this.field_O.a((byte) -92));
+          var4 = (re) (this.field_O.nextBackward((byte) -92));
         }
         return null;
     }

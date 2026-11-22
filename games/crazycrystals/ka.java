@@ -5,7 +5,7 @@ final class ka extends od {
     static boolean field_j;
     static int field_n;
     static db field_m;
-    wb field_k;
+    IntrusiveDeque field_k;
     private wg field_o;
     tj field_l;
 
@@ -14,7 +14,7 @@ final class ka extends od {
         int var2;
         var2 = CrazyCrystals.field_B;
         while (true) {
-          var1 = (pl) (this.field_k.a(false));
+          var1 = (pl) (this.field_k.nextForward(false));
           if (var1 == null) {
             return null;
           }
@@ -83,7 +83,7 @@ final class ka extends od {
     }
 
     final od d() {
-        pl var1 = (pl) (this.field_k.g(32073));
+        pl var1 = (pl) (this.field_k.beginForward(32073));
         if (var1 == null) {
           return null;
         }
@@ -106,13 +106,13 @@ final class ka extends od {
         var7 = CrazyCrystals.field_B;
         try {
           this.field_l.a(param0, param1, param2);
-          var6 = (pl) (this.field_k.g(32073));
+          var6 = (pl) (this.field_k.beginForward(32073));
           scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             if (this.field_o.a(var6, (byte) 100)) {
-              var6 = (pl) (this.field_k.a(false));
+              var6 = (pl) (this.field_k.nextForward(false));
               continue;
             }
             var4_int = param1;
@@ -121,14 +121,14 @@ final class ka extends od {
               if (var5 <= var6.field_k) {
                 this.a(param0, var6, var4_int, -1048576, var5, var5 + var4_int);
                 var6.field_k = var6.field_k - var5;
-                var6 = (pl) (this.field_k.a(false));
+                var6 = (pl) (this.field_k.nextForward(false));
                 continue scanLoop1;
               }
               this.a(param0, var6, var4_int, -1048576, var6.field_k, var5 + var4_int);
               var5 = var5 - var6.field_k;
               var4_int = var4_int + var6.field_k;
             } while (!this.field_o.a(var5, var4_int, param0, var6, (byte) 98));
-            var6 = (pl) (this.field_k.a(false));
+            var6 = (pl) (this.field_k.nextForward(false));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -241,13 +241,13 @@ final class ka extends od {
         int var2;
         var4 = CrazyCrystals.field_B;
         this.field_l.a(param0);
-        var3 = (pl) (this.field_k.g(32073));
+        var3 = (pl) (this.field_k.beginForward(32073));
         scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           if (this.field_o.a(var3, (byte) 113)) {
-            var3 = (pl) (this.field_k.a(false));
+            var3 = (pl) (this.field_k.nextForward(false));
             continue;
           }
           var2 = param0;
@@ -255,18 +255,18 @@ final class ka extends od {
             if (var3.field_k >= var2) {
               this.a(var3, var2, (byte) -101);
               var3.field_k = var3.field_k - var2;
-              var3 = (pl) (this.field_k.a(false));
+              var3 = (pl) (this.field_k.nextForward(false));
               continue scanLoop1;
             }
             this.a(var3, var3.field_k, (byte) -116);
             var2 = var2 - var3.field_k;
           } while (!this.field_o.a(var2, 0, (int[]) null, var3, (byte) 94));
-          var3 = (pl) (this.field_k.a(false));
+          var3 = (pl) (this.field_k.nextForward(false));
         }
     }
 
     ka(wg param0) {
-        this.field_k = new wb();
+        this.field_k = new IntrusiveDeque();
         this.field_l = new tj();
         try {
           this.field_o = param0;

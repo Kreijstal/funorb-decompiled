@@ -39,10 +39,10 @@ final class MixedSupport131 {
         try {
           cipherPacketBufferLocal18 = UiComponentPart006.cipherPacketBufferState0001;
           integerLocal5 = cipherPacketBufferLocal18.readUnsignedByte((byte) -110);
-          mixedSupport020Local6 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1741((byte) -54));
+          mixedSupport020Local6 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.beginBackward((byte) -54));
           while (mixedSupport020Local6 != null) {
             if (integerLocal5 != mixedSupport020Local6.integerState0115) {
-              mixedSupport020Local6 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1745(true));
+              mixedSupport020Local6 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.nextBackward(true));
               continue;
             }
             break;

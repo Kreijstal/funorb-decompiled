@@ -3228,6 +3228,38 @@
       "renamedSymbol": "F:OpacityWidget.alpha:I"
     },
     {
+      "symbol": "F:fl.field_a:Loh;",
+      "originalName": "field_a",
+      "to": "nextNode",
+      "evidence": "Role traced through complete owning constructor and all instance operations;preserve every partial/default/exhaustion state.. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.nextNode:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:fl.field_c:Loh;",
+      "originalName": "field_c",
+      "to": "lastReturned",
+      "evidence": "Role traced through complete owning constructor and all instance operations;preserve every partial/default/exhaustion state.. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.lastReturned:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:fl.field_d:I",
+      "originalName": "field_d",
+      "to": "nextBucketIndex",
+      "evidence": "Role traced through complete owning constructor and all instance operations;preserve every partial/default/exhaustion state.. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.nextBucketIndex:I"
+    },
+    {
+      "symbol": "F:fl.field_g:Lrm;",
+      "originalName": "field_g",
+      "to": "table",
+      "evidence": "Role traced through complete owning constructor and all instance operations;preserve every partial/default/exhaustion state.. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.table:LIterableNodeHashTable;"
+    },
+    {
       "symbol": "F:fs.field_t:Ljava/lang/String;",
       "originalName": "field_t",
       "to": "name",
@@ -3330,6 +3362,22 @@
       "evidence": "IntrusiveDeque traverses field_f forward and field_e backward from its sentinel.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IntrusiveNode.next:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:pf.field_b:Loh;",
+      "originalName": "field_b",
+      "to": "iterationCursor",
+      "evidence": "Role traced through complete owning constructor and all instance operations;preserve every partial/default/exhaustion state.. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.iterationCursor:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:pf.field_h:Loh;",
+      "originalName": "field_h",
+      "to": "sentinel",
+      "evidence": "Role traced through complete owning constructor and all instance operations;preserve every partial/default/exhaustion state.. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;"
     },
     {
       "symbol": "F:wd.field_M:Lgo;",
@@ -6978,6 +7026,14 @@
       "evidence": "Assigns null to 2 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NodeHashTableIterator.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:fl.c(I)V",
+      "originalName": "c",
+      "to": "reset",
+      "evidence": "Clear lastReturned first;int>-77 calls next() on old bucket/cursor state before writing nextBucketIndex1 and pending node from table.buckets[0].next. Preserve partial reset,old-state traversal/failures and constructor guard-107. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V"
     },
     {
       "symbol": "M:fm.a(I)V",
@@ -12890,6 +12946,14 @@
       "evidence": "Unlinks and returns the node before the sentinel, or null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveDeque.pollLast(Z)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:pf.a(ZLoh;Lpf;)V",
+      "originalName": "a",
+      "to": "transferSuffixTo",
+      "evidence": "Save source tail;true clears static String before source sentinel.previous and start.previous.next boundary writes. Only afterward test start==sentinel;nonempty suffix attaches to target tail with original reciprocal write order. Preserve self/foreign/null alias behavior,cursor state,partial splices and exception-string allocation/failure ordering. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V"
     },
     {
       "symbol": "M:pf.b(I)Loh;",
@@ -32648,9 +32712,9 @@
     },
     {
       "symbol": "F:fl.field_a:Loh;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_a:LIntrusiveNode;",
+      "renamedSymbol": "F:NodeHashTableIterator.nextNode:LIntrusiveNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "nextNode",
       "declaration": {
         "file": "fl.java",
         "start": 182,
@@ -32670,9 +32734,9 @@
     },
     {
       "symbol": "F:fl.field_c:Loh;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_c:LIntrusiveNode;",
+      "renamedSymbol": "F:NodeHashTableIterator.lastReturned:LIntrusiveNode;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "lastReturned",
       "declaration": {
         "file": "fl.java",
         "start": 158,
@@ -32681,9 +32745,9 @@
     },
     {
       "symbol": "F:fl.field_d:I",
-      "renamedSymbol": "F:NodeHashTableIterator.field_d:I",
+      "renamedSymbol": "F:NodeHashTableIterator.nextBucketIndex:I",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "nextBucketIndex",
       "declaration": {
         "file": "fl.java",
         "start": 258,
@@ -32714,9 +32778,9 @@
     },
     {
       "symbol": "F:fl.field_g:Lrm;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_g:LIterableNodeHashTable;",
+      "renamedSymbol": "F:NodeHashTableIterator.table:LIterableNodeHashTable;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "table",
       "declaration": {
         "file": "fl.java",
         "start": 206,
@@ -50578,9 +50642,9 @@
     },
     {
       "symbol": "F:pf.field_b:Loh;",
-      "renamedSymbol": "F:IntrusiveDeque.field_b:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.iterationCursor:LIntrusiveNode;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "iterationCursor",
       "declaration": {
         "file": "pf.java",
         "start": 198,
@@ -50644,9 +50708,9 @@
     },
     {
       "symbol": "F:pf.field_h:Loh;",
-      "renamedSymbol": "F:IntrusiveDeque.field_h:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "pf.java",
         "start": 85,
@@ -241714,7 +241778,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#0",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#0",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -241725,7 +241789,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#1",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#1",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -241736,7 +241800,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#2",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#2",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -241747,7 +241811,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#3",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#3",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#3",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -241758,7 +241822,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#4",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#4",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -241769,7 +241833,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#5",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#5",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -241780,7 +241844,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#6",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#6",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -241791,7 +241855,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#7",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#7",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#7",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -241802,7 +241866,7 @@
     },
     {
       "symbol": "L:pf.a(ZLoh;Lpf;)V#8",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#8",
+      "renamedSymbol": "L:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -322542,9 +322606,9 @@
     },
     {
       "symbol": "M:fl.c(I)V",
-      "renamedSymbol": "M:NodeHashTableIterator.c(I)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "reset",
       "declaration": {
         "file": "fl.java",
         "start": 5539,
@@ -339757,9 +339821,9 @@
     },
     {
       "symbol": "M:pf.a(ZLoh;Lpf;)V",
-      "renamedSymbol": "M:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V",
+      "renamedSymbol": "M:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "transferSuffixTo",
       "declaration": {
         "file": "pf.java",
         "start": 7177,
@@ -377663,7 +377727,7 @@
     },
     {
       "symbol": "P:fl.c(I)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.c(I)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -420068,7 +420132,7 @@
     },
     {
       "symbol": "P:pf.a(ZLoh;Lpf;)V#0",
-      "renamedSymbol": "P:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -420079,7 +420143,7 @@
     },
     {
       "symbol": "P:pf.a(ZLoh;Lpf;)V#1",
-      "renamedSymbol": "P:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#1",
+      "renamedSymbol": "P:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -420090,7 +420154,7 @@
     },
     {
       "symbol": "P:pf.a(ZLoh;Lpf;)V#2",
-      "renamedSymbol": "P:IntrusiveDeque.a(ZLIntrusiveNode;LIntrusiveDeque;)V#2",
+      "renamedSymbol": "P:IntrusiveDeque.transferSuffixTo(ZLIntrusiveNode;LIntrusiveDeque;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -518488,7 +518552,7 @@
       "original": "fl.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "5df3ee5fade094cf5260624fd3b491694632c5dff5adec5eda5a9534cbfee473",
-      "outputSha256": "8e03a4d5c901f78ce54ac3655fc86fb378850a06078fc4dd5378585ee82fd59a",
+      "outputSha256": "c70d4c1da3e0768cd46c741c0610e3e80609775cffeb485b86f23875da0c37a8",
       "edits": [
         {
           "start": 71,
@@ -518512,6 +518576,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 158,
+          "end": 165,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 179,
           "end": 181,
           "symbol": "C:oh",
@@ -518519,11 +518590,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 182,
+          "end": 189,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
           "start": 203,
           "end": 205,
           "symbol": "C:rm",
           "original": "rm",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 206,
+          "end": 213,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 258,
+          "end": 265,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
         },
         {
           "start": 315,
@@ -518561,11 +518653,32 @@
           "renamed": "Star"
         },
         {
+          "start": 552,
+          "end": 559,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 631,
+          "end": 638,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 639,
           "end": 640,
           "symbol": "M:oh.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 667,
+          "end": 674,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
         },
         {
           "start": 707,
@@ -518785,11 +518898,130 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3396,
+          "end": 3403,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 3422,
+          "end": 3429,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3439,
+          "end": 3446,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 3525,
+          "end": 3532,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 3549,
+          "end": 3556,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3627,
+          "end": 3634,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3651,
+          "end": 3658,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3666,
+          "end": 3673,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3698,
+          "end": 3705,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
           "start": 3727,
           "end": 3734,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 3743,
+          "end": 3750,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 3764,
+          "end": 3771,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3797,
+          "end": 3804,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 3812,
+          "end": 3819,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 3838,
+          "end": 3845,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 3922,
+          "end": 3929,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 3937,
+          "end": 3944,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 3958,
+          "end": 3965,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
         },
         {
           "start": 3971,
@@ -518855,6 +519087,41 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4611,
+          "end": 4618,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 4637,
+          "end": 4644,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 4654,
+          "end": 4661,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 4687,
+          "end": 4694,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 4711,
+          "end": 4718,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
           "start": 4726,
           "end": 4733,
           "symbol": "F:oh.field_f:Loh;",
@@ -518862,11 +519129,88 @@
           "renamed": "next"
         },
         {
+          "start": 4750,
+          "end": 4757,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 4831,
+          "end": 4838,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 4855,
+          "end": 4862,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 4932,
+          "end": 4939,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 4956,
+          "end": 4963,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 4971,
+          "end": 4978,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 5006,
+          "end": 5013,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
           "start": 5035,
           "end": 5042,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 5066,
+          "end": 5073,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 5092,
+          "end": 5099,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 5124,
+          "end": 5131,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 5153,
+          "end": 5160,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
         },
         {
           "start": 5168,
@@ -518890,6 +519234,27 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 5238,
+          "end": 5245,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 5283,
+          "end": 5290,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
+        },
+        {
+          "start": 5316,
+          "end": 5317,
+          "symbol": "M:fl.c(I)V",
+          "original": "c",
+          "renamed": "reset"
+        },
+        {
           "start": 5395,
           "end": 5396,
           "symbol": "C:r",
@@ -518902,6 +519267,41 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 5539,
+          "end": 5540,
+          "symbol": "M:fl.c(I)V",
+          "original": "c",
+          "renamed": "reset"
+        },
+        {
+          "start": 5568,
+          "end": 5575,
+          "symbol": "F:fl.field_c:Loh;",
+          "original": "field_c",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 5658,
+          "end": 5665,
+          "symbol": "F:fl.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 5684,
+          "end": 5691,
+          "symbol": "F:fl.field_a:Loh;",
+          "original": "field_a",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 5699,
+          "end": 5706,
+          "symbol": "F:fl.field_g:Lrm;",
+          "original": "field_g",
+          "renamed": "table"
         },
         {
           "start": 5718,
@@ -540113,7 +540513,7 @@
       "original": "hl.java",
       "renamed": "ValidationIndicator.java",
       "inputSha256": "0bd0dd64298ac933565258bdc29b6ad79c8d18c7ab0e48a7c32a4496d91c2f20",
-      "outputSha256": "84751b2f0bc9d20bdb1d76880664e3d33c927def6368db58331b4b554e2886b7",
+      "outputSha256": "78d9795cd28749d5e5b59fc87884ecae82e6196d869f9bcda615c2eb7b18e695",
       "edits": [
         {
           "start": 50,
@@ -540296,6 +540696,20 @@
           "symbol": "M:pf.a(BLoh;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 2435,
+          "end": 2442,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2450,
+          "end": 2457,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 2928,
@@ -616107,7 +616521,7 @@
       "original": "on.java",
       "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "bf5d8e2bc8bd9ed34f4a20a1718c0b5db016c0150ae5d6bf2b4b223959222b20",
-      "outputSha256": "7fe2647ba3f1110250ec9888d1ee923920df05f2ba90a52b16835ce8adcf63c4",
+      "outputSha256": "8c2b139e0129520df06a178b9cc4e7f1ea6e604c8642f95dec57726c787d980a",
       "edits": [
         {
           "start": 50,
@@ -616145,11 +616559,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 347,
+          "end": 354,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 355,
           "end": 362,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 436,
+          "end": 443,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 547,
@@ -616264,11 +616692,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1362,
+          "end": 1369,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1481,
           "end": 1488,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 1548,
+          "end": 1555,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 1659,
@@ -616292,6 +616734,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1756,
+          "end": 1763,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1764,
           "end": 1771,
           "symbol": "F:oh.field_f:Loh;",
@@ -616299,11 +616748,25 @@
           "renamed": "next"
         },
         {
+          "start": 1854,
+          "end": 1861,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1973,
           "end": 1980,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 2040,
+          "end": 2047,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 2151,
@@ -616348,11 +616811,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2959,
+          "end": 2966,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2967,
           "end": 2974,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 3023,
+          "end": 3030,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 3119,
@@ -616439,11 +616916,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4679,
+          "end": 4686,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4687,
           "end": 4694,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 4781,
+          "end": 4788,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 4885,
@@ -616486,6 +616977,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5708,
+          "end": 5715,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 5819,
@@ -621156,7 +621654,7 @@
       "original": "pf.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "228d9e3944da5c5cf115488d1f0106fb4f06c87c4c50454ae26b6f2d12df9a34",
-      "outputSha256": "0060583dc590e898f33930e1434224629b3a33b1efc5e8ce32fac3c7608b467d",
+      "outputSha256": "1e5fb5716da2f53e5f32451f78a5526f83a2863703c8c7e1c2d7a2f83a4177ca",
       "edits": [
         {
           "start": 50,
@@ -621180,11 +621678,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 85,
+          "end": 92,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 195,
           "end": 197,
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 198,
+          "end": 205,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 218,
@@ -621206,6 +621718,20 @@
           "symbol": "M:pf.g(I)Z",
           "original": "g",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 357,
+          "end": 364,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 373,
+          "end": 380,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 381,
@@ -621236,11 +621762,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 990,
+          "end": 997,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 998,
           "end": 1005,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 1029,
+          "end": 1036,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 1182,
@@ -621341,11 +621881,39 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2626,
+          "end": 2633,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2634,
           "end": 2641,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 2668,
+          "end": 2675,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2694,
+          "end": 2701,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 2756,
+          "end": 2763,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 2771,
@@ -621383,6 +621951,34 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2928,
+          "end": 2935,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 2954,
+          "end": 2961,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2988,
+          "end": 2995,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 3050,
+          "end": 3057,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 3065,
           "end": 3072,
           "symbol": "F:oh.field_e:Loh;",
@@ -621411,11 +622007,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 3312,
+          "end": 3319,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 3320,
           "end": 3327,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 3357,
+          "end": 3364,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 3408,
@@ -621467,6 +622077,13 @@
           "renamed": "clear"
         },
         {
+          "start": 3951,
+          "end": 3958,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 3959,
           "end": 3966,
           "symbol": "F:oh.field_f:Loh;",
@@ -621474,11 +622091,32 @@
           "renamed": "next"
         },
         {
+          "start": 4045,
+          "end": 4052,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4081,
+          "end": 4088,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 4096,
           "end": 4103,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 4196,
+          "end": 4203,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 4260,
@@ -621523,11 +622161,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4937,
+          "end": 4944,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4945,
           "end": 4952,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 4979,
+          "end": 4986,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 5036,
@@ -621579,11 +622231,39 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5410,
+          "end": 5417,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5418,
           "end": 5425,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 5516,
+          "end": 5523,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5550,
+          "end": 5557,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 5612,
+          "end": 5619,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 5627,
@@ -621628,6 +622308,13 @@
           "renamed": "next"
         },
         {
+          "start": 6057,
+          "end": 6064,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6065,
           "end": 6072,
           "symbol": "F:oh.field_f:Loh;",
@@ -621640,6 +622327,13 @@
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 6106,
+          "end": 6113,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 6132,
@@ -621705,6 +622399,13 @@
           "renamed": "pollLast"
         },
         {
+          "start": 6957,
+          "end": 6964,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6968,
           "end": 6970,
           "symbol": "C:oh",
@@ -621719,6 +622420,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7011,
+          "end": 7018,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 7019,
           "end": 7026,
           "symbol": "F:oh.field_e:Loh;",
@@ -621726,11 +622434,25 @@
           "renamed": "previous"
         },
         {
+          "start": 7053,
+          "end": 7060,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 7110,
           "end": 7111,
           "symbol": "M:oh.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 7177,
+          "end": 7178,
+          "symbol": "M:pf.a(ZLoh;Lpf;)V",
+          "original": "a",
+          "renamed": "transferSuffixTo"
         },
         {
           "start": 7195,
@@ -621754,11 +622476,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7581,
+          "end": 7588,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 7589,
           "end": 7596,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 7686,
+          "end": 7693,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 7694,
@@ -621789,11 +622525,32 @@
           "renamed": "next"
         },
         {
+          "start": 7760,
+          "end": 7767,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 7798,
+          "end": 7805,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 7828,
           "end": 7835,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 7845,
+          "end": 7852,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 7853,
@@ -621822,6 +622579,20 @@
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 7941,
+          "end": 7948,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 7969,
+          "end": 7976,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 7977,
@@ -621880,6 +622651,13 @@
           "renamed": "previous"
         },
         {
+          "start": 9009,
+          "end": 9016,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 9017,
           "end": 9024,
           "symbol": "F:oh.field_e:Loh;",
@@ -621892,6 +622670,13 @@
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 9056,
+          "end": 9063,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 9080,
@@ -621957,11 +622742,39 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 9475,
+          "end": 9482,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 9509,
+          "end": 9516,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 9535,
+          "end": 9542,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 9631,
           "end": 9633,
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 9664,
+          "end": 9671,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 9679,
@@ -621999,6 +622812,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 11215,
+          "end": 11222,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 11223,
           "end": 11230,
           "symbol": "F:oh.field_f:Loh;",
@@ -622006,11 +622826,25 @@
           "renamed": "next"
         },
         {
+          "start": 11251,
+          "end": 11258,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 11316,
           "end": 11317,
           "symbol": "M:oh.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 11354,
+          "end": 11361,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 11407,
@@ -622048,11 +622882,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 11517,
+          "end": 11524,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 11531,
           "end": 11533,
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 11550,
+          "end": 11557,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 11558,
@@ -622062,11 +622910,32 @@
           "renamed": "next"
         },
         {
+          "start": 11573,
+          "end": 11580,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 11595,
+          "end": 11602,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 11603,
           "end": 11610,
           "symbol": "F:oh.field_e:Loh;",
           "original": "field_e",
           "renamed": "previous"
+        },
+        {
+          "start": 11618,
+          "end": 11625,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 11649,
@@ -622083,11 +622952,32 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 11706,
+          "end": 11707,
+          "symbol": "M:pf.a(ZLoh;Lpf;)V",
+          "original": "a",
+          "renamed": "transferSuffixTo"
+        },
+        {
+          "start": 11720,
+          "end": 11727,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 11728,
           "end": 11735,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 11794,
+          "end": 11801,
+          "symbol": "F:pf.field_b:Loh;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 11805,
@@ -702742,7 +703632,7 @@
       "original": "vk.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "47c5a96f4fba351cd816d4be9b89d2379c2f19008894cbc5f56886fd317d05b2",
-      "outputSha256": "d4052129f0dc9103b31ff9141ed6ff6ab5b754982b48a7520f52139416b6b761",
+      "outputSha256": "44d99a6d8e67ea5ccd726ed80bf8184d3b012eec28ead3826ce5d6aaaa5869c6",
       "edits": [
         {
           "start": 50,
@@ -702871,11 +703761,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 779,
+          "end": 786,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 787,
           "end": 794,
           "symbol": "F:oh.field_f:Loh;",
           "original": "field_f",
           "renamed": "next"
+        },
+        {
+          "start": 829,
+          "end": 836,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 913,
@@ -703018,11 +703922,25 @@
           "renamed": "PcmMixerListener"
         },
         {
+          "start": 2252,
+          "end": 2259,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2358,
           "end": 2360,
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "PcmMixerListener"
+        },
+        {
+          "start": 2376,
+          "end": 2383,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 2384,
@@ -703051,6 +703969,13 @@
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "PcmMixerListener"
+        },
+        {
+          "start": 2697,
+          "end": 2704,
+          "symbol": "F:pf.field_h:Loh;",
+          "original": "field_h",
+          "renamed": "sentinel"
         },
         {
           "start": 2705,
@@ -711350,10 +712275,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "75eee86f689baba259f644081ab96b4659b175882a7ea969d2ee3d6870aac5a6",
+    "rulesSha256": "7972c682cbcb8de8da7e907e03b29d2da1fe54207273264d18104229d3395a28",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "fa0e3bf630570ec6d2b30b481b3fa7ea605acbf8a05a66c5c8dc6f4462bf9878",
+    "outputTreeSha256": "6333bbdce3585dd5009c6244f54b2d486f45cfdc163ca69f10384b49c5e7c829",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

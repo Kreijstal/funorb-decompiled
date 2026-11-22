@@ -78,7 +78,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (0 <= vg.field_b &&
               var2_int >= 0) {
-              ji.field_e[vg.field_b] = ~var2_int;
+              IterableNodeHashTable.field_e[vg.field_b] = ~var2_int;
               vg.field_b = vg.field_b + 1 & 127;
               if (ud.field_a == vg.field_b) {
                 vg.field_b = -1;
@@ -175,7 +175,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (0 <= vg.field_b &&
             var2_int >= 0) {
-            ji.field_e[vg.field_b] = var2_int;
+            IterableNodeHashTable.field_e[vg.field_b] = var2_int;
             vg.field_b = 1 + vg.field_b & 127;
             if (ud.field_a == vg.field_b) {
               vg.field_b = -1;

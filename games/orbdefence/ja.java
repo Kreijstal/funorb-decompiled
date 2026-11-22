@@ -404,13 +404,13 @@ final class ja {
         if (this.field_a == 2 &&
           !n.b((byte) -95)) {
           if (3 > param1) {
-            return im.field_a[this.field_a] + 200 * param1;
+            return IntrusiveDeque.field_a[this.field_a] + 200 * param1;
           }
-          return 200 + im.field_a[this.field_a];
+          return 200 + IntrusiveDeque.field_a[this.field_a];
         }
         if (this.field_a == 2 &&
           n.b((byte) 47)) {
-          return im.field_a[this.field_a] - 100;
+          return IntrusiveDeque.field_a[this.field_a] - 100;
         }
         if (this.field_a == 3) {
           return 200 * param1 + 20;
@@ -421,12 +421,12 @@ final class ja {
         }
         if (this.field_a == 8 &&
           param1 <= 3) {
-          return im.field_a[this.field_a] - 100;
+          return IntrusiveDeque.field_a[this.field_a] - 100;
         }
         if (param0 != -29187) {
           return -35;
         }
-        return im.field_a[this.field_a];
+        return IntrusiveDeque.field_a[this.field_a];
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -825,7 +825,7 @@ final class ja {
             rh.a((byte) 114, 7, param2);
             dm.field_f = 0;
             lb.field_g = 0;
-            MouseWheelInput.field_b.a(false);
+            MouseWheelInput.field_b.clear(false);
             if (var9 == 0) {
               break regionExit1;
             }
@@ -2420,9 +2420,9 @@ final class ja {
             fk.field_b = var3_ref_hj;
           }
           var3 = this.a((byte) -12);
-          var4 = im.field_a[this.field_a];
+          var4 = IntrusiveDeque.field_a[this.field_a];
           var5 = wd.field_o[this.field_a] - 24;
-          var6 = vb.field_g[this.field_a] - im.field_a[this.field_a];
+          var6 = vb.field_g[this.field_a] - IntrusiveDeque.field_a[this.field_a];
           var7 = 48 + vh.field_q[this.field_a].length * IterableNodeHashTable.field_e[this.field_a] - 16;
           var2 = 0;
           var8 = lc.field_o * 255 / 100;
@@ -2451,11 +2451,11 @@ final class ja {
         if ((decompiledFrameRemainder1) &&
           (1 == this.field_a)) {
           var2Lifetime4 = this.a((byte) -12);
-          im.field_a[this.field_a] = im.field_a[0];
+          IntrusiveDeque.field_a[this.field_a] = IntrusiveDeque.field_a[0];
           vb.field_g[this.field_a] = vb.field_g[0];
-          var3Lifetime2 = im.field_a[this.field_a];
+          var3Lifetime2 = IntrusiveDeque.field_a[this.field_a];
           var4Lifetime1 = wd.field_o[this.field_a] - 24;
-          var5Lifetime1 = -im.field_a[this.field_a] + vb.field_g[this.field_a];
+          var5Lifetime1 = -IntrusiveDeque.field_a[this.field_a] + vb.field_g[this.field_a];
           var6Lifetime1 = 48 + vh.field_q[this.field_a].length * IterableNodeHashTable.field_e[this.field_a];
           var7Lifetime1 = 0;
           var8Lifetime1 = lc.field_o * 255 / 100;

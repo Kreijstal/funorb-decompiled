@@ -10,7 +10,7 @@ final class eb {
     static String field_a;
     static ti field_b;
     private byte[][] field_h;
-    static ng field_f;
+    static IntrusiveDeque field_f;
     int field_g;
     String[][] field_c;
 

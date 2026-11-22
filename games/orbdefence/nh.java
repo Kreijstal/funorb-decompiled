@@ -126,10 +126,10 @@ final class nh {
           if (param0 != 15968) {
             nh.clearStaticReferences((byte) 53);
           }
-          var2 = (d) (md.field_h.b((byte) -25));
+          var2 = (d) (md.field_h.beginForward((byte) -25));
           while (var2 != null) {
             fa.a(var2, param1, param0 ^ 15999);
-            var2 = (d) (md.field_h.d(853));
+            var2 = (d) (md.field_h.nextForward(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

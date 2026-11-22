@@ -470,7 +470,7 @@ final class ca extends gj implements dc, da, pe {
             param2.field_J != null) {
             ik.d(109);
           }
-          vc.field_d = 0;
+          IntrusiveDeque.field_d = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_j)))) {
@@ -525,7 +525,7 @@ final class ca extends gj implements dc, da, pe {
                           dupTemp$0 = param2.field_J[var8];
                           ge.field_e[dupTemp$0] = ge.field_e[dupTemp$0] + 1;
                         }
-                        vc.field_d = vc.field_d + 1;
+                        IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
                         break;
                       }
                     }

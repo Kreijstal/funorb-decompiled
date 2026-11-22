@@ -39,7 +39,7 @@ final class lb {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).d(8195);
             }
-            var13 = (ri) (ei.field_h.g(-63));
+            var13 = (ri) (ei.field_h.beginForward(-63));
             if (var13 == null) {
               le.c((byte) 53);
               return;
@@ -51,7 +51,7 @@ final class lb {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var15 = (ri) (ei.field_h.g(param0 ^ 20755));
+              var15 = (ri) (ei.field_h.beginForward(param0 ^ 20755));
               if (var15 == null) {
                 le.c((byte) 66);
                 return;
@@ -64,7 +64,7 @@ final class lb {
               le.c((byte) 78);
             }
           } else {
-            var12 = (hm) (ih.field_x.g(-117));
+            var12 = (hm) (ih.field_x.beginForward(-117));
             if (var12 == null) {
               le.c((byte) 81);
               return;

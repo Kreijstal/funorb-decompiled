@@ -12,7 +12,7 @@ final class rf {
         field_a = null;
         if (param0 < 11) {
           double[] var2 = (double[]) null;
-          rf.a((mn) null, -0.7974835177805552, (oi) null, (dj) null, (double[]) null, false);
+          rf.a((PrimaryNodeDeque) null, -0.7974835177805552, (oi) null, (dj) null, (double[]) null, false);
         }
     }
 
@@ -20,7 +20,7 @@ final class rf {
         throw new IllegalStateException();
     }
 
-    final static void a(mn param0, double param1, oi param2, dj param3, double[] param4, boolean param5) {
+    final static void a(PrimaryNodeDeque param0, double param1, oi param2, dj param3, double[] param4, boolean param5) {
         double var7_double = 0.0;
         double var9 = 0.0;
         double var11 = 0.0;
@@ -29,7 +29,7 @@ final class rf {
           var7_double = param3.field_E + param4[9] * param3.field_C;
           if (param5) {
             double[] var15 = (double[]) null;
-            rf.a((mn) null, 0.5304627650530377, (oi) null, (dj) null, (double[]) null, false);
+            rf.a((PrimaryNodeDeque) null, 0.5304627650530377, (oi) null, (dj) null, (double[]) null, false);
           }
           var9 = param3.field_C * param4[10] + param3.field_t;
           var11 = param3.field_C * param4[11] + param3.field_D;
@@ -38,7 +38,7 @@ final class rf {
           param2.field_t = var7_double;
           param2.field_p = var11;
           param2.field_u = var13 * 20.0;
-          param0.a((IntrusiveNode) (param2), (byte) 97);
+          param0.addLast((IntrusiveNode) (param2), (byte) 97);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

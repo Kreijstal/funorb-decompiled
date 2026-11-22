@@ -181,7 +181,7 @@ final class vc {
               fieldTemp$0 = rl.field_e;
               rl.field_e = rl.field_e + 1;
               var6.field_ab = fieldTemp$0;
-              ii.field_c.a(-109, var6);
+              ii.field_c.addLast(-109, var6);
             }
             var6.field_db = var5_ref_String;
             return;
@@ -234,7 +234,7 @@ final class vc {
             fieldTemp$1 = tl.field_a;
             tl.field_a = tl.field_a + 1;
             var7_ref.field_ab = fieldTemp$1;
-            lf.field_b.a(-107, var7_ref);
+            lf.field_b.addLast(-107, var7_ref);
           }
           if (var4Lifetime1 != null) {
             var4Lifetime1 = ((String) (var4Lifetime1)).intern();
@@ -242,7 +242,7 @@ final class vc {
           var7_ref.field_Z = (String) (var4Lifetime1);
           var7_ref.field_db = var5_ref_StringLifetime1;
           var7_ref.unlink(57);
-          var8_ref = (ti) (lf.field_b.b((byte) 126));
+          var8_ref = (ti) (lf.field_b.beginForward((byte) 126));
           scanLoop1: while (true) {
             if (var8_ref != null) {
               stackIn_59_0 = var7_ref;
@@ -252,12 +252,12 @@ final class vc {
                 break scanLoop1;
               }
               if (oj.a(stackIn_59_0, stackIn_59_1, stackIn_59_2)) {
-                var8_ref = (ti) (lf.field_b.d(853));
+                var8_ref = (ti) (lf.field_b.nextForward(853));
                 continue;
               }
             }
             if (null == var8_ref) {
-              lf.field_b.a(-96, var7_ref);
+              lf.field_b.addLast(-96, var7_ref);
               if (var9 == 0) {
                 return;
               }

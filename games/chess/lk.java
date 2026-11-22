@@ -56,7 +56,7 @@ final class lk {
             return;
           }
           stackIn_4_0 = 18621;
-          stackIn_5_1 = !(cn.field_f >= 13);
+          stackIn_5_1 = !(SecondaryNodeDeque.field_f >= 13);
           lg.field_a = cf.createAccountSuccessResult(stackIn_4_0, stackIn_5_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

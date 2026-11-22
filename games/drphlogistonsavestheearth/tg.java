@@ -8,7 +8,7 @@ final class tg {
     static int field_b;
     private int field_f;
     private IntrusiveNode[] field_d;
-    static vd field_g;
+    static IntrusiveDeque field_g;
     static String[] field_c;
     static int[] field_i;
 
@@ -133,7 +133,7 @@ final class tg {
     static {
         field_b = 0;
         field_c = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
-        field_g = new vd();
+        field_g = new IntrusiveDeque();
         field_i = new int[4];
     }
 }

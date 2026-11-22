@@ -112,7 +112,7 @@ final class ec {
 
     final static hm a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         hm var8 = new hm(param7, param5, param6, param0, param4, param1);
-        ih.field_x.a(var8, 119);
+        ih.field_x.addLast(var8, 119);
         MouseInput.a(param3, 2, var8);
         if (!param2) {
           field_d = (byte[]) null;

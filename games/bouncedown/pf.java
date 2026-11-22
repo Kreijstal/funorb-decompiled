@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf extends ak {
-    private bc field_E;
+    private IntrusiveDeque field_E;
     static int[] field_A;
     static String[] field_D;
     static String field_B;
@@ -61,7 +61,7 @@ final class pf extends ak {
           if (param0 != 128) {
             field_A = (int[]) null;
           }
-          var3 = bc.a(param2, -123);
+          var3 = IntrusiveDeque.a(param2, -123);
           if (-1 != param1.indexOf(param2)) {
             return true;
           }
@@ -213,7 +213,7 @@ final class pf extends ak {
             throw new IllegalArgumentException();
           }
           var3 = (ri) (param0);
-          this.field_E.a((byte) 83, (IntrusiveNode) (var3));
+          this.field_E.addFirst((byte) 83, (IntrusiveNode) (var3));
           var3.field_D = true;
           var3.a((lk) (this), param1);
         } catch (RuntimeException runtimeException) {
@@ -242,7 +242,7 @@ final class pf extends ak {
 
     public pf() {
         super(0, 0, ob.field_a, gi.field_e, (fc) null, (sk) null);
-        this.field_E = new bc();
+        this.field_E = new IntrusiveDeque();
     }
 
     static {

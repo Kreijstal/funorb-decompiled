@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class m implements Iterable {
-    int field_d;
-    private IntrusiveNode field_f;
-    IntrusiveNode[] field_b;
-    static bc field_e;
-    static bc field_c;
+final class IterableNodeHashTable implements Iterable {
+    int bucketCount;
+    private IntrusiveNode lookupCursor;
+    IntrusiveNode[] buckets;
+    static IntrusiveDeque field_e;
+    static IntrusiveDeque field_c;
     static int field_g;
     static int[] field_a;
 
@@ -17,36 +17,36 @@ final class m implements Iterable {
         field_a = null;
         field_e = null;
         if (param0 != -1) {
-          m.a((byte) -27);
+          IterableNodeHashTable.a((byte) -27);
         }
     }
 
-    final IntrusiveNode a(byte param0, long param1) {
+    final IntrusiveNode get(byte param0, long param1) {
         IntrusiveNode var4;
         int var5;
         IntrusiveNode var6;
         int var7;
         var7 = Bounce.field_N;
         var5 = -117 / ((param0 - 20) / 36);
-        var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
-        this.field_f = var4.field_c;
+        var4 = this.buckets[(int)(param1 & (long)(-1 + this.bucketCount))];
+        this.lookupCursor = var4.field_c;
         while (true) {
-          if (var4 == this.field_f) {
-            this.field_f = null;
+          if (var4 == this.lookupCursor) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~this.field_f.field_d != ~param1) {
-            this.field_f = this.field_f.field_c;
+          if (~this.lookupCursor.field_d != ~param1) {
+            this.lookupCursor = this.lookupCursor.field_c;
             continue;
           }
           break;
         }
-        var6 = this.field_f;
-        this.field_f = this.field_f.field_c;
+        var6 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.field_c;
         return var6;
     }
 
-    final void a(int param0, long param1, IntrusiveNode param2) {
+    final void put(int param0, long param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (param0 > -95) {
@@ -55,7 +55,7 @@ final class m implements Iterable {
           if (null != param2.field_f) {
             param2.unlink(2);
           }
-          var5 = this.field_b[(int)((long)(-1 + this.field_d) & param1)];
+          var5 = this.buckets[(int)((long)(-1 + this.bucketCount) & param1)];
           param2.field_f = var5.field_f;
           param2.field_c = var5;
           param2.field_f.field_c = param2;
@@ -70,21 +70,21 @@ final class m implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    private m() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
     final static int a(byte param0) {
         if (param0 <= 1) {
-          field_e = (bc) null;
-          return wh.field_d;
+          field_e = (IntrusiveDeque) null;
+          return SecondaryNodeDeque.field_d;
         }
-        return wh.field_d;
+        return SecondaryNodeDeque.field_d;
     }
 
     static {
-        field_e = new bc();
-        field_c = new bc();
+        field_e = new IntrusiveDeque();
+        field_c = new IntrusiveDeque();
         field_g = -1;
     }
 }

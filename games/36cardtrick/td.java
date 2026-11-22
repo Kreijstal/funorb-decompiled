@@ -128,7 +128,7 @@ final class td {
                 var18.field_i[var5] = -5;
               }
             }
-            vb.field_e.a(var18, 27362);
+            vb.field_e.addLast(var18, 27362);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

@@ -35,7 +35,7 @@ final class f {
           var2 = var9.readUnsignedByte(-98);
           var3 = var9.readUnsignedByte(92);
           if (param0 == ~var2) {
-            var4 = (dl) (tf.field_q.a((byte) 74));
+            var4 = (dl) (tf.field_q.beginForward((byte) 74));
             if (var4 == null) {
               mc.a((byte) -126);
               return;
@@ -59,11 +59,11 @@ final class f {
             return;
           }
           var4_int = var9.readSignedSmart((byte) 59);
-          var5_ref_gh = (gh) (sj.field_a.a((byte) 74));
+          var5_ref_gh = (gh) (sj.field_a.beginForward((byte) 74));
           while (var5_ref_gh != null) {
             if (var3 != var5_ref_gh.field_m ||
               var4_int != var5_ref_gh.field_l) {
-              var5_ref_gh = (gh) (sj.field_a.b((byte) -106));
+              var5_ref_gh = (gh) (sj.field_a.nextForward((byte) -106));
               continue;
             }
             break;

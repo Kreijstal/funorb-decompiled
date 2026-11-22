@@ -103,7 +103,7 @@ final class mh extends nb implements jk {
         try {
           if (param4 != this.field_G) {
             if (param4 == this.field_E) {
-              bg.a(false);
+              SecondaryNodeDeque.a(false);
             } else {
               if (param4 == this.field_C) {
                 ui.d(param2 ^ 215535462);

@@ -6,7 +6,7 @@ final class ne extends DualLinkNode {
     private int[] field_t;
     static int field_w;
     static tj field_v;
-    static bc field_r;
+    static IntrusiveDeque field_r;
     private int[][] field_o;
     int[] field_s;
     static int[] field_m;
@@ -222,7 +222,7 @@ final class ne extends DualLinkNode {
 
     final static ve f(int param0) {
         if (param0 != 32768) {
-          field_r = (bc) null;
+          field_r = (IntrusiveDeque) null;
         }
         return new ve(bb.a(param0 - 32880), ck.g((byte) 112));
     }
@@ -308,7 +308,7 @@ final class ne extends DualLinkNode {
     static {
         field_w = 0;
         field_m = new int[8192];
-        field_r = new bc();
+        field_r = new IntrusiveDeque();
         field_q = "Name is available";
     }
 }

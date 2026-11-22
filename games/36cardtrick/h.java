@@ -78,12 +78,12 @@ final class h extends hl {
           bi.field_d = bi.field_d - 1;
           if (bi.field_d == 0) {
             bi.field_d = 200;
-            var1 = (gi) (aj.field_s.a((byte) 74));
+            var1 = (gi) (aj.field_s.beginForward((byte) 74));
             while (var1 != null) {
               if (!var1.field_i.isLinked(125)) {
                 var1.unlink(84);
               }
-              var1 = (gi) (aj.field_s.b((byte) -92));
+              var1 = (gi) (aj.field_s.nextForward((byte) -92));
             }
           }
         } catch (RuntimeException runtimeException) {

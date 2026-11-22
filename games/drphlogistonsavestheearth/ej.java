@@ -22,7 +22,7 @@ final class ej {
           if (param1 < 50) {
             return;
           }
-          dg.a((byte) 50, (java.awt.Component) ((Object) param0));
+          SecondaryNodeDeque.a((byte) 50, (java.awt.Component) ((Object) param0));
           if (null == sc.field_e) {
             return;
           }

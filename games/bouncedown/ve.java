@@ -194,7 +194,7 @@ final class ve {
         var1 = nj.field_o;
         synchronized (var1) {
           n.field_m = c.field_c;
-          wh.field_d = wh.field_d + 1;
+          SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + 1;
           uc.field_C = DelegatingCanvas.field_a;
           ll.field_y = q.field_H;
           mi.field_j = cl.field_o;
@@ -210,7 +210,7 @@ final class ve {
     }
 
     final static void a(int param0) {
-        n var1 = (n) (qb.field_g.e((byte) 60));
+        n var1 = (n) (qb.field_g.removeLast((byte) 60));
         if (var1 != null) {
           na.a(var1.field_g, var1.field_k, var1.field_h);
           na.e(var1.field_l, var1.field_j, var1.field_i, var1.field_n);
@@ -218,7 +218,7 @@ final class ve {
             ve.b((byte) -90);
           }
           var1.field_g = null;
-          k.field_B.a(1, var1);
+          k.field_B.addLast(1, var1);
           return;
         }
         throw new IllegalStateException();

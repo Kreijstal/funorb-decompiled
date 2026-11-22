@@ -149,7 +149,7 @@ final class fb extends IntrusiveNode {
                 var19.field_m[var6] = -5;
               }
             }
-            ab.field_h.a(-78, var19);
+            ab.field_h.addLast(-78, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

@@ -293,10 +293,10 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (this.nodeDequeState0034 != null) {
-          sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1741((byte) -124));
+          sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.beginBackward((byte) -124));
           while (sceneWidgetLocal15 != null) {
             sceneWidgetLocal15.performAction1771(booleanArgument1, this.integerState0896, booleanArgument3, booleanArgument4, integerLocal9 + this.integerState0892, this.integerState0915, booleanArgument7, this.integerState0886 + integerLocal10, this.booleanState0213, booleanArgument10, -29696);
-            sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1745(true));
+            sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.nextBackward(true));
           }
         }
         SoftwareRaster.performAction0649(integerLocal2, integerLocal3, integerLocal4, integerLocal5);
@@ -351,11 +351,11 @@ class SceneWidget extends SceneWidgetNode {
         int integerLocal8;
         if (!booleanArgument4) {
           integerLocal2 = 0;
-          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1741((byte) 118));
+          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.beginBackward((byte) 118));
           while (sceneWidgetLocal1 != null) {
             sceneWidgetLocal1.integerState0904 = -sceneWidgetLocal1.integerState0903 + integerLocal2;
             integerLocal2 = integerLocal2 + (sceneWidgetLocal1.integerState0895 + sceneWidgetLocal1.integerState0915 + integerArgument2);
-            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1745(true));
+            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.nextBackward(true));
           }
           integerLocal7 = -integerArgument2 + integerLocal2;
         }
@@ -404,7 +404,7 @@ class SceneWidget extends SceneWidgetNode {
           if (null == this.nodeDequeState0034) {
             this.nodeDequeState0034 = new NodeDeque();
           }
-          this.nodeDequeState0034.performAction1735(sceneWidgetArgument1, 2777);
+          this.nodeDequeState0034.addFirst(sceneWidgetArgument1, 2777);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "w.GA(" + (sceneWidgetArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
@@ -414,11 +414,11 @@ class SceneWidget extends SceneWidgetNode {
         SceneWidget sceneWidgetLocal1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (this.nodeDequeState0034 != null) {
-          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1740(true));
+          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.beginForward(true));
           while (sceneWidgetLocal1 != null) {
             sceneWidgetLocal1.booleanState0215 = true;
             sceneWidgetLocal1.performAction1774(-92);
-            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1743(true));
+            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.nextForward(true));
           }
         }
         if (integerArgument1 >= -16) {
@@ -504,10 +504,10 @@ class SceneWidget extends SceneWidgetNode {
         stackBooleanLocal2 = (this.booleanState0211) && (DualNode.integerState0062 == this.integerState0888) && (booleanArgument3);
         this.booleanState0218 = stackBooleanLocal2;
         if (null != this.nodeDequeState0034) {
-          sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1740(true));
+          sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.beginForward(true));
           while (sceneWidgetLocal9 != null) {
             sceneWidgetLocal9.performAction1763(this.integerState0892, (byte) 126, booleanArgument3, this.integerState0915, this.integerState0896, this.integerState0886);
-            sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1743(true));
+            sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.nextForward(true));
           }
         }
         if (this.booleanState0211) {
@@ -755,13 +755,13 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (null != this.nodeDequeState0034) {
-          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1741((byte) -125));
+          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.beginBackward((byte) -125));
           while (sceneWidgetLocal1 != null) {
             integerLocal2 = sceneWidgetLocal1.integerState0896 + sceneWidgetLocal1.integerState0890;
             if (integerLocal5 < integerLocal2) {
               integerLocal5 = integerLocal2;
             }
-            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1745(true));
+            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.nextBackward(true));
           }
         }
         return integerLocal5;

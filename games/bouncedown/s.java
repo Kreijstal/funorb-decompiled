@@ -103,7 +103,7 @@ final class s extends vc {
           var2_long = fa.a(-94);
           if (0 != vi.field_c &&
             bh.field_c < 0) {
-            var4_ref_j = (j) (ih.field_w.a((byte) -99));
+            var4_ref_j = (j) (ih.field_w.beginForward((byte) -99));
             if (var4_ref_j != null &&
               var4_ref_j.field_h < var2_long) {
               var4_ref_j.unlink(2);
@@ -154,7 +154,7 @@ final class s extends vc {
             for (var6 = 0; var6 < pe.field_d; var6++) {
               var5.field_i[var6] = jc.field_g.payload[var6];
             }
-            ih.field_w.a(1, var5);
+            ih.field_w.addLast(1, var5);
             bh.field_c = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

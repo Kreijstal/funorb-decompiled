@@ -165,7 +165,7 @@ final class pe extends IntrusiveNode {
           var2_long = ri.a(-3);
           if (tk.field_b != 0 &&
             tg.field_S < 0) {
-            var4_ref_hc = (hc) (qh.field_w.a(-121));
+            var4_ref_hc = (hc) (qh.field_w.beginForward(-121));
             if (var4_ref_hc != null &&
               var4_ref_hc.field_r < var2_long) {
               var4_ref_hc.unlink(true);
@@ -227,7 +227,7 @@ final class pe extends IntrusiveNode {
             for (var6 = 0; var6 < ai.field_i; var6++) {
               var5.field_q[var6] = e.field_c.payload[var6];
             }
-            qh.field_w.a((IntrusiveNode) (var5), (byte) -93);
+            qh.field_w.addLast((IntrusiveNode) (var5), (byte) -93);
             tg.field_S = -1;
             stackIn_18_0 = tg.field_S;
           }

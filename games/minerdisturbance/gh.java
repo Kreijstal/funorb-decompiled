@@ -22,10 +22,10 @@ final class gh {
             ig.a(param0, 1, var4);
             var4 = (il) (IsaacRandom.field_h.nextForward((byte) 56));
           }
-          var5 = (jb) (sd.field_a.beginForward(96));
+          var5 = (jb) (IterableNodeHashTable.field_a.beginForward(96));
           while (var5 != null) {
             ti.a(var5, true, param0);
-            var5 = (jb) (sd.field_a.nextForward((byte) 56));
+            var5 = (jb) (IterableNodeHashTable.field_a.nextForward((byte) 56));
           }
           if (param1 == 21121) {
             return;

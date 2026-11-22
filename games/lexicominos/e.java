@@ -84,7 +84,7 @@ final class e {
               return stackIn_20_0;
             }
           }
-          stackIn_23_0 = bg.a(var3[var3.length - 1], -21637);
+          stackIn_23_0 = SecondaryNodeDeque.a(var3[var3.length - 1], -21637);
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

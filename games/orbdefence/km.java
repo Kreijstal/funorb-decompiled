@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km {
-    private im field_c;
+    private IntrusiveDeque field_c;
     static String field_b;
     private IntrusiveNode field_a;
 
@@ -23,7 +23,7 @@ final class km {
 
     final IntrusiveNode b(boolean param0) {
         IntrusiveNode var2 = this.field_a;
-        if (this.field_c.field_d == var2) {
+        if (this.field_c.sentinel == var2) {
           this.field_a = null;
           return null;
         }
@@ -46,11 +46,11 @@ final class km {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_c.field_d.field_c;
+            var3 = this.field_c.sentinel.field_c;
           } else {
             var3 = param0;
           }
-          if (this.field_c.field_d == var3) {
+          if (this.field_c.sentinel == var3) {
             this.field_a = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
@@ -91,7 +91,7 @@ final class km {
         if (param0 >= -69) {
           this.field_a = (IntrusiveNode) null;
           var2 = this.field_a;
-          if (this.field_c.field_d != var2) {
+          if (this.field_c.sentinel != var2) {
             this.field_a = var2.field_c;
             return var2;
           }
@@ -99,7 +99,7 @@ final class km {
           return null;
         }
         var2Lifetime1 = this.field_a;
-        if (this.field_c.field_d != var2Lifetime1) {
+        if (this.field_c.sentinel != var2Lifetime1) {
           this.field_a = var2Lifetime1.field_c;
           return var2Lifetime1;
         }
@@ -185,17 +185,17 @@ final class km {
     }
 
     final IntrusiveNode d(int param0) {
-        IntrusiveNode var2 = this.field_c.field_d.field_e;
+        IntrusiveNode var2 = this.field_c.sentinel.field_e;
         if (param0 != 27935) {
-          this.field_c = (im) null;
-          if (this.field_c.field_d != var2) {
+          this.field_c = (IntrusiveDeque) null;
+          if (this.field_c.sentinel != var2) {
             this.field_a = var2.field_e;
             return var2;
           }
           this.field_a = null;
           return null;
         }
-        if (this.field_c.field_d != var2) {
+        if (this.field_c.sentinel != var2) {
           this.field_a = var2.field_e;
           return var2;
         }
@@ -223,12 +223,12 @@ final class km {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_c.field_d.field_e;
+            var3 = this.field_c.sentinel.field_e;
           }
           if (param1 != -1) {
             km.a(true);
           }
-          if (this.field_c.field_d == var3) {
+          if (this.field_c.sentinel == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -250,7 +250,7 @@ final class km {
         }
     }
 
-    km(im param0) {
+    km(IntrusiveDeque param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -259,8 +259,8 @@ final class km {
     }
 
     final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_c.field_d.field_c;
-        if (var2 == this.field_c.field_d) {
+        IntrusiveNode var2 = this.field_c.sentinel.field_c;
+        if (var2 == this.field_c.sentinel) {
           this.field_a = null;
           return null;
         }

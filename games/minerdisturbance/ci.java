@@ -51,7 +51,7 @@ abstract class ci {
           if (fh.field_b < 10) {
             return false;
           }
-          if (!qc.field_b) {
+          if (!SecondaryNodeDeque.field_b) {
             return !gd.b((byte) -97) ? true : false;
           }
           return false;
@@ -59,7 +59,7 @@ abstract class ci {
         if (fh.field_b < 10) {
           return false;
         }
-        if (!qc.field_b) {
+        if (!SecondaryNodeDeque.field_b) {
           return !gd.b((byte) -97) ? true : false;
         }
         return false;

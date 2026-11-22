@@ -240,7 +240,7 @@ final class hn implements Runnable {
         int var13 = Chess.field_G;
         int var8Lifetime1;
         int var9Lifetime1;
-        jc.field_d = ao.a(param3, "frame_top", 2993, "commonui");
+        IntrusiveDeque.field_d = ao.a(param3, "frame_top", 2993, "commonui");
         ej.field_e = ao.a(param3, "frame_bottom", 2993, "commonui");
         vk.field_a = wk.a(param3, 1, "jagex_logo_grey", "commonui");
         bj.field_db = ao.a(param3, "button", 2993, "commonui");

@@ -26,15 +26,15 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
-          var4 = (vg) (kk.field_X.b((byte) -45));
+          var4 = (vg) (kk.field_X.beginForward((byte) -45));
           while (var4 != null) {
             bk.a(true, param0, var4);
-            var4 = (vg) (kk.field_X.d(param1 ^ 7970));
+            var4 = (vg) (kk.field_X.nextForward(param1 ^ 7970));
           }
-          var5 = (gj) (cb.field_b.b((byte) 123));
+          var5 = (gj) (cb.field_b.beginForward((byte) 123));
           while (var5 != null) {
             se.a(var5, param0, -49);
-            var5 = (gj) (cb.field_b.d(param1 ^ 7970));
+            var5 = (gj) (cb.field_b.nextForward(param1 ^ 7970));
           }
           if (param1 == 7287) {
             return;

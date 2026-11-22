@@ -6,7 +6,7 @@ import java.util.*;
 class og extends qm implements he {
     static sj field_x;
     static String field_u;
-    wb field_v;
+    IntrusiveDeque field_v;
     static Random field_w;
     static String field_y;
 
@@ -23,7 +23,7 @@ class og extends qm implements he {
         RuntimeException decompiledCaughtException = null;
         var7 = CrazyCrystals.field_B;
         try {
-          if (this.field_v.b(-16497)) {
+          if (this.field_v.isEmpty(-16497)) {
             return false;
           }
           var8 = new tm(this.field_v);
@@ -93,7 +93,7 @@ class og extends qm implements he {
         RuntimeException decompiledCaughtException = null;
         var7 = CrazyCrystals.field_B;
         try {
-          if (this.field_v.b(-16497)) {
+          if (this.field_v.isEmpty(-16497)) {
             return false;
           }
           var9 = new tm(this.field_v);
@@ -276,7 +276,7 @@ class og extends qm implements he {
     final void b(qm param0, int param1) {
         try {
           int var3_int = -34 % ((-70 - param1) / 41);
-          this.field_v.b(0, param0);
+          this.field_v.addLast(0, param0);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "og.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -416,7 +416,7 @@ class og extends qm implements he {
 
     og(int param0, int param1, int param2, int param3, wo param4) {
         super(param0, param1, param2, param3, param4, (bi) null);
-        this.field_v = new wb();
+        this.field_v = new IntrusiveDeque();
     }
 
     final void a(int param0, int param1, int param2, int param3, qm param4, int param5) {
@@ -596,7 +596,7 @@ class og extends qm implements he {
         int var2 = 0;
         tm var3 = new tm(this.field_v);
         if (param0 <= 30) {
-          this.field_v = (wb) null;
+          this.field_v = (IntrusiveDeque) null;
         }
         qm var4 = (qm) (var3.a((byte) 80));
         while (var4 != null) {

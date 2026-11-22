@@ -476,7 +476,7 @@ final class he extends ip {
             hp.field_b[28].field_G = var4Lifetime27;
           }
           var3_ref_StringLifetime28 = kf.field_i;
-          var4Lifetime28 = qi.field_c;
+          var4Lifetime28 = IterableNodeHashTable.field_c;
           if (hp.field_b[29] != null) {
             hp.field_b[29].field_G = var4Lifetime28;
             hp.field_b[29].field_F = var3_ref_StringLifetime28;
@@ -866,7 +866,7 @@ final class he extends ip {
           ck.field_H.a(ClientException.a(ki.field_e, -1), -106, "guardian");
           ck.field_H.a(ClientException.a(ak.field_m, -1), param0 + 23560, "raiders");
           ck.field_H.a(ClientException.a(wo.field_f, -1), 102, "monsters");
-          ck.field_H.a(ClientException.a(dh.field_e, -1), param0 ^ -23517, "traps");
+          ck.field_H.a(ClientException.a(SecondaryNodeDeque.field_e, -1), param0 ^ -23517, "traps");
           ck.field_H.a(ClientException.a(wm.field_j, -1), -115, "guardians");
           ck.field_H.a("<col=8B1717>", -103, "col_charge");
           ck.field_H.a("<col=2E5D17>", -106, "col_advance");
@@ -1060,8 +1060,8 @@ final class he extends ip {
             var12.e();
             dc.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
             tg.field_l.c(jk.a(new String[]{mj.field_f}, hm.field_t, 30496), var6, 60, 16777215, -1);
-            dc.field_e.c(jk.a(new String[]{dh.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
-            tg.field_l.c(jk.a(new String[]{dh.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
+            dc.field_e.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
+            tg.field_l.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
             dc.field_e.c(je.field_l, var6, 180, 16777215, -1);
             tg.field_l.c(cg.field_c, var6, 200, 16777215, -1);
             uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);

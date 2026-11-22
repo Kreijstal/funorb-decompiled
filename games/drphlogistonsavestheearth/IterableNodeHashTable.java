@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class tc implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static int field_d;
     static int[] field_a;
-    private IntrusiveNode field_g;
+    private IntrusiveNode lookupCursor;
     static boolean field_i;
     static double[] field_f;
-    int field_c;
-    IntrusiveNode[] field_h;
+    int bucketCount;
+    IntrusiveNode[] buckets;
     static PlatformTask field_e;
     static String[] field_b;
 
@@ -122,7 +122,7 @@ final class tc implements Iterable {
             wi.field_b[var1_intLifetime1] = 0L;
           }
           if (param0 != 86) {
-            tc.clearStaticReferences(-82);
+            IterableNodeHashTable.clearStaticReferences(-82);
           }
           jj.field_b = 0;
         } catch (RuntimeException runtimeException) {
@@ -130,7 +130,7 @@ final class tc implements Iterable {
         }
     }
 
-    private tc() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
@@ -138,15 +138,15 @@ final class tc implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(long param0, IntrusiveNode param1, int param2) {
+    final void put(long param0, IntrusiveNode param1, int param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1.previous != null) {
             param1.unlink(-16175);
           }
-          var5 = this.field_h[(int)((long)(this.field_c - 1) & param0)];
+          var5 = this.buckets[(int)((long)(this.bucketCount - 1) & param0)];
           if (param2 <= 25) {
-            this.field_h = (IntrusiveNode[]) null;
+            this.buckets = (IntrusiveNode[]) null;
           }
           param1.previous = var5.previous;
           param1.next = var5;
@@ -158,20 +158,20 @@ final class tc implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var5 = null;
         int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        IntrusiveNode var4 = this.field_h[(int)(param0 & (long)(this.field_c + param1))];
-        this.field_g = var4.next;
-        while (var4 != this.field_g) {
-          if (this.field_g.key == param0) {
-            var5 = this.field_g;
-            this.field_g = this.field_g.next;
+        IntrusiveNode var4 = this.buckets[(int)(param0 & (long)(this.bucketCount + param1))];
+        this.lookupCursor = var4.next;
+        while (var4 != this.lookupCursor) {
+          if (this.lookupCursor.key == param0) {
+            var5 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
             return var5;
           }
-          this.field_g = this.field_g.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        this.field_g = null;
+        this.lookupCursor = null;
         return null;
     }
 

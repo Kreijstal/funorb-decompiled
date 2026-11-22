@@ -43,7 +43,7 @@ final class LoginMenuScreen extends pj implements ke {
                 fk.field_h = param1;
                 var2 = wg.a("loginm3", param0 - 7);
                 if (var2 != null) {
-                  dg.field_a = mj.a((byte) -120, var2);
+                  SecondaryNodeDeque.field_a = mj.a((byte) -120, var2);
                 }
                 var2 = wg.a("loginm2", 0);
                 if (null != var2) {
@@ -59,7 +59,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("error_js5crc", param0 - 7);
                 if (var2 != null) {
-                  vd.field_e = mj.a((byte) 23, var2);
+                  IntrusiveDeque.field_e = mj.a((byte) 23, var2);
                 }
                 var2 = wg.a("error_js5io", 0);
                 if (null != var2) {
@@ -1293,7 +1293,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create", param0 - 7);
                 if (null != var2) {
-                  vd.field_d = mj.a((byte) -105, var2);
+                  IntrusiveDeque.field_d = mj.a((byte) -105, var2);
                 }
                 var2 = wg.a("create_pleasechooseapassword", 0);
                 if (var2 != null) {
@@ -1597,7 +1597,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_alert_nameleadingspace", 0);
                 if (null != var2) {
-                  vd.field_a = mj.a((byte) 90, var2);
+                  IntrusiveDeque.field_a = mj.a((byte) 90, var2);
                 }
                 var2 = wg.a("create_alert_doublespace", 0);
                 if (var2 != null) {
@@ -3272,7 +3272,7 @@ final class LoginMenuScreen extends pj implements ke {
         int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          this.field_I.g(255);
+          this.field_I.clear(255);
           if (null != param1 &&
             0 != param1.length) {
             var3_int = param1.length;

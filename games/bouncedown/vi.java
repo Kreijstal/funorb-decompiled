@@ -127,10 +127,10 @@ final class vi implements Runnable {
           var2 = var27.readUnsignedByte((byte) -91);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-1640531527);
-            var4_ref_sa = (sa) (jl.field_f.a((byte) -113));
+            var4_ref_sa = (sa) (jl.field_f.beginForward((byte) -113));
             while (var4_ref_sa != null) {
               if (var3 != var4_ref_sa.field_n) {
-                var4_ref_sa = (sa) (jl.field_f.d((byte) -65));
+                var4_ref_sa = (sa) (jl.field_f.nextForward((byte) -65));
                 continue;
               }
               break;
@@ -226,10 +226,10 @@ final class vi implements Runnable {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(-1640531527);
             var4 = var27.readLong((byte) -121);
-            var6 = (he) (of.field_b.a((byte) -92));
+            var6 = (he) (of.field_b.beginForward((byte) -92));
             while (var6 != null) {
               if (var6.field_j != var3Lifetime1) {
-                var6 = (he) (of.field_b.d((byte) -42));
+                var6 = (he) (of.field_b.nextForward((byte) -42));
                 continue;
               }
               break;
@@ -508,7 +508,7 @@ final class vi implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, (byte) -123, (Runnable) (this));
           while (0 == var2.status) {
-            wh.a(10L, 19406);
+            SecondaryNodeDeque.a(10L, 19406);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

@@ -42,9 +42,9 @@ final class qc extends qe {
         }
         if (var3 == 13 ||
           var3 == 14) {
-          var8 = qi.field_b + 120;
+          var8 = IterableNodeHashTable.field_b + 120;
           var9 = var5 - (-var4 + var8) >> 1;
-          var9 = var9 + qi.field_b;
+          var9 = var9 + IterableNodeHashTable.field_b;
           if (var3 != 13) {
             stackIn_10_0 = 120 * DelegatingCanvas.field_d / 256;
           } else {
@@ -226,7 +226,7 @@ final class qc extends qe {
             this.c(256, -2);
           }
           if (this.field_x.b((byte) -48)) {
-            var6 = -120 + (this.e(param1, 82) + this.f(-77, param1)) + qi.field_b >> 1;
+            var6 = -120 + (this.e(param1, 82) + this.f(-77, param1)) + IterableNodeHashTable.field_b >> 1;
             var7 = hj.field_S - var6;
             var8 = 256 * var7 / 120;
             if (var8 <= 0) {
@@ -267,7 +267,7 @@ final class qc extends qe {
               um.a(256, false);
             }
             if (this.field_x.b((byte) -87)) {
-              var6 = -120 + (this.e(param1, 82) + (this.f(76, param1) + qi.field_b)) >> 1;
+              var6 = -120 + (this.e(param1, 82) + (this.f(76, param1) + IterableNodeHashTable.field_b)) >> 1;
               var7 = hj.field_S - var6;
               var8 = 256 * var7 / 120;
               if (var8 > 0) {
@@ -710,7 +710,7 @@ final class qc extends qe {
         var9 = o.a(this.field_B, (byte) 105, param0);
         if (var4 == 13 ||
           var4 == 14) {
-          var6 = 120 + qi.field_b;
+          var6 = 120 + IterableNodeHashTable.field_b;
         }
         kf.a(param0, this.field_B, param1 - 46);
         var10 = -var6 + var8 + var7 >> 1;

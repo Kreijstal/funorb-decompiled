@@ -125,7 +125,7 @@ final class ba extends ln {
           if (param1 <= 37) {
             field_h = (java.awt.Image) null;
           }
-          cf.field_c.b(0, param2);
+          cf.field_c.addLast(0, param2);
           tb.a(param0, param2, (byte) -123);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "ba.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

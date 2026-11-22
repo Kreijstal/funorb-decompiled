@@ -6,7 +6,7 @@ final class cd {
     private DualLinkNode field_d;
     static String field_f;
     static long field_a;
-    static bk field_b;
+    static IntrusiveDeque field_b;
     private DualLinkNode field_c;
     static int field_e;
     static String field_g;

@@ -206,7 +206,7 @@ final class am {
           }
           if (var2 == 0) {
             if (null == r.field_Ib) {
-              r.field_Ib = new dk(128);
+              r.field_Ib = new SecondaryNodeHashTable(128);
               wc.field_v = 0;
             }
             stackIn_14_0 = (var1.readUnsignedByte(param0 ^ -40) != 1) ? 0 : 1;
@@ -228,16 +228,16 @@ final class am {
             if (var6 == null) {
               var6 = hh.a(-15024, var7);
               if (var6 != null) {
-                r.field_Ib.a(true, var6, (long)var8.hashCode());
+                r.field_Ib.put(true, var6, (long)var8.hashCode());
               }
             }
             if (null == var6) {
               var6 = new ve();
-              r.field_Ib.a(true, var6, (long)var8.hashCode());
+              r.field_Ib.put(true, var6, (long)var8.hashCode());
               fieldTemp$0 = wc.field_v;
               wc.field_v = wc.field_v + 1;
               var6.field_Ib = fieldTemp$0;
-              cl.field_e.a((IntrusiveNode) (var6), (byte) 127);
+              cl.field_e.addFirst((IntrusiveNode) (var6), (byte) 127);
             }
             var6.field_Ob = var7;
             var6.field_Kb = var5;
@@ -270,7 +270,7 @@ final class am {
             return;
           }
           if (bf.field_M == null) {
-            bf.field_M = new dk(128);
+            bf.field_M = new SecondaryNodeHashTable(128);
             wg.field_w = 0;
           }
           var3Lifetime1 = var1.readString(0);
@@ -283,16 +283,16 @@ final class am {
           if (null == var6Lifetime1) {
             var6Lifetime1 = mn.a(-1, var5Lifetime1);
             if (null != var6Lifetime1) {
-              bf.field_M.a(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
+              bf.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ve();
-            bf.field_M.a(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
+            bf.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
             fieldTemp$1 = wg.field_w;
             wg.field_w = wg.field_w + 1;
             var6Lifetime1.field_Ib = fieldTemp$1;
-            me.field_e.a((IntrusiveNode) (var6Lifetime1), (byte) 126);
+            me.field_e.addFirst((IntrusiveNode) (var6Lifetime1), (byte) 126);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -301,10 +301,10 @@ final class am {
           var6Lifetime1.field_Fb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Ob = var5Lifetime1;
           var6Lifetime1.unlink(-2193);
-          var7_ref = (ve) (me.field_e.g(-18110));
+          var7_ref = (ve) (me.field_e.beginBackward(-18110));
           while (var7_ref != null) {
             if (pd.a((byte) -15, var6Lifetime1, var7_ref)) {
-              var7_ref = (ve) (me.field_e.a((byte) -105));
+              var7_ref = (ve) (me.field_e.nextBackward((byte) -105));
               if (var9 == 0) {
                 continue;
               }
@@ -312,7 +312,7 @@ final class am {
             break;
           }
           if (null == var7_ref) {
-            me.field_e.a((IntrusiveNode) (var6Lifetime1), (byte) -102);
+            me.field_e.addFirst((IntrusiveNode) (var6Lifetime1), (byte) -102);
             if (var9 == 0) {
               return;
             }

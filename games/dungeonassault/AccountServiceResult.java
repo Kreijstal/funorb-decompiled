@@ -61,7 +61,7 @@ final class AccountServiceResult {
             stackIn_5_0 = null;
             return (AccountServiceResult) (stackIn_5_0);
           }
-          if (wd.field_d == dh.field_b &&
+          if (wd.field_d == SecondaryNodeDeque.field_b &&
             param1.equals(bf.field_o)) {
             wd.field_d = sp.field_e;
             stackIn_9_0 = DualLinkNode.field_p;

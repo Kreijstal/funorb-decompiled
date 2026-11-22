@@ -130,7 +130,7 @@ abstract class ke {
           var23 = null;
           var12 = CrazyCrystals.field_B;
           try {
-            var13 = (pi) (hc.field_b.g(param1 + 41202));
+            var13 = (pi) (hc.field_b.beginForward(param1 + 41202));
             var17 = var13;
             if (var17 == null) {
               return;

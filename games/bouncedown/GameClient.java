@@ -6,7 +6,7 @@ abstract class GameClient extends AppletShell {
     private int field_q;
     private int field_x;
     private long field_D;
-    static bc field_n;
+    static IntrusiveDeque field_n;
     private boolean field_o;
     private boolean field_m;
     private int field_u;
@@ -133,7 +133,7 @@ abstract class GameClient extends AppletShell {
     private final void i(int param0) {
         ib.field_m[2] = true;
         if (param0 != 0) {
-          field_n = (bc) null;
+          field_n = (IntrusiveDeque) null;
         }
     }
 
@@ -173,7 +173,7 @@ abstract class GameClient extends AppletShell {
           var3 = 1200 * AccountNameAvailabilityValidator.f(-118);
           if (this.field_o ||
             !(var3 >= FullscreenFocusCanvas.a(31083)) &&
-            !(var3 >= m.a((byte) 77))) {
+            !(var3 >= IterableNodeHashTable.a((byte) 77))) {
             this.field_o = false;
             kc.a((byte) 18);
             va.a(2);
@@ -751,7 +751,7 @@ abstract class GameClient extends AppletShell {
     }
 
     static {
-        field_n = new bc();
+        field_n = new IntrusiveDeque();
         field_w = "No highscores";
         field_t = "This password is part of your Player Name, and would be easy to guess";
         field_s = 9;

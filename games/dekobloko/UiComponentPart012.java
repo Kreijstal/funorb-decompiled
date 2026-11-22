@@ -69,14 +69,14 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
         SceneWidget sceneWidgetLocal2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetLocal1 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.computeHashNode1741((byte) -76));
+          sceneWidgetLocal1 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.beginBackward((byte) -76));
           SceneWidget sceneWidgetLocal4 = sceneWidgetLocal1;
           while (sceneWidgetLocal1 != null) {
             sceneWidgetLocal1.integerState0903 = 0;
             sceneWidgetLocal1.integerState0904 = 0;
             sceneWidgetLocal1.integerState0895 = 0;
             sceneWidgetLocal1.integerState0915 = 0;
-            sceneWidgetLocal2 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.computeHashNode1745(true));
+            sceneWidgetLocal2 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.nextBackward(true));
             sceneWidgetLocal2 = sceneWidgetLocal2;
           }
           if (!booleanArgument2) {

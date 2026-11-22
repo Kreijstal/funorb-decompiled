@@ -129,7 +129,7 @@ final class dh extends si {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(qk.a(param0, -2));
             }
-            var15 = (f) (ql.field_i.h(param0 - 11148));
+            var15 = (f) (ql.field_i.beginForward(param0 - 11148));
             if (var15 == null) {
               eg.a((byte) 126);
               return;
@@ -141,7 +141,7 @@ final class dh extends si {
             return;
           }
           if (1 == var2) {
-            var11 = (je) (aa.field_e.h(-11151));
+            var11 = (je) (aa.field_e.beginForward(-11151));
             if (var11 == null) {
               eg.a((byte) 126);
               return;
@@ -149,7 +149,7 @@ final class dh extends si {
             var11.unlink(-16175);
           } else {
             if (var2 == 2) {
-              var13 = (f) (ql.field_i.h(-11151));
+              var13 = (f) (ql.field_i.beginForward(-11151));
               if (var13 == null) {
                 eg.a((byte) 126);
                 return;

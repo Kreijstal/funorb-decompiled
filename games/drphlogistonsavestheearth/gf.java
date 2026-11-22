@@ -12,7 +12,7 @@ final class gf {
     static int[] field_o;
     int field_q;
     int field_I;
-    static vd field_h;
+    static IntrusiveDeque field_h;
     private ck[] field_j;
     private int field_f;
     private int field_E;
@@ -30,7 +30,7 @@ final class gf {
     private double field_w;
     private int field_y;
     int field_t;
-    static vd field_A;
+    static IntrusiveDeque field_A;
     double field_d;
     static int field_C;
     static int field_D;
@@ -235,7 +235,7 @@ final class gf {
           if (param0 == 16510) {
             return false;
           }
-          field_h = (vd) null;
+          field_h = (IntrusiveDeque) null;
           return false;
         }
         return true;
@@ -492,8 +492,8 @@ final class gf {
     }
 
     static {
-        field_h = new vd();
-        field_A = new vd();
+        field_h = new IntrusiveDeque();
+        field_A = new IntrusiveDeque();
         field_k = new int[]{-1, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 68, 68, -1, -1, -1, -1, 68, 68, -1, -1, -1, -1};
         field_p = new int[8192];
         field_G = true;

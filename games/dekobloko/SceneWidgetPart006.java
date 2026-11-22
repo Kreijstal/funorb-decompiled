@@ -151,17 +151,17 @@ final class SceneWidgetPart006 extends SceneWidget {
           MixedSupport016.sceneWidgetPart013State0001 = null;
           UiComponentPart011.sceneWidgetPart013State0002 = null;
           if (null != MixedSupport057.nodeDequeState0010) {
-            MixedSupport057.nodeDequeState0010.performAction1742(120);
+            MixedSupport057.nodeDequeState0010.clear(120);
             MixedSupport057.nodeDequeState0010 = null;
           }
           MixedSupport090.secondaryNodeHashTableState0004 = null;
           if (null != MixedSupport051.nodeDequeState0009) {
-            MixedSupport051.nodeDequeState0009.performAction1742(118);
+            MixedSupport051.nodeDequeState0009.clear(118);
             MixedSupport051.nodeDequeState0009 = null;
           }
           MixedSupport121.secondaryNodeHashTableState0005 = null;
           if (MixedSupport091.nodeDequeState0021 != null) {
-            MixedSupport091.nodeDequeState0021.performAction1742(113);
+            MixedSupport091.nodeDequeState0021.clear(113);
             MixedSupport091.nodeDequeState0021 = null;
           }
           GameApplet.secondaryNodeHashTableState0002 = null;
@@ -170,7 +170,7 @@ final class SceneWidgetPart006 extends SceneWidget {
           }
           sceneWidgetPart012Local3 = (SceneWidgetPart012) (MixedSupport090.secondaryNodeHashTableState0004.first(-9443));
           while (sceneWidgetPart012Local3 != null) {
-            sceneWidgetPart012Local3.performAction0134((byte) 69);
+            sceneWidgetPart012Local3.unlinkSecondary((byte) 69);
             sceneWidgetPart012Local3 = (SceneWidgetPart012) (MixedSupport090.secondaryNodeHashTableState0004.next(-123));
           }
           MixedSupport090.secondaryNodeHashTableState0004 = null;

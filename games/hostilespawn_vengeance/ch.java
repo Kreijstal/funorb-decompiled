@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ch {
-    static vl field_p;
+    static IntrusiveDeque field_p;
     static int field_e;
     private double field_l;
     private double field_i;
@@ -154,7 +154,7 @@ class ch {
 
     static {
         field_e = 500;
-        field_p = new vl();
+        field_p = new IntrusiveDeque();
         field_d = "Discard";
         field_b = "This door is locked. There must be another way through.";
         field_q = 0;

@@ -92,7 +92,7 @@ final class bq extends mg {
             ba.a(3, 43, lo.field_b);
           }
           while (true) {
-            var3 = (ca) (so.field_h.c(0));
+            var3 = (ca) (so.field_h.removeFirst(0));
             if (var3 != null) {
               mb.a(var3, 4, 0);
               continue;
@@ -100,7 +100,7 @@ final class bq extends mg {
             break;
           }
           while (true) {
-            var1 = (we) (ec.field_l.c(0));
+            var1 = (we) (ec.field_l.removeFirst(0));
             if (var1 != null) {
               lj.a(5, var1, param0 ^ 120);
               continue;

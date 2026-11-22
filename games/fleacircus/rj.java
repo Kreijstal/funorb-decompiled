@@ -7,7 +7,7 @@ final class rj extends kc {
     private String field_l;
     private String field_h;
     static boolean field_m;
-    static vc field_i;
+    static IntrusiveDeque field_i;
     static boolean field_j;
     static boolean field_n;
 
@@ -47,7 +47,7 @@ final class rj extends kc {
 
     static {
         field_k = -1;
-        field_i = new vc();
+        field_i = new IntrusiveDeque();
         field_n = false;
     }
 }

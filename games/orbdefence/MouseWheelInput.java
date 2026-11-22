@@ -6,7 +6,7 @@ import java.io.*;
 abstract class MouseWheelInput {
     static byte[][] field_a;
     static String field_c;
-    static im field_b;
+    static IntrusiveDeque field_b;
 
     abstract void detach(int param0, java.awt.Component param1);
 
@@ -108,6 +108,6 @@ abstract class MouseWheelInput {
     static {
         field_c = "Suggested names: ";
         field_a = new byte[250][];
-        field_b = new im();
+        field_b = new IntrusiveDeque();
     }
 }

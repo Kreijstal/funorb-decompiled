@@ -430,7 +430,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (oa) null;
-                      var8.result = bl.a(0, var8.intArgument, (String) (var8.objectArgument)).a((byte) -101);
+                      var8.result = IterableNodeHashTable.a(0, var8.intArgument, (String) (var8.objectArgument)).a((byte) -101);
                     } catch (oa decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (oa) (Object) decompiledCaughtException;

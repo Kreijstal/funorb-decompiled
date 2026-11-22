@@ -140,7 +140,7 @@ final class aj extends ig {
     }
 
     static {
-        wb discarded$0 = new wb();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_s = (f) ((Object) new pj(-1, 0));
     }
 }

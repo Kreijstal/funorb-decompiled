@@ -69,7 +69,7 @@ final class AccountCreationResultPanel extends af implements qh {
         try {
           this.field_sb = true;
           if (param0.success) {
-            var4 = bk.field_e;
+            var4 = IntrusiveDeque.field_e;
           } else {
             if (null == param0.suggestions) {
               var4 = param0.message;

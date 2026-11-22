@@ -61,7 +61,7 @@ final class th {
           uh.a(tk.field_a, (byte) 119, 4, param0, ol.field_W, param2, jl.field_h, bc.field_a);
           return true;
         }
-        ij.field_h.a(new dh(param2, param0, tk.field_a, jl.field_h, ol.field_W, bc.field_a), 27362);
+        ij.field_h.addLast(new dh(param2, param0, tk.field_a, jl.field_h, ol.field_W, bc.field_a), 27362);
         return true;
     }
 

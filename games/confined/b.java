@@ -392,7 +392,7 @@ final class b implements fe {
                 var18.field_u[var5] = -5;
               }
             }
-            af.field_cb.a((IntrusiveNode) (var18), (byte) -82);
+            af.field_cb.addLast((IntrusiveNode) (var18), (byte) -82);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

@@ -59,7 +59,7 @@ final class s extends am {
           var9 = e.field_c;
           var2 = var9.readUnsignedByte(32);
           if (param0 == var2) {
-            var3_ref_pe = (pe) (IntrusiveNodeHashTable.field_e.a(param0 + 38));
+            var3_ref_pe = (pe) (IntrusiveNodeHashTable.field_e.beginForward(param0 + 38));
             if (var3_ref_pe == null) {
               dc.d(111);
               return;
@@ -85,10 +85,10 @@ final class s extends am {
             return;
           }
           var3 = var9.readInt((byte) 36);
-          var4 = (gg) (GameCanvas.field_b.a(-117));
+          var4 = (gg) (GameCanvas.field_b.beginForward(-117));
           while (var4 != null) {
             if (var4.field_o != var3) {
-              var4 = (gg) (GameCanvas.field_b.d(2123));
+              var4 = (gg) (GameCanvas.field_b.nextForward(2123));
               continue;
             }
             break;

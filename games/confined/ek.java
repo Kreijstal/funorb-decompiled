@@ -606,7 +606,7 @@ final class ek {
         }
     }
 
-    final void a(int param0, mn param1) {
+    final void a(int param0, PrimaryNodeDeque param1) {
         int var3_int = 0;
         int stackIn_8_0 = 0;
         oi stackIn_13_0 = null;
@@ -642,7 +642,7 @@ final class ek {
           stackIn_13_0.field_u = stackIn_13_1 * ((double)stackIn_14_2 + 0.0078125 * (double)(this.field_a + this.field_o)) * this.field_n.field_C;
           this.field_j.field_p = this.field_n.field_D;
           this.field_j.field_t = this.field_n.field_E;
-          param1.a((IntrusiveNode) (this.field_j), (byte) -126);
+          param1.addLast((IntrusiveNode) (this.field_j), (byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

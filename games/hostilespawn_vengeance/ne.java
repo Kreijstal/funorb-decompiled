@@ -6,7 +6,7 @@ final class ne extends IntrusiveNode {
     int field_l;
     static int field_o;
     int field_h;
-    static vl field_q;
+    static IntrusiveDeque field_q;
     static bd field_n;
     int field_m;
     int field_k;
@@ -199,6 +199,6 @@ final class ne extends IntrusiveNode {
     static {
         field_o = -1;
         field_p = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
-        field_q = new vl();
+        field_q = new IntrusiveDeque();
     }
 }

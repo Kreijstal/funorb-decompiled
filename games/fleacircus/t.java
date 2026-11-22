@@ -835,7 +835,7 @@ final class t {
                     fleas.field_L = 0;
                     kh.field_b = 0;
                     var11[0] = 0;
-                    a.field_e.f(1);
+                    a.field_e.clear(1);
                   }
                 } else {
                   if (var6 == 14) {

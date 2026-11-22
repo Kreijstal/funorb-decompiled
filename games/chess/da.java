@@ -23,8 +23,8 @@ final class da extends ArchiveProvider {
     private on field_f;
     private ab field_q;
     private boolean field_x;
-    private jc field_t;
-    private jc field_i;
+    private IntrusiveDeque field_t;
+    private IntrusiveDeque field_i;
     private int field_r;
     private boolean field_k;
     private long field_o;
@@ -98,7 +98,7 @@ final class da extends ArchiveProvider {
           }
           AccountNameAvailabilityValidator.field_m.a((byte) 125, ji.field_N);
           var17 = new ci(0L, (ci) null);
-          var17.field_I = new jc();
+          var17.field_I = new IntrusiveDeque();
           ac.field_j = new nb(0L, var17, param1, param4);
           ji.field_N.a((byte) 123, ac.field_j);
           qj.field_e = new ci(0L, param2);
@@ -310,7 +310,7 @@ final class da extends ArchiveProvider {
                 var11_ref_String = "";
               }
               qn.field_U.writeString(-104, var11_ref_String);
-              lk.a(dk.field_k, mn.field_h, qn.field_U, 86, se.field_M);
+              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, qn.field_U, 86, se.field_M);
               qn.field_U.backpatchShortLength(qn.field_U.position - var10, 70);
               decompiledFrameRemainder0 = (var13 != 0);
             }
@@ -337,13 +337,13 @@ final class da extends ArchiveProvider {
               qn.field_U.writeByte(16, (byte) 63);
               qn.field_U.position = qn.field_U.position + 1;
               var9 = qn.field_U.position;
-              lk.a(dk.field_k, mn.field_h, qn.field_U, 55, se.field_M);
+              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, qn.field_U, 55, se.field_M);
               qn.field_U.backpatchByteLength(qn.field_U.position - var9, -1);
             }
             vh.a(-1, (byte) -27);
-            tb.field_f = dk.field_f;
+            tb.field_f = SecondaryNodeHashTable.field_f;
           }
-          if (tb.field_f == dk.field_f &&
+          if (tb.field_f == SecondaryNodeHashTable.field_f &&
             tk.a(82, 1)) {
             var9 = tk.field_h.readUnsignedByte(-115);
             tk.field_h.position = 0;
@@ -656,7 +656,7 @@ final class da extends ArchiveProvider {
           if (param0 != 12460) {
             da.b((byte) 56);
           }
-          var2 = this.field_i.g(-18110);
+          var2 = this.field_i.beginBackward(-18110);
           while (var2 != null) {
             var3 = (int)var2.key;
             if (var4 != 0) {
@@ -677,7 +677,7 @@ final class da extends ArchiveProvider {
                 var2.unlink(-2193);
               }
             }
-            var2 = this.field_i.a((byte) -127);
+            var2 = this.field_i.nextBackward((byte) -127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -699,7 +699,7 @@ final class da extends ArchiveProvider {
             this.field_g = -13;
           }
           if (this.field_t == null) {
-            this.field_t = new jc();
+            this.field_t = new IntrusiveDeque();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1198,7 +1198,7 @@ final class da extends ArchiveProvider {
               }
               if (this.field_k) {
                 var2_int = 1;
-                var3 = this.field_t.g(-18110);
+                var3 = this.field_t.beginBackward(-18110);
                 scanLoop2: while (true) {
                   if (null != var3) {
                     var4 = (int)var3.key;
@@ -1220,7 +1220,7 @@ final class da extends ArchiveProvider {
                     } else {
                       var3.unlink(-2193);
                     }
-                    var3 = this.field_t.a((byte) -114);
+                    var3 = this.field_t.nextBackward((byte) -114);
                     continue;
                   }
                   while (true) {
@@ -1248,7 +1248,7 @@ final class da extends ArchiveProvider {
                     if (0 == this.field_E[this.field_r]) {
                       var3 = new IntrusiveNode();
                       var3.key = (long)this.field_r;
-                      this.field_t.a(var3, (byte) -49);
+                      this.field_t.addFirst(var3, (byte) -49);
                       var2_int = 0;
                     }
                     this.field_r = this.field_r + 1;
@@ -1264,7 +1264,7 @@ final class da extends ArchiveProvider {
               if (decompiledFrameRemainder0) {
                 if (this.field_x) {
                   var2_intLifetime1 = 1;
-                  var3Lifetime1 = this.field_t.g(param0 ^ -18112);
+                  var3Lifetime1 = this.field_t.beginBackward(param0 ^ -18112);
                   scanLoop3: while (true) {
                     if (var3Lifetime1 != null) {
                       var4Lifetime1 = (int)var3Lifetime1.key;
@@ -1286,7 +1286,7 @@ final class da extends ArchiveProvider {
                       } else {
                         var2_intLifetime1 = 0;
                       }
-                      var3Lifetime1 = this.field_t.a((byte) -117);
+                      var3Lifetime1 = this.field_t.nextBackward((byte) -117);
                       continue;
                     }
                     while (true) {
@@ -1314,7 +1314,7 @@ final class da extends ArchiveProvider {
                       if (1 != this.field_E[this.field_r]) {
                         var3Lifetime1 = new IntrusiveNode();
                         var3Lifetime1.key = (long)this.field_r;
-                        this.field_t.a(var3Lifetime1, (byte) 108);
+                        this.field_t.addFirst(var3Lifetime1, (byte) 108);
                         var2_intLifetime1 = 0;
                       }
                       this.field_r = this.field_r + 1;
@@ -1434,7 +1434,7 @@ final class da extends ArchiveProvider {
         RuntimeException var10 = null;
         this.field_j = new kl(16);
         this.field_r = 0;
-        this.field_i = new jc();
+        this.field_i = new IntrusiveDeque();
         this.field_o = 0L;
         try {
           this.field_z = param1;
@@ -1443,11 +1443,11 @@ final class da extends ArchiveProvider {
             this.field_k = false;
             if (Chess.field_G != 0) {
               this.field_k = true;
-              this.field_t = new jc();
+              this.field_t = new IntrusiveDeque();
             }
           } else {
             this.field_k = true;
-            this.field_t = new jc();
+            this.field_t = new IntrusiveDeque();
           }
           this.field_f = param4;
           this.field_D = param8;

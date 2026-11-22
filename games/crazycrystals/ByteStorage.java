@@ -1509,7 +1509,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("pleasetryagain", 5236);
                 if (var2 != null) {
-                  be.field_a = fa.a((byte) -63, var2);
+                  SecondaryNodeDeque.field_a = fa.a((byte) -63, var2);
                 }
                 var2 = ah.a("pleasereenterpass", 5236);
                 if (null != var2) {
@@ -1929,7 +1929,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_suggestions", 5236);
                 if (null != var2) {
-                  wb.field_b = fa.a((byte) -96, var2);
+                  IntrusiveDeque.field_b = fa.a((byte) -96, var2);
                 }
                 var2 = ah.a("create_more_suggestions", 5236);
                 if (null != var2) {
@@ -2341,7 +2341,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("unpacking_music", 5236);
                 if (var2 != null) {
-                  be.field_b = fa.a((byte) -90, var2);
+                  SecondaryNodeDeque.field_b = fa.a((byte) -90, var2);
                 }
                 var2 = ah.a("unpacking_levels", 5236);
                 if (null != var2) {

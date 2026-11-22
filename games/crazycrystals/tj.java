@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tj extends od {
-    private wb field_l;
-    private wb field_m;
+    private IntrusiveDeque field_l;
+    private IntrusiveDeque field_m;
     private int field_k;
     private int field_j;
 
     private final void a(IntrusiveNode param0, rj param1) {
         while (true) {
-          if (param0 == this.field_m.field_a) {
+          if (param0 == this.field_m.sentinel) {
             rf.a(param0, param1, 47);
-            this.field_j = ((rj) (this.field_m.field_a.field_b)).field_f;
+            this.field_j = ((rj) (this.field_m.sentinel.field_b)).field_f;
             return;
           }
           if (((rj) (param0)).field_f <= param1.field_f) {
@@ -21,7 +21,7 @@ final class tj extends od {
           break;
         }
         rf.a(param0, param1, 47);
-        this.field_j = ((rj) (this.field_m.field_a.field_b)).field_f;
+        this.field_j = ((rj) (this.field_m.sentinel.field_b)).field_f;
         return;
     }
 
@@ -30,7 +30,7 @@ final class tj extends od {
     }
 
     final synchronized void b(od param0) {
-        this.field_l.a(93, param0);
+        this.field_l.addFirst(93, param0);
     }
 
     final void a(ko param0, int param1, int param2, int param3) {
@@ -59,7 +59,7 @@ final class tj extends od {
           param2 = param2 - var4;
           this.field_k = this.field_k + var4;
           this.e();
-          var5 = (rj) (this.field_m.g(32073));
+          var5 = (rj) (this.field_m.beginForward(32073));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -78,8 +78,8 @@ final class tj extends od {
     private final void a(rj param0) {
         param0.unlink(false);
         param0.a();
-        IntrusiveNode var2 = this.field_m.field_a.field_b;
-        if (var2 == this.field_m.field_a) {
+        IntrusiveNode var2 = this.field_m.sentinel.field_b;
+        if (var2 == this.field_m.sentinel) {
           this.field_j = -1;
         } else {
           this.field_j = ((rj) (var2)).field_f;
@@ -89,10 +89,10 @@ final class tj extends od {
     private final void e() {
         rj var1 = null;
         if (this.field_k > 0) {
-          var1 = (rj) (this.field_m.g(32073));
+          var1 = (rj) (this.field_m.beginForward(32073));
           while (var1 != null) {
             var1.field_f = var1.field_f - this.field_k;
-            var1 = (rj) (this.field_m.a(false));
+            var1 = (rj) (this.field_m.nextForward(false));
           }
           this.field_j = this.field_j - this.field_k;
           this.field_k = 0;
@@ -100,19 +100,19 @@ final class tj extends od {
     }
 
     private final void d(int param0) {
-        od var2 = (od) (this.field_l.g(32073));
+        od var2 = (od) (this.field_l.beginForward(32073));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (od) (this.field_l.a(false));
+          var2 = (od) (this.field_l.nextForward(false));
         }
     }
 
     final od d() {
-        return (od) (this.field_l.g(32073));
+        return (od) (this.field_l.beginForward(32073));
     }
 
     final od a() {
-        return (od) (this.field_l.a(false));
+        return (od) (this.field_l.nextForward(false));
     }
 
     final synchronized void a(int param0) {
@@ -136,7 +136,7 @@ final class tj extends od {
           param0 = param0 - var2;
           this.field_k = this.field_k + var2;
           this.e();
-          var3 = (rj) (this.field_m.g(32073));
+          var3 = (rj) (this.field_m.beginForward(32073));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -153,10 +153,10 @@ final class tj extends od {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        od var4 = (od) (this.field_l.g(32073));
+        od var4 = (od) (this.field_l.beginForward(32073));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (od) (this.field_l.a(false));
+          var4 = (od) (this.field_l.nextForward(false));
         }
     }
 
@@ -165,8 +165,8 @@ final class tj extends od {
     }
 
     public tj() {
-        this.field_l = new wb();
-        this.field_m = new wb();
+        this.field_l = new IntrusiveDeque();
+        this.field_m = new IntrusiveDeque();
         this.field_k = 0;
         this.field_j = -1;
     }

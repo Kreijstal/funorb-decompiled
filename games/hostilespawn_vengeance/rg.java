@@ -65,10 +65,10 @@ final class rg {
           }
           var14 = sc.field_g;
           var2 = var14.l(32270);
-          var3 = (qj) (rj.field_G.g(-83));
+          var3 = (qj) (rj.field_G.beginForward(-83));
           while (var3 != null) {
             if (var3.field_i != var2) {
-              var3 = (qj) (rj.field_G.a(param0 + 12683));
+              var3 = (qj) (rj.field_G.nextForward(param0 + 12683));
               continue;
             }
             break;

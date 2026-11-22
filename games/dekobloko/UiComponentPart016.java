@@ -218,7 +218,7 @@ final class UiComponentPart016 extends ComponentDecorator {
             this.performAction0831((byte) -72, (UiComponent) null);
           }
           uiComponentPart003Local1 = (UiComponentPart003) (uiComponentArgument2);
-          this.nodeDequeState0012.performAction1739(uiComponentPart003Local1, 7143);
+          this.nodeDequeState0012.addLast(uiComponentPart003Local1, 7143);
           uiComponentPart003Local1.booleanState0011 = true;
           uiComponentPart003Local1.computeBoolean0221(false, (UiComponent) (this));
         } catch (RuntimeException runtimeException) {

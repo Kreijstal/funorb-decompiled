@@ -25,7 +25,7 @@ class IntrusiveNode {
           return;
         }
         lc.field_J = null;
-        ra.field_c = new mn();
+        ra.field_c = new PrimaryNodeDeque();
         i.field_o = 0;
         oj.field_B = 0;
     }

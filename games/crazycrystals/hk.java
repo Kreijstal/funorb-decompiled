@@ -18,18 +18,18 @@ abstract class hk extends pb {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          var4 = (we) (tb.field_b.g(32073));
+          var4 = (we) (tb.field_b.beginForward(32073));
           while (var4 != null) {
             pm.a(param1, var4, (byte) 71);
-            var4 = (we) (tb.field_b.a(false));
+            var4 = (we) (tb.field_b.nextForward(false));
           }
           if (param0 != 5) {
             hk.b(72);
           }
-          var5 = (pp) (nh.field_A.g(param0 ^ 32076));
+          var5 = (pp) (nh.field_A.beginForward(param0 ^ 32076));
           while (var5 != null) {
             pk.a(param1, var5, (byte) 113);
-            var5 = (pp) (nh.field_A.a(false));
+            var5 = (pp) (nh.field_A.nextForward(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

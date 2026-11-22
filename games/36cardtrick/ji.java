@@ -6,18 +6,18 @@ final class ji {
     static String field_b;
 
     final static void a(boolean param0) {
-        eh var1 = (eh) (lk.field_g.b(-48));
+        eh var1 = (eh) (lk.field_g.removeLast(-48));
         if (var1 == null) {
           var1 = new eh();
         }
         if (param0) {
           var1.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
-          ai.field_k.a(var1, 27362);
+          ai.field_k.addLast(var1, 27362);
           return;
         }
         ji.a(false);
         var1.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
-        ai.field_k.a(var1, 27362);
+        ai.field_k.addLast(var1, 27362);
     }
 
     static long a(long param0, long param1) {

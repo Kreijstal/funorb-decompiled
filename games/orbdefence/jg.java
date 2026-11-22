@@ -3,13 +3,13 @@
  */
 final class jg extends di {
     static String field_l;
-    im field_k;
+    IntrusiveDeque field_k;
     static String[] field_n;
     private lj field_j;
     v field_m;
 
     final di a() {
-        he var1 = (he) (this.field_k.b((byte) -75));
+        he var1 = (he) (this.field_k.beginForward((byte) -75));
         if (var1 == null) {
           return null;
         }
@@ -74,7 +74,7 @@ final class jg extends di {
     final di d() {
         he var1;
         while (true) {
-          var1 = (he) (this.field_k.d(853));
+          var1 = (he) (this.field_k.nextForward(853));
           if (var1 == null) {
             return null;
           }
@@ -179,7 +179,7 @@ final class jg extends di {
         boolean stackIn_4_0 = false;
         var4 = OrbDefence.field_D ? 1 : 0;
         this.field_m.c(param0);
-        var3 = (he) (this.field_k.b((byte) 117));
+        var3 = (he) (this.field_k.beginForward((byte) 117));
         while (var3 != null) {
           stackIn_4_0 = this.field_j.a(var3, (byte) 90);
           boolean decompiledFrameCompleted0 = true;
@@ -198,7 +198,7 @@ final class jg extends di {
               var3.field_w = var3.field_w - var2;
             }
           }
-          var3 = (he) (this.field_k.d(853));
+          var3 = (he) (this.field_k.nextForward(853));
         }
     }
 
@@ -215,7 +215,7 @@ final class jg extends di {
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           this.field_m.b(param0, param1, param2);
-          var6 = (he) (this.field_k.b((byte) -96));
+          var6 = (he) (this.field_k.beginForward((byte) -96));
           while (var6 != null) {
             if (!this.field_j.a(var6, (byte) 98)) {
               var4_int = param1;
@@ -231,7 +231,7 @@ final class jg extends di {
                 var4_int = var4_int + var6.field_w;
               } while (!this.field_j.a(4160, var6, var4_int, var5, param0));
             }
-            var6 = (he) (this.field_k.d(853));
+            var6 = (he) (this.field_k.nextForward(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -259,7 +259,7 @@ final class jg extends di {
     }
 
     jg(lj param0) {
-        this.field_k = new im();
+        this.field_k = new IntrusiveDeque();
         this.field_m = new v();
         try {
           this.field_j = param0;

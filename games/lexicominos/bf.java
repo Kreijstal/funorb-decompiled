@@ -6,8 +6,8 @@ final class bf {
     private int field_e;
     static int[] field_a;
     static int field_g;
-    private ji field_b;
-    private bg field_c;
+    private IterableNodeHashTable field_b;
+    private SecondaryNodeDeque field_c;
     static String field_f;
 
     final static void b(byte param0) {
@@ -91,19 +91,19 @@ final class bf {
         if (param1 != 0) {
           rh var7 = (rh) null;
           this.a((rh) null, (byte) 68);
-          var9 = (rh) (this.field_b.a((byte) 42, param0));
+          var9 = (rh) (this.field_b.get((byte) 42, param0));
           if (var9 == null) {
             return null;
           }
           var10 = var9.c((byte) 30);
           if (var10 != null) {
             if (!var9.d((byte) -90)) {
-              this.field_c.a(var9, (byte) 25);
+              this.field_c.addLast(var9, (byte) 25);
               var9.field_j = 0L;
             } else {
               var6 = new gj(var10, var9.field_q);
-              this.field_b.a(var6, 1, var9.key);
-              this.field_c.a(var6, (byte) 25);
+              this.field_b.put(var6, 1, var9.key);
+              this.field_c.addLast(var6, (byte) 25);
               ((rh) ((Object) var6)).field_j = 0L;
               var9.unlink((byte) -122);
               var9.unlinkSecondary(12);
@@ -115,19 +115,19 @@ final class bf {
           this.field_d = this.field_d + var9.field_q;
           return null;
         }
-        rh var11 = (rh) (this.field_b.a((byte) 42, param0));
+        rh var11 = (rh) (this.field_b.get((byte) 42, param0));
         if (var11 == null) {
           return null;
         }
         Object var12 = var11.c((byte) 30);
         if (var12 != null) {
           if (!var11.d((byte) -90)) {
-            this.field_c.a(var11, (byte) 25);
+            this.field_c.addLast(var11, (byte) 25);
             var11.field_j = 0L;
           } else {
             var6Lifetime1 = new gj(var12, var11.field_q);
-            this.field_b.a(var6Lifetime1, 1, var11.key);
-            this.field_c.a(var6Lifetime1, (byte) 25);
+            this.field_b.put(var6Lifetime1, 1, var11.key);
+            this.field_c.addLast(var6Lifetime1, (byte) 25);
             ((rh) ((Object) var6Lifetime1)).field_j = 0L;
             var11.unlink((byte) -122);
             var11.unlinkSecondary(12);
@@ -151,12 +151,12 @@ final class bf {
           this.b(param0, 111);
           this.field_d = this.field_d - param2;
           while (this.field_d < 0) {
-            var6 = (rh) (this.field_c.b((byte) 112));
+            var6 = (rh) (this.field_c.removeFirst((byte) 112));
             this.a(var6, (byte) 9);
           }
           var6_ref = new gj(param3, param2);
-          this.field_b.a(var6_ref, 1, param0);
-          this.field_c.a(var6_ref, (byte) 25);
+          this.field_b.put(var6_ref, 1, param0);
+          this.field_c.addLast(var6_ref, (byte) 25);
           if (param1 != 62) {
             bf.a((byte) 17);
           }
@@ -167,7 +167,7 @@ final class bf {
     }
 
     private final void b(long param0, int param1) {
-        rh var4 = (rh) (this.field_b.a((byte) 42, param0));
+        rh var4 = (rh) (this.field_b.get((byte) 42, param0));
         if (param1 <= 46) {
           return;
         }

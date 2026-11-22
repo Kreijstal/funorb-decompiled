@@ -8,21 +8,21 @@ final class NodeDeque {
     HashNode hashNodeState0009;
     private HashNode hashNodeState0010;
 
-    final boolean computeBoolean1738(int integerArgument1) {
+    final boolean isEmpty(int integerArgument1) {
         if (integerArgument1 >= -1) {
           integerArrayState0250 = (int[]) null;
         }
         return this.hashNodeState0009.previous == this.hashNodeState0009 ? true : false;
     }
 
-    final void performAction1742(int integerArgument1) {
+    final void clear(int integerArgument1) {
         HashNode hashNodeLocal1;
         int integerLocal2;
         HashNode hashNodeLocal3;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument1 < 104) {
           hashNodeLocal3 = (HashNode) null;
-          this.performAction1735((HashNode) null, 114);
+          this.addFirst((HashNode) null, 114);
         }
         while (true) {
           hashNodeLocal1 = this.hashNodeState0009.previous;
@@ -36,7 +36,7 @@ final class NodeDeque {
         return;
     }
 
-    final HashNode computeHashNode1744(int integerArgument1) {
+    final HashNode removeFirst(int integerArgument1) {
         if (integerArgument1 >= -23) {
           return (HashNode) null;
         }
@@ -48,7 +48,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final void performAction1734(int integerArgument1, HashNode hashNodeArgument2, NodeDeque nodeDequeArgument3) {
+    final void movePrefixToFront(int integerArgument1, HashNode hashNodeArgument2, NodeDeque nodeDequeArgument3) {
         HashNode hashNodeLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -91,7 +91,7 @@ final class NodeDeque {
         }
     }
 
-    final HashNode computeHashNode1733(int integerArgument1, HashNode hashNodeArgument2) {
+    final HashNode beginBackwardFrom(int integerArgument1, HashNode hashNodeArgument2) {
         HashNode hashNodeLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -102,7 +102,7 @@ final class NodeDeque {
         RuntimeException caughtExceptionLocal8 = null;
         try {
           if (integerArgument1 <= 1) {
-            this.computeBoolean1738(-55);
+            this.isEmpty(-55);
           }
           if (hashNodeArgument2 != null) {
             hashNodeLocal1 = hashNodeArgument2;
@@ -160,7 +160,7 @@ final class NodeDeque {
         }
     }
 
-    final HashNode computeHashNode1743(boolean booleanArgument1) {
+    final HashNode nextForward(boolean booleanArgument1) {
         if (!booleanArgument1) {
           integerArrayState0250 = (int[]) null;
         }
@@ -214,7 +214,7 @@ final class NodeDeque {
         }
     }
 
-    final HashNode computeHashNode1741(byte byteArgument1) {
+    final HashNode beginBackward(byte byteArgument1) {
         int integerLocal1 = -55 / ((byteArgument1 + 17) / 35);
         HashNode hashNodeLocal2 = this.hashNodeState0009.previous;
         if (hashNodeLocal2 == this.hashNodeState0009) {
@@ -225,7 +225,7 @@ final class NodeDeque {
         return hashNodeLocal2;
     }
 
-    final void performAction1735(HashNode hashNodeArgument1, int integerArgument2) {
+    final void addFirst(HashNode hashNodeArgument1, int integerArgument2) {
         if (hashNodeArgument1.next != null) {
           hashNodeArgument1.unlink((byte) 124);
         }
@@ -242,7 +242,7 @@ final class NodeDeque {
         }
     }
 
-    final HashNode computeHashNode1745(boolean booleanArgument1) {
+    final HashNode nextBackward(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return (HashNode) null;
         }
@@ -255,7 +255,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final HashNode computeHashNode1740(boolean booleanArgument1) {
+    final HashNode beginForward(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return (HashNode) null;
         }
@@ -268,7 +268,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final void performAction1739(HashNode hashNodeArgument1, int integerArgument2) {
+    final void addLast(HashNode hashNodeArgument1, int integerArgument2) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -283,7 +283,7 @@ final class NodeDeque {
           hashNodeArgument1.next.previous = hashNodeArgument1;
           hashNodeArgument1.previous.next = hashNodeArgument1;
           if (integerArgument2 != 7143) {
-            this.computeHashNode1745(false);
+            this.nextBackward(false);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -300,7 +300,7 @@ final class NodeDeque {
         }
     }
 
-    final HashNode computeHashNode1732(int integerArgument1) {
+    final HashNode removeLast(int integerArgument1) {
         HashNode hashNodeLocal1 = this.hashNodeState0009.previous;
         if (this.hashNodeState0009 == hashNodeLocal1) {
           return null;
@@ -312,7 +312,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final int computeInteger1731(byte byteArgument1) {
+    final int size(byte byteArgument1) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal2 = 0;
         int integerLocal3 = 60 % ((byteArgument1 - 13) / 50);

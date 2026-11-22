@@ -8,7 +8,7 @@ final class rj extends fc {
     static bd field_N;
     static int[] field_M;
     private int field_I;
-    static vl field_G;
+    static IntrusiveDeque field_G;
     static ln[] field_J;
     private int field_L;
     private boolean field_B;
@@ -236,6 +236,6 @@ final class rj extends fc {
 
     static {
         field_M = new int[4];
-        field_G = new vl();
+        field_G = new IntrusiveDeque();
     }
 }

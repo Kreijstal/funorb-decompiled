@@ -6,7 +6,7 @@ import java.util.*;
 class pj extends vg implements ba {
     static String[] field_A;
     static boolean field_H;
-    vd field_I;
+    IntrusiveDeque field_I;
     static he[] field_z;
     static MouseInput field_G;
     static int field_E;
@@ -128,7 +128,7 @@ class pj extends vg implements ba {
 
     pj(int param0, int param1, int param2, int param3, cg param4) {
         super(param0, param1, param2, param3, param4, (fd) null);
-        this.field_I = new vd();
+        this.field_I = new IntrusiveDeque();
     }
 
     final static double a(double param0, int param1) {
@@ -428,7 +428,7 @@ class pj extends vg implements ba {
               if (30000L >= of.a((byte) 122)) {
                 cc.field_p = lf.field_f;
               } else {
-                cc.field_p = dg.field_a;
+                cc.field_p = SecondaryNodeDeque.field_a;
               }
               dk.field_b = false;
               stackIn_62_0 = 249;
@@ -530,7 +530,7 @@ class pj extends vg implements ba {
 
     final void b(vg param0, byte param1) {
         try {
-          this.field_I.a(param0, 255);
+          this.field_I.addLast(param0, 255);
           if (param1 < 30) {
             field_E = -118;
           }
@@ -618,7 +618,7 @@ class pj extends vg implements ba {
         RuntimeException decompiledCaughtException = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (this.field_I.a(30430)) {
+          if (this.field_I.isEmpty(30430)) {
             return false;
           }
           if (param1 <= 29) {
@@ -780,7 +780,7 @@ class pj extends vg implements ba {
         RuntimeException decompiledCaughtException = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (this.field_I.a(param1 - 35105)) {
+          if (this.field_I.isEmpty(param1 - 35105)) {
             return false;
           }
           var8 = new rh(this.field_I);

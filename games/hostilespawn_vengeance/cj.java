@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class cj extends ph {
-    private vl field_G;
+    private IntrusiveDeque field_G;
     static String field_K;
     private String[] field_H;
     private mm field_J;
@@ -270,7 +270,7 @@ class cj extends ph {
           field_K = (String) null;
         }
         uj var2 = new uj();
-        ve.field_b.a(var2, 109);
+        ve.field_b.addLast(var2, 109);
         pe.a((byte) 51, param0);
         return var2;
     }
@@ -295,9 +295,9 @@ class cj extends ph {
         int var16;
         int var7Lifetime1;
         var16 = HostileSpawn.field_I ? 1 : 0;
-        this.field_G = new vl();
+        this.field_G = new IntrusiveDeque();
         if (param0 != -25638) {
-          this.field_G = (vl) null;
+          this.field_G = (IntrusiveDeque) null;
         }
         var2 = 0;
         var3 = (mi) ((Object) this.field_h);
@@ -336,7 +336,7 @@ class cj extends ph {
             if (var10 != null) {
               ((mm) (var10)).field_j = var15;
             }
-            this.field_G.a(var15, param0 ^ -25716);
+            this.field_G.addLast(var15, param0 ^ -25716);
             var10 = var15;
           }
         }
@@ -352,7 +352,7 @@ class cj extends ph {
           var7 = (ResourceArchive) null;
           cj.a((ResourceArchive) null, 119, -67, (ResourceArchive) null, 52);
         }
-        var4 = (mm) (this.field_G.g(-109));
+        var4 = (mm) (this.field_G.beginForward(-109));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -364,7 +364,7 @@ class cj extends ph {
             }
             var5 = var5.field_j;
           }
-          var4 = (mm) (this.field_G.a(12684));
+          var4 = (mm) (this.field_G.nextForward(12684));
         }
         return null;
     }

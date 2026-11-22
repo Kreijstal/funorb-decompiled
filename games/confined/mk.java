@@ -50,21 +50,21 @@ final class mk extends ai {
         ud var1 = null;
         ud var1Lifetime1;
         if (param0 == 128) {
-          var1 = (ud) (m.field_d.b((byte) 87));
+          var1 = (ud) (m.field_d.removeLast((byte) 87));
           if (var1 == null) {
             var1 = new ud();
           }
           var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-          AccountRequestState.field_b.a((IntrusiveNode) (var1), (byte) 114);
+          AccountRequestState.field_b.addLast((IntrusiveNode) (var1), (byte) 114);
           return;
         }
         field_m = (String) null;
-        var1Lifetime1 = (ud) (m.field_d.b((byte) 87));
+        var1Lifetime1 = (ud) (m.field_d.removeLast((byte) 87));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new ud();
         }
         var1Lifetime1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-        AccountRequestState.field_b.a((IntrusiveNode) (var1Lifetime1), (byte) 114);
+        AccountRequestState.field_b.addLast((IntrusiveNode) (var1Lifetime1), (byte) 114);
     }
 
     static {

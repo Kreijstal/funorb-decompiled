@@ -309,7 +309,7 @@ final class vl extends PcmStream {
         var9 = Chess.field_G;
         this.c(64, param0, param1, -62);
         if ((this.field_Q[param1] & 2) != 0) {
-          var5 = (qd) (this.field_B.field_x.b(param3 + 50101));
+          var5 = (qd) (this.field_B.field_x.beginForward(param3 + 50101));
           while (var5 != null) {
             if (var5.field_n == param1 &&
               var5.field_J < 0) {
@@ -322,7 +322,7 @@ final class vl extends PcmStream {
               var5.field_D = 4096;
               return;
             }
-            var5 = (qd) (this.field_B.field_x.a(true));
+            var5 = (qd) (this.field_B.field_x.nextForward(true));
           }
         }
         var10 = (kf) (this.field_s.a(-108, (long)this.field_p[param1]));
@@ -376,7 +376,7 @@ final class vl extends PcmStream {
           }
           this.field_U[param1][var7.field_A] = var7;
         }
-        this.field_B.field_x.a((IntrusiveNode) (var7), (byte) -46);
+        this.field_B.field_x.addFirst((IntrusiveNode) (var7), (byte) -46);
         if (param3 != -21164) {
           return;
         }
@@ -435,7 +435,7 @@ final class vl extends PcmStream {
         if (param1 >= -70) {
           this.field_w = -126;
         }
-        qd var3 = (qd) (this.field_B.field_x.g(-18110));
+        qd var3 = (qd) (this.field_B.field_x.beginBackward(-18110));
         while (var3 != null) {
           if (param0 < 0 ||
             param0 == var3.field_n) {
@@ -451,7 +451,7 @@ final class vl extends PcmStream {
             }
             var3.unlink(-2193);
           }
-          var3 = (qd) (this.field_B.field_x.a((byte) -108));
+          var3 = (qd) (this.field_B.field_x.nextBackward((byte) -108));
         }
     }
 
@@ -597,12 +597,12 @@ final class vl extends PcmStream {
         qd var3 = null;
         int var4 = Chess.field_G;
         if ((this.field_Q[param0] & 4) != 0) {
-          var3 = (qd) (this.field_B.field_x.g(-18110));
+          var3 = (qd) (this.field_B.field_x.beginBackward(-18110));
           while (var3 != null) {
             if (param0 == var3.field_n) {
               var3.field_x = 0;
             }
-            var3 = (qd) (this.field_B.field_x.a((byte) -97));
+            var3 = (qd) (this.field_B.field_x.nextBackward((byte) -97));
           }
         }
         if (param1) {
@@ -761,7 +761,7 @@ final class vl extends PcmStream {
         {
           this.field_u[param2][param1] = null;
           if ((2 & this.field_Q[param2]) != 0) {
-            var6 = (qd) (this.field_B.field_x.g(-18110));
+            var6 = (qd) (this.field_B.field_x.beginBackward(-18110));
             while (var6 != null) {
               if (var6.field_n == var8.field_n &&
                 0 > var6.field_J &&
@@ -769,7 +769,7 @@ final class vl extends PcmStream {
                 var8.field_J = 0;
                 break;
               }
-              var6 = (qd) (this.field_B.field_x.a((byte) -116));
+              var6 = (qd) (this.field_B.field_x.nextBackward((byte) -116));
             }
           } else {
             var8.field_J = 0;
@@ -785,7 +785,7 @@ final class vl extends PcmStream {
         qd var3;
         int var4;
         var4 = Chess.field_G;
-        var3 = (qd) (this.field_B.field_x.g(-18110));
+        var3 = (qd) (this.field_B.field_x.beginBackward(-18110));
         if (param0 <= 86) {
           this.field_E = (int[]) null;
         }
@@ -796,7 +796,7 @@ final class vl extends PcmStream {
             this.field_u[var3.field_n][var3.field_C] = null;
             var3.field_J = 0;
           }
-          var3 = (qd) (this.field_B.field_x.a((byte) -102));
+          var3 = (qd) (this.field_B.field_x.nextBackward((byte) -102));
         }
     }
 
@@ -805,18 +805,18 @@ final class vl extends PcmStream {
         int var4;
         var4 = Chess.field_G;
         if ((this.field_Q[param0] & 2) != 0) {
-          var3 = (qd) (this.field_B.field_x.g(param1 ^ -18109));
+          var3 = (qd) (this.field_B.field_x.beginBackward(param1 ^ -18109));
           while (var3 != null) {
             if (param0 == var3.field_n) {
               if (null != this.field_u[param0][var3.field_C]) {
-                var3 = (qd) (this.field_B.field_x.a((byte) -102));
+                var3 = (qd) (this.field_B.field_x.nextBackward((byte) -102));
                 continue;
               }
               if (0 > var3.field_J) {
                 var3.field_J = 0;
               }
             }
-            var3 = (qd) (this.field_B.field_x.a((byte) -102));
+            var3 = (qd) (this.field_B.field_x.nextBackward((byte) -102));
           }
         }
         if (param1 != 1) {

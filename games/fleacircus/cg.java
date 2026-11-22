@@ -21,8 +21,8 @@ final class cg extends gi {
     private boolean field_t;
     private boolean field_q;
     private int field_l;
-    private vc field_p;
-    private vc field_s;
+    private IntrusiveDeque field_p;
+    private IntrusiveDeque field_s;
     private boolean field_k;
     private long field_w;
 
@@ -120,7 +120,7 @@ final class cg extends gi {
         }
         this.field_q = true;
         if (this.field_p == null) {
-          this.field_p = new vc();
+          this.field_p = new IntrusiveDeque();
         }
     }
 
@@ -161,7 +161,7 @@ final class cg extends gi {
           }
           if (this.field_t) {
             var2_int = 1;
-            var3 = this.field_p.c((byte) 47);
+            var3 = this.field_p.beginForward((byte) 47);
             while (var3 != null) {
               var4 = (int)var3.field_c;
               if (0 == this.field_i[var4]) {
@@ -172,7 +172,7 @@ final class cg extends gi {
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_p.b((byte) -105);
+              var3 = this.field_p.nextForward((byte) -105);
             }
             scanLoop1: while (true) {
               if (this.field_l < this.field_j.field_f.length) {
@@ -188,7 +188,7 @@ final class cg extends gi {
                     var7 = new IntrusiveNode();
                     var7.field_c = (long)this.field_l;
                     var2_int = 0;
-                    this.field_p.a(false, var7);
+                    this.field_p.addLast(false, var7);
                   }
                 }
                 this.field_l = this.field_l + 1;
@@ -205,7 +205,7 @@ final class cg extends gi {
           else {
             if (this.field_q) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_p.c((byte) 47);
+              var3Lifetime1 = this.field_p.beginForward((byte) 47);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.field_c;
                 if (this.field_i[var4Lifetime1] != 1) {
@@ -216,7 +216,7 @@ final class cg extends gi {
                 } else {
                   var3Lifetime1.unlink(-1);
                 }
-                var3Lifetime1 = this.field_p.b((byte) -105);
+                var3Lifetime1 = this.field_p.nextForward((byte) -105);
               }
               while (this.field_j.field_f.length > this.field_l) {
                 if (this.field_j.field_f[this.field_l] == 0) {
@@ -231,7 +231,7 @@ final class cg extends gi {
                     var6 = new IntrusiveNode();
                     var6.field_c = (long)this.field_l;
                     var2_intLifetime1 = 0;
-                    this.field_p.a(false, var6);
+                    this.field_p.addLast(false, var6);
                   }
                   this.field_l = this.field_l + 1;
                   continue;
@@ -479,7 +479,7 @@ final class cg extends gi {
         if (this.a(-1712) == null) {
           return;
         }
-        IntrusiveNode var2 = this.field_s.c((byte) 47);
+        IntrusiveNode var2 = this.field_s.beginForward((byte) 47);
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {
@@ -503,7 +503,7 @@ final class cg extends gi {
               }
             }
           }
-          var2 = this.field_s.b((byte) -105);
+          var2 = this.field_s.nextForward((byte) -105);
         }
     }
 
@@ -546,7 +546,7 @@ final class cg extends gi {
         RuntimeException var10 = null;
         this.field_n = new hc(16);
         this.field_l = 0;
-        this.field_s = new vc();
+        this.field_s = new IntrusiveDeque();
         this.field_w = 0L;
         try {
           this.field_m = param0;
@@ -555,7 +555,7 @@ final class cg extends gi {
             this.field_t = false;
           } else {
             this.field_t = true;
-            this.field_p = new vc();
+            this.field_p = new IntrusiveDeque();
           }
           this.field_e = param7;
           this.field_u = param6;

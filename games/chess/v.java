@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class v {
-    private cn field_l;
-    private bl field_f;
+    private SecondaryNodeDeque field_l;
+    private IterableNodeHashTable field_f;
     static String field_h;
     private int field_c;
     static String field_b;
@@ -30,12 +30,12 @@ final class v {
         }
         try {
           while (this.field_c < 0) {
-            var6 = (cm) (this.field_l.c(-14336));
+            var6 = (cm) (this.field_l.removeFirst(-14336));
             this.a(1, var6);
           }
           var6_ref = new el(param1, param0);
-          this.field_f.a(var6_ref, param3, 31313);
-          this.field_l.a(var6_ref, false);
+          this.field_f.put(var6_ref, param3, 31313);
+          this.field_l.addLast(var6_ref, false);
           ((cm) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "v.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -81,7 +81,7 @@ final class v {
 
     final Object a(byte param0, long param1) {
         el var6 = null;
-        cm var7 = (cm) (this.field_f.a(param1, (byte) -127));
+        cm var7 = (cm) (this.field_f.get(param1, (byte) -127));
         if (var7 == null) {
           return null;
         }
@@ -94,12 +94,12 @@ final class v {
         }
         if (param0 == -77) {
           if (!var7.g(-113)) {
-            this.field_l.a(var7, false);
+            this.field_l.addLast(var7, false);
             var7.secondaryKey = 0L;
           } else {
             var6 = new el(var5, var7.field_q);
-            this.field_f.a(var6, var7.key, 31313);
-            this.field_l.a(var6, false);
+            this.field_f.put(var6, var7.key, 31313);
+            this.field_l.addLast(var6, false);
             ((cm) ((Object) var6)).secondaryKey = 0L;
             var7.unlink(-2193);
             var7.unlinkSecondary(-1);
@@ -123,13 +123,13 @@ final class v {
 
     private v(int param0, int param1) {
         int var3;
-        this.field_l = new cn();
+        this.field_l = new SecondaryNodeDeque();
         this.field_g = param0;
         this.field_c = param0;
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_f = new bl(var3);
+            this.field_f = new IterableNodeHashTable(var3);
             return;
           }
           if (var3 < param1) {
@@ -138,7 +138,7 @@ final class v {
           }
           break;
         }
-        this.field_f = new bl(var3);
+        this.field_f = new IterableNodeHashTable(var3);
         return;
     }
 
@@ -147,13 +147,13 @@ final class v {
         Object var4 = null;
         cm var6Lifetime1;
         if (param1 > 55) {
-          var6 = (cm) (this.field_f.a(param0, (byte) 112));
+          var6 = (cm) (this.field_f.get(param0, (byte) 112));
           this.a(1, var6);
           return;
         }
         cm var5 = (cm) null;
         this.a(-68, (cm) null);
-        var6Lifetime1 = (cm) (this.field_f.a(param0, (byte) 112));
+        var6Lifetime1 = (cm) (this.field_f.get(param0, (byte) 112));
         this.a(1, var6Lifetime1);
     }
 
@@ -186,15 +186,15 @@ final class v {
               return;
             }
             var7 = param3;
-            jc.a((byte) 111, var7);
+            IntrusiveDeque.a((byte) 111, var7);
             kf.field_j = FullscreenFocusCanvas.createAccountSuggestionsResult(param3, -101);
             return;
           }
           stackIn_11_0 = param0 ^ 13172;
-          stackIn_12_1 = !(cn.field_f >= 13);
+          stackIn_12_1 = !(SecondaryNodeDeque.field_f >= 13);
           kf.field_j = cf.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
-          jc.a((byte) 98, (String[]) null);
+          IntrusiveDeque.a((byte) 98, (String[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

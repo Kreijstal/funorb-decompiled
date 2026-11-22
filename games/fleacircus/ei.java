@@ -418,7 +418,7 @@ final class ei extends sh {
 
     final static void b(boolean param0) {
         v.field_R = new String[]{fj.field_a, pb.field_h, tb.field_b, mh.field_v, NodeHashTableIterator.field_b, ec.field_d, vj.field_a};
-        kb.field_k = new String[][]{new String[]{em.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, db.a(si.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ia.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), vg.field_v, UiComponent.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{gj.field_D, db.a(fl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oc.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(af.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(dl.field_u, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(w.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(hc.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(pl.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oe.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(em.field_h, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(re.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kf.field_j, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(lg.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(MouseWheelInput.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(hm.field_f, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ui.field_lb, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(gm.field_ib, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(j.field_l, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(cj.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{jj.field_V, g.field_t, qj.field_E}, new String[]{ga.field_q, kb.field_n, vc.field_g, ai.field_o}};
+        kb.field_k = new String[][]{new String[]{em.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, db.a(si.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ia.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), vg.field_v, UiComponent.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{gj.field_D, db.a(fl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oc.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(af.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(dl.field_u, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(w.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(hc.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(pl.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oe.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(em.field_h, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(re.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kf.field_j, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(lg.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(MouseWheelInput.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(hm.field_f, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ui.field_lb, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(gm.field_ib, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(j.field_l, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(cj.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{jj.field_V, g.field_t, qj.field_E}, new String[]{ga.field_q, kb.field_n, IntrusiveDeque.field_g, ai.field_o}};
         String var21 = db.a(jk.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var1 = var21;
         String var2 = db.a(ak.field_g, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
@@ -758,7 +758,7 @@ final class ei extends sh {
         var9 = fleas.field_A ? 1 : 0;
         this.b(-106, param0, 64, param1);
         if ((2 & this.field_q[param1]) != 0) {
-          var5 = (tk) (this.field_O.field_n.b(-61));
+          var5 = (tk) (this.field_O.field_n.beginBackward(-61));
           while (var5 != null) {
             if (var5.field_o == param1 &&
               var5.field_q < 0) {
@@ -771,7 +771,7 @@ final class ei extends sh {
               var5.field_F = param0;
               return;
             }
-            var5 = (tk) (this.field_O.field_n.c(6));
+            var5 = (tk) (this.field_O.field_n.nextBackward(6));
           }
         }
         var10 = (wc) (this.field_S.a((long)this.field_T[param1], -1110));
@@ -825,21 +825,21 @@ final class ei extends sh {
           }
           this.field_A[param1][var7.field_B] = var7;
         }
-        this.field_O.field_n.a(param3, var7);
+        this.field_O.field_n.addLast(param3, var7);
         this.field_D[param1][param0] = var7;
         return;
     }
 
     private final void a(int param0, int param1) {
         int var4 = fleas.field_A ? 1 : 0;
-        tk var3 = (tk) (this.field_O.field_n.c((byte) 47));
+        tk var3 = (tk) (this.field_O.field_n.beginForward((byte) 47));
         while (var3 != null) {
           if ((param1 < 0 || var3.field_o == param1) &&
             0 > var3.field_q) {
             this.field_D[var3.field_o][var3.field_F] = null;
             var3.field_q = 0;
           }
-          var3 = (tk) (this.field_O.field_n.b((byte) -105));
+          var3 = (tk) (this.field_O.field_n.nextForward((byte) -105));
         }
         if (param0 > -87) {
           this.b(100, -119);
@@ -1105,18 +1105,18 @@ final class ei extends sh {
           discarded$1 = this.b(64, (tk) null);
         }
         if ((this.field_q[param0] & 2) != 0) {
-          var3 = (tk) (this.field_O.field_n.c((byte) 47));
+          var3 = (tk) (this.field_O.field_n.beginForward((byte) 47));
           while (var3 != null) {
             if (var3.field_o == param0) {
               if (null != this.field_D[param0][var3.field_F]) {
-                var3 = (tk) (this.field_O.field_n.b((byte) -105));
+                var3 = (tk) (this.field_O.field_n.nextForward((byte) -105));
                 continue;
               }
               if (0 > var3.field_q) {
                 var3.field_q = 0;
               }
             }
-            var3 = (tk) (this.field_O.field_n.b((byte) -105));
+            var3 = (tk) (this.field_O.field_n.nextForward((byte) -105));
           }
         }
     }
@@ -1156,7 +1156,7 @@ final class ei extends sh {
         int var5;
         var5 = fleas.field_A ? 1 : 0;
         var4 = -69 / ((param1 - 56) / 55);
-        var3 = (tk) (this.field_O.field_n.c((byte) 47));
+        var3 = (tk) (this.field_O.field_n.beginForward((byte) 47));
         while (var3 != null) {
           if (param0 < 0 ||
             var3.field_o == param0) {
@@ -1172,7 +1172,7 @@ final class ei extends sh {
             }
             var3.unlink(-1);
           }
-          var3 = (tk) (this.field_O.field_n.b((byte) -105));
+          var3 = (tk) (this.field_O.field_n.nextForward((byte) -105));
         }
     }
 
@@ -1190,12 +1190,12 @@ final class ei extends sh {
           return;
         }
         if ((this.field_q[param0] & 4) != 0) {
-          var3 = (tk) (this.field_O.field_n.c((byte) 47));
+          var3 = (tk) (this.field_O.field_n.beginForward((byte) 47));
           while (var3 != null) {
             if (var3.field_o == param0) {
               var3.field_x = 0;
             }
-            var3 = (tk) (this.field_O.field_n.b((byte) -105));
+            var3 = (tk) (this.field_O.field_n.nextForward((byte) -105));
           }
         }
     }
@@ -1214,7 +1214,7 @@ final class ei extends sh {
           var6 = 72 / ((9 - param0) / 45);
           this.field_D[param3][param1] = null;
           if (0 != (2 & this.field_q[param3])) {
-            var7 = (tk) (this.field_O.field_n.c((byte) 47));
+            var7 = (tk) (this.field_O.field_n.beginForward((byte) 47));
             while (var7 != null) {
               if (var7.field_o == var9.field_o &&
                 var7.field_q < 0 &&
@@ -1222,7 +1222,7 @@ final class ei extends sh {
                 var9.field_q = 0;
                 break;
               }
-              var7 = (tk) (this.field_O.field_n.b((byte) -105));
+              var7 = (tk) (this.field_O.field_n.nextForward((byte) -105));
             }
           } else {
             var9.field_q = 0;

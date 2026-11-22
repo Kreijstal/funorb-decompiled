@@ -15,7 +15,7 @@ final class fc {
     int field_R;
     int field_f;
     private int field_P;
-    private ng field_G;
+    private IntrusiveDeque field_G;
     private int field_U;
     boolean field_D;
     static String[] field_S;
@@ -24,10 +24,10 @@ final class fc {
     private int field_n;
     int field_t;
     private int field_o;
-    private ng field_B;
+    private IntrusiveDeque field_B;
     int field_J;
     int field_r;
-    private ng field_y;
+    private IntrusiveDeque field_y;
     boolean field_h;
     private boolean field_k;
     private int field_V;
@@ -42,7 +42,7 @@ final class fc {
     oj field_m;
     ha field_Q;
     int field_M;
-    ng field_j;
+    IntrusiveDeque field_j;
     boolean field_E;
     boolean field_O;
     private boolean field_x;
@@ -165,7 +165,7 @@ final class fc {
         int[] var11;
         var7 = Lexicominos.field_L ? 1 : 0;
         var11 = new int[4];
-        var3 = (bd) (this.field_y.a(true));
+        var3 = (bd) (this.field_y.beginForward(true));
         var4 = 77 % ((param0 - 52) / 55);
         while (var3 != null) {
           DualLinkNode.a(12, var11, var3);
@@ -189,7 +189,7 @@ final class fc {
           } else {
             this.a((byte) -107, 255, 0);
           }
-          var3 = (bd) (this.field_y.f(2));
+          var3 = (bd) (this.field_y.nextForward(2));
         }
     }
 
@@ -415,12 +415,12 @@ final class fc {
           return;
         }
         this.b(2);
-        if (null != this.field_G.a(true)) {
+        if (null != this.field_G.beginForward(true)) {
           fieldTemp$0 = this.field_H + 1;
           this.field_H = this.field_H + 1;
           if (335 == fieldTemp$0) {
             this.field_H = 0;
-            this.field_G.a((byte) 74);
+            this.field_G.removeFirst((byte) 74);
           }
         }
         boolean decompiledFrameRemainder1 = true;
@@ -452,10 +452,10 @@ final class fc {
             if (this.field_y != null) {
               this.field_n = this.field_n - 1;
               var5 = this.field_n + 50;
-              var18 = (vf) (this.field_B.a(true));
+              var18 = (vf) (this.field_B.beginForward(true));
               while (var18 != null) {
                 var18.a(var5, true);
-                var18 = (vf) (this.field_B.f(param0 ^ 3));
+                var18 = (vf) (this.field_B.nextForward(param0 ^ 3));
               }
               if ((this.field_n == 0)) {
                 this.c(-111);
@@ -481,10 +481,10 @@ final class fc {
                 }
               }
               this.field_y = this.field_m.a(this.field_w, 17161);
-              this.field_t = this.field_t + this.field_y.b(param0 + 1);
-              if (this.field_y.b(param0 + 1) != 0) {
+              this.field_t = this.field_t + this.field_y.size(param0 + 1);
+              if (this.field_y.size(param0 + 1) != 0) {
                 mh.b(0, 100);
-                this.field_l = this.field_l + this.field_y.b(2);
+                this.field_l = this.field_l + this.field_y.size(2);
                 if (th.field_l.length <= this.field_l) {
                   this.field_l = th.field_l.length - 1;
                 }
@@ -516,7 +516,7 @@ final class fc {
                 var8Lifetime1 = var6Lifetime2;
                 var14 = new int[4];
                 var9_array = new int[4];
-                var15 = (bd) (this.field_y.a(true));
+                var15 = (bd) (this.field_y.beginForward(true));
                 while (var15 != null) {
                   DualLinkNode.a(12, var14, var15);
                   stackIn_173_0 = var14[2] + var14[1] - 1;
@@ -545,7 +545,7 @@ final class fc {
                   this.field_i = this.field_i ^ var14[0];
                   this.field_f = this.field_f ^ var14[0];
                   this.field_P = this.field_P + this.field_U;
-                  var15 = (bd) (this.field_y.f(2));
+                  var15 = (bd) (this.field_y.nextForward(2));
                 }
                 discarded$3 = this.field_X.append('|');
                 this.field_V = 416 + ((var7 + var8Lifetime1) * -24 + 24) / 2;
@@ -561,10 +561,10 @@ final class fc {
                 }
                 this.field_n = 50;
                 var10Lifetime1 = 100;
-                var11 = (vf) (this.field_B.a(true));
+                var11 = (vf) (this.field_B.beginForward(true));
                 while (var11 != null) {
-                  var11.a(this.field_y.b(2), 32211, var10Lifetime1);
-                  var11 = (vf) (this.field_B.f(param0 ^ 3));
+                  var11.a(this.field_y.size(2), 32211, var10Lifetime1);
+                  var11 = (vf) (this.field_B.nextForward(param0 ^ 3));
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -681,10 +681,10 @@ final class fc {
             if (var5 == 3) {
               if (this.field_n > 0) {
                 this.field_n = this.field_n - 1;
-                var19 = (vf) (this.field_B.a(true));
+                var19 = (vf) (this.field_B.beginForward(true));
                 while (var19 != null) {
                   var19.a(this.field_n, true);
-                  var19 = (vf) (this.field_B.f(2));
+                  var19 = (vf) (this.field_B.nextForward(2));
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -885,12 +885,12 @@ final class fc {
         }
         sc.field_g = sc.field_g | var4;
         MouseWheelInput.field_a = MouseWheelInput.field_a | var4;
-        this.field_G.b(127, new bd(param2));
+        this.field_G.addLast(127, new bd(param2));
         if (this.field_h) {
           return;
         }
         if (AccountRequestState.a((byte) -102)) {
-          rb.field_b.b(104, new vb(param2, param1, this.field_U, this.field_P, this.field_W, this.field_N));
+          rb.field_b.addLast(104, new vb(param2, param1, this.field_U, this.field_P, this.field_W, this.field_N));
         } else {
           qd.a(this.field_N, 11803, this.field_W, this.field_P, param1, param2, 4, this.field_U);
         }
@@ -936,7 +936,7 @@ final class fc {
         tl.a(false, this.field_y);
         var18 = new int[4];
         var3 = 0;
-        var4 = (bd) (this.field_y.a(true));
+        var4 = (bd) (this.field_y.beginForward(true));
         while (var4 != null) {
           DualLinkNode.a(12, var18, var4);
           var5_ref_StringBuilder = new StringBuilder(var18[3] * var18[2]);
@@ -972,7 +972,7 @@ final class fc {
           }
           var13 = new vf(stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5);
           var13.a(50, (byte) -55, var3 * 24 + this.field_M + 266, 371);
-          this.field_B.a(-60, var13);
+          this.field_B.addFirst(-60, var13);
           var3++;
           if (var18[2] <= 1) {
             var11Lifetime1 += 12;
@@ -981,15 +981,15 @@ final class fc {
             var12 += 12;
             var11Lifetime1 = var11Lifetime1 + mk.field_h.a('1');
           }
-          this.field_j.a(-111, new gd(ib.field_g[var10] * this.field_l, var11Lifetime1, var12));
-          var4 = (bd) (this.field_y.f(param0 - 19074));
+          this.field_j.addFirst(-111, new gd(ib.field_g[var10] * this.field_l, var11Lifetime1, var12));
+          var4 = (bd) (this.field_y.nextForward(param0 - 19074));
         }
         stackIn_20_0Lifetime1 = param0;
         stackIn_20_1Lifetime1 = 19076;
         if (stackIn_20_0Lifetime1 != stackIn_20_1Lifetime1) {
           return;
         }
-        var4Lifetime1 = (bd) (this.field_y.a(true));
+        var4Lifetime1 = (bd) (this.field_y.beginForward(true));
         while (var4Lifetime1 != null) {
           DualLinkNode.a(param0 - 19064, var18, var4Lifetime1);
           var5 = 1 + var18[0];
@@ -999,7 +999,7 @@ final class fc {
               this.field_w[var6Lifetime1][var8Lifetime1] = (char)0;
             }
           }
-          var4Lifetime1 = (bd) (this.field_y.f(2));
+          var4Lifetime1 = (bd) (this.field_y.nextForward(2));
         }
         cf.a(this, (byte) 50);
         return;
@@ -1135,11 +1135,11 @@ final class fc {
         if (stackIn_38_0Lifetime1 == stackIn_38_1Lifetime1 &&
           this.field_y != null) {
           var19 = new int[4];
-          var11 = (bd) (this.field_y.a(true));
+          var11 = (bd) (this.field_y.beginForward(true));
           while (var11 != null) {
             DualLinkNode.a(12, var19, var11);
             this.a(var19, 371);
-            var11 = (bd) (this.field_y.f(2));
+            var11 = (bd) (this.field_y.nextForward(2));
           }
           if (25 < this.field_n) {
             stackIn_46_0 = 125 - this.field_n;
@@ -1149,19 +1149,19 @@ final class fc {
           var5Lifetime3 = stackIn_46_0 * 4096 / 100;
           th.field_l[this.field_l].a(this.field_o, this.field_V, 0, var5Lifetime3);
         }
-        var10 = (vf) (this.field_B.a(true));
+        var10 = (vf) (this.field_B.beginForward(true));
         while (var10 != null) {
           var10.a(17517, this.field_m, 0);
-          var10 = (vf) (this.field_B.f(2));
+          var10 = (vf) (this.field_B.nextForward(2));
         }
         SoftwareRasterizer.g(0, 8, 311, 450);
         if (param0 < 46) {
           return;
         }
-        var12 = (gd) (this.field_j.a(true));
+        var12 = (gd) (this.field_j.beginForward(true));
         while (var12 != null) {
           var12.a((byte) -34);
-          var12 = (gd) (this.field_j.f(2));
+          var12 = (gd) (this.field_j.nextForward(2));
         }
         SoftwareRasterizer.b();
         if (this.field_D) {
@@ -1174,12 +1174,12 @@ final class fc {
     final void b(int param0) {
         int var2 = 0;
         int var3 = Lexicominos.field_L ? 1 : 0;
-        gd var2_ref_gd = (gd) (this.field_j.a(true));
+        gd var2_ref_gd = (gd) (this.field_j.beginForward(true));
         while (var2_ref_gd != null) {
           var2_ref_gd.c((byte) -55);
           this.field_i = this.field_i ^ var2_ref_gd.field_n;
           this.field_f = this.field_f ^ var2_ref_gd.field_n;
-          var2_ref_gd = (gd) (this.field_j.f(2));
+          var2_ref_gd = (gd) (this.field_j.nextForward(2));
         }
         if (this.field_r < this.field_J) {
           var2 = (this.field_J - this.field_r) / 30;
@@ -1309,7 +1309,7 @@ final class fc {
           SoftwareRasterizer.a(53, 183, 48, 24, 16777215);
         }
         oh.a(183, lg.field_c, false, Integer.toString(this.field_d), 0, 77);
-        var10 = (bd) (this.field_G.a(true));
+        var10 = (bd) (this.field_G.beginForward(true));
         if (var10 != null) {
           var4 = 0;
           if (80 > this.field_H) {
@@ -1397,7 +1397,7 @@ final class fc {
         }
     }
 
-    final static void a(ng param0, char[][] param1, int[][] param2, int param3) {
+    final static void a(IntrusiveDeque param0, char[][] param1, int[][] param2, int param3) {
         int var7 = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
@@ -1422,15 +1422,15 @@ final class fc {
         int var5Lifetime1;
         var9 = Lexicominos.field_L ? 1 : 0;
         try {
-          var4 = (ij) (param0.a(true));
+          var4 = (ij) (param0.beginForward(true));
           while (var4 != null) {
             var5 = var4.field_q;
-            var6_ref_bd = (bd) (var4.field_s.a(true));
+            var6_ref_bd = (bd) (var4.field_s.beginForward(true));
             while (var6_ref_bd != null) {
               param2[(var6_ref_bd.field_h >> 16) - var5][vg.a(65535, var6_ref_bd.field_h)] = var5 * 24;
-              var6_ref_bd = (bd) (var4.field_s.f(param3 ^ 11880));
+              var6_ref_bd = (bd) (var4.field_s.nextForward(param3 ^ 11880));
             }
-            var4 = (ij) (param0.f(2));
+            var4 = (ij) (param0.nextForward(2));
           }
           if (param3 != 11882) {
             return;
@@ -1487,7 +1487,7 @@ final class fc {
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         var2 = -6 / ((-30 - param0) / 36);
-        var3 = (vf) (this.field_B.a(true));
+        var3 = (vf) (this.field_B.beginForward(true));
         while (var3 != null) {
           if (var3.field_i >= 371 &&
             var3.field_n >= (266 - (-this.field_M - 120))) {
@@ -1495,7 +1495,7 @@ final class fc {
           } else {
             var3.a(17517, this.field_m, -311);
           }
-          var3 = (vf) (this.field_B.f(2));
+          var3 = (vf) (this.field_B.nextForward(2));
         }
     }
 
@@ -1554,16 +1554,16 @@ final class fc {
         this.field_D = false;
         this.field_U = 0;
         this.field_N = -17;
-        this.field_G = new ng();
+        this.field_G = new IntrusiveDeque();
         this.field_h = false;
         this.field_F = new int[18][12];
         this.field_H = 0;
         this.field_w = new char[18][12];
         this.field_K = 1;
         this.field_d = 1;
-        this.field_B = new ng();
+        this.field_B = new IntrusiveDeque();
         this.field_M = 0;
-        this.field_j = new ng();
+        this.field_j = new IntrusiveDeque();
         this.field_s = 4096;
         this.field_l = 0;
         this.field_b = -1;

@@ -168,16 +168,16 @@ final class ta extends pk {
           if (param1 >= -73) {
             ta.b(29);
           }
-          var2 = (r) (bb.field_d.g(-18110));
+          var2 = (r) (bb.field_d.beginBackward(-18110));
           while (var2 != null) {
             if (var2.a(param0, -343)) {
-              var2 = (r) (bb.field_d.a((byte) -121));
+              var2 = (r) (bb.field_d.nextBackward((byte) -121));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            bb.field_d.a((IntrusiveNode) (param0), (byte) -43);
+            bb.field_d.addFirst((IntrusiveNode) (param0), (byte) -43);
             return;
           }
           he.a(param0, var2, true);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j extends qg {
-    private bk field_D;
+    private IntrusiveDeque field_D;
     static String field_A;
     static ee field_C;
     static String field_F;
@@ -101,7 +101,7 @@ final class j extends qg {
           }
           int var4 = 61 % ((41 - param1) / 33);
           var3 = (qf) (param0);
-          this.field_D.a(-121, var3);
+          this.field_D.addFirst(-121, var3);
           var3.field_E = true;
           var3.a(115, (lk) (this));
         } catch (RuntimeException runtimeException) {
@@ -123,7 +123,7 @@ final class j extends qg {
 
     public j() {
         super(0, 0, lb.field_g, kb.field_d, (ci) null, (pl) null);
-        this.field_D = new bk();
+        this.field_D = new IntrusiveDeque();
     }
 
     final void b(boolean param0) {

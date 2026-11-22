@@ -166,7 +166,7 @@ final class kh extends gm {
               var9 = stackIn_12_0;
               if (var18 == null) {
                 var8_ref_r = new r(var20, var19, var3_long);
-                d.field_Mb.a(true, var8_ref_r, var3_long);
+                d.field_Mb.put(true, var8_ref_r, var3_long);
               } else {
                 if (var9 != 0) {
                   var18.a(1, var19, var20);
@@ -204,21 +204,21 @@ final class kh extends gm {
               return;
             }
             if (var2 == 7) {
-              var15 = (r) (bb.field_d.g(-18110));
+              var15 = (r) (bb.field_d.beginBackward(-18110));
               while (var15 != null) {
                 var15.unlink(-2193);
                 var15.unlinkSecondary(-1);
-                var15 = (r) (bb.field_d.a((byte) -122));
+                var15 = (r) (bb.field_d.nextBackward((byte) -122));
               }
               cb.field_f = 0;
               return;
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
-              var4_ref_ln = (ln) (ae.field_f.a((long)var3, param0 + 2983));
+              var4_ref_ln = (ln) (ae.field_f.get((long)var3, param0 + 2983));
               if (var4_ref_ln == null) {
                 var4_ref_ln = new ln(qa.field_e);
-                ae.field_f.a(true, var4_ref_ln, (long)var3);
+                ae.field_f.put(true, var4_ref_ln, (long)var3);
               }
               vl.a(var1, var4_ref_ln, true, param0 ^ 101);
               fh.a((byte) -119, var4_ref_ln);
@@ -227,7 +227,7 @@ final class kh extends gm {
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 + 674914959);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-96);
-              var12 = (ln) (ae.field_f.a((long)var3Lifetime4, 3000));
+              var12 = (ln) (ae.field_f.get((long)var3Lifetime4, 3000));
               var21 = var12;
               if (var12 == null) {
                 return;
@@ -242,11 +242,11 @@ final class kh extends gm {
               return;
             }
             if (var2 == 10) {
-              var30 = (ln) (nk.field_t.g(param0 ^ -18093));
+              var30 = (ln) (nk.field_t.beginBackward(param0 ^ -18093));
               while (var30 != null) {
                 var30.unlink(-2193);
                 var30.unlinkSecondary(-1);
-                var30 = (ln) (nk.field_t.a((byte) -115));
+                var30 = (ln) (nk.field_t.nextBackward((byte) -115));
               }
               return;
             }
@@ -255,7 +255,7 @@ final class kh extends gm {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-97);
-                var27_ref = (ln) (ae.field_f.a((long)var3Lifetime5, 3000));
+                var27_ref = (ln) (ae.field_f.get((long)var3Lifetime5, 3000));
                 if (var27_ref == null) {
                   return;
                 }
@@ -281,7 +281,7 @@ final class kh extends gm {
                     var7 = mi.a(param0 ^ 134217710, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new r(var24, var25, var3_longLifetime2);
-                      cm.field_v.a(true, var7, var3_longLifetime2);
+                      cm.field_v.put(true, var7, var3_longLifetime2);
                       pd.field_Rb.field_Xb = pd.field_Rb.field_Xb + 1;
                     }
                     var7.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 ^ 674914993);
@@ -292,7 +292,7 @@ final class kh extends gm {
                     stackIn_80_0.field_Hb = stackIn_81_1;
                     var7.field_Vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 - 142);
                     var7.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-106);
-                    pd.field_Sb.a((IntrusiveNode) (var7), (byte) 109);
+                    pd.field_Sb.addFirst((IntrusiveNode) (var7), (byte) 109);
                     return;
                   }
                   if (var2 == 19) {
@@ -375,7 +375,7 @@ final class kh extends gm {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
-            var14 = (ln) (ae.field_f.a((long)var3Lifetime6, 3000));
+            var14 = (ln) (ae.field_f.get((long)var3Lifetime6, 3000));
             var28 = var14;
             if (var14 != null) {
               if (11 != var2) {
@@ -387,13 +387,13 @@ final class kh extends gm {
             }
             return;
           }
-          var3_ref_r = (r) (pd.field_Sb.g(-18110));
+          var3_ref_r = (r) (pd.field_Sb.beginBackward(-18110));
           while (var3_ref_r != null) {
             var3_ref_r.unlink(-2193);
             var3_ref_r.unlinkSecondary(param0 ^ -18);
-            var3_ref_r = (r) (pd.field_Sb.a((byte) -107));
+            var3_ref_r = (r) (pd.field_Sb.nextBackward((byte) -107));
           }
-          var3_ref_rLifetime1 = (r) (d.field_Mb.a(false));
+          var3_ref_rLifetime1 = (r) (d.field_Mb.first(false));
           while (var3_ref_rLifetime1 != null) {
             if (var3_ref_rLifetime1.field_ac ||
               var3_ref_rLifetime1.field_Qb) {
@@ -404,7 +404,7 @@ final class kh extends gm {
               }
               ta.a(var3_ref_rLifetime1, -98);
             }
-            var3_ref_rLifetime1 = (r) (d.field_Mb.a(0));
+            var3_ref_rLifetime1 = (r) (d.field_Mb.next(0));
           }
           if (var2 == 1 &&
             pd.field_Rb != null) {

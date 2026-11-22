@@ -94,7 +94,7 @@ final class wl {
         RuntimeException decompiledCaughtException = null;
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
-          var4 = (ud) (ab.field_h.b((byte) -35));
+          var4 = (ud) (ab.field_h.beginForward((byte) -35));
           var1 = var4;
           if (var1 == null) {
             return false;

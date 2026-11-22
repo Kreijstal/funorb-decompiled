@@ -61,30 +61,30 @@ final class hg {
           var10_int = (var10_int + 7) / 8;
           fe.field_d = new byte[var10_int];
           if (null == param2.field_I) {
-            param2.field_I = new jc();
+            param2.field_I = new IntrusiveDeque();
           }
           if (!param6) {
             return;
           }
           bb.field_d = param2.field_I;
-          bb.field_d.e(-31023);
-          d.field_Mb = new dk(param5);
+          bb.field_d.clear(-31023);
+          d.field_Mb = new SecondaryNodeHashTable(param5);
           fm.field_W = -1;
           jf.field_b = -1;
-          cn.field_g = 0;
+          SecondaryNodeDeque.field_g = 0;
           cb.field_f = 0;
           if (param8.field_I == null) {
-            param8.field_I = new jc();
+            param8.field_I = new IntrusiveDeque();
           }
           nk.field_t = param8.field_I;
-          nk.field_t.e(-31023);
-          ae.field_f = new dk(param1);
+          nk.field_t.clear(-31023);
+          ae.field_f = new SecondaryNodeHashTable(param1);
           if (param4.field_I == null) {
-            param4.field_I = new jc();
+            param4.field_I = new IntrusiveDeque();
           }
           pd.field_Sb = param4.field_I;
-          pd.field_Sb.e(-31023);
-          cm.field_v = new dk(param3);
+          pd.field_Sb.clear(-31023);
+          cm.field_v = new SecondaryNodeHashTable(param3);
           BoundedRandomAccessFile.field_e = 0L;
           ig.field_g = param7;
           return;

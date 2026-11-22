@@ -10,7 +10,7 @@ final class d extends ci {
     static byte[] field_Jb;
     private ci field_Fb;
     private ci[] field_Eb;
-    static dk field_Mb;
+    static SecondaryNodeHashTable field_Mb;
 
     final static boolean a(boolean param0) {
         sk.field_p = param0 ? true : false;
@@ -29,7 +29,7 @@ final class d extends ci {
           fk.field_q.a(64 * bc.field_b / 80, (byte) -100);
           mh.field_d.b(fk.field_q);
           if (param6 > -21) {
-            field_Mb = (dk) null;
+            field_Mb = (SecondaryNodeHashTable) null;
           }
           ka.field_a = param0;
           ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);

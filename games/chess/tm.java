@@ -5,7 +5,7 @@ final class tm {
     int field_e;
     static int field_c;
     int field_g;
-    static jc field_a;
+    static IntrusiveDeque field_a;
     int field_f;
     int field_i;
     static int field_d;
@@ -84,7 +84,7 @@ final class tm {
     }
 
     static {
-        field_a = new jc();
+        field_a = new IntrusiveDeque();
         field_b = "Show players in <%0>'s game";
         field_h = "Players";
     }

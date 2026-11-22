@@ -6,7 +6,7 @@ class bc extends kf {
     private wl field_I;
     static String field_J;
     static String[] field_E;
-    private ng field_K;
+    private IntrusiveDeque field_K;
     static fi field_H;
     static String[] field_L;
     static dg field_F;
@@ -46,7 +46,7 @@ class bc extends kf {
         int var16;
         int var7Lifetime1;
         var16 = Lexicominos.field_L ? 1 : 0;
-        this.field_K = new ng();
+        this.field_K = new IntrusiveDeque();
         var2 = 0;
         var3 = (ub) ((Object) this.field_i);
         var4 = var3.a((w) (this), (byte) -111);
@@ -88,7 +88,7 @@ class bc extends kf {
             if (var10 != null) {
               ((wl) (var10)).field_p = var15;
             }
-            this.field_K.b(114, var15);
+            this.field_K.addLast(114, var15);
             var10 = var15;
           }
         }
@@ -143,7 +143,7 @@ class bc extends kf {
         wl var5;
         int var6;
         var6 = Lexicominos.field_L ? 1 : 0;
-        var4 = (wl) (this.field_K.a(true));
+        var4 = (wl) (this.field_K.beginForward(true));
         if (param1) {
           return (wl) null;
         }
@@ -158,7 +158,7 @@ class bc extends kf {
             }
             var5 = var5.field_p;
           }
-          var4 = (wl) (this.field_K.f(2));
+          var4 = (wl) (this.field_K.nextForward(2));
         }
         return null;
     }

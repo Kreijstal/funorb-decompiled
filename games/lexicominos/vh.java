@@ -3,13 +3,13 @@
  */
 final class vh {
     static int field_b;
-    static ng field_a;
+    static IntrusiveDeque field_a;
 
     final static void a(boolean param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         vb var4 = null;
-        ng stackIn_3_0 = null;
+        IntrusiveDeque stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -17,18 +17,18 @@ final class vh {
         try {
           stackIn_3_0 = jl.field_a;
           stackIn_4_1 = !(param0);
-          var4 = (vb) (((ng) (Object) stackIn_3_0).a(stackIn_4_1));
+          var4 = (vb) (((IntrusiveDeque) (Object) stackIn_3_0).beginForward(stackIn_4_1));
           while (var4 != null) {
             vi.a(param1, var4, 1);
-            var4 = (vb) (jl.field_a.f(2));
+            var4 = (vb) (jl.field_a.nextForward(2));
           }
           if (param0) {
             return;
           }
-          var2 = ci.field_f.a(true);
+          var2 = ci.field_f.beginForward(true);
           while (var2 != null) {
             ck.a(param1, 2);
-            var2 = ci.field_f.f(2);
+            var2 = ci.field_f.nextForward(2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,6 +92,6 @@ final class vh {
 
     static {
         field_b = -1;
-        field_a = new ng();
+        field_a = new IntrusiveDeque();
     }
 }

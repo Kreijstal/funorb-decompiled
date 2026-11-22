@@ -85,7 +85,7 @@ final class af {
     }
 
     final static void a(byte param0) {
-        kc var1 = (kc) (rd.field_C.h(-11151));
+        kc var1 = (kc) (rd.field_C.beginForward(-11151));
         if (var1 == null) {
           eg.a((byte) 126);
           return;

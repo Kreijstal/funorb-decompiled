@@ -137,18 +137,18 @@ final class qj extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (jd) (ib.field_a.g(-48));
+          var4 = (jd) (ib.field_a.beginForward(-48));
           while (var4 != null) {
             ea.a(var4, param1, 70);
-            var4 = (jd) (ib.field_a.a(12684));
+            var4 = (jd) (ib.field_a.nextForward(12684));
           }
           if (param0 != -21) {
             field_k = (boolean[]) null;
           }
-          var5 = (ic) (ch.field_p.g(-41));
+          var5 = (ic) (ch.field_p.beginForward(-41));
           while (var5 != null) {
             rl.a(param1, var5, 746037954);
-            var5 = (ic) (ch.field_p.a(12684));
+            var5 = (ic) (ch.field_p.nextForward(12684));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

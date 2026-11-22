@@ -103,7 +103,7 @@ final class ib extends fj {
     }
 
     final static void b(boolean param0) {
-        ud var1 = (ud) (AccountRequestState.field_b.b((byte) 98));
+        ud var1 = (ud) (AccountRequestState.field_b.removeLast((byte) 98));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -113,7 +113,7 @@ final class ib extends fj {
         }
         fn.h(var1.field_t, var1.field_n, var1.field_r, var1.field_p);
         var1.field_s = null;
-        m.field_d.a((IntrusiveNode) (var1), (byte) -108);
+        m.field_d.addLast((IntrusiveNode) (var1), (byte) -108);
     }
 
     final void a(int param0, boolean param1, int param2) {

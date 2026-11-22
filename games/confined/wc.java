@@ -119,7 +119,7 @@ final class wc extends id {
         }
     }
 
-    final void a(mn param0, double param1, int param2, vg param3, oi param4) {
+    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -582,7 +582,7 @@ final class wc extends id {
               this.field_ib.field_p = dh.field_sb;
               var13 = this.field_ic[var12 / 3];
               var13.a(ud.field_o, 16744512, this.field_bc[2 + var12], 0.5, 1.0, dh.field_sb, rn.field_c, this.field_bc[var12], false, this.field_bc[1 + var12]);
-              this.field_A.field_b.a((IntrusiveNode) (var13), (byte) 123);
+              this.field_A.field_b.addLast((IntrusiveNode) (var13), (byte) 123);
             }
           }
         }

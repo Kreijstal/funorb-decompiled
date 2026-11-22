@@ -6,7 +6,7 @@ import java.util.*;
 
 final class b {
     static int field_a;
-    private be field_c;
+    private SecondaryNodeDeque field_c;
     private int field_f;
     private IntrusiveNodeHashTable field_e;
     static String field_b;
@@ -165,12 +165,12 @@ final class b {
           return null;
         }
         if (!var7.h(-964)) {
-          this.field_c.a((byte) 8, var7);
+          this.field_c.addLast((byte) 8, var7);
           var7.field_k = 0L;
         } else {
           var6 = new qd(var5, var7.field_n);
           this.field_e.put(var7.field_e, (byte) 42, var6);
-          this.field_c.a((byte) 124, var6);
+          this.field_c.addLast((byte) 124, var6);
           ((ib) ((Object) var6)).field_k = 0L;
           var7.unlink(false);
           var7.unlinkSecondary(1);
@@ -192,12 +192,12 @@ final class b {
           this.a(param3, -70);
           this.field_g = this.field_g - param1;
           while (this.field_g < 0) {
-            var6 = (ib) (this.field_c.a(30244));
+            var6 = (ib) (this.field_c.removeFirst(30244));
             this.a(66, var6);
           }
           var6_ref = new qd(param0, param1);
           this.field_e.put(param3, (byte) 42, var6_ref);
-          this.field_c.a((byte) 119, var6_ref);
+          this.field_c.addLast((byte) 119, var6_ref);
           ((ib) ((Object) var6_ref)).field_k = 0L;
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "b.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -372,7 +372,7 @@ final class of {
             of.a((java.applet.Applet) null, (byte) 31);
           }
           if (param0 == 4) {
-            stackIn_14_0 = oc.a(bl.field_b, new String[]{param2}, (byte) -79);
+            stackIn_14_0 = oc.a(IterableNodeHashTable.field_b, new String[]{param2}, (byte) -79);
             return stackIn_14_0;
           }
           if (5 == param0) {

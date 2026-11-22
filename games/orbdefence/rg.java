@@ -58,7 +58,7 @@ abstract class rg {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_28_0 = im.field_b;
+                    stackIn_28_0 = IntrusiveDeque.field_b;
                     return stackIn_28_0;
                   }
                 }

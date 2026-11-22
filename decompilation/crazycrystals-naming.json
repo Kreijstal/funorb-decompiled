@@ -236,6 +236,14 @@
       "renamedSymbol": "C:DirectByteStorage"
     },
     {
+      "symbol": "C:be",
+      "originalName": "be",
+      "to": "SecondaryNodeDeque",
+      "evidence": "Complete constructor and every instance operation reviewed against associated iterator and node-link contracts. Circular secondary-link sentinel deque supporting append and head removal. Full owning constructor/all instance operations and every instance field reviewed. Static helper names unchanged. Preserve native descriptors/modifiers and class-name/nonclass literals. No native owned/type-use declarations or exact quoted class literals. Identifier-only change.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SecondaryNodeDeque"
+    },
+    {
       "symbol": "C:bm",
       "originalName": "bm",
       "to": "IsaacRandom",
@@ -428,6 +436,14 @@
       "renamedSymbol": "C:GameAppletShell"
     },
     {
+      "symbol": "C:wb",
+      "originalName": "wb",
+      "to": "IntrusiveDeque",
+      "evidence": "Owns a circular primary-link IntrusiveNode sentinel and an independent shared pending-node traversal cursor. Complete constructor and all instance methods independently reviewed,including every guard-dependent side effect and all partial link/cursor updates. Static helpers unchanged. Preserve argument widths/domains,guards,overflow,partial effects,aliasing,exceptions,modifiers and existing meaningful names. No native owner/type-use declarations or exact quoted class literals;identifier-only change.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IntrusiveDeque"
+    },
+    {
       "symbol": "C:wk",
       "originalName": "wk",
       "to": "SecondaryNodeDequeIterator",
@@ -442,6 +458,14 @@
       "evidence": "Sole instance ByteBuffer allocated directly and read/written by byte-array operations. Preserve all nullable/guard states.",
       "confidence": "reviewed",
       "renamedSymbol": "F:DirectByteStorage.buffer:Ljava/nio/ByteBuffer;"
+    },
+    {
+      "symbol": "F:be.field_f:Lij;",
+      "originalName": "field_f",
+      "to": "sentinel",
+      "evidence": "Secondary circular endpoint shared by append,head remove and JDK iterator. Full owning constructor and every instance body reviewed;preserve defaults,visibility,mutability,aliasing and guarded/partial update behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;"
     },
     {
       "symbol": "F:dd.field_d:Z",
@@ -636,6 +660,22 @@
       "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z"
     },
     {
+      "symbol": "F:wb.field_a:Ljb;",
+      "originalName": "field_a",
+      "to": "sentinel",
+      "evidence": "Circular primary-chain endpoint. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:wb.field_c:Ljb;",
+      "originalName": "field_c",
+      "to": "iterationCursor",
+      "evidence": "Shared pending-node cursor for manual directional traversal;not last-returned node. Exact declaration and complete deque constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.iterationCursor:LIntrusiveNode;"
+    },
+    {
       "symbol": "F:wk.field_a:Lij;",
       "originalName": "field_a",
       "to": "lastReturned",
@@ -649,7 +689,7 @@
       "to": "deque",
       "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:Lbe;"
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:LSecondaryNodeDeque;"
     },
     {
       "symbol": "F:wk.field_e:Lij;",
@@ -770,6 +810,22 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 31247b525f00a3c00277829f2d91e3aeea011b6c7c7195ef6ea5856f31f1e59c.",
       "confidence": "reviewed",
       "renamedSymbol": "M:bc.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:be.a(BLij;)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlink linked node(1);assign field_g previous and field_j next;byte<7 returns before reciprocal neighbor writes,which alone are wrapped. Complete owning constructor,all collection instance operations and iterator/node-link contexts reviewed. Preserve exact argument widths/domains,guards,overflow,partial reads/writes,aliasing,allocation/call/exception order,modifiers and override relationships. Naming only;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(BLDualLinkNode;)V"
+    },
+    {
+      "symbol": "M:be.a(I)Lij;",
+      "originalName": "a",
+      "to": "removeFirst",
+      "evidence": "Read field_j head;empty null. Int!=30244 calls addLast(byte94,null) before unlink(1);valid guard removes directly. Complete owning constructor,all collection instance operations and iterator/node-link contexts reviewed. Preserve exact argument widths/domains,guards,overflow,partial reads/writes,aliasing,allocation/call/exception order,modifiers and override relationships. Naming only;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
     },
     {
       "symbol": "M:bg.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -2340,12 +2396,92 @@
       "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
     },
     {
+      "symbol": "M:wb.a(B)Ljb;",
+      "originalName": "a",
+      "to": "beginBackward",
+      "evidence": "Read sentinel.field_d previous;empty clears cursor. Nonempty byte>=-23 recursively calls beginBackward(byte-78) before final previous-cursor assignment. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.beginBackward(B)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:wb.a(I)V",
+      "originalName": "a",
+      "to": "clear",
+      "evidence": "Read global control,repeatedly unlink sentinel.field_b next(false),clear cursor;int!=22800 then calls addLast(44,null). Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.clear(I)V"
+    },
+    {
+      "symbol": "M:wb.a(ILjb;)V",
+      "originalName": "a",
+      "to": "addFirst",
+      "evidence": "Unlink linked node(false),set field_b next and field_d previous;int<=74 writes static field_d=72 before reciprocal writes. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.addFirst(ILIntrusiveNode;)V"
+    },
+    {
+      "symbol": "M:wb.a(Z)Ljb;",
+      "originalName": "a",
+      "to": "nextForward",
+      "evidence": "Read cursor before guard;true returns null unchanged. False sentinel clears cursor,nonempty advances field_b next. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.nextForward(Z)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:wb.b(I)Z",
+      "originalName": "b",
+      "to": "isEmpty",
+      "evidence": "Int!=-16497 clears static deque reference before sentinel.field_b next identity comparison. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.isEmpty(I)Z"
+    },
+    {
+      "symbol": "M:wb.b(ILjb;)V",
+      "originalName": "b",
+      "to": "addLast",
+      "evidence": "Unlink membership(false),append fully via field_d previous and field_b next;int!=0 then calls removeFirst(-27),retaining wrapper/partial failures. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.addLast(ILIntrusiveNode;)V"
+    },
+    {
+      "symbol": "M:wb.c(I)Ljb;",
+      "originalName": "c",
+      "to": "removeFirst",
+      "evidence": "Int!=0 calls addFirst(4,null) before sentinel read;otherwise take field_b next and unlink(false) unless empty. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.removeFirst(I)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:wb.d(I)Ljb;",
+      "originalName": "d",
+      "to": "removeLast",
+      "evidence": "Evaluate-76%((-55-int)/57) before sentinel.field_d previous read;nonempty unlink(false). Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.removeLast(I)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:wb.e(I)Ljb;",
+      "originalName": "e",
+      "to": "nextBackward",
+      "evidence": "Cursor sentinel clears cursor;otherwise advance field_d previous before guard;only int0 returns node,others null after advance. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.nextBackward(I)LIntrusiveNode;"
+    },
+    {
       "symbol": "M:wb.f(I)V",
       "originalName": "f",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a7ea9d84cf39f6af85c2b75b5975b4a571a6c956f93622cdde66d09b8250937c.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:wb.clearStaticReferences(I)V"
+      "renamedSymbol": "M:IntrusiveDeque.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:wb.g(I)Ljb;",
+      "originalName": "g",
+      "to": "beginForward",
+      "evidence": "Read sentinel.field_b next;empty clears cursor. Nonempty int!=32073 nulls sentinel before saving next cursor;return saved node. Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.beginForward(I)LIntrusiveNode;"
     },
     {
       "symbol": "M:wc.b(B)V",
@@ -2952,9 +3088,9 @@
     },
     {
       "symbol": "C:be",
-      "renamedSymbol": "C:be",
+      "renamedSymbol": "C:SecondaryNodeDeque",
       "originalName": "be",
-      "renamedName": "be",
+      "renamedName": "SecondaryNodeDeque",
       "declaration": {
         "file": "be.java",
         "start": 71,
@@ -6868,9 +7004,9 @@
     },
     {
       "symbol": "C:wb",
-      "renamedSymbol": "C:wb",
+      "renamedSymbol": "C:IntrusiveDeque",
       "originalName": "wb",
-      "renamedName": "wb",
+      "renamedName": "IntrusiveDeque",
       "declaration": {
         "file": "wb.java",
         "start": 50,
@@ -8287,7 +8423,7 @@
     },
     {
       "symbol": "F:b.field_c:Lbe;",
-      "renamedSymbol": "F:b.field_c:Lbe;",
+      "renamedSymbol": "F:b.field_c:LSecondaryNodeDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -8529,7 +8665,7 @@
     },
     {
       "symbol": "F:be.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:be.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDeque.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -8540,7 +8676,7 @@
     },
     {
       "symbol": "F:be.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:be.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDeque.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -8551,7 +8687,7 @@
     },
     {
       "symbol": "F:be.field_c:I",
-      "renamedSymbol": "F:be.field_c:I",
+      "renamedSymbol": "F:SecondaryNodeDeque.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -8562,7 +8698,7 @@
     },
     {
       "symbol": "F:be.field_d:Lam;",
-      "renamedSymbol": "F:be.field_d:Lam;",
+      "renamedSymbol": "F:SecondaryNodeDeque.field_d:Lam;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -8573,7 +8709,7 @@
     },
     {
       "symbol": "F:be.field_e:Ldb;",
-      "renamedSymbol": "F:be.field_e:Ldb;",
+      "renamedSymbol": "F:SecondaryNodeDeque.field_e:Ldb;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -8584,9 +8720,9 @@
     },
     {
       "symbol": "F:be.field_f:Lij;",
-      "renamedSymbol": "F:be.field_f:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "be.java",
         "start": 154,
@@ -9376,7 +9512,7 @@
     },
     {
       "symbol": "F:bn.field_i:Lwb;",
-      "renamedSymbol": "F:bn.field_i:Lwb;",
+      "renamedSymbol": "F:bn.field_i:LIntrusiveDeque;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -9970,7 +10106,7 @@
     },
     {
       "symbol": "F:cf.field_c:Lwb;",
-      "renamedSymbol": "F:cf.field_c:Lwb;",
+      "renamedSymbol": "F:cf.field_c:LIntrusiveDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -11356,7 +11492,7 @@
     },
     {
       "symbol": "F:df.field_b:Lwb;",
-      "renamedSymbol": "F:df.field_b:Lwb;",
+      "renamedSymbol": "F:df.field_b:LIntrusiveDeque;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -12610,7 +12746,7 @@
     },
     {
       "symbol": "F:ec.field_l:Lwb;",
-      "renamedSymbol": "F:ec.field_l:Lwb;",
+      "renamedSymbol": "F:ec.field_l:LIntrusiveDeque;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -12742,7 +12878,7 @@
     },
     {
       "symbol": "F:ee.field_j:Lwb;",
-      "renamedSymbol": "F:ee.field_j:Lwb;",
+      "renamedSymbol": "F:ee.field_j:LIntrusiveDeque;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -12786,7 +12922,7 @@
     },
     {
       "symbol": "F:ee.field_n:Lwb;",
-      "renamedSymbol": "F:ee.field_n:Lwb;",
+      "renamedSymbol": "F:ee.field_n:LIntrusiveDeque;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -14953,7 +15089,7 @@
     },
     {
       "symbol": "F:g.field_b:Lwb;",
-      "renamedSymbol": "F:g.field_b:Lwb;",
+      "renamedSymbol": "F:g.field_b:LIntrusiveDeque;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -15954,7 +16090,7 @@
     },
     {
       "symbol": "F:gn.field_Q:Lwb;",
-      "renamedSymbol": "F:gn.field_Q:Lwb;",
+      "renamedSymbol": "F:gn.field_Q:LIntrusiveDeque;",
       "originalName": "field_Q",
       "renamedName": "field_Q",
       "declaration": {
@@ -16240,7 +16376,7 @@
     },
     {
       "symbol": "F:hc.field_b:Lwb;",
-      "renamedSymbol": "F:hc.field_b:Lwb;",
+      "renamedSymbol": "F:hc.field_b:LIntrusiveDeque;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -16284,7 +16420,7 @@
     },
     {
       "symbol": "F:hd.field_c:Lwb;",
-      "renamedSymbol": "F:hd.field_c:Lwb;",
+      "renamedSymbol": "F:hd.field_c:LIntrusiveDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -16295,7 +16431,7 @@
     },
     {
       "symbol": "F:hd.field_d:Lwb;",
-      "renamedSymbol": "F:hd.field_d:Lwb;",
+      "renamedSymbol": "F:hd.field_d:LIntrusiveDeque;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -18165,7 +18301,7 @@
     },
     {
       "symbol": "F:je.field_a:Lwb;",
-      "renamedSymbol": "F:je.field_a:Lwb;",
+      "renamedSymbol": "F:je.field_a:LIntrusiveDeque;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -19551,7 +19687,7 @@
     },
     {
       "symbol": "F:ka.field_k:Lwb;",
-      "renamedSymbol": "F:ka.field_k:Lwb;",
+      "renamedSymbol": "F:ka.field_k:LIntrusiveDeque;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -23610,7 +23746,7 @@
     },
     {
       "symbol": "F:nh.field_A:Lwb;",
-      "renamedSymbol": "F:nh.field_A:Lwb;",
+      "renamedSymbol": "F:nh.field_A:LIntrusiveDeque;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -25051,7 +25187,7 @@
     },
     {
       "symbol": "F:og.field_v:Lwb;",
-      "renamedSymbol": "F:og.field_v:Lwb;",
+      "renamedSymbol": "F:og.field_v:LIntrusiveDeque;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -25117,7 +25253,7 @@
     },
     {
       "symbol": "F:oi.field_a:Lwb;",
-      "renamedSymbol": "F:oi.field_a:Lwb;",
+      "renamedSymbol": "F:oi.field_a:LIntrusiveDeque;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -25304,7 +25440,7 @@
     },
     {
       "symbol": "F:ok.field_a:Lwb;",
-      "renamedSymbol": "F:ok.field_a:Lwb;",
+      "renamedSymbol": "F:ok.field_a:LIntrusiveDeque;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -25403,7 +25539,7 @@
     },
     {
       "symbol": "F:ol.field_A:Lwb;",
-      "renamedSymbol": "F:ol.field_A:Lwb;",
+      "renamedSymbol": "F:ol.field_A:LIntrusiveDeque;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -26866,7 +27002,7 @@
     },
     {
       "symbol": "F:pm.field_c:Lwb;",
-      "renamedSymbol": "F:pm.field_c:Lwb;",
+      "renamedSymbol": "F:pm.field_c:LIntrusiveDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -29363,7 +29499,7 @@
     },
     {
       "symbol": "F:rf.field_B:Lwb;",
-      "renamedSymbol": "F:rf.field_B:Lwb;",
+      "renamedSymbol": "F:rf.field_B:LIntrusiveDeque;",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -30892,7 +31028,7 @@
     },
     {
       "symbol": "F:so.field_h:Lwb;",
-      "renamedSymbol": "F:so.field_h:Lwb;",
+      "renamedSymbol": "F:so.field_h:LIntrusiveDeque;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -31057,7 +31193,7 @@
     },
     {
       "symbol": "F:tb.field_b:Lwb;",
-      "renamedSymbol": "F:tb.field_b:Lwb;",
+      "renamedSymbol": "F:tb.field_b:LIntrusiveDeque;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -31442,7 +31578,7 @@
     },
     {
       "symbol": "F:tj.field_l:Lwb;",
-      "renamedSymbol": "F:tj.field_l:Lwb;",
+      "renamedSymbol": "F:tj.field_l:LIntrusiveDeque;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -31453,7 +31589,7 @@
     },
     {
       "symbol": "F:tj.field_m:Lwb;",
-      "renamedSymbol": "F:tj.field_m:Lwb;",
+      "renamedSymbol": "F:tj.field_m:LIntrusiveDeque;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -31651,7 +31787,7 @@
     },
     {
       "symbol": "F:tm.field_g:Lwb;",
-      "renamedSymbol": "F:tm.field_g:Lwb;",
+      "renamedSymbol": "F:tm.field_g:LIntrusiveDeque;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -34005,7 +34141,7 @@
     },
     {
       "symbol": "F:vm.field_g:Lwb;",
-      "renamedSymbol": "F:vm.field_g:Lwb;",
+      "renamedSymbol": "F:vm.field_g:LIntrusiveDeque;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -34533,9 +34669,9 @@
     },
     {
       "symbol": "F:wb.field_a:Ljb;",
-      "renamedSymbol": "F:wb.field_a:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "wb.java",
         "start": 89,
@@ -34544,7 +34680,7 @@
     },
     {
       "symbol": "F:wb.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:wb.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:IntrusiveDeque.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -34555,9 +34691,9 @@
     },
     {
       "symbol": "F:wb.field_c:Ljb;",
-      "renamedSymbol": "F:wb.field_c:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.iterationCursor:LIntrusiveNode;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "iterationCursor",
       "declaration": {
         "file": "wb.java",
         "start": 160,
@@ -34566,7 +34702,7 @@
     },
     {
       "symbol": "F:wb.field_d:I",
-      "renamedSymbol": "F:wb.field_d:I",
+      "renamedSymbol": "F:IntrusiveDeque.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -34577,7 +34713,7 @@
     },
     {
       "symbol": "F:wb.field_e:Lwb;",
-      "renamedSymbol": "F:wb.field_e:Lwb;",
+      "renamedSymbol": "F:IntrusiveDeque.field_e:LIntrusiveDeque;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -35292,7 +35428,7 @@
     },
     {
       "symbol": "F:wk.field_d:Lbe;",
-      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:Lbe;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:LSecondaryNodeDeque;",
       "originalName": "field_d",
       "renamedName": "deque",
       "declaration": {
@@ -45478,7 +45614,7 @@
     },
     {
       "symbol": "L:be.a(B)V#0",
-      "renamedSymbol": "L:be.a(B)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -45489,7 +45625,7 @@
     },
     {
       "symbol": "L:be.a(BLij;)V#0",
-      "renamedSymbol": "L:be.a(BLDualLinkNode;)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(BLDualLinkNode;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -45500,7 +45636,7 @@
     },
     {
       "symbol": "L:be.a(I)Lij;#0",
-      "renamedSymbol": "L:be.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -45511,7 +45647,7 @@
     },
     {
       "symbol": "L:be.a(I)Lij;#1",
-      "renamedSymbol": "L:be.a(I)LDualLinkNode;#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -45522,7 +45658,7 @@
     },
     {
       "symbol": "L:be.a(III)I#0",
-      "renamedSymbol": "L:be.a(III)I#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -45533,7 +45669,7 @@
     },
     {
       "symbol": "L:be.a(III)I#1",
-      "renamedSymbol": "L:be.a(III)I#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -45544,7 +45680,7 @@
     },
     {
       "symbol": "L:be.a(III)I#10",
-      "renamedSymbol": "L:be.a(III)I#10",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -45555,7 +45691,7 @@
     },
     {
       "symbol": "L:be.a(III)I#2",
-      "renamedSymbol": "L:be.a(III)I#2",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -45566,7 +45702,7 @@
     },
     {
       "symbol": "L:be.a(III)I#3",
-      "renamedSymbol": "L:be.a(III)I#3",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -45577,7 +45713,7 @@
     },
     {
       "symbol": "L:be.a(III)I#4",
-      "renamedSymbol": "L:be.a(III)I#4",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -45588,7 +45724,7 @@
     },
     {
       "symbol": "L:be.a(III)I#5",
-      "renamedSymbol": "L:be.a(III)I#5",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -45599,7 +45735,7 @@
     },
     {
       "symbol": "L:be.a(III)I#6",
-      "renamedSymbol": "L:be.a(III)I#6",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -45610,7 +45746,7 @@
     },
     {
       "symbol": "L:be.a(III)I#7",
-      "renamedSymbol": "L:be.a(III)I#7",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#7",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -45621,7 +45757,7 @@
     },
     {
       "symbol": "L:be.a(III)I#8",
-      "renamedSymbol": "L:be.a(III)I#8",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -45632,7 +45768,7 @@
     },
     {
       "symbol": "L:be.a(III)I#9",
-      "renamedSymbol": "L:be.a(III)I#9",
+      "renamedSymbol": "L:SecondaryNodeDeque.a(III)I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -168733,7 +168869,7 @@
     },
     {
       "symbol": "L:tm.<init>(Lwb;)V#0",
-      "renamedSymbol": "L:tm.<init>(Lwb;)V#0",
+      "renamedSymbol": "L:tm.<init>(LIntrusiveDeque;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -183242,7 +183378,7 @@
     },
     {
       "symbol": "L:wb.a(B)Ljb;#0",
-      "renamedSymbol": "L:wb.a(B)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackward(B)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183253,7 +183389,7 @@
     },
     {
       "symbol": "L:wb.a(I)V#0",
-      "renamedSymbol": "L:wb.a(I)V#0",
+      "renamedSymbol": "L:IntrusiveDeque.clear(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183264,7 +183400,7 @@
     },
     {
       "symbol": "L:wb.a(I)V#1",
-      "renamedSymbol": "L:wb.a(I)V#1",
+      "renamedSymbol": "L:IntrusiveDeque.clear(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -183275,7 +183411,7 @@
     },
     {
       "symbol": "L:wb.a(I)V#2",
-      "renamedSymbol": "L:wb.a(I)V#2",
+      "renamedSymbol": "L:IntrusiveDeque.clear(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -183286,7 +183422,7 @@
     },
     {
       "symbol": "L:wb.a(ILdl;Ljava/lang/String;)V#0",
-      "renamedSymbol": "L:wb.a(ILdl;Ljava/lang/String;)V#0",
+      "renamedSymbol": "L:IntrusiveDeque.a(ILdl;Ljava/lang/String;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -183297,7 +183433,7 @@
     },
     {
       "symbol": "L:wb.a(ILdl;Ljava/lang/String;)V#1",
-      "renamedSymbol": "L:wb.a(ILdl;Ljava/lang/String;)V#1",
+      "renamedSymbol": "L:IntrusiveDeque.a(ILdl;Ljava/lang/String;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -183308,7 +183444,7 @@
     },
     {
       "symbol": "L:wb.a(ILjb;)V#0",
-      "renamedSymbol": "L:wb.a(ILIntrusiveNode;)V#0",
+      "renamedSymbol": "L:IntrusiveDeque.addFirst(ILIntrusiveNode;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -183319,7 +183455,7 @@
     },
     {
       "symbol": "L:wb.a(Z)Ljb;#0",
-      "renamedSymbol": "L:wb.a(Z)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.nextForward(Z)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183330,7 +183466,7 @@
     },
     {
       "symbol": "L:wb.b(ILjb;)V#0",
-      "renamedSymbol": "L:wb.b(ILIntrusiveNode;)V#0",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(ILIntrusiveNode;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -183341,7 +183477,7 @@
     },
     {
       "symbol": "L:wb.b(ILjb;)V#1",
-      "renamedSymbol": "L:wb.b(ILIntrusiveNode;)V#1",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(ILIntrusiveNode;)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -183352,7 +183488,7 @@
     },
     {
       "symbol": "L:wb.b(ILjb;)V#2",
-      "renamedSymbol": "L:wb.b(ILIntrusiveNode;)V#2",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(ILIntrusiveNode;)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -183363,7 +183499,7 @@
     },
     {
       "symbol": "L:wb.b(ILjb;)V#3",
-      "renamedSymbol": "L:wb.b(ILIntrusiveNode;)V#3",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(ILIntrusiveNode;)V#3",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -183374,7 +183510,7 @@
     },
     {
       "symbol": "L:wb.b(ILjb;)V#4",
-      "renamedSymbol": "L:wb.b(ILIntrusiveNode;)V#4",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(ILIntrusiveNode;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -183385,7 +183521,7 @@
     },
     {
       "symbol": "L:wb.b(ILjb;)V#5",
-      "renamedSymbol": "L:wb.b(ILIntrusiveNode;)V#5",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(ILIntrusiveNode;)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -183396,7 +183532,7 @@
     },
     {
       "symbol": "L:wb.c(I)Ljb;#0",
-      "renamedSymbol": "L:wb.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.removeFirst(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183407,7 +183543,7 @@
     },
     {
       "symbol": "L:wb.c(I)Ljb;#1",
-      "renamedSymbol": "L:wb.c(I)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDeque.removeFirst(I)LIntrusiveNode;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -183418,7 +183554,7 @@
     },
     {
       "symbol": "L:wb.c(I)Ljb;#2",
-      "renamedSymbol": "L:wb.c(I)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveDeque.removeFirst(I)LIntrusiveNode;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -183429,7 +183565,7 @@
     },
     {
       "symbol": "L:wb.d(I)Ljb;#0",
-      "renamedSymbol": "L:wb.d(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.removeLast(I)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -183440,7 +183576,7 @@
     },
     {
       "symbol": "L:wb.d(I)Ljb;#1",
-      "renamedSymbol": "L:wb.d(I)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDeque.removeLast(I)LIntrusiveNode;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183451,7 +183587,7 @@
     },
     {
       "symbol": "L:wb.e(I)Ljb;#0",
-      "renamedSymbol": "L:wb.e(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.nextBackward(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183462,7 +183598,7 @@
     },
     {
       "symbol": "L:wb.g(I)Ljb;#0",
-      "renamedSymbol": "L:wb.g(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.beginForward(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -187279,7 +187415,7 @@
     },
     {
       "symbol": "L:wk.<init>(Lbe;)V#0",
-      "renamedSymbol": "L:SecondaryNodeDequeIterator.<init>(Lbe;)V#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.<init>(LSecondaryNodeDeque;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -190788,9 +190924,9 @@
     },
     {
       "symbol": "M:be.<init>()V",
-      "renamedSymbol": "M:be.<init>()V",
+      "renamedSymbol": "M:SecondaryNodeDeque.<init>()V",
       "originalName": "be",
-      "renamedName": "be",
+      "renamedName": "SecondaryNodeDeque",
       "declaration": {
         "file": "be.java",
         "start": 2709,
@@ -190799,7 +190935,7 @@
     },
     {
       "symbol": "M:be.a(B)V",
-      "renamedSymbol": "M:be.a(B)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -190810,9 +190946,9 @@
     },
     {
       "symbol": "M:be.a(BLij;)V",
-      "renamedSymbol": "M:be.a(BLDualLinkNode;)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(BLDualLinkNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "be.java",
         "start": 2156,
@@ -190821,9 +190957,9 @@
     },
     {
       "symbol": "M:be.a(I)Lij;",
-      "renamedSymbol": "M:be.a(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "be.java",
         "start": 2780,
@@ -190832,7 +190968,7 @@
     },
     {
       "symbol": "M:be.a(III)I",
-      "renamedSymbol": "M:be.a(III)I",
+      "renamedSymbol": "M:SecondaryNodeDeque.a(III)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -190843,7 +190979,7 @@
     },
     {
       "symbol": "M:be.iterator()Ljava/util/Iterator;",
-      "renamedSymbol": "M:be.iterator()Ljava/util/Iterator;",
+      "renamedSymbol": "M:SecondaryNodeDeque.iterator()Ljava/util/Iterator;",
       "originalName": "iterator",
       "renamedName": "iterator",
       "declaration": {
@@ -216825,7 +216961,7 @@
     },
     {
       "symbol": "M:tm.<init>(Lwb;)V",
-      "renamedSymbol": "M:tm.<init>(Lwb;)V",
+      "renamedSymbol": "M:tm.<init>(LIntrusiveDeque;)V",
       "originalName": "tm",
       "renamedName": "tm",
       "declaration": {
@@ -220026,9 +220162,9 @@
     },
     {
       "symbol": "M:wb.<init>()V",
-      "renamedSymbol": "M:wb.<init>()V",
+      "renamedSymbol": "M:IntrusiveDeque.<init>()V",
       "originalName": "wb",
-      "renamedName": "wb",
+      "renamedName": "IntrusiveDeque",
       "declaration": {
         "file": "wb.java",
         "start": 5414,
@@ -220037,9 +220173,9 @@
     },
     {
       "symbol": "M:wb.a(B)Ljb;",
-      "renamedSymbol": "M:wb.a(B)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.beginBackward(B)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "beginBackward",
       "declaration": {
         "file": "wb.java",
         "start": 1184,
@@ -220048,9 +220184,9 @@
     },
     {
       "symbol": "M:wb.a(I)V",
-      "renamedSymbol": "M:wb.a(I)V",
+      "renamedSymbol": "M:IntrusiveDeque.clear(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clear",
       "declaration": {
         "file": "wb.java",
         "start": 768,
@@ -220059,7 +220195,7 @@
     },
     {
       "symbol": "M:wb.a(ILdl;Ljava/lang/String;)V",
-      "renamedSymbol": "M:wb.a(ILdl;Ljava/lang/String;)V",
+      "renamedSymbol": "M:IntrusiveDeque.a(ILdl;Ljava/lang/String;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -220070,9 +220206,9 @@
     },
     {
       "symbol": "M:wb.a(ILjb;)V",
-      "renamedSymbol": "M:wb.a(ILIntrusiveNode;)V",
+      "renamedSymbol": "M:IntrusiveDeque.addFirst(ILIntrusiveNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addFirst",
       "declaration": {
         "file": "wb.java",
         "start": 185,
@@ -220081,9 +220217,9 @@
     },
     {
       "symbol": "M:wb.a(Z)Ljb;",
-      "renamedSymbol": "M:wb.a(Z)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.nextForward(Z)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextForward",
       "declaration": {
         "file": "wb.java",
         "start": 1695,
@@ -220092,9 +220228,9 @@
     },
     {
       "symbol": "M:wb.b(I)Z",
-      "renamedSymbol": "M:wb.b(I)Z",
+      "renamedSymbol": "M:IntrusiveDeque.isEmpty(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "isEmpty",
       "declaration": {
         "file": "wb.java",
         "start": 4342,
@@ -220103,9 +220239,9 @@
     },
     {
       "symbol": "M:wb.b(ILjb;)V",
-      "renamedSymbol": "M:wb.b(ILIntrusiveNode;)V",
+      "renamedSymbol": "M:IntrusiveDeque.addLast(ILIntrusiveNode;)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "addLast",
       "declaration": {
         "file": "wb.java",
         "start": 3113,
@@ -220114,9 +220250,9 @@
     },
     {
       "symbol": "M:wb.c(I)Ljb;",
-      "renamedSymbol": "M:wb.c(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.removeFirst(I)LIntrusiveNode;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "wb.java",
         "start": 4878,
@@ -220125,9 +220261,9 @@
     },
     {
       "symbol": "M:wb.d(I)Ljb;",
-      "renamedSymbol": "M:wb.d(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.removeLast(I)LIntrusiveNode;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "removeLast",
       "declaration": {
         "file": "wb.java",
         "start": 2872,
@@ -220136,9 +220272,9 @@
     },
     {
       "symbol": "M:wb.e(I)Ljb;",
-      "renamedSymbol": "M:wb.e(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.nextBackward(I)LIntrusiveNode;",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "nextBackward",
       "declaration": {
         "file": "wb.java",
         "start": 4587,
@@ -220147,7 +220283,7 @@
     },
     {
       "symbol": "M:wb.f(I)V",
-      "renamedSymbol": "M:wb.clearStaticReferences(I)V",
+      "renamedSymbol": "M:IntrusiveDeque.clearStaticReferences(I)V",
       "originalName": "f",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -220158,9 +220294,9 @@
     },
     {
       "symbol": "M:wb.g(I)Ljb;",
-      "renamedSymbol": "M:wb.g(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.beginForward(I)LIntrusiveNode;",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "beginForward",
       "declaration": {
         "file": "wb.java",
         "start": 1985,
@@ -220983,7 +221119,7 @@
     },
     {
       "symbol": "M:wk.<init>(Lbe;)V",
-      "renamedSymbol": "M:SecondaryNodeDequeIterator.<init>(Lbe;)V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.<init>(LSecondaryNodeDeque;)V",
       "originalName": "wk",
       "renamedName": "SecondaryNodeDequeIterator",
       "declaration": {
@@ -225240,7 +225376,7 @@
     },
     {
       "symbol": "P:be.a(B)V#0",
-      "renamedSymbol": "P:be.a(B)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225251,7 +225387,7 @@
     },
     {
       "symbol": "P:be.a(BLij;)V#0",
-      "renamedSymbol": "P:be.a(BLDualLinkNode;)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(BLDualLinkNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225262,7 +225398,7 @@
     },
     {
       "symbol": "P:be.a(BLij;)V#1",
-      "renamedSymbol": "P:be.a(BLDualLinkNode;)V#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(BLDualLinkNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225273,7 +225409,7 @@
     },
     {
       "symbol": "P:be.a(I)Lij;#0",
-      "renamedSymbol": "P:be.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225284,7 +225420,7 @@
     },
     {
       "symbol": "P:be.a(III)I#0",
-      "renamedSymbol": "P:be.a(III)I#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.a(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225295,7 +225431,7 @@
     },
     {
       "symbol": "P:be.a(III)I#1",
-      "renamedSymbol": "P:be.a(III)I#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.a(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225306,7 +225442,7 @@
     },
     {
       "symbol": "P:be.a(III)I#2",
-      "renamedSymbol": "P:be.a(III)I#2",
+      "renamedSymbol": "P:SecondaryNodeDeque.a(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -292703,7 +292839,7 @@
     },
     {
       "symbol": "P:tm.<init>(Lwb;)V#0",
-      "renamedSymbol": "P:tm.<init>(Lwb;)V#0",
+      "renamedSymbol": "P:tm.<init>(LIntrusiveDeque;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300810,7 +300946,7 @@
     },
     {
       "symbol": "P:wb.a(B)Ljb;#0",
-      "renamedSymbol": "P:wb.a(B)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.beginBackward(B)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300821,7 +300957,7 @@
     },
     {
       "symbol": "P:wb.a(I)V#0",
-      "renamedSymbol": "P:wb.a(I)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.clear(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300832,7 +300968,7 @@
     },
     {
       "symbol": "P:wb.a(ILdl;Ljava/lang/String;)V#0",
-      "renamedSymbol": "P:wb.a(ILdl;Ljava/lang/String;)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.a(ILdl;Ljava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300843,7 +300979,7 @@
     },
     {
       "symbol": "P:wb.a(ILdl;Ljava/lang/String;)V#1",
-      "renamedSymbol": "P:wb.a(ILdl;Ljava/lang/String;)V#1",
+      "renamedSymbol": "P:IntrusiveDeque.a(ILdl;Ljava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300854,7 +300990,7 @@
     },
     {
       "symbol": "P:wb.a(ILdl;Ljava/lang/String;)V#2",
-      "renamedSymbol": "P:wb.a(ILdl;Ljava/lang/String;)V#2",
+      "renamedSymbol": "P:IntrusiveDeque.a(ILdl;Ljava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -300865,7 +301001,7 @@
     },
     {
       "symbol": "P:wb.a(ILjb;)V#0",
-      "renamedSymbol": "P:wb.a(ILIntrusiveNode;)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.addFirst(ILIntrusiveNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300876,7 +301012,7 @@
     },
     {
       "symbol": "P:wb.a(ILjb;)V#1",
-      "renamedSymbol": "P:wb.a(ILIntrusiveNode;)V#1",
+      "renamedSymbol": "P:IntrusiveDeque.addFirst(ILIntrusiveNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300887,7 +301023,7 @@
     },
     {
       "symbol": "P:wb.a(Z)Ljb;#0",
-      "renamedSymbol": "P:wb.a(Z)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.nextForward(Z)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300898,7 +301034,7 @@
     },
     {
       "symbol": "P:wb.b(I)Z#0",
-      "renamedSymbol": "P:wb.b(I)Z#0",
+      "renamedSymbol": "P:IntrusiveDeque.isEmpty(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300909,7 +301045,7 @@
     },
     {
       "symbol": "P:wb.b(ILjb;)V#0",
-      "renamedSymbol": "P:wb.b(ILIntrusiveNode;)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.addLast(ILIntrusiveNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300920,7 +301056,7 @@
     },
     {
       "symbol": "P:wb.b(ILjb;)V#1",
-      "renamedSymbol": "P:wb.b(ILIntrusiveNode;)V#1",
+      "renamedSymbol": "P:IntrusiveDeque.addLast(ILIntrusiveNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300931,7 +301067,7 @@
     },
     {
       "symbol": "P:wb.c(I)Ljb;#0",
-      "renamedSymbol": "P:wb.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.removeFirst(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300942,7 +301078,7 @@
     },
     {
       "symbol": "P:wb.d(I)Ljb;#0",
-      "renamedSymbol": "P:wb.d(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.removeLast(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300953,7 +301089,7 @@
     },
     {
       "symbol": "P:wb.e(I)Ljb;#0",
-      "renamedSymbol": "P:wb.e(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.nextBackward(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300964,7 +301100,7 @@
     },
     {
       "symbol": "P:wb.f(I)V#0",
-      "renamedSymbol": "P:wb.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300975,7 +301111,7 @@
     },
     {
       "symbol": "P:wb.g(I)Ljb;#0",
-      "renamedSymbol": "P:wb.g(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.beginForward(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303197,7 +303333,7 @@
     },
     {
       "symbol": "P:wk.<init>(Lbe;)V#0",
-      "renamedSymbol": "P:SecondaryNodeDequeIterator.<init>(Lbe;)V#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.<init>(LSecondaryNodeDeque;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304037,7 +304173,7 @@
       "original": "CrazyCrystals.java",
       "renamed": "CrazyCrystals.java",
       "inputSha256": "a08d8042f0911171e4fb913fce01c42b4c66ebb601c47a17fe8740dcec639b80",
-      "outputSha256": "356cd847f6a4a72579b579f8a4c11bd7f924b8817d2e38c35629b6e7601e82e2",
+      "outputSha256": "7b63b1719ef1a131b62001477a374850433bf586272b5a7d730f1cde87e4be17",
       "edits": [
         {
           "start": 79,
@@ -304105,6 +304241,13 @@
           "original": "L30",
           "renamed": "scanLoop2",
           "kind": "label"
+        },
+        {
+          "start": 10898,
+          "end": 10899,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         },
         {
           "start": 20647,
@@ -304252,6 +304395,13 @@
           "symbol": "M:am.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 21544,
+          "end": 21546,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 21547,
@@ -304926,6 +305076,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 26394,
+          "end": 26396,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 26511,
           "end": 26513,
           "symbol": "C:ii",
@@ -305362,6 +305519,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 58151,
+          "end": 58153,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 61174,
           "end": 61175,
           "symbol": "C:a",
@@ -305451,7 +305615,7 @@
       "original": "a.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "84d50a2d7110b35ada96aac7c3144347744d30a91edeaac2706a9cb4602b8d2c",
-      "outputSha256": "89020256e5a0c5e79accace61c8de4fd2db524bf665bcc2adbb6ac3a8479e66f",
+      "outputSha256": "26f62abdd0ce3d68ec8da42098b14c1fd37d8c326e40f82dfbe0f2412aeb71ad",
       "edits": [
         {
           "start": 50,
@@ -305655,6 +305819,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 24705,
+          "end": 24707,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 24735,
@@ -305885,7 +306056,7 @@
       "original": "ah.java",
       "renamed": "ah.java",
       "inputSha256": "27fefae26790033ffe301d68c54412febfdd5ac735ba362a4d930e1baea22895",
-      "outputSha256": "36ae9fa7817df9c69736fd9d764b56ac06d0cb55ce23924c556b2cf2ae166a1a",
+      "outputSha256": "2c91679391acc3881477435cbcdbff5b8e1583dc676dad6b562e9b86fdbdd853",
       "edits": [
         {
           "start": 648,
@@ -306131,6 +306302,13 @@
           "symbol": "M:un.a(ILjava/lang/String;Ljava/lang/Class;)Lgb;",
           "original": "a",
           "renamed": "requestDeclaredField"
+        },
+        {
+          "start": 9175,
+          "end": 9176,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         },
         {
           "start": 14248,
@@ -306727,7 +306905,7 @@
       "original": "aj.java",
       "renamed": "aj.java",
       "inputSha256": "d735cb36c83339089175c4399020789ff371f680a6809cc326f40b3b8a33babc",
-      "outputSha256": "dfab58a5ee1c5b42b6205e704d6c78c60dec6e27170951d5124b37fb7bb6383a",
+      "outputSha256": "325f5eb938bd559e48e1b7fa738ff75eee170aa67e22473e9598bd660de862ca",
       "edits": [
         {
           "start": 3028,
@@ -306763,6 +306941,20 @@
           "symbol": "C:si",
           "original": "si",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 4995,
+          "end": 4997,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 5016,
+          "end": 5018,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -306891,7 +307083,7 @@
       "original": "ap.java",
       "renamed": "ap.java",
       "inputSha256": "d3bbf8d1e54f00220aeba0225bd03e624497d54dae2d655957f97fcfdd3b424b",
-      "outputSha256": "4b5ef716b660fe84668f75fb000e705a719a1e84b4d743ffe14e37dddc22c522",
+      "outputSha256": "4a82c4a9041f5e59906cabebea4eec80256e39ec803ad06fbf4a32e6e35316a0",
       "edits": [
         {
           "start": 1247,
@@ -307122,6 +307314,13 @@
           "renamed": "readString"
         },
         {
+          "start": 11534,
+          "end": 11535,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
           "start": 12039,
           "end": 12041,
           "symbol": "C:ug",
@@ -307164,11 +307363,25 @@
           "renamed": "readString"
         },
         {
+          "start": 13345,
+          "end": 13346,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
           "start": 13620,
           "end": 13621,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 13669,
+          "end": 13670,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 13690,
@@ -307179,12 +307392,26 @@
           "kind": "label"
         },
         {
+          "start": 14040,
+          "end": 14041,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 14212,
           "end": 14215,
           "symbol": "B:ap.a(Z)V#0",
           "original": "L15",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 14449,
+          "end": 14450,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         },
         {
           "start": 16845,
@@ -307560,8 +307787,15 @@
       "original": "b.java",
       "renamed": "b.java",
       "inputSha256": "f368052579f7fa3dbd2649f922bebd58e54d503e55e8aa0dddfde4369b2c12c8",
-      "outputSha256": "e1a9f15631b0abc498eb2a7cffd3e8b312237a9974f0066424652a7dc53d59ec",
+      "outputSha256": "12de81df49977ea14f7a44e9e2ce9e3082864657d0e079082c6d4828eaff75ba",
       "edits": [
+        {
+          "start": 129,
+          "end": 131,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
         {
           "start": 178,
           "end": 180,
@@ -307612,11 +307846,25 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 5789,
+          "end": 5790,
+          "symbol": "M:be.a(BLij;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 5922,
           "end": 5923,
           "symbol": "M:ug.a(JBLjb;)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 5979,
+          "end": 5980,
+          "symbol": "M:be.a(BLij;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 6062,
@@ -307633,11 +307881,25 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 6649,
+          "end": 6650,
+          "symbol": "M:be.a(I)Lij;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 6770,
           "end": 6771,
           "symbol": "M:ug.a(JBLjb;)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 6825,
+          "end": 6826,
+          "symbol": "M:be.a(BLij;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 7455,
@@ -307708,7 +307970,7 @@
       "original": "ba.java",
       "renamed": "ba.java",
       "inputSha256": "8891be4a4f4b4ae18577e44fc2faa19241d9fce13a9621502f8a8854fd5fa45d",
-      "outputSha256": "ff7042604d7c4e9031422db4b035f361df958aac3757164e5e4013aa2421fc11",
+      "outputSha256": "509f5747d7cb4de5e2b3024eda7821045470b3b095775d4a3f1523683eb3f16e",
       "edits": [
         {
           "start": 2596,
@@ -307730,6 +307992,13 @@
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 3779,
+          "end": 3780,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         }
       ]
     },
@@ -307836,16 +308105,30 @@
     },
     {
       "original": "be.java",
-      "renamed": "be.java",
+      "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "de9725de646842f52446510557a7a40185a2b6c967f423e7da70b4c019b6fee8",
-      "outputSha256": "63e170a3609b532fd43c91c4c512e4aa9b60e900492ec4b343dd7c5f66c5f925",
+      "outputSha256": "6d394417f2cc1d1bae6e18c6620b28da3dc6ac8b97805a3baa9ed166d33349d3",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
         {
           "start": 151,
           "end": 153,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 154,
+          "end": 161,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 1205,
@@ -307869,6 +308152,13 @@
           "renamed": "SecondaryNodeDequeIterator"
         },
         {
+          "start": 2156,
+          "end": 2157,
+          "symbol": "M:be.a(BLij;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 2171,
           "end": 2173,
           "symbol": "C:ij",
@@ -307883,6 +308173,27 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 2285,
+          "end": 2292,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2332,
+          "end": 2339,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2709,
+          "end": 2711,
+          "symbol": "M:be.<init>()V",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 2777,
           "end": 2779,
           "symbol": "C:ij",
@@ -307890,11 +308201,32 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 2780,
+          "end": 2781,
+          "symbol": "M:be.a(I)Lij;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 2804,
           "end": 2806,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 2819,
+          "end": 2826,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2861,
+          "end": 2868,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 2951,
@@ -307916,6 +308248,13 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3032,
+          "end": 3033,
+          "symbol": "M:be.a(BLij;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 3046,
@@ -308194,8 +308533,15 @@
       "original": "bn.java",
       "renamed": "bn.java",
       "inputSha256": "0ae3294d48910ff2db11c8d802460434129d93d0c4594da3eb4d6b00f19f954e",
-      "outputSha256": "a9675ce4cb6d80a55496269e2cdfa524f42602f9e45948955c36107f52a4f34a",
+      "outputSha256": "3d78ee5c1aabfafd2c5907c38041ed277238131df9e488de653cb54909569098",
       "edits": [
+        {
+          "start": 188,
+          "end": 190,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 5750,
           "end": 5751,
@@ -308288,7 +308634,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "9e55dbb65b73bb8b58bb3b7fbe63a4c9eab2ffab9b25c2f3b032f5fa0777ce96",
-      "outputSha256": "8e3cb12a6fe74a4c46b80031898d49069dd1c5ea3951e11e2bab7c153f894594",
+      "outputSha256": "db2e67052f087d8e995f67e1f64292961039dc4398e354ed012daa4e29ad6164",
       "edits": [
         {
           "start": 344,
@@ -308317,6 +308663,20 @@
           "symbol": "M:ng.a(ILjava/lang/String;)V",
           "original": "a",
           "renamed": "writeBase38String"
+        },
+        {
+          "start": 3252,
+          "end": 3253,
+          "symbol": "M:wb.c(I)Ljb;",
+          "original": "c",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 3453,
+          "end": 3454,
+          "symbol": "M:wb.c(I)Ljb;",
+          "original": "c",
+          "renamed": "removeFirst"
         }
       ]
     },
@@ -308395,7 +308755,7 @@
       "original": "ca.java",
       "renamed": "ca.java",
       "inputSha256": "8d77e5907963feab2ddaa0a4dff37ebb83003585fbdd2f428be51d3f3f25374d",
-      "outputSha256": "e05cca829771475c376641185318bc1f772cddf5f64ed2f33ad91c4c2de1c3a6",
+      "outputSha256": "c3aa41227ebf11d04a8fa0b9dca15cf61f9170002c454d92c4b2d7a6e70e33ab",
       "edits": [
         {
           "start": 61,
@@ -308403,6 +308763,160 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3009,
+          "end": 3011,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3050,
+          "end": 3052,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3064,
+          "end": 3066,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3095,
+          "end": 3097,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3214,
+          "end": 3216,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3258,
+          "end": 3260,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3303,
+          "end": 3305,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3573,
+          "end": 3575,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3605,
+          "end": 3607,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3618,
+          "end": 3620,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3995,
+          "end": 3997,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4037,
+          "end": 4039,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4080,
+          "end": 4082,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4422,
+          "end": 4424,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4466,
+          "end": 4468,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4511,
+          "end": 4513,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4830,
+          "end": 4832,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4874,
+          "end": 4876,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4919,
+          "end": 4921,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 5207,
+          "end": 5209,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 5235,
+          "end": 5237,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 5248,
+          "end": 5250,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         }
       ]
     },
@@ -308547,8 +309061,23 @@
       "original": "cf.java",
       "renamed": "cf.java",
       "inputSha256": "e9d6e6f39462d7cfd07279722e93c3b662aa15a78a939f0d7526cea90b014018",
-      "outputSha256": "e9d6e6f39462d7cfd07279722e93c3b662aa15a78a939f0d7526cea90b014018",
-      "edits": []
+      "outputSha256": "b0d787b213debe599aa165a2a98d232837bf38180e4d5269703fc60c047c9bfd",
+      "edits": [
+        {
+          "start": 66,
+          "end": 68,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1055,
+          "end": 1057,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        }
+      ]
     },
     {
       "original": "cg.java",
@@ -309329,8 +309858,15 @@
       "original": "cn.java",
       "renamed": "cn.java",
       "inputSha256": "fde4f9e7ab868d1c47e1ee763e8032f047204f4ea29009e3809dbe701b9eb0fc",
-      "outputSha256": "3f1e8cc98391862f0868f3613039c5ec2d104e782ae33f7013336735ceb7f361",
+      "outputSha256": "94dfa52b4f0b684b51bccff23af96f42a3dc9212188694b6403c588e19f8a677",
       "edits": [
+        {
+          "start": 522,
+          "end": 523,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
         {
           "start": 804,
           "end": 811,
@@ -309932,14 +310468,22 @@
       "original": "df.java",
       "renamed": "df.java",
       "inputSha256": "85672d6443012f5b9b65b4e799216409cb9189343e4ca966a07c13d9ab24d9cb",
-      "outputSha256": "85672d6443012f5b9b65b4e799216409cb9189343e4ca966a07c13d9ab24d9cb",
-      "edits": []
+      "outputSha256": "4b97881a50af89dbf2fa9b3680d014635f939aeb35b8e885b95e7848ffb63a0e",
+      "edits": [
+        {
+          "start": 117,
+          "end": 119,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        }
+      ]
     },
     {
       "original": "dg.java",
       "renamed": "dg.java",
       "inputSha256": "e87d3c3b7fb907edc8cf91d3725e0feec8205e7c165f5177e123a1b3913690ab",
-      "outputSha256": "c95c50af3edbea62b45a038a447f9b4a83347258e7066c3f2dfcd5060307f373",
+      "outputSha256": "a5977c055e209c490349c0f1835f450530056af1500c34dfcae2145c1c5c192d",
       "edits": [
         {
           "start": 282,
@@ -309947,6 +310491,20 @@
           "symbol": "M:dg.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 22529,
+          "end": 22530,
+          "symbol": "M:wb.a(I)V",
+          "original": "a",
+          "renamed": "clear"
+        },
+        {
+          "start": 22594,
+          "end": 22595,
+          "symbol": "M:wb.a(I)V",
+          "original": "a",
+          "renamed": "clear"
         }
       ]
     },
@@ -310692,8 +311250,15 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "d94e941ccc7c71e7eef6fdce3f53de872f196ec4b5d526bafac5d2d7591d0726",
-      "outputSha256": "4a7de1253760700db2161f4af66e983efed190f0237ad54080e860f6e7791bcb",
+      "outputSha256": "f36331f3ed5aed46187be397f88c4780ea21b724f1f32a6d1d5565a1791c9559",
       "edits": [
+        {
+          "start": 604,
+          "end": 606,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
         {
           "start": 843,
           "end": 845,
@@ -310707,7 +311272,7 @@
       "original": "ea.java",
       "renamed": "ea.java",
       "inputSha256": "7c6e66a51336120d02be7d00e80ed9f91986a41f814d5b1fd4124f72049cfc8a",
-      "outputSha256": "4ffc7fa8cfd2a23be28d5909644ce71489af2525898b4c13db21ebe05a7e9646",
+      "outputSha256": "b35765de7d00335c6af9cbd4cda741fd00cd26120d00e3626622db0287f0e654",
       "edits": [
         {
           "start": 15782,
@@ -310729,6 +311294,13 @@
           "symbol": "C:a",
           "original": "a",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 29448,
+          "end": 29449,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         }
       ]
     },
@@ -310736,7 +311308,7 @@
       "original": "eb.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "b8838ff8722b9577664381bd7da2f1776cacaea9bd6f606b98eb4be167d94ec0",
-      "outputSha256": "dca476d66b44b3d01e639c3cdda45529c707c1e318d7faebf57aa209e77ced19",
+      "outputSha256": "513f1f0bb5e664158648ddd8f605a28597b5aba9747d4a195a53c321314fb550",
       "edits": [
         {
           "start": 53,
@@ -310893,6 +311465,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 18783,
+          "end": 18785,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 18975,
           "end": 18977,
           "symbol": "C:dd",
@@ -310900,11 +311479,67 @@
           "renamed": "FullscreenFocusCanvas"
         },
         {
+          "start": 19190,
+          "end": 19192,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 19224,
+          "end": 19226,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 19269,
+          "end": 19271,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 19308,
+          "end": 19310,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 19366,
+          "end": 19368,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 19410,
           "end": 19412,
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 19415,
+          "end": 19417,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 19461,
+          "end": 19463,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 19571,
+          "end": 19573,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 19712,
@@ -310975,8 +311610,15 @@
       "original": "ec.java",
       "renamed": "ec.java",
       "inputSha256": "e5d650b9bb34dd0d327732cc50bcb452797f9450083bf3695d1451e11fbb5c61",
-      "outputSha256": "4c39575b03cd9a54bd3c5dd10a14f51c87488ea6425bd844a225890909349b16",
+      "outputSha256": "1472ba6400ea2513b94282e412edad47d59914e3ac318a47eeee83fe1634816b",
       "edits": [
+        {
+          "start": 104,
+          "end": 106,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 816,
           "end": 818,
@@ -310990,6 +311632,13 @@
           "symbol": "M:ec.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 3520,
+          "end": 3522,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -311026,8 +311675,22 @@
       "original": "ee.java",
       "renamed": "ee.java",
       "inputSha256": "3af033ce302631b5d6fff7674a8e0f66ad085ec03557ea6146d02f9e5bfe3bef",
-      "outputSha256": "dd6ef109d1b302d47c36460371d22d067c3db2996e80b754d775f422ed0f3870",
+      "outputSha256": "4a6a28709c6515544ea43a1d2a04bbf09d09f5952cd8adb1941f0e1908581b29",
       "edits": [
+        {
+          "start": 452,
+          "end": 454,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 476,
+          "end": 478,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 832,
           "end": 834,
@@ -311057,11 +311720,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1301,
+          "end": 1302,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 1615,
           "end": 1616,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 1675,
+          "end": 1676,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 1711,
@@ -311087,11 +311764,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2346,
+          "end": 2347,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
+          "start": 2819,
+          "end": 2820,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 3161,
           "end": 3162,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 3296,
+          "end": 3297,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 3336,
@@ -311115,6 +311813,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 4007,
+          "end": 4008,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         },
         {
           "start": 4872,
@@ -311194,6 +311899,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 17804,
+          "end": 17805,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 18029,
           "end": 18030,
           "symbol": "M:jb.a(Z)V",
@@ -311220,6 +311932,27 @@
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 18569,
+          "end": 18570,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 19338,
+          "end": 19340,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 19425,
+          "end": 19426,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 19550,
@@ -311257,11 +311990,53 @@
           "renamed": "position"
         },
         {
+          "start": 21103,
+          "end": 21105,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 21369,
+          "end": 21371,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
           "start": 21774,
           "end": 21781,
           "symbol": "F:ng.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 21826,
+          "end": 21827,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
+          "start": 22717,
+          "end": 22719,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 23569,
+          "end": 23571,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 23837,
+          "end": 23839,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -311298,8 +312073,16 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "263e6a690337a07a937b8971e97e0dea22989496e214c6ed309fb788cdc416a3",
-      "outputSha256": "263e6a690337a07a937b8971e97e0dea22989496e214c6ed309fb788cdc416a3",
-      "edits": []
+      "outputSha256": "41b7d952165172899dabda80e8ac21145202dacbbc322cf0f09def23c472f3d5",
+      "edits": [
+        {
+          "start": 8801,
+          "end": 8803,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        }
+      ]
     },
     {
       "original": "ej.java",
@@ -311929,7 +312712,7 @@
       "original": "fo.java",
       "renamed": "fo.java",
       "inputSha256": "87adac3fac962719334ca0a4ef1f07cf3cdb8a0a82d34dd8a471534803af735c",
-      "outputSha256": "77173e0da5bcf2bbfd0ee1a2231405ea72a761a9917c7978cf9d6a877fc7fbd6",
+      "outputSha256": "2c5902707fe12b03790db5f1bd45f6f2a99763541073698b640864d3381d49e3",
       "edits": [
         {
           "start": 61,
@@ -311937,6 +312720,34 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 548,
+          "end": 549,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 673,
+          "end": 674,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 730,
+          "end": 731,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 927,
+          "end": 928,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         }
       ]
     },
@@ -312064,8 +312875,15 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "e745c52e80f6ed90c215402c274552dec46ee3c399f882e4e71563213d3d501e",
-      "outputSha256": "b701ca7eaeb173d0aa38f871820d7430fe72f1c7982503ade305927eeaefbcdc",
+      "outputSha256": "af9c45d98b8e106f95e019af334ca16b9861d0ba775106609fbafb30b0fd8775",
       "edits": [
+        {
+          "start": 119,
+          "end": 121,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 155,
           "end": 156,
@@ -312508,14 +313326,28 @@
       "original": "gn.java",
       "renamed": "gn.java",
       "inputSha256": "6b79c6c4e2eeb0ced4623e85e75ca853fbcfe71217d7fc11f43e1e6aa78550d9",
-      "outputSha256": "4f01f9310e87e9ed0b6422769eeda15e7258db8820743fbcfc1fff20bf021a5d",
+      "outputSha256": "07695a66f569612b2beea9b610c520d48696678d75d658039b7dd1edfdf37639",
       "edits": [
+        {
+          "start": 115,
+          "end": 117,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 896,
           "end": 897,
           "symbol": "M:gn.e(Z)V",
           "original": "e",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1769,
+          "end": 1771,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 3525,
@@ -312530,6 +313362,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 5481,
+          "end": 5483,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -312537,8 +313376,43 @@
       "original": "go.java",
       "renamed": "go.java",
       "inputSha256": "14b12fb53312a55fc6d43da55d252220be4d78f3afcf3fc296d8de3944d86172",
-      "outputSha256": "dff880413fd1330dc4d64c7f6b7161420f2f305cf02a73c47125a4675daeb03e",
+      "outputSha256": "f82f1452e56991caf50d961b6ac2f2b46cbc71ac7c174e68bbda4892c3af07e0",
       "edits": [
+        {
+          "start": 506,
+          "end": 508,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 581,
+          "end": 583,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 791,
+          "end": 793,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 875,
+          "end": 877,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 901,
+          "end": 903,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
         {
           "start": 2853,
           "end": 2854,
@@ -312835,8 +313709,15 @@
       "original": "hc.java",
       "renamed": "hc.java",
       "inputSha256": "3b4cecc0c668a5b3b050e7ec6efef543c522697e847ab09ad8e62da0e6e7a9b8",
-      "outputSha256": "bc32df26c9bb133a461840e2ce96386284649367024de5d503102661e650fb44",
+      "outputSha256": "0823c09974ed1f97b1229be5c7fbe8ded7063f28656b4709ef3fa04026dd3f2c",
       "edits": [
+        {
+          "start": 89,
+          "end": 91,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 375,
           "end": 377,
@@ -312850,6 +313731,13 @@
           "symbol": "M:hc.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 849,
+          "end": 851,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -312857,14 +313745,84 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "cb3a33dd70fc8e688d0f9f997eded4d801e39689cc2f43d0a42a63e832fca968",
-      "outputSha256": "07de87f53354c816b6d71cbc8af0d45c178267e6463799abb2c0c10dd8018612",
+      "outputSha256": "11514572d2087a5a1bb224cbeaa4afdd52b4d6caed2e7b3243a3ea37d02ef582",
       "edits": [
+        {
+          "start": 93,
+          "end": 95,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 143,
+          "end": 145,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 294,
+          "end": 296,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 305,
+          "end": 306,
+          "symbol": "M:wb.d(I)Ljb;",
+          "original": "d",
+          "renamed": "removeLast"
+        },
+        {
+          "start": 517,
+          "end": 518,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
+          "start": 620,
+          "end": 622,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 631,
+          "end": 632,
+          "symbol": "M:wb.d(I)Ljb;",
+          "original": "d",
+          "renamed": "removeLast"
+        },
+        {
+          "start": 860,
+          "end": 861,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
         {
           "start": 911,
           "end": 912,
           "symbol": "M:hd.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1420,
+          "end": 1422,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1448,
+          "end": 1450,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -312914,8 +313872,37 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "0329d8c04d5ec130fa14cb2a28dae6eda527ccdc3210965254978240ada5d5c4",
-      "outputSha256": "0329d8c04d5ec130fa14cb2a28dae6eda527ccdc3210965254978240ada5d5c4",
-      "edits": []
+      "outputSha256": "9a6a28fe17483794a2f4c8a9e62117d45df76be75989cbf4c5e9bc8dc742c066",
+      "edits": [
+        {
+          "start": 459,
+          "end": 460,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 582,
+          "end": 583,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 702,
+          "end": 703,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 835,
+          "end": 836,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        }
+      ]
     },
     {
       "original": "hl.java",
@@ -313290,7 +314277,7 @@
       "original": "ib.java",
       "renamed": "ib.java",
       "inputSha256": "2c62f7bed89d543eb693f07646daeaf9aa4da7171d1a773aab049d1310fe00a0",
-      "outputSha256": "09dd64e1fd0e6a52f13cf6ded0d80956b464bd520ab0abfa17c43c435ed9cf59",
+      "outputSha256": "2001ee31521d047f29627d27c3e6623c3d66be5666dc94a1e14820ea965f8bee",
       "edits": [
         {
           "start": 64,
@@ -313305,6 +314292,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 450,
+          "end": 451,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 605,
@@ -314496,14 +315490,28 @@
       "original": "je.java",
       "renamed": "je.java",
       "inputSha256": "7881cd699cb5c2cc66140fed0f52a67b0de807034012ee2a4fc55eea760c71b0",
-      "outputSha256": "9aecddf8a6191e8709768f711b83bc1ba52fd767c4030eebf1a2deb8d1ae8157",
+      "outputSha256": "04e41f2e124132a12049d76ef219af6da34bfecb455746a3f26f4f0ef8a8cb3f",
       "edits": [
+        {
+          "start": 66,
+          "end": 68,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 368,
           "end": 369,
           "symbol": "M:je.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 925,
+          "end": 927,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -315126,8 +316134,51 @@
       "original": "jp.java",
       "renamed": "jp.java",
       "inputSha256": "5f9a6f72fcbc3f50012007833f16cd84ab3ca926482704d71eab7512cdc542fb",
-      "outputSha256": "5f9a6f72fcbc3f50012007833f16cd84ab3ca926482704d71eab7512cdc542fb",
-      "edits": []
+      "outputSha256": "8b67a16ef6fb7cbb052bfe2e96cdf1fdc02ecfa220c5f38b813016a0534d720d",
+      "edits": [
+        {
+          "start": 473,
+          "end": 474,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 652,
+          "end": 653,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 822,
+          "end": 823,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
+          "start": 981,
+          "end": 982,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 1186,
+          "end": 1187,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 1378,
+          "end": 1379,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        }
+      ]
     },
     {
       "original": "k.java",
@@ -315148,8 +316199,36 @@
       "original": "ka.java",
       "renamed": "ka.java",
       "inputSha256": "42b8fbe3f8cb025a74ea1ddd3c11fa4544061f772d649d20adb4959ff9a653c9",
-      "outputSha256": "2f403bdeeaff2c801d199b691224aa9199c3595dade3ff6484997fc4ad901a54",
+      "outputSha256": "3ce552975dda7f1013c804bb419ee63620a1829dfa98cffa10f5e13b94b9e169",
       "edits": [
+        {
+          "start": 145,
+          "end": 147,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 349,
+          "end": 350,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 3007,
+          "end": 3008,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 3715,
+          "end": 3716,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
         {
           "start": 3736,
           "end": 3738,
@@ -315157,6 +316236,20 @@
           "original": "L0",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 3915,
+          "end": 3916,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 4256,
+          "end": 4257,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 4292,
@@ -315167,6 +316260,20 @@
           "kind": "label"
         },
         {
+          "start": 4609,
+          "end": 4610,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 9119,
+          "end": 9120,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 9138,
           "end": 9140,
           "symbol": "B:ka.a(I)V#0",
@@ -315175,12 +316282,40 @@
           "kind": "label"
         },
         {
+          "start": 9307,
+          "end": 9308,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 9569,
+          "end": 9570,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 9603,
           "end": 9605,
           "symbol": "B:ka.a(I)V#0",
           "original": "L0",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 9827,
+          "end": 9828,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 9902,
+          "end": 9904,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -315252,7 +316387,7 @@
       "original": "ke.java",
       "renamed": "ke.java",
       "inputSha256": "4eae7b94ee1a7dd16a66fcae8efe0bc6504ded6f318c3521363fa65233b5a763",
-      "outputSha256": "77c9c3fcba64b3965a94b0e08401f05bcfdc8b2f4996f57055b9283eaf823797",
+      "outputSha256": "994170bbe3475fc7f7e40d4de3faff165271da7dea75b189155b7392f800957e",
       "edits": [
         {
           "start": 254,
@@ -315288,6 +316423,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 4464,
+          "end": 4465,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 4838,
@@ -316396,7 +317538,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "f06be91a5fd78dca91e0174ba3ba0f158db240f442906f2d358aad1aa4e72895",
-      "outputSha256": "a02d85ae9fd7b1a1876fbfbbfb367c75c1f38026451dded64e80287c8ac5829c",
+      "outputSha256": "d36a4f2ee201df090f74630d90a4162db78c01df5d6c36661aa2dd204ca2d64f",
       "edits": [
         {
           "start": 335,
@@ -316455,6 +317597,13 @@
           "renamed": "readInt"
         },
         {
+          "start": 1225,
+          "end": 1226,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 1452,
           "end": 1453,
           "symbol": "M:jb.a(Z)V",
@@ -316462,11 +317611,25 @@
           "renamed": "unlink"
         },
         {
+          "start": 1558,
+          "end": 1559,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 1688,
           "end": 1689,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 1785,
+          "end": 1786,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 2071,
@@ -316509,8 +317672,29 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "c2b0520fcacc9a95561b7075f8cab16a0014c7b24f5a7c2fb45606e83cea4629",
-      "outputSha256": "c01079b1481a8e9c84ccc8294688ed6d1f71c892d2d1454569ac3c8824d4e0b4",
+      "outputSha256": "f7ef07a209dc043895db69d1ace6b72274344581c2fa7784f2606962d1cc9af7",
       "edits": [
+        {
+          "start": 251,
+          "end": 252,
+          "symbol": "M:wb.d(I)Ljb;",
+          "original": "d",
+          "renamed": "removeLast"
+        },
+        {
+          "start": 536,
+          "end": 538,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 547,
+          "end": 548,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
         {
           "start": 617,
           "end": 618,
@@ -316553,8 +317737,16 @@
       "original": "lj.java",
       "renamed": "lj.java",
       "inputSha256": "af4ebfe20040d749016c7679a4dfe06cb8e2e17e3362d8bc6167577aef23576f",
-      "outputSha256": "af4ebfe20040d749016c7679a4dfe06cb8e2e17e3362d8bc6167577aef23576f",
-      "edits": []
+      "outputSha256": "45e3e431594b1e2cdb7488d65495d5cde4928e1da43ecdbd4f4088387826d95d",
+      "edits": [
+        {
+          "start": 2470,
+          "end": 2471,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        }
+      ]
     },
     {
       "original": "lk.java",
@@ -316825,7 +318017,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "574d23985eb3f682a309daa98c99e82ab8edcdcc0ac8d0edbb64975e7ee7f4a9",
-      "outputSha256": "2b9ce287fa23be1b9655a1f71db2760b753916a3d00f093271ed6132f99a5b58",
+      "outputSha256": "ee2088d35af26e279ef55381db84d36c2d49f50cf19449b6a742ab0cd5db2762",
       "edits": [
         {
           "start": 8615,
@@ -316847,6 +318039,20 @@
           "symbol": "M:ng.c(B)I",
           "original": "c",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 9006,
+          "end": 9007,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 9134,
+          "end": 9135,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 9338,
@@ -316961,6 +318167,20 @@
           "renamed": "readLong"
         },
         {
+          "start": 12831,
+          "end": 12832,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 12989,
+          "end": 12990,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 13244,
           "end": 13245,
           "symbol": "M:jb.a(Z)V",
@@ -316987,8 +318207,16 @@
       "original": "mb.java",
       "renamed": "mb.java",
       "inputSha256": "d569c3d3b68659be6fac829eb48e47e097afe7062abac3b70a1092ca6f574539",
-      "outputSha256": "d569c3d3b68659be6fac829eb48e47e097afe7062abac3b70a1092ca6f574539",
-      "edits": []
+      "outputSha256": "ac2f8894d061d377b81f6df395669088bd8607544a7287ad3677d19278c8a4db",
+      "edits": [
+        {
+          "start": 332,
+          "end": 333,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        }
+      ]
     },
     {
       "original": "mc.java",
@@ -317521,7 +318749,7 @@
       "original": "mn.java",
       "renamed": "mn.java",
       "inputSha256": "6af77003e4791014f74a72990ddb50e2f896ad98e5c8eae4cbcdd1e7f8fbef65",
-      "outputSha256": "607e61fad29cd97ac1c3104b8a78392c58790cfc11331dcdb273cdcf4b36be42",
+      "outputSha256": "50e6baad17c9da24bbbcb00780eada88746e029096e908d3b923afb5e4304e8e",
       "edits": [
         {
           "start": 1467,
@@ -317557,6 +318785,20 @@
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 2404,
+          "end": 2406,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 2438,
+          "end": 2440,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 2587,
@@ -320294,8 +321536,15 @@
       "original": "nh.java",
       "renamed": "nh.java",
       "inputSha256": "696077342fda0f7249e93cc54c36c55e9a76f6931f2da45a1a1003cfe239e61b",
-      "outputSha256": "2e2a8793c42998471b62864b0bcc47caf4346b988af58a74e939777ae70bf857",
+      "outputSha256": "50d2e677bd390c506fdc9637b4909f5c523040cf78f6f74c2b2c0fee236b8b0f",
       "edits": [
+        {
+          "start": 171,
+          "end": 173,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 3201,
           "end": 3203,
@@ -320400,6 +321649,27 @@
           "symbol": "F:ng.field_f:I",
           "original": "field_f",
           "renamed": "position"
+        },
+        {
+          "start": 10269,
+          "end": 10271,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 11375,
+          "end": 11376,
+          "symbol": "M:wb.a(I)V",
+          "original": "a",
+          "renamed": "clear"
+        },
+        {
+          "start": 13237,
+          "end": 13239,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -320557,8 +321827,16 @@
       "original": "nl.java",
       "renamed": "nl.java",
       "inputSha256": "576fa3f8a88baa73ca95fa36ae7eda4904ca484ebbb321baa8ca9c0f857d5552",
-      "outputSha256": "576fa3f8a88baa73ca95fa36ae7eda4904ca484ebbb321baa8ca9c0f857d5552",
-      "edits": []
+      "outputSha256": "cc18e96cbf9b960c8cb9e3451df21706d84d6a6e40d5ec7e37e55c42cdab76ea",
+      "edits": [
+        {
+          "start": 3023,
+          "end": 3025,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        }
+      ]
     },
     {
       "original": "nm.java",
@@ -321140,8 +322418,29 @@
       "original": "og.java",
       "renamed": "og.java",
       "inputSha256": "72c77e4a5b4e17acd8eef4ac5c54532d4c9f2267899f789cda50aa3280bbe191",
-      "outputSha256": "4dbf94d06641aff4e3f5258339327a0cf285b019521f969a2ecd4d99b8afe09d",
+      "outputSha256": "c1de158fa634dd1ee18d862f35b33a3b7056bbcd97f46bb336bc355dccea9e68",
       "edits": [
+        {
+          "start": 149,
+          "end": 151,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 681,
+          "end": 682,
+          "symbol": "M:wb.b(I)Z",
+          "original": "b",
+          "renamed": "isEmpty"
+        },
+        {
+          "start": 2859,
+          "end": 2860,
+          "symbol": "M:wb.b(I)Z",
+          "original": "b",
+          "renamed": "isEmpty"
+        },
         {
           "start": 4909,
           "end": 4910,
@@ -321164,11 +322463,25 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 8771,
+          "end": 8772,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
           "start": 9651,
           "end": 9652,
           "symbol": "M:jb.b(I)Z",
           "original": "b",
           "renamed": "isLinked"
+        },
+        {
+          "start": 14201,
+          "end": 14203,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 14855,
@@ -321190,6 +322503,13 @@
           "symbol": "M:jb.b(I)Z",
           "original": "b",
           "renamed": "isLinked"
+        },
+        {
+          "start": 21321,
+          "end": 21323,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -321204,8 +322524,23 @@
       "original": "oi.java",
       "renamed": "oi.java",
       "inputSha256": "3e320a15b683cd2aebf03094d366c560a31b39775a315b23827e74a8eea963ac",
-      "outputSha256": "3e320a15b683cd2aebf03094d366c560a31b39775a315b23827e74a8eea963ac",
-      "edits": []
+      "outputSha256": "c568768afc76e13a6b9f4272a9904440c0f93421f6c9e346147bce8bb5017c61",
+      "edits": [
+        {
+          "start": 93,
+          "end": 95,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 503,
+          "end": 505,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        }
+      ]
     },
     {
       "original": "oj.java",
@@ -321240,7 +322575,7 @@
       "original": "ok.java",
       "renamed": "ok.java",
       "inputSha256": "b11ad4d5fbb2fa723257863293213fb2f43e7c8389df5dff47886d5944442658",
-      "outputSha256": "4dd78044b357a63f304c52a8fcb0a5205fe69666ba7e014922ab85b21ff7058d",
+      "outputSha256": "35867745745c49f13f655113219b8a428bfd22806a17ad43a571e84bfcf9cf6e",
       "edits": [
         {
           "start": 227,
@@ -321250,11 +322585,25 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 273,
+          "end": 275,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
           "start": 332,
           "end": 334,
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 11075,
+          "end": 11077,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -321262,14 +322611,35 @@
       "original": "ol.java",
       "renamed": "ol.java",
       "inputSha256": "746b06dce82297ac1a8695f711ecc35e6e58171c7066c29c175ba047b9607952",
-      "outputSha256": "55f0961c45673cdfd20b72e09de63efe01031c53e68ae1f7aba7f63be5e62e6a",
+      "outputSha256": "398807ab10a3d0fbcb61a429d34560ef3a67d47d03516c7559e1e5eef7a0afb1",
       "edits": [
+        {
+          "start": 231,
+          "end": 233,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 573,
           "end": 574,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 760,
+          "end": 762,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 938,
+          "end": 940,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 1085,
@@ -321305,6 +322675,13 @@
           "symbol": "F:ng.field_f:I",
           "original": "field_f",
           "renamed": "position"
+        },
+        {
+          "start": 3720,
+          "end": 3721,
+          "symbol": "M:wb.a(ILjb;)V",
+          "original": "a",
+          "renamed": "addFirst"
         }
       ]
     },
@@ -321326,7 +322703,7 @@
       "original": "oo.java",
       "renamed": "oo.java",
       "inputSha256": "85a61a92ec19dd9e7ce41614a2376d2ebdaed79ca4db2b774b08c9d222e99b65",
-      "outputSha256": "6c1e4159799ce932b63bf83ba67d9e423824f74b052262192d2e1c244bfdff1a",
+      "outputSha256": "ed19a91674da4efe8a7375c39130de2981b8edbdd764260b30c39b21cda66a3e",
       "edits": [
         {
           "start": 747,
@@ -321362,6 +322739,34 @@
           "symbol": "C:dd",
           "original": "dd",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7621,
+          "end": 7623,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 7660,
+          "end": 7662,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 7744,
+          "end": 7746,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 7825,
+          "end": 7827,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 8247,
@@ -321506,7 +322911,7 @@
       "original": "pe.java",
       "renamed": "pe.java",
       "inputSha256": "3a9be904b084ef2a97afc85757736125322be0e76f7dbcb8a6ea56175339e06f",
-      "outputSha256": "3cb53d132308574f6cbdf34efa59e9d39855ef2c3ec3dc0c90130c67b0fbcd51",
+      "outputSha256": "7acd328fce1972f0ee6259e76a35fceffe0759f17050ca2804aebe9f4de154a3",
       "edits": [
         {
           "start": 61,
@@ -321530,6 +322935,20 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 1744,
+          "end": 1745,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 1866,
+          "end": 1867,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 2052,
           "end": 2053,
           "symbol": "M:ng.h(I)I",
@@ -321542,6 +322961,13 @@
           "symbol": "M:ng.i(I)Ljava/lang/String;",
           "original": "i",
           "renamed": "readString"
+        },
+        {
+          "start": 2936,
+          "end": 2938,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 4488,
@@ -321563,7 +322989,7 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "d76da6be64a514be2954013da4876afe1be353ad4699187a9bcd4eed7ae525d1",
-      "outputSha256": "3bc7c44ba5a754d1863bbd961f9863d6c35995bd6d38f3b07ef58bf96bec89d1",
+      "outputSha256": "9857cf71dbed6a866d3e96b8a59b036b81aab23a1ca8f2688075e2f83854dcce",
       "edits": [
         {
           "start": 6681,
@@ -321601,6 +323027,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 19325,
+          "end": 19326,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 19452,
           "end": 19459,
           "symbol": "F:ng.field_f:I",
@@ -321627,6 +323060,20 @@
           "symbol": "M:ng.f(I)I",
           "original": "f",
           "renamed": "readSignedSmart"
+        },
+        {
+          "start": 20008,
+          "end": 20009,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 20208,
+          "end": 20209,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 20361,
@@ -321841,7 +323288,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "8fbd08065a75253d04832fb3a6eed8e03e57e7fe48b32e0ac42e851e2f8ecfcf",
-      "outputSha256": "fb6ff9e8d4905431b0886095c3d00c8bfb91f1352ca90abb5eb9f37a41208590",
+      "outputSha256": "ce5e0a384c49813ab505102a1b53a909b4bc1c42544c598bc572e83e2cc45c84",
       "edits": [
         {
           "start": 159,
@@ -321921,6 +323368,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 5425,
+          "end": 5426,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 5551,
           "end": 5552,
           "symbol": "M:ng.h(I)I",
@@ -321968,6 +323422,20 @@
           "symbol": "M:ng.b(B)I",
           "original": "b",
           "renamed": "readInt"
+        },
+        {
+          "start": 6037,
+          "end": 6038,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 6192,
+          "end": 6193,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 6420,
@@ -322081,8 +323549,15 @@
       "original": "pm.java",
       "renamed": "pm.java",
       "inputSha256": "e4d24e9e9a346863889b2aa0dcce1998b99a7a920ab2ea82873fee79aa6a87b3",
-      "outputSha256": "60e6b5729a5f626e32d0bd60f9b27ae95cd7c7dd75e46a18b8891a5ecea37e46",
+      "outputSha256": "ded2b5cf82dbdcb3caa60431f506183ab58df25e24a82e70a8e569807bb06290",
       "edits": [
+        {
+          "start": 95,
+          "end": 97,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 602,
           "end": 604,
@@ -322180,6 +323655,13 @@
           "symbol": "F:ng.field_f:I",
           "original": "field_f",
           "renamed": "position"
+        },
+        {
+          "start": 11262,
+          "end": 11264,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -322260,7 +323742,7 @@
       "original": "qa.java",
       "renamed": "qa.java",
       "inputSha256": "16370543611c1d2c817161438726b62ccac1ca8ff9fab9d09d1b766938fdf852",
-      "outputSha256": "c3efa886e600203e8c80a17c0efdb49f4dfe5278b184c234bf4ec74191eb5eb9",
+      "outputSha256": "4460e5bf16f4e130a35368f9cb36d3844adfca3cb03da1fd31ddba4947446c4d",
       "edits": [
         {
           "start": 168,
@@ -322354,6 +323836,13 @@
           "renamed": "close"
         },
         {
+          "start": 10615,
+          "end": 10616,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
           "start": 10698,
           "end": 10700,
           "symbol": "C:gl",
@@ -322408,7 +323897,7 @@
       "original": "qb.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "5d12b3c336bac989b625f5058755461e0fa9c36aff91892317994266a56fdf0f",
-      "outputSha256": "adaf4e3dbf7852bebb524091f462ad669ea134a9e82345426897d314a9158391",
+      "outputSha256": "a98ff6d0b801ff2047573a6cdf5b468dec2f62e45f9c22242ebde80db29f3f82",
       "edits": [
         {
           "start": 53,
@@ -322604,6 +324093,13 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 58433,
+          "end": 58435,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 58749,
           "end": 58751,
           "symbol": "C:pg",
@@ -322632,6 +324128,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 75007,
+          "end": 75009,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
           "start": 76988,
           "end": 76990,
           "symbol": "C:pg",
@@ -322651,6 +324154,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 91690,
+          "end": 91692,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 94625,
@@ -323436,7 +324946,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "f6855124d509b6dd84d2baf7bb48437e8de3e3f47ceeaf6de139b1a1cd9e86a4",
-      "outputSha256": "7daea94e4f0f1f0adbeaf89f442d748a1cb2d2c5c396915e0185265d4e4e5e03",
+      "outputSha256": "381b085d5029427099490a96e07564e609e3bdbed0c2afbd441aa9c414370c36",
       "edits": [
         {
           "start": 265,
@@ -323458,6 +324968,13 @@
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 2741,
+          "end": 2743,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 3475,
@@ -323486,7 +325003,7 @@
       "original": "rc.java",
       "renamed": "rc.java",
       "inputSha256": "d12fc12a69ece97d25764e6cbfad24cf47c168e0ad9ec1aab5784c20fdc07791",
-      "outputSha256": "661d823db54c7cf03eb7230611e618f4d9ba4ff8bb9d6c18dbac1fc5c4552ce1",
+      "outputSha256": "dabca7922e5751cdd636f3628b2808d6b212c5a53317a42298b7ca4a733d36a4",
       "edits": [
         {
           "start": 247,
@@ -323494,6 +325011,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 618,
+          "end": 619,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         },
         {
           "start": 822,
@@ -323580,8 +325104,29 @@
       "original": "rf.java",
       "renamed": "rf.java",
       "inputSha256": "ae2a4671c3ea0558ef84a61fcbda4415574d737c7bc1474836d924cbefce1890",
-      "outputSha256": "a6a3a7b41b278d52f5d61fa39a213be150543c0802abfa27d60922988cfb1641",
+      "outputSha256": "3b7b1a2761b21f6cd6bcf9455a2ea4d9ddf217a7ea16fc6d5abac5e98b279e25",
       "edits": [
+        {
+          "start": 96,
+          "end": 98,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 656,
+          "end": 658,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 2172,
+          "end": 2173,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
         {
           "start": 2616,
           "end": 2617,
@@ -323630,6 +325175,34 @@
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 12156,
+          "end": 12158,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 13672,
+          "end": 13674,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 16523,
+          "end": 16524,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 16934,
+          "end": 16935,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         }
       ]
     },
@@ -323637,7 +325210,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "026bd597ecad1cc9563cf7109d597be2e27e4e9b313b203c0db12b52f62d04ce",
-      "outputSha256": "b40b97124750bac6de28f71ebae7ecdf79044bba66a9e720aed98db4382e535e",
+      "outputSha256": "b50d0c7b7083d4a74852982d6b254bc2a90478ca23cf636b2d02f6a60e790833",
       "edits": [
         {
           "start": 2216,
@@ -323645,6 +325218,13 @@
           "symbol": "M:rg.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 3311,
+          "end": 3313,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         }
       ]
     },
@@ -324911,7 +326491,7 @@
       "original": "rn.java",
       "renamed": "rn.java",
       "inputSha256": "dae3095961ecbde64602f325c41caa946269efdf804e4f814ed42495709245eb",
-      "outputSha256": "bb0bbfcbe017ecdd9fd2b8693bf47ff2a6662b6b8231f4257b841d45d30e8836",
+      "outputSha256": "caccded18e0c431a6b6baded87b99a07efcd6e2e4c20322f2ec901994874d926",
       "edits": [
         {
           "start": 915,
@@ -324919,6 +326499,20 @@
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 6166,
+          "end": 6168,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 6195,
+          "end": 6197,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 6754,
@@ -325455,7 +327049,7 @@
       "original": "si.java",
       "renamed": "AccountServiceResult.java",
       "inputSha256": "18b53c78ca06d32f5afa81bf983e39753eeafdb2ded8bf6e1e38339fdb772d32",
-      "outputSha256": "90fe7d58d3b52ae11217148b9b22e00a9da5c4a0e39ecc200ca23e467bca155e",
+      "outputSha256": "96e8d0f1b1b08e9478466cd826db04356e3dba3b35f12dd99c5bc485067092c5",
       "edits": [
         {
           "start": 50,
@@ -325505,6 +327099,34 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 748,
+          "end": 749,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 872,
+          "end": 873,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 923,
+          "end": 924,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 1025,
+          "end": 1026,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 1115,
@@ -325612,8 +327234,15 @@
       "original": "so.java",
       "renamed": "so.java",
       "inputSha256": "1cade3a1f06f99e93b384191c68e71fa87957e57356ea823026b4f9ca2637814",
-      "outputSha256": "08c889e1c958ccff895b0582a1a5d67afd2109d730b11d58da9023b4df563121",
+      "outputSha256": "09accf5c6ab9c266bbb66c9d563e923722816e15757e6536980c62b083f9f09e",
       "edits": [
+        {
+          "start": 168,
+          "end": 170,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 334,
           "end": 336,
@@ -325746,6 +327375,13 @@
           "symbol": "C:km",
           "original": "km",
           "renamed": "SecondaryIntrusiveDeque"
+        },
+        {
+          "start": 4697,
+          "end": 4699,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -325827,8 +327463,15 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "30a1b24187f70819224fdf82788d06fe611ab639bb7a5e058d83b6abf829fa56",
-      "outputSha256": "c21dadc6c85f40cbce2891d10465cddafb4f7231c2442e45024bae35f426a488",
+      "outputSha256": "4f12074a4ea94f11eb97f69449324bdd7cca9d414eaccb11b9c185eebac7c46d",
       "edits": [
+        {
+          "start": 136,
+          "end": 138,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 2233,
           "end": 2235,
@@ -326019,6 +327662,20 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 9526,
+          "end": 9528,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 9569,
+          "end": 9571,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 9599,
           "end": 9601,
           "symbol": "C:bm",
@@ -326031,6 +327688,13 @@
           "symbol": "C:a",
           "original": "a",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 10849,
+          "end": 10851,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -326373,8 +328037,22 @@
       "original": "tj.java",
       "renamed": "tj.java",
       "inputSha256": "980f3a1116d2a778e90ca05d3c6d09e299429ab5b70abaafa6efa55b4cd08884",
-      "outputSha256": "e2b9edc3a2c8de4556568e3338a102bca45e7de8ca86e9fff2616f5f8269dfe3",
+      "outputSha256": "22b4a1a5de15103bdca4407370f0d6b720d1f3fa4437e4a7a268b9452e4e0650",
       "edits": [
+        {
+          "start": 78,
+          "end": 80,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 102,
+          "end": 104,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 190,
           "end": 192,
@@ -326383,11 +328061,46 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 274,
+          "end": 281,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 370,
+          "end": 377,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 663,
+          "end": 670,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 771,
           "end": 772,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 852,
+          "end": 853,
+          "symbol": "M:wb.a(ILjb;)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
+          "start": 1778,
+          "end": 1779,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 2197,
@@ -326402,6 +328115,97 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2258,
+          "end": 2265,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2308,
+          "end": 2315,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2551,
+          "end": 2552,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 2689,
+          "end": 2690,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 2887,
+          "end": 2888,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 2991,
+          "end": 2992,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 3072,
+          "end": 3073,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 3143,
+          "end": 3144,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 3830,
+          "end": 3831,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 4298,
+          "end": 4299,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 4418,
+          "end": 4419,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 4536,
+          "end": 4538,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 4569,
+          "end": 4571,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -326733,7 +328537,7 @@
       "original": "tm.java",
       "renamed": "tm.java",
       "inputSha256": "4149b7d24ed70fba932f947f6dfd2c168b9d8d4eea8617759493d2591553fe24",
-      "outputSha256": "f0682cbbe8a4567deec1676e0dadf2208a0af20e01e48893b686855b002e2156",
+      "outputSha256": "c3918d38f89f8f5ccd7b2a72e4024e2f1e89c2502fe757f7a5d29f74ec1f8c6c",
       "edits": [
         {
           "start": 66,
@@ -326750,6 +328554,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 113,
+          "end": 115,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
           "start": 262,
           "end": 264,
           "symbol": "C:jb",
@@ -326762,6 +328573,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 313,
+          "end": 320,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 368,
@@ -326783,6 +328601,20 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 456,
+          "end": 463,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 642,
+          "end": 649,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 800,
@@ -326813,11 +328645,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1226,
+          "end": 1233,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1346,
           "end": 1347,
           "symbol": "M:tm.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1392,
+          "end": 1399,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 1496,
@@ -326839,6 +328685,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2329,
+          "end": 2336,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 2525,
@@ -326874,6 +328727,20 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2981,
+          "end": 2988,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3091,
+          "end": 3098,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 3187,
@@ -326918,6 +328785,27 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5531,
+          "end": 5538,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5644,
+          "end": 5651,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5830,
+          "end": 5837,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6528,
           "end": 6529,
           "symbol": "M:tm.a(I)V",
@@ -326937,6 +328825,20 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 8120,
+          "end": 8127,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 8267,
+          "end": 8269,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 8554,
@@ -327134,8 +329036,22 @@
       "original": "ue.java",
       "renamed": "ue.java",
       "inputSha256": "c2fc65572da21bdf8088414759d7244d781c18a6ebb66a62230ffd17f674e444",
-      "outputSha256": "2b2c2d3aa29b86cf9b10d647808c73a75b621bc18f8e2962ccd6cac6400dd325",
+      "outputSha256": "1349c2038e01ea3aec58b9c19b744173222f2e39f37ef6da0ea6a2566051122b",
       "edits": [
+        {
+          "start": 1178,
+          "end": 1179,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 1371,
+          "end": 1372,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
         {
           "start": 2151,
           "end": 2153,
@@ -329131,8 +331047,23 @@
       "original": "vm.java",
       "renamed": "vm.java",
       "inputSha256": "694808894183195cc93d2e303abb47afb9e6dd2ca0843cdcdf067cba3dd3402e",
-      "outputSha256": "694808894183195cc93d2e303abb47afb9e6dd2ca0843cdcdf067cba3dd3402e",
-      "edits": []
+      "outputSha256": "2d3a818971cf264f38485a03fd42ce4496096e431a4881d2d34793f27bc665ae",
+      "edits": [
+        {
+          "start": 212,
+          "end": 214,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 4876,
+          "end": 4878,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        }
+      ]
     },
     {
       "original": "vn.java",
@@ -329514,7 +331445,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "a247f99ca989ff32532b07b34868dcbb27bc4990e27f7abf90340924dd105ea6",
-      "outputSha256": "446717635866e1965b77114468a1dd62bbe7b0f812e1c66f94d720ee1c8ebff3",
+      "outputSha256": "b0dd3a01e09e875dffcf9e0300db369acc913cf9d3d7ca7f67fc6b249d82f658",
       "edits": [
         {
           "start": 60,
@@ -329522,6 +331453,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 295,
+          "end": 296,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         }
       ]
     },
@@ -329766,10 +331704,17 @@
     },
     {
       "original": "wb.java",
-      "renamed": "wb.java",
+      "renamed": "IntrusiveDeque.java",
       "inputSha256": "bfd4753c51d2c8724961992b7ef1df387620a835cef58238649f6f3f82a6636c",
-      "outputSha256": "706dda51cdcf6c601b5a3754f02b89493289ef6c9e41c6fb7edd81b1c2df6b8e",
+      "outputSha256": "1fb48c8ca282eb85e20d664a65e493eb5312d8caafb7e628444eb8f7cc1fac12",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
         {
           "start": 86,
           "end": 88,
@@ -329778,11 +331723,39 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 89,
+          "end": 96,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 133,
+          "end": 135,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
           "start": 157,
           "end": 159,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 160,
+          "end": 167,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 185,
+          "end": 186,
+          "symbol": "M:wb.a(ILjb;)V",
+          "original": "a",
+          "renamed": "addFirst"
         },
         {
           "start": 199,
@@ -329799,6 +331772,27 @@
           "renamed": "unlink"
         },
         {
+          "start": 339,
+          "end": 346,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 388,
+          "end": 395,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 768,
+          "end": 769,
+          "symbol": "M:wb.a(I)V",
+          "original": "a",
+          "renamed": "clear"
+        },
+        {
           "start": 792,
           "end": 794,
           "symbol": "C:jb",
@@ -329806,11 +331800,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 895,
+          "end": 902,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 939,
+          "end": 946,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 996,
           "end": 997,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 1029,
+          "end": 1036,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
         },
         {
           "start": 1112,
@@ -329827,6 +331842,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1146,
+          "end": 1147,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
           "start": 1153,
           "end": 1155,
           "symbol": "C:jb",
@@ -329841,11 +331863,60 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1184,
+          "end": 1185,
+          "symbol": "M:wb.a(B)Ljb;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1209,
           "end": 1211,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1224,
+          "end": 1231,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1258,
+          "end": 1265,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1292,
+          "end": 1299,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 1384,
+          "end": 1391,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 1454,
+          "end": 1455,
+          "symbol": "M:wb.a(B)Ljb;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 1482,
+          "end": 1489,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
         },
         {
           "start": 1557,
@@ -329862,11 +331933,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1695,
+          "end": 1696,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 1723,
           "end": 1725,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1738,
+          "end": 1745,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
         },
         {
           "start": 1787,
@@ -329876,11 +331961,39 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1832,
+          "end": 1839,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1858,
+          "end": 1865,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 1928,
+          "end": 1935,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 1982,
           "end": 1984,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1985,
+          "end": 1986,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
         },
         {
           "start": 2009,
@@ -329890,11 +332003,60 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2024,
+          "end": 2031,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2066,
+          "end": 2073,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2092,
+          "end": 2099,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 2187,
+          "end": 2194,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 2257,
+          "end": 2264,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2268,
           "end": 2270,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2291,
+          "end": 2298,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 2565,
+          "end": 2567,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         },
         {
           "start": 2869,
@@ -329904,6 +332066,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2872,
+          "end": 2873,
+          "symbol": "M:wb.d(I)Ljb;",
+          "original": "d",
+          "renamed": "removeLast"
+        },
+        {
           "start": 2944,
           "end": 2946,
           "symbol": "C:jb",
@@ -329911,11 +332080,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2959,
+          "end": 2966,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3001,
+          "end": 3008,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 3027,
           "end": 3028,
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 3113,
+          "end": 3114,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
         },
         {
           "start": 3127,
@@ -329932,6 +332122,69 @@
           "renamed": "unlink"
         },
         {
+          "start": 3486,
+          "end": 3493,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3535,
+          "end": 3542,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3706,
+          "end": 3707,
+          "symbol": "M:wb.c(I)Ljb;",
+          "original": "c",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 4342,
+          "end": 4343,
+          "symbol": "M:wb.b(I)Z",
+          "original": "b",
+          "renamed": "isEmpty"
+        },
+        {
+          "start": 4412,
+          "end": 4419,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4436,
+          "end": 4443,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4489,
+          "end": 4491,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 4519,
+          "end": 4526,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4543,
+          "end": 4550,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4584,
           "end": 4586,
           "symbol": "C:jb",
@@ -329939,11 +332192,46 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4587,
+          "end": 4588,
+          "symbol": "M:wb.e(I)Ljb;",
+          "original": "e",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 4611,
           "end": 4613,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 4626,
+          "end": 4633,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 4660,
+          "end": 4667,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4686,
+          "end": 4693,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 4748,
+          "end": 4755,
+          "symbol": "F:wb.field_c:Ljb;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
         },
         {
           "start": 4848,
@@ -329958,6 +332246,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 4878,
+          "end": 4879,
+          "symbol": "M:wb.c(I)Ljb;",
+          "original": "c",
+          "renamed": "removeFirst"
         },
         {
           "start": 4902,
@@ -329988,11 +332283,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5017,
+          "end": 5018,
+          "symbol": "M:wb.a(ILjb;)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
           "start": 5023,
           "end": 5025,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5056,
+          "end": 5063,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5100,
+          "end": 5107,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 5128,
@@ -330002,6 +332318,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 5237,
+          "end": 5244,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5288,
+          "end": 5295,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5323,
           "end": 5324,
           "symbol": "M:jb.a(Z)V",
@@ -330009,11 +332339,60 @@
           "renamed": "unlink"
         },
         {
+          "start": 5414,
+          "end": 5416,
+          "symbol": "M:wb.<init>()V",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 5434,
+          "end": 5441,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5448,
           "end": 5450,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5467,
+          "end": 5474,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5490,
+          "end": 5497,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5512,
+          "end": 5519,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5535,
+          "end": 5542,
+          "symbol": "F:wb.field_a:Ljb;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5646,
+          "end": 5648,
+          "symbol": "C:wb",
+          "original": "wb",
+          "renamed": "IntrusiveDeque"
         }
       ]
     },
@@ -330080,7 +332459,7 @@
       "original": "wg.java",
       "renamed": "wg.java",
       "inputSha256": "f1fe0c4194e350eb9785d6b8a1b0956a8ed2a91fff1c831fa93507b2344660d8",
-      "outputSha256": "22403dcdbc4561950af1b8e7c48ba2c375d4b18261de62accae45397a981207a",
+      "outputSha256": "2bc9e7d1c7e07b419a6dfa521f99faf1e0d8ef811ff472c3b67c90f4fbc25587",
       "edits": [
         {
           "start": 1631,
@@ -330090,6 +332469,27 @@
           "renamed": "unlink"
         },
         {
+          "start": 17794,
+          "end": 17795,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 17974,
+          "end": 17975,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 25577,
+          "end": 25578,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
           "start": 26120,
           "end": 26121,
           "symbol": "M:jb.a(Z)V",
@@ -330097,11 +332497,67 @@
           "renamed": "unlink"
         },
         {
+          "start": 26186,
+          "end": 26187,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 26726,
+          "end": 26727,
+          "symbol": "M:wb.a(B)Ljb;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 27321,
+          "end": 27322,
+          "symbol": "M:wb.e(I)Ljb;",
+          "original": "e",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 29212,
+          "end": 29213,
+          "symbol": "M:wb.b(ILjb;)V",
+          "original": "b",
+          "renamed": "addLast"
+        },
+        {
           "start": 30907,
           "end": 30909,
           "symbol": "C:md",
           "original": "md",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 33024,
+          "end": 33025,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 33279,
+          "end": 33280,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 33541,
+          "end": 33542,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 33845,
+          "end": 33846,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 34707,
@@ -330116,6 +332572,20 @@
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 42900,
+          "end": 42901,
+          "symbol": "M:wb.g(I)Ljb;",
+          "original": "g",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 43189,
+          "end": 43190,
+          "symbol": "M:wb.a(Z)Ljb;",
+          "original": "a",
+          "renamed": "nextForward"
         }
       ]
     },
@@ -330160,7 +332630,7 @@
       "original": "wk.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "42a534975c38470ff6a91cd25b9a1eff45856aaf0d1d1ba68f8740fdcb4e6499",
-      "outputSha256": "fa5131b03d9b5448cf07b13e3428e31b83c0516a37d9b804f37bba865138c716",
+      "outputSha256": "dd66b3596703b7785f700bf336476b1fae325e94091fe975f7d085b2338132c3",
       "edits": [
         {
           "start": 71,
@@ -330182,6 +332652,13 @@
           "symbol": "F:wk.field_e:Lij;",
           "original": "field_e",
           "renamed": "nextNode"
+        },
+        {
+          "start": 132,
+          "end": 134,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
         },
         {
           "start": 135,
@@ -330217,6 +332694,13 @@
           "symbol": "F:wk.field_d:Lbe;",
           "original": "field_d",
           "renamed": "deque"
+        },
+        {
+          "start": 303,
+          "end": 310,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 433,
@@ -330282,6 +332766,13 @@
           "renamed": "deque"
         },
         {
+          "start": 1459,
+          "end": 1466,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1485,
           "end": 1492,
           "symbol": "F:wk.field_e:Lij;",
@@ -330324,6 +332815,13 @@
           "renamed": "SecondaryNodeDequeIterator"
         },
         {
+          "start": 1670,
+          "end": 1672,
+          "symbol": "C:be",
+          "original": "be",
+          "renamed": "SecondaryNodeDeque"
+        },
+        {
           "start": 1696,
           "end": 1703,
           "symbol": "F:wk.field_a:Lij;",
@@ -330350,6 +332848,13 @@
           "symbol": "F:wk.field_d:Lbe;",
           "original": "field_d",
           "renamed": "deque"
+        },
+        {
+          "start": 1797,
+          "end": 1804,
+          "symbol": "F:be.field_f:Lij;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 1829,
@@ -330608,10 +333113,10 @@
       "commit": "67141d635b7060c02e01505325a82243446974c0",
       "subdirectory": "games/crazycrystals"
     },
-    "rulesSha256": "c5ed90fe0890495e30c32ec88037af2c3d0a8b68533f621db665329a630df39e",
+    "rulesSha256": "db6eb329fa9a89ade7a97404c09a75587a4ba6c444574c4f1683fc1b423d932c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
-    "outputTreeSha256": "a4161a9fb967566fa98b1b7e5b81a92424e7d43db11c3be9e01bfb5eae5b0877",
+    "outputTreeSha256": "d9fb35f1773765cd48d848da428227d88da2b14b38c16d90715e12aae6a3eefb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

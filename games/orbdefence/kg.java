@@ -28,7 +28,7 @@ final class kg extends IntrusiveNode {
             field_h = (ge) null;
           }
           vh.field_q[param5] = param4;
-          im.field_a[param5] = param0;
+          IntrusiveDeque.field_a[param5] = param0;
           vb.field_g[param5] = param1;
           wd.field_o[param5] = param6;
           IterableNodeHashTable.field_e[param5] = param2;

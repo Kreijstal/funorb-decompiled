@@ -2011,7 +2011,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-119, "startgame");
                 if (null != var2) {
-                  sd.field_e = bh.a(var2, -126);
+                  IterableNodeHashTable.field_e = bh.a(var2, -126);
                 }
                 var2 = e.a(param0 ^ -9306, "newgame");
                 if (null != var2) {

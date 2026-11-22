@@ -120,9 +120,9 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
             stackStringLocal3 = NodeHashTableIterator.substituteIndexedPlaceholders(94, MixedSupport144.stringState0607, new String[]{stringArgument2});
             return stackStringLocal3;
           }
-          UiComponentPart025.nodeDequeState0027.computeHashNode1733(64, sceneWidgetPart014Local17);
+          UiComponentPart025.nodeDequeState0027.beginBackwardFrom(64, sceneWidgetPart014Local17);
           while (true) {
-            sceneWidgetPart014Local16 = (SceneWidgetPart014) (UiComponentPart025.nodeDequeState0027.computeHashNode1745(true));
+            sceneWidgetPart014Local16 = (SceneWidgetPart014) (UiComponentPart025.nodeDequeState0027.nextBackward(true));
             if (sceneWidgetPart014Local16 != null) {
               sceneWidgetPart014Local16.integerState0920 = sceneWidgetPart014Local16.integerState0920 - 1;
               continue;
@@ -130,7 +130,7 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
             break;
           }
           sceneWidgetPart014Local17.unlink((byte) 119);
-          sceneWidgetPart014Local17.performAction0134((byte) 121);
+          sceneWidgetPart014Local17.unlinkSecondary((byte) 121);
           integerState0502 = integerState0502 - 1;
           cipherPacketBufferLocal18 = SocketFactory.cipherPacketBufferState0002;
           cipherPacketBufferLocal18.performAction1641(integerArgument1, -4);

@@ -23,7 +23,7 @@ final class pa extends dg {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param1);
               var3 = fh.a(param0, var3, -1);
-              bk.a(param0, -25573, var3.toString(), true);
+              IntrusiveDeque.a(param0, -25573, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -389,7 +389,7 @@ final class pa extends dg {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 127);
             }
-            var13 = (rc) (ue.field_b.a((byte) 74));
+            var13 = (rc) (ue.field_b.beginForward((byte) 74));
             if (var13 == null) {
               mc.a((byte) -127);
               return;
@@ -401,7 +401,7 @@ final class pa extends dg {
             return;
           }
           if (var2 == 1) {
-            var15 = (dh) (vb.field_c.a((byte) 74));
+            var15 = (dh) (vb.field_c.beginForward((byte) 74));
             if (var15 == null) {
               mc.a((byte) -128);
               return;
@@ -412,7 +412,7 @@ final class pa extends dg {
               k.a((Throwable) null, (byte) 70, "A1: " + aj.a((byte) 92));
               mc.a((byte) -128);
             } else {
-              var14 = (rc) (ue.field_b.a((byte) 74));
+              var14 = (rc) (ue.field_b.beginForward((byte) 74));
               if (var14 == null) {
                 mc.a((byte) -126);
                 return;

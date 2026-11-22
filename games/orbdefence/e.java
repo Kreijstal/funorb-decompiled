@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class e {
-    static im field_b;
+    static IntrusiveDeque field_b;
     static java.awt.Font field_a;
 
     final static byte[] extractBytes(Object param0, boolean param1, int param2) {
@@ -87,7 +87,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 26052) {
-            field_b = (im) null;
+            field_b = (IntrusiveDeque) null;
           }
           if (pk.a(param3 - 26108, param0, param2, param1)) {
             return bd.b(true);
@@ -108,6 +108,6 @@ final class e {
     }
 
     static {
-        field_b = new im();
+        field_b = new IntrusiveDeque();
     }
 }

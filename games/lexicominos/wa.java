@@ -94,7 +94,7 @@ final class wa extends IntrusiveNode {
     }
 
     static {
-        ng discarded$0 = new ng();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_j = new boolean[112];
     }
 }

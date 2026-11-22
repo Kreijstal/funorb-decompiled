@@ -32,7 +32,7 @@ final class MixedSupport113 extends HashNode {
         SceneWidgetPart012 sceneWidgetPart012Local7;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1741((byte) -53));
+          sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.beginBackward((byte) -53));
           while (sceneWidgetPart012Local2 != null) {
             if (sceneWidgetPart012Local2.integerState0785 > 0) {
               sceneWidgetPart012Local2.integerState0785 = sceneWidgetPart012Local2.integerState0785 - 1;
@@ -43,9 +43,9 @@ final class MixedSupport113 extends HashNode {
                 }
               }
             }
-            sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1745(true));
+            sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.nextBackward(true));
           }
-          sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1741((byte) 26));
+          sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.beginBackward((byte) 26));
           while (sceneWidgetPart013Local3 != null) {
             if (sceneWidgetPart013Local3.integerState0846 > 0) {
               sceneWidgetPart013Local3.integerState0846 = sceneWidgetPart013Local3.integerState0846 - 1;
@@ -56,9 +56,9 @@ final class MixedSupport113 extends HashNode {
                 }
               }
             }
-            sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1745(true));
+            sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.nextBackward(true));
           }
-          sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.computeHashNode1741((byte) 50));
+          sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.beginBackward((byte) 50));
           while (sceneWidgetPart012Local7 != null) {
             if (0 < sceneWidgetPart012Local7.integerState0785) {
               sceneWidgetPart012Local7.integerState0785 = sceneWidgetPart012Local7.integerState0785 - 1;
@@ -69,7 +69,7 @@ final class MixedSupport113 extends HashNode {
                 }
               }
             }
-            sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.computeHashNode1745(true));
+            sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.nextBackward(true));
           }
           if (byteArgument1 == 123) {
             return;

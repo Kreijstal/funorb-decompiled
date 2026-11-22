@@ -656,7 +656,7 @@ final class wj extends ph {
                       stackIn_255_1Lifetime1 = null;
                       stackIn_251_2 = true;
                     }
-                    if (ei.field_q.e(-20049)) {
+                    if (ei.field_q.isEmpty(-20049)) {
                       stackIn_255_0Lifetime1Lifetime1 = null;
                       stackIn_255_1Lifetime1Lifetime1 = null;
                       stackIn_254_3 = false;
@@ -754,7 +754,7 @@ final class wj extends ph {
                     stackIn_295_1Lifetime1 = null;
                     stackIn_290_2 = true;
                   }
-                  if (ei.field_q.e(-20049)) {
+                  if (ei.field_q.isEmpty(-20049)) {
                     stackIn_295_0Lifetime1Lifetime1 = null;
                     stackIn_295_1Lifetime1Lifetime1 = null;
                     stackIn_293_3 = false;

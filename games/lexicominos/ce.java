@@ -27,7 +27,7 @@ final class ce {
         try {
           var2 = new vi();
           var3 = -126 % ((param1 + 11) / 51);
-          ci.field_f.b(109, var2);
+          ci.field_f.addLast(109, var2);
           ck.a(param0, 2);
           stackIn_1_0 = var2;
           return stackIn_1_0;

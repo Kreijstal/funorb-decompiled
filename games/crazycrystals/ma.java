@@ -230,10 +230,10 @@ final class ma extends pn {
           }
           if (var2 == 0) {
             var3 = var27.readUnsignedShort((byte) -7);
-            var4 = (ak) (hd.field_d.g(32073));
+            var4 = (ak) (hd.field_d.beginForward(32073));
             while (var4 != null) {
               if (var3 != var4.field_g) {
-                var4 = (ak) (hd.field_d.a(false));
+                var4 = (ak) (hd.field_d.nextForward(false));
                 continue;
               }
               break;
@@ -329,10 +329,10 @@ final class ma extends pn {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort((byte) -7);
             var4_long = var27.readLong(true);
-            var6_ref_hp = (hp) (cf.field_c.g(32073));
+            var6_ref_hp = (hp) (cf.field_c.beginForward(32073));
             while (var6_ref_hp != null) {
               if (var6_ref_hp.field_n != var3Lifetime1) {
-                var6_ref_hp = (hp) (cf.field_c.a(false));
+                var6_ref_hp = (hp) (cf.field_c.nextForward(false));
                 continue;
               }
               break;

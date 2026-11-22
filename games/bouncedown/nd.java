@@ -168,7 +168,7 @@ final class nd extends lc implements rc {
         int var6 = 0;
         var6 = Bounce.field_N;
         try {
-          this.field_w.b(-77);
+          this.field_w.clear(-77);
           if (param1 != null &&
             param1.length != 0) {
             if (param0 > -66) {

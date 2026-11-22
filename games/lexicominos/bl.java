@@ -18,14 +18,14 @@ class bl {
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           var3_int = -param1.field_hb + param2.field_hb;
-          if (ji.field_b != param2.field_jb) {
+          if (IterableNodeHashTable.field_b != param2.field_jb) {
             if (param2.field_jb == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (ji.field_b != param1.field_jb) {
+          if (IterableNodeHashTable.field_b != param1.field_jb) {
             if (param1.field_jb == null) {
               var3_int -= 200;
             }

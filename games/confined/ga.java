@@ -5,7 +5,7 @@ import java.util.*;
 
 class ga extends fj implements hi {
     static ej field_J;
-    mn field_N;
+    PrimaryNodeDeque field_N;
     static nf field_K;
     static int[] field_I;
     static long field_M;
@@ -95,7 +95,7 @@ class ga extends fj implements hi {
 
     ga(int param0, int param1, int param2, int param3, fe param4) {
         super(param0, param1, param2, param3, param4, (uk) null);
-        this.field_N = new mn();
+        this.field_N = new PrimaryNodeDeque();
     }
 
     final boolean c(fj param0, int param1) {
@@ -114,7 +114,7 @@ class ga extends fj implements hi {
           if (param1 != 32) {
             field_J = (ej) null;
           }
-          if (this.field_N.f(-1)) {
+          if (this.field_N.isEmpty(-1)) {
             return false;
           }
           var8 = new vb(this.field_N);
@@ -174,7 +174,7 @@ class ga extends fj implements hi {
           var3 = (fj) (var2.b(-67));
         }
         if (param0 != 84) {
-          this.field_N = (mn) null;
+          this.field_N = (PrimaryNodeDeque) null;
         }
     }
 
@@ -191,7 +191,7 @@ class ga extends fj implements hi {
         try {
           var3 = new vb(this.field_N);
           if (param1 != 418) {
-            this.field_N = (mn) null;
+            this.field_N = (PrimaryNodeDeque) null;
           }
           var4 = (fj) (var3.a((byte) 120));
           while (var4 != null) {
@@ -328,7 +328,7 @@ class ga extends fj implements hi {
 
     final void b(fj param0, int param1) {
         try {
-          this.field_N.a((IntrusiveNode) (param0), (byte) -66);
+          this.field_N.addLast((IntrusiveNode) (param0), (byte) -66);
           if (param1 != 10) {
             field_I = (int[]) null;
           }
@@ -405,7 +405,7 @@ class ga extends fj implements hi {
         RuntimeException decompiledCaughtException = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          if (this.field_N.f(-1)) {
+          if (this.field_N.isEmpty(-1)) {
             return false;
           }
           var8 = new vb(this.field_N);
@@ -451,7 +451,7 @@ class ga extends fj implements hi {
         var2 = new vb(this.field_N);
         var3 = (fj) (var2.a((byte) 120));
         if (param0 > -82) {
-          this.field_N = (mn) null;
+          this.field_N = (PrimaryNodeDeque) null;
         }
         while (var3 != null) {
           var4 = var3.f((byte) -83);

@@ -8,7 +8,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static int[] field_b;
     static String field_a;
     private DualLinkNode nextNode;
-    private wh deque;
+    private SecondaryNodeDeque deque;
 
     public static void clearStaticReferences(boolean param0) {
         field_b = null;
@@ -35,7 +35,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (this.deque.field_a == var1) {
+        if (this.deque.sentinel == var1) {
           var1 = null;
           this.nextNode = null;
         } else {
@@ -46,14 +46,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_a;
+        return this.nextNode != this.deque.sentinel;
     }
 
-    SecondaryNodeDequeIterator(wh param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
-          this.nextNode = this.deque.field_a.field_l;
+          this.nextNode = this.deque.sentinel.field_l;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');

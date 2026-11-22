@@ -307,7 +307,7 @@ final class ProxySocketFactory extends SocketFactory {
         RuntimeException caughtExceptionLocal6 = null;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          mixedSupport071Local5 = (MixedSupport071) (MixedSupport002.nodeDequeState0001.computeHashNode1741((byte) -95));
+          mixedSupport071Local5 = (MixedSupport071) (MixedSupport002.nodeDequeState0001.beginBackward((byte) -95));
           mixedSupport071Local2 = mixedSupport071Local5;
           if (mixedSupport071Local2 == null) {
             return false;

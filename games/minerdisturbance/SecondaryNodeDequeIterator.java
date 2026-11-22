@@ -7,7 +7,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode nextNode;
     static int field_a;
     static int field_d;
-    private qc deque;
+    private SecondaryNodeDeque deque;
     private DualLinkNode lastReturned;
     static Sprite field_b;
 
@@ -32,14 +32,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.deque.field_e != this.nextNode;
+        return this.deque.sentinel != this.nextNode;
     }
 
-    SecondaryNodeDequeIterator(qc param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.lastReturned = null;
         try {
           this.deque = param0;
-          this.nextNode = this.deque.field_e.field_t;
+          this.nextNode = this.deque.sentinel.field_t;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -53,7 +53,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (this.deque.field_e == var1) {
+        if (this.deque.sentinel == var1) {
           var1 = null;
           this.nextNode = null;
         } else {

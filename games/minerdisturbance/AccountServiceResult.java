@@ -171,7 +171,7 @@ final class AccountServiceResult {
     }
 
     final static void a(boolean param0) {
-        if (!qc.field_b) {
+        if (!SecondaryNodeDeque.field_b) {
           throw new IllegalStateException();
         }
         jb.field_q = param0;

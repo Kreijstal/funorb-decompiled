@@ -79,8 +79,8 @@ final class di {
               return true;
             }
             var4 = pm.field_p;
-            if (qi.field_a != 0.0) {
-              var4 = (int)((double)var4 + bl.field_i.nextGaussian() * qi.field_a);
+            if (IterableNodeHashTable.field_a != 0.0) {
+              var4 = (int)((double)var4 + bl.field_i.nextGaussian() * IterableNodeHashTable.field_a);
               if (var4 < 0) {
                 var4 = 0;
               }

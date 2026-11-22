@@ -81,12 +81,12 @@ final class IterableNodeCollection implements Iterable {
         }
     }
 
-    final DualNode computeDualNode1654(byte byteArgument1) {
+    final DualNode removeFirst(byte byteArgument1) {
         DualNode dualNodeLocal1 = this.dualNodeState0009.dualNodeState0003;
         if (dualNodeLocal1 == this.dualNodeState0009) {
           return null;
         }
-        dualNodeLocal1.performAction0134((byte) 97);
+        dualNodeLocal1.unlinkSecondary((byte) 97);
         if (byteArgument1 < 51) {
           int[] integerArrayLocal2 = (int[]) null;
           IterableNodeCollection.computeRenderingSupport0071657((int[]) null, true, 58, 67);
@@ -95,7 +95,7 @@ final class IterableNodeCollection implements Iterable {
     }
 
     final static void performAction1656(int integerArgument1) {
-        MixedSupport144 cachedMixedSupport144Local1 = (MixedSupport144) (MixedSupport118.nodeDequeState0032.computeHashNode1744(-89));
+        MixedSupport144 cachedMixedSupport144Local1 = (MixedSupport144) (MixedSupport118.nodeDequeState0032.removeFirst(-89));
         MixedSupport144 mixedSupport144Local2 = cachedMixedSupport144Local1;
         MixedSupport144 mixedSupport144Local3 = cachedMixedSupport144Local1;
         if (integerArgument1 != -9074) {
@@ -105,7 +105,7 @@ final class IterableNodeCollection implements Iterable {
           mixedSupport144Local3 = new MixedSupport144();
         }
         mixedSupport144Local3.performAction1786((byte) 37, SoftwareRaster.integerState0284, SoftwareRaster.integerArrayState0063, SoftwareRaster.integerState0285, SoftwareRaster.integerState0281, SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0283);
-        MixedSupport018.nodeDequeState0005.performAction1735(mixedSupport144Local3, 2777);
+        MixedSupport018.nodeDequeState0005.addFirst(mixedSupport144Local3, 2777);
     }
 
     final static void performAction1658(IndexedSprite[] indexedSpriteArrayArgument1, byte byteArgument2) {
@@ -210,7 +210,7 @@ final class IterableNodeCollection implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final void performAction1655(byte byteArgument1, DualNode dualNodeArgument2) {
+    final void addLast(byte byteArgument1, DualNode dualNodeArgument2) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -218,7 +218,7 @@ final class IterableNodeCollection implements Iterable {
         RuntimeException runtimeExceptionLocal5 = null;
         try {
           if (dualNodeArgument2.dualNodeState0004 != null) {
-            dualNodeArgument2.performAction0134((byte) 85);
+            dualNodeArgument2.unlinkSecondary((byte) 85);
           }
           dualNodeArgument2.dualNodeState0004 = this.dualNodeState0009.dualNodeState0004;
           dualNodeArgument2.dualNodeState0003 = this.dualNodeState0009;

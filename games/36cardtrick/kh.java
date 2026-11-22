@@ -6,7 +6,7 @@ abstract class kh {
     int field_b;
     static int field_e;
     int[] field_h;
-    static bk field_c;
+    static IntrusiveDeque field_c;
     int field_d;
     java.awt.Image field_a;
     static int field_g;
