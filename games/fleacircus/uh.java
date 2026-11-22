@@ -834,7 +834,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime130 = tf.a(0, "SPIKES_TIP");
           if (var2Lifetime130 != null) {
-            ld.field_b = ab.a(0, var2Lifetime130);
+            DelegatingCanvas.field_b = ab.a(0, var2Lifetime130);
           }
           var2Lifetime131 = tf.a(0, "SPRING_TIP");
           if (var2Lifetime131 != null) {

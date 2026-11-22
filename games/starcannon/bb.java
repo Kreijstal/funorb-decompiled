@@ -223,15 +223,15 @@ final class bb {
         this.field_r = param2;
     }
 
-    final qc a(int param0) {
+    final FullscreenFocusCanvas a(int param0) {
         if (param0 != 2) {
-          return (qc) null;
+          return (FullscreenFocusCanvas) null;
         }
         this.field_n = eh.field_n;
         this.field_o = ef.field_d;
         this.field_s.a((byte) 61, this.field_p, this.field_f);
         jj.field_E = false;
-        qc var2 = re.a(0, nb.field_e, 0, true, this.field_p, this.field_f);
+        FullscreenFocusCanvas var2 = re.createFullscreenCanvas(0, nb.field_e, 0, true, this.field_p, this.field_f);
         if (var2 != null) {
           return var2;
         }

@@ -438,7 +438,7 @@ final class ei extends sh {
         String var16 = db.a(gf.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var17 = db.a(gg.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0);
         String var18 = db.a(fi.field_k, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
-        String var19 = db.a(ld.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
+        String var19 = db.a(DelegatingCanvas.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var20 = db.a(si.field_H, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         DualLinkNode.field_i = new String[23];
         qg.field_d = new String[]{"", var21, var2, var3, var3, var4, var20, var2, var5, var5, var10, var4, var6, var6, var7, var8, var9, var11, var12, var13, var14, var15, var16, var17, var18, var19, var16, var6, var7, var9, var8, var11, var6, var20};

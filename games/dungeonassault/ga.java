@@ -169,7 +169,7 @@ final class ga extends ip {
             stackIn_36_0 = var7;
             return stackIn_36_0;
           }
-          ng.a(param0, 48, var7);
+          ng.exitFullscreenFrame(param0, 48, var7);
           stackIn_34_0 = null;
           return (java.awt.Frame) (stackIn_34_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

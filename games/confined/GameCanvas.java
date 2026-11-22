@@ -21,7 +21,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         }
     }
 
-    final void a(int param0, df param1) {
+    final void a(int param0, PlatformTaskDispatcher param1) {
         if (param0 > -76) {
           return;
         }

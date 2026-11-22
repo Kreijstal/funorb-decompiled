@@ -60,10 +60,10 @@ final class ge extends k implements mj {
               AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
               return;
             }
-            if (ed.field_c <= 0) {
+            if (AccountRequestState.field_c <= 0) {
               return;
             }
-            ed.field_c = ed.field_c - 1;
+            AccountRequestState.field_c = AccountRequestState.field_c - 1;
             return;
           }
           if (pd.field_Rb != null) {
@@ -75,11 +75,11 @@ final class ge extends k implements mj {
               AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
               return;
             }
-            if (ug.field_b > ed.field_c) {
-              if (0 == ed.field_c) {
+            if (ug.field_b > AccountRequestState.field_c) {
+              if (0 == AccountRequestState.field_c) {
                 AccountServiceResult.a(false, true);
               }
-              ed.field_c = ed.field_c + 1;
+              AccountRequestState.field_c = AccountRequestState.field_c + 1;
               return;
             }
           } else {
@@ -88,8 +88,8 @@ final class ge extends k implements mj {
                 an.field_e = an.field_e - 1;
                 return;
               }
-              if (0 < ed.field_c) {
-                ed.field_c = ed.field_c - 1;
+              if (0 < AccountRequestState.field_c) {
+                AccountRequestState.field_c = AccountRequestState.field_c - 1;
                 return;
               }
               if (AccountServiceResult.field_c < ug.field_b) {
@@ -105,8 +105,8 @@ final class ge extends k implements mj {
                 AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
                 return;
               }
-              if (0 < ed.field_c) {
-                ed.field_c = ed.field_c - 1;
+              if (0 < AccountRequestState.field_c) {
+                AccountRequestState.field_c = AccountRequestState.field_c - 1;
                 return;
               }
               if (ug.field_b > an.field_e) {

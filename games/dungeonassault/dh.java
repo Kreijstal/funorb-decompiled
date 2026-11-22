@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class dh implements Iterable {
-    static af field_b;
+    static AccountRequestState field_b;
     static String field_c;
     static String field_f;
     DualLinkNode field_d;
@@ -146,7 +146,7 @@ final class dh implements Iterable {
 
     static {
         field_c = "<br><br>This will activate your dungeon, allowing other players to raid it.";
-        field_b = new af();
+        field_b = new AccountRequestState();
         field_e = "Traps";
     }
 }

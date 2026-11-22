@@ -5,7 +5,7 @@ final class s {
     static IntrusiveDeque field_e;
     int field_j;
     static String field_d;
-    static pf field_f;
+    static AccountRequestState field_f;
     static int[] field_b;
     static String field_l;
     static String field_h;
@@ -117,7 +117,7 @@ final class s {
         field_e = new IntrusiveDeque();
         field_b = new int[]{1, 3, 3, 5, 5, 10, 2, 2, 3, 1, 2, 3, 1, 2, 3};
         field_d = "Play free version";
-        field_f = new pf();
+        field_f = new AccountRequestState();
         field_g = "Waiting for fonts";
         field_a = "Use the arrow keys to move the Nova Ray.<br><br>Press SPACE or CTRL to fire the Nova Ray's lasers and shoot the Paragulan attack ships out the sky.";
         field_l = "Log in";

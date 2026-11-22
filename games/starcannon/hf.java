@@ -101,7 +101,7 @@ final class hf extends fi {
 
     final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, qe param8, int param9, int param10, boolean param11) {
         try {
-          qc.a(param3, param4, param2, param6, param4, -109, param2, param7, param11, param5, param0, param8, param10, param1, param8);
+          FullscreenFocusCanvas.a(param3, param4, param2, param6, param4, -109, param2, param7, param11, param5, param0, param8, param10, param1, param8);
           if (param9 != -11) {
             hf.b(-126);
           }

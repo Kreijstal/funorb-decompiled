@@ -211,12 +211,12 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static ue a(int param0, byte param1, fd param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, byte param1, fd param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ue var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        ue stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -227,9 +227,9 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           if (var8 == null) {
             return null;
           }
-          var7 = new ue();
-          var7.field_i = var8;
-          var7.field_i.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param0, param4);
           if (param1 >= -32) {
             field_f = (bd) null;

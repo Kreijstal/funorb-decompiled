@@ -169,7 +169,7 @@ final class eg {
                   var21Lifetime2 = param0.field_n[var18];
                   ArchiveProvider.field_b[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
                   ql.field_o[var18] = var21Lifetime2 * var16 + (var19 * var10 + var20 * var13) >> 16;
-                  dq.field_c[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
+                  AccountRequestState.field_c[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
                   var18++;
                 }
               }

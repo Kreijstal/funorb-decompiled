@@ -167,7 +167,7 @@ final class uj implements Runnable {
           while (true) {
             if (vb.field_i < 0) {
               cd.field_t.position = 0;
-              if (!va.a(true, 1)) {
+              if (!AccountRequestState.a(true, 1)) {
                 return false;
               }
               vb.field_i = cd.field_t.o(-75);

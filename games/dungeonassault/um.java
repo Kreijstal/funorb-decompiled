@@ -23,30 +23,30 @@ abstract class um {
     }
 
     final static void a(int param0, boolean param1) {
-        ql.field_d = param0;
+        DelegatingCanvas.field_d = param0;
         if (param1) {
           um.a(-85, false);
           if (null != ob.field_Xb) {
             ob.field_Xb.c(param0, 24509);
-            if (ek.field_b != null) {
-              ek.field_b.a(param0, 256);
+            if (FullscreenFocusCanvas.field_b != null) {
+              FullscreenFocusCanvas.field_b.a(param0, 256);
             }
             return;
           }
-          if (ek.field_b != null) {
-            ek.field_b.a(param0, 256);
+          if (FullscreenFocusCanvas.field_b != null) {
+            FullscreenFocusCanvas.field_b.a(param0, 256);
           }
           return;
         }
         if (null == ob.field_Xb) {
-          if (ek.field_b != null) {
-            ek.field_b.a(param0, 256);
+          if (FullscreenFocusCanvas.field_b != null) {
+            FullscreenFocusCanvas.field_b.a(param0, 256);
           }
           return;
         }
         ob.field_Xb.c(param0, 24509);
-        if (ek.field_b != null) {
-          ek.field_b.a(param0, 256);
+        if (FullscreenFocusCanvas.field_b != null) {
+          FullscreenFocusCanvas.field_b.a(param0, 256);
         }
     }
 

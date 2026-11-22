@@ -245,7 +245,7 @@ final class uo {
               var12.b(var12.field_Ib, 121);
               var12.field_bc = new UiPanel(0L, ja.field_e);
               var12.b(var12.field_bc, 118);
-              var12.field_Rb = new UiPanel(0L, ee.field_b);
+              var12.field_Rb = new UiPanel(0L, AccountRequestState.field_b);
               var12.b(var12.field_Rb, param6 + 125);
               var12.i(-2147483648);
               var12.field_nc = new UiPanel(0L, sc.field_c);

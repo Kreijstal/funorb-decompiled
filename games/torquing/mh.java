@@ -243,11 +243,11 @@ final class mh {
             stackIn_19_0 = on.field_c;
           }
           var14 = stackIn_19_0;
-          pp.a(var13 + 3, (byte) -128, 14145495, 5 + param1, 14145495);
+          FullscreenFocusCanvas.a(var13 + 3, (byte) -128, 14145495, 5 + param1, 14145495);
           SpriteState.a(param1 + 5, 14145495, 126, var13 + 3 + var14, 14145495);
-          pp.a(var13 + 2, (byte) -126, 8947848, 4 + param1, 8947848);
+          FullscreenFocusCanvas.a(var13 + 2, (byte) -126, 8947848, 4 + param1, 8947848);
           SpriteState.a(param1 + 4, 8947848, 126, var14 + 2 + var13, 8947848);
-          pp.a(var13 + 1, (byte) -128, 6710886, 3 + param1, 6710886);
+          FullscreenFocusCanvas.a(var13 + 1, (byte) -128, 6710886, 3 + param1, 6710886);
           SpriteState.a(3 + param1, 6710886, param3 ^ 36, var13 + 1 + var14, 6710886);
           if (!param0) {
             stackIn_22_0 = i.field_Q.field_O[1][1];
@@ -255,7 +255,7 @@ final class mh {
             stackIn_22_0 = i.field_Q.field_O[9][1];
           }
           var15 = stackIn_22_0;
-          pp.a(var13, (byte) -125, var15, param1 + 2, 0);
+          FullscreenFocusCanvas.a(var13, (byte) -125, var15, param1 + 2, 0);
           SpriteState.a(2 + param1, var15, 126, var13 + var14, 0);
           decompiledFrameRemainder2 = (var22 != 0);
         }
@@ -2628,7 +2628,7 @@ final class mh {
                     stackIn_71_2 = (fa.field_b != 0);
                     stackIn_73_3 = param0 ^ 95;
                     stackIn_74_4 = (ie.field_b.field_L != 0);
-                    ((pk) (Object) stackIn_67_0).c(pp.a(stackIn_68_1, stackIn_71_2, stackIn_73_3, stackIn_74_4), 321, 280 + dd.field_c.field_x + 1, 0, -1);
+                    ((pk) (Object) stackIn_67_0).c(FullscreenFocusCanvas.a(stackIn_68_1, stackIn_71_2, stackIn_73_3, stackIn_74_4), 321, 280 + dd.field_c.field_x + 1, 0, -1);
                     stackIn_76_0 = qh.field_c;
                     stackIn_77_1 = (0 != ie.field_b.field_s);
                     stackIn_79_2 = 2;
@@ -2649,11 +2649,11 @@ final class mh {
                     break regionExit1;
                   }
                   wb.b(-1);
-                  gd.field_a[da.field_a].b(245, 199);
+                  AccountRequestState.field_a[da.field_a].b(245, 199);
                   if (mf.field_t < vi.field_a.length << 2) {
-                    vi.a(-(mf.field_t >> 2) + vi.field_a.length, gd.field_a[gf.field_h], 245, 199, vi.field_a);
+                    vi.a(-(mf.field_t >> 2) + vi.field_a.length, AccountRequestState.field_a[gf.field_h], 245, 199, vi.field_a);
                   }
-                  SoftwareRasterizer.c(243, 197, gd.field_a[0].field_j + 4, 4 + gd.field_a[0].field_e, 1);
+                  SoftwareRasterizer.c(243, 197, AccountRequestState.field_a[0].field_j + 4, 4 + AccountRequestState.field_a[0].field_e, 1);
                   return;
                 }
                 stackIn_96_0 = (this.field_h == 6) ? 0 : 1;

@@ -32,7 +32,7 @@ final class hi extends IntrusiveNode {
         }
     }
 
-    final static void a(ce param0, java.awt.Frame param1, byte param2) {
+    final static void exitFullscreenFrame(ce param0, java.awt.Frame param1, byte param2) {
         od var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;

@@ -28,7 +28,7 @@ class bh extends ck {
         if (param0 <= 116) {
           return (String) null;
         }
-        if (param1 == ek.field_c) {
+        if (param1 == FullscreenFocusCanvas.field_c) {
           return null;
         }
         return cc.field_e[param1];

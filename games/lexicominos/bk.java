@@ -3,7 +3,7 @@
  */
 final class bk {
     static int field_a;
-    static ki field_c;
+    static AccountRequestState field_c;
     static int field_b;
     static int field_d;
     private static String field_z;

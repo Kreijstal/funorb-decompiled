@@ -232,7 +232,7 @@ abstract class MouseWheelInput {
             }
           }
         }
-        ed.field_b = 0;
+        AccountRequestState.field_b = 0;
         bj.field_gb = -2147483648;
         bh.field_F = 2147483647;
         nj.field_t = 2147483647;

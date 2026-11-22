@@ -3,7 +3,7 @@
  */
 final class bh {
     static int field_b;
-    static gd field_a;
+    static AccountRequestState field_a;
     static IntrusiveDeque field_c;
 
     public static void a(int param0) {

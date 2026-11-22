@@ -89,8 +89,8 @@ final class un {
           param0.field_M = true;
           rm.field_f = new eg(100);
           KeyboardInput.field_f = 0;
-          ie.field_a = true;
-          hc.field_u = ve.field_e;
+          DelegatingCanvas.field_a = true;
+          hc.field_u = AccountRequestState.field_e;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

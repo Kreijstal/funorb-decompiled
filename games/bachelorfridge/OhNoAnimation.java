@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OhNoAnimation extends EventAnimation {
-    static af field_w;
+    static AccountRequestState field_w;
     private OhNoEvent field_v;
 
     private final void f(int param0) {
@@ -73,11 +73,11 @@ final class OhNoAnimation extends EventAnimation {
     public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != -1) {
-          field_w = (af) null;
+          field_w = (AccountRequestState) null;
         }
     }
 
     static {
-        field_w = new af();
+        field_w = new AccountRequestState();
     }
 }

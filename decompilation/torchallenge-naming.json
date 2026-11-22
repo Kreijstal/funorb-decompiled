@@ -652,6 +652,14 @@
       "renamedSymbol": "C:RandomAccessCacheFile"
     },
     {
+      "symbol": "C:ne",
+      "originalName": "ne",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:oe",
       "originalName": "oe",
       "to": "RasterBuffer",
@@ -2105,7 +2113,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ee5c69ba969eaffc077e5f55ec989909bbc5b92bc536203d18dd02f743f76cbb.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ne.clearStaticReferences(B)V"
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(B)V"
     },
     {
       "symbol": "M:ng.c(Z)V",
@@ -5627,9 +5635,9 @@
     },
     {
       "symbol": "C:ne",
-      "renamedSymbol": "C:ne",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "ne",
-      "renamedName": "ne",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "ne.java",
         "start": 50,
@@ -14449,7 +14457,7 @@
     },
     {
       "symbol": "F:eh.field_p:Lne;",
-      "renamedSymbol": "F:eh.field_p:Lne;",
+      "renamedSymbol": "F:eh.field_p:LAccountRequestState;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -16726,7 +16734,7 @@
     },
     {
       "symbol": "F:gj.field_a:Lne;",
-      "renamedSymbol": "F:gj.field_a:Lne;",
+      "renamedSymbol": "F:gj.field_a:LAccountRequestState;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -17320,7 +17328,7 @@
     },
     {
       "symbol": "F:hf.field_b:Lne;",
-      "renamedSymbol": "F:hf.field_b:Lne;",
+      "renamedSymbol": "F:hf.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -23106,7 +23114,7 @@
     },
     {
       "symbol": "F:mg.field_c:Lne;",
-      "renamedSymbol": "F:mg.field_c:Lne;",
+      "renamedSymbol": "F:mg.field_c:LAccountRequestState;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -23799,7 +23807,7 @@
     },
     {
       "symbol": "F:ne.field_a:[C",
-      "renamedSymbol": "F:ne.field_a:[C",
+      "renamedSymbol": "F:AccountRequestState.field_a:[C",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -23810,7 +23818,7 @@
     },
     {
       "symbol": "F:ne.field_b:[I",
-      "renamedSymbol": "F:ne.field_b:[I",
+      "renamedSymbol": "F:AccountRequestState.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -26780,7 +26788,7 @@
     },
     {
       "symbol": "F:qc.field_i:Lne;",
-      "renamedSymbol": "F:qc.field_i:Lne;",
+      "renamedSymbol": "F:qc.field_i:LAccountRequestState;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -121017,7 +121025,7 @@
     },
     {
       "symbol": "L:ne.a(IIIIIIII[Lka;IIIII)V#0",
-      "renamedSymbol": "L:ne.a(IIIIIIII[LSprite;IIIII)V#0",
+      "renamedSymbol": "L:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#0",
       "originalName": "var14_int",
       "renamedName": "var14_int",
       "declaration": {
@@ -121028,7 +121036,7 @@
     },
     {
       "symbol": "L:ne.a(IIIIIIII[Lka;IIIII)V#1",
-      "renamedSymbol": "L:ne.a(IIIIIIII[LSprite;IIIII)V#1",
+      "renamedSymbol": "L:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#1",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -121039,7 +121047,7 @@
     },
     {
       "symbol": "L:ne.a(IIIIIIII[Lka;IIIII)V#2",
-      "renamedSymbol": "L:ne.a(IIIIIIII[LSprite;IIIII)V#2",
+      "renamedSymbol": "L:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#2",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -121050,7 +121058,7 @@
     },
     {
       "symbol": "L:ne.a(IIIIIIII[Lka;IIIII)V#3",
-      "renamedSymbol": "L:ne.a(IIIIIIII[LSprite;IIIII)V#3",
+      "renamedSymbol": "L:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#3",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -121061,7 +121069,7 @@
     },
     {
       "symbol": "L:ne.a(IIIIIIII[Lka;IIIII)V#4",
-      "renamedSymbol": "L:ne.a(IIIIIIII[LSprite;IIIII)V#4",
+      "renamedSymbol": "L:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -213824,7 +213832,7 @@
     },
     {
       "symbol": "M:ne.a(B)V",
-      "renamedSymbol": "M:ne.clearStaticReferences(B)V",
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -213835,7 +213843,7 @@
     },
     {
       "symbol": "M:ne.a(IIIIIIII[Lka;IIIII)V",
-      "renamedSymbol": "M:ne.a(IIIIIIII[LSprite;IIIII)V",
+      "renamedSymbol": "M:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -213846,7 +213854,7 @@
     },
     {
       "symbol": "M:ne.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:ne.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -265689,7 +265697,7 @@
     },
     {
       "symbol": "P:ne.a(B)V#0",
-      "renamedSymbol": "P:ne.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:AccountRequestState.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -265700,7 +265708,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#0",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#0",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -265711,7 +265719,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#1",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#1",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -265722,7 +265730,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#10",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#10",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -265733,7 +265741,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#11",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#11",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -265744,7 +265752,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#12",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#12",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -265755,7 +265763,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#13",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#13",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -265766,7 +265774,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#2",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#2",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -265777,7 +265785,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#3",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#3",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -265788,7 +265796,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#4",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#4",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -265799,7 +265807,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#5",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#5",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -265810,7 +265818,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#6",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#6",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -265821,7 +265829,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#7",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#7",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -265832,7 +265840,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#8",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#8",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -265843,7 +265851,7 @@
     },
     {
       "symbol": "P:ne.a(IIIIIIII[Lka;IIIII)V#9",
-      "renamedSymbol": "P:ne.a(IIIIIIII[LSprite;IIIII)V#9",
+      "renamedSymbol": "P:AccountRequestState.a(IIIIIIII[LSprite;IIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -292951,7 +292959,7 @@
       "original": "TorChallenge.java",
       "renamed": "TorChallenge.java",
       "inputSha256": "75ee103948c5b44b7d6c6b36d6bd8d90cc0cbf95e347b07e992ad199fc73c86c",
-      "outputSha256": "fb282e945d4dc14da1917430afdaa7e9c1c9c2d65cb93981ecd365492dae1db2",
+      "outputSha256": "d71331082f86267bb99427da59c09560a42d7ed293c39f9ff15afd101cb79f7c",
       "edits": [
         {
           "start": 78,
@@ -297694,6 +297702,13 @@
           "symbol": "M:eb.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 84389,
+          "end": 84391,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 84392,
@@ -304069,7 +304084,7 @@
       "original": "da.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "ea2ec3264d872b97c683225aa2b9800d01e08ffe1b4cfe6c596d47fc5606ca44",
-      "outputSha256": "cd7af4700f25cd0af3107fd2b457f128e1d0cb096bc6bf0febbcbaf0c44862f9",
+      "outputSha256": "4577f1782e86d6b3791706b02be6c406e9fc4723e3233c7403f1d475df686076",
       "edits": [
         {
           "start": 44,
@@ -304203,6 +304218,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 733,
+          "end": 735,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1004,
@@ -309405,7 +309427,7 @@
       "original": "eh.java",
       "renamed": "eh.java",
       "inputSha256": "a56c7fccccfa94ad8e080f84167e788bd4df82085d1d5d3584536d14433d1e4f",
-      "outputSha256": "6fdb00a57be91cacc1eff1e9b9842e86d3fc955a5b971626fc302b34b6d0dfa7",
+      "outputSha256": "cc36d202c873f7213d4f7de7c7f0b8d592371759571fee1a52cb12dca9f0f4d3",
       "edits": [
         {
           "start": 61,
@@ -309413,6 +309435,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 142,
+          "end": 144,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 324,
@@ -317871,7 +317900,7 @@
       "original": "gj.java",
       "renamed": "gj.java",
       "inputSha256": "451f65d50d492b3b3f3bd31e99abda37bb507fb26268443a3405e480c5cf0911",
-      "outputSha256": "aa65e18d1f474ab64aa81da9b6a29fb617c7720c92184c2dde19db85bda7b369",
+      "outputSha256": "8abc6a3721a5a12e6a278cc1b2e880b180851a506d3c81bf722f095f92576eb2",
       "edits": [
         {
           "start": 91,
@@ -317886,6 +317915,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "Sprite"
+        },
+        {
+          "start": 180,
+          "end": 182,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 220,
@@ -319706,7 +319742,7 @@
       "original": "hf.java",
       "renamed": "hf.java",
       "inputSha256": "cf93f7ac7be4582efde312e8be51850a05de39f12944355112ac94ea5634ab55",
-      "outputSha256": "42bac42db86f9e4beab6a7241b6f5f2c73e8fa5e71d0ba5638bf222ea766a18e",
+      "outputSha256": "aa21d91d9a88329ec80dff1f5fe8b21d64adb14b01f1bedaa8ea50f9e10e7d40",
       "edits": [
         {
           "start": 79,
@@ -319714,6 +319750,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "Sprite"
+        },
+        {
+          "start": 205,
+          "end": 207,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2562,
@@ -319784,6 +319827,13 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 7759,
+          "end": 7761,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 9969,
@@ -321600,7 +321650,7 @@
       "original": "ie.java",
       "renamed": "ie.java",
       "inputSha256": "e7be59113271c89adb772288b8955967d430fe1c00c2269175bd20dad9d59c26",
-      "outputSha256": "7ee934c880e5b0072b8e2a42252b427aa14e9d2976a7d3cccf2d4b2de5d0786f",
+      "outputSha256": "74ea960d59c773c6df5e8747882b7edd32e90637a1fbed450c88c6c5d055f518",
       "edits": [
         {
           "start": 66,
@@ -321664,6 +321714,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1827,
+          "end": 1829,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2499,
@@ -338675,8 +338732,15 @@
       "original": "mg.java",
       "renamed": "mg.java",
       "inputSha256": "87291f8e88a617b5047e4c5797a08eaca13929b9a7c2d483d0832a70b1ce7f65",
-      "outputSha256": "9cae008fec783dffe946219f731186e0f22ae3126b73311a326cbbfc1a527e9f",
+      "outputSha256": "4efcf4278ec95b8df0b61d3b6a2c90f069558768b09e86c8abe7903adb05036f",
       "edits": [
+        {
+          "start": 66,
+          "end": 68,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 609,
           "end": 616,
@@ -338830,6 +338894,13 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3093,
+          "end": 3095,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -340161,10 +340232,17 @@
     },
     {
       "original": "ne.java",
-      "renamed": "ne.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "5aa028d1577acba3dec6de227ca54156fda7fe410d4d19fd08835c9a1712ac5f",
-      "outputSha256": "1d692e5744e9f80ad6b0a244834a9069e1a4393b86820be7d8d98c7c74f95578",
+      "outputSha256": "b4c87e6ea9faf2f1caa91ed580f5da90d39f81317d879d152bbdb6dad9df2517",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 219,
           "end": 220,
@@ -345953,7 +346031,7 @@
       "original": "pd.java",
       "renamed": "GameScreen.java",
       "inputSha256": "1fc4b6a63dfb1422e8f73d2aef6f3a3d86b163dd84b569f0812d5d481661368f",
-      "outputSha256": "fa125320ca7c2a70e5d9f4b2f96415fa7357fde22879a9cf17b9e358dd06cdf9",
+      "outputSha256": "cc93f42968a049db401d01ece384f038ada365ab31349ec0637fcedafd51e232",
       "edits": [
         {
           "start": 50,
@@ -349053,6 +349131,13 @@
           "symbol": "F:pd.field_e:I",
           "original": "field_e",
           "renamed": "screenId"
+        },
+        {
+          "start": 112088,
+          "end": 112090,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 112104,
@@ -353686,6 +353771,13 @@
           "renamed": "screenId"
         },
         {
+          "start": 282684,
+          "end": 282686,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 282700,
           "end": 282707,
           "symbol": "F:pd.field_e:I",
@@ -353693,11 +353785,25 @@
           "renamed": "screenId"
         },
         {
+          "start": 282829,
+          "end": 282831,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 282845,
           "end": 282852,
           "symbol": "F:pd.field_e:I",
           "original": "field_e",
           "renamed": "screenId"
+        },
+        {
+          "start": 282925,
+          "end": 282927,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 282941,
@@ -355048,8 +355154,15 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "4a640984414465849029adb79c49a03fe796e286795fdd2f6a37551883fef3c2",
-      "outputSha256": "77f596b7173bab4a9f908ce953a9af33a53e1cbfabec5a68cd08dea5dcdbb9c6",
+      "outputSha256": "59678dad48d65c8648c705461cbe73321a3984daa1b2081c40eb36cbad3e6fad",
       "edits": [
+        {
+          "start": 115,
+          "end": 117,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 431,
           "end": 433,
@@ -355072,11 +355185,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1719,
+          "end": 1721,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3811,
           "end": 3812,
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4132,
+          "end": 4134,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -369633,7 +369760,7 @@
       "original": "rj.java",
       "renamed": "rj.java",
       "inputSha256": "cb35dda6467b642a67e6d9e46eff25b463e68dc4618e50cf0a989acd7519c5cf",
-      "outputSha256": "aa57e703a23ae708540ac37dec29511830cbd3357bde8c7ecc72c4c9c15738b0",
+      "outputSha256": "be99b817b46831a2bbf9c34385398fab1500d01a5f74a631d0c991480fa674f6",
       "edits": [
         {
           "start": 85,
@@ -369847,6 +369974,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "Sprite"
+        },
+        {
+          "start": 18020,
+          "end": 18022,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 18744,
@@ -385323,10 +385457,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "1a36ceadb3c6c31912ba9099ab726d3d5bb8bf341d3e739e5fd07e7c911128f4",
+    "rulesSha256": "5194a22d13874f0147d1921b4a9a8e35596270880c9677bc31f168a9affaaa0e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "8b2bffa65171a5292d679eb8ccc008a3f700965e64bd65f420e5541ebafeb428",
+    "outputTreeSha256": "4e6413d6829106de2a9b8bc68d1ef87e420a37e5894cc8134fbbf178a5dc5853",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

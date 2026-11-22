@@ -102,7 +102,7 @@ final class fs {
           this.field_b.f((byte) 50);
         }
         this.field_b.d((byte) 96);
-        if (af.field_a &&
+        if (AccountRequestState.field_a &&
           this.field_b.field_h.field_e == 0) {
           this.field_b.field_h.endMatch(true, 0);
           this.field_b.e(param0 - 15528);

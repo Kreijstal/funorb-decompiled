@@ -25,7 +25,7 @@ final class tc extends id {
         if (!al.field_f.a(true)) {
           return gk.field_c;
         }
-        return va.field_a;
+        return FullscreenFocusCanvas.field_a;
     }
 
     final db a(byte param0, int param1) {

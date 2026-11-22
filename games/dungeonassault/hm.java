@@ -81,7 +81,7 @@ final class hm extends IntrusiveNode {
                               } else {
                                 if (11 == var4) {
                                   if (null != ik.field_e) {
-                                    af.a((byte) 37);
+                                    AccountRequestState.a((byte) 37);
                                     if (ik.field_e != null) {
                                       ik.field_e.a(17158, param2);
                                       gh.field_f = true;
@@ -272,20 +272,20 @@ final class hm extends IntrusiveNode {
               oo.field_a = true;
             }
           }
-          if (ql.field_c != null) {
-            var3 = 357 - ql.field_c.field_G / 2;
+          if (DelegatingCanvas.field_c != null) {
+            var3 = 357 - DelegatingCanvas.field_c.field_G / 2;
             var4 = 0;
             if (no.field_d != 0 &&
               field_k > var3 &&
-              field_k < var3 + ql.field_c.field_v) {
-              if (-ql.field_c.field_y + 269 < lc.field_c &&
+              field_k < var3 + DelegatingCanvas.field_c.field_v) {
+              if (-DelegatingCanvas.field_c.field_y + 269 < lc.field_c &&
                 lc.field_c < 269) {
                 wf.field_x = am.field_c;
                 oo.field_a = false;
                 var4 = 1;
               }
               if (586 < lc.field_c &&
-                ql.field_c.field_y + 586 > lc.field_c) {
+                DelegatingCanvas.field_c.field_y + 586 > lc.field_c) {
                 oo.field_a = true;
                 wf.field_x = am.field_c;
                 var4 = 1;
@@ -294,13 +294,13 @@ final class hm extends IntrusiveNode {
             if (var4 == 0 &&
               wf.field_x > am.field_g &&
               eh.field_h > var3 &&
-              ql.field_c.field_v + var3 > eh.field_h) {
-              if (hj.field_S > 269 - ql.field_c.field_y &&
+              DelegatingCanvas.field_c.field_v + var3 > eh.field_h) {
+              if (hj.field_S > 269 - DelegatingCanvas.field_c.field_y &&
                 269 > hj.field_S) {
                 wf.field_x = am.field_g;
               }
               if (hj.field_S > 586 &&
-                hj.field_S < 586 + ql.field_c.field_y) {
+                hj.field_S < 586 + DelegatingCanvas.field_c.field_y) {
                 wf.field_x = am.field_g;
               }
             }

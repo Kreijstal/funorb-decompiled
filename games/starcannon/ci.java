@@ -137,12 +137,12 @@ final class ci implements de {
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, var7 + (304 - param2.length() * 6) / 2, 22 + var8);
             }
-            if (hi.field_a == null) {
+            if (DelegatingCanvas.field_a == null) {
               return;
             }
             var10.setFont(jb.field_c);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(hi.field_a, eh.field_n / 2 - hi.field_a.length() * 6 / 2, -26 + ef.field_d / 2);
+            var10.drawString(DelegatingCanvas.field_a, eh.field_n / 2 - DelegatingCanvas.field_a.length() * 6 / 2, -26 + ef.field_d / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

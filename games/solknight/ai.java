@@ -48,7 +48,7 @@ final class ai {
           gf.field_Y = dupTemp$1;
           md.field_y = dupTemp$1;
           if (bk.field_a.field_c != 1) {
-            ef.field_e = wc.field_f;
+            AccountRequestState.field_e = wc.field_f;
           } else {
             try {
               MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.field_e), qa.field_n);
@@ -60,13 +60,13 @@ final class ai {
               MouseInputHandler.field_b = stackIn_11_0;
               FullscreenFocusCanvas.field_e = stackIn_11_0;
               var5.position = 0;
-              ef.field_e = qc.field_i;
+              AccountRequestState.field_e = qc.field_i;
               si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
               qf.a(param1 + 37, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              ef.field_e = wc.field_f;
+              AccountRequestState.field_e = wc.field_f;
               bk.field_a = null;
               return true;
             }

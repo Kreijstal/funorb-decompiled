@@ -46,7 +46,7 @@ final class qc extends qe {
           var9 = var5 - (-var4 + var8) >> 1;
           var9 = var9 + qi.field_b;
           if (var3 != 13) {
-            stackIn_10_0 = 120 * ql.field_d / 256;
+            stackIn_10_0 = 120 * DelegatingCanvas.field_d / 256;
           } else {
             stackIn_10_0 = oo.field_d * 120 / 256;
           }
@@ -677,7 +677,7 @@ final class qc extends qe {
             var15 = var15 + cf.field_f.field_y / 3;
           }
         } else {
-          la.field_b.c(ql.field_h, 392, 260, 16777215, -1);
+          la.field_b.c(DelegatingCanvas.field_h, 392, 260, 16777215, -1);
           if (ed.c(true)) {
             var5 = 300;
             db.field_v.a(ld.field_a, 239, var5, 306, 100, 16777215, -1, 1, 0, db.field_v.field_H);

@@ -510,7 +510,7 @@ final class wa extends pj implements kd, ke {
             }
           }
           if (param1) {
-            lb.field_w.a(0, ua.a(ob.field_g, -13412, ck.field_c), ua.a(ih.field_R, -13412, ae.field_gb));
+            lb.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
             if (lb.field_w.c((byte) -82)) {
               if (lb.field_w.field_f == 0) {
                 stackIn_62_0 = 3;
@@ -669,7 +669,7 @@ final class wa extends pj implements kd, ke {
             }
           }
           if (param1) {
-            lb.field_w.a(0, ua.a(ob.field_g, -13412, ck.field_c), ua.a(ih.field_R, -13412, ae.field_gb));
+            lb.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
             if (lb.field_w.c((byte) -82)) {
               if (lb.field_w.field_f == 0) {
                 stackIn_62_0 = 3;

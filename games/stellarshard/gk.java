@@ -88,16 +88,16 @@ final class gk {
               if (param1) {
                 var9 = var9 | 1;
               }
-              uc.field_c.position = 0;
-              uc.field_c.writeInt(0, pl.field_P.nextInt());
-              uc.field_c.writeInt(0, pl.field_P.nextInt());
-              uc.field_c.writePrefixedString(-104, var14);
-              uc.field_c.writePrefixedString(-106, var8);
+              AccountRequestState.field_c.position = 0;
+              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
+              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
+              AccountRequestState.field_c.writePrefixedString(-104, var14);
+              AccountRequestState.field_c.writePrefixedString(-106, var8);
               var15 = (CharSequence) ((Object) param3);
-              uc.field_c.writePrefixedString(-117, IntrusiveNode.a(var15, param6));
-              uc.field_c.writeShort(param0, -127);
-              uc.field_c.writeByte(false, param4);
-              uc.field_c.writeByte(false, var9);
+              AccountRequestState.field_c.writePrefixedString(-117, IntrusiveNode.a(var15, param6));
+              AccountRequestState.field_c.writeShort(param0, -127);
+              AccountRequestState.field_c.writeByte(false, param4);
+              AccountRequestState.field_c.writeByte(false, var9);
               pg.field_fb.writeByte(false, 18);
               pg.field_fb.position = pg.field_fb.position + 2;
               var10 = pg.field_fb.position;
@@ -106,13 +106,13 @@ final class gk {
                 var11_ref_StringLifetime4 = "";
               }
               pg.field_fb.writeString(var11_ref_StringLifetime4, -9799);
-              ha.a(fj.field_l, pg.field_fb, uc.field_c, -105, u.field_o);
+              ha.a(fj.field_l, pg.field_fb, AccountRequestState.field_c, -105, u.field_o);
               pg.field_fb.backpatchShortLength(-1, -var10 + pg.field_fb.position);
             } else {
-              uc.field_c.position = 0;
-              uc.field_c.writeInt(0, pl.field_P.nextInt());
-              uc.field_c.writeInt(0, pl.field_P.nextInt());
-              stackIn_14_0 = uc.field_c;
+              AccountRequestState.field_c.position = 0;
+              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
+              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
+              stackIn_14_0 = AccountRequestState.field_c;
               stackIn_14_1 = 96;
               if (!param2.a(5)) {
                 stackIn_15_2 = "";
@@ -120,7 +120,7 @@ final class gk {
                 stackIn_15_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_14_1, stackIn_15_2);
-              stackIn_17_0 = uc.field_c;
+              stackIn_17_0 = AccountRequestState.field_c;
               stackIn_17_1 = 126;
               if (!param5.a(5)) {
                 stackIn_18_2 = "";
@@ -131,7 +131,7 @@ final class gk {
               pg.field_fb.writeByte(false, 16);
               pg.field_fb.position = pg.field_fb.position + 1;
               var9 = pg.field_fb.position;
-              ha.a(fj.field_l, pg.field_fb, uc.field_c, -121, u.field_o);
+              ha.a(fj.field_l, pg.field_fb, AccountRequestState.field_c, -121, u.field_o);
               pg.field_fb.backpatchByteLength(pg.field_fb.position - var9, (byte) -94);
             }
             ue.a((byte) -108, -1);

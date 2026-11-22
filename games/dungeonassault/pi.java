@@ -118,7 +118,7 @@ final class pi {
         if (param0 != -555) {
           pi.clearStaticReferences(49);
         }
-        return ql.field_f == wd.field_d ? true : false;
+        return DelegatingCanvas.field_f == wd.field_d ? true : false;
     }
 
     final pi a(int param0, int param1) {

@@ -403,7 +403,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_x_dropped_out", false);
                 if (var2 != null) {
-                  ee.field_a = in.a(param0 ^ 0, var2);
+                  AccountRequestState.field_a = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("mu_entered_other_game", false);
                 if (var2 != null) {
@@ -2001,7 +2001,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("waitingfor_textures", false);
                 if (null != var2) {
-                  ee.field_d = in.a(param0 + 0, var2);
+                  AccountRequestState.field_d = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("waitingfor_animations", false);
                 if (null != var2) {

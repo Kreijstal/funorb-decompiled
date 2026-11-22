@@ -138,7 +138,7 @@ final class ec {
           var6Lifetime1 = uj.field_i << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = sb.a((byte) 79, var6Lifetime1) >> 8;
-          var9Lifetime1 = r.a((byte) 71, var6Lifetime1) >> 8;
+          var9Lifetime1 = FullscreenFocusCanvas.a((byte) 71, var6Lifetime1) >> 8;
           if (ei.field_a != -1 &&
             p.field_a != -1) {
             var8Lifetime1 = 240 - p.field_a;

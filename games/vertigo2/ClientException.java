@@ -207,7 +207,7 @@ final class ClientException extends RuntimeException {
                 var13.b(var13.field_Nb, 120);
               }
               var13.field_Nb.field_O = 2;
-              var13.field_Qb = new UiPanel(0L, ee.field_b);
+              var13.field_Qb = new UiPanel(0L, AccountRequestState.field_b);
               var13.b(var13.field_Qb, 122);
               var13.i(-2147483648);
               var13.field_Tb = new UiPanel(0L, sc.field_c);

@@ -201,7 +201,7 @@ final class ob extends wm {
     }
 
     final static String d(byte param0) {
-        if (ci.field_ub == g.field_a) {
+        if (ci.field_ub == DelegatingCanvas.field_a) {
           return jd.field_d;
         }
         if (ci.field_ub == vl.field_A) {

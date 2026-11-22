@@ -8,7 +8,7 @@ final class ce {
     static AudioOutput field_b;
 
     final static void b(int param0) {
-        if (!ra.a(-17977)) {
+        if (!FullscreenFocusCanvas.a(-17977)) {
           return;
         }
         try {

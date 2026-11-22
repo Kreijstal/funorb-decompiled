@@ -48,12 +48,12 @@ final class rn {
           }
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              null != g.field_d[var12]) {
+              null != DelegatingCanvas.field_d[var12]) {
               var13 = 3 + (-6 + AccountNameAvailabilityValidator.field_m.field_pb + 2) * var11 / (qm.field_d + 1);
               var11++;
               var7Lifetime1 = -var13 - 2 + 3 + (-6 + (AccountNameAvailabilityValidator.field_m.field_pb + 2)) * var11 / (1 + qm.field_d);
               if (var12 < 5) {
-                g.field_d[var12].a(var6_int, var8, -2147483648, var7Lifetime1, var13);
+                DelegatingCanvas.field_d[var12].a(var6_int, var8, -2147483648, var7Lifetime1, var13);
                 t.field_K[var12].a(param3, var9 - param3, -2147483648, var7Lifetime1, 0);
                 ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7Lifetime1 - param4, param4);
                 mf.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7Lifetime1 - param4, param4);

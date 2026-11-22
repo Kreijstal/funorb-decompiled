@@ -225,8 +225,8 @@ final class qq extends EventEffect {
           i.field_a.a(-1, DefaultWidgetRenderer.field_d);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.children = new IntrusiveDeque();
-          af.field_b = new sga(0L, var17, param5, param2);
-          DefaultWidgetRenderer.field_d.a(-1, af.field_b);
+          AccountRequestState.field_b = new sga(0L, var17, param5, param2);
+          DefaultWidgetRenderer.field_d.a(-1, AccountRequestState.field_b);
           ResetAnimation.field_w = new UiComponent(0L, param3);
           DefaultWidgetRenderer.field_d.a(-1, ResetAnimation.field_w);
           HailAnimation.field_A = new UiComponent(0L, param6);

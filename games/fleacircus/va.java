@@ -138,16 +138,16 @@ final class va {
         this.field_q = 84;
     }
 
-    final vb b(int param0) {
-        vb var2 = null;
-        vb var2Lifetime1;
+    final FullscreenFocusCanvas b(int param0) {
+        FullscreenFocusCanvas var2 = null;
+        FullscreenFocusCanvas var2Lifetime1;
         this.field_c = ki.field_a;
         this.field_b = gm.field_nb;
         this.field_p.a(this.field_h, param0 + 6874, this.field_f);
         if (param0 != -7936) {
           this.field_n = -70;
           ContextualRuntimeException.field_h = false;
-          var2 = SecondaryNodeDeque.a(0, this.field_f, 0, fg.field_q, 0, this.field_h);
+          var2 = SecondaryNodeDeque.createFullscreenCanvas(0, this.field_f, 0, fg.field_q, 0, this.field_h);
           if (var2 == null) {
             this.a(-121);
             return var2;
@@ -155,7 +155,7 @@ final class va {
           return var2;
         }
         ContextualRuntimeException.field_h = false;
-        var2Lifetime1 = SecondaryNodeDeque.a(0, this.field_f, 0, fg.field_q, 0, this.field_h);
+        var2Lifetime1 = SecondaryNodeDeque.createFullscreenCanvas(0, this.field_f, 0, fg.field_q, 0, this.field_h);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }

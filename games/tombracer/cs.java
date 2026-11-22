@@ -8,10 +8,10 @@ final class cs {
 
     final static String a(byte param0) {
         int var1 = 126 % ((param0 + 60) / 52);
-        if (LegacyOpenGlTexture.field_a == PlayerResultRow.field_y) {
+        if (LegacyOpenGlTexture.registrationRequestState == PlayerResultRow.accountRequestPending) {
           return ObjectList.field_i;
         }
-        if (wt.field_d == PlayerResultRow.field_y) {
+        if (wt.usernameQueryState == PlayerResultRow.accountRequestPending) {
           return uaa.field_a;
         }
         if (DefaultRoomObjectRenderer.field_b.isComplete(124)) {

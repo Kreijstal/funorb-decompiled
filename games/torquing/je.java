@@ -171,13 +171,13 @@ final class je implements WidgetRenderer {
         }
     }
 
-    final static pp a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        pp var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        pp stackIn_5_0 = null;
-        pp stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_5_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -189,12 +189,12 @@ final class je implements WidgetRenderer {
             return null;
           }
           if (param5 > -9) {
-            stackIn_5_0 = (pp) null;
+            stackIn_5_0 = (FullscreenFocusCanvas) null;
             return stackIn_5_0;
           }
-          var7 = new pp();
-          var7.field_d = var8;
-          var7.field_d.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param0, param1);
           var7.addFocusListener(var7);
           var7.requestFocus();

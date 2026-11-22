@@ -19,7 +19,7 @@ final class af {
         if (param0 >= -50) {
           field_b = false;
           jd.a(ff.field_b, 160);
-          ff.field_b.a(false, jh.field_a);
+          ff.field_b.exitFullscreen(false, jh.field_a);
           ff.field_b = null;
           if (null != da.field_a) {
             da.field_a.a((byte) -110);
@@ -30,7 +30,7 @@ final class af {
           return;
         }
         jd.a(ff.field_b, 160);
-        ff.field_b.a(false, jh.field_a);
+        ff.field_b.exitFullscreen(false, jh.field_a);
         ff.field_b = null;
         if (null == da.field_a) {
           ug.field_y.requestFocus();

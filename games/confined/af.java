@@ -41,7 +41,7 @@ final class af extends sa {
         field_U = null;
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, df param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -59,10 +59,10 @@ final class af extends sa {
         java.awt.Frame var7 = null;
         int var9 = 0;
         tl[] var10 = null;
-        bc var11 = null;
+        PlatformTask var11 = null;
         var9 = Confined.field_J ? 1 : 0;
         try {
-          if (!param4.c(-121)) {
+          if (!param4.isFullscreenAvailable(-121)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -93,16 +93,16 @@ final class af extends sa {
             stackIn_29_0 = (java.awt.Frame) null;
             return stackIn_29_0;
           }
-          var11 = param4.a((byte) -101, param3, param2, param0, param1);
-          while (0 == var11.field_g) {
+          var11 = param4.requestFullscreenEnter((byte) -101, param3, param2, param0, param1);
+          while (0 == var11.status) {
             jd.a(1, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_f);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_35_0 = null;
             return (java.awt.Frame) (stackIn_35_0);
           }
-          if (var11.field_g != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           si.a(var7, param4, true);

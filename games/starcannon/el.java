@@ -26,7 +26,7 @@ final class el extends dk {
 
     final static void a(gi param0, int param1, int param2, boolean param3) {
         try {
-          qc.field_g = param1;
+          FullscreenFocusCanvas.field_g = param1;
           u.field_c = param0;
           if (!param3) {
             field_J = (Sprite) null;

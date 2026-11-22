@@ -127,7 +127,7 @@ final class of {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param2);
-          if (!ed.a(var8, 21257)) {
+          if (!AccountRequestState.a(var8, 21257)) {
             stackIn_2_0 = qj.field_a;
             return stackIn_2_0;
           }

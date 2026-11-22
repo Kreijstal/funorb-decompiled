@@ -82,8 +82,8 @@ final class ui extends g implements qh {
             if (param0 >= -49) {
               ui.l(-66);
             }
-            if (null != sc.field_b) {
-              sc.field_b.b(124);
+            if (null != AccountRequestState.field_b) {
+              AccountRequestState.field_b.b(124);
             }
             if (ni.field_c != null) {
               try {

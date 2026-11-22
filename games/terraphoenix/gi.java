@@ -1191,7 +1191,7 @@ final class gi {
           qb.field_f = ig.a(param0, 0, "frame_bottom", "commonui");
           hd.field_o = il.a("jagex_logo_grey", "commonui", param0, param3 + 2039);
           i.field_c = ig.a(param0, 0, "button", "commonui");
-          og.field_c = IterableNodeHashTable.a("validation", (byte) -90, "commonui", param0);
+          AccountRequestState.field_c = IterableNodeHashTable.a("validation", (byte) -90, "commonui", param0);
           ra.field_l = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
           qk.field_e = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
           be.field_x = (BitmapFont) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));

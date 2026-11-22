@@ -113,10 +113,10 @@ final class lo {
     final synchronized static long a(byte param0) {
         int var3 = 103 % ((35 - param0) / 39);
         long var1 = System.currentTimeMillis();
-        if (!(u.field_b <= var1)) {
-          r.field_f = r.field_f + (u.field_b - var1);
+        if (!(AccountRequestState.field_b <= var1)) {
+          r.field_f = r.field_f + (AccountRequestState.field_b - var1);
         }
-        u.field_b = var1;
+        AccountRequestState.field_b = var1;
         return var1 + r.field_f;
     }
 

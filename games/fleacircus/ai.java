@@ -139,7 +139,7 @@ final class ai extends r {
             if (stackIn_21_0) {
               return;
             }
-            ae.field_b = null;
+            AccountRequestState.field_b = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -409,7 +409,7 @@ final class GzipDecompressor {
         }
         int var1 = ClientException.a(6940);
         int var2 = wc.d(20);
-        u.field_c.a(-qf.field_g + p.field_g, (qf.field_g << 1) + var1, 122, AccountNameAvailabilityValidator.field_m - qc.field_g, var2 + (qc.field_g << 1));
+        u.field_c.a(-qf.field_g + p.field_g, (qf.field_g << 1) + var1, 122, AccountNameAvailabilityValidator.field_m - FullscreenFocusCanvas.field_g, var2 + (FullscreenFocusCanvas.field_g << 1));
         KeyboardInput.b(1000);
     }
 

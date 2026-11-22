@@ -122,13 +122,13 @@ final class qg {
         }
     }
 
-    final static r a(int param0, int param1, int param2, PlatformTaskDispatcher param3, byte param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, byte param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        r var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        r stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -138,11 +138,11 @@ final class qg {
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (r) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new r();
-          var7.field_c = var8;
-          var7.field_c.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           if (param4 != -73) {
             field_c = 104;
           }

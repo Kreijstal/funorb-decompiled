@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fta {
-    static fpa field_c;
+    static AccountRequestState accountRequestIdle;
     static Sprite field_b;
     static Sprite field_a;
 
@@ -106,11 +106,11 @@ final class fta {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-          field_c = (fpa) null;
-          field_c = null;
+          accountRequestIdle = (AccountRequestState) null;
+          accountRequestIdle = null;
           return;
         }
-        field_c = null;
+        accountRequestIdle = null;
     }
 
     final boolean a(int param0) {
@@ -138,6 +138,6 @@ final class fta {
     }
 
     static {
-        field_c = new fpa();
+        accountRequestIdle = new AccountRequestState();
     }
 }

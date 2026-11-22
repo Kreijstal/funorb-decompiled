@@ -191,7 +191,7 @@ final class UrlDownloadRequest implements Runnable {
             field_i = 59;
           }
           for (var6_int = param3; param4 >= var6_int; var6_int++) {
-            C2SRoomResultPacket.fillRange((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
+            C2SRoomResultPacket.fillRange((byte) -55, param0, param1, PackedBitSetSupport.field_a[var6_int], param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

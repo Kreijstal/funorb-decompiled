@@ -581,7 +581,7 @@ final class pc extends ci {
         var18 = null;
         var19 = Chess.field_G;
         try {
-          ByteStorage.a(ed.field_c, true);
+          ByteStorage.a(AccountRequestState.field_c, true);
           if (null != pd.field_Rb) {
             sc.field_d.field_tb = true;
             uj.field_j.field_pb = 0;
@@ -619,7 +619,7 @@ final class pc extends ci {
                   var10_ref_String = oc.a(tg.field_b, new String[]{Integer.toString(cb.field_f)}, (byte) -119);
                 }
                 uj.field_j.field_db = uj.field_j.field_db + "<br>" + var10_ref_String;
-                if ((16 & g.field_c) == 0 &&
+                if ((16 & DelegatingCanvas.field_c) == 0 &&
                   !jh.field_a) {
                   uj.field_j.field_Ab = nj.field_x.field_Q;
                 }

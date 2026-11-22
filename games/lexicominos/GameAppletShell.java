@@ -91,7 +91,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ef.field_e = 0;
               AccountCreationResultPanel.field_sb = param2;
               fi.field_j = param2;
-              ki.field_f = param0;
+              AccountRequestState.field_f = param0;
               tg.field_i = kk.c(-14047);
               dupTemp$0 = new ab(param5, param6, param1, true);
               jh.field_a = dupTemp$0;
@@ -408,7 +408,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ug.field_y = (java.awt.Canvas) ((Object) new jc((java.awt.Component) (this)));
+          ug.field_y = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ug.field_y));
           ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
           ug.field_y.setVisible(true);
@@ -697,7 +697,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < jj.field_c)) {
                       this.b(24344);
-                      ki.a(ug.field_y, jh.field_a, 50);
+                      AccountRequestState.a(ug.field_y, jh.field_a, 50);
                       break;
                     }
                     this.a(1);

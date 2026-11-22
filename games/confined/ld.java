@@ -13,7 +13,7 @@ abstract class ld {
     static String field_j;
     int field_a;
     int field_h;
-    static df field_k;
+    static PlatformTaskDispatcher field_k;
 
     final static boolean a(byte param0, char param1) {
         boolean stackIn_28_0 = false;

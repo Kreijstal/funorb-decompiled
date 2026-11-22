@@ -693,13 +693,13 @@ final class FoodShopPanel {
         var3 = BachelorFridge.field_y;
         this.field_s.a(19842, true);
         if (this.field_s.field_T) {
-          if (af.field_a) {
+          if (AccountRequestState.field_a) {
             Crc32Table.a(2, (byte) -57);
           }
           au.field_c = 3;
         }
         this.field_l.a(19842, true);
-        if (af.field_a &&
+        if (AccountRequestState.field_a &&
           this.field_l.field_T) {
           Crc32Table.a(5, (byte) 1);
         }

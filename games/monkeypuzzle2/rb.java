@@ -236,7 +236,7 @@ final class rb extends ii {
         if (param0 != 3591) {
           field_eb = -116;
         }
-        ba.field_f.a((byte) -107, rc.field_k);
+        ba.field_f.exitFullscreen((byte) -107, rc.field_k);
         ie.field_e.requestFocus();
         ba.field_f = null;
     }

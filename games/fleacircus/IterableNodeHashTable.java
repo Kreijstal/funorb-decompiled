@@ -54,7 +54,7 @@ final class IterableNodeHashTable implements Iterable {
         var3 = fleas.field_A ? 1 : 0;
         if (wc.field_q > 0) {
           if (aa.field_r == null) {
-            ResourceArchive.field_p = SecondaryNodeDeque.a(0, 640, 0, fg.field_q, 0, 480);
+            ResourceArchive.field_p = SecondaryNodeDeque.createFullscreenCanvas(0, 640, 0, fg.field_q, 0, 480);
           } else {
             ResourceArchive.field_p = aa.field_r.b(param1 - 7862);
             UiComponent.a((byte) 116, 2);

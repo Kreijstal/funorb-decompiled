@@ -11,7 +11,7 @@ final class wg {
     private int field_e;
     private wf field_b;
     static String[] field_r;
-    static qb field_u;
+    static AccountRequestState field_u;
     private int field_f;
     private int field_n;
     private int field_g;
@@ -126,7 +126,7 @@ final class wg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_u = (qb) null;
+            field_u = (AccountRequestState) null;
           }
           stackIn_3_0 = fk.field_h.a("", param0, 24874);
           return stackIn_3_0;
@@ -312,7 +312,7 @@ final class wg {
 
     static {
         field_r = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
-        field_u = new qb();
+        field_u = new AccountRequestState();
         field_k = new ql(1);
     }
 }

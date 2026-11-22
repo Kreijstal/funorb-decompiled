@@ -658,7 +658,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          kj.field_E = (java.awt.Canvas) ((Object) new hi((java.awt.Component) (this)));
+          kj.field_E = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) kj.field_E));
           kj.field_E.setSize(eh.field_n, ef.field_d);
           kj.field_E.setVisible(true);

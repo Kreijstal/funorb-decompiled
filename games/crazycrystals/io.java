@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class io extends rf {
-    static u field_P;
+    static AccountRequestState field_P;
     private int field_E;
     private dl field_K;
     private n field_L;
@@ -50,7 +50,7 @@ final class io extends rf {
           oj.field_H = param2;
           ka.field_m = param1;
           if (param0 != 4096) {
-            field_P = (u) null;
+            field_P = (AccountRequestState) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "io.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -67,7 +67,7 @@ final class io extends rf {
           return;
         }
         un var2 = (un) null;
-        io.a(89, 18, -26, (un) null, -101, 42);
+        io.createFullscreenCanvas(89, 18, -26, (un) null, -101, 42);
         field_I = null;
     }
 
@@ -514,13 +514,13 @@ final class io extends rf {
         return;
     }
 
-    final static dd a(int param0, int param1, int param2, un param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, un param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        dd var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        dd stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -530,14 +530,14 @@ final class io extends rf {
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (dd) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new dd();
+          var7 = new FullscreenFocusCanvas();
           if (param2 != 1038170945) {
             field_M = (am) null;
           }
-          var7.field_e = var8;
-          var7.field_e.add((java.awt.Component) ((Object) var7));
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param0, param4);
           var7.addFocusListener(var7);
           var7.requestFocus();
@@ -568,7 +568,7 @@ final class io extends rf {
     }
 
     static {
-        field_P = new u();
+        field_P = new AccountRequestState();
         field_J = "This level is available as a taster of the '<%0>' section.";
         field_I = new String[]{"Over 50 more mind-bending puzzles", "Lasers and explosions", "Spiders to kill, balls to trap", "Make everything work together", "Picture levels, variety levels ...", "... and some truly zany levels!", "12 exacting two-player puzzles", "Kill each other ...", "... or work and die together!", "5 crazy three-player puzzles", "And you thought two was bad!", "25 frantic arcade levels", "Race and outrun the bombs!", "Spiders and balls take chase!", "Dodge balls for England!", "Start avalanches and chain reactions!", null, null, "<col=FF0000>WARNING: serious challenges ahead."};
     }

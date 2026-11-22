@@ -248,7 +248,7 @@ public final class Chess extends gb {
           }
         }
         if (rm.field_R != null &&
-          rm.field_R.field_b) {
+          rm.field_R.focusLost) {
           b.a(true);
           om.a(119);
         }
@@ -316,7 +316,7 @@ public final class Chess extends gb {
                 } else {
                   if (var2 != 3) {
                     if (var2 == 4) {
-                      a.field_d = true;
+                      FullscreenFocusCanvas.field_d = true;
                       hj.a(0, -6, false);
                     }
                   } else {
@@ -622,22 +622,22 @@ public final class Chess extends gb {
         cm.field_s = jn.a("logo", 8221, "", mm.field_d);
         IntrusiveNode.field_g = jn.a("achievements", 8221, "", mm.field_d);
         ml.field_g = jn.a("instructions", 8221, "", mm.field_d);
-        g.field_g = jn.a("rankings", 8221, "", mm.field_d);
+        DelegatingCanvas.field_g = jn.a("rankings", 8221, "", mm.field_d);
         cm.field_s.field_a = -(cm.field_s.field_k / 2) + 320;
         cm.field_s.field_m = cm.field_s.field_h / 4;
         IntrusiveNode.field_g.field_m = cm.field_s.field_m;
         ml.field_g.field_m = cm.field_s.field_m;
-        g.field_g.field_m = cm.field_s.field_m;
+        DelegatingCanvas.field_g.field_m = cm.field_s.field_m;
         IntrusiveNode.field_g.field_a = 320 - IntrusiveNode.field_g.field_k / 2;
         ml.field_g.field_a = -(ml.field_g.field_k / 2) + 320;
-        g.field_g.field_a = 320 - g.field_g.field_k / 2;
+        DelegatingCanvas.field_g.field_a = 320 - DelegatingCanvas.field_g.field_k / 2;
         dc.field_n = new rk[12];
         if (param0 != 16) {
           return;
         }
         dc.field_n[7] = null;
         dc.field_n[8] = cm.field_s;
-        dc.field_n[4] = g.field_g;
+        dc.field_n[4] = DelegatingCanvas.field_g;
         dc.field_n[5] = ml.field_g;
         dc.field_n[1] = cm.field_s;
         dc.field_n[9] = null;
@@ -1186,7 +1186,7 @@ public final class Chess extends gb {
           11 != jc.field_f) {
           var2 = 1;
           if (null != pd.field_Rb) {
-            stackIn_10_0 = (g.a(-1, pd.field_Rb.field_Xb)) ? 1 : 0;
+            stackIn_10_0 = (DelegatingCanvas.a(-1, pd.field_Rb.field_Xb)) ? 1 : 0;
           } else {
             stackIn_10_0 = 0;
           }
@@ -1334,7 +1334,7 @@ public final class Chess extends gb {
                 }
                 ResourceArchive.a(5);
                 qk.field_h = ge.field_bb;
-                if (a.field_d) {
+                if (FullscreenFocusCanvas.field_d) {
                   fk.a(false, 15);
                 }
                 if (ia.field_l) {
@@ -1583,7 +1583,7 @@ public final class Chess extends gb {
         gm.a(6);
         vj.a(-97);
         rh.a(104);
-        a.a(-9);
+        FullscreenFocusCanvas.a(-9);
         gg.c(0);
         fe.a((byte) 106);
         aa.clearStaticReferences(0);
@@ -1704,7 +1704,7 @@ public final class Chess extends gb {
         lk.a(0);
         sg.a((byte) 124);
         la.a(69);
-        g.clearStaticReferences(-20905);
+        DelegatingCanvas.clearStaticReferences(-20905);
         qm.clearStaticReferences((byte) -6);
         qh.clearStaticReferences(-99);
         ByteStorage.clearStaticReferences(-24420);
@@ -1805,7 +1805,7 @@ public final class Chess extends gb {
         mh.a(3);
         tk.b((byte) 77);
         tf.clearStaticReferences(false);
-        ed.a((byte) -31);
+        AccountRequestState.releaseStatics((byte) -31);
         AccountServiceResult.a(0);
         e.a(99);
         h.a(1187598372);
@@ -2078,7 +2078,7 @@ public final class Chess extends gb {
         int var2 = 0;
         int var3;
         var3 = field_G;
-        ResourceArchive.field_l[0] = g.a((byte) -34, param0);
+        ResourceArchive.field_l[0] = DelegatingCanvas.a((byte) -34, param0);
         for (var2 = 1; var2 < 13; var2++) {
           if (ic.field_a[var2]) {
             ResourceArchive.field_l[var2] = s.field_S.a(va.field_c[var2], "", -12983);

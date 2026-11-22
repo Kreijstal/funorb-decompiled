@@ -464,7 +464,7 @@ final class he extends ip {
             hp.field_b[26].field_G = var4Lifetime25;
           }
           var3_ref_StringLifetime26 = ro.field_m;
-          var4Lifetime26 = ql.field_l;
+          var4Lifetime26 = DelegatingCanvas.field_l;
           if (hp.field_b[27] != null) {
             hp.field_b[27].field_G = var4Lifetime26;
             hp.field_b[27].field_F = var3_ref_StringLifetime26;
@@ -577,7 +577,7 @@ final class he extends ip {
           }
           var3_ref_StringLifetime42 = ld.field_h;
           var4Lifetime42 = to.field_f;
-          var5Lifetime8 = ek.field_a;
+          var5Lifetime8 = FullscreenFocusCanvas.field_a;
           if (null != gh.field_i[8]) {
             gh.field_i[8].field_t = var4Lifetime42;
             gh.field_i[8].field_o = var5Lifetime8;
@@ -819,7 +819,7 @@ final class he extends ip {
             gh.field_i[37].field_o = var5Lifetime37;
           }
           li.field_b[3] = tg.field_n;
-          li.field_b[0] = ek.field_d;
+          li.field_b[0] = FullscreenFocusCanvas.field_d;
           li.field_b[2] = df.field_d;
           li.field_b[1] = tp.field_z;
           ByteStorage.field_a[1] = lj.field_j;
@@ -829,7 +829,7 @@ final class he extends ip {
           cc.field_e = new String[254];
           for (var3 = 0; var3 < dc.field_p.length; var3++) {
             cc.field_e[var3 + wm.field_a] = od.field_b[var3];
-            cc.field_e[var3 + (rj.field_l + wm.field_a)] = ek.field_h[var3];
+            cc.field_e[var3 + (rj.field_l + wm.field_a)] = FullscreenFocusCanvas.field_h[var3];
           }
           for (var3Lifetime1 = 0; Raider.field_m.length > var3Lifetime1; var3Lifetime1++) {
             cc.field_e[var3Lifetime1 + uf.field_a] = j.field_O[var3Lifetime1];
@@ -861,7 +861,7 @@ final class he extends ip {
           ck.field_H.a("<img=1>", 104, "command");
           ck.field_H.a("<col=FF0000>", -117, "highlight");
           ck.field_H.a(ClientException.a(gg.field_e, -1), param0 ^ 23494, "raider");
-          ck.field_H.a(ClientException.a(af.field_a, param0 ^ 23486), -107, "monster");
+          ck.field_H.a(ClientException.a(AccountRequestState.field_a, param0 ^ 23486), -107, "monster");
           ck.field_H.a(ClientException.a(DungeonAssault.field_H, -1), 74, "trap");
           ck.field_H.a(ClientException.a(ki.field_e, -1), -106, "guardian");
           ck.field_H.a(ClientException.a(ak.field_m, -1), param0 + 23560, "raiders");
@@ -1042,19 +1042,19 @@ final class he extends ip {
             DirectByteStorage.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "signup_text");
             lg.field_u = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "menu_text");
             MouseWheelInput.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button_frame");
-            ql.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
+            DelegatingCanvas.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
             dc.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
             tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
             var27 = gf.field_b;
             var2 = gf.field_i;
             var3 = gf.field_c;
             gf.a(rp.field_e);
-            var11 = new cn(4 + ql.field_c.field_y, ql.field_c.field_v + 4);
+            var11 = new cn(4 + DelegatingCanvas.field_c.field_y, DelegatingCanvas.field_c.field_v + 4);
             var11.e();
-            ql.field_c.c(2, 2, uj.field_d);
+            DelegatingCanvas.field_c.c(2, 2, uj.field_d);
             uc.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0, false);
-            ql.field_c = var11;
-            al.field_j = ql.field_c.b();
+            DelegatingCanvas.field_c = var11;
+            al.field_j = DelegatingCanvas.field_c.b();
             var12 = new cn(195, 221);
             var6 = var12.field_y / 2;
             var12.e();
@@ -1241,27 +1241,27 @@ final class he extends ip {
             stackIn_67_0 = (1 == o.field_i.field_b);
             cf.a(stackIn_67_0, rm.field_T, 126, mi.field_f);
           }
-          if (ql.field_c != null) {
-            var2Lifetime4 = -(ql.field_c.field_G / 2) + 357;
-            ql.field_c.h(-ql.field_c.field_E + 269, var2Lifetime4);
+          if (DelegatingCanvas.field_c != null) {
+            var2Lifetime4 = -(DelegatingCanvas.field_c.field_G / 2) + 357;
+            DelegatingCanvas.field_c.h(-DelegatingCanvas.field_c.field_E + 269, var2Lifetime4);
             al.field_j.h(586, var2Lifetime4);
             if (var2Lifetime4 < eh.field_h &&
-              var2Lifetime4 + ql.field_c.field_v > eh.field_h) {
+              var2Lifetime4 + DelegatingCanvas.field_c.field_v > eh.field_h) {
               var3Lifetime5 = 40 + (la.a(jc.field_e << 4, (byte) 86) * 40 >> 16);
               if (var3Lifetime5 <= 0) {
                 qh.a(245);
                 en.field_b[me.field_f].h(269, 340);
                 return;
               }
-              if (hj.field_S > -ql.field_c.field_y + 269 &&
+              if (hj.field_S > -DelegatingCanvas.field_c.field_y + 269 &&
                 hj.field_S < 269) {
-                ql.field_c.b(269 - ql.field_c.field_E - 1, var2Lifetime4 - 1, var3Lifetime5);
-                ql.field_c.b(-ql.field_c.field_E + 269 + 1, -1 + var2Lifetime4, var3Lifetime5);
-                ql.field_c.b(-ql.field_c.field_E + 269 - 1, 1 + var2Lifetime4, var3Lifetime5);
-                ql.field_c.b(269 - ql.field_c.field_E + 1, 1 + var2Lifetime4, var3Lifetime5);
+                DelegatingCanvas.field_c.b(269 - DelegatingCanvas.field_c.field_E - 1, var2Lifetime4 - 1, var3Lifetime5);
+                DelegatingCanvas.field_c.b(-DelegatingCanvas.field_c.field_E + 269 + 1, -1 + var2Lifetime4, var3Lifetime5);
+                DelegatingCanvas.field_c.b(-DelegatingCanvas.field_c.field_E + 269 - 1, 1 + var2Lifetime4, var3Lifetime5);
+                DelegatingCanvas.field_c.b(269 - DelegatingCanvas.field_c.field_E + 1, 1 + var2Lifetime4, var3Lifetime5);
               } else {
                 if (hj.field_S > 586 &&
-                  ql.field_c.field_y + 586 > hj.field_S) {
+                  DelegatingCanvas.field_c.field_y + 586 > hj.field_S) {
                   al.field_j.b(585, -1 + var2Lifetime4, var3Lifetime5);
                   al.field_j.b(587, var2Lifetime4 - 1, var3Lifetime5);
                   al.field_j.b(585, 1 + var2Lifetime4, var3Lifetime5);

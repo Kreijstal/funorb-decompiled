@@ -58,7 +58,7 @@ final class ga {
               }
             } else {
               SoftwareRasterizer.a();
-              ra.a(320, 150, 240);
+              FullscreenFocusCanvas.a(320, 150, 240);
               lj.a(0, param2, 0, (byte) -128);
             }
           } else {
@@ -130,7 +130,7 @@ final class ga {
               }
             } else {
               SoftwareRasterizer.a();
-              ra.a(320, 150, 240);
+              FullscreenFocusCanvas.a(320, 150, 240);
               lj.a(0, param2, 0, (byte) -128);
             }
           } else {

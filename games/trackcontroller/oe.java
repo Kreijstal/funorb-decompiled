@@ -5,7 +5,7 @@ final class oe {
     static String field_d;
     static int field_e;
     static int field_c;
-    static le field_b;
+    static AccountRequestState field_b;
     private int[] field_a;
 
     public static void clearStaticReferences(int param0) {
@@ -144,6 +144,6 @@ final class oe {
 
     static {
         field_d = "Achievements";
-        field_b = new le();
+        field_b = new AccountRequestState();
     }
 }

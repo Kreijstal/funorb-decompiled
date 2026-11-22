@@ -148,7 +148,7 @@ final class ai {
 
     final static void a(int param0, vh param1) {
         try {
-          ek.field_b.field_A.a(false, ha.field_k, tl.field_k, param0, param1);
+          FullscreenFocusCanvas.field_b.field_A.a(false, ha.field_k, tl.field_k, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ai.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

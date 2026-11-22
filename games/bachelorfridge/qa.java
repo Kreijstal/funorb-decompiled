@@ -10,7 +10,7 @@ final class qa extends k {
         }
         TeleportAnimation.e(-116);
         hp.field_c = -3;
-        if (!af.field_a) {
+        if (!AccountRequestState.field_a) {
           StatusEffectInfo.a(true);
           sia.field_h = false;
           lg.a(true, -4, true);

@@ -85,7 +85,7 @@ class fe extends IntrusiveNode {
     }
 
     fe(String param0, rm param1) {
-        this(param0, bd.field_c.field_b, param1);
+        this(param0, AccountRequestState.field_c.field_b, param1);
     }
 
     public final String toString() {
@@ -499,7 +499,7 @@ class fe extends IntrusiveNode {
         }
         var6 = a.a(true);
         if (var6 != null) {
-          bd.field_c.a(ng.field_l, lj.field_q, var6, (byte) 49);
+          AccountRequestState.field_c.a(ng.field_l, lj.field_q, var6, (byte) 49);
         }
     }
 

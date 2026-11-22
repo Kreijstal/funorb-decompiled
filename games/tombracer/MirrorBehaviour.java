@@ -124,7 +124,7 @@ final class MirrorBehaviour extends Behaviour {
             this.field_o = null;
             return false;
           }
-          var6 = wm.clampedFixedRatio(4096, var5_int, -61);
+          var6 = PlayerViewportLayout.clampedFixedRatio(4096, var5_int, -61);
           param2.shortenTo(var6, (byte) 47);
           this.field_o = param2;
           this.field_s = this.beamSegmentLength(true, param2);

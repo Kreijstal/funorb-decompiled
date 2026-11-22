@@ -925,7 +925,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var2 = ec.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          DirectByteStorage.field_h = (java.awt.Canvas) ((Object) new g((java.awt.Component) (this)));
+          DirectByteStorage.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DirectByteStorage.field_h));
           DirectByteStorage.field_h.setSize(tm.field_c, em.field_O);
           DirectByteStorage.field_h.setVisible(true);

@@ -60,9 +60,9 @@ abstract class ng {
           !(gk.field_i.length >= param2)) {
           gk.field_i = new int[2 * param2];
         }
-        if (th.field_c == null ||
-          !(th.field_c.length >= param2)) {
-          th.field_c = new int[2 * param2];
+        if (DelegatingCanvas.field_c == null ||
+          !(DelegatingCanvas.field_c.length >= param2)) {
+          DelegatingCanvas.field_c = new int[2 * param2];
         }
         if (null == ij.field_b ||
           !(param2 <= ij.field_b.length)) {

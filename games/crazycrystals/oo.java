@@ -216,10 +216,10 @@ final class oo extends se {
           if (!ok.field_c.a(-20402, "commonui")) {
             return 60;
           }
-          if (!dd.field_a.a((byte) 102)) {
+          if (!FullscreenFocusCanvas.field_a.a((byte) 102)) {
             return 70;
           }
-          if (!dd.field_a.a(false)) {
+          if (!FullscreenFocusCanvas.field_a.a(false)) {
             return 80;
           }
         } else {
@@ -246,10 +246,10 @@ final class oo extends se {
           if (!ok.field_c.a(-20402, "commonui")) {
             return 80;
           }
-          if (!dd.field_a.a((byte) 102)) {
+          if (!FullscreenFocusCanvas.field_a.a((byte) 102)) {
             return 82;
           }
-          if (!dd.field_a.a(false)) {
+          if (!FullscreenFocusCanvas.field_a.a(false)) {
             return 86;
           }
         }

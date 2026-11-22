@@ -123,7 +123,7 @@ final class o extends IntrusiveNode {
           if (!MouseInput.a(116, param2)) {
             return false;
           }
-          if (param2 == ek.field_c) {
+          if (param2 == FullscreenFocusCanvas.field_c) {
             return true;
           }
           param2 = param2 & 127;

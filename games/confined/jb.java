@@ -664,7 +664,7 @@ final class jb {
           if (var7.field_d == 5 ||
             var7.field_d == 6) {
             var9Lifetime1 = pn.field_a.c(pc.field_k);
-            var10Lifetime1 = pn.field_a.c(ie.field_c);
+            var10Lifetime1 = pn.field_a.c(DelegatingCanvas.field_c);
             if (var10Lifetime1 > var9Lifetime1) {
               var9Lifetime1 = var10Lifetime1;
             }
@@ -903,7 +903,7 @@ final class jb {
                 if (var10 > var8) {
                   var8 = var10;
                 }
-                var10 = pn.field_a.c(ie.field_c);
+                var10 = pn.field_a.c(DelegatingCanvas.field_c);
                 if (var9 < var10) {
                   var9 = var10;
                 }
@@ -923,7 +923,7 @@ final class jb {
                   if (qc.field_n) {
                     stackIn_48_0 = pc.field_k;
                   } else {
-                    stackIn_48_0 = ie.field_c;
+                    stackIn_48_0 = DelegatingCanvas.field_c;
                   }
                   var11_ref_String = stackIn_48_0;
                 } else {

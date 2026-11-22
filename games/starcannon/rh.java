@@ -97,7 +97,7 @@ final class rh extends IntrusiveNode {
 
     final static hb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         hb var8 = new hb(param7, param0, param2, param4, param3, param1);
-        hi.field_f.b(101, var8);
+        DelegatingCanvas.field_f.b(101, var8);
         if (param5 != -1893600464) {
           rh.clearStaticReferences(false);
         }

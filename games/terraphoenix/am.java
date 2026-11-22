@@ -36,8 +36,8 @@ final class am extends WidgetContainer implements n {
           }
           gi.a(param3, param2, param0, param4 - 2018);
           nd.c((byte) -11);
-          IsaacCipher.field_f = og.field_a;
-          pe.field_a = og.field_a;
+          IsaacCipher.field_f = AccountRequestState.field_a;
+          pe.field_a = AccountRequestState.field_a;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "am.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

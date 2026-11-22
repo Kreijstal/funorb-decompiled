@@ -151,7 +151,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.field_wb = new UiComponent(0L, (UiComponent) null);
           this.addChild(-127, this.field_wb);
           if (param11 != null) {
-            this.field_Bb = new UiComponent(0L, param8, fpa.field_a);
+            this.field_Bb = new UiComponent(0L, param8, AccountRequestState.field_a);
             this.field_Bb.field_ib = 11184810;
             this.field_Bb.field_z = 1;
             this.field_wb.addChild(-122, this.field_Bb);

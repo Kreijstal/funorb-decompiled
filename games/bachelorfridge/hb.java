@@ -147,9 +147,9 @@ final class hb extends aba {
           HailAnimation.field_A.a(param3, 31407, -DisableSpecial.field_r.field_sb + (ResetAnimation.field_w.field_sb - param1), param1, 0);
           var7 = var7 - (param3 + 2);
           DisableSpecial.field_r.a(param3, 31407, DisableSpecial.field_r.field_sb, param1 + HailAnimation.field_A.field_sb, 0);
-          af.field_b.a((byte) -58, -5 + var7, 5, 5, param5 + 2 + 485 + param1, param5, 2);
+          AccountRequestState.field_b.a((byte) -58, -5 + var7, 5, 5, param5 + 2 + 485 + param1, param5, 2);
           if (ao.field_d != null) {
-            ao.field_d.a(af.field_b.field_kb, af.field_b.field_p, (byte) 59, af.field_b.field_sb, af.field_b.field_rb);
+            ao.field_d.a(AccountRequestState.field_b.field_kb, AccountRequestState.field_b.field_p, (byte) 59, AccountRequestState.field_b.field_sb, AccountRequestState.field_b.field_rb);
           }
           var8 = -var6_int - param1 + i.field_a.field_sb;
           var9 = var8 / 2;

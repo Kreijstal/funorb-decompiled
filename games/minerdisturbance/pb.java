@@ -178,11 +178,11 @@ final class pb {
 
     final static void a(int param0) {
         mb.field_b.n(21974);
-        if (bd.field_e == null) {
-          bd.field_e = new jl(mb.field_b, ic.field_i);
+        if (AccountRequestState.field_e == null) {
+          AccountRequestState.field_e = new jl(mb.field_b, ic.field_i);
         }
         int var1 = 67 / ((-18 - param0) / 56);
-        mb.field_b.b(1, bd.field_e);
+        mb.field_b.b(1, AccountRequestState.field_e);
     }
 
     public static void c(int param0) {

@@ -8,7 +8,7 @@ final class rg {
     static String field_a;
 
     final static void a(db[] param0, int param1, byte param2, int param3) {
-        ki.field_a = new wh(param0);
+        AccountRequestState.field_a = new wh(param0);
         wh.field_f = param3;
         if (param2 != -105) {
           return;

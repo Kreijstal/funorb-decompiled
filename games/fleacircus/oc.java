@@ -233,7 +233,7 @@ final class oc {
           cb.field_v = ui.field_ob;
           if (param2 == 255) {
             stackIn_12_0 = !(13 <= ug.field_c);
-            BoundedRandomAccessFile.field_b = ld.createAccountSuccessResult(stackIn_12_0, (byte) 42);
+            BoundedRandomAccessFile.field_b = DelegatingCanvas.createAccountSuccessResult(stackIn_12_0, (byte) 42);
             return;
           }
           if (param2 >= 100 &&

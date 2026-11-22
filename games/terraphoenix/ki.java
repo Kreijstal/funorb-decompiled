@@ -420,14 +420,14 @@ final class ki extends vj {
         if (kj.field_d != var6Lifetime1 &&
           var6Lifetime1 != oh.field_b) {
           if (qf.field_d == var6Lifetime1) {
-            var14 = og.field_c[2];
+            var14 = AccountRequestState.field_c[2];
             var14.d(var9, -(var14.field_t >> 1) + var10, 256);
           } else if (var6Lifetime1 == dg.field_c) {
-            var15 = og.field_c[1];
+            var15 = AccountRequestState.field_c[1];
             var15.d(var9, -(var15.field_t >> 1) + var10, 256);
           }
         } else {
-          var16 = og.field_c[0];
+          var16 = AccountRequestState.field_c[0];
           var11 = var16.field_q << 1;
           var12 = var16.field_u << 1;
           if (this.field_U != null &&

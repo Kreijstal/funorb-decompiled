@@ -7,11 +7,11 @@ final class mq {
     static int[] field_b;
     static PlayerProfile field_e;
     private OpenGlToolkit field_c;
-    private cua field_f;
+    private LegacyOpenGlShaderProgram field_f;
 
     final boolean ensureShader(byte param0) {
-        fca var3 = null;
-        fca var2 = null;
+        LegacyOpenGlShaderObject var3 = null;
+        LegacyOpenGlShaderObject var2 = null;
         if (param0 < 2) {
           this.ensureShader((byte) 62);
         }
@@ -21,7 +21,7 @@ final class mq {
           var3 = LegacyOpenGlSpecularEffect.compileShader(64, this.field_c, 35632, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
           var2 = var3;
           if (var2 != null) {
-            this.field_f = dga.linkShaderProgram(21885, this.field_c, new fca[]{var3});
+            this.field_f = dga.linkShaderProgram(21885, this.field_c, new LegacyOpenGlShaderObject[]{var3});
           }
         }
         return this.field_f != null ? true : false;

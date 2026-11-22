@@ -164,11 +164,11 @@ final class pma extends k {
           bfa.field_a = false;
         }
         if (o.d((byte) 54)) {
-          af.field_a = false;
+          AccountRequestState.field_a = false;
         } else {
           bf.field_h[CreatureType.field_n].a(108);
           ua.field_b = true;
-          af.field_a = true;
+          AccountRequestState.field_a = true;
           BattleCreature.d(false);
         }
     }

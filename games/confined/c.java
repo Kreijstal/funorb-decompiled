@@ -857,7 +857,7 @@ final class c extends sc {
           }
           var2Lifetime58 = wm.a("nMetresToLevelN", (byte) 39);
           if (null != var2Lifetime58) {
-            ve.field_d = va.a(0, var2Lifetime58);
+            AccountRequestState.field_d = va.a(0, var2Lifetime58);
           }
           var2Lifetime59 = wm.a("homingAlienShots", (byte) 101);
           if (null != var2Lifetime59) {
@@ -893,7 +893,7 @@ final class c extends sc {
           }
           var2Lifetime67 = wm.a("devQuoteIanT", (byte) 53);
           if (null != var2Lifetime67) {
-            ve.field_e = va.a(0, var2Lifetime67);
+            AccountRequestState.field_e = va.a(0, var2Lifetime67);
           }
           var2Lifetime68 = wm.a("collisionCourse", (byte) 74);
           if (null != var2Lifetime68) {
@@ -1153,7 +1153,7 @@ final class c extends sc {
           }
           var2Lifetime132 = wm.a("powerUpsAwardedForScore", (byte) 105);
           if (null != var2Lifetime132) {
-            ve.field_c = va.a(0, var2Lifetime132);
+            AccountRequestState.field_c = va.a(0, var2Lifetime132);
           }
           var2Lifetime133 = wm.a("extraLives", (byte) 81);
           if (null != var2Lifetime133) {
@@ -1205,7 +1205,7 @@ final class c extends sc {
           }
           var2Lifetime145 = wm.a("viewExternal", (byte) 92);
           if (null != var2Lifetime145) {
-            ie.field_c = va.a(0, var2Lifetime145);
+            DelegatingCanvas.field_c = va.a(0, var2Lifetime145);
           }
           var2Lifetime146 = wm.a("brightnessColon", (byte) 115);
           if (null != var2Lifetime146) {

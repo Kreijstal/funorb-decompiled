@@ -25,7 +25,7 @@ final class qm {
         if (!(he.field_e <= param0)) {
           bc.field_d = param0;
         }
-        if (param0 > bd.field_g) {
+        if (param0 > AccountRequestState.field_g) {
           v.field_c = param0;
         }
         jk.field_db[fb.field_c] = param4;

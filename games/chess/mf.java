@@ -474,7 +474,7 @@ class mf extends IntrusiveNode {
     }
 
     mf(String param0, rg param1) {
-        this(param0, a.field_a.field_f, param1);
+        this(param0, FullscreenFocusCanvas.field_a.field_f, param1);
     }
 
     void a(int param0, int param1, int param2, int param3) {
@@ -699,7 +699,7 @@ class mf extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        a.field_a.a(var5, fm.field_S, 106, vn.field_Db);
+        FullscreenFocusCanvas.field_a.a(var5, fm.field_S, 106, vn.field_Db);
     }
 
     protected mf() {

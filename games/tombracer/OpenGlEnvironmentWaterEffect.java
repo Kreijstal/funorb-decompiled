@@ -6,7 +6,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private HardwareWaterTextures field_f;
     private OpenGlShaderProgram field_k;
     private boolean field_h;
-    static wm field_j;
+    static PlayerViewportLayout leftViewportLayout;
     static ToolkitSprite field_d;
     static UiComponent field_i;
     static QuickChatParamType field_g;
@@ -121,7 +121,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     public static void releaseStatics(int param0) {
         field_i = null;
-        field_j = null;
+        leftViewportLayout = null;
         if (param0 == 13936) {
           field_g = null;
           field_d = null;
@@ -217,7 +217,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     }
 
     static {
-        field_j = new wm();
+        leftViewportLayout = new PlayerViewportLayout();
         field_g = new QuickChatParamType(8, 0, 4, 1);
     }
 }

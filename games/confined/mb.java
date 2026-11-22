@@ -16,19 +16,19 @@ final class mb extends ka {
             return false;
           }
           if (null == mg.field_a) {
-            mg.field_a = ld.field_k.a(nd.field_s, -90, af.field_ab);
+            mg.field_a = ld.field_k.requestDirectSocket(nd.field_s, -90, af.field_ab);
           }
-          if (mg.field_a.field_g == 0) {
+          if (mg.field_a.status == 0) {
             return false;
           }
           long dupTemp$0 = ri.a(param1 - 20);
           pc.field_a = dupTemp$0;
           m.field_b = dupTemp$0;
-          if (mg.field_a.field_g != 1) {
+          if (mg.field_a.status != 1) {
             lk.field_d = i.field_q;
           } else {
             try {
-              kl.field_G = new vd((java.net.Socket) (mg.field_a.field_f), ld.field_k);
+              kl.field_G = new vd((java.net.Socket) (mg.field_a.result), ld.field_k);
               var4 = e.field_c;
               var5 = var4;
               vh.field_a.position = 0;
@@ -54,7 +54,7 @@ final class mb extends ka {
 
     final static void a(String param0, boolean param1, Throwable param2) {
         try {
-          df stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -66,10 +66,10 @@ final class mb extends ka {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          bc var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
-          df var7 = null;
+          PlatformTaskDispatcher var7 = null;
           String var8 = null;
           String var9 = null;
           String var10 = null;
@@ -92,8 +92,8 @@ final class mb extends ka {
             var10 = pi.a("&", "%26", 22232, var9);
             var11 = pi.a("#", "%23", 22232, var10);
             if (!param1) {
-              var7 = (df) null;
-              mb.a((Object) null, 13, (df) null);
+              var7 = (PlatformTaskDispatcher) null;
+              mb.a((Object) null, 13, (PlatformTaskDispatcher) null);
             }
             if (kc.field_k == null) {
               return;
@@ -113,12 +113,12 @@ final class mb extends ka {
               stackIn_15_3 = null;
               stackIn_15_6 = kc.field_f;
             }
-            var4 = ((df) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(df.field_b).append("&v2=").append(df.field_s).append("&e=").append(var11).toString()));
-            while (var4.field_g == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_b).append("&v2=").append(PlatformTaskDispatcher.field_s).append("&e=").append(var11).toString()));
+            while (var4.status == 0) {
               jd.a(1, 1L);
             }
-            if (var4.field_g == 1) {
-              var5 = (DataInputStream) (var4.field_f);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }
@@ -163,7 +163,7 @@ final class mb extends ka {
         }
     }
 
-    final static void a(Object param0, int param1, df param2) {
+    final static void a(Object param0, int param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

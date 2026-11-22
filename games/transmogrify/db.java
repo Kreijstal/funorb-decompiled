@@ -5,7 +5,7 @@ final class db {
     static int[] field_e;
     private int[] field_c;
     static int field_d;
-    static pd field_a;
+    static AccountRequestState field_a;
     static String[] field_b;
     static String field_f;
 

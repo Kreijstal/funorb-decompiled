@@ -484,7 +484,7 @@ final class ka extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
+    final static void exitFullscreenFrame(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

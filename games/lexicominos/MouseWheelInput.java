@@ -4,7 +4,7 @@
 abstract class MouseWheelInput {
     static int[] field_b;
     static String[] field_g;
-    static ki field_c;
+    static AccountRequestState field_c;
     static String field_e;
     static boolean field_d;
     static int field_a;

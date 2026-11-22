@@ -176,7 +176,7 @@ final class hc {
               fl.field_b[1] = 5;
             }
           } else {
-            var3_int = bk.a((byte) 3, bb.a(ef.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
+            var3_int = bk.a((byte) 3, bb.a(AccountRequestState.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(w.field_c[var5])) {

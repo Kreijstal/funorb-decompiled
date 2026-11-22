@@ -27,7 +27,7 @@ class IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         try {
           ia.field_p[param5] = param6;
-          ne.field_b[param5] = param0;
+          AccountRequestState.field_b[param5] = param0;
           bd.field_m[param5] = param1;
           il.field_q[param5] = param4;
           int var7_int = -98 / ((9 - param3) / 48);

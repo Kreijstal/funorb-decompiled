@@ -6,7 +6,7 @@ final class pe {
     static String[] field_c;
     private static long[] field_d;
     static int[] field_f;
-    static og field_a;
+    static AccountRequestState field_a;
     static int field_e;
 
     final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
@@ -37,7 +37,7 @@ final class pe {
         field_d = null;
         field_a = null;
         if (param0 != -107) {
-          field_a = (og) null;
+          field_a = (AccountRequestState) null;
         }
     }
 

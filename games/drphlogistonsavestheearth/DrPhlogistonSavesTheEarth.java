@@ -225,7 +225,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             sc.a(-1, true, ad.field_q);
           }
           if (df.field_l != null &&
-            df.field_l.field_h) {
+            df.field_l.focusLost) {
             qk.a(true);
             vj.b((byte) 72);
           }
@@ -307,7 +307,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                     var2_int == 2) {
                     if (null != df.field_l) {
                       hb.a(-5, df.field_l);
-                      df.field_l.a(sb.field_d, true);
+                      df.field_l.exitFullscreen(sb.field_d, true);
                       df.field_l = null;
                     }
                     if (var2_int == 2) {
@@ -515,7 +515,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           m.clearStaticReferences(!param0);
           na.a((byte) -33);
           sb.a((byte) 33);
-          q.a(25270);
+          FullscreenFocusCanvas.a(25270);
           wg.clearStaticReferences(2);
           ng.clearStaticReferences(0);
           cf.clearStaticReferences(-127);
@@ -618,7 +618,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ce.clearStaticReferences(-105);
           hc.clearStaticReferences((byte) -98);
           hm.c(-99);
-          ua.clearStaticReferences((byte) 50);
+          DelegatingCanvas.clearStaticReferences((byte) 50);
           rc.a(2);
           qf.a((byte) 64);
           ByteStorage.clearStaticReferences(67);
@@ -707,7 +707,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           vc.clearStaticReferences(0);
           bb.clearStaticReferences(param0);
           wk.d(80);
-          qb.clearStaticReferences(false);
+          AccountRequestState.clearStaticReferences(false);
           AccountServiceResult.clearStaticReferences(120);
           sd.a(2);
           lk.clearStaticReferences(-27996);
@@ -760,13 +760,13 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException var2 = null;
         try {
           if (null != df.field_m) {
-            q.a(df.field_m, 255);
+            FullscreenFocusCanvas.a(df.field_m, 255);
             df.field_m = null;
             tc.a((byte) 86);
           }
           kf.field_d = al.a(3, 1);
           aa.field_b = al.a(3, 2);
-          ua.field_b = al.a(3, 3);
+          DelegatingCanvas.field_b = al.a(3, 3);
           ui.field_a = al.a(3, 4);
           df.field_a = al.a(3, 5);
           mh.field_a = al.a(3, 6);
@@ -1359,7 +1359,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (var2Lifetime5 != null) {
             nl.field_r[7] = var2Lifetime5.a().a(qk.field_g);
           }
-          nl.field_r[8] = tk.a(ua.field_b, "", "DrP_8_respawn").c().a(qk.field_g);
+          nl.field_r[8] = tk.a(DelegatingCanvas.field_b, "", "DrP_8_respawn").c().a(qk.field_g);
           var2Lifetime6 = kb.a(aa.field_b, "", "DrP_9_final_death");
           if (null != var2Lifetime6) {
             nl.field_r[9] = var2Lifetime6.a().a(qk.field_g);
@@ -1376,7 +1376,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (var2Lifetime9 != null) {
             nl.field_r[12] = var2Lifetime9.a().a(qk.field_g);
           }
-          nl.field_r[13] = tk.a(ua.field_b, "", "DrP_13_probes_die").c().a(qk.field_g);
+          nl.field_r[13] = tk.a(DelegatingCanvas.field_b, "", "DrP_13_probes_die").c().a(qk.field_g);
           var2Lifetime10 = kb.a(aa.field_b, "", "DrP_14_glider_fire");
           if (null != var2Lifetime10) {
             nl.field_r[14] = var2Lifetime10.a().a(qk.field_g);
@@ -1401,9 +1401,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != var2Lifetime15) {
             nl.field_r[19] = var2Lifetime15.a().a(qk.field_g);
           }
-          nl.field_r[20] = tk.a(ua.field_b, "", "DrP_20_as_bot_die").c().a(qk.field_g);
-          nl.field_r[21] = tk.a(ua.field_b, "", "DrP_21_dropship_move").c().a(qk.field_g);
-          nl.field_r[22] = tk.a(ua.field_b, "", "DrP_22_dropship_chrg").c().a(qk.field_g);
+          nl.field_r[20] = tk.a(DelegatingCanvas.field_b, "", "DrP_20_as_bot_die").c().a(qk.field_g);
+          nl.field_r[21] = tk.a(DelegatingCanvas.field_b, "", "DrP_21_dropship_move").c().a(qk.field_g);
+          nl.field_r[22] = tk.a(DelegatingCanvas.field_b, "", "DrP_22_dropship_chrg").c().a(qk.field_g);
           var2Lifetime16 = kb.a(aa.field_b, "", "DrP_23_dropship_spawn");
           if (var2Lifetime16 != null) {
             nl.field_r[23] = var2Lifetime16.a().a(qk.field_g);
@@ -1416,7 +1416,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != var2Lifetime18) {
             nl.field_r[25] = var2Lifetime18.a().a(qk.field_g);
           }
-          nl.field_r[26] = tk.a(ua.field_b, "", "DrP_26_dropship_die").c().a(qk.field_g);
+          nl.field_r[26] = tk.a(DelegatingCanvas.field_b, "", "DrP_26_dropship_die").c().a(qk.field_g);
           var2Lifetime19 = kb.a(aa.field_b, "", "DrP_27_spacemine_exp");
           if (null != var2Lifetime19) {
             nl.field_r[27] = var2Lifetime19.a().a(qk.field_g);
@@ -1425,7 +1425,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (var2Lifetime20 != null) {
             nl.field_r[28] = var2Lifetime20.a().a(qk.field_g);
           }
-          nl.field_r[29] = tk.a(ua.field_b, "", "DrP_29_miner_move").c().a(qk.field_g);
+          nl.field_r[29] = tk.a(DelegatingCanvas.field_b, "", "DrP_29_miner_move").c().a(qk.field_g);
           var2Lifetime21 = kb.a(aa.field_b, "", "DrP_30_miner_die");
           if (null != var2Lifetime21) {
             nl.field_r[30] = var2Lifetime21.a().a(qk.field_g);
@@ -1438,8 +1438,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != var2Lifetime23) {
             nl.field_r[32] = var2Lifetime23.a().a(qk.field_g);
           }
-          nl.field_r[33] = tk.a(ua.field_b, "", "DrP_33_battlecarr_move").c().a(qk.field_g);
-          nl.field_r[34] = tk.a(ua.field_b, "", "DrP_34_battlecarr_charge").c().a(qk.field_g);
+          nl.field_r[33] = tk.a(DelegatingCanvas.field_b, "", "DrP_33_battlecarr_move").c().a(qk.field_g);
+          nl.field_r[34] = tk.a(DelegatingCanvas.field_b, "", "DrP_34_battlecarr_charge").c().a(qk.field_g);
           var2Lifetime24 = kb.a(aa.field_b, "", "DrP_35_battlecarr_fire");
           if (var2Lifetime24 != null) {
             nl.field_r[35] = var2Lifetime24.a().a(qk.field_g);
@@ -1452,8 +1452,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (var2Lifetime26 != null) {
             nl.field_r[37] = var2Lifetime26.a().a(qk.field_g);
           }
-          nl.field_r[38] = tk.a(ua.field_b, "", "DrP_38_battlecarr_die").c().a(qk.field_g);
-          nl.field_r[39] = tk.a(ua.field_b, "", "DrP_39_bunkers_hit").c().a(qk.field_g);
+          nl.field_r[38] = tk.a(DelegatingCanvas.field_b, "", "DrP_38_battlecarr_die").c().a(qk.field_g);
+          nl.field_r[39] = tk.a(DelegatingCanvas.field_b, "", "DrP_39_bunkers_hit").c().a(qk.field_g);
           var2Lifetime27 = kb.a(aa.field_b, "", "DrP_40_bunkers_die");
           if (null != var2Lifetime27) {
             nl.field_r[40] = var2Lifetime27.a().a(qk.field_g);
@@ -1482,7 +1482,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (var2Lifetime33 != null) {
             nl.field_r[46] = var2Lifetime33.a().a(qk.field_g);
           }
-          nl.field_r[47] = tk.a(ua.field_b, "", "DrP_47_attackcop_move").c().a(qk.field_g);
+          nl.field_r[47] = tk.a(DelegatingCanvas.field_b, "", "DrP_47_attackcop_move").c().a(qk.field_g);
           var2Lifetime34 = kb.a(aa.field_b, "", "DrP_48_attackcop_fire");
           if (null != var2Lifetime34) {
             nl.field_r[48] = var2Lifetime34.a().a(qk.field_g);
@@ -1491,8 +1491,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (var2Lifetime35 != null) {
             nl.field_r[49] = var2Lifetime35.a().a(qk.field_g);
           }
-          nl.field_r[50] = tk.a(ua.field_b, "", "DrP_50_attackcop_die").c().a(qk.field_g);
-          nl.field_r[51] = tk.a(ua.field_b, "", "DrP_51_doomcop_move").c().a(qk.field_g);
+          nl.field_r[50] = tk.a(DelegatingCanvas.field_b, "", "DrP_50_attackcop_die").c().a(qk.field_g);
+          nl.field_r[51] = tk.a(DelegatingCanvas.field_b, "", "DrP_51_doomcop_move").c().a(qk.field_g);
           var2Lifetime36 = kb.a(aa.field_b, "", "DrP_52_doomcop_fire");
           if (var2Lifetime36 != null) {
             nl.field_r[52] = var2Lifetime36.a().a(qk.field_g);
@@ -1501,12 +1501,12 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != var2Lifetime37) {
             nl.field_r[53] = var2Lifetime37.a().a(qk.field_g);
           }
-          nl.field_r[54] = tk.a(ua.field_b, "", "DrP_54_doomcop_die").c().a(qk.field_g);
+          nl.field_r[54] = tk.a(DelegatingCanvas.field_b, "", "DrP_54_doomcop_die").c().a(qk.field_g);
           var2Lifetime38 = kb.a(aa.field_b, "", "DrP_55_floatbat_move");
           if (null != var2Lifetime38) {
             nl.field_r[55] = var2Lifetime38.a().a(qk.field_g);
           }
-          nl.field_r[56] = tk.a(ua.field_b, "", "DrP_56_floatbat_chrg").c().a(qk.field_g);
+          nl.field_r[56] = tk.a(DelegatingCanvas.field_b, "", "DrP_56_floatbat_chrg").c().a(qk.field_g);
           var2Lifetime39 = kb.a(aa.field_b, "", "DrP_57_floatbat_fire");
           if (null != var2Lifetime39) {
             nl.field_r[57] = var2Lifetime39.a().a(qk.field_g);
@@ -1519,12 +1519,12 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != var2Lifetime41) {
             nl.field_r[59] = var2Lifetime41.a().a(qk.field_g);
           }
-          nl.field_r[60] = tk.a(ua.field_b, "", "DrP_60_floatbat_die").c().a(qk.field_g);
+          nl.field_r[60] = tk.a(DelegatingCanvas.field_b, "", "DrP_60_floatbat_die").c().a(qk.field_g);
           var2Lifetime42 = kb.a(aa.field_b, "", "DrP_61_alcomship_move");
           if (var2Lifetime42 != null) {
             nl.field_r[61] = var2Lifetime42.a().a(qk.field_g);
           }
-          nl.field_r[62] = tk.a(ua.field_b, "", "DrP_62_alcomship_chrg").c().a(qk.field_g);
+          nl.field_r[62] = tk.a(DelegatingCanvas.field_b, "", "DrP_62_alcomship_chrg").c().a(qk.field_g);
           var2Lifetime43 = kb.a(aa.field_b, "", "DrP_63_alcomship_fire");
           if (null != var2Lifetime43) {
             nl.field_r[63] = var2Lifetime43.a().a(qk.field_g);
@@ -1541,7 +1541,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != var2Lifetime46) {
             nl.field_r[66] = var2Lifetime46.a().a(qk.field_g);
           }
-          nl.field_r[67] = tk.a(ua.field_b, "", "DrP_67_alcomship_die").c().a(qk.field_g);
+          nl.field_r[67] = tk.a(DelegatingCanvas.field_b, "", "DrP_67_alcomship_die").c().a(qk.field_g);
           var2Lifetime47 = kb.a(aa.field_b, "", "DrP_68_humbuild_hit");
           if (var2Lifetime47 != null) {
             nl.field_r[68] = var2Lifetime47.a().a(qk.field_g);
@@ -1675,7 +1675,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ek.d(-2);
           if (null != df.field_l) {
             hb.a(-5, df.field_l);
-            df.field_l.a(sb.field_d, true);
+            df.field_l.exitFullscreen(sb.field_d, true);
           }
           sb.b((byte) 67);
           if (param0 > -120) {
@@ -1807,7 +1807,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           wg.field_c = eh.a("", (byte) -49, kf.field_d, "help_key_ctrl");
           na.field_c = eh.a("", (byte) -33, kf.field_d, "help_key_space");
           ul.field_h = eh.a("", (byte) -82, kf.field_d, "help_key_z");
-          qb.field_d = eh.a("", (byte) -72, kf.field_d, "help_key_x");
+          AccountRequestState.field_d = eh.a("", (byte) -72, kf.field_d, "help_key_x");
           lk.field_k = eh.a("", (byte) -98, kf.field_d, "help_key_c");
           lb.field_D = eh.a("", (byte) -69, kf.field_d, "help_key_v");
           ki.field_b = eh.a("", (byte) -40, kf.field_d, "help_key_up");
@@ -1894,8 +1894,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (param0 >= -110) {
             this.field_C = false;
           }
-          qb.field_a = be.a(eh.a("", (byte) -80, kf.field_d, "alienbunker_big_rubble"), wk.field_m.length);
-          this.a(85, qb.field_a);
+          AccountRequestState.field_a = be.a(eh.a("", (byte) -80, kf.field_d, "alienbunker_big_rubble"), wk.field_m.length);
+          this.a(85, AccountRequestState.field_a);
           uk.field_b = be.a(eh.a("", (byte) -34, kf.field_d, "alienbunker_big_fire_mask"), wk.field_m.length);
           this.a(99, uk.field_b);
           LevelSession.field_db = ij.a("aliencombattank", (byte) 105, kf.field_d, "");
@@ -2043,8 +2043,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != aa.field_b) {
             if (aa.field_b.a(0) &&
               aa.field_b.c((byte) 79)) {
-              if (ua.field_b.a(0) &&
-                ua.field_b.c((byte) 21)) {
+              if (DelegatingCanvas.field_b.a(0) &&
+                DelegatingCanvas.field_b.c((byte) 21)) {
                 if (ui.field_a.a(0) &&
                   ui.field_a.c((byte) 56)) {
                   if (df.field_a.a(0) &&
@@ -2061,7 +2061,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                               return false;
                             }
                             ByteStorage.b(77);
-                            cf.field_c = new cf(aa.field_b, ua.field_b);
+                            cf.field_c = new cf(aa.field_b, DelegatingCanvas.field_b);
                             qk.field_g = new ng(22050, id.field_d);
                             this.j((byte) -30);
                             aa.field_b = null;
@@ -2085,15 +2085,15 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 we.a(hj.a(AccountCreationResultPanel.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
                 return false;
               }
-              we.a(qg.a(wi.field_h, ig.field_o, 34, "", ua.field_b), -105, 8.0f);
+              we.a(qg.a(wi.field_h, ig.field_o, 34, "", DelegatingCanvas.field_b), -105, 8.0f);
               return false;
             }
             we.a(qg.a(wi.field_h, ig.field_o, 34, "", aa.field_b), -88, 5.0f);
             return false;
           }
-          if (null != ua.field_b) {
+          if (null != DelegatingCanvas.field_b) {
             qk.field_g = null;
-            ua.field_b = null;
+            DelegatingCanvas.field_b = null;
             tc.a((byte) 86);
             return false;
           }
@@ -2218,9 +2218,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         try {
           we.a(qa.field_O, -103, 73.0f);
           bc.field_d = new nh(50, 300);
-          q.field_f = new he(50, 300, 2);
-          var2_int = q.field_f.field_d * 260;
-          var3 = -1 + q.field_f.field_m.length;
+          FullscreenFocusCanvas.field_f = new he(50, 300, 2);
+          var2_int = FullscreenFocusCanvas.field_f.field_d * 260;
+          var3 = -1 + FullscreenFocusCanvas.field_f.field_m.length;
           var4 = var2_int;
           do {
             if (var3 < var4) {
@@ -2229,7 +2229,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               var4 = 336 * wj.field_k;
               break;
             }
-            q.field_f.field_m[var4] = (byte) 1;
+            FullscreenFocusCanvas.field_f.field_m[var4] = (byte) 1;
             var4++;
           } while (var6 == 0);
           var5 = 0;
@@ -2290,7 +2290,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
           gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
           ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
-          q.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
+          FullscreenFocusCanvas.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
           kl.field_R[0] = qk.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
           kl.field_R[1] = qk.a("", kf.field_d, "scenery_space_background_asteroid_2", true);
           kl.field_R[2] = qk.a("", kf.field_d, "scenery_space_background_asteroid_3", true);

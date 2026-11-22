@@ -304,7 +304,7 @@ class rm extends ck {
         try {
           var2_int = param0.readUnsignedByte(true);
           if (var2_int == 255) {
-            var2_int = ek.field_c;
+            var2_int = FullscreenFocusCanvas.field_c;
           }
           if (param1 != 6065) {
             field_J = (String) null;

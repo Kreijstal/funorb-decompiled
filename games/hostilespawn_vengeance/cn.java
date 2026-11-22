@@ -407,7 +407,7 @@ class cn implements nn, mi {
             wa.field_q = ie.field_c.d(16776960);
             sd.a(2, 0);
           } else {
-            wa.field_q = KeyboardInput.a(640, (byte) -114, gf.field_b, 0, 480, 0);
+            wa.field_q = KeyboardInput.createFullscreenCanvas(640, (byte) -114, gf.field_b, 0, 480, 0);
           }
           if (wa.field_q != null) {
             ea.a(wa.field_q, 0);

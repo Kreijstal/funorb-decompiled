@@ -2065,7 +2065,7 @@ public final class TorChallenge extends GameClientBase {
           bk.b((byte) -128);
           eb.clearStaticReferences(237);
           eh.c((byte) 121);
-          ne.clearStaticReferences((byte) -116);
+          AccountRequestState.clearStaticReferences((byte) -116);
           AccountServiceResult.b(-124);
           vh.clearStaticReferences(-44);
           cf.a(-113);

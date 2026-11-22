@@ -85,7 +85,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (PlayerResultRow.field_y == wt.field_d) {
+          if (PlayerResultRow.accountRequestPending == wt.usernameQueryState) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -96,7 +96,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           if (param0 > -87) {
             field_u = (boolean[][]) null;
           }
-          if (PlayerResultRow.field_y != LegacyOpenGlTexture.field_a) {
+          if (PlayerResultRow.accountRequestPending != LegacyOpenGlTexture.registrationRequestState) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

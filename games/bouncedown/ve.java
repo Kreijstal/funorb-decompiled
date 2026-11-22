@@ -195,7 +195,7 @@ final class ve {
         synchronized (var1) {
           n.field_m = c.field_c;
           wh.field_d = wh.field_d + 1;
-          uc.field_C = th.field_a;
+          uc.field_C = DelegatingCanvas.field_a;
           ll.field_y = q.field_H;
           mi.field_j = cl.field_o;
           cl.field_o = false;

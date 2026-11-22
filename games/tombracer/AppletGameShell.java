@@ -115,7 +115,7 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 2) {
             var5Lifetime1 = pe.a(CourseLayoutFactory.b(69), toa.a(false), ArchiveRequest.a(false), this.field_u, cs.a((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
-              TextureTransformMode.a(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
+              TextureTransformMode.completeAccountRegistrationResponse(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
               PressureSwitchBehaviour.field_s = null;
               io.field_b = null;
             }
@@ -148,7 +148,7 @@ abstract class AppletGameShell extends GameApplet {
               HorizontalGradientOperator.field_m = true;
               Transform3D.field_c = 10;
             } else {
-              cua.clearSessionAndReload((byte) -26, ToolkitSelector.getApplet(118));
+              LegacyOpenGlShaderProgram.clearSessionAndReload((byte) -26, ToolkitSelector.getApplet(118));
             }
           }
           if (5 == var4) {
@@ -162,7 +162,7 @@ abstract class AppletGameShell extends GameApplet {
             TextureFormat.openServerList(89, ToolkitSelector.getApplet(113));
           }
           if (8 == var4) {
-            cua.clearSessionAndReload((byte) -65, ToolkitSelector.getApplet(37));
+            LegacyOpenGlShaderProgram.clearSessionAndReload((byte) -65, ToolkitSelector.getApplet(37));
           }
           if (9 == var4) {
             IsaacCipher.openSupportPage(ToolkitSelector.getApplet(104), -87);
@@ -330,7 +330,7 @@ abstract class AppletGameShell extends GameApplet {
           LoadLevelCommand.g(param0 + 46);
         } else {
           if (var2 != 1) {
-            if (!fpa.field_c) {
+            if (!AccountRequestState.field_c) {
               this.reportError(-6738, "reconnect");
             }
             TextureMetadata.b(param0);
@@ -419,7 +419,7 @@ abstract class AppletGameShell extends GameApplet {
         MazeSolver.initializeArchiveServices(ApproachPlayerLocomotor.field_t, ComponentTypeNames.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         JavaKeyCodeMapPatches.patchJavaKeyCodeMap(520);
         HardCacheEntry.field_q = MouseWheelFactory.createMouseWheelInput((byte) -86);
-        fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
+        AccountRequestState.attachCanvasInput(CurveShape.field_l, (byte) 75);
         SoftwareRasterBlitter.field_c = param2;
         MonochromeFillOperator.field_p = param3;
         VertexArrayPointer.field_c = param6;
@@ -759,7 +759,7 @@ abstract class AppletGameShell extends GameApplet {
           ReportAbuseDialog.field_Cb) {
           CharacterChoiceFactory.detachCanvasInput(CurveShape.field_l, false);
           this.recreateCanvas((byte) 14);
-          fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
+          AccountRequestState.attachCanvasInput(CurveShape.field_l, (byte) 75);
         }
         if (UsernameQueryRequests.field_a[8]) {
           dra.sendReflectionCheckResponses(true);

@@ -18,7 +18,7 @@ final class cc extends ab {
           var2.position = var2.position + 1;
           var3 = var2.position;
           var2.writeByte(2, (byte) 47);
-          var2.writeBytes(g.field_f, (byte) -45, 0, g.field_f.length);
+          var2.writeBytes(DelegatingCanvas.field_f, (byte) -45, 0, DelegatingCanvas.field_f.length);
           var2.writeByte(qd.field_u, (byte) -69);
           var2.writeByte(PacketBuffer.field_n, (byte) 107);
           var2.writeBytes(fe.field_d, (byte) -45, 0, fe.field_d.length);

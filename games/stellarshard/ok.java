@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ok {
-    static uc field_a;
+    static AccountRequestState field_a;
     static li field_c;
     static hl field_b;
 
@@ -133,7 +133,7 @@ final class ok {
           if (param1 == 1) {
             return null;
           }
-          field_a = (uc) null;
+          field_a = (AccountRequestState) null;
           stackIn_51_0 = null;
           return (wb) (stackIn_51_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ final class ok {
     }
 
     static {
-        field_a = new uc();
+        field_a = new AccountRequestState();
         field_c = new li(7, 0, 1, 1);
     }
 }

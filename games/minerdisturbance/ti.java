@@ -64,9 +64,9 @@ final class ti extends hc {
     }
 
     private ti(String param0, rm param1) {
-        this(param0, bd.field_c.field_m, param1);
+        this(param0, AccountRequestState.field_c.field_m, param1);
         try {
-          this.field_A = bd.field_c.field_e;
+          this.field_A = AccountRequestState.field_c.field_e;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -105,7 +105,7 @@ final class ti extends hc {
     private ti(String param0, ad param1, rm param2) {
         super(param0, param1, param2);
         try {
-          this.field_A = bd.field_c.field_e;
+          this.field_A = AccountRequestState.field_c.field_e;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

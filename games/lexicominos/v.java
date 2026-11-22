@@ -128,7 +128,7 @@ final class v extends ik {
         this.field_v = param1;
         this.field_x = param0;
         this.field_C = uc.field_hb;
-        this.field_f = ra.field_c;
+        this.field_f = FullscreenFocusCanvas.field_c;
     }
 
     static {

@@ -315,7 +315,7 @@ final class la extends wd {
           var2 = 1;
         } else {
           if (null == vd.field_b) {
-            sj.field_f = qd.a(0, 640, ck.field_e, 127, 0, 480);
+            sj.field_f = qd.createFullscreenCanvas(0, 640, ck.field_e, 127, 0, 480);
           } else {
             sj.field_f = vd.field_b.c((byte) 105);
             bi.a(0, 2);

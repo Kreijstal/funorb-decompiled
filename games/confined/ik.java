@@ -125,7 +125,7 @@ final class ik extends ah {
         var4 = Confined.field_J ? 1 : 0;
         try {
           try {
-            if (!df.field_f.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_f.startsWith("win")) {
               return false;
             }
             if (param1 != -1) {

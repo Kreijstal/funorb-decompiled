@@ -1,0 +1,115 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LegacyOpenGlShaderProgram {
+    static String[] field_b;
+    private OpenGlToolkit field_a;
+    long field_c;
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 3) {
+          return;
+        }
+        field_b = null;
+    }
+
+    final static void selectLobbyGame(int param0, int param1, int param2) {
+        BitPacketBuffer var4 = null;
+        BitPacketBuffer var4Lifetime1;
+        if (param1 != 3) {
+          return;
+        }
+        if (RasterizerOperator.field_o == param0) {
+          return;
+        }
+        LobbyGameWidget var6 = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-115, (long)RasterizerOperator.field_o));
+        LobbyGameWidget var7 = var6;
+        RasterizerOperator.field_o = param0;
+        if (var7 != null) {
+          var7.field_Cb = null;
+        } else {
+          var4 = ql.field_k;
+          var4.writeCipheredOpcode(param2, param1 ^ -2985);
+          var4.writeByte(3, param1 - 3);
+          var4.writeByte(11, 0);
+          var4.writeShort(-1477662136, param0);
+          return;
+        }
+        var4Lifetime1 = ql.field_k;
+        var4Lifetime1.writeCipheredOpcode(param2, param1 ^ -2985);
+        var4Lifetime1.writeByte(3, param1 - 3);
+        var4Lifetime1.writeByte(11, 0);
+        var4Lifetime1.writeShort(-1477662136, param0);
+    }
+
+    final static void insertSorted(LobbyGameWidget param0, byte param1) {
+        RuntimeException runtimeException = null;
+        LobbyGameWidget var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = TombRacer.field_G ? 1 : 0;
+        try {
+          param0.unlink(17);
+          var2 = (LobbyGameWidget) (AffineTransform3D.field_j.first(-80));
+          while (var2 != null) {
+            if (var2.sortsBefore(param0, 71)) {
+              var2 = (LobbyGameWidget) (AffineTransform3D.field_j.next(113));
+              continue;
+            }
+            break;
+          }
+          if (var2 == null) {
+            AffineTransform3D.field_j.addLast((byte) -59, param0);
+          } else {
+            PlatformComponent.insertBefore(var2, param0, (byte) -120);
+          }
+          var3 = 27 % ((-29 - param1) / 55);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_12_0 = runtimeException;
+          stackIn_12_1 = new StringBuilder().append("cua.D(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void clearSessionAndReload(byte param0, java.applet.Applet param1) {
+        CourseMapPath.writeSessionCookie(37, param1, "");
+        if (param0 > -16) {
+          return;
+        }
+        try {
+          nt.reloadPage(param1, -1978);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cua.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    protected final void finalize() throws Throwable {
+        this.field_a.queueShaderObjectDeletion((byte) -105, this.field_c);
+        super.finalize();
+    }
+
+    LegacyOpenGlShaderProgram(OpenGlToolkit param0, long param1, LegacyOpenGlShaderObject[] param2) {
+        try {
+          this.field_c = param1;
+          this.field_a = param0;
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_b = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
+    }
+}

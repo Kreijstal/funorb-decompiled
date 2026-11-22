@@ -84,7 +84,7 @@ final class DirectByteStorage extends ByteStorage {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          hi.a(0, "", param1);
+          DelegatingCanvas.a(0, "", param1);
           if (param0 != 18065) {
             field_f = (ka) null;
           }

@@ -425,7 +425,7 @@ final class ij {
           }
           nh.field_S[q.field_M] = param0;
           gk.field_i[q.field_M] = param5;
-          th.field_c[q.field_M] = param4;
+          DelegatingCanvas.field_c[q.field_M] = param4;
           var6_int = param5 + (param0 + param4);
           if (param3 != var6_int) {
             stackIn_11_0 = 1000 * param0 / var6_int;

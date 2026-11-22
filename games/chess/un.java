@@ -733,11 +733,11 @@ final class un {
             qh.field_b.field_l = var4;
             var3 = var4;
           }
-          var5 = 0.05000000074505806f * (-0.5f + ((float)var3 - a.field_h));
-          a.field_h = a.field_h + var5;
+          var5 = 0.05000000074505806f * (-0.5f + ((float)var3 - FullscreenFocusCanvas.field_h));
+          FullscreenFocusCanvas.field_h = FullscreenFocusCanvas.field_h + var5;
           qh.field_b.field_k = -2 - qh.field_b.field_c + AccountNameAvailabilityValidator.field_m.field_wb;
           qh.field_b.field_i = 5;
-          qh.field_b.field_l = qh.field_b.field_c + (int)a.field_h;
+          qh.field_b.field_l = qh.field_b.field_c + (int)FullscreenFocusCanvas.field_h;
         }
         if (this.field_b) {
           if (param0) {

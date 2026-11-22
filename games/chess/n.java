@@ -71,7 +71,7 @@ final class n {
           if (param3 != 0) {
             field_b = (bn[]) null;
           }
-          g.field_a = ji.field_T;
+          DelegatingCanvas.field_a = ji.field_T;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "n.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

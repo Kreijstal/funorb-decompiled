@@ -64,7 +64,7 @@ final class ie {
               return true;
             }
           }
-          var2Lifetime1 = ne.field_a;
+          var2Lifetime1 = AccountRequestState.field_a;
           var3Lifetime1 = 0;
           if (param0 != 82) {
             ie.a((byte) 53, '￈');

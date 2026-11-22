@@ -114,7 +114,7 @@ final class sg {
         ih var8 = null;
         aj var9 = null;
         var7 = fleas.field_A ? 1 : 0;
-        var8 = ae.field_a;
+        var8 = AccountRequestState.field_a;
         var3 = var8.readUnsignedByte(false);
         stackIn_3_0 = (0 != (var3 & 128));
         ll.field_j = stackIn_3_0;

@@ -279,7 +279,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ol.field_e = (java.awt.Canvas) ((Object) new ld((java.awt.Component) (this)));
+          ol.field_e = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ol.field_e));
           ol.field_e.setSize(ki.field_a, gm.field_nb);
           var3 = 81 % ((param0 - 53) / 56);

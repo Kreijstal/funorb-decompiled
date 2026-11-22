@@ -21,7 +21,7 @@ final class vf {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (og.field_a != IsaacCipher.field_f) {
+          if (AccountRequestState.field_a != IsaacCipher.field_f) {
             return false;
           }
           var8 = new AccountCreationResultPanel(jl.field_I, param0);

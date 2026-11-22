@@ -484,6 +484,14 @@
       "renamedSymbol": "C:GzipDecompressor"
     },
     {
+      "symbol": "C:fk",
+      "originalName": "fk",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:gb",
       "originalName": "gb",
       "to": "ResourceArchive",
@@ -570,6 +578,14 @@
       "evidence": "Abstract IntrusiveNode with sub-stream link and abstract sample-mixing and skip contract.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PcmStream"
+    },
+    {
+      "symbol": "C:ue",
+      "originalName": "ue",
+      "to": "FullscreenFocusCanvas",
+      "evidence": "Complete six-method instance contract,Frame/volatile flag declarations and complete canvas factory reviewed. Empty constructor,paint/update/focusGained no-ops,focusLost sets volatile flag,owned exit wrapper delegates reviewed Frame release helper; factory attaches canvas and focus listener to display Frame. Unrelated static helpers preserved. No owned/type-use native declarations. Exact same-spelling non-class literals,where present,are separately source-reviewed and pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FullscreenFocusCanvas"
     },
     {
       "symbol": "C:ui",
@@ -682,6 +698,22 @@
       "evidence": "Wheel-event accumulator returned/replaced by polling. Preserve game-specific resets, early constants and guard writes.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MouseWheelHandler.rotation:I"
+    },
+    {
+      "symbol": "F:ue.field_g:Z",
+      "originalName": "field_g",
+      "to": "focusLost",
+      "evidence": "Exact volatile Boolean declaration,focusLost callback and all instance/factory bodies reviewed. Callback sets it true; obfuscation-guard writes,if present,remain observable. Preserve declaration modifiers,default initialization,all aliases/reads/writes and guard-dependent reset order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:FullscreenFocusCanvas.focusLost:Z"
+    },
+    {
+      "symbol": "F:ue.field_i:Ljava/awt/Frame;",
+      "originalName": "field_i",
+      "to": "fullscreenFrame",
+      "evidence": "Exact declaration and factory assignment,exit wrapper and callback contract reviewed. Shared display Frame retained in original field. Preserve declaration modifiers,default initialization,all aliases/reads/writes and guard-dependent reset order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:FullscreenFocusCanvas.fullscreenFrame:Ljava/awt/Frame;"
     },
     {
       "symbol": "M:aa.a(B)V",
@@ -980,6 +1012,14 @@
       "renamedSymbol": "M:GzipDecompressor.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:fk.b(B)V",
+      "originalName": "b",
+      "to": "releaseStatics",
+      "evidence": "Complete declaration/body reviewed: Clears b/c, evaluates -10/((byte+86)/36), then clears a; preserve arithmetic failure and prior writes. Name states static cleanup role while retaining all guards, helper calls, exception context and non-reference writes; identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(B)V"
+    },
+    {
       "symbol": "M:fl.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1138,6 +1178,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 5 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 6c05e7a967def7c45527a9c5c86e454be4f2f808ae81a73296094a928ac4e3d0.",
       "confidence": "reviewed",
       "renamedSymbol": "M:jf.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:jg.a(IBLfd;III)Lue;",
+      "originalName": "a",
+      "to": "createFullscreenCanvas",
+      "evidence": "Complete factory body reviewed. Byte param1>=-32 clears static bd reference after setBounds and before listener/requestFocus. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;"
     },
     {
       "symbol": "M:kb.a(B)I",
@@ -1620,6 +1668,14 @@
       "renamedSymbol": "M:sc.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "exitFullscreenFrame",
+      "evidence": "Complete Frame-release body/canvas caller reviewed. Task retry,hide,dispose precede int>=-98 recursive helper(null,120,null). Preserve prior disposal, recursive call/failure and context. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V"
+    },
+    {
       "symbol": "M:se.$cfr$lcmp(JJ)I",
       "originalName": "$cfr$lcmp",
       "to": "compareLongs",
@@ -1706,6 +1762,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 7 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 494d7c3e449899e81d36b8622a275d429594b7786d2e652b4042f0a0775c6a01.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ub.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ue.a(ZLfd;)V",
+      "originalName": "a",
+      "to": "exitFullscreen",
+      "evidence": "Complete wrapper and called Frame-release body reviewed. Frame helper(manager,-106,Frame) executes before false Boolean clears static bd reference. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FullscreenFocusCanvas.exitFullscreen(ZLfd;)V"
     },
     {
       "symbol": "M:uf.g(I)V",
@@ -3406,9 +3470,9 @@
     },
     {
       "symbol": "C:fk",
-      "renamedSymbol": "C:fk",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "fk",
-      "renamedName": "fk",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "fk.java",
         "start": 50,
@@ -5738,9 +5802,9 @@
     },
     {
       "symbol": "C:ue",
-      "renamedSymbol": "C:ue",
+      "renamedSymbol": "C:FullscreenFocusCanvas",
       "originalName": "ue",
-      "renamedName": "ue",
+      "renamedName": "FullscreenFocusCanvas",
       "declaration": {
         "file": "ue.java",
         "start": 50,
@@ -11865,7 +11929,7 @@
     },
     {
       "symbol": "F:e.field_q:Lfk;",
-      "renamedSymbol": "F:e.field_q:Lfk;",
+      "renamedSymbol": "F:e.field_q:LAccountRequestState;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -12228,7 +12292,7 @@
     },
     {
       "symbol": "F:ee.field_b:Lfk;",
-      "renamedSymbol": "F:ee.field_b:Lfk;",
+      "renamedSymbol": "F:ee.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -14395,7 +14459,7 @@
     },
     {
       "symbol": "F:fk.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:fk.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -14406,7 +14470,7 @@
     },
     {
       "symbol": "F:fk.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:fk.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -14417,7 +14481,7 @@
     },
     {
       "symbol": "F:fk.field_c:Lbd;",
-      "renamedSymbol": "F:fk.field_c:Lbd;",
+      "renamedSymbol": "F:AccountRequestState.field_c:Lbd;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -20346,7 +20410,7 @@
     },
     {
       "symbol": "F:ki.field_f:Lfk;",
-      "renamedSymbol": "F:ki.field_f:Lfk;",
+      "renamedSymbol": "F:ki.field_f:LAccountRequestState;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -25725,7 +25789,7 @@
     },
     {
       "symbol": "F:od.field_I:Lfk;",
-      "renamedSymbol": "F:od.field_I:Lfk;",
+      "renamedSymbol": "F:od.field_I:LAccountRequestState;",
       "originalName": "field_I",
       "renamedName": "field_I",
       "declaration": {
@@ -33821,7 +33885,7 @@
     },
     {
       "symbol": "F:ti.field_b:Lfk;",
-      "renamedSymbol": "F:ti.field_b:Lfk;",
+      "renamedSymbol": "F:ti.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -34635,7 +34699,7 @@
     },
     {
       "symbol": "F:ue.field_a:Lql;",
-      "renamedSymbol": "F:ue.field_a:Lql;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_a:Lql;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -34646,7 +34710,7 @@
     },
     {
       "symbol": "F:ue.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:ue.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -34657,7 +34721,7 @@
     },
     {
       "symbol": "F:ue.field_c:Lbd;",
-      "renamedSymbol": "F:ue.field_c:Lbd;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_c:Lbd;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -34668,7 +34732,7 @@
     },
     {
       "symbol": "F:ue.field_d:I",
-      "renamedSymbol": "F:ue.field_d:I",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -34679,7 +34743,7 @@
     },
     {
       "symbol": "F:ue.field_e:I",
-      "renamedSymbol": "F:ue.field_e:I",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -34690,7 +34754,7 @@
     },
     {
       "symbol": "F:ue.field_f:Lbd;",
-      "renamedSymbol": "F:ue.field_f:Lbd;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_f:Lbd;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -34701,9 +34765,9 @@
     },
     {
       "symbol": "F:ue.field_g:Z",
-      "renamedSymbol": "F:ue.field_g:Z",
+      "renamedSymbol": "F:FullscreenFocusCanvas.focusLost:Z",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "focusLost",
       "declaration": {
         "file": "ue.java",
         "start": 140,
@@ -34712,7 +34776,7 @@
     },
     {
       "symbol": "F:ue.field_h:Lbd;",
-      "renamedSymbol": "F:ue.field_h:Lbd;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_h:Lbd;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -34723,9 +34787,9 @@
     },
     {
       "symbol": "F:ue.field_i:Ljava/awt/Frame;",
-      "renamedSymbol": "F:ue.field_i:Ljava/awt/Frame;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.fullscreenFrame:Ljava/awt/Frame;",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "fullscreenFrame",
       "declaration": {
         "file": "ue.java",
         "start": 192,
@@ -34734,7 +34798,7 @@
     },
     {
       "symbol": "F:ue.field_j:Lbd;",
-      "renamedSymbol": "F:ue.field_j:Lbd;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_j:Lbd;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -34745,7 +34809,7 @@
     },
     {
       "symbol": "F:ue.field_k:[I",
-      "renamedSymbol": "F:ue.field_k:[I",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_k:[I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -37429,7 +37493,7 @@
     },
     {
       "symbol": "F:wa.field_q:Lue;",
-      "renamedSymbol": "F:wa.field_q:Lue;",
+      "renamedSymbol": "F:wa.field_q:LFullscreenFocusCanvas;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -80791,7 +80855,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#0",
-      "renamedSymbol": "L:fk.a(B)V#0",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -80802,7 +80866,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#1",
-      "renamedSymbol": "L:fk.a(B)V#1",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -80813,7 +80877,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#2",
-      "renamedSymbol": "L:fk.a(B)V#2",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -80824,7 +80888,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#3",
-      "renamedSymbol": "L:fk.a(B)V#3",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -80835,7 +80899,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#4",
-      "renamedSymbol": "L:fk.a(B)V#4",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -80846,7 +80910,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#5",
-      "renamedSymbol": "L:fk.a(B)V#5",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -80857,7 +80921,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#6",
-      "renamedSymbol": "L:fk.a(B)V#6",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#6",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -80868,7 +80932,7 @@
     },
     {
       "symbol": "L:fk.a(B)V#7",
-      "renamedSymbol": "L:fk.a(B)V#7",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -80879,7 +80943,7 @@
     },
     {
       "symbol": "L:fk.b(B)V#0",
-      "renamedSymbol": "L:fk.b(B)V#0",
+      "renamedSymbol": "L:AccountRequestState.releaseStatics(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -91549,7 +91613,7 @@
     },
     {
       "symbol": "L:gn.d(I)Lue;#0",
-      "renamedSymbol": "L:gn.d(I)Lue;#0",
+      "renamedSymbol": "L:gn.d(I)LFullscreenFocusCanvas;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105739,7 +105803,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#0",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#0",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -105750,7 +105814,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#1",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#1",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#1",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -105761,7 +105825,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#2",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#2",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -105772,7 +105836,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#3",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#3",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -105783,7 +105847,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#4",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#4",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -105794,7 +105858,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#5",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#5",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#5",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -105805,7 +105869,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#6",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#6",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#6",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -105816,7 +105880,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#7",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#7",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#7",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -105827,7 +105891,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#8",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#8",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -105838,7 +105902,7 @@
     },
     {
       "symbol": "L:jg.a(IBLfd;III)Lue;#9",
-      "renamedSymbol": "L:KeyboardInput.a(IBLfd;III)Lue;#9",
+      "renamedSymbol": "L:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169022,7 +169086,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -169033,7 +169097,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -169044,7 +169108,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#10",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#10",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169055,7 +169119,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#2",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#2",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#2",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -169066,7 +169130,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#3",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#3",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#3",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -169077,7 +169141,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#4",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#4",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#4",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -169088,7 +169152,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#5",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#5",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -169099,7 +169163,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#6",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#6",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -169110,7 +169174,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#7",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#7",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169121,7 +169185,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#8",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#8",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#8",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -169132,7 +169196,7 @@
     },
     {
       "symbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#9",
-      "renamedSymbol": "L:sd.a(Lfd;ILjava/awt/Frame;)V#9",
+      "renamedSymbol": "L:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -180781,7 +180845,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#0",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -180792,7 +180856,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#1",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#1",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -180803,7 +180867,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#10",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#10",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#10",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -180814,7 +180878,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#11",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#11",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#11",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -180825,7 +180889,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#12",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#12",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -180836,7 +180900,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#13",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#13",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -180847,7 +180911,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#2",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#2",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -180858,7 +180922,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#3",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#3",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -180869,7 +180933,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#4",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#4",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -180880,7 +180944,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#5",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#5",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#5",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -180891,7 +180955,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#6",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#6",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#6",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -180902,7 +180966,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#7",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#7",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#7",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -180913,7 +180977,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#8",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#8",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#8",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -180924,7 +180988,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#9",
-      "renamedSymbol": "L:ue.a(ILjava/lang/String;)Ljava/lang/Class;#9",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#9",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -180935,7 +180999,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfd;)V#0",
-      "renamedSymbol": "L:ue.a(ZLfd;)V#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.exitFullscreen(ZLfd;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -180946,7 +181010,7 @@
     },
     {
       "symbol": "L:ue.focusLost(Ljava/awt/event/FocusEvent;)V#0",
-      "renamedSymbol": "L:ue.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.focusLost(Ljava/awt/event/FocusEvent;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -208050,7 +208114,7 @@
     },
     {
       "symbol": "M:fk.a(B)V",
-      "renamedSymbol": "M:fk.a(B)V",
+      "renamedSymbol": "M:AccountRequestState.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208061,9 +208125,9 @@
     },
     {
       "symbol": "M:fk.b(B)V",
-      "renamedSymbol": "M:fk.b(B)V",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "fk.java",
         "start": 1312,
@@ -208072,7 +208136,7 @@
     },
     {
       "symbol": "M:fk.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:fk.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -209964,7 +210028,7 @@
     },
     {
       "symbol": "M:gn.d(I)Lue;",
-      "renamedSymbol": "M:gn.d(I)Lue;",
+      "renamedSymbol": "M:gn.d(I)LFullscreenFocusCanvas;",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -212439,9 +212503,9 @@
     },
     {
       "symbol": "M:jg.a(IBLfd;III)Lue;",
-      "renamedSymbol": "M:KeyboardInput.a(IBLfd;III)Lue;",
+      "renamedSymbol": "M:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createFullscreenCanvas",
       "declaration": {
         "file": "jg.java",
         "start": 7245,
@@ -222328,9 +222392,9 @@
     },
     {
       "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
-      "renamedSymbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+      "renamedSymbol": "M:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "exitFullscreenFrame",
       "declaration": {
         "file": "sd.java",
         "start": 3592,
@@ -224682,9 +224746,9 @@
     },
     {
       "symbol": "M:ue.<init>()V",
-      "renamedSymbol": "M:ue.<init>()V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.<init>()V",
       "originalName": "ue",
-      "renamedName": "ue",
+      "renamedName": "FullscreenFocusCanvas",
       "declaration": {
         "file": "ue.java",
         "start": 3539,
@@ -224693,7 +224757,7 @@
     },
     {
       "symbol": "M:ue.a(B)V",
-      "renamedSymbol": "M:ue.a(B)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -224704,7 +224768,7 @@
     },
     {
       "symbol": "M:ue.a(ILjava/lang/String;)Ljava/lang/Class;",
-      "renamedSymbol": "M:ue.a(ILjava/lang/String;)Ljava/lang/Class;",
+      "renamedSymbol": "M:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -224715,7 +224779,7 @@
     },
     {
       "symbol": "M:ue.a(IZ)V",
-      "renamedSymbol": "M:ue.a(IZ)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.a(IZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -224726,9 +224790,9 @@
     },
     {
       "symbol": "M:ue.a(ZLfd;)V",
-      "renamedSymbol": "M:ue.a(ZLfd;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.exitFullscreen(ZLfd;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "exitFullscreen",
       "declaration": {
         "file": "ue.java",
         "start": 3568,
@@ -224737,7 +224801,7 @@
     },
     {
       "symbol": "M:ue.focusGained(Ljava/awt/event/FocusEvent;)V",
-      "renamedSymbol": "M:ue.focusGained(Ljava/awt/event/FocusEvent;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.focusGained(Ljava/awt/event/FocusEvent;)V",
       "originalName": "focusGained",
       "renamedName": "focusGained",
       "declaration": {
@@ -224748,7 +224812,7 @@
     },
     {
       "symbol": "M:ue.focusLost(Ljava/awt/event/FocusEvent;)V",
-      "renamedSymbol": "M:ue.focusLost(Ljava/awt/event/FocusEvent;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.focusLost(Ljava/awt/event/FocusEvent;)V",
       "originalName": "focusLost",
       "renamedName": "focusLost",
       "declaration": {
@@ -224759,7 +224823,7 @@
     },
     {
       "symbol": "M:ue.paint(Ljava/awt/Graphics;)V",
-      "renamedSymbol": "M:ue.paint(Ljava/awt/Graphics;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.paint(Ljava/awt/Graphics;)V",
       "originalName": "paint",
       "renamedName": "paint",
       "declaration": {
@@ -224770,7 +224834,7 @@
     },
     {
       "symbol": "M:ue.update(Ljava/awt/Graphics;)V",
-      "renamedSymbol": "M:ue.update(Ljava/awt/Graphics;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.update(Ljava/awt/Graphics;)V",
       "originalName": "update",
       "renamedName": "update",
       "declaration": {
@@ -249564,7 +249628,7 @@
     },
     {
       "symbol": "P:fk.a(B)V#0",
-      "renamedSymbol": "P:fk.a(B)V#0",
+      "renamedSymbol": "P:AccountRequestState.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -249575,7 +249639,7 @@
     },
     {
       "symbol": "P:fk.b(B)V#0",
-      "renamedSymbol": "P:fk.b(B)V#0",
+      "renamedSymbol": "P:AccountRequestState.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -254349,7 +254413,7 @@
     },
     {
       "symbol": "P:gn.d(I)Lue;#0",
-      "renamedSymbol": "P:gn.d(I)Lue;#0",
+      "renamedSymbol": "P:gn.d(I)LFullscreenFocusCanvas;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259838,7 +259902,7 @@
     },
     {
       "symbol": "P:jg.a(IBLfd;III)Lue;#0",
-      "renamedSymbol": "P:KeyboardInput.a(IBLfd;III)Lue;#0",
+      "renamedSymbol": "P:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259849,7 +259913,7 @@
     },
     {
       "symbol": "P:jg.a(IBLfd;III)Lue;#1",
-      "renamedSymbol": "P:KeyboardInput.a(IBLfd;III)Lue;#1",
+      "renamedSymbol": "P:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259860,7 +259924,7 @@
     },
     {
       "symbol": "P:jg.a(IBLfd;III)Lue;#2",
-      "renamedSymbol": "P:KeyboardInput.a(IBLfd;III)Lue;#2",
+      "renamedSymbol": "P:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -259871,7 +259935,7 @@
     },
     {
       "symbol": "P:jg.a(IBLfd;III)Lue;#3",
-      "renamedSymbol": "P:KeyboardInput.a(IBLfd;III)Lue;#3",
+      "renamedSymbol": "P:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -259882,7 +259946,7 @@
     },
     {
       "symbol": "P:jg.a(IBLfd;III)Lue;#4",
-      "renamedSymbol": "P:KeyboardInput.a(IBLfd;III)Lue;#4",
+      "renamedSymbol": "P:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -259893,7 +259957,7 @@
     },
     {
       "symbol": "P:jg.a(IBLfd;III)Lue;#5",
-      "renamedSymbol": "P:KeyboardInput.a(IBLfd;III)Lue;#5",
+      "renamedSymbol": "P:KeyboardInput.createFullscreenCanvas(IBLfd;III)LFullscreenFocusCanvas;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -283180,7 +283244,7 @@
     },
     {
       "symbol": "P:sd.a(Lfd;ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:sd.a(Lfd;ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -283191,7 +283255,7 @@
     },
     {
       "symbol": "P:sd.a(Lfd;ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:sd.a(Lfd;ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -283202,7 +283266,7 @@
     },
     {
       "symbol": "P:sd.a(Lfd;ILjava/awt/Frame;)V#2",
-      "renamedSymbol": "P:sd.a(Lfd;ILjava/awt/Frame;)V#2",
+      "renamedSymbol": "P:sd.exitFullscreenFrame(Lfd;ILjava/awt/Frame;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -288801,7 +288865,7 @@
     },
     {
       "symbol": "P:ue.a(B)V#0",
-      "renamedSymbol": "P:ue.a(B)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288812,7 +288876,7 @@
     },
     {
       "symbol": "P:ue.a(ILjava/lang/String;)Ljava/lang/Class;#0",
-      "renamedSymbol": "P:ue.a(ILjava/lang/String;)Ljava/lang/Class;#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288823,7 +288887,7 @@
     },
     {
       "symbol": "P:ue.a(ILjava/lang/String;)Ljava/lang/Class;#1",
-      "renamedSymbol": "P:ue.a(ILjava/lang/String;)Ljava/lang/Class;#1",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(ILjava/lang/String;)Ljava/lang/Class;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -288834,7 +288898,7 @@
     },
     {
       "symbol": "P:ue.a(IZ)V#0",
-      "renamedSymbol": "P:ue.a(IZ)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288845,7 +288909,7 @@
     },
     {
       "symbol": "P:ue.a(IZ)V#1",
-      "renamedSymbol": "P:ue.a(IZ)V#1",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -288856,7 +288920,7 @@
     },
     {
       "symbol": "P:ue.a(ZLfd;)V#0",
-      "renamedSymbol": "P:ue.a(ZLfd;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.exitFullscreen(ZLfd;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288867,7 +288931,7 @@
     },
     {
       "symbol": "P:ue.a(ZLfd;)V#1",
-      "renamedSymbol": "P:ue.a(ZLfd;)V#1",
+      "renamedSymbol": "P:FullscreenFocusCanvas.exitFullscreen(ZLfd;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -288878,7 +288942,7 @@
     },
     {
       "symbol": "P:ue.focusGained(Ljava/awt/event/FocusEvent;)V#0",
-      "renamedSymbol": "P:ue.focusGained(Ljava/awt/event/FocusEvent;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.focusGained(Ljava/awt/event/FocusEvent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288889,7 +288953,7 @@
     },
     {
       "symbol": "P:ue.focusLost(Ljava/awt/event/FocusEvent;)V#0",
-      "renamedSymbol": "P:ue.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.focusLost(Ljava/awt/event/FocusEvent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288900,7 +288964,7 @@
     },
     {
       "symbol": "P:ue.paint(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "P:ue.paint(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.paint(Ljava/awt/Graphics;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288911,7 +288975,7 @@
     },
     {
       "symbol": "P:ue.update(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "P:ue.update(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.update(Ljava/awt/Graphics;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297594,7 +297658,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "fe443eac3792e150a11a153937471893d89d55ff902f8cbf78086d80fdd629dc",
+      "outputSha256": "14338acc1b9a2b196cc2ec10f112e8e1c1fa5ce56ccc58e9f1c6d2c6189ad223",
       "edits": [
         {
           "start": 78,
@@ -297602,6 +297666,13 @@
           "symbol": "C:d",
           "original": "d",
           "renamed": "NetworkGameClient"
+        },
+        {
+          "start": 1244,
+          "end": 1246,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 1345,
@@ -297637,6 +297708,13 @@
           "symbol": "C:d",
           "original": "d",
           "renamed": "NetworkGameClient"
+        },
+        {
+          "start": 4366,
+          "end": 4368,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4957,
@@ -297856,6 +297934,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 11077,
+          "end": 11079,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 11090,
           "end": 11092,
           "symbol": "C:ci",
@@ -298001,6 +298086,20 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 17499,
+          "end": 17501,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 18080,
+          "end": 18082,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 18318,
@@ -298343,6 +298442,13 @@
           "symbol": "M:sm.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 52912,
+          "end": 52914,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 53035,
@@ -299122,6 +299228,20 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 58299,
+          "end": 58301,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 58302,
+          "end": 58303,
+          "symbol": "M:fk.b(B)V",
+          "original": "b",
+          "renamed": "releaseStatics"
+        },
+        {
           "start": 58328,
           "end": 58330,
           "symbol": "C:jj",
@@ -299232,6 +299352,20 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 67714,
+          "end": 67721,
+          "symbol": "F:ue.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
+        {
+          "start": 67813,
+          "end": 67814,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
         },
         {
           "start": 67877,
@@ -299663,11 +299797,25 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 91831,
+          "end": 91832,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
+        },
+        {
           "start": 91899,
           "end": 91901,
           "symbol": "C:se",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 92541,
+          "end": 92542,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
         },
         {
           "start": 92613,
@@ -299677,11 +299825,32 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 92889,
+          "end": 92890,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
+        },
+        {
           "start": 92957,
           "end": 92959,
           "symbol": "C:se",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 93926,
+          "end": 93933,
+          "symbol": "F:ue.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
+        {
+          "start": 94023,
+          "end": 94024,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
         },
         {
           "start": 94087,
@@ -299775,6 +299944,13 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 101538,
+          "end": 101540,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 101604,
           "end": 101606,
           "symbol": "C:jg",
@@ -299801,6 +299977,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 102703,
+          "end": 102705,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 103501,
@@ -300717,7 +300900,7 @@
       "original": "am.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "8c275b415b048935f8b71fe2341bf194fe1728db32dac1e518432c36b9016f37",
-      "outputSha256": "ca5acc6b24364baa496c56dfe515f7d74234bc27015c52bfa71a1cbad558566f",
+      "outputSha256": "a0c00b89b262cc840b0f9e3f9eb12dc911b56090e3cb05a491aafe631bc572c4",
       "edits": [
         {
           "start": 44,
@@ -300788,6 +300971,20 @@
           "symbol": "M:am.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5812,
+          "end": 5814,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 6929,
+          "end": 6931,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 6989,
@@ -301520,7 +301717,7 @@
       "original": "bi.java",
       "renamed": "bi.java",
       "inputSha256": "67119959c8a4ff2cd791624f2193f732cf55ef9c1d315f9d2e7030a2e73b19dc",
-      "outputSha256": "cd80088a2f2f8048de8129d87bc47cfd561b186034962c40ad36b39cce264826",
+      "outputSha256": "5c95ec6ceecb68e51aadd547e912fa9abb410de794b68d2b552457c541097532",
       "edits": [
         {
           "start": 216,
@@ -301535,6 +301732,13 @@
           "symbol": "M:bi.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1979,
+          "end": 1981,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2067,
@@ -301628,7 +301832,7 @@
       "original": "bn.java",
       "renamed": "bn.java",
       "inputSha256": "2d2665fe866d22d62c8acded16ca86db97588e3236eb156853d2b8a66189f521",
-      "outputSha256": "371fb77683f56c055bd7e6f653f33e6cad0a1d6abfd37dd6d9a00a1e86e29ee8",
+      "outputSha256": "5b296964c8c0855a1349a47f18608f0f5fb86f0a6ce0d69ca2d2f93e281e1db2",
       "edits": [
         {
           "start": 2129,
@@ -301706,6 +301910,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 11941,
+          "end": 11943,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 12070,
@@ -302530,7 +302741,7 @@
       "original": "cn.java",
       "renamed": "cn.java",
       "inputSha256": "a3a6f0b268b1352071252aeeaded7d2dc0b59b0f4b8e7afcf274c0bd3dbe2818",
-      "outputSha256": "82e457b0d92a455164c86f547e6c34628c3e857ccf24a44cff6be274f8683655",
+      "outputSha256": "0ebdf58445003864d4c942c7c4e4dc699dbad86abe12605baa3e393d5fbe51b0",
       "edits": [
         {
           "start": 1372,
@@ -302657,6 +302868,13 @@
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 15854,
+          "end": 15855,
+          "symbol": "M:jg.a(IBLfd;III)Lue;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
         },
         {
           "start": 18521,
@@ -303481,7 +303699,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "68fb9d86e52749ceed581d13c0c28ab9eb215d4f29706062895ad328bef8b8ec",
-      "outputSha256": "cf92ef695ba3e1e4d410588358711697dc9474b00b929f96ccd32614dec739a8",
+      "outputSha256": "bb6dfe9e0217b8ca7f96a9af7412c413c2e6468b0f67afa8123a3fd28c406b8e",
       "edits": [
         {
           "start": 61,
@@ -303717,6 +303935,13 @@
           "renamed": "KeyboardInput"
         },
         {
+          "start": 60538,
+          "end": 60540,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 60864,
           "end": 60866,
           "symbol": "C:uk",
@@ -303813,6 +304038,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "GameCanvas"
+        },
+        {
+          "start": 102188,
+          "end": 102190,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 102516,
@@ -304075,8 +304307,15 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "282ba6062f570b7ad36847e09ac3c6f5116d33f90be849b76434fef4ffcba1bd",
-      "outputSha256": "bb3867e81c665a572a9225e59e5aaec61ae3a52879058b880d9421f95f0fca3a",
+      "outputSha256": "377b69997abfb1a991081bfaa626c843c090f0ed5b6a7e277912ac0e3a8bbf7a",
       "edits": [
+        {
+          "start": 579,
+          "end": 581,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 991,
           "end": 993,
@@ -304134,6 +304373,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 17279,
+          "end": 17281,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 19304,
           "end": 19306,
           "symbol": "C:ci",
@@ -304148,11 +304394,32 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 19530,
+          "end": 19532,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 21218,
+          "end": 21220,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 22054,
           "end": 22056,
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 24630,
+          "end": 24632,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -304430,8 +304697,22 @@
       "original": "ee.java",
       "renamed": "ee.java",
       "inputSha256": "4588c359d296815db31272b66657a7e55e50e1703dcc9c407a04977200bd6149",
-      "outputSha256": "5eea9fa24e4c8ca25c918efabe7c0f1804043c3abc5c70c552858e976754e019",
+      "outputSha256": "58ae905b19ee188e52b575da002a028cc1fa99c081203ed36085131d79031c11",
       "edits": [
+        {
+          "start": 221,
+          "end": 223,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 1903,
+          "end": 1905,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 2578,
           "end": 2580,
@@ -304543,6 +304824,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 13612,
+          "end": 13614,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -305633,16 +305921,30 @@
     },
     {
       "original": "fk.java",
-      "renamed": "fk.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "431d9df684618f1ebca5cf3058ae66e9b2ef3d1aed0aea445d18cb731a72b0c3",
-      "outputSha256": "f2534579931b8f9f46672825208925730297e8d513af40edd041b53292ee3c81",
+      "outputSha256": "32b9874f0814b4300b3f3c0ec4f5f0e4ed06402ce1df4754ae68dd68956ad443",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1122,
           "end": 1124,
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 1312,
+          "end": 1313,
+          "symbol": "M:fk.b(B)V",
+          "original": "b",
+          "renamed": "releaseStatics"
         }
       ]
     },
@@ -305890,7 +306192,7 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "e470c1a7156f3577c1012e5c0f4111dd319c8ba17a402ec55691be352caade16",
-      "outputSha256": "1163d74431fb327894da5da25b2b2432ec48ff32ee82cb4a0f8dcfb7a72f9cf6",
+      "outputSha256": "963d2b0d01c9b15c8fba89094d993c2c5e3fd2f1dbe36b60bd8cc54ca7a952e3",
       "edits": [
         {
           "start": 858,
@@ -305905,6 +306207,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 5578,
+          "end": 5579,
+          "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
         },
         {
           "start": 6197,
@@ -306755,7 +307064,7 @@
       "original": "gn.java",
       "renamed": "gn.java",
       "inputSha256": "e7a510ca03e8b6e4868760e64151fb960a1c0d03df51deda27897e97753e4efd",
-      "outputSha256": "b516ae18cc548bc312527636484aae842fbcf838e6b3492f7a4936435c5ef27e",
+      "outputSha256": "5dabf676decbf0e7c3bf4d432d8b15f735d55aca506a1b9675d7f3fdc66b8fb5",
       "edits": [
         {
           "start": 743,
@@ -306800,11 +307109,32 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 4543,
+          "end": 4545,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 4799,
+          "end": 4801,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 4809,
           "end": 4811,
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 4812,
+          "end": 4813,
+          "symbol": "M:jg.a(IBLfd;III)Lue;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
         },
         {
           "start": 6359,
@@ -307026,7 +307356,7 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "5d02d259137690d885a206754f8c0dc99c157362c30b058daaad758a68423f98",
-      "outputSha256": "b26bbd167b863969ca4fbde402559b8ed0b97805aa0adbc01bc51ee0b2693701",
+      "outputSha256": "ae1056def69695af7e51d56089b15c8ebaf799f2109c4041fe118878931b0608",
       "edits": [
         {
           "start": 408,
@@ -307077,6 +307407,13 @@
           "original": "L34",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 7413,
+          "end": 7415,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 7945,
@@ -307686,14 +308023,42 @@
       "original": "hh.java",
       "renamed": "hh.java",
       "inputSha256": "e10dc020f1e498eadf31e9bbff922355bd19f914dd093a779150926c8959e1cd",
-      "outputSha256": "e43bbd8a63f34faaa4cca9d768fd5d2cc6cc74114537a6825aa5b124e319a19e",
+      "outputSha256": "e3104369f02cc9ab1d061b0e79040a236eee5310e09ab6b1394770f456026d99",
       "edits": [
+        {
+          "start": 1965,
+          "end": 1967,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 2246,
+          "end": 2248,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
         {
           "start": 2300,
           "end": 2302,
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 2362,
+          "end": 2364,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 2732,
+          "end": 2734,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 2951,
@@ -307703,11 +308068,39 @@
           "renamed": "IsaacGenerator"
         },
         {
+          "start": 3014,
+          "end": 3016,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 3600,
+          "end": 3602,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 3829,
           "end": 3831,
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 3896,
+          "end": 3898,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 4293,
+          "end": 4295,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 4521,
@@ -307717,11 +308110,67 @@
           "renamed": "IsaacGenerator"
         },
         {
+          "start": 4588,
+          "end": 4590,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 5061,
+          "end": 5063,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 5353,
+          "end": 5355,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 5410,
           "end": 5412,
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 5476,
+          "end": 5478,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7666,
+          "end": 7668,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7783,
+          "end": 7785,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7814,
+          "end": 7816,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 9040,
+          "end": 9042,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 10560,
@@ -307785,6 +308234,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 12866,
+          "end": 12868,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 12932,
@@ -308135,7 +308591,7 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "c6fbb1a6c2c9c9c97a9519fd420524926a9b688bdcf32d21ea96b299b4b63c55",
-      "outputSha256": "28386fd615ed44aa086ca3d41f1ac2a77848171cd8ee4e0db3ea7dcf627f672c",
+      "outputSha256": "6aa3c2b3aed5e735d6cf547c696ebbbcf2e0c090ffdd8f61bf640b8f7fa51ad2",
       "edits": [
         {
           "start": 172,
@@ -308157,6 +308613,27 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3808,
+          "end": 3810,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 3942,
+          "end": 3944,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 4508,
+          "end": 4510,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 6737,
@@ -308624,7 +309101,7 @@
       "original": "ih.java",
       "renamed": "ih.java",
       "inputSha256": "8cd7b742cda3b97c84d9e0ece43906a551de389b27342c4062092c6acd1b1fe7",
-      "outputSha256": "8c0cbcd47530508aba91e6730336462df4aea1678e29aa32ac746c2cbebecff0",
+      "outputSha256": "7e4613508de316e84be6e40ed49c50ae3c1b5ffa1b4fd2595060f40469a302c0",
       "edits": [
         {
           "start": 7757,
@@ -308639,6 +309116,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 16459,
+          "end": 16461,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 17925,
@@ -309238,7 +309722,7 @@
       "original": "jg.java",
       "renamed": "KeyboardInput.java",
       "inputSha256": "5d9a9183751989550ef4b5066e89293e72099cb4380e9e0ea5ac670f0226dec2",
-      "outputSha256": "b7aeb537158a7e36b42f77eb773445321bcc16626921c61542da29413e26df5d",
+      "outputSha256": "6a12cfebc395d6ce4ff5030ace777b2037b5c4459c0f909750ea972f2c1fa28f",
       "edits": [
         {
           "start": 50,
@@ -309351,6 +309835,55 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 7242,
+          "end": 7244,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7245,
+          "end": 7246,
+          "symbol": "M:jg.a(IBLfd;III)Lue;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
+        },
+        {
+          "start": 7407,
+          "end": 7409,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7467,
+          "end": 7469,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7870,
+          "end": 7872,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 7891,
+          "end": 7898,
+          "symbol": "F:ue.field_i:Ljava/awt/Frame;",
+          "original": "field_i",
+          "renamed": "fullscreenFrame"
+        },
+        {
+          "start": 7922,
+          "end": 7929,
+          "symbol": "F:ue.field_i:Ljava/awt/Frame;",
+          "original": "field_i",
+          "renamed": "fullscreenFrame"
         },
         {
           "start": 8714,
@@ -310176,8 +310709,15 @@
       "original": "ki.java",
       "renamed": "ki.java",
       "inputSha256": "8207f3578762e020de89599531930d1df5cbc7996d4c85755638aa538f5afcec",
-      "outputSha256": "0a6289dd1fb5569fb4c1dc921c58f1fb78fb8197293cc7574fbd33894bcf47ff",
+      "outputSha256": "d8c43d4710b6d16fa964d840ee595f7aa8a83de754f3eeb9f56019888bcb5981",
       "edits": [
+        {
+          "start": 139,
+          "end": 141,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1016,
           "end": 1018,
@@ -310901,7 +311441,7 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "b99ed5afb6868299c98bd42d9998549b487792fa7f9d95e86cc185c9e2f0875d",
-      "outputSha256": "df3a09d78a792b02cbe6771714f3d5ebbcad1663f8fe9f344c31c5cf348bf108",
+      "outputSha256": "1f4c5b696499622a6ac841c65dcc2e3817a0d426101344f74120a5aa1b3e1709",
       "edits": [
         {
           "start": 1529,
@@ -310918,11 +311458,25 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 3368,
+          "end": 3370,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 7884,
           "end": 7886,
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 9864,
+          "end": 9866,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 11573,
@@ -310995,7 +311549,7 @@
       "original": "lj.java",
       "renamed": "lj.java",
       "inputSha256": "ccfac6406e2c5554f767217715c6271ea5958509de2f54896cc91c0ed630357d",
-      "outputSha256": "731f00fcc0441db0afe029d6dbc7b501198186de6fd39b4ca6b09090f96e1df6",
+      "outputSha256": "5eeea9700799400a6194739d9a46cc2125388ddf4d75e0b8392caa9b5639537f",
       "edits": [
         {
           "start": 64,
@@ -311003,6 +311557,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1299,
+          "end": 1301,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 2562,
@@ -311458,8 +312019,15 @@
       "original": "mc.java",
       "renamed": "mc.java",
       "inputSha256": "8ef8a302864eea4ddd6576fd6eca5799c8ea140d6adf16734754414267c8c6d9",
-      "outputSha256": "6f359a8016650817e795d07eb7a090748e5ab53c6dc114888a815ff6e140c8d7",
+      "outputSha256": "da6e9635e734112765257fa28defb59fe345aad1e5ef1e2cdd4f0974c15627ba",
       "edits": [
+        {
+          "start": 675,
+          "end": 677,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 2028,
           "end": 2030,
@@ -313817,7 +314385,7 @@
       "original": "nj.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "5bcec3383d4ae19e2bd6c598a4a9b1858d5d6411d79a080246ecdb614b18982a",
-      "outputSha256": "e83ccd716e404c84bf95096eba938227f9ab7ec2e46d82f9a93916913ecd45d1",
+      "outputSha256": "50cc651374204462e45365de9d9c85713f79dc95e63524db1be84838adce6210",
       "edits": [
         {
           "start": 53,
@@ -314092,6 +314660,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 9818,
+          "end": 9820,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 10091,
           "end": 10093,
           "symbol": "C:wg",
@@ -314189,7 +314764,7 @@
       "original": "nm.java",
       "renamed": "nm.java",
       "inputSha256": "3cda71639c00f5f1d28f8510b187c29c1a7df9611afe9ca243c6328b07944755",
-      "outputSha256": "605195de06d2f2fd6d8aefbe8bd8493d80e708ba4c41407747591e590f4226b5",
+      "outputSha256": "55be764dc0f1feaa543b8e33087378557601653224e1f2eae9e298eda5d1b44e",
       "edits": [
         {
           "start": 2963,
@@ -314197,6 +314772,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 9245,
+          "end": 9247,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 12195,
@@ -314611,8 +315193,15 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "a6a58ee323fba7b34097d0b8b5518ca5792c2977397c2b56f4da98ee61437341",
-      "outputSha256": "df3ab65aabcecadbe55c244e742b63afb7d990b8c6ed09cef77584a76a62e98a",
+      "outputSha256": "daaca97faa396ae872ebe96b55b92e326ab177e42158510c9d2452e535c4a95e",
       "edits": [
+        {
+          "start": 275,
+          "end": 277,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 593,
           "end": 595,
@@ -314940,7 +315529,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "8352cd79d6971849a45d40e72f557a9225a2c4beb4493657042493998c1ee6cb",
-      "outputSha256": "692a474744b95c651f9479f3657da4a68dbe85bb55a6fdf011dcef81d3e3bef5",
+      "outputSha256": "927bdaf141ac8031b871f62891b7ddbd7ce3f652fe9b9bea5d22134337bfe3f2",
       "edits": [
         {
           "start": 1114,
@@ -315032,6 +315621,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 183444,
+          "end": 183446,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 184275,
@@ -315370,7 +315966,7 @@
       "original": "pc.java",
       "renamed": "pc.java",
       "inputSha256": "62e1fde298a854f8ae41a017d51c9ece27d4901fa9fc0ba44222633de50db494",
-      "outputSha256": "f428f73ca97000ff5e5293efaafc6c013f99b7e8a9629484c5d2860077d2bfdf",
+      "outputSha256": "e20ab61053ff091fe5e36fc35f9769afc0669e2135832df96b8f1f0f980147c6",
       "edits": [
         {
           "start": 2037,
@@ -318423,6 +319019,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 132110,
+          "end": 132112,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 136155,
           "end": 136157,
           "symbol": "C:wg",
@@ -319346,7 +319949,7 @@
       "original": "qj.java",
       "renamed": "qj.java",
       "inputSha256": "828a897861ef2a18dab514336b5623f289e4acede9c11a18dbbb0a120895eb9b",
-      "outputSha256": "0307ab1673ccecd68c9d7917068dfd73f31c9f925e6efc75e33e28ad1561a9f8",
+      "outputSha256": "1f853c3e92bfa0f6f610238306a7a0e36691f52f1f8d26413f88d26461637716",
       "edits": [
         {
           "start": 61,
@@ -319438,6 +320041,13 @@
           "symbol": "M:qj.c(I)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 10746,
+          "end": 10748,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 12506,
@@ -320113,7 +320723,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "56c5d35b47521bb20f32cb9ef7116c2ae21625190fde51f47f8d4788280499c8",
-      "outputSha256": "f5155177dd545360e4f4b497814aa4345937ef4f454fab505de67f53cbc9f7f2",
+      "outputSha256": "1b8f3ac169f1037dcedeb8a7783c6d4fd7f2d54e29c1888277cb5b239992d149",
       "edits": [
         {
           "start": 2171,
@@ -320257,6 +320867,27 @@
           "kind": "label"
         },
         {
+          "start": 41268,
+          "end": 41270,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 41319,
+          "end": 41321,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 41367,
+          "end": 41369,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 42507,
           "end": 42509,
           "symbol": "B:re.c(Z)V#0",
@@ -320278,6 +320909,20 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 44270,
+          "end": 44272,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 44317,
+          "end": 44319,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 44524,
@@ -320562,6 +321207,13 @@
           "kind": "label"
         },
         {
+          "start": 64683,
+          "end": 64685,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 64760,
           "end": 64762,
           "symbol": "B:re.a(BZ)V#0",
@@ -320570,12 +321222,26 @@
           "kind": "label"
         },
         {
+          "start": 65072,
+          "end": 65074,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 65149,
           "end": 65151,
           "symbol": "B:re.a(BZ)V#0",
           "original": "L1",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 65411,
+          "end": 65413,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 65488,
@@ -321159,6 +321825,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 176686,
+          "end": 176688,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 180132,
@@ -321772,8 +322445,15 @@
       "original": "sd.java",
       "renamed": "sd.java",
       "inputSha256": "e006419ddb50e36615576b80f52563e617a8102984a33e7cbcd87294eacdf480",
-      "outputSha256": "f40b156a717dadecffe35ae50000f68f3fd06171d441b8b4a7ca683c097fc478",
+      "outputSha256": "3b3c99281f48ff033f66ff40507affd54df420f7def172be8a21613f02168b11",
       "edits": [
+        {
+          "start": 1143,
+          "end": 1144,
+          "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
+        },
         {
           "start": 2069,
           "end": 2071,
@@ -321801,6 +322481,20 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 3592,
+          "end": 3593,
+          "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
+        },
+        {
+          "start": 4540,
+          "end": 4541,
+          "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
         },
         {
           "start": 5308,
@@ -322444,7 +323138,7 @@
       "original": "sj.java",
       "renamed": "sj.java",
       "inputSha256": "0821331f03a86e4a8c8266e18786ec1c72d32d1db852623df1cd02bd7d4d2f68",
-      "outputSha256": "89f4cdeee5bf76bbf3161597238c10aae0d7fe6b1262377e66feab323836674e",
+      "outputSha256": "a2b656800fc752052af4ae8359781159e2eca1abe937e47ed63d5db18cfa6ed3",
       "edits": [
         {
           "start": 292,
@@ -322466,6 +323160,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1530,
+          "end": 1532,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2031,
@@ -322501,6 +323202,13 @@
           "symbol": "C:uk",
           "original": "uk",
           "renamed": "ArchiveProvider"
+        },
+        {
+          "start": 4649,
+          "end": 4651,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 5479,
@@ -322769,7 +323477,7 @@
       "original": "ta.java",
       "renamed": "ta.java",
       "inputSha256": "83d39f71574b85774075d5b37c88972a25da5769b8e2e38d0d9ade9ab9f65e43",
-      "outputSha256": "56cdd760d304317b26dc536b4fc8afdd325dcae91685a241af32688edbd7f27d",
+      "outputSha256": "5f2f0114ab66762cd282015f4f7dcb06bd23dae767fafe5ef0bfd94603298606",
       "edits": [
         {
           "start": 302,
@@ -322805,6 +323513,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 8228,
+          "end": 8230,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 10046,
@@ -322896,7 +323611,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "d46de3cae3c8b413ae343afa7b127635bc0719fb7c8ddb934383d68aec665321",
-      "outputSha256": "b5d6dc30da64bf181e1f62c26a2e7381e36ed96b10d01e032ab05fb7cc6717c4",
+      "outputSha256": "bdf9e36042632879454340a27f09585557525b8d1d0c984ecf993ff0cebe379a",
       "edits": [
         {
           "start": 142,
@@ -322925,6 +323640,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 3668,
+          "end": 3669,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
         },
         {
           "start": 3834,
@@ -323302,8 +324024,15 @@
       "original": "ti.java",
       "renamed": "ti.java",
       "inputSha256": "7c5141f6981d63aee10fd9e5d363c000d58d9ecec417f9786b251e25512e8800",
-      "outputSha256": "50c359b5cd31ff1a08eb6d24dad50add0dc7dc2669828b00119540b277ff45c9",
+      "outputSha256": "712a0bd3e7f4e7f3c598f0b03bb4196d150f7f86ec0e04ac6b6de38ab576c85c",
       "edits": [
+        {
+          "start": 306,
+          "end": 308,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 892,
           "end": 894,
@@ -323374,6 +324103,13 @@
           "original": "ol",
           "renamed": "MouseWheelHandler",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 6816,
+          "end": 6818,
+          "symbol": "C:fk",
+          "original": "fk",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -323687,10 +324423,38 @@
     },
     {
       "original": "ue.java",
-      "renamed": "ue.java",
+      "renamed": "FullscreenFocusCanvas.java",
       "inputSha256": "b60be64df0833f46da2bc499dc639fb8362e239b891d44c5a6188b2ca4f0dd62",
-      "outputSha256": "3ce50a0599889a5b79fed40e5676bf8f106a77d7493475aceb201309835276f7",
+      "outputSha256": "c5c4ff44121e19198f870e0aa8d71805107e6e4e11961a5f9fbe69b2540b4a62",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 140,
+          "end": 147,
+          "symbol": "F:ue.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
+        {
+          "start": 192,
+          "end": 199,
+          "symbol": "F:ue.field_i:Ljava/awt/Frame;",
+          "original": "field_i",
+          "renamed": "fullscreenFrame"
+        },
+        {
+          "start": 491,
+          "end": 498,
+          "symbol": "F:ue.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
         {
           "start": 577,
           "end": 579,
@@ -323706,11 +324470,53 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 3386,
+          "end": 3388,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 3539,
+          "end": 3541,
+          "symbol": "M:ue.<init>()V",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 3568,
+          "end": 3569,
+          "symbol": "M:ue.a(ZLfd;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
+        },
+        {
+          "start": 3626,
+          "end": 3627,
+          "symbol": "M:sd.a(Lfd;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
+        },
+        {
+          "start": 3647,
+          "end": 3654,
+          "symbol": "F:ue.field_i:Ljava/awt/Frame;",
+          "original": "field_i",
+          "renamed": "fullscreenFrame"
+        },
+        {
           "start": 3797,
           "end": 3799,
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 4285,
+          "end": 4287,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         }
       ]
     },
@@ -324758,8 +325564,15 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "d1dde43ecc7b02b7d1adad30c03c4bdecf1bcfe0a6d29c3b9149e360fd10917c",
-      "outputSha256": "52249e7fe50bee0322d2dd1731fda3e2513b485ee99d8f4a1497ac11f970008a",
+      "outputSha256": "8e1e7eeb2f6de70485c6d0cbad82bde911daa55c78d5d30bb475466b224361df",
       "edits": [
+        {
+          "start": 622,
+          "end": 629,
+          "symbol": "F:ue.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
         {
           "start": 1287,
           "end": 1289,
@@ -325565,8 +326378,15 @@
       "original": "wa.java",
       "renamed": "wa.java",
       "inputSha256": "c391c5d6036f415b7e5d5be14e04999bab2bd8ff23ae79cd424ff6dfb01a359f",
-      "outputSha256": "5d77e3786d526ffd960e7559851aa4b2e33dfdc264fd7c535232418e49ef704e",
+      "outputSha256": "b99ff3eb4441365bca2d7000d813c68745dd4c62c36b94a8cc3587de299bb591",
       "edits": [
+        {
+          "start": 362,
+          "end": 364,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
+        },
         {
           "start": 657,
           "end": 659,
@@ -325587,6 +326407,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 2339,
+          "end": 2341,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 2550,
@@ -326170,7 +326997,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "446521b20edcd033dab4d5f42e85bec8436e981cee505d1554c82e8583f89fd8",
-      "outputSha256": "fae0a671e748ff468ee993feb4f938d71cc06d5badabfb095898339fe852d1c6",
+      "outputSha256": "7e782c7e536ad48aea4265442dbdce1ecd547dff8d010c444a66adfecf249d24",
       "edits": [
         {
           "start": 275,
@@ -326213,6 +327040,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "GameCanvas"
+        },
+        {
+          "start": 11311,
+          "end": 11313,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 11886,
@@ -326538,10 +327372,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "535c0b018a9287546700fa67066846110daaffa7ceab7c589948f8e3de3530ab",
+    "rulesSha256": "7c33ca800d37ebb429f5c83672a4496131fb194b2a447f4a70799f1c32304fd6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "08b0730275fea6c38aca03684fac1a5fe6d01a520e428809a5e3c19fae9787e3",
+    "outputTreeSha256": "c3fac0b7000117786472d1aca4cc4257b2cd8a9523dd8e69822228d7c88f8660",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

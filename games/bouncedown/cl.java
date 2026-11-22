@@ -180,7 +180,7 @@ final class cl extends al {
           var2 = var9.readUnsignedByte((byte) -118);
           var3 = var9.readUnsignedByte((byte) -113);
           if (0 == var2) {
-            var4 = (id) (mf.field_d.a((byte) -105));
+            var4 = (id) (AccountRequestState.field_d.a((byte) -105));
             if (var4 == null) {
               kc.a((byte) 18);
               return;

@@ -9,9 +9,9 @@ final class vd implements Runnable {
     private int field_g;
     private int field_b;
     private int field_k;
-    private df field_i;
+    private PlatformTaskDispatcher field_i;
     private boolean field_f;
-    private bc field_h;
+    private PlatformTask field_h;
     private OutputStream field_d;
     private boolean field_a;
     private InputStream field_j;
@@ -145,7 +145,7 @@ final class vd implements Runnable {
         }
     }
 
-    vd(java.net.Socket param0, df param1) throws IOException {
+    vd(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -180,7 +180,7 @@ final class vd implements Runnable {
               }
             }
             if (null == this.field_h) {
-              this.field_h = this.field_i.a((byte) 48, (Runnable) (this), 3);
+              this.field_h = this.field_i.requestThreadStart((byte) 48, (Runnable) (this), 3);
             }
             if (param1) {
               return;
@@ -242,12 +242,12 @@ final class vd implements Runnable {
             this.notifyAll();
           }
           if (this.field_h != null) {
-            while (this.field_h.field_g == 0) {
+            while (this.field_h.status == 0) {
               jd.a(1, 1L);
             }
-            if (this.field_h.field_g == 1) {
+            if (this.field_h.status == 1) {
               try {
-                ((Thread) (this.field_h.field_f)).join();
+                ((Thread) (this.field_h.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (InterruptedException) (Object) decompiledCaughtException;
@@ -338,7 +338,7 @@ final class vd implements Runnable {
         return;
     }
 
-    private vd(java.net.Socket param0, df param1, int param2) throws IOException {
+    private vd(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_f = false;
         this.field_b = 0;
         this.field_k = 0;

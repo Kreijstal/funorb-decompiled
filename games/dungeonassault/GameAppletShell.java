@@ -454,7 +454,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          c.field_h = (java.awt.Canvas) ((Object) new ql((java.awt.Component) (this)));
+          c.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) c.field_h));
           c.field_h.setSize(up.field_d, eg.field_d);
           c.field_h.setVisible(true);
@@ -820,8 +820,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           try {
             try {
               if (null != ba.field_c) {
-                ql.field_b = ql.field_b + 1;
-                if (ql.field_b >= 3) {
+                DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1;
+                if (DelegatingCanvas.field_b >= 3) {
                   this.a((byte) -112, "alreadyloaded");
                   return;
                 }

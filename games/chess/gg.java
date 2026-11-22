@@ -298,20 +298,20 @@ final class gg {
         this.field_f.a(this.field_A, this.field_t, (byte) -100);
     }
 
-    final a a(byte param0) {
-        a var2 = null;
+    final FullscreenFocusCanvas a(byte param0) {
+        FullscreenFocusCanvas var2 = null;
         this.field_A = em.field_O;
         this.field_t = tm.field_c;
         this.field_f.a(this.field_x, this.field_w, (byte) -101);
         if (param0 == 101) {
           hf.field_a = false;
-          var2 = fn.a(0, this.field_x, 0, 66, this.field_w, oc.field_l);
+          var2 = fn.createFullscreenCanvas(0, this.field_x, 0, 66, this.field_w, oc.field_l);
           if (var2 == null) {
             this.c((byte) -104);
           }
           return var2;
         }
-        return (a) null;
+        return (FullscreenFocusCanvas) null;
     }
 
     final static void b(byte param0) {

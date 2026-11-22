@@ -76,7 +76,7 @@ final class in {
           if (var11.field_f != 2) {
             return var7;
           }
-          wf.a(var7, param2, param4 - 3057);
+          wf.exitFullscreenFrame(var7, param2, param4 - 3057);
           stackIn_40_0 = null;
           return (java.awt.Frame) (stackIn_40_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

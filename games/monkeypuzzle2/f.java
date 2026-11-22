@@ -8,7 +8,7 @@ class f extends kc {
     static int[] field_j;
     static String field_f;
     static String field_e;
-    static lk field_i;
+    static AccountRequestState field_i;
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
@@ -98,7 +98,7 @@ class f extends kc {
         hb var2 = gf.field_c;
         var2.b(true, param0);
         if (param1 != 22492) {
-          field_i = (lk) null;
+          field_i = (AccountRequestState) null;
         }
         var2.writeByte(1, param1 - 71644);
         var2.writeByte(2, param1 - 71644);
@@ -128,6 +128,6 @@ class f extends kc {
         field_j = new int[]{5, 5, 3, 1, 2, 3, 3, 1, 2, 3};
         field_e = "Quit";
         field_f = "You are not currently logged in to the<nbsp>game.";
-        field_i = new lk();
+        field_i = new AccountRequestState();
     }
 }

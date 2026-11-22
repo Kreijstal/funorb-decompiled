@@ -2798,7 +2798,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("fs_accept_countdown_sing", 4);
                 if (var2 != null) {
-                  ef.field_f = Archive.a(true, var2);
+                  AccountRequestState.field_f = Archive.a(true, var2);
                 }
                 var2 = vd.a("fs_accept_countdown_pl", 4);
                 if (var2 != null) {

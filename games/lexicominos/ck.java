@@ -99,9 +99,9 @@ final class ck extends IOException {
     }
 
     final static void b(byte param0) {
-        if (jc.field_b != null) {
-          jc.field_b.b(58);
-          jc.field_b = null;
+        if (DelegatingCanvas.field_b != null) {
+          DelegatingCanvas.field_b.b(58);
+          DelegatingCanvas.field_b = null;
         }
         if (param0 >= -25) {
           field_a = 22;
@@ -125,9 +125,9 @@ final class ck extends IOException {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$b$e683eeaaf5b5(int param0) {
-        if (jc.field_b != null) {
-          jc.field_b.b(58);
-          jc.field_b = null;
+        if (DelegatingCanvas.field_b != null) {
+          DelegatingCanvas.field_b.b(58);
+          DelegatingCanvas.field_b = null;
         }
         if (param0 >= -25) {
           field_a = 22;

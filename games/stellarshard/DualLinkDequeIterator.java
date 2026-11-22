@@ -10,7 +10,7 @@ final class DualLinkDequeIterator implements Iterator {
     static int field_b;
     static li field_f;
     static BitmapFont field_c;
-    static va field_e;
+    static FullscreenFocusCanvas field_e;
     private DualLinkDeque field_a;
     static String field_g;
 

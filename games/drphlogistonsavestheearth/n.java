@@ -259,7 +259,7 @@ final class n implements Runnable {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 64) {
-          n.a(31, (bl) null, -33, -104, -11, -95);
+          n.createFullscreenCanvas(31, (bl) null, -33, -104, -11, -95);
         }
         stackIn_6_0 = (null != uj.field_j) && (tl.field_O == ik.field_d);
         return stackIn_6_0;
@@ -376,12 +376,12 @@ final class n implements Runnable {
         }
     }
 
-    final static q a(int param0, bl param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, bl param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        q var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        q stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -392,9 +392,9 @@ final class n implements Runnable {
           if (var8 == null) {
             return null;
           }
-          var7 = new q();
-          var7.field_a = var8;
-          var7.field_a.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param2, param4);
           var7.addFocusListener(var7);
           var7.requestFocus();

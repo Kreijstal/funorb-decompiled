@@ -923,7 +923,7 @@ final class LevelSession {
         if ((this.field_J & 1) == 0) {
           return;
         }
-        bc.field_d = gm.a(bc.field_d, 65280, (-8096 + this.field_J) / 20, q.field_f, 16711680, true);
+        bc.field_d = gm.a(bc.field_d, 65280, (-8096 + this.field_J) / 20, FullscreenFocusCanvas.field_f, 16711680, true);
     }
 
     private final void p(int param0) {
@@ -1472,10 +1472,10 @@ final class LevelSession {
     }
 
     private final void b(byte param0, int param1) {
-        q.field_e.c(0, 0, 1907987);
+        FullscreenFocusCanvas.field_e.c(0, 0, 1907987);
         int var3 = -87 / ((-57 - param0) / 40);
         if (nd.field_M >= 0) {
-          q.field_e.e(0, 0, nd.field_M);
+          FullscreenFocusCanvas.field_e.e(0, 0, nd.field_M);
         }
     }
 
@@ -3519,7 +3519,7 @@ final class LevelSession {
             ib.field_a = hi.a(640, 4, this.field_l);
             var3++;
             ch.field_y = hi.a(75, param0 + 4, this.field_l);
-            var2 = var2 != 0 | q.field_e.a(0, 0, ib.field_a, ch.field_y) ? 1 : 0;
+            var2 = var2 != 0 | FullscreenFocusCanvas.field_e.a(0, 0, ib.field_a, ch.field_y) ? 1 : 0;
             do {
               if (var3 < 100 &&
                 var2 == 0) {

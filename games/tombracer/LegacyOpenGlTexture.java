@@ -12,10 +12,10 @@ abstract class LegacyOpenGlTexture implements FramebufferAttachment {
     static BitmapFont field_b;
     private int texelCount;
     OpenGlToolkit toolkit;
-    static fpa field_a;
+    static AccountRequestState registrationRequestState;
 
     public static void releaseStatics(int param0) {
-        field_a = null;
+        registrationRequestState = null;
         if (param0 != 1956) {
           field_j = (String) null;
           field_b = null;

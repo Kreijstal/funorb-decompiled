@@ -24,7 +24,7 @@ abstract class SpriteState extends DualLinkNode {
         try {
           if (!sf.b(false)) {
             if (pd.field_f != null &&
-              pd.field_f.field_c) {
+              pd.field_f.focusLost) {
               ih.b((byte) -25);
               dg.field_z.a((byte) -111, (UiWidget) (new ia(dg.field_z, nb.field_K)));
             }
@@ -36,7 +36,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           dg.field_z.f((byte) -127);
           while (qh.c(119)) {
-            dg.field_z.a(gi.field_f, uc.field_b, true);
+            dg.field_z.a(gi.field_f, AccountRequestState.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

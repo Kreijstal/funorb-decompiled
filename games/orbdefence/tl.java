@@ -8,7 +8,7 @@ final class tl {
     static int field_a;
     static ba field_c;
     static String field_e;
-    static va field_h;
+    static AccountRequestState field_h;
     static AccountServiceResult field_g;
     static int[] field_d;
     static int[] field_b;
@@ -19,7 +19,7 @@ final class tl {
         try {
           var5 = uk.field_b;
           if (param0 > -121) {
-            field_h = (va) null;
+            field_h = (AccountRequestState) null;
           }
           var5.i(param2, 92);
           var5.position = var5.position + 1;
@@ -253,6 +253,6 @@ final class tl {
     static {
         field_f = new Random();
         field_c = new ba(7, 0, 1, 1);
-        field_h = new va();
+        field_h = new AccountRequestState();
     }
 }

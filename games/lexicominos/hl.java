@@ -617,7 +617,7 @@ final class hl extends PcmStream {
         RuntimeException var2 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          var4 = (wa) (ki.field_b.a(true));
+          var4 = (wa) (AccountRequestState.field_b.a(true));
           do {
             if (var4 == null) {
               if (param1 != -2212) {
@@ -626,7 +626,7 @@ final class hl extends PcmStream {
               break;
             }
             na.a((byte) -126, var4, param0);
-            var4 = (wa) (ki.field_b.f(2));
+            var4 = (wa) (AccountRequestState.field_b.f(2));
           } while (var3 == 0);
           var5 = (mc) (vh.field_a.a(true));
           while (var5 != null) {

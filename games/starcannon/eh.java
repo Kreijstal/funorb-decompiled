@@ -1576,7 +1576,7 @@ abstract class eh {
                 }
                 var2 = rd.a("login_username_email", -67);
                 if (var2 != null) {
-                  pf.field_b = DualLinkNode.a(112, var2);
+                  AccountRequestState.field_b = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("login_username", param0 ^ -103);
                 if (var2 != null) {
@@ -1740,7 +1740,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_alert_email_unavailable", -67);
                 if (null != var2) {
-                  hi.field_e = DualLinkNode.a(param0 ^ 70, var2);
+                  DelegatingCanvas.field_e = DualLinkNode.a(param0 ^ 70, var2);
                 }
                 var2 = rd.a("create_alert_invaliddate", -64);
                 if (var2 != null) {

@@ -644,7 +644,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             tl.a(122);
             l.a(param1 + 73);
             nf.a(2, true, sj.field_V);
-            ql.a((byte) -105);
+            DelegatingCanvas.a((byte) -105);
             hh.field_c = true;
             ab.field_a = 15000L + kd.c(-2456);
           }
@@ -757,7 +757,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (dk.field_c == 3 &&
-          ql.a(GameAppletShell.field_b, ib.field_b, (byte) 61, fi.field_u) &&
+          DelegatingCanvas.a(GameAppletShell.field_b, ib.field_b, (byte) 61, fi.field_u) &&
           fl.a(-43, ib.field_b)) {
           jm.a(false);
           am.b(112);

@@ -77,7 +77,7 @@ abstract class am extends IntrusiveNode {
               }
               return;
             }
-            nn.field_e = nn.field_e - pp.field_a;
+            nn.field_e = nn.field_e - FullscreenFocusCanvas.field_a;
             if (param0 >= 53) {
               return;
             }

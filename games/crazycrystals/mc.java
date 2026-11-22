@@ -38,7 +38,7 @@ abstract class mc extends DualLinkNode {
           }
           return null;
         }
-        if (cl.field_o < GzipDecompressor.field_a + u.field_a) {
+        if (cl.field_o < GzipDecompressor.field_a + AccountRequestState.field_a) {
           return kf.field_f;
         }
         if (param0 != 6) {

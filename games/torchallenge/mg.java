@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mg {
-    static ne field_c;
+    static AccountRequestState field_c;
     static int[] field_a;
     static int field_e;
     static int field_b;
@@ -93,6 +93,6 @@ final class mg {
 
     static {
         field_a = new int[]{0, 0};
-        field_c = new ne();
+        field_c = new AccountRequestState();
     }
 }

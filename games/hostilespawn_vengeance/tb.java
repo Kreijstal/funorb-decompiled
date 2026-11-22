@@ -116,7 +116,7 @@ final class tb extends ph {
           return;
         }
         v.a(8, wa.field_q);
-        wa.field_q.a(true, gf.field_b);
+        wa.field_q.exitFullscreen(true, gf.field_b);
         if (param0 < -84) {
           wa.field_q = null;
           if (ie.field_c != null) {

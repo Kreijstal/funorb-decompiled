@@ -79,7 +79,7 @@ final class bg extends IntrusiveNode {
             null != sb.field_g &&
             sb.field_g.a(0) &&
             sb.field_g.a(param0 ^ -11140, "benefits")) {
-            ua.field_c = qk.a("benefits", ce.field_a, "headline", true);
+            DelegatingCanvas.field_c = qk.a("benefits", ce.field_a, "headline", true);
             t.field_d = qk.a("benefits", ce.field_a, "blurbpane", true);
             r.field_b = qk.a("benefits", ce.field_a, "button", true);
             eg.field_d = qk.a("benefits", ce.field_a, "signup_text", true);
@@ -238,8 +238,8 @@ final class bg extends IntrusiveNode {
           wj.b(ha.field_d);
           wj.a(16, 16, 608, 112, 15, qf.field_d, em.field_d);
           wj.a(231, 144, 393, 232, 15, qf.field_d, em.field_d);
-          if (null != ua.field_c) {
-            ua.field_c.d(0, 0);
+          if (null != DelegatingCanvas.field_c) {
+            DelegatingCanvas.field_c.d(0, 0);
           }
           if (t.field_d != null) {
             t.field_d.d(0, 0);

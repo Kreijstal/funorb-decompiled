@@ -256,7 +256,7 @@ final class sg {
           var3_int = stackIn_5_0;
           var4 = -50 / ((param1 + 36) / 58);
           if (this.field_e <= -1) {
-            if (!ki.a((byte) -116)) {
+            if (!AccountRequestState.a((byte) -116)) {
               bi.field_a.a(tj.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             } else {
               bi.field_a.a(tj.field_k + "<br><br>" + al.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
@@ -325,13 +325,13 @@ final class sg {
         }
     }
 
-    final static ra a(int param0, int param1, int param2, int param3, int param4, ab param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, int param4, ab param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ra var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        ra stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -341,11 +341,11 @@ final class sg {
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (ra) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new ra();
-          var7.field_b = var8;
-          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(param0, 0, param1, param2);
           var7.addFocusListener(var7);
           var7.requestFocus();
@@ -592,7 +592,7 @@ final class sg {
                                       if (this.field_c.d(0)) {
                                         el.field_c.a((byte) 99, 4);
                                         th.field_o[2].e(0);
-                                        if (!ki.a((byte) -118)) {
+                                        if (!AccountRequestState.a((byte) -118)) {
                                           stackIn_191_0 = this.field_k;
                                           stackIn_191_1 = -52;
                                           stackIn_191_2 = param1;
@@ -692,7 +692,7 @@ final class sg {
           } else {
             if (this.field_c.d(0)) {
               if (ve.field_a &&
-                !ki.a((byte) -118)) {
+                !AccountRequestState.a((byte) -118)) {
                 if (!hh.field_N.field_k) {
                   ve.field_a = false;
                 } else {
@@ -715,10 +715,10 @@ final class sg {
                     wa.field_j[82]) {
                     oe.field_a = 0;
                   }
-                  ki.field_d = null;
+                  AccountRequestState.field_d = null;
                   el.field_c = new fc(this.field_k, id.field_w[rg.field_b], new Random());
                   this.field_k.a((byte) 126, param1, -1, 2);
-                  ki.a(960000, el.field_c.field_I, -128);
+                  AccountRequestState.a(960000, el.field_c.field_I, -128);
                 }
               } else {
                 this.field_k.a((byte) 127, param1, 8, 14);
@@ -1415,7 +1415,7 @@ final class sg {
           if (this.field_d == 1) {
             boolean decompiledFrameRemainder0 = true;
             var3 = pa.field_d + (pa.field_d >> 1);
-            if (!ki.a((byte) -108)) {
+            if (!AccountRequestState.a((byte) -108)) {
               if (hh.field_N == null) {
                 hh.field_N = ud.a(1, -68, 10, 3, 9);
               }
@@ -1424,7 +1424,7 @@ final class sg {
                   var2 = fd.field_a;
                   var14 = hh.field_N.field_j[jf.field_I];
                   var19 = hh.field_N.field_n[jf.field_I];
-                  var6 = ul.a(ki.field_d, hh.field_N, param0 ^ 52, jf.field_I);
+                  var6 = ul.a(AccountRequestState.field_d, hh.field_N, param0 ^ 52, jf.field_I);
                   var7 = 38;
                   for (var8_int = 0; 10 > var8_int; var8_int++) {
                     if (var14[var8_int] != null) {
@@ -1681,7 +1681,7 @@ final class sg {
                 if (this.field_d != 4 &&
                   this.field_d != 13) {
                   if (((this.field_d == 1)) &&
-                    (!(ki.a((byte) -114)))) {
+                    (!(AccountRequestState.a((byte) -114)))) {
                     var2_int = (pa.field_d >> 1) + pa.field_d;
                     jh.field_d.a(fl.field_b, 12, -jh.field_d.field_E + 370, 278, 1000, 0, -1, 0, 0, var2_int);
                   }

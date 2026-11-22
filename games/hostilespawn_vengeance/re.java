@@ -1255,9 +1255,9 @@ final class re {
             if (var15.field_m) {
               if (null != var15.field_l) {
                 var4Lifetime2 = kh.field_X;
-                var5 = var14.field_p[ue.field_e];
-                var19 = var14.field_l[ue.field_e];
-                var7 = fg.a(var15, ue.field_e, false, ch.field_h);
+                var5 = var14.field_p[FullscreenFocusCanvas.field_e];
+                var19 = var14.field_l[FullscreenFocusCanvas.field_e];
+                var7 = fg.a(var15, FullscreenFocusCanvas.field_e, false, ch.field_h);
                 var8 = 18;
                 if (null != ch.field_h &&
                   var15.field_j == ch.field_h.field_t &&
@@ -1330,8 +1330,8 @@ final class re {
           var15 != null &&
           p.field_m[bm.field_c].field_m &&
           var15.field_l != null &&
-          var14.field_l[ue.field_e] != null &&
-          var14.field_l[ue.field_e].length == 0) {
+          var14.field_l[FullscreenFocusCanvas.field_e] != null &&
+          var14.field_l[FullscreenFocusCanvas.field_e].length == 0) {
           return;
         }
         return;
@@ -1833,7 +1833,7 @@ final class re {
                   (decompiledFrameRemainder16) &&
                   (decompiledFrameRemainder15) &&
                   (decompiledFrameRemainder14)) {
-                  ue.field_e = 0;
+                  FullscreenFocusCanvas.field_e = 0;
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -1843,7 +1843,7 @@ final class re {
                   (decompiledFrameRemainder17) &&
                   (decompiledFrameRemainder16) &&
                   (decompiledFrameRemainder15)) {
-                  ue.field_e = 2;
+                  FullscreenFocusCanvas.field_e = 2;
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -1852,7 +1852,7 @@ final class re {
                   (decompiledFrameRemainder21) &&
                   (decompiledFrameRemainder17) &&
                   (decompiledFrameRemainder16)) {
-                  ue.field_e = 1;
+                  FullscreenFocusCanvas.field_e = 1;
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -4996,7 +4996,7 @@ final class re {
           var2 = p.field_m[bm.field_c];
           if (var2.field_m &&
             null != var2.field_p) {
-            fg.a(var2, ue.field_e, false, ch.field_h);
+            fg.a(var2, FullscreenFocusCanvas.field_e, false, ch.field_h);
           }
         }
     }

@@ -61,7 +61,7 @@ final class ra {
             return;
           }
           if (dg.field_i != null &&
-            dg.field_i.field_b) {
+            dg.field_i.focusLost) {
             ug.a(-116);
             w.field_G.a(new i(w.field_G, bl.field_b), (byte) 100);
           }

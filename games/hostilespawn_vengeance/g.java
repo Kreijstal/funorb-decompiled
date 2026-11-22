@@ -156,7 +156,7 @@ final class g extends ph {
             stackIn_37_0 = var7;
             return stackIn_37_0;
           }
-          sd.a(param3, -125, var7);
+          sd.exitFullscreenFrame(param3, -125, var7);
           stackIn_35_0 = null;
           return (java.awt.Frame) (stackIn_35_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

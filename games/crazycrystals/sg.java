@@ -3,7 +3,7 @@
  */
 final class sg {
     static boolean field_a;
-    static u field_b;
+    static AccountRequestState field_b;
 
     public static void a(boolean param0) {
         if (!param0) {

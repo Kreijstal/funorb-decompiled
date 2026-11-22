@@ -1581,7 +1581,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_username_unavailable", 0);
                 if (var2 != null) {
-                  q.field_g = mj.a((byte) -110, var2);
+                  FullscreenFocusCanvas.field_g = mj.a((byte) -110, var2);
                 }
                 var2 = wg.a("create_username_available", param0 ^ 7);
                 if (var2 != null) {
@@ -1881,7 +1881,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("instructions", 0);
                 if (var2 != null) {
-                  q.field_d = mj.a((byte) -106, var2);
+                  FullscreenFocusCanvas.field_d = mj.a((byte) -106, var2);
                 }
                 var2 = wg.a("tutorial", 0);
                 if (var2 != null) {

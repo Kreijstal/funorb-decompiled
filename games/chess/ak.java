@@ -267,7 +267,7 @@ final class ak extends IntrusiveNode {
     }
 
     final static void c(byte param0) {
-        a.field_a = hm.a(-64);
+        FullscreenFocusCanvas.field_a = hm.a(-64);
         jh.field_e = new fm();
         if (param0 >= -87) {
           return;

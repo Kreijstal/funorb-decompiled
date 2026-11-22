@@ -36,7 +36,7 @@ abstract class mj {
         }
         if (lb.field_a != null) {
           if (!lb.field_a.b(4)) {
-            return oe.field_d;
+            return FullscreenFocusCanvas.field_d;
           }
           return fg.field_j;
         }

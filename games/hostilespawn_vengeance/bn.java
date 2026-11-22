@@ -331,7 +331,7 @@ final class bn {
             p var3 = (p) null;
             bn.a(false, -123, (p) null, 64);
           }
-          ue.a(param1.field_M, false);
+          FullscreenFocusCanvas.a(param1.field_M, false);
           param1.field_M = 0;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "bn.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

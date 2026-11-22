@@ -110,7 +110,7 @@ abstract class wl extends tb {
                 param2 = dd.field_f;
               }
               param0 = 2;
-              af.field_r.b(va.field_a, 15);
+              af.field_r.b(FullscreenFocusCanvas.field_a, 15);
             }
             if (param0 == 10) {
               var3_int = 0;

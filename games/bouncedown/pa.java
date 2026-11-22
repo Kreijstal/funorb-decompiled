@@ -166,9 +166,9 @@ final class pa {
         try {
           if (!fi.b(param0 + 21921)) {
             if (sj.field_f != null &&
-              sj.field_f.field_f) {
+              sj.field_f.focusLost) {
               eh.a(true);
-              MouseWheelInput.field_b.b(new nh(MouseWheelInput.field_b, jb.field_c), false);
+              MouseWheelInput.field_b.b(new nh(MouseWheelInput.field_b, FullscreenFocusCanvas.field_c), false);
             }
             return;
           }

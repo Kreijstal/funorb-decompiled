@@ -5,7 +5,7 @@ final class tg {
     static String field_d;
     static long field_a;
     static int[] field_b;
-    static va field_c;
+    static AccountRequestState field_c;
 
     final static ti a(String param0, int param1) {
         String var2 = null;
@@ -28,7 +28,7 @@ final class tg {
             return (ti) (stackIn_3_0);
           }
           if (param1 != 256) {
-            field_c = (va) null;
+            field_c = (AccountRequestState) null;
           }
           var6 = (CharSequence) ((Object) param0);
           var2 = ua.a(-21, var6);

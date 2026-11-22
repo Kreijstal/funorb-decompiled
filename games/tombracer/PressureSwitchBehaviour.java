@@ -218,7 +218,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param2 != -106) {
           field_s = (String[]) null;
         }
-        if (bc.handleNameEntryKeyInput(true)) {
+        if (NameEntryKeyboardSupport.handleNameEntryKeyInput(true)) {
           return true;
         }
         if (Puddle.routeKeyInput(param3, (byte) -44, param1, param0)) {

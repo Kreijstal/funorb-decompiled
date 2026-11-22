@@ -76,12 +76,12 @@ final class tia {
           }
           incrementValue$0 = param1;
           param1++;
-          C2SRoomResultPacket.fillRange((byte) -55, param3, param2, vaa.field_a[incrementValue$0], param4);
+          C2SRoomResultPacket.fillRange((byte) -55, param3, param2, PackedBitSetSupport.field_a[incrementValue$0], param4);
           incrementValue$1 = param0;
           param0--;
-          C2SRoomResultPacket.fillRange((byte) -55, param3, param2, vaa.field_a[incrementValue$1], param4);
+          C2SRoomResultPacket.fillRange((byte) -55, param3, param2, PackedBitSetSupport.field_a[incrementValue$1], param4);
           for (var6_int = param1; param0 >= var6_int; var6_int++) {
-            var7 = vaa.field_a[var6_int];
+            var7 = PackedBitSetSupport.field_a[var6_int];
             var7[param2] = param3;
             var7[param4] = param3;
           }

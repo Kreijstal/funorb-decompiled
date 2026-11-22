@@ -5,7 +5,7 @@ final class Model extends IntrusiveNode {
     static int[] field_p;
     pj field_k;
     static int[] field_m;
-    static gd field_o;
+    static AccountRequestState field_o;
     mp field_q;
     static Sprite field_r;
     static String[] field_n;

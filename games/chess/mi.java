@@ -275,7 +275,7 @@ final class mi extends PcmStream {
           stackIn_11_11 = (hj.field_i) || (hl.field_h);
           bh.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_5_6, stackIn_5_7, stackIn_6_8, stackIn_9_9 != 0, stackIn_9_10, stackIn_11_11);
         } else {
-          if (g.a(param0 + 77, pd.field_Rb.field_Xb)) {
+          if (DelegatingCanvas.a(param0 + 77, pd.field_Rb.field_Xb)) {
             var2 = 1;
             stackIn_36_0 = param0 - 46;
             stackIn_36_1 = 15;

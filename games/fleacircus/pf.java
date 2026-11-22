@@ -69,7 +69,7 @@ final class pf {
             return null;
           }
           if (var11.field_b == 2) {
-            hi.a(param3, var7, (byte) 52);
+            hi.exitFullscreenFrame(param3, var7, (byte) 52);
             stackIn_36_0 = null;
             return (java.awt.Frame) (stackIn_36_0);
           }
@@ -393,9 +393,9 @@ final class pf {
               var5Lifetime3 = var5Lifetime3 + id.field_c;
               var8Lifetime1 = af.field_b - (var7Lifetime2 >> 1);
               vh.field_j[var4Lifetime3] = new int[4];
-              vh.field_j[var4Lifetime3][0] = -ae.field_c + var8Lifetime1;
+              vh.field_j[var4Lifetime3][0] = -AccountRequestState.field_c + var8Lifetime1;
               vh.field_j[var4Lifetime3][1] = var5Lifetime3;
-              vh.field_j[var4Lifetime3][2] = (ae.field_c << 1) + var7Lifetime2;
+              vh.field_j[var4Lifetime3][2] = (AccountRequestState.field_c << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + ((ge.field_h << 1) + (id.field_c + hb.field_t));
               vh.field_j[var4Lifetime3][3] = hb.field_t + (ge.field_h << 1);
             } else {

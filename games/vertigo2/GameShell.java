@@ -203,9 +203,9 @@ abstract class GameShell extends GameApplet {
           }
           if (oq.field_E == null) {
             oq.field_E = rc.b(param1 + 130);
-            ee.field_c = UiWidget.e(param1 + 12349);
+            AccountRequestState.field_c = UiWidget.e(param1 + 12349);
           }
-          t.a(oq.field_E, param1 + 1513245, ee.field_c, kb.field_b);
+          t.a(oq.field_E, param1 + 1513245, AccountRequestState.field_c, kb.field_b);
           la.field_e = null;
           ke.field_b = null;
           kb.field_b = null;

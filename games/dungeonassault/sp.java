@@ -6,7 +6,7 @@ final class sp {
     static String[] field_g;
     static cn field_a;
     static int field_h;
-    static af field_e;
+    static AccountRequestState field_e;
     static String field_f;
     static rk field_c;
     static String field_b;
@@ -30,6 +30,6 @@ final class sp {
         field_g = new String[]{"Reconnoitre", "Using a combination of diplomacy, bribery and intimidation, the <%0> prepares for the raid by learning the contents of any two dungeon rooms. (Single use)"};
         field_f = "Ogre Brute";
         field_b = "Close";
-        field_e = new af();
+        field_e = new AccountRequestState();
     }
 }

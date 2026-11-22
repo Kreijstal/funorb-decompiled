@@ -185,7 +185,7 @@ final class cf extends qf {
             stackIn_11_0 = wi.field_a;
             return stackIn_11_0;
           }
-          stackIn_9_0 = hi.field_e;
+          stackIn_9_0 = DelegatingCanvas.field_e;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

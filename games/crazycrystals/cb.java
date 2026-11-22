@@ -400,7 +400,7 @@ final class cb extends pn implements Cloneable {
             stackIn_6_0 = (f) null;
             return stackIn_6_0;
           }
-          dd.field_c.a(32, param2 * 12, 12 * param1, 0, (byte) -111);
+          FullscreenFocusCanvas.field_c.a(32, param2 * 12, 12 * param1, 0, (byte) -111);
           stackIn_8_0 = new ig(param0, param4, (f) (this), false);
           return (f) ((Object) stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -82,7 +82,7 @@ final class nv extends UiComponent {
                 null != SnowAnimation.field_w) {
                 var6 = 1;
               }
-              if (af.a(var6, 26291) == 2) {
+              if (AccountRequestState.a(var6, 26291) == 2) {
                 HomingMissileEvent.a(113, var6, param0, 1);
               }
               var8 = (String) null;

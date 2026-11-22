@@ -183,7 +183,7 @@ abstract class ag extends GameApplet {
     private final void g(byte param0) {
         int var2 = 24 / ((param0 - 58) / 42);
         String var3 = IntrusiveNode.c(1);
-        hi.a(0, var3, ll.b(110));
+        DelegatingCanvas.a(0, var3, ll.b(110));
     }
 
     private final static boolean h(int param0) {
@@ -251,7 +251,7 @@ abstract class ag extends GameApplet {
                             stackIn_30_0 = 13607;
                             stackIn_31_1 = (var2 == 12);
                             var3 = pb.a(stackIn_30_0, stackIn_31_1);
-                            qc.a(var3, (byte) -89);
+                            FullscreenFocusCanvas.a(var3, (byte) -89);
                           }
                         } else {
                           MouseInput.a(il.field_g, se.field_p, nb.field_e, false);
@@ -588,7 +588,7 @@ abstract class ag extends GameApplet {
             if (param1) {
               fi.field_h = false;
             } else {
-              var5_intLifetime2 = qc.a(hc.a((byte) 117), this.field_r, this.field_x, false, -1, ff.g(9));
+              var5_intLifetime2 = FullscreenFocusCanvas.a(hc.a((byte) 117), this.field_r, this.field_x, false, -1, ff.g(9));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   pd.a(UiWidget.field_r, var5_intLifetime2, (byte) -77);
@@ -778,7 +778,7 @@ abstract class ag extends GameApplet {
         if (fi.field_h) {
           return -1;
         }
-        var2 = qc.a(hc.a((byte) 108), this.field_r, this.field_x, true, -1, ff.g(114));
+        var2 = FullscreenFocusCanvas.a(hc.a((byte) 108), this.field_r, this.field_x, true, -1, ff.g(114));
         if (var2 == -1) {
           return -1;
         }

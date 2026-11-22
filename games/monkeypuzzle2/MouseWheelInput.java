@@ -18,19 +18,19 @@ abstract class MouseWheelInput {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           ig.b();
-          r.field_a = new int[260];
+          FullscreenFocusCanvas.field_a = new int[260];
           uc.field_b = 11;
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;
-            r.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            FullscreenFocusCanvas.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (!param0) {
             field_a = (Sprite[][]) null;
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < r.field_a.length) {
-            r.field_a[var5] = 255;
+          while (var5 < FullscreenFocusCanvas.field_a.length) {
+            FullscreenFocusCanvas.field_a[var5] = 255;
             var5++;
           }
           return;

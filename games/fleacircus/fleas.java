@@ -718,8 +718,8 @@ public final class fleas extends NetworkGameClient {
                   a.field_b = fc.a(hm.field_g, "button_raised", "", (byte) 61);
                   ud.b((byte) 47);
                   var11 = tl.field_p.field_N;
-                  vb.field_a = new dd(var11, var11);
-                  vb.field_a.f();
+                  FullscreenFocusCanvas.field_a = new dd(var11, var11);
+                  FullscreenFocusCanvas.field_a.f();
                   BufferedSocket.field_m.a(0, 0, var11, var11);
                   BufferedSocket.field_m = null;
                   gi.field_b.a((byte) 109);
@@ -983,7 +983,7 @@ public final class fleas extends NetworkGameClient {
           wj.a(param0 - 95);
           uc.clearStaticReferences((byte) -118);
           of.b(71);
-          vb.a(-29039);
+          FullscreenFocusCanvas.a(-29039);
           va.b((byte) 126);
           ng.a(0);
           w.c(5);
@@ -1085,7 +1085,7 @@ public final class fleas extends NetworkGameClient {
           kl.clearStaticReferences((byte) -24);
           hl.clearStaticReferences(true);
           qk.clearStaticReferences(param0 + 1);
-          ld.a((byte) -95);
+          DelegatingCanvas.a((byte) -95);
           lf.clearStaticReferences((byte) 65);
           fl.clearStaticReferences(26113);
           ByteStorage.clearStaticReferences((byte) -75);
@@ -1166,7 +1166,7 @@ public final class fleas extends NetworkGameClient {
           hi.clearStaticReferences((byte) -117);
           fi.a(param0 + param0);
           ql.clearStaticReferences((byte) -92);
-          ae.a((byte) -114);
+          AccountRequestState.releaseStatics((byte) -114);
           AccountServiceResult.clearStaticReferences(122);
           ve.a((byte) 84);
           ed.a(20760);
@@ -1507,7 +1507,7 @@ public final class fleas extends NetworkGameClient {
           PacketBuffer.field_j = PacketBuffer.field_j + 1;
           ai.e(-20846);
           if (ResourceArchive.field_p != null &&
-            ResourceArchive.field_p.field_c) {
+            ResourceArchive.field_p.focusLost) {
             IntrusiveNode.a(false);
             cm.a((byte) -28);
           }

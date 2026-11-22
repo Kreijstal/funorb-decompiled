@@ -218,10 +218,10 @@ final class re implements uj {
               }
               if (!param4) {
                 stackIn_42_0 = ((8 & var7) != 0);
-                bd.field_b = stackIn_42_0;
+                AccountRequestState.field_b = stackIn_42_0;
                 stackIn_45_0 = ((4 & var7) != 0);
                 fa.field_b = stackIn_45_0;
-                if (bd.field_b) {
+                if (AccountRequestState.field_b) {
                 }
               }
               if (ei.field_L) {

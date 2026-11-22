@@ -3,7 +3,7 @@
  */
 final class ag {
     private static int[] field_b;
-    static gd field_c;
+    static AccountRequestState field_c;
     static k field_a;
     static String field_d;
 
@@ -52,7 +52,7 @@ final class ag {
           if (param0 == -45) {
             return;
           }
-          field_c = (gd) null;
+          field_c = (AccountRequestState) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class ag {
             field_b[var1] = var0;
           }
         }
-        field_c = new gd();
+        field_c = new AccountRequestState();
         field_d = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_a = new k(12, 0, 1, 0);
     }

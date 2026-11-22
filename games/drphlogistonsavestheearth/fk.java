@@ -6,7 +6,7 @@ final class fk extends IntrusiveNode {
     int field_o;
     int field_s;
     fk field_k;
-    static qb field_q;
+    static AccountRequestState field_q;
     static he field_l;
     int field_n;
     static String field_p;

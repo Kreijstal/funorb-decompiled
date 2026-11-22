@@ -103,7 +103,7 @@ final class ib extends fj {
     }
 
     final static void b(boolean param0) {
-        ud var1 = (ud) (ve.field_b.b((byte) 98));
+        ud var1 = (ud) (AccountRequestState.field_b.b((byte) 98));
         if (var1 == null) {
           throw new IllegalStateException();
         }

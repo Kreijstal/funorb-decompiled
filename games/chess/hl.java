@@ -362,7 +362,7 @@ class hl implements jm, mg {
           stackIn_41_2 = (param1) && (!jh.field_a);
           ((ci) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_41_2);
         } else {
-          if (ed.field_c > 0) {
+          if (AccountRequestState.field_c > 0) {
             if (ig.field_h != null) {
               ig.field_h.d(fm.field_T.field_mb, 0);
             }
@@ -509,7 +509,7 @@ class hl implements jm, mg {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             cf.b(param4.field_C + param2 + param4.field_r, param4.field_y + param4.field_u + param0, param2 + param4.field_r, 80, param4.field_u + param0);
-            a.field_a.a(var10, this.field_i, var10, var11, var12, false);
+            FullscreenFocusCanvas.field_a.a(var10, this.field_i, var10, var11, var12, false);
             fd.a(28773);
           }
           if (param3 <= -66) {
@@ -540,7 +540,7 @@ class hl implements jm, mg {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = AccountNameAvailabilityValidator.field_r[ce.a((int) var2[var4_int], 255)];
         }
-        km var4 = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[0], a.field_c[param0], wm.field_b[0], b.field_c[0], var3);
+        km var4 = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[0], FullscreenFocusCanvas.field_c[param0], wm.field_b[0], b.field_c[0], var3);
         ch.k(4210752);
         return var4;
     }
@@ -748,7 +748,7 @@ class hl implements jm, mg {
                 stackIn_18_0 = var18.a(-5940, var9);
               }
               var15 = stackIn_18_0;
-              a.field_a.a(126, param0.field_k + this.field_m + (param0.field_r + param3) + var13.field_d, this.field_p, this.a(var14, 2668, param1, param0), var15 - var14, var13.field_e, this.field_p >>> 24);
+              FullscreenFocusCanvas.field_a.a(126, param0.field_k + this.field_m + (param0.field_r + param3) + var13.field_d, this.field_p, this.a(var14, 2668, param1, param0), var15 - var14, var13.field_e, this.field_p >>> 24);
             }
             fd.a(28773);
           }

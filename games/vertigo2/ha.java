@@ -93,12 +93,12 @@ final class ha {
             im.field_j.b(rk.field_v, 121);
           }
           im.field_j.b(ja.field_f, 123);
-          ja.field_f.field_Lb.a(ee.field_b, param9 - 27);
+          ja.field_f.field_Lb.a(AccountRequestState.field_b, param9 - 27);
           ja.field_f.field_Lb.field_ab = 1;
           var23 = ja.field_f.field_Lb;
           var24 = var23;
           var24.field_O = 1;
-          bf.field_c = new UiPanel(0L, ee.field_b);
+          bf.field_c = new UiPanel(0L, AccountRequestState.field_b);
           bf.field_c.field_O = 1;
           DirectByteStorage.field_j = new UiPanel(0L, vc.field_b, sl.field_x.toUpperCase());
           qn.field_s = new UiPanel(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
@@ -142,7 +142,7 @@ final class ha {
             ud.field_A.b(b.field_h, 118);
           }
           ud.field_A.b(la.field_f, param9 + 123);
-          rh.field_I = new UiPanel(0L, ee.field_b);
+          rh.field_I = new UiPanel(0L, AccountRequestState.field_b);
           rh.field_I.field_ab = 0;
           rh.field_I.field_O = 1;
           gb.field_c = new UiPanel(0L, ub.field_t, bm.field_y.toUpperCase());
@@ -150,12 +150,12 @@ final class ha {
           oc.field_v.b(rh.field_I, 118);
           oc.field_v.b(gb.field_c, 119);
           oi.field_a = new UiPanel(0L, ua.field_c);
-          oi.field_a.a(ee.field_b, -83);
+          oi.field_a.a(AccountRequestState.field_b, -83);
           var16 = oi.field_a;
           oi.field_a.field_ab = 1;
           var16.field_O = 1;
           de.field_g = new UiPanel(0L, (UiPanel) null);
-          nb.field_D = new UiPanel(0L, ee.field_b);
+          nb.field_D = new UiPanel(0L, AccountRequestState.field_b);
           nb.field_D.field_O = 1;
           uc.field_a = new UiPanel(0L, db.field_t, kc.field_c);
           eq.field_z = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
@@ -240,7 +240,7 @@ final class ha {
           fo.field_f = new UiPanel(0L, SpriteState.field_u);
           hd.field_g = new UiPanel(0L, SpriteState.field_u);
           kk.field_f = new UiPanel(0L, pn.field_N);
-          kk.field_f.a(ee.field_b, -86);
+          kk.field_f.a(AccountRequestState.field_b, -86);
           var17 = kk.field_f;
           kk.field_f.field_ab = 1;
           var17.field_O = 1;

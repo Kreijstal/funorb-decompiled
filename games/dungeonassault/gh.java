@@ -48,18 +48,18 @@ final class gh {
         }
         if (param1 >= -97) {
           qg var3 = (qg) null;
-          gh.a(101, -9, -53, 62, (qg) null, -6);
+          gh.createFullscreenCanvas(101, -9, -53, 62, (qg) null, -6);
         }
         return param0 / 10 + "." + param0 % 10;
     }
 
-    final static ek a(int param0, int param1, int param2, int param3, qg param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, qg param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ek var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        ek stackIn_5_0 = null;
-        ek stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_5_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -70,9 +70,9 @@ final class gh {
           if (var8 == null) {
             return null;
           }
-          var7 = new ek();
-          var7.field_e = var8;
-          var7.field_e.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param5, param3);
           var7.addFocusListener(var7);
           var7.requestFocus();
@@ -80,7 +80,7 @@ final class gh {
             stackIn_7_0 = var7;
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ek) null;
+          stackIn_5_0 = (FullscreenFocusCanvas) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

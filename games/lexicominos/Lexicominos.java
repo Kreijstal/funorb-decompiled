@@ -949,7 +949,7 @@ public final class Lexicominos extends nk {
           tb.a(255);
           dd.a(1);
           td.clearStaticReferences(0);
-          ra.b(20);
+          FullscreenFocusCanvas.b(20);
           gf.clearStaticReferences(-78);
           qk.a(false);
           AudioOutput.clearStaticReferences();
@@ -1033,7 +1033,7 @@ public final class Lexicominos extends nk {
           dj.a(-45);
           ui.clearStaticReferences(-1);
           he.a(-1);
-          jc.clearStaticReferences(-63);
+          DelegatingCanvas.clearStaticReferences(-63);
           el.clearStaticReferences(true);
           ByteStorage.clearStaticReferences((byte) -125);
           Bzip2Decoder.clearStaticReferences();
@@ -1114,7 +1114,7 @@ public final class Lexicominos extends nk {
           sa.a(0);
           vi.a(112);
           vb.clearStaticReferences(109);
-          ki.a(-119);
+          AccountRequestState.releaseStatics(-119);
           AccountServiceResult.b(-26);
           la.clearStaticReferences((byte) 122);
           c.clearStaticReferences(117);
@@ -1159,7 +1159,7 @@ public final class Lexicominos extends nk {
         RuntimeException var2 = null;
         try {
           nh.a(0, 1000000, 6, true);
-          if (!ki.a((byte) -118)) {
+          if (!AccountRequestState.a((byte) -118)) {
             vc.field_D = ce.a(4, 109);
             hh.field_N = ud.a(1, -108, 10, 3, 9);
             al.a(16, ef.field_c, 100.0f);
@@ -1206,7 +1206,7 @@ public final class Lexicominos extends nk {
           if (param0 != 0) {
             return true;
           }
-          stackIn_10_0 = (ki.a((byte) -120)) || (this.field_K);
+          stackIn_10_0 = (AccountRequestState.a((byte) -120)) || (this.field_K);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1224,7 +1224,7 @@ public final class Lexicominos extends nk {
         RuntimeException decompiledCaughtException = null;
         var4 = field_L ? 1 : 0;
         try {
-          if (!ki.a((byte) -119)) {
+          if (!AccountRequestState.a((byte) -119)) {
             do {
               var2 = (vb) (rb.field_b.a((byte) 56));
               if (var2 == null) {
@@ -1440,7 +1440,7 @@ public final class Lexicominos extends nk {
           if (2 <= vb.field_i) {
             bi.field_a.c(Integer.toString(tj.field_i), 630, 25, 16711680, -1);
           }
-          if (ra.a(-17977)) {
+          if (FullscreenFocusCanvas.a(-17977)) {
             SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
             rg.a(GameAppletShell.field_o, 10, (byte) -105, 10);
           }
@@ -1451,7 +1451,7 @@ public final class Lexicominos extends nk {
             }
           }
           if (pb.c(true) &&
-            !ra.a(-17977)) {
+            !FullscreenFocusCanvas.a(-17977)) {
             stackIn_87_0 = 0;
             if (null != ff.field_b) {
               stackIn_88_1 = true;
@@ -1532,7 +1532,7 @@ public final class Lexicominos extends nk {
           ce.field_b.e();
           ik.field_h.e();
           if (null != ff.field_b &&
-            ff.field_b.field_d) {
+            ff.field_b.focusLost) {
             af.a(-53);
             ce.b(4);
           }
@@ -1579,7 +1579,7 @@ public final class Lexicominos extends nk {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ra.a(-17977)) {
+              if (FullscreenFocusCanvas.a(-17977)) {
                 if (je.field_a != 0) {
                   var2_int = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
@@ -1603,7 +1603,7 @@ public final class Lexicominos extends nk {
                       kl.a(bi.field_a.field_E * 3 >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -103, nh.field_c, true, 1 + bi.field_a.field_E, 240);
                       break;
                   }
-                  if (!ra.a(-17977)) {
+                  if (!FullscreenFocusCanvas.a(-17977)) {
                     vg.field_d[aa.field_j].a(true, true);
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
@@ -1669,7 +1669,7 @@ public final class Lexicominos extends nk {
                   if (fieldTemp$1 != 32) {
                     break regionExit1;
                   }
-                  if (ra.a(-17977)) {
+                  if (FullscreenFocusCanvas.a(-17977)) {
                     pl.a((byte) -85);
                     if (var4 != 0) {
                       mk.a(14891);
@@ -1693,11 +1693,11 @@ public final class Lexicominos extends nk {
                     break regionExit1;
                   }
                 }
-                if (!ki.a((byte) -115)) {
+                if (!AccountRequestState.a((byte) -115)) {
                   if (el.field_c != null &&
                     el.field_c.field_J > 0 &&
                     !el.field_c.field_h) {
-                    ki.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 + el.field_c.field_m.field_i}, el.field_c.field_a);
+                    AccountRequestState.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 + el.field_c.field_m.field_i}, el.field_c.field_a);
                   }
                   hh.field_N = ud.a(1, -118, 10, 3, 9);
                   aa.field_j = hf.field_a;
@@ -1776,7 +1776,7 @@ public final class Lexicominos extends nk {
                         el.field_c.field_d = el.field_c.field_d + 1;
                         el.field_c.field_s = 0;
                         if (1 == (el.field_c.field_d & 1)) {
-                          ki.a(40000 * el.field_c.field_d + 960000, el.field_c.field_I, -127);
+                          AccountRequestState.a(40000 * el.field_c.field_d + 960000, el.field_c.field_I, -127);
                         }
                       }
                     }
@@ -2236,7 +2236,7 @@ public final class Lexicominos extends nk {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted0)) {
             if (th.field_r == 1 &&
-              !ki.a((byte) -127)) {
+              !AccountRequestState.a((byte) -127)) {
               hh.field_N = ud.a(1, -85, 10, 3, 9);
               decompiledFrameRemainder0 = (var8 != 0);
             }

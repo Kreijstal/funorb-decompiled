@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class PacketBuffer extends IntrusiveNode {
-    static va field_m;
+    static AccountRequestState field_m;
     static boolean field_g;
     int position;
     static String field_h;
@@ -13,7 +13,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final void writeByte(int param0, int param1) {
         if (param1 > -3) {
-          field_m = (va) null;
+          field_m = (AccountRequestState) null;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -790,7 +790,7 @@ class PacketBuffer extends IntrusiveNode {
 
     static {
         field_h = "Awesomo";
-        field_m = new va();
+        field_m = new AccountRequestState();
         field_f = 64;
         field_l = new im();
     }

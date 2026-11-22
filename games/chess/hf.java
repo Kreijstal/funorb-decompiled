@@ -121,7 +121,7 @@ final class hf {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!ed.a(var6, 21257)) {
+          if (!AccountRequestState.a(var6, 21257)) {
             stackIn_3_0 = qj.field_a;
             return stackIn_3_0;
           }
@@ -130,7 +130,7 @@ final class hf {
             return stackIn_7_0;
           }
           if (qd.a((byte) 13, param2)) {
-            stackIn_11_0 = ed.field_a;
+            stackIn_11_0 = AccountRequestState.field_a;
             return stackIn_11_0;
           }
           if (ah.a(param2, 54)) {

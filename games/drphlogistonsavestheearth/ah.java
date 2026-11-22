@@ -160,7 +160,7 @@ final class ah extends pj implements fh, ke {
             var17 = r.field_c[var16];
             ue.a(var16, (byte) 93);
             for (var18 = 0; var18 < 3; var18++) {
-              lc.field_u[var18] = lc.field_u[var18] + q.field_b[var15][var18];
+              lc.field_u[var18] = lc.field_u[var18] + FullscreenFocusCanvas.field_b[var15][var18];
             }
             s.a(true, lc.field_u, false, wd.field_e, false, var17, -45);
             dd.a(var8Lifetime1, var13Lifetime1, var14, var7Lifetime1, var9Lifetime1, var12Lifetime1, (byte) -81, var17);

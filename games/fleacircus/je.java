@@ -1077,7 +1077,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("reloadgame", 0);
                 if (var2 != null) {
-                  ld.field_c = ab.a(0, var2);
+                  DelegatingCanvas.field_c = ab.a(0, var2);
                 }
                 var2 = ad.a("toserverlist", 0);
                 if (null != var2) {

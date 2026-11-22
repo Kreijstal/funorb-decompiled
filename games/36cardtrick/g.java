@@ -28,7 +28,7 @@ class g extends lk implements u {
         if (!eh.d(19314)) {
           return;
         }
-        sc.a(param0, (byte) 122, false);
+        AccountRequestState.a(param0, (byte) 122, false);
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {

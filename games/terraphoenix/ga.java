@@ -403,7 +403,7 @@ final class ga {
         if (param0 != -1426) {
           this.field_h = 55;
         }
-        scanLoop1: while (param1 < og.field_f.b(var3Lifetime2)) {
+        scanLoop1: while (param1 < AccountRequestState.field_f.b(var3Lifetime2)) {
           if (var4 > 1) {
             var3Lifetime2 = mm.a(this.field_n.charAt(0), 0);
             var5 = 1;
@@ -431,7 +431,7 @@ final class ga {
           break;
         }
         var4Lifetime1 = 20;
-        scanLoop2: while (param1 < og.field_f.b(var3Lifetime2)) {
+        scanLoop2: while (param1 < AccountRequestState.field_f.b(var3Lifetime2)) {
           if (var4Lifetime1 > 0) {
             var3Lifetime2 = this.field_n.charAt(0) + ".";
             var5Lifetime1 = 0;
@@ -458,7 +458,7 @@ final class ga {
           }
           break;
         }
-        if (param1 < og.field_f.b(var3Lifetime2)) {
+        if (param1 < AccountRequestState.field_f.b(var3Lifetime2)) {
           var8 = mm.a(this.field_z.charAt(0), 0);
           var3Lifetime2 = var8;
           var3Lifetime2 = var8;
@@ -478,7 +478,7 @@ final class ga {
 
     final String b(int param0) {
         if (param0 == this.field_h) {
-          return og.field_g + this.field_n + " " + this.field_z;
+          return AccountRequestState.field_g + this.field_n + " " + this.field_z;
         }
         if (this.field_h == 2) {
           return wj.field_d + this.field_n + " " + this.field_z;

@@ -14,48 +14,48 @@ final class ch extends am {
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - param0));
         if ((double)var6 >= -3.141592653589793 &&
           (double)var6 <= -2.356194490192345) {
-          gd.field_c = param2;
+          AccountRequestState.field_c = param2;
           tp.field_o = param1;
         } else if ((double)var6 <= -1.5707963267948966 &&
           (double)var6 >= -2.356194490192345) {
-          gd.field_c = param1;
+          AccountRequestState.field_c = param1;
           tp.field_o = param2;
         } else if (-0.7853981633974483 >= (double)var6 &&
           (double)var6 >= -1.5707963267948966) {
-          gd.field_c = param1;
+          AccountRequestState.field_c = param1;
           tp.field_o = ci.field_c - param2;
         } else if (var6 <= 0.0f &&
           -0.7853981633974483 <= (double)var6) {
-          gd.field_c = -param2 + um.field_o;
+          AccountRequestState.field_c = -param2 + um.field_o;
           tp.field_o = param1;
         } else if (var6 >= 0.0f &&
           (double)var6 <= 0.7853981633974483) {
           tp.field_o = -param1 + ci.field_c;
-          gd.field_c = -param2 + um.field_o;
+          AccountRequestState.field_c = -param2 + um.field_o;
         } else if (0.7853981633974483 <= (double)var6 &&
           1.5707963267948966 >= (double)var6) {
           tp.field_o = ci.field_c - param2;
-          gd.field_c = um.field_o - param1;
+          AccountRequestState.field_c = um.field_o - param1;
         } else if ((double)var6 >= 1.5707963267948966 &&
           (double)var6 <= 2.356194490192345) {
-          gd.field_c = -param1 + um.field_o;
+          AccountRequestState.field_c = -param1 + um.field_o;
           tp.field_o = param2;
         } else {
           if (2.356194490192345 <= (double)var6) {
             if (!(3.141592653589793 >= (double)var6)) {
               tp.field_o = tp.field_o & jh.field_A;
-              gd.field_c = gd.field_c & vp.field_I;
+              AccountRequestState.field_c = AccountRequestState.field_c & vp.field_I;
               decompiledFrameRemainder0 = false;
             }
             else {
-              gd.field_c = param2;
+              AccountRequestState.field_c = param2;
               tp.field_o = -param1 + ci.field_c;
             }
           }
         }
         if (decompiledFrameRemainder0) {
           tp.field_o = tp.field_o & jh.field_A;
-          gd.field_c = gd.field_c & vp.field_I;
+          AccountRequestState.field_c = AccountRequestState.field_c & vp.field_I;
         }
 
     }
@@ -72,7 +72,7 @@ final class ch extends am {
         if (this.field_l.field_b) {
           for (var4 = 0; ci.field_c > var4; var4++) {
             this.d(2048, var4, param1);
-            var5 = this.b(0, 0, gd.field_c);
+            var5 = this.b(0, 0, AccountRequestState.field_c);
             var7[var4] = var5[tp.field_o];
           }
         }
@@ -150,7 +150,7 @@ final class ch extends am {
           var6 = var13[2];
           for (var7 = 0; var7 < ci.field_c; var7++) {
             this.d(2048, var7, param1);
-            var14 = this.c(24066, gd.field_c, 0);
+            var14 = this.c(24066, AccountRequestState.field_c, 0);
             var4[var7] = var14[0][tp.field_o];
             var5[var7] = var14[1][tp.field_o];
             var6[var7] = var14[2][tp.field_o];

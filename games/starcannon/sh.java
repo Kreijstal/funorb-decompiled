@@ -184,7 +184,7 @@ final class sh extends fh {
                   var25Lifetime1Lifetime1 = param4.field_h[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_C[var23Lifetime2];
                   ad.field_D[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
-                  hi.field_d[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + var13 * var24Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1 >> 16) + var10;
+                  DelegatingCanvas.field_d[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + var13 * var24Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1 >> 16) + var10;
                   StarCannon.field_y[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param4.field_n[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_g[var23Lifetime2];

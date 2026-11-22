@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ml {
-    static ve field_a;
+    static AccountRequestState field_a;
     static String field_c;
     static String field_b;
 
@@ -11,7 +11,7 @@ final class ml {
         field_b = null;
         field_a = null;
         if (param0 != -1) {
-          field_a = (ve) null;
+          field_a = (AccountRequestState) null;
         }
     }
 
@@ -84,6 +84,6 @@ final class ml {
     static {
         field_c = "Please check if address is correct";
         field_b = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
-        field_a = new ve();
+        field_a = new AccountRequestState();
     }
 }

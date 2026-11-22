@@ -27,7 +27,7 @@ class IntrusiveNode {
           return;
         }
         IntrusiveNode.a((byte) -97, ResourceArchive.field_p);
-        ResourceArchive.field_p.a(fg.field_q, 20401);
+        ResourceArchive.field_p.exitFullscreen(fg.field_q, 20401);
         ResourceArchive.field_p = null;
         if (aa.field_r != null) {
           aa.field_r.a(-115);

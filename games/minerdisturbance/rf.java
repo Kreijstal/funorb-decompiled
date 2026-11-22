@@ -20,19 +20,19 @@ final class rf {
           if (param0 != -75) {
             rf.a((byte) -48);
           }
-          if (bd.field_h == ci.field_e) {
+          if (AccountRequestState.field_h == ci.field_e) {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
-          if (bd.field_h == kd.field_p &&
+          if (AccountRequestState.field_h == kd.field_p &&
             param1.equals(ic.field_m)) {
-            bd.field_h = mc.field_t;
+            AccountRequestState.field_h = mc.field_t;
             stackIn_11_0 = sd.field_d;
             return stackIn_11_0;
           }
           ic.field_m = param1;
           sd.field_d = null;
-          bd.field_h = ci.field_e;
+          AccountRequestState.field_h = ci.field_e;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends oo implements dn {
-    static dq field_fb;
+    static AccountRequestState field_fb;
     private wd field_db;
     private boolean field_eb;
     private boolean field_gb;
@@ -18,7 +18,7 @@ final class AccountCreationResultPanel extends oo implements dn {
 
     final void n(int param0) {
         int var2 = -27 / ((71 - param0) / 52);
-        this.showAccountCreationResult(true, dq.createAccountErrorResult(248, 32, rl.field_i), 11);
+        this.showAccountCreationResult(true, AccountRequestState.createAccountErrorResult(248, 32, rl.field_i), 11);
     }
 
     AccountCreationResultPanel(lt param0, wd param1) {
@@ -140,6 +140,6 @@ final class AccountCreationResultPanel extends oo implements dn {
     }
 
     static {
-        field_fb = new dq();
+        field_fb = new AccountRequestState();
     }
 }

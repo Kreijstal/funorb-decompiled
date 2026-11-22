@@ -500,7 +500,7 @@ public final class TrackController extends GameShell {
         dh.d(-8);
         th.e(0);
         cf.clearStaticReferences(29211);
-        le.b(-128);
+        AccountRequestState.releaseStatics(-128);
         AccountServiceResult.b(71);
         j.clearStaticReferences(-75);
         ba.a((byte) 113);

@@ -578,7 +578,7 @@ final class f {
                 }
                 if (this.field_f.field_o[var4_ref_pdLifetime1.field_t] == 6) {
                   if (!ob.field_F ||
-                    !(2 <= va.field_d)) {
+                    !(2 <= AccountRequestState.field_d)) {
                     var5_intLifetime1 = this.field_f.field_j[var4_ref_pdLifetime1.field_t];
                     var6Lifetime1 = var5_intLifetime1 % 8;
                     var7_intLifetime1 = (var5_intLifetime1 - var6Lifetime1) / 8;

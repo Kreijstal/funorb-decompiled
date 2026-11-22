@@ -159,12 +159,12 @@ final class le {
                   var4 = "<col=999999>" + var4 + cn.field_e + "</col>";
                   var5 = "";
                   if (var10 != 0) {
-                    var4 = "<col=999999>" + var4 + a.field_e + "</col>";
+                    var4 = "<col=999999>" + var4 + FullscreenFocusCanvas.field_e + "</col>";
                     var5 = "";
                   }
                 }
               } else {
-                var4 = "<col=999999>" + var4 + a.field_e + "</col>";
+                var4 = "<col=999999>" + var4 + FullscreenFocusCanvas.field_e + "</col>";
                 var5 = "";
               }
               var9 = sc.field_a.b(var4);

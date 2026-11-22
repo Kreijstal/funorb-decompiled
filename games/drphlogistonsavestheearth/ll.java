@@ -27,7 +27,7 @@ final class ll extends lk {
 
     final static void a(int param0, String param1) {
         if (param0 == -1054) {
-          System.out.println("Error: " + qb.a("%0a", (byte) 127, "\n", param1));
+          System.out.println("Error: " + AccountRequestState.a("%0a", (byte) 127, "\n", param1));
           return;
         }
     }

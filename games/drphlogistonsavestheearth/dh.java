@@ -202,14 +202,14 @@ final class dh extends si {
 
     final static void a(int param0, int param1) {
         cl.field_o = 3 & param0 >> 4;
-        q.field_c = (12 & param0) >> 2;
+        FullscreenFocusCanvas.field_c = (12 & param0) >> 2;
         if (cl.field_o > 2) {
           cl.field_o = 2;
         }
         int var2 = -12 % ((-62 - param1) / 40);
         pa.field_f = 3 & param0;
-        if (!(q.field_c <= 2)) {
-          q.field_c = 2;
+        if (!(FullscreenFocusCanvas.field_c <= 2)) {
+          FullscreenFocusCanvas.field_c = 2;
         }
         if (!(pa.field_f <= 2)) {
           pa.field_f = 2;

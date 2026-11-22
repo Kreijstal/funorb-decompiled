@@ -98,7 +98,7 @@ final class ve extends ci {
           if (param0 != -76) {
             field_Nb = (jc) null;
           }
-          if (g.field_a != ci.field_ub) {
+          if (DelegatingCanvas.field_a != ci.field_ub) {
             return -1;
           }
           stackIn_23_0 = 2;

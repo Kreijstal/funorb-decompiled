@@ -9,7 +9,7 @@ final class b implements fe {
     static int field_f;
     private int field_n;
     private int field_b;
-    static ve field_a;
+    static AccountRequestState field_a;
     private int field_o;
     private int field_e;
     private int field_p;
@@ -141,7 +141,7 @@ final class b implements fe {
               throw new NumberFormatException();
             }
             if (param2 != 16) {
-              field_a = (ve) null;
+              field_a = (AccountRequestState) null;
             }
             stackIn_43_0 = var6;
             return stackIn_43_0;
@@ -274,7 +274,7 @@ final class b implements fe {
         }
     }
 
-    final static void a(df param0, int param1, PacketBuffer param2, int param3) {
+    final static void a(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -316,11 +316,11 @@ final class b implements fe {
             var18 = new dg();
             var18.field_r = param2.readUnsignedByte(32);
             var18.field_t = param2.readInt((byte) 67);
-            var18.field_q = new bc[var18.field_r];
+            var18.field_q = new PlatformTask[var18.field_r];
             var18.field_u = new int[var18.field_r];
             var18.field_o = new int[var18.field_r];
             var18.field_s = new byte[var18.field_r][][];
-            var18.field_m = new bc[var18.field_r];
+            var18.field_m = new PlatformTask[var18.field_r];
             var18.field_v = new int[var18.field_r];
             for (var5 = 0; var5 < var18.field_r; var5++) {
               try {
@@ -356,7 +356,7 @@ final class b implements fe {
                       var12[var17] = pi.a((byte) 94, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param0.a((byte) -107, pi.a((byte) 81, var20), var12, var21);
+                    var18.field_q[var5] = param0.requestDeclaredMethod((byte) -107, pi.a((byte) 81, var20), var12, var21);
                     var18.field_s[var5] = var22;
                   }
                 } else {
@@ -368,7 +368,7 @@ final class b implements fe {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_v[var5] = var9;
-                  var18.field_m[var5] = param0.a(0, pi.a((byte) 98, var15), var16);
+                  var18.field_m[var5] = param0.requestDeclaredField(0, pi.a((byte) 98, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -450,7 +450,7 @@ final class b implements fe {
 
     static {
         field_f = 0;
-        field_a = new ve();
+        field_a = new AccountRequestState();
         field_j = "Look out for <col=FFFFFF>extra life</col> power-ups!";
     }
 }

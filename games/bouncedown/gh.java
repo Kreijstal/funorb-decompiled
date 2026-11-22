@@ -239,7 +239,7 @@ final class gh extends lc implements ki, rc, rf {
         this.field_C.field_q = pc.field_c;
         this.field_A.field_q = AccountServiceResult.field_b;
         this.field_E.field_q = fd.field_o;
-        this.field_J.field_q = jb.field_b;
+        this.field_J.field_q = FullscreenFocusCanvas.field_b;
         this.field_G.field_q = pb.field_g;
         this.field_F.a(new AccountNameAvailabilityValidator(this.field_F), true);
         this.field_B.a(new nj(this.field_B), true);

@@ -767,7 +767,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "rankingPolarPrince");
                 if (null != var2) {
-                  bd.field_a = bh.a(var2, -122);
+                  AccountRequestState.field_a = bh.a(var2, -122);
                 }
                 var2 = lh.b(-1, "rankingKingOfTheSnowMen");
                 if (null != var2) {
@@ -1633,7 +1633,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltipHardHat");
                 if (var2 != null) {
-                  bd.field_i = bh.a(var2, -127);
+                  AccountRequestState.field_i = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "tooltipScanner");
                 if (var2 != null) {

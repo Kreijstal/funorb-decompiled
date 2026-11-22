@@ -17,10 +17,10 @@ final class ha extends IntrusiveNode {
         ee.field_i = false;
         if (param0 != -17288) {
           field_k = true;
-          ae.field_a.readUnsignedByte(false);
+          AccountRequestState.field_a.readUnsignedByte(false);
           return;
         }
-        ae.field_a.readUnsignedByte(false);
+        AccountRequestState.field_a.readUnsignedByte(false);
     }
 
     public static void clearStaticReferences(boolean param0) {

@@ -8,7 +8,7 @@ abstract class rh extends DualLinkNode {
     boolean field_o;
     private static tf field_u;
     boolean field_p;
-    static pd field_v;
+    static AccountRequestState field_v;
     static Sprite[] field_l;
     static Sprite field_s;
     static int unlockedAchievementMask;

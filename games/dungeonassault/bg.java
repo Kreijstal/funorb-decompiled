@@ -419,7 +419,7 @@ final class bg extends qe {
             this.a(var8Lifetime1, var7Lifetime2, 16777215, (byte) 126, param0, param2, var5_int);
             la.field_b.c(gh.a(param2.field_a, (byte) -121), s.field_b[2] + s.field_b[3] >> 1, param0, 16777215, -1);
             if (!param2.field_c.equals("")) {
-              var9 = u.a(la.field_b, (byte) -111, param2.field_c, ek.field_c, 16777215, -s.field_b[3] + (s.field_b[4] - 25));
+              var9 = u.a(la.field_b, (byte) -111, param2.field_c, FullscreenFocusCanvas.field_c, 16777215, -s.field_b[3] + (s.field_b[4] - 25));
               var10 = s.field_b[3] + 10;
               if (0 < param2.field_f) {
                 var11 = ue.field_i[0];
@@ -561,7 +561,7 @@ final class bg extends qe {
         var4 = gm.field_d.field_N / 40;
         var6 = 16777215;
         if (var2 != null) {
-          var7 = ek.a(0, (byte) -127, gm.field_d.field_N, ((di) (var2)).field_a);
+          var7 = FullscreenFocusCanvas.a(0, (byte) -127, gm.field_d.field_N, ((di) (var2)).field_a);
           if (((di) (var2)).field_h > 0) {
             if (!(var7 > 0.0)) {
               var5 = jk.a(new String[]{gh.a(((di) (var2)).field_h, (byte) -114)}, mi.field_c, 30496);
@@ -617,7 +617,7 @@ final class bg extends qe {
           this.a(12690143, -s.field_b[0] + (s.field_b[2] + s.field_b[1] >> 1), 120, param0, -5 + s.field_b[2] - s.field_b[1], la.field_b.field_H);
           ((se) ((Object) var3)).c(gh.a(param0.field_a, (byte) -117), -s.field_b[0] + (s.field_b[2] + s.field_b[3] >> 1), la.field_b.field_H, 12690143, -1);
           if (!param0.field_c.equals("")) {
-            var7 = u.a(var3, (byte) 124, param0.field_c, ek.field_c, 12690143, -s.field_b[3] + s.field_b[4] - 25);
+            var7 = u.a(var3, (byte) 124, param0.field_c, FullscreenFocusCanvas.field_c, 12690143, -s.field_b[3] + s.field_b[4] - 25);
             var8 = 10 - s.field_b[0] + s.field_b[3];
             if (param0.field_f > 0) {
               var9 = ue.field_i[0];
@@ -746,7 +746,7 @@ final class bg extends qe {
             this.a(var8, var7, var5_int, (byte) 125, param3, param2, var6);
             la.field_b.c(gh.a(param2.field_a, (byte) -110), s.field_b[3] + s.field_b[2] >> 1, param3, var5_int, -1);
             if (0 < param2.field_c.length()) {
-              var9 = u.a(la.field_b, (byte) -76, param2.field_c, ek.field_c, var5_int, -s.field_b[3] + (s.field_b[4] - 25));
+              var9 = u.a(la.field_b, (byte) -76, param2.field_c, FullscreenFocusCanvas.field_c, var5_int, -s.field_b[3] + (s.field_b[4] - 25));
               la.field_b.b(var9);
               var10 = s.field_b[3] + 10;
               if (param2.field_f > 0) {

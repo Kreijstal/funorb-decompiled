@@ -57,7 +57,7 @@ final class td {
           NetworkGameClient.field_E = param1;
           wk.field_g = param5;
           he.field_m = param6;
-          ol.field_i = ql.field_f;
+          ol.field_i = DelegatingCanvas.field_f;
           ho.field_i = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

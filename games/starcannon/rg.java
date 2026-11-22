@@ -172,7 +172,7 @@ final class rg extends vk implements si, ga {
           if (null != this.field_J) {
             this.field_j = this.field_j + (var7.a(this.field_J, -40 + this.field_i, var7.field_p) + 5);
           }
-          var8 = pf.field_b;
+          var8 = AccountRequestState.field_b;
           var9 = kl.a(ll.b(95), (byte) 84);
           if (var9 != p.field_a) {
             if (SecondaryNodeDeque.field_b == var9) {

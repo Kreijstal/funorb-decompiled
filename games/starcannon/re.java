@@ -24,13 +24,13 @@ final class re extends IntrusiveNode {
         }
     }
 
-    final static qc a(int param0, ka param1, int param2, boolean param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, ka param1, int param2, boolean param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        qc var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        qc stackIn_5_0 = null;
-        qc stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_5_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -42,12 +42,12 @@ final class re extends IntrusiveNode {
             return null;
           }
           if (!param3) {
-            stackIn_5_0 = (qc) null;
+            stackIn_5_0 = (FullscreenFocusCanvas) null;
             return stackIn_5_0;
           }
-          var7 = new qc();
-          var7.field_f = var8;
-          var7.field_f.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param4, param5);
           var7.addFocusListener(var7);
           var7.requestFocus();
@@ -75,7 +75,7 @@ final class re extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        n.field_a.a(nb.field_e, (byte) -63);
+        n.field_a.exitFullscreen(nb.field_e, (byte) -63);
         n.field_a = null;
         if (kd.field_B == null) {
           kj.field_E.requestFocus();

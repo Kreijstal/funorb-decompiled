@@ -7,7 +7,7 @@ final class ol {
     private long[] field_j;
     static int[] field_k;
     private byte[] field_m;
-    static af field_i;
+    static AccountRequestState field_i;
     private int field_h;
     private long[] field_c;
     private byte[] field_l;

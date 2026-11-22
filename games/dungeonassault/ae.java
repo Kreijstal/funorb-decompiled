@@ -193,7 +193,7 @@ final class ae {
           nk.field_Hb = true;
           AccountNameAvailabilityValidator.field_t = param1;
           if (AccountNameAvailabilityValidator.field_t == 0) {
-            var3_int = KeyboardInput.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, ql.field_k);
+            var3_int = KeyboardInput.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, DelegatingCanvas.field_k);
             var4 = var3_int + 3;
             go.field_A = new String[var4];
             to.field_c = new int[var4];
@@ -212,7 +212,7 @@ final class ae {
             to.field_c[var4 - 1] = 1;
             n.field_g[1] = 5;
           } else if (AccountNameAvailabilityValidator.field_t == 1) {
-            var3_int = KeyboardInput.a(n.field_c, (byte) -114, qj.field_e, wa.field_l, ql.field_k);
+            var3_int = KeyboardInput.a(n.field_c, (byte) -114, qj.field_e, wa.field_l, DelegatingCanvas.field_k);
             var4 = var3_int + 2;
             to.field_c = new int[var4];
             go.field_A = new String[var4];

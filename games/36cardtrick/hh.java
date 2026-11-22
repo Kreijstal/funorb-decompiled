@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hh extends IntrusiveNode {
-    static sc field_g;
+    static AccountRequestState field_g;
     int field_h;
 
     public static void a(int param0) {
@@ -30,7 +30,7 @@ final class hh extends IntrusiveNode {
           }
           return var1;
         }
-        field_g = (sc) null;
+        field_g = (AccountRequestState) null;
         var1Lifetime1 = "";
         if (null != i.field_a) {
           var1Lifetime1 = i.field_a.d((byte) -99);
@@ -49,6 +49,6 @@ final class hh extends IntrusiveNode {
     }
 
     static {
-        field_g = new sc();
+        field_g = new AccountRequestState();
     }
 }

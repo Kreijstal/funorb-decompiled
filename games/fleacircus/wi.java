@@ -17,7 +17,7 @@ abstract class wi {
     static String field_m;
     int field_n;
     boolean field_g;
-    static ae field_f;
+    static AccountRequestState field_f;
 
     boolean a(byte param0) {
         if (param0 < 67) {
@@ -91,6 +91,6 @@ abstract class wi {
         field_b = 0;
         field_m = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_j = new vc();
-        field_f = new ae();
+        field_f = new AccountRequestState();
     }
 }

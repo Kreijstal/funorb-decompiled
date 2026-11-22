@@ -149,7 +149,7 @@ public final class Main extends c {
         try {
           this.field_cb = null;
           this.field_P = null;
-          sc.a((byte) 81, lc.field_a[1]);
+          AccountRequestState.a((byte) 81, lc.field_a[1]);
           ai.field_m = 0;
           nb.field_e = 0;
           rj.field_p = af.field_ob - ByteArrayStore.field_b;
@@ -589,7 +589,7 @@ public final class Main extends c {
         try {
           h.e((byte) -84);
           if (null != gj.field_a &&
-            gj.field_a.field_b) {
+            gj.field_a.focusLost) {
             ga.a(!param0);
             g.k(4);
           }
@@ -1096,7 +1096,7 @@ public final class Main extends c {
             !dl.d(0)) {
             this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 70, 3);
           }
-          sc.a((byte) 53, lc.field_a[0]);
+          AccountRequestState.a((byte) 53, lc.field_a[0]);
           this.a(11246, 6, 3, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1466,7 +1466,7 @@ public final class Main extends c {
             this.field_Z = (String) null;
           }
           mg.a(50, true);
-          sc.a((byte) 42, lc.field_a[0]);
+          AccountRequestState.a((byte) 42, lc.field_a[0]);
           if (!dl.d(0)) {
             ra.field_d = sk.a(4, (byte) 125);
           }
@@ -1584,7 +1584,7 @@ public final class Main extends c {
                           return stackIn_50_0;
                         }
                         ok.b(69);
-                        ug.a(80.0f, 122, sc.field_c);
+                        ug.a(80.0f, 122, AccountRequestState.field_c);
                         this.b((byte) 59);
                         jd.field_c[0] = uj.a(sh.field_g, "", "turnover_card").a();
                         jd.field_c[1] = uj.a(sh.field_g, "", "revolver_cocking").a();
@@ -2098,7 +2098,7 @@ public final class Main extends c {
           gk.c(0);
           kh.clearStaticReferences(192);
           gf.a((byte) 103);
-          oe.a((byte) 127);
+          FullscreenFocusCanvas.a((byte) 127);
           bj.a(-113);
           ah.a(param0 ^ -38);
           uf.clearStaticReferences();
@@ -2251,7 +2251,7 @@ public final class Main extends c {
           t.clearStaticReferences(0);
           rc.b((byte) 112);
           dh.b((byte) -36);
-          sc.clearStaticReferences(178313985);
+          AccountRequestState.clearStaticReferences(178313985);
           AccountServiceResult.a(2);
           lb.c(640);
           cc.a((byte) 107);

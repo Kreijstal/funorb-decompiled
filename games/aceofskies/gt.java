@@ -91,11 +91,11 @@ final class gt extends DualLinkNode {
           }
           if (param2 != 255) {
             if (param2 < 100) {
-              GameAppletShell.field_l = dq.createAccountErrorResult(param2, 32, param1);
+              GameAppletShell.field_l = AccountRequestState.createAccountErrorResult(param2, 32, param1);
               return;
             }
             if (param2 > 105) {
-              GameAppletShell.field_l = dq.createAccountErrorResult(param2, 32, param1);
+              GameAppletShell.field_l = AccountRequestState.createAccountErrorResult(param2, 32, param1);
               return;
             }
             String[] var7 = param3;

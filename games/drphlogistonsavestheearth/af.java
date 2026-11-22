@@ -49,7 +49,7 @@ final class af {
             return;
           }
           hb.a(-5, df.field_l);
-          df.field_l.a(sb.field_d, true);
+          df.field_l.exitFullscreen(sb.field_d, true);
           df.field_l = null;
           if (null != pi.field_V) {
             pi.field_V.b((byte) -7);
@@ -61,7 +61,7 @@ final class af {
           return;
         }
         hb.a(-5, df.field_l);
-        df.field_l.a(sb.field_d, true);
+        df.field_l.exitFullscreen(sb.field_d, true);
         df.field_l = null;
         if (null != pi.field_V) {
           pi.field_V.b((byte) -7);

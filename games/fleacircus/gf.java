@@ -175,7 +175,7 @@ final class gf {
             k.c(-28354);
             return;
           }
-          var2 = ae.field_a;
+          var2 = AccountRequestState.field_a;
           var2.readInt((byte) -32);
           var2.readInt((byte) 122);
           var2.readInt((byte) 127);
@@ -187,7 +187,7 @@ final class gf {
           k.c(-28354);
           return;
         }
-        var2Lifetime1 = ae.field_a;
+        var2Lifetime1 = AccountRequestState.field_a;
         var2Lifetime1.readInt((byte) -32);
         var2Lifetime1.readInt((byte) 122);
         var2Lifetime1.readInt((byte) 127);
@@ -217,13 +217,13 @@ final class gf {
           if (!gi.a(1, true)) {
             return false;
           }
-          pd.field_l = ae.field_a.readUnsignedByte(false);
-          ae.field_a.position = 0;
+          pd.field_l = AccountRequestState.field_a.readUnsignedByte(false);
+          AccountRequestState.field_a.position = 0;
         }
         if (pd.field_l == -2) {
           if (gi.a(2, true)) {
-            pd.field_l = ae.field_a.readUnsignedShort((byte) -65);
-            ae.field_a.position = 0;
+            pd.field_l = AccountRequestState.field_a.readUnsignedShort((byte) -65);
+            AccountRequestState.field_a.position = 0;
             var1 = -114 % ((param0 - 53) / 54);
             return gi.a(pd.field_l, true);
           }

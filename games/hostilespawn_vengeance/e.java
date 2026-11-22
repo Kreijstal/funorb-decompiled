@@ -22,7 +22,7 @@ final class e {
     static String field_x;
     static String field_A;
     static bd field_d;
-    static fk field_q;
+    static AccountRequestState field_q;
     static int field_z;
     static String field_k;
     static int[] field_c;
@@ -487,7 +487,7 @@ final class e {
           sb.a(var5, -121);
           si.c(0, 0, var5.field_z, var5.field_A / 2, 16180917, 16306250);
           si.c(0, var5.field_A / 2, var5.field_z, var5.field_A, 16306250, 15568919);
-          var6 = ue.field_b;
+          var6 = FullscreenFocusCanvas.field_b;
           var7 = sg.field_m;
           this.a(-16, var5.field_A, var8, ra.field_e, 0, var6, 0.5f, param0, var5, var5.field_z);
           this.a(20, var5.field_A, var8, ra.field_e, param0 + 0, var7, 0.5f, 0, var5, var5.field_z);
@@ -544,7 +544,7 @@ final class e {
           jm.field_b = MouseInput.a("members_expansion_screen", param0 + 181, "arrow", jk.field_c);
           mn.field_e = ArchiveIndex.a("arialish12", cl.field_i, 84, jk.field_c, "");
           ra.field_e = th.a(jk.field_c, 126, "", cl.field_i, "pump32");
-          ue.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c, false);
+          FullscreenFocusCanvas.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c, false);
           od.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c, false);
           vj.field_h = ei.a(jk.field_c, param0 ^ -49, "members_expansion_screen", "button_highlights");
           cl.field_i = null;
@@ -586,7 +586,7 @@ final class e {
         }
         this.field_e.e(16, 302);
         mn.field_e.a(this.field_a[this.field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        ue.field_j.e(30, 330);
+        FullscreenFocusCanvas.field_j.e(30, 330);
         mn.field_e.a(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         mn.field_e.a(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         mn.field_e.a(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
@@ -682,7 +682,7 @@ final class e {
         field_x = "Create your own free Jagex account";
         field_A = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
         field_z = 0;
-        field_q = new fk();
+        field_q = new AccountRequestState();
         field_m = "Check the shuttle bays for a way off the station.";
         field_c = new int[]{41, 327, 41};
         field_k = "These reactor detonations are destabilising the level. I'd better not blow up any more.";

@@ -12,7 +12,7 @@ final class mc {
     static String field_e;
     private MinerDisturbance field_q;
     private int field_b;
-    static bd field_t;
+    static AccountRequestState field_t;
     private int field_f;
     private int[] field_g;
     static String field_z;
@@ -367,7 +367,7 @@ final class mc {
         int var4;
         var4 = MinerDisturbance.field_ab;
         if (param0 != -7) {
-          field_t = (bd) null;
+          field_t = (AccountRequestState) null;
         }
         var2 = 0;
         for (var3 = 0; var3 < 21; var3++) {
@@ -1261,6 +1261,6 @@ final class mc {
         field_z = "Nothing To Say";
         field_x = "Please send me news and updates (I can unsubscribe at any time)";
         field_e = "Not yet achieved";
-        field_t = new bd();
+        field_t = new AccountRequestState();
     }
 }

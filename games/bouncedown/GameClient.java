@@ -172,7 +172,7 @@ abstract class GameClient extends AppletShell {
         if (ej.b(-4)) {
           var3 = 1200 * AccountNameAvailabilityValidator.f(-118);
           if (this.field_o ||
-            !(var3 >= jb.a(31083)) &&
+            !(var3 >= FullscreenFocusCanvas.a(31083)) &&
             !(var3 >= m.a((byte) 77))) {
             this.field_o = false;
             kc.a((byte) 18);
@@ -264,7 +264,7 @@ abstract class GameClient extends AppletShell {
         }
         if (1 == sa.field_k) {
           if (Slime.field_a != 0) {
-            jb.field_a = fa.a((byte) -76, jd.field_g);
+            FullscreenFocusCanvas.field_a = fa.a((byte) -76, jd.field_g);
           }
           pa.field_i = jc.a(ne.field_n, false, 1, 0, true);
           kg.field_b = jc.a(mh.field_Y, false, 1, 0, true);
@@ -273,19 +273,19 @@ abstract class GameClient extends AppletShell {
           sa.field_k = 2;
         }
         if (sa.field_k == 2) {
-          if (jb.field_a != null &&
-            jb.field_a.c(-114)) {
-            if (jb.field_a.a("", (byte) -16)) {
-              if (jb.field_a.b("", false)) {
-                cg.a((byte) -99, jb.field_a);
-                jb.field_a = null;
+          if (FullscreenFocusCanvas.field_a != null &&
+            FullscreenFocusCanvas.field_a.c(-114)) {
+            if (FullscreenFocusCanvas.field_a.a("", (byte) -16)) {
+              if (FullscreenFocusCanvas.field_a.b("", false)) {
+                cg.a((byte) -99, FullscreenFocusCanvas.field_a);
+                FullscreenFocusCanvas.field_a = null;
                 vc.e((byte) -44);
               }
             } else {
-              jb.field_a = null;
+              FullscreenFocusCanvas.field_a = null;
             }
           }
-          if (null == jb.field_a) {
+          if (null == FullscreenFocusCanvas.field_a) {
             sa.field_k = 3;
           }
         }

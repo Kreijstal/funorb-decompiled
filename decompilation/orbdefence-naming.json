@@ -588,6 +588,14 @@
       "renamedSymbol": "C:GameAppletShell"
     },
     {
+      "symbol": "C:va",
+      "originalName": "va",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "F:bc.field_n:Z",
       "originalName": "field_n",
       "to": "nameAvailable",
@@ -1898,6 +1906,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 425ae4ed97548dac1185517741f8c3f9a040ca45b15ad77e95130040f6cef9f5.",
       "confidence": "reviewed",
       "renamedSymbol": "M:uk.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:va.a(I)V",
+      "originalName": "a",
+      "to": "releaseStatics",
+      "evidence": "Complete declaration/body reviewed: Wrong int!=8 returns before cleanup; int8 clears a/b inside original RuntimeException wrapper. Name states static cleanup role while retaining all guards, helper calls, exception context and non-reference writes; identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V"
     },
     {
       "symbol": "M:vc.$cfr$lcmp(JJ)I",
@@ -5666,9 +5682,9 @@
     },
     {
       "symbol": "C:va",
-      "renamedSymbol": "C:va",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "va",
-      "renamedName": "va",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "va.java",
         "start": 69,
@@ -17084,7 +17100,7 @@
     },
     {
       "symbol": "F:kf.field_d:Lva;",
-      "renamedSymbol": "F:kf.field_d:Lva;",
+      "renamedSymbol": "F:kf.field_d:LAccountRequestState;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -19779,7 +19795,7 @@
     },
     {
       "symbol": "F:mg.field_m:Lva;",
-      "renamedSymbol": "F:PacketBuffer.field_m:Lva;",
+      "renamedSymbol": "F:PacketBuffer.field_m:LAccountRequestState;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -24124,7 +24140,7 @@
     },
     {
       "symbol": "F:qc.field_g:Lva;",
-      "renamedSymbol": "F:qc.field_g:Lva;",
+      "renamedSymbol": "F:qc.field_g:LAccountRequestState;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -26907,7 +26923,7 @@
     },
     {
       "symbol": "F:tg.field_c:Lva;",
-      "renamedSymbol": "F:tg.field_c:Lva;",
+      "renamedSymbol": "F:tg.field_c:LAccountRequestState;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -27325,7 +27341,7 @@
     },
     {
       "symbol": "F:tl.field_h:Lva;",
-      "renamedSymbol": "F:tl.field_h:Lva;",
+      "renamedSymbol": "F:tl.field_h:LAccountRequestState;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -28128,7 +28144,7 @@
     },
     {
       "symbol": "F:va.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:va.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -28139,7 +28155,7 @@
     },
     {
       "symbol": "F:va.field_b:[Ljava/lang/String;",
-      "renamedSymbol": "F:va.field_b:[Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_b:[Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -28150,7 +28166,7 @@
     },
     {
       "symbol": "F:va.field_c:I",
-      "renamedSymbol": "F:va.field_c:I",
+      "renamedSymbol": "F:AccountRequestState.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -28161,7 +28177,7 @@
     },
     {
       "symbol": "F:va.field_d:I",
-      "renamedSymbol": "F:va.field_d:I",
+      "renamedSymbol": "F:AccountRequestState.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -149964,7 +149980,7 @@
     },
     {
       "symbol": "L:va.a(I)V#0",
-      "renamedSymbol": "L:va.a(I)V#0",
+      "renamedSymbol": "L:AccountRequestState.releaseStatics(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -149975,7 +149991,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#0",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#0",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -149986,7 +150002,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#1",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#1",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -149997,7 +150013,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#2",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#2",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#2",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -150008,7 +150024,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#3",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#3",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -150019,7 +150035,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#4",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#4",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -150030,7 +150046,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#5",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#5",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#5",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -150041,7 +150057,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#6",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#6",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#6",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -150052,7 +150068,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#7",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#7",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -150063,7 +150079,7 @@
     },
     {
       "symbol": "L:va.a(IILki;B)Lhj;#8",
-      "renamedSymbol": "L:va.a(IILki;B)Lhj;#8",
+      "renamedSymbol": "L:AccountRequestState.a(IILki;B)Lhj;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150074,7 +150090,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#0",
-      "renamedSymbol": "L:va.a(Lki;B)V#0",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#0",
       "originalName": "stackIn_664_0",
       "renamedName": "stackIn_664_0",
       "declaration": {
@@ -150085,7 +150101,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#1",
-      "renamedSymbol": "L:va.a(Lki;B)V#1",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#1",
       "originalName": "stackIn_664_1",
       "renamedName": "stackIn_664_1",
       "declaration": {
@@ -150096,7 +150112,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#10",
-      "renamedSymbol": "L:va.a(Lki;B)V#10",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#10",
       "originalName": "var2Lifetime4",
       "renamedName": "var2Lifetime4",
       "declaration": {
@@ -150107,7 +150123,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#100",
-      "renamedSymbol": "L:va.a(Lki;B)V#100",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#100",
       "originalName": "var2Lifetime94",
       "renamedName": "var2Lifetime94",
       "declaration": {
@@ -150118,7 +150134,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#101",
-      "renamedSymbol": "L:va.a(Lki;B)V#101",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#101",
       "originalName": "var2Lifetime95",
       "renamedName": "var2Lifetime95",
       "declaration": {
@@ -150129,7 +150145,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#102",
-      "renamedSymbol": "L:va.a(Lki;B)V#102",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#102",
       "originalName": "var2Lifetime96",
       "renamedName": "var2Lifetime96",
       "declaration": {
@@ -150140,7 +150156,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#103",
-      "renamedSymbol": "L:va.a(Lki;B)V#103",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#103",
       "originalName": "var2Lifetime97",
       "renamedName": "var2Lifetime97",
       "declaration": {
@@ -150151,7 +150167,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#104",
-      "renamedSymbol": "L:va.a(Lki;B)V#104",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#104",
       "originalName": "var2Lifetime98",
       "renamedName": "var2Lifetime98",
       "declaration": {
@@ -150162,7 +150178,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#105",
-      "renamedSymbol": "L:va.a(Lki;B)V#105",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#105",
       "originalName": "var2Lifetime99",
       "renamedName": "var2Lifetime99",
       "declaration": {
@@ -150173,7 +150189,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#106",
-      "renamedSymbol": "L:va.a(Lki;B)V#106",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#106",
       "originalName": "var2Lifetime100",
       "renamedName": "var2Lifetime100",
       "declaration": {
@@ -150184,7 +150200,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#107",
-      "renamedSymbol": "L:va.a(Lki;B)V#107",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#107",
       "originalName": "var2Lifetime101",
       "renamedName": "var2Lifetime101",
       "declaration": {
@@ -150195,7 +150211,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#108",
-      "renamedSymbol": "L:va.a(Lki;B)V#108",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#108",
       "originalName": "var2Lifetime102",
       "renamedName": "var2Lifetime102",
       "declaration": {
@@ -150206,7 +150222,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#109",
-      "renamedSymbol": "L:va.a(Lki;B)V#109",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#109",
       "originalName": "var2Lifetime103",
       "renamedName": "var2Lifetime103",
       "declaration": {
@@ -150217,7 +150233,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#11",
-      "renamedSymbol": "L:va.a(Lki;B)V#11",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#11",
       "originalName": "var2Lifetime5",
       "renamedName": "var2Lifetime5",
       "declaration": {
@@ -150228,7 +150244,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#110",
-      "renamedSymbol": "L:va.a(Lki;B)V#110",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#110",
       "originalName": "var2Lifetime104",
       "renamedName": "var2Lifetime104",
       "declaration": {
@@ -150239,7 +150255,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#111",
-      "renamedSymbol": "L:va.a(Lki;B)V#111",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#111",
       "originalName": "var2Lifetime105",
       "renamedName": "var2Lifetime105",
       "declaration": {
@@ -150250,7 +150266,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#112",
-      "renamedSymbol": "L:va.a(Lki;B)V#112",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#112",
       "originalName": "var2Lifetime106",
       "renamedName": "var2Lifetime106",
       "declaration": {
@@ -150261,7 +150277,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#113",
-      "renamedSymbol": "L:va.a(Lki;B)V#113",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#113",
       "originalName": "var2Lifetime107",
       "renamedName": "var2Lifetime107",
       "declaration": {
@@ -150272,7 +150288,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#114",
-      "renamedSymbol": "L:va.a(Lki;B)V#114",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#114",
       "originalName": "var2Lifetime108",
       "renamedName": "var2Lifetime108",
       "declaration": {
@@ -150283,7 +150299,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#115",
-      "renamedSymbol": "L:va.a(Lki;B)V#115",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#115",
       "originalName": "var2Lifetime109",
       "renamedName": "var2Lifetime109",
       "declaration": {
@@ -150294,7 +150310,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#116",
-      "renamedSymbol": "L:va.a(Lki;B)V#116",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#116",
       "originalName": "var2Lifetime110",
       "renamedName": "var2Lifetime110",
       "declaration": {
@@ -150305,7 +150321,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#117",
-      "renamedSymbol": "L:va.a(Lki;B)V#117",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#117",
       "originalName": "var2Lifetime111",
       "renamedName": "var2Lifetime111",
       "declaration": {
@@ -150316,7 +150332,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#118",
-      "renamedSymbol": "L:va.a(Lki;B)V#118",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#118",
       "originalName": "var2Lifetime112",
       "renamedName": "var2Lifetime112",
       "declaration": {
@@ -150327,7 +150343,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#119",
-      "renamedSymbol": "L:va.a(Lki;B)V#119",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#119",
       "originalName": "var2Lifetime113",
       "renamedName": "var2Lifetime113",
       "declaration": {
@@ -150338,7 +150354,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#12",
-      "renamedSymbol": "L:va.a(Lki;B)V#12",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#12",
       "originalName": "var2Lifetime6",
       "renamedName": "var2Lifetime6",
       "declaration": {
@@ -150349,7 +150365,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#120",
-      "renamedSymbol": "L:va.a(Lki;B)V#120",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#120",
       "originalName": "var2Lifetime114",
       "renamedName": "var2Lifetime114",
       "declaration": {
@@ -150360,7 +150376,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#121",
-      "renamedSymbol": "L:va.a(Lki;B)V#121",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#121",
       "originalName": "var2Lifetime115",
       "renamedName": "var2Lifetime115",
       "declaration": {
@@ -150371,7 +150387,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#122",
-      "renamedSymbol": "L:va.a(Lki;B)V#122",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#122",
       "originalName": "var2Lifetime116",
       "renamedName": "var2Lifetime116",
       "declaration": {
@@ -150382,7 +150398,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#123",
-      "renamedSymbol": "L:va.a(Lki;B)V#123",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#123",
       "originalName": "var2Lifetime117",
       "renamedName": "var2Lifetime117",
       "declaration": {
@@ -150393,7 +150409,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#124",
-      "renamedSymbol": "L:va.a(Lki;B)V#124",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#124",
       "originalName": "var2Lifetime118",
       "renamedName": "var2Lifetime118",
       "declaration": {
@@ -150404,7 +150420,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#125",
-      "renamedSymbol": "L:va.a(Lki;B)V#125",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#125",
       "originalName": "var2Lifetime119",
       "renamedName": "var2Lifetime119",
       "declaration": {
@@ -150415,7 +150431,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#126",
-      "renamedSymbol": "L:va.a(Lki;B)V#126",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#126",
       "originalName": "var2Lifetime120",
       "renamedName": "var2Lifetime120",
       "declaration": {
@@ -150426,7 +150442,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#127",
-      "renamedSymbol": "L:va.a(Lki;B)V#127",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#127",
       "originalName": "var2Lifetime121",
       "renamedName": "var2Lifetime121",
       "declaration": {
@@ -150437,7 +150453,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#128",
-      "renamedSymbol": "L:va.a(Lki;B)V#128",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#128",
       "originalName": "var2Lifetime122",
       "renamedName": "var2Lifetime122",
       "declaration": {
@@ -150448,7 +150464,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#129",
-      "renamedSymbol": "L:va.a(Lki;B)V#129",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#129",
       "originalName": "var2Lifetime123",
       "renamedName": "var2Lifetime123",
       "declaration": {
@@ -150459,7 +150475,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#13",
-      "renamedSymbol": "L:va.a(Lki;B)V#13",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#13",
       "originalName": "var2Lifetime7",
       "renamedName": "var2Lifetime7",
       "declaration": {
@@ -150470,7 +150486,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#130",
-      "renamedSymbol": "L:va.a(Lki;B)V#130",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#130",
       "originalName": "var2Lifetime124",
       "renamedName": "var2Lifetime124",
       "declaration": {
@@ -150481,7 +150497,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#131",
-      "renamedSymbol": "L:va.a(Lki;B)V#131",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#131",
       "originalName": "var2Lifetime125",
       "renamedName": "var2Lifetime125",
       "declaration": {
@@ -150492,7 +150508,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#132",
-      "renamedSymbol": "L:va.a(Lki;B)V#132",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#132",
       "originalName": "var2Lifetime126",
       "renamedName": "var2Lifetime126",
       "declaration": {
@@ -150503,7 +150519,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#133",
-      "renamedSymbol": "L:va.a(Lki;B)V#133",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#133",
       "originalName": "var2Lifetime127",
       "renamedName": "var2Lifetime127",
       "declaration": {
@@ -150514,7 +150530,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#134",
-      "renamedSymbol": "L:va.a(Lki;B)V#134",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#134",
       "originalName": "var2Lifetime128",
       "renamedName": "var2Lifetime128",
       "declaration": {
@@ -150525,7 +150541,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#135",
-      "renamedSymbol": "L:va.a(Lki;B)V#135",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#135",
       "originalName": "var2Lifetime129",
       "renamedName": "var2Lifetime129",
       "declaration": {
@@ -150536,7 +150552,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#136",
-      "renamedSymbol": "L:va.a(Lki;B)V#136",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#136",
       "originalName": "var2Lifetime130",
       "renamedName": "var2Lifetime130",
       "declaration": {
@@ -150547,7 +150563,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#137",
-      "renamedSymbol": "L:va.a(Lki;B)V#137",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#137",
       "originalName": "var2Lifetime131",
       "renamedName": "var2Lifetime131",
       "declaration": {
@@ -150558,7 +150574,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#138",
-      "renamedSymbol": "L:va.a(Lki;B)V#138",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#138",
       "originalName": "var2Lifetime132",
       "renamedName": "var2Lifetime132",
       "declaration": {
@@ -150569,7 +150585,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#139",
-      "renamedSymbol": "L:va.a(Lki;B)V#139",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#139",
       "originalName": "var2Lifetime133",
       "renamedName": "var2Lifetime133",
       "declaration": {
@@ -150580,7 +150596,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#14",
-      "renamedSymbol": "L:va.a(Lki;B)V#14",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#14",
       "originalName": "var2Lifetime8",
       "renamedName": "var2Lifetime8",
       "declaration": {
@@ -150591,7 +150607,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#140",
-      "renamedSymbol": "L:va.a(Lki;B)V#140",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#140",
       "originalName": "var2Lifetime134",
       "renamedName": "var2Lifetime134",
       "declaration": {
@@ -150602,7 +150618,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#141",
-      "renamedSymbol": "L:va.a(Lki;B)V#141",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#141",
       "originalName": "var2Lifetime135",
       "renamedName": "var2Lifetime135",
       "declaration": {
@@ -150613,7 +150629,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#142",
-      "renamedSymbol": "L:va.a(Lki;B)V#142",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#142",
       "originalName": "var2Lifetime136",
       "renamedName": "var2Lifetime136",
       "declaration": {
@@ -150624,7 +150640,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#143",
-      "renamedSymbol": "L:va.a(Lki;B)V#143",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#143",
       "originalName": "var2Lifetime137",
       "renamedName": "var2Lifetime137",
       "declaration": {
@@ -150635,7 +150651,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#144",
-      "renamedSymbol": "L:va.a(Lki;B)V#144",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#144",
       "originalName": "var2Lifetime138",
       "renamedName": "var2Lifetime138",
       "declaration": {
@@ -150646,7 +150662,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#145",
-      "renamedSymbol": "L:va.a(Lki;B)V#145",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#145",
       "originalName": "var2Lifetime139",
       "renamedName": "var2Lifetime139",
       "declaration": {
@@ -150657,7 +150673,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#146",
-      "renamedSymbol": "L:va.a(Lki;B)V#146",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#146",
       "originalName": "var2Lifetime140",
       "renamedName": "var2Lifetime140",
       "declaration": {
@@ -150668,7 +150684,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#147",
-      "renamedSymbol": "L:va.a(Lki;B)V#147",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#147",
       "originalName": "var2Lifetime141",
       "renamedName": "var2Lifetime141",
       "declaration": {
@@ -150679,7 +150695,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#148",
-      "renamedSymbol": "L:va.a(Lki;B)V#148",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#148",
       "originalName": "var2Lifetime142",
       "renamedName": "var2Lifetime142",
       "declaration": {
@@ -150690,7 +150706,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#149",
-      "renamedSymbol": "L:va.a(Lki;B)V#149",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#149",
       "originalName": "var2Lifetime143",
       "renamedName": "var2Lifetime143",
       "declaration": {
@@ -150701,7 +150717,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#15",
-      "renamedSymbol": "L:va.a(Lki;B)V#15",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#15",
       "originalName": "var2Lifetime9",
       "renamedName": "var2Lifetime9",
       "declaration": {
@@ -150712,7 +150728,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#150",
-      "renamedSymbol": "L:va.a(Lki;B)V#150",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#150",
       "originalName": "var2Lifetime144",
       "renamedName": "var2Lifetime144",
       "declaration": {
@@ -150723,7 +150739,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#151",
-      "renamedSymbol": "L:va.a(Lki;B)V#151",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#151",
       "originalName": "var2Lifetime145",
       "renamedName": "var2Lifetime145",
       "declaration": {
@@ -150734,7 +150750,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#152",
-      "renamedSymbol": "L:va.a(Lki;B)V#152",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#152",
       "originalName": "var2Lifetime146",
       "renamedName": "var2Lifetime146",
       "declaration": {
@@ -150745,7 +150761,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#153",
-      "renamedSymbol": "L:va.a(Lki;B)V#153",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#153",
       "originalName": "var2Lifetime147",
       "renamedName": "var2Lifetime147",
       "declaration": {
@@ -150756,7 +150772,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#154",
-      "renamedSymbol": "L:va.a(Lki;B)V#154",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#154",
       "originalName": "var2Lifetime148",
       "renamedName": "var2Lifetime148",
       "declaration": {
@@ -150767,7 +150783,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#155",
-      "renamedSymbol": "L:va.a(Lki;B)V#155",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#155",
       "originalName": "var2Lifetime149",
       "renamedName": "var2Lifetime149",
       "declaration": {
@@ -150778,7 +150794,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#156",
-      "renamedSymbol": "L:va.a(Lki;B)V#156",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#156",
       "originalName": "var2Lifetime150",
       "renamedName": "var2Lifetime150",
       "declaration": {
@@ -150789,7 +150805,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#157",
-      "renamedSymbol": "L:va.a(Lki;B)V#157",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#157",
       "originalName": "var2Lifetime151",
       "renamedName": "var2Lifetime151",
       "declaration": {
@@ -150800,7 +150816,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#158",
-      "renamedSymbol": "L:va.a(Lki;B)V#158",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#158",
       "originalName": "var2Lifetime152",
       "renamedName": "var2Lifetime152",
       "declaration": {
@@ -150811,7 +150827,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#159",
-      "renamedSymbol": "L:va.a(Lki;B)V#159",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#159",
       "originalName": "var2Lifetime153",
       "renamedName": "var2Lifetime153",
       "declaration": {
@@ -150822,7 +150838,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#16",
-      "renamedSymbol": "L:va.a(Lki;B)V#16",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#16",
       "originalName": "var2Lifetime10",
       "renamedName": "var2Lifetime10",
       "declaration": {
@@ -150833,7 +150849,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#160",
-      "renamedSymbol": "L:va.a(Lki;B)V#160",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#160",
       "originalName": "var2Lifetime154",
       "renamedName": "var2Lifetime154",
       "declaration": {
@@ -150844,7 +150860,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#161",
-      "renamedSymbol": "L:va.a(Lki;B)V#161",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#161",
       "originalName": "var2Lifetime155",
       "renamedName": "var2Lifetime155",
       "declaration": {
@@ -150855,7 +150871,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#162",
-      "renamedSymbol": "L:va.a(Lki;B)V#162",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#162",
       "originalName": "var2Lifetime156",
       "renamedName": "var2Lifetime156",
       "declaration": {
@@ -150866,7 +150882,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#163",
-      "renamedSymbol": "L:va.a(Lki;B)V#163",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#163",
       "originalName": "var2Lifetime157",
       "renamedName": "var2Lifetime157",
       "declaration": {
@@ -150877,7 +150893,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#164",
-      "renamedSymbol": "L:va.a(Lki;B)V#164",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#164",
       "originalName": "var2Lifetime158",
       "renamedName": "var2Lifetime158",
       "declaration": {
@@ -150888,7 +150904,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#165",
-      "renamedSymbol": "L:va.a(Lki;B)V#165",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#165",
       "originalName": "var2Lifetime159",
       "renamedName": "var2Lifetime159",
       "declaration": {
@@ -150899,7 +150915,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#166",
-      "renamedSymbol": "L:va.a(Lki;B)V#166",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#166",
       "originalName": "var2Lifetime160",
       "renamedName": "var2Lifetime160",
       "declaration": {
@@ -150910,7 +150926,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#167",
-      "renamedSymbol": "L:va.a(Lki;B)V#167",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#167",
       "originalName": "var2Lifetime161",
       "renamedName": "var2Lifetime161",
       "declaration": {
@@ -150921,7 +150937,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#168",
-      "renamedSymbol": "L:va.a(Lki;B)V#168",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#168",
       "originalName": "var2Lifetime162",
       "renamedName": "var2Lifetime162",
       "declaration": {
@@ -150932,7 +150948,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#169",
-      "renamedSymbol": "L:va.a(Lki;B)V#169",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#169",
       "originalName": "var2Lifetime163",
       "renamedName": "var2Lifetime163",
       "declaration": {
@@ -150943,7 +150959,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#17",
-      "renamedSymbol": "L:va.a(Lki;B)V#17",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#17",
       "originalName": "var2Lifetime11",
       "renamedName": "var2Lifetime11",
       "declaration": {
@@ -150954,7 +150970,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#170",
-      "renamedSymbol": "L:va.a(Lki;B)V#170",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#170",
       "originalName": "var2Lifetime164",
       "renamedName": "var2Lifetime164",
       "declaration": {
@@ -150965,7 +150981,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#171",
-      "renamedSymbol": "L:va.a(Lki;B)V#171",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#171",
       "originalName": "var2Lifetime165",
       "renamedName": "var2Lifetime165",
       "declaration": {
@@ -150976,7 +150992,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#172",
-      "renamedSymbol": "L:va.a(Lki;B)V#172",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#172",
       "originalName": "var2Lifetime166",
       "renamedName": "var2Lifetime166",
       "declaration": {
@@ -150987,7 +151003,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#173",
-      "renamedSymbol": "L:va.a(Lki;B)V#173",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#173",
       "originalName": "var2Lifetime167",
       "renamedName": "var2Lifetime167",
       "declaration": {
@@ -150998,7 +151014,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#174",
-      "renamedSymbol": "L:va.a(Lki;B)V#174",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#174",
       "originalName": "var2Lifetime168",
       "renamedName": "var2Lifetime168",
       "declaration": {
@@ -151009,7 +151025,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#175",
-      "renamedSymbol": "L:va.a(Lki;B)V#175",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#175",
       "originalName": "var2Lifetime169",
       "renamedName": "var2Lifetime169",
       "declaration": {
@@ -151020,7 +151036,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#176",
-      "renamedSymbol": "L:va.a(Lki;B)V#176",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#176",
       "originalName": "var2Lifetime170",
       "renamedName": "var2Lifetime170",
       "declaration": {
@@ -151031,7 +151047,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#177",
-      "renamedSymbol": "L:va.a(Lki;B)V#177",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#177",
       "originalName": "var2Lifetime171",
       "renamedName": "var2Lifetime171",
       "declaration": {
@@ -151042,7 +151058,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#178",
-      "renamedSymbol": "L:va.a(Lki;B)V#178",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#178",
       "originalName": "var2Lifetime172",
       "renamedName": "var2Lifetime172",
       "declaration": {
@@ -151053,7 +151069,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#179",
-      "renamedSymbol": "L:va.a(Lki;B)V#179",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#179",
       "originalName": "var2Lifetime173",
       "renamedName": "var2Lifetime173",
       "declaration": {
@@ -151064,7 +151080,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#18",
-      "renamedSymbol": "L:va.a(Lki;B)V#18",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#18",
       "originalName": "var2Lifetime12",
       "renamedName": "var2Lifetime12",
       "declaration": {
@@ -151075,7 +151091,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#180",
-      "renamedSymbol": "L:va.a(Lki;B)V#180",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#180",
       "originalName": "var2Lifetime174",
       "renamedName": "var2Lifetime174",
       "declaration": {
@@ -151086,7 +151102,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#181",
-      "renamedSymbol": "L:va.a(Lki;B)V#181",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#181",
       "originalName": "var2Lifetime175",
       "renamedName": "var2Lifetime175",
       "declaration": {
@@ -151097,7 +151113,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#182",
-      "renamedSymbol": "L:va.a(Lki;B)V#182",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#182",
       "originalName": "var2Lifetime176",
       "renamedName": "var2Lifetime176",
       "declaration": {
@@ -151108,7 +151124,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#183",
-      "renamedSymbol": "L:va.a(Lki;B)V#183",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#183",
       "originalName": "var2Lifetime177",
       "renamedName": "var2Lifetime177",
       "declaration": {
@@ -151119,7 +151135,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#184",
-      "renamedSymbol": "L:va.a(Lki;B)V#184",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#184",
       "originalName": "var2Lifetime178",
       "renamedName": "var2Lifetime178",
       "declaration": {
@@ -151130,7 +151146,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#185",
-      "renamedSymbol": "L:va.a(Lki;B)V#185",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#185",
       "originalName": "var2Lifetime179",
       "renamedName": "var2Lifetime179",
       "declaration": {
@@ -151141,7 +151157,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#186",
-      "renamedSymbol": "L:va.a(Lki;B)V#186",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#186",
       "originalName": "var2Lifetime180",
       "renamedName": "var2Lifetime180",
       "declaration": {
@@ -151152,7 +151168,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#187",
-      "renamedSymbol": "L:va.a(Lki;B)V#187",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#187",
       "originalName": "var2Lifetime181",
       "renamedName": "var2Lifetime181",
       "declaration": {
@@ -151163,7 +151179,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#188",
-      "renamedSymbol": "L:va.a(Lki;B)V#188",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#188",
       "originalName": "var2Lifetime182",
       "renamedName": "var2Lifetime182",
       "declaration": {
@@ -151174,7 +151190,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#189",
-      "renamedSymbol": "L:va.a(Lki;B)V#189",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#189",
       "originalName": "var2Lifetime183",
       "renamedName": "var2Lifetime183",
       "declaration": {
@@ -151185,7 +151201,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#19",
-      "renamedSymbol": "L:va.a(Lki;B)V#19",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#19",
       "originalName": "var2Lifetime13",
       "renamedName": "var2Lifetime13",
       "declaration": {
@@ -151196,7 +151212,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#190",
-      "renamedSymbol": "L:va.a(Lki;B)V#190",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#190",
       "originalName": "var2Lifetime184",
       "renamedName": "var2Lifetime184",
       "declaration": {
@@ -151207,7 +151223,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#191",
-      "renamedSymbol": "L:va.a(Lki;B)V#191",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#191",
       "originalName": "var2Lifetime185",
       "renamedName": "var2Lifetime185",
       "declaration": {
@@ -151218,7 +151234,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#192",
-      "renamedSymbol": "L:va.a(Lki;B)V#192",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#192",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -151229,7 +151245,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#2",
-      "renamedSymbol": "L:va.a(Lki;B)V#2",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#2",
       "originalName": "stackIn_665_2",
       "renamedName": "stackIn_665_2",
       "declaration": {
@@ -151240,7 +151256,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#20",
-      "renamedSymbol": "L:va.a(Lki;B)V#20",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#20",
       "originalName": "var2Lifetime14",
       "renamedName": "var2Lifetime14",
       "declaration": {
@@ -151251,7 +151267,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#21",
-      "renamedSymbol": "L:va.a(Lki;B)V#21",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#21",
       "originalName": "var2Lifetime15",
       "renamedName": "var2Lifetime15",
       "declaration": {
@@ -151262,7 +151278,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#22",
-      "renamedSymbol": "L:va.a(Lki;B)V#22",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#22",
       "originalName": "var2Lifetime16",
       "renamedName": "var2Lifetime16",
       "declaration": {
@@ -151273,7 +151289,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#23",
-      "renamedSymbol": "L:va.a(Lki;B)V#23",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#23",
       "originalName": "var2Lifetime17",
       "renamedName": "var2Lifetime17",
       "declaration": {
@@ -151284,7 +151300,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#24",
-      "renamedSymbol": "L:va.a(Lki;B)V#24",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#24",
       "originalName": "var2Lifetime18",
       "renamedName": "var2Lifetime18",
       "declaration": {
@@ -151295,7 +151311,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#25",
-      "renamedSymbol": "L:va.a(Lki;B)V#25",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#25",
       "originalName": "var2Lifetime19",
       "renamedName": "var2Lifetime19",
       "declaration": {
@@ -151306,7 +151322,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#26",
-      "renamedSymbol": "L:va.a(Lki;B)V#26",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#26",
       "originalName": "var2Lifetime20",
       "renamedName": "var2Lifetime20",
       "declaration": {
@@ -151317,7 +151333,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#27",
-      "renamedSymbol": "L:va.a(Lki;B)V#27",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#27",
       "originalName": "var2Lifetime21",
       "renamedName": "var2Lifetime21",
       "declaration": {
@@ -151328,7 +151344,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#28",
-      "renamedSymbol": "L:va.a(Lki;B)V#28",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#28",
       "originalName": "var2Lifetime22",
       "renamedName": "var2Lifetime22",
       "declaration": {
@@ -151339,7 +151355,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#29",
-      "renamedSymbol": "L:va.a(Lki;B)V#29",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#29",
       "originalName": "var2Lifetime23",
       "renamedName": "var2Lifetime23",
       "declaration": {
@@ -151350,7 +151366,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#3",
-      "renamedSymbol": "L:va.a(Lki;B)V#3",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -151361,7 +151377,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#30",
-      "renamedSymbol": "L:va.a(Lki;B)V#30",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#30",
       "originalName": "var2Lifetime24",
       "renamedName": "var2Lifetime24",
       "declaration": {
@@ -151372,7 +151388,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#31",
-      "renamedSymbol": "L:va.a(Lki;B)V#31",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#31",
       "originalName": "var2Lifetime25",
       "renamedName": "var2Lifetime25",
       "declaration": {
@@ -151383,7 +151399,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#32",
-      "renamedSymbol": "L:va.a(Lki;B)V#32",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#32",
       "originalName": "var2Lifetime26",
       "renamedName": "var2Lifetime26",
       "declaration": {
@@ -151394,7 +151410,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#33",
-      "renamedSymbol": "L:va.a(Lki;B)V#33",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#33",
       "originalName": "var2Lifetime27",
       "renamedName": "var2Lifetime27",
       "declaration": {
@@ -151405,7 +151421,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#34",
-      "renamedSymbol": "L:va.a(Lki;B)V#34",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#34",
       "originalName": "var2Lifetime28",
       "renamedName": "var2Lifetime28",
       "declaration": {
@@ -151416,7 +151432,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#35",
-      "renamedSymbol": "L:va.a(Lki;B)V#35",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#35",
       "originalName": "var2Lifetime29",
       "renamedName": "var2Lifetime29",
       "declaration": {
@@ -151427,7 +151443,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#36",
-      "renamedSymbol": "L:va.a(Lki;B)V#36",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#36",
       "originalName": "var2Lifetime30",
       "renamedName": "var2Lifetime30",
       "declaration": {
@@ -151438,7 +151454,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#37",
-      "renamedSymbol": "L:va.a(Lki;B)V#37",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#37",
       "originalName": "var2Lifetime31",
       "renamedName": "var2Lifetime31",
       "declaration": {
@@ -151449,7 +151465,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#38",
-      "renamedSymbol": "L:va.a(Lki;B)V#38",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#38",
       "originalName": "var2Lifetime32",
       "renamedName": "var2Lifetime32",
       "declaration": {
@@ -151460,7 +151476,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#39",
-      "renamedSymbol": "L:va.a(Lki;B)V#39",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#39",
       "originalName": "var2Lifetime33",
       "renamedName": "var2Lifetime33",
       "declaration": {
@@ -151471,7 +151487,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#4",
-      "renamedSymbol": "L:va.a(Lki;B)V#4",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -151482,7 +151498,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#40",
-      "renamedSymbol": "L:va.a(Lki;B)V#40",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#40",
       "originalName": "var2Lifetime34",
       "renamedName": "var2Lifetime34",
       "declaration": {
@@ -151493,7 +151509,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#41",
-      "renamedSymbol": "L:va.a(Lki;B)V#41",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#41",
       "originalName": "var2Lifetime35",
       "renamedName": "var2Lifetime35",
       "declaration": {
@@ -151504,7 +151520,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#42",
-      "renamedSymbol": "L:va.a(Lki;B)V#42",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#42",
       "originalName": "var2Lifetime36",
       "renamedName": "var2Lifetime36",
       "declaration": {
@@ -151515,7 +151531,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#43",
-      "renamedSymbol": "L:va.a(Lki;B)V#43",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#43",
       "originalName": "var2Lifetime37",
       "renamedName": "var2Lifetime37",
       "declaration": {
@@ -151526,7 +151542,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#44",
-      "renamedSymbol": "L:va.a(Lki;B)V#44",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#44",
       "originalName": "var2Lifetime38",
       "renamedName": "var2Lifetime38",
       "declaration": {
@@ -151537,7 +151553,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#45",
-      "renamedSymbol": "L:va.a(Lki;B)V#45",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#45",
       "originalName": "var2Lifetime39",
       "renamedName": "var2Lifetime39",
       "declaration": {
@@ -151548,7 +151564,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#46",
-      "renamedSymbol": "L:va.a(Lki;B)V#46",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#46",
       "originalName": "var2Lifetime40",
       "renamedName": "var2Lifetime40",
       "declaration": {
@@ -151559,7 +151575,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#47",
-      "renamedSymbol": "L:va.a(Lki;B)V#47",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#47",
       "originalName": "var2Lifetime41",
       "renamedName": "var2Lifetime41",
       "declaration": {
@@ -151570,7 +151586,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#48",
-      "renamedSymbol": "L:va.a(Lki;B)V#48",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#48",
       "originalName": "var2Lifetime42",
       "renamedName": "var2Lifetime42",
       "declaration": {
@@ -151581,7 +151597,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#49",
-      "renamedSymbol": "L:va.a(Lki;B)V#49",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#49",
       "originalName": "var2Lifetime43",
       "renamedName": "var2Lifetime43",
       "declaration": {
@@ -151592,7 +151608,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#5",
-      "renamedSymbol": "L:va.a(Lki;B)V#5",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -151603,7 +151619,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#50",
-      "renamedSymbol": "L:va.a(Lki;B)V#50",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#50",
       "originalName": "var2Lifetime44",
       "renamedName": "var2Lifetime44",
       "declaration": {
@@ -151614,7 +151630,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#51",
-      "renamedSymbol": "L:va.a(Lki;B)V#51",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#51",
       "originalName": "var2Lifetime45",
       "renamedName": "var2Lifetime45",
       "declaration": {
@@ -151625,7 +151641,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#52",
-      "renamedSymbol": "L:va.a(Lki;B)V#52",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#52",
       "originalName": "var2Lifetime46",
       "renamedName": "var2Lifetime46",
       "declaration": {
@@ -151636,7 +151652,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#53",
-      "renamedSymbol": "L:va.a(Lki;B)V#53",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#53",
       "originalName": "var2Lifetime47",
       "renamedName": "var2Lifetime47",
       "declaration": {
@@ -151647,7 +151663,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#54",
-      "renamedSymbol": "L:va.a(Lki;B)V#54",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#54",
       "originalName": "var2Lifetime48",
       "renamedName": "var2Lifetime48",
       "declaration": {
@@ -151658,7 +151674,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#55",
-      "renamedSymbol": "L:va.a(Lki;B)V#55",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#55",
       "originalName": "var2Lifetime49",
       "renamedName": "var2Lifetime49",
       "declaration": {
@@ -151669,7 +151685,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#56",
-      "renamedSymbol": "L:va.a(Lki;B)V#56",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#56",
       "originalName": "var2Lifetime50",
       "renamedName": "var2Lifetime50",
       "declaration": {
@@ -151680,7 +151696,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#57",
-      "renamedSymbol": "L:va.a(Lki;B)V#57",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#57",
       "originalName": "var2Lifetime51",
       "renamedName": "var2Lifetime51",
       "declaration": {
@@ -151691,7 +151707,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#58",
-      "renamedSymbol": "L:va.a(Lki;B)V#58",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#58",
       "originalName": "var2Lifetime52",
       "renamedName": "var2Lifetime52",
       "declaration": {
@@ -151702,7 +151718,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#59",
-      "renamedSymbol": "L:va.a(Lki;B)V#59",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#59",
       "originalName": "var2Lifetime53",
       "renamedName": "var2Lifetime53",
       "declaration": {
@@ -151713,7 +151729,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#6",
-      "renamedSymbol": "L:va.a(Lki;B)V#6",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151724,7 +151740,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#60",
-      "renamedSymbol": "L:va.a(Lki;B)V#60",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#60",
       "originalName": "var2Lifetime54",
       "renamedName": "var2Lifetime54",
       "declaration": {
@@ -151735,7 +151751,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#61",
-      "renamedSymbol": "L:va.a(Lki;B)V#61",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#61",
       "originalName": "var2Lifetime55",
       "renamedName": "var2Lifetime55",
       "declaration": {
@@ -151746,7 +151762,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#62",
-      "renamedSymbol": "L:va.a(Lki;B)V#62",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#62",
       "originalName": "var2Lifetime56",
       "renamedName": "var2Lifetime56",
       "declaration": {
@@ -151757,7 +151773,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#63",
-      "renamedSymbol": "L:va.a(Lki;B)V#63",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#63",
       "originalName": "var2Lifetime57",
       "renamedName": "var2Lifetime57",
       "declaration": {
@@ -151768,7 +151784,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#64",
-      "renamedSymbol": "L:va.a(Lki;B)V#64",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#64",
       "originalName": "var2Lifetime58",
       "renamedName": "var2Lifetime58",
       "declaration": {
@@ -151779,7 +151795,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#65",
-      "renamedSymbol": "L:va.a(Lki;B)V#65",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#65",
       "originalName": "var2Lifetime59",
       "renamedName": "var2Lifetime59",
       "declaration": {
@@ -151790,7 +151806,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#66",
-      "renamedSymbol": "L:va.a(Lki;B)V#66",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#66",
       "originalName": "var2Lifetime60",
       "renamedName": "var2Lifetime60",
       "declaration": {
@@ -151801,7 +151817,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#67",
-      "renamedSymbol": "L:va.a(Lki;B)V#67",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#67",
       "originalName": "var2Lifetime61",
       "renamedName": "var2Lifetime61",
       "declaration": {
@@ -151812,7 +151828,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#68",
-      "renamedSymbol": "L:va.a(Lki;B)V#68",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#68",
       "originalName": "var2Lifetime62",
       "renamedName": "var2Lifetime62",
       "declaration": {
@@ -151823,7 +151839,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#69",
-      "renamedSymbol": "L:va.a(Lki;B)V#69",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#69",
       "originalName": "var2Lifetime63",
       "renamedName": "var2Lifetime63",
       "declaration": {
@@ -151834,7 +151850,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#7",
-      "renamedSymbol": "L:va.a(Lki;B)V#7",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#7",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -151845,7 +151861,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#70",
-      "renamedSymbol": "L:va.a(Lki;B)V#70",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#70",
       "originalName": "var2Lifetime64",
       "renamedName": "var2Lifetime64",
       "declaration": {
@@ -151856,7 +151872,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#71",
-      "renamedSymbol": "L:va.a(Lki;B)V#71",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#71",
       "originalName": "var2Lifetime65",
       "renamedName": "var2Lifetime65",
       "declaration": {
@@ -151867,7 +151883,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#72",
-      "renamedSymbol": "L:va.a(Lki;B)V#72",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#72",
       "originalName": "var2Lifetime66",
       "renamedName": "var2Lifetime66",
       "declaration": {
@@ -151878,7 +151894,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#73",
-      "renamedSymbol": "L:va.a(Lki;B)V#73",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#73",
       "originalName": "var2Lifetime67",
       "renamedName": "var2Lifetime67",
       "declaration": {
@@ -151889,7 +151905,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#74",
-      "renamedSymbol": "L:va.a(Lki;B)V#74",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#74",
       "originalName": "var2Lifetime68",
       "renamedName": "var2Lifetime68",
       "declaration": {
@@ -151900,7 +151916,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#75",
-      "renamedSymbol": "L:va.a(Lki;B)V#75",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#75",
       "originalName": "var2Lifetime69",
       "renamedName": "var2Lifetime69",
       "declaration": {
@@ -151911,7 +151927,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#76",
-      "renamedSymbol": "L:va.a(Lki;B)V#76",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#76",
       "originalName": "var2Lifetime70",
       "renamedName": "var2Lifetime70",
       "declaration": {
@@ -151922,7 +151938,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#77",
-      "renamedSymbol": "L:va.a(Lki;B)V#77",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#77",
       "originalName": "var2Lifetime71",
       "renamedName": "var2Lifetime71",
       "declaration": {
@@ -151933,7 +151949,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#78",
-      "renamedSymbol": "L:va.a(Lki;B)V#78",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#78",
       "originalName": "var2Lifetime72",
       "renamedName": "var2Lifetime72",
       "declaration": {
@@ -151944,7 +151960,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#79",
-      "renamedSymbol": "L:va.a(Lki;B)V#79",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#79",
       "originalName": "var2Lifetime73",
       "renamedName": "var2Lifetime73",
       "declaration": {
@@ -151955,7 +151971,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#8",
-      "renamedSymbol": "L:va.a(Lki;B)V#8",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#8",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -151966,7 +151982,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#80",
-      "renamedSymbol": "L:va.a(Lki;B)V#80",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#80",
       "originalName": "var2Lifetime74",
       "renamedName": "var2Lifetime74",
       "declaration": {
@@ -151977,7 +151993,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#81",
-      "renamedSymbol": "L:va.a(Lki;B)V#81",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#81",
       "originalName": "var2Lifetime75",
       "renamedName": "var2Lifetime75",
       "declaration": {
@@ -151988,7 +152004,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#82",
-      "renamedSymbol": "L:va.a(Lki;B)V#82",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#82",
       "originalName": "var2Lifetime76",
       "renamedName": "var2Lifetime76",
       "declaration": {
@@ -151999,7 +152015,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#83",
-      "renamedSymbol": "L:va.a(Lki;B)V#83",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#83",
       "originalName": "var2Lifetime77",
       "renamedName": "var2Lifetime77",
       "declaration": {
@@ -152010,7 +152026,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#84",
-      "renamedSymbol": "L:va.a(Lki;B)V#84",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#84",
       "originalName": "var2Lifetime78",
       "renamedName": "var2Lifetime78",
       "declaration": {
@@ -152021,7 +152037,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#85",
-      "renamedSymbol": "L:va.a(Lki;B)V#85",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#85",
       "originalName": "var2Lifetime79",
       "renamedName": "var2Lifetime79",
       "declaration": {
@@ -152032,7 +152048,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#86",
-      "renamedSymbol": "L:va.a(Lki;B)V#86",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#86",
       "originalName": "var2Lifetime80",
       "renamedName": "var2Lifetime80",
       "declaration": {
@@ -152043,7 +152059,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#87",
-      "renamedSymbol": "L:va.a(Lki;B)V#87",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#87",
       "originalName": "var2Lifetime81",
       "renamedName": "var2Lifetime81",
       "declaration": {
@@ -152054,7 +152070,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#88",
-      "renamedSymbol": "L:va.a(Lki;B)V#88",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#88",
       "originalName": "var2Lifetime82",
       "renamedName": "var2Lifetime82",
       "declaration": {
@@ -152065,7 +152081,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#89",
-      "renamedSymbol": "L:va.a(Lki;B)V#89",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#89",
       "originalName": "var2Lifetime83",
       "renamedName": "var2Lifetime83",
       "declaration": {
@@ -152076,7 +152092,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#9",
-      "renamedSymbol": "L:va.a(Lki;B)V#9",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#9",
       "originalName": "var2Lifetime3",
       "renamedName": "var2Lifetime3",
       "declaration": {
@@ -152087,7 +152103,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#90",
-      "renamedSymbol": "L:va.a(Lki;B)V#90",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#90",
       "originalName": "var2Lifetime84",
       "renamedName": "var2Lifetime84",
       "declaration": {
@@ -152098,7 +152114,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#91",
-      "renamedSymbol": "L:va.a(Lki;B)V#91",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#91",
       "originalName": "var2Lifetime85",
       "renamedName": "var2Lifetime85",
       "declaration": {
@@ -152109,7 +152125,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#92",
-      "renamedSymbol": "L:va.a(Lki;B)V#92",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#92",
       "originalName": "var2Lifetime86",
       "renamedName": "var2Lifetime86",
       "declaration": {
@@ -152120,7 +152136,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#93",
-      "renamedSymbol": "L:va.a(Lki;B)V#93",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#93",
       "originalName": "var2Lifetime87",
       "renamedName": "var2Lifetime87",
       "declaration": {
@@ -152131,7 +152147,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#94",
-      "renamedSymbol": "L:va.a(Lki;B)V#94",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#94",
       "originalName": "var2Lifetime88",
       "renamedName": "var2Lifetime88",
       "declaration": {
@@ -152142,7 +152158,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#95",
-      "renamedSymbol": "L:va.a(Lki;B)V#95",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#95",
       "originalName": "var2Lifetime89",
       "renamedName": "var2Lifetime89",
       "declaration": {
@@ -152153,7 +152169,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#96",
-      "renamedSymbol": "L:va.a(Lki;B)V#96",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#96",
       "originalName": "var2Lifetime90",
       "renamedName": "var2Lifetime90",
       "declaration": {
@@ -152164,7 +152180,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#97",
-      "renamedSymbol": "L:va.a(Lki;B)V#97",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#97",
       "originalName": "var2Lifetime91",
       "renamedName": "var2Lifetime91",
       "declaration": {
@@ -152175,7 +152191,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#98",
-      "renamedSymbol": "L:va.a(Lki;B)V#98",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#98",
       "originalName": "var2Lifetime92",
       "renamedName": "var2Lifetime92",
       "declaration": {
@@ -152186,7 +152202,7 @@
     },
     {
       "symbol": "L:va.a(Lki;B)V#99",
-      "renamedSymbol": "L:va.a(Lki;B)V#99",
+      "renamedSymbol": "L:AccountRequestState.a(Lki;B)V#99",
       "originalName": "var2Lifetime93",
       "renamedName": "var2Lifetime93",
       "declaration": {
@@ -152197,7 +152213,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#0",
-      "renamedSymbol": "L:va.a(ZI)Z#0",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -152208,7 +152224,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#1",
-      "renamedSymbol": "L:va.a(ZI)Z#1",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -152219,7 +152235,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#2",
-      "renamedSymbol": "L:va.a(ZI)Z#2",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -152230,7 +152246,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#3",
-      "renamedSymbol": "L:va.a(ZI)Z#3",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#3",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -152241,7 +152257,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#4",
-      "renamedSymbol": "L:va.a(ZI)Z#4",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -152252,7 +152268,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#5",
-      "renamedSymbol": "L:va.a(ZI)Z#5",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#5",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -152263,7 +152279,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#6",
-      "renamedSymbol": "L:va.a(ZI)Z#6",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#6",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -152274,7 +152290,7 @@
     },
     {
       "symbol": "L:va.a(ZI)Z#7",
-      "renamedSymbol": "L:va.a(ZI)Z#7",
+      "renamedSymbol": "L:AccountRequestState.a(ZI)Z#7",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -152285,7 +152301,7 @@
     },
     {
       "symbol": "L:va.toString()Ljava/lang/String;#0",
-      "renamedSymbol": "L:va.toString()Ljava/lang/String;#0",
+      "renamedSymbol": "L:AccountRequestState.toString()Ljava/lang/String;#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -152296,7 +152312,7 @@
     },
     {
       "symbol": "L:va.toString()Ljava/lang/String;#1",
-      "renamedSymbol": "L:va.toString()Ljava/lang/String;#1",
+      "renamedSymbol": "L:AccountRequestState.toString()Ljava/lang/String;#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -152307,7 +152323,7 @@
     },
     {
       "symbol": "L:va.toString()Ljava/lang/String;#2",
-      "renamedSymbol": "L:va.toString()Ljava/lang/String;#2",
+      "renamedSymbol": "L:AccountRequestState.toString()Ljava/lang/String;#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -183327,9 +183343,9 @@
     },
     {
       "symbol": "M:va.a(I)V",
-      "renamedSymbol": "M:va.a(I)V",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "va.java",
         "start": 2035,
@@ -183338,7 +183354,7 @@
     },
     {
       "symbol": "M:va.a(IILki;B)Lhj;",
-      "renamedSymbol": "M:va.a(IILki;B)Lhj;",
+      "renamedSymbol": "M:AccountRequestState.a(IILki;B)Lhj;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -183349,7 +183365,7 @@
     },
     {
       "symbol": "M:va.a(Lki;B)V",
-      "renamedSymbol": "M:va.a(Lki;B)V",
+      "renamedSymbol": "M:AccountRequestState.a(Lki;B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -183360,7 +183376,7 @@
     },
     {
       "symbol": "M:va.a(ZI)Z",
-      "renamedSymbol": "M:va.a(ZI)Z",
+      "renamedSymbol": "M:AccountRequestState.a(ZI)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -183371,7 +183387,7 @@
     },
     {
       "symbol": "M:va.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:va.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -239955,7 +239971,7 @@
     },
     {
       "symbol": "P:va.a(I)V#0",
-      "renamedSymbol": "P:va.a(I)V#0",
+      "renamedSymbol": "P:AccountRequestState.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -239966,7 +239982,7 @@
     },
     {
       "symbol": "P:va.a(IILki;B)Lhj;#0",
-      "renamedSymbol": "P:va.a(IILki;B)Lhj;#0",
+      "renamedSymbol": "P:AccountRequestState.a(IILki;B)Lhj;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -239977,7 +239993,7 @@
     },
     {
       "symbol": "P:va.a(IILki;B)Lhj;#1",
-      "renamedSymbol": "P:va.a(IILki;B)Lhj;#1",
+      "renamedSymbol": "P:AccountRequestState.a(IILki;B)Lhj;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -239988,7 +240004,7 @@
     },
     {
       "symbol": "P:va.a(IILki;B)Lhj;#2",
-      "renamedSymbol": "P:va.a(IILki;B)Lhj;#2",
+      "renamedSymbol": "P:AccountRequestState.a(IILki;B)Lhj;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -239999,7 +240015,7 @@
     },
     {
       "symbol": "P:va.a(IILki;B)Lhj;#3",
-      "renamedSymbol": "P:va.a(IILki;B)Lhj;#3",
+      "renamedSymbol": "P:AccountRequestState.a(IILki;B)Lhj;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -240010,7 +240026,7 @@
     },
     {
       "symbol": "P:va.a(Lki;B)V#0",
-      "renamedSymbol": "P:va.a(Lki;B)V#0",
+      "renamedSymbol": "P:AccountRequestState.a(Lki;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -240021,7 +240037,7 @@
     },
     {
       "symbol": "P:va.a(Lki;B)V#1",
-      "renamedSymbol": "P:va.a(Lki;B)V#1",
+      "renamedSymbol": "P:AccountRequestState.a(Lki;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -240032,7 +240048,7 @@
     },
     {
       "symbol": "P:va.a(ZI)Z#0",
-      "renamedSymbol": "P:va.a(ZI)Z#0",
+      "renamedSymbol": "P:AccountRequestState.a(ZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -240043,7 +240059,7 @@
     },
     {
       "symbol": "P:va.a(ZI)Z#1",
-      "renamedSymbol": "P:va.a(ZI)Z#1",
+      "renamedSymbol": "P:AccountRequestState.a(ZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -243666,7 +243682,7 @@
       "original": "OrbDefence.java",
       "renamed": "OrbDefence.java",
       "inputSha256": "8f2067a013d3a2eb54cef83f70f7f94951e5c8f44037c45ddc76837d367cfb5b",
-      "outputSha256": "023f77516a4aa86eb7f783a3bac110dd5a913ad54301dc3e09ee595d45cde12f",
+      "outputSha256": "a2ce739838f99f76940867bc07b1cf1cc80108666c41d932414c104cc91cc8cb",
       "edits": [
         {
           "start": 76,
@@ -243723,6 +243739,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 4867,
+          "end": 4869,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5078,
@@ -244635,6 +244658,20 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 17348,
+          "end": 17350,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17351,
+          "end": 17352,
+          "symbol": "M:va.a(I)V",
+          "original": "a",
+          "renamed": "releaseStatics"
+        },
+        {
           "start": 17365,
           "end": 17367,
           "symbol": "C:qj",
@@ -244717,6 +244754,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 20373,
+          "end": 20375,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 21736,
@@ -244997,6 +245041,13 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 40607,
+          "end": 40609,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 40636,
@@ -246844,7 +246895,7 @@
       "original": "ce.java",
       "renamed": "ce.java",
       "inputSha256": "0648d28aa607c4a9b69ac11a5b5ce190ebca92c71d61f7fb28853783a6cc87ab",
-      "outputSha256": "f75b69fa4d10d80d3ca94de854d197e429cf9e1272c0f39e2c9d9ae08251d096",
+      "outputSha256": "af1bd9f4ad4af90e51c18591f5a180ffcb80612c73dc1d3e4f1db18d14d13766",
       "edits": [
         {
           "start": 1748,
@@ -246859,6 +246910,13 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 2033,
+          "end": 2035,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2098,
@@ -246889,6 +246947,13 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 2226,
+          "end": 2228,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 2255,
           "end": 2257,
           "symbol": "C:tf",
@@ -246910,11 +246975,25 @@
           "renamed": "position"
         },
         {
+          "start": 2347,
+          "end": 2349,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 2358,
           "end": 2360,
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 2432,
+          "end": 2434,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2443,
@@ -248202,7 +248281,7 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "6261dc5e995ce1633e060c9ad2e32491941df9d743cd48e539d514470186354d",
-      "outputSha256": "edb97aa43b9f1e318fe65d7231932a522d6adb082dacc98bd95ba35997ffe1cf",
+      "outputSha256": "39dd7d010aa516cd2578077cc0f46065992d990dd9b5ad9abaa2ca8a0fff0e17",
       "edits": [
         {
           "start": 1021,
@@ -248322,6 +248401,13 @@
           "original": "L102",
           "renamed": "scanLoop3",
           "kind": "label"
+        },
+        {
+          "start": 20634,
+          "end": 20636,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 22343,
@@ -250099,7 +250185,7 @@
       "original": "fk.java",
       "renamed": "fk.java",
       "inputSha256": "ab8d17287bf1109a02d1c92e4e1ce322c5c7f77b884e09aaa28dfe839052900d",
-      "outputSha256": "47fd645c8ec40ae0633481bb415e307cae88bebf986f7fcfdb3d069b478ab9bb",
+      "outputSha256": "fb13846c7dc32a208bdedc0c096f7e33ef9dfcf189ffb574dc70cfb11ab36e66",
       "edits": [
         {
           "start": 167,
@@ -250128,6 +250214,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1562,
+          "end": 1564,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -250790,8 +250883,16 @@
       "original": "gg.java",
       "renamed": "gg.java",
       "inputSha256": "6fb00fcd02c4ba70134d31e0f0e72cb630cbd6a674e1702120a89a134dd4618f",
-      "outputSha256": "6fb00fcd02c4ba70134d31e0f0e72cb630cbd6a674e1702120a89a134dd4618f",
-      "edits": []
+      "outputSha256": "a66953133d31edb42707828213e945b27334f33c726316761d9f44126634c682",
+      "edits": [
+        {
+          "start": 4493,
+          "end": 4495,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        }
+      ]
     },
     {
       "original": "gh.java",
@@ -252988,7 +253089,7 @@
       "original": "ja.java",
       "renamed": "ja.java",
       "inputSha256": "be28231a21e1fdff1e9c6611dfa60c940838014d798923e2422f05a3b8e78eba",
-      "outputSha256": "b84482b52d19428959bec96ff6d6be4c71c46ce118d7441d6b7d98b2563a20c7",
+      "outputSha256": "bf85be423930aec7ab0c2eac865fe7c01affd5c5a9f7c173914c5db3989a7f55",
       "edits": [
         {
           "start": 7402,
@@ -253669,6 +253770,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 105036,
+          "end": 105038,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 106233,
           "end": 106235,
           "symbol": "C:al",
@@ -253956,7 +254064,7 @@
       "original": "jk.java",
       "renamed": "jk.java",
       "inputSha256": "3bcf5d96a61a64bea021c05630cece4c12c7c470f23571b1ece449045c6dd236",
-      "outputSha256": "123d5e227aea5e5d032307baa53f8af11268e1b00b6c81ffc1c8ec762c9934ec",
+      "outputSha256": "e28506894e28af55d3437643e16c5cb9073b7f26611634f89146ad2280a8ede2",
       "edits": [
         {
           "start": 627,
@@ -254337,6 +254445,13 @@
           "renamed": "FullscreenFocusCanvas"
         },
         {
+          "start": 9546,
+          "end": 9548,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 9602,
           "end": 9603,
           "symbol": "M:mg.b(B)I",
@@ -254365,11 +254480,25 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 10358,
+          "end": 10360,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 10481,
           "end": 10488,
           "symbol": "F:mg.field_i:I",
           "original": "field_i",
           "renamed": "position"
+        },
+        {
+          "start": 10626,
+          "end": 10628,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 10697,
@@ -254384,6 +254513,13 @@
           "symbol": "F:mg.field_i:I",
           "original": "field_i",
           "renamed": "position"
+        },
+        {
+          "start": 10766,
+          "end": 10768,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 10946,
@@ -255225,14 +255361,28 @@
       "original": "kf.java",
       "renamed": "kf.java",
       "inputSha256": "e908cb74a60dd5274ec49629c58a674e8e798e553a9635732ba004c4c659d088",
-      "outputSha256": "b3afb4d39857bc819cb5f6d03bcf3f6fc505ab63f4caefb551dd75d09382c2d4",
+      "outputSha256": "9e68b6a656166f47ce8eb395e9a2f9b7a74d03eeb7f7fda2a867c1d61000d658",
       "edits": [
+        {
+          "start": 66,
+          "end": 68,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 235,
           "end": 236,
           "symbol": "M:kf.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 535,
+          "end": 537,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -256593,7 +256743,7 @@
       "original": "lm.java",
       "renamed": "lm.java",
       "inputSha256": "6990fce09d96935be2ba3149f3a9276e064d4ca6bb2ecb57459484f5094ddd2d",
-      "outputSha256": "b01a4da30576632680169b72ef6fc60c6872122b287edae38e2bbcd3b8ede838",
+      "outputSha256": "53a1e50d818a6f5f3c27e7d41938ca7df2b17fba800e7293bf9c51e0506ddbf3",
       "edits": [
         {
           "start": 3089,
@@ -256657,6 +256807,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 106258,
+          "end": 106260,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 107214,
@@ -257086,7 +257243,7 @@
       "original": "mg.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "3335c681de5810c98f91c49e954ef8aeb82b6744488bb5a0da7fb5d050267a48",
-      "outputSha256": "718c94a243f743cb3ab9f08ebdd442203e93f70f7ac2ace42d143252dabad6de",
+      "outputSha256": "c41fa754851e9968bbb8049c487890f79c7e8eb6c762b04249e207a91452d9b1",
       "edits": [
         {
           "start": 44,
@@ -257101,6 +257258,13 @@
           "symbol": "C:ca",
           "original": "ca",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 119,
@@ -257129,6 +257293,13 @@
           "symbol": "M:mg.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 337,
+          "end": 339,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 388,
@@ -259579,6 +259750,13 @@
           "symbol": "F:mg.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 26465,
+          "end": 26467,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -259807,7 +259985,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "89d4d48f049221959a144ef3320aa7a98638b6d995589cec469ac1c64aa57ec5",
-      "outputSha256": "f691525d0332b826e46882d8cfa81684fbdb7bc37079f2ec01d9891517d863f7",
+      "outputSha256": "6fed5b488bd6092413bc92c0e9e0fc532be98a6cc9ba5fb96aad1dfc2e03a7a8",
       "edits": [
         {
           "start": 1068,
@@ -259822,6 +260000,13 @@
           "symbol": "M:ml.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 7673,
+          "end": 7675,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -260138,7 +260323,7 @@
       "original": "nk.java",
       "renamed": "nk.java",
       "inputSha256": "b18a331ccc4d7b6e47a70c77d5ec355e3187ec09ed309dae4ae45da1ea71c03b",
-      "outputSha256": "ddf8e3cc28b105d219d745829208d15f5c29ad50f45618ed65c6cf9a11d6f11a",
+      "outputSha256": "f736543f2361b2b9b0a6057a44ba8f33d793dac35679292f745d0a135297672d",
       "edits": [
         {
           "start": 91,
@@ -260996,6 +261181,13 @@
           "kind": "label"
         },
         {
+          "start": 67203,
+          "end": 67205,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 67236,
           "end": 67238,
           "symbol": "C:ek",
@@ -261082,6 +261274,13 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 83067,
+          "end": 83069,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 83427,
           "end": 83429,
           "symbol": "C:fc",
@@ -261108,6 +261307,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 84167,
+          "end": 84169,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 84200,
@@ -263579,8 +263785,16 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "f4cb9898044ce18a3ea0d932a35819d14dbf5077891706a8aaf02a22026089f5",
-      "outputSha256": "f4cb9898044ce18a3ea0d932a35819d14dbf5077891706a8aaf02a22026089f5",
-      "edits": []
+      "outputSha256": "539ddf4d7ff4d9caf0310815bbb8152a33244a45d884caa44ba8ccde54a4f28d",
+      "edits": [
+        {
+          "start": 252,
+          "end": 254,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        }
+      ]
     },
     {
       "original": "qd.java",
@@ -264993,8 +265207,22 @@
       "original": "tg.java",
       "renamed": "tg.java",
       "inputSha256": "da2347ea053f00c78ebb15b5e9b4b204ee31e056bb0e54cc18966d034a7502e1",
-      "outputSha256": "1afb345392ca70667e90b0bcc09165db5f902cc23073c51a22772f690db24f3f",
+      "outputSha256": "49ac4192d36f4f523b2555812880f53bf58cc2d5dc2af990de2178ee00037f9d",
       "edits": [
+        {
+          "start": 144,
+          "end": 146,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 901,
+          "end": 903,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 2362,
           "end": 2363,
@@ -265088,14 +265316,28 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "d4349936e8db59098cdf528d67fc7fb92627b7b0b506a882ba1b1a58d34f0682",
-      "outputSha256": "b38854a8c019a9a23e3a8eaeb4718414fa957df8a5f15ec3f2596fc63304df39",
+      "outputSha256": "dc6c5cd8d476cdbc59e843ac2968917aa7d4633644efed2bad8565a6e5d70f5c",
       "edits": [
+        {
+          "start": 188,
+          "end": 190,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 211,
           "end": 213,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 480,
+          "end": 482,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 547,
@@ -265229,6 +265471,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 9135,
+          "end": 9137,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -265405,7 +265654,7 @@
       "original": "uj.java",
       "renamed": "uj.java",
       "inputSha256": "2e049801252d487d060b106f18cc6c7d1e31a450e80be50d1f506a79502a17f5",
-      "outputSha256": "fced565a6775ef7d94f66ce064fab4d569c99a5890176de3721cae52bb09ea5c",
+      "outputSha256": "00d5a1948ef03e9418d1e101a5dac75026555b61ada85b365559b183869b1da5",
       "edits": [
         {
           "start": 226,
@@ -265602,6 +265851,13 @@
           "symbol": "F:mg.field_i:I",
           "original": "field_i",
           "renamed": "position"
+        },
+        {
+          "start": 5948,
+          "end": 5950,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6082,
@@ -265861,10 +266117,24 @@
     },
     {
       "original": "va.java",
-      "renamed": "va.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "d03ad9b7b262316781593e05dd3af5f4fed31449c936b87a4bc079c0888c3b99",
-      "outputSha256": "4b828ca2d328f0dcc4888991ca29c30ef24136a0c146986ee83fc1ee4fbf4aa6",
+      "outputSha256": "cf949f27347d020c979038691cc3d77804e676e7caa94c1ecca2b02d302ddbad",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2035,
+          "end": 2036,
+          "symbol": "M:va.a(I)V",
+          "original": "a",
+          "renamed": "releaseStatics"
+        },
         {
           "start": 2605,
           "end": 2612,
@@ -265929,6 +266199,13 @@
           "renamed": "position"
         },
         {
+          "start": 11348,
+          "end": 11350,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 12818,
           "end": 12820,
           "symbol": "C:ca",
@@ -265977,7 +266254,7 @@
       "original": "vc.java",
       "renamed": "vc.java",
       "inputSha256": "22707236a79ed77f974bebee830e3be33cc38c74e46bc13c5aef55bbe2dc864a",
-      "outputSha256": "b68468f965b34ad2cb6c9d3d8c5bb47281eb15b1d411f5dbb2fd62d3777e3ae4",
+      "outputSha256": "687a62924304e4e38f356e2ffb715eb41b15b8eccb7c7501142d19f43ac2a5d6",
       "edits": [
         {
           "start": 1270,
@@ -266141,6 +266418,13 @@
           "renamed": "writeByte"
         },
         {
+          "start": 17577,
+          "end": 17579,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 17639,
           "end": 17640,
           "symbol": "M:mg.b(B)I",
@@ -266162,6 +266446,13 @@
           "renamed": "position"
         },
         {
+          "start": 18078,
+          "end": 18080,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 18133,
           "end": 18134,
           "symbol": "M:mg.c(B)J",
@@ -266174,6 +266465,13 @@
           "symbol": "F:mg.field_i:I",
           "original": "field_i",
           "renamed": "position"
+        },
+        {
+          "start": 18357,
+          "end": 18359,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 18419,
@@ -266216,6 +266514,13 @@
           "symbol": "M:mg.c(B)J",
           "original": "c",
           "renamed": "readLong"
+        },
+        {
+          "start": 19477,
+          "end": 19479,
+          "symbol": "C:va",
+          "original": "va",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 19501,
@@ -266880,10 +267185,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/orbdefence"
     },
-    "rulesSha256": "0b95e69f9f882d3de7c2013b5d197ee33d2ee31abe976a19029979fa1ef31f97",
+    "rulesSha256": "444a159e984c37ed174edfa4f40bfcafada9d1353049cfc9deebd43598b2c27b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e3bfc367b5ea5a23b2e1c054741add7fe4ad7d766d2894095f8b176fff61de16",
-    "outputTreeSha256": "33ced88535de96c1727333253c2fe3a41e988692c9aa6fc9b1bf75c0eca143d9",
+    "outputTreeSha256": "420e15b1443309ea7ed578a172e6234cd61b06cd668e074ba32146da904e87ad",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -147,7 +147,7 @@ final class ib implements ComponentLayout {
         String var4_ref_StringLifetime1;
         var8 = fleas.field_A ? 1 : 0;
         try {
-          var1 = ae.field_a;
+          var1 = AccountRequestState.field_a;
           var2 = var1.readUnsignedByte(false);
           if (var2 == 0) {
             if (null == kc.field_c) {
@@ -160,14 +160,14 @@ final class ib implements ComponentLayout {
             if (var3_int != 0) {
               var1.readString(0);
             }
-            var5_ref = vb.a(var4_ref_String, (byte) -47);
+            var5_ref = FullscreenFocusCanvas.a(var4_ref_String, (byte) -47);
             var6_ref = var1.readString(0);
             var7_ref = uk.a(-109, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (null == var5_ref) {
-              var5_ref = vb.a(var6_ref, (byte) 93);
+              var5_ref = FullscreenFocusCanvas.a(var6_ref, (byte) 93);
               if (var5_ref != null) {
                 kc.field_c.a(var5_ref, -1, (long)var7_ref.hashCode());
               }

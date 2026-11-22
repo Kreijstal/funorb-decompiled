@@ -69,7 +69,7 @@ abstract class bl extends DualLinkNode {
 
     final static boolean g(int param0) {
         if (IsaacRandom.field_i < param0) {
-          if (bd.field_k < 0) {
+          if (AccountRequestState.field_k < 0) {
             return false;
           }
           if (qd.field_O[99]) {
@@ -108,7 +108,7 @@ abstract class bl extends DualLinkNode {
           }
           return true;
         }
-        if (bd.field_k >= 0) {
+        if (AccountRequestState.field_k >= 0) {
           if (mh.field_e[ca.field_k][hf.field_t + 1].g()) {
             return true;
           }
@@ -120,7 +120,7 @@ abstract class bl extends DualLinkNode {
             mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
             return true;
           }
-          if (bd.field_k >= 0 &&
+          if (AccountRequestState.field_k >= 0 &&
             !qd.field_O[99] &&
             2 != rj.field_f &&
             qe.field_b[4]) {
@@ -144,7 +144,7 @@ abstract class bl extends DualLinkNode {
           }
           return false;
         }
-        if (bd.field_k < 0) {
+        if (AccountRequestState.field_k < 0) {
           return false;
         }
         if (qd.field_O[99]) {

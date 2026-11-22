@@ -38,10 +38,10 @@ final class pua extends hq {
           var7_int = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param4 + param2);
           var8 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param3 - param4);
           for (var15 = var11; var7_int > var15; var15++) {
-            C2SRoomResultPacket.fillRange((byte) -55, param5, var14, vaa.field_a[var15], var13);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, var14, PackedBitSetSupport.field_a[var15], var13);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
-            C2SRoomResultPacket.fillRange((byte) -55, param5, var14, vaa.field_a[var15Lifetime1], var13);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, var14, PackedBitSetSupport.field_a[var15Lifetime1], var13);
           }
           var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4 + param1);
           var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param4 + param6);
@@ -49,7 +49,7 @@ final class pua extends hq {
             pua.releaseStatics((byte) -34);
           }
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
-            var21 = vaa.field_a[var15Lifetime2];
+            var21 = PackedBitSetSupport.field_a[var15Lifetime2];
             C2SRoomResultPacket.fillRange((byte) -55, param5, var9, var21, var13);
             C2SRoomResultPacket.fillRange((byte) -55, param5, var14, var21, var10);
           }

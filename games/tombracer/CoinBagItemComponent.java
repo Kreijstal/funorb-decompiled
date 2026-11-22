@@ -112,7 +112,7 @@ final class CoinBagItemComponent extends ItemComponent {
         try {
           dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
           if (null != C2SChooseRewardPacket.field_a) {
-            bc.field_b.field_X = true;
+            NameEntryKeyboardSupport.field_b.field_X = true;
             var22 = HiscoresScreen.field_z;
             var26 = var22;
             HiscoresScreen.field_z.field_t = 0;
@@ -475,7 +475,7 @@ final class CoinBagItemComponent extends ItemComponent {
             return;
           }
           if (null != C2SChooseRewardPacket.field_a) {
-            if (0 != bc.field_b.field_y) {
+            if (0 != NameEntryKeyboardSupport.field_b.field_y) {
               MidiVoiceMixer.a(param2, 30, C2SChooseRewardPacket.field_a.getGameId(0));
             }
             if (hw.field_a.field_y != 0) {

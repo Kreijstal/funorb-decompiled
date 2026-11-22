@@ -33,7 +33,7 @@ final class bg {
               var6 = se.a(3, fb.field_d[var3_int], true);
               var7 = af.field_b - (var6 >> 1);
               var4 = var4 + id.field_c;
-              if (IntrusiveNode.a(var4, hb.field_t + (ge.field_h << 1), var6 + (ae.field_c << 1), true, var7 - ae.field_c, param0, param1)) {
+              if (IntrusiveNode.a(var4, hb.field_t + (ge.field_h << 1), var6 + (AccountRequestState.field_c << 1), true, var7 - AccountRequestState.field_c, param0, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

@@ -250,7 +250,7 @@ public final class stellarshard extends rb implements cf {
                 var40 = var32_double * var34;
                 uf.field_c[var27] = (int)(var40 * var14 + (var38 * (var8 * 1.0 + -var2_double * 0.0) + (var8 * 0.0 + 1.0 * var2_double) * var36));
                 fd.field_qb[var27] = (int)((var10 * 0.0 + var4 * 1.0) * var36 + (0.0 * -var4 + var10 * 1.0) * var38 + var40 * var16);
-                uc.field_a[var27] = (int)((var38 * (1.0 * var12 + -var6 * 0.0) + var36 * (var6 * 1.0 + 0.0 * var12) + var18 * var40) * 0.8);
+                AccountRequestState.field_a[var27] = (int)((var38 * (1.0 * var12 + -var6 * 0.0) + var36 * (var6 * 1.0 + 0.0 * var12) + var18 * var40) * 0.8);
                 var27++;
               }
               var27Lifetime1 = 0;
@@ -277,13 +277,13 @@ public final class stellarshard extends rb implements cf {
                     var30 = 5 * var28 + var27Lifetime1;
                     var31 = var28 * 5 + (var27Lifetime1 + 1);
                     var32 = 1 + var27Lifetime1 + 5 * (1 + var28);
-                    qa.a(uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31, var21, var22, var26, var23, var24);
-                    qa.a(0, 2, var29, uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31, 128, 128, 128);
+                    qa.a(uf.field_c, fd.field_qb, AccountRequestState.field_a, var32, var30, var31, var21, var22, var26, var23, var24);
+                    qa.a(0, 2, var29, uf.field_c, fd.field_qb, AccountRequestState.field_a, var32, var30, var31, 128, 128, 128);
                     var30Lifetime1 = var27Lifetime1 + 5 * var28;
                     var32Lifetime1 = (1 + var28) * 5 + var27Lifetime1;
                     var31Lifetime1 = (1 + var28) * 5 + (var27Lifetime1 + 1);
-                    qa.a(uf.field_c, fd.field_qb, uc.field_a, var32Lifetime1, var30Lifetime1, var31Lifetime1, var21, var22, var25, var23, var26);
-                    qa.a(0, 2, var29, uf.field_c, fd.field_qb, uc.field_a, var32Lifetime1, var30Lifetime1, var31Lifetime1, 128, 128, 128);
+                    qa.a(uf.field_c, fd.field_qb, AccountRequestState.field_a, var32Lifetime1, var30Lifetime1, var31Lifetime1, var21, var22, var25, var23, var26);
+                    qa.a(0, 2, var29, uf.field_c, fd.field_qb, AccountRequestState.field_a, var32Lifetime1, var30Lifetime1, var31Lifetime1, 128, 128, 128);
                     var28++;
                   }
                   var27Lifetime1++;
@@ -329,10 +329,10 @@ public final class stellarshard extends rb implements cf {
             qd.field_h = false;
           }
           if (DualLinkDequeIterator.field_e != null &&
-            DualLinkDequeIterator.field_e.field_c) {
+            DualLinkDequeIterator.field_e.focusLost) {
             ke.a(4);
             nd.a(-26621, DualLinkDequeIterator.field_e);
-            DualLinkDequeIterator.field_e.a(ic.field_d, -57);
+            DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -57);
             qd.field_j.requestFocus();
             DualLinkDequeIterator.field_e = null;
           }
@@ -400,7 +400,7 @@ public final class stellarshard extends rb implements cf {
                           break;
                         }
                         nd.a(-26621, DualLinkDequeIterator.field_e);
-                        DualLinkDequeIterator.field_e.a(ic.field_d, -71);
+                        DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -71);
                         DualLinkDequeIterator.field_e = null;
                         qd.field_j.requestFocus();
                       default:
@@ -413,7 +413,7 @@ public final class stellarshard extends rb implements cf {
                       case 2:
                         if (null != DualLinkDequeIterator.field_e) {
                           nd.a(-26621, DualLinkDequeIterator.field_e);
-                          DualLinkDequeIterator.field_e.a(ic.field_d, -15);
+                          DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -15);
                           DualLinkDequeIterator.field_e = null;
                           qd.field_j.requestFocus();
                         }
@@ -432,7 +432,7 @@ public final class stellarshard extends rb implements cf {
                   if (var2_int == 2 &&
                     DualLinkDequeIterator.field_e != null) {
                     nd.a(-26621, DualLinkDequeIterator.field_e);
-                    DualLinkDequeIterator.field_e.a(ic.field_d, -15);
+                    DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -15);
                     DualLinkDequeIterator.field_e = null;
                     qd.field_j.requestFocus();
                   }
@@ -2816,7 +2816,7 @@ public final class stellarshard extends rb implements cf {
         try {
           if (null != DualLinkDequeIterator.field_e) {
             nd.a(-26621, DualLinkDequeIterator.field_e);
-            DualLinkDequeIterator.field_e.a(ic.field_d, -101);
+            DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -101);
             DualLinkDequeIterator.field_e = null;
             qd.field_j.requestFocus();
           }
@@ -2876,7 +2876,7 @@ public final class stellarshard extends rb implements cf {
           FrameTimer.clearStaticReferences(-1);
           RasterBuffer.b((byte) 82);
           fj.a((byte) 59);
-          va.a((byte) 88);
+          FullscreenFocusCanvas.a((byte) 88);
           jb.clearStaticReferences(0);
           vl.a(-118);
           mb.clearStaticReferences(false);
@@ -3052,7 +3052,7 @@ public final class stellarshard extends rb implements cf {
           kl.c((byte) -106);
           af.a(54);
           fk.clearStaticReferences(param0 ^ -24024);
-          uc.a(-8749);
+          AccountRequestState.releaseStatics(-8749);
           AccountServiceResult.a((byte) -102);
           bk.a(-127);
           th.clearStaticReferences(-116);
@@ -3927,7 +3927,7 @@ public final class stellarshard extends rb implements cf {
           }
           if (mk.field_k > 0 &&
             lh.a(ic.field_d, (byte) 115)) {
-            DualLinkDequeIterator.field_e = wb.a(0, -107, 480, ic.field_d, 640, 0);
+            DualLinkDequeIterator.field_e = wb.createFullscreenCanvas(0, -107, 480, ic.field_d, 640, 0);
             if (null != DualLinkDequeIterator.field_e) {
               nc.a(DualLinkDequeIterator.field_e, (byte) 121);
             }

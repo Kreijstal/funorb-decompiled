@@ -102,9 +102,9 @@ final class il {
           try {
             this.field_e = param0;
             if (hd.field_h != null) {
-              ql.field_e[0] = param0;
+              DelegatingCanvas.field_e[0] = param0;
               try {
-                this.field_e = hd.field_h.newInstance(ql.field_e);
+                this.field_e = hd.field_h.newInstance(DelegatingCanvas.field_e);
                 return;
               } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

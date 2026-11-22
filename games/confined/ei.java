@@ -43,14 +43,14 @@ final class ei extends ug implements el {
             if (null != dn.field_d &&
               dn.field_d.field_f) {
               qh.c(4);
-              ie.field_b.c(new ei(ie.field_b, wl.field_f), param0 - 15102);
+              DelegatingCanvas.field_b.c(new ei(DelegatingCanvas.field_b, wl.field_f), param0 - 15102);
             }
             return;
           }
-          ie.field_b.a(true, true, pe.field_m, qe.field_Q);
-          ie.field_b.i((byte) 52);
+          DelegatingCanvas.field_b.a(true, true, pe.field_m, qe.field_Q);
+          DelegatingCanvas.field_b.i((byte) 52);
           while (nm.e((byte) -96)) {
-            ie.field_b.a((byte) 101, ad.field_h, gk.field_r);
+            DelegatingCanvas.field_b.a((byte) 101, ad.field_h, gk.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

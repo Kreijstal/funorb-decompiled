@@ -101,7 +101,7 @@ abstract class ve {
           int var8Lifetime1;
           var9 = Lexicominos.field_L ? 1 : 0;
           try {
-            if (null == jc.field_b &&
+            if (null == DelegatingCanvas.field_b &&
               !dg.a(param3, true)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -256,7 +256,7 @@ abstract class ve {
               stackIn_84_0 = pg.field_d;
               return stackIn_84_0;
             }
-            if (jc.field_b == null) {
+            if (DelegatingCanvas.field_b == null) {
               if (fb.field_p) {
                 if (vl.b(-92) <= 30000L) {
                   wj.field_p = sa.field_h;

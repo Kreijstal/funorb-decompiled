@@ -31,7 +31,7 @@ final class fk extends dl {
           ui.field_kb = ui.field_ob;
           if (param1 == 255) {
             stackIn_12_0 = !(ug.field_c >= 13);
-            kh.field_a = ld.createAccountSuccessResult(stackIn_12_0, (byte) 42);
+            kh.field_a = DelegatingCanvas.createAccountSuccessResult(stackIn_12_0, (byte) 42);
             var6 = (String[]) null;
             m.a(-44, (String[]) null);
             return;

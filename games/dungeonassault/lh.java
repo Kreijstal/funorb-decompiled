@@ -163,8 +163,8 @@ final class lh {
           var7.field_f = 0;
           var8 = new an(var4, true);
           var8.field_f = 0;
-          var8.a(ek.a((byte) -64, 8947848), 0);
-          var8.a(1, (byte) -107).a(ek.a((byte) -93, 11184810), true).a(-7695, 2236962);
+          var8.a(FullscreenFocusCanvas.a((byte) -64, 8947848), 0);
+          var8.a(1, (byte) -107).a(FullscreenFocusCanvas.a((byte) -93, 11184810), true).a(-7695, 2236962);
           this.field_q = (ca) ((Object) new oh(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new jn(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new im(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);

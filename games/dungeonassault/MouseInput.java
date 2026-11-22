@@ -154,7 +154,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     }
 
     final static boolean a(int param0, int param1) {
-        if (param1 == ek.field_c) {
+        if (param1 == FullscreenFocusCanvas.field_c) {
           return true;
         }
         param1 = param1 & 127;

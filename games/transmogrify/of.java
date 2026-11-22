@@ -7,7 +7,7 @@ final class of {
     static String field_b;
     static jc field_a;
     static StringBuilder wordBuffer;
-    static pd field_d;
+    static AccountRequestState field_d;
 
     public static void clearStaticReferences(int param0) {
         field_d = null;
@@ -52,6 +52,6 @@ final class of {
         field_b = "Change display name";
         field_f = new kh("usename");
         wordBuffer = new StringBuilder(12);
-        field_d = new pd();
+        field_d = new AccountRequestState();
     }
 }

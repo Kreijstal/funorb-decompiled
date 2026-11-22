@@ -8,7 +8,7 @@ final class Crc32Table {
     static qia field_a;
 
     final static void a(int param0, byte param1) {
-        if (!af.field_a) {
+        if (!AccountRequestState.field_a) {
           return;
         }
         bf.field_h[CreatureType.field_n].a(param0, (byte) 73);

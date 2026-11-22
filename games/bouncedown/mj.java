@@ -82,8 +82,8 @@ final class mj {
             stackIn_2_0 = qh.field_e;
             return stackIn_2_0;
           }
-          if (jb.field_a != null) {
-            if (!jb.field_a.c(48)) {
+          if (FullscreenFocusCanvas.field_a != null) {
+            if (!FullscreenFocusCanvas.field_a.c(48)) {
               stackIn_10_0 = pc.field_p;
               return stackIn_10_0;
             }

@@ -240,7 +240,7 @@ final class sj {
           SecondaryNodeDeque.field_c[2] = df.a("", param3, (byte) 118, "x3");
           SecondaryNodeDeque.field_c[3] = df.a("", param3, (byte) 118, "x4");
           SpriteState.field_o = lb.a(false, "", param3, "fs_frame");
-          ji.field_b = lb.a(false, "", param3, "fs_frame_inv");
+          DelegatingCanvas.field_b = lb.a(false, "", param3, "fs_frame_inv");
           for (var8_intLifetime2 = 0; SecondaryNodeDeque.field_c.length > var8_intLifetime2; var8_intLifetime2++) {
             SecondaryNodeDeque.field_c[var8_intLifetime2].b();
           }

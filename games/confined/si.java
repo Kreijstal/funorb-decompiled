@@ -86,8 +86,8 @@ final class si {
         field_d = null;
     }
 
-    final static void a(java.awt.Frame param0, df param1, boolean param2) {
-        bc var3 = null;
+    final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, boolean param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -102,11 +102,11 @@ final class si {
             field_a = (String) null;
           }
           while (true) {
-            var3 = param1.a(param0, -89);
-            while (0 == var3.field_g) {
+            var3 = param1.requestFullscreenExit(param0, -89);
+            while (0 == var3.status) {
               jd.a(1, 10L);
             }
-            if (var3.field_g != 1) {
+            if (var3.status != 1) {
               jd.a(1, 100L);
               continue;
             }

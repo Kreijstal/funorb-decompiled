@@ -233,7 +233,7 @@ final class ta extends me {
           }
           ln.field_a.a(-2, 1);
           ha.field_t = -1;
-          ue.field_d = 0;
+          FullscreenFocusCanvas.field_d = 0;
           if (bm.field_c == 0) {
             if (rl.field_c != 3) {
               if (rl.field_c == 4) {

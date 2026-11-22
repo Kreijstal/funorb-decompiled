@@ -16,7 +16,7 @@ final class PlayerResultRow {
     int field_u;
     int field_r;
     static int field_j;
-    static fpa field_y;
+    static AccountRequestState accountRequestPending;
     int field_v;
     int field_c;
     boolean field_o;
@@ -166,7 +166,7 @@ final class PlayerResultRow {
         }
         field_w = null;
         field_s = null;
-        field_y = null;
+        accountRequestPending = null;
     }
 
     final void a(double param0, double param1, double param2, boolean param3) {
@@ -238,7 +238,7 @@ final class PlayerResultRow {
 
     static {
         field_j = 83;
-        field_y = new fpa();
+        accountRequestPending = new AccountRequestState();
         field_s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }
 }

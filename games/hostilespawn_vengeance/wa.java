@@ -10,7 +10,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
     static bd field_o;
     private java.awt.image.ImageConsumer field_m;
     static int field_p;
-    static ue field_q;
+    static FullscreenFocusCanvas field_q;
     static int field_k;
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
@@ -67,7 +67,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
     final void a(int param0, byte param1, int param2, java.awt.Graphics param3) {
         try {
           if (param1 >= -124) {
-            field_q = (ue) null;
+            field_q = (FullscreenFocusCanvas) null;
           }
           this.a(-1);
           param3.drawImage(this.field_c, param0, param2, (java.awt.image.ImageObserver) (this));

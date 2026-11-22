@@ -262,7 +262,7 @@ final class kj extends PcmStream {
         try {
           if (!cg.a(75)) {
             if (null != ff.field_b &&
-              ff.field_b.field_d) {
+              ff.field_b.focusLost) {
               af.a(-98);
               ti.field_L.a(-14579, new ii(ti.field_L, qg.field_a));
             }

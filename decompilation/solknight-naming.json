@@ -260,6 +260,14 @@
       "renamedSymbol": "C:DualLinkNode"
     },
     {
+      "symbol": "C:ef",
+      "originalName": "ef",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:ej",
       "originalName": "ej",
       "to": "PcmStream",
@@ -897,7 +905,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 13 null writes to 6 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 7623b18277de6589c627627753715e91bec55b6a6099b6d94cc2df01bd5ed8cc.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ef.clearStaticReferences(I)V"
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:eh.a(B)V",
@@ -2981,9 +2989,9 @@
     },
     {
       "symbol": "C:ef",
-      "renamedSymbol": "C:ef",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "ef",
-      "renamedName": "ef",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "ef.java",
         "start": 50,
@@ -8668,7 +8676,7 @@
     },
     {
       "symbol": "F:da.field_d:Lef;",
-      "renamedSymbol": "F:Archive.field_d:Lef;",
+      "renamedSymbol": "F:Archive.field_d:LAccountRequestState;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -9922,7 +9930,7 @@
     },
     {
       "symbol": "F:ef.field_a:Lff;",
-      "renamedSymbol": "F:ef.field_a:Lff;",
+      "renamedSymbol": "F:AccountRequestState.field_a:Lff;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -9933,7 +9941,7 @@
     },
     {
       "symbol": "F:ef.field_b:[I",
-      "renamedSymbol": "F:ef.field_b:[I",
+      "renamedSymbol": "F:AccountRequestState.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -9944,7 +9952,7 @@
     },
     {
       "symbol": "F:ef.field_c:[Z",
-      "renamedSymbol": "F:ef.field_c:[Z",
+      "renamedSymbol": "F:AccountRequestState.field_c:[Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -9955,7 +9963,7 @@
     },
     {
       "symbol": "F:ef.field_d:[[B",
-      "renamedSymbol": "F:ef.field_d:[[B",
+      "renamedSymbol": "F:AccountRequestState.field_d:[[B",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -9966,7 +9974,7 @@
     },
     {
       "symbol": "F:ef.field_e:Lkb;",
-      "renamedSymbol": "F:ef.field_e:Lkb;",
+      "renamedSymbol": "F:AccountRequestState.field_e:Lkb;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -9977,7 +9985,7 @@
     },
     {
       "symbol": "F:ef.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:ef.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -9988,7 +9996,7 @@
     },
     {
       "symbol": "F:ef.field_g:I",
-      "renamedSymbol": "F:ef.field_g:I",
+      "renamedSymbol": "F:AccountRequestState.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -10142,7 +10150,7 @@
     },
     {
       "symbol": "F:el.field_p:Lef;",
-      "renamedSymbol": "F:el.field_p:Lef;",
+      "renamedSymbol": "F:el.field_p:LAccountRequestState;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -11330,7 +11338,7 @@
     },
     {
       "symbol": "F:gb.field_i:Lef;",
-      "renamedSymbol": "F:PacketBuffer.field_i:Lef;",
+      "renamedSymbol": "F:PacketBuffer.field_i:LAccountRequestState;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -11484,7 +11492,7 @@
     },
     {
       "symbol": "F:gf.field_Z:Lef;",
-      "renamedSymbol": "F:gf.field_Z:Lef;",
+      "renamedSymbol": "F:gf.field_Z:LAccountRequestState;",
       "originalName": "field_Z",
       "renamedName": "field_Z",
       "declaration": {
@@ -17677,7 +17685,7 @@
     },
     {
       "symbol": "F:ma.field_o:Lef;",
-      "renamedSymbol": "F:ma.field_o:Lef;",
+      "renamedSymbol": "F:ma.field_o:LAccountRequestState;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -54406,7 +54414,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#0",
-      "renamedSymbol": "L:ef.a(IIB)I#0",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -54417,7 +54425,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#1",
-      "renamedSymbol": "L:ef.a(IIB)I#1",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -54428,7 +54436,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#2",
-      "renamedSymbol": "L:ef.a(IIB)I#2",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -54439,7 +54447,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#3",
-      "renamedSymbol": "L:ef.a(IIB)I#3",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -54450,7 +54458,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#4",
-      "renamedSymbol": "L:ef.a(IIB)I#4",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -54461,7 +54469,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#5",
-      "renamedSymbol": "L:ef.a(IIB)I#5",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -54472,7 +54480,7 @@
     },
     {
       "symbol": "L:ef.a(IIB)I#6",
-      "renamedSymbol": "L:ef.a(IIB)I#6",
+      "renamedSymbol": "L:AccountRequestState.a(IIB)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -54483,7 +54491,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#0",
-      "renamedSymbol": "L:ef.a(III)I#0",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -54494,7 +54502,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#1",
-      "renamedSymbol": "L:ef.a(III)I#1",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -54505,7 +54513,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#2",
-      "renamedSymbol": "L:ef.a(III)I#2",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -54516,7 +54524,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#3",
-      "renamedSymbol": "L:ef.a(III)I#3",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#3",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -54527,7 +54535,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#4",
-      "renamedSymbol": "L:ef.a(III)I#4",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -54538,7 +54546,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#5",
-      "renamedSymbol": "L:ef.a(III)I#5",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -54549,7 +54557,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#6",
-      "renamedSymbol": "L:ef.a(III)I#6",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -54560,7 +54568,7 @@
     },
     {
       "symbol": "L:ef.a(III)I#7",
-      "renamedSymbol": "L:ef.a(III)I#7",
+      "renamedSymbol": "L:AccountRequestState.a(III)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -54571,7 +54579,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#0",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#0",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -54582,7 +54590,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#1",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#1",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -54593,7 +54601,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#10",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#10",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -54604,7 +54612,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#11",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#11",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -54615,7 +54623,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#12",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#12",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -54626,7 +54634,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#13",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#13",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -54637,7 +54645,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#14",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#14",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -54648,7 +54656,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#15",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#15",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -54659,7 +54667,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#2",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#2",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -54670,7 +54678,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#3",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#3",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#3",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -54681,7 +54689,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#4",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#4",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -54692,7 +54700,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#5",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#5",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#5",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -54703,7 +54711,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#6",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#6",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#6",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -54714,7 +54722,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#7",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#7",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -54725,7 +54733,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#8",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#8",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#8",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -54736,7 +54744,7 @@
     },
     {
       "symbol": "L:ef.a(ILo;)V#9",
-      "renamedSymbol": "L:ef.a(ILSprite;)V#9",
+      "renamedSymbol": "L:AccountRequestState.a(ILSprite;)V#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -149347,7 +149355,7 @@
     },
     {
       "symbol": "M:ef.a(I)V",
-      "renamedSymbol": "M:ef.clearStaticReferences(I)V",
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -149358,7 +149366,7 @@
     },
     {
       "symbol": "M:ef.a(IIB)I",
-      "renamedSymbol": "M:ef.a(IIB)I",
+      "renamedSymbol": "M:AccountRequestState.a(IIB)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -149369,7 +149377,7 @@
     },
     {
       "symbol": "M:ef.a(III)I",
-      "renamedSymbol": "M:ef.a(III)I",
+      "renamedSymbol": "M:AccountRequestState.a(III)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -149380,7 +149388,7 @@
     },
     {
       "symbol": "M:ef.a(ILo;)V",
-      "renamedSymbol": "M:ef.a(ILSprite;)V",
+      "renamedSymbol": "M:AccountRequestState.a(ILSprite;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -149391,7 +149399,7 @@
     },
     {
       "symbol": "M:ef.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:ef.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -178046,7 +178054,7 @@
     },
     {
       "symbol": "P:ef.a(I)V#0",
-      "renamedSymbol": "P:ef.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:AccountRequestState.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178057,7 +178065,7 @@
     },
     {
       "symbol": "P:ef.a(IIB)I#0",
-      "renamedSymbol": "P:ef.a(IIB)I#0",
+      "renamedSymbol": "P:AccountRequestState.a(IIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178068,7 +178076,7 @@
     },
     {
       "symbol": "P:ef.a(IIB)I#1",
-      "renamedSymbol": "P:ef.a(IIB)I#1",
+      "renamedSymbol": "P:AccountRequestState.a(IIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178079,7 +178087,7 @@
     },
     {
       "symbol": "P:ef.a(IIB)I#2",
-      "renamedSymbol": "P:ef.a(IIB)I#2",
+      "renamedSymbol": "P:AccountRequestState.a(IIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -178090,7 +178098,7 @@
     },
     {
       "symbol": "P:ef.a(III)I#0",
-      "renamedSymbol": "P:ef.a(III)I#0",
+      "renamedSymbol": "P:AccountRequestState.a(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178101,7 +178109,7 @@
     },
     {
       "symbol": "P:ef.a(III)I#1",
-      "renamedSymbol": "P:ef.a(III)I#1",
+      "renamedSymbol": "P:AccountRequestState.a(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178112,7 +178120,7 @@
     },
     {
       "symbol": "P:ef.a(III)I#2",
-      "renamedSymbol": "P:ef.a(III)I#2",
+      "renamedSymbol": "P:AccountRequestState.a(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -178123,7 +178131,7 @@
     },
     {
       "symbol": "P:ef.a(ILo;)V#0",
-      "renamedSymbol": "P:ef.a(ILSprite;)V#0",
+      "renamedSymbol": "P:AccountRequestState.a(ILSprite;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178134,7 +178142,7 @@
     },
     {
       "symbol": "P:ef.a(ILo;)V#1",
-      "renamedSymbol": "P:ef.a(ILSprite;)V#1",
+      "renamedSymbol": "P:AccountRequestState.a(ILSprite;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222941,7 +222949,7 @@
       "original": "SolKnight.java",
       "renamed": "SolKnight.java",
       "inputSha256": "09994fcf27077b7ba474299af98ccf1ae11e359aa588872d6e2b838387cb7de4",
-      "outputSha256": "7fd39ec22977b008dbdfc71928984265a109b641098f31ba334a0fb781f17970",
+      "outputSha256": "f79b56231572e7c6e7128f2166960258d2c6e4c162d244b16ec8421c1c64ac46",
       "edits": [
         {
           "start": 143,
@@ -223208,6 +223216,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 5553,
+          "end": 5555,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5871,
@@ -224001,6 +224016,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 11121,
+          "end": 11123,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 11124,
           "end": 11125,
           "symbol": "M:ef.a(I)V",
@@ -224547,6 +224569,27 @@
           "renamed": "Asteroid"
         },
         {
+          "start": 20816,
+          "end": 20818,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 20851,
+          "end": 20853,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 20886,
+          "end": 20888,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 21221,
           "end": 21228,
           "symbol": "F:vd.field_d:[Lie;",
@@ -224790,6 +224833,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 24243,
+          "end": 24245,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 24425,
@@ -225940,7 +225990,7 @@
       "original": "ab.java",
       "renamed": "ab.java",
       "inputSha256": "6ab4bb6f94db54d68bac6d9765f0c8142e09d7a7419a4d0fb1f34099d1cc9421",
-      "outputSha256": "a6fb8567bd4a9b7386bc76da7090b667dde3b0d5c4d4c8701a9604e436cd0227",
+      "outputSha256": "92dd2fd023455d1c902184b33da972ca351c46d16d09cf2d39a8c674674efd82",
       "edits": [
         {
           "start": 83,
@@ -225948,6 +225998,20 @@
           "symbol": "C:dh",
           "original": "dh",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 583,
+          "end": 585,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 664,
+          "end": 666,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1068,
@@ -226062,11 +226126,39 @@
           "renamed": "Archive"
         },
         {
+          "start": 6723,
+          "end": 6725,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6793,
+          "end": 6795,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 6822,
           "end": 6824,
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 6870,
+          "end": 6872,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6941,
+          "end": 6943,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6970,
@@ -226076,11 +226168,39 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 7012,
+          "end": 7014,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7088,
+          "end": 7090,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 7117,
           "end": 7119,
           "symbol": "C:db",
           "original": "db",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 7159,
+          "end": 7161,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7516,
+          "end": 7518,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 7605,
@@ -226228,6 +226348,188 @@
           "renamed": "createMouseWheelInput"
         },
         {
+          "start": 17312,
+          "end": 17314,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17552,
+          "end": 17554,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18556,
+          "end": 18558,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18588,
+          "end": 18590,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18668,
+          "end": 18670,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18699,
+          "end": 18701,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18730,
+          "end": 18732,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18761,
+          "end": 18763,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18791,
+          "end": 18793,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18868,
+          "end": 18870,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18896,
+          "end": 18898,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18924,
+          "end": 18926,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18953,
+          "end": 18955,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18981,
+          "end": 18983,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19010,
+          "end": 19012,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19038,
+          "end": 19040,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19066,
+          "end": 19068,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19094,
+          "end": 19096,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19122,
+          "end": 19124,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19150,
+          "end": 19152,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19178,
+          "end": 19180,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19262,
+          "end": 19264,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19291,
+          "end": 19293,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19320,
+          "end": 19322,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19348,
+          "end": 19350,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19806,
+          "end": 19808,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 20339,
           "end": 20341,
           "symbol": "C:qh",
@@ -226268,6 +226570,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 23764,
+          "end": 23766,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 23816,
@@ -226422,6 +226731,13 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 26814,
+          "end": 26816,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 26841,
@@ -227366,7 +227682,7 @@
       "original": "ai.java",
       "renamed": "ai.java",
       "inputSha256": "742f0149e3376f801d8b36debd7e619e2928353c576b6de8c6f95bb956d6df2f",
-      "outputSha256": "2745a46a33edb6a0227d06c7bb6e6a64b03036d1218d4efce25c3af1d9b4e87c",
+      "outputSha256": "9ca4828fbbde753761b283c84c876881bc63ca6f34f029e15f49ab6c5b429efd",
       "edits": [
         {
           "start": 135,
@@ -227395,6 +227711,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 1757,
+          "end": 1759,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1833,
@@ -227437,6 +227760,20 @@
           "symbol": "F:gb.field_m:I",
           "original": "field_m",
           "renamed": "position"
+        },
+        {
+          "start": 2222,
+          "end": 2224,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2590,
+          "end": 2592,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3413,
@@ -227718,7 +228055,7 @@
       "original": "ak.java",
       "renamed": "ak.java",
       "inputSha256": "dc16f38d362d6bd48321caf210115803eb5e197af010f5ed6e461a764ecf4023",
-      "outputSha256": "e08419ca8d7e1ba81ef8fbf42a7dc89ef746282c9436312d61f9f7aefb239650",
+      "outputSha256": "958c222de1803d613fda55d261546a3502cfc2fff178d4c5200fb99665408bc2",
       "edits": [
         {
           "start": 93,
@@ -227791,11 +228128,25 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 3161,
+          "end": 3163,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3272,
           "end": 3274,
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 3332,
+          "end": 3334,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3721,
@@ -230794,7 +231145,7 @@
       "original": "da.java",
       "renamed": "Archive.java",
       "inputSha256": "4c8098b40759ba31211cfd9bb4c64a62a648ee8067c99ba018f82b51ce8af22b",
-      "outputSha256": "36384f099d758ea74ff5add4c125ed4192c952e7e8d047e6a354483c04a3ca21",
+      "outputSha256": "c3d7ce39b60508c43d996bc07f2e8590b886eaf4ad29b43cc2264988175f0335",
       "edits": [
         {
           "start": 50,
@@ -230811,11 +231162,25 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 197,
+          "end": 199,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 245,
           "end": 247,
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "ArchiveSource"
+        },
+        {
+          "start": 1619,
+          "end": 1621,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5890,
@@ -231138,6 +231503,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "ArchiveSource"
+        },
+        {
+          "start": 34315,
+          "end": 34317,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -233881,10 +234253,17 @@
     },
     {
       "original": "ef.java",
-      "renamed": "ef.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "7ed68b64a608aec54b7414f2f045aa67722c5a714057cebe6b8f4deef3e5d9e1",
-      "outputSha256": "73a0eecd0fb0995348c1ec9e2a4cf92a5e5793d7e2827a702d8f2acd8dea77bf",
+      "outputSha256": "55f1f56874a9a1cd15202a279a3fd68c6144622c22e8b0f16023172097fb7f5e",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1443,
           "end": 1444,
@@ -234126,8 +234505,15 @@
       "original": "el.java",
       "renamed": "el.java",
       "inputSha256": "71fa5f3ace27da01148318774d3b566894bbb2ec8b714e62b211b3beb33efed8",
-      "outputSha256": "02589e3b2694adb233e5cbe255f10c020a59ff62e10aeb6dbd8721e83ffddbfe",
+      "outputSha256": "4e8aeabd766c78c8f630aa73753b5965f1c2d9da589f876fcb9b518e97f471d6",
       "edits": [
+        {
+          "start": 100,
+          "end": 102,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1296,
           "end": 1298,
@@ -234141,6 +234527,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 25784,
+          "end": 25786,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -234368,7 +234761,7 @@
       "original": "fc.java",
       "renamed": "fc.java",
       "inputSha256": "2b90c80230c0414dd2da4298b587fdf01f1e785e6a737c77d14940642416e65a",
-      "outputSha256": "233397dbc9ea7986c8568c1b40410a0d745a22f466c568c20cbde3cca0478e00",
+      "outputSha256": "e1ad8e965bb2a3429587c1e2dd811b4b36d47106e5ac714493293b5e54235ecb",
       "edits": [
         {
           "start": 61,
@@ -234383,6 +234776,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 1693,
+          "end": 1695,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1790,
@@ -234427,6 +234827,20 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 2158,
+          "end": 2160,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2213,
+          "end": 2215,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 2306,
           "end": 2307,
           "symbol": "M:gb.j(I)I",
@@ -234441,11 +234855,32 @@
           "renamed": "position"
         },
         {
+          "start": 2403,
+          "end": 2405,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 2416,
           "end": 2418,
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 2539,
+          "end": 2541,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2610,
+          "end": 2612,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2704,
@@ -234469,11 +234904,25 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 2830,
+          "end": 2832,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 2843,
           "end": 2845,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2939,
+          "end": 2941,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2953,
@@ -234497,11 +234946,32 @@
           "renamed": "position"
         },
         {
+          "start": 3316,
+          "end": 3318,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3329,
           "end": 3331,
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 3727,
+          "end": 3729,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3845,
+          "end": 3847,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3931,
@@ -234602,6 +235072,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 5140,
+          "end": 5142,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5183,
           "end": 5185,
           "symbol": "C:lf",
@@ -234628,6 +235105,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 6815,
+          "end": 6817,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 7204,
@@ -235636,7 +236120,7 @@
       "original": "fl.java",
       "renamed": "fl.java",
       "inputSha256": "34a81898f028fc3bbe807954dba115600ba9abb71548ff683fbf202c51760ecc",
-      "outputSha256": "51f774b2f6ad6bd81b6787290eb24a61c77579db394cb1611b7215b7b6389572",
+      "outputSha256": "d1df56e8698822a7fb04c93b519660e669e85511a1014df4b31aba466468fdc0",
       "edits": [
         {
           "start": 200,
@@ -235777,6 +236261,20 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 5589,
+          "end": 5591,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5624,
+          "end": 5626,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6464,
@@ -236045,7 +236543,7 @@
       "original": "gb.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "a35f4a363dfd7749c41a82fc20650d7bc83c21cffdf7fabb5fd83cd6e9350c35",
-      "outputSha256": "f7cfd85dcee61557b2e83cc7ed130ff4e35f729993ad61178241ef66793c1a64",
+      "outputSha256": "f44b8370bccf8482ca45123aee3945bf2cffe2dddd3249ad5d9c08d57a1971bd",
       "edits": [
         {
           "start": 44,
@@ -236067,6 +236565,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 95,
+          "end": 97,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 115,
@@ -238777,7 +239282,7 @@
       "original": "gf.java",
       "renamed": "gf.java",
       "inputSha256": "fcd4ea177bee4d7bb889c1a02f33e9dfee1d2e76f9edf00a8e91232090c2abf7",
-      "outputSha256": "5841c8047421816315f804f1f0493481b3427dd8d11f7070983f29bd5104de2c",
+      "outputSha256": "a4dab6a58ce4fba1e70d5c3ed2bb651c48a6c875ee63076b3cb4e835ebf6a652",
       "edits": [
         {
           "start": 182,
@@ -238785,6 +239290,13 @@
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 279,
+          "end": 281,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 382,
@@ -238876,6 +239388,13 @@
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8260,
+          "end": 8262,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -240681,7 +241200,7 @@
       "original": "hc.java",
       "renamed": "hc.java",
       "inputSha256": "50155f2e625312d5e9cadf4371e1e7af3d6f559dd3d796623e54bd47ea950e7c",
-      "outputSha256": "6f23c8e82ce31870dca6adb8ab75c03063207d4f48758243237507940324baec",
+      "outputSha256": "9b2795eef2fcf1d8b776fbd25116a07521a32b83c7bb600bae2a1d11e6bba855",
       "edits": [
         {
           "start": 111,
@@ -240843,6 +241362,13 @@
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6398,
+          "end": 6400,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 8217,
@@ -244583,8 +245109,16 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "91b02c1145db3918d94cebbe5f5ba1d4975ea2cd56284662cd76a4a6db1694ec",
-      "outputSha256": "91b02c1145db3918d94cebbe5f5ba1d4975ea2cd56284662cd76a4a6db1694ec",
-      "edits": []
+      "outputSha256": "00813b4917bab2e0528f27bda3fff0437c62d42bf6894683f88d3f416445bba5",
+      "edits": [
+        {
+          "start": 565,
+          "end": 567,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        }
+      ]
     },
     {
       "original": "ik.java",
@@ -248559,7 +249093,7 @@
       "original": "lf.java",
       "renamed": "MouseWheelInput.java",
       "inputSha256": "8c913f219bcb600942ea97347646c4c7b3b04196a2139eb995a2cb228547d905",
-      "outputSha256": "bef18c4dbdecdf5b5bd160435007a867351a31e16595c42740fe44a1b143c0a9",
+      "outputSha256": "c3a73a119d51d34da6ab324a2fee9894e061b01a1dd5ecb720d06d09fd629488",
       "edits": [
         {
           "start": 53,
@@ -248581,6 +249115,13 @@
           "symbol": "M:lf.a(Ljava/awt/Component;I)V",
           "original": "a",
           "renamed": "detach"
+        },
+        {
+          "start": 847,
+          "end": 849,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1094,
@@ -249272,7 +249813,7 @@
       "original": "lj.java",
       "renamed": "lj.java",
       "inputSha256": "b3a63d5b06891963bb90c2cd4b5076a32c70154162d1bb7fe78636cce79cdb7a",
-      "outputSha256": "425909f6d045e7202b79b1406a99a94cd239c91090b4baf1b6ef118771346c07",
+      "outputSha256": "bb020990a31465b343879f8aaffe803be74f9749a303fc5e04e56c9a6661b004",
       "edits": [
         {
           "start": 61,
@@ -254091,6 +254632,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 105541,
+          "end": 105543,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 105554,
           "end": 105556,
           "symbol": "C:da",
@@ -255088,7 +255636,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "780df52a9555b0e5ba8486a7ffeb607724ef4a8d9a0ce21f12dca65967a592ae",
-      "outputSha256": "006df64c29d551eefb6c3769e4c013ac6c9008c2f181284b670d6d8ff816ea74",
+      "outputSha256": "ff130e3de11f24dac3eb9bb9b8d6be5af1a4077a31c5d534eab3059a937da637",
       "edits": [
         {
           "start": 55,
@@ -255096,6 +255644,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 124,
+          "end": 126,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -262472,7 +263027,7 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "1457a2321d36ae680037b7b9e78c0c20d396f181f07324f123cc142d4f1638a2",
-      "outputSha256": "5d75a53c7232da9372a8506eef02af2260ad37558e8886c820fcfaa41a261ef4",
+      "outputSha256": "24d41800f0e792861eeb83f26ff901c3bbf257e72e09a4f1ac68281c402de8cd",
       "edits": [
         {
           "start": 112,
@@ -262487,6 +263042,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 863,
+          "end": 865,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 929,
@@ -262558,7 +263120,7 @@
       "original": "qh.java",
       "renamed": "GameKeyHandler.java",
       "inputSha256": "0c505c917206ac2da8a86c3c0c13690be59e61117fe67570f8fa6f1fc57e3a79",
-      "outputSha256": "b956bb6a799a6ab7fa22510308e3b68c3ca2455a52eacae53eed1b6dc10d261d",
+      "outputSha256": "4f272207b3c8caee8293e311d7a07f6c8403b00794c557e781b7edd51418dd0f",
       "edits": [
         {
           "start": 50,
@@ -262589,6 +263151,13 @@
           "renamed": "GzipDecompressor"
         },
         {
+          "start": 1371,
+          "end": 1373,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 1506,
           "end": 1508,
           "symbol": "C:da",
@@ -262601,6 +263170,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 1602,
+          "end": 1604,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2024,
@@ -267597,7 +268173,7 @@
       "original": "sl.java",
       "renamed": "sl.java",
       "inputSha256": "4cf08080d2a4c01727e9edf5df3a1c3e3dcfd2098bdc4c932bacb1ecd46c85d1",
-      "outputSha256": "09f8715e5c10ef38b66c925a21d4c409e7c4f07cbe01cd62b85ac2c4ea86158e",
+      "outputSha256": "90eb57adad8cbdea4e8339302af8225d318c7f3f433c71e6010aa155fa13d6f7",
       "edits": [
         {
           "start": 80,
@@ -267619,6 +268195,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "Archive"
+        },
+        {
+          "start": 5630,
+          "end": 5632,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 7489,
@@ -271940,7 +272523,7 @@
       "original": "vb.java",
       "renamed": "vb.java",
       "inputSha256": "e5ce814ff278fbfd77fcb4a92f98617cd24c7364dccd4c679554d6c23c34489e",
-      "outputSha256": "b63f1e1f37b6b90e442d4794380ea858e666375ff300add436511febb58edc62",
+      "outputSha256": "29cd3586c181b90f429c1d8da98ec5c9f9fe82be1d6b1ca68ca28e80e7fa8cc4",
       "edits": [
         {
           "start": 77,
@@ -271983,6 +272566,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 2127,
+          "end": 2129,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2153,
@@ -272216,6 +272806,20 @@
           "renamed": "position"
         },
         {
+          "start": 4480,
+          "end": 4482,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4531,
+          "end": 4533,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 4638,
           "end": 4639,
           "symbol": "M:gb.j(I)I",
@@ -272230,6 +272834,20 @@
           "renamed": "position"
         },
         {
+          "start": 4774,
+          "end": 4776,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5307,
+          "end": 5309,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5410,
           "end": 5411,
           "symbol": "C:n",
@@ -272242,6 +272860,13 @@
           "symbol": "F:gb.field_m:I",
           "original": "field_m",
           "renamed": "position"
+        },
+        {
+          "start": 5567,
+          "end": 5569,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5698,
@@ -272263,6 +272888,13 @@
           "symbol": "M:gb.d(Z)Ljava/lang/String;",
           "original": "d",
           "renamed": "readPrefixedString"
+        },
+        {
+          "start": 6185,
+          "end": 6187,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6306,
@@ -274431,7 +275063,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "0a8f53c96a17947a51bd0b6b053b22b9bbe63144a1344419c1920734360fc8fc",
-      "outputSha256": "568b6291e90c99fd449685cde0c2ffccc8681b22c2565879c647bebdea7ca716",
+      "outputSha256": "c291560c8ba31b698f9571dc0e4e8a82383ff727b021f4124b017f27ecb2da59",
       "edits": [
         {
           "start": 176,
@@ -274446,6 +275078,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 1693,
+          "end": 1695,
+          "symbol": "C:ef",
+          "original": "ef",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -274749,10 +275388,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/solknight"
     },
-    "rulesSha256": "de8e4cb76cd02254405b87d802d0b06a5a530d86dfa2dbd9a22b60b2a9aec740",
+    "rulesSha256": "57c8f7658347286c6a89f610d17f1197532ce4c1832fcc3e498205d96b3195b9",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
-    "outputTreeSha256": "8973fb30cc460582bb73e371f6ff50df4662ed278eff4847cd52db37736719be",
+    "outputTreeSha256": "f977e0127a0b4221f31adbe0114a705d9015158dd0c1be1d7fc926f381199290",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

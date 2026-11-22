@@ -106,7 +106,7 @@ final class hl extends l {
         lj.field_b = var3 & 127;
         stackIn_3_0 = ((128 & var3) != 0);
         om.field_u = stackIn_3_0;
-        dd.field_b = var9.readUnsignedByte(255);
+        FullscreenFocusCanvas.field_b = var9.readUnsignedByte(255);
         KeyboardInputHandler.field_d = var9.readLong(true);
         if (lj.field_b == 2) {
           na.field_kb = var9.readUnsignedShort((byte) -7);

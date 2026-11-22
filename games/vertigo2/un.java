@@ -6,7 +6,7 @@ final class un extends UiPanel {
     static long[] field_Mb;
     private UiPanel field_Nb;
     static boolean field_Ib;
-    static ee field_Hb;
+    static AccountRequestState field_Hb;
     private UiPanel field_Jb;
     private int field_Ob;
     static b field_Lb;
@@ -344,7 +344,7 @@ final class un extends UiPanel {
 
     public static void clearStaticReferences(int param0) {
         if (param0 >= -58) {
-          field_Hb = (ee) null;
+          field_Hb = (AccountRequestState) null;
           field_Hb = null;
           field_Mb = null;
           field_Lb = null;

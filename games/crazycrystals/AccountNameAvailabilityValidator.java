@@ -150,7 +150,7 @@ final class AccountNameAvailabilityValidator extends se {
           return;
         }
         fq.a(-32, ph.field_E);
-        ph.field_E.a(te.field_a, (byte) -92);
+        ph.field_E.exitFullscreen(te.field_a, (byte) -92);
         ph.field_E = null;
         if (ne.field_f != null) {
           ne.field_f.a((byte) 96);

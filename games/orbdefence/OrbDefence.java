@@ -158,7 +158,7 @@ public final class OrbDefence extends NetworkGameClient {
 
     private final void g(byte param0) {
         if (eg.field_x != null) {
-          va.a(eg.field_x, (byte) 63);
+          AccountRequestState.a(eg.field_x, (byte) 63);
           eg.field_x = null;
           vd.a(113);
         }
@@ -587,7 +587,7 @@ public final class OrbDefence extends NetworkGameClient {
         ad.clearStaticReferences(true);
         dc.clearStaticReferences(!param0 ? true : false);
         ha.clearStaticReferences((byte) 99);
-        va.a(8);
+        AccountRequestState.releaseStatics(8);
         AccountServiceResult.clearStaticReferences(-28342);
         mi.clearStaticReferences((byte) -67);
         tl.clearStaticReferences(-127);
@@ -698,7 +698,7 @@ public final class OrbDefence extends NetworkGameClient {
           }
           fg.$cfr$intArgs$a$7ffe4b125357(stackIn_39_0, stackIn_40_1);
         }
-        if (2 <= va.field_d) {
+        if (2 <= AccountRequestState.field_d) {
           ob.field_I.b(Integer.toString(ud.field_f), 20, 20, 16777215, 1);
         }
         if (param0 >= -72) {
@@ -1078,7 +1078,7 @@ public final class OrbDefence extends NetworkGameClient {
         int fieldTemp$0 = 0;
         int var3;
         var3 = field_D ? 1 : 0;
-        if (va.field_d >= 2 &&
+        if (AccountRequestState.field_d >= 2 &&
           IterableNodeHashTable.field_a[41]) {
           lb.field_g = 16777215;
           DirectByteStorage.field_d = true;

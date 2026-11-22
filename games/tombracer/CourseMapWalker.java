@@ -1193,7 +1193,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsquality", (byte) 110);
                 if (var2 != null) {
-                  bc.field_a = BitPackedColour.decodeText((byte) 46, var2);
+                  NameEntryKeyboardSupport.field_a = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmoveshift", (byte) 110);
                 if (var2 != null) {
@@ -1645,31 +1645,31 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,0", (byte) 101);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[0] = BitPackedColour.decodeText((byte) 109, var2);
+                  AccountRequestState.snakeDeathMessages[0] = BitPackedColour.decodeText((byte) 109, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,1", (byte) 116);
                 if (null != var2) {
-                  fpa.snakeDeathMessages[1] = BitPackedColour.decodeText((byte) 89, var2);
+                  AccountRequestState.snakeDeathMessages[1] = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,2", (byte) 101);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[2] = BitPackedColour.decodeText((byte) 30, var2);
+                  AccountRequestState.snakeDeathMessages[2] = BitPackedColour.decodeText((byte) 30, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,3", (byte) 111);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[3] = BitPackedColour.decodeText((byte) 121, var2);
+                  AccountRequestState.snakeDeathMessages[3] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,4", (byte) 107);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[4] = BitPackedColour.decodeText((byte) 93, var2);
+                  AccountRequestState.snakeDeathMessages[4] = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,5", (byte) 126);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[5] = BitPackedColour.decodeText((byte) 126, var2);
+                  AccountRequestState.snakeDeathMessages[5] = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,6", (byte) 116);
                 if (null != var2) {
-                  fpa.snakeDeathMessages[6] = BitPackedColour.decodeText((byte) 31, var2);
+                  AccountRequestState.snakeDeathMessages[6] = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,0", (byte) 117);
             }

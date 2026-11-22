@@ -30,13 +30,13 @@ final class v {
               }
               return false;
             }
-            if (null != qc.field_c[fi.field_d]) {
+            if (null != FullscreenFocusCanvas.field_c[fi.field_d]) {
               fi.field_d = fi.field_d + 1;
               continue;
             }
             break;
           }
-          qc.field_c[fi.field_d] = param0;
+          FullscreenFocusCanvas.field_c[fi.field_d] = param0;
           fi.field_d = fi.field_d + 1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

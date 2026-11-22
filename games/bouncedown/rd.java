@@ -45,7 +45,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (nj.field_o != null) {
             wh.field_d = 0;
-            th.field_a = param0.getX();
+            DelegatingCanvas.field_a = param0.getX();
             q.field_H = param0.getY();
             cl.field_o = true;
           }
@@ -91,7 +91,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             return;
           }
           wh.field_d = 0;
-          th.field_a = param0.getX();
+          DelegatingCanvas.field_a = param0.getX();
           q.field_H = param0.getY();
           cl.field_o = true;
           return;
@@ -233,7 +233,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             return;
           }
           wh.field_d = 0;
-          th.field_a = param0.getX();
+          DelegatingCanvas.field_a = param0.getX();
           q.field_H = param0.getY();
           cl.field_o = true;
           return;
@@ -255,7 +255,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (nj.field_o != null) {
             wh.field_d = 0;
-            th.field_a = -1;
+            DelegatingCanvas.field_a = -1;
             q.field_H = -1;
             cl.field_o = true;
           }

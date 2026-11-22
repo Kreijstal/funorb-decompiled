@@ -106,7 +106,7 @@ final class oh {
           if (var10.field_b != 2) {
             return var7;
           }
-          eg.a(var7, (byte) -47, param1);
+          eg.exitFullscreenFrame(var7, (byte) -47, param1);
           stackIn_34_0 = null;
           return (java.awt.Frame) (stackIn_34_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

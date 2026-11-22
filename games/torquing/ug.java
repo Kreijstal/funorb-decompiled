@@ -17,7 +17,7 @@ final class ug {
           return;
         }
         tf.a(-120, dg.field_i);
-        dg.field_i.a(nk.field_u, 159);
+        dg.field_i.exitFullscreen(nk.field_u, 159);
         dg.field_i = null;
         if (ki.field_D != null) {
           ki.field_D.b(false);

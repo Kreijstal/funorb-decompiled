@@ -25,7 +25,7 @@ final class hk extends wc {
           if (param0 != -29558) {
             field_J = (String) null;
           }
-          stackIn_3_0 = a.a((byte) 113, '*', param1.field_v.length());
+          stackIn_3_0 = FullscreenFocusCanvas.a((byte) 113, '*', param1.field_v.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

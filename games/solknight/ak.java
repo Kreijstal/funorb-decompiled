@@ -88,7 +88,7 @@ final class ak {
           if (null == MouseWheelInput.field_d) {
             return false;
           }
-          if (ef.field_e.a(80)) {
+          if (AccountRequestState.field_e.a(80)) {
             return true;
           }
           return false;
@@ -96,7 +96,7 @@ final class ak {
         if (null == MouseWheelInput.field_d) {
           return false;
         }
-        if (ef.field_e.a(80)) {
+        if (AccountRequestState.field_e.a(80)) {
           return true;
         }
         return false;

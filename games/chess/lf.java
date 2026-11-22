@@ -21,28 +21,28 @@ final class lf extends kn {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        gb.field_A[ed.field_b] = param3;
-        vn.field_Ab[ed.field_b] = ed.field_b;
-        hg.field_d[ed.field_b] = param5;
+        gb.field_A[AccountRequestState.field_b] = param3;
+        vn.field_Ab[AccountRequestState.field_b] = AccountRequestState.field_b;
+        hg.field_d[AccountRequestState.field_b] = param5;
         if (!(nj.field_t <= param5)) {
           bh.field_F = param5;
         }
         if (param5 > bj.field_gb) {
           eb.field_y = param5;
         }
-        hn.field_e[ed.field_b] = param0;
-        in.field_j[ed.field_b] = param2;
-        oc.field_n[ed.field_b] = param4;
+        hn.field_e[AccountRequestState.field_b] = param0;
+        in.field_j[AccountRequestState.field_b] = param2;
+        oc.field_n[AccountRequestState.field_b] = param4;
         int var6 = param4 + param2 + param0;
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
-        gh.field_a[ed.field_b] = var7;
+        gh.field_a[AccountRequestState.field_b] = var7;
         if (bh.field_F > var7) {
           bh.field_F = var7;
         }
         if (param1 != 117) {
           lf.a(-126, (byte) -125, 10, 121, 120, 92);
         }
-        ed.field_b = ed.field_b + 1;
+        AccountRequestState.field_b = AccountRequestState.field_b + 1;
         if (eb.field_y < var7) {
           eb.field_y = var7;
         }
@@ -287,7 +287,7 @@ final class lf extends kn {
           wb.g(0, 0, wb.field_h, AccountNameAvailabilityValidator.field_m.field_wb);
           la.field_c.a(false, param1);
         }
-        if ((0 < AccountServiceResult.field_c || ed.field_c > 0) &&
+        if ((0 < AccountServiceResult.field_c || AccountRequestState.field_c > 0) &&
           jh.field_a) {
           wb.g(0, 0, wb.field_h, AccountNameAvailabilityValidator.field_m.field_wb);
           ah.field_i.a(false, param1);

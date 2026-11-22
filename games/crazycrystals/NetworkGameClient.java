@@ -584,7 +584,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           rb.field_k = de.a(false, true, tp.field_b, 1, param1 - 14988);
           ok.field_c = de.a(false, true, sl.field_q, 1, 12);
-          dd.field_a = de.a(false, true, oh.field_e, 1, param1 - 14988);
+          FullscreenFocusCanvas.field_a = de.a(false, true, oh.field_e, 1, param1 - 14988);
           dj.field_ab = rb.field_k;
           eq.field_j = 2;
           lo.field_a = ok.field_c;
@@ -607,13 +607,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (eq.field_j == 3 &&
-          ro.a(rb.field_k, ok.field_c, false, dd.field_a) &&
-          jg.a(dd.field_a, -38)) {
+          ro.a(rb.field_k, ok.field_c, false, FullscreenFocusCanvas.field_a) &&
+          jg.a(FullscreenFocusCanvas.field_a, -38)) {
           sg.a(param1 ^ 15099);
           m.c(29537);
           jd.field_z = false;
           ta.field_i = vl.field_b;
-          GameCanvas.a((byte) -106, dd.field_a, fj.field_d, ok.field_c, rb.field_k);
+          GameCanvas.a((byte) -106, FullscreenFocusCanvas.field_a, fj.field_d, ok.field_c, rb.field_k);
           if (uk.field_j ||
             tp.field_h != null) {
             stackIn_103_0 = !(uk.field_j);
@@ -627,9 +627,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             am.field_e = ba.a(-29513);
             tb.field_a = ep.c((byte) 112);
           }
-          am.a(am.field_e, 0, dd.field_a, tb.field_a);
+          am.a(am.field_e, 0, FullscreenFocusCanvas.field_a, tb.field_a);
           rb.field_k = null;
-          dd.field_a = null;
+          FullscreenFocusCanvas.field_a = null;
           ok.field_c = null;
           rb.a((java.applet.Applet) (this), (byte) 126);
           vp.a(param1 ^ 15078);

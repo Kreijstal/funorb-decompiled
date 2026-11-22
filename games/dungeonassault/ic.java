@@ -36,7 +36,7 @@ final class ic extends mc {
           return;
         }
         if (null == il.field_c) {
-          cm.field_R = gh.a(0, -115, 0, 480, i.field_A, 640);
+          cm.field_R = gh.createFullscreenCanvas(0, -115, 0, 480, i.field_A, 640);
           if (cm.field_R == null) {
             var2Lifetime1 = 3;
           } else {

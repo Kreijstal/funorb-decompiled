@@ -8,7 +8,7 @@ final class uk extends IntrusiveNode {
     int field_i;
     int field_l;
     int field_n;
-    static dq field_j;
+    static AccountRequestState field_j;
     static int field_g;
     static km field_f;
     int field_k;
@@ -35,6 +35,6 @@ final class uk extends IntrusiveNode {
     }
 
     static {
-        field_j = new dq();
+        field_j = new AccountRequestState();
     }
 }

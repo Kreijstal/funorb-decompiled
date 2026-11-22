@@ -180,13 +180,13 @@ final class ql extends um implements ij {
             var6 = (tp) (var4.b(75));
           }
           if (ao.field_O.field_Hb.field_tb != 0) {
-            rc.field_d = new un(ao.field_O.field_Hb.field_ob, ao.field_O.field_Hb.field_C, ao.field_O.field_Hb.field_Fb, ao.field_O.field_Hb.field_db, DualLinkNode.field_r, vf.field_B, ee.field_b, ee.field_b);
+            rc.field_d = new un(ao.field_O.field_Hb.field_ob, ao.field_O.field_Hb.field_C, ao.field_O.field_Hb.field_Fb, ao.field_O.field_Hb.field_db, DualLinkNode.field_r, vf.field_B, AccountRequestState.field_b, AccountRequestState.field_b);
             AccountNameAvailabilityValidator.field_n = 2;
           }
           if (ao.field_O.field_Kb.field_tb == 0) {
             return;
           }
-          rc.field_d = new un(ao.field_O.field_Kb.field_ob, ao.field_O.field_Kb.field_C, ao.field_O.field_Kb.field_Fb, ao.field_O.field_Kb.field_db, qc.field_y, vf.field_B, ee.field_b, ee.field_b);
+          rc.field_d = new un(ao.field_O.field_Kb.field_ob, ao.field_O.field_Kb.field_C, ao.field_O.field_Kb.field_Fb, ao.field_O.field_Kb.field_db, qc.field_y, vf.field_B, AccountRequestState.field_b, AccountRequestState.field_b);
           AccountNameAvailabilityValidator.field_n = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

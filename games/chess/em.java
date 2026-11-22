@@ -143,7 +143,7 @@ final class em {
         if (AccountServiceResult.field_c > 0) {
           vg.a(param2, param7, (byte) -84, param5);
         }
-        if (0 < ed.field_c) {
+        if (0 < AccountRequestState.field_c) {
           pc.a(param5, -91, param6, param2, param7);
         }
         if (jh.field_a &&
@@ -158,7 +158,7 @@ final class em {
         }
         mk.a(param7, param4, param9, (byte) -68, param0, param3, param8);
         s.a(param1 + 21485, se.field_S, param9, param7, param3);
-        g.field_c = g.field_c + 1;
+        DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
     }
 
     final void a(int param0) {

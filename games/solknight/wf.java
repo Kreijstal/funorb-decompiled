@@ -72,7 +72,7 @@ abstract class wf implements oe {
         if (MouseWheelInput.field_d == null) {
           return false;
         }
-        if (jj.field_Y != ef.field_e) {
+        if (jj.field_Y != AccountRequestState.field_e) {
           return false;
         }
         return true;

@@ -17,7 +17,7 @@ final class ch {
     static java.awt.Color field_i;
     private byte[] field_c;
     static ad field_j;
-    static lk field_d;
+    static AccountRequestState field_d;
 
     final void a(int param0, byte[] param1) throws IOException {
         RuntimeException stackIn_5_0 = null;

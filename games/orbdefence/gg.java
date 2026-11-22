@@ -102,7 +102,7 @@ final class gg extends ej implements ai {
               this.field_r = this.field_r + 10;
               var3 = fi.field_a;
               if (rc.b(-38)) {
-                var3 = va.field_a;
+                var3 = AccountRequestState.field_a;
                 this.field_r = this.field_r + 20;
               }
             } else {

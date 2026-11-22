@@ -22,7 +22,7 @@ final class kg extends nb implements ue, jk {
           if (this.field_E != param4) {
             return;
           }
-          jc.a((byte) 95);
+          DelegatingCanvas.a((byte) 95);
           this.field_F.g(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

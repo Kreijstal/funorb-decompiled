@@ -18,7 +18,7 @@ final class uk extends ql {
         try {
           ni.field_e = param1;
           fc.field_q = param6;
-          jc.field_c = param7;
+          DelegatingCanvas.field_c = param7;
           sa.field_g = param3;
           wg.field_e = param4;
           fl.field_d = param8;
@@ -37,7 +37,7 @@ final class uk extends ql {
         try {
           this.field_R = param1;
           if (this.field_R != null) {
-            var3_int = ra.field_c.a(this.field_R, 260, ra.field_c.field_E);
+            var3_int = FullscreenFocusCanvas.field_c.a(this.field_R, 260, FullscreenFocusCanvas.field_c.field_E);
             this.b(300, -114, 150 + var3_int);
           }
           this.field_X = new md(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -53,10 +53,10 @@ final class uk extends ql {
     final void a(int param0, byte param1, int param2) {
         int var4 = 3 % ((-3 - param1) / 43);
         super.a(param0, (byte) 116, param2);
-        ra.field_c.a(this.field_W, param2 + (this.field_j >> 1), param0 + 103, 16777215, -1);
+        FullscreenFocusCanvas.field_c.a(this.field_W, param2 + (this.field_j >> 1), param0 + 103, 16777215, -1);
         if (this.field_R != null) {
           SoftwareRasterizer.a(20 + param2, param0 + 120 - 7, 260, 8421504);
-          ra.field_c.a(this.field_R, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ra.field_c.field_E);
+          FullscreenFocusCanvas.field_c.a(this.field_R, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, FullscreenFocusCanvas.field_c.field_E);
           return;
         }
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hh {
-    static df field_c;
+    static PlatformTaskDispatcher field_c;
     static jb field_d;
     static String field_a;
     static String field_b;
@@ -163,7 +163,7 @@ final class hh {
         }
     }
 
-    final static tl[] a(df param0, int param1) {
+    final static tl[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         tl[] stackIn_4_0 = null;
         tl[] stackIn_13_0 = null;
@@ -177,27 +177,27 @@ final class hh {
         tl[] var4 = null;
         tl var6 = null;
         int var7 = 0;
-        bc var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          if (!param0.c(-123)) {
+          if (!param0.isFullscreenAvailable(-123)) {
             stackIn_4_0 = new tl[]{};
             return stackIn_4_0;
           }
           if (param1 <= 65) {
             hh.clearStaticReferences((byte) -108);
           }
-          var8 = param0.a(5);
-          while (var8.field_g == 0) {
+          var8 = param0.requestDisplayModes(5);
+          while (var8.status == 0) {
             jd.a(1, 10L);
           }
-          if (var8.field_g == 2) {
+          if (var8.status == 2) {
             stackIn_13_0 = new tl[]{};
             return stackIn_13_0;
           }
-          var10 = (int[]) (var8.field_f);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new tl[var10.length >> 2];

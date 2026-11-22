@@ -97,7 +97,7 @@ final class AccountCreationResultPanel extends ma implements ke {
                 }
               }
             } else {
-              var4 = q.field_g;
+              var4 = FullscreenFocusCanvas.field_g;
               if (this.field_Ib != null) {
                 this.field_Ib.a((byte) -82);
               }
@@ -152,7 +152,7 @@ final class AccountCreationResultPanel extends ma implements ke {
 
     public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
         if (this.field_Hb) {
-          q.a((byte) -115, false, true);
+          FullscreenFocusCanvas.a((byte) -115, false, true);
           return;
         }
         try {

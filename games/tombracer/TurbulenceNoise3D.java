@@ -60,7 +60,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
     }
 
     final static void drawFullscreenDialog(int param0) {
-        int var1 = qd.getFullscreenDialogWidth((byte) 82);
+        int var1 = FullscreenDialogWidthSupport.getFullscreenDialogWidth((byte) 82);
         int var2 = TimingPattern.getFullscreenDialogHeight(-62);
         NetworkArchiveRequest.field_t.drawFrame((byte) 57, var1 + (PathMoveLocomotor.field_p << 1), -lsa.field_b + AccountServiceResult.field_d, FurnitureModel.field_o - PathMoveLocomotor.field_p, (lsa.field_b << 1) + var2);
         if (param0 == -1226152383) {

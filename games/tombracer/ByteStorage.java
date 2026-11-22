@@ -4,7 +4,7 @@
 abstract class ByteStorage {
     static int[] field_b;
     static int[] field_d;
-    static wm field_e;
+    static PlayerViewportLayout rightViewportLayout;
     static QuickChatPhraseSource field_a;
     static String field_c;
 
@@ -12,7 +12,7 @@ abstract class ByteStorage {
 
     public static void releaseStatics(int param0) {
         field_a = null;
-        field_e = null;
+        rightViewportLayout = null;
         int var1 = -73 / ((param0 - 5) / 62);
         field_d = null;
         field_c = null;
@@ -40,7 +40,7 @@ abstract class ByteStorage {
           field_b[var2] = (int)(Math.sin(var0 * (double)var2) * 16384.0);
           field_d[var2] = (int)(16384.0 * Math.cos((double)var2 * var0));
         }
-        field_e = new wm();
+        rightViewportLayout = new PlayerViewportLayout();
         field_c = "You have unlocked some worlds that are for Members Only. To play these, become a member at FunOrb.com.";
     }
 }

@@ -9,7 +9,7 @@ final class ee {
     private RandomAccessFile field_i;
     static nd field_h;
     private long field_f;
-    static fk field_b;
+    static AccountRequestState field_b;
     static bd field_g;
     static bd[] field_d;
     static int field_e;
@@ -71,7 +71,7 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_b = (fk) null;
+            field_b = (AccountRequestState) null;
           }
           var5_int = this.field_i.read(param0, param3, param2);
           if (var5_int > 0) {
@@ -375,7 +375,7 @@ final class ee {
     static {
         field_a = new nd(15, 0, 1, 0);
         field_h = new nd(8, 0, 4, 1);
-        field_b = new fk();
+        field_b = new AccountRequestState();
         field_e = 0;
     }
 }

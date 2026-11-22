@@ -191,11 +191,11 @@ final class rn extends rd {
         if (!ok.field_c.a(param0 ^ 20403, "commonui")) {
           return jn.field_k + " - " + ok.field_c.b("commonui", -60) + "%";
         }
-        if (!dd.field_a.a((byte) 102)) {
+        if (!FullscreenFocusCanvas.field_a.a((byte) 102)) {
           return gf.field_d;
         }
-        if (!dd.field_a.a(false)) {
-          return l.field_a + " - " + dd.field_a.b(3492) + "%";
+        if (!FullscreenFocusCanvas.field_a.a(false)) {
+          return l.field_a + " - " + FullscreenFocusCanvas.field_a.b(3492) + "%";
         }
         return wp.field_a;
     }

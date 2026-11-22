@@ -16,7 +16,7 @@ final class tl {
     static int field_f;
     static double[][] field_a;
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, df param6, int param7, boolean param8, long param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, PlatformTaskDispatcher param6, int param7, boolean param8, long param9, int param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;

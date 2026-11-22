@@ -57,7 +57,7 @@ final class AccountServiceResult {
             stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
-          if (wd.field_d == ql.field_f) {
+          if (wd.field_d == DelegatingCanvas.field_f) {
             stackIn_5_0 = null;
             return (AccountServiceResult) (stackIn_5_0);
           }
@@ -67,7 +67,7 @@ final class AccountServiceResult {
             stackIn_9_0 = DualLinkNode.field_p;
             return stackIn_9_0;
           }
-          wd.field_d = ql.field_f;
+          wd.field_d = DelegatingCanvas.field_f;
           bf.field_o = param1;
           DualLinkNode.field_p = null;
           stackIn_11_0 = null;

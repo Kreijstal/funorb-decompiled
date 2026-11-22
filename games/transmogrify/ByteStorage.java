@@ -263,7 +263,7 @@ abstract class ByteStorage {
     }
 
     final static boolean b(int param0) {
-        pd.field_b = true;
+        AccountRequestState.field_b = true;
         if (param0 == -1) {
           qf.field_b = lk.a(param0 + 1) + 15000L;
           return 11 == gl.field_y ? true : false;

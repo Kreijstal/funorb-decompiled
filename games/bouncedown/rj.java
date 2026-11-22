@@ -542,7 +542,7 @@ final class rj extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = var28_int * (var30 - var27Lifetime6Lifetime1) + (var30 - var27Lifetime6Lifetime1) / 2;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = mf.a(0, var30 - var27Lifetime6Lifetime1, var32);
+                var34 = AccountRequestState.a(0, var30 - var27Lifetime6Lifetime1, var32);
                 this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
                 var32 = var32 + (var31 - var28_int);
               }
@@ -584,7 +584,7 @@ final class rj extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = mf.a(0, var30Lifetime1Lifetime1 - var27Lifetime7, var32Lifetime1);
+                var34Lifetime1 = AccountRequestState.a(0, var30Lifetime1Lifetime1 - var27Lifetime7, var32Lifetime1);
                 var35 = var34Lifetime1 + (this.field_r[var37] & 255);
                 if (0 > var35) {
                   var35 = 0;

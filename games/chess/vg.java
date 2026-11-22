@@ -88,7 +88,7 @@ final class vg {
               var10 = 0;
               while (true) {
                 if (var10 < wn.field_d.length) {
-                  stackIn_11_0 = ((g.field_f[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
+                  stackIn_11_0 = ((DelegatingCanvas.field_f[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_11_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -185,15 +185,15 @@ final class vg {
               var9 = var16;
               var9 = var16;
               var10Lifetime1 = tn.field_j.field_xb.b(var16) + 3 * tn.field_j.field_xb.a('.');
-              if (16 == (g.field_c & 48)) {
+              if (16 == (DelegatingCanvas.field_c & 48)) {
                 var9 = var16 + ".";
               }
               tn.field_j.field_fb = 0;
               tn.field_j.field_z = (-var10Lifetime1 + tn.field_j.field_M) / 2;
-              if (32 == (48 & g.field_c)) {
+              if (32 == (48 & DelegatingCanvas.field_c)) {
                 var9 = (String) (var9) + "..";
               }
-              if ((g.field_c & 48) == 48) {
+              if ((DelegatingCanvas.field_c & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
               tn.field_j.field_db = (String) (var9);

@@ -175,14 +175,14 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             cs.field_c = null;
             JavaKeyCodeMapPatches.field_d = false;
           }
-          wm.field_a = SpriteTileOperator.field_t;
-          if (null != wm.field_a) {
-            wm.field_a.onDeactivated(-123);
-            if (wm.field_a.field_c == 1) {
+          PlayerViewportLayout.field_a = SpriteTileOperator.field_t;
+          if (null != PlayerViewportLayout.field_a) {
+            PlayerViewportLayout.field_a.onDeactivated(-123);
+            if (PlayerViewportLayout.field_a.field_c == 1) {
               TextureCombineSource.startMenuBackgroundDemo(108);
             }
-            if (null != mq.field_e && (wm.field_a.field_c == 12 ||
-              wm.field_a.field_c == 4)) {
+            if (null != mq.field_e && (PlayerViewportLayout.field_a.field_c == 12 ||
+              PlayerViewportLayout.field_a.field_c == 4)) {
               SpawnerBehaviour.sendSettings(MusicVolumeControl.getMusicVolume(-22636), 12, mq.field_e.field_g, jg.getSoundVolume((byte) -80));
             }
           }
@@ -223,9 +223,9 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             era.field_c = false;
           }
           if (SpriteTileOperator.field_t instanceof MenuScreen &&
-            wm.field_a instanceof MenuScreen &&
-            ((MenuScreen) (wm.field_a)).isShallowerThan(true, (MenuScreen) (SpriteTileOperator.field_t))) {
-            SpriteTileOperator.field_t.field_d = wm.field_a.field_c;
+            PlayerViewportLayout.field_a instanceof MenuScreen &&
+            ((MenuScreen) (PlayerViewportLayout.field_a)).isShallowerThan(true, (MenuScreen) (SpriteTileOperator.field_t))) {
+            SpriteTileOperator.field_t.field_d = PlayerViewportLayout.field_a.field_c;
           }
           var3_int = 69 % ((40 - param2) / 38);
           return;

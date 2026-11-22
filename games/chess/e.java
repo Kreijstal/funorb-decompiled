@@ -201,7 +201,7 @@ final class e extends ma implements mj {
         try {
           if (!mk.b(110)) {
             if (rm.field_R != null &&
-              rm.field_R.field_b) {
+              rm.field_R.focusLost) {
               b.a(true);
               ji.field_V.b(new ge(ji.field_V, kh.field_k), (byte) -86);
             }

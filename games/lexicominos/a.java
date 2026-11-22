@@ -24,10 +24,10 @@ final class a extends kb {
           if (!(param0 > ig.field_a.position)) {
             return true;
           }
-          if (null == jc.field_b) {
+          if (null == DelegatingCanvas.field_b) {
             return false;
           }
-          int var2_int = jc.field_b.d(param1 - 16791);
+          int var2_int = DelegatingCanvas.field_b.d(param1 - 16791);
           if (param1 != 10343) {
             return false;
           }
@@ -35,7 +35,7 @@ final class a extends kb {
             if (param0 - ig.field_a.position < var2_int) {
               var2_int = param0 - ig.field_a.position;
             }
-            jc.field_b.a(ig.field_a.payload, (byte) -109, var2_int, ig.field_a.position);
+            DelegatingCanvas.field_b.a(ig.field_a.payload, (byte) -109, var2_int, ig.field_a.position);
             ta.field_e = rf.c(0);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (param0 > ig.field_a.position) {

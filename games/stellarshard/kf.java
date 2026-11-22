@@ -7,7 +7,7 @@ final class kf implements uk {
     static String field_d;
     static int[] field_b;
 
-    final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
+    final static void exitFullscreenFrame(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
         re var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

@@ -2821,7 +2821,7 @@ final class ja {
           ob.field_I.c(hc.field_k, var5Lifetime3, var14Lifetime2, 16720452, -1);
         }
         var22Lifetime1 = 160;
-        var20Lifetime1 = va.field_b[var17];
+        var20Lifetime1 = AccountRequestState.field_b[var17];
         var14Lifetime2 += 10;
         if (var11[var17] &&
           (1 << var17 & var16) == 0) {

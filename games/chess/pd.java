@@ -120,16 +120,16 @@ final class pd extends ci {
         RuntimeException var2 = null;
         var3 = Chess.field_G;
         try {
-          dc.a(nj.field_t, param0, true, (byte) -123, bj.field_gb, ed.field_b, 0);
-          for (var2_int = 0; var2_int < ed.field_b; var2_int++) {
+          dc.a(nj.field_t, param0, true, (byte) -123, bj.field_gb, AccountRequestState.field_b, 0);
+          for (var2_int = 0; var2_int < AccountRequestState.field_b; var2_int++) {
             vn.field_Ab[var2_int + param0] = var2_int;
           }
-          dc.a(bh.field_F, param0 + param0, false, (byte) -118, eb.field_y, ed.field_b + param0, param0);
+          dc.a(bh.field_F, param0 + param0, false, (byte) -118, eb.field_y, AccountRequestState.field_b + param0, param0);
           if (param1 >= -102) {
             pd.a(-89, -57, 110);
           }
-          if (ed.field_b > param0) {
-            ed.field_b = param0;
+          if (AccountRequestState.field_b > param0) {
+            AccountRequestState.field_b = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,12 +153,12 @@ final class pd extends ci {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = ib.field_d != null ? 1 : 0;
         if (9 == vg.field_a &&
-          ph.a(hn.field_s, (byte) -43, v.field_b, a.field_f, ca.field_i)) {
+          ph.a(hn.field_s, (byte) -43, v.field_b, FullscreenFocusCanvas.field_f, ca.field_i)) {
           if (hn.field_s != 2 &&
             var3 != 0) {
             return false;
           }
-          return fl.a(ca.field_i, a.field_f, hn.field_s, v.field_b, (byte) 105);
+          return fl.a(ca.field_i, FullscreenFocusCanvas.field_f, hn.field_s, v.field_b, (byte) 105);
         }
         if (vg.field_a == 10) {
           if (var3 != 0) {

@@ -59,7 +59,7 @@ final class cd {
         try {
           if (!vh.c((byte) -93)) {
             if (null != ba.field_f &&
-              ba.field_f.field_d) {
+              ba.field_f.focusLost) {
               wl.e((byte) 120);
               si.field_o.b((byte) -56, new s(si.field_o, cg.field_c));
             }

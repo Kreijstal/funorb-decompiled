@@ -12,14 +12,14 @@ final class jd extends IntrusiveNode {
 
     final static void b(boolean param0) {
         int var1 = 0;
-        if (ql.field_d <= 32) {
+        if (DelegatingCanvas.field_d <= 32) {
           um.a(0, false);
         } else {
-          var1 = ql.field_d % 32;
+          var1 = DelegatingCanvas.field_d % 32;
           if (0 == var1) {
             var1 = 32;
           }
-          um.a(-var1 + ql.field_d, false);
+          um.a(-var1 + DelegatingCanvas.field_d, false);
         }
         if (param0) {
           return;

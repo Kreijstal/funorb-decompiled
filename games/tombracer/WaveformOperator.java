@@ -221,7 +221,7 @@ final class WaveformOperator extends TextureOperator {
         RuntimeException var4_ref = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          wt.field_d = mua.field_a;
+          wt.usernameQueryState = mua.accountRequestComplete;
           if (255 != param1) {
             if (param1 >= 100 &&
               param1 <= 105) {

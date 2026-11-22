@@ -20,7 +20,7 @@ final class ce {
         try {
           if (!fl.d(897584976)) {
             if (n.field_a != null &&
-              n.field_a.field_b) {
+              n.field_a.focusLost) {
               re.a(0);
               ed.field_q.a((byte) 85, (UiWidget) (new vj(ed.field_q, cb.field_d)));
             }

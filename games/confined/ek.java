@@ -15,7 +15,7 @@ final class ek {
     private int field_c;
     private int field_m;
     int field_d;
-    static df field_p;
+    static PlatformTaskDispatcher field_p;
     int field_b;
     private oi field_j;
 
@@ -195,7 +195,7 @@ final class ek {
         int var4Lifetime2;
         int var4Lifetime3;
         if (param0 > -46) {
-          field_p = (df) null;
+          field_p = (PlatformTaskDispatcher) null;
           var2 = this.field_o >> 4;
           var3 = this.field_a >> 6;
           if (!this.field_l) {
@@ -476,7 +476,7 @@ final class ek {
           field_k = null;
           return;
         }
-        field_p = (df) null;
+        field_p = (PlatformTaskDispatcher) null;
         field_p = null;
         field_e = null;
         field_k = null;

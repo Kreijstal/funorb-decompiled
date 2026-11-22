@@ -5,7 +5,7 @@ final class cj extends rb {
     private int field_f;
     private int field_m;
     private int field_g;
-    static le field_e;
+    static AccountRequestState field_e;
     private int field_i;
     private boolean field_l;
     private BitmapFont field_n;
@@ -242,7 +242,7 @@ final class cj extends rb {
         var2.writeByte(1, (byte) -104);
         var2.writeByte(0, (byte) -88);
         if (param1) {
-          field_e = (le) null;
+          field_e = (AccountRequestState) null;
         }
     }
 
@@ -260,7 +260,7 @@ final class cj extends rb {
           PacketBuffer.a((byte) -108);
           var2 = var1.b();
           if (param0 <= 81) {
-            field_e = (le) null;
+            field_e = (AccountRequestState) null;
           }
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
@@ -338,7 +338,7 @@ final class cj extends rb {
     }
 
     static {
-        field_e = new le();
+        field_e = new AccountRequestState();
         field_j = new IntrusiveDeque();
         field_o = new GameKeyHandler();
     }

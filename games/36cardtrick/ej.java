@@ -132,7 +132,7 @@ final class ej extends ta {
             return null;
           }
           if (var11.field_a == 2) {
-            rl.a(false, param2, var7);
+            rl.exitFullscreenFrame(false, param2, var7);
             stackIn_39_0 = null;
             return (java.awt.Frame) (stackIn_39_0);
           }

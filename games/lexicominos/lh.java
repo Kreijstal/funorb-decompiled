@@ -267,9 +267,9 @@ final class lh extends ik {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ki.field_g = param0.readUnsignedShort(-1698573656) << 5;
+          AccountRequestState.field_g = param0.readUnsignedShort(-1698573656) << 5;
           var2_int = param0.readUnsignedByte(true);
-          ki.field_g = ki.field_g + (var2_int >> 3);
+          AccountRequestState.field_g = AccountRequestState.field_g + (var2_int >> 3);
           sg.field_a = 1835008 & var2_int << 18;
           sg.field_a = sg.field_a + (param0.readUnsignedShort(-1698573656) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(true);

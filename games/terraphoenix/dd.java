@@ -173,7 +173,7 @@ final class dd extends eb {
           var6 = (this.height >> 1) + (param3 + this.y);
           var8 = this.field_K.a(-16323);
           if (kj.field_d == var8) {
-            var16 = og.field_c[0];
+            var16 = AccountRequestState.field_c[0];
             var9 = var16.field_q << 1;
             var10 = var16.field_u << 1;
             if (ld.field_c == null) {
@@ -200,18 +200,18 @@ final class dd extends eb {
           }
           if (oh.field_b != var8) {
             if (qf.field_d == var8) {
-              var17 = og.field_c[2];
+              var17 = AccountRequestState.field_c[2];
               var17.d(var5 - (var17.field_r >> 1), var6 - (var17.field_t >> 1), 256);
               return;
             }
             if (dg.field_c != var8) {
               return;
             }
-            var18 = og.field_c[1];
+            var18 = AccountRequestState.field_c[1];
             var18.d(-(var18.field_r >> 1) + var5, var6 - (var18.field_t >> 1), 256);
             return;
           }
-          var15 = og.field_c[0];
+          var15 = AccountRequestState.field_c[0];
           var9Lifetime3 = var15.field_q << 1;
           var10Lifetime3 = var15.field_u << 1;
           if (ld.field_c != null &&
@@ -232,7 +232,7 @@ final class dd extends eb {
         var6Lifetime1 = (this.height >> 1) + (param3 + this.y);
         var8Lifetime1 = this.field_K.a(-16323);
         if (kj.field_d == var8Lifetime1) {
-          var20 = og.field_c[0];
+          var20 = AccountRequestState.field_c[0];
           var9Lifetime1 = var20.field_q << 1;
           var10Lifetime1 = var20.field_u << 1;
           if (ld.field_c == null) {
@@ -259,18 +259,18 @@ final class dd extends eb {
         }
         if (oh.field_b != var8Lifetime1) {
           if (qf.field_d == var8Lifetime1) {
-            var21 = og.field_c[2];
+            var21 = AccountRequestState.field_c[2];
             var21.d(var5 - (var21.field_r >> 1), var6Lifetime1 - (var21.field_t >> 1), 256);
             return;
           }
           if (dg.field_c != var8Lifetime1) {
             return;
           }
-          var22 = og.field_c[1];
+          var22 = AccountRequestState.field_c[1];
           var22.d(-(var22.field_r >> 1) + var5, var6Lifetime1 - (var22.field_t >> 1), 256);
           return;
         }
-        var19 = og.field_c[0];
+        var19 = AccountRequestState.field_c[0];
         var9Lifetime2 = var19.field_q << 1;
         var10Lifetime2 = var19.field_u << 1;
         if (ld.field_c == null) {

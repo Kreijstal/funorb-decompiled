@@ -23,10 +23,10 @@ final class gh extends dk {
         RuntimeException var2_ref = null;
         var3 = StarCannon.field_A;
         try {
-          var4 = (hb) (hi.field_f.c(-3905));
+          var4 = (hb) (DelegatingCanvas.field_f.c(-3905));
           while (var4 != null) {
             hb.a(107, param1, var4);
-            var4 = (hb) (hi.field_f.a(-16913));
+            var4 = (hb) (DelegatingCanvas.field_f.a(-16913));
           }
           var2 = sd.field_d.c(-3905);
           if (param0 >= -27) {

@@ -67,7 +67,7 @@ final class vb extends il {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (qc.field_i == ef.field_e) {
+          if (qc.field_i == AccountRequestState.field_e) {
             NodeHashTableIterator.field_b = null;
             id.field_c.position = 0;
             if (param3 != null) {
@@ -122,15 +122,15 @@ final class vb extends il {
               id.field_c.backpatchByteLength(param6 + 21761, id.field_c.position - var9);
             }
             qf.a(0, -1);
-            ef.field_e = di.field_l;
+            AccountRequestState.field_e = di.field_l;
           }
-          if (ef.field_e == di.field_l &&
+          if (AccountRequestState.field_e == di.field_l &&
             bf.c(param6 ^ -21696, 1)) {
             var9Lifetime1 = te.field_N.readUnsignedByte(255);
             te.field_N.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
-              ef.field_e = ta.field_e;
+              AccountRequestState.field_e = ta.field_e;
               ke.field_O = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -144,7 +144,7 @@ final class vb extends il {
               if (var9Lifetime1 != 99) {
                 te.field_O = -1;
                 ob.field_h = var9Lifetime1;
-                ef.field_e = bj.field_a;
+                AccountRequestState.field_e = bj.field_a;
               } else {
                 bf.c(54, sk.g(-9917));
                 NodeHashTableIterator.field_b = new Boolean(lj.a(te.field_N, -2));
@@ -152,7 +152,7 @@ final class vb extends il {
               }
             }
           }
-          if (ta.field_e == ef.field_e) {
+          if (ta.field_e == AccountRequestState.field_e) {
             var9Lifetime2 = 2;
             if (bf.c(110, var9Lifetime2)) {
               var10Lifetime1 = te.field_N.readUnsignedShort(-121);
@@ -169,7 +169,7 @@ final class vb extends il {
               }
             }
           }
-          if (bj.field_a == ef.field_e &&
+          if (bj.field_a == AccountRequestState.field_e &&
             qd.b((byte) 125)) {
             if (ob.field_h != 255) {
               md.field_v = te.field_N.readString(15);

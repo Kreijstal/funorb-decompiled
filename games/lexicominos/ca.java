@@ -9,12 +9,12 @@ class ca extends kd {
     static ng field_n;
     static long field_h;
     static String field_o;
-    static ki field_i;
+    static AccountRequestState field_i;
 
     final static void c(boolean param0) {
         af.a(-56);
         if (param0) {
-          field_i = (ki) null;
+          field_i = (AccountRequestState) null;
           if (null == ug.field_y) {
             rg.a(-124);
             hc.h(249);
@@ -75,7 +75,7 @@ class ca extends kd {
         return MouseWheelInput.field_c == field_i ? true : false;
     }
 
-    final static void a(ab param0, int param1, java.awt.Frame param2) {
+    final static void exitFullscreenFrame(ab param0, int param1, java.awt.Frame param2) {
         ei var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -170,13 +170,13 @@ class ca extends kd {
         re.field_X = null;
         gj.field_t = 0;
         var2 = rc.field_i;
-        rc.field_i = jc.field_c;
+        rc.field_i = DelegatingCanvas.field_c;
         if (param1 == 51) {
           kb.field_b.field_j = 2;
         } else {
           if (50 != param1) {
             kb.field_b.field_j = 1;
-            jc.field_c = var2;
+            DelegatingCanvas.field_c = var2;
             kb.field_b.field_p = kb.field_b.field_p + 1;
             if (param0 != -51) {
               field_o = (String) null;
@@ -196,7 +196,7 @@ class ca extends kd {
           }
           kb.field_b.field_j = 5;
         }
-        jc.field_c = var2;
+        DelegatingCanvas.field_c = var2;
         kb.field_b.field_p = kb.field_b.field_p + 1;
         if (param0 != -51) {
           field_o = (String) null;
@@ -233,7 +233,7 @@ class ca extends kd {
 
     final static boolean d(boolean param0) {
         if (!param0) {
-          field_i = (ki) null;
+          field_i = (AccountRequestState) null;
           return true;
         }
         return true;
@@ -243,6 +243,6 @@ class ca extends kd {
         field_h = 20000000L;
         field_n = new ng();
         field_o = "Logging in...";
-        field_i = new ki();
+        field_i = new AccountRequestState();
     }
 }

@@ -544,8 +544,8 @@ class h implements WidgetRenderer, m {
             return false;
           }
         }
-        var4 = bg.field_j[param0] + bh.field_a[param0] + pd.field_a[param0];
-        var5 = bg.field_j[param1] + (pd.field_a[param1] + bh.field_a[param1]);
+        var4 = bg.field_j[param0] + bh.field_a[param0] + AccountRequestState.field_a[param0];
+        var5 = bg.field_j[param1] + (AccountRequestState.field_a[param1] + bh.field_a[param1]);
         if (param2 != -7079) {
           field_l = (char[]) null;
         }

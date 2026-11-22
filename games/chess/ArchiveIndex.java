@@ -30,8 +30,8 @@ final class ArchiveIndex {
           if (AccountServiceResult.field_c > 0) {
             AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
           } else {
-            if (0 < ed.field_c) {
-              ed.field_c = ed.field_c - 1;
+            if (0 < AccountRequestState.field_c) {
+              AccountRequestState.field_c = AccountRequestState.field_c - 1;
             }
           }
         } else {
@@ -43,8 +43,8 @@ final class ArchiveIndex {
         if (AccountServiceResult.field_c > 0) {
           ByteStorage.a(AccountServiceResult.field_c, true);
         }
-        if (ed.field_c > 0) {
-          ByteStorage.a(ed.field_c, true);
+        if (AccountRequestState.field_c > 0) {
+          ByteStorage.a(AccountRequestState.field_c, true);
         }
         if (param0 != 19) {
           ArchiveIndex.a((byte) -39);

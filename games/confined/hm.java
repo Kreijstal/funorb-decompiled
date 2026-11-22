@@ -380,18 +380,18 @@ final class hm extends dc {
     final static boolean f(byte param0) {
         if (param0 < 3) {
           field_qb = -48;
-          if (null == ie.field_b) {
+          if (null == DelegatingCanvas.field_b) {
             return false;
           }
-          if (ie.field_b.h(0) != null) {
+          if (DelegatingCanvas.field_b.h(0) != null) {
             return true;
           }
           return false;
         }
-        if (null == ie.field_b) {
+        if (null == DelegatingCanvas.field_b) {
           return false;
         }
-        if (ie.field_b.h(0) != null) {
+        if (DelegatingCanvas.field_b.h(0) != null) {
           return true;
         }
         return false;

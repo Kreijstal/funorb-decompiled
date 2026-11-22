@@ -347,7 +347,7 @@ final class d {
           if (11 != var6) {
             if (var6 != 13) {
               if (var6 == 14) {
-                if (0 == qc.field_d) {
+                if (0 == FullscreenFocusCanvas.field_d) {
                   return;
                 }
                 var4 = (param0 >> 4) + this.field_d;
@@ -470,7 +470,7 @@ final class d {
                 }
               }
             } else {
-              if (qc.field_d == 0) {
+              if (FullscreenFocusCanvas.field_d == 0) {
                 return;
               }
               var4 = this.field_d + (param0 >> 4);

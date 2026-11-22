@@ -606,7 +606,7 @@ abstract class rb extends GameApplet {
         if (dj.field_a == el.field_E) {
           return al.field_f.c(param0 - 122);
         }
-        return va.field_a;
+        return FullscreenFocusCanvas.field_a;
     }
 
     private final void a(int param0, int param1, String param2, int param3, int param4) {

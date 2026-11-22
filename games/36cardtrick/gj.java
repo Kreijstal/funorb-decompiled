@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gj implements Runnable {
-    static oe field_a;
+    static FullscreenFocusCanvas field_a;
     private cd field_e;
     int field_b;
     private Thread field_d;
@@ -313,7 +313,7 @@ final class gj implements Runnable {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 != 14) {
-          field_a = (oe) null;
+          field_a = (FullscreenFocusCanvas) null;
           field_a = null;
           return;
         }

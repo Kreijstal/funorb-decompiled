@@ -8,7 +8,7 @@ final class mg {
     static pm[] field_b;
     static String field_f;
     static String field_h;
-    static bc field_a;
+    static PlatformTask field_a;
     static String field_d;
 
     final static int a(CharSequence param0, byte param1) {

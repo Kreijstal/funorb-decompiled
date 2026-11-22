@@ -67,7 +67,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = fca.field_d;
+              stackIn_18_3 = LegacyOpenGlShaderObject.field_d;
             }
             this.field_y = new FocusableWidget(stackIn_18_3, (WidgetListener) null);
             if (this.field_D) {

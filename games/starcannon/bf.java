@@ -98,7 +98,7 @@ final class bf extends IntrusiveNode {
             fieldTemp$0 = this.field_r;
             this.field_r = this.field_r + 1;
             if (param5 > fieldTemp$0 &&
-              this.field_r % (-qc.field_d + 3) == 0) {
+              this.field_r % (-FullscreenFocusCanvas.field_d + 3) == 0) {
               for (var9 = 0; param0 > var9; var9++) {
                 v.a(new d(-16 + this.field_f + sh.b(-126, 32), this.field_u + sh.b(64, 32) - 16, sh.b(-126, 64) + 64, 6), -4001);
               }
@@ -2294,7 +2294,7 @@ final class bf extends IntrusiveNode {
                                   AccountNameAvailabilityValidator.field_j[this.field_v].d(var4 - 16, -16 + (this.field_u - 32), var3);
                                   break regionExit1;
                                 case 21:
-                                  qc.field_e[this.field_v].d(-48 + var4, -32 + this.field_u, 256);
+                                  FullscreenFocusCanvas.field_e[this.field_v].d(-48 + var4, -32 + this.field_u, 256);
                                   break regionExit1;
                                 case 13:
                                   if (0 >= fi.field_e.field_k) {
@@ -2467,19 +2467,19 @@ final class bf extends IntrusiveNode {
           this.field_k = 1;
         }
         if (this.field_q == 1) {
-          this.field_k = pf.field_d * 2 / 3 + 1;
+          this.field_k = AccountRequestState.field_d * 2 / 3 + 1;
         }
         if (this.field_q == 2) {
-          this.field_k = pf.field_d + 1;
+          this.field_k = AccountRequestState.field_d + 1;
         }
         if (this.field_q == 3) {
-          this.field_k = 51 + 4 * pf.field_d;
+          this.field_k = 51 + 4 * AccountRequestState.field_d;
         }
         if (this.field_q == 4) {
-          this.field_k = 2 * pf.field_d + 2;
+          this.field_k = 2 * AccountRequestState.field_d + 2;
         }
         if (this.field_q == 5) {
-          this.field_k = 3 + pf.field_d;
+          this.field_k = 3 + AccountRequestState.field_d;
         }
         if (this.field_q == 10) {
           if (sh.b(-2, 2) == 0) {
@@ -2508,40 +2508,40 @@ final class bf extends IntrusiveNode {
           }
         }
         if (this.field_q == 12) {
-          this.field_k = 100 + pf.field_d * 3;
+          this.field_k = 100 + AccountRequestState.field_d * 3;
         }
         if (this.field_q == 21) {
-          this.field_k = 100 + 20 * pf.field_d;
+          this.field_k = 100 + 20 * AccountRequestState.field_d;
         }
         if (11 == this.field_q) {
-          this.field_k = 50 * pf.field_d + 200 << 2;
+          this.field_k = 50 * AccountRequestState.field_d + 200 << 2;
           if (rj.field_h == 3) {
             this.field_k = this.field_k >> 2;
           }
         }
         if (this.field_q == 15) {
-          this.field_k = 50 * pf.field_d + 500 << 2;
+          this.field_k = 50 * AccountRequestState.field_d + 500 << 2;
           if (nf.field_l == 2) {
-            this.field_k = pf.field_d * 50 + 750 << 2;
+            this.field_k = AccountRequestState.field_d * 50 + 750 << 2;
           }
           if (rj.field_h == 3) {
             this.field_k = this.field_k >> 2;
           }
         }
         if (this.field_q == 16) {
-          this.field_k = 50 * pf.field_d + 2000 << 2;
+          this.field_k = 50 * AccountRequestState.field_d + 2000 << 2;
           if (rj.field_h == 3) {
             this.field_k = this.field_k >> 2;
           }
         }
         if (this.field_q == 17) {
-          this.field_k = 2 * pf.field_d + 1;
+          this.field_k = 2 * AccountRequestState.field_d + 1;
         }
         if (this.field_q == 18) {
-          this.field_k = 30 + pf.field_d * 5;
+          this.field_k = 30 + AccountRequestState.field_d * 5;
         }
         if (this.field_q == 19) {
-          this.field_k = 20 + 4 * pf.field_d;
+          this.field_k = 20 + 4 * AccountRequestState.field_d;
         }
         if (this.field_q == 22) {
           this.field_k = 1;

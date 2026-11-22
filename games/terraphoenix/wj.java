@@ -124,7 +124,7 @@ final class wj {
             if (mh.field_a == af.field_b &&
               vc.a(-115, 1)) {
               var6_intLifetime1 = LevelEditor.field_j.readUnsignedByte(param1 - 45782);
-              og.field_e = null;
+              AccountRequestState.field_e = null;
               qk.field_b = var6_intLifetime1;
               LevelEditor.field_j.position = 0;
               if (var6_intLifetime1 != 0 &&

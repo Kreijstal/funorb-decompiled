@@ -121,19 +121,19 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           }
           if (!JavaKeyCodeMapPatches.field_d &&
             param1 != null &&
-            wm.field_a != param1 &&
+            PlayerViewportLayout.field_a != param1 &&
             SpriteTileOperator.field_t != param1) {
             param1.draw((byte) -28, false);
           }
-          if (null != wm.field_a) {
-            if (!wm.field_a.isFullScreen(31923)) {
-              wm.field_a.draw((byte) -28, false);
+          if (null != PlayerViewportLayout.field_a) {
+            if (!PlayerViewportLayout.field_a.isFullScreen(31923)) {
+              PlayerViewportLayout.field_a.draw((byte) -28, false);
             } else {
               if (param1 == null) {
-                stackIn_19_0 = (wm.field_a instanceof ala) ? 0 : 1;
+                stackIn_19_0 = (PlayerViewportLayout.field_a instanceof ala) ? 0 : 1;
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
-                  wm.field_a.draw((byte) -28, false);
+                  PlayerViewportLayout.field_a.draw((byte) -28, false);
                   CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(param2 ^ 17), SoftwareRasterizer.pixels, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false));
                 }
               }
@@ -269,7 +269,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         sj.releaseStatics(true);
         msa.releaseStatics(param0 ^ -3666);
         ChatMessage.releaseStatics(95);
-        qd.releaseStatics(22442);
+        FullscreenDialogWidthSupport.releaseStatics(22442);
         GameClock.releaseStatics(-59);
         RasterBuffer.releaseStatics(true);
         LoadingStepList.releaseStatics(53);
@@ -499,7 +499,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         TriangleMesh.releaseStatics(-32768);
         nn.releaseStatics((byte) 9);
         nea.releaseStatics(0);
-        vaa.releaseStatics(0);
+        PackedBitSetSupport.releaseStatics(0);
         RandomAccessFileHandle.releaseStatics((byte) -7);
         DelegatingCanvas.releaseStatics(-24962);
         ol.releaseStatics(0);
@@ -682,7 +682,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         ValidationMessageWidget.releaseStatics((byte) 10);
         io.releaseStatics((byte) -57);
         TermsLinksPanel.releaseStatics(param0 + 3666);
-        bc.releaseStatics(118);
+        NameEntryKeyboardSupport.releaseStatics(118);
         esa.releaseStatics((byte) 102);
         TextureOperator.releaseStatics((byte) -79);
         CanvasImageBuffer.releaseStatics((byte) 97);
@@ -814,7 +814,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         r.releaseStatics(11);
         NativeSceneLight.releaseStatics((byte) -87);
         qfa.releaseStatics(true);
-        cua.releaseStatics(3);
+        LegacyOpenGlShaderProgram.releaseStatics(3);
         LegacyOpenGlTexture3D.releaseStatics((byte) 91);
         OpenGlRenderbuffer.releaseStatics((byte) -48);
         LegacyOpenGlEffect.releaseStatics(-18318);
@@ -838,7 +838,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         LegacyOpenGlUnlitEffect.releaseStatics(-125);
         LegacyOpenGlReflectionEffect.releaseStatics(9681);
         LegacyOpenGlEnvironmentWaterEffect.releaseStatics((byte) -58);
-        fca.releaseStatics(-1);
+        LegacyOpenGlShaderObject.releaseStatics(-1);
         ClientRsaModulus.releaseStatics(false);
         TextureFilter.releaseStatics(32768);
         HardwareGraphicsHeap.releaseStatics(-114);
@@ -924,7 +924,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         CharacterChoiceFactory.releaseStatics(0);
         sja.releaseStatics((byte) -126);
         nt.releaseStatics(true);
-        fpa.releaseStatics(1451);
+        AccountRequestState.releaseStatics(1451);
         LoadLevelCommand.releaseStatics(-50);
         HelloCommand.releaseStatics(true);
         ShowLevelSetCommand.releaseStatics(param0 ^ -31324);
@@ -946,7 +946,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         RenderableNode.releaseStatics((byte) -49);
         CharacterPreview.releaseStatics(true);
         CharacterChoiceTile.releaseStatics(-10);
-        wm.releaseStatics((byte) 115);
+        PlayerViewportLayout.releaseStatics((byte) 115);
         RewardChoiceSlot.releaseStatics((byte) -101);
         PlayerResultRow.releaseStatics(1);
         ValidationState.releaseStatics(-99);
@@ -1077,9 +1077,9 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           this.field_E = 123;
         }
         if (this.field_D == null) {
-          if (wm.field_a != null &&
-            !(wm.field_a instanceof ala)) {
-            wm.field_a.update(false, false, 15283);
+          if (PlayerViewportLayout.field_a != null &&
+            !(PlayerViewportLayout.field_a instanceof ala)) {
+            PlayerViewportLayout.field_a.update(false, false, 15283);
           }
           SpriteTileOperator.field_t.update(true, param1, 15283);
           if (cs.field_c != null &&
@@ -1543,7 +1543,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
               SecondaryNodeDequeIterator.field_a = null;
               ConstrainToRectangleLocomotor.showMenuScreen(false, 1, (byte) 122);
             } else {
-              wm.field_a = null;
+              PlayerViewportLayout.field_a = null;
               SecondaryNodeDequeIterator.field_a = null;
               TextureCombineSource.startMenuBackgroundDemo(-82);
               ConstrainToRectangleLocomotor.showMenuScreen(false, 0, (byte) 124);

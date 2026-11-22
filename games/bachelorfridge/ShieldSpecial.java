@@ -20,7 +20,7 @@ final class ShieldSpecial extends SpecialOrder {
         }
         if (o.d((byte) 119)) {
           ua.field_b = false;
-          af.field_a = false;
+          AccountRequestState.field_a = false;
           return;
         }
         BattleCreature.d(false);

@@ -11,7 +11,7 @@ final class ic extends jh {
     static String field_i;
     static String field_g;
     static volatile int field_n;
-    static bd field_l;
+    static AccountRequestState field_l;
     static int field_k;
     private java.net.ProxySelector field_o;
 
@@ -338,7 +338,7 @@ final class ic extends jh {
           var2_int = param1.length();
           var3 = new byte[var2_int];
           if (param0) {
-            field_l = (bd) null;
+            field_l = (AccountRequestState) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             {

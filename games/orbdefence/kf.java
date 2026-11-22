@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kf {
-    static va field_d;
+    static AccountRequestState field_d;
     static int field_e;
     static hj field_a;
     static int field_c;
@@ -23,7 +23,7 @@ final class kf {
     static {
         field_z = "kf.A(";
         field_e = -1;
-        field_d = new va();
+        field_d = new AccountRequestState();
         field_a = new hj(540, 140);
         field_b = "Name is available";
     }

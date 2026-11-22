@@ -183,7 +183,7 @@ final class qt {
                 WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
               ConsoleExpressionParser.decodeLobbyGame(32, var4, true, var1);
-              cua.insertSorted(var4, (byte) 80);
+              LegacyOpenGlShaderProgram.insertSorted(var4, (byte) 80);
               return;
             }
             if (var2 == 9) {
@@ -225,7 +225,7 @@ final class qt {
                     var17_ref.field_Ib = var4_intLifetime1;
                   }
                   var14.field_gc = false;
-                  cua.insertSorted(var17_ref, (byte) 48);
+                  LegacyOpenGlShaderProgram.insertSorted(var17_ref, (byte) 48);
                 }
                 return;
               }
@@ -346,7 +346,7 @@ final class qt {
             } else {
               var25.field_Sb = true;
             }
-            cua.insertSorted(var25, (byte) -97);
+            LegacyOpenGlShaderProgram.insertSorted(var25, (byte) -97);
             return;
           }
           var3_ref_pha = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.first(-80));
@@ -424,7 +424,7 @@ final class qt {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fta.field_c != LegacyOpenGlTexture.field_a) {
+          if (fta.accountRequestIdle != LegacyOpenGlTexture.registrationRequestState) {
             return false;
           }
           if (!param1) {
@@ -436,7 +436,7 @@ final class qt {
             var8.h(param1);
             return true;
           }
-          LegacyOpenGlTexture.field_a = PlayerResultRow.field_y;
+          LegacyOpenGlTexture.registrationRequestState = PlayerResultRow.accountRequestPending;
           ObjectList.field_i = param0;
           IntNode.field_j = param6;
           QuickChatPhraseDefinition.field_n = param2;

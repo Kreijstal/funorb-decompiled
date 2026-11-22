@@ -7,7 +7,7 @@ final class Archive {
     private Object[] field_c;
     static ff field_i;
     private boolean field_h;
-    static ef field_d;
+    static AccountRequestState field_d;
     static int field_f;
     private ArchiveSource field_j;
     private Object[][] field_b;
@@ -59,7 +59,7 @@ final class Archive {
           return false;
         }
         if (param1) {
-          field_d = (ef) null;
+          field_d = (AccountRequestState) null;
         }
         if (param0 >= 0 &&
           param2 >= 0 &&
@@ -968,7 +968,7 @@ final class Archive {
     static {
         int var0 = 0;
         field_i = new ff(6, 0, 4, 2);
-        field_d = new ef();
+        field_d = new AccountRequestState();
         field_a = new fa[255];
         for (var0 = 0; field_a.length > var0; var0++) {
           field_a[var0] = new fa();

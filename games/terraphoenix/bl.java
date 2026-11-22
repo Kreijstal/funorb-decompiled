@@ -632,7 +632,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 90, "warningencum");
                 if (null != var2) {
-                  og.field_b = ll.a(param0 ^ 96, var2);
+                  AccountRequestState.field_b = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 88, "armournames,0");
                 if (null != var2) {
@@ -1406,7 +1406,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 108, "corporal");
                 if (null != var2) {
-                  og.field_g = ll.a(0, var2);
+                  AccountRequestState.field_g = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "sergeant");
                 if (null != var2) {

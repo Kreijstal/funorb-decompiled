@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lc {
-    static u field_c;
+    static AccountRequestState field_c;
     static int field_e;
     static String field_b;
     static int field_d;

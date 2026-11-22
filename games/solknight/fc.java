@@ -52,7 +52,7 @@ final class fc extends IntrusiveNode {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
-            if (qc.field_i == ef.field_e) {
+            if (qc.field_i == AccountRequestState.field_e) {
               if (param2) {
                 var11 = (String) null;
                 MouseWheelInput.field_a = pb.a(false, param4, kc.field_P, 0, (String) null);
@@ -63,29 +63,29 @@ final class fc extends IntrusiveNode {
               id.field_c.writeByte(param5 ^ -121, 14);
               id.field_c.writeByte(-127, MouseWheelInput.field_a.a(77).field_e);
               qf.a(param5 + 0, -1);
-              ef.field_e = gl.field_s;
+              AccountRequestState.field_e = gl.field_s;
             }
-            if (ef.field_e == gl.field_s &&
+            if (AccountRequestState.field_e == gl.field_s &&
               bf.c(81, 1)) {
               var6_int = te.field_N.readUnsignedByte(255);
               te.field_N.position = 0;
               if (0 != var6_int) {
-                ef.field_e = SecondaryNodeDeque.field_e;
+                AccountRequestState.field_e = SecondaryNodeDeque.field_e;
                 ob.field_h = var6_int;
                 te.field_O = -1;
               } else {
-                ef.field_e = pl.field_b;
+                AccountRequestState.field_e = pl.field_b;
               }
             }
-            if (ef.field_e == pl.field_b &&
+            if (AccountRequestState.field_e == pl.field_b &&
               bf.c(54, 8)) {
               i.field_H = te.field_N.readLong(10526);
               te.field_N.position = 0;
               ci.a(-25776, param2, param1, MouseWheelInput.field_a, param3);
-              ef.field_e = UiWidget.field_o;
+              AccountRequestState.field_e = UiWidget.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ef.field_e == UiWidget.field_o &&
+            if (AccountRequestState.field_e == UiWidget.field_o &&
               bf.c(53, 1)) {
               var6_intLifetime1 = te.field_N.readUnsignedByte(255);
               ob.field_h = var6_intLifetime1;
@@ -94,7 +94,7 @@ final class fc extends IntrusiveNode {
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ef.field_e = SecondaryNodeDeque.field_e;
+                  AccountRequestState.field_e = SecondaryNodeDeque.field_e;
                   te.field_O = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -106,11 +106,11 @@ final class fc extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ef.field_e = dk.field_h;
+                AccountRequestState.field_e = dk.field_h;
                 te.field_O = -1;
               }
             }
-            if (dk.field_h == ef.field_e &&
+            if (dk.field_h == AccountRequestState.field_e &&
               qd.b((byte) 127)) {
               kc.field_P = te.field_N.readLong(10526);
               lh.field_s = te.field_N.readUnsignedByte(255);
@@ -143,7 +143,7 @@ final class fc extends IntrusiveNode {
               var13 = (CharSequence) ((Object) ne.field_g);
               kf.field_D = FullscreenFocusCanvas.a(var13, -2);
               c.field_H = te.field_N.readUnsignedByte(255);
-              ef.field_e = jj.field_Y;
+              AccountRequestState.field_e = jj.field_Y;
               if (MouseWheelInput.field_a.a(123) != dc.field_k) {
                 if (MouseWheelInput.field_a.a(param5 + 70) == qb.field_L) {
                   bb.field_I.a((byte) 104, ia.g(-78));
@@ -182,7 +182,7 @@ final class fc extends IntrusiveNode {
               stackIn_74_0 = ob.field_h;
               return stackIn_74_0;
             }
-            if (SecondaryNodeDeque.field_e == ef.field_e &&
+            if (SecondaryNodeDeque.field_e == AccountRequestState.field_e &&
               qd.b((byte) 125)) {
               je.a(false);
               if (ob.field_h == 7 &&

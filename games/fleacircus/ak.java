@@ -43,7 +43,7 @@ final class ak {
           var1 = var6 + ":";
           for (var2 = 0; pd.field_l > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & ae.field_a.payload[var2];
+            var3 = 255 & AccountRequestState.field_a.payload[var2];
             var4 = var3 >> 4;
             if (var4 >= 10) {
               var4 += 55;
@@ -200,8 +200,8 @@ final class ak {
           }
           if (ResourceArchive.field_k == ue.field_c &&
             gi.a(1, true)) {
-            var9Lifetime1 = ae.field_a.readUnsignedByte(false);
-            ae.field_a.position = 0;
+            var9Lifetime1 = AccountRequestState.field_a.readUnsignedByte(false);
+            AccountRequestState.field_a.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               ResourceArchive.field_k = u.field_b;
@@ -221,20 +221,20 @@ final class ak {
                 be.field_a = var9Lifetime1;
               } else {
                 gi.a(cm.b(param1 ^ 15059), true);
-                bb.field_A = new Boolean(sd.a(ae.field_a, 16448));
-                ae.field_a.position = 0;
+                bb.field_A = new Boolean(sd.a(AccountRequestState.field_a, 16448));
+                AccountRequestState.field_a.position = 0;
               }
             }
           }
           if (u.field_b == ResourceArchive.field_k) {
             var9Lifetime2 = 2;
             if (gi.a(var9Lifetime2, true)) {
-              var10Lifetime1 = ae.field_a.readUnsignedShort((byte) -111);
-              ae.field_a.position = 0;
+              var10Lifetime1 = AccountRequestState.field_a.readUnsignedShort((byte) -111);
+              AccountRequestState.field_a.position = 0;
               if (gi.a(var10Lifetime1, true)) {
                 var11 = tc.field_e.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  tc.field_e[var12] = ae.field_a.readPrefixedString(-84);
+                  tc.field_e[var12] = AccountRequestState.field_a.readPrefixedString(-84);
                 }
                 k.c(-28354);
                 aa.field_q = false;
@@ -246,9 +246,9 @@ final class ak {
           if (ResourceArchive.field_k == gd.field_b &&
             gf.b(param1 - 14911)) {
             if (be.field_a != 255) {
-              fh.field_a = ae.field_a.readString(param1 - 15021);
+              fh.field_a = AccountRequestState.field_a.readString(param1 - 15021);
             } else {
-              var9_ref_String = ae.field_a.readNullableString((byte) -115);
+              var9_ref_String = AccountRequestState.field_a.readNullableString((byte) -115);
               if (var9_ref_String != null) {
                 ea.a(376, BoundedRandomAccessFile.getApplet((byte) -93), var9_ref_String);
               }

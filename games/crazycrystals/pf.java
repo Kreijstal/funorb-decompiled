@@ -163,7 +163,7 @@ final class pf extends pn implements Cloneable {
           if (param5 != -87) {
             this.field_x = -110;
           }
-          dd.field_c.a(32, param2 * 12, 12 * param1, 0, (byte) -111);
+          FullscreenFocusCanvas.field_c.a(32, param2 * 12, 12 * param1, 0, (byte) -111);
           stackIn_7_0 = new ig(param0, param4, (f) (this), false);
           return (f) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

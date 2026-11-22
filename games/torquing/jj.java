@@ -64,7 +64,7 @@ final class jj {
             stackIn_37_0 = var7;
             return stackIn_37_0;
           }
-          ka.a(-123, var7, param0);
+          ka.exitFullscreenFrame(-123, var7, param0);
           stackIn_35_0 = null;
           return (java.awt.Frame) (stackIn_35_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

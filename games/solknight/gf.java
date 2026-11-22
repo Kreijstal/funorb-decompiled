@@ -10,7 +10,7 @@ abstract class gf extends ld {
     private te field_V;
     static int field_T;
     private int field_eb;
-    static ef field_Z;
+    static AccountRequestState field_Z;
     static String[] field_X;
     private int field_bb;
     static long field_Y;
@@ -239,7 +239,7 @@ abstract class gf extends ld {
     }
 
     static {
-        field_Z = new ef();
+        field_Z = new AccountRequestState();
         field_X = new String[]{"All scores", "My scores", "Best each"};
     }
 }

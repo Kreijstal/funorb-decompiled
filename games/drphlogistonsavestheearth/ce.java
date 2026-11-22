@@ -9,7 +9,7 @@ final class ce {
     static long field_f;
     static vh field_e;
 
-    final static void a(bl param0, java.awt.Frame param1, byte param2) {
+    final static void exitFullscreenFrame(bl param0, java.awt.Frame param1, byte param2) {
         il var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;

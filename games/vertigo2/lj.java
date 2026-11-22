@@ -156,7 +156,7 @@ final class lj {
     }
 
     final static void a(byte param0) {
-        e.a(12899, hb.field_D, TextureOperator.field_s, ee.field_b, ua.field_c);
+        e.a(12899, hb.field_D, TextureOperator.field_s, AccountRequestState.field_b, ua.field_c);
         if (param0 >= -114) {
           lj.clearStaticReferences(80);
         }

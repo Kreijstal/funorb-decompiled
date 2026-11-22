@@ -7,7 +7,7 @@ final class gj {
     private int field_g;
     Sprite field_e;
     private int field_f;
-    static ne field_a;
+    static AccountRequestState field_a;
     static int field_c;
     Sprite[] field_k;
     private int field_h;

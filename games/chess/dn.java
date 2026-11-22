@@ -148,7 +148,7 @@ final class dn {
           if (!tj.a(param1, param0, param3, (byte) 83)) {
             return null;
           }
-          stackIn_6_0 = g.a(param4.a(param1, param0, 5847), 127);
+          stackIn_6_0 = DelegatingCanvas.a(param4.a(param1, param0, 5847), 127);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

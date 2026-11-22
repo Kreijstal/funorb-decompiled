@@ -3,7 +3,7 @@
  */
 final class wh extends ul implements j {
     private dm field_db;
-    static ve field_fb;
+    static AccountRequestState field_fb;
     private int field_bb;
     static String field_eb;
     static String field_ab;
@@ -65,7 +65,7 @@ final class wh extends ul implements j {
 
     public final dm a(byte param0) {
         if (param0 != -9) {
-          field_fb = (ve) null;
+          field_fb = (AccountRequestState) null;
           return this.field_db;
         }
         return this.field_db;
@@ -83,7 +83,7 @@ final class wh extends ul implements j {
 
     static {
         field_eb = "This password is part of your Player Name, and would be easy to guess";
-        field_fb = new ve();
+        field_fb = new AccountRequestState();
         field_ab = "1 cluster missile";
     }
 }

@@ -128,7 +128,7 @@ class vk extends UiWidget implements ch {
               }
             }
             if (decompiledFrameRemainder0) {
-              var3_ref = (hb) (hi.field_f.c(-3905));
+              var3_ref = (hb) (DelegatingCanvas.field_f.c(-3905));
               if (var3_ref == null) {
                 ec.a((byte) 27);
                 return;
@@ -1112,7 +1112,7 @@ class vk extends UiWidget implements ch {
           if (var2 == 0) {
             if (td.field_o == null) {
               td.field_o = new ai(128);
-              hi.field_b = 0;
+              DelegatingCanvas.field_b = 0;
             }
             stackIn_11_0 = (1 != var1.readUnsignedByte(7909)) ? 0 : 1;
             var4_int = stackIn_11_0;
@@ -1135,8 +1135,8 @@ class vk extends UiWidget implements ch {
             if (null == var6) {
               var6 = new ld();
               td.field_o.a(2, (long)var8.hashCode(), var6);
-              fieldTemp$0 = hi.field_b;
-              hi.field_b = hi.field_b + 1;
+              fieldTemp$0 = DelegatingCanvas.field_b;
+              DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1;
               var6.field_hb = fieldTemp$0;
               ma.field_c.b(122, var6);
             }

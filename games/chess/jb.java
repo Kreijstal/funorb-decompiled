@@ -104,7 +104,7 @@ abstract class jb implements vb {
 
     final static String f(int param0) {
         int var1 = -127 / ((param0 + 31) / 56);
-        if (g.field_a == ci.field_ub) {
+        if (DelegatingCanvas.field_a == ci.field_ub) {
           return oc.field_o;
         }
         if (!pi.field_c.b((byte) 107)) {

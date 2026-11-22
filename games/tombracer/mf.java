@@ -4,7 +4,7 @@
 final class mf {
     int field_b;
     private HardwareOpenGlToolkit field_c;
-    static wm field_d;
+    static PlayerViewportLayout fullViewportLayout;
     static int field_a;
 
     protected final void finalize() throws Throwable {
@@ -16,7 +16,7 @@ final class mf {
         if (param0) {
           mf.buildPowerCurveTable(-23);
         }
-        field_d = null;
+        fullViewportLayout = null;
     }
 
     final static void buildPowerCurveTable(int param0) {
@@ -58,7 +58,7 @@ final class mf {
     }
 
     static {
-        field_d = new wm();
+        fullViewportLayout = new PlayerViewportLayout();
         field_a = 50;
     }
 }

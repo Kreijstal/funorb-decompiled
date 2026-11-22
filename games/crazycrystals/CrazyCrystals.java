@@ -573,7 +573,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ke.clearStaticReferences((byte) 127);
           bc.clearStaticReferences(-26389);
           vm.b((byte) 119);
-          dd.a(param0 ^ -45);
+          FullscreenFocusCanvas.a(param0 ^ -45);
           oa.b(-98);
           f.a(100);
           id.clearStaticReferences();
@@ -1748,7 +1748,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             sg.field_a = true;
           }
           if (ph.field_E != null &&
-            ph.field_E.field_d) {
+            ph.field_E.focusLost) {
             q.a(false);
             cm.a(-15544);
           }

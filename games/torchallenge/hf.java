@@ -7,7 +7,7 @@ final class hf implements j {
     static byte[] field_d;
     static int[][] field_f;
     static int field_e;
-    static ne field_b;
+    static AccountRequestState field_b;
 
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
@@ -217,7 +217,7 @@ final class hf implements j {
     static {
         field_c = 0;
         field_f = new int[][]{new int[]{222, 147}, new int[]{198, 144}, new int[]{235, 151}};
-        field_b = new ne();
+        field_b = new AccountRequestState();
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

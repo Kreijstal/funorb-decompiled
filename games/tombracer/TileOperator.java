@@ -295,7 +295,7 @@ final class TileOperator extends TextureOperator {
           var8 = -1;
           var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + param1);
           var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - param1);
-          C2SRoomResultPacket.fillRange((byte) -55, param2, var9, vaa.field_a[param4], var10);
+          C2SRoomResultPacket.fillRange((byte) -55, param2, var9, PackedBitSetSupport.field_a[param4], var10);
           while (var6 > var5_int) {
             var8 += 2;
             var7 = var7 + var8;
@@ -309,10 +309,10 @@ final class TileOperator extends TextureOperator {
                 var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
                 var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var5_int);
                 if (var12 <= LineShape.field_h) {
-                  C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var12], var14);
+                  C2SRoomResultPacket.fillRange((byte) -55, param2, var13, PackedBitSetSupport.field_a[var12], var14);
                 }
                 if (var11 >= HardwareModelBillboardState.field_d) {
-                  C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var11], var14);
+                  C2SRoomResultPacket.fillRange((byte) -55, param2, var13, PackedBitSetSupport.field_a[var11], var14);
                 }
               }
             }
@@ -328,12 +328,12 @@ final class TileOperator extends TextureOperator {
             var13Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
             var14Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 - 16226, pka.field_b, param3 - var6);
             if (LineShape.field_h >= var12Lifetime1) {
-              C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var12Lifetime1], var14Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, PackedBitSetSupport.field_a[var12Lifetime1], var14Lifetime1);
             }
             if (HardwareModelBillboardState.field_d > var11Lifetime1) {
               continue;
             }
-            C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var11Lifetime1], var14Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, PackedBitSetSupport.field_a[var11Lifetime1], var14Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -447,7 +447,7 @@ final class TileOperator extends TextureOperator {
 
     final static void setTargetRows(int[][] param0, int param1) {
         try {
-          vaa.field_a = param0;
+          PackedBitSetSupport.field_a = param0;
           int var2_int = -93 % ((param1 - 57) / 49);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nfa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

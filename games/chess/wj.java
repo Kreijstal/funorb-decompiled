@@ -27,7 +27,7 @@ final class wj implements jm {
         RuntimeException var21 = null;
         try {
           cg.a(0, param17, param11, param18);
-          g.a((byte) -81, param2, param10, param4, param9);
+          DelegatingCanvas.a((byte) -81, param2, param10, param4, param9);
           di.a(param12, -121, param6);
           gi.a(param15, param0, param19, false, param13, param8);
           var21_int = -109 % ((param14 + 27) / 45);

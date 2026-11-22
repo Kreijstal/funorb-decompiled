@@ -136,9 +136,9 @@ final class sc {
     final static int[] a(int param0, int param1, int param2) {
         int var3 = sb.a((byte) 79, param2);
         int var5 = 37 % ((-85 - param0) / 36);
-        int var4 = r.a((byte) 71, param2);
+        int var4 = FullscreenFocusCanvas.a((byte) 71, param2);
         int var6 = sb.a((byte) 79, param1);
-        int var7 = r.a((byte) 71, param1);
+        int var7 = FullscreenFocusCanvas.a((byte) 71, param1);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var7 * (long)var3 >> 16);
         int var10 = (int)((long)var6 * (long)var4 >> 16);

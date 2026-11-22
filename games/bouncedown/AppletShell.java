@@ -166,7 +166,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
 
     public final void start() {
         if (this != og.field_c ||
-          jb.field_d) {
+          FullscreenFocusCanvas.field_d) {
           return;
         }
         try {
@@ -185,7 +185,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         RuntimeException var2_ref = null;
         try {
           if (og.field_c == this &&
-            !jb.field_d) {
+            !FullscreenFocusCanvas.field_d) {
             ae.field_b = true;
             if (hh.field_k &&
               -jc.field_k + fa.a(125) > 1000L) {
@@ -282,7 +282,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (param0 != 12955) {
             this.focusGained((java.awt.event.FocusEvent) null);
           }
-          ch.field_h = (java.awt.Canvas) ((Object) new th((java.awt.Component) (this)));
+          ch.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ch.field_h));
           ch.field_h.setSize(kj.field_i, jc.field_i);
           ch.field_h.setVisible(true);
@@ -761,10 +761,10 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           var3 = this;
           synchronized (var3) {
-            if (jb.field_d) {
+            if (FullscreenFocusCanvas.field_d) {
               return;
             }
-            jb.field_d = true;
+            FullscreenFocusCanvas.field_d = true;
           }
           if (a.field_c != null) {
             a.field_c.destroy();
@@ -815,7 +815,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
 
     public final void stop() {
         if (og.field_c != this ||
-          jb.field_d) {
+          FullscreenFocusCanvas.field_d) {
           return;
         }
         try {
@@ -940,7 +940,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == og.field_c &&
-            !jb.field_d) {
+            !FullscreenFocusCanvas.field_d) {
             ua.field_d = fa.a(112);
             wh.a(5000L, 19406);
             jj.field_a = null;

@@ -1554,7 +1554,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 115, "create_age_tooltip");
                 if (null != var2) {
-                  jb.field_b = c.a(0, var2);
+                  FullscreenFocusCanvas.field_b = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 112, "create_optin_news_tooltip");
                 if (null != var2) {
@@ -1658,7 +1658,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 120, "create_alert_mismatch");
                 if (var2 != null) {
-                  mf.field_c = c.a(0, var2);
+                  AccountRequestState.field_c = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 113, "create_passwordvalid");
                 if (null != var2) {

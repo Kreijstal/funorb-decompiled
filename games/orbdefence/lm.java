@@ -2728,7 +2728,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  va.field_a = bk.a(var2, -12465);
+                  AccountRequestState.field_a = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "fs_timeout");
                 if (null != var2) {

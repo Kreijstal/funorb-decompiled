@@ -16,7 +16,7 @@ final class eg implements de {
     private int field_g;
     private int field_b;
 
-    final static void a(java.awt.Frame param0, byte param1, ka param2) {
+    final static void exitFullscreenFrame(java.awt.Frame param0, byte param1, ka param2) {
         bk var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

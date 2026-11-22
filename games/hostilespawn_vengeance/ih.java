@@ -412,7 +412,7 @@ final class ih extends ej {
               var4 >= -96 &&
               var3 <= 736 &&
               576 >= var4 &&
-              0 == ue.field_d) {
+              0 == FullscreenFocusCanvas.field_d) {
               var9 = var7.field_i;
               if (var9 != 129 &&
                 var9 != 131 &&

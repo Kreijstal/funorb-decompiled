@@ -49,11 +49,11 @@ final class mn extends gk {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == bd.field_e) {
-            bd.field_e = new jl(mb.field_b, ic.field_i);
-            mb.field_b.b(1, bd.field_e);
+          if (null == AccountRequestState.field_e) {
+            AccountRequestState.field_e = new jl(mb.field_b, ic.field_i);
+            mb.field_b.b(1, AccountRequestState.field_e);
           }
-          bd.field_e.a(param0 ^ 68, param3, param1, param2);
+          AccountRequestState.field_e.a(param0 ^ 68, param3, param1, param2);
           SoftwareRasterizer.d();
           pf.a(0, true);
           if (param0 == -63) {

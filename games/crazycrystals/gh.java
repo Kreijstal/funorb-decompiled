@@ -858,8 +858,8 @@ final class gh extends ea implements Cloneable {
           so.field_g = null;
           fn.field_h.a((byte) -75);
           fn.field_h = null;
-          dd.field_c.a((byte) -17);
-          dd.field_c = null;
+          FullscreenFocusCanvas.field_c.a((byte) -17);
+          FullscreenFocusCanvas.field_c = null;
           cn.field_e.a((byte) -64);
           cn.field_e = null;
           jj.field_c.a((byte) -30);

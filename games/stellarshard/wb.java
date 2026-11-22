@@ -50,13 +50,13 @@ final class wb {
         throw new IllegalStateException();
     }
 
-    final static va a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        va var7 = null;
+        FullscreenFocusCanvas var7 = null;
         int var8 = 0;
         java.awt.Frame var9 = null;
-        va stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -67,9 +67,9 @@ final class wb {
           if (var9 == null) {
             return null;
           }
-          var7 = new va();
-          var7.field_d = var9;
-          var7.field_d.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var9;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param4, param2);
           var7.addFocusListener(var7);
           var7.requestFocus();

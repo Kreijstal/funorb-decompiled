@@ -3,7 +3,7 @@
  */
 final class mua {
     static int field_b;
-    static fpa field_a;
+    static AccountRequestState accountRequestComplete;
 
     final static Room createEmptyRoom(PlayerSimulation param0, int param1) {
         RuntimeException var2 = null;
@@ -35,13 +35,13 @@ final class mua {
     }
 
     public static void releaseStatics(int param0) {
-        field_a = null;
+        accountRequestComplete = null;
         if (param0 != 0) {
           mua.releaseStatics(34);
         }
     }
 
     static {
-        field_a = new fpa();
+        accountRequestComplete = new AccountRequestState();
     }
 }

@@ -7,7 +7,7 @@ abstract class tl {
     String field_c;
     int field_d;
     static dl field_b;
-    static u field_e;
+    static AccountRequestState field_e;
     static am field_a;
 
     public static void b(int param0) {
@@ -1497,6 +1497,6 @@ abstract class tl {
     }
 
     static {
-        field_e = new u();
+        field_e = new AccountRequestState();
     }
 }

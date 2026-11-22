@@ -6,7 +6,7 @@ import java.util.*;
 abstract class um extends UiWidget implements dq {
     static String field_H;
     static qg field_E;
-    static ee field_F;
+    static AccountRequestState field_F;
     static String field_C;
     UiWidget[] field_G;
     static String field_D;
@@ -228,7 +228,7 @@ abstract class um extends UiWidget implements dq {
         if (!param0) {
           return null;
         }
-        field_F = (ee) null;
+        field_F = (AccountRequestState) null;
         return null;
     }
 
@@ -455,7 +455,7 @@ abstract class um extends UiWidget implements dq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 94) {
-            field_F = (ee) null;
+            field_F = (AccountRequestState) null;
           }
           stackIn_3_0 = this.a(1, param0, (byte) -127);
           return stackIn_3_0;
@@ -619,7 +619,7 @@ abstract class um extends UiWidget implements dq {
           }
           var4_int = 0;
           if (param2 > -1) {
-            field_F = (ee) null;
+            field_F = (AccountRequestState) null;
           }
           while (this.field_G.length > var4_int) {
             var5 = this.field_G[var4_int];

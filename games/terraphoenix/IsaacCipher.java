@@ -8,7 +8,7 @@ final class IsaacCipher {
     private int field_b;
     private int[] field_a;
     static String field_g;
-    static og field_f;
+    static AccountRequestState field_f;
     private int field_d;
     static String field_j;
     private int field_e;

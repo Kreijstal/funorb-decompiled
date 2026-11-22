@@ -188,12 +188,12 @@ final class PlayerContextMenu {
                   LegacyOpenGlRidgedWaterEffect.a(param2, false, this.field_k);
                 } else {
                   if (param1 == 15) {
-                    cua.selectLobbyGame(this.field_k, param0 + 21, param2);
+                    LegacyOpenGlShaderProgram.selectLobbyGame(this.field_k, param0 + 21, param2);
                   } else {
                     if (param1 != 16) {
                       return false;
                     }
-                    cua.selectLobbyGame(0, 3, param2);
+                    LegacyOpenGlShaderProgram.selectLobbyGame(0, 3, param2);
                   }
                 }
               }

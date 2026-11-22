@@ -260,7 +260,7 @@ class jla {
                 }
               }
               RasterBuffer.a(6, 7758);
-              boolean decompiledSharedTail0 = (af.field_a ||
+              boolean decompiledSharedTail0 = (AccountRequestState.field_a ||
                 AttackUpAllAnimation.e(-29919));
               if (!decompiledSharedTail0) {
                 gs.field_f.a(false, iea.field_d);

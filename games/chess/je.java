@@ -166,7 +166,7 @@ final class je extends vm {
             stackIn_3_0 = qk.field_b;
             return stackIn_3_0;
           }
-          if (!g.a(83, var3, var4)) {
+          if (!DelegatingCanvas.a(83, var3, var4)) {
             stackIn_7_0 = qk.field_b;
             return stackIn_7_0;
           }

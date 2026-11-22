@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj {
-    static uc field_a;
+    static AccountRequestState field_a;
     static int[] field_b;
     static String field_c;
 
@@ -118,7 +118,7 @@ final class dj {
 
     static {
         field_b = new int[4];
-        field_a = new uc();
+        field_a = new AccountRequestState();
         field_c = "Continue";
     }
 }

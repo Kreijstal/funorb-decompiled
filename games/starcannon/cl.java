@@ -3,7 +3,7 @@
  */
 final class cl extends od {
     static int field_j;
-    static pf field_k;
+    static AccountRequestState field_k;
 
     static int a(int param0, int param1) {
         return param0 | param1;
@@ -137,12 +137,12 @@ final class cl extends od {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 < 81) {
-          field_k = (pf) null;
+          field_k = (AccountRequestState) null;
         }
         field_k = null;
     }
 
     static {
-        field_k = new pf();
+        field_k = new AccountRequestState();
     }
 }

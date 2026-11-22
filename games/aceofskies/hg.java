@@ -250,7 +250,7 @@ final class hg extends to {
           int[] var65 = new int[param7.field_q];
           int[] var63 = ArchiveProvider.field_b;
           int[] var62 = ql.field_o;
-          int[] var64 = dq.field_c;
+          int[] var64 = AccountRequestState.field_c;
           for (int var13 = 0; var13 < param7.field_q; var13++) {
             int var14 = param1 * var62[var13] + var63[var13] * param6 + var64[var13] * param4 >> 8;
             if (0 > var14) {

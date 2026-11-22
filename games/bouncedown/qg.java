@@ -3,13 +3,13 @@
  */
 final class qg extends IntrusiveNode {
     int field_i;
-    static mf field_g;
+    static AccountRequestState field_g;
     int field_h;
 
     public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != 57) {
-          field_g = (mf) null;
+          field_g = (AccountRequestState) null;
         }
     }
 
@@ -17,10 +17,10 @@ final class qg extends IntrusiveNode {
         int var3 = Bounce.field_N;
         ih.field_X = 0;
         if (param0 != -23888) {
-          field_g = (mf) null;
+          field_g = (AccountRequestState) null;
         }
         md.field_q = null;
-        mf.field_a = null;
+        AccountRequestState.field_a = null;
         int var2 = a.field_a;
         a.field_a = fk.field_d;
         tb.field_p.field_l = tb.field_p.field_l + 1;
@@ -115,6 +115,6 @@ final class qg extends IntrusiveNode {
     }
 
     static {
-        field_g = new mf();
+        field_g = new AccountRequestState();
     }
 }

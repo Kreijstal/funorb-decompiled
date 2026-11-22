@@ -124,9 +124,9 @@ final class ge implements Runnable {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               lh.a(var15, -95);
               if (var6_intLifetime1 == 0) {
-                ra.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, ki.field_g);
+                FullscreenFocusCanvas.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
               } else {
-                ra.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, ki.field_g);
+                FullscreenFocusCanvas.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
               }
             }
             DirectByteStorage.b((byte) 83, var5);
@@ -480,7 +480,7 @@ final class ge implements Runnable {
           field_e = (String) null;
         }
         int var2 = eb.d((byte) -6);
-        ki.field_a.a(rf.field_c - id.field_v, (id.field_v << 1) + var2, var1 + (wh.field_f << 1), me.field_v - wh.field_f, -1160208572);
+        AccountRequestState.field_a.a(rf.field_c - id.field_v, (id.field_v << 1) + var2, var1 + (wh.field_f << 1), me.field_v - wh.field_f, -1160208572);
         hi.b(0);
     }
 

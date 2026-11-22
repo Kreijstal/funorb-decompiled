@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class vc extends wd {
-    static mf field_F;
+    static AccountRequestState field_F;
     static String field_B;
     private ui field_E;
     static si field_G;

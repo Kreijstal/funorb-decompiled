@@ -100,7 +100,7 @@ final class ara extends UiComponent {
           }
           if (var8 != 0) {
             for (var14 = param2; var14 <= param3; var14++) {
-              vaa.field_a[var14][var9Lifetime2] = param1;
+              PackedBitSetSupport.field_a[var14][var9Lifetime2] = param1;
               var12 = var12 + var11;
               if (var12 > 0) {
                 var12 = var12 - var10Lifetime2;
@@ -113,7 +113,7 @@ final class ara extends UiComponent {
           var14Lifetime1 = var16;
           while (param3 >= var16) {
             var12 = var12 + var11;
-            vaa.field_a[var9Lifetime2][var16] = param1;
+            PackedBitSetSupport.field_a[var9Lifetime2][var16] = param1;
             if (var12 > 0) {
               var12 = var12 - var10Lifetime2;
               var9Lifetime2 = var9Lifetime2 + var13;

@@ -9,7 +9,7 @@ abstract class fd {
     int field_k;
     int field_b;
     static boolean field_i;
-    static le field_h;
+    static AccountRequestState field_h;
     int field_g;
     static Sprite field_d;
     int field_a;

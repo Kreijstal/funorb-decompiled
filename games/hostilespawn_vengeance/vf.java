@@ -22,7 +22,7 @@ final class vf extends ph {
         try {
           if (!m.c(param0 ^ -77)) {
             if (null != wa.field_q &&
-              wa.field_q.field_g) {
+              wa.field_q.focusLost) {
               tb.f((byte) -119);
               nb.field_F.c(new jh(nb.field_F, hf.field_g), param0 + 118);
             }

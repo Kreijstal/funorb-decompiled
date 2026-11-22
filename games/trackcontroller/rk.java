@@ -8,7 +8,7 @@ final class rk extends wd {
     private dg field_S;
     private boolean field_W;
     static int field_Y;
-    static le field_X;
+    static AccountRequestState field_X;
     private String field_cb;
     private boolean field_U;
     static int field_ab;

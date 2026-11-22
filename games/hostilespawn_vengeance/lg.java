@@ -93,7 +93,7 @@ final class lg extends in {
                       ((bd) (Object) stackIn_17_0).a(true, 128, (int)var13.field_c, var5 - 8, var6 - 8);
                     }
                   }
-                  if (ue.field_d == 0) {
+                  if (FullscreenFocusCanvas.field_d == 0) {
                     if (6 != var13.field_i) {
                       if (var13.field_u != null &&
                         var13.field_i != 128 &&
@@ -227,7 +227,7 @@ final class lg extends in {
                 }
               }
               if ((decompiledFrameRemainder0) &&
-                (0 == ue.field_d)) {
+                (0 == FullscreenFocusCanvas.field_d)) {
                 if (var14.field_i == 6) {
                   var6 = -param0 + (int)((var14.field_l.field_a + (0.5 + (double)var14.field_j.field_g)) * 24.0);
                   var5 = (int)(24.0 * (var14.field_l.field_f + ((double)var14.field_j.field_e + -0.5))) - param3;

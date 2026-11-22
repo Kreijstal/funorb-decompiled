@@ -181,7 +181,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           mo.a(param20, param3, param4, param0, (byte) -16);
           mh.a(param7, -20, param1);
           f.a(param16, param15, param17, param13, param14, (byte) 104);
-          u.a(param6, param12, 250, param9);
+          AccountRequestState.a(param6, param12, 250, param9);
           KeyboardInputHandler.a(param11, (byte) 118, param10, param19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

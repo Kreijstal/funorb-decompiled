@@ -1407,7 +1407,7 @@ class oj extends p {
               mm.field_m[el.field_j].field_l.a(0.9, 0.9, 1);
               el.field_j = el.field_j + 1;
             }
-            ue.a(25, false);
+            FullscreenFocusCanvas.a(25, false);
             if (ha.field_t != 2) {
               return;
             }

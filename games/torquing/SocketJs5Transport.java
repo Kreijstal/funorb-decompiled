@@ -3084,19 +3084,19 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  pp.field_e[0] = SecondaryNodeDeque.a(var2, false);
+                  FullscreenFocusCanvas.field_e[0] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "reconnect_lost_seq,1");
                 if (var2 != null) {
-                  pp.field_e[1] = SecondaryNodeDeque.a(var2, false);
+                  FullscreenFocusCanvas.field_e[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "reconnect_lost_seq,2");
                 if (null != var2) {
-                  pp.field_e[2] = SecondaryNodeDeque.a(var2, false);
+                  FullscreenFocusCanvas.field_e[2] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  pp.field_e[3] = SecondaryNodeDeque.a(var2, false);
+                  FullscreenFocusCanvas.field_e[3] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "reconnect_lost");
                 if (var2 != null) {

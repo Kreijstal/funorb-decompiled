@@ -60,7 +60,7 @@ final class ph {
           wh.field_f = param0;
           int var4_int = 10 / ((69 - param1) / 55);
           id.field_v = param2;
-          ki.field_a = param3;
+          AccountRequestState.field_a = param3;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

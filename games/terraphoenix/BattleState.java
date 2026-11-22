@@ -867,7 +867,7 @@ final class BattleState {
                             fi.field_m = null;
                             this.field_q.field_S = false;
                             ld.field_e = vf.field_a;
-                            og.field_d = -1;
+                            AccountRequestState.field_d = -1;
                             if (var9 == 0) {
                               break regionExit2;
                             }
@@ -896,13 +896,13 @@ final class BattleState {
                           }
                           ProxySocketConnector.field_i = IntrusiveNode.field_c;
                           ld.field_e = vf.field_a;
-                          og.field_d = -1;
+                          AccountRequestState.field_d = -1;
                           this.field_q.field_S = false;
                           this.field_q.tile.unit = null;
                           fi.field_m = this.map.a(false, this.field_q.field_n, this.field_q.field_H, -89, true, this.field_q.field_N, this.field_q.field_E, this.field_q.field_X, this.field_q.field_F);
                           this.field_q.tile.unit = this.field_q;
                           if (fi.field_m != null) {
-                            og.field_d = fi.field_m.a(param1);
+                            AccountRequestState.field_d = fi.field_m.a(param1);
                             if (var9 != 0) {
                               this.b((byte) -3);
                               if (null != var5Lifetime1 &&
@@ -4053,13 +4053,13 @@ final class BattleState {
               var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 + 32 * (ProxySocketConnector.field_i - ld.field_e);
               var6Lifetime1Lifetime1 = var6Lifetime1Lifetime1 + 16 * (ld.field_e + ProxySocketConnector.field_i);
               var7Lifetime1Lifetime1 = this.field_q.field_N;
-              if (og.field_d > 0) {
+              if (AccountRequestState.field_d > 0) {
                 var8_ref_ci = hb.field_p[3];
                 var9 = (int)(24.0 + Math.sin(mm.field_f) * 24.0);
                 ve.a(var8_ref_ci, -5353, var7Lifetime1Lifetime1 * 144 + var9, var6Lifetime1Lifetime1 + (-(var7Lifetime1Lifetime1 * 48) - var9), var4Lifetime1Lifetime1 - 24);
                 var9 = (int)(Math.cos(mm.field_f) * 24.0 + 24.0);
                 ve.a(var8_ref_ci, -5353, var9 + var7Lifetime1Lifetime1 * 144, -var9 - 48 * var7Lifetime1Lifetime1 + var6Lifetime1Lifetime1, -24 + var4Lifetime1Lifetime1);
-                var10_int = og.field_d;
+                var10_int = AccountRequestState.field_d;
                 stackIn_156_0 = this.map;
                 stackIn_156_1 = var6Lifetime1Lifetime1 + (-24 - var7Lifetime1Lifetime1 * 48);
                 if (var10_int > this.field_q.field_jb) {
@@ -4246,7 +4246,7 @@ final class BattleState {
                             if (95 < var10_int) {
                               var10_int = 95;
                             }
-                            og.field_f.a(var10_int + "%", 449, 80 + var8, 16777215, -1);
+                            AccountRequestState.field_f.a(var10_int + "%", 449, 80 + var8, 16777215, -1);
                             if (6 != ((oh) (var9_refLifetime2)).field_g &&
                               7 != ((oh) (var9_refLifetime2)).field_g &&
                               ((oh) (var9_refLifetime2)).field_c < ((oh) (var9_refLifetime2)).a(true)) {
@@ -4352,7 +4352,7 @@ final class BattleState {
                           if (95 < var11_intLifetime1) {
                             var11_intLifetime1 = 95;
                           }
-                          og.field_f.a(var11_intLifetime1 + "%", -464 + (531 + var10_int), 80 + var8, 16777215, -1);
+                          AccountRequestState.field_f.a(var11_intLifetime1 + "%", -464 + (531 + var10_int), 80 + var8, 16777215, -1);
                         }
                       }
                       if (null != this.field_q.field_b) {
@@ -4370,7 +4370,7 @@ final class BattleState {
                           SoftwareRasterizer.e(547, var8 + 35, 48, 48, 16777215);
                           SoftwareRasterizer.e(548, var8 + 36, 46, 46, 16711680);
                         }
-                        og.field_f.a(Integer.toString(this.field_q.field_b.field_d), 589, var8 + 81, 16777215, -1);
+                        AccountRequestState.field_f.a(Integer.toString(this.field_q.field_b.field_d), 589, var8 + 81, 16777215, -1);
                       }
                       if (this.field_q.field_B == 0) {
                         SoftwareRasterizer.d(100, var8 + 67, 24, 24, 0, 128);
@@ -4425,15 +4425,15 @@ final class BattleState {
                     }
                     var16_ref_String = var16_ref_String + "/" + var17;
                   }
-                  og.field_f.c(var15_ref_String, 134, 18 + var8, 0, 0);
-                  og.field_f.c(var16_ref_String, 134, 35 + var8, 0, 0);
-                  og.field_f.c(Integer.toString(this.field_q.field_u + this.field_q.field_m), 134, var8 + 52, 0, 0);
-                  og.field_f.c(var15_ref_String, 135, 17 + var8, 0, 0);
-                  og.field_f.c(var16_ref_String, 135, var8 + 34, 0, 0);
-                  og.field_f.c(Integer.toString(this.field_q.field_m + this.field_q.field_u), 135, var8 + 51, 0, 0);
-                  og.field_f.c(var15_ref_String, 135, 18 + var8, 8421631, -1);
-                  og.field_f.c(var16_ref_String, 135, 35 + var8, 16719904, -1);
-                  og.field_f.c(Integer.toString(this.field_q.field_u + this.field_q.field_m), 135, 52 + var8, 2162464, -1);
+                  AccountRequestState.field_f.c(var15_ref_String, 134, 18 + var8, 0, 0);
+                  AccountRequestState.field_f.c(var16_ref_String, 134, 35 + var8, 0, 0);
+                  AccountRequestState.field_f.c(Integer.toString(this.field_q.field_u + this.field_q.field_m), 134, var8 + 52, 0, 0);
+                  AccountRequestState.field_f.c(var15_ref_String, 135, 17 + var8, 0, 0);
+                  AccountRequestState.field_f.c(var16_ref_String, 135, var8 + 34, 0, 0);
+                  AccountRequestState.field_f.c(Integer.toString(this.field_q.field_m + this.field_q.field_u), 135, var8 + 51, 0, 0);
+                  AccountRequestState.field_f.c(var15_ref_String, 135, 18 + var8, 8421631, -1);
+                  AccountRequestState.field_f.c(var16_ref_String, 135, 35 + var8, 16719904, -1);
+                  AccountRequestState.field_f.c(Integer.toString(this.field_q.field_u + this.field_q.field_m), 135, 52 + var8, 2162464, -1);
                 }
                 if (ha.field_o) {
                   if (this.field_B < 2) {
@@ -4548,12 +4548,12 @@ final class BattleState {
                     }
                     if (~var10_int != ~var13Lifetime1Lifetime1) {
                       th.field_i.b(var4Lifetime1Lifetime1 - th.field_i.field_r + var14Lifetime1, 365);
-                      og.field_f.b(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -12 + var14Lifetime1 - 8), var4Lifetime1Lifetime1, var8 - 5, 52224, -1);
-                      og.field_f.a(Integer.toString(var15Lifetime1), -5 + (var14Lifetime1 + var4Lifetime1Lifetime1), -5 + var8, var16, -1);
+                      AccountRequestState.field_f.b(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -12 + var14Lifetime1 - 8), var4Lifetime1Lifetime1, var8 - 5, 52224, -1);
+                      AccountRequestState.field_f.a(Integer.toString(var15Lifetime1), -5 + (var14Lifetime1 + var4Lifetime1Lifetime1), -5 + var8, var16, -1);
                     } else {
                       vl.field_c.b(var14Lifetime1 + var4Lifetime1Lifetime1 - vl.field_c.field_r, 365);
-                      og.field_f.b(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -20 + var14Lifetime1), var4Lifetime1Lifetime1, var8 - 5, 65280, -1);
-                      og.field_f.a(Integer.toString(var15Lifetime1), -5 + (var4Lifetime1Lifetime1 + var14Lifetime1), -5 + var8, var17Lifetime1, -1);
+                      AccountRequestState.field_f.b(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -20 + var14Lifetime1), var4Lifetime1Lifetime1, var8 - 5, 65280, -1);
+                      AccountRequestState.field_f.a(Integer.toString(var15Lifetime1), -5 + (var4Lifetime1Lifetime1 + var14Lifetime1), -5 + var8, var17Lifetime1, -1);
                     }
                     if (this.units[var11_intLifetime1Lifetime1].field_ob) {
                       SoftwareRasterizer.e(89 - vl.field_c.field_r + var4Lifetime1Lifetime1 - (-var14Lifetime1 + 1), 383, 4, 16777215);
@@ -4563,7 +4563,7 @@ final class BattleState {
                     }
                     if (this.units[var11_intLifetime1Lifetime1].field_v == this.units[var11_intLifetime1Lifetime1].field_jb &&
                       1 == this.units[var11_intLifetime1Lifetime1].field_B) {
-                      og.field_f.a(Integer.toString(var15Lifetime1), var14Lifetime1 + var4Lifetime1Lifetime1 - 5, var8 - 5, var18, -1);
+                      AccountRequestState.field_f.a(Integer.toString(var15Lifetime1), var14Lifetime1 + var4Lifetime1Lifetime1 - 5, var8 - 5, var18, -1);
                     }
                     var11_intLifetime1Lifetime1--;
                     var13Lifetime1Lifetime1--;
@@ -4591,32 +4591,32 @@ final class BattleState {
               var9_refLifetime1 = var8_ref_dlLifetime1.unit;
               var10_intLifetime2 = 80;
               if (null != var9_refLifetime1) {
-                og.field_f.a(((BattleUnit) (var9_refLifetime1)).field_K, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a(((BattleUnit) (var9_refLifetime1)).field_K, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Health " + ((BattleUnit) (var9_refLifetime1)).field_P + "/" + ((BattleUnit) (var9_refLifetime1)).field_mb, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Health " + ((BattleUnit) (var9_refLifetime1)).field_P + "/" + ((BattleUnit) (var9_refLifetime1)).field_mb, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Armour " + ((BattleUnit) (var9_refLifetime1)).field_u + "/" + ((BattleUnit) (var9_refLifetime1)).field_fb, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Armour " + ((BattleUnit) (var9_refLifetime1)).field_u + "/" + ((BattleUnit) (var9_refLifetime1)).field_fb, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Shield " + ((BattleUnit) (var9_refLifetime1)).field_m + "/" + ((BattleUnit) (var9_refLifetime1)).field_J, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Shield " + ((BattleUnit) (var9_refLifetime1)).field_m + "/" + ((BattleUnit) (var9_refLifetime1)).field_J, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Weapon: " + od.field_c[((BattleUnit) (var9_refLifetime1)).field_nb.field_g].field_j, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Weapon: " + od.field_c[((BattleUnit) (var9_refLifetime1)).field_nb.field_g].field_j, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
                 if (null != ((BattleUnit) (var9_refLifetime1)).field_b) {
-                  og.field_f.a("Nades:  " + od.field_c[((BattleUnit) (var9_refLifetime1)).field_b.field_g].field_j + "*" + ((BattleUnit) (var9_refLifetime1)).field_b.field_d, 630, var10_intLifetime2, 16777215, 0);
+                  AccountRequestState.field_f.a("Nades:  " + od.field_c[((BattleUnit) (var9_refLifetime1)).field_b.field_g].field_j + "*" + ((BattleUnit) (var9_refLifetime1)).field_b.field_d, 630, var10_intLifetime2, 16777215, 0);
                 }
                 var10_intLifetime2 += 12;
-                og.field_f.a("Tus " + ((BattleUnit) (var9_refLifetime1)).field_jb + "/" + ((BattleUnit) (var9_refLifetime1)).field_v, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Tus " + ((BattleUnit) (var9_refLifetime1)).field_jb + "/" + ((BattleUnit) (var9_refLifetime1)).field_v, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Interupt " + ((BattleUnit) (var9_refLifetime1)).field_q, 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Interupt " + ((BattleUnit) (var9_refLifetime1)).field_q, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
                 var10_intLifetime2 += 12;
-                og.field_f.a("Use [ and ] to change weapon", 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Use [ and ] to change weapon", 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Use <lt> and > to change tus", 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Use <lt> and > to change tus", 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Hold shift and use <lt> and > to change interupttus", 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Hold shift and use <lt> and > to change interupttus", 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Press / to kill this unit", 630, var10_intLifetime2, 16777215, 0);
+                AccountRequestState.field_f.a("Press / to kill this unit", 630, var10_intLifetime2, 16777215, 0);
                 if (bh.field_e[IntrusiveNode.field_b]) {
                   if (bh.field_e[81]) {
                     ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_q - 1;
@@ -4720,7 +4720,7 @@ final class BattleState {
               if (decompiledFrameRemainder2) {
                 if (var8_ref_dlLifetime1.field_v == 0 ||
                   var8_ref_dlLifetime1.field_v == 1) {
-                  og.field_f.a("Press the numberkeys from 0 to 6 to create a unit here", 630, var10_intLifetime2, 16777215, 0);
+                  AccountRequestState.field_f.a("Press the numberkeys from 0 to 6 to create a unit here", 630, var10_intLifetime2, 16777215, 0);
                   var10_intLifetime2 += 12;
                 }
                 var11 = null;
@@ -4837,8 +4837,8 @@ final class BattleState {
             if (var8 >= 320) {
               var8 = 320;
             }
-            if (var8 < og.field_f.b(jc.field_B)) {
-              var8 = og.field_f.b(jc.field_B);
+            if (var8 < AccountRequestState.field_f.b(jc.field_B)) {
+              var8 = AccountRequestState.field_f.b(jc.field_B);
             }
             var9 = 24 + 24 * vc.field_f.c(this.field_K, var8);
             SoftwareRasterizer.f(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
@@ -4849,7 +4849,7 @@ final class BattleState {
           if (decompiledFrameRemainder0) {
             jl.a(stackIn_753_0, stackIn_753_1, stackIn_753_2, var8 + 26, (byte) 103, -3 + (310 - var8 / 2));
             vc.field_f.a(this.field_K, -(var8 / 2) + 320, 24 + (240 - var9 / 2), var8, var9, 16777215, 0, 1, 0, vc.field_f.field_s);
-            og.field_f.c(jc.field_B, 320, 24 + (var9 / 2 + 240), 16777215, -1);
+            AccountRequestState.field_f.c(jc.field_B, 320, 24 + (var9 / 2 + 240), 16777215, -1);
           }
           vb.field_i = 25;
           ge.field_b = 610;
@@ -4876,18 +4876,18 @@ final class BattleState {
                 if (1 == var8_ref_th.field_d / 5 % 2) {
                   var10_intLifetime1 = 16777215;
                 }
-                og.field_f.b(var8_ref_th.field_b, 21, var9Lifetime1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 19, var9Lifetime1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1 + 1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 20, -1 + var9Lifetime1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1, var10_intLifetime1, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 21, var9Lifetime1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 19, var9Lifetime1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1 + 1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 20, -1 + var9Lifetime1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1, var10_intLifetime1, -1);
               } else {
                 var10_intLifetime1 = 65793 * var8_ref_th.field_d;
-                og.field_f.b(var8_ref_th.field_b, 21, var9Lifetime1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 19, var9Lifetime1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1 + 1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 20, -1 + var9Lifetime1, 0, -1);
-                og.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1, var10_intLifetime1, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 21, var9Lifetime1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 19, var9Lifetime1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1 + 1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 20, -1 + var9Lifetime1, 0, -1);
+                AccountRequestState.field_f.b(var8_ref_th.field_b, 20, var9Lifetime1, var10_intLifetime1, -1);
               }
               if (null != var8_ref_th) {
                 var8_ref_th = var8_ref_th.field_f;
@@ -4908,13 +4908,13 @@ final class BattleState {
             if (null != this.client.field_Eb) {
               boolean decompiledSharedTail0 = (this.client.field_Eb.length != 1);
               if (!decompiledSharedTail0) {
-                og.field_f.a(this.client.field_Eb[0], 178, 6, 332, 33, 16777215, -1, 1, 1, 12);
+                AccountRequestState.field_f.a(this.client.field_Eb[0], 178, 6, 332, 33, 16777215, -1, 1, 1, 12);
                 decompiledSharedTail0 = (var19 != 0);
               }
               if (decompiledSharedTail0) {
-                og.field_f.a(this.client.field_Eb[0], 178, 6, 162, 33, 16777215, -1, 1, 1, 12);
+                AccountRequestState.field_f.a(this.client.field_Eb[0], 178, 6, 162, 33, 16777215, -1, 1, 1, 12);
                 SoftwareRasterizer.f(344, 10, 27, 4473924);
-                og.field_f.a(this.client.field_Eb[1], 348, 6, 162, 33, 16777215, -1, 1, 1, 12);
+                AccountRequestState.field_f.a(this.client.field_Eb[1], 348, 6, 162, 33, 16777215, -1, 1, 1, 12);
               }
             }
           }
@@ -4961,7 +4961,7 @@ final class BattleState {
           fi.field_m = null;
           ProxySocketConnector.field_i = -1;
           ld.field_e = -1;
-          og.field_d = -1;
+          AccountRequestState.field_d = -1;
           if (param0 != -3) {
             this.field_d = 61;
           }

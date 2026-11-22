@@ -213,7 +213,7 @@ final class hd extends hi {
                       var34 = 0.0;
                     }
                     if (2 == ln.field_a.field_y[var7]) {
-                      ue.field_d = 0;
+                      FullscreenFocusCanvas.field_d = 0;
                     }
                     var36 = var34 - var39Lifetime2.field_c;
                     if (128.0 <= var36) {

@@ -53,12 +53,12 @@ final class qa {
         }
     }
 
-    final static oe a(int param0, int param1, int param2, int param3, le param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, le param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        oe var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        oe stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -72,9 +72,9 @@ final class qa {
           if (var8 == null) {
             return null;
           }
-          var7 = new oe();
-          var7.field_c = var8;
-          var7.field_c.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param5, param1);
           var7.addFocusListener(var7);
           var7.requestFocus();

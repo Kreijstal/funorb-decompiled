@@ -1642,7 +1642,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("create_suggestions", 24);
                 if (null != var2) {
-                  fk.field_b = nm.a(125, var2);
+                  AccountRequestState.field_b = nm.a(125, var2);
                 }
                 var2 = vj.a("create_more_suggestions", 24);
                 if (null != var2) {
@@ -2768,7 +2768,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("members_expansion_price_top", 24);
                 if (null != var2) {
-                  ue.field_b = nm.a(123, var2);
+                  FullscreenFocusCanvas.field_b = nm.a(123, var2);
                 }
                 var2 = vj.a("members_expansion_price_bottom", 24);
                 if (null != var2) {

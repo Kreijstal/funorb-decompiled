@@ -286,7 +286,7 @@ final class qj extends IntrusiveNode {
           var14 = (int)(24.0 * (-var9.field_a + ((double)(-var8.field_g) + (var5.field_l.field_a + (double)var6.field_g))));
           var17 = var7.field_r;
           var13 = (int)(24.0 * ((double)var6.field_e + var5.field_l.field_f - (double)var8.field_e - var9.field_f));
-          if (1 == ue.field_d) {
+          if (1 == FullscreenFocusCanvas.field_d) {
             return;
           }
           if (ul.field_L > -1 &&

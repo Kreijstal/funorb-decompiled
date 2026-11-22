@@ -2824,7 +2824,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  le.field_a = ta.a(32200, var2);
+                  AccountRequestState.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_nonmember");
                 if (var2 != null) {

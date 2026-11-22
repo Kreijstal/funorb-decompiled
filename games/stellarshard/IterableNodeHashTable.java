@@ -114,7 +114,7 @@ final class IterableNodeHashTable implements Iterable {
         try {
           jf.d(param1 ^ 0);
           na.field_d.e((byte) 16);
-          af.field_r = new la(va.field_a, (String) null, gk.field_a, param3, param0);
+          af.field_r = new la(FullscreenFocusCanvas.field_a, (String) null, gk.field_a, param3, param0);
           sf.field_f = new pg(na.field_d, af.field_r);
           na.field_d.a((byte) -128, (UiWidget) (sf.field_f));
           if (param1 != -1) {

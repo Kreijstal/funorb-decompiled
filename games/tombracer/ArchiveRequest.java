@@ -9,24 +9,24 @@ abstract class ArchiveRequest extends DualLinkNode {
     final static String a(boolean param0) {
         if (param0) {
           ArchiveRequest.hasFlag2048(-49, 62, -28);
-          if (LegacyOpenGlTexture.field_a == PlayerResultRow.field_y) {
+          if (LegacyOpenGlTexture.registrationRequestState == PlayerResultRow.accountRequestPending) {
             return BridgeTile.field_g;
           }
           if (!DefaultRoomObjectRenderer.field_b.isComplete(88)) {
             return DefaultRoomObjectRenderer.field_b.getName((byte) 119);
           }
-          if (PlayerResultRow.field_y != wt.field_d) {
+          if (PlayerResultRow.accountRequestPending != wt.usernameQueryState) {
             return ScrollControlWidget.field_E;
           }
           return DefaultRoomObjectRenderer.field_b.getName((byte) 100);
         }
-        if (LegacyOpenGlTexture.field_a == PlayerResultRow.field_y) {
+        if (LegacyOpenGlTexture.registrationRequestState == PlayerResultRow.accountRequestPending) {
           return BridgeTile.field_g;
         }
         if (!DefaultRoomObjectRenderer.field_b.isComplete(88)) {
           return DefaultRoomObjectRenderer.field_b.getName((byte) 119);
         }
-        if (PlayerResultRow.field_y != wt.field_d) {
+        if (PlayerResultRow.accountRequestPending != wt.usernameQueryState) {
           return ScrollControlWidget.field_E;
         }
         return DefaultRoomObjectRenderer.field_b.getName((byte) 100);

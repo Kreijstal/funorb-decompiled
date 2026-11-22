@@ -3247,7 +3247,7 @@ final class BattleState {
           this.field_m = param4;
           this.field_J = st.field_d[this.field_m];
           this.field_y = param5;
-          this.field_L = FloodSpecial.a(0, this.playerCount, this.field_o, this.field_k, af.field_a);
+          this.field_L = FloodSpecial.a(0, this.playerCount, this.field_o, this.field_k, AccountRequestState.field_a);
           this.field_D = this.field_L.field_g;
           if (null == this.field_L) {
             throw new RuntimeException();
@@ -3334,7 +3334,7 @@ final class BattleState {
           this.field_g = new int[this.playerCount];
           this.field_p = new vg();
           this.field_T = new paa(this);
-          if (af.field_a) {
+          if (AccountRequestState.field_a) {
             this.tiles[3][6].terrain = 39;
             this.tiles[3][6].field_h = 20;
             this.tiles[4][5].field_h = 20;

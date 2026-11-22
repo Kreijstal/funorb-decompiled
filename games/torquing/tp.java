@@ -3,7 +3,7 @@
  */
 final class tp {
     static int field_g;
-    static gd field_h;
+    static AccountRequestState field_h;
     static int field_i;
     private int field_j;
     static String field_n;
@@ -205,7 +205,7 @@ final class tp {
         long var12 = 0L;
         int var14 = 0;
         field_n = "Instructions";
-        field_h = new gd();
+        field_h = new AccountRequestState();
         field_e = new long[8][256];
         field_m = new long[11];
         field_o = 0;

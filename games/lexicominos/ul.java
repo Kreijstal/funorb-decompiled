@@ -457,7 +457,7 @@ final class ul extends kd {
           be.field_b = uk.a("validation", "commonui", -909811167, param0);
           cl.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
           ql.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
-          ra.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));
+          FullscreenFocusCanvas.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));
           var18 = new db(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
           var5 = PacketBuffer.a(param0, "commonui", true, "screen_options");

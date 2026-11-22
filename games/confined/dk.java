@@ -78,7 +78,7 @@ class dk {
         param0.field_m = param1;
     }
 
-    final static dk a(df param0, java.awt.Component param1, int param2, int param3) {
+    final static dk a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           hg var4 = null;
           Throwable var4_ref = null;
@@ -118,7 +118,7 @@ class dk {
                 field_f == null) {
                 field_f = new sb();
                 field_f.field_c = param0;
-                param0.a((byte) 50, (Runnable) ((Object) field_f), field_g);
+                param0.requestThreadStart((byte) 50, (Runnable) ((Object) field_f), field_g);
               }
               if (field_f != null) {
                 if (field_f.field_k[param2] != null) {

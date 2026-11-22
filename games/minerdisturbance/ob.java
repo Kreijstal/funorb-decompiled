@@ -280,7 +280,7 @@ abstract class ob extends GameAppletShell {
             stackIn_100_3 = !(nc.field_e);
             bb.a(stackIn_96_0, stackIn_97_1, stackIn_99_2, stackIn_100_3);
           }
-          if (bd.field_d) {
+          if (AccountRequestState.field_d) {
             km.a((byte) -69);
           }
           if (hj.field_o == null) {
@@ -448,7 +448,7 @@ abstract class ob extends GameAppletShell {
             if (var10 != null) {
               this.field_A = Integer.parseInt(var10);
             }
-            bd.field_d = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            AccountRequestState.field_d = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(param2, param1, this.field_B, 3, param0, param3, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

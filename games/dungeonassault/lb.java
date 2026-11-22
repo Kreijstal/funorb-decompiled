@@ -138,7 +138,7 @@ final class lb {
           this.field_r = param0.readUnsignedMedium(-121);
           this.field_I = param0.readUnsignedShort(0);
           if (param2 < 2) {
-            this.field_w = ek.field_c;
+            this.field_w = FullscreenFocusCanvas.field_c;
           } else {
             this.field_w = rm.a(param0, 6065);
           }
@@ -318,7 +318,7 @@ final class lb {
         this.field_t = new long[10];
         this.field_c = new long[10];
         this.field_j = new long[10];
-        this.field_w = ek.field_c;
+        this.field_w = FullscreenFocusCanvas.field_c;
         this.field_b = 0;
         this.field_m = 2500;
         this.field_q = -1;

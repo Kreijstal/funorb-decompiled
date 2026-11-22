@@ -182,7 +182,7 @@ final class wk {
             stackIn_14_0 = 3;
             return stackIn_14_0;
           }
-          if (wd.field_d == ql.field_f) {
+          if (wd.field_d == DelegatingCanvas.field_f) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
@@ -190,7 +190,7 @@ final class wk {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (ol.field_i != ql.field_f) {
+          if (ol.field_i != DelegatingCanvas.field_f) {
             return -1;
           }
           stackIn_25_0 = 2;

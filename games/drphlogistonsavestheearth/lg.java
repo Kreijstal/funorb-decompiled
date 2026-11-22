@@ -32,7 +32,7 @@ final class lg implements cg {
         try {
           if (!fa.d(0)) {
             if (null != df.field_l &&
-              df.field_l.field_h) {
+              df.field_l.focusLost) {
               af.b(6);
               hg.field_S.a((byte) -115, (vg) (new ae(hg.field_S, uf.field_a)));
             }

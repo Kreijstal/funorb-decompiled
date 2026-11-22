@@ -5,7 +5,7 @@ final class di {
     static String field_b;
     static int field_c;
     static String field_d;
-    static lk field_a;
+    static AccountRequestState field_a;
 
     final static boolean a(ad param0, ad param1, ad param2, byte param3) {
         RuntimeException var4 = null;
@@ -97,7 +97,7 @@ final class di {
         field_a = null;
         field_b = null;
         if (param0) {
-          field_a = (lk) null;
+          field_a = (AccountRequestState) null;
         }
     }
 
@@ -202,6 +202,6 @@ final class di {
 
     static {
         field_b = "Start Game";
-        field_a = new lk();
+        field_a = new AccountRequestState();
     }
 }

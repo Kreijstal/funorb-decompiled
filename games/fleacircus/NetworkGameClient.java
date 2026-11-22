@@ -116,7 +116,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           oa.field_j == 0) {
           stackIn_26_0 = (oa.field_j != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_26_0;
-          oa.field_j = ld.a(82);
+          oa.field_j = DelegatingCanvas.a(82);
           if (var3Lifetime1 != 0 &&
             oa.field_j == 0 &&
             bh.field_t == 11 &&
@@ -387,7 +387,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         this.k(924);
                       } else {
                         if (8 == var2) {
-                          kf.a(ae.field_a, -3, pd.field_l, fg.field_q);
+                          kf.a(AccountRequestState.field_a, -3, pd.field_l, fg.field_q);
                         } else {
                           if (16 != var2) {
                             if (var2 != 11 &&
@@ -468,11 +468,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -70) {
           this.field_v = false;
         }
-        int var2 = ae.field_a.readUnsignedByte(false);
+        int var2 = AccountRequestState.field_a.readUnsignedByte(false);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + pd.field_l;
         byte[] var5 = new byte[var4];
-        ae.field_a.a(111, var4, 0, var5);
+        AccountRequestState.field_a.a(111, var4, 0, var5);
         me.a(BoundedRandomAccessFile.getApplet((byte) -116), param0 ^ 110, ab.a(0, var5), var3 != 0);
     }
 

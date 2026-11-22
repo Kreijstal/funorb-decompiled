@@ -53,7 +53,7 @@ final class ia extends ln {
           if (decompiledFrameRemainder0) {
             if (!co.field_F) {
               if (cl.field_o >= GzipDecompressor.field_a) {
-                stackIn_20_0 = (cl.field_o < GzipDecompressor.field_a + u.field_a) ? 1 : 0;
+                stackIn_20_0 = (cl.field_o < GzipDecompressor.field_a + AccountRequestState.field_a) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }

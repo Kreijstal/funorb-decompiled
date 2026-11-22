@@ -219,7 +219,7 @@ abstract class ed {
             return (java.awt.Frame) (stackIn_34_0);
           }
           if (var11.field_f == 2) {
-            ib.a(param1, var7, (byte) 115);
+            ib.exitFullscreenFrame(param1, var7, (byte) 115);
             stackIn_37_0 = null;
             return (java.awt.Frame) (stackIn_37_0);
           }

@@ -364,6 +364,14 @@
       "renamedSymbol": "C:Archive"
     },
     {
+      "symbol": "C:le",
+      "originalName": "le",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:lj",
       "originalName": "lj",
       "to": "GameKeyHandler",
@@ -2258,6 +2266,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 e5a91bccd608140054c54969303c77b26ee1019da90069b31dea8910db58d18a.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ld.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:le.b(I)V",
+      "originalName": "b",
+      "to": "releaseStatics",
+      "evidence": "Complete declaration/body reviewed: Clears a before int>-90 invokes unchanged static le.a(18); preserve exact helper and any failure after clear. Name states static cleanup role while retaining all guards, helper calls, exception context and non-reference writes; identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V"
     },
     {
       "symbol": "M:lg.a(I)Lh;",
@@ -4848,9 +4864,9 @@
     },
     {
       "symbol": "C:le",
-      "renamedSymbol": "C:le",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "le",
-      "renamedName": "le",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "le.java",
         "start": 50,
@@ -9028,7 +9044,7 @@
     },
     {
       "symbol": "F:cj.field_e:Lle;",
-      "renamedSymbol": "F:cj.field_e:Lle;",
+      "renamedSymbol": "F:cj.field_e:LAccountRequestState;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -10986,7 +11002,7 @@
     },
     {
       "symbol": "F:fd.field_h:Lle;",
-      "renamedSymbol": "F:fd.field_h:Lle;",
+      "renamedSymbol": "F:fd.field_h:LAccountRequestState;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -13769,7 +13785,7 @@
     },
     {
       "symbol": "F:hf.field_f:Lle;",
-      "renamedSymbol": "F:DiskArchiveStore.field_f:Lle;",
+      "renamedSymbol": "F:DiskArchiveStore.field_f:LAccountRequestState;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -16827,7 +16843,7 @@
     },
     {
       "symbol": "F:le.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:le.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -19940,7 +19956,7 @@
     },
     {
       "symbol": "F:oe.field_b:Lle;",
-      "renamedSymbol": "F:oe.field_b:Lle;",
+      "renamedSymbol": "F:oe.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -24131,7 +24147,7 @@
     },
     {
       "symbol": "F:rk.field_X:Lle;",
-      "renamedSymbol": "F:rk.field_X:Lle;",
+      "renamedSymbol": "F:rk.field_X:LAccountRequestState;",
       "originalName": "field_X",
       "renamedName": "field_X",
       "declaration": {
@@ -152699,7 +152715,7 @@
     },
     {
       "symbol": "M:le.a(I)Lrd;",
-      "renamedSymbol": "M:le.a(I)Lrd;",
+      "renamedSymbol": "M:AccountRequestState.a(I)Lrd;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -152710,9 +152726,9 @@
     },
     {
       "symbol": "M:le.b(I)V",
-      "renamedSymbol": "M:le.b(I)V",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "le.java",
         "start": 193,
@@ -152721,7 +152737,7 @@
     },
     {
       "symbol": "M:le.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:le.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -192145,7 +192161,7 @@
     },
     {
       "symbol": "P:le.a(I)Lrd;#0",
-      "renamedSymbol": "P:le.a(I)Lrd;#0",
+      "renamedSymbol": "P:AccountRequestState.a(I)Lrd;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192156,7 +192172,7 @@
     },
     {
       "symbol": "P:le.b(I)V#0",
-      "renamedSymbol": "P:le.b(I)V#0",
+      "renamedSymbol": "P:AccountRequestState.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219638,7 +219654,7 @@
       "original": "TrackController.java",
       "renamed": "TrackController.java",
       "inputSha256": "49d744ca886e6641bafaca916524c2cb5d5fa26126d63ff119698b88cb016b28",
-      "outputSha256": "e8a83dc378207ce13a7beae50e39b4a5008bf288c8d69b2ad5830ea179f493a0",
+      "outputSha256": "cae43353f1ee554f052d3da0447396e9dc562f2c10b66e3bd1274d2fb8e28b97",
       "edits": [
         {
           "start": 100,
@@ -221186,6 +221202,20 @@
           "symbol": "M:cf.d(I)V",
           "original": "d",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 14178,
+          "end": 14180,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 14181,
+          "end": 14182,
+          "symbol": "M:le.b(I)V",
+          "original": "b",
+          "renamed": "releaseStatics"
         },
         {
           "start": 14198,
@@ -231204,8 +231234,15 @@
       "original": "cj.java",
       "renamed": "cj.java",
       "inputSha256": "b7402dda3379188337967fb5771c0edd57b15797ff521ad9768226a259575229",
-      "outputSha256": "0adcd688f17af6cbe11109bf4b0e4021b12a734f6d626e582560abe02d3a7ba3",
+      "outputSha256": "460be0887ee2bb27ba73d28a0abc986d5a514778c1f182e1a9608343b30c5a03",
       "edits": [
+        {
+          "start": 152,
+          "end": 154,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 230,
           "end": 232,
@@ -231347,6 +231384,13 @@
           "renamed": "writeByte"
         },
         {
+          "start": 8711,
+          "end": 8713,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 8784,
           "end": 8786,
           "symbol": "C:qj",
@@ -231380,6 +231424,13 @@
           "symbol": "C:be",
           "original": "be",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 9152,
+          "end": 9154,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 9270,
@@ -231478,6 +231529,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 11875,
+          "end": 11877,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 11903,
@@ -239865,8 +239923,15 @@
       "original": "fd.java",
       "renamed": "fd.java",
       "inputSha256": "7748e41a806c5ef96d609b2feb4e6d72bbcc0cef15b0d622c975a9394fce7752",
-      "outputSha256": "ea61c0ad339da22bd22676d57fdf3bd76bfff85c01e709dee58f83f0c5eedcec",
+      "outputSha256": "bc4de1edefd5a9807021e93af6d97972601b5a91d3c6bf40620d8e957829354b",
       "edits": [
+        {
+          "start": 216,
+          "end": 218,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 256,
           "end": 258,
@@ -244344,7 +244409,7 @@
       "original": "hf.java",
       "renamed": "DiskArchiveStore.java",
       "inputSha256": "9501e03a28c16d4d48c4520500fea77a5dd8e06e9481e9d02f32ed8fa6103138",
-      "outputSha256": "ee7f316bbcbbfa868004846b08505e0510c0328780af9ffb42886e052bda69a7",
+      "outputSha256": "c2e84170473caa29486a72314271ade84cb63526e975d0a22e651f8c57eb6b86",
       "edits": [
         {
           "start": 69,
@@ -244352,6 +244417,13 @@
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 110,
+          "end": 112,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 134,
@@ -244513,6 +244585,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 6537,
+          "end": 6539,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6597,
@@ -245188,6 +245267,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 22220,
+          "end": 22222,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -248297,7 +248383,7 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "c2042d34c5ef4d79155afa45156028b829ff34ea02ca3c79358dbae732456c38",
-      "outputSha256": "ddbaf60b242facf24637a8a5c666de731a8892b6d3ddaa4c9f77349e58504319",
+      "outputSha256": "a3ff350118149ff7fbe705bf33700087e2a3104d558558896553fe811c6052fe",
       "edits": [
         {
           "start": 130,
@@ -248564,6 +248650,13 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 13427,
+          "end": 13429,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 13890,
@@ -250525,8 +250618,15 @@
       "original": "jh.java",
       "renamed": "jh.java",
       "inputSha256": "6242590055cacd952bcb77162e02f79b4e0f3be6c9eb4d98db4cef94337280a3",
-      "outputSha256": "123d2ffb2284c1eba085cef02cb211dbb858c9436dd9b3d07f62cd9ef006fc00",
+      "outputSha256": "a91305b18e7f1f7c5f32e993f84ae79c5737309a999b228638f47da96762c6ea",
       "edits": [
+        {
+          "start": 139,
+          "end": 141,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 300,
           "end": 302,
@@ -254186,10 +254286,32 @@
     },
     {
       "original": "le.java",
-      "renamed": "le.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "73d213535db827212a2ff85f8145d7af4df04cbff90030383862379e43b160fb",
-      "outputSha256": "73d213535db827212a2ff85f8145d7af4df04cbff90030383862379e43b160fb",
-      "edits": []
+      "outputSha256": "0d6c7d0ce1f93941e9979ff062d113b58f487f5234f52b8ba4ffeca82423303a",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 193,
+          "end": 194,
+          "symbol": "M:le.b(I)V",
+          "original": "b",
+          "renamed": "releaseStatics"
+        },
+        {
+          "start": 271,
+          "end": 273,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        }
+      ]
     },
     {
       "original": "lf.java",
@@ -266467,8 +266589,15 @@
       "original": "oe.java",
       "renamed": "oe.java",
       "inputSha256": "d4639ba3f3f6d74169d59464148ed7837c4dfa5c23628a4989d2d8a1e5489ad2",
-      "outputSha256": "756ca78d342272d2f20c4c69b512a506f2b323573ce63ccf506af3b368bf131b",
+      "outputSha256": "5bca774b24310da02920c17f82afc71c211cfdebe5a0f49c88b9549aa7804c16",
       "edits": [
+        {
+          "start": 141,
+          "end": 143,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 204,
           "end": 205,
@@ -266559,6 +266688,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 5122,
+          "end": 5124,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -281061,8 +281197,15 @@
       "original": "rk.java",
       "renamed": "rk.java",
       "inputSha256": "d564bf876a1c7e0a50cf77be7050a8d3f71a814bf0c68122bf98f0d7a37dd4c0",
-      "outputSha256": "8d769f94ff64c6bf4f95d1be9885af051b79c992b41e3252214b0e01ea9fe762",
+      "outputSha256": "bc581032d4e824e0a2acd5620911558795ac935593c8025b8bb9f7f397c8160f",
       "edits": [
+        {
+          "start": 236,
+          "end": 238,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1125,
           "end": 1127,
@@ -282081,7 +282224,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "f8ee2a92c2d52359d95b227838766cf09d51eef90becfbd92ea7d42bebc1d97e",
-      "outputSha256": "0469c818fdab45199c1ca2ee9cf4d0cca0a71ca31bae38f4ab41b3ea1d1b89e7",
+      "outputSha256": "d1d37150e027b45492ced28e6c1b216dc4ba1c7d047398ad00da4e9dacbd66ac",
       "edits": [
         {
           "start": 75,
@@ -282481,6 +282624,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "LevelView"
+        },
+        {
+          "start": 104825,
+          "end": 104827,
+          "symbol": "C:le",
+          "original": "le",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 105131,
@@ -292170,10 +292320,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "bcd781d655d24b27124f513f6c3ed9196ee70c26d2fb47e81dde2b6a7f15b279",
+    "rulesSha256": "027a4c3a0c2a3529ed147bed40b2ebb3c4fa8ee6fff345642fb88984d7750e8f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "d4514dadb16e522b141bd4b9183418ac7d8e0be34c9a06e341ef9622892b793e",
+    "outputTreeSha256": "3b97fb7a5cc14e92a8ee2a58e9a968ea0ac07a708942ada07c793927a27fb70d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

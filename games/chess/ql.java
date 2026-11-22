@@ -38,11 +38,11 @@ final class ql {
         int var2_int;
         byte[] var3;
         if (param1 == 100) {
-          if (g.field_h > 0) {
-            fieldTemp$1 = g.field_h - 1;
-            g.field_h = g.field_h - 1;
+          if (DelegatingCanvas.field_h > 0) {
+            fieldTemp$1 = DelegatingCanvas.field_h - 1;
+            DelegatingCanvas.field_h = DelegatingCanvas.field_h - 1;
             var2 = hk.field_K[fieldTemp$1];
-            hk.field_K[g.field_h] = null;
+            hk.field_K[DelegatingCanvas.field_h] = null;
             return var2;
           }
           if (5000 == param1 &&

@@ -3,7 +3,7 @@
  */
 final class kq extends EventEffect {
     static int field_i;
-    static af field_j;
+    static AccountRequestState field_j;
     static int field_k;
 
     kq() {
@@ -40,7 +40,7 @@ final class kq extends EventEffect {
     }
 
     static {
-        field_j = new af();
+        field_j = new AccountRequestState();
         field_k = 0;
     }
 }

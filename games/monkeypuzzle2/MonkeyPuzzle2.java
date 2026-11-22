@@ -42,7 +42,7 @@ public final class MonkeyPuzzle2 extends bi {
           aa.a(-11449);
           if (ba.field_f != null) {
             vh.a(ba.field_f, (byte) -117);
-            ba.field_f.a((byte) -107, rc.field_k);
+            ba.field_f.exitFullscreen((byte) -107, rc.field_k);
           }
           if (param0) {
             MonkeyPuzzle2.g((byte) -20);
@@ -88,7 +88,7 @@ public final class MonkeyPuzzle2 extends bi {
           ne.b((byte) -17);
           ba.clearStaticReferences(false);
           pd.a((byte) 105);
-          r.a((byte) -124);
+          FullscreenFocusCanvas.a((byte) -124);
           oe.d(-12248);
           kk.clearStaticReferences((byte) -104);
           hj.c(1903697041);
@@ -159,7 +159,7 @@ public final class MonkeyPuzzle2 extends bi {
           lf.clearStaticReferences(false);
           ef.a(true);
           pl.b((byte) -77);
-          ji.a(-101);
+          DelegatingCanvas.a(-101);
           ec.clearStaticReferences((byte) 123);
           ol.clearStaticReferences(120);
           ob.f(8364);
@@ -271,7 +271,7 @@ public final class MonkeyPuzzle2 extends bi {
           rb.i(-121);
           m.a(49);
           rk.a(10);
-          lk.clearStaticReferences(true);
+          AccountRequestState.clearStaticReferences(true);
           AccountServiceResult.a(50);
           h.a((byte) 85);
           ib.a(55);
@@ -428,7 +428,7 @@ public final class MonkeyPuzzle2 extends bi {
         try {
           ld.a(false);
           if (ba.field_f != null &&
-            ba.field_f.field_d) {
+            ba.field_f.focusLost) {
             rb.h(3591);
             cm.k(param0 - 15241);
           }
@@ -465,7 +465,7 @@ public final class MonkeyPuzzle2 extends bi {
                     var2_int == 2)) {
                     if (ba.field_f != null) {
                       vh.a(ba.field_f, (byte) 47);
-                      ba.field_f.a((byte) -107, rc.field_k);
+                      ba.field_f.exitFullscreen((byte) -107, rc.field_k);
                       ba.field_f = null;
                     }
                     if ((var2_int == 2)) {

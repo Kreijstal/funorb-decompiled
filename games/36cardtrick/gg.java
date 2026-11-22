@@ -3,7 +3,7 @@
  */
 final class gg {
     static int field_d;
-    static sc field_b;
+    static AccountRequestState field_b;
     static boolean field_a;
     static String field_c;
 
@@ -100,7 +100,7 @@ final class gg {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
               if (param1 != 7380) {
-                field_b = (sc) null;
+                field_b = (AccountRequestState) null;
               }
               param0.getAppletContext().showDocument(fh.a(param0, var2, param1 - 7381), "_top");
               return;
@@ -131,6 +131,6 @@ final class gg {
 
     static {
         field_c = "Discard";
-        field_b = new sc();
+        field_b = new AccountRequestState();
     }
 }

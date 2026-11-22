@@ -37,14 +37,14 @@ final class vl extends em {
             var5 = (pe) null;
             vl.a((pe) null, (pe) null, 95);
           }
-          if (param0.field_nb == bd.field_j) {
+          if (param0.field_nb == AccountRequestState.field_j) {
             var3_int -= 200;
           } else {
             if (param0.field_nb == null) {
               var3_int += 200;
             }
           }
-          if (bd.field_j != param1.field_nb) {
+          if (AccountRequestState.field_j != param1.field_nb) {
             if (null == param1.field_nb) {
               var3_int -= 200;
             }
@@ -77,7 +77,7 @@ final class vl extends em {
         wc.field_b = false;
         oj.a(param0, 3);
         ic.field_l = mc.field_t;
-        bd.field_h = mc.field_t;
+        AccountRequestState.field_h = mc.field_t;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {

@@ -56,7 +56,7 @@ final class qg extends am {
           var5_int = param1.a(param4 ^ -256, param2);
           var6 = param1.a(param3, -112, var5_int);
           if (param4 == 255) {
-            stackIn_4_0 = gd.a(param1, var5_int, param0, var6, param4 ^ 237);
+            stackIn_4_0 = AccountRequestState.a(param1, var5_int, param0, var6, param4 ^ 237);
             return stackIn_4_0;
           }
           stackIn_2_0 = (vn) null;

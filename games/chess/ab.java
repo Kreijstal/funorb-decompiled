@@ -88,7 +88,7 @@ abstract class ab extends l {
         var6 = Chess.field_G;
         try {
           var10 = (CharSequence) ((Object) param2);
-          if (!ed.a(var10, 21257)) {
+          if (!AccountRequestState.a(var10, 21257)) {
             stackIn_3_0 = qj.field_a;
             return stackIn_3_0;
           }

@@ -578,7 +578,7 @@ final class fc {
                     this.field_d = this.field_d + 1;
                     this.field_s = 0;
                     if ((this.field_d & 1) == 1) {
-                      ki.a(1000000 + this.field_d * 40000 - 40000, this.field_I, -104);
+                      AccountRequestState.a(1000000 + this.field_d * 40000 - 40000, this.field_I, -104);
                     }
                   }
                   if (this.field_d == 5) {
@@ -730,7 +730,7 @@ final class fc {
                 this.field_n = this.field_n + 1;
                 if ((438 <= this.field_n) &&
                   (decompiledFrameRemainder1 = (-1 == this.field_b))) {
-                  if (ki.a((byte) -112)) {
+                  if (AccountRequestState.a((byte) -112)) {
                     stackIn_218_0 = ((MouseWheelInput.field_a | this.field_J) == 0) ? 0 : 6;
                     var5 = stackIn_218_0;
                     this.field_u.a((byte) 88, false, var5, var5);
@@ -889,7 +889,7 @@ final class fc {
         if (this.field_h) {
           return;
         }
-        if (ki.a((byte) -102)) {
+        if (AccountRequestState.a((byte) -102)) {
           rb.field_b.b(104, new vb(param2, param1, this.field_U, this.field_P, this.field_W, this.field_N));
         } else {
           qd.a(this.field_N, 11803, this.field_W, this.field_P, param1, param2, 4, this.field_U);
@@ -1523,10 +1523,10 @@ final class fc {
             } else {
               if (var3Lifetime1 == 4) {
                 if (this.field_J > 0 &&
-                  !ki.a((byte) -115) &&
+                  !AccountRequestState.a((byte) -115) &&
                   this.field_b == -1 &&
                   !this.field_h) {
-                  ki.field_d = gl.a(65526, 9, this.field_i, 3, this.field_f, (byte) 56, this.field_R, new int[]{64 * this.field_J + this.field_m.field_i}, this.field_a);
+                  AccountRequestState.field_d = gl.a(65526, 9, this.field_i, 3, this.field_f, (byte) 56, this.field_R, new int[]{64 * this.field_J + this.field_m.field_i}, this.field_a);
                 }
                 nh.a(0, 1000000, 7, true);
               }

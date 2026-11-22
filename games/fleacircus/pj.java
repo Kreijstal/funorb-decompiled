@@ -40,7 +40,7 @@ final class pj extends cb {
         int var11Lifetime1;
         var12 = fleas.field_A ? 1 : 0;
         try {
-          var13 = ae.field_a;
+          var13 = AccountRequestState.field_a;
           var15 = var13;
           var2 = var15.readUnsignedByte(false);
           if (param0 <= 62) {

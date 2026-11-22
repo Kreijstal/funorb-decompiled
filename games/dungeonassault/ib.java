@@ -57,7 +57,7 @@ final class ib {
           return;
         }
         pd.a(cm.field_R, -32);
-        cm.field_R.a(i.field_A, 0);
+        cm.field_R.exitFullscreen(i.field_A, 0);
         cm.field_R = null;
         if (il.field_c != null) {
           il.field_c.a(6733);
@@ -142,7 +142,7 @@ final class ib {
     }
 
     final static void c(int param0) {
-        ek.field_b.b((byte) 52);
+        FullscreenFocusCanvas.field_b.b((byte) 52);
         int var1 = -60 % ((18 - param0) / 61);
     }
 

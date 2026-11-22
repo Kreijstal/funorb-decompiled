@@ -120,10 +120,10 @@ abstract class gb {
               var3 = var3 + param1;
             }
             ll.a(-1054, var3);
-            var7 = qb.a(":", (byte) 127, "%3a", var3);
-            var8 = qb.a("@", (byte) 127, "%40", var7);
-            var9 = qb.a("&", (byte) 127, "%26", var8);
-            var10 = qb.a("#", (byte) 127, "%23", var9);
+            var7 = AccountRequestState.a(":", (byte) 127, "%3a", var3);
+            var8 = AccountRequestState.a("@", (byte) 127, "%40", var7);
+            var9 = AccountRequestState.a("&", (byte) 127, "%26", var8);
+            var10 = AccountRequestState.a("#", (byte) 127, "%23", var9);
             if (LevelSession.field_K == null) {
               return;
             }

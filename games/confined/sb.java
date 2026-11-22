@@ -11,7 +11,7 @@ final class sb implements Runnable {
     static int field_f;
     static double[] field_a;
     volatile dk[] field_k;
-    df field_c;
+    PlatformTaskDispatcher field_c;
     volatile boolean field_j;
 
     public static void a(int param0) {

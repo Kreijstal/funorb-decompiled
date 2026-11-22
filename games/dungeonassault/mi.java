@@ -131,7 +131,7 @@ final class mi {
           tm.field_b = dk.a(131, 1, "da_raid_lose");
           gl.field_Ib = dk.a(200, 1, "da_stressing_music");
           dd.field_B = dk.a(100, 1, "da_defeat_monster");
-          ek.field_b.field_A.f(-50);
+          FullscreenFocusCanvas.field_b.field_A.f(-50);
           ha.field_k = null;
           return;
         }
@@ -140,17 +140,17 @@ final class mi {
         tm.field_b = dk.a(131, 1, "da_raid_lose");
         gl.field_Ib = dk.a(200, 1, "da_stressing_music");
         dd.field_B = dk.a(100, 1, "da_defeat_monster");
-        ek.field_b.field_A.f(-50);
+        FullscreenFocusCanvas.field_b.field_A.f(-50);
         ha.field_k = null;
     }
 
     final static void b(int param0) {
         int var1 = 0;
-        if (ql.field_d >= 224) {
+        if (DelegatingCanvas.field_d >= 224) {
           um.a(256, false);
         } else {
-          var1 = ql.field_d % 32;
-          um.a(-var1 + (ql.field_d + 32), false);
+          var1 = DelegatingCanvas.field_d % 32;
+          um.a(-var1 + (DelegatingCanvas.field_d + 32), false);
         }
         if (param0 == 210041889) {
           return;

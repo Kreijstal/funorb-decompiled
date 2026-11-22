@@ -464,7 +464,7 @@ final class hb extends bg {
               } else {
                 switch (var8_int) {
                   case 3:
-                    ee.a(1, -109, 3);
+                    AccountRequestState.a(1, -109, 3);
                     var5 = 1;
                     this.a(13, (byte) -36);
                     break;
@@ -486,7 +486,7 @@ final class hb extends bg {
                       if (param0.field_X != -50) {
                         this.a(8, (byte) -36);
                       } else {
-                        ee.a(0, -70, 14);
+                        AccountRequestState.a(0, -70, 14);
                         this.a(15, (byte) -36);
                       }
                     }
@@ -503,7 +503,7 @@ final class hb extends bg {
                     var5 = 1;
                     break;
                   case 2:
-                    ee.a(0, -85, 3);
+                    AccountRequestState.a(0, -85, 3);
                     var5 = 1;
                     this.a(5, (byte) -36);
                     break;

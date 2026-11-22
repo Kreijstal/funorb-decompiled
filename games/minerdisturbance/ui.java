@@ -73,7 +73,7 @@ class ui extends hc {
         this.field_R = false;
         try {
           this.field_M = param2;
-          this.field_A = bd.field_c.field_a;
+          this.field_A = AccountRequestState.field_c.field_a;
           this.a(true, false, param0);
           this.field_Q = true;
           this.field_K = sf.a((byte) 109);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class he extends IntrusiveNode {
-    static mf field_p;
+    static AccountRequestState field_p;
     int[] field_g;
     int field_m;
     int field_s;
@@ -20,7 +20,7 @@ final class he extends IntrusiveNode {
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param0 != 4) {
-          field_p = (mf) null;
+          field_p = (AccountRequestState) null;
         }
         if (param2) {
           var4 += 4;
@@ -104,9 +104,9 @@ final class he extends IntrusiveNode {
               var18[0][4 * var10] = sj.field_j[var11];
               var18[0][var10 * 4 + 1] = nh.field_S[var11];
               var18[0][var10 * 4 + 2] = gk.field_i[var11];
-              var18[0][4 * var10 + 3] = th.field_c[var11];
+              var18[0][4 * var10 + 3] = DelegatingCanvas.field_c[var11];
               if (s.a(wh.field_c[var11], param0 - 3) &&
-                gk.field_i[var11] + nh.field_S[var11] + th.field_c[var11] == 0) {
+                gk.field_i[var11] + nh.field_S[var11] + DelegatingCanvas.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -122,9 +122,9 @@ final class he extends IntrusiveNode {
               var18[1][4 * var13] = sj.field_j[var11Lifetime1];
               var18[1][4 * var13 + 1] = nh.field_S[var11Lifetime1];
               var18[1][4 * var13 + 2] = gk.field_i[var11Lifetime1];
-              var18[1][3 + 4 * var13] = th.field_c[var11Lifetime1];
+              var18[1][3 + 4 * var13] = DelegatingCanvas.field_c[var11Lifetime1];
               if (s.a(wh.field_c[var11Lifetime1], -97) &&
-                nh.field_S[var11Lifetime1] - (-gk.field_i[var11Lifetime1] - th.field_c[var11Lifetime1]) == 0) {
+                nh.field_S[var11Lifetime1] - (-gk.field_i[var11Lifetime1] - DelegatingCanvas.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -175,7 +175,7 @@ final class he extends IntrusiveNode {
     static {
         field_l = "Checking";
         field_n = new Slime[3];
-        field_p = new mf();
+        field_p = new AccountRequestState();
         field_i = "Unpacking graphics";
     }
 }

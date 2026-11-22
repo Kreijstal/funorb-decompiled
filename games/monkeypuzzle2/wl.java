@@ -157,7 +157,7 @@ abstract class wl {
           return;
         }
         vh.a(ba.field_f, (byte) 9);
-        ba.field_f.a((byte) -107, rc.field_k);
+        ba.field_f.exitFullscreen((byte) -107, rc.field_k);
         ba.field_f = null;
         if (ci.field_a != null) {
           ci.field_a.e(0);

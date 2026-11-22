@@ -2731,7 +2731,7 @@ final class pc {
           var7 = var5_int - 10;
           if (param3.field_f > 0 &&
             null != param3.field_x) {
-            fk.a((byte) -74);
+            AccountRequestState.a((byte) -74);
           }
           th.field_Lb = 0;
           var8 = 0;

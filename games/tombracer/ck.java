@@ -188,7 +188,7 @@ final class ck {
             RoomRegion.field_l.addChild(-122, RopeBridgeComponent.field_F);
           }
           RoomRegion.field_l.addChild(-124, MidiPatch.field_n);
-          bc.field_b = new UiComponent(0L, ClipStack.field_g, OpenGlSprite.field_k.toUpperCase());
+          NameEntryKeyboardSupport.field_b = new UiComponent(0L, ClipStack.field_g, OpenGlSprite.field_k.toUpperCase());
           StatusEffect.field_g = new UiComponent(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new UiComponent(0L, CommonChooseReward.field_c);
           FullscreenDialogLayout.field_b = new UiComponent(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());

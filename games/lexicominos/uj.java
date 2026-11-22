@@ -84,7 +84,7 @@ final class uj implements rd {
             stackIn_12_2 = null;
             stackIn_12_3 = null;
             stackIn_12_4 = tg.field_i.getCodeBase();
-            stackIn_12_5 = new StringBuilder().append("clienterror.ws?c=").append(ki.field_f).append("&u=");
+            stackIn_12_5 = new StringBuilder().append("clienterror.ws?c=").append(AccountRequestState.field_f).append("&u=");
             if (null != gl.field_b) {
               stackIn_13_2 = null;
               stackIn_13_3 = null;

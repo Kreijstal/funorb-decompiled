@@ -256,7 +256,7 @@ final class gh extends r {
               }
               var10 = stackIn_44_0;
               if (var10 != null) {
-                var10.a(-ae.field_c + var9Lifetime1, 0, var8Lifetime1 + (ae.field_c << 1), hb.field_t + (ge.field_h << 1), var1_int);
+                var10.a(-AccountRequestState.field_c + var9Lifetime1, 0, var8Lifetime1 + (AccountRequestState.field_c << 1), hb.field_t + (ge.field_h << 1), var1_int);
               }
               var1_int = var1_int + ge.field_h;
             }

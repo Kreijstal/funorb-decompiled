@@ -23,11 +23,11 @@ abstract class ab extends GameApplet {
     private int field_z;
 
     private final void h(int param0) {
-        ef.field_c[param0] = true;
+        AccountRequestState.field_c[param0] = true;
     }
 
     private final void i(int param0) {
-        ef.field_c[1] = true;
+        AccountRequestState.field_c[1] = true;
         if (param0 != -13072) {
           this.field_x = (String) null;
         }
@@ -182,25 +182,25 @@ abstract class ab extends GameApplet {
         int var2 = this.j(-1);
         if (var2 == 0 ||
           var2 == 1) {
-          if (ef.field_c[1]) {
+          if (AccountRequestState.field_c[1]) {
             gh.a(2, 9543);
           }
-          if (ef.field_c[2]) {
+          if (AccountRequestState.field_c[2]) {
             FullscreenFocusCanvas.a(3, (byte) -100);
           }
-          if (ef.field_c[3]) {
+          if (AccountRequestState.field_c[3]) {
             hi.a(4, -5887);
           }
-          if (ef.field_c[4]) {
+          if (AccountRequestState.field_c[4]) {
             SecondaryNodeDeque.a(5, 18897);
           }
-          if (ef.field_c[5]) {
+          if (AccountRequestState.field_c[5]) {
             ci.a((byte) -77, 6);
           }
-          if (ef.field_c[6]) {
+          if (AccountRequestState.field_c[6]) {
             SpriteState.b(36951, 7);
           }
-          if (ef.field_c[8]) {
+          if (AccountRequestState.field_c[8]) {
             ff.a((byte) -89);
           }
         }
@@ -216,7 +216,7 @@ abstract class ab extends GameApplet {
         var4 = SolKnight.field_L ? 1 : 0;
         var2 = ob.field_h;
         if (64 > var2 &&
-          ef.field_c[var2]) {
+          AccountRequestState.field_c[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -507,7 +507,7 @@ abstract class ab extends GameApplet {
         if (!param4) {
           this.field_m = -97;
         }
-        ef.field_g = param2;
+        AccountRequestState.field_g = param2;
         og.field_c = param7;
         vd.field_c = param0;
         aj.field_u = param6;
@@ -517,7 +517,7 @@ abstract class ab extends GameApplet {
     }
 
     private final void f(byte param0) {
-        ef.field_c[4] = true;
+        AccountRequestState.field_c[4] = true;
         if (param0 < 6) {
           this.g(122);
         }
@@ -554,38 +554,38 @@ abstract class ab extends GameApplet {
     }
 
     private final void c(boolean param0, boolean param1) {
-        ef.field_c[8] = param1;
-        ef.field_c[7] = true;
+        AccountRequestState.field_c[8] = param1;
+        AccountRequestState.field_c[7] = true;
         if (param0) {
           return;
         }
-        ef.field_c[18] = true;
-        ef.field_c[17] = true;
-        ef.field_c[16] = true;
-        ef.field_c[3] = true;
-        ef.field_c[0] = true;
+        AccountRequestState.field_c[18] = true;
+        AccountRequestState.field_c[17] = true;
+        AccountRequestState.field_c[16] = true;
+        AccountRequestState.field_c[3] = true;
+        AccountRequestState.field_c[0] = true;
     }
 
     private final void g(byte param0) {
-        ef.field_b[18] = 1;
-        ef.field_b[3] = -1;
-        ef.field_b[16] = -1;
-        ef.field_b[5] = -1;
-        ef.field_b[11] = -1;
-        ef.field_b[7] = -1;
-        ef.field_b[4] = -1;
-        ef.field_b[2] = -2;
-        ef.field_b[9] = -1;
-        ef.field_b[1] = 16;
-        ef.field_b[6] = -2;
-        ef.field_b[13] = -1;
+        AccountRequestState.field_b[18] = 1;
+        AccountRequestState.field_b[3] = -1;
+        AccountRequestState.field_b[16] = -1;
+        AccountRequestState.field_b[5] = -1;
+        AccountRequestState.field_b[11] = -1;
+        AccountRequestState.field_b[7] = -1;
+        AccountRequestState.field_b[4] = -1;
+        AccountRequestState.field_b[2] = -2;
+        AccountRequestState.field_b[9] = -1;
+        AccountRequestState.field_b[1] = 16;
+        AccountRequestState.field_b[6] = -2;
+        AccountRequestState.field_b[13] = -1;
         if (param0 < 64) {
           return;
         }
-        ef.field_b[10] = -1;
-        ef.field_b[17] = -1;
-        ef.field_b[8] = -2;
-        ef.field_b[12] = -1;
+        AccountRequestState.field_b[10] = -1;
+        AccountRequestState.field_b[17] = -1;
+        AccountRequestState.field_b[8] = -2;
+        AccountRequestState.field_b[12] = -1;
     }
 
     private final void k(int param0) {
@@ -607,7 +607,7 @@ abstract class ab extends GameApplet {
         if (param0) {
           return;
         }
-        ef.field_c[2] = true;
+        AccountRequestState.field_c[2] = true;
     }
 
     final void a(int param0, boolean param1) {
@@ -738,7 +738,7 @@ abstract class ab extends GameApplet {
             af.field_c = IsaacRandom.a(og.field_c, 82);
           }
           lh.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
-          DelegatingCanvas.field_c = pj.a(ef.field_g, (byte) -126, 1, false, true);
+          DelegatingCanvas.field_c = pj.a(AccountRequestState.field_g, (byte) -126, 1, false, true);
           AccountCreationResultPanel.field_ub = pj.a(aj.field_u, (byte) 52, 1, false, true);
           pl.field_d = lh.field_o;
           ai.field_b = DelegatingCanvas.field_c;
@@ -833,7 +833,7 @@ abstract class ab extends GameApplet {
           this.a(true);
           th.a((byte) -69, dc.field_q);
         }
-        if (ef.field_c[8]) {
+        if (AccountRequestState.field_c[8]) {
           ArchiveSource.b(param0 + 11);
         }
     }

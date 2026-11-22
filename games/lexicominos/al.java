@@ -30,42 +30,42 @@ abstract class al extends nb {
           super.a((byte) -115, param1, param2, param3);
           return;
         }
-        if (ki.field_c == null) {
-          ki.field_c = new db(this.field_j, this.field_v);
-          de.a(ki.field_c, param0 + 121);
+        if (AccountRequestState.field_c == null) {
+          AccountRequestState.field_c = new db(this.field_j, this.field_v);
+          de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.a();
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
-          ki.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+          AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
-        if (ki.field_c.field_p < this.field_j) {
-          ki.field_c = new db(this.field_j, this.field_v);
-          de.a(ki.field_c, param0 + 121);
+        if (AccountRequestState.field_c.field_p < this.field_j) {
+          AccountRequestState.field_c = new db(this.field_j, this.field_v);
+          de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.a();
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
-          ki.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+          AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
-        if (this.field_v <= ki.field_c.field_u) {
-          de.a(ki.field_c, param0 + 121);
+        if (this.field_v <= AccountRequestState.field_c.field_u) {
+          de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.a();
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
-          ki.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+          AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
-        ki.field_c = new db(this.field_j, this.field_v);
-        de.a(ki.field_c, param0 + 121);
+        AccountRequestState.field_c = new db(this.field_j, this.field_v);
+        de.a(AccountRequestState.field_c, param0 + 121);
         SoftwareRasterizer.a();
         this.a(0, (byte) 115, 0);
         super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
         pd.a(-22949);
-        ki.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+        AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
     }
 
     boolean a(byte param0) {

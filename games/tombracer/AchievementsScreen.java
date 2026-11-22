@@ -184,7 +184,7 @@ final class AchievementsScreen extends DropInMenuScreen {
           GameFont var4 = (GameFont) null;
           discarded$0 = this.drawWrappedText((String) null, (GameFontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
-        return vaa.isBitSet(SimpleConditionBehaviour.field_o, param1, -101);
+        return PackedBitSetSupport.isBitSet(SimpleConditionBehaviour.field_o, param1, -101);
     }
 
     final static LobbyPlayerEntry findLobbyPlayer(byte param0, long param1) {

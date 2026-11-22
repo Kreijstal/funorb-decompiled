@@ -127,7 +127,7 @@ final class ch extends k {
           b.field_c = null;
           AccountNameAvailabilityValidator.field_r = null;
           be.field_a = null;
-          a.field_c = null;
+          FullscreenFocusCanvas.field_c = null;
           wm.field_b = null;
           return;
         }
@@ -135,7 +135,7 @@ final class ch extends k {
         b.field_c = null;
         AccountNameAvailabilityValidator.field_r = null;
         be.field_a = null;
-        a.field_c = null;
+        FullscreenFocusCanvas.field_c = null;
         wm.field_b = null;
     }
 

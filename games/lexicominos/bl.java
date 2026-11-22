@@ -71,14 +71,14 @@ class bl {
         var3 = Lexicominos.field_L ? 1 : 0;
         if (param1 == 2) {
           if (jd.field_c <= 0) {
-            if (ki.a((byte) -116)) {
+            if (AccountRequestState.a((byte) -116)) {
               var2 = 0;
             } else {
               var2 = 1;
             }
           } else {
             if (da.field_a == null) {
-              ff.field_b = sg.a(0, 640, 480, 0, 0, jh.field_a);
+              ff.field_b = sg.createFullscreenCanvas(0, 640, 480, 0, 0, jh.field_a);
             } else {
               ff.field_b = da.field_a.b((byte) -74);
               ka.a(2, -27844);
@@ -93,14 +93,14 @@ class bl {
         } else {
           field_a = (String) null;
           if (jd.field_c <= 0) {
-            if (ki.a((byte) -116)) {
+            if (AccountRequestState.a((byte) -116)) {
               var2 = 0;
             } else {
               var2 = 1;
             }
           } else {
             if (da.field_a == null) {
-              ff.field_b = sg.a(0, 640, 480, 0, 0, jh.field_a);
+              ff.field_b = sg.createFullscreenCanvas(0, 640, 480, 0, 0, jh.field_a);
               if (null == ff.field_b) {
                 var2 = 3;
               } else {

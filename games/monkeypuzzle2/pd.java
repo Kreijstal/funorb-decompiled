@@ -241,7 +241,7 @@ final class pd {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
-          rk.a(param2, var7, false);
+          rk.exitFullscreenFrame(param2, var7, false);
           stackIn_37_0 = null;
           return (java.awt.Frame) (stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

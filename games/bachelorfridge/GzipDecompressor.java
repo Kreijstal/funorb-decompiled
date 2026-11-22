@@ -118,7 +118,7 @@ final class GzipDecompressor {
                     SnowAnimation.field_w != null) {
                     var5 = 1;
                   }
-                  if (af.a(var5, 26291) != 2) {
+                  if (AccountRequestState.a(var5, 26291) != 2) {
                     PetAttackSpecial.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
                   } else {
                     HomingMissileEvent.a(116, var5, param2, 1);
@@ -131,7 +131,7 @@ final class GzipDecompressor {
                   SnowAnimation.field_w != null) {
                   var5 = 1;
                 }
-                if (af.a(var5, 26291) != 2) {
+                if (AccountRequestState.a(var5, 26291) != 2) {
                   PetAttackSpecial.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
                 } else {
                   HomingMissileEvent.a(116, var5, param2, 1);

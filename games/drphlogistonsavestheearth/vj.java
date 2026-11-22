@@ -967,7 +967,7 @@ final class vj {
             if (hf.field_C == 2) {
               ea.field_a = new qe((java.net.Socket) (tc.field_e.field_g), MouseWheelInput.field_e);
               var3 = new PacketBuffer(13);
-              q.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
+              FullscreenFocusCanvas.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
               var3.writeByte(15, (byte) -92);
               var3.writeInt(mi.field_j, (byte) 107);
               ea.field_a.a(13, -30537, var3.payload, 0);

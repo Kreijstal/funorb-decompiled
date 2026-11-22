@@ -72,7 +72,7 @@ final class qk extends IOException {
           field_a = (String) null;
           if (null != df.field_l) {
             hb.a(-5, df.field_l);
-            df.field_l.a(sb.field_d, true);
+            df.field_l.exitFullscreen(sb.field_d, true);
             df.field_l = null;
             n.field_g.requestFocus();
             return;
@@ -83,7 +83,7 @@ final class qk extends IOException {
           return;
         }
         hb.a(-5, df.field_l);
-        df.field_l.a(sb.field_d, true);
+        df.field_l.exitFullscreen(sb.field_d, true);
         df.field_l = null;
         n.field_g.requestFocus();
     }

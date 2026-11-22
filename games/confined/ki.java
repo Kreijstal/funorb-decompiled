@@ -3,7 +3,7 @@
  */
 final class ki {
     static dh field_c;
-    static df field_d;
+    static PlatformTaskDispatcher field_d;
     static bi field_a;
     static ke field_b;
     private static String field_z;

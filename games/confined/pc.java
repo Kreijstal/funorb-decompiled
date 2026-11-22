@@ -416,20 +416,20 @@ final class pc implements Runnable {
         }
     }
 
-    pc(df param0) {
-        bc var2 = null;
+    pc(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_i = new wd();
         this.field_b = 0;
         this.field_g = false;
         try {
-          var2 = param0.a((byte) 66, (Runnable) (this), 5);
-          while (var2.field_g == 0) {
+          var2 = param0.requestThreadStart((byte) 66, (Runnable) (this), 5);
+          while (var2.status == 0) {
             jd.a(1, 10L);
           }
-          if (var2.field_g == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_c = (Thread) (var2.field_f);
+          this.field_c = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

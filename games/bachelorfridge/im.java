@@ -25,7 +25,7 @@ final class im {
         gk.field_a[ut.field_l] = param1;
         if (param1 >= waa.field_a) {
           if (wt.field_u < param1) {
-            af.field_c = param1;
+            AccountRequestState.field_c = param1;
           }
           mba.field_a[ut.field_l] = param5;
           sc.field_o[ut.field_l] = param4;
@@ -45,14 +45,14 @@ final class im {
             im.a(-109, 3, 88, true, 30, 109);
           }
           ut.field_l = ut.field_l + 1;
-          if (var7 > af.field_c) {
-            af.field_c = var7;
+          if (var7 > AccountRequestState.field_c) {
+            AccountRequestState.field_c = var7;
           }
           return;
         }
         ScavengerSpecial.field_r = param1;
         if (wt.field_u < param1) {
-          af.field_c = param1;
+          AccountRequestState.field_c = param1;
         }
         mba.field_a[ut.field_l] = param5;
         sc.field_o[ut.field_l] = param4;
@@ -72,8 +72,8 @@ final class im {
           im.a(-109, 3, 88, true, 30, 109);
         }
         ut.field_l = ut.field_l + 1;
-        if (var7Lifetime1 > af.field_c) {
-          af.field_c = var7Lifetime1;
+        if (var7Lifetime1 > AccountRequestState.field_c) {
+          AccountRequestState.field_c = var7Lifetime1;
         }
     }
 

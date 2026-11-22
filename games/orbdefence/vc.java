@@ -497,7 +497,7 @@ final class vc {
               dh.field_bb = nh.field_c;
             }
             if (nh.field_c == dh.field_bb &&
-              va.a(true, 1)) {
+              AccountRequestState.a(true, 1)) {
               var6_intLifetime1 = cd.field_t.readUnsignedByte((byte) 90);
               if (0 == var6_intLifetime1) {
                 dh.field_bb = wh.field_c;
@@ -511,14 +511,14 @@ final class vc {
               cd.field_t.position = 0;
             }
             if (wh.field_c == dh.field_bb &&
-              va.a(true, 8)) {
+              AccountRequestState.a(true, 8)) {
               tg.field_a = cd.field_t.readLong((byte) -89);
               cd.field_t.position = 0;
               lg.a(3, param1, s.field_A, param4, param0);
               dh.field_bb = da.field_m;
             }
             if (da.field_m == dh.field_bb &&
-              va.a(true, 1)) {
+              AccountRequestState.a(true, 1)) {
               var6_intLifetime2 = cd.field_t.readUnsignedByte((byte) 90);
               cd.field_t.position = 0;
               ug.field_r = null;
@@ -548,7 +548,7 @@ final class vc {
             if (dh.field_bb == lm.field_e &&
               ce.a(-60)) {
               p.field_c = cd.field_t.readLong((byte) -89);
-              va.field_d = cd.field_t.readUnsignedByte((byte) 90);
+              AccountRequestState.field_d = cd.field_t.readUnsignedByte((byte) 90);
               cd.field_t.readUnsignedByte((byte) 90);
               tc.field_b = cd.field_t.readUnsignedShort(98203176);
               var6 = cd.field_t.readNullableString(-1);

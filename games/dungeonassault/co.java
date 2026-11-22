@@ -17,13 +17,13 @@ final class co extends vf {
         if (param0 <= 13) {
           return (String) null;
         }
-        if (ol.field_i == ql.field_f) {
+        if (ol.field_i == DelegatingCanvas.field_f) {
           return he.field_m;
         }
         if (!im.field_b.b(36)) {
           return im.field_b.c(-2085);
         }
-        if (wd.field_d != ql.field_f) {
+        if (wd.field_d != DelegatingCanvas.field_f) {
           return field_C;
         }
         return im.field_b.c(-2085);

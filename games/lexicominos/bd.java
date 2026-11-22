@@ -81,7 +81,7 @@ final class bd extends kd {
     final static boolean c(boolean param0) {
         if (param0) {
           bd.a(110, 10);
-          if (jc.field_b == null) {
+          if (DelegatingCanvas.field_b == null) {
             return false;
           }
           if (gg.field_b == uf.field_m) {
@@ -89,7 +89,7 @@ final class bd extends kd {
           }
           return false;
         }
-        if (jc.field_b == null) {
+        if (DelegatingCanvas.field_b == null) {
           return false;
         }
         if (gg.field_b == uf.field_m) {

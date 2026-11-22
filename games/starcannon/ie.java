@@ -8,7 +8,7 @@ final class ie extends kf {
     static int field_C;
     static volatile int field_D;
     int field_w;
-    static pf field_x;
+    static AccountRequestState field_x;
     static Sprite[] field_A;
 
     static long a(long param0, long param1) {

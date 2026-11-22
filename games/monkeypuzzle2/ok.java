@@ -60,7 +60,7 @@ final class ok {
         ma.field_a = new String[20];
         ma.field_a[10] = f.field_e;
         ma.field_a[12] = dl.field_f;
-        ma.field_a[2] = lk.field_b;
+        ma.field_a[2] = AccountRequestState.field_b;
         ma.field_a[0] = di.field_b;
         ma.field_a[4] = vh.field_F;
         ma.field_a[13] = AccountNameAvailabilityValidator.field_t;

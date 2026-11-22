@@ -128,7 +128,7 @@ final class uc extends PacketBuffer {
 
     final static void b(int param0, String param1) {
         try {
-          og.field_e = param1;
+          AccountRequestState.field_e = param1;
           int var2_int = 111 / ((49 - param0) / 53);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "uc.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

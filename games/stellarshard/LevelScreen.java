@@ -655,7 +655,7 @@ final class LevelScreen extends ib {
                                 }
                                 if (decompiledFrameRemainder0) {
                                   nd.a(-26621, DualLinkDequeIterator.field_e);
-                                  DualLinkDequeIterator.field_e.a(ic.field_d, -105);
+                                  DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -105);
                                   DualLinkDequeIterator.field_e = null;
                                   qd.field_j.requestFocus();
                                   decompiledFrameRemainder0 = (var4 != 0);
@@ -708,7 +708,7 @@ final class LevelScreen extends ib {
                             na.field_j = null;
                             if (DualLinkDequeIterator.field_e != null) {
                               nd.a(-26621, DualLinkDequeIterator.field_e);
-                              DualLinkDequeIterator.field_e.a(ic.field_d, -104);
+                              DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
                               DualLinkDequeIterator.field_e = null;
                               qd.field_j.requestFocus();
                             }
@@ -722,7 +722,7 @@ final class LevelScreen extends ib {
                         if (var4 != 0) {
                           if (DualLinkDequeIterator.field_e != null) {
                             nd.a(-26621, DualLinkDequeIterator.field_e);
-                            DualLinkDequeIterator.field_e.a(ic.field_d, -104);
+                            DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
                             DualLinkDequeIterator.field_e = null;
                             qd.field_j.requestFocus();
                           }
@@ -735,7 +735,7 @@ final class LevelScreen extends ib {
               } else {
                 if (DualLinkDequeIterator.field_e != null) {
                   nd.a(-26621, DualLinkDequeIterator.field_e);
-                  DualLinkDequeIterator.field_e.a(ic.field_d, -104);
+                  DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
                   DualLinkDequeIterator.field_e = null;
                   qd.field_j.requestFocus();
                 }

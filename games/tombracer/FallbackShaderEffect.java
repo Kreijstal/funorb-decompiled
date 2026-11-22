@@ -144,7 +144,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               }
               stackIn_37_0.field_r = LegacyOpenGlFlowingWaterEffect.formatText(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
               MessageOverlay.field_t.field_r = RenderLayer.field_h;
-              bc.field_b.field_X = true;
+              NameEntryKeyboardSupport.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;
               if (null != PlatformModel.field_A) {
                 TouchSwitchBehaviour.field_s = false;
@@ -192,7 +192,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
               }
             } else {
-              bc.field_b.field_X = false;
+              NameEntryKeyboardSupport.field_b.field_X = false;
               HazardModel.field_t.field_r = ThresholdOperator.field_n;
               if (var8 != 0) {
                 stackIn_23_0 = HardwareGraphicsHeap.field_l;
@@ -236,7 +236,7 @@ final class FallbackShaderEffect extends ShaderEffect {
             FallbackShaderEffect.releaseStatics(-121);
           }
           if (null != WaveformOperator.field_n) {
-            if (bc.field_b.field_y != 0) {
+            if (NameEntryKeyboardSupport.field_b.field_y != 0) {
               ReturnToLobbyPacketWriter.sendReturnToLobby(param3, (byte) 28);
             }
             if (hw.field_a.field_y != 0) {

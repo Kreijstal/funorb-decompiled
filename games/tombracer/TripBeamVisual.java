@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TripBeamVisual {
-    static wm field_c;
+    static PlayerViewportLayout stackedRightViewportLayout;
     static int field_a;
     static ValidationOutcome field_d;
     static ToolkitModel[] field_b;
 
     public static void releaseStatics(int param0) {
         field_b = null;
-        field_c = null;
+        stackedRightViewportLayout = null;
         if (param0 != -1901) {
           return;
         }
@@ -26,7 +26,7 @@ final class TripBeamVisual {
     }
 
     static {
-        field_c = new wm();
+        stackedRightViewportLayout = new PlayerViewportLayout();
         field_d = new ValidationOutcome();
     }
 }

@@ -9,7 +9,7 @@ final class FridgeScreen {
     private saa field_c;
     private IntrusiveDeque field_q;
     FridgeCreature[] field_r;
-    static af field_p;
+    static AccountRequestState field_p;
     private int field_d;
     ula field_j;
     int field_n;
@@ -324,7 +324,7 @@ final class FridgeScreen {
         var26 = BachelorFridge.field_y;
         try {
           if (param0 > -45) {
-            field_p = (af) null;
+            field_p = (AccountRequestState) null;
           }
           var28 = ig.field_m;
           var2 = var28.readUnsignedByte(16711935);
@@ -552,7 +552,7 @@ final class FridgeScreen {
         }
         this.field_a.a(19842, true);
         if (this.field_a.field_T) {
-          if (af.field_a) {
+          if (AccountRequestState.field_a) {
             Crc32Table.a(6, (byte) -35);
           }
           au.field_c = 5;
@@ -561,13 +561,13 @@ final class FridgeScreen {
           DirectByteStorage.field_k) {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_m.e(12917) && (!AttackUpAllAnimation.e(-29919) ||
-            af.field_a)) {
+            AccountRequestState.field_a)) {
             qa.d(123);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (AttackUpAllAnimation.e(param0 - 29908) &&
-              !af.field_a) {
+              !AccountRequestState.field_a) {
               this.field_f = new mj(100, 150, 440, 160, DamageEffect.field_i);
             } else {
               this.field_f = new mj(100, 150, 440, 160, vu.field_o);
@@ -576,7 +576,7 @@ final class FridgeScreen {
           Crc32Table.a(37, (byte) -115);
         }
         if (this.field_s.field_T) {
-          if (af.field_a) {
+          if (AccountRequestState.field_a) {
             Crc32Table.a(1, (byte) 127);
           }
           au.field_c = 2;

@@ -4,7 +4,7 @@
 final class qc {
     static cf field_f;
     static int[] field_g;
-    static ne field_i;
+    static AccountRequestState field_i;
     static cf field_d;
     static String field_e;
     static boolean field_j;
@@ -58,7 +58,7 @@ final class qc {
     final static void a(int param0) {
         cj.a((byte) 118, gi.b(param0 ^ 12476));
         if (param0 != 0) {
-          field_i = (ne) null;
+          field_i = (AccountRequestState) null;
         }
     }
 
@@ -134,7 +134,7 @@ final class qc {
     static {
         field_f = new cf();
         field_g = new int[]{0, 0};
-        field_i = new ne();
+        field_i = new AccountRequestState();
         field_e = "You are not currently logged in to the<nbsp>game.";
         field_d = new cf();
         field_b = "To Customer Support";

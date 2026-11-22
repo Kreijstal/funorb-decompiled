@@ -5,7 +5,7 @@ final class TextureTransformMode {
     static String field_a;
     static String field_b;
 
-    final static void a(int param0, String[] param1, byte param2, String param3) {
+    final static void completeAccountRegistrationResponse(int param0, String[] param1, byte param2, String param3) {
         int var5 = 0;
         int stackIn_10_0 = 0;
         boolean stackIn_11_1 = false;
@@ -18,7 +18,7 @@ final class TextureTransformMode {
         RuntimeException var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          LegacyOpenGlTexture.field_a = mua.field_a;
+          LegacyOpenGlTexture.registrationRequestState = mua.accountRequestComplete;
           if (param0 == 255) {
             stackIn_10_0 = -108;
             stackIn_11_1 = !(QuickChatPhraseDefinition.field_n >= 13);

@@ -1850,7 +1850,7 @@ final class nk {
         var27 = null;
         var29 = null;
         var19 = OrbDefence.field_D ? 1 : 0;
-        if (va.field_d >= 2) {
+        if (AccountRequestState.field_d >= 2) {
           if (IterableNodeHashTable.field_a[12]) {
             ob.field_F = true;
           }
@@ -2285,7 +2285,7 @@ final class nk {
           this.field_m = -1;
         }
         if (IterableNodeHashTable.field_a[56] &&
-          2 <= va.field_d) {
+          2 <= AccountRequestState.field_d) {
           var3Lifetime1 = 0;
           while (true) {
             if (jk.field_j.length > var3Lifetime1) {
@@ -2318,7 +2318,7 @@ final class nk {
           stackIn_276_0 = stackOut_275_0;
           if (var19 == 0) {
             if (stackIn_276_0 &&
-              va.field_d >= 2) {
+              AccountRequestState.field_d >= 2) {
               DirectByteStorage.field_d = true;
               var4_ref_pd.field_o = 0;
             }

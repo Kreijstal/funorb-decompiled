@@ -954,7 +954,7 @@ public final class MinerDisturbance extends ob {
           boolean decompiledFrameRemainder0 = true;
           if (pl.field_h == 3) {
             rg.field_wb = rg.field_wb / 2;
-            bd.field_k = bd.field_k / 2;
+            AccountRequestState.field_k = AccountRequestState.field_k / 2;
             if (je.e(ca.field_k, hf.field_t, 1, 1) >= 5) {
               var6 = 12;
               if (cm.field_r > 12) {
@@ -989,7 +989,7 @@ public final class MinerDisturbance extends ob {
           }
           if (pl.field_h == 12) {
             cm.field_r = cm.field_r + 1;
-            bd.field_k = bd.field_k / 2;
+            AccountRequestState.field_k = AccountRequestState.field_k / 2;
             rg.field_wb = rg.field_wb / 2;
             if (cm.field_r > 5) {
               var6 = 12;
@@ -1530,7 +1530,7 @@ public final class MinerDisturbance extends ob {
           if (!ke.field_V &&
             il.e(-31391)) {
             rg.field_wb = 0;
-            bd.field_k = 0;
+            AccountRequestState.field_k = 0;
           }
           if (!je.c(ca.field_k, hf.field_t, 1, 1)) {
             pc.field_k = 0;
@@ -1875,8 +1875,8 @@ public final class MinerDisturbance extends ob {
                     di.field_K = -1;
                     rg.field_wb = -10;
                   }
-                  if (bd.field_k > -160) {
-                    bd.field_k = -160;
+                  if (AccountRequestState.field_k > -160) {
+                    AccountRequestState.field_k = -160;
                   }
                   if (d.field_b &&
                     qd.field_O[97]) {
@@ -1888,19 +1888,19 @@ public final class MinerDisturbance extends ob {
                     var13_ref_gf.field_g = 0;
                     var13_ref_gf.field_b = 240;
                     uf.field_p[jf.b((byte) 61)] = var13_ref_gf;
-                    bd.field_k = -160;
+                    AccountRequestState.field_k = -160;
                   }
-                  IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
+                  IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
                   sk.field_d = sk.field_d + rg.field_wb;
                   if (IsaacRandom.field_i > 40 &&
                     mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                     IsaacRandom.field_i = 40;
-                    bd.field_k = 0;
+                    AccountRequestState.field_k = 0;
                   }
                   if (IsaacRandom.field_i < -40 &&
                     mh.field_e[ca.field_k][hf.field_t - 1].g()) {
                     IsaacRandom.field_i = -40;
-                    bd.field_k = 0;
+                    AccountRequestState.field_k = 0;
                   }
                   if (sk.field_d > 80 &&
                     IsaacRandom.field_i < -40 &&
@@ -2012,7 +2012,7 @@ public final class MinerDisturbance extends ob {
                     decompiledSharedTail6 = (var21 != 0);
                   }
                   if (decompiledSharedTail6) {
-                    bd.field_k = -40;
+                    AccountRequestState.field_k = -40;
                     rj.field_f = 3;
                     rg.field_wb = 10 * di.field_K;
                     ne.a(10, 79);
@@ -2142,7 +2142,7 @@ public final class MinerDisturbance extends ob {
                 break regionExit2;
               }
               var2_int = 0;
-              if (bd.field_k >= 0 &&
+              if (AccountRequestState.field_k >= 0 &&
                 !qd.field_O[99]) {
                 if (sk.field_d < -30 &&
                   mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
@@ -2154,7 +2154,7 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (IsaacRandom.field_i >= 0 &&
-                bd.field_k >= 0) {
+                AccountRequestState.field_k >= 0) {
                 if (mh.field_e[ca.field_k][1 + hf.field_t].g()) {
                   var2_int = 0;
                 }
@@ -2243,7 +2243,7 @@ public final class MinerDisturbance extends ob {
                     rj.field_f = 10;
                     rg.field_wb = -50;
                     kj.field_d = 0;
-                    bd.field_k = -10;
+                    AccountRequestState.field_k = -10;
                     tc.field_t = 0;
                   }
                 }
@@ -2277,7 +2277,7 @@ public final class MinerDisturbance extends ob {
                   sk.field_d > 0 &&
                   mh.field_e[ca.field_k + 1][hf.field_t].field_a) {
                   if (tc.field_t >= 25) {
-                    bd.field_k = -10;
+                    AccountRequestState.field_k = -10;
                     tc.field_t = 0;
                     rj.field_f = 10;
                     rg.field_wb = 50;
@@ -2344,7 +2344,7 @@ public final class MinerDisturbance extends ob {
                 if (var13 != 0) {
                   rg.field_wb = di.field_K * 10;
                   rj.field_f = 3;
-                  bd.field_k = -40;
+                  AccountRequestState.field_k = -40;
                   ne.a(10, -77);
                 }
               }
@@ -2396,7 +2396,7 @@ public final class MinerDisturbance extends ob {
                 if (tc.field_t >= 25) {
                   rj.field_f = 10;
                   rg.field_wb = 50;
-                  bd.field_k = -10;
+                  AccountRequestState.field_k = -10;
                   kj.field_d = 0;
                   if (var21 != 0) {
                     tc.field_t = tc.field_t + 2;
@@ -2418,7 +2418,7 @@ public final class MinerDisturbance extends ob {
                   decompiledSharedTail4 = (var21 != 0);
                 }
                 if (decompiledSharedTail4) {
-                  bd.field_k = -10;
+                  AccountRequestState.field_k = -10;
                   rg.field_wb = 50;
                   kj.field_d = 0;
                   rj.field_f = 10;
@@ -2441,15 +2441,15 @@ public final class MinerDisturbance extends ob {
                 qd.field_O[98] ||
                 (this.field_E == 5 ||
                 this.field_E == 4)) &&
-                -40 < bd.field_k) {
-                bd.field_k = bd.field_k - 1;
+                -40 < AccountRequestState.field_k) {
+                AccountRequestState.field_k = AccountRequestState.field_k - 1;
                 if ((var21 != 0) &&
-                  (bd.field_k < 0)) {
-                  bd.field_k = bd.field_k + 1;
+                  (AccountRequestState.field_k < 0)) {
+                  AccountRequestState.field_k = AccountRequestState.field_k + 1;
                 }
               } else {
-                if (bd.field_k < 0) {
-                  bd.field_k = bd.field_k + 1;
+                if (AccountRequestState.field_k < 0) {
+                  AccountRequestState.field_k = AccountRequestState.field_k + 1;
                 }
               }
               if (d.field_b &&
@@ -2469,15 +2469,15 @@ public final class MinerDisturbance extends ob {
                 qd.field_O[99] ||
                 var5Lifetime1 != 0) &&
                 (var2_int == 0 &&
-                bd.field_k < 40)) {
-                bd.field_k = bd.field_k + 1;
+                AccountRequestState.field_k < 40)) {
+                AccountRequestState.field_k = AccountRequestState.field_k + 1;
                 if ((var21 != 0) &&
-                  (bd.field_k > 0)) {
-                  bd.field_k = bd.field_k - 1;
+                  (AccountRequestState.field_k > 0)) {
+                  AccountRequestState.field_k = AccountRequestState.field_k - 1;
                 }
               } else {
-                if (bd.field_k > 0) {
-                  bd.field_k = bd.field_k - 1;
+                if (AccountRequestState.field_k > 0) {
+                  AccountRequestState.field_k = AccountRequestState.field_k - 1;
                 }
               }
               if ((d.field_b &&
@@ -2486,8 +2486,8 @@ public final class MinerDisturbance extends ob {
                 (!qd.field_O[98] &&
                 mh.field_e[ca.field_k][1 + hf.field_t].g() &&
                 var2_int == 0 &&
-                bd.field_k < 40)) {
-                bd.field_k = bd.field_k + 1;
+                AccountRequestState.field_k < 40)) {
+                AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
               if ((d.field_b &&
                 qd.field_O[99] ||
@@ -2495,7 +2495,7 @@ public final class MinerDisturbance extends ob {
                 !qd.field_O[98])) &&
                 var2_int != 0) {
                 rj.field_f = 1;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
                 IsaacRandom.field_i = 0;
               }
               if (var4Lifetime3 != 0 &&
@@ -2503,11 +2503,11 @@ public final class MinerDisturbance extends ob {
                 if (rg.field_wb * rg.field_wb > 400) {
                   rg.field_wb = rg.field_wb / 2;
                 }
-                if (bd.field_k * bd.field_k > 400) {
-                  bd.field_k = bd.field_k / 2;
+                if (AccountRequestState.field_k * AccountRequestState.field_k > 400) {
+                  AccountRequestState.field_k = AccountRequestState.field_k / 2;
                 }
               }
-              IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
+              IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
               sk.field_d = sk.field_d + rg.field_wb;
               if (!qd.field_O[98] &&
                 this.field_E != 5) {
@@ -2522,12 +2522,12 @@ public final class MinerDisturbance extends ob {
                     if (IsaacRandom.field_i > 40 &&
                       mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                       IsaacRandom.field_i = 40;
-                      bd.field_k = 0;
+                      AccountRequestState.field_k = 0;
                     }
                     if (IsaacRandom.field_i < -40 &&
                       mh.field_e[ca.field_k][hf.field_t - 1].g()) {
                       IsaacRandom.field_i = -40;
-                      bd.field_k = 0;
+                      AccountRequestState.field_k = 0;
                     }
                   }
                 }
@@ -2535,12 +2535,12 @@ public final class MinerDisturbance extends ob {
                 if (IsaacRandom.field_i > 40 &&
                   mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                   IsaacRandom.field_i = 40;
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                 }
                 if (IsaacRandom.field_i < -40 &&
                   mh.field_e[ca.field_k][hf.field_t - 1].g()) {
                   IsaacRandom.field_i = -40;
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                 }
               }
               if (sk.field_d > 80 &&
@@ -2574,26 +2574,26 @@ public final class MinerDisturbance extends ob {
                   if (var21 != 0) {
                     if (40 < IsaacRandom.field_i &&
                       mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                      bd.field_k = 0;
+                      AccountRequestState.field_k = 0;
                       IsaacRandom.field_i = 40;
                     }
                     if (-40 > IsaacRandom.field_i &&
                       mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
                       IsaacRandom.field_i = -40;
-                      bd.field_k = 0;
+                      AccountRequestState.field_k = 0;
                     }
                   }
                 }
               } else {
                 if (40 < IsaacRandom.field_i &&
                   mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                   IsaacRandom.field_i = 40;
                 }
                 if (-40 > IsaacRandom.field_i &&
                   mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
                   IsaacRandom.field_i = -40;
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                 }
               }
               if (160 < sk.field_d) {
@@ -2665,9 +2665,9 @@ public final class MinerDisturbance extends ob {
                   rg.field_wb = rg.field_wb + 1;
                 }
               }
-              if (bd.field_k < 40 && (d.field_b ||
+              if (AccountRequestState.field_k < 40 && (d.field_b ||
                 var5Lifetime1 != 0)) {
-                bd.field_k = bd.field_k + 1;
+                AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
               if (d.field_b &&
                 qd.field_O[97] ||
@@ -2692,7 +2692,7 @@ public final class MinerDisturbance extends ob {
                   rg.field_wb = rg.field_wb - 1;
                 }
               }
-              IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
+              IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
               sk.field_d = sk.field_d + rg.field_wb;
               if (IsaacRandom.field_i > 0 &&
                 mh.field_e[ca.field_k][hf.field_t + 1].g()) {
@@ -2710,7 +2710,7 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                   if (mh.field_e[ca.field_k][hf.field_t + 1].field_v &&
-                    20 <= bd.field_k &&
+                    20 <= AccountRequestState.field_k &&
                     !mh.field_e[ca.field_k][1 + hf.field_t].field_E) {
                     mh.field_e[ca.field_k][1 + hf.field_t].field_S = true;
                     mh.field_e[ca.field_k][1 + hf.field_t].field_r = 975;
@@ -2720,35 +2720,35 @@ public final class MinerDisturbance extends ob {
                   }
                 }
                 IsaacRandom.field_i = 0;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
               }
               if (IsaacRandom.field_i < 0 &&
                 mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
                 IsaacRandom.field_i = 0;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
               }
               if (Math.abs(sk.field_d) >= Math.abs(IsaacRandom.field_i) && (!d.field_b ||
                 !qd.field_O[99])) {
                 if (80 < sk.field_d &&
                   IsaacRandom.field_i < 0 &&
-                  bd.field_k <= 0 &&
+                  AccountRequestState.field_k <= 0 &&
                   mh.field_e[1 + ca.field_k][-1 + hf.field_t].g()) {
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                   IsaacRandom.field_i = 0;
                 }
                 if (sk.field_d < -80 &&
                   0 > IsaacRandom.field_i &&
-                  bd.field_k <= 0 &&
+                  AccountRequestState.field_k <= 0 &&
                   mh.field_e[-1 + ca.field_k][hf.field_t - 1].g()) {
                   IsaacRandom.field_i = 0;
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                 }
                 if (80 < sk.field_d &&
                   IsaacRandom.field_i > 0 &&
-                  bd.field_k >= 0 &&
+                  AccountRequestState.field_k >= 0 &&
                   mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
                   if (mh.field_e[ca.field_k + 1][hf.field_t + 1].field_v &&
-                    bd.field_k >= 20 &&
+                    AccountRequestState.field_k >= 20 &&
                     !mh.field_e[ca.field_k + 1][1 + hf.field_t].field_E) {
                     mh.field_e[ca.field_k + 1][1 + hf.field_t].field_S = true;
                     mh.field_e[1 + ca.field_k][1 + hf.field_t].field_r = 975;
@@ -2756,15 +2756,15 @@ public final class MinerDisturbance extends ob {
                       ag.a(true, 28, 1 + hf.field_t << 5, 1 + ca.field_k << 5);
                     }
                   }
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                   IsaacRandom.field_i = 0;
                 }
                 if ((!(sk.field_d >= -80)) &&
                   (!(IsaacRandom.field_i <= 0)) &&
-                  (!(bd.field_k < 0)) &&
+                  (!(AccountRequestState.field_k < 0)) &&
                   (mh.field_e[-1 + ca.field_k][hf.field_t + 1].g())) {
                   if (mh.field_e[ca.field_k - 1][hf.field_t + 1].field_v &&
-                    bd.field_k >= 20 &&
+                    AccountRequestState.field_k >= 20 &&
                     !mh.field_e[ca.field_k - 1][1 + hf.field_t].field_E) {
                     mh.field_e[-1 + ca.field_k][hf.field_t + 1].field_S = true;
                     mh.field_e[-1 + ca.field_k][hf.field_t + 1].field_r = 975;
@@ -2772,7 +2772,7 @@ public final class MinerDisturbance extends ob {
                       ag.a(true, 28, 1 + hf.field_t << 5, -1 + ca.field_k << 5);
                     }
                   }
-                  bd.field_k = 0;
+                  AccountRequestState.field_k = 0;
                   IsaacRandom.field_i = 0;
                   if (var21 != 0) {
                     if (sk.field_d > 80 &&
@@ -2838,7 +2838,7 @@ public final class MinerDisturbance extends ob {
                   mh.field_e[ca.field_k + 1][hf.field_t].field_S = true;
                   mh.field_e[ca.field_k + 1][hf.field_t].field_r = 975;
                   rg.field_wb = -10;
-                  bd.field_k = bd.field_k - 10;
+                  AccountRequestState.field_k = AccountRequestState.field_k - 10;
                   if (sc.field_b) {
                     ag.a(true, 28, hf.field_t << 5, 1 + ca.field_k << 5);
                     if (var21 != 0) {
@@ -2859,7 +2859,7 @@ public final class MinerDisturbance extends ob {
                   mh.field_e[-1 + ca.field_k][hf.field_t].field_S = true;
                   mh.field_e[ca.field_k - 1][hf.field_t].field_r = 975;
                   rg.field_wb = 10;
-                  bd.field_k = bd.field_k - 10;
+                  AccountRequestState.field_k = AccountRequestState.field_k - 10;
                   if (sc.field_b) {
                     ag.a(true, 28, hf.field_t << 5, -1 + ca.field_k << 5);
                     if (var21 != 0) {
@@ -2896,11 +2896,11 @@ public final class MinerDisturbance extends ob {
                 ne.a(ll.a((byte) -73, 4) + 57, 85);
               }
               boolean decompiledFrameRemainder2 = true;
-              if (0 < bd.field_k) {
+              if (0 < AccountRequestState.field_k) {
                 rj.field_f = 4;
                 decompiledFrameRemainder2 = (var21 != 0);
               }
-              if ((decompiledFrameRemainder2) && (bd.field_k == 0 &&
+              if ((decompiledFrameRemainder2) && (AccountRequestState.field_k == 0 &&
                 rg.field_wb * rg.field_wb > 225)) {
                 if (rg.field_wb < 0) {
                   rg.field_wb = -15;
@@ -2948,10 +2948,10 @@ public final class MinerDisturbance extends ob {
                 tb.field_c = 15;
               }
               tb.field_c = 41;
-              if (-10 < bd.field_k) {
+              if (-10 < AccountRequestState.field_k) {
                 tb.field_c = tb.field_c + 1;
               }
-              if (bd.field_k > -20) {
+              if (AccountRequestState.field_k > -20) {
                 tb.field_c = tb.field_c + 1;
               }
               if (var2_int == 0) {
@@ -3185,7 +3185,7 @@ public final class MinerDisturbance extends ob {
                   }
                   rg.field_wb = 50 * di.field_K;
                   rj.field_f = 3;
-                  bd.field_k = -10;
+                  AccountRequestState.field_k = -10;
                   decompiledSharedTail1 = (var21 != 0);
                 }
                 if (decompiledSharedTail1) {
@@ -3284,22 +3284,22 @@ public final class MinerDisturbance extends ob {
             }
             var12 = stackIn_2099_0;
             if (var12 != 0 &&
-              bd.field_k > -80) {
-              bd.field_k = bd.field_k - 1;
+              AccountRequestState.field_k > -80) {
+              AccountRequestState.field_k = AccountRequestState.field_k - 1;
               if ((var21 != 0) &&
-                (40 > bd.field_k)) {
-                bd.field_k = bd.field_k + 1;
+                (40 > AccountRequestState.field_k)) {
+                AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
             } else {
-              if (40 > bd.field_k) {
-                bd.field_k = bd.field_k + 1;
+              if (40 > AccountRequestState.field_k) {
+                AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
             }
             if (!qd.field_O[98] ||
               qd.field_K == 0) {
               if (var2_int != 0) {
                 rj.field_f = 1;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
                 IsaacRandom.field_i = 0;
                 if (var21 != 0) {
                   rj.field_f = 4;
@@ -3309,7 +3309,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             sk.field_d = sk.field_d + rg.field_wb;
-            IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
+            IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
             if ((var4Lifetime3 != 0 ||
               !(tc.field_s <= 0)) && (var12 != 0 &&
               !qe.field_b[15])) {
@@ -3320,11 +3320,11 @@ public final class MinerDisturbance extends ob {
               if (IsaacRandom.field_i > 40 &&
                 mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                 IsaacRandom.field_i = 40;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
               }
               if ((!(IsaacRandom.field_i >= -40)) &&
                 (mh.field_e[ca.field_k][hf.field_t - 1].g())) {
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
                 IsaacRandom.field_i = -40;
                 if (var21 != 0) {
                   if (sk.field_d > 80 &&
@@ -3371,12 +3371,12 @@ public final class MinerDisturbance extends ob {
               if (40 < IsaacRandom.field_i &&
                 mh.field_e[ca.field_k][1 + hf.field_t].g()) {
                 IsaacRandom.field_i = 40;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
               }
               if ((!(-40 <= IsaacRandom.field_i)) &&
                 (mh.field_e[ca.field_k][-1 + hf.field_t].g())) {
                 IsaacRandom.field_i = -40;
-                bd.field_k = 0;
+                AccountRequestState.field_k = 0;
                 if (var21 != 0) {
                   if (sk.field_d > 80 &&
                     mh.field_e[ca.field_k + 1][hf.field_t].g()) {
@@ -4643,7 +4643,7 @@ public final class MinerDisturbance extends ob {
                       return;
                     }
                   }
-                  ce.field_d.b(bd.field_a, param2, param3, param0, -1);
+                  ce.field_d.b(AccountRequestState.field_a, param2, param3, param0, -1);
                   var5[8].b(var6Lifetime1, 0);
                   if (ne.a(false) != 6) {
                     stackIn_247_0 = !param1;
@@ -4909,7 +4909,7 @@ public final class MinerDisturbance extends ob {
           jn.e(111);
           af.a(param0 - 12708);
           hf.a(-16935);
-          bd.a((byte) 126);
+          AccountRequestState.releaseStatics((byte) 126);
           AccountServiceResult.c(-20613);
           lc.a(param0 - 52);
           wb.a(param0 ^ 1);
@@ -5621,7 +5621,7 @@ public final class MinerDisturbance extends ob {
               rg.field_wb > 28) {
               mh.field_e[1 + ca.field_k][hf.field_t].field_S = true;
               mh.field_e[ca.field_k + 1][hf.field_t].field_r = 975;
-              bd.field_k = bd.field_k + 10;
+              AccountRequestState.field_k = AccountRequestState.field_k + 10;
               rg.field_wb = -10;
               if (sc.field_b) {
                 ag.a(true, 28, hf.field_t << 5, ca.field_k + 1 << 5);
@@ -5644,7 +5644,7 @@ public final class MinerDisturbance extends ob {
               mh.field_e[ca.field_k - 1][hf.field_t].field_S = true;
               mh.field_e[-1 + ca.field_k][hf.field_t].field_r = 975;
               rg.field_wb = 10;
-              bd.field_k = bd.field_k + 10;
+              AccountRequestState.field_k = AccountRequestState.field_k + 10;
               if (sc.field_b) {
                 ag.a(true, 28, hf.field_t << 5, -1 + ca.field_k << 5);
                 if ((var4 != 0) &&
@@ -6399,7 +6399,7 @@ public final class MinerDisturbance extends ob {
             li.field_c = 0;
             ClientException.field_d = 0;
           }
-          bd.field_k = -1;
+          AccountRequestState.field_k = -1;
           rg.field_wb = 0;
           this.field_K = false;
           pc.field_k = 0;
@@ -7367,7 +7367,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (var8Lifetime1 == 7) {
-              bb.a(bd.field_i, 0, ce.field_d, 16513123, -6);
+              bb.a(AccountRequestState.field_i, 0, ce.field_d, 16513123, -6);
               if (var10 == 0) {
                 return;
               }

@@ -4,7 +4,7 @@
 final class jh extends ue {
     static Sprite field_h;
     private String field_d;
-    static pd field_n;
+    static AccountRequestState field_n;
     private int field_e;
     private int field_j;
     private boolean field_f;
@@ -359,6 +359,6 @@ final class jh extends ue {
     }
 
     static {
-        field_n = new pd();
+        field_n = new AccountRequestState();
     }
 }

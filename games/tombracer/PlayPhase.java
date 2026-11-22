@@ -135,7 +135,7 @@ final class PlayPhase extends MatchPhase {
                 var6Lifetime2 = var7_int;
               }
             }
-            this.viewports[var6Lifetime2].applyLayout(0, ByteStorage.field_e, -20186);
+            this.viewports[var6Lifetime2].applyLayout(0, ByteStorage.rightViewportLayout, -20186);
             this.viewports[var6Lifetime2].draw(23479);
           } else {
             if (var5_int > 2) {
@@ -154,7 +154,7 @@ final class PlayPhase extends MatchPhase {
                 var8 = this.matchState.standings.order[var19[var4_int][var7_int]];
                 if (var8 != -1 &&
                   var3 != var8) {
-                  this.viewports[var8].applyLayout(var7_int, TripBeamVisual.field_c, -20186);
+                  this.viewports[var8].applyLayout(var7_int, TripBeamVisual.stackedRightViewportLayout, -20186);
                   this.viewports[var8].draw(23479);
                 }
               }
@@ -371,9 +371,9 @@ final class PlayPhase extends MatchPhase {
     private final void applyViewportLayout(byte param0) {
         int var2 = this.screen.getViewedPlayerIndex(89);
         if (this.matchState.playersRemaining <= 1) {
-          this.viewports[var2].applyLayout(0, mf.field_d, -20186);
+          this.viewports[var2].applyLayout(0, mf.fullViewportLayout, -20186);
         } else {
-          this.viewports[var2].applyLayout(0, OpenGlEnvironmentWaterEffect.field_j, -20186);
+          this.viewports[var2].applyLayout(0, OpenGlEnvironmentWaterEffect.leftViewportLayout, -20186);
         }
         if (param0 < 52) {
           this.field_p = false;
@@ -439,7 +439,7 @@ final class PlayPhase extends MatchPhase {
         if (param0 <= 83) {
           PlayPhase.fillRectAlpha(-107, -110, (byte) -67, -77, -33, 57);
         }
-        fpa.field_c = true;
+        AccountRequestState.field_c = true;
         LegacyOpenGlPostProcessEffect.field_f = 15000L + AdjustedWallClock.currentTimeMillis((byte) -107);
         return Transform3D.field_c == 11 ? true : false;
     }

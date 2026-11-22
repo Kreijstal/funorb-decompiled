@@ -6,7 +6,7 @@ final class fh extends wd {
     int field_I;
     int field_H;
     int field_J;
-    static mf field_B;
+    static AccountRequestState field_B;
     int field_F;
     int field_D;
     int field_K;

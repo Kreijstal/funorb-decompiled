@@ -98,7 +98,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            ql.field_a = param1;
+            DelegatingCanvas.field_a = param1;
             try {
               var7 = param2.getParameter("cookieprefix");
               var5 = var7;

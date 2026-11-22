@@ -3,7 +3,7 @@
  */
 abstract class jc extends qf {
     static String[] field_L;
-    static sc field_P;
+    static AccountRequestState field_P;
     static ik field_O;
     private int field_T;
     private int field_M;

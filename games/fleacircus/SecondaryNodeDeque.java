@@ -70,13 +70,13 @@ final class SecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    final static vb a(int param0, int param1, int param2, ce param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, ce param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        vb var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        vb stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -86,11 +86,11 @@ final class SecondaryNodeDeque implements Iterable {
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (vb) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new vb();
-          var7.field_b = var8;
-          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(param0, 0, param1, param5);
           var7.addFocusListener(var7);
           var7.requestFocus();

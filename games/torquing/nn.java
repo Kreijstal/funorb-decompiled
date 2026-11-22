@@ -174,7 +174,7 @@ final class nn {
             if (null == lg.field_B) {
               return;
             }
-            stackIn_13_0 = pp.field_f;
+            stackIn_13_0 = FullscreenFocusCanvas.field_f;
             stackIn_13_1 = 0;
             stackIn_13_2 = null;
             stackIn_13_3 = null;

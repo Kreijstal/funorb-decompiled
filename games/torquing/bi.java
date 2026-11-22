@@ -402,7 +402,7 @@ final class bi {
         try {
           var3 = new StringBuilder(this.field_T);
           var4 = (CharSequence) ((Object) "ff9040");
-          gd.a(-20980, var3, var4, 5 + 13 * param0);
+          AccountRequestState.a(-20980, var3, var4, 5 + 13 * param0);
           this.field_T = var3.toString();
           if (param1 >= -26) {
             this.field_Q = (kg[]) null;

@@ -111,7 +111,7 @@ final class m {
         nk.field_t = true;
     }
 
-    final pp b(byte param0) {
+    final FullscreenFocusCanvas b(byte param0) {
         if (param0 != -73) {
           this.field_g = 21;
         }
@@ -119,7 +119,7 @@ final class m {
         this.field_u = wk.field_d;
         this.field_p.a(this.field_b, -6714, this.field_r);
         b.field_v = false;
-        pp var2 = je.a(this.field_r, this.field_b, nk.field_u, 0, 0, -116);
+        FullscreenFocusCanvas var2 = je.createFullscreenCanvas(this.field_r, this.field_b, nk.field_u, 0, 0, -116);
         if (var2 == null) {
           this.b(false);
         }

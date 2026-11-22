@@ -6,12 +6,12 @@ final class ReportAbusePanel extends WidgetContainer implements WidgetActionList
     private InteractiveWidget field_E;
     static String field_D;
     private InteractiveWidget field_C;
-    static af field_G;
+    static AccountRequestState field_G;
 
     final static void a(nv param0, byte param1) {
         try {
           if (param1 != 59) {
-            field_G = (af) null;
+            field_G = (AccountRequestState) null;
           }
           fo.field_a.a(param1 ^ -60, param0);
         } catch (RuntimeException runtimeException) {

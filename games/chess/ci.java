@@ -44,7 +44,7 @@ class ci extends ei {
     boolean field_rb;
     boolean field_gb;
     int field_vb;
-    static ed field_ub;
+    static AccountRequestState field_ub;
     km field_jb;
     km field_Bb;
     km field_sb;
@@ -521,7 +521,7 @@ class ci extends ei {
         field_x = null;
         field_ub = null;
         if (param0 >= -122) {
-          field_ub = (ed) null;
+          field_ub = (AccountRequestState) null;
         }
     }
 
@@ -902,7 +902,7 @@ class ci extends ei {
     }
 
     static {
-        field_ub = new ed();
+        field_ub = new AccountRequestState();
         field_x = "Auto-respond to <%0>";
     }
 }

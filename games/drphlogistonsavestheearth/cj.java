@@ -18,13 +18,13 @@ final class cj {
         }
         if (param0 == 8227) {
           gm.field_M = true;
-          qb.a(param0 ^ 8258, true);
+          AccountRequestState.a(param0 ^ 8258, true);
           af.field_b = 0;
           return;
         }
         field_c = (boolean[]) null;
         gm.field_M = true;
-        qb.a(param0 ^ 8258, true);
+        AccountRequestState.a(param0 ^ 8258, true);
         af.field_b = 0;
     }
 

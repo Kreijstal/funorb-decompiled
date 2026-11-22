@@ -334,15 +334,15 @@ final class bn {
         throw new Error();
     }
 
-    final ek d(int param0) {
+    final FullscreenFocusCanvas d(int param0) {
         this.field_e = eg.field_d;
         this.field_t = up.field_d;
         this.field_g.a(this.field_w, this.field_u, (byte) -86);
         if (param0 < 32) {
-          return (ek) null;
+          return (FullscreenFocusCanvas) null;
         }
         ve.field_a = false;
-        ek var2 = gh.a(0, -66, 0, this.field_w, i.field_A, this.field_u);
+        FullscreenFocusCanvas var2 = gh.createFullscreenCanvas(0, -66, 0, this.field_w, i.field_A, this.field_u);
         if (var2 != null) {
           return var2;
         }

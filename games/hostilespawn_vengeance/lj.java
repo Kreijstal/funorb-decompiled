@@ -47,7 +47,7 @@ abstract class lj extends DualLinkNode {
           var3 = 0;
           if (var1_int != 0 &&
             0 <= mc.field_F.field_f) {
-            var3 = ue.field_k[mc.field_F.field_f];
+            var3 = FullscreenFocusCanvas.field_k[mc.field_F.field_f];
             if (var3 != 2 &&
               var3 != 5) {
               var4 = -61 % ((param0 - 31) / 58);

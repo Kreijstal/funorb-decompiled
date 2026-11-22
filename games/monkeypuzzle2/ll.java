@@ -1130,7 +1130,7 @@ final class ll {
                 }
                 var2 = te.a("invalidpass", -59);
                 if (null != var2) {
-                  r.field_b = be.a(var2, (byte) -45);
+                  FullscreenFocusCanvas.field_b = be.a(var2, (byte) -45);
                 }
                 var2 = te.a("retry", -83);
                 if (null != var2) {
@@ -1490,7 +1490,7 @@ final class ll {
                 }
                 var2 = te.a("login_username_tooltip", -55);
                 if (null != var2) {
-                  r.field_f = be.a(var2, (byte) 88);
+                  FullscreenFocusCanvas.field_f = be.a(var2, (byte) 88);
                 }
                 var2 = te.a("login_password_tooltip", -104);
                 if (var2 != null) {
@@ -1914,7 +1914,7 @@ final class ll {
                 }
                 var2 = te.a("highscores", -114);
                 if (null != var2) {
-                  lk.field_b = be.a(var2, (byte) -126);
+                  AccountRequestState.field_b = be.a(var2, (byte) -126);
                 }
                 var2 = te.a("rankings", -29);
                 if (var2 != null) {

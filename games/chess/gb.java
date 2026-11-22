@@ -405,7 +405,7 @@ abstract class gb extends GameAppletShell {
         var5 = Chess.field_G;
         if (null != ch.field_gb) {
           if (null == rm.field_R) {
-            var6 = a.a((byte) -110);
+            var6 = FullscreenFocusCanvas.a((byte) -110);
             var4_ref_java_awt_Dimension = var6.getSize();
             ch.field_gb.a(var4_ref_java_awt_Dimension.width, -83, var4_ref_java_awt_Dimension.height);
           }

@@ -122,7 +122,7 @@ final class gf {
         }
     }
 
-    final ra b(byte param0) {
+    final FullscreenFocusCanvas b(byte param0) {
         if (param0 != -74) {
           this.c(-88);
         }
@@ -130,7 +130,7 @@ final class gf {
         this.field_k = AccountCreationResultPanel.field_sb;
         this.field_g.a(-26278, this.field_i, this.field_a);
         rl.field_O = false;
-        ra var2 = sg.a(0, this.field_i, this.field_a, 0, 0, jh.field_a);
+        FullscreenFocusCanvas var2 = sg.createFullscreenCanvas(0, this.field_i, this.field_a, 0, 0, jh.field_a);
         if (var2 == null) {
           this.a((byte) -110);
         }

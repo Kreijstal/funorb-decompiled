@@ -141,11 +141,11 @@ final class wi {
           }
           for (var2 = 0; var2 < var1.field_r; var2++) {
             if (var4.field_m[var2] != null &&
-              var4.field_m[var2].field_g == 0) {
+              var4.field_m[var2].status == 0) {
               return false;
             }
             if (var4.field_q[var2] != null &&
-              var4.field_q[var2].field_g == 0) {
+              var4.field_q[var2].status == 0) {
               return false;
             }
           }

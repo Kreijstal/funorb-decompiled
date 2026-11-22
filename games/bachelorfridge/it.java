@@ -125,7 +125,7 @@ final class it {
           for (var2_int = 0; var2_int < ut.field_l; var2_int++) {
             fn.field_k[var2_int + param1] = var2_int;
           }
-          laa.a(param1 + param1, af.field_c, param1 + ut.field_l, false, ScavengerSpecial.field_r, 6374, param1);
+          laa.a(param1 + param1, AccountRequestState.field_c, param1 + ut.field_l, false, ScavengerSpecial.field_r, 6374, param1);
           if (param1 < ut.field_l) {
             ut.field_l = param1;
           }

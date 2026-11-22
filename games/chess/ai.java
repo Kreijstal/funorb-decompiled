@@ -66,7 +66,7 @@ final class ai {
             var5 = ab.a(param2, param1 + 21247, var4);
           }
           if (pk.field_b == 2) {
-            var5 = a.a(param2, var4, (byte) 64);
+            var5 = FullscreenFocusCanvas.a(param2, var4, (byte) 64);
           }
           if (3 == pk.field_b) {
             var5 = of.a(var4, param2, var4, -1);

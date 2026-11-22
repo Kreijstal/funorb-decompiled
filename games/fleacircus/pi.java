@@ -38,7 +38,7 @@ final class pi {
         if (param0 != 15) {
           pi.clearStaticReferences((byte) -9);
         }
-        b.field_e = ae.field_a.readString(0);
+        b.field_e = AccountRequestState.field_a.readString(0);
         CharSequence var2 = (CharSequence) ((Object) b.field_e);
         ma.field_a = uk.a(param0 - 127, var2);
     }

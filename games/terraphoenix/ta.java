@@ -47,7 +47,7 @@ final class ta {
           }
           if (pe.field_a == k.field_b &&
             param1.equals(DualLinkNode.field_l)) {
-            pe.field_a = og.field_a;
+            pe.field_a = AccountRequestState.field_a;
             stackIn_9_0 = h.field_c;
             return stackIn_9_0;
           }

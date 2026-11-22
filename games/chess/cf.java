@@ -77,7 +77,7 @@ final class cf extends ci {
           if (param1) {
             stackIn_4_0 = AccountServiceResult.field_c;
           } else {
-            stackIn_4_0 = ed.field_c;
+            stackIn_4_0 = AccountRequestState.field_c;
           }
           ByteStorage.a(stackIn_4_0, true);
           qa.field_f.a(fm.field_T.field_M, 0, 0, -2 + (-40 + fm.field_T.field_pb), true);

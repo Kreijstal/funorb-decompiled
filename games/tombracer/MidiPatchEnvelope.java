@@ -42,7 +42,7 @@ final class MidiPatchEnvelope {
           if (param3 != -13) {
             MidiPatchEnvelope.fillCircle(61, -28, 117, (byte) -18, -123);
           }
-          C2SRoomResultPacket.fillRange((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
+          C2SRoomResultPacket.fillRange((byte) -55, param2, param4 + param1, PackedBitSetSupport.field_a[param0], -param4 + param1);
           while (var6 > var5_int) {
             var8 += 2;
             var5_int++;
@@ -50,8 +50,8 @@ final class MidiPatchEnvelope {
             if (0 <= var7) {
               var6--;
               var7 = var7 - (var6 << 1);
-              var9_ref_int__ = vaa.field_a[var6 + param0];
-              var10_ref_int__ = vaa.field_a[-var6 + param0];
+              var9_ref_int__ = PackedBitSetSupport.field_a[var6 + param0];
+              var10_ref_int__ = PackedBitSetSupport.field_a[-var6 + param0];
               var11_int = param1 + var5_int;
               var12_int = -var5_int + param1;
               C2SRoomResultPacket.fillRange((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
@@ -59,8 +59,8 @@ final class MidiPatchEnvelope {
             }
             var9 = param1 + var6;
             var10 = param1 - var6;
-            var11 = vaa.field_a[var5_int + param0];
-            var12 = vaa.field_a[-var5_int + param0];
+            var11 = PackedBitSetSupport.field_a[var5_int + param0];
+            var12 = PackedBitSetSupport.field_a[-var5_int + param0];
             C2SRoomResultPacket.fillRange((byte) -55, param2, var9, var11, var10);
             C2SRoomResultPacket.fillRange((byte) -55, param2, var9, var12, var10);
           }

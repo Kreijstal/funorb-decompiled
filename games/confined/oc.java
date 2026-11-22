@@ -157,7 +157,7 @@ final class oc {
         this.field_c = q.field_j;
         this.field_a = cc.field_m;
         this.field_d = ha.field_e;
-        this.field_k = ve.field_h;
+        this.field_k = AccountRequestState.field_h;
     }
 
     static {

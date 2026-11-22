@@ -198,9 +198,9 @@ final class kd implements WidgetRenderer {
           }
           else {
             if (2 <= re.field_A) {
-              pa.a(376 + param1, pd.field_c, 39935, 16776867, 164, 16710412, 264, -10, 39935);
+              pa.a(376 + param1, AccountRequestState.field_c, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {
-              pa.a(376 + param1, pd.field_c, 39935, 8421504, 164, 8421504, 264, -10, 39935);
+              pa.a(376 + param1, AccountRequestState.field_c, 39935, 8421504, 164, 8421504, 264, -10, 39935);
             }
           }
           stackIn_55_0 = param1 + 376;

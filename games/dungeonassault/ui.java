@@ -23,7 +23,7 @@ final class ui {
         }
         if (param0 == 28) {
           if (!gl.field_Lb) {
-            stackIn_16_0 = ql.field_g;
+            stackIn_16_0 = DelegatingCanvas.field_g;
           } else {
             stackIn_16_0 = go.field_V;
           }

@@ -326,7 +326,7 @@ final class iw {
         }
         ut.field_l = 0;
         wt.field_u = -2147483648;
-        af.field_c = -2147483648;
+        AccountRequestState.field_c = -2147483648;
         waa.field_a = 2147483647;
         ScavengerSpecial.field_r = 2147483647;
     }

@@ -87,7 +87,7 @@ final class kq extends UiPanel {
     }
 
     final static void b(int param0, boolean param1) {
-        ee.a(8, param1);
+        AccountRequestState.a(8, param1);
         if (param0 > -45) {
           field_Lb = (ve) null;
         }

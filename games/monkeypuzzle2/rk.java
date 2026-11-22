@@ -12,7 +12,7 @@ final class rk {
     static PlatformTaskDispatcher field_g;
     String field_b;
 
-    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, boolean param2) {
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, boolean param2) {
         ic var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;

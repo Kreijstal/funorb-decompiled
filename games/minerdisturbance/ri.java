@@ -253,7 +253,7 @@ final class ri {
 
     final static void a(boolean param0) {
         try {
-          bd.field_b = false;
+          AccountRequestState.field_b = false;
           kj.field_a.readUnsignedByte((byte) -54);
           if (!param0) {
             ri.a(true, 81, 23, (pb) null, -39);

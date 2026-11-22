@@ -11,7 +11,7 @@ final class ki extends fb {
     private ki(String param0, jm param1, rg param2) {
         super(param0, param1, param2);
         try {
-          this.field_n = a.field_a.field_k;
+          this.field_n = FullscreenFocusCanvas.field_a.field_k;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -132,9 +132,9 @@ final class ki extends fb {
     }
 
     private ki(String param0, rg param1) {
-        this(param0, a.field_a.field_a, param1);
+        this(param0, FullscreenFocusCanvas.field_a.field_a, param1);
         try {
-          this.field_n = a.field_a.field_k;
+          this.field_n = FullscreenFocusCanvas.field_a.field_k;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

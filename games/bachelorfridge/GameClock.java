@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GameClock {
-    static af field_a;
+    static AccountRequestState field_a;
     static String field_b;
 
     final int a(byte param0, long param1) {
@@ -26,7 +26,7 @@ abstract class GameClock {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-          field_a = (af) null;
+          field_a = (AccountRequestState) null;
         }
     }
 
@@ -45,7 +45,7 @@ abstract class GameClock {
     abstract long a(byte param0);
 
     static {
-        field_a = new af();
+        field_a = new AccountRequestState();
         field_b = "<%0> has left the lobby.";
     }
 }

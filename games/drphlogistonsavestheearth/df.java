@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class df {
-    static q field_l;
+    static FullscreenFocusCanvas field_l;
     static vj field_a;
     static int field_h;
     private de[] field_e;

@@ -381,7 +381,7 @@ final class cj extends qf implements Cloneable {
                         if (~this.field_D == param3) {
                             /* Inlined CFG state: 13. */
                             {
-                                dd.field_c.a(64, param1 * 12, param0 * 12, 0, (byte) -111);
+                                FullscreenFocusCanvas.field_c.a(64, param1 * 12, param0 * 12, 0, (byte) -111);
                                 stackIn_14_0 = new ig((f) (this), bd.field_n, this.field_l, false);
                                 statePc = 14;
                                 continue scanLoop1;

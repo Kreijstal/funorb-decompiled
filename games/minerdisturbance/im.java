@@ -113,7 +113,7 @@ final class im {
     }
 
     final static void a(byte param0) {
-        bd.field_c = sl.e(105);
+        AccountRequestState.field_c = sl.e(105);
         if (param0 != 79) {
           return;
         }

@@ -213,7 +213,7 @@ final class AccountCreationResultPanel extends uc implements jk {
               }
             }
           }
-          var5 = new vc((uc) (this), ra.field_c, var4);
+          var5 = new vc((uc) (this), FullscreenFocusCanvas.field_c, var4);
           var6 = -123 % ((-72 - param1) / 44);
           if (param2.success) {
             if (param2.field_b) {
@@ -316,11 +316,11 @@ final class AccountCreationResultPanel extends uc implements jk {
           }
           if (1 == var2) {
             var4_int = var10.readSignedSmart((byte) -10);
-            var5_ref_wa = (wa) (ki.field_b.a(true));
+            var5_ref_wa = (wa) (AccountRequestState.field_b.a(true));
             while (var5_ref_wa != null) {
               if (var3 != var5_ref_wa.field_o ||
                 var5_ref_wa.field_h != var4_int) {
-                var5_ref_wa = (wa) (ki.field_b.f(2));
+                var5_ref_wa = (wa) (AccountRequestState.field_b.f(2));
                 continue;
               }
               break;
@@ -348,7 +348,7 @@ final class AccountCreationResultPanel extends uc implements jk {
     }
 
     AccountCreationResultPanel(eg param0, pj param1) {
-        super(param0, ra.field_c, m.field_b, false, false);
+        super(param0, FullscreenFocusCanvas.field_c, m.field_b, false, false);
         try {
           this.field_rb = param1;
         } catch (RuntimeException runtimeException) {
@@ -407,7 +407,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           return;
         }
         try {
-          jc.a((byte) 108);
+          DelegatingCanvas.a((byte) 108);
           this.g(true);
           if (param2 != 215535458) {
             kf var7 = (kf) null;

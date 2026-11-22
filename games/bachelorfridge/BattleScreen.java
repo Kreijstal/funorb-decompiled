@@ -463,7 +463,7 @@ final class BattleScreen extends dfa {
         if (null != this.field_A) {
           this.field_A.a(false);
         }
-        if (af.field_a) {
+        if (AccountRequestState.field_a) {
           DiveBomberAnimation.b(true);
         }
     }
@@ -771,7 +771,7 @@ final class BattleScreen extends dfa {
         if (kaa.field_m == -5) {
           return;
         }
-        if (af.field_a) {
+        if (AccountRequestState.field_a) {
           ic.a(69);
         }
         if (this.field_e.field_a) {
@@ -1794,7 +1794,7 @@ final class BattleScreen extends dfa {
         this.field_h.assignTurnOrderIndices(-1);
         this.field_s = new BoardView(this);
         this.j(-15503);
-        if (af.field_a) {
+        if (AccountRequestState.field_a) {
           this.field_h.tiles[3][6].field_h = 20;
           this.field_h.tiles[3][6].terrain = 39;
           this.field_h.tiles[4][5].terrain = 39;

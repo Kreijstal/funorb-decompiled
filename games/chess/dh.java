@@ -639,7 +639,7 @@ final class dh {
           return true;
         }
         if (param1 == 6) {
-          var7 = a.a(param2, this.field_i, (byte) 64);
+          var7 = FullscreenFocusCanvas.a(param2, this.field_i, (byte) 64);
           if (var7 != null) {
             var5Lifetime2 = (String) null;
             lc.a(this.field_i, (String) null, 2, 0, var7, false);

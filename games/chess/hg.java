@@ -50,7 +50,7 @@ final class hg {
           wk.field_e = param9;
           gb.field_t = -1L;
           qa.field_e = param9.length;
-          g.field_f = new byte[(qh.field_g + 7) / 8];
+          DelegatingCanvas.field_f = new byte[(qh.field_g + 7) / 8];
           ud.field_b = false;
           pd.field_Rb = null;
           ib.field_d = null;

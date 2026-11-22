@@ -27,7 +27,7 @@ abstract class MouseWheelInput {
         int var7 = 0;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          if (jj.field_Y != ef.field_e) {
+          if (jj.field_Y != AccountRequestState.field_e) {
             return false;
           }
           if (param1 != 122) {

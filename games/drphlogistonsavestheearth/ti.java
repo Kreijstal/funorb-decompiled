@@ -60,7 +60,7 @@ final class ti {
         la.field_b = rd.field_F;
         k.field_L = 0;
         lb.field_w = new ql(2);
-        lb.field_w.a(-1, ua.a(ob.field_g, -13412, ck.field_c), param0, -76);
+        lb.field_w.a(-1, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), param0, -76);
     }
 
     final static boolean a(lh param0, boolean param1) {

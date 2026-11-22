@@ -162,7 +162,7 @@ final class lc extends ro {
             if (var7 != null) {
               var2_int = (60 + var7.field_w) * mf.field_t / op.field_j;
               var3 = var2_int - 30;
-              if (!pp.field_c) {
+              if (!FullscreenFocusCanvas.field_c) {
                 ql.a(256 * (var7.field_w - var3) / 30, 245, var7, 199, -256 * var3 / 30, (byte) -81);
               } else {
                 ql.a(-256 * var3 / 30, 245, var7, 199, (-var3 + var7.field_w) * 256 / 30, (byte) -122);

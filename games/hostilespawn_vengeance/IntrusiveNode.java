@@ -180,7 +180,7 @@ class IntrusiveNode {
           }
           r.field_a = 0;
           if (ha.field_t == 1) {
-            ue.a(250, false);
+            FullscreenFocusCanvas.a(250, false);
             var3Lifetime1 = 1;
             for (var4_int = 0; var4_int < el.field_j; var4_int++) {
               if (125 != mm.field_m[var4_int].field_i) {
@@ -212,7 +212,7 @@ class IntrusiveNode {
               }
             }
           }
-          ue.a(250, false);
+          FullscreenFocusCanvas.a(250, false);
           if (param1 <= 89) {
             IntrusiveNode.a(-56, (byte) -41);
           }

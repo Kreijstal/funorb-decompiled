@@ -3,7 +3,7 @@
  */
 final class el extends a {
     private vg field_l;
-    static ef field_p;
+    static AccountRequestState field_p;
     static pc field_o;
     static String field_j;
     static String field_m;
@@ -580,7 +580,7 @@ final class el extends a {
     }
 
     static {
-        field_p = new ef();
+        field_p = new AccountRequestState();
         field_o = new pc();
         field_m = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_j = "Email (Login):";

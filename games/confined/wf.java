@@ -16,9 +16,9 @@ final class wf {
           var3_int = 117 % ((param0 + 35) / 33);
           if (10 > we.field_c) {
             var4 = 0;
-            if (ve.field_f) {
+            if (AccountRequestState.field_f) {
               var4 = 1;
-              ve.field_f = false;
+              AccountRequestState.field_f = false;
             }
             vg.a(ul.k(0), var4 != 0, ib.a((byte) 109), m.field_k, false);
             return;

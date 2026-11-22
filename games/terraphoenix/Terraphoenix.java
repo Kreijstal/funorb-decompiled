@@ -491,7 +491,7 @@ public final class Terraphoenix extends GameShell {
               (decompiledFrameRemainder3)) {
               var3Lifetime1 = 100;
               stackIn_272_0 = var3Lifetime1;
-              stackIn_272_1 = og.field_f;
+              stackIn_272_1 = AccountRequestState.field_f;
               stackIn_272_2 = new StringBuilder().append(qf.field_a).append("<br><br>");
               stackIn_273_3 = (ge.field_e != 0);
               stackIn_276_4 = 98;
@@ -901,9 +901,9 @@ public final class Terraphoenix extends GameShell {
           if (-4 == ha.field_q) {
             this.field_bb = jh.field_l[19];
           }
-          PcmPlayerPump.field_h = 8 + 16 * og.field_f.c(this.field_bb, 484);
+          PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 484);
           if (wb.field_f < PcmPlayerPump.field_h) {
-            PcmPlayerPump.field_h = 8 + 16 * og.field_f.c(this.field_bb, 475);
+            PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 475);
           }
           if (this.field_S != null &&
             wb.field_f >= PcmPlayerPump.field_h) {
@@ -926,7 +926,7 @@ public final class Terraphoenix extends GameShell {
             this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, wb.field_f, wb.field_f);
           }
           if (this.field_S != null) {
-            PcmPlayerPump.field_h = 16 * og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
+            PcmPlayerPump.field_h = 16 * AccountRequestState.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
             this.field_S.a(-92, true);
             var3Lifetime2 = 12;
             if (this.field_S.e((byte) -96) ||
@@ -991,7 +991,7 @@ public final class Terraphoenix extends GameShell {
               this.field_cb = this.field_cb + 1;
               this.field_mb = 0;
               if (PcmPlayerPump.field_h - wb.field_f <= qg.field_a) {
-                PcmPlayerPump.field_h = og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
+                PcmPlayerPump.field_h = AccountRequestState.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
                 qg.field_a = -wb.field_f + PcmPlayerPump.field_h;
                 if (0 > qg.field_a) {
                   qg.field_a = 0;
@@ -2294,7 +2294,7 @@ public final class Terraphoenix extends GameShell {
                   }
                 }
                 vc.field_f.b(var14_ref, 320, var9, var8, 0);
-                og.field_f.a(qc.field_e, -vc.field_f.b(var14_ref) + 320, -20 + var9, -16 + vc.field_f.b(var14_ref), 24, var8, 0, 2, 1, 12);
+                AccountRequestState.field_f.a(qc.field_e, -vc.field_f.b(var14_ref) + 320, -20 + var9, -16 + vc.field_f.b(var14_ref), 24, var8, 0, 2, 1, 12);
               }
               if (var13 <= 0 ||
                 var15 != 0) {
@@ -2601,7 +2601,7 @@ public final class Terraphoenix extends GameShell {
                         var12_int = (4144959 & wa.field_s >> 2) + ((16711422 & wa.field_s) >> 1);
                         var10 = 1;
                       }
-                      og.field_f.b(var7, 360, var6, var12_int, -1);
+                      AccountRequestState.field_f.b(var7, 360, var6, var12_int, -1);
                       var6 += 20;
                     }
                     var5++;
@@ -2620,19 +2620,19 @@ public final class Terraphoenix extends GameShell {
                   }
                   if (var10 != 0) {
                     if (var9 == 0) {
-                      og.field_f.a(bl.field_g + "<br><br>" + SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                      AccountRequestState.field_f.a(bl.field_g + "<br><br>" + SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       if (var13 != 0) {
-                        og.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
-                        og.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        AccountRequestState.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        AccountRequestState.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       }
                     } else {
-                      og.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                      AccountRequestState.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       if (var13 != 0) {
-                        og.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        AccountRequestState.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       }
                     }
                   } else {
-                    og.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                    AccountRequestState.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                   }
                   if (var9 != 0) {
                     this.field_Q.b(456, 329);
@@ -2654,7 +2654,7 @@ public final class Terraphoenix extends GameShell {
                     }
                   }
                   this.a(0, 461, 159, 252, 160);
-                  og.field_f.b(((ga) (var11)).a(-1426, 160), 470, 263, 65280, -1);
+                  AccountRequestState.field_f.b(((ga) (var11)).a(-1426, 160), 470, 263, 65280, -1);
                   if (((ga) (var11)).field_m != null) {
                     var12 = kb.field_a[((ga) (var11)).field_m.field_f];
                     var12.a(509, 281, 64, 64);
@@ -2789,10 +2789,10 @@ public final class Terraphoenix extends GameShell {
             var4_int = 640 - rk.field_c;
           }
           SoftwareRasterizer.a(param2 << 4, param1 << 4, 2900, var4_int, sh.field_E);
-          og.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, -600 - (-(24 * ((0 + nd.field_k) % 50)) - 120), 12, 240, wa.field_s, 0, 64, 1, 1, 24);
-          og.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, 120 + (-25 + (nd.field_k + 25) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
-          og.field_f.a(cc.field_l, 320 - (-(rk.field_c / 2) + 12), 120 + (nd.field_k + 12) % 50 * 24 - 600, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
-          og.field_f.a(cc.field_l, rk.field_c / 2 + 320 - 12, 120 + (-25 + (nd.field_k + 37) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, -600 - (-(24 * ((0 + nd.field_k) % 50)) - 120), 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, 120 + (-25 + (nd.field_k + 25) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.a(cc.field_l, 320 - (-(rk.field_c / 2) + 12), 120 + (nd.field_k + 12) % 50 * 24 - 600, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.a(cc.field_l, rk.field_c / 2 + 320 - 12, 120 + (-25 + (nd.field_k + 37) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
           var5 = 0;
           do {
             if (var5 >= 640) {
@@ -4153,7 +4153,7 @@ public final class Terraphoenix extends GameShell {
                       } else {
                         hf.field_w[var12].b(120, var5Lifetime1);
                       }
-                      var5Lifetime1 = var5Lifetime1 + (og.field_f.field_w + og.field_f.field_w * og.field_f.a(eb.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, og.field_f.field_w));
+                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.a(eb.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
                       var13 = 0;
                       while (!(ImageProducerRasterBuffer.field_m[var12] <= var13)) {
                         IsaacCipher.field_k.c(460 + var13 * -8, 250);
@@ -4476,7 +4476,7 @@ public final class Terraphoenix extends GameShell {
           jh.d((byte) -122);
           cc.clearStaticReferences((byte) -17);
           th.clearStaticReferences(102);
-          og.clearStaticReferences(8934);
+          AccountRequestState.clearStaticReferences(8934);
           AccountServiceResult.a((byte) 122);
           ec.a((byte) -82);
           o.a(0);
@@ -5436,7 +5436,7 @@ public final class Terraphoenix extends GameShell {
               }
               if (decompiledFrameCompleted1) {
                 if (var7 != 0) {
-                  og.field_f.c(sl.field_a, 320, 400, 16777215, 0);
+                  AccountRequestState.field_f.c(sl.field_a, 320, 400, 16777215, 0);
                   var8_intLifetime1 = 0;
                   while (3 > var8_intLifetime1) {
                     var9_ref_String = rb.field_b[var8_intLifetime1];
@@ -6617,20 +6617,20 @@ public final class Terraphoenix extends GameShell {
                 if (0 < var10) {
                   nb.field_d[6].b(452, var11);
                   if (var10 > 1) {
-                    og.field_f.a(var10 + kk.field_b[19], 486, var11 + 1, 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.a(var10 + kk.field_b[19], 486, var11 + 1, 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   if (var10 == 1) {
-                    og.field_f.a(var10 + kk.field_b[20], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.a(var10 + kk.field_b[20], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   var11 -= 34;
                 }
                 if (this.field_Fb > 0) {
                   qc.field_f[7].a(452, var11, -1 + nb.field_d[6].field_r, -1 + nb.field_d[6].field_t);
                   if (this.field_Fb > 1) {
-                    og.field_f.a(this.field_Fb + kk.field_b[21], 486, -19 + (20 + var11), 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.a(this.field_Fb + kk.field_b[21], 486, -19 + (20 + var11), 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   if (1 == this.field_Fb) {
-                    og.field_f.a(this.field_Fb + kk.field_b[22], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.a(this.field_Fb + kk.field_b[22], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   var11 -= 34;
                 }
@@ -7382,7 +7382,7 @@ public final class Terraphoenix extends GameShell {
                   390 >= MouseWheelInput.field_b) {
                   var10 = 16777215;
                 }
-                og.field_f.a(dj.field_f, 352, 280, 256, 50, 7829367 | var10, -1, 1, 1, og.field_f.field_s);
+                AccountRequestState.field_f.a(dj.field_f, 352, 280, 256, 50, 7829367 | var10, -1, 1, 1, AccountRequestState.field_f.field_s);
                 vc.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
                 SoftwareRasterizer.e(383, 339, 194, 52, 0);
                 SoftwareRasterizer.e(385, 341, 190, 48, 0);
@@ -8053,10 +8053,10 @@ public final class Terraphoenix extends GameShell {
                 var9 = (int)(var8_ref_Runtime.totalMemory() - var8_ref_Runtime.freeMemory()) >> 20;
                 vc.field_f.b(UiWidget.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
                 if (this.field_ob) {
-                  og.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
+                  AccountRequestState.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
                 }
                 if (this.field_fb) {
-                  og.field_f.b("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
+                  AccountRequestState.field_f.b("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
                 }
               }
               this.c(false);
@@ -8124,7 +8124,7 @@ public final class Terraphoenix extends GameShell {
               var5Lifetime1 = 320;
               var6Lifetime1 = 240;
               this.a(param0 ^ 3350, var6Lifetime1, var5Lifetime1);
-              var7_ref_ud = og.field_f;
+              var7_ref_ud = AccountRequestState.field_f;
               var8 = 100;
               var9Lifetime1 = 12;
               stackIn_184_0 = var8;
@@ -8363,7 +8363,7 @@ public final class Terraphoenix extends GameShell {
                 var8Lifetime1 = 475;
               }
               SoftwareRasterizer.c(9, 415, 512, 472);
-              og.field_f.a(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -qg.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
+              AccountRequestState.field_f.a(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -qg.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
               SoftwareRasterizer.c();
               if (this.field_S != null) {
                 SoftwareRasterizer.g(9, 415, 512, 0, 192);
@@ -8461,10 +8461,10 @@ public final class Terraphoenix extends GameShell {
               if (this.field_Eb.length > var5Lifetime2) {
                 var4Lifetime2 += 12;
                 stackIn_519_0 = ~var3_intLifetime2;
-                stackIn_519_1 = ~og.field_f.b(this.field_Eb[var5Lifetime2]);
+                stackIn_519_1 = ~AccountRequestState.field_f.b(this.field_Eb[var5Lifetime2]);
                 if (var10 == 0) {
                   if (stackIn_519_0 > stackIn_519_1) {
-                    var3_intLifetime2 = og.field_f.b(this.field_Eb[var5Lifetime2]);
+                    var3_intLifetime2 = AccountRequestState.field_f.b(this.field_Eb[var5Lifetime2]);
                   }
                   var5Lifetime2++;
                   continue;
@@ -8503,7 +8503,7 @@ public final class Terraphoenix extends GameShell {
             var7Lifetime1 = 0;
             while (this.field_Eb.length > var7Lifetime1) {
               var6Lifetime2 += 12;
-              og.field_f.c(this.field_Eb[var7Lifetime1], var5Lifetime2, -2 + var6Lifetime2, 16777215, -1);
+              AccountRequestState.field_f.c(this.field_Eb[var7Lifetime1], var5Lifetime2, -2 + var6Lifetime2, 16777215, -1);
               var7Lifetime1++;
               if (var10 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -8550,19 +8550,19 @@ public final class Terraphoenix extends GameShell {
             var4Lifetime3 = (int)(var3.totalMemory() - var3.freeMemory()) >> 20;
             vc.field_f.b(UiWidget.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
             if (this.field_ob) {
-              og.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
+              AccountRequestState.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
             }
             if (this.field_fb) {
-              og.field_f.b("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
+              AccountRequestState.field_f.b("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
             }
             if (this.field_E) {
-              og.field_f.b("GRENADES", 20, 100, 16777215, 0);
+              AccountRequestState.field_f.b("GRENADES", 20, 100, 16777215, 0);
             }
             if (this.field_H) {
-              og.field_f.b("PISTOLS", 20, 120, 16777215, 0);
+              AccountRequestState.field_f.b("PISTOLS", 20, 120, 16777215, 0);
             }
             if (this.field_Ab) {
-              og.field_f.b("LAUNCHERS", 20, 140, 16777215, 0);
+              AccountRequestState.field_f.b("LAUNCHERS", 20, 140, 16777215, 0);
             }
           }
           AccountNameAvailabilityValidator.a(0, var2, 0, (byte) 125);
@@ -8636,7 +8636,7 @@ public final class Terraphoenix extends GameShell {
         int var4Lifetime1;
         var5 = field_V;
         try {
-          og.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b12");
+          AccountRequestState.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b12");
           vc.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
           var2 = ig.a(ab.field_a, 0, "screenshots", "member_benefits");
           if (me.field_o <= 0) {
@@ -8651,7 +8651,7 @@ public final class Terraphoenix extends GameShell {
           kk.a(50, 100);
           var3 = new IndexedSprite[1];
           var3[0] = qb.a("sightingpic", (byte) -36, "", ab.field_a);
-          og.field_f.a(var3, (int[]) null);
+          AccountRequestState.field_f.a(var3, (int[]) null);
           wg.field_f = il.a("options", "", ab.field_a, -1);
           il.a("help", "", ab.field_a, -1);
           aa.field_j = il.a("next", "", ab.field_a, param0 + 2019);
@@ -8987,7 +8987,7 @@ public final class Terraphoenix extends GameShell {
             if (qf.a((byte) 76)) {
               var2_int = this.h((byte) -13);
               if (2 == var2_int) {
-                o.a(50, 320, 240, og.field_f, 10, 12);
+                o.a(50, 320, 240, AccountRequestState.field_f, 10, 12);
               }
               if (var3 != 0) {
                 this.k(-20858);
@@ -9066,7 +9066,7 @@ public final class Terraphoenix extends GameShell {
             var6 = 60;
             var7 = 430;
             var8 = 300;
-            var9 = og.field_f.b("%") + var8;
+            var9 = AccountRequestState.field_f.b("%") + var8;
             var10 = 1 + this.field_Bb;
             if (ha.field_q == 1) {
               var10 -= 3;
@@ -9133,148 +9133,148 @@ public final class Terraphoenix extends GameShell {
             var11 += 32;
             var12 = 0;
             if (this.field_X.field_e.field_g > 0) {
-              og.field_f.b(pe.field_c[0], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_g), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[0], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_g), 300, var11, wa.field_s, 0);
               if (!bk.c(-25704)) {
-                og.field_f.a(this.field_X.field_e.field_g * 100 + hh.field_l, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.a(this.field_X.field_e.field_g * 100 + hh.field_l, var7, var11, wa.field_s, 0);
               }
               var11 += 12;
               var12 = var12 + this.field_X.field_e.field_g * 100;
             }
             if (this.field_X.field_e.field_j > 0) {
-              og.field_f.b(pe.field_c[1], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_j), 300, var11, wa.field_s, 0);
-              og.field_f.a(this.field_X.field_e.field_j * 500 + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[1], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_j), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(this.field_X.field_e.field_j * 500 + hh.field_l, var7, var11, wa.field_s, 0);
               var12 = var12 + 500 * this.field_X.field_e.field_j;
               var11 += 12;
             }
             if (this.field_X.field_e.field_m > 0) {
-              og.field_f.b(pe.field_c[28], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_m), 300, var11, wa.field_s, 0);
-              og.field_f.a(this.field_X.field_e.field_m * 100 + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[28], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_m), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(this.field_X.field_e.field_m * 100 + hh.field_l, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 = var12 + this.field_X.field_e.field_m * 100;
             }
             if (0 < this.field_X.field_e.field_b) {
-              og.field_f.b(pe.field_c[2], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_b), 300, var11, wa.field_s, 0);
-              og.field_f.a(1000 * this.field_X.field_e.field_b + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[2], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_b), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(1000 * this.field_X.field_e.field_b + hh.field_l, var7, var11, wa.field_s, 0);
               var12 = var12 + 1000 * this.field_X.field_e.field_b;
               var11 += 12;
             }
             if (1 == this.field_X.field_e.field_i) {
-              og.field_f.b(pe.field_c[3], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[3], var6, var11, wa.field_s, 0);
               if (!bk.c(param0 - 25704)) {
-                og.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
               }
               var11 += 12;
               var12 += 1000;
             }
             if (this.field_X.field_e.field_i == 2) {
-              og.field_f.b(pe.field_c[4], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[4], var6, var11, wa.field_s, 0);
               if (!bk.c(-25704)) {
-                og.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
               }
               var12 += 2500;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 3) {
-              og.field_f.b(pe.field_c[5], var6, var11, wa.field_s, 0);
-              og.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[5], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
               var12 += 2500;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 4) {
-              og.field_f.b(pe.field_c[6], var6, var11, wa.field_s, 0);
-              og.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[6], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
               var12 += 2500;
               var11 += 12;
             }
             if (5 == this.field_X.field_e.field_i) {
-              og.field_f.b(pe.field_c[7], var6, var11, wa.field_s, 0);
-              og.field_f.a(ee.field_N, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[7], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(ee.field_N, var7, var11, wa.field_s, 0);
               var12 += 3000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 6) {
-              og.field_f.b(pe.field_c[8], var6, var11, wa.field_s, 0);
-              og.field_f.a(NodeHashTableIterator.field_c, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[8], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(NodeHashTableIterator.field_c, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 6000;
             }
             if (this.field_X.field_e.field_i == 7) {
-              og.field_f.b(pe.field_c[9], var6, var11, wa.field_s, 0);
-              og.field_f.a(oa.field_b, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[9], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(oa.field_b, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 10000;
             }
             if (8 == this.field_X.field_e.field_i) {
-              og.field_f.b(pe.field_c[10], var6, var11, wa.field_s, 0);
-              og.field_f.a(oa.field_b, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[10], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(oa.field_b, var7, var11, wa.field_s, 0);
               var12 += 10000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 9) {
-              og.field_f.b(pe.field_c[11], var6, var11, wa.field_s, 0);
-              og.field_f.a(fh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[11], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(fh.field_l, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 5000;
             }
             if (this.field_X.field_e.field_i == 10) {
-              og.field_f.b(pe.field_c[12], var6, var11, wa.field_s, 0);
-              og.field_f.a(fh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[12], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(fh.field_l, var7, var11, wa.field_s, 0);
               var12 += 5000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 11) {
-              og.field_f.b(pe.field_c[13], var6, var11, wa.field_s, 0);
-              og.field_f.a(bj.field_a, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[13], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(bj.field_a, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 25000;
             }
             if (this.field_X.field_e.field_i == 12) {
-              og.field_f.b(pe.field_c[14], var6, var11, wa.field_s, 0);
-              og.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[14], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
               var12 += 1000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -1) {
-              og.field_f.b(pe.field_c[15], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[15], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -2) {
-              og.field_f.b(pe.field_c[16], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[16], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -3) {
-              og.field_f.b(pe.field_c[17], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[17], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -4) {
-              og.field_f.b(pe.field_c[18], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[18], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (-5 == this.field_X.field_e.field_i) {
-              og.field_f.b(pe.field_c[19], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[19], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -6) {
-              og.field_f.b(pe.field_c[20], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[20], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_f > 0) {
-              og.field_f.b(pe.field_c[21], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_f), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[21], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_f), 300, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_k > 0) {
-              og.field_f.b(pe.field_c[22], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_k), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[22], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_k), 300, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_h > 0) {
-              og.field_f.b(pe.field_c[23], var6, var11, wa.field_s, 0);
-              og.field_f.b(Integer.toString(this.field_X.field_e.field_h), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(pe.field_c[23], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_h), 300, var11, wa.field_s, 0);
               var11 += 12;
             }
             var11 += 12;
@@ -9287,11 +9287,11 @@ public final class Terraphoenix extends GameShell {
                 if (var16 == 0) {
                   if (stackIn_180_0 < stackIn_180_1) {
                     if (var13 == 0) {
-                      og.field_f.b(od.field_c[var14].field_j, 240, var11, wa.field_s, 0);
-                      og.field_f.b(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 400, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.b(od.field_c[var14].field_j, 240, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 400, var11, wa.field_s, 0);
                     } else {
-                      og.field_f.b(od.field_c[var14].field_j, 40, var11, wa.field_s, 0);
-                      og.field_f.b(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 200, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.b(od.field_c[var14].field_j, 40, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 200, var11, wa.field_s, 0);
                     }
                     stackIn_171_0 = (var13 != 0) ? 0 : 1;
                     var13 = stackIn_171_0;
@@ -9314,42 +9314,42 @@ public final class Terraphoenix extends GameShell {
               }
               var15 = stackIn_180_0 + stackIn_180_1;
               if (var14 > 0) {
-                og.field_f.b(m.field_b, var6, var11, 16777215, 0);
-                og.field_f.a(100 * var15 / var14 + "%", var9, var11, 16777215, 0);
+                AccountRequestState.field_f.b(m.field_b, var6, var11, 16777215, 0);
+                AccountRequestState.field_f.a(100 * var15 / var14 + "%", var9, var11, 16777215, 0);
                 var12 = var12 * var15 / var14;
               }
               var11 += 12;
-              og.field_f.b(MapTile.field_o, var6, var11, 16777215, 0);
-              og.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
+              AccountRequestState.field_f.b(MapTile.field_o, var6, var11, 16777215, 0);
+              AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
               var11 += 12;
               break;
             }
             if (Archive.field_a == 1) {
               if (!bk.c(param0 - 25704)) {
-                og.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
-                og.field_f.a(Integer.toString(var12 / 2), var8, var11, 16777215, 0);
+                AccountRequestState.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
+                AccountRequestState.field_f.a(Integer.toString(var12 / 2), var8, var11, 16777215, 0);
               }
               var12 = var12 + var12 / 2;
               var11 += 12;
               if (this.field_X.field_e.field_b + this.field_X.field_e.field_j > 0 &&
                 this.field_X.field_d > 0) {
-                og.field_f.b(pe.field_c[25], var6, var11, 16777215, 0);
+                AccountRequestState.field_f.b(pe.field_c[25], var6, var11, 16777215, 0);
                 var14Lifetime1 = this.field_Bb * ((this.field_X.field_e.field_b + this.field_X.field_e.field_j) * 250) / this.field_X.field_d;
-                og.field_f.a(Integer.toString(var14Lifetime1), var8, var11, 16777215, 0);
+                AccountRequestState.field_f.a(Integer.toString(var14Lifetime1), var8, var11, 16777215, 0);
                 var12 = var12 + var14Lifetime1;
                 var11 += 12;
               }
             }
             if (2 == Archive.field_a) {
-              og.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
-              og.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
+              AccountRequestState.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
+              AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
               var12 = var12 + var12;
               var11 += 12;
               if (this.field_X.field_e.field_j + this.field_X.field_e.field_b > 0 &&
                 this.field_X.field_d > 0) {
-                og.field_f.b(pe.field_c[25], var6, var11, 16777215, 0);
+                AccountRequestState.field_f.b(pe.field_c[25], var6, var11, 16777215, 0);
                 var14Lifetime2 = 500 * ((this.field_X.field_e.field_j + this.field_X.field_e.field_b) * this.field_Bb) / this.field_X.field_d;
-                og.field_f.a(Integer.toString(var14Lifetime2), var8, var11, 16777215, 0);
+                AccountRequestState.field_f.a(Integer.toString(var14Lifetime2), var8, var11, 16777215, 0);
                 var12 = var12 + var14Lifetime2;
                 var11 += 12;
               }
@@ -9357,8 +9357,8 @@ public final class Terraphoenix extends GameShell {
             this.field_X.field_H = var12;
             if (!bk.c(-25704)) {
               var11 += 2;
-              og.field_f.b(pe.field_c[26], var6, var11, 16777215, 0);
-              og.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
+              AccountRequestState.field_f.b(pe.field_c[26], var6, var11, 16777215, 0);
+              AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
               var11 += 14;
               var11 += 14;
               vc.field_f.b(pe.field_c[27], 60, var11, 16777215, 0);
@@ -9370,8 +9370,8 @@ public final class Terraphoenix extends GameShell {
               -1 == this.field_X.field_e.field_i &&
               this.field_X.field_e.field_e != this.field_X.field_e.field_f + this.field_X.field_e.field_k + this.field_X.field_e.field_h) {
               if (bk.c(-25704)) {
-                og.field_f.a(uc.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, og.field_f.field_s);
-                og.field_f.a(ae.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, og.field_f.field_s);
+                AccountRequestState.field_f.a(uc.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
+                AccountRequestState.field_f.a(ae.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
                 stackIn_222_0 = (this.a(false, 384, (byte) -44, 370, ba.field_c)) ? 0 : 1;
                 var14Lifetime3 = stackIn_222_0;
                 discarded$0 = this.a(var14Lifetime3 != 0, 64, (byte) -44, 370, FullscreenFocusCanvas.field_c);
@@ -9382,7 +9382,7 @@ public final class Terraphoenix extends GameShell {
                   discarded$1 = this.a(true, 384, (byte) -44, 340, ba.field_c);
                   decompiledFrameRemainder0 = (this.field_Bb == 12);
                   if (decompiledFrameRemainder0) {
-                    og.field_f.a(vb.field_c, 352, 290, 256, 50, 16777215, 0, 1, 1, og.field_f.field_s);
+                    AccountRequestState.field_f.a(vb.field_c, 352, 290, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                     decompiledFrameRemainder0 = (var16 != 0);
                   }
                 }
@@ -9417,11 +9417,11 @@ public final class Terraphoenix extends GameShell {
                   SoftwareRasterizer.e(496, 340 + var15Lifetime1, 80, 50, var14Lifetime3Lifetime1);
                   boolean decompiledSharedTail0 = (null == si.field_ib);
                   if (!decompiledSharedTail0) {
-                    og.field_f.a(UiWidget.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, og.field_f.field_s);
+                    AccountRequestState.field_f.a(UiWidget.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                     decompiledSharedTail0 = (var16 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    og.field_f.a(rj.field_d, 352, 310, 256, 50, 16777215, 0, 1, 1, og.field_f.field_s);
+                    AccountRequestState.field_f.a(rj.field_d, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                   }
                   if (var16 != 0) {
                     discarded$2 = this.a(true, 384, (byte) -44, 340, ba.field_c);

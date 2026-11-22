@@ -303,7 +303,7 @@ abstract class MazeComponent extends PrefabComponent {
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + ToolkitSelector.field_a, 0);
           RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + ToolkitSelector.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
           MidiPatch.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
-          bc.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
+          NameEntryKeyboardSupport.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
           StatusEffect.field_g.setBounds(MouseWheelFactory.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.setBounds(MouseWheelFactory.field_b.field_G, MouseWheelFactory.field_b.field_t - 72, -23776, 30, 0);
           var2_int = 3 + ColourRowCache.field_b;

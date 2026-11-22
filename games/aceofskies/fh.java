@@ -10,7 +10,7 @@ final class fh extends vo {
 
     final static void setLoadingProgress(int obfuscationGuard, float percent, String message) {
         try {
-          dq.loadingMessage = message;
+          AccountRequestState.loadingMessage = message;
           NetworkGameClient.loadingPercent = percent;
           if (obfuscationGuard >= -23) {
             field_g = (String) null;

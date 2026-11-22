@@ -30,7 +30,7 @@ final class pd {
               wi.field_c.b((byte) -79, lc.field_hb);
             }
             if (10 == param1) {
-              qc.a(false);
+              FullscreenFocusCanvas.a(false);
               var3_int = 0;
             }
             if (var3_int != 0) {

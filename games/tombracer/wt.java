@@ -4,12 +4,12 @@
 final class wt {
     static Sprite[] field_c;
     static String field_b;
-    static fpa field_d;
+    static AccountRequestState usernameQueryState;
     static int field_a;
 
     public static void releaseStatics(int param0) {
         field_c = null;
-        field_d = null;
+        usernameQueryState = null;
         field_b = null;
         if (param0 <= 105) {
           wt.showProgressDialog((byte) -46);

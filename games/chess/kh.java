@@ -432,8 +432,8 @@ final class kh extends gm {
             return;
           }
           ud.field_b = true;
-          for (var3Lifetime2 = 0; g.field_f.length > var3Lifetime2; var3Lifetime2++) {
-            g.field_f[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(0);
+          for (var3Lifetime2 = 0; DelegatingCanvas.field_f.length > var3Lifetime2; var3Lifetime2++) {
+            DelegatingCanvas.field_f[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(0);
           }
           qd.field_u = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ -105);
           PacketBuffer.field_n = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-107);

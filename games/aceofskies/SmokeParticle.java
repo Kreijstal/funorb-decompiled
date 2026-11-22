@@ -113,7 +113,7 @@ final class SmokeParticle extends FlightBody {
         String stackIn_34_2 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          int var7_int = dq.a(param4, -70);
+          int var7_int = AccountRequestState.roundUpToMultipleOfEight(param4, -70);
           if (null == lp.field_b) {
             lp.field_b = new java.security.SecureRandom();
           }

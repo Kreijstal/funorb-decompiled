@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, qn, Teleportable {
+final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, RoomObjectMarker, Teleportable {
     private IntrusiveDeque children;
     static UiComponent field_q;
     static int field_m;
@@ -3102,7 +3102,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           if (param0 == var5_int) {
             return false;
           }
-          var6 = wm.clampedFixedRatio(4096, var5_int, param0 + 125);
+          var6 = PlayerViewportLayout.clampedFixedRatio(4096, var5_int, param0 + 125);
           var7 = 0;
           var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {

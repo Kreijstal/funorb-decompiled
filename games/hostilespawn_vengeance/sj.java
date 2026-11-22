@@ -60,7 +60,7 @@ final class sj {
           }
           try {
             if (ce.field_e == 0) {
-              db.field_o = AccountServiceResult.field_k.a(fk.field_a, 76, mb.field_p);
+              db.field_o = AccountServiceResult.field_k.a(AccountRequestState.field_a, 76, mb.field_p);
               ce.field_e = ce.field_e + 1;
             }
             if (ce.field_e == 1) {
@@ -144,7 +144,7 @@ final class sj {
           ha.field_w.field_B = var2;
           ha.field_w.field_n.a(true, (byte) 12, var2);
           if (null == q.field_g) {
-            stackIn_9_0 = ue.field_a;
+            stackIn_9_0 = FullscreenFocusCanvas.field_a;
           } else {
             stackIn_9_0 = q.field_g;
           }

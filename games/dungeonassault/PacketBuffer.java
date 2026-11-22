@@ -1439,11 +1439,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_defeat,0", false);
                 if (var2 != null) {
-                  ek.field_j[0] = dj.a(var2, param1);
+                  FullscreenFocusCanvas.field_j[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_defeat,1", param1);
                 if (null != var2) {
-                  ek.field_j[1] = dj.a(var2, param1);
+                  FullscreenFocusCanvas.field_j[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_defeat_repeated,0", param1);
                 if (null != var2) {
@@ -1965,7 +1965,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_black_knight", false);
                 if (var2 != null) {
-                  ql.field_l = dj.a(var2, false);
+                  DelegatingCanvas.field_l = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_minotaur", false);
                 if (var2 != null) {
@@ -2145,7 +2145,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tip_teleport", false);
                 if (var2 != null) {
-                  ek.field_a = dj.a(var2, false);
+                  FullscreenFocusCanvas.field_a = dj.a(var2, false);
                 }
                 var2 = gm.a("tip_hidden_nails", param1);
                 if (null != var2) {
@@ -2623,7 +2623,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orb_preservation", false);
                 if (null != var2) {
-                  ek.field_d = dj.a(var2, param1);
+                  FullscreenFocusCanvas.field_d = dj.a(var2, param1);
                 }
                 var2 = gm.a("orb_majesty", param1);
                 if (null != var2) {
@@ -2679,27 +2679,27 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("titles_age_female,0", false);
                 if (null != var2) {
-                  ek.field_h[0] = dj.a(var2, false);
+                  FullscreenFocusCanvas.field_h[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_age_female,1", param1);
                 if (var2 != null) {
-                  ek.field_h[1] = dj.a(var2, false);
+                  FullscreenFocusCanvas.field_h[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_age_female,2", false);
                 if (null != var2) {
-                  ek.field_h[2] = dj.a(var2, param1);
+                  FullscreenFocusCanvas.field_h[2] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_age_female,3", false);
                 if (var2 != null) {
-                  ek.field_h[3] = dj.a(var2, false);
+                  FullscreenFocusCanvas.field_h[3] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_age_female,4", false);
                 if (var2 != null) {
-                  ek.field_h[4] = dj.a(var2, false);
+                  FullscreenFocusCanvas.field_h[4] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_age_female,5", false);
                 if (null != var2) {
-                  ek.field_h[5] = dj.a(var2, false);
+                  FullscreenFocusCanvas.field_h[5] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_male,0", param1);
                 if (null != var2) {
@@ -3343,7 +3343,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_isometric", false);
                 if (var2 != null) {
-                  ql.field_g = dj.a(var2, param1);
+                  DelegatingCanvas.field_g = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_topdown", false);
                 if (var2 != null) {
@@ -3697,7 +3697,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_monster", false);
                 if (var2 != null) {
-                  af.field_a = dj.a(var2, param1);
+                  AccountRequestState.field_a = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_trap", false);
                 if (var2 != null) {

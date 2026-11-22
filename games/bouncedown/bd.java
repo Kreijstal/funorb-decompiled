@@ -84,7 +84,7 @@ final class bd extends al {
             if (var3 != null) {
               if (var3.a((byte) 125) == mc.field_a &&
                 !param0.equals(this.field_k.field_h)) {
-                stackIn_7_0 = mf.field_c;
+                stackIn_7_0 = AccountRequestState.field_c;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.c((byte) 66);
@@ -97,7 +97,7 @@ final class bd extends al {
           if (param0.equals(this.field_k.field_h)) {
             return null;
           }
-          stackIn_15_0 = mf.field_c;
+          stackIn_15_0 = AccountRequestState.field_c;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

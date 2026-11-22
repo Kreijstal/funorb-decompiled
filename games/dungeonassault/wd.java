@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd {
-    static af field_d;
+    static AccountRequestState field_d;
     eh field_i;
     private int field_c;
     static nn field_f;

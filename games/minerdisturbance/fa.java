@@ -11,8 +11,8 @@ final class fa {
     final static void c(int param0) {
         if (null != mb.field_b) {
           mb.field_b.a(true);
-          if (null != bd.field_e) {
-            bd.field_e.r(4595);
+          if (null != AccountRequestState.field_e) {
+            AccountRequestState.field_e.r(4595);
           }
           tc.a(param0 ^ -9351);
           if (param0 == -9) {
@@ -21,8 +21,8 @@ final class fa {
           field_c = (String) null;
           return;
         }
-        if (null != bd.field_e) {
-          bd.field_e.r(4595);
+        if (null != AccountRequestState.field_e) {
+          AccountRequestState.field_e.r(4595);
         }
         tc.a(param0 ^ -9351);
         if (param0 != -9) {

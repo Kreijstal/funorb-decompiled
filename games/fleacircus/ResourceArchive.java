@@ -4,7 +4,7 @@
 final class ResourceArchive {
     private boolean field_d;
     private gi field_i;
-    static vb field_p;
+    static FullscreenFocusCanvas field_p;
     private int field_h;
     static ik field_c;
     static mj field_f;
@@ -706,7 +706,7 @@ final class ResourceArchive {
           of.field_b = param3;
           pg.field_c = param6;
           if (param2 != 8737) {
-            field_p = (vb) null;
+            field_p = (FullscreenFocusCanvas) null;
           }
           b.field_a = param0;
           mh.field_x = param8;

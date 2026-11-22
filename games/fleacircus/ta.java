@@ -31,7 +31,7 @@ abstract class ta extends DualLinkNode {
         if (param0 != -15040) {
           return (String) null;
         }
-        return ae.field_a.readString(param0 + 15040);
+        return AccountRequestState.field_a.readString(param0 + 15040);
     }
 
     final static void a(boolean param0, int param1) {

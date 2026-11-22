@@ -251,7 +251,7 @@ final class qi extends WidgetContainer implements vc, ql {
           if (null != this.field_C) {
             this.field_C.field_h = (ml) ((Object) var6);
           }
-          this.field_L.field_m = r.field_f;
+          this.field_L.field_m = FullscreenFocusCanvas.field_f;
           if (this.field_D != null) {
             this.field_D.field_h = (ml) ((Object) var6);
           }

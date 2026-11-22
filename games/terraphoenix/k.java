@@ -4,7 +4,7 @@
 final class k {
     static String[] field_d;
     static String field_a;
-    static og field_b;
+    static AccountRequestState field_b;
     static int[] field_e;
     private IntrusiveNode field_g;
     private IntrusiveDeque field_c;
@@ -152,7 +152,7 @@ final class k {
           this.field_g = var2.next;
           return var2;
         }
-        field_b = (og) null;
+        field_b = (AccountRequestState) null;
         this.field_g = var2.next;
         return var2;
     }
@@ -202,7 +202,7 @@ final class k {
     final IntrusiveNode a(byte param0) {
         IntrusiveNode var2 = this.field_c.sentinel.previous;
         if (param0 != -13) {
-          field_b = (og) null;
+          field_b = (AccountRequestState) null;
           if (this.field_c.sentinel != var2) {
             this.field_g = var2.previous;
             return var2;
@@ -252,6 +252,6 @@ final class k {
         field_d = new String[]{"Moving and shooting", "Your normal cursor is shown by this green box. If the box is over a staircase, an arrow will appear to denote which direction the stairs travel.", "By left clicking on the terrain, the movement cursor will appear with a number saying how much time it will take to move to this position. Click once more to confirm and your soldier will move.", "If the cursor is positioned over a controllable soldier, it will turn blue. Click to select the soldier.", "Moving the cursor over an enemy will change the cursor to a red targeting icon. Left clicking will make your soldier fire a shot at the target. If you select your gun from the console you will enter auto-fire mode allowing you to fire at any position on the landscape. This is useful for explosive weapons or if you cannot see your target.", "If a soldier is in ready mode, they will automatically crouch when next to cover such as a low wall or hedge. Enemy fire is likely to hit the cover and thus not injure your soldier. Remember that cover can be destroyed by explosives or powerful guns."};
         field_e = new int[8192];
         field_a = "MML-4";
-        field_b = new og();
+        field_b = new AccountRequestState();
     }
 }

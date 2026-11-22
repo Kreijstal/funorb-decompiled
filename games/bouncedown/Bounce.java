@@ -126,7 +126,7 @@ public final class Bounce extends GameClient {
           sg.clearStaticReferences((byte) -112);
           ef.b(-10);
           gi.b(72);
-          jb.clearStaticReferences(false);
+          FullscreenFocusCanvas.clearStaticReferences(false);
           pb.a(-19);
           pk.clearStaticReferences(-112);
           v.clearStaticReferences(-8217);
@@ -211,7 +211,7 @@ public final class Bounce extends GameClient {
           pe.a(0);
           ih.d((byte) -58);
           hc.clearStaticReferences(true);
-          th.a((byte) -83);
+          DelegatingCanvas.a((byte) -83);
           fi.clearStaticReferences(-14935);
           da.a(-87);
           ad.clearStaticReferences();
@@ -289,7 +289,7 @@ public final class Bounce extends GameClient {
           qg.clearStaticReferences((byte) 57);
           ld.a(false);
           ke.a(-196);
-          mf.a((byte) -114);
+          AccountRequestState.releaseStatics((byte) -114);
           AccountServiceResult.a((byte) -75);
           qh.b((byte) -101);
           uf.a(32578);
@@ -891,10 +891,10 @@ public final class Bounce extends GameClient {
             return;
           }
           if (sj.field_f != null &&
-            sj.field_f.field_f) {
+            sj.field_f.focusLost) {
             v.d((byte) 121);
             mh.a(sj.field_f, (byte) 80);
-            sj.field_f.a((byte) -121, ck.field_e);
+            sj.field_f.exitFullscreen((byte) -121, ck.field_e);
             sj.field_f = null;
             ch.field_h.requestFocus();
           }
@@ -941,7 +941,7 @@ public final class Bounce extends GameClient {
                 if (var2_int == 2 &&
                   sj.field_f != null) {
                   mh.a(sj.field_f, (byte) 111);
-                  sj.field_f.a((byte) -121, ck.field_e);
+                  sj.field_f.exitFullscreen((byte) -121, ck.field_e);
                   sj.field_f = null;
                   ch.field_h.requestFocus();
                 }
@@ -966,7 +966,7 @@ public final class Bounce extends GameClient {
                   if (2 == var2_intLifetime2) {
                     if (null != sj.field_f) {
                       mh.a(sj.field_f, (byte) 103);
-                      sj.field_f.a((byte) -115, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -115, ck.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
@@ -974,7 +974,7 @@ public final class Bounce extends GameClient {
                     if ((var3 != 0) &&
                       (null != sj.field_f)) {
                       mh.a(sj.field_f, (byte) 121);
-                      sj.field_f.a((byte) -127, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -127, ck.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
@@ -982,7 +982,7 @@ public final class Bounce extends GameClient {
                 } else {
                   if (null != sj.field_f) {
                     mh.a(sj.field_f, (byte) 121);
-                    sj.field_f.a((byte) -127, ck.field_e);
+                    sj.field_f.exitFullscreen((byte) -127, ck.field_e);
                     sj.field_f = null;
                     ch.field_h.requestFocus();
                   }
@@ -1158,7 +1158,7 @@ public final class Bounce extends GameClient {
           }
           if (sj.field_f != null) {
             mh.a(sj.field_f, (byte) 101);
-            sj.field_f.a((byte) -122, ck.field_e);
+            sj.field_f.exitFullscreen((byte) -122, ck.field_e);
             sj.field_f = null;
             ch.field_h.requestFocus();
           }
@@ -1332,7 +1332,7 @@ public final class Bounce extends GameClient {
           od.field_f = q.a(-1, va.field_c, "newfont", ub.field_a, "");
           l.field_e = nc.a("title", ub.field_a, "", 0);
           ej.field_a = nc.a("title_achievements", ub.field_a, "", param1 - 3134);
-          mf.field_b = nc.a("title_highscores", ub.field_a, "", 0);
+          AccountRequestState.field_b = nc.a("title_highscores", ub.field_a, "", 0);
           mi.field_k = nc.a("title_instructions", ub.field_a, "", 0);
           cl.field_p = vh.a(ub.field_a, "", (byte) -13, "frame");
           ig.field_d = vh.a(ub.field_a, "", (byte) 117, "frame_50");

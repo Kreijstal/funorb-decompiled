@@ -1339,7 +1339,7 @@ public final class Transmogrify extends SessionGameApplet {
           qk.a((byte) -86);
           oh.a((byte) 104);
           AchievementNotice.clearStaticReferences(111);
-          pd.clearStaticReferences((byte) -74);
+          AccountRequestState.clearStaticReferences((byte) -74);
           AccountServiceResult.clearStaticReferences(-1);
           fc.a(false);
           hi.a(false);

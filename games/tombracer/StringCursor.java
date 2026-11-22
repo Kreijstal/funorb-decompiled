@@ -24,7 +24,7 @@ final class StringCursor {
               if (ColourRowCacheEntry.field_f == null) {
                 var2 = 3;
               } else {
-                fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
+                AccountRequestState.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
                 var2 = 2;
               }
               if (OpenGlSceneLight.field_o == null &&
@@ -38,7 +38,7 @@ final class StringCursor {
             if (ColourRowCacheEntry.field_f == null) {
               var2 = 3;
             } else {
-              fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
+              AccountRequestState.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
               var2 = 2;
             }
           }
@@ -73,7 +73,7 @@ final class StringCursor {
               }
               return;
             }
-            fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
+            AccountRequestState.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
             var2 = 2;
           } else {
             ColourRowCacheEntry.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
@@ -81,7 +81,7 @@ final class StringCursor {
             if (ColourRowCacheEntry.field_f == null) {
               var2 = 3;
             } else {
-              fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
+              AccountRequestState.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
               var2 = 2;
             }
           }

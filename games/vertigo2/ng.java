@@ -60,7 +60,7 @@ final class ng {
               param1.readBits((byte) -106, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.readBits((byte) -128, ee.a(-1 + var5, 96));
+              var6_int = param1.readBits((byte) -128, AccountRequestState.a(-1 + var5, 96));
               var4[var5] = var4[var6_int];
             }
           }

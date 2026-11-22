@@ -16,14 +16,14 @@ final class em extends vf {
     }
 
     final static String e(int param0) {
-        if (ol.field_i == ql.field_f) {
+        if (ol.field_i == DelegatingCanvas.field_f) {
           return td.field_d;
         }
         if (param0 != 7142) {
           em.e(-19);
-          return ek.field_i;
+          return FullscreenFocusCanvas.field_i;
         }
-        return ek.field_i;
+        return FullscreenFocusCanvas.field_i;
     }
 
     final int d(byte param0) {

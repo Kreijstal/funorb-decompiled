@@ -5,7 +5,7 @@ final class rl extends r {
     static int field_u;
     static String field_t;
 
-    final static void a(boolean param0, le param1, java.awt.Frame param2) {
+    final static void exitFullscreenFrame(boolean param0, le param1, java.awt.Frame param2) {
         vi var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;

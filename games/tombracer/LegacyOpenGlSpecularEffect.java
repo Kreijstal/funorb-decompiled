@@ -105,13 +105,13 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static fca compileShader(int param0, OpenGlToolkit param1, int param2, String param3) {
+    final static LegacyOpenGlShaderObject compileShader(int param0, OpenGlToolkit param1, int param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         String var7 = null;
         byte[] var11 = null;
         Object stackIn_10_0 = null;
-        fca stackIn_12_0 = null;
+        LegacyOpenGlShaderObject stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -140,10 +140,10 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
             if (PitComponent.field_I[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_10_0 = null;
-              return (fca) (stackIn_10_0);
+              return (LegacyOpenGlShaderObject) (stackIn_10_0);
             }
           }
-          stackIn_12_0 = new fca(param1, var4_long, param2);
+          stackIn_12_0 = new LegacyOpenGlShaderObject(param1, var4_long, param2);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

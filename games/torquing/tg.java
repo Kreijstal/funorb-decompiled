@@ -118,7 +118,7 @@ abstract class tg extends GameApplet {
             ih.b(true);
             lg.h(-101);
             dc.a(2, gh.field_b, 2);
-            pp.a(false);
+            FullscreenFocusCanvas.a(false);
             gk.field_a = true;
             DualLinkNode.field_k = km.b(-1) + 15000L;
           }

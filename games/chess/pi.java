@@ -78,7 +78,7 @@ final class pi {
             dupTemp$1 = new int[2][var5 * 4];
             var3.field_j = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = ed.field_b;
+            var8 = AccountRequestState.field_b;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {

@@ -94,10 +94,10 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           ConstrainToFacingArcLocomotor.a(false, true, 65, true);
         }
         if (!param3) {
-          return cua.field_b[var4];
+          return LegacyOpenGlShaderProgram.field_b[var4];
         }
         var4++;
-        return cua.field_b[var4];
+        return LegacyOpenGlShaderProgram.field_b[var4];
     }
 
     ConstrainToFacingArcLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {

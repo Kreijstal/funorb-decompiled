@@ -180,7 +180,7 @@ final class mo extends am {
             if (op.field_q <= mf.field_t) {
               gf.field_h = da.field_a;
               mf.field_t = mf.field_t - op.field_q;
-              if (!pp.field_c) {
+              if (!FullscreenFocusCanvas.field_c) {
                 da.field_a = da.field_a - 1;
                 if (da.field_a < 0) {
                   da.field_a = da.field_a + var2_int;
@@ -193,7 +193,7 @@ final class mo extends am {
               }
             }
             if (mf.field_t > op.field_j) {
-              pp.field_c = true;
+              FullscreenFocusCanvas.field_c = true;
             }
           }
           if (param0 != -457010900) {
@@ -207,13 +207,13 @@ final class mo extends am {
               re.field_c < var3 + qc.field_db.field_t) {
               if (wh.field_s > -qc.field_db.field_s + 269 &&
                 wh.field_s < 269) {
-                pp.field_c = false;
+                FullscreenFocusCanvas.field_c = false;
                 var4 = 1;
                 mf.field_t = op.field_q;
               }
               if (wh.field_s > 586 &&
                 wh.field_s < qc.field_db.field_s + 586) {
-                pp.field_c = true;
+                FullscreenFocusCanvas.field_c = true;
                 var4 = 1;
                 mf.field_t = op.field_q;
               }

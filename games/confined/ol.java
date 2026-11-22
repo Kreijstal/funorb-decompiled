@@ -4,7 +4,7 @@
 final class ol {
     static bi field_c;
     static String field_b;
-    static bc field_a;
+    static PlatformTask field_a;
 
     final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var5 = 0;
@@ -73,7 +73,7 @@ final class ol {
         fi.field_a = param0;
         li.field_l = param2 ? true : false;
         if (param1 < 84) {
-          field_a = (bc) null;
+          field_a = (PlatformTask) null;
         }
         cj.field_d = true;
     }

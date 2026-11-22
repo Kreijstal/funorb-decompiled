@@ -281,7 +281,7 @@ class qn extends fb {
         this.field_N = -1;
         this.field_O = 0L;
         try {
-          this.field_n = a.field_a.field_o;
+          this.field_n = FullscreenFocusCanvas.field_a.field_o;
           this.field_T = param2;
           this.a(0, true, param0);
           this.field_W = true;

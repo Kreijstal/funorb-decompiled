@@ -100,7 +100,7 @@ final class TutorialController {
             this.field_w = 5;
           }
           if (this.field_d == this.field_l && (this.field_d == 3 ||
-            this.field_d == 2) && 0 < og.field_d) {
+            this.field_d == 2) && 0 < AccountRequestState.field_d) {
             this.field_w = 5;
             this.field_B = 4;
           }
@@ -328,7 +328,7 @@ final class TutorialController {
           var2Lifetime1 = -wh.field_e.field_r + 640;
           var4 = 53;
         }
-        var5 = og.field_f.field_s * (og.field_f.c(this.field_b, var3Lifetime1) + 1) + 32;
+        var5 = AccountRequestState.field_f.field_s * (AccountRequestState.field_f.c(this.field_b, var3Lifetime1) + 1) + 32;
         if (this.field_o != "") {
           if (this.field_a) {
             if (this.field_w == 0 &&
@@ -540,16 +540,16 @@ final class TutorialController {
           if (!this.field_a &&
             this.field_s) {
             var6 = 6250335 + this.field_j * 1052688;
-            og.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, -1 + this.field_q - 3, 0, -1);
-            og.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, 1 + (this.field_q - 3), 0, -1);
-            og.field_f.c(this.field_f, -1 + (this.field_k + this.field_t) / 2, this.field_q - 3, 0, -1);
-            og.field_f.c(this.field_f, 1 + (this.field_k + this.field_t) / 2, -3 + this.field_q, 0, -1);
-            og.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, -3 + this.field_q, var6, -1);
+            AccountRequestState.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, -1 + this.field_q - 3, 0, -1);
+            AccountRequestState.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, 1 + (this.field_q - 3), 0, -1);
+            AccountRequestState.field_f.c(this.field_f, -1 + (this.field_k + this.field_t) / 2, this.field_q - 3, 0, -1);
+            AccountRequestState.field_f.c(this.field_f, 1 + (this.field_k + this.field_t) / 2, -3 + this.field_q, 0, -1);
+            AccountRequestState.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, -3 + this.field_q, var6, -1);
             SoftwareRasterizer.e(-this.field_j + this.field_k, this.field_q - this.field_j, 1 + this.field_t + (-this.field_k + this.field_j * 2), 2 * this.field_j + 1 - this.field_q + this.field_y, var6);
             SoftwareRasterizer.e(this.field_k + 1 - this.field_j, -this.field_j + 1 + this.field_q, 2 * this.field_j - this.field_k + this.field_t - 1, -1 + this.field_y - (this.field_q - this.field_j * 2), 0);
             SoftwareRasterizer.e(this.field_k - 1 - this.field_j, -this.field_j - 1 + this.field_q, 3 + (-this.field_k + (this.field_t + this.field_j * 2)), 2 * this.field_j + (3 + (-this.field_q + this.field_y)), 0);
           }
-          var3 = og.field_f.field_s * (og.field_f.c(this.field_b, var4) + 1) + 32;
+          var3 = AccountRequestState.field_f.field_s * (AccountRequestState.field_f.c(this.field_b, var4) + 1) + 32;
           if (0 != this.field_p) {
             SoftwareRasterizer.d(643 - (var4 + 12), var2 + 3, 6 + var4, var3 - 6, 0, 192);
           } else {
@@ -561,14 +561,14 @@ final class TutorialController {
             jl.a(jc.field_G, var3, var2, 12 + var4, (byte) -127, -var4 + 640 - 12);
           }
           if (this.field_p == 0) {
-            og.field_f.b(this.field_o, 32, var2 + 16, 16777215, -1);
+            AccountRequestState.field_f.b(this.field_o, 32, var2 + 16, 16777215, -1);
           } else {
-            og.field_f.b(this.field_o, 32 + (-var4 + 640), var2 + 16, 16777215, -1);
+            AccountRequestState.field_f.b(this.field_o, 32 + (-var4 + 640), var2 + 16, 16777215, -1);
           }
           if (this.field_p == 0) {
-            ji.a(6, og.field_f.field_s, 16777215, og.field_f.field_s + (var2 + 32), this.field_b, (byte) 90, var4);
+            ji.a(6, AccountRequestState.field_f.field_s, 16777215, AccountRequestState.field_f.field_s + (var2 + 32), this.field_b, (byte) 90, var4);
           } else {
-            ji.a(-6 + (-var4 + 640), og.field_f.field_s, 16777215, og.field_f.field_s + (var2 + 33), this.field_b, (byte) 98, 637);
+            ji.a(-6 + (-var4 + 640), AccountRequestState.field_f.field_s, 16777215, AccountRequestState.field_f.field_s + (var2 + 33), this.field_b, (byte) 98, 637);
           }
           var6Lifetime1 = this.field_l;
           if (var6Lifetime1 > 9) {
@@ -1343,7 +1343,7 @@ final class TutorialController {
                         this.field_o = TutorialText.field_d[58];
                         this.field_C = 3;
                         this.field_r = 4;
-                        if (og.field_d > 0) {
+                        if (AccountRequestState.field_d > 0) {
                           this.field_r = ProxySocketConnector.field_i;
                           this.field_C = ld.field_e;
                         }

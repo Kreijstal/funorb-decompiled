@@ -299,7 +299,7 @@ final class ala extends GameScreen {
 
     final void draw(byte param0, boolean param1) {
         this.drawFadeOverlay(true, 68);
-        fca.a(SingleChildWidget.a(0), 7);
+        LegacyOpenGlShaderObject.a(SingleChildWidget.a(0), 7);
         if (param0 != -28) {
           this.onActivated((byte) 98);
         }

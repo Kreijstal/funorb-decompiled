@@ -88,7 +88,7 @@ abstract class ota {
           var36 = var27 * (-1 + param1);
           var37 = var30;
           var38 = (-1 + var12) * var29;
-          var49 = vaa.field_a[param7];
+          var49 = PackedBitSetSupport.field_a[param7];
           var48 = var49;
           var39 = var48;
           C2SRoomResultPacket.fillRange((byte) -55, param3, param4 - var11, var39, -param2 + param4);
@@ -148,18 +148,18 @@ abstract class ota {
             var43 = param4 + var8_int;
             var44 = -var8_int + param4;
             if (var40 == 0) {
-              C2SRoomResultPacket.fillRange((byte) -55, param3, var43, vaa.field_a[var41], var44);
-              C2SRoomResultPacket.fillRange((byte) -55, param3, var43, vaa.field_a[var42], var44);
+              C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var41], var44);
+              C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var42], var44);
               continue;
             }
             var45 = param4 + var10;
             var46 = param4 - var10;
-            C2SRoomResultPacket.fillRange((byte) -55, param3, var46, vaa.field_a[var41], var44);
-            C2SRoomResultPacket.fillRange((byte) -55, param6, var45, vaa.field_a[var41], var46);
-            C2SRoomResultPacket.fillRange((byte) -55, param3, var43, vaa.field_a[var41], var45);
-            C2SRoomResultPacket.fillRange((byte) -55, param3, var46, vaa.field_a[var42], var44);
-            C2SRoomResultPacket.fillRange((byte) -55, param6, var45, vaa.field_a[var42], var46);
-            C2SRoomResultPacket.fillRange((byte) -55, param3, var43, vaa.field_a[var42], var45);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var46, PackedBitSetSupport.field_a[var41], var44);
+            C2SRoomResultPacket.fillRange((byte) -55, param6, var45, PackedBitSetSupport.field_a[var41], var46);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var41], var45);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var46, PackedBitSetSupport.field_a[var42], var44);
+            C2SRoomResultPacket.fillRange((byte) -55, param6, var45, PackedBitSetSupport.field_a[var42], var46);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var42], var45);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

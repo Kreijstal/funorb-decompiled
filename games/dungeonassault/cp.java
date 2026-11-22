@@ -255,7 +255,7 @@ final class cp extends gd {
         try {
           if (!fm.a((byte) -123)) {
             if (cm.field_R != null &&
-              cm.field_R.field_g) {
+              cm.field_R.focusLost) {
               ib.a(930);
               na.field_D.a(new nm(na.field_D, of.field_g), -1);
             }

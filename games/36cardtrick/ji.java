@@ -86,7 +86,7 @@ final class ji {
           var19.a(var7, var10, var8, (byte) 1, (byte) -1, (short) 63, (short) -1);
           cf.field_d = var19.a((short) var3, (short) var11, (short) var12);
           db.field_p = var19.a((short) var8, (short) var15, (short) var18);
-          sc.field_a = var19.a((short) var13, (short) var16, (short) var5);
+          AccountRequestState.field_a = var19.a((short) var13, (short) var16, (short) var5);
           ng.field_H = var19.a((short) var14, (short) var17, (short) var10);
           qf.field_F = var19.a(var3, var5, var7, (byte) 1, cf.field_d, (short) 0, (short) 0);
           if (param0 >= -87) {

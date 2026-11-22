@@ -334,7 +334,7 @@ final class t {
         var15 = tl.field_p;
         var4 = 164;
         var5 = 110;
-        this.b(2, ae.field_e);
+        this.b(2, AccountRequestState.field_e);
         og.a(var5 - pd.field_k[0].field_r, pd.field_k, 91, var4 - pd.field_k[0].field_x, pd.field_k[6].field_r + (pd.field_k[0].field_r + 80) - 8, 312 - (-pd.field_k[0].field_x - pd.field_k[2].field_x));
         if (!param0) {
           stackIn_5_0 = kh.field_b;
@@ -427,8 +427,8 @@ final class t {
           var15.c(me.field_e, 100, -(int)(0.5 * (double)var15.field_N) + ia.field_j[4], 0, -1);
           var4Lifetime1 = var4Lifetime1 + var15.b(me.field_e);
           for (var13 = 0; rf.field_c[var8] > var13; var13++) {
-            vb.field_a.d(var4Lifetime1, ia.field_j[4] - (-var15.field_K + var15.field_N) - (var15.field_H - (int)((double)var15.field_N * 0.5)));
-            var4Lifetime1 = var4Lifetime1 + vb.field_a.field_w / 3;
+            FullscreenFocusCanvas.field_a.d(var4Lifetime1, ia.field_j[4] - (-var15.field_K + var15.field_N) - (var15.field_H - (int)((double)var15.field_N * 0.5)));
+            var4Lifetime1 = var4Lifetime1 + FullscreenFocusCanvas.field_a.field_w / 3;
           }
           if (var10 != 0) {
             il.field_d[var8].d(420, 252);
@@ -842,7 +842,7 @@ final class t {
                     if (!(!this.field_b.b(109))) {
                       oa.a(4, param0, 99);
                       bj.field_m = this.field_i;
-                      ae.field_e = db.a((byte) -115, fleas.field_F, je.field_O.length);
+                      AccountRequestState.field_e = db.a((byte) -115, fleas.field_F, je.field_O.length);
                     }
                   } else {
                     if (var6 == 3) {

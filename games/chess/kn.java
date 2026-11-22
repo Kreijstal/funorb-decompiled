@@ -8,7 +8,7 @@ abstract class kn extends mf implements ra {
     static String field_J;
     static String field_E;
     static md field_F;
-    static ed field_D;
+    static AccountRequestState field_D;
     static String field_K;
     mf field_M;
     static km field_G;
@@ -64,7 +64,7 @@ abstract class kn extends mf implements ra {
           if (param2 == -1) {
             return false;
           }
-          field_D = (ed) null;
+          field_D = (AccountRequestState) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -510,7 +510,7 @@ abstract class kn extends mf implements ra {
         field_E = "Buying or selling an account";
         field_H = new ug(2);
         field_K = "Offensive account name";
-        field_D = new ed();
+        field_D = new AccountRequestState();
         field_L = true;
     }
 }

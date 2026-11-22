@@ -40,7 +40,7 @@ final class ca {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          a.a(102, (java.awt.Component) ((Object) param1));
+          FullscreenFocusCanvas.a(102, (java.awt.Component) ((Object) param1));
           if (param0 != 13369344) {
             return;
           }
@@ -276,7 +276,7 @@ final class ca {
               if (ea.field_bb.field_Mb.field_L == 0) {
                 break;
               }
-              me.field_a = new kd(ea.field_bb.field_Mb.field_U, ea.field_bb.field_Mb.field_wb, ea.field_bb.field_Mb.field_M, ea.field_bb.field_Mb.field_pb, a.field_i, od.field_V, qn.field_P, qn.field_P);
+              me.field_a = new kd(ea.field_bb.field_Mb.field_U, ea.field_bb.field_Mb.field_wb, ea.field_bb.field_Mb.field_M, ea.field_bb.field_Mb.field_pb, FullscreenFocusCanvas.field_i, od.field_V, qn.field_P, qn.field_P);
               pk.field_b = 1;
               break;
             }

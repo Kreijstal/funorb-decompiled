@@ -62,17 +62,17 @@ final class hh {
             for (var5 = 0; var5 < var4; var5++) {
               jf.field_b[var5] = -1;
             }
-            ue.field_k = new int[2];
+            FullscreenFocusCanvas.field_k = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               hf.field_d[var5] = gf.field_c[var5];
             }
             hf.field_d[-3 + var4] = "";
             hf.field_d[var4 - 2] = lh.field_c;
             jf.field_b[var4 - 2] = 0;
-            ue.field_k[0] = 4;
+            FullscreenFocusCanvas.field_k[0] = 4;
             hf.field_d[var4 - 1] = IsaacGenerator.field_n;
             jf.field_b[var4 - 1] = 1;
-            ue.field_k[1] = 5;
+            FullscreenFocusCanvas.field_k[1] = 5;
           } else if (be.field_e == 1) {
             var3_int = fa.a(gf.field_c, cg.field_a, 105, lj.field_u, ne.field_p);
             var4 = var3_int + 2;
@@ -81,14 +81,14 @@ final class hh {
             for (var5 = 0; var4 > var5; var5++) {
               jf.field_b[var5] = -1;
             }
-            ue.field_k = new int[1];
+            FullscreenFocusCanvas.field_k = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               hf.field_d[var5] = gf.field_c[var5];
             }
             hf.field_d[-2 + var4] = "";
             hf.field_d[var4 - 1] = IsaacGenerator.field_n;
             jf.field_b[-1 + var4] = 0;
-            ue.field_k[0] = 5;
+            FullscreenFocusCanvas.field_k[0] = 5;
           } else if (2 != be.field_e) {
             if (be.field_e == 3) {
               if (gf.field_b.field_k) {
@@ -102,14 +102,14 @@ final class hh {
               for (var5 = 0; var5 < var4; var5++) {
                 jf.field_b[var5] = -1;
               }
-              ue.field_k = new int[1];
+              FullscreenFocusCanvas.field_k = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 hf.field_d[var5] = gf.field_c[var5];
               }
               hf.field_d[-2 + var4] = "";
               hf.field_d[var4 - 1] = IsaacGenerator.field_n;
               jf.field_b[-1 + var4] = 0;
-              ue.field_k[0] = 5;
+              FullscreenFocusCanvas.field_k[0] = 5;
             } else if (4 == be.field_e) {
               var3_int = fa.a(gf.field_c, cg.field_a, param0 ^ 119, lj.field_u, ha.field_y);
               var4 = 2 + var3_int;
@@ -118,14 +118,14 @@ final class hh {
               for (var5 = 0; var5 < var4; var5++) {
                 jf.field_b[var5] = -1;
               }
-              ue.field_k = new int[1];
+              FullscreenFocusCanvas.field_k = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 hf.field_d[var5] = gf.field_c[var5];
               }
               hf.field_d[var4 - 2] = "";
               hf.field_d[var4 - 1] = IsaacGenerator.field_n;
               jf.field_b[-1 + var4] = 0;
-              ue.field_k[0] = 5;
+              FullscreenFocusCanvas.field_k[0] = 5;
             } else {
               if (5 != be.field_e) {
                 throw new IllegalArgumentException();
@@ -137,17 +137,17 @@ final class hh {
               for (var5 = 0; var5 < var4; var5++) {
                 jf.field_b[var5] = -1;
               }
-              ue.field_k = new int[2];
+              FullscreenFocusCanvas.field_k = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 hf.field_d[var5] = gf.field_c[var5];
               }
               hf.field_d[var4 - 3] = "";
               hf.field_d[var4 - 2] = field_c;
               jf.field_b[-2 + var4] = 0;
-              ue.field_k[0] = 3;
+              FullscreenFocusCanvas.field_k[0] = 3;
               hf.field_d[-1 + var4] = IsaacGenerator.field_n;
               jf.field_b[var4 - 1] = 1;
-              ue.field_k[1] = 5;
+              FullscreenFocusCanvas.field_k[1] = 5;
             }
           } else {
             var3_int = fa.a(gf.field_c, cg.field_a, 53, lj.field_u, vg.a(new String[]{"<br><%0><br>"}, param0 + 108, wa.field_l));
@@ -202,11 +202,11 @@ final class hh {
             }
             hf.field_d[1] = al.field_X;
             jf.field_b[1] = 0;
-            ue.field_k = new int[2];
+            FullscreenFocusCanvas.field_k = new int[2];
             hf.field_d[0] = sg.field_e;
             hf.field_d[2] = ve.field_d;
-            ue.field_k[0] = 5;
-            ue.field_k[1] = 2;
+            FullscreenFocusCanvas.field_k[0] = 5;
+            FullscreenFocusCanvas.field_k[1] = 2;
             hf.field_d[4] = an.field_f;
             jf.field_b[3] = 1;
             hf.field_d[5] = "";
@@ -235,7 +235,7 @@ final class hh {
             }
             fj.field_Rb = hn.a((byte) 80);
           }
-          mc.field_F.field_b = ue.field_k.length;
+          mc.field_F.field_b = FullscreenFocusCanvas.field_k.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < hf.field_d.length; var4Lifetime1++) {
             stackIn_88_0 = 110;
@@ -317,7 +317,7 @@ final class hh {
         try {
           hn.field_a = param6;
           AccountServiceResult.field_k = param2;
-          fk.field_a = param4;
+          AccountRequestState.field_a = param4;
           if (param8 != -1) {
             hh.clearStaticReferences(114);
           }

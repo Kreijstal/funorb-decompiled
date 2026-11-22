@@ -191,7 +191,7 @@ final class bs extends UiPanel {
           h.field_D = new dm(0L, pb.field_b, we.field_J, nf.field_o);
           ao.field_O = new dm(0L, pb.field_b, sl.field_s, eq.field_B);
           wi.field_g = new UiPanel(0L, (UiPanel) null);
-          IterableNodeHashTable.field_a = new UiPanel(0L, ee.field_b);
+          IterableNodeHashTable.field_a = new UiPanel(0L, AccountRequestState.field_b);
           IterableNodeHashTable.field_a.field_O = 1;
           int var2_int = -113 % ((param1 - 32) / 50);
           jg.field_q = new UiPanel(0L, db.field_t, kc.field_c);
@@ -202,11 +202,11 @@ final class bs extends UiPanel {
           wi.field_g.b(va.field_f, 127);
           wi.field_g.b(h.field_D, 118);
           wi.field_g.b(hb.field_k, 118);
-          h.field_D.field_Lb.field_Lb.a(ee.field_b, -34);
+          h.field_D.field_Lb.field_Lb.a(AccountRequestState.field_b, -34);
           h.field_D.field_Lb.field_Lb.field_ab = 1;
           var3 = h.field_D.field_Lb.field_Lb;
           var3.field_O = 1;
-          ao.field_O.field_Lb.field_Lb.a(ee.field_b, -114);
+          ao.field_O.field_Lb.field_Lb.a(AccountRequestState.field_b, -114);
           var4 = ao.field_O.field_Lb.field_Lb;
           ao.field_O.field_Lb.field_Lb.field_ab = 1;
           var4.field_O = 1;

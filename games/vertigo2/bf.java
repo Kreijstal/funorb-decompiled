@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bf {
-    static ee field_b;
+    static AccountRequestState field_b;
     static UiPanel field_c;
     static boolean field_a;
     private static String field_z;
@@ -20,7 +20,7 @@ final class bf {
 
     static {
         field_z = "bf.A(";
-        field_b = new ee();
+        field_b = new AccountRequestState();
         field_a = false;
     }
 }

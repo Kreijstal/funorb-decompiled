@@ -150,7 +150,7 @@ final class ej extends mi {
     final static void a(ue param0, ue param1, int param2) {
         try {
           g.field_a = param0;
-          pf.field_a = param1;
+          AccountRequestState.field_a = param1;
           if (param2 >= -73) {
             field_q = (String) null;
           }

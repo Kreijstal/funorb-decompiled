@@ -35,7 +35,7 @@ final class BitPacketBuffer extends PacketBuffer {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var4 = 9 / ((-85 - param0) / 40);
-        param1 = param1 & fca.field_b[param2];
+        param1 = param1 & LegacyOpenGlShaderObject.field_b[param2];
         while (this.bitsLeftInByte < param2) {
           param2 = param2 - this.bitsLeftInByte;
           fieldTemp$1 = this.position;
@@ -94,14 +94,14 @@ final class BitPacketBuffer extends PacketBuffer {
           while (var4 < param1) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((fca.field_b[var4] & this.payload[incrementValue$0]) << -var4 + param1);
+            var5 = var5 + ((LegacyOpenGlShaderObject.field_b[var4] & this.payload[incrementValue$0]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (var4 == param1) {
-            var5 = var5 + (fca.field_b[var4] & this.payload[var3]);
+            var5 = var5 + (LegacyOpenGlShaderObject.field_b[var4] & this.payload[var3]);
           } else {
-            var5 = var5 + (this.payload[var3] >> -param1 + var4 & fca.field_b[param1]);
+            var5 = var5 + (this.payload[var3] >> -param1 + var4 & LegacyOpenGlShaderObject.field_b[param1]);
           }
           return var5;
         }
@@ -109,14 +109,14 @@ final class BitPacketBuffer extends PacketBuffer {
         while (var4 < param1) {
           incrementValue$1 = var3;
           var3++;
-          var5 = var5 + ((fca.field_b[var4] & this.payload[incrementValue$1]) << -var4 + param1);
+          var5 = var5 + ((LegacyOpenGlShaderObject.field_b[var4] & this.payload[incrementValue$1]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 == param1) {
-          var5 = var5 + (fca.field_b[var4] & this.payload[var3]);
+          var5 = var5 + (LegacyOpenGlShaderObject.field_b[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.payload[var3] >> -param1 + var4 & fca.field_b[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & LegacyOpenGlShaderObject.field_b[param1]);
         }
         return var5;
     }

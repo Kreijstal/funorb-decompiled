@@ -38,7 +38,7 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, rq.field_t, param0, ee.field_b, ja.field_e, ip.field_a, pn.field_N);
+          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, rq.field_t, param0, AccountRequestState.field_b, ja.field_e, ip.field_a, pn.field_N);
           kb.field_d = gk.a(param1, "lobby", "chatfilter", true);
           ba.field_f[1] = uo.field_j;
           ba.field_f[2] = vg.field_a;

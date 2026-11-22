@@ -9,15 +9,15 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
     private int field_n;
     private OpenGlFramebuffer field_s;
     static String field_u;
-    private cua field_v;
+    private LegacyOpenGlShaderProgram field_v;
     private int field_r;
     private int field_t;
-    private cua field_j;
-    private cua field_w;
+    private LegacyOpenGlShaderProgram field_j;
+    private LegacyOpenGlShaderProgram field_w;
     private int field_p;
     private LegacyOpenGlTexture2D[] field_l;
     private OpenGlFramebuffer field_q;
-    private cua field_m;
+    private LegacyOpenGlShaderProgram field_m;
 
     final void apply(LegacyOpenGlTexture2D param0, int param1, byte param2, LegacyOpenGlTexture2D param3) {
         int var5_int = 0;
@@ -198,7 +198,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
 
     final boolean isSupported(int param0) {
         if (param0 != 34842) {
-          this.field_m = (cua) null;
+          this.field_m = (LegacyOpenGlShaderProgram) null;
           if (!this.toolkit.field_id) {
             return false;
           }
@@ -229,7 +229,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         this.field_t = param2;
         this.field_n = param0;
         if (param1 != -71) {
-          this.field_w = (cua) null;
+          this.field_w = (LegacyOpenGlShaderProgram) null;
         }
         var4 = WidgetContainer.highestOneBit(this.field_t, (byte) -95);
         var5 = WidgetContainer.highestOneBit(this.field_n, (byte) -95);
@@ -401,10 +401,10 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           return false;
         }
         this.toolkit.popReadDrawFramebuffer(this.field_q, 0);
-        this.field_m = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
-        this.field_v = dga.linkShaderProgram(param0 ^ 21820, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
-        this.field_j = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")});
-        this.field_w = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")});
+        this.field_m = dga.linkShaderProgram(21885, this.toolkit, new LegacyOpenGlShaderObject[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
+        this.field_v = dga.linkShaderProgram(param0 ^ 21820, this.toolkit, new LegacyOpenGlShaderObject[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
+        this.field_j = dga.linkShaderProgram(21885, this.toolkit, new LegacyOpenGlShaderObject[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")});
+        this.field_w = dga.linkShaderProgram(21885, this.toolkit, new LegacyOpenGlShaderObject[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")});
         if (null == this.field_v) {
           return false;
         }

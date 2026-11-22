@@ -88,15 +88,15 @@ final class cd extends rg {
           dj.field_b[0] = pl.field_P.nextInt();
           dj.field_b[1] = pl.field_P.nextInt();
           dj.field_b[3] = (int)ob.field_a;
-          uc.field_c.position = 0;
+          AccountRequestState.field_c.position = 0;
           dj.field_b[2] = (int)(ob.field_a >> 32);
-          uc.field_c.writeInt(0, dj.field_b[0]);
-          uc.field_c.writeInt(0, dj.field_b[1]);
-          uc.field_c.writeInt(0, dj.field_b[2]);
-          uc.field_c.writeInt(0, dj.field_b[3]);
-          ca.a(uc.field_c, -23074);
-          uc.field_c.writeShort(param3, -113);
-          param2.a(95, uc.field_c);
+          AccountRequestState.field_c.writeInt(0, dj.field_b[0]);
+          AccountRequestState.field_c.writeInt(0, dj.field_b[1]);
+          AccountRequestState.field_c.writeInt(0, dj.field_b[2]);
+          AccountRequestState.field_c.writeInt(0, dj.field_b[3]);
+          ca.a(AccountRequestState.field_c, -23074);
+          AccountRequestState.field_c.writeShort(param3, -113);
+          param2.a(95, AccountRequestState.field_c);
           pg.field_fb.position = 0;
           var5_int = -4 / ((param0 + 7) / 61);
           if (!param4) {
@@ -130,7 +130,7 @@ final class cd extends rg {
           if (null != pk.field_b) {
             pg.field_fb.writePrefixedString(126, pk.field_b);
           }
-          ha.a(fj.field_l, pg.field_fb, uc.field_c, -104, u.field_o);
+          ha.a(fj.field_l, pg.field_fb, AccountRequestState.field_c, -104, u.field_o);
           pg.field_fb.backpatchShortLength(-1, pg.field_fb.position - var6);
           ue.a((byte) -88, -1);
           return;

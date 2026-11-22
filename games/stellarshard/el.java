@@ -8,7 +8,7 @@ final class el extends ki {
     byte[] field_D;
     int field_C;
     static int field_I;
-    static uc field_E;
+    static AccountRequestState field_E;
 
     final static ek i(int param0) {
         ek var1 = null;

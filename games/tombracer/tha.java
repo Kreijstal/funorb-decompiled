@@ -142,7 +142,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_z = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) null);
         this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
-        this.field_x = new FocusableWidget(fca.field_d, (WidgetListener) null);
+        this.field_x = new FocusableWidget(LegacyOpenGlShaderObject.field_d, (WidgetListener) null);
         DialogButtonPainter var1 = new DialogButtonPainter();
         this.field_z.field_r = (WidgetPainter) ((Object) var1);
         this.field_w.field_r = (WidgetPainter) ((Object) var1);

@@ -207,7 +207,7 @@ final class vm extends hf {
         stackIn_3_0 = ((128 & var3) != 0);
         im.field_c = stackIn_3_0;
         cc.field_m = var3 & 127;
-        ve.field_h = var8.readUnsignedByte(32);
+        AccountRequestState.field_h = var8.readUnsignedByte(32);
         rl.field_x = var8.readLong((byte) -68);
         if (cc.field_m == 2) {
           ha.field_e = var8.readUnsignedShort((byte) 25);

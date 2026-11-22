@@ -915,7 +915,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 117, "ra_intro");
                 if (null != var2) {
-                  fpa.field_a = BitPackedColour.decodeText((byte) 117, var2);
+                  AccountRequestState.field_a = BitPackedColour.decodeText((byte) 117, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -109, "ra_intro_no_name");
                 if (var2 != null) {
@@ -1051,7 +1051,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 127, "justplay");
                 if (var2 != null) {
-                  fca.field_d = BitPackedColour.decodeText((byte) 64, var2);
+                  LegacyOpenGlShaderObject.field_d = BitPackedColour.decodeText((byte) 64, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -117, "justplay_excl");
                 if (null != var2) {
@@ -2795,7 +2795,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 106, "graphics_config_apply");
                 if (var2 != null) {
-                  wm.field_b = BitPackedColour.decodeText((byte) 31, var2);
+                  PlayerViewportLayout.field_b = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "graphics_config_title");
                 if (var2 != null) {
@@ -2931,31 +2931,31 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -76, "mustlogin_alternate,1");
                 if (var2 != null) {
-                  cua.field_b[1] = BitPackedColour.decodeText((byte) 124, var2);
+                  LegacyOpenGlShaderProgram.field_b[1] = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -99, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  cua.field_b[2] = BitPackedColour.decodeText((byte) 126, var2);
+                  LegacyOpenGlShaderProgram.field_b[2] = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mustlogin_alternate,3");
                 if (var2 != null) {
-                  cua.field_b[3] = BitPackedColour.decodeText((byte) 49, var2);
+                  LegacyOpenGlShaderProgram.field_b[3] = BitPackedColour.decodeText((byte) 49, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -121, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  cua.field_b[4] = BitPackedColour.decodeText((byte) 41, var2);
+                  LegacyOpenGlShaderProgram.field_b[4] = BitPackedColour.decodeText((byte) 41, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -48, "mustlogin_alternate,5");
                 if (null != var2) {
-                  cua.field_b[5] = BitPackedColour.decodeText((byte) 107, var2);
+                  LegacyOpenGlShaderProgram.field_b[5] = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mustlogin_alternate,6");
                 if (null != var2) {
-                  cua.field_b[6] = BitPackedColour.decodeText((byte) 118, var2);
+                  LegacyOpenGlShaderProgram.field_b[6] = BitPackedColour.decodeText((byte) 118, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -63, "mustlogin_alternate,7");
                 if (var2 != null) {
-                  cua.field_b[7] = BitPackedColour.decodeText((byte) 104, var2);
+                  LegacyOpenGlShaderProgram.field_b[7] = BitPackedColour.decodeText((byte) 104, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -85, "subscription_cost_monthly,0");
                 if (var2 != null) {

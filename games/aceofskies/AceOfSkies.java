@@ -706,7 +706,7 @@ public final class AceOfSkies extends NetworkGameClient {
           HudMessage.a((byte) 117);
           oc.a((byte) 121);
           mj.a(3);
-          dq.a(122);
+          AccountRequestState.releaseStatics(122);
           id.clearStaticReferences((byte) 106);
           m.a(256);
           jn.h(-89);

@@ -85,7 +85,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
             LineShape.field_h >= param5) {
             var22 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + param2);
             var23 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 - param2);
-            C2SRoomResultPacket.fillRange((byte) -55, param3, var22, vaa.field_a[param5], var23);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var22, PackedBitSetSupport.field_a[param5], var23);
           }
           while (true) {
             if (var7 <= 0) {
@@ -123,12 +123,12 @@ abstract class GraphicsHeap extends IntrusiveNode {
             var24 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + var6_int);
             var25 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var6_int + param0);
             if (var22Lifetime1 >= HardwareModelBillboardState.field_d) {
-              C2SRoomResultPacket.fillRange((byte) -55, param3, var24, vaa.field_a[var22Lifetime1], var25);
+              C2SRoomResultPacket.fillRange((byte) -55, param3, var24, PackedBitSetSupport.field_a[var22Lifetime1], var25);
             }
             if (var23Lifetime1 > LineShape.field_h) {
               continue;
             }
-            C2SRoomResultPacket.fillRange((byte) -55, param3, var24, vaa.field_a[var23Lifetime1], var25);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var24, PackedBitSetSupport.field_a[var23Lifetime1], var25);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

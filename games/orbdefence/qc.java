@@ -10,7 +10,7 @@ final class qc implements td {
     static Calendar field_c;
     static hj[] field_f;
     static kc field_b;
-    static va field_g;
+    static AccountRequestState field_g;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;

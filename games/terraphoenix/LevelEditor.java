@@ -379,18 +379,18 @@ final class LevelEditor {
     }
 
     private final void a(boolean param0, String param1, int param2, int param3, int param4) {
-        og.field_f.a(param1, param4 + 3, param2 + 3, 8421504, -1);
-        og.field_f.a(param1, param4 + 2, param2 + 2, 8421504, -1);
+        AccountRequestState.field_f.a(param1, param4 + 3, param2 + 3, 8421504, -1);
+        AccountRequestState.field_f.a(param1, param4 + 2, param2 + 2, 8421504, -1);
         if (param0) {
           return;
         }
         try {
-          og.field_f.a(param1, 1 + param4, param2 + 1, 8421504, -1);
-          og.field_f.a(param1, param4 + 1, param2, 0, -1);
-          og.field_f.a(param1, param4 - 1, param2, 0, -1);
-          og.field_f.a(param1, param4, -1 + param2, 0, -1);
-          og.field_f.a(param1, param4, param2 + 1, 0, -1);
-          og.field_f.a(param1, param4, param2, param3, -1);
+          AccountRequestState.field_f.a(param1, 1 + param4, param2 + 1, 8421504, -1);
+          AccountRequestState.field_f.a(param1, param4 + 1, param2, 0, -1);
+          AccountRequestState.field_f.a(param1, param4 - 1, param2, 0, -1);
+          AccountRequestState.field_f.a(param1, param4, -1 + param2, 0, -1);
+          AccountRequestState.field_f.a(param1, param4, param2 + 1, 0, -1);
+          AccountRequestState.field_f.a(param1, param4, param2, param3, -1);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "mk.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

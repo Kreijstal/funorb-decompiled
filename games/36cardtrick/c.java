@@ -34,20 +34,20 @@ abstract class c extends fj {
                   discarded$2 = this.a(false, false, 10);
                   if (var3 != 0) {
                     AccountNameAvailabilityValidator.a(2, eg.field_f);
-                    sc.a((byte) 20);
+                    AccountRequestState.a((byte) 20);
                     stackIn_26_1 = (null != gj.field_a);
                     discarded$3 = this.a(stackIn_26_1, false, 10);
                   }
                 } else {
                   AccountNameAvailabilityValidator.a(2, eg.field_f);
                   if (var3 != 0) {
-                    sc.a((byte) 20);
+                    AccountRequestState.a((byte) 20);
                     stackIn_26_1 = (null != gj.field_a);
                     discarded$3 = this.a(stackIn_26_1, false, 10);
                   }
                 }
               } else {
-                sc.a((byte) 20);
+                AccountRequestState.a((byte) 20);
                 if (var3 != 0) {
                   stackIn_26_1 = (null != gj.field_a);
                   discarded$3 = this.a(stackIn_26_1, false, 10);
@@ -1920,7 +1920,7 @@ abstract class c extends fj {
                 }
                 var2 = hc.a("unpacking_soundeffects", (byte) -127);
                 if (var2 != null) {
-                  sc.field_c = GzipInflater.a(var2, (byte) 104);
+                  AccountRequestState.field_c = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("unpacking_music", (byte) -127);
                 if (null != var2) {
@@ -3576,9 +3576,9 @@ abstract class c extends fj {
             }
             if (ta.field_hb == null) {
               ta.field_hb = af.r(77);
-              oe.field_a = fd.a(-28506);
+              FullscreenFocusCanvas.field_a = fd.a(-28506);
             }
-            ca.a(sg.field_a, ta.field_hb, oe.field_a, 0);
+            ca.a(sg.field_a, ta.field_hb, FullscreenFocusCanvas.field_a, 0);
             aa.field_db = null;
             jk.field_c = null;
             sg.field_a = null;
@@ -3602,7 +3602,7 @@ abstract class c extends fj {
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              ug.a(0.0f, 106, pf.a(ue.field_a, oe.field_d, fg.field_j, true));
+              ug.a(0.0f, 106, pf.a(ue.field_a, FullscreenFocusCanvas.field_d, fg.field_j, true));
             }
           }
           if (12 == g.field_A &&

@@ -337,7 +337,7 @@ final class GameAssetLoader implements LoadingStage {
     public final void finishLoading(byte param0) {
         CoinItemComponent.createMenuScreens(cq.field_d, (byte) 52);
         UsernameQueryRequests.setFrameRate(50, param0 ^ -78);
-        wm.field_a = null;
+        PlayerViewportLayout.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) LoginMethod.getMenuScreen(0, (byte) 50));
         ima.setLoadingProgress(100.0f, DateValidationSource.loadingQuipsShort[10], param0 ^ 115);
         CharacterChoiceTile.field_j.draw(param0 ^ -49);

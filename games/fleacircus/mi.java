@@ -82,14 +82,14 @@ final class mi extends IntrusiveNode {
           var4 = db.field_J;
           synchronized (var4) {
             gg.field_h.a(param1, true, -1);
-            if (param3 == ae.field_b) {
+            if (param3 == AccountRequestState.field_b) {
               return;
             }
             gg.field_h.e(-398);
             db.field_J.g();
-            ae.field_b = param3;
-            if (ae.field_b != null) {
-              gg.field_h.a(param2, 68, ae.field_b);
+            AccountRequestState.field_b = param3;
+            if (AccountRequestState.field_b != null) {
+              gg.field_h.a(param2, 68, AccountRequestState.field_b);
             }
           }
           return;

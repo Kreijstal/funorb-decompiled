@@ -62,7 +62,7 @@ final class el {
         if (param0 != 1) {
           return false;
         }
-        stackIn_6_0 = (null != jc.field_b) && (uf.field_m.b(~param0));
+        stackIn_6_0 = (null != DelegatingCanvas.field_b) && (uf.field_m.b(~param0));
         return stackIn_6_0;
     }
 

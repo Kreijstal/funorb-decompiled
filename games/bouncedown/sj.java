@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj implements fc {
-    static jb field_f;
+    static FullscreenFocusCanvas field_f;
     private int field_e;
     static int[] field_j;
     private tj field_i;

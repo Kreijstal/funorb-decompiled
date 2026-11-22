@@ -5,7 +5,7 @@ final class tj extends g implements qh {
     static String field_H;
     private hl field_E;
     static String field_D;
-    static sc field_F;
+    static AccountRequestState field_F;
     private hl field_G;
     private hl field_I;
     static String field_J;
@@ -185,6 +185,6 @@ final class tj extends g implements qh {
         field_H = "Please wait...";
         field_D = "MISSES";
         field_J = "Start Game";
-        field_F = new sc();
+        field_F = new AccountRequestState();
     }
 }

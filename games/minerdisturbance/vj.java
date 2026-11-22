@@ -55,7 +55,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException decompiledCaughtException = null;
         var5 = MinerDisturbance.field_ab;
         try {
-          bd.field_h = kd.field_p;
+          AccountRequestState.field_h = kd.field_p;
           if (param0 != -21614) {
             vj.d(-99);
           }

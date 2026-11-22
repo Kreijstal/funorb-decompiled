@@ -128,7 +128,7 @@ abstract class pp {
               ld.field_c = oq.createAccountSuggestionsResult((byte) -63, args);
               return;
             }
-            ld.field_c = dq.createAccountErrorResult(param1, 32, param2);
+            ld.field_c = AccountRequestState.createAccountErrorResult(param1, 32, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

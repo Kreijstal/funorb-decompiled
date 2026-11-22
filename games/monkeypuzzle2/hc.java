@@ -102,12 +102,12 @@ final class hc {
           de.field_m = (7 & var2_int) << 18;
           de.field_m = de.field_m + (param1.readUnsignedShort(17277) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) 114);
-          lk.field_a = (var2_intLifetime1 & 63) << 15;
+          AccountRequestState.field_a = (var2_intLifetime1 & 63) << 15;
           de.field_m = de.field_m + (var2_intLifetime1 >> 6);
-          lk.field_a = lk.field_a + (param1.readUnsignedByte((byte) 114) << 7);
+          AccountRequestState.field_a = AccountRequestState.field_a + (param1.readUnsignedByte((byte) 114) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) 114);
           mk.field_i = 65536 & var2_intLifetime2 << 16;
-          lk.field_a = lk.field_a + (var2_intLifetime2 >> 1);
+          AccountRequestState.field_a = AccountRequestState.field_a + (var2_intLifetime2 >> 1);
           mk.field_i = mk.field_i + param1.readUnsignedShort(17277);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "hc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

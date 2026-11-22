@@ -6,7 +6,7 @@ final class hg extends hc {
     static int field_sb;
     String field_qb;
     int field_tb;
-    static qb field_ub;
+    static AccountRequestState field_ub;
     static int field_pb;
     static k field_S;
     static String[] field_ob;
@@ -171,7 +171,7 @@ final class hg extends hc {
 
     static {
         field_pb = 0;
-        field_ub = new qb();
+        field_ub = new AccountRequestState();
         field_ob = new String[40];
     }
 }

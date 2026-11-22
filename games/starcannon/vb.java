@@ -364,7 +364,7 @@ final class vb extends qf {
           }
           var2Lifetime40 = cb.a("lev3a", (byte) -124);
           if (null != var2Lifetime40) {
-            qc.field_a = DualLinkNode.a(121, var2Lifetime40);
+            FullscreenFocusCanvas.field_a = DualLinkNode.a(121, var2Lifetime40);
           }
           var2Lifetime41 = cb.a("lev2a", (byte) -124);
           if (null != var2Lifetime41) {

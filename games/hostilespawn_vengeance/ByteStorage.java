@@ -230,7 +230,7 @@ abstract class ByteStorage {
             var3 = var6[1 + var8];
             var2 = var15[var8];
             var9 = var6[2 + var8];
-            ue.field_c.a(true, 128, var9, var2, var3);
+            FullscreenFocusCanvas.field_c.a(true, 128, var9, var2, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

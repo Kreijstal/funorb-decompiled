@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff {
-    static ra field_b;
+    static FullscreenFocusCanvas field_b;
     static int[] field_a;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 > -91) {
-          field_b = (ra) null;
+          field_b = (FullscreenFocusCanvas) null;
         }
     }
 

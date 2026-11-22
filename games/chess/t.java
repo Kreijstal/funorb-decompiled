@@ -164,10 +164,10 @@ final class t extends ma implements mj {
             var6Lifetime1 = stackIn_43_0;
             if (var6Lifetime1 != 0) {
               var7 = dl.field_n;
-              for (var8_int = 0; g.field_f.length > var8_int; var8_int++) {
-                g.field_f[var8_int] = (byte) 0;
+              for (var8_int = 0; DelegatingCanvas.field_f.length > var8_int; var8_int++) {
+                DelegatingCanvas.field_f[var8_int] = (byte) 0;
               }
-              g.field_f[var7 / 8] = (byte)s.a((int) g.field_f[var7 / 8], 1 << var7 % 8);
+              DelegatingCanvas.field_f[var7 / 8] = (byte)s.a((int) DelegatingCanvas.field_f[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (!param1) ? 0 : -1;
             for (var7 = stackIn_51_0; wn.field_d.length > var7; var7++) {
@@ -182,11 +182,11 @@ final class t extends ma implements mj {
                 if (param1) {
                   if (var6Lifetime1 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; g.field_f.length > var9; var9++) {
-                        g.field_f[var9] = (byte) 0;
+                      for (var9 = 0; DelegatingCanvas.field_f.length > var9; var9++) {
+                        DelegatingCanvas.field_f[var9] = (byte) 0;
                       }
                     } else {
-                      g.field_f[var7 / 8] = (byte)dm.a((int) g.field_f[var7 / 8], 1 << ce.a(var7, 7));
+                      DelegatingCanvas.field_f[var7 / 8] = (byte)dm.a((int) DelegatingCanvas.field_f[var7 / 8], 1 << ce.a(var7, 7));
                     }
                   }
                 } else {
@@ -209,13 +209,13 @@ final class t extends ma implements mj {
                     dupTemp$0 = ba.field_P[1][var7 + 1];
                     stackIn_76_0 = dupTemp$0;
                     stackIn_76_1 = dupTemp$0.field_gb;
-                    stackIn_77_2 = ((g.field_f[var9 / 8] & 1 << (7 & var9)) == 0);
+                    stackIn_77_2 = ((DelegatingCanvas.field_f[var9 / 8] & 1 << (7 & var9)) == 0);
                     stackIn_76_0.field_gb = stackIn_76_1 & stackIn_77_2;
                   }
                 } else {
                   stackIn_79_0 = ba.field_P[1][var7 + 1];
                   stackIn_79_1 = -1;
-                  stackIn_79_2 = g.field_f[var7 / 8] & 1 << (7 & var7);
+                  stackIn_79_2 = DelegatingCanvas.field_f[var7 / 8] & 1 << (7 & var7);
                   stackIn_79_3 = -1;
                   stackIn_82_1 = (stackIn_79_1 != (stackIn_79_2 ^ stackIn_79_3));
                   stackIn_79_0.field_gb = stackIn_82_1;

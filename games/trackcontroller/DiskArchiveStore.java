@@ -5,7 +5,7 @@ import java.io.*;
 
 final class DiskArchiveStore {
     private int field_c;
-    static le field_f;
+    static AccountRequestState field_f;
     private BufferedCacheFile field_g;
     private int field_e;
     private BufferedCacheFile field_h;
@@ -162,7 +162,7 @@ final class DiskArchiveStore {
               this.field_g.a((long)(6 * param1), true);
               this.field_g.a(ByteStorage.field_a, 6, 0, 0);
               if (param0 >= -89) {
-                field_f = (le) null;
+                field_f = (AccountRequestState) null;
               }
               var4_int = (65280 & ByteStorage.field_a[1] << 8) + ((ByteStorage.field_a[0] & 255) << 16) + (255 & ByteStorage.field_a[2]);
               var5 = (ByteStorage.field_a[3] << 16 & 16711680) - (-(65280 & ByteStorage.field_a[4] << 8) - (ByteStorage.field_a[5] & 255));
@@ -519,7 +519,7 @@ final class DiskArchiveStore {
 
     static {
         field_a = "Email is valid";
-        field_f = new le();
+        field_f = new AccountRequestState();
         field_b = new byte[50][];
     }
 }

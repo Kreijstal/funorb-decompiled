@@ -62,7 +62,7 @@ final class oe {
           if (2 != var11.field_f) {
             return var7;
           }
-          kf.a(var7, param5 + 16711936, param0);
+          kf.exitFullscreenFrame(var7, param5 + 16711936, param0);
           stackIn_34_0 = null;
           return (java.awt.Frame) (stackIn_34_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

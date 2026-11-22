@@ -41,7 +41,7 @@ final class id {
             try {
               sg.field_h = new BufferedSocket((java.net.Socket) (gg.field_e.field_e), af.field_f);
               ud.field_b.position = 0;
-              var4 = ae.field_a;
+              var4 = AccountRequestState.field_a;
               var5 = var4;
               ResourceArchive.field_k = d.field_O;
               var5.position = 0;

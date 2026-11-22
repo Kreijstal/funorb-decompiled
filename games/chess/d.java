@@ -217,7 +217,7 @@ final class d extends ci {
           }
           if (param1.field_l != null) {
             ca.field_i = param1.field_l;
-            a.field_f = param1.field_m;
+            FullscreenFocusCanvas.field_f = param1.field_m;
             v.field_b = param1.field_i;
             hn.field_s = param1.field_k;
           }

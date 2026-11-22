@@ -151,8 +151,8 @@ final class fl {
           sf.field_c > 0) {
           fieldTemp$2 = sf.field_c - 1;
           sf.field_c = sf.field_c - 1;
-          var2_ref_byte__Lifetime2 = ef.field_d[fieldTemp$2];
-          ef.field_d[sf.field_c] = null;
+          var2_ref_byte__Lifetime2 = AccountRequestState.field_d[fieldTemp$2];
+          AccountRequestState.field_d[sf.field_c] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (rg.field_d != null) {

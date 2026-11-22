@@ -11,7 +11,7 @@ final class cm extends ii implements pf, vg {
     static String field_S;
     static String field_K;
     static int[] field_M;
-    static ek field_R;
+    static FullscreenFocusCanvas field_R;
 
     private final String i(int param0) {
         if (param0 <= 109) {
@@ -150,7 +150,7 @@ final class cm extends ii implements pf, vg {
 
     private final String a(int param0) {
         if (param0 < 82) {
-          field_R = (ek) null;
+          field_R = (FullscreenFocusCanvas) null;
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";

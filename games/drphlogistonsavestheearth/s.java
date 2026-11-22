@@ -73,7 +73,7 @@ final class s {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (hb.field_g > 0) {
-            df.field_l = n.a(0, sb.field_d, 640, 9764, 480, 0);
+            df.field_l = n.createFullscreenCanvas(0, sb.field_d, 640, 9764, 480, 0);
             if (df.field_l != null) {
               var2_int = 2;
               ej.a(df.field_l, (byte) 57);
@@ -375,7 +375,7 @@ final class s {
         hg.field_ob[18] = vi.field_d;
         hg.field_ob[6] = rk.field_c;
         hg.field_ob[17] = DualLinkNode.field_q;
-        hg.field_ob[3] = q.field_d;
+        hg.field_ob[3] = FullscreenFocusCanvas.field_d;
         hg.field_ob[10] = sh.field_d;
         hg.field_ob[7] = hd.field_L;
         hg.field_ob[13] = AccountCreationResultPanel.field_Db;

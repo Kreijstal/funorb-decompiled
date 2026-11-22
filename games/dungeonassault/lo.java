@@ -148,7 +148,7 @@ abstract class lo {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = ek.field_b;
+          stackIn_2_0 = FullscreenFocusCanvas.field_b;
           stackIn_2_1 = 22199;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = param3;

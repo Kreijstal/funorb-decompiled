@@ -150,10 +150,10 @@ final class oj {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (ql.field_a == null) {
+            if (DelegatingCanvas.field_a == null) {
               return param0.getParameter("settings");
             }
-            stackIn_13_0 = ql.field_a;
+            stackIn_13_0 = DelegatingCanvas.field_a;
             return stackIn_13_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

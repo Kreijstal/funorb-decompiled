@@ -99,9 +99,9 @@ final class kk {
           eh.a("commonui", (byte) -45, param1, "dropdown");
           var5 = ij.a("screen_options", (byte) 113, param1, "commonui");
           al.field_d = new he[4];
-          qb.field_b = new he[4];
+          AccountRequestState.field_b = new he[4];
           gd.field_b = new he[4];
-          var6 = new he[][]{al.field_d, qb.field_b, gd.field_b};
+          var6 = new he[][]{al.field_d, AccountRequestState.field_b, gd.field_b};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;

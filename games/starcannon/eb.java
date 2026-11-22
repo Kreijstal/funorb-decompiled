@@ -64,9 +64,9 @@ final class eb {
           if (g.field_a != null &&
             g.field_a.b((byte) 106) &&
             g.field_a.a("benefits", -9883) &&
-            null != pf.field_a &&
-            pf.field_a.b((byte) 110) &&
-            pf.field_a.a("benefits", -9883)) {
+            null != AccountRequestState.field_a &&
+            AccountRequestState.field_a.b((byte) 110) &&
+            AccountRequestState.field_a.a("benefits", -9883)) {
             ed.field_k = vk.a("benefits", 32, "headline", g.field_a);
             cf.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
             pc.field_a = vk.a("benefits", 106, "button", g.field_a);
@@ -74,8 +74,8 @@ final class eb {
             SpriteState.field_z = vk.a("benefits", 71, "menu_text", g.field_a);
             KeyboardInput.field_c = vk.a("benefits", 32, "button_frame", g.field_a);
             ge.field_b = vk.a("benefits", 123, "arrow", g.field_a);
-            gi.field_b = (qe) ((Object) od.a("benefits", g.field_a, "large_font", -1, pf.field_a));
-            ah.field_d = (qe) ((Object) od.a("benefits", g.field_a, "small_font", -1, pf.field_a));
+            gi.field_b = (qe) ((Object) od.a("benefits", g.field_a, "large_font", -1, AccountRequestState.field_a));
+            ah.field_d = (qe) ((Object) od.a("benefits", g.field_a, "small_font", -1, AccountRequestState.field_a));
             var28 = ki.field_a;
             var2 = ki.field_j;
             var3 = ki.field_f;

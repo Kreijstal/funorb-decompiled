@@ -225,7 +225,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ng.a(Lqg;ILjava/awt/Frame;)V#0"
+      "renamedSymbol": "B:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#0"
     },
     {
       "symbol": "B:np.a(ZII)V#0",
@@ -340,6 +340,14 @@
       "renamedSymbol": "B:vn.a([II)V#0"
     },
     {
+      "symbol": "C:af",
+      "originalName": "af",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:b",
       "originalName": "b",
       "to": "ClientException",
@@ -354,6 +362,14 @@
       "evidence": "Byte payload and cursor with big-endian primitive, string and smart encodings.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PacketBuffer"
+    },
+    {
+      "symbol": "C:ek",
+      "originalName": "ek",
+      "to": "FullscreenFocusCanvas",
+      "evidence": "Complete six-method instance contract,Frame/volatile flag declarations and complete canvas factory reviewed. Empty constructor,paint/update/focusGained no-ops,focusLost sets volatile flag,owned exit wrapper delegates reviewed Frame release helper; factory attaches canvas and focus listener to display Frame. Unrelated static helpers preserved. No owned/type-use native declarations. Exact same-spelling non-class literals,where present,are separately source-reviewed and pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FullscreenFocusCanvas"
     },
     {
       "symbol": "C:ep",
@@ -484,6 +500,14 @@
       "renamedSymbol": "C:PcmStream"
     },
     {
+      "symbol": "C:ql",
+      "originalName": "ql",
+      "to": "DelegatingCanvas",
+      "evidence": "Complete constructor/paint/update contract and sole instance Component field reviewed: constructor retains exact delegate alias,paint/update forward exact Graphics reference to matching delegate method with original RuntimeException wrapping. Unrelated static helpers preserved. No owned/type-use native declarations. Exact same-spelling non-class literals,where present,are separately source-reviewed and pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DelegatingCanvas"
+    },
+    {
       "symbol": "C:qp",
       "originalName": "qp",
       "to": "BoundedRandomAccessFile",
@@ -580,6 +604,22 @@
       "renamedSymbol": "F:PacketBuffer.position:I"
     },
     {
+      "symbol": "F:ek.field_e:Ljava/awt/Frame;",
+      "originalName": "field_e",
+      "to": "fullscreenFrame",
+      "evidence": "Exact declaration and factory assignment,exit wrapper and callback contract reviewed. Shared display Frame retained in original field. Preserve declaration modifiers,default initialization,all aliases/reads/writes and guard-dependent reset order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:FullscreenFocusCanvas.fullscreenFrame:Ljava/awt/Frame;"
+    },
+    {
+      "symbol": "F:ek.field_g:Z",
+      "originalName": "field_g",
+      "to": "focusLost",
+      "evidence": "Exact volatile Boolean declaration,focusLost callback and all instance/factory bodies reviewed. Callback sets it true; obfuscation-guard writes,if present,remain observable. Preserve declaration modifiers,default initialization,all aliases/reads/writes and guard-dependent reset order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:FullscreenFocusCanvas.focusLost:Z"
+    },
+    {
       "symbol": "F:ep.field_h:Ljava/nio/ByteBuffer;",
       "originalName": "field_h",
       "to": "buffer",
@@ -626,6 +666,14 @@
       "evidence": "Long node key carried by every intrusive node.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IntrusiveNode.key:J"
+    },
+    {
+      "symbol": "F:ql.field_i:Ljava/awt/Component;",
+      "originalName": "field_i",
+      "to": "delegateComponent",
+      "evidence": "Exact private Component declaration plus complete constructor/paint/update bodies reviewed. Retains delegate alias and receives both paint/update forwarding. Preserve declaration modifiers,default initialization,all aliases/reads/writes and guard-dependent reset order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DelegatingCanvas.delegateComponent:Ljava/awt/Component;"
     },
     {
       "symbol": "F:sk.field_h:I",
@@ -705,7 +753,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 dd1c06d525871ed2b60087d7d69841101b84c6ac9cf1d098e71aeda93f44ac34.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:af.clearStaticReferences(I)V"
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:ag.a(I)V",
@@ -1260,6 +1308,14 @@
       "renamedSymbol": "M:ej.clearStaticReferences()V"
     },
     {
+      "symbol": "M:ek.a(Lqg;I)V",
+      "originalName": "a",
+      "to": "exitFullscreen",
+      "evidence": "Complete wrapper and called Frame-release body reviewed. ng helper(manager,99,Frame) executes before int!=0 focusGained(null), retaining no-op callback and exact order. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FullscreenFocusCanvas.exitFullscreen(Lqg;I)V"
+    },
+    {
       "symbol": "M:em.a([Ljava/lang/String;I)Lvk;",
       "originalName": "a",
       "to": "createAccountSuggestionsResult",
@@ -1402,6 +1458,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 8 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ff2923b9823a39b8fc6ed6ab7ebd967aff4209b45721aa5b3bb4971c65ab8022.",
       "confidence": "reviewed",
       "renamedSymbol": "M:gg.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:gh.a(IIIILqg;I)Lek;",
+      "originalName": "a",
+      "to": "createFullscreenCanvas",
+      "evidence": "Complete factory body reviewed. Creates/attaches/configures/focuses canvas before guard int param1<-63 returns it; other guard values return null after those side effects. Never move guard before construction. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;"
     },
     {
       "symbol": "M:gk.b(Z)V",
@@ -1810,6 +1874,14 @@
       "evidence": "Returns whether the forward link is non-null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveNode.isLinked(I)Z"
+    },
+    {
+      "symbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "exitFullscreenFrame",
+      "evidence": "Complete Frame-release body/canvas caller reviewed. Int<38 clears static String before retry loop. Preserve captured DungeonAssault.field_K, scanLoop1 label and pending path early return when captured flag!=0; failure may fall through to dispose when flag!=0. Do not replace with unconditional retry-until-success. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V"
     },
     {
       "symbol": "M:nh.a(Z)V",
@@ -2784,7 +2856,7 @@
     },
     {
       "symbol": "B:ng.a(Lqg;ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "B:ng.a(Lqg;ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "B:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#0",
       "originalName": "L1",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -3026,9 +3098,9 @@
     },
     {
       "symbol": "C:af",
-      "renamedSymbol": "C:af",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "af",
-      "renamedName": "af",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "af.java",
         "start": 50,
@@ -3829,9 +3901,9 @@
     },
     {
       "symbol": "C:ek",
-      "renamedSymbol": "C:ek",
+      "renamedSymbol": "C:FullscreenFocusCanvas",
       "originalName": "ek",
-      "renamedName": "ek",
+      "renamedName": "FullscreenFocusCanvas",
       "declaration": {
         "file": "ek.java",
         "start": 50,
@@ -6073,9 +6145,9 @@
     },
     {
       "symbol": "C:ql",
-      "renamedSymbol": "C:ql",
+      "renamedSymbol": "C:DelegatingCanvas",
       "originalName": "ql",
-      "renamedName": "ql",
+      "renamedName": "DelegatingCanvas",
       "declaration": {
         "file": "ql.java",
         "start": 50,
@@ -7921,7 +7993,7 @@
     },
     {
       "symbol": "F:af.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:af.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -11375,7 +11447,7 @@
     },
     {
       "symbol": "F:cm.field_R:Lek;",
-      "renamedSymbol": "F:cm.field_R:Lek;",
+      "renamedSymbol": "F:cm.field_R:LFullscreenFocusCanvas;",
       "originalName": "field_R",
       "renamedName": "field_R",
       "declaration": {
@@ -12541,7 +12613,7 @@
     },
     {
       "symbol": "F:dh.field_b:Laf;",
-      "renamedSymbol": "F:dh.field_b:Laf;",
+      "renamedSymbol": "F:dh.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -14048,7 +14120,7 @@
     },
     {
       "symbol": "F:ek.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ek.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -14059,7 +14131,7 @@
     },
     {
       "symbol": "F:ek.field_b:Ltc;",
-      "renamedSymbol": "F:ek.field_b:Ltc;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_b:Ltc;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -14070,7 +14142,7 @@
     },
     {
       "symbol": "F:ek.field_c:I",
-      "renamedSymbol": "F:ek.field_c:I",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -14081,7 +14153,7 @@
     },
     {
       "symbol": "F:ek.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:ek.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -14092,9 +14164,9 @@
     },
     {
       "symbol": "F:ek.field_e:Ljava/awt/Frame;",
-      "renamedSymbol": "F:ek.field_e:Ljava/awt/Frame;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.fullscreenFrame:Ljava/awt/Frame;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "fullscreenFrame",
       "declaration": {
         "file": "ek.java",
         "start": 191,
@@ -14103,7 +14175,7 @@
     },
     {
       "symbol": "F:ek.field_f:Luk;",
-      "renamedSymbol": "F:ek.field_f:LGzipDecompressor;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_f:LGzipDecompressor;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -14114,9 +14186,9 @@
     },
     {
       "symbol": "F:ek.field_g:Z",
-      "renamedSymbol": "F:ek.field_g:Z",
+      "renamedSymbol": "F:FullscreenFocusCanvas.focusLost:Z",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "focusLost",
       "declaration": {
         "file": "ek.java",
         "start": 221,
@@ -14125,7 +14197,7 @@
     },
     {
       "symbol": "F:ek.field_h:[Ljava/lang/String;",
-      "renamedSymbol": "F:ek.field_h:[Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_h:[Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -14136,7 +14208,7 @@
     },
     {
       "symbol": "F:ek.field_i:Ljava/lang/String;",
-      "renamedSymbol": "F:ek.field_i:Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_i:Ljava/lang/String;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -14147,7 +14219,7 @@
     },
     {
       "symbol": "F:ek.field_j:[Ljava/lang/String;",
-      "renamedSymbol": "F:ek.field_j:[Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenFocusCanvas.field_j:[Ljava/lang/String;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -32462,7 +32534,7 @@
     },
     {
       "symbol": "F:ol.field_i:Laf;",
-      "renamedSymbol": "F:ol.field_i:Laf;",
+      "renamedSymbol": "F:ol.field_i:LAccountRequestState;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -35795,7 +35867,7 @@
     },
     {
       "symbol": "F:ql.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ql.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:DelegatingCanvas.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -35806,7 +35878,7 @@
     },
     {
       "symbol": "F:ql.field_b:I",
-      "renamedSymbol": "F:ql.field_b:I",
+      "renamedSymbol": "F:DelegatingCanvas.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -35817,7 +35889,7 @@
     },
     {
       "symbol": "F:ql.field_c:Lcn;",
-      "renamedSymbol": "F:ql.field_c:Lcn;",
+      "renamedSymbol": "F:DelegatingCanvas.field_c:Lcn;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -35828,7 +35900,7 @@
     },
     {
       "symbol": "F:ql.field_d:I",
-      "renamedSymbol": "F:ql.field_d:I",
+      "renamedSymbol": "F:DelegatingCanvas.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -35839,7 +35911,7 @@
     },
     {
       "symbol": "F:ql.field_e:[Ljava/lang/Object;",
-      "renamedSymbol": "F:ql.field_e:[Ljava/lang/Object;",
+      "renamedSymbol": "F:DelegatingCanvas.field_e:[Ljava/lang/Object;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -35850,7 +35922,7 @@
     },
     {
       "symbol": "F:ql.field_f:Laf;",
-      "renamedSymbol": "F:ql.field_f:Laf;",
+      "renamedSymbol": "F:DelegatingCanvas.field_f:LAccountRequestState;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -35861,7 +35933,7 @@
     },
     {
       "symbol": "F:ql.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:ql.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:DelegatingCanvas.field_g:Ljava/lang/String;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -35872,7 +35944,7 @@
     },
     {
       "symbol": "F:ql.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:ql.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:DelegatingCanvas.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -35883,9 +35955,9 @@
     },
     {
       "symbol": "F:ql.field_i:Ljava/awt/Component;",
-      "renamedSymbol": "F:ql.field_i:Ljava/awt/Component;",
+      "renamedSymbol": "F:DelegatingCanvas.delegateComponent:Ljava/awt/Component;",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "delegateComponent",
       "declaration": {
         "file": "ql.java",
         "start": 160,
@@ -35894,7 +35966,7 @@
     },
     {
       "symbol": "F:ql.field_j:I",
-      "renamedSymbol": "F:ql.field_j:I",
+      "renamedSymbol": "F:DelegatingCanvas.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -35905,7 +35977,7 @@
     },
     {
       "symbol": "F:ql.field_k:Ljava/lang/String;",
-      "renamedSymbol": "F:ql.field_k:Ljava/lang/String;",
+      "renamedSymbol": "F:DelegatingCanvas.field_k:Ljava/lang/String;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -35916,7 +35988,7 @@
     },
     {
       "symbol": "F:ql.field_l:Ljava/lang/String;",
-      "renamedSymbol": "F:ql.field_l:Ljava/lang/String;",
+      "renamedSymbol": "F:DelegatingCanvas.field_l:Ljava/lang/String;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -39128,7 +39200,7 @@
     },
     {
       "symbol": "F:sp.field_e:Laf;",
-      "renamedSymbol": "F:sp.field_e:Laf;",
+      "renamedSymbol": "F:sp.field_e:LAccountRequestState;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -43990,7 +44062,7 @@
     },
     {
       "symbol": "F:wd.field_d:Laf;",
-      "renamedSymbol": "F:wd.field_d:Laf;",
+      "renamedSymbol": "F:wd.field_d:LAccountRequestState;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -48335,7 +48407,7 @@
     },
     {
       "symbol": "L:af.a(B)V#0",
-      "renamedSymbol": "L:af.a(B)V#0",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -48346,7 +48418,7 @@
     },
     {
       "symbol": "L:af.a(B)V#1",
-      "renamedSymbol": "L:af.a(B)V#1",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -48357,7 +48429,7 @@
     },
     {
       "symbol": "L:af.a(B)V#2",
-      "renamedSymbol": "L:af.a(B)V#2",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -48368,7 +48440,7 @@
     },
     {
       "symbol": "L:af.a(B)V#3",
-      "renamedSymbol": "L:af.a(B)V#3",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -48379,7 +48451,7 @@
     },
     {
       "symbol": "L:af.a(B)V#4",
-      "renamedSymbol": "L:af.a(B)V#4",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -48390,7 +48462,7 @@
     },
     {
       "symbol": "L:af.a(B)V#5",
-      "renamedSymbol": "L:af.a(B)V#5",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -48401,7 +48473,7 @@
     },
     {
       "symbol": "L:af.a(B)V#6",
-      "renamedSymbol": "L:af.a(B)V#6",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#6",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -48412,7 +48484,7 @@
     },
     {
       "symbol": "L:af.a(B)V#7",
-      "renamedSymbol": "L:af.a(B)V#7",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#7",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -48423,7 +48495,7 @@
     },
     {
       "symbol": "L:af.a(B)V#8",
-      "renamedSymbol": "L:af.a(B)V#8",
+      "renamedSymbol": "L:AccountRequestState.a(B)V#8",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -48434,7 +48506,7 @@
     },
     {
       "symbol": "L:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#0",
-      "renamedSymbol": "L:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#0",
+      "renamedSymbol": "L:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#0",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -48445,7 +48517,7 @@
     },
     {
       "symbol": "L:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#1",
-      "renamedSymbol": "L:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#1",
+      "renamedSymbol": "L:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -57366,7 +57438,7 @@
     },
     {
       "symbol": "L:bn.d(I)Lek;#0",
-      "renamedSymbol": "L:bn.d(I)Lek;#0",
+      "renamedSymbol": "L:bn.d(I)LFullscreenFocusCanvas;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -85977,7 +86049,7 @@
     },
     {
       "symbol": "L:ek.a(B)V#0",
-      "renamedSymbol": "L:ek.a(B)V#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -85988,7 +86060,7 @@
     },
     {
       "symbol": "L:ek.a(BI)[Lcn;#0",
-      "renamedSymbol": "L:ek.a(BI)[Lcn;#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(BI)[Lcn;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -85999,7 +86071,7 @@
     },
     {
       "symbol": "L:ek.a(BI)[Lcn;#1",
-      "renamedSymbol": "L:ek.a(BI)[Lcn;#1",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(BI)[Lcn;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -86010,7 +86082,7 @@
     },
     {
       "symbol": "L:ek.a(IBII)D#0",
-      "renamedSymbol": "L:ek.a(IBII)D#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(IBII)D#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -86021,7 +86093,7 @@
     },
     {
       "symbol": "L:ek.a(IBII)D#1",
-      "renamedSymbol": "L:ek.a(IBII)D#1",
+      "renamedSymbol": "L:FullscreenFocusCanvas.a(IBII)D#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -86032,7 +86104,7 @@
     },
     {
       "symbol": "L:ek.a(Lqg;I)V#0",
-      "renamedSymbol": "L:ek.a(Lqg;I)V#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.exitFullscreen(Lqg;I)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -86043,7 +86115,7 @@
     },
     {
       "symbol": "L:ek.a(Lqg;I)V#1",
-      "renamedSymbol": "L:ek.a(Lqg;I)V#1",
+      "renamedSymbol": "L:FullscreenFocusCanvas.exitFullscreen(Lqg;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -86054,7 +86126,7 @@
     },
     {
       "symbol": "L:ek.focusLost(Ljava/awt/event/FocusEvent;)V#0",
-      "renamedSymbol": "L:ek.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+      "renamedSymbol": "L:FullscreenFocusCanvas.focusLost(Ljava/awt/event/FocusEvent;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -99672,7 +99744,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#0",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#0",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -99683,7 +99755,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#1",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#1",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#1",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -99694,7 +99766,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#10",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#10",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -99705,7 +99777,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#2",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#2",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -99716,7 +99788,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#3",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#3",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -99727,7 +99799,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#4",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#4",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -99738,7 +99810,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#5",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#5",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -99749,7 +99821,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#6",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#6",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -99760,7 +99832,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#7",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#7",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#7",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -99771,7 +99843,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#8",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#8",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#8",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -99782,7 +99854,7 @@
     },
     {
       "symbol": "L:gh.a(IIIILqg;I)Lek;#9",
-      "renamedSymbol": "L:gh.a(IIIILqg;I)Lek;#9",
+      "renamedSymbol": "L:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -158005,7 +158077,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -158016,7 +158088,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -158027,7 +158099,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#2",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#2",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#2",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -158038,7 +158110,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#3",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#3",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#3",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -158049,7 +158121,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#4",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#4",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#4",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -158060,7 +158132,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#5",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#5",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#5",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -158071,7 +158143,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#6",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#6",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#6",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -158082,7 +158154,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#7",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#7",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -158093,7 +158165,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#8",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#8",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#8",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -158104,7 +158176,7 @@
     },
     {
       "symbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#9",
-      "renamedSymbol": "L:ng.a(Lqg;ILjava/awt/Frame;)V#9",
+      "renamedSymbol": "L:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -189036,7 +189108,7 @@
     },
     {
       "symbol": "L:ql.<init>(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "L:ql.<init>(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "L:DelegatingCanvas.<init>(Ljava/awt/Component;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -189047,7 +189119,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#0",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#0",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -189058,7 +189130,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#1",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#1",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -189069,7 +189141,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#10",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#10",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -189080,7 +189152,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#2",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#2",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#2",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -189091,7 +189163,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#3",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#3",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -189102,7 +189174,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#4",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#4",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#4",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -189113,7 +189185,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#5",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#5",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#5",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -189124,7 +189196,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#6",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#6",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#6",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -189135,7 +189207,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#7",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#7",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#7",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -189146,7 +189218,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#8",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#8",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#8",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -189157,7 +189229,7 @@
     },
     {
       "symbol": "L:ql.a(Lnh;Lnh;BLnh;)Z#9",
-      "renamedSymbol": "L:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#9",
+      "renamedSymbol": "L:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -189168,7 +189240,7 @@
     },
     {
       "symbol": "L:ql.b(B)V#0",
-      "renamedSymbol": "L:ql.b(B)V#0",
+      "renamedSymbol": "L:DelegatingCanvas.b(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -189179,7 +189251,7 @@
     },
     {
       "symbol": "L:ql.paint(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "L:ql.paint(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "L:DelegatingCanvas.paint(Ljava/awt/Graphics;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -189190,7 +189262,7 @@
     },
     {
       "symbol": "L:ql.update(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "L:ql.update(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "L:DelegatingCanvas.update(Ljava/awt/Graphics;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -225589,7 +225661,7 @@
     },
     {
       "symbol": "M:af.a(B)V",
-      "renamedSymbol": "M:af.a(B)V",
+      "renamedSymbol": "M:AccountRequestState.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -225600,7 +225672,7 @@
     },
     {
       "symbol": "M:af.a(I)V",
-      "renamedSymbol": "M:af.clearStaticReferences(I)V",
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -225611,7 +225683,7 @@
     },
     {
       "symbol": "M:af.a(ZLtc;IILjava/awt/Component;IILqg;)V",
-      "renamedSymbol": "M:af.a(ZLtc;IILjava/awt/Component;IILqg;)V",
+      "renamedSymbol": "M:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -225622,7 +225694,7 @@
     },
     {
       "symbol": "M:af.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:af.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -227382,7 +227454,7 @@
     },
     {
       "symbol": "M:bn.d(I)Lek;",
-      "renamedSymbol": "M:bn.d(I)Lek;",
+      "renamedSymbol": "M:bn.d(I)LFullscreenFocusCanvas;",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -232255,9 +232327,9 @@
     },
     {
       "symbol": "M:ek.<init>()V",
-      "renamedSymbol": "M:ek.<init>()V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.<init>()V",
       "originalName": "ek",
-      "renamedName": "ek",
+      "renamedName": "FullscreenFocusCanvas",
       "declaration": {
         "file": "ek.java",
         "start": 1429,
@@ -232266,7 +232338,7 @@
     },
     {
       "symbol": "M:ek.a(B)V",
-      "renamedSymbol": "M:ek.a(B)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -232277,7 +232349,7 @@
     },
     {
       "symbol": "M:ek.a(BI)[Lcn;",
-      "renamedSymbol": "M:ek.a(BI)[Lcn;",
+      "renamedSymbol": "M:FullscreenFocusCanvas.a(BI)[Lcn;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -232288,7 +232360,7 @@
     },
     {
       "symbol": "M:ek.a(IBII)D",
-      "renamedSymbol": "M:ek.a(IBII)D",
+      "renamedSymbol": "M:FullscreenFocusCanvas.a(IBII)D",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -232299,9 +232371,9 @@
     },
     {
       "symbol": "M:ek.a(Lqg;I)V",
-      "renamedSymbol": "M:ek.a(Lqg;I)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.exitFullscreen(Lqg;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "exitFullscreen",
       "declaration": {
         "file": "ek.java",
         "start": 1657,
@@ -232310,7 +232382,7 @@
     },
     {
       "symbol": "M:ek.focusGained(Ljava/awt/event/FocusEvent;)V",
-      "renamedSymbol": "M:ek.focusGained(Ljava/awt/event/FocusEvent;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.focusGained(Ljava/awt/event/FocusEvent;)V",
       "originalName": "focusGained",
       "renamedName": "focusGained",
       "declaration": {
@@ -232321,7 +232393,7 @@
     },
     {
       "symbol": "M:ek.focusLost(Ljava/awt/event/FocusEvent;)V",
-      "renamedSymbol": "M:ek.focusLost(Ljava/awt/event/FocusEvent;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.focusLost(Ljava/awt/event/FocusEvent;)V",
       "originalName": "focusLost",
       "renamedName": "focusLost",
       "declaration": {
@@ -232332,7 +232404,7 @@
     },
     {
       "symbol": "M:ek.paint(Ljava/awt/Graphics;)V",
-      "renamedSymbol": "M:ek.paint(Ljava/awt/Graphics;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.paint(Ljava/awt/Graphics;)V",
       "originalName": "paint",
       "renamedName": "paint",
       "declaration": {
@@ -232343,7 +232415,7 @@
     },
     {
       "symbol": "M:ek.update(Ljava/awt/Graphics;)V",
-      "renamedSymbol": "M:ek.update(Ljava/awt/Graphics;)V",
+      "renamedSymbol": "M:FullscreenFocusCanvas.update(Ljava/awt/Graphics;)V",
       "originalName": "update",
       "renamedName": "update",
       "declaration": {
@@ -234862,9 +234934,9 @@
     },
     {
       "symbol": "M:gh.a(IIIILqg;I)Lek;",
-      "renamedSymbol": "M:gh.a(IIIILqg;I)Lek;",
+      "renamedSymbol": "M:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createFullscreenCanvas",
       "declaration": {
         "file": "gh.java",
         "start": 1582,
@@ -245070,9 +245142,9 @@
     },
     {
       "symbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
-      "renamedSymbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
+      "renamedSymbol": "M:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "exitFullscreenFrame",
       "declaration": {
         "file": "ng.java",
         "start": 130881,
@@ -250845,9 +250917,9 @@
     },
     {
       "symbol": "M:ql.<init>(Ljava/awt/Component;)V",
-      "renamedSymbol": "M:ql.<init>(Ljava/awt/Component;)V",
+      "renamedSymbol": "M:DelegatingCanvas.<init>(Ljava/awt/Component;)V",
       "originalName": "ql",
-      "renamedName": "ql",
+      "renamedName": "DelegatingCanvas",
       "declaration": {
         "file": "ql.java",
         "start": 3378,
@@ -250856,7 +250928,7 @@
     },
     {
       "symbol": "M:ql.a(B)V",
-      "renamedSymbol": "M:ql.a(B)V",
+      "renamedSymbol": "M:DelegatingCanvas.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -250867,7 +250939,7 @@
     },
     {
       "symbol": "M:ql.a(Lnh;Lnh;BLnh;)Z",
-      "renamedSymbol": "M:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z",
+      "renamedSymbol": "M:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -250878,7 +250950,7 @@
     },
     {
       "symbol": "M:ql.b(B)V",
-      "renamedSymbol": "M:ql.b(B)V",
+      "renamedSymbol": "M:DelegatingCanvas.b(B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -250889,7 +250961,7 @@
     },
     {
       "symbol": "M:ql.paint(Ljava/awt/Graphics;)V",
-      "renamedSymbol": "M:ql.paint(Ljava/awt/Graphics;)V",
+      "renamedSymbol": "M:DelegatingCanvas.paint(Ljava/awt/Graphics;)V",
       "originalName": "paint",
       "renamedName": "paint",
       "declaration": {
@@ -250900,7 +250972,7 @@
     },
     {
       "symbol": "M:ql.update(Ljava/awt/Graphics;)V",
-      "renamedSymbol": "M:ql.update(Ljava/awt/Graphics;)V",
+      "renamedSymbol": "M:DelegatingCanvas.update(Ljava/awt/Graphics;)V",
       "originalName": "update",
       "renamedName": "update",
       "declaration": {
@@ -260019,7 +260091,7 @@
     },
     {
       "symbol": "P:af.a(B)V#0",
-      "renamedSymbol": "P:af.a(B)V#0",
+      "renamedSymbol": "P:AccountRequestState.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260030,7 +260102,7 @@
     },
     {
       "symbol": "P:af.a(I)V#0",
-      "renamedSymbol": "P:af.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:AccountRequestState.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260041,7 +260113,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#0",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#0",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260052,7 +260124,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#1",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#1",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260063,7 +260135,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#2",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#2",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260074,7 +260146,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#3",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#3",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -260085,7 +260157,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#4",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#4",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -260096,7 +260168,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#5",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#5",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -260107,7 +260179,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#6",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#6",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -260118,7 +260190,7 @@
     },
     {
       "symbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#7",
-      "renamedSymbol": "P:af.a(ZLtc;IILjava/awt/Component;IILqg;)V#7",
+      "renamedSymbol": "P:AccountRequestState.a(ZLtc;IILjava/awt/Component;IILqg;)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -264056,7 +264128,7 @@
     },
     {
       "symbol": "P:bn.d(I)Lek;#0",
-      "renamedSymbol": "P:bn.d(I)Lek;#0",
+      "renamedSymbol": "P:bn.d(I)LFullscreenFocusCanvas;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277289,7 +277361,7 @@
     },
     {
       "symbol": "P:ek.a(B)V#0",
-      "renamedSymbol": "P:ek.a(B)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277300,7 +277372,7 @@
     },
     {
       "symbol": "P:ek.a(BI)[Lcn;#0",
-      "renamedSymbol": "P:ek.a(BI)[Lcn;#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(BI)[Lcn;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277311,7 +277383,7 @@
     },
     {
       "symbol": "P:ek.a(BI)[Lcn;#1",
-      "renamedSymbol": "P:ek.a(BI)[Lcn;#1",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(BI)[Lcn;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -277322,7 +277394,7 @@
     },
     {
       "symbol": "P:ek.a(IBII)D#0",
-      "renamedSymbol": "P:ek.a(IBII)D#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(IBII)D#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277333,7 +277405,7 @@
     },
     {
       "symbol": "P:ek.a(IBII)D#1",
-      "renamedSymbol": "P:ek.a(IBII)D#1",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(IBII)D#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -277344,7 +277416,7 @@
     },
     {
       "symbol": "P:ek.a(IBII)D#2",
-      "renamedSymbol": "P:ek.a(IBII)D#2",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(IBII)D#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -277355,7 +277427,7 @@
     },
     {
       "symbol": "P:ek.a(IBII)D#3",
-      "renamedSymbol": "P:ek.a(IBII)D#3",
+      "renamedSymbol": "P:FullscreenFocusCanvas.a(IBII)D#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -277366,7 +277438,7 @@
     },
     {
       "symbol": "P:ek.a(Lqg;I)V#0",
-      "renamedSymbol": "P:ek.a(Lqg;I)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.exitFullscreen(Lqg;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277377,7 +277449,7 @@
     },
     {
       "symbol": "P:ek.a(Lqg;I)V#1",
-      "renamedSymbol": "P:ek.a(Lqg;I)V#1",
+      "renamedSymbol": "P:FullscreenFocusCanvas.exitFullscreen(Lqg;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -277388,7 +277460,7 @@
     },
     {
       "symbol": "P:ek.focusGained(Ljava/awt/event/FocusEvent;)V#0",
-      "renamedSymbol": "P:ek.focusGained(Ljava/awt/event/FocusEvent;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.focusGained(Ljava/awt/event/FocusEvent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277399,7 +277471,7 @@
     },
     {
       "symbol": "P:ek.focusLost(Ljava/awt/event/FocusEvent;)V#0",
-      "renamedSymbol": "P:ek.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.focusLost(Ljava/awt/event/FocusEvent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277410,7 +277482,7 @@
     },
     {
       "symbol": "P:ek.paint(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "P:ek.paint(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.paint(Ljava/awt/Graphics;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277421,7 +277493,7 @@
     },
     {
       "symbol": "P:ek.update(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "P:ek.update(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "P:FullscreenFocusCanvas.update(Ljava/awt/Graphics;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -283581,7 +283653,7 @@
     },
     {
       "symbol": "P:gh.a(IIIILqg;I)Lek;#0",
-      "renamedSymbol": "P:gh.a(IIIILqg;I)Lek;#0",
+      "renamedSymbol": "P:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -283592,7 +283664,7 @@
     },
     {
       "symbol": "P:gh.a(IIIILqg;I)Lek;#1",
-      "renamedSymbol": "P:gh.a(IIIILqg;I)Lek;#1",
+      "renamedSymbol": "P:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -283603,7 +283675,7 @@
     },
     {
       "symbol": "P:gh.a(IIIILqg;I)Lek;#2",
-      "renamedSymbol": "P:gh.a(IIIILqg;I)Lek;#2",
+      "renamedSymbol": "P:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -283614,7 +283686,7 @@
     },
     {
       "symbol": "P:gh.a(IIIILqg;I)Lek;#3",
-      "renamedSymbol": "P:gh.a(IIIILqg;I)Lek;#3",
+      "renamedSymbol": "P:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -283625,7 +283697,7 @@
     },
     {
       "symbol": "P:gh.a(IIIILqg;I)Lek;#4",
-      "renamedSymbol": "P:gh.a(IIIILqg;I)Lek;#4",
+      "renamedSymbol": "P:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -283636,7 +283708,7 @@
     },
     {
       "symbol": "P:gh.a(IIIILqg;I)Lek;#5",
-      "renamedSymbol": "P:gh.a(IIIILqg;I)Lek;#5",
+      "renamedSymbol": "P:gh.createFullscreenCanvas(IIIILqg;I)LFullscreenFocusCanvas;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -306153,7 +306225,7 @@
     },
     {
       "symbol": "P:ng.a(Lqg;ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:ng.a(Lqg;ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306164,7 +306236,7 @@
     },
     {
       "symbol": "P:ng.a(Lqg;ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:ng.a(Lqg;ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -306175,7 +306247,7 @@
     },
     {
       "symbol": "P:ng.a(Lqg;ILjava/awt/Frame;)V#2",
-      "renamedSymbol": "P:ng.a(Lqg;ILjava/awt/Frame;)V#2",
+      "renamedSymbol": "P:ng.exitFullscreenFrame(Lqg;ILjava/awt/Frame;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -322653,7 +322725,7 @@
     },
     {
       "symbol": "P:ql.<init>(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "P:ql.<init>(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "P:DelegatingCanvas.<init>(Ljava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322664,7 +322736,7 @@
     },
     {
       "symbol": "P:ql.a(B)V#0",
-      "renamedSymbol": "P:ql.a(B)V#0",
+      "renamedSymbol": "P:DelegatingCanvas.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322675,7 +322747,7 @@
     },
     {
       "symbol": "P:ql.a(Lnh;Lnh;BLnh;)Z#0",
-      "renamedSymbol": "P:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#0",
+      "renamedSymbol": "P:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322686,7 +322758,7 @@
     },
     {
       "symbol": "P:ql.a(Lnh;Lnh;BLnh;)Z#1",
-      "renamedSymbol": "P:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#1",
+      "renamedSymbol": "P:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -322697,7 +322769,7 @@
     },
     {
       "symbol": "P:ql.a(Lnh;Lnh;BLnh;)Z#2",
-      "renamedSymbol": "P:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#2",
+      "renamedSymbol": "P:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -322708,7 +322780,7 @@
     },
     {
       "symbol": "P:ql.a(Lnh;Lnh;BLnh;)Z#3",
-      "renamedSymbol": "P:ql.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#3",
+      "renamedSymbol": "P:DelegatingCanvas.a(LResourceArchive;LResourceArchive;BLResourceArchive;)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -322719,7 +322791,7 @@
     },
     {
       "symbol": "P:ql.b(B)V#0",
-      "renamedSymbol": "P:ql.b(B)V#0",
+      "renamedSymbol": "P:DelegatingCanvas.b(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322730,7 +322802,7 @@
     },
     {
       "symbol": "P:ql.paint(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "P:ql.paint(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "P:DelegatingCanvas.paint(Ljava/awt/Graphics;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322741,7 +322813,7 @@
     },
     {
       "symbol": "P:ql.update(Ljava/awt/Graphics;)V#0",
-      "renamedSymbol": "P:ql.update(Ljava/awt/Graphics;)V#0",
+      "renamedSymbol": "P:DelegatingCanvas.update(Ljava/awt/Graphics;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -340598,7 +340670,7 @@
       "original": "DungeonAssault.java",
       "renamed": "DungeonAssault.java",
       "inputSha256": "b5464cbb2115c14735feab48fc15b139ffc8cb70c93977ed2f68b3e29596a14a",
-      "outputSha256": "85c8bef64db1f338b3d08a8d824deb5f968df142518f2d2e3b75a6b4f9cbd328",
+      "outputSha256": "78b17c9ac15654400f256e0999dac9f115df1774055236aae1c6eb916c2aedb7",
       "edits": [
         {
           "start": 101,
@@ -340627,6 +340699,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "CombatState"
+        },
+        {
+          "start": 2042,
+          "end": 2044,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3122,
@@ -340683,6 +340762,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3847,
+          "end": 3849,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4248,
@@ -340802,6 +340888,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 9757,
+          "end": 9764,
+          "symbol": "F:ek.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
         },
         {
           "start": 11844,
@@ -340965,6 +341058,13 @@
           "kind": "label"
         },
         {
+          "start": 16485,
+          "end": 16487,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 16531,
           "end": 16533,
           "symbol": "C:pj",
@@ -341001,6 +341101,13 @@
           "original": "L19",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 17351,
+          "end": 17353,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 17585,
@@ -341073,6 +341180,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 20166,
+          "end": 20168,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 21202,
@@ -341318,6 +341432,13 @@
           "symbol": "M:c.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 23011,
+          "end": 23013,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 23120,
@@ -341775,6 +341896,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 25828,
+          "end": 25830,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 25903,
           "end": 25905,
           "symbol": "C:un",
@@ -342104,6 +342232,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 28600,
+          "end": 28602,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 28603,
           "end": 28604,
           "symbol": "M:af.a(I)V",
@@ -342270,6 +342405,13 @@
           "symbol": "C:qp",
           "original": "qp",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 34754,
+          "end": 34756,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 34970,
@@ -342582,7 +342724,7 @@
       "original": "ae.java",
       "renamed": "ae.java",
       "inputSha256": "68452257ccde07f46642f3e23bbdbef81838b498ebe4eb80262d32ef2a7b96fb",
-      "outputSha256": "ab9d9e01a80c475b7b29f863381d095d956e71e3fb932e1d1deddadbd3cc9520",
+      "outputSha256": "3149bca789e3be6a49d138cfcedb5101b67ffc14cb42559904b737b4637facd5",
       "edits": [
         {
           "start": 1160,
@@ -342620,6 +342762,13 @@
           "renamed": "KeyboardInput"
         },
         {
+          "start": 5213,
+          "end": 5215,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 5889,
           "end": 5891,
           "symbol": "C:kh",
@@ -342632,6 +342781,13 @@
           "symbol": "C:og",
           "original": "og",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 5984,
+          "end": 5986,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 6545,
@@ -342770,10 +342926,45 @@
     },
     {
       "original": "af.java",
-      "renamed": "af.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "580b349f5d18a014476d57b270253de73f646e399c1d510b2cc7f06a6646bee1",
-      "outputSha256": "c9c6cd358c26f881a0df8a5988adf6361132d30a7d2d73df7caa51d56d0cdeb3",
+      "outputSha256": "21449aa6ac9ffedea2895fd1c6c173f35823f6493387c07ffec202f4f6711228",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 546,
+          "end": 548,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 577,
+          "end": 579,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 590,
+          "end": 592,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 631,
+          "end": 633,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
         {
           "start": 714,
           "end": 716,
@@ -342787,6 +342978,13 @@
           "symbol": "M:af.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1657,
+          "end": 1659,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1660,
@@ -343013,7 +343211,7 @@
       "original": "ai.java",
       "renamed": "ai.java",
       "inputSha256": "e50f6047c0a7f7eba8f0eb3ab731d04bce17dd15c7c61c3f02e82c5383ce3d58",
-      "outputSha256": "6421d1d8e993243592196ca723fd8a067aa9b80d409c99e55cabc4b4b0138889",
+      "outputSha256": "0e6ff35b41bda4c1338be6718764fd1577ccc9cf6e5cc1d21b3167f9ad7c868c",
       "edits": [
         {
           "start": 492,
@@ -343252,6 +343450,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 4782,
+          "end": 4784,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 4921,
@@ -344056,7 +344261,7 @@
       "original": "bg.java",
       "renamed": "bg.java",
       "inputSha256": "a06fb24cad3da1a883f870845b1e394d53deb41d50e078fe215929511b96408d",
-      "outputSha256": "cad3692664611006051238592a9b29f5cac40717bc3d9739f025b75b9334c4cf",
+      "outputSha256": "73b46846db87dfdcb5bdbc2589bea97def17e86d00f7e97cc5c06611fe799ca7",
       "edits": [
         {
           "start": 125,
@@ -344143,6 +344348,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 13972,
+          "end": 13974,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 14653,
           "end": 14655,
           "symbol": "C:nl",
@@ -344171,6 +344383,20 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 19396,
+          "end": 19398,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 21910,
+          "end": 21912,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 23229,
           "end": 23231,
           "symbol": "C:vk",
@@ -344197,6 +344423,13 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 26636,
+          "end": 26638,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 27815,
@@ -344232,7 +344465,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "f2af38a39b0930897572bf328daf467132b036929f3fb4e045a27abf4fa0c99d",
-      "outputSha256": "35bb1c1b6ba25c2d9d7faaa9e0339072ec41950d1382b48127c1f30237c7301f",
+      "outputSha256": "63c640dcebe97a8140a5fcc9909d32ce14efd35ed2cab012e3d4287d0fe6b69b",
       "edits": [
         {
           "start": 317,
@@ -344240,6 +344473,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 746,
+          "end": 748,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 1975,
@@ -345126,7 +345366,7 @@
       "original": "bn.java",
       "renamed": "bn.java",
       "inputSha256": "3140e0530925f3c97ea0254ca7d5b40c1cca1165315671ad0c04fd6be34cf49a",
-      "outputSha256": "0fff7a0cd6ba58a991b65032983bab4f2c8c34127e58b2235f95abe3469530b5",
+      "outputSha256": "01bc5a1cb6a60f88a09a738b1ae9d73c1aeefe787502fb996953c34ad452532f",
       "edits": [
         {
           "start": 290,
@@ -345148,6 +345388,34 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 10698,
+          "end": 10700,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 10896,
+          "end": 10898,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 10952,
+          "end": 10954,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 10965,
+          "end": 10966,
+          "symbol": "M:gh.a(IIIILqg;I)Lek;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
         }
       ]
     },
@@ -346211,7 +346479,7 @@
       "original": "cm.java",
       "renamed": "cm.java",
       "inputSha256": "96cc9cb7ab9b09d83a12ca31f8cdef3d80d9f0cbd2ffff128a85eab96e8d2c1b",
-      "outputSha256": "83e69ea28a22c72f470fb74eb57de2634de3eea2585b90173f5768c30ccf50ab",
+      "outputSha256": "3b9e3ad8e7d5a86b8ee9e1b49a190ff846249a9b3cfee1734b3162d428b1832b",
       "edits": [
         {
           "start": 168,
@@ -346219,6 +346487,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 322,
+          "end": 324,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 1478,
@@ -346247,6 +346522,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 5129,
+          "end": 5131,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 6532,
@@ -346354,7 +346636,7 @@
       "original": "co.java",
       "renamed": "co.java",
       "inputSha256": "31a16ef51490861236751c944f298805d3b52394ab58b359659297aec558b2fa",
-      "outputSha256": "69629b0fe36dac47528523748117ca5de628069c0219d9fb9037aa7d8b9c593e",
+      "outputSha256": "34c89e706cefe8a0e505012431e6c46e70e8610b27c3c36d12f63e6a095f82ff",
       "edits": [
         {
           "start": 113,
@@ -346362,6 +346644,20 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 433,
+          "end": 435,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 593,
+          "end": 595,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 1486,
@@ -346376,7 +346672,7 @@
       "original": "cp.java",
       "renamed": "cp.java",
       "inputSha256": "5c854f2283f2508f4f7dcecf490d3717ae9ff71e3a4ebac87110218a718b5e83",
-      "outputSha256": "68fa103375924dd4c2cd73645187b6ee9bce63001038852e1ec3529760b1d997",
+      "outputSha256": "bd35acc9d0c662d4d7a72bc054cacb6fb766359e47a222fb320ff3063896bf32",
       "edits": [
         {
           "start": 5546,
@@ -346398,6 +346694,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 8900,
+          "end": 8907,
+          "symbol": "F:ek.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
         },
         {
           "start": 9549,
@@ -347318,8 +347621,15 @@
       "original": "dh.java",
       "renamed": "dh.java",
       "inputSha256": "d201cea7f53d7c2929853d8a8976d5ff10c1a4af0acd3e357bbfe8524ddd622b",
-      "outputSha256": "e2efe882c2667b2f7faf4295ce17be100251dc345e064e2a1c405f77f2b6c76f",
+      "outputSha256": "ae27d2e87928be3ca6c016f12514ab5ad16636bb6bd7fe3f8c76e316c2c36412",
       "edits": [
+        {
+          "start": 107,
+          "end": 109,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 177,
           "end": 179,
@@ -347438,6 +347748,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 4061,
+          "end": 4063,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -348490,7 +348807,7 @@
       "original": "ec.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "2e19d6e3c95777c5a8674d94fcc8f2e531a5e6b31bb3a450cc3a1c5aab78a5d5",
-      "outputSha256": "c88be8c4bacdeb70328d908849c74c7ad50017ebba569ac32c3fd5bdd3ac5f9e",
+      "outputSha256": "73d5bac9d36407bfd20a26bfe8c7cc4d05018c175357227660c500d6e424cd9a",
       "edits": [
         {
           "start": 44,
@@ -350363,6 +350680,20 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 57169,
+          "end": 57171,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 57335,
+          "end": 57337,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 59188,
           "end": 59190,
           "symbol": "C:ug",
@@ -350440,6 +350771,13 @@
           "renamed": "NetworkGameClient"
         },
         {
+          "start": 78165,
+          "end": 78167,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 79120,
           "end": 79122,
           "symbol": "C:vk",
@@ -350459,6 +350797,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 85337,
+          "end": 85339,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 93170,
@@ -350503,6 +350848,55 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 105309,
+          "end": 105311,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 107572,
+          "end": 107574,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 107739,
+          "end": 107741,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 107905,
+          "end": 107907,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 108072,
+          "end": 108074,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 108238,
+          "end": 108240,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 108404,
+          "end": 108406,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 129274,
           "end": 129276,
           "symbol": "C:hb",
@@ -350522,6 +350916,13 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 135163,
+          "end": 135165,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 136456,
@@ -350557,6 +350958,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 149658,
+          "end": 149660,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 152367,
@@ -352810,10 +353218,31 @@
     },
     {
       "original": "ek.java",
-      "renamed": "ek.java",
+      "renamed": "FullscreenFocusCanvas.java",
       "inputSha256": "083d501307b6c3f835e38042bf2f0e51df97af8df4f13518ce1bc3b536147b40",
-      "outputSha256": "89c48ae8918ecf55851dd9523484ceb4f294f59bc0d81b5ec92241c706f5eb48",
+      "outputSha256": "2e12ffd29e26a72a45bfee2beaa33745a6b7c8ebc5095ff1de13f50f89ffbe3d",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 191,
+          "end": 198,
+          "symbol": "F:ek.field_e:Ljava/awt/Frame;",
+          "original": "field_e",
+          "renamed": "fullscreenFrame"
+        },
+        {
+          "start": 221,
+          "end": 228,
+          "symbol": "F:ek.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
         {
           "start": 318,
           "end": 320,
@@ -352822,11 +353251,46 @@
           "renamed": "GzipDecompressor"
         },
         {
+          "start": 1214,
+          "end": 1221,
+          "symbol": "F:ek.field_g:Z",
+          "original": "field_g",
+          "renamed": "focusLost"
+        },
+        {
           "start": 1300,
           "end": 1302,
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1429,
+          "end": 1431,
+          "symbol": "M:ek.<init>()V",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1657,
+          "end": 1658,
+          "symbol": "M:ek.a(Lqg;I)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
+        },
+        {
+          "start": 1711,
+          "end": 1712,
+          "symbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
+        },
+        {
+          "start": 1730,
+          "end": 1737,
+          "symbol": "F:ek.field_e:Ljava/awt/Frame;",
+          "original": "field_e",
+          "renamed": "fullscreenFrame"
         },
         {
           "start": 1994,
@@ -352855,7 +353319,7 @@
       "original": "em.java",
       "renamed": "em.java",
       "inputSha256": "bf5ab8e83cce5ddcf8bb6ea9ac5f91f366952c9a09a0ce705bb1aed7f0345265",
-      "outputSha256": "83839c4c3bf3196744120f62aa7ddfa9ad6f3822ff241e52c41c16c8f9904989",
+      "outputSha256": "8e3736f9d45a011a6fa495197fe0e207e7757c17b71920d9220199af71475e5a",
       "edits": [
         {
           "start": 70,
@@ -352863,6 +353327,27 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 375,
+          "end": 377,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 496,
+          "end": 498,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 533,
+          "end": 535,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 716,
@@ -354486,7 +354971,7 @@
       "original": "ga.java",
       "renamed": "ga.java",
       "inputSha256": "a7e1d25ffa57a629d06b58c4bac2761491ab035b36b73d01fb09ffe180f5d81e",
-      "outputSha256": "157c90c85572c02313a4280e21b966659f9ccd0f2469bc6e472d0254b2d9cabe",
+      "outputSha256": "6774972b4fed5498cd4e265448b758df4cf00015717af5c3ce4bb84f2fc406c3",
       "edits": [
         {
           "start": 267,
@@ -354522,6 +355007,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "CombatState"
+        },
+        {
+          "start": 5904,
+          "end": 5905,
+          "symbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
         },
         {
           "start": 6441,
@@ -354729,7 +355221,7 @@
       "original": "gh.java",
       "renamed": "gh.java",
       "inputSha256": "46d3abbaa338ea6d3149c09b4fa29b6ba206d2793413ca51222f492cc1634d26",
-      "outputSha256": "b0b10af56fc4a73ba5e3f496606f3906c4637896d65998865844933b129365e0",
+      "outputSha256": "ba6ae2a802bebc49d55e32cb26f83e6ce9166622a54f538a0cd281f1ae833385",
       "edits": [
         {
           "start": 197,
@@ -354744,6 +355236,76 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1461,
+          "end": 1462,
+          "symbol": "M:gh.a(IIIILqg;I)Lek;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
+        },
+        {
+          "start": 1579,
+          "end": 1581,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1582,
+          "end": 1583,
+          "symbol": "M:gh.a(IIIILqg;I)Lek;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
+        },
+        {
+          "start": 1743,
+          "end": 1745,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1803,
+          "end": 1805,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1834,
+          "end": 1836,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 2234,
+          "end": 2236,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 2255,
+          "end": 2262,
+          "symbol": "F:ek.field_e:Ljava/awt/Frame;",
+          "original": "field_e",
+          "renamed": "fullscreenFrame"
+        },
+        {
+          "start": 2286,
+          "end": 2293,
+          "symbol": "F:ek.field_e:Ljava/awt/Frame;",
+          "original": "field_e",
+          "renamed": "fullscreenFrame"
+        },
+        {
+          "start": 2586,
+          "end": 2588,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 3169,
@@ -357332,7 +357894,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "fd7c6b1324f6e47a87ee94e6fce588221fc431a0c0a4af4702fe6157f6e4fb53",
-      "outputSha256": "e33779c5610bace9f0639aac98af71d3b3c0a0dc4047c025dbb23692fafd1afa",
+      "outputSha256": "d0f4965974dc1b0707528a68bacb469bf905c3d271b55c945a7f21ff7e239239",
       "edits": [
         {
           "start": 7192,
@@ -357580,6 +358142,13 @@
           "renamed": "NetworkGameClient"
         },
         {
+          "start": 18145,
+          "end": 18147,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 19692,
           "end": 19694,
           "symbol": "C:vk",
@@ -357592,6 +358161,13 @@
           "symbol": "C:nh",
           "original": "nh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 23006,
+          "end": 23008,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 24034,
@@ -357643,6 +358219,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 33547,
+          "end": 33549,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 33645,
           "end": 33647,
           "symbol": "C:un",
@@ -357671,6 +358254,13 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 34009,
+          "end": 34011,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 34073,
           "end": 34075,
           "symbol": "C:hb",
@@ -357690,6 +358280,13 @@
           "symbol": "C:b",
           "original": "b",
           "renamed": "ClientException"
+        },
+        {
+          "start": 36075,
+          "end": 36077,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 36145,
@@ -357839,6 +358436,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 43419,
+          "end": 43421,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 43437,
           "end": 43439,
           "symbol": "C:jb",
@@ -357858,6 +358462,41 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 43842,
+          "end": 43844,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 43862,
+          "end": 43864,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 43922,
+          "end": 43924,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 44040,
+          "end": 44042,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 44085,
+          "end": 44087,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 44256,
@@ -357977,6 +358616,111 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 53328,
+          "end": 53330,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53380,
+          "end": 53382,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53423,
+          "end": 53425,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53437,
+          "end": 53439,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53601,
+          "end": 53603,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53909,
+          "end": 53911,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53989,
+          "end": 53991,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54008,
+          "end": 54010,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54083,
+          "end": 54085,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54097,
+          "end": 54099,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54179,
+          "end": 54181,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54193,
+          "end": 54195,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54274,
+          "end": 54276,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54293,
+          "end": 54295,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54433,
+          "end": 54435,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 55104,
@@ -358746,7 +359490,7 @@
       "original": "hm.java",
       "renamed": "hm.java",
       "inputSha256": "1cd6cf72a57cfb338f3d221170baa166c71a20593045daca662a474954157d2d",
-      "outputSha256": "e4770b57df580b34d96ffe1e324eebc39e27ce61d87976e312ba53b3dce959d4",
+      "outputSha256": "67b7ca8229c07fd30ba8d293650e5a2e5357868914f1c7f95aa1956ddfd3e1f1",
       "edits": [
         {
           "start": 61,
@@ -358782,6 +359526,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3212,
+          "end": 3214,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3736,
@@ -358824,6 +359575,62 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 10865,
+          "end": 10867,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 10912,
+          "end": 10914,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11056,
+          "end": 11058,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11097,
+          "end": 11099,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11347,
+          "end": 11349,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11639,
+          "end": 11641,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11718,
+          "end": 11720,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11906,
+          "end": 11908,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 13330,
@@ -359200,7 +360007,7 @@
       "original": "ib.java",
       "renamed": "ib.java",
       "inputSha256": "ffda07df7a5cf5907cdd800bb9814a5d8c542dfece064095ed69773a1b383c28",
-      "outputSha256": "23955150a214f382a7efe132f16f13595e7882473c8b7124c01ea8dc522140f9",
+      "outputSha256": "6b12f6245046a7f507e40d7d86e470d932bff773246d91d04d4cf13b7e098e99",
       "edits": [
         {
           "start": 211,
@@ -359224,6 +360031,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 1759,
+          "end": 1760,
+          "symbol": "M:ek.a(Lqg;I)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
+        },
+        {
           "start": 3030,
           "end": 3032,
           "symbol": "C:vk",
@@ -359236,6 +360050,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 4758,
+          "end": 4760,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 5345,
@@ -359264,8 +360085,15 @@
       "original": "ic.java",
       "renamed": "ic.java",
       "inputSha256": "6b9b00fc6b574f8fb4cf5b1afeb54864b92f8808aa37a773cae3284b862ad319",
-      "outputSha256": "0a7e8dc768995e1413849d5afe9d82a78f46f06acd326f33b8b94324934c205f",
+      "outputSha256": "da196b34c5e15618fd8c55fc6181d27ddd1c7bfb41cf73dd1fe78c7d241663d5",
       "edits": [
+        {
+          "start": 929,
+          "end": 930,
+          "symbol": "M:gh.a(IIIILqg;I)Lek;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
+        },
         {
           "start": 1063,
           "end": 1065,
@@ -360100,7 +360928,7 @@
       "original": "il.java",
       "renamed": "il.java",
       "inputSha256": "787202a49ec4bb6569c79cbacd82ae130113fc0952227ee814fbb9bc3a138be8",
-      "outputSha256": "bbc9f12ca4d752359b042b9613d7e27ae64022946e0644477b433668b14d7bbb",
+      "outputSha256": "2f926cf9481e56f1879895ab34582a33d007e8faefaea09690769bc59e5ec301",
       "edits": [
         {
           "start": 3084,
@@ -360108,6 +360936,20 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 3714,
+          "end": 3716,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 3812,
+          "end": 3814,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 5206,
@@ -360165,7 +361007,7 @@
       "original": "in.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "7e2ae985ca978fc026920918f3fd478bb3e6b06ab35f1743ebe9fd65ed87a007",
-      "outputSha256": "e57739288383fdf1168d62cf205ba5b46b92b889f2410a808e81e545c43b5384",
+      "outputSha256": "298dfe33284c21fb2d649059f342e4d6949f32f56dcb515d5ae10fdb51cee8e8",
       "edits": [
         {
           "start": 53,
@@ -360434,6 +361276,13 @@
           "renamed": "pollRotation"
         },
         {
+          "start": 21097,
+          "end": 21099,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 21495,
           "end": 21497,
           "symbol": "C:kh",
@@ -360474,6 +361323,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 24615,
+          "end": 24617,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 24620,
@@ -360671,7 +361527,7 @@
       "original": "j.java",
       "renamed": "j.java",
       "inputSha256": "ee7cd4a32bc86ea856db758832d6cc67956fd9aebc1c119f41163098a5ca6ea4",
-      "outputSha256": "71010219b63462ba98b2d599e8ef60cdcdc988e08f0ee6744707a08531be3170",
+      "outputSha256": "563e6c04638184c016a95a06c678322ca0f7597f709b88e819883ecdc9bf6058",
       "edits": [
         {
           "start": 2302,
@@ -360679,6 +361535,27 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 3215,
+          "end": 3217,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 3242,
+          "end": 3244,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 3315,
+          "end": 3317,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 4511,
@@ -360891,7 +361768,7 @@
       "original": "jb.java",
       "renamed": "AccountCreationResultPanel.java",
       "inputSha256": "e521e5fc2be42b82167c3bc444fee51b7f450491d36c181e99f51a2ebdef4b6f",
-      "outputSha256": "e091f81deabd04ec35e93827d40365afb7cf549ac3d8ca656c9b2224a5374c0b",
+      "outputSha256": "99592d53b1b47959beaff4c01c4824c5f5a463fcb2babeb1c16090f51e505863",
       "edits": [
         {
           "start": 50,
@@ -360962,6 +361839,13 @@
           "symbol": "C:nh",
           "original": "nh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2864,
+          "end": 2866,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 3787,
@@ -361117,7 +362001,7 @@
       "original": "jd.java",
       "renamed": "jd.java",
       "inputSha256": "3f4e2a9ce6344870bfb5d75bedb909f475f2228da1201f9bad6df3024d0a4073",
-      "outputSha256": "2b1259d8a036c961c3fdfea0c3251cf4cc3905f303325a18c1767381c5828885",
+      "outputSha256": "b2de010d260607603be264a89888b51f8ab26729dff6a2678fb0adab6bd76054",
       "edits": [
         {
           "start": 61,
@@ -361125,6 +362009,27 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 309,
+          "end": 311,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 389,
+          "end": 391,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 491,
+          "end": 493,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         }
       ]
     },
@@ -362095,7 +363000,7 @@
       "original": "kg.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "749770de94579461ee21625fe7d850f5d94ed39222d926990f65f52641318f5f",
-      "outputSha256": "3586356e9cef05fe4bf6083612ae8d5392efcebe6acbbb47fa0dd7b4d77e0208",
+      "outputSha256": "4472c0f03ab19f42f4ddf794de229a5e1a8506d29d5a41f167b49c54bc083e4b",
       "edits": [
         {
           "start": 60,
@@ -362187,6 +363092,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 17808,
+          "end": 17810,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 18681,
@@ -362285,6 +363197,27 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 31243,
+          "end": 31245,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 31256,
+          "end": 31258,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 31292,
+          "end": 31294,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 31722,
@@ -363478,7 +364411,7 @@
       "original": "lb.java",
       "renamed": "lb.java",
       "inputSha256": "cac1f4bc9bcd18bf9386041b7a8ccb27d9d07154facd0986b12a70568ce6111c",
-      "outputSha256": "2980f57eaf87a6ce205bf4657eabc74b28d67cac1f676afd9bb3aa170f77548a",
+      "outputSha256": "2f7600573ef06032c17e55cb236a4e34ecd9c29a8aac71164e836227ac2e6a23",
       "edits": [
         {
           "start": 794,
@@ -363649,6 +364582,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 4014,
+          "end": 4016,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 4152,
           "end": 4153,
           "symbol": "M:ec.c(Z)I",
@@ -363817,6 +364757,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 10662,
+          "end": 10664,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 10905,
           "end": 10907,
           "symbol": "C:hb",
@@ -363829,7 +364776,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "0e026200519894b933176425c60c1f659074d3c8b3c79fd9d209272b0cebcb31",
-      "outputSha256": "fa03a960c4aa334fbed15c7518ac601d7b60bbb00718f69c17c709ac9734f889",
+      "outputSha256": "2422c1beecb00502e7dc670b9a802cf64de9c25ce60e9c475408e932a1d02c05",
       "edits": [
         {
           "start": 123,
@@ -364063,6 +365010,20 @@
           "renamed": "readInt"
         },
         {
+          "start": 10566,
+          "end": 10568,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 10606,
+          "end": 10608,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 10776,
           "end": 10777,
           "symbol": "M:ec.a(BII[B)V",
@@ -364075,6 +365036,34 @@
           "symbol": "M:ec.h(I)I",
           "original": "h",
           "renamed": "readInt"
+        },
+        {
+          "start": 10962,
+          "end": 10964,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 10997,
+          "end": 10999,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 11244,
+          "end": 11246,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 11312,
+          "end": 11314,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 11323,
@@ -364578,7 +365567,7 @@
       "original": "lh.java",
       "renamed": "lh.java",
       "inputSha256": "49e3d03d26365b41c796017b53c83e325fb18444197bfd65ddc308a396bd7c86",
-      "outputSha256": "ee68af3c11bd3c7c71074e1a9c4b225367b8e81a3dec99c6d2436a2953a1ae35",
+      "outputSha256": "aa05bc645bb42448271889f17552dc37fad3f4579a41a7db3e54d69d0ba14303",
       "edits": [
         {
           "start": 3550,
@@ -364586,6 +365575,20 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 5940,
+          "end": 5942,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 6006,
+          "end": 6008,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 7848,
@@ -365060,7 +366063,7 @@
       "original": "ll.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "6e6aa391b4869f15187d0ba8811df27fc288baee0c0a5a7d9922d8bbd51f8503",
-      "outputSha256": "327a3030f14dd70d8859116aceb19ea8d595795a11530d1b383d3a67e4d7134e",
+      "outputSha256": "87276d10a5ce6cfa983dc71611c140936fd7d2d22d1829b0ccf5805956ba0277",
       "edits": [
         {
           "start": 65,
@@ -365131,6 +366134,13 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 3919,
+          "end": 3921,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 4321,
@@ -366069,7 +367079,7 @@
       "original": "lo.java",
       "renamed": "lo.java",
       "inputSha256": "d74e3f8963cb9fe8eb7f0aa7dd21282a6d96faba7d4fd086558e2312f83da932",
-      "outputSha256": "b2b6c4a8b4fd2564431503c1655bd8dce4c7831f524ebbef8ef46ed9fab5b349",
+      "outputSha256": "77850f48d0806c1d1eb49071b747f97dff287883bb17b9100c8d55231b5583f4",
       "edits": [
         {
           "start": 241,
@@ -366100,6 +367110,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 5333,
+          "end": 5335,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 5746,
           "end": 5748,
           "symbol": "C:wj",
@@ -366126,7 +367143,7 @@
       "original": "lp.java",
       "renamed": "lp.java",
       "inputSha256": "6efb2a34e1638b0187735a85c7479183111fccb75cbafd0d2337455cd402e1fd",
-      "outputSha256": "d6ae37453c812ec958709c9e73101eae310007319ac242dd249712cf3102f802",
+      "outputSha256": "10148d2e6318efebc173359859c0f3991138c8f54f45b3c5e847988533a59af7",
       "edits": [
         {
           "start": 61,
@@ -366148,6 +367165,13 @@
           "symbol": "C:ni",
           "original": "ni",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 1125,
+          "end": 1127,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 1371,
@@ -367155,7 +368179,7 @@
       "original": "mh.java",
       "renamed": "MouseInput.java",
       "inputSha256": "6ad3fb246c9c5f4bae116aaf13bad48d479082cad74f4c0dacd04aff7c2975f9",
-      "outputSha256": "f3edce7e2cfe1639e554b5eb719a68b69753a80f28be90bdfe8004b00c624504",
+      "outputSha256": "a4eac0dde81986417b72b595d5eabed3e50d6bc8f1f348e6d2572b5de2205eb7",
       "edits": [
         {
           "start": 50,
@@ -367221,6 +368245,13 @@
           "renamed": "KeyboardInput"
         },
         {
+          "start": 5317,
+          "end": 5319,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
           "start": 6015,
           "end": 6017,
           "symbol": "C:hb",
@@ -367261,7 +368292,7 @@
       "original": "mi.java",
       "renamed": "mi.java",
       "inputSha256": "26c401e920591c396b6c8c9c096b782baf390d46acb4822067ebb6fc6fa44cdd",
-      "outputSha256": "8766459ff68e07224e4c6ebaee2f6e3e7aee6a0fd5051cb800120a5d952d2179",
+      "outputSha256": "c2b6abf78ca346b0acbf3002640a7c9df572f4e03f326768e0819e94a923184a",
       "edits": [
         {
           "start": 200,
@@ -367283,6 +368314,41 @@
           "symbol": "C:wj",
           "original": "wj",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 4815,
+          "end": 4817,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 5177,
+          "end": 5179,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 5310,
+          "end": 5312,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 5393,
+          "end": 5395,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 5434,
+          "end": 5436,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 5599,
@@ -367995,7 +369061,7 @@
       "original": "ng.java",
       "renamed": "ng.java",
       "inputSha256": "4ead403e3c89f9ec416529d4dc4c4b02a3c5a174d44a5737331335e330310b7e",
-      "outputSha256": "41c191bd1ecaea7306e9f754e649c5542812ef46c36b9bb1887db322cc4afb51",
+      "outputSha256": "08aa901a8a16e5a4eac5ab7b9c0bf728e8f199294763b7931069e84ce1bf6c7a",
       "edits": [
         {
           "start": 801,
@@ -368047,6 +369113,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 14204,
+          "end": 14205,
+          "symbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
+        },
+        {
           "start": 55046,
           "end": 55048,
           "symbol": "C:qp",
@@ -368082,11 +369155,25 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 88243,
+          "end": 88245,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 103805,
           "end": 103807,
           "symbol": "C:qp",
           "original": "qp",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 104286,
+          "end": 104288,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 106231,
@@ -368220,6 +369307,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 130881,
+          "end": 130882,
+          "symbol": "M:ng.a(Lqg;ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreenFrame"
         },
         {
           "start": 131423,
@@ -369793,7 +370887,7 @@
       "original": "o.java",
       "renamed": "o.java",
       "inputSha256": "7b309ab3fd7c1cb0db164e487c0cb275859c6f3ea130cd7aa096c5aa13f3f397",
-      "outputSha256": "a6d5f136c6c7bd8ecee6133445e9b443e5b808f67ad482a609c68cd5764fc42d",
+      "outputSha256": "8b51fc8b1a1b3c89ffcccf1ff8db696e9ff70511fdc6d168987ff50122a9e926",
       "edits": [
         {
           "start": 60,
@@ -369850,6 +370944,13 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 4202,
+          "end": 4204,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 5435,
@@ -370853,7 +371954,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "24ef103ba1d47a3a3ea45a9d07290642c0bdbd2ec9c42cbba29ffecf7ea6b175",
-      "outputSha256": "26061224299d1c8357117ff3b3ab637897524ed674878e8b534912552519bb85",
+      "outputSha256": "9c98ac2908d401aee29386e6c88de90a00e1b07f650cee92b3321708956213fa",
       "edits": [
         {
           "start": 2557,
@@ -370996,6 +372097,20 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 5688,
+          "end": 5690,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 5805,
+          "end": 5807,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 6335,
           "end": 6337,
           "symbol": "C:vk",
@@ -371079,8 +372194,15 @@
       "original": "ol.java",
       "renamed": "ol.java",
       "inputSha256": "3b58b1a9d801bf30fd6247060bb39845957ff0b4ac207ff47187768836d82b94",
-      "outputSha256": "d5cccc19b831e466b740535c993939e8d281bc7f7b8dc55253e4cec644b24cce",
+      "outputSha256": "d323e90f98127ca777a513c1ce9850cd62605fa6ac94cce83911881ababbca44",
       "edits": [
+        {
+          "start": 204,
+          "end": 206,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1615,
           "end": 1616,
@@ -372019,7 +373141,7 @@
       "original": "pi.java",
       "renamed": "pi.java",
       "inputSha256": "e76c58bd2d8c4603a8890a952a18f1e3570b1da7461def51e0dd8cfe66ad27ae",
-      "outputSha256": "9a8b1f8b14d1edc60aa879abfd44ea814c6e59665fba82ddc3147d3cf418593b",
+      "outputSha256": "579d37920788b92c65ea776b462ceb516c45c580586f05f57f3b7340430ba812",
       "edits": [
         {
           "start": 4313,
@@ -372034,6 +373156,13 @@
           "symbol": "M:pi.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 4574,
+          "end": 4576,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 5436,
@@ -372552,7 +373681,7 @@
       "original": "pj.java",
       "renamed": "CombatState.java",
       "inputSha256": "1b6bf41b5b2f7fdba0c3d353e6863cc0dd24620095127b7081639f7ddc26a714",
-      "outputSha256": "34a2fa49422c2827f47d1479915b285e698680632daa64398df868d0350b3ba2",
+      "outputSha256": "1c619e076c4e8612029acba205c2e7edf067f83967a863e6acd0191616c94d48",
       "edits": [
         {
           "start": 50,
@@ -373222,6 +374351,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "CombatState"
+        },
+        {
+          "start": 60757,
+          "end": 60759,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 60837,
@@ -374124,8 +375260,15 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "2f1f04c7d1cf72560cd769308f2319391493636db1a7d6634b6647fd5b3843df",
-      "outputSha256": "2feaa9e3b8b99b1aad4db47f74c660ac36c3297bc88f8d63938e69d5037c3c74",
+      "outputSha256": "3197c8c323edba068877bff581c4cb089e14f9fc5a084396bd9777f7d870be61",
       "edits": [
+        {
+          "start": 1526,
+          "end": 1528,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
         {
           "start": 2004,
           "end": 2006,
@@ -374258,6 +375401,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 22163,
+          "end": 22165,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 22834,
@@ -374936,10 +376086,38 @@
     },
     {
       "original": "ql.java",
-      "renamed": "ql.java",
+      "renamed": "DelegatingCanvas.java",
       "inputSha256": "1bfb0e3c225e96e526350cdb0d7ef2c737eea0a61a3344d4f16d847b3cfb7e53",
-      "outputSha256": "67592f2b75df6758626b4e2b1d21a50c4c8e81355170fbc2c35cfe5a3eaf2ccb",
+      "outputSha256": "a2406c0a22b5268c64ff554c9acf36274bd36203971b2e919b8d10eff4e96193",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 160,
+          "end": 167,
+          "symbol": "F:ql.field_i:Ljava/awt/Component;",
+          "original": "field_i",
+          "renamed": "delegateComponent"
+        },
+        {
+          "start": 261,
+          "end": 263,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 488,
+          "end": 495,
+          "symbol": "F:ql.field_i:Ljava/awt/Component;",
+          "original": "field_i",
+          "renamed": "delegateComponent"
+        },
         {
           "start": 582,
           "end": 584,
@@ -374960,6 +376138,13 @@
           "symbol": "C:nh",
           "original": "nh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1039,
+          "end": 1041,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 1045,
@@ -375011,6 +376196,20 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 3378,
+          "end": 3380,
+          "symbol": "M:ql.<init>(Ljava/awt/Component;)V",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 3439,
+          "end": 3446,
+          "symbol": "F:ql.field_i:Ljava/awt/Component;",
+          "original": "field_i",
+          "renamed": "delegateComponent"
+        },
+        {
           "start": 3527,
           "end": 3529,
           "symbol": "C:vk",
@@ -375018,11 +376217,25 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 3734,
+          "end": 3741,
+          "symbol": "F:ql.field_i:Ljava/awt/Component;",
+          "original": "field_i",
+          "renamed": "delegateComponent"
+        },
+        {
           "start": 3827,
           "end": 3829,
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 4364,
+          "end": 4366,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -376066,7 +377279,7 @@
       "original": "rm.java",
       "renamed": "rm.java",
       "inputSha256": "43e8e4f22c2b0e720e40f30726b9ce0466219e8d175051e95ca2cdcfbfa24d30",
-      "outputSha256": "5968fdd954c224f063dee403abb129ee4846dff124c4f12bd78da3b01dd1c163",
+      "outputSha256": "c82fdf2aae102b74e47f7ae4a548c9a4b1e604ab213482a97ea99684cdabbf24",
       "edits": [
         {
           "start": 3072,
@@ -376102,6 +377315,13 @@
           "symbol": "M:ec.c(Z)I",
           "original": "c",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 10787,
+          "end": 10789,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         },
         {
           "start": 11380,
@@ -377505,8 +378725,23 @@
       "original": "sp.java",
       "renamed": "sp.java",
       "inputSha256": "8abe8ec9543da51b8d7f22ada155446dc919be92ca62597798263c611f953785",
-      "outputSha256": "8abe8ec9543da51b8d7f22ada155446dc919be92ca62597798263c611f953785",
-      "edits": []
+      "outputSha256": "0f541e47574f899f3f613ef64c3dcbe1c2a0b5bc30c2e16497855eafe1fb941a",
+      "edits": [
+        {
+          "start": 165,
+          "end": 167,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 889,
+          "end": 891,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        }
+      ]
     },
     {
       "original": "t.java",
@@ -377978,7 +379213,7 @@
       "original": "td.java",
       "renamed": "td.java",
       "inputSha256": "2395dac70b8c67d53a209ad4e8e6d5e1681103cfe05266ae8cc85268d49d487a",
-      "outputSha256": "ff5e45cbb7fb753e1867321f3dd5274b71cbca8377d53e1dbc8394c7edd42385",
+      "outputSha256": "ddfbe4c306992e7ccc2bd0c295dd3881558a4fafc582ce9e44dcb57e841e4b32",
       "edits": [
         {
           "start": 195,
@@ -378021,6 +379256,13 @@
           "symbol": "C:in",
           "original": "in",
           "renamed": "NetworkGameClient"
+        },
+        {
+          "start": 1764,
+          "end": 1766,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 3037,
@@ -380151,7 +381393,7 @@
       "original": "ui.java",
       "renamed": "ui.java",
       "inputSha256": "a9c42625905095c27efae4df9ccdf864c480e2146d797fef187b5cfbf567b944",
-      "outputSha256": "106be3c2fb7dc0b1a319a432bce7c1053052a9b151b64f49f269a4d1f2dc5ec2",
+      "outputSha256": "87e61f9b9b7632fa4101ebbe2db21a0162801fcb3552a34c782d8cfc6c64f625",
       "edits": [
         {
           "start": 315,
@@ -380166,6 +381408,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 658,
+          "end": 660,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 1672,
@@ -380540,7 +381789,7 @@
       "original": "um.java",
       "renamed": "um.java",
       "inputSha256": "36e833ebcbd51838d2e67eb41e8fdc10aceac973c3a6445f153925d2884b139e",
-      "outputSha256": "2837a0cc6d855dfb00adbd0e9fd6f2c3b34c4461e02476424ff237f31d5d0612",
+      "outputSha256": "bed84898ec316b7bded1ad0866054ab894d31ba8c7a0da733c620a8fafec1735",
       "edits": [
         {
           "start": 139,
@@ -380548,6 +381797,69 @@
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "Raider"
+        },
+        {
+          "start": 624,
+          "end": 626,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 790,
+          "end": 792,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 826,
+          "end": 828,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 913,
+          "end": 915,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 947,
+          "end": 949,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1063,
+          "end": 1065,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1097,
+          "end": 1099,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1214,
+          "end": 1216,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 1246,
+          "end": 1248,
+          "symbol": "C:ek",
+          "original": "ek",
+          "renamed": "FullscreenFocusCanvas"
         }
       ]
     },
@@ -382135,7 +383447,7 @@
       "original": "vk.java",
       "renamed": "AccountServiceResult.java",
       "inputSha256": "bea2c62c85ebcdf96b82438e2e951c208f6452571926e57091a8b6fa1a98b8bb",
-      "outputSha256": "29ce958103c8a98b802faec242ba66b4a5297f6e874f9f09a7b4e87e2c94b577",
+      "outputSha256": "c8d009cc8e0b980d3d093ae84b3832225d21b317fc29906d991cdaa0e20e143b",
       "edits": [
         {
           "start": 50,
@@ -382271,6 +383583,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 1545,
+          "end": 1547,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
           "start": 1611,
           "end": 1613,
           "symbol": "C:vk",
@@ -382283,6 +383602,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1867,
+          "end": 1869,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 1920,
@@ -382332,7 +383658,7 @@
       "original": "vl.java",
       "renamed": "vl.java",
       "inputSha256": "031a7bd377c8b4471964f18f93bc5224b695a5d289616535a5284108f509a881",
-      "outputSha256": "6892350d966f3fcbefa722366fbcc0016e1e425b9dbd99ba79138b4b41d46129",
+      "outputSha256": "98cc375a7d386835fac03dcc1befe8097e99af95719b2ff5fd81b2f2c9f38105",
       "edits": [
         {
           "start": 191,
@@ -382361,6 +383687,20 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 624,
+          "end": 626,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 703,
+          "end": 705,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 2071,
@@ -383305,8 +384645,15 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "5b417192479f1dc50b78a65e9ac63061bf8fc1e45348af191d630e39461a9a83",
-      "outputSha256": "718db225afc8e2c2241b0a481c948deb92dc08dd17ae38b0bb018180ce501e41",
+      "outputSha256": "49311b4a5fc84cbe8d995f176eed9c17e8fb3751b5b0f1fdfc8297d3efe9152e",
       "edits": [
+        {
+          "start": 66,
+          "end": 68,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 1709,
           "end": 1711,
@@ -383850,7 +385197,7 @@
       "original": "wk.java",
       "renamed": "wk.java",
       "inputSha256": "b5b6c8542455d6d978ace7b913986509c90a2b22007e754d747de09841578aed",
-      "outputSha256": "53b2964cd617f990adecc897d205663ceba65d38831e3de08d8f21f04652bd39",
+      "outputSha256": "017adff1acffb58142675d00f350e882a490e158431b2b09b635908e2fee9d44",
       "edits": [
         {
           "start": 1791,
@@ -383872,6 +385219,20 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 6239,
+          "end": 6241,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 6466,
+          "end": 6468,
+          "symbol": "C:ql",
+          "original": "ql",
+          "renamed": "DelegatingCanvas"
         },
         {
           "start": 6774,
@@ -384021,10 +385382,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/dungeonassault"
     },
-    "rulesSha256": "c7ac797c94f3cf8131eb183167bcc3903eb373eff463f1486b9e333243f4f79e",
+    "rulesSha256": "5c1cfd1d275d0a391988cb75c5833f7f7f59124e483fcf4fa1fe444d3b1fa1d3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
-    "outputTreeSha256": "b897f41008647eeeea12efdbd378bcd7134be49c17a5cc63dbbbe4e556b0e02b",
+    "outputTreeSha256": "c8cf7ad7466ef4a067787cf60d07e6547655d480178de50e090ef8e987472cea",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

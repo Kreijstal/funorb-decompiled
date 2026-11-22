@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui extends oh {
-    static ae field_ob;
+    static AccountRequestState field_ob;
     static boolean[] field_mb;
-    static ae field_kb;
+    static AccountRequestState field_kb;
     static String field_lb;
     static MouseWheelInput field_pb;
     static uj field_nb;
@@ -50,7 +50,7 @@ final class ui extends oh {
     }
 
     static {
-        field_ob = new ae();
+        field_ob = new AccountRequestState();
         field_mb = new boolean[64];
         field_lb = "<%0>One-touch wall:<%1> if a flea hits one of these from the side, the flea is turned around and the wall immediately crumbles away.";
         field_nb = new uj(0);

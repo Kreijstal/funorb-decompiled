@@ -289,11 +289,11 @@ abstract class nk extends GameAppletShell {
           AccountCreationResultPanel.field_tb = false;
           pb.field_j = qk.field_a;
           fk.a(hl.field_F, we.field_h, (byte) 40, ej.field_d, GzipDecompressor.field_a);
-          if (ki.field_e ||
+          if (AccountRequestState.field_e ||
             null != sc.field_c) {
             stackIn_102_0 = sc.field_c;
-            stackIn_103_1 = !(ki.field_e);
-            stackIn_106_2 = !(ki.field_e);
+            stackIn_103_1 = !(AccountRequestState.field_e);
+            stackIn_106_2 = !(AccountRequestState.field_e);
             rb.a(stackIn_102_0, stackIn_103_1, stackIn_106_2, param1 + 14636);
           }
           if (Lexicominos.field_M) {

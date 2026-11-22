@@ -228,7 +228,7 @@ class hc extends fe {
     }
 
     hc(String param0, rm param1) {
-        this(param0, bd.field_c.field_m, param1);
+        this(param0, AccountRequestState.field_c.field_m, param1);
     }
 
     final void a(int param0, int param1, int param2, int param3, fe param4, int param5) {
@@ -282,7 +282,7 @@ class hc extends fe {
         this.field_G = false;
         this.field_F = true;
         this.field_E = true;
-        this.field_A = bd.field_c.field_o;
+        this.field_A = AccountRequestState.field_c.field_o;
     }
 
     static {

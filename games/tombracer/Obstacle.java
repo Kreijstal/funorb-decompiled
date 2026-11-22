@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Obstacle extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, qn {
+final class Obstacle extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, RoomObjectMarker {
     private int field_n;
     private Room room;
     private int x;
@@ -283,7 +283,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (var5_int == -1) {
             return false;
           }
-          var6 = wm.clampedFixedRatio(4096, var5_int, param0 - 59);
+          var6 = PlayerViewportLayout.clampedFixedRatio(4096, var5_int, param0 - 59);
           param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

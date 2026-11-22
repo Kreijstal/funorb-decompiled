@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj implements jm {
-    static String[] field_j;
+    static String[] chessFileLabels;
     static String field_a;
     static int field_n;
     static String field_f;
@@ -91,7 +91,7 @@ final class sj implements jm {
         field_k = null;
         field_p = null;
         field_a = null;
-        field_j = null;
+        chessFileLabels = null;
         field_d = null;
         if (!param0) {
           return;
@@ -196,7 +196,7 @@ final class sj implements jm {
         field_n = 250;
         field_t = "Medium";
         field_c = "Black in check";
-        field_j = new String[]{"a", "b", "c", "d", "e", "f", "g", "h"};
+        chessFileLabels = new String[]{"a", "b", "c", "d", "e", "f", "g", "h"};
         field_f = "Encouraging rule breaking";
         field_m = "Close";
         field_a = "Click";

@@ -178,7 +178,7 @@ class fb extends mf {
     }
 
     fb(String param0, rg param1) {
-        this(param0, a.field_a.field_a, param1);
+        this(param0, FullscreenFocusCanvas.field_a.field_a, param1);
     }
 
     fb(String param0, jm param1, rg param2) {
@@ -283,7 +283,7 @@ class fb extends mf {
         this.field_J = false;
         this.field_H = true;
         this.field_E = true;
-        this.field_n = a.field_a.field_c;
+        this.field_n = FullscreenFocusCanvas.field_a.field_c;
     }
 
     static {

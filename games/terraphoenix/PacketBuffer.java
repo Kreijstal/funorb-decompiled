@@ -251,8 +251,8 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != -124) {
           return;
         }
-        pe.field_a = og.field_a;
-        IsaacCipher.field_f = og.field_a;
+        pe.field_a = AccountRequestState.field_a;
+        IsaacCipher.field_f = AccountRequestState.field_a;
     }
 
     final int readVarInt(byte param0) {

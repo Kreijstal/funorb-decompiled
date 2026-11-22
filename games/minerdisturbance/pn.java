@@ -249,7 +249,7 @@ final class pn implements uj {
         }
         bc.field_d = 2147483647;
         fb.field_c = 0;
-        bd.field_g = -2147483648;
+        AccountRequestState.field_g = -2147483648;
         he.field_e = 2147483647;
         if (param1 != 11760) {
           return;

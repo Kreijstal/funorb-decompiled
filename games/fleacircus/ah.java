@@ -401,7 +401,7 @@ final class ah {
             return;
           }
           if (null != ResourceArchive.field_p &&
-            ResourceArchive.field_p.field_c) {
+            ResourceArchive.field_p.focusLost) {
             IntrusiveNode.a(false);
             GzipDecompressor.field_a.b(new ic(GzipDecompressor.field_a, fb.field_g), (byte) -35);
           }

@@ -254,7 +254,7 @@ abstract class GameClientShell extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         ob.field_c = this.field_n;
         LoginMenuScreen.a((byte) 119, ob.field_c);
-        ua.a(this.field_t, this.field_A, (byte) 34, this.field_v, 5000, sb.field_d, ob.field_c, 5000, this.field_z, this.field_m, this.field_p, param2, this.field_w, param1);
+        DelegatingCanvas.a(this.field_t, this.field_A, (byte) 34, this.field_v, 5000, sb.field_d, ob.field_c, 5000, this.field_z, this.field_m, this.field_p, param2, this.field_w, param1);
         wi.a(this.field_v, param1, ob.field_c, this.field_m, this.field_z, this.field_p, sb.field_d, this.field_A, 111);
         rg.a(param3 ^ -11603);
         sc.field_e = vb.createMouseWheelInput((byte) 65);

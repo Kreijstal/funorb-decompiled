@@ -12,7 +12,7 @@ final class bo {
         dk.field_g = false;
         cf.field_Nb = false;
         uk.a(false, -1);
-        g.field_a = ji.field_T;
+        DelegatingCanvas.field_a = ji.field_T;
         vl.field_A = ji.field_T;
         if (param0 <= 30) {
           field_a = (String) null;

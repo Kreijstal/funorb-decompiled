@@ -446,7 +446,7 @@ public final class Vertigo2 extends GameShell {
     }
 
     private final void loadBackgroundImages(byte param0) {
-        ee.a(11579, nn.field_y);
+        AccountRequestState.a(11579, nn.field_y);
         Sprite var7 = new Sprite(nn.field_y.a("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
         Sprite var8 = var7;
         Sprite var3 = new Sprite(nn.field_y.a("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
@@ -1116,7 +1116,7 @@ public final class Vertigo2 extends GameShell {
           hl.clearStaticReferences((byte) -118);
           be.a(-1);
           ub.clearStaticReferences(false);
-          ee.b(0);
+          AccountRequestState.releaseStatics(0);
           AccountServiceResult.clearStaticReferences(-81);
           s.clearStaticReferences((byte) -118);
           if (param0 <= 103) {
@@ -1593,10 +1593,10 @@ public final class Vertigo2 extends GameShell {
                                                 ProxySocketConnector.a(false, 72.0f, gr.a(eq.field_E, (byte) 109, nn.field_y, bm.field_D, ""));
                                                 return false;
                                               }
-                                              ProxySocketConnector.a(false, 68.0f, fg.a(ii.field_C, ua.field_g, ee.field_d, 274));
+                                              ProxySocketConnector.a(false, 68.0f, fg.a(ii.field_C, ua.field_g, AccountRequestState.field_d, 274));
                                               return false;
                                             }
-                                            ProxySocketConnector.a(false, 67.0f, fg.a(ii.field_C, ua.field_g, ee.field_d, param0 ^ 16776941));
+                                            ProxySocketConnector.a(false, 67.0f, fg.a(ii.field_C, ua.field_g, AccountRequestState.field_d, param0 ^ 16776941));
                                             return false;
                                           }
                                           ProxySocketConnector.a(false, 66.0f, fg.a(ml.field_u, kq.field_Vb, bb.field_G, 274));
@@ -1918,7 +1918,7 @@ public final class Vertigo2 extends GameShell {
             am.field_n = lc.field_b;
           }
           if (var3_int == 0) {
-            ee.a(-11747);
+            AccountRequestState.a(-11747);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2054,7 +2054,7 @@ public final class Vertigo2 extends GameShell {
         RuntimeException var2 = null;
         try {
           rm.a((byte) -89, (java.awt.Component) ((Object) param0));
-          ee.a((java.awt.Component) ((Object) param0), param1 + 140);
+          AccountRequestState.a((java.awt.Component) ((Object) param0), param1 + 140);
           if (param1 != -35) {
             var3 = (java.awt.Canvas) null;
             Vertigo2.a((java.awt.Canvas) null, (byte) 15);

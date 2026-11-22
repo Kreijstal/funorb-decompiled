@@ -17,7 +17,7 @@ final class mj extends IntrusiveNode {
           wm.field_f.a(false, false);
           jf.a(param1, param3, (byte) 18, param4);
           im.a((byte) 79);
-          bd.field_h = mc.field_t;
+          AccountRequestState.field_h = mc.field_t;
           ic.field_l = mc.field_t;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "mj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

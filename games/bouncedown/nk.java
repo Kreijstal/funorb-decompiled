@@ -190,7 +190,7 @@ final class nk {
                     }
                     if (sj.field_f != null) {
                       mh.a(sj.field_f, (byte) 122);
-                      sj.field_f.a((byte) -124, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -124, ck.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                       break regionExit2;
@@ -223,7 +223,7 @@ final class nk {
                     }
                     if (null != sj.field_f) {
                       mh.a(sj.field_f, (byte) 84);
-                      sj.field_f.a((byte) -127, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -127, ck.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
@@ -615,7 +615,7 @@ final class nk {
           var7Lifetime1 = this.field_g - 35;
           var8Lifetime1 = 295;
           this.a(var7Lifetime1, 80, var8Lifetime1, 4, 480);
-          mf.field_b.a(320 - mf.field_b.field_t / 2, this.field_g - 120);
+          AccountRequestState.field_b.a(320 - AccountRequestState.field_b.field_t / 2, this.field_g - 120);
           na.e(84, var7Lifetime1 + 4, 556, -4 + (var7Lifetime1 + var8Lifetime1));
         }
         if (this.field_i == 1) {

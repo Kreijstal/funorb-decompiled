@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ql extends IntrusiveNode {
     int field_r;
-    static ae field_l;
+    static AccountRequestState field_l;
     int field_n;
     int field_p;
     int field_m;
@@ -41,7 +41,7 @@ final class ql extends IntrusiveNode {
         fh[] var5;
         var4 = fleas.field_A ? 1 : 0;
         if (param0 != -22471) {
-          field_l = (ae) null;
+          field_l = (AccountRequestState) null;
         }
         var5 = al.b(true);
         var2 = var5;
@@ -63,7 +63,7 @@ final class ql extends IntrusiveNode {
     }
 
     static {
-        field_l = new ae();
+        field_l = new AccountRequestState();
         field_j = new java.util.zip.CRC32();
     }
 }

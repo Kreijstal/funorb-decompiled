@@ -11,7 +11,7 @@ final class kd {
     private int field_s;
     private ln[] field_l;
     static boolean field_i;
-    static bd field_p;
+    static AccountRequestState field_p;
     private int field_f;
     private int field_m;
     private Sprite field_q;
@@ -626,7 +626,7 @@ final class kd {
     static {
         field_b = new String[][]{new String[]{"Do not touch the lava or you will die! Lava rises quickly, so start making your way to the exit. Pools of water slow the lava, so try to leave them intact"}};
         field_e = "Play free version";
-        field_p = new bd();
+        field_p = new AccountRequestState();
         field_k = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
     }
 }

@@ -6,7 +6,7 @@ final class DiskCacheWorker implements Runnable {
     private SecondaryNodeDeque field_f;
     static String field_k;
     static String field_b;
-    static dq field_h;
+    static AccountRequestState field_h;
     static String field_i;
     static IndexedSprite[] field_e;
     private boolean field_j;
@@ -286,6 +286,6 @@ final class DiskCacheWorker implements Runnable {
         field_k = "Name is available";
         field_i = "Email address is unavailable";
         field_g = new int[8192];
-        field_h = new dq();
+        field_h = new AccountRequestState();
     }
 }

@@ -12,7 +12,7 @@ class pj extends vg implements ba {
     static int field_E;
     static boolean field_C;
     static he[][] field_B;
-    static qb field_D;
+    static AccountRequestState field_D;
     static boolean field_F;
 
     public static void f(int param0) {
@@ -227,7 +227,7 @@ class pj extends vg implements ba {
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (param3 <= 113) {
-            field_D = (qb) null;
+            field_D = (AccountRequestState) null;
           }
           var8 = new rh(this.field_I);
           var9 = (vg) (var8.c(-1));
@@ -736,7 +736,7 @@ class pj extends vg implements ba {
           var5 = new rh(this.field_I);
           var6 = (vg) (var5.c(-1));
           if (param1) {
-            field_D = (qb) null;
+            field_D = (AccountRequestState) null;
           }
           while (var6 != null) {
             discarded$3 = param2.append('\n');
@@ -822,6 +822,6 @@ class pj extends vg implements ba {
         field_H = true;
         field_B = new he[3][];
         field_G = new MouseInput();
-        field_D = new qb();
+        field_D = new AccountRequestState();
     }
 }

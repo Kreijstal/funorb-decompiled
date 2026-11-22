@@ -135,7 +135,7 @@ final class dd extends u {
             var60 = var44.field_O;
             GameAppletShell.a(var60, 63, DualLinkNode.field_h, 0, 0);
           } else {
-            qb.a(0);
+            AccountRequestState.a(0);
           }
           var54 = new int[param7.field_H];
           var49 = var54;

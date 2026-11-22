@@ -2185,14 +2185,14 @@ final class LevelMap {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          og.field_f.c(param4, param2 - 1, param0, 0, -1);
-          og.field_f.c(param4, 1 + param2, param0, 0, -1);
-          og.field_f.c(param4, param2, param0 - 1, 0, -1);
-          og.field_f.c(param4, param2, param0 + 1, 0, -1);
+          AccountRequestState.field_f.c(param4, param2 - 1, param0, 0, -1);
+          AccountRequestState.field_f.c(param4, 1 + param2, param0, 0, -1);
+          AccountRequestState.field_f.c(param4, param2, param0 - 1, 0, -1);
+          AccountRequestState.field_f.c(param4, param2, param0 + 1, 0, -1);
           if (param3 != -2) {
             this.field_m = 65;
           }
-          og.field_f.c(param4, param2, param0, param1, -1);
+          AccountRequestState.field_f.c(param4, param2, param0, param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3373,46 +3373,46 @@ final class LevelMap {
             SoftwareRasterizer.e(-11 + var6, 49, 172, 322, 6645093);
             SoftwareRasterizer.f(-10 + var6, 50, 170, 320, 0);
             var16_int = 20;
-            og.field_f.b(vb.field_e, var6, var7, 16777215, -1);
-            og.field_f.b(vb.field_e, 1 + var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(vb.field_e, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(vb.field_e, 1 + var6, var7, 16777215, -1);
             var7 = var7 + (6 + var16_int);
-            og.field_f.b(kj.field_a, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(kj.field_a, var6, var7, 16777215, -1);
             var7 = var7 + (var16_int + 6);
             SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var8);
-            og.field_f.b(cm.field_e, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(cm.field_e, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var9);
-            og.field_f.b(gh.field_L, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(gh.field_L, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var10);
-            og.field_f.b(ab.field_c, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(ab.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             var7 += 6;
-            og.field_f.b(mm.field_g, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(mm.field_g, var6, var7, 16777215, -1);
             var7 = var7 + (var16_int + 6);
             SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var11);
-            og.field_f.b(bm.field_c, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(bm.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var12);
-            og.field_f.b(am.field_H, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(am.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, -11 + var7, 12, 12, var13);
-            og.field_f.b(cg.field_I, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(cg.field_I, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var15);
-            og.field_f.b(DualLinkNode.field_h, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(DualLinkNode.field_h, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, -11 + var7, 12, 12, var14);
-            og.field_f.b(gh.field_O, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(gh.field_O, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.f(var6, -11 + var7, 12, 12, 16777215);
-            og.field_f.b(rj.field_b, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(rj.field_b, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             rh.field_b[0].f(-2 + var6, -13 + var7);
-            og.field_f.b(hm.field_H, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(hm.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             rh.field_b[6].f(-2 + var6, -13 + var7);
-            og.field_f.b(f.field_h, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.b(f.field_h, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
           }
           if (param2 != 50) {

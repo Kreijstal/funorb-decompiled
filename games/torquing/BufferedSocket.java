@@ -238,7 +238,7 @@ final class BufferedSocket implements Runnable {
         ResourceArchive.field_j.field_u = ResourceArchive.field_j.field_t;
         nn.field_e = -jb.field_b.field_c + 640;
         var2.field_v = 0;
-        pp.field_a = nn.field_e / 30;
+        FullscreenFocusCanvas.field_a = nn.field_e / 30;
     }
 
     final static boolean a(int param0, int param1) {

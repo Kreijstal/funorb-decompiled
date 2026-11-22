@@ -43,7 +43,7 @@ final class jh extends jd {
             stackIn_13_0 = this.field_q;
           }
           var7 = stackIn_13_0;
-          th.a(var7, (byte) 99, param1.field_i + param0 + (-this.field_u[0].field_o + param1.field_m >> 1), this.field_u, param4 + param1.field_r, param1.field_k);
+          DelegatingCanvas.a(var7, (byte) 99, param1.field_i + param0 + (-this.field_u[0].field_o + param1.field_m >> 1), this.field_u, param4 + param1.field_r, param1.field_k);
           var9 = 113 / ((-60 - param2) / 56);
           stackIn_16_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_16_0;

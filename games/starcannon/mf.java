@@ -68,7 +68,7 @@ final class mf {
           if (!param0) {
             return;
           }
-          qc.a((java.awt.Component) ((Object) param1), (byte) 69);
+          FullscreenFocusCanvas.a((java.awt.Component) ((Object) param1), (byte) 69);
           oi.a((java.awt.Component) ((Object) param1), 0);
           if (null == qj.field_eb) {
             return;

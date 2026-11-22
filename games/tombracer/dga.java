@@ -28,11 +28,11 @@ final class dga {
         }
     }
 
-    final static cua linkShaderProgram(int param0, OpenGlToolkit param1, fca[] param2) {
+    final static LegacyOpenGlShaderProgram linkShaderProgram(int param0, OpenGlToolkit param1, LegacyOpenGlShaderObject[] param2) {
         int var3_int = 0;
-        cua stackIn_3_0 = null;
+        LegacyOpenGlShaderProgram stackIn_3_0 = null;
         Object stackIn_27_0 = null;
-        cua stackIn_29_0 = null;
+        LegacyOpenGlShaderProgram stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -49,7 +49,7 @@ final class dga {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 21885) {
-            stackIn_3_0 = (cua) null;
+            stackIn_3_0 = (LegacyOpenGlShaderProgram) null;
             return stackIn_3_0;
           }
           for (var3_int = 0; param2.length > var3_int; var3_int++) {
@@ -85,10 +85,10 @@ final class dga {
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
               stackIn_27_0 = null;
-              return (cua) (stackIn_27_0);
+              return (LegacyOpenGlShaderProgram) (stackIn_27_0);
             }
           }
-          stackIn_29_0 = new cua(param1, var3_long, param2);
+          stackIn_29_0 = new LegacyOpenGlShaderProgram(param1, var3_long, param2);
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

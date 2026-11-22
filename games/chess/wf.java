@@ -316,7 +316,7 @@ final class wf extends ma implements ha, mj {
         }
     }
 
-    final static void a(java.awt.Frame param0, jk param1, int param2) {
+    final static void exitFullscreenFrame(java.awt.Frame param0, jk param1, int param2) {
         nl var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -411,7 +411,7 @@ final class wf extends ma implements ha, mj {
           var1_int = 0;
           if (!param0) {
             var8 = (jk) null;
-            wf.a((java.awt.Frame) null, (jk) null, -94);
+            wf.exitFullscreenFrame((java.awt.Frame) null, (jk) null, -94);
           }
           var2 = 0;
           while (kf.d(18954)) {

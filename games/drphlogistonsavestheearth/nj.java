@@ -339,7 +339,7 @@ final class nj {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
-          ce.a(param2, var7, (byte) -47);
+          ce.exitFullscreenFrame(param2, var7, (byte) -47);
           stackIn_37_0 = null;
           return (java.awt.Frame) (stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,7 +395,7 @@ final class nj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_i[var3Lifetime1] = ff.a(this.field_i[var3Lifetime1], qb.field_c[var4][rk.a((int)(this.field_q[rk.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_i[var3Lifetime1] = ff.a(this.field_i[var3Lifetime1], AccountRequestState.field_c[var4][rk.a((int)(this.field_q[rk.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -403,14 +403,14 @@ final class nj {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_q[var3Lifetime1Lifetime1] = this.field_i[var3Lifetime1Lifetime1];
           }
-          this.field_q[0] = ff.a(this.field_q[0], qb.field_e[var2Lifetime2]);
+          this.field_q[0] = ff.a(this.field_q[0], AccountRequestState.field_e[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_i[var3Lifetime1Lifetime2] = this.field_q[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (var8 < 8) {
-              this.field_i[var3Lifetime1Lifetime2] = ff.a(this.field_i[var3Lifetime1Lifetime2], qb.field_c[var8][rk.a(255, (int)(this.field_h[rk.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
+              this.field_i[var3Lifetime1Lifetime2] = ff.a(this.field_i[var3Lifetime1Lifetime2], AccountRequestState.field_c[var8][rk.a(255, (int)(this.field_h[rk.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var8++;
             }

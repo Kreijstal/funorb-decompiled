@@ -280,7 +280,7 @@ final class jk {
             dh.field_bb = FullscreenFocusCanvas.field_f;
           }
           if (dh.field_bb == FullscreenFocusCanvas.field_f &&
-            va.a(true, 1)) {
+            AccountRequestState.a(true, 1)) {
             var9Lifetime1 = cd.field_t.readUnsignedByte((byte) 90);
             cd.field_t.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -301,7 +301,7 @@ final class jk {
                 dh.field_bb = nk.field_w;
                 ab.field_l = var9Lifetime1;
               } else {
-                va.a(true, ue.b((byte) 123));
+                AccountRequestState.a(true, ue.b((byte) 123));
                 ci.field_h = new Boolean(af.a(cd.field_t, true));
                 cd.field_t.position = 0;
               }
@@ -309,10 +309,10 @@ final class jk {
           }
           if (dh.field_bb == fd.field_h) {
             var9Lifetime2 = 2;
-            if (va.a(true, var9Lifetime2)) {
+            if (AccountRequestState.a(true, var9Lifetime2)) {
               var10Lifetime1 = cd.field_t.readUnsignedShort(98203176);
               cd.field_t.position = 0;
-              if (va.a(true, var10Lifetime1)) {
+              if (AccountRequestState.a(true, var10Lifetime1)) {
                 var11 = vd.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   vd.field_e[var12] = cd.field_t.readPrefixedString(gi.a(param6, -23760));

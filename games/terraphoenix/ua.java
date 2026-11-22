@@ -8,7 +8,7 @@ final class ua {
     private int field_a;
     private ak field_i;
     private int field_h;
-    static og field_d;
+    static AccountRequestState field_d;
     private ak field_f;
     static int field_e;
     static String[] field_c;
@@ -207,7 +207,7 @@ final class ua {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 8) {
-          field_d = (og) null;
+          field_d = (AccountRequestState) null;
         }
         field_c = null;
         field_d = null;
@@ -395,6 +395,6 @@ final class ua {
     static {
         field_e = 128;
         field_c = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
-        field_d = new og();
+        field_d = new AccountRequestState();
     }
 }

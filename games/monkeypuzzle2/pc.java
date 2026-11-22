@@ -417,10 +417,10 @@ abstract class pc extends nf {
               if (!fk.field_a) {
                 param2 = od.field_o;
                 if (MonkeyPuzzle2.field_F) {
-                  param2 = r.field_b;
+                  param2 = FullscreenFocusCanvas.field_b;
                 }
               } else {
-                param2 = r.field_b;
+                param2 = FullscreenFocusCanvas.field_b;
               }
               j.field_e.a(bh.field_b, (byte) -34);
             }

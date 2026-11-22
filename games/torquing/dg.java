@@ -7,7 +7,7 @@ final class dg extends af {
     static int field_h;
     static String field_m;
     int field_d;
-    static pp field_i;
+    static FullscreenFocusCanvas field_i;
     static String field_j;
     private int field_l;
     static uc field_e;

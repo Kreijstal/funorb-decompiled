@@ -113,7 +113,7 @@ final class da extends ArchiveProvider {
           t.field_K = new ci[5];
           ig.field_i = new ci[5];
           mf.field_l = new ci[5];
-          g.field_d = new ci[5];
+          DelegatingCanvas.field_d = new ci[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -127,7 +127,7 @@ final class da extends ArchiveProvider {
                 } else {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
-                    var19 = a.field_k;
+                    var19 = FullscreenFocusCanvas.field_k;
                   }
                 }
               } else {
@@ -139,17 +139,17 @@ final class da extends ArchiveProvider {
                 var19 = stackIn_27_0;
               }
               if (decompiledFrameRemainder0) {
-                g.field_d[var18] = new ci(0L, param0);
+                DelegatingCanvas.field_d[var18] = new ci(0L, param0);
                 t.field_K[var18] = new ci(0L, eh.field_M, var19);
                 ig.field_i[var18] = new ci(0L, (ci) null);
                 ig.field_i[var18].field_cb = 1;
                 mf.field_l[var18] = new ci(0L, eh.field_M);
                 mf.field_l[var18].field_cb = 1;
-                g.field_d[var18].a((byte) 125, t.field_K[var18]);
-                g.field_d[var18].a((byte) 123, ig.field_i[var18]);
-                g.field_d[var18].a((byte) 127, mf.field_l[var18]);
-                g.field_d[var18].h(0);
-                AccountNameAvailabilityValidator.field_m.a((byte) 127, g.field_d[var18]);
+                DelegatingCanvas.field_d[var18].a((byte) 125, t.field_K[var18]);
+                DelegatingCanvas.field_d[var18].a((byte) 123, ig.field_i[var18]);
+                DelegatingCanvas.field_d[var18].a((byte) 127, mf.field_l[var18]);
+                DelegatingCanvas.field_d[var18].h(0);
+                AccountNameAvailabilityValidator.field_m.a((byte) 127, DelegatingCanvas.field_d[var18]);
                 qm.field_d = qm.field_d + 1;
               }
               var18++;

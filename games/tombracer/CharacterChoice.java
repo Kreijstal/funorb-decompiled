@@ -317,7 +317,7 @@ final class CharacterChoice implements BitDecodableMarker {
           var7_int = param3 + param0;
           var8 = param6 - param0;
           for (var11 = param3; var7_int > var11; var11++) {
-            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, vaa.field_a[var11], param4);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, PackedBitSetSupport.field_a[var11], param4);
           }
           var9 = param0 + param4;
           if (param5 != 27) {
@@ -325,10 +325,10 @@ final class CharacterChoice implements BitDecodableMarker {
           }
           var10 = param1 - param0;
           for (var11Lifetime1 = param6; var8 < var11Lifetime1; var11Lifetime1--) {
-            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, vaa.field_a[var11Lifetime1], param4);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, PackedBitSetSupport.field_a[var11Lifetime1], param4);
           }
           for (var11Lifetime2 = var7_int; var8 >= var11Lifetime2; var11Lifetime2++) {
-            var17 = vaa.field_a[var11Lifetime2];
+            var17 = PackedBitSetSupport.field_a[var11Lifetime2];
             C2SRoomResultPacket.fillRange((byte) -55, param2, var9, var17, param4);
             C2SRoomResultPacket.fillRange((byte) -55, param2, param1, var17, var10);
           }

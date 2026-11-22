@@ -744,11 +744,11 @@ final class qe extends uk {
         }
     }
 
-    private final String h(int param0, int param1) {
+    private final String formatSquareCoordinate(int param0, int param1) {
         int var3 = param1 / 8;
         int var4 = param1 % 8;
         int var5 = -65 % ((55 - param0) / 50);
-        return sj.field_j[var4] + (1 + var3);
+        return sj.chessFileLabels[var4] + (1 + var3);
     }
 
     final int a(boolean param0, boolean param1, int param2, int param3, byte param4, boolean param5) {
@@ -1284,13 +1284,13 @@ final class qe extends uk {
           -var10 + var11 == 2) {
           return "0-0";
         }
-        stackIn_35_0 = new StringBuilder().append(this.a(var6, (byte) 124)).append(this.h(-106, param4));
+        stackIn_35_0 = new StringBuilder().append(this.a(var6, (byte) 124)).append(this.formatSquareCoordinate(-106, param4));
         if (var12 != 0) {
           stackIn_36_1 = "x";
         } else {
           stackIn_36_1 = "";
         }
-        stackIn_38_0 = ((StringBuilder) (Object) stackIn_35_0).append(stackIn_36_1).append(this.h(109, param2));
+        stackIn_38_0 = ((StringBuilder) (Object) stackIn_35_0).append(stackIn_36_1).append(this.formatSquareCoordinate(109, param2));
         if (0 != param1) {
           stackIn_39_1 = this.a(param1, (byte) 30);
         } else {

@@ -184,7 +184,7 @@ abstract class cb extends ok implements wg {
             }
             ha.field_g = 1;
             var3 = var1.readString(false);
-            bd.field_j = ((String) (var3)).intern();
+            AccountRequestState.field_j = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -54);
             ArchiveIndex.a(var4, 2);
             return;

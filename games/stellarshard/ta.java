@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta extends IntrusiveNode {
-    static uc field_m;
+    static AccountRequestState field_m;
     static String field_r;
     int field_o;
     static Sprite field_s;
@@ -63,7 +63,7 @@ final class ta extends IntrusiveNode {
     static {
         field_r = "Highscores";
         field_k = "Create";
-        field_m = new uc();
+        field_m = new AccountRequestState();
         field_l = "Confirm Password: ";
     }
 }

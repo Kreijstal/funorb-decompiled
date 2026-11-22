@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class l {
-    static u field_b;
+    static AccountRequestState field_b;
     static String field_c;
     static String field_a;
     static db field_d;
@@ -78,7 +78,7 @@ abstract class l {
 
     static {
         field_c = "Three-Player Puzzles";
-        field_b = new u();
+        field_b = new AccountRequestState();
         field_a = "Loading extra data";
     }
 }

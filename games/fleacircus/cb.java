@@ -5,7 +5,7 @@ abstract class cb extends DualLinkNode {
     int field_r;
     static java.awt.Frame field_t;
     static String field_q;
-    static ae field_v;
+    static AccountRequestState field_v;
     static dd field_u;
     static el field_w;
     static String field_s;

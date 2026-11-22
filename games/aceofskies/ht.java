@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ht extends IntrusiveNode {
-    static dq field_k;
+    static AccountRequestState field_k;
     static String field_h;
     static boolean field_g;
     int field_l;

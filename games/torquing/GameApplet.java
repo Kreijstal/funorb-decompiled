@@ -694,7 +694,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !fq.field_E) {
             eq.field_d = km.b(-1);
             ub.a(1976, 5000L);
-            pp.field_f = null;
+            FullscreenFocusCanvas.field_f = null;
             this.a(false, -11);
             return;
           }
@@ -993,7 +993,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               lg.field_B = ip.a(9);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param2, param6, true);
               nk.field_u = dupTemp$0;
-              pp.field_f = dupTemp$0;
+              FullscreenFocusCanvas.field_f = dupTemp$0;
               var8_int = 117 % ((param1 - 76) / 34);
               var9 = nk.field_u.a((byte) -91, 1, (Runnable) (this));
               while (true) {

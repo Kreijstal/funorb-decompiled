@@ -23,14 +23,14 @@ final class AccountServiceResult {
     }
 
     final static AccountServiceResult pollAccountCreationResult(int param0) {
-        if (og.field_a == IsaacCipher.field_f) {
+        if (AccountRequestState.field_a == IsaacCipher.field_f) {
           throw new IllegalStateException();
         }
         if (param0 != -352) {
           return (AccountServiceResult) null;
         }
         if (k.field_b == IsaacCipher.field_f) {
-          IsaacCipher.field_f = og.field_a;
+          IsaacCipher.field_f = AccountRequestState.field_a;
           return wl.field_Q;
         }
         return null;

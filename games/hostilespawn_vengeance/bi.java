@@ -57,7 +57,7 @@ final class bi {
                         var9 = rh.field_x;
                       }
                     } else {
-                      var9 = fk.field_c;
+                      var9 = AccountRequestState.field_c;
                     }
                   } else {
                     var9 = NetworkGameClient.field_s;

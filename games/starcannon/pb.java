@@ -30,12 +30,12 @@ final class pb {
         if (param0 != 13607) {
           return (fb) null;
         }
-        pf.field_e = var3 & 127;
+        AccountRequestState.field_e = var3 & 127;
         stackIn_5_0 = ((var3 & 128) != 0);
         cf.field_r = stackIn_5_0;
         lj.field_i = var8.readUnsignedByte(7909);
         ne.field_d = var8.readLong((byte) 5);
-        if (pf.field_e == 2) {
+        if (AccountRequestState.field_e == 2) {
           wc.field_f = var8.readUnsignedShort(-1174051992);
           tk.field_e = var8.readUnsignedMedium(127);
         } else {
@@ -50,11 +50,11 @@ final class pb {
         } else {
           fb.field_e = ee.field_d;
         }
-        if (1 == pf.field_e) {
+        if (1 == AccountRequestState.field_e) {
           var8.readUnsignedShort(-1174051992);
           var8.readString(-95);
         } else {
-          if (pf.field_e == 4) {
+          if (AccountRequestState.field_e == 4) {
             var8.readUnsignedShort(-1174051992);
             var8.readString(-95);
           }

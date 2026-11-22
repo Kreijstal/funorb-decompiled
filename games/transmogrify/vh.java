@@ -152,7 +152,7 @@ final class vh extends me {
           vb.field_a = param0;
         }
         bh.field_a[cg.field_l] = param3;
-        pd.field_a[cg.field_l] = param2;
+        AccountRequestState.field_a[cg.field_l] = param2;
         bg.field_j[cg.field_l] = param1;
         int var6 = param2 + param3 + param1;
         if (param5) {

@@ -63,7 +63,7 @@ class bd extends oh implements da {
               ((bm) (Object) stackIn_12_0).a(stackIn_13_1, -23493, -1);
             }
           } else {
-            var7.a(ld.field_c, -23493, 11);
+            var7.a(DelegatingCanvas.field_c, -23493, 11);
             var7.a(vk.field_K, -23493, 17);
           }
           if (param1 != 3) {
@@ -166,7 +166,7 @@ class bd extends oh implements da {
         int var25Lifetime2;
         var26 = fleas.field_A ? 1 : 0;
         try {
-          var28 = ae.field_a;
+          var28 = AccountRequestState.field_a;
           var2 = var28.readUnsignedByte(false);
           if (0 == var2) {
             var3 = var28.readUnsignedShort((byte) 108);

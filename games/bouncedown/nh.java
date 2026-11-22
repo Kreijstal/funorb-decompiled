@@ -22,7 +22,7 @@ final class nh extends wk implements rc {
         try {
           var3 = null;
           if (nb.field_c != param1) {
-            if (param1 != jb.field_c) {
+            if (param1 != FullscreenFocusCanvas.field_c) {
               if (param1 == jk.field_a) {
                 var3 = pe.field_g;
                 this.field_m = this.field_m + 30;

@@ -13,7 +13,7 @@ abstract class oe extends ga {
     static String field_S;
     static e field_R;
     static boolean field_P;
-    static ve field_Q;
+    static AccountRequestState field_Q;
 
     abstract void b(int param0, byte param1, int param2);
 
@@ -94,7 +94,7 @@ abstract class oe extends ga {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 != -6) {
-          field_Q = (ve) null;
+          field_Q = (AccountRequestState) null;
           var2 = this.b(false);
           var3 = var2 - this.field_V;
           if (var3 <= 0) {

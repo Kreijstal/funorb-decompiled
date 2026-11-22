@@ -3,7 +3,7 @@
  */
 final class nb extends ka {
     static int[][] field_b;
-    static dq field_c;
+    static AccountRequestState field_c;
 
     final static void a(int param0, OpenGlRenderer param1) {
         try {
@@ -18,7 +18,7 @@ final class nb extends ka {
             mq.field_e = sf.a(false, -137, var20);
           }
           if (param0 != 8) {
-            field_c = (dq) null;
+            field_c = (AccountRequestState) null;
           }
           cs var11 = param1.field_cc;
           if (var11.b(true) &&
@@ -53,7 +53,7 @@ final class nb extends ka {
     public static void clearStaticReferences(int param0) {
         field_b = (int[][]) null;
         if (param0 < 66) {
-          field_c = (dq) null;
+          field_c = (AccountRequestState) null;
           field_c = null;
           return;
         }

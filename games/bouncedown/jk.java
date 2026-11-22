@@ -157,14 +157,14 @@ final class jk {
             return 80;
           }
         } else {
-          if (jb.field_a != null) {
-            if (!jb.field_a.c(-125)) {
+          if (FullscreenFocusCanvas.field_a != null) {
+            if (!FullscreenFocusCanvas.field_a.c(-125)) {
               return 14;
             }
-            if (!jb.field_a.a("", (byte) -16)) {
+            if (!FullscreenFocusCanvas.field_a.a("", (byte) -16)) {
               return 29;
             }
-            if (!jb.field_a.b("", false)) {
+            if (!FullscreenFocusCanvas.field_a.b("", false)) {
               return 29;
             }
           }

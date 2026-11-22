@@ -6,7 +6,7 @@ abstract class ba {
     static Sprite[][] field_a;
     static String field_d;
     static String field_c;
-    static r field_f;
+    static FullscreenFocusCanvas field_f;
     java.awt.Image field_b;
     int[] field_e;
     int field_g;

@@ -25,7 +25,7 @@ class mh {
             gj.field_a = wc.field_A.c(-1);
             vd.a(2, -1);
           } else {
-            gj.field_a = qa.a(0, 480, 0, 17651, jk.field_a, 640);
+            gj.field_a = qa.createFullscreenCanvas(0, 480, 0, 17651, jk.field_a, 640);
           }
           if (gj.field_a != null) {
             tk.a(gj.field_a, -1);
@@ -38,7 +38,7 @@ class mh {
         }
         if (null == wc.field_A &&
           rg.field_a) {
-          sc.a(var2, (byte) 116, param1);
+          AccountRequestState.a(var2, (byte) 116, param1);
         }
     }
 

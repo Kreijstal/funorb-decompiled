@@ -27,7 +27,7 @@ final class GpuPrimitiveType {
         rm.field_e = !param1 ? new lla(BitPacketBuffer.field_p, RoomRegion.field_l) : new lla(WheeledMountComponent.field_O, HazardModel.field_t);
         C2SRoomResultPacket.field_c = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_c.addChild(param0 ^ 65, rm.field_e.field_a);
-        C2SRoomResultPacket.field_c.addChild(param0 ^ 68, bc.field_b);
+        C2SRoomResultPacket.field_c.addChild(param0 ^ 68, NameEntryKeyboardSupport.field_b);
         PlayerModel.field_a = new UiComponent(0L, WallModel.field_r);
         if (param0 == -64) {
           ProgressDialog.field_R = new UiComponent(0L, (UiComponent) null);

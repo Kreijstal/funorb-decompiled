@@ -82,8 +82,8 @@ final class dl {
                     return false;
                   }
                   this.field_c.a((byte) 40, (long)(param4 * 6));
-                  this.field_c.a(0, ra.field_a, 6, -1);
-                  var7_int = (65280 & ra.field_a[4] << 8) + (ra.field_a[3] << 16 & 16711680) + (255 & ra.field_a[5]);
+                  this.field_c.a(0, FullscreenFocusCanvas.field_a, 6, -1);
+                  var7_int = (65280 & FullscreenFocusCanvas.field_a[4] << 8) + (FullscreenFocusCanvas.field_a[3] << 16 & 16711680) + (255 & FullscreenFocusCanvas.field_a[5]);
                   if (var7_int <= 0 ||
                     !((this.field_a.a((byte) -122) / 520L) >= (long)var7_int)) {
                     return false;
@@ -94,17 +94,17 @@ final class dl {
                     var7_int = 1;
                   }
                 }
-                ra.field_a[1] = (byte)(param3 >> 8);
-                ra.field_a[2] = (byte)param3;
-                ra.field_a[0] = (byte)(param3 >> 16);
-                ra.field_a[4] = (byte)(var7_int >> 8);
-                ra.field_a[3] = (byte)(var7_int >> 16);
-                ra.field_a[5] = (byte)var7_int;
+                FullscreenFocusCanvas.field_a[1] = (byte)(param3 >> 8);
+                FullscreenFocusCanvas.field_a[2] = (byte)param3;
+                FullscreenFocusCanvas.field_a[0] = (byte)(param3 >> 16);
+                FullscreenFocusCanvas.field_a[4] = (byte)(var7_int >> 8);
+                FullscreenFocusCanvas.field_a[3] = (byte)(var7_int >> 16);
+                FullscreenFocusCanvas.field_a[5] = (byte)var7_int;
                 if (param1 != 17699) {
                   this.field_c = (be) null;
                 }
                 this.field_c.a((byte) 40, (long)(param4 * 6));
-                this.field_c.b(0, ra.field_a, 6, -31593);
+                this.field_c.b(0, FullscreenFocusCanvas.field_a, 6, -31593);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -115,7 +115,7 @@ final class dl {
                       this.field_a.a((byte) 40, (long)(var7_int * 520));
                       if (param4 > 65535) {
                         try {
-                          this.field_a.a(0, ra.field_a, 10, -1);
+                          this.field_a.a(0, FullscreenFocusCanvas.field_a, 10, -1);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,13 +125,13 @@ final class dl {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (ra.field_a[2] << 8 & 65280) + ((ra.field_a[1] << 16 & 16711680) + (-16777216 & ra.field_a[0] << 24) + (ra.field_a[3] & 255));
-                        var12 = (ra.field_a[5] & 255) + (65280 & ra.field_a[4] << 8);
-                        var10 = ((ra.field_a[6] & 255) << 16) - (-((ra.field_a[7] & 255) << 8) - (ra.field_a[8] & 255));
-                        var13 = 255 & ra.field_a[9];
+                        var11 = (FullscreenFocusCanvas.field_a[2] << 8 & 65280) + ((FullscreenFocusCanvas.field_a[1] << 16 & 16711680) + (-16777216 & FullscreenFocusCanvas.field_a[0] << 24) + (FullscreenFocusCanvas.field_a[3] & 255));
+                        var12 = (FullscreenFocusCanvas.field_a[5] & 255) + (65280 & FullscreenFocusCanvas.field_a[4] << 8);
+                        var10 = ((FullscreenFocusCanvas.field_a[6] & 255) << 16) - (-((FullscreenFocusCanvas.field_a[7] & 255) << 8) - (FullscreenFocusCanvas.field_a[8] & 255));
+                        var13 = 255 & FullscreenFocusCanvas.field_a[9];
                       } else {
                         try {
-                          this.field_a.a(0, ra.field_a, 8, -1);
+                          this.field_a.a(0, FullscreenFocusCanvas.field_a, 8, -1);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -141,10 +141,10 @@ final class dl {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var10 = ((255 & ra.field_a[5]) << 8) + (((ra.field_a[4] & 255) << 16) + (ra.field_a[6] & 255));
-                        var11 = (255 & ra.field_a[1]) + (65280 & ra.field_a[0] << 8);
-                        var13 = 255 & ra.field_a[7];
-                        var12 = ((ra.field_a[2] & 255) << 8) + (255 & ra.field_a[3]);
+                        var10 = ((255 & FullscreenFocusCanvas.field_a[5]) << 8) + (((FullscreenFocusCanvas.field_a[4] & 255) << 16) + (FullscreenFocusCanvas.field_a[6] & 255));
+                        var11 = (255 & FullscreenFocusCanvas.field_a[1]) + (65280 & FullscreenFocusCanvas.field_a[0] << 8);
+                        var13 = 255 & FullscreenFocusCanvas.field_a[7];
+                        var12 = ((FullscreenFocusCanvas.field_a[2] & 255) << 8) + (255 & FullscreenFocusCanvas.field_a[3]);
                       }
                       if ((param4 == var11 &&
                         var9 == var12 &&
@@ -171,18 +171,18 @@ final class dl {
                       var10 = 0;
                     }
                     if (param4 > 65535) {
-                      ra.field_a[8] = (byte)var10;
-                      ra.field_a[3] = (byte)param4;
-                      ra.field_a[2] = (byte)(param4 >> 8);
-                      ra.field_a[9] = (byte)this.field_f;
-                      ra.field_a[5] = (byte)var9;
-                      ra.field_a[1] = (byte)(param4 >> 16);
-                      ra.field_a[4] = (byte)(var9 >> 8);
-                      ra.field_a[7] = (byte)(var10 >> 8);
-                      ra.field_a[6] = (byte)(var10 >> 16);
-                      ra.field_a[0] = (byte)(param4 >> 24);
+                      FullscreenFocusCanvas.field_a[8] = (byte)var10;
+                      FullscreenFocusCanvas.field_a[3] = (byte)param4;
+                      FullscreenFocusCanvas.field_a[2] = (byte)(param4 >> 8);
+                      FullscreenFocusCanvas.field_a[9] = (byte)this.field_f;
+                      FullscreenFocusCanvas.field_a[5] = (byte)var9;
+                      FullscreenFocusCanvas.field_a[1] = (byte)(param4 >> 16);
+                      FullscreenFocusCanvas.field_a[4] = (byte)(var9 >> 8);
+                      FullscreenFocusCanvas.field_a[7] = (byte)(var10 >> 8);
+                      FullscreenFocusCanvas.field_a[6] = (byte)(var10 >> 16);
+                      FullscreenFocusCanvas.field_a[0] = (byte)(param4 >> 24);
                       this.field_a.a((byte) 40, (long)(520 * var7_int));
-                      this.field_a.b(0, ra.field_a, 10, -31593);
+                      this.field_a.b(0, FullscreenFocusCanvas.field_a, 10, -31593);
                       var11 = param3 - var8;
                       if (var11 > 510) {
                         var11 = 510;
@@ -190,16 +190,16 @@ final class dl {
                       this.field_a.b(var8, param0, var11, -31593);
                       var8 = var8 + var11;
                     } else {
-                      ra.field_a[5] = (byte)(var10 >> 8);
-                      ra.field_a[6] = (byte)var10;
-                      ra.field_a[1] = (byte)param4;
-                      ra.field_a[3] = (byte)var9;
-                      ra.field_a[2] = (byte)(var9 >> 8);
-                      ra.field_a[7] = (byte)this.field_f;
-                      ra.field_a[0] = (byte)(param4 >> 8);
-                      ra.field_a[4] = (byte)(var10 >> 16);
+                      FullscreenFocusCanvas.field_a[5] = (byte)(var10 >> 8);
+                      FullscreenFocusCanvas.field_a[6] = (byte)var10;
+                      FullscreenFocusCanvas.field_a[1] = (byte)param4;
+                      FullscreenFocusCanvas.field_a[3] = (byte)var9;
+                      FullscreenFocusCanvas.field_a[2] = (byte)(var9 >> 8);
+                      FullscreenFocusCanvas.field_a[7] = (byte)this.field_f;
+                      FullscreenFocusCanvas.field_a[0] = (byte)(param4 >> 8);
+                      FullscreenFocusCanvas.field_a[4] = (byte)(var10 >> 16);
                       this.field_a.a((byte) 40, (long)(520 * var7_int));
-                      this.field_a.b(0, ra.field_a, 8, -31593);
+                      this.field_a.b(0, FullscreenFocusCanvas.field_a, 8, -31593);
                       var11 = param3 - var8;
                       if (var11 > 512) {
                         var11 = 512;
@@ -318,9 +318,9 @@ final class dl {
                 return (byte[]) (stackIn_5_0);
               }
               this.field_c.a((byte) 40, (long)(6 * param0));
-              this.field_c.a(0, ra.field_a, 6, -1);
-              var4_int = (255 & ra.field_a[2]) + ((255 & ra.field_a[0]) << 16) + ((ra.field_a[1] & 255) << 8);
-              var5 = (ra.field_a[5] & 255) + ((ra.field_a[3] & 255) << 16) + (65280 & ra.field_a[4] << 8);
+              this.field_c.a(0, FullscreenFocusCanvas.field_a, 6, -1);
+              var4_int = (255 & FullscreenFocusCanvas.field_a[2]) + ((255 & FullscreenFocusCanvas.field_a[0]) << 16) + ((FullscreenFocusCanvas.field_a[1] & 255) << 8);
+              var5 = (FullscreenFocusCanvas.field_a[5] & 255) + ((FullscreenFocusCanvas.field_a[3] & 255) << 16) + (65280 & FullscreenFocusCanvas.field_a[4] << 8);
               if (var4_int < 0) {
                 return null;
               }
@@ -349,21 +349,21 @@ final class dl {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_a.a(0, ra.field_a, var14 + var9, -1);
-                  var12 = (255 & ra.field_a[6]) + ((ra.field_a[5] & 255) << 8) + ((ra.field_a[4] & 255) << 16);
-                  var11 = ((255 & ra.field_a[2]) << 8) + (ra.field_a[3] & 255);
-                  var10 = (ra.field_a[0] << 8 & 65280) + (255 & ra.field_a[1]);
-                  var13 = 255 & ra.field_a[7];
+                  this.field_a.a(0, FullscreenFocusCanvas.field_a, var14 + var9, -1);
+                  var12 = (255 & FullscreenFocusCanvas.field_a[6]) + ((FullscreenFocusCanvas.field_a[5] & 255) << 8) + ((FullscreenFocusCanvas.field_a[4] & 255) << 16);
+                  var11 = ((255 & FullscreenFocusCanvas.field_a[2]) << 8) + (FullscreenFocusCanvas.field_a[3] & 255);
+                  var10 = (FullscreenFocusCanvas.field_a[0] << 8 & 65280) + (255 & FullscreenFocusCanvas.field_a[1]);
+                  var13 = 255 & FullscreenFocusCanvas.field_a[7];
                 } else {
                   var14 = 10;
                   if (510 < var9) {
                     var9 = 510;
                   }
-                  this.field_a.a(0, ra.field_a, var9 + var14, -1);
-                  var12 = (255 & ra.field_a[8]) + ((255 & ra.field_a[6]) << 16) + ((ra.field_a[7] & 255) << 8);
-                  var10 = (255 & ra.field_a[3]) + ((ra.field_a[2] & 255) << 8) + (((255 & ra.field_a[1]) << 16) + ((255 & ra.field_a[0]) << 24));
-                  var11 = (ra.field_a[5] & 255) + (65280 & ra.field_a[4] << 8);
-                  var13 = 255 & ra.field_a[9];
+                  this.field_a.a(0, FullscreenFocusCanvas.field_a, var9 + var14, -1);
+                  var12 = (255 & FullscreenFocusCanvas.field_a[8]) + ((255 & FullscreenFocusCanvas.field_a[6]) << 16) + ((FullscreenFocusCanvas.field_a[7] & 255) << 8);
+                  var10 = (255 & FullscreenFocusCanvas.field_a[3]) + ((FullscreenFocusCanvas.field_a[2] & 255) << 8) + (((255 & FullscreenFocusCanvas.field_a[1]) << 16) + ((255 & FullscreenFocusCanvas.field_a[0]) << 24));
+                  var11 = (FullscreenFocusCanvas.field_a[5] & 255) + (65280 & FullscreenFocusCanvas.field_a[4] << 8);
+                  var13 = 255 & FullscreenFocusCanvas.field_a[9];
                 }
                 if (var10 != param0) {
                   return null;
@@ -385,7 +385,7 @@ final class dl {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = ra.field_a[var16];
+                  var6[incrementValue$2] = FullscreenFocusCanvas.field_a[var16];
                 }
                 var5 = var12;
                 var8++;

@@ -130,7 +130,7 @@ final class GameCanvas extends java.awt.Canvas {
             stackIn_38_0 = var7;
             return stackIn_38_0;
           }
-          bo.a(param4, var7, 1);
+          bo.exitFullscreenFrame(param4, var7, 1);
           stackIn_36_0 = null;
           return (java.awt.Frame) (stackIn_36_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

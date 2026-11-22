@@ -30,7 +30,7 @@ final class qb {
           if (var5 == null) {
             return false;
           }
-          hi.a(var5, 0);
+          DelegatingCanvas.a(var5, 0);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

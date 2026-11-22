@@ -236,7 +236,7 @@ final class MenuEntry {
             var19 = 120;
             if (39 == this.field_g) {
               WidgetStyleLayer.field_k[4].drawScaled(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
-              MembersUpsellMenu.drawCentredTextWithShadow(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
+              MembersUpsellMenu.drawCentredTextWithShadow(NameEntryKeyboardSupport.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
             }
             var26 = CurrentGraphicsToolkit.toolkit;
             var21_int = this.field_b - 8;

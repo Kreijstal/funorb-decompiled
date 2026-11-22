@@ -26,7 +26,7 @@ final class vl extends PcmStream {
     static lh field_M;
     private int[] field_t;
     private int[] field_R;
-    static ed field_A;
+    static AccountRequestState field_A;
     private boolean field_K;
     private long field_J;
     private int field_G;
@@ -835,7 +835,7 @@ final class vl extends PcmStream {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
-          field_A = (ed) null;
+          field_A = (AccountRequestState) null;
         }
         field_I = null;
         field_A = null;

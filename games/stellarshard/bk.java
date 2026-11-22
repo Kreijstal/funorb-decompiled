@@ -16,7 +16,7 @@ final class bk {
 
     final static void a(int param0, String param1, boolean param2, String param3) {
         try {
-          va.field_a = param3;
+          FullscreenFocusCanvas.field_a = param3;
           wb.field_c = param1;
           we.a(param2, 12757, ul.field_H);
           if (param0 != 12) {

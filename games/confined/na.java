@@ -3,7 +3,7 @@
  */
 class na extends rg {
     private mn field_R;
-    static ve field_S;
+    static AccountRequestState field_S;
     static String field_U;
     static mn field_T;
     private nn field_P;

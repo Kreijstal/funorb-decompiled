@@ -83,7 +83,7 @@ public final class StarCannon extends ag {
                         /* Inlined CFG state: 8. */
                         {
                             param0 = 100 - param0 >> 2;
-                            if (qc.field_d < 1) {
+                            if (FullscreenFocusCanvas.field_d < 1) {
                                 /* Inlined CFG state: 11. */
                                 {
                                     var3 = 0;
@@ -103,7 +103,7 @@ public final class StarCannon extends ag {
                     } else {
                         /* Inlined CFG state: 2. */
                         {
-                            stackIn_147_0 = qc.field_c[var3];
+                            stackIn_147_0 = FullscreenFocusCanvas.field_c[var3];
                             stackIn_3_0 = stackIn_147_0;
                             if (false) {
                                 statePc = 147;
@@ -117,10 +117,10 @@ public final class StarCannon extends ag {
                                     } else {
                                         /* Inlined CFG state: 4. */
                                         {
-                                            if (qc.field_c[var3].field_h == 4) {
+                                            if (FullscreenFocusCanvas.field_c[var3].field_h == 4) {
                                                 /* Inlined CFG state: 6. */
                                                 {
-                                                    qc.field_c[var3].a(320 - fi.field_e.field_f, 123);
+                                                    FullscreenFocusCanvas.field_c[var3].a(320 - fi.field_e.field_f, 123);
                                                     statePc = 7;
                                                     continue scanLoop1;
                                                 }
@@ -147,7 +147,7 @@ public final class StarCannon extends ag {
                     } else {
                         /* Inlined CFG state: 13. */
                         {
-                            stackIn_147_0 = qc.field_c[var3];
+                            stackIn_147_0 = FullscreenFocusCanvas.field_c[var3];
                             stackIn_14_0 = stackIn_147_0;
                             if (false) {
                                 statePc = 147;
@@ -161,10 +161,10 @@ public final class StarCannon extends ag {
                                     } else {
                                         /* Inlined CFG state: 15. */
                                         {
-                                            if (qc.field_c[var3].field_h == 3) {
+                                            if (FullscreenFocusCanvas.field_c[var3].field_h == 3) {
                                                 /* Inlined CFG state: 17. */
                                                 {
-                                                    qc.field_c[var3].a(320 - fi.field_e.field_f, -91);
+                                                    FullscreenFocusCanvas.field_c[var3].a(320 - fi.field_e.field_f, -91);
                                                     statePc = 18;
                                                     continue scanLoop1;
                                                 }
@@ -230,7 +230,7 @@ public final class StarCannon extends ag {
                         {
                             stackIn_163_0 = null;
                             stackIn_27_0 = stackIn_163_0;
-                            stackIn_163_1 = qc.field_c[var3];
+                            stackIn_163_1 = FullscreenFocusCanvas.field_c[var3];
                             stackIn_27_1 = stackIn_163_1;
                             if (false) {
                                 statePc = 163;
@@ -244,13 +244,13 @@ public final class StarCannon extends ag {
                                     } else {
                                         /* Inlined CFG state: 28. */
                                         {
-                                            if (qc.field_c[var3].field_h == 2) {
+                                            if (FullscreenFocusCanvas.field_c[var3].field_h == 2) {
                                                 statePc = 33;
                                                 continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 29. */
                                                 {
-                                                    if (qc.field_c[var3].field_h == 3) {
+                                                    if (FullscreenFocusCanvas.field_c[var3].field_h == 3) {
                                                         statePc = 33;
                                                     } else {
                                                         statePc = 30;
@@ -266,10 +266,10 @@ public final class StarCannon extends ag {
                     }
                 }
                 case 30: {
-                    if (qc.field_c[var3].field_h != 4) {
+                    if (FullscreenFocusCanvas.field_c[var3].field_h != 4) {
                         /* Inlined CFG state: 32. */
                         {
-                            qc.field_c[var3].a(-fi.field_e.field_f + 320, 54);
+                            FullscreenFocusCanvas.field_c[var3].a(-fi.field_e.field_f + 320, 54);
                             statePc = 33;
                             continue scanLoop1;
                         }
@@ -287,7 +287,7 @@ public final class StarCannon extends ag {
                     if (var3 >= 4000) {
                         /* Inlined CFG state: 42. */
                         {
-                            if (qc.field_d == 2) {
+                            if (FullscreenFocusCanvas.field_d == 2) {
                                 /* Inlined CFG state: 44. */
                                 {
                                     gi.a(param1 - 7302);
@@ -302,7 +302,7 @@ public final class StarCannon extends ag {
                     } else {
                         /* Inlined CFG state: 36. */
                         {
-                            stackIn_147_0 = qc.field_c[var3];
+                            stackIn_147_0 = FullscreenFocusCanvas.field_c[var3];
                             stackIn_37_0 = stackIn_147_0;
                             if (false) {
                                 statePc = 147;
@@ -316,11 +316,11 @@ public final class StarCannon extends ag {
                                     } else {
                                         /* Inlined CFG state: 38. */
                                         {
-                                            if (qc.field_c[var3].field_h == 2) {
+                                            if (FullscreenFocusCanvas.field_c[var3].field_h == 2) {
                                                 /* Inlined CFG state: 40. */
                                                 {
-                                                    qc.field_c[var3].b(-fi.field_e.field_f + 320, 128);
-                                                    qc.field_c[var3].a(-fi.field_e.field_f + 320, param1 ^ 7322);
+                                                    FullscreenFocusCanvas.field_c[var3].b(-fi.field_e.field_f + 320, 128);
+                                                    FullscreenFocusCanvas.field_c[var3].a(-fi.field_e.field_f + 320, param1 ^ 7322);
                                                     statePc = 41;
                                                     continue scanLoop1;
                                                 }
@@ -355,7 +355,7 @@ public final class StarCannon extends ag {
                             /* Sequential CFG blocks: 47, 48. */
                             {
                                 stackIn_48_0 = null;
-                                stackIn_48_1 = qc.field_c[var3];
+                                stackIn_48_1 = FullscreenFocusCanvas.field_c[var3];
                             }
                             {
                                 if (stackIn_48_0 == stackIn_48_1) {
@@ -364,11 +364,11 @@ public final class StarCannon extends ag {
                                 } else {
                                     /* Inlined CFG state: 49. */
                                     {
-                                        if (2 == qc.field_c[var3].field_h) {
+                                        if (2 == FullscreenFocusCanvas.field_c[var3].field_h) {
                                             /* Inlined CFG state: 51. */
                                             {
-                                                qc.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
-                                                qc.field_c[var3].a(320 - fi.field_e.field_f, -56);
+                                                FullscreenFocusCanvas.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
+                                                FullscreenFocusCanvas.field_c[var3].a(320 - fi.field_e.field_f, -56);
                                                 statePc = 52;
                                                 continue scanLoop1;
                                             }
@@ -680,7 +680,7 @@ public final class StarCannon extends ag {
                     if (2 == rj.field_h) {
                         /* Inlined CFG state: 103. */
                         {
-                            var10_ref_String = qc.field_a;
+                            var10_ref_String = FullscreenFocusCanvas.field_a;
                             statePc = 104;
                             continue scanLoop1;
                         }
@@ -960,13 +960,13 @@ public final class StarCannon extends ag {
                     continue scanLoop1;
                 }
                 case 148: {
-                    qc.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
-                    stackIn_147_0 = qc.field_c[var3];
+                    FullscreenFocusCanvas.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
+                    stackIn_147_0 = FullscreenFocusCanvas.field_c[var3];
                     statePc = 147;
                     continue scanLoop1;
                 }
                 case 149: {
-                    if (2 == qc.field_c[var3].field_h) {
+                    if (2 == FullscreenFocusCanvas.field_c[var3].field_h) {
                         statePc = 148;
                     } else {
                         statePc = 151;
@@ -986,7 +986,7 @@ public final class StarCannon extends ag {
                             /* Inlined CFG state: 154. */
                             {
                                 stackIn_152_0 = null;
-                                stackIn_152_1 = qc.field_c[var3];
+                                stackIn_152_1 = FullscreenFocusCanvas.field_c[var3];
                                 statePc = 152;
                                 continue scanLoop1;
                             }
@@ -1007,13 +1007,13 @@ public final class StarCannon extends ag {
                     continue scanLoop1;
                 }
                 case 159: {
-                    qc.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
-                    stackIn_158_0 = qc.field_c[var3];
+                    FullscreenFocusCanvas.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
+                    stackIn_158_0 = FullscreenFocusCanvas.field_c[var3];
                     statePc = 158;
                     continue scanLoop1;
                 }
                 case 160: {
-                    if (2 == qc.field_c[var3].field_h) {
+                    if (2 == FullscreenFocusCanvas.field_c[var3].field_h) {
                         statePc = 159;
                     } else {
                         statePc = 162;
@@ -1033,7 +1033,7 @@ public final class StarCannon extends ag {
                             /* Inlined CFG state: 165. */
                             {
                                 stackIn_163_0 = null;
-                                stackIn_163_1 = qc.field_c[var3];
+                                stackIn_163_1 = FullscreenFocusCanvas.field_c[var3];
                                 statePc = 163;
                                 continue scanLoop1;
                             }
@@ -1085,7 +1085,7 @@ public final class StarCannon extends ag {
         var3 = field_A;
         if (ha.field_c != 0) {
           if (ha.field_c == 1) {
-            pf.field_d = pf.field_d + 1;
+            AccountRequestState.field_d = AccountRequestState.field_d + 1;
             dg.field_l = 0;
             ha.field_c = 2;
             mj.a(96, 12, 0, 31, 100);
@@ -1093,7 +1093,7 @@ public final class StarCannon extends ag {
           } else {
             if (1 < ha.field_c) {
               ha.field_c = ha.field_c + 1;
-              pf.field_d = pf.field_d + 1;
+              AccountRequestState.field_d = AccountRequestState.field_d + 1;
               if (ha.field_c == 5) {
                 li.a(-115, new bf(0, -128, -40, 14));
                 li.a(-126, new bf(0, -128, 40, 14));
@@ -1107,7 +1107,7 @@ public final class StarCannon extends ag {
             }
           }
         } else {
-          pf.field_d = pf.field_d + 1;
+          AccountRequestState.field_d = AccountRequestState.field_d + 1;
           ha.field_c = 1;
           li.a(-119, new bf(0, -128, -24, 6));
           li.a(param0 ^ -124, new bf(0, -128, 24, 6));
@@ -1144,20 +1144,20 @@ public final class StarCannon extends ag {
             } else {
               bf.field_w = bf.field_w + 1;
               dg.field_l = 0;
-              pf.field_d = pf.field_d + 1;
+              AccountRequestState.field_d = AccountRequestState.field_d + 1;
               mj.a(96, 12, 0, 29, 100);
               mj.a(255, 12, 1200, 40, 100);
             }
           } else {
             bf.field_w = 2;
             dg.field_l = 0;
-            pf.field_d = pf.field_d + 1;
+            AccountRequestState.field_d = AccountRequestState.field_d + 1;
             mj.a(96, 12, 0, 29, 100);
             mj.a(255, 12, 1200, 40, 100);
           }
         } else {
           bf.field_w = 1;
-          pf.field_d = pf.field_d + 1;
+          AccountRequestState.field_d = AccountRequestState.field_d + 1;
           li.a(-121, new bf(0, -128, 0, 8));
           dg.field_l = 0;
           mj.a(96, 12, 0, 29, 100);
@@ -1271,7 +1271,7 @@ public final class StarCannon extends ag {
                       tj.field_C = var6.field_k;
                       ua.field_c = 1 + ue.field_c[rj.field_h];
                       dg.field_l = 0;
-                      pf.field_d = pf.field_d + 1;
+                      AccountRequestState.field_d = AccountRequestState.field_d + 1;
                       mj.a(255, param0 ^ -244, 0, 41, 100);
                       ti.field_f.a(kc.field_P);
                       kc.field_P.f();
@@ -1415,7 +1415,7 @@ public final class StarCannon extends ag {
                             kh.field_y.b(101, var6);
                             tj.field_C = var6.field_k;
                             ua.field_c = 1 + ue.field_c[rj.field_h];
-                            pf.field_d = pf.field_d + 1;
+                            AccountRequestState.field_d = AccountRequestState.field_d + 1;
                             dg.field_l = 0;
                             mj.a(255, 12, 0, 41, 100);
                             ti.field_f.a(kc.field_P);
@@ -1536,7 +1536,7 @@ public final class StarCannon extends ag {
         nb.field_f.d();
         ea.field_d.d();
         if (null != n.field_a &&
-          n.field_a.field_b) {
+          n.field_a.focusLost) {
           re.a(0);
           le.b(-36);
         }
@@ -1797,7 +1797,7 @@ public final class StarCannon extends ag {
           this.d((byte) 22);
           gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", jg.field_F);
           AccountNameAvailabilityValidator.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", jg.field_F);
-          qc.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", jg.field_F);
+          FullscreenFocusCanvas.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", jg.field_F);
           gf.field_a = SecondaryNodeDequeIterator.a("cannoneer", 116, "", jg.field_F);
           dl.field_c = SecondaryNodeDequeIterator.a("playership", param1 + 1407, "", jg.field_F);
           vc.field_m = SecondaryNodeDequeIterator.a("addons", 126, "", jg.field_F);
@@ -1963,7 +1963,7 @@ public final class StarCannon extends ag {
         jg.field_F = null;
         tg.field_y = 10;
         tj.field_G = 0;
-        pf.field_d = 1;
+        AccountRequestState.field_d = 1;
         bf.field_w = 0;
         ha.field_c = 0;
         MouseWheelSource.field_c = -1;
@@ -2141,7 +2141,7 @@ public final class StarCannon extends ag {
         if (fi.field_e.field_k <= 0) {
           if (MouseWheelSource.field_c < 0) {
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 4000; var2_intLifetime1++) {
-              qc.field_c[var2_intLifetime1] = null;
+              FullscreenFocusCanvas.field_c[var2_intLifetime1] = null;
             }
             var2_ref = (bf) (kh.field_y.c(-3905));
             while (var2_ref != null) {
@@ -2169,14 +2169,14 @@ public final class StarCannon extends ag {
               mj.a(255, 12, 0, 33, 100);
             }
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 4000; var2_intLifetime1++) {
-              if (qc.field_c[var2_intLifetime1] != null &&
-                qc.field_c[var2_intLifetime1].field_h == 2) {
-                var3 = qc.field_c[var2_intLifetime1].field_d - fi.field_e.field_f;
-                var4 = qc.field_c[var2_intLifetime1].field_q - fi.field_e.field_u;
+              if (FullscreenFocusCanvas.field_c[var2_intLifetime1] != null &&
+                FullscreenFocusCanvas.field_c[var2_intLifetime1].field_h == 2) {
+                var3 = FullscreenFocusCanvas.field_c[var2_intLifetime1].field_d - fi.field_e.field_f;
+                var4 = FullscreenFocusCanvas.field_c[var2_intLifetime1].field_q - fi.field_e.field_u;
                 var5_int = (int)Math.sqrt((double)(var4 * var4 + var3 * var3));
                 if (var5_int < SpriteState.field_p) {
-                  qc.field_c[var2_intLifetime1].field_h = 0;
-                  qc.field_c[var2_intLifetime1].field_p = 64;
+                  FullscreenFocusCanvas.field_c[var2_intLifetime1].field_h = 0;
+                  FullscreenFocusCanvas.field_c[var2_intLifetime1].field_p = 64;
                 }
               }
             }
@@ -2621,7 +2621,7 @@ public final class StarCannon extends ag {
         var3Lifetime3 = -64 / ((38 - param0) / 48);
         var9 = (bf) (kh.field_y.c(-3905));
         while (var9 != null) {
-          stackOut_347_0 = var9.a(qc.field_c, this, 114);
+          stackOut_347_0 = var9.a(FullscreenFocusCanvas.field_c, this, 114);
           stackIn_353_0 = stackOut_347_0 ? 1 : 0;
           stackIn_348_0 = stackOut_347_0;
           if (!stackIn_348_0) {
@@ -2634,9 +2634,9 @@ public final class StarCannon extends ag {
           fi.field_e.field_k = 1;
         }
         for (var3Lifetime4 = 0; 4000 > var3Lifetime4; var3Lifetime4++) {
-          if (null != qc.field_c[var3Lifetime4] &&
-            null == qc.field_c[var3Lifetime4].a((byte) 108)) {
-            qc.field_c[var3Lifetime4] = null;
+          if (null != FullscreenFocusCanvas.field_c[var3Lifetime4] &&
+            null == FullscreenFocusCanvas.field_c[var3Lifetime4].a((byte) 108)) {
+            FullscreenFocusCanvas.field_c[var3Lifetime4] = null;
             if (var3Lifetime4 < fi.field_d) {
               fi.field_d = var3Lifetime4;
             }
@@ -2722,7 +2722,7 @@ public final class StarCannon extends ag {
               rj.field_h = 0;
               if (field_z == -1) {
                 for (var3Lifetime5 = 0; var3Lifetime5 < 4000; var3Lifetime5++) {
-                  qc.field_c[var3Lifetime5] = null;
+                  FullscreenFocusCanvas.field_c[var3Lifetime5] = null;
                 }
                 var10 = (bf) (kh.field_y.c(-3905));
                 while (var10 != null) {
@@ -2798,7 +2798,7 @@ public final class StarCannon extends ag {
                 hc.field_e = "hahahah";
               }
               if (hc.field_e.equalsIgnoreCase("donefor")) {
-                pf.field_d = 1000;
+                AccountRequestState.field_d = 1000;
                 a.field_a = true;
                 jk.field_j = 0;
               }
@@ -3077,7 +3077,7 @@ public final class StarCannon extends ag {
                               kh.field_y.b(param0 - 7, var9);
                               tj.field_C = var9.field_k;
                               ua.field_c = ue.field_c[rj.field_h] + 1;
-                              pf.field_d = pf.field_d + 1;
+                              AccountRequestState.field_d = AccountRequestState.field_d + 1;
                               dg.field_l = 0;
                               mj.a(255, 12, 0, 41, 100);
                               ti.field_f.a(kc.field_P);
@@ -3219,7 +3219,7 @@ public final class StarCannon extends ag {
         fi.a(0);
         tk.a(-124);
         cg.a(89);
-        qc.a(-1);
+        FullscreenFocusCanvas.a(-1);
         bb.clearStaticReferences(2);
         bf.a(15415);
         d.a(32);
@@ -3305,7 +3305,7 @@ public final class StarCannon extends ag {
         pe.clearStaticReferences((byte) 93);
         ca.clearStaticReferences(true);
         ai.clearStaticReferences(0);
-        hi.clearStaticReferences((byte) 56);
+        DelegatingCanvas.clearStaticReferences((byte) 56);
         te.a(-1);
         dl.a(true);
         ByteStorage.a((byte) 63);
@@ -3386,7 +3386,7 @@ public final class StarCannon extends ag {
         ah.clearStaticReferences(-91);
         rj.a(-1);
         hb.a(9681);
-        pf.a(true);
+        AccountRequestState.releaseStatics(true);
         AccountServiceResult.a(-1);
         qb.a(-115);
         ge.a(45);
@@ -3461,7 +3461,7 @@ public final class StarCannon extends ag {
           oi.a((java.awt.Canvas) (var2), (byte) 72);
           return;
         }
-        if (qc.field_d == 0) {
+        if (FullscreenFocusCanvas.field_d == 0) {
           ki.b();
         } else {
           var3_int = (320 - fi.field_e.field_f) / 48;
@@ -3615,7 +3615,7 @@ public final class StarCannon extends ag {
         lc.field_gb = -2048;
         nf.field_l = 0;
         ua.field_c = -2;
-        qc.field_d = 2;
+        FullscreenFocusCanvas.field_d = 2;
         this.a(false, false, false, true, -752);
         wa.a(0, -75, 16777215, 0, rj.field_l, (java.applet.Applet) (this));
     }
@@ -3888,7 +3888,7 @@ public final class StarCannon extends ag {
                                 kh.field_y.b(88, var6);
                                 tj.field_C = var6.field_k;
                                 ua.field_c = 1 + ue.field_c[rj.field_h];
-                                pf.field_d = pf.field_d + 1;
+                                AccountRequestState.field_d = AccountRequestState.field_d + 1;
                                 dg.field_l = 0;
                                 mj.a(255, 12, 0, 41, 100);
                                 ti.field_f.a(kc.field_P);

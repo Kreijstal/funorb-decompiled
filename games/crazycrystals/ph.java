@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph extends og implements im, vd {
-    static dd field_E;
+    static FullscreenFocusCanvas field_E;
     private AccountCreationResultPanel field_z;
     private rf field_B;
     private pc field_C;
@@ -48,7 +48,7 @@ final class ph extends og implements im, vd {
 
     private final String a(int param0) {
         if (param0 <= 104) {
-          field_E = (dd) null;
+          field_E = (FullscreenFocusCanvas) null;
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -168,7 +168,7 @@ final class ph extends og implements im, vd {
     public static void clearStaticReferences(boolean param0) {
         field_E = null;
         if (!param0) {
-          field_E = (dd) null;
+          field_E = (FullscreenFocusCanvas) null;
         }
     }
 

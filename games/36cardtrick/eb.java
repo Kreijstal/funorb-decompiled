@@ -224,8 +224,8 @@ final class eb {
             eb.clearStaticReferences(true);
           }
           dg.field_H = (ch) ((Object) new a());
-          sc.field_b = new gj(param0);
-          ja.field_b = new eb(dg.field_H, sc.field_b);
+          AccountRequestState.field_b = new gj(param0);
+          ja.field_b = new eb(dg.field_H, AccountRequestState.field_b);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "eb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

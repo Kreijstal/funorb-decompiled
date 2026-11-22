@@ -317,7 +317,7 @@ final class ja extends WidgetContainer implements u, ql {
             }
             var14Lifetime2 = stackIn_14_0;
             var15 = param0 * var62[var13] + param6 * var64[var13] + var63[var13] * param3 >> 8;
-            stackIn_16_0 = r.field_a;
+            stackIn_16_0 = FullscreenFocusCanvas.field_a;
             if (var15 >= 0) {
               stackIn_17_1 = var15;
             } else {

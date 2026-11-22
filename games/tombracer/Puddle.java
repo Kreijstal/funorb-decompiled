@@ -94,7 +94,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (var5_int == -1) {
             return false;
           }
-          var6 = wm.clampedFixedRatio(4096, var5_int, 108);
+          var6 = PlayerViewportLayout.clampedFixedRatio(4096, var5_int, 108);
           param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,7 +3,7 @@
  */
 class PacketBuffer extends IntrusiveNode {
     static Sprite[] field_k;
-    static ef field_i;
+    static AccountRequestState field_i;
     int position;
     static pc field_h;
     static int field_j;

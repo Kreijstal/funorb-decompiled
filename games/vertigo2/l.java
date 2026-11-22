@@ -6,7 +6,7 @@ abstract class l {
     int field_g;
     int field_f;
     int field_c;
-    static ee field_a;
+    static AccountRequestState field_a;
     boolean field_i;
     boolean field_d;
     int field_j;
@@ -153,7 +153,7 @@ abstract class l {
 
     public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          field_a = (ee) null;
+          field_a = (AccountRequestState) null;
         }
         field_a = null;
         field_b = null;
@@ -196,7 +196,7 @@ abstract class l {
     }
 
     static {
-        field_a = new ee();
+        field_a = new AccountRequestState();
         field_h = new int[4];
         field_b = new long[32];
     }

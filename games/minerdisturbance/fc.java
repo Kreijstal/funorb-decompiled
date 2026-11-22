@@ -96,7 +96,7 @@ final class fc extends DualLinkNode {
         if (ci.field_e == ic.field_l) {
           return wm.field_d;
         }
-        if (ci.field_e == bd.field_h) {
+        if (ci.field_e == AccountRequestState.field_h) {
           return ic.field_m;
         }
         if (!wm.field_f.a(0)) {

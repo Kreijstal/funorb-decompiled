@@ -5,7 +5,7 @@ final class jl {
     static int field_d;
     static int[] field_b;
     static String field_k;
-    static pf field_a;
+    static AccountRequestState field_a;
     private int field_l;
     private int field_i;
     static int field_h;
@@ -323,7 +323,7 @@ final class jl {
             }
             var12Lifetime2 = var8Lifetime2 * var17 / var11Lifetime3;
             var14 = (var6 + 16) * 5 << 7;
-            for (var18 = var6 + 16; var18 < (-16 + var6 + var10Lifetime1); var18 = var18 + (4 - qc.field_d)) {
+            for (var18 = var6 + 16; var18 < (-16 + var6 + var10Lifetime1); var18 = var18 + (4 - FullscreenFocusCanvas.field_d)) {
               var13 = (int)((double)var12Lifetime2 + Math.random() * 5.0 - 2.0);
               stackIn_146_0Lifetime1 = ~var8Lifetime2;
               stackIn_146_1Lifetime1 = ~var13;
@@ -344,7 +344,7 @@ final class jl {
               ki.a(1 + var17, var18, var15 * 257);
               var16 = ((255 & var20) + 2 * var16 + var15 * 2) / 5;
               ki.a(638 - var17, var18, var16 * 257);
-              var14 = var14 + (-(640 * qc.field_d) + 2560);
+              var14 = var14 + (-(640 * FullscreenFocusCanvas.field_d) + 2560);
             }
             var17--;
           }
@@ -565,13 +565,13 @@ final class jl {
           }
         }
         if (var7 == 20) {
-          if (qc.field_d == 0) {
+          if (FullscreenFocusCanvas.field_d == 0) {
             var8 = ec.field_d;
           }
-          if (qc.field_d == 1) {
+          if (FullscreenFocusCanvas.field_d == 1) {
             var8 = fd.field_d;
           }
-          if (qc.field_d == 2) {
+          if (FullscreenFocusCanvas.field_d == 2) {
             var8 = gh.field_A;
           }
         }
@@ -700,16 +700,16 @@ final class jl {
                       } else {
                         if (var5 == 20) {
                           if (this.field_e.d(-1)) {
-                            qc.field_d = qc.field_d + 1;
-                            if (3 == qc.field_d) {
-                              qc.field_d = 0;
+                            FullscreenFocusCanvas.field_d = FullscreenFocusCanvas.field_d + 1;
+                            if (3 == FullscreenFocusCanvas.field_d) {
+                              FullscreenFocusCanvas.field_d = 0;
                             }
                             mj.a(255, 12, 0, 12, 50);
                           }
                           if (!(!this.field_e.b(-18433))) {
-                            qc.field_d = qc.field_d - 1;
-                            if (qc.field_d == -1) {
-                              qc.field_d = 2;
+                            FullscreenFocusCanvas.field_d = FullscreenFocusCanvas.field_d - 1;
+                            if (FullscreenFocusCanvas.field_d == -1) {
+                              FullscreenFocusCanvas.field_d = 2;
                             }
                             mj.a(255, 12, 0, 12, 50);
                           }
@@ -942,7 +942,7 @@ final class jl {
               na.field_a = 0;
               qf.field_h = 0;
               wg.field_e = 0;
-              pf.field_d = nf.field_l + 1;
+              AccountRequestState.field_d = nf.field_l + 1;
               if (a.field_a) {
                 il.field_i = il.field_i - 1;
                 a.field_a = false;
@@ -987,8 +987,8 @@ final class jl {
                 }
                 var5_ref_bf = (bf) (kh.field_y.a(-16913));
               }
-              for (var5 = 0; var5 < qc.field_c.length; var5++) {
-                qc.field_c[var5] = null;
+              for (var5 = 0; var5 < FullscreenFocusCanvas.field_c.length; var5++) {
+                FullscreenFocusCanvas.field_c[var5] = null;
               }
               se.field_m = 0;
               nf.field_e = 0;
@@ -1512,6 +1512,6 @@ final class jl {
         field_d = 4;
         field_h = 0;
         field_k = "Please try again in a few minutes.";
-        field_a = new pf();
+        field_a = new AccountRequestState();
     }
 }

@@ -159,13 +159,13 @@ abstract class GameScreen {
         try {
           if (param1 < param2) {
             for (var5_int = param1; param2 > var5_int; var5_int++) {
-              vaa.field_a[var5_int][param0] = param3;
+              PackedBitSetSupport.field_a[var5_int][param0] = param3;
             }
           } else {
             var8 = param2;
             var5_int = var8;
             while (param1 > var8) {
-              vaa.field_a[var8][param0] = param3;
+              PackedBitSetSupport.field_a[var8][param0] = param3;
               var8++;
             }
           }

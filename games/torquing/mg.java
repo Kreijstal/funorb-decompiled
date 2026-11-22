@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mg {
-    static gd field_b;
+    static AccountRequestState field_b;
     static double[][] field_a;
 
     final synchronized static byte[] a(int param0, int param1) {
@@ -48,7 +48,7 @@ final class mg {
         byte[] var3Lifetime4;
         byte[] var3Lifetime1Lifetime1;
         if (param0 >= -46) {
-          field_b = (gd) null;
+          field_b = (AccountRequestState) null;
           if (param1 != 100) {
             if (5000 == param1 &&
               ok.field_E > 0) {
@@ -249,6 +249,6 @@ final class mg {
 
     static {
         field_a = new double[9][9];
-        field_b = new gd();
+        field_b = new AccountRequestState();
     }
 }

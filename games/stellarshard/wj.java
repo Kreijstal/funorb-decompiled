@@ -553,7 +553,7 @@ final class wj extends fb {
           throw new IllegalStateException();
         }
         qh.field_d = true;
-        va.a(false, -844);
+        FullscreenFocusCanvas.a(false, -844);
         eg.field_d = 0;
     }
 

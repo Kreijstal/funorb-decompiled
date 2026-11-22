@@ -23,7 +23,7 @@ final class dq extends pc {
             se.a((byte) -63, param1, 0);
             return;
           }
-          ph.field_E = io.a(640, 0, param0 ^ -1038173815, te.field_a, 480, 0);
+          ph.field_E = io.createFullscreenCanvas(640, 0, param0 ^ -1038173815, te.field_a, 480, 0);
           if (null != ph.field_E) {
             mm.a(ph.field_E, true);
             se.a((byte) -80, param1, 2);
@@ -40,7 +40,7 @@ final class dq extends pc {
           se.a((byte) -63, param1, 0);
           return;
         }
-        ph.field_E = io.a(640, 0, param0 ^ -1038173815, te.field_a, 480, 0);
+        ph.field_E = io.createFullscreenCanvas(640, 0, param0 ^ -1038173815, te.field_a, 480, 0);
         if (null != ph.field_E) {
           mm.a(ph.field_E, true);
           se.a((byte) -80, param1, 2);

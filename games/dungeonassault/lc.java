@@ -281,8 +281,8 @@ final class lc {
           if (param1 != 50166) {
             field_h = (int[]) null;
           }
-          if (var4 >= 0 && (ql.field_j == 0 ||
-            !(var4 > ql.field_j))) {
+          if (var4 >= 0 && (DelegatingCanvas.field_j == 0 ||
+            !(var4 > DelegatingCanvas.field_j))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
@@ -292,17 +292,17 @@ final class lc {
               return stackIn_9_0;
             }
             var5 = var9.readInt(-69);
-            if (var5 >= 0 && (ql.field_j == 0 ||
-              !(ql.field_j < var5))) {
+            if (var5 >= 0 && (DelegatingCanvas.field_j == 0 ||
+              !(DelegatingCanvas.field_j < var5))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
               if (1 == var3) {
                 ej.a(var13, var5, param0, var4, 9);
               } else {
-                var7 = ek.field_f;
+                var7 = FullscreenFocusCanvas.field_f;
                 synchronized (var7) {
-                  ek.field_f.decompress(-109, var13, var9);
+                  FullscreenFocusCanvas.field_f.decompress(-109, var13, var9);
                 }
               }
               stackIn_23_0 = var6;

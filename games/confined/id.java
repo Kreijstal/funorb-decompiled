@@ -298,11 +298,11 @@ abstract class id extends ee {
         }
     }
 
-    final static GameCanvas a(int param0, df param1, int param2, int param3, int param4, int param5) {
+    final static GameCanvas a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         GameCanvas var7 = null;
-        df var8 = null;
+        PlatformTaskDispatcher var8 = null;
         java.awt.Frame var9 = null;
         Object stackIn_2_0 = null;
         GameCanvas stackIn_6_0 = null;
@@ -318,8 +318,8 @@ abstract class id extends ee {
             return (GameCanvas) (stackIn_2_0);
           }
           if (param0 != 2401) {
-            var8 = (df) null;
-            id.a(62, (df) null, 51, -70, 79, 121);
+            var8 = (PlatformTaskDispatcher) null;
+            id.a(62, (PlatformTaskDispatcher) null, 51, -70, 79, 121);
           }
           var7 = new GameCanvas();
           var7.field_e = var9;
@@ -672,7 +672,7 @@ abstract class id extends ee {
     final static void c(int param0, int param1) {
         qn var2 = null;
         int var3 = 0;
-        df var4 = null;
+        PlatformTaskDispatcher var4 = null;
         bj var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -684,8 +684,8 @@ abstract class id extends ee {
             var5 = (bj) (lf.field_k.d(2123));
           }
           if (param0 != -1) {
-            var4 = (df) null;
-            id.a(-71, (df) null, 89, -73, -25, -28);
+            var4 = (PlatformTaskDispatcher) null;
+            id.a(-71, (PlatformTaskDispatcher) null, 89, -73, -25, -28);
           }
           var2 = (qn) (na.field_T.a(59));
           while (var2 != null) {

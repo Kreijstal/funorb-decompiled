@@ -167,7 +167,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
 
     final static void a(int param0, int param1) {
         ti.field_c = gf.field_h[param1];
-        oe.field_d = ri.field_a[param1];
+        FullscreenFocusCanvas.field_d = ri.field_a[param1];
         int var2 = -109 / ((-56 - param0) / 40);
         fg.field_j = dg.field_I[param1];
     }

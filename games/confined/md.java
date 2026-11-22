@@ -250,18 +250,18 @@ final class md {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_r; var4++) {
               if (null != var13.field_m[var4]) {
-                if (var13.field_m[var4].field_g == 2) {
+                if (var13.field_m[var4].status == 2) {
                   var13.field_u[var4] = -5;
                 }
-                if (var13.field_m[var4].field_g == 0) {
+                if (var13.field_m[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (null != var13.field_q[var4]) {
-                if (var13.field_q[var4].field_g == 2) {
+                if (var13.field_q[var4].status == 2) {
                   var13.field_u[var4] = -6;
                 }
-                if (var13.field_q[var4].field_g == 0) {
+                if (var13.field_q[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -277,26 +277,26 @@ final class md {
                   var6_int = var17.field_o[var5];
                   if (var6_int != 0) {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_m[var5].field_f);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_m[var5].result);
                       var20 = var16_ref;
                       var20.setInt((Object) null, var17.field_v[var5]);
                       param0.writeByte(94, 0);
                     } else {
                       if (var6_int == 2) {
-                        var28 = (java.lang.reflect.Field) (var17.field_m[var5].field_f);
+                        var28 = (java.lang.reflect.Field) (var17.field_m[var5].result);
                         var8 = var28.getModifiers();
                         param0.writeByte(117, 0);
                         param0.writeInt(-121, var8);
                       }
                     }
                   } else {
-                    var27 = (java.lang.reflect.Field) (var17.field_m[var5].field_f);
+                    var27 = (java.lang.reflect.Field) (var17.field_m[var5].result);
                     var8 = var27.getInt((Object) null);
                     param0.writeByte(120, 0);
                     param0.writeInt(-110, var8);
                   }
                   if (var6_int == 3) {
-                    var29 = (java.lang.reflect.Method) (var17.field_q[var5].field_f);
+                    var29 = (java.lang.reflect.Method) (var17.field_q[var5].result);
                     var26 = var17.field_s[var5];
                     var9 = new Object[var26.length];
                     for (var10_int = 0; var26.length > var10_int; var10_int++) {
@@ -317,7 +317,7 @@ final class md {
                     }
                   } else {
                     if (4 == var6_int) {
-                      var30 = (java.lang.reflect.Method) (var17.field_q[var5].field_f);
+                      var30 = (java.lang.reflect.Method) (var17.field_q[var5].result);
                       var8Lifetime1 = var30.getModifiers();
                       param0.writeByte(90, 0);
                       param0.writeInt(-126, var8Lifetime1);

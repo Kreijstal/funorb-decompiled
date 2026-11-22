@@ -5,7 +5,7 @@ final class DirectByteArrayStore extends ByteArrayStore {
     private java.nio.ByteBuffer buffer;
     static boolean field_e;
     static int field_f;
-    static sc field_d;
+    static AccountRequestState field_d;
 
     final void setBytes(byte[] param0, byte param1) {
         this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
@@ -60,7 +60,7 @@ final class DirectByteArrayStore extends ByteArrayStore {
         w var3 = null;
         try {
           if (param0 >= -40) {
-            field_d = (sc) null;
+            field_d = (AccountRequestState) null;
           }
           var3 = na.field_r;
           var3.h(param2, 0);

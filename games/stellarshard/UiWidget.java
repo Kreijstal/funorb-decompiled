@@ -577,7 +577,7 @@ class UiWidget extends IntrusiveNode {
           field_s = (Sprite) null;
           if (cg.field_a) {
             qh.field_d = true;
-            va.a(true, -844);
+            FullscreenFocusCanvas.a(true, -844);
             eg.field_d = 0;
             return;
           }
@@ -585,7 +585,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (cg.field_a) {
           qh.field_d = true;
-          va.a(true, -844);
+          FullscreenFocusCanvas.a(true, -844);
           eg.field_d = 0;
           return;
         }

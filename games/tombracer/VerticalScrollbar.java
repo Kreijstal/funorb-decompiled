@@ -111,9 +111,9 @@ final class VerticalScrollbar extends UiComponent {
         if (param0 != -1) {
           field_tb = (boolean[]) null;
         }
-        var3 = -vaa.field_b + var1;
+        var3 = -PackedBitSetSupport.field_b + var1;
         if (var3 > 30000L) {
-          vaa.field_b = var1;
+          PackedBitSetSupport.field_b = var1;
           gp.field_h = 0;
           return true;
         }
@@ -133,7 +133,7 @@ final class VerticalScrollbar extends UiComponent {
           return false;
         }
         gp.field_h = gp.field_h + 1;
-        vaa.field_b = var1;
+        PackedBitSetSupport.field_b = var1;
         return true;
     }
 

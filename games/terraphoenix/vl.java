@@ -77,7 +77,7 @@ final class vl {
           if (param0 < 21) {
             vl.b(48);
           }
-          stackIn_3_0 = og.a(19758, param1, (int)param1.length());
+          stackIn_3_0 = AccountRequestState.a(19758, param1, (int)param1.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,22 +237,22 @@ final class vl {
             var4 += 52;
           }
           if (param1.field_hb == 0) {
-            og.field_f.c(lb.field_c[0], this.field_f + 189, 79, 65280, -1);
+            AccountRequestState.field_f.c(lb.field_c[0], this.field_f + 189, 79, 65280, -1);
           }
           if (param1.field_hb == 1) {
-            og.field_f.c(lb.field_c[1], this.field_f + 189, 79, 65280, -1);
+            AccountRequestState.field_f.c(lb.field_c[1], this.field_f + 189, 79, 65280, -1);
           }
           if (param1.field_hb == 2) {
-            og.field_f.c(lb.field_c[2], 189 + this.field_f, 79, 65280, -1);
+            AccountRequestState.field_f.c(lb.field_c[2], 189 + this.field_f, 79, 65280, -1);
           }
           if (param1.field_hb == 3) {
-            og.field_f.c(lb.field_c[3], this.field_f + 189, 79, 65280, -1);
+            AccountRequestState.field_f.c(lb.field_c[3], this.field_f + 189, 79, 65280, -1);
           }
           if (param1.field_hb == 4) {
-            og.field_f.c(lb.field_c[4], this.field_f + 189, 79, 65280, -1);
+            AccountRequestState.field_f.c(lb.field_c[4], this.field_f + 189, 79, 65280, -1);
           }
           if (param1.field_hb == 5) {
-            og.field_f.c(lb.field_c[5], this.field_f + 189, 79, 65280, -1);
+            AccountRequestState.field_f.c(lb.field_c[5], this.field_f + 189, 79, 65280, -1);
           }
           SoftwareRasterizer.c(this.field_f + 57, 84, 323 + this.field_f, 364);
           var4 = 84 - param1.field_G;
@@ -412,11 +412,11 @@ final class vl {
                     if (var7 > 1) {
                       var8_ref_String = var14 + "*" + var7;
                     }
-                    og.field_f.c(var8_ref_String, this.field_f + 90, 32 + var4 + 8, 0, -1);
-                    og.field_f.c(var8_ref_String, this.field_f + 88, var4 + 32 + 8, 0, -1);
-                    og.field_f.c(var8_ref_String, 89 + this.field_f, 32 + (var4 + 9), 0, -1);
-                    og.field_f.c(var8_ref_String, this.field_f + 89, 7 + (var4 + 32), 0, -1);
-                    og.field_f.c(var8_ref_String, this.field_f + 89, 8 + var4 + 32, 16777215, -1);
+                    AccountRequestState.field_f.c(var8_ref_String, this.field_f + 90, 32 + var4 + 8, 0, -1);
+                    AccountRequestState.field_f.c(var8_ref_String, this.field_f + 88, var4 + 32 + 8, 0, -1);
+                    AccountRequestState.field_f.c(var8_ref_String, 89 + this.field_f, 32 + (var4 + 9), 0, -1);
+                    AccountRequestState.field_f.c(var8_ref_String, this.field_f + 89, 7 + (var4 + 32), 0, -1);
+                    AccountRequestState.field_f.c(var8_ref_String, this.field_f + 89, 8 + var4 + 32, 16777215, -1);
                   }
                   if (ef.field_j >= 59 + this.field_f &&
                     ef.field_j < 103 + this.field_f &&
@@ -430,12 +430,12 @@ final class vl {
                 var7 = 65280;
                 if (param1.field_I.field_a[var6] <= 0) {
                   var7 = 16711680;
-                  og.field_f.b(od.field_c[var6].field_j, this.field_f + 65, 82 + var4, var7, -1);
-                  og.field_f.a(bh.field_j, this.field_f + 313, 82 + var4, var7, -1);
+                  AccountRequestState.field_f.b(od.field_c[var6].field_j, this.field_f + 65, 82 + var4, var7, -1);
+                  AccountRequestState.field_f.a(bh.field_j, this.field_f + 313, 82 + var4, var7, -1);
                 } else {
-                  og.field_f.b(od.field_c[var6].field_j, 65 + this.field_f, 82 + var4, var7, -1);
+                  AccountRequestState.field_f.b(od.field_c[var6].field_j, 65 + this.field_f, 82 + var4, var7, -1);
                   if (param1.field_I.field_a[var6] < 50) {
-                    og.field_f.a(hk.field_c + param1.field_I.field_a[var6], this.field_f + 313, var4 + 82, var7, -1);
+                    AccountRequestState.field_f.a(hk.field_c + param1.field_I.field_a[var6], this.field_f + 313, var4 + 82, var7, -1);
                   }
                 }
                 if (var6 != 17) {
@@ -447,18 +447,18 @@ final class vl {
                       var6 != 9 &&
                       var6 != 10) {
                       if (1 == var6) {
-                        og.field_f.a(ab.field_e + 10 * od.field_c[var6].field_l, this.field_f + 319, 16 + var4, var7, -1);
+                        AccountRequestState.field_f.a(ab.field_e + 10 * od.field_c[var6].field_l, this.field_f + 319, 16 + var4, var7, -1);
                       } else {
-                        og.field_f.a(ab.field_e + od.field_c[var6].field_l, this.field_f + 319, 16 + var4, var7, -1);
+                        AccountRequestState.field_f.a(ab.field_e + od.field_c[var6].field_l, this.field_f + 319, 16 + var4, var7, -1);
                       }
                     } else {
-                      og.field_f.a(ab.field_e + od.field_c[var6].field_l * 3, 319 + this.field_f, 16 + var4, var7, -1);
+                      AccountRequestState.field_f.a(ab.field_e + od.field_c[var6].field_l * 3, 319 + this.field_f, 16 + var4, var7, -1);
                     }
                   } else {
-                    og.field_f.a(ab.field_e + od.field_c[var6].field_l + im.field_a, 319 + this.field_f, 16 + var4, var7, -1);
+                    AccountRequestState.field_f.a(ab.field_e + od.field_c[var6].field_l + im.field_a, 319 + this.field_f, 16 + var4, var7, -1);
                   }
                   if (od.field_c[var6].field_o > 1) {
-                    og.field_f.a(lm.field_f + od.field_c[var6].field_o, 319 + this.field_f, 30 + var4, var7, -1);
+                    AccountRequestState.field_f.a(lm.field_f + od.field_c[var6].field_o, 319 + this.field_f, 30 + var4, var7, -1);
                   }
                   if (var6 != 5 &&
                     11 != var6) {
@@ -474,28 +474,28 @@ final class vl {
                     if (var6 == 14) {
                       var8 = var8 * 2 / 3;
                     }
-                    og.field_f.a(wh.field_g + var8 + "%", 319 + this.field_f, var4 + 16 + 28, var7, -1);
+                    AccountRequestState.field_f.a(wh.field_g + var8 + "%", 319 + this.field_f, var4 + 16 + 28, var7, -1);
                     if (0 < od.field_c[var6].field_b[2] &&
                       5 >= od.field_c[var6].field_b[2]) {
-                      og.field_f.a(di.field_h[0], 319 + this.field_f, 16 + var4 + 42, var7, -1);
+                      AccountRequestState.field_f.a(di.field_h[0], 319 + this.field_f, 16 + var4 + 42, var7, -1);
                     }
                     if (od.field_c[var6].field_b[2] > 5 &&
                       10 >= od.field_c[var6].field_b[2]) {
-                      og.field_f.a(di.field_h[1], this.field_f + 319, 16 + (var4 + 42), var7, -1);
+                      AccountRequestState.field_f.a(di.field_h[1], this.field_f + 319, 16 + (var4 + 42), var7, -1);
                     }
                     if (od.field_c[var6].field_b[2] > 10 &&
                       od.field_c[var6].field_b[2] <= 20) {
-                      og.field_f.a(di.field_h[2], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
+                      AccountRequestState.field_f.a(di.field_h[2], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
                     }
                     if (od.field_c[var6].field_b[2] > 20) {
-                      og.field_f.a(di.field_h[3], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
+                      AccountRequestState.field_f.a(di.field_h[3], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
                     }
                     if (0 == od.field_c[var6].field_b[2]) {
-                      og.field_f.a(di.field_h[4], 319 + this.field_f, var4 + 58, var7, -1);
+                      AccountRequestState.field_f.a(di.field_h[4], 319 + this.field_f, var4 + 58, var7, -1);
                     }
                   }
                 } else {
-                  og.field_f.a(ImageProducerRasterBuffer.field_n + 50, this.field_f + 319, 16 + var4, var7, -1);
+                  AccountRequestState.field_f.a(ImageProducerRasterBuffer.field_n + 50, this.field_f + 319, 16 + var4, var7, -1);
                 }
                 var4 += 92;
               }
@@ -556,11 +556,11 @@ final class vl {
                   if (1 < var7) {
                     var8_ref_String = var15 + "*" + var7;
                   }
-                  og.field_f.c(var8_ref_String, 90 + this.field_f, 8 + var4 + 32, 0, -1);
-                  og.field_f.c(var8_ref_String, 88 + this.field_f, var4 + 32 + 8, 0, -1);
-                  og.field_f.c(var8_ref_String, this.field_f + 89, 32 + (var4 + 9), 0, -1);
-                  og.field_f.c(var8_ref_String, 89 + this.field_f, 7 + var4 + 32, 0, -1);
-                  og.field_f.c(var8_ref_String, 89 + this.field_f, 8 + var4 + 32, 16777215, -1);
+                  AccountRequestState.field_f.c(var8_ref_String, 90 + this.field_f, 8 + var4 + 32, 0, -1);
+                  AccountRequestState.field_f.c(var8_ref_String, 88 + this.field_f, var4 + 32 + 8, 0, -1);
+                  AccountRequestState.field_f.c(var8_ref_String, this.field_f + 89, 32 + (var4 + 9), 0, -1);
+                  AccountRequestState.field_f.c(var8_ref_String, 89 + this.field_f, 7 + var4 + 32, 0, -1);
+                  AccountRequestState.field_f.c(var8_ref_String, 89 + this.field_f, 8 + var4 + 32, 16777215, -1);
                 }
                 if (59 + this.field_f <= ef.field_j &&
                   ef.field_j < 103 + this.field_f &&
@@ -572,15 +572,15 @@ final class vl {
                 }
               }
               if (0 >= param1.field_I.field_d[var6]) {
-                og.field_f.b(sj.field_a[var6].field_m, 65 + this.field_f, var4 + 82, 16711680, -1);
-                og.field_f.a(bh.field_j, this.field_f + 313, 82 + var4, 16711680, -1);
-                og.field_f.a(ImageProducerRasterBuffer.field_n + (sj.field_a[var6].field_g + sj.field_a[var6].field_d), this.field_f + 319, var4 + 16, 16711680, -1);
+                AccountRequestState.field_f.b(sj.field_a[var6].field_m, 65 + this.field_f, var4 + 82, 16711680, -1);
+                AccountRequestState.field_f.a(bh.field_j, this.field_f + 313, 82 + var4, 16711680, -1);
+                AccountRequestState.field_f.a(ImageProducerRasterBuffer.field_n + (sj.field_a[var6].field_g + sj.field_a[var6].field_d), this.field_f + 319, var4 + 16, 16711680, -1);
               } else {
-                og.field_f.b(sj.field_a[var6].field_m, 65 + this.field_f, 82 + var4, 65280, -1);
+                AccountRequestState.field_f.b(sj.field_a[var6].field_m, 65 + this.field_f, 82 + var4, 65280, -1);
                 if (50 > param1.field_I.field_d[var6]) {
-                  og.field_f.a(hk.field_c + param1.field_I.field_d[var6], this.field_f + 313, var4 + 82, 65280, -1);
+                  AccountRequestState.field_f.a(hk.field_c + param1.field_I.field_d[var6], this.field_f + 313, var4 + 82, 65280, -1);
                 }
-                og.field_f.a(ImageProducerRasterBuffer.field_n + (sj.field_a[var6].field_g + sj.field_a[var6].field_d), this.field_f + 319, 16 + var4, 65280, -1);
+                AccountRequestState.field_f.a(ImageProducerRasterBuffer.field_n + (sj.field_a[var6].field_g + sj.field_a[var6].field_d), this.field_f + 319, 16 + var4, 65280, -1);
               }
               var4 += 92;
             }
@@ -693,18 +693,18 @@ final class vl {
             if (param1.field_nb[var9] == null) {
               th.field_i.b(var10 + (var11 - th.field_i.field_r), -this.field_f + 370);
               var12 = (120 + (int)(Math.sin(mm.field_f) * 120.0)) * 65793;
-              if (og.field_f.b(pj.field_v) <= -5 + var8) {
-                og.field_f.b(pj.field_v, var11 + 5, -this.field_f + var4, var12, -1);
+              if (AccountRequestState.field_f.b(pj.field_v) <= -5 + var8) {
+                AccountRequestState.field_f.b(pj.field_v, var11 + 5, -this.field_f + var4, var12, -1);
               } else {
-                og.field_f.b(AccountServiceResult.field_e, 5 + var11, -this.field_f + var4, var12, -1);
+                AccountRequestState.field_f.b(AccountServiceResult.field_e, 5 + var11, -this.field_f + var4, var12, -1);
               }
             } else {
               if (var9 != param1.field_qb) {
                 th.field_i.b(-th.field_i.field_r + (var11 + var10), 370 - this.field_f);
-                og.field_f.b(param1.field_nb[var9].a(-1426, -8 + var10), var11, -this.field_f + var4, 52224, -1);
+                AccountRequestState.field_f.b(param1.field_nb[var9].a(-1426, -8 + var10), var11, -this.field_f + var4, 52224, -1);
               } else {
                 field_c.b(var10 + var11 - field_c.field_r, -this.field_f + 370);
-                og.field_f.b(param1.field_nb[var9].a(-1426, -8 + var10), var11, -this.field_f + var4, 65280, -1);
+                AccountRequestState.field_f.b(param1.field_nb[var9].a(-1426, -8 + var10), var11, -this.field_f + var4, 65280, -1);
               }
             }
           }
@@ -724,7 +724,7 @@ final class vl {
               var10 = -(var17.field_p * 3 / 4) + (-(3 * var17.field_r / 8) + 593);
               var11 = 194 - var17.field_t * 3 / 8 - 3 * var17.field_v / 4;
               var9_ref_ci.a(-this.field_f + var10, var11, 75, 150);
-              og.field_f.c(param1.field_nb[param1.field_qb].field_A.field_d + " / " + od.field_c[param1.field_nb[param1.field_qb].field_A.field_g].field_o, -this.field_f + 593, 264, 65280, -1);
+              AccountRequestState.field_f.c(param1.field_nb[param1.field_qb].field_A.field_d + " / " + od.field_c[param1.field_nb[param1.field_qb].field_A.field_g].field_o, -this.field_f + 593, 264, 65280, -1);
             }
             if (null != param1.field_nb[param1.field_qb].field_m) {
               kb.field_a[param1.field_nb[param1.field_qb].field_m.field_f].a(-this.field_f + 453, 139, 87, 87);
@@ -735,7 +735,7 @@ final class vl {
               var10 = -(var18.field_p * 3 / 4) + (597 - 3 * var18.field_r / 8);
               var11 = -(var18.field_v * 3 / 4) - 3 * var18.field_t / 8 + 297;
               var18.a(-this.field_f + var10, var11, 150, 75);
-              og.field_f.c(Integer.toString(param1.field_nb[param1.field_qb].field_i.field_d), 602 - this.field_f, 335, 65280, -1);
+              AccountRequestState.field_f.c(Integer.toString(param1.field_nb[param1.field_qb].field_i.field_d), 602 - this.field_f, 335, 65280, -1);
               if (!(7 >= param1.field_nb[param1.field_qb].field_i.field_d) ||
                 !(param1.field_I.field_a[param1.field_nb[param1.field_qb].field_i.field_g] > 0)) {
                 SoftwareRasterizer.f(618 - this.field_f, 325, 6, 11, 6052956);
@@ -751,15 +751,15 @@ final class vl {
               var9 += 23;
             }
             param1.field_nb[param1.field_qb].d((byte) 37);
-            og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_e), var9, 406 - this.field_f, 16777215, -1);
+            AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_e), var9, 406 - this.field_f, 16777215, -1);
             SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_t * 3 + var9, 640);
             tg.field_e.f(var10, 416 - this.field_f, 16711680);
             SoftwareRasterizer.c();
-            og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 + 1, -this.field_f + 426, 0, -1);
-            og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 - 1, 416 + (-this.field_f + 10), 0, -1);
-            og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 + 1), 0, -1);
-            og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 - 1), 0, -1);
-            og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (416 - this.field_f), 16711680, -1);
+            AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 + 1, -this.field_f + 426, 0, -1);
+            AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 - 1, 416 + (-this.field_f + 10), 0, -1);
+            AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 + 1), 0, -1);
+            AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 - 1), 0, -1);
+            AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (416 - this.field_f), 16711680, -1);
             var11 = 65793 * (int)(Math.sin(mm.field_f) * 120.0) + 7895160;
             SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_w * 3 + var9, 640);
             tg.field_e.f(var10, 432 - this.field_f, 255);
@@ -767,18 +767,18 @@ final class vl {
               SoftwareRasterizer.d(var9, 432 - this.field_f, param1.field_nb[param1.field_qb].field_s * 3, 9, var11, 192);
               SoftwareRasterizer.d(3 * param1.field_nb[param1.field_qb].field_s + var9, 432 - this.field_f, 3 * (-param1.field_nb[param1.field_qb].field_s + param1.field_nb[param1.field_qb].field_w), 9, var11 & 16711680, 192);
               SoftwareRasterizer.c();
-              og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9 + 1, 10 + (432 - this.field_f), 0, -1);
-              og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9 - 1, -this.field_f + 442, 0, -1);
-              og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9, 442 - this.field_f + 1, 0, -1);
-              og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9, 432 - this.field_f + 9, 0, -1);
-              og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9, 10 + (-this.field_f + 432), var11, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_s + AccountRequestState.field_b, var9 + 1, 10 + (432 - this.field_f), 0, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_s + AccountRequestState.field_b, var9 - 1, -this.field_f + 442, 0, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_s + AccountRequestState.field_b, var9, 442 - this.field_f + 1, 0, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_s + AccountRequestState.field_b, var9, 432 - this.field_f + 9, 0, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_s + AccountRequestState.field_b, var9, 10 + (-this.field_f + 432), var11, -1);
             } else {
               SoftwareRasterizer.c();
-              og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9 + 1, 432 - this.field_f + 10, 0, -1);
-              og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9 - 1, 10 - this.field_f + 432, 0, -1);
-              og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 1 + (442 - this.field_f), 0, -1);
-              og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 10 + (432 - (this.field_f + 1)), 0, -1);
-              og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 432 - (this.field_f - 10), 8421631, -1);
+              AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9 + 1, 432 - this.field_f + 10, 0, -1);
+              AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9 - 1, 10 - this.field_f + 432, 0, -1);
+              AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 1 + (442 - this.field_f), 0, -1);
+              AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 10 + (432 - (this.field_f + 1)), 0, -1);
+              AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 432 - (this.field_f - 10), 8421631, -1);
             }
             SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_u * 3 + var9, 640);
             tg.field_e.f(var10, 448 - this.field_f, 16776960);
@@ -787,23 +787,23 @@ final class vl {
               SoftwareRasterizer.d(param1.field_nb[param1.field_qb].field_v * 3 + var9, -this.field_f + 448, (param1.field_nb[param1.field_qb].field_u - param1.field_nb[param1.field_qb].field_v) * 3, 9, 16711680 & var11, 192);
             }
             SoftwareRasterizer.c();
-            og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, 1 + var9, 448 - this.field_f + 10, 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, -1 + var9, -this.field_f + 448 + 10, 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 458 - (this.field_f - 1), 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, -1 - this.field_f + 448 + 10, 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, 1 + var9, 448 - this.field_f + 10, 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, -1 + var9, -this.field_f + 448 + 10, 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 458 - (this.field_f - 1), 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, -1 - this.field_f + 448 + 10, 0, -1);
             if (param1.field_nb[param1.field_qb].field_s == param1.field_nb[param1.field_qb].field_w) {
-              og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 10 + (-this.field_f + 448), 16776960, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 10 + (-this.field_f + 448), 16776960, -1);
             } else {
-              og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 10 + (448 - this.field_f), var11, -1);
+              AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 10 + (448 - this.field_f), var11, -1);
             }
             SoftwareRasterizer.c(var9, 0, 3 * param1.field_nb[param1.field_qb].field_B + var9, 640);
             tg.field_e.f(var10, 464 - this.field_f, 16777215);
             SoftwareRasterizer.c();
-            og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", 1 + var9, 10 + (-this.field_f + 464), 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9 - 1, 10 + (464 - this.field_f), 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, 10 + (-this.field_f + 464 + 1), 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, -1 + (10 + (464 - this.field_f)), 0, -1);
-            og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, 474 - this.field_f, 16777215, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", 1 + var9, 10 + (-this.field_f + 464), 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9 - 1, 10 + (464 - this.field_f), 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, 10 + (-this.field_f + 464 + 1), 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, -1 + (10 + (464 - this.field_f)), 0, -1);
+            AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, 474 - this.field_f, 16777215, -1);
           }
           SoftwareRasterizer.c();
           return;

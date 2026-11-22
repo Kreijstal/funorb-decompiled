@@ -268,7 +268,7 @@ final class j implements Runnable {
         if (param0 != -110) {
           field_a = (String) null;
         }
-        return ci.field_e == bd.field_h ? true : false;
+        return ci.field_e == AccountRequestState.field_h ? true : false;
     }
 
     j() {

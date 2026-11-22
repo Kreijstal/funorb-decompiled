@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cf {
-    static lk field_b;
+    static AccountRequestState field_b;
     static int[] field_a;
     static boolean field_c;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 < 120) {
-          field_b = (lk) null;
+          field_b = (AccountRequestState) null;
         }
         field_b = null;
         field_a = null;
@@ -22,7 +22,7 @@ final class cf {
         }
         lh.field_e = true;
         if (param0 < 1) {
-          field_b = (lk) null;
+          field_b = (AccountRequestState) null;
         }
     }
 
@@ -102,7 +102,7 @@ final class cf {
     static {
         int var0 = 0;
         int var1 = 0;
-        field_b = new lk();
+        field_b = new AccountRequestState();
         field_a = new int[256];
         for (var0 = 0; var0 < 256; var0++) {
           var1 = var0 * 3 / 2 + var0;

@@ -84,9 +84,9 @@ final class he extends IntrusiveNode {
             !(param1 <= bh.field_a.length)) {
             bh.field_a = new int[param1 * 2];
           }
-          if (null == pd.field_a ||
-            !(pd.field_a.length >= param1)) {
-            pd.field_a = new int[2 * param1];
+          if (null == AccountRequestState.field_a ||
+            !(AccountRequestState.field_a.length >= param1)) {
+            AccountRequestState.field_a = new int[2 * param1];
           }
           if (null != bg.field_j &&
             bg.field_j.length >= param1) {
@@ -180,9 +180,9 @@ final class he extends IntrusiveNode {
               !(param1 <= bh.field_a.length)) {
               bh.field_a = new int[param1 * 2];
             }
-            if (null == pd.field_a ||
-              !(pd.field_a.length >= param1)) {
-              pd.field_a = new int[2 * param1];
+            if (null == AccountRequestState.field_a ||
+              !(AccountRequestState.field_a.length >= param1)) {
+              AccountRequestState.field_a = new int[2 * param1];
             }
             if (null != bg.field_j &&
               bg.field_j.length >= param1) {
@@ -274,9 +274,9 @@ final class he extends IntrusiveNode {
               !(param1 <= bh.field_a.length)) {
               bh.field_a = new int[param1 * 2];
             }
-            if (null == pd.field_a ||
-              !(pd.field_a.length >= param1)) {
-              pd.field_a = new int[2 * param1];
+            if (null == AccountRequestState.field_a ||
+              !(AccountRequestState.field_a.length >= param1)) {
+              AccountRequestState.field_a = new int[2 * param1];
             }
             if (null != bg.field_j &&
               bg.field_j.length >= param1) {

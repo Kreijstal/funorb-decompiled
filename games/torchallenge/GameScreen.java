@@ -3046,7 +3046,7 @@ final class GameScreen {
           if (var3_int == 1) {
             var4 = lg.field_d[this.screenId][7];
             var5 = lg.field_d[this.screenId][5] + var4;
-            stackIn_11_0 = var4 + (var5 * param0 + ne.field_b[this.screenId]);
+            stackIn_11_0 = var4 + (var5 * param0 + AccountRequestState.field_b[this.screenId]);
             return stackIn_11_0;
           }
           if (0 == var3_int) {
@@ -6770,14 +6770,14 @@ final class GameScreen {
           var3_int = lg.field_d[this.screenId][0];
           if (1 == var3_int) {
             var5 = lg.field_d[this.screenId][7] + lg.field_d[this.screenId][5];
-            stackIn_13_0 = ne.field_b[this.screenId] + var5 * param1;
+            stackIn_13_0 = AccountRequestState.field_b[this.screenId] + var5 * param1;
             return stackIn_13_0;
           }
           if (var3_int == 0) {
-            stackIn_18_0 = ne.field_b[this.screenId];
+            stackIn_18_0 = AccountRequestState.field_b[this.screenId];
             return stackIn_18_0;
           }
-          stackIn_20_0 = ne.field_b[this.screenId];
+          stackIn_20_0 = AccountRequestState.field_b[this.screenId];
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

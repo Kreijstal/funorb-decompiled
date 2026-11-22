@@ -269,7 +269,7 @@ final class de extends f implements Cloneable {
           if (param4 == null) {
             return (f) (this);
           }
-          dd.field_c.a(32, 12 * param2, 12 * param1, 0, (byte) -111);
+          FullscreenFocusCanvas.field_c.a(32, 12 * param2, 12 * param1, 0, (byte) -111);
           stackIn_8_0 = new ig(param0, param4, (f) (this), false);
           return (f) ((Object) stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

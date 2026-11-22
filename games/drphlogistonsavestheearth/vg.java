@@ -923,7 +923,7 @@ class vg extends IntrusiveNode {
           var3 = var9.readUnsignedByte(31760);
           var9.d((byte) 65);
           dm.field_B = m.a(103, var9);
-          q.field_b = new int[var3][];
+          FullscreenFocusCanvas.field_b = new int[var3][];
           r.field_c = new ja[var3];
           var4 = 0;
           do {
@@ -940,7 +940,7 @@ class vg extends IntrusiveNode {
             var5.a(6, 6, 6, (byte) -65, 1);
             var5.b(32767);
             var6 = new int[]{var5.field_I + var5.field_s >> 1, var5.field_N + var5.field_d >> 1, var5.field_j + var5.field_C >> 1};
-            q.field_b[var4] = var6;
+            FullscreenFocusCanvas.field_b[var4] = var6;
             var5.a(-var6[0], -var6[2], 0, -var6[1]);
             var4++;
             if (var7 != 0) {

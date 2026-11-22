@@ -40,7 +40,7 @@ public final class HostileSpawn extends NetworkGameClient {
           wk.field_b[0] = ia.field_e;
           wk.field_b[3] = qm.field_P;
           wk.field_b[2] = sc.field_a;
-          wk.field_b[1] = ue.field_f;
+          wk.field_b[1] = FullscreenFocusCanvas.field_f;
           wk.field_b[4] = fg.a("", "key", vd.field_C, false);
           wk.field_b[11] = KeyboardInput.field_f;
           kh.field_bb = new int[101];
@@ -114,7 +114,7 @@ public final class HostileSpawn extends NetworkGameClient {
           lm.field_y = fg.a("", "splat_guard", vd.field_C, false);
           NetworkGameClient.field_s = fg.a("", "splat_dormant", vd.field_C, false);
           ee.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
-          fk.field_c = fg.a("", "splat_queen", vd.field_C, false);
+          AccountRequestState.field_c = fg.a("", "splat_queen", vd.field_C, false);
           rh.field_x = fg.a("", "splat_runner", vd.field_C, false);
           tb.field_I = fg.a("", "splat_spitter", vd.field_C, false);
           ta.field_jb = fg.a("", "splat_egg", vd.field_C, false);
@@ -223,7 +223,7 @@ public final class HostileSpawn extends NetworkGameClient {
               di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
               AccountServiceResult.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
               sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
-              ue.field_c = MouseInput.a("", -36, "bullet_rocket", vd.field_C);
+              FullscreenFocusCanvas.field_c = MouseInput.a("", -36, "bullet_rocket", vd.field_C);
               df.field_g = ei.a(vd.field_C, 125, "", "muzzleflash");
               id.field_p = ei.a(vd.field_C, 89, "", "impact_gun");
               fg.a("", "impact_rail", vd.field_C, false);
@@ -375,7 +375,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[221] = s.field_d;
           ia.field_l[152] = ni.field_b;
           ia.field_l[158] = jn.field_B;
-          ia.field_l[63] = ue.field_h;
+          ia.field_l[63] = FullscreenFocusCanvas.field_h;
           ia.field_l[113] = ld.field_p;
           ia.field_l[48] = hf.field_b;
           ia.field_l[94] = jc.field_a;
@@ -391,7 +391,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[78] = el.field_f;
           ia.field_l[218] = nb.field_J;
           ia.field_l[183] = sd.field_w;
-          ia.field_l[81] = ue.field_f;
+          ia.field_l[81] = FullscreenFocusCanvas.field_f;
           ia.field_l[53] = bi.field_b;
           ia.field_l[153] = fm.field_b;
           ia.field_l[131] = ri.field_k;
@@ -1121,7 +1121,7 @@ public final class HostileSpawn extends NetworkGameClient {
           in.a(-107);
           sm.clearStaticReferences((byte) -102);
           ja.a(26);
-          ue.a((byte) -27);
+          FullscreenFocusCanvas.a((byte) -27);
           gn.a(-40);
           e.b(param0 ^ 103);
           he.b(true);
@@ -1344,7 +1344,7 @@ public final class HostileSpawn extends NetworkGameClient {
           vk.d(126);
           la.clearStaticReferences((byte) -62);
           hk.c(-20150);
-          fk.b((byte) -125);
+          AccountRequestState.releaseStatics((byte) -125);
           AccountServiceResult.a(47);
           qi.j(66);
           jf.clearStaticReferences((byte) -99);
@@ -1567,10 +1567,10 @@ public final class HostileSpawn extends NetworkGameClient {
             ri.field_m = false;
           }
           if (null != wa.field_q &&
-            wa.field_q.field_g) {
+            wa.field_q.focusLost) {
             td.c((byte) 113);
             v.a(-112, wa.field_q);
-            wa.field_q.a(true, gf.field_b);
+            wa.field_q.exitFullscreen(true, gf.field_b);
             wa.field_q = null;
             GameAppletShell.field_h.requestFocus();
           }
@@ -2192,7 +2192,7 @@ public final class HostileSpawn extends NetworkGameClient {
             if (var2_int == 2 &&
               wa.field_q != null) {
               v.a(15, wa.field_q);
-              wa.field_q.a(true, gf.field_b);
+              wa.field_q.exitFullscreen(true, gf.field_b);
               wa.field_q = null;
               GameAppletShell.field_h.requestFocus();
             }
@@ -2214,7 +2214,7 @@ public final class HostileSpawn extends NetworkGameClient {
               }
               if (wa.field_q != null) {
                 v.a(15, wa.field_q);
-                wa.field_q.a(true, gf.field_b);
+                wa.field_q.exitFullscreen(true, gf.field_b);
                 wa.field_q = null;
                 GameAppletShell.field_h.requestFocus();
               }
@@ -2225,7 +2225,7 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             if (null != wa.field_q) {
               v.a(param0 - 38, wa.field_q);
-              wa.field_q.a(true, gf.field_b);
+              wa.field_q.exitFullscreen(true, gf.field_b);
               wa.field_q = null;
               GameAppletShell.field_h.requestFocus();
             }
@@ -2260,10 +2260,10 @@ public final class HostileSpawn extends NetworkGameClient {
             ca.field_c = 0;
           }
           if (wa.field_q != null &&
-            wa.field_q.field_g) {
+            wa.field_q.focusLost) {
             td.c((byte) 110);
             v.a(29, wa.field_q);
-            wa.field_q.a(true, gf.field_b);
+            wa.field_q.exitFullscreen(true, gf.field_b);
             wa.field_q = null;
             GameAppletShell.field_h.requestFocus();
           }
@@ -2438,7 +2438,7 @@ public final class HostileSpawn extends NetworkGameClient {
           MouseInput.field_k = fg.a("", "Scenery_21", vd.field_C, false);
           lc.field_b = fg.a("", "Scenery_22", vd.field_C, false);
           rb.field_y = fg.a("", "Scenery_23", vd.field_C, false);
-          ue.field_h = fg.a("", "Scenery_24", vd.field_C, false);
+          FullscreenFocusCanvas.field_h = fg.a("", "Scenery_24", vd.field_C, false);
           KeyboardInput.field_j = fg.a("", "Scenery_25", vd.field_C, false);
           wa.field_o = fg.a("", "Scenery_26", vd.field_C, false);
           sm.field_h = fg.a("", "Scenery_27", vd.field_C, false);
@@ -2455,7 +2455,7 @@ public final class HostileSpawn extends NetworkGameClient {
           IsaacGenerator.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
           el.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
           oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
-          ue.field_f = fg.a("", "health_big_tga", vd.field_C, false);
+          FullscreenFocusCanvas.field_f = fg.a("", "health_big_tga", vd.field_C, false);
           ia.field_e = fg.a("", "health_sm_tga", vd.field_C, false);
           kj.field_f = fg.a("", "Scenery_37", vd.field_C, false);
           gf.field_a = fg.a("", "Scenery_38", vd.field_C, false);

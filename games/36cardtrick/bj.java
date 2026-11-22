@@ -27,7 +27,7 @@ final class bj {
     private int field_t;
     private int field_i;
 
-    final oe c(int param0) {
+    final FullscreenFocusCanvas c(int param0) {
         this.field_r = gg.field_d;
         this.field_o = AccountNameAvailabilityValidator.field_j;
         if (param0 != -1) {
@@ -35,7 +35,7 @@ final class bj {
         }
         this.field_q.a(-23603, this.field_p, this.field_v);
         vd.field_w = false;
-        oe var2 = qa.a(0, this.field_p, 0, 17651, jk.field_a, this.field_v);
+        FullscreenFocusCanvas var2 = qa.createFullscreenCanvas(0, this.field_p, 0, 17651, jk.field_a, this.field_v);
         if (var2 == null) {
           this.a((byte) 10);
         }

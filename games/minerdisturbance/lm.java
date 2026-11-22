@@ -57,7 +57,7 @@ final class lm extends kn implements f, sh {
           return wm.field_f.a(false);
         }
         int var1 = 104 % ((param0 - 25) / 54);
-        if (ci.field_e == bd.field_h) {
+        if (ci.field_e == AccountRequestState.field_h) {
           return wm.field_f.a(false);
         }
         return pl.field_a;

@@ -89,7 +89,7 @@ final class me implements ComponentLayout {
           Throwable decompiledCaughtException = null;
           try {
             if (ce.field_d.startsWith("win") &&
-              ld.a(122, param2)) {
+              DelegatingCanvas.a(122, param2)) {
               return;
             }
             if (param1 >= -39) {

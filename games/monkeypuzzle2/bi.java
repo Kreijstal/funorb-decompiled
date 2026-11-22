@@ -528,7 +528,7 @@ abstract class bi extends GameApplet {
         }
         if (mc.field_a == 10) {
           if (fe.field_h != 0) {
-            ch.field_j = ol.a(-102, r.field_e);
+            ch.field_j = ol.a(-102, FullscreenFocusCanvas.field_e);
           }
           mc.field_a = 11;
         }
@@ -636,7 +636,7 @@ abstract class bi extends GameApplet {
         eb.field_A = cf.createMouseWheelInput(param4 + 25427);
         af.a(20, ie.field_e);
         pl.field_g = param3;
-        r.field_e = param1;
+        FullscreenFocusCanvas.field_e = param1;
         SecondaryNodeDequeIterator.field_e = param7;
         uk.field_q = param6;
         ph.field_c = param2;

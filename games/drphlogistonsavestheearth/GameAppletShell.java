@@ -695,7 +695,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var2 = AccountCreationResultPanel.field_Gb;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          n.field_g = (java.awt.Canvas) ((Object) new ua((java.awt.Component) (this)));
+          n.field_g = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) n.field_g));
           n.field_g.setSize(fg.field_h, ByteStorage.field_a);
           n.field_g.setVisible(true);

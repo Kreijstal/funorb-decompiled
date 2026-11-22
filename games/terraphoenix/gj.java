@@ -82,7 +82,7 @@ final class gj {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (og.field_e != null) {
+          if (AccountRequestState.field_e != null) {
             var6 = var6 | 16;
           }
           di.field_l.writeByte(var6, -112);
@@ -91,8 +91,8 @@ final class gj {
             var7 = "";
           }
           di.field_l.writeString(var7, 2295);
-          if (og.field_e != null) {
-            di.field_l.writePrefixedString(og.field_e, -108);
+          if (AccountRequestState.field_e != null) {
+            di.field_l.writePrefixedString(AccountRequestState.field_e, -108);
           }
           ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
           di.field_l.backpatchShortLength(-var5_int + di.field_l.position, -20125);

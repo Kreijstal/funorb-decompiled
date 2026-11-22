@@ -469,7 +469,7 @@ final class mk {
                 var31 = var31 + fe.field_g * var39Lifetime1;
               }
               if (var12.field_dc) {
-                var12.field_mc.field_db = oc.a(a.field_j, new String[]{var32}, (byte) -53);
+                var12.field_mc.field_db = oc.a(FullscreenFocusCanvas.field_j, new String[]{var32}, (byte) -53);
                 var12.field_mc.a(ri.field_g, -(2 * ri.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
                 var31 = var31 + fe.field_g;
               }
@@ -479,7 +479,7 @@ final class mk {
                 var31 = var31 + fe.field_g;
               }
             }
-            var33 = a.a(var12.field_jc, var32, -3);
+            var33 = FullscreenFocusCanvas.a(var12.field_jc, var32, -3);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Sb.field_xb.b(var33, var12.field_M - ri.field_g - ri.field_g);
               var12.field_Sb.field_db = var33;

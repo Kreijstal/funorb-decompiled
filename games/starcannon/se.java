@@ -435,7 +435,7 @@ final class se extends bd {
           return;
         }
         if (null == kd.field_B) {
-          n.field_a = re.a(0, nb.field_e, 0, true, 640, 480);
+          n.field_a = re.createFullscreenCanvas(0, nb.field_e, 0, true, 640, 480);
         } else {
           n.field_a = kd.field_B.a(2);
           ae.a(2, (byte) 31);

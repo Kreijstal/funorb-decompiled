@@ -261,7 +261,7 @@ class eg implements ad, cf {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             wf.a(param3 + param4.field_t, param1 + param4.field_u, (byte) 8, param1 + param4.field_u + param4.field_v, param4.field_q + (param3 + param4.field_t));
-            bd.field_c.a(var10, var12, var11, (byte) 97, var10, this.field_a);
+            AccountRequestState.field_c.a(var10, var12, var11, (byte) 97, var10, this.field_a);
             tk.b(true);
           }
           if (param0 != 13034) {
@@ -565,7 +565,7 @@ class eg implements ad, cf {
                 }
               }
               var15 = stackIn_18_0;
-              bd.field_c.a(this.field_r >>> 24, 0, var13.field_i, this.field_r, var15 - var14, this.a(param1, param3, -4, var14), param1.field_o + (this.field_c + (param1.field_t + (param2 + var13.field_h))));
+              AccountRequestState.field_c.a(this.field_r >>> 24, 0, var13.field_i, this.field_r, var15 - var14, this.a(param1, param3, -4, var14), param1.field_o + (this.field_c + (param1.field_t + (param2 + var13.field_h))));
             }
             tk.b(true);
           }
@@ -891,14 +891,14 @@ class eg implements ad, cf {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = ae.field_d.nextInt();
           }
-          if (null == bd.field_f ||
-            !(var7_int <= bd.field_f.payload.length)) {
-            bd.field_f = new PacketBuffer(var7_int);
+          if (null == AccountRequestState.field_f ||
+            !(var7_int <= AccountRequestState.field_f.payload.length)) {
+            AccountRequestState.field_f = new PacketBuffer(var7_int);
           }
-          bd.field_f.position = 0;
-          bd.field_f.writeBytes(param0, param3, true, param2);
-          bd.field_f.padZerosTo(-1, var7_int);
-          bd.field_f.encryptXtea(var13, 31747);
+          AccountRequestState.field_f.position = 0;
+          AccountRequestState.field_f.writeBytes(param0, param3, true, param2);
+          AccountRequestState.field_f.padZerosTo(-1, var7_int);
+          AccountRequestState.field_f.encryptXtea(var13, 31747);
           if (null == c.field_a ||
             !(c.field_a.payload.length >= 100)) {
             c.field_a = new PacketBuffer(100);
@@ -917,7 +917,7 @@ class eg implements ad, cf {
           c.field_a.writeShort((byte) 122, param3);
           c.field_a.applyRsa((byte) -49, param4, param6);
           param5.writeBytes(0, c.field_a.position, true, c.field_a.payload);
-          param5.writeBytes(0, bd.field_f.position, true, bd.field_f.payload);
+          param5.writeBytes(0, AccountRequestState.field_f.position, true, AccountRequestState.field_f.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

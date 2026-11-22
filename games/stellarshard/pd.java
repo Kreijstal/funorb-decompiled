@@ -17,7 +17,7 @@ final class pd extends vk {
     static long[] field_j;
     static long[][] field_l;
     private int field_v;
-    static va field_f;
+    static FullscreenFocusCanvas field_f;
     private int field_i;
     static String field_p;
 

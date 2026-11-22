@@ -5,7 +5,7 @@ final class eh extends IntrusiveNode {
     int field_j;
     static int field_k;
     static int field_m;
-    static ne field_p;
+    static AccountRequestState field_p;
     static int field_o;
     static int field_l;
     byte[] field_i;

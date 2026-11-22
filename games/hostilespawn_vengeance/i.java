@@ -105,10 +105,10 @@ final class i {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = ue.a(0, var10[var17]);
+                      var12[var17] = FullscreenFocusCanvas.a(0, var10[var17]);
                       var17++;
                     }
-                    var18.field_j[var5] = param2.a(var12, ue.a(0, var20), var21, 115);
+                    var18.field_j[var5] = param2.a(var12, FullscreenFocusCanvas.a(0, var20), var21, 115);
                     var18.field_o[var5] = var22;
                   }
                 } else {
@@ -122,7 +122,7 @@ final class i {
                   }
                   var18.field_q[var5] = var6_int;
                   var18.field_n[var5] = var9;
-                  var18.field_r[var5] = param2.a((byte) 104, ue.a(0, var15), var16);
+                  var18.field_r[var5] = param2.a((byte) 104, FullscreenFocusCanvas.a(0, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

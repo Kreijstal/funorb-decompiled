@@ -16,7 +16,7 @@ final class lc extends IntrusiveNode {
     static he[] field_i;
     int[] field_w;
     static String field_k;
-    static qb field_h;
+    static AccountRequestState field_h;
     byte[][][] field_t;
 
     final static char a(int param0, char param1) {
@@ -270,7 +270,7 @@ final class lc extends IntrusiveNode {
         ja.field_Q = fg.a(1);
         ng.field_c = new k();
         int var1 = -73 % ((param0 - 47) / 52);
-        q.a((byte) -29, true, true);
+        FullscreenFocusCanvas.a((byte) -29, true, true);
     }
 
     final static void a(int param0, byte param1) {

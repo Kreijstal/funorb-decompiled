@@ -169,7 +169,7 @@ final class saa {
           d.field_H.a(19842, true);
           if (this.field_d.field_c.field_k.field_a == 2) {
             if (sn.field_m.field_T &&
-              af.field_a) {
+              AccountRequestState.field_a) {
               Crc32Table.a(3, (byte) 124);
             }
             if (sn.field_m.field_T) {
@@ -186,7 +186,7 @@ final class saa {
               this.field_o = 5;
             }
             if (d.field_H.field_T &&
-              af.field_a) {
+              AccountRequestState.field_a) {
               Crc32Table.a(4, (byte) -41);
             }
           }
@@ -516,7 +516,7 @@ final class saa {
         var5 = BachelorFridge.field_y;
         try {
           if (param1) {
-            if (af.field_a) {
+            if (AccountRequestState.field_a) {
               ic.a(74);
             }
             if (!this.field_i &&
@@ -659,7 +659,7 @@ final class saa {
             SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
             this.field_s.e(param0 - 2);
           }
-          if (af.field_a &&
+          if (AccountRequestState.field_a &&
             param2) {
             DiveBomberAnimation.b(true);
           }

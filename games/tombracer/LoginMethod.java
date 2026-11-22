@@ -88,19 +88,19 @@ final class LoginMethod {
             } else {
               incrementValue$0 = param2;
               param2++;
-              C2SRoomResultPacket.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$0], param1);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, param4, PackedBitSetSupport.field_a[incrementValue$0], param1);
             }
             if (LineShape.field_h >= param3) {
               incrementValue$1 = param3;
               param3--;
-              C2SRoomResultPacket.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$1], param1);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, param4, PackedBitSetSupport.field_a[incrementValue$1], param1);
             } else {
               param3 = LineShape.field_h;
             }
             if (var6_int != 0 &&
               var7 != 0) {
               for (var8 = param2; var8 <= param3; var8++) {
-                var12 = vaa.field_a[var8];
+                var12 = PackedBitSetSupport.field_a[var8];
                 var11 = var12;
                 var9 = var11;
                 var12[param4] = param0;
@@ -109,12 +109,12 @@ final class LoginMethod {
             } else {
               if (var6_int != 0) {
                 for (var8 = param2; param3 >= var8; var8++) {
-                  vaa.field_a[var8][param1] = param0;
+                  PackedBitSetSupport.field_a[var8][param1] = param0;
                 }
               } else {
                 if (var7 != 0) {
                   for (var8 = param2; var8 <= param3; var8++) {
-                    vaa.field_a[var8][param4] = param0;
+                    PackedBitSetSupport.field_a[var8][param4] = param0;
                   }
                 }
               }

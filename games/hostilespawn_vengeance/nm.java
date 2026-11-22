@@ -224,7 +224,7 @@ final class nm {
                   df.field_g[3 - (1 & pj.field_v)].a(true, 128, (int)var8.field_c, var12Lifetime4, var13Lifetime3);
                 }
               }
-              if (ue.field_d == 0) {
+              if (FullscreenFocusCanvas.field_d == 0) {
                 var8.field_F = 255;
                 var11Lifetime1 = var8.field_i;
                 if (var11Lifetime1 != 30) {

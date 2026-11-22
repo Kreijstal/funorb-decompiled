@@ -233,7 +233,7 @@ final class MatchOverlayQueue {
         if (param0 != 0) {
           MatchOverlayQueue.a(117);
         }
-        if (PlayerResultRow.field_y == LegacyOpenGlTexture.field_a) {
+        if (PlayerResultRow.accountRequestPending == LegacyOpenGlTexture.registrationRequestState) {
           return ConstraintLocomotor.field_p;
         }
         return ConstrainToLatticeLocomotor.field_u;

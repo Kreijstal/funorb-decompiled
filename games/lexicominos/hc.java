@@ -52,7 +52,7 @@ final class hc extends ui {
         try {
           var14 = param4.b(25545);
           var8 = param2.b(25545);
-          if (null == jc.field_b &&
+          if (null == DelegatingCanvas.field_b &&
             !dg.a(false, true)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
@@ -177,7 +177,7 @@ final class hc extends ui {
             stackIn_57_0 = pg.field_d;
             return stackIn_57_0;
           }
-          if (null == jc.field_b) {
+          if (null == DelegatingCanvas.field_b) {
             if (fb.field_p) {
               if (vl.b(-116) <= 30000L) {
                 wj.field_p = sa.field_h;

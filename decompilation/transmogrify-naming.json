@@ -484,6 +484,14 @@
       "renamedSymbol": "C:PacketBuffer"
     },
     {
+      "symbol": "C:pd",
+      "originalName": "pd",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:pf",
       "originalName": "pf",
       "to": "SecondaryNodeDeque",
@@ -2145,7 +2153,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ae2d358173aabda36f24f3ff5560ed0c469e827da41952f6aa15d7352ecce0ab.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:pd.clearStaticReferences(B)V"
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(B)V"
     },
     {
       "symbol": "M:pf.a(I)V",
@@ -5068,9 +5076,9 @@
     },
     {
       "symbol": "C:pd",
-      "renamedSymbol": "C:pd",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "pd",
-      "renamedName": "pd",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "pd.java",
         "start": 50,
@@ -9655,7 +9663,7 @@
     },
     {
       "symbol": "F:db.field_a:Lpd;",
-      "renamedSymbol": "F:db.field_a:Lpd;",
+      "renamedSymbol": "F:db.field_a:LAccountRequestState;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -12856,7 +12864,7 @@
     },
     {
       "symbol": "F:gd.field_l:Lpd;",
-      "renamedSymbol": "F:AchievementNotice.field_l:Lpd;",
+      "renamedSymbol": "F:AchievementNotice.field_l:LAccountRequestState;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -15243,7 +15251,7 @@
     },
     {
       "symbol": "F:jh.field_n:Lpd;",
-      "renamedSymbol": "F:jh.field_n:Lpd;",
+      "renamedSymbol": "F:jh.field_n:LAccountRequestState;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -20490,7 +20498,7 @@
     },
     {
       "symbol": "F:of.field_d:Lpd;",
-      "renamedSymbol": "F:of.field_d:Lpd;",
+      "renamedSymbol": "F:of.field_d:LAccountRequestState;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -21183,7 +21191,7 @@
     },
     {
       "symbol": "F:pd.field_a:[I",
-      "renamedSymbol": "F:pd.field_a:[I",
+      "renamedSymbol": "F:AccountRequestState.field_a:[I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -21194,7 +21202,7 @@
     },
     {
       "symbol": "F:pd.field_b:Z",
-      "renamedSymbol": "F:pd.field_b:Z",
+      "renamedSymbol": "F:AccountRequestState.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -21205,7 +21213,7 @@
     },
     {
       "symbol": "F:pd.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:pd.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -23735,7 +23743,7 @@
     },
     {
       "symbol": "F:rh.field_v:Lpd;",
-      "renamedSymbol": "F:rh.field_v:Lpd;",
+      "renamedSymbol": "F:rh.field_v:LAccountRequestState;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -107093,7 +107101,7 @@
     },
     {
       "symbol": "L:pd.a(B)[Lii;#0",
-      "renamedSymbol": "L:pd.a(B)[LIndexedSprite;#0",
+      "renamedSymbol": "L:AccountRequestState.a(B)[LIndexedSprite;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -107104,7 +107112,7 @@
     },
     {
       "symbol": "L:pd.a(B)[Lii;#1",
-      "renamedSymbol": "L:pd.a(B)[LIndexedSprite;#1",
+      "renamedSymbol": "L:AccountRequestState.a(B)[LIndexedSprite;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -107115,7 +107123,7 @@
     },
     {
       "symbol": "L:pd.a(B)[Lii;#2",
-      "renamedSymbol": "L:pd.a(B)[LIndexedSprite;#2",
+      "renamedSymbol": "L:AccountRequestState.a(B)[LIndexedSprite;#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -162082,7 +162090,7 @@
     },
     {
       "symbol": "M:pd.a(B)[Lii;",
-      "renamedSymbol": "M:pd.a(B)[LIndexedSprite;",
+      "renamedSymbol": "M:AccountRequestState.a(B)[LIndexedSprite;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -162093,7 +162101,7 @@
     },
     {
       "symbol": "M:pd.b(B)V",
-      "renamedSymbol": "M:pd.clearStaticReferences(B)V",
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(B)V",
       "originalName": "b",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -162104,7 +162112,7 @@
     },
     {
       "symbol": "M:pd.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:pd.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -207391,7 +207399,7 @@
     },
     {
       "symbol": "P:pd.a(B)[Lii;#0",
-      "renamedSymbol": "P:pd.a(B)[LIndexedSprite;#0",
+      "renamedSymbol": "P:AccountRequestState.a(B)[LIndexedSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207402,7 +207410,7 @@
     },
     {
       "symbol": "P:pd.b(B)V#0",
-      "renamedSymbol": "P:pd.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:AccountRequestState.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224236,7 +224244,7 @@
       "original": "Transmogrify.java",
       "renamed": "Transmogrify.java",
       "inputSha256": "36ff65344c688c1d8188369e7012f3dd0fa8c32f6f4d9fa19fc7296177fffa94",
-      "outputSha256": "b5d559ad8ffc196d4fd2423b0d6094f25d94f92c3f0a8b5509d985c33988aabf",
+      "outputSha256": "a7e4f93a2253598f42055b2bd4fdd416692c153693786c7ca30a145274682416",
       "edits": [
         {
           "start": 78,
@@ -226589,6 +226597,13 @@
           "symbol": "M:gd.d(I)V",
           "original": "d",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 50028,
+          "end": 50030,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 50031,
@@ -231483,8 +231498,15 @@
       "original": "db.java",
       "renamed": "db.java",
       "inputSha256": "3fc3744f0691410b24828cbe86756aa19f13e21154c82375443a8cfff13948b5",
-      "outputSha256": "0a7147ec83bf53725aaa13c3ef5e23f7b485fdda4022e4229177146e1349e429",
+      "outputSha256": "dbbf7eb4b09df76e6b517e8840aeebe59c6ced49eac5827439847a920540af0c",
       "edits": [
+        {
+          "start": 143,
+          "end": 145,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 236,
           "end": 238,
@@ -232747,7 +232769,7 @@
       "original": "dj.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "117c04bf3c89c4ded77739b094e6299dc9ab5b7554021d13a91e0d861afb4725",
-      "outputSha256": "5f9fd482aa5256d457cabd7af58a60a80b67dbea791fd5c8ffdcd26d062a7022",
+      "outputSha256": "5b34fae31195c4710d2ed86f4577e0b715c77dac5a454b96259e621190e327fe",
       "edits": [
         {
           "start": 53,
@@ -232804,6 +232826,13 @@
           "symbol": "M:dj.a([BB)V",
           "original": "a",
           "renamed": "setBytes"
+        },
+        {
+          "start": 8813,
+          "end": 8815,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -232938,7 +232967,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "2af83f7561f89d543560d20be7c95894740216642e619a0a1811078b334948f4",
-      "outputSha256": "e26006779c57d38a415417079576d1ee64d7cb62109f025dfeaafdc45bd40538",
+      "outputSha256": "8090192d525a0338abf2db25ab05f4b0445fff9f1342f62717f3aedb1aa3b016",
       "edits": [
         {
           "start": 64,
@@ -233506,6 +233535,13 @@
           "symbol": "C:qd",
           "original": "qd",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 10373,
+          "end": 10375,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 10452,
@@ -237047,7 +237083,7 @@
       "original": "gd.java",
       "renamed": "AchievementNotice.java",
       "inputSha256": "0c4a98669809a92a79f6c6bb421aae7b257fcba180518f51e96c7bc5c9dbdfda",
-      "outputSha256": "64d067ba85ab9c3af567d5c34318f926c9df29539996014197f51120f092cc2b",
+      "outputSha256": "0e1dbd685110d48a2ce08129dce0609a387f90f894d6e2452984a45139fdd08a",
       "edits": [
         {
           "start": 50,
@@ -237062,6 +237098,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 147,
+          "end": 149,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 301,
@@ -237090,6 +237133,13 @@
           "symbol": "M:gd.<init>(IIIIII)V",
           "original": "gd",
           "renamed": "AchievementNotice"
+        },
+        {
+          "start": 2861,
+          "end": 2863,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3493,
@@ -237981,7 +238031,7 @@
       "original": "h.java",
       "renamed": "h.java",
       "inputSha256": "d7959a5d8dd96e4184ec76b48e2312fc3dcc6000d279ffcc396093af5467e158",
-      "outputSha256": "deea43a7cd7cd11a9a51ec4526f50978b9364c4aefb1ecaa30bc0bff13100298",
+      "outputSha256": "e0c902e6ac0c321f35ba20f3f2af247a82770e04a603e38a1c1e1acc4274ed29",
       "edits": [
         {
           "start": 57,
@@ -238122,6 +238172,20 @@
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 21351,
+          "end": 21353,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 21408,
+          "end": 21410,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 21739,
@@ -238287,7 +238351,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "60efecbf24634762e82161f90052a73bf56df5f7eb61f2ae61b43065b1050d21",
-      "outputSha256": "27f0a5e195939c73d7890a268264e23e665f91d5d379b3bf81736678b0915351",
+      "outputSha256": "3fadef0aeb11d9b4bc56952b97c6691a3b75993f5854675f88243f63fb12a382",
       "edits": [
         {
           "start": 61,
@@ -238386,6 +238450,69 @@
           "symbol": "M:ve.a([Ljava/lang/String;B)Luj;",
           "original": "a",
           "renamed": "createAccountSuggestionsResult"
+        },
+        {
+          "start": 2955,
+          "end": 2957,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2983,
+          "end": 2985,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3027,
+          "end": 3029,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6698,
+          "end": 6700,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6728,
+          "end": 6730,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6774,
+          "end": 6776,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10529,
+          "end": 10531,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10559,
+          "end": 10561,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10605,
+          "end": 10607,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 15995,
@@ -238606,7 +238733,7 @@
       "original": "hj.java",
       "renamed": "hj.java",
       "inputSha256": "9317875d38b01f3225e9d97ba5cc286dba00cf947fa29d93130771ed66f1a00d",
-      "outputSha256": "8bd3c65893bc08509c9000e9ebefeb5f11f81bfdaa494878cff197b337bf7a3e",
+      "outputSha256": "784fad38da3cd66f1bb65a86c0b779e54125980606b3c97cd3c3b07ca21fd96d",
       "edits": [
         {
           "start": 61,
@@ -238698,6 +238825,13 @@
           "symbol": "M:hj.m(I)V",
           "original": "m",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5398,
+          "end": 5400,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5508,
@@ -241119,7 +241253,7 @@
       "original": "ig.java",
       "renamed": "SessionGameApplet.java",
       "inputSha256": "1c97cbde97035d4b44fffd9a732324c11d70aa8bc641f6a64f6ad52b6a49d7fa",
-      "outputSha256": "e7c3c1d267d4829f197f202e3a30615c8a36e727f48a031744dd2282e63bb202",
+      "outputSha256": "f95a8fe2ebebe94e99f962a22dc8ca46b360cb00e633a36d844e514fc295ce2e",
       "edits": [
         {
           "start": 53,
@@ -241155,6 +241289,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 3387,
+          "end": 3389,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4376,
@@ -242776,7 +242917,7 @@
       "original": "jh.java",
       "renamed": "jh.java",
       "inputSha256": "39f1ae9e344a6df3845a43675f371084d84b861620325dea2a9d6a6de4e3a287",
-      "outputSha256": "8e3126d420b286b400883883a0160285f337740fd6639e4717d4f89f4e175b81",
+      "outputSha256": "17d280af3804649d6fb99aa4fd9b769359d8edd7fa97e69f710ced8d3277c64a",
       "edits": [
         {
           "start": 77,
@@ -242784,6 +242925,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "Sprite"
+        },
+        {
+          "start": 128,
+          "end": 130,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 9371,
@@ -242798,6 +242946,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "Sprite"
+        },
+        {
+          "start": 12977,
+          "end": 12979,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -243212,7 +243367,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "13af3eb4bb4d744ae6608fe38eba243601779c23141517f5746d2bc9057bc133",
-      "outputSha256": "4eec76bb0534aae11bd280d71bc05b4c16124a13782e3e3e00b48c9cb23bb377",
+      "outputSha256": "35395b72f64c38d20bec8936329d7caa5a0309e0464ae0a19ef37aadfc8c9fcb",
       "edits": [
         {
           "start": 64,
@@ -243325,6 +243480,20 @@
           "symbol": "C:fg",
           "original": "fg",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 7829,
+          "end": 7831,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7945,
+          "end": 7947,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 8098,
@@ -251237,7 +251406,7 @@
       "original": "of.java",
       "renamed": "of.java",
       "inputSha256": "c5abfc0fe73664cf19f5c5731874ed5d7852a6dc65575f867729bf86a486bdee",
-      "outputSha256": "a6fb93015007ae7768680b4dac2c64036588dbc15530292833c7b09b03510816",
+      "outputSha256": "da7cc327ab28c7c08794f46e6b0a04a6c06e61810f9379cca8b3229b20a3fac0",
       "edits": [
         {
           "start": 177,
@@ -251245,6 +251414,13 @@
           "symbol": "F:of.field_e:Ljava/lang/StringBuilder;",
           "original": "field_e",
           "renamed": "wordBuffer"
+        },
+        {
+          "start": 197,
+          "end": 199,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 233,
@@ -251308,6 +251484,13 @@
           "symbol": "F:of.field_e:Ljava/lang/StringBuilder;",
           "original": "field_e",
           "renamed": "wordBuffer"
+        },
+        {
+          "start": 1545,
+          "end": 1547,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -251692,10 +251875,17 @@
     },
     {
       "original": "pd.java",
-      "renamed": "pd.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "45198c2c905beb7abe14e91e8b4a0060663cd2043f3c865bac7514ec7aeec65c",
-      "outputSha256": "69b65826ce2966a728689d62315efd71cb4337e4dbfa93b5df4c621310138722",
+      "outputSha256": "c016fa26e0b394b1b8110ed3b0ee2ca0aae1dd2bbb4753da3b71fe50315296a2",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 241,
           "end": 243,
@@ -256400,7 +256590,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "39e7b94098242049c9af8ab1c95305742ddb126d6b0b3e9ddfd892e24a5e6370",
-      "outputSha256": "1b0494debe0c36dd9ce703cd012b1fe26255daa452097a3825bf2483a477c176",
+      "outputSha256": "850f11493a90a4692e1473312c6b8320c0e348eaa7885817a1156adf05298eeb",
       "edits": [
         {
           "start": 64,
@@ -256415,6 +256605,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 229,
+          "end": 231,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 252,
@@ -264883,7 +265080,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "dc44a5766824fadbb40e21cd2a6d7b23803f269e2a5bfc4068da3dc44a07c09a",
-      "outputSha256": "361daa6ba1ab5c2d8dcf260c9b4c95e1a5a6f6a1ad08566675518b0269d23159",
+      "outputSha256": "3660d4f3b1ed5bceb2e101f10fab273f3e3fa0fbaf161c2c84894cb05cc167b8",
       "edits": [
         {
           "start": 125,
@@ -264912,6 +265109,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 5782,
+          "end": 5784,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -266024,7 +266228,7 @@
       "original": "wc.java",
       "renamed": "wc.java",
       "inputSha256": "82e0b9e7cc32eda2de031ebd830cae644d15cb4a4397f777747d88027b64ab8c",
-      "outputSha256": "610f1559bfd0b54009bb806ef41ba244c9b2d907bf710d59fd21870a1c30ba44",
+      "outputSha256": "def13cc0f769ab5ff42947826613b434b42b711894959ccbf2f718d7bd868f71",
       "edits": [
         {
           "start": 2242,
@@ -266482,6 +266686,13 @@
           "renamed": "readString"
         },
         {
+          "start": 15115,
+          "end": 15117,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 15211,
           "end": 15213,
           "symbol": "C:qg",
@@ -266489,11 +266700,32 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 15267,
+          "end": 15269,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15905,
+          "end": 15907,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 16019,
           "end": 16021,
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 16143,
+          "end": 16145,
+          "symbol": "C:pd",
+          "original": "pd",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -267516,10 +267748,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/transmogrify"
     },
-    "rulesSha256": "ef399b6cb6abf83ddc0054bf53c1655b3127b10704fce2631b762fb6b54c80ec",
+    "rulesSha256": "788678a48ce6ec68fc9243721ecee35c0ff4e7f99d5ff3b48b1fe7fc4ed22d0c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
-    "outputTreeSha256": "379b6af387bd0d83e8638e9101a83ac7a400e0f4a175489716cc425864dabec9",
+    "outputTreeSha256": "898c22e67aab9df8b1e16290adbe08b5a26df25b54595ae2c55226fffa831e3a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

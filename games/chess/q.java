@@ -653,7 +653,7 @@ final class q {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4_int >= 5))) {
-            var5 = g.field_d[var4_int];
+            var5 = DelegatingCanvas.field_d[var4_int];
             stackIn_36_0 = var5;
             if (var7 == 0) {
               if (stackIn_36_0 != null) {

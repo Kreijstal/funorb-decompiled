@@ -379,7 +379,7 @@ final class ng extends ck {
                   dj.a(var2, false);
                 }
                 if (param0 != -27088) {
-                  ng.a((qg) null, 86, (java.awt.Frame) null);
+                  ng.exitFullscreenFrame((qg) null, 86, (java.awt.Frame) null);
                 }
                 var2 = rp.a("mu_options_ratedgametype", 120);
                 if (null != var2) {
@@ -2323,7 +2323,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("mouseoveranicon", param0 + 27151);
                 if (var2 != null) {
-                  ql.field_h = dj.a(var2, false);
+                  DelegatingCanvas.field_h = dj.a(var2, false);
                 }
                 var2 = rp.a("notyetachieved", 118);
                 if (var2 != null) {
@@ -2739,7 +2739,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("fs_nonmember", 51);
                 if (var2 != null) {
-                  ql.field_k = dj.a(var2, false);
+                  DelegatingCanvas.field_k = dj.a(var2, false);
                 }
                 var2 = rp.a("fs_button_close", 88);
                 if (var2 != null) {
@@ -3401,7 +3401,7 @@ final class ng extends ck {
         }
     }
 
-    final static void a(qg param0, int param1, java.awt.Frame param2) {
+    final static void exitFullscreenFrame(qg param0, int param1, java.awt.Frame param2) {
         pn var3 = null;
         int var4 = 0;
         RuntimeException stackIn_19_0 = null;

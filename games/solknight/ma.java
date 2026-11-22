@@ -4,7 +4,7 @@
 class ma extends DualLinkNode {
     static String field_m;
     static int[] field_n;
-    static ef field_o;
+    static AccountRequestState field_o;
     private static String field_z;
 
     ma() {

@@ -171,7 +171,7 @@ public final class SolKnight extends ab {
               sj.a(4, var5, -7471);
             }
           }
-          while (MouseWheelInput.a(ef.field_b, 122)) {
+          while (MouseWheelInput.a(AccountRequestState.field_b, 122)) {
             this.d(true);
           }
           qf.a(0, 0);
@@ -397,7 +397,7 @@ public final class SolKnight extends ab {
           rh.b(0);
           ib.a(0);
           bl.a(0);
-          ef.clearStaticReferences(11051);
+          AccountRequestState.clearStaticReferences(11051);
           AccountServiceResult.a(true);
           ce.b(true);
           kb.clearStaticReferences((byte) 15);
@@ -607,9 +607,9 @@ public final class SolKnight extends ab {
             jc.field_b = Asteroid.a("unachieved", "basic", pl.field_d, (byte) -127);
             nb.field_a = Asteroid.a("locked", "basic", pl.field_d, (byte) -117);
             u.field_c = Asteroid.a("orbcoin", "basic", pl.field_d, (byte) -115);
-            ef.a(124, jc.field_b);
-            ef.a(115, nb.field_a);
-            ef.a(123, u.field_c);
+            AccountRequestState.a(124, jc.field_b);
+            AccountRequestState.a(115, nb.field_a);
+            AccountRequestState.a(123, u.field_c);
             pl.field_d = null;
             ai.field_b = null;
             stackIn_64_0 = fc.field_o;
@@ -672,7 +672,7 @@ public final class SolKnight extends ab {
           var4 = var18;
           for (var5_int = 0; var18.length > var5_int; var5_int++) {
             var6_ref_o = var18[var5_int];
-            ef.a(param0 + 120, var6_ref_o);
+            AccountRequestState.a(param0 + 120, var6_ref_o);
           }
           var21 = hj.field_p;
           var5 = hj.field_n;

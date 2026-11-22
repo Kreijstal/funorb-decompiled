@@ -3,12 +3,12 @@
  */
 final class dg extends IntrusiveNode {
     int field_t;
-    bc[] field_q;
+    PlatformTask[] field_q;
     int[] field_u;
     int field_r;
     byte[][][] field_s;
     static ej field_p;
-    bc[] field_m;
+    PlatformTask[] field_m;
     int[] field_o;
     int[] field_v;
     static ad field_n;

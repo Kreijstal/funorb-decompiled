@@ -516,6 +516,14 @@
       "renamedSymbol": "C:CreatureActor"
     },
     {
+      "symbol": "C:af",
+      "originalName": "af",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:aga",
       "originalName": "aga",
       "to": "BattleCreature",
@@ -3617,7 +3625,7 @@
       "to": "releaseStatics",
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:af.releaseStatics(I)V"
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V"
     },
     {
       "symbol": "M:afa.d(I)V",
@@ -13549,9 +13557,9 @@
     },
     {
       "symbol": "C:af",
-      "renamedSymbol": "C:af",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "af",
-      "renamedName": "af",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "af.java",
         "start": 50,
@@ -23427,7 +23435,7 @@
     },
     {
       "symbol": "F:af.field_a:Z",
-      "renamedSymbol": "F:af.field_a:Z",
+      "renamedSymbol": "F:AccountRequestState.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -23438,7 +23446,7 @@
     },
     {
       "symbol": "F:af.field_b:Lsga;",
-      "renamedSymbol": "F:af.field_b:Lsga;",
+      "renamedSymbol": "F:AccountRequestState.field_b:Lsga;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -23449,7 +23457,7 @@
     },
     {
       "symbol": "F:af.field_c:I",
-      "renamedSymbol": "F:af.field_c:I",
+      "renamedSymbol": "F:AccountRequestState.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -30709,7 +30717,7 @@
     },
     {
       "symbol": "F:dka.field_G:Laf;",
-      "renamedSymbol": "F:ReportAbusePanel.field_G:Laf;",
+      "renamedSymbol": "F:ReportAbusePanel.field_G:LAccountRequestState;",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -46560,7 +46568,7 @@
     },
     {
       "symbol": "F:ki.field_w:Laf;",
-      "renamedSymbol": "F:OhNoAnimation.field_w:Laf;",
+      "renamedSymbol": "F:OhNoAnimation.field_w:LAccountRequestState;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -47198,7 +47206,7 @@
     },
     {
       "symbol": "F:kq.field_j:Laf;",
-      "renamedSymbol": "F:kq.field_j:Laf;",
+      "renamedSymbol": "F:kq.field_j:LAccountRequestState;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -55844,7 +55852,7 @@
     },
     {
       "symbol": "F:ola.field_p:Laf;",
-      "renamedSymbol": "F:FridgeScreen.field_p:Laf;",
+      "renamedSymbol": "F:FridgeScreen.field_p:LAccountRequestState;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -68571,7 +68579,7 @@
     },
     {
       "symbol": "F:tn.field_a:Laf;",
-      "renamedSymbol": "F:GameClock.field_a:Laf;",
+      "renamedSymbol": "F:GameClock.field_a:LAccountRequestState;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -79648,7 +79656,7 @@
     },
     {
       "symbol": "L:af.a(II)I#0",
-      "renamedSymbol": "L:af.a(II)I#0",
+      "renamedSymbol": "L:AccountRequestState.a(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -79659,7 +79667,7 @@
     },
     {
       "symbol": "L:af.a(II)I#1",
-      "renamedSymbol": "L:af.a(II)I#1",
+      "renamedSymbol": "L:AccountRequestState.a(II)I#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -372468,7 +372476,7 @@
     },
     {
       "symbol": "M:af.a(I)V",
-      "renamedSymbol": "M:af.releaseStatics(I)V",
+      "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -372479,7 +372487,7 @@
     },
     {
       "symbol": "M:af.a(II)I",
-      "renamedSymbol": "M:af.a(II)I",
+      "renamedSymbol": "M:AccountRequestState.a(II)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -372490,7 +372498,7 @@
     },
     {
       "symbol": "M:af.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:af.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -433012,7 +433020,7 @@
     },
     {
       "symbol": "P:af.a(I)V#0",
-      "renamedSymbol": "P:af.releaseStatics(I)V#0",
+      "renamedSymbol": "P:AccountRequestState.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433023,7 +433031,7 @@
     },
     {
       "symbol": "P:af.a(II)I#0",
-      "renamedSymbol": "P:af.a(II)I#0",
+      "renamedSymbol": "P:AccountRequestState.a(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433034,7 +433042,7 @@
     },
     {
       "symbol": "P:af.a(II)I#1",
-      "renamedSymbol": "P:af.a(II)I#1",
+      "renamedSymbol": "P:AccountRequestState.a(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -568470,7 +568478,7 @@
       "original": "BachelorFridge.java",
       "renamed": "BachelorFridge.java",
       "inputSha256": "391cd94920e6e97d6195a3bd3359d3980815a7177a0ef225101f995702613a8b",
-      "outputSha256": "d6049f6b5830a8839df3355717b0ab8266d1dbf34e5334019a2866e3c1cc40f0",
+      "outputSha256": "06198545f531589c6803f5b80a274501479ad0c23b8877bc18fec6ab08fbdba0",
       "edits": [
         {
           "start": 80,
@@ -572188,6 +572196,13 @@
           "symbol": "M:qia.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 30216,
+          "end": 30218,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 30219,
@@ -578552,10 +578567,17 @@
     },
     {
       "original": "af.java",
-      "renamed": "af.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "36b764e3b0720bc27119236eabb2a90a8ff0ea1c69edbba6b41cb9f159a0eb0e",
-      "outputSha256": "564275f57122ad592b5e6ad7198b2cc01cc1644882e36e64a4457f27066bb25e",
+      "outputSha256": "ca208b1da5e0dfe739e57067e80d7f48a31fd9256dc73bb3b7e8d9fc57e18117",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 155,
           "end": 156,
@@ -578564,11 +578586,25 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 211,
+          "end": 213,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 594,
           "end": 596,
           "symbol": "C:fb",
           "original": "fb",
           "renamed": "ShuffleSpecial"
+        },
+        {
+          "start": 803,
+          "end": 805,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 898,
@@ -614751,7 +614787,7 @@
       "original": "dka.java",
       "renamed": "ReportAbusePanel.java",
       "inputSha256": "a972fe2c61bf11d9c9813f07de7bdb09c418c43f1cacc8db0c8f333ebe6487b6",
-      "outputSha256": "2dda25877f14250a3e0264592d72cc57f74d80e6dfd22c8d9b090a1681cabe53",
+      "outputSha256": "0800656708de1707bb145b0ef4f189ce217a4e8522d555441753aa96426bca05",
       "edits": [
         {
           "start": 50,
@@ -614794,6 +614830,20 @@
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "InteractiveWidget"
+        },
+        {
+          "start": 192,
+          "end": 194,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 322,
+          "end": 324,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 463,
@@ -630179,7 +630229,7 @@
       "original": "fla.java",
       "renamed": "ShieldSpecial.java",
       "inputSha256": "6fe48fe7ea05dc6ec779e9cb8281d8591db9a9726204a8c359523ea9ab9ab032",
-      "outputSha256": "2224de944bea2c5409d9ac65fae9bc44b6c7212fadb42f6f4555f4a2e286d57b",
+      "outputSha256": "ab2a901ce14fb2dea47fa642a26674e9c78af073cfc14ee63059ef82c07463ee",
       "edits": [
         {
           "start": 50,
@@ -630243,6 +630293,13 @@
           "symbol": "C:wca",
           "original": "wca",
           "renamed": "CreatureType"
+        },
+        {
+          "start": 511,
+          "end": 513,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 567,
@@ -631998,7 +632055,7 @@
       "original": "fs.java",
       "renamed": "fs.java",
       "inputSha256": "b81c682085307b91252256a82e78606b32345c7435211b79e62e3eb8721efd21",
-      "outputSha256": "4a3920c2c335cdee28b3f6114d59ecee50c4e0ec25d1bb4fe651fc1b1a742899",
+      "outputSha256": "0716772b22c252bea37a53e804abfbf13a2df2b78921ba0033c0ccda8d21e1df",
       "edits": [
         {
           "start": 122,
@@ -632160,6 +632217,13 @@
           "symbol": "C:sfa",
           "original": "sfa",
           "renamed": "CreatureOrder"
+        },
+        {
+          "start": 2927,
+          "end": 2929,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3019,
@@ -637480,7 +637544,7 @@
       "original": "gj.java",
       "renamed": "BattleScreen.java",
       "inputSha256": "caa514085786676d402831154c24cbda3d0d0740162bb548d77ad54852953491",
-      "outputSha256": "244f5a7bf79d40fcfdb9085d0efe92f353fcd3e7aec0df9cd58a0d79590b7658",
+      "outputSha256": "e1dfdedf87125e4cc09a58bd7f99ad3d7d28813572aad05eb43e6fcb0c483448",
       "edits": [
         {
           "start": 71,
@@ -638365,6 +638429,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 15149,
+          "end": 15151,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 15173,
           "end": 15176,
           "symbol": "C:kla",
@@ -639042,6 +639113,13 @@
           "symbol": "C:cj",
           "original": "cj",
           "renamed": "BattleUpdate"
+        },
+        {
+          "start": 26926,
+          "end": 26928,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 28099,
@@ -641254,6 +641332,13 @@
           "symbol": "C:jo",
           "original": "jo",
           "renamed": "BoardView"
+        },
+        {
+          "start": 64006,
+          "end": 64008,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 64043,
@@ -646623,7 +646708,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "60d275c2cd3ec864007bd33aed63b48353bc7fbfe757631ad06ab9453a7197fa",
-      "outputSha256": "b32eaf298b8c292e43a3204b88d58a27e3f22e262c2c538a1b883939dce8d458",
+      "outputSha256": "e008043178c74e4fb1657e61e4480cbd48f7744d23b1e947cf3aae22cccf1138",
       "edits": [
         {
           "start": 79,
@@ -646827,6 +646912,41 @@
           "symbol": "C:jba",
           "original": "jba",
           "renamed": "HailAnimation"
+        },
+        {
+          "start": 4534,
+          "end": 4536,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4676,
+          "end": 4678,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4697,
+          "end": 4699,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4728,
+          "end": 4730,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4749,
+          "end": 4751,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5113,
@@ -660506,7 +660626,7 @@
       "original": "im.java",
       "renamed": "im.java",
       "inputSha256": "fd5165c27372fa2e99082bea0002fde86728a9f5ed1575debb0fa7e782c7bca4",
-      "outputSha256": "b86bebc18015b5e7842eb9bf728ed703cc3bc85af82898bd57237d0498cb88f1",
+      "outputSha256": "c3074a99bebcd113a2230fcc590bf92dab258d426ba0d8ec63db67da700131af",
       "edits": [
         {
           "start": 165,
@@ -660514,6 +660634,13 @@
           "symbol": "M:im.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 786,
+          "end": 788,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1223,
@@ -660530,11 +660657,32 @@
           "renamed": "ScavengerSpecial"
         },
         {
+          "start": 1422,
+          "end": 1424,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 1448,
+          "end": 1450,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 1515,
           "end": 1517,
           "symbol": "C:mt",
           "original": "mt",
           "renamed": "ScavengerSpecial"
+        },
+        {
+          "start": 1581,
+          "end": 1583,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2043,
@@ -660549,6 +660697,20 @@
           "symbol": "C:mt",
           "original": "mt",
           "renamed": "ScavengerSpecial"
+        },
+        {
+          "start": 2246,
+          "end": 2248,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2270,
+          "end": 2272,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2332,
@@ -662398,7 +662560,7 @@
       "original": "it.java",
       "renamed": "it.java",
       "inputSha256": "1a88acebf6c32ea9e77a0366e3488597a357449fcbcc12b8152491f1c721f80f",
-      "outputSha256": "33d09a41ab6fbf21b55ad54071759f3551eab1fe4004ff6609fb4fa32f116b9e",
+      "outputSha256": "171fcfd3ff1e6a50a9834393a80dc6a1f471700ec89470dad4a18330348d7a10",
       "edits": [
         {
           "start": 353,
@@ -662462,6 +662624,13 @@
           "symbol": "C:uca",
           "original": "uca",
           "renamed": "Crc32Table"
+        },
+        {
+          "start": 3725,
+          "end": 3727,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3765,
@@ -662532,7 +662701,7 @@
       "original": "iu.java",
       "renamed": "iu.java",
       "inputSha256": "fa38103540bef564ad4b2210554550c757557dadf83503ce04cbf0480f9ac939",
-      "outputSha256": "2f7b69b63efe6791f414ec85df45dd5f4fc3289d9a0a010a96a5c286f18bede6",
+      "outputSha256": "7283c20fc30a4182393f2e3ebe14abd69b47c0c6289997bced19a05460cedb09",
       "edits": [
         {
           "start": 61,
@@ -662542,11 +662711,25 @@
           "renamed": "AnimationNode"
         },
         {
+          "start": 1387,
+          "end": 1389,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 1407,
           "end": 1414,
           "symbol": "F:sna.field_z:Leaa;",
           "original": "field_z",
           "renamed": "children"
+        },
+        {
+          "start": 1665,
+          "end": 1667,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1796,
@@ -662598,6 +662781,55 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 3094,
+          "end": 3096,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3450,
+          "end": 3452,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3480,
+          "end": 3482,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3521,
+          "end": 3523,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3552,
+          "end": 3554,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3608,
+          "end": 3610,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3638,
+          "end": 3640,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3697,
           "end": 3700,
           "symbol": "C:wia",
@@ -662605,11 +662837,25 @@
           "renamed": "BoardTile"
         },
         {
+          "start": 3724,
+          "end": 3726,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3795,
           "end": 3798,
           "symbol": "C:wia",
           "original": "wia",
           "renamed": "BoardTile"
+        },
+        {
+          "start": 3822,
+          "end": 3824,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3867,
@@ -662626,11 +662872,67 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 3931,
+          "end": 3933,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3963,
+          "end": 3965,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3993,
+          "end": 3995,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4044,
+          "end": 4046,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4076,
+          "end": 4078,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 4196,
           "end": 4198,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 4254,
+          "end": 4256,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4286,
+          "end": 4288,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4316,
+          "end": 4318,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4360,
@@ -662640,11 +662942,95 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 4386,
+          "end": 4388,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4432,
+          "end": 4434,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4484,
+          "end": 4486,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4579,
+          "end": 4581,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4609,
+          "end": 4611,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 4650,
           "end": 4652,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 4919,
+          "end": 4921,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5259,
+          "end": 5261,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5289,
+          "end": 5291,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5328,
+          "end": 5330,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5359,
+          "end": 5361,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5413,
+          "end": 5415,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5443,
+          "end": 5445,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5500,
@@ -662654,11 +663040,32 @@
           "renamed": "BoardTile"
         },
         {
+          "start": 5525,
+          "end": 5527,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5585,
           "end": 5588,
           "symbol": "C:wia",
           "original": "wia",
           "renamed": "BoardTile"
+        },
+        {
+          "start": 5612,
+          "end": 5614,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5644,
+          "end": 5646,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5770,
@@ -662668,6 +663075,27 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 5832,
+          "end": 5834,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5864,
+          "end": 5866,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5894,
+          "end": 5896,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5940,
           "end": 5942,
           "symbol": "C:qh",
@@ -662675,11 +663103,53 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 5968,
+          "end": 5970,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6014,
+          "end": 6016,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6070,
+          "end": 6072,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6167,
+          "end": 6169,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6197,
+          "end": 6199,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 6240,
           "end": 6242,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 6298,
+          "end": 6300,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6343,
@@ -662696,11 +663166,102 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 6407,
+          "end": 6409,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6439,
+          "end": 6441,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6469,
+          "end": 6471,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6510,
+          "end": 6512,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6542,
+          "end": 6544,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6650,
+          "end": 6652,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6682,
+          "end": 6684,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6712,
+          "end": 6714,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 6760,
           "end": 6762,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 6790,
+          "end": 6792,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6836,
+          "end": 6838,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6896,
+          "end": 6898,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6995,
+          "end": 6997,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7025,
+          "end": 7027,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 7070,
@@ -662717,6 +663278,27 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 7240,
+          "end": 7242,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7272,
+          "end": 7274,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7302,
+          "end": 7304,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 7351,
           "end": 7353,
           "symbol": "C:qh",
@@ -662724,11 +663306,67 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 7381,
+          "end": 7383,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7482,
+          "end": 7484,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7512,
+          "end": 7514,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 7559,
           "end": 7561,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 7625,
+          "end": 7627,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7671,
+          "end": 7673,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7717,
+          "end": 7719,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7818,
+          "end": 7820,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7848,
+          "end": 7850,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 7895,
@@ -662745,6 +663383,41 @@
           "renamed": "BoardTile"
         },
         {
+          "start": 8042,
+          "end": 8044,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8074,
+          "end": 8076,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8217,
+          "end": 8219,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8249,
+          "end": 8251,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8279,
+          "end": 8281,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 8328,
           "end": 8330,
           "symbol": "C:qh",
@@ -662752,11 +663425,67 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 8358,
+          "end": 8360,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8460,
+          "end": 8462,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8490,
+          "end": 8492,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 8537,
           "end": 8539,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 8604,
+          "end": 8606,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8650,
+          "end": 8652,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8696,
+          "end": 8698,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8798,
+          "end": 8800,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8828,
+          "end": 8830,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 8875,
@@ -662773,11 +663502,53 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 9046,
+          "end": 9048,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9078,
+          "end": 9080,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9108,
+          "end": 9110,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 9153,
           "end": 9155,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 9179,
+          "end": 9181,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9286,
+          "end": 9288,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9316,
+          "end": 9318,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 9359,
@@ -662787,11 +663558,53 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 9418,
+          "end": 9420,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9473,
+          "end": 9475,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9515,
+          "end": 9517,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9622,
+          "end": 9624,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9652,
+          "end": 9654,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 9695,
           "end": 9697,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 9783,
+          "end": 9785,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 9824,
@@ -662808,6 +663621,62 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 9880,
+          "end": 9882,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9912,
+          "end": 9914,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9942,
+          "end": 9944,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9979,
+          "end": 9981,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10011,
+          "end": 10013,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10148,
+          "end": 10150,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10180,
+          "end": 10182,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10210,
+          "end": 10212,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 10257,
           "end": 10259,
           "symbol": "C:qh",
@@ -662815,11 +663684,67 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 10285,
+          "end": 10287,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10384,
+          "end": 10386,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10414,
+          "end": 10416,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 10459,
           "end": 10461,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 10521,
+          "end": 10523,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10567,
+          "end": 10569,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10611,
+          "end": 10613,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10711,
+          "end": 10713,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10741,
+          "end": 10743,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 10786,
@@ -662836,6 +663761,27 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 10936,
+          "end": 10938,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10968,
+          "end": 10970,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10998,
+          "end": 11000,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 11041,
           "end": 11043,
           "symbol": "C:qh",
@@ -662843,11 +663789,67 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 11065,
+          "end": 11067,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11161,
+          "end": 11163,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11191,
+          "end": 11193,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 11232,
           "end": 11234,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 11287,
+          "end": 11289,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11333,
+          "end": 11335,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11373,
+          "end": 11375,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11469,
+          "end": 11471,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11499,
+          "end": 11501,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 11540,
@@ -664123,7 +665125,7 @@
       "original": "iw.java",
       "renamed": "iw.java",
       "inputSha256": "dcb37df78c0aac2b78927fe18219d400ad7d6bc86bf9e9db2ae040adcc3b4403",
-      "outputSha256": "dee592b5c0448b5775fbd97411cde37eaf822cdf4194d8d49a83163ef7eb827d",
+      "outputSha256": "9c9e52179785d0b0f208b724e9b15bced61292348ce24676e8ec659cc2b80957",
       "edits": [
         {
           "start": 66,
@@ -664187,6 +665189,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 13414,
+          "end": 13416,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 13482,
@@ -670531,7 +671540,7 @@
       "original": "jla.java",
       "renamed": "jla.java",
       "inputSha256": "edd2120d7208a8a6dfc061b69eff23f8f8fc32e2b4fa83b857c4d94b6f863a27",
-      "outputSha256": "ca805709a17cbbf38b227b7893b99bef51b89fa4042f9384f60c2337f9b4b68c",
+      "outputSha256": "18bd26ac2c6bd1c3b7f62467076fe6810da1f5700bdf0efd90f41a68faceec4f",
       "edits": [
         {
           "start": 126,
@@ -671194,6 +672203,13 @@
           "symbol": "C:qm",
           "original": "qm",
           "renamed": "RasterBuffer"
+        },
+        {
+          "start": 10343,
+          "end": 10345,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 10373,
@@ -678189,7 +679205,7 @@
       "original": "jt.java",
       "renamed": "FoodShopPanel.java",
       "inputSha256": "31d88f812bd55f13dce3ff2d8a18c4f18dd517e48db29cd34a7c0cf4c19c8295",
-      "outputSha256": "6f2452fa719b0f5944c65dbf5ebfa4d0c3e3498d58f7fd0efc42b4db0cb029f0",
+      "outputSha256": "4e0810b5ea93a25ba37c4e006b641634368836a98a5d42d86dd8a11ddd9fcf1f",
       "edits": [
         {
           "start": 50,
@@ -678957,11 +679973,25 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 25504,
+          "end": 25506,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 25530,
           "end": 25533,
           "symbol": "C:uca",
           "original": "uca",
           "renamed": "Crc32Table"
+        },
+        {
+          "start": 25649,
+          "end": 25651,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 25707,
@@ -682775,7 +683805,7 @@
       "original": "ki.java",
       "renamed": "OhNoAnimation.java",
       "inputSha256": "9fe1864da71df980167f134b0fb52deb15e877da4218b6126652018037e83320",
-      "outputSha256": "a81e0323072b5a2f98da27fe6d05de53bb2f9f38d5a778ebc965bbba49b744b8",
+      "outputSha256": "777daf1312001cd3a2f4d50c36f95581414439e542d8b8f5d5f74caf350f859d",
       "edits": [
         {
           "start": 50,
@@ -682790,6 +683820,13 @@
           "symbol": "C:ana",
           "original": "ana",
           "renamed": "EventAnimation"
+        },
+        {
+          "start": 78,
+          "end": 80,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 102,
@@ -682951,6 +683988,20 @@
           "symbol": "M:ki.e(I)V",
           "original": "e",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 2051,
+          "end": 2053,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2113,
+          "end": 2115,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -685666,7 +686717,7 @@
       "original": "kq.java",
       "renamed": "kq.java",
       "inputSha256": "51961a40e61fec9ec6b30942e998a6058a34dfbdf0e0e0c3543b7b92847c0d0f",
-      "outputSha256": "7b151ebf62fd3a4147bf2bd966d307c3997a812e333030e7815614e469c9e225",
+      "outputSha256": "8dee8df6383131d2c22128f381a4bee35ee0f1c509732b659418d7dfde2e5a48",
       "edits": [
         {
           "start": 61,
@@ -685674,6 +686725,13 @@
           "symbol": "C:pp",
           "original": "pp",
           "renamed": "EventEffect"
+        },
+        {
+          "start": 101,
+          "end": 103,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 171,
@@ -685758,6 +686816,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1189,
+          "end": 1191,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -720682,7 +721747,7 @@
       "original": "nv.java",
       "renamed": "nv.java",
       "inputSha256": "48ca6ca0d674b0b2b40cbf628b1883216005b5d55e0e9e7ffe9c04f00934ed16",
-      "outputSha256": "5136e5c69d4a6c0f9691c327efa61fcb4fe7b17654d23947dbe5ab5af6dab48f",
+      "outputSha256": "428a7331b11c58888d0cb426063b30c1b932fe4fb4bd288513fafe89c9ff92cc",
       "edits": [
         {
           "start": 61,
@@ -720739,6 +721804,13 @@
           "symbol": "C:pw",
           "original": "pw",
           "renamed": "SnowAnimation"
+        },
+        {
+          "start": 2706,
+          "end": 2708,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2748,
@@ -724312,7 +725384,7 @@
       "original": "ola.java",
       "renamed": "FridgeScreen.java",
       "inputSha256": "ef295958ffd3a6ff0637ef9aee7e1df72211dd9a0ec69bb57b5f487a85decd20",
-      "outputSha256": "2e3afc6a9d95b5e470b075d7a99f830925e02214d702adcd135e9508c5a20377",
+      "outputSha256": "5de9c5fc0aa0db4808fd89a06e21ebc3b895dbc04abfcdd0be079956cb342331",
       "edits": [
         {
           "start": 71,
@@ -724334,6 +725406,13 @@
           "symbol": "C:jfa",
           "original": "jfa",
           "renamed": "FridgeCreature"
+        },
+        {
+          "start": 202,
+          "end": 204,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 306,
@@ -724700,6 +725779,13 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 10639,
+          "end": 10641,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 10714,
           "end": 10715,
           "symbol": "M:lu.b(I)I",
@@ -724945,6 +726031,13 @@
           "renamed": "FoodShopPanel"
         },
         {
+          "start": 18781,
+          "end": 18783,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 18807,
           "end": 18810,
           "symbol": "C:uca",
@@ -724966,11 +726059,25 @@
           "renamed": "AttackUpAllAnimation"
         },
         {
+          "start": 19065,
+          "end": 19067,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 19195,
           "end": 19197,
           "symbol": "C:bp",
           "original": "bp",
           "renamed": "AttackUpAllAnimation"
+        },
+        {
+          "start": 19234,
+          "end": 19236,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 19304,
@@ -724985,6 +726092,13 @@
           "symbol": "C:uca",
           "original": "uca",
           "renamed": "Crc32Table"
+        },
+        {
+          "start": 19527,
+          "end": 19529,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 19553,
@@ -726462,7 +727576,7 @@
       "original": "op.java",
       "renamed": "BattleState.java",
       "inputSha256": "84d68c1920bd67a5e8d96a80679ade0e5183103d8fcd2951dab1e5e8f7608d13",
-      "outputSha256": "4fb8e59c6ae2ba4b82251f5fc4a4e408d678cb360f68a44d8fea533599868e51",
+      "outputSha256": "5eb12cb4e164487a6124f58a47085f0b0d078f766754a9ee7b60239c0c22acf2",
       "edits": [
         {
           "start": 71,
@@ -732583,6 +733697,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 117087,
+          "end": 117089,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 117269,
           "end": 117276,
           "symbol": "F:op.field_d:I",
@@ -732882,6 +734003,13 @@
           "symbol": "F:op.field_d:I",
           "original": "field_d",
           "renamed": "playerCount"
+        },
+        {
+          "start": 120747,
+          "end": 120749,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 120778,
@@ -741664,7 +742792,7 @@
       "original": "pma.java",
       "renamed": "pma.java",
       "inputSha256": "e4a84600873dd3027f7ecc1980904838ba4c072f8e6b004ad1db3b84dcacc1f7",
-      "outputSha256": "0d6387b68ffcfab4f258e927c27957f14d05c679a0239f4c668bc85b67f8bd5f",
+      "outputSha256": "926023877c7ae92491d1ebfeb15f414897fc113cf645b3b6fffc889a0b4519be",
       "edits": [
         {
           "start": 200,
@@ -741856,11 +742984,25 @@
           "renamed": "CreatureType"
         },
         {
+          "start": 5123,
+          "end": 5125,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5181,
           "end": 5184,
           "symbol": "C:wca",
           "original": "wca",
           "renamed": "CreatureType"
+        },
+        {
+          "start": 5241,
+          "end": 5243,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5270,
@@ -746046,7 +747188,7 @@
       "original": "qa.java",
       "renamed": "qa.java",
       "inputSha256": "68df08544f642b372a3fc84d66282c01e9fd71d3253e8770303f582602defe03",
-      "outputSha256": "3b1a1ca12820e07412bd350446dca39949048fbd42771bb969d40e7bbcdafaa2",
+      "outputSha256": "bf7258f59bde2c2f1721505c530ef9c0d353c198b2000a6828083bc19f680c60",
       "edits": [
         {
           "start": 76,
@@ -746061,6 +747203,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "TeleportAnimation"
+        },
+        {
+          "start": 240,
+          "end": 242,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 264,
@@ -751067,7 +752216,7 @@
       "original": "qq.java",
       "renamed": "qq.java",
       "inputSha256": "0db758088e2b828705698b4bdde55dcdb47fbc2503d57ff1d375ca0aed840617",
-      "outputSha256": "dcde0752bc7c77de59246207099bb351c85292d543b0ea671b1aeaf2a2bf72c2",
+      "outputSha256": "970c70a97d1b17583c1069eed8c3322d4a873f39c04751f4fece259d43fb0df9",
       "edits": [
         {
           "start": 61,
@@ -751392,11 +752541,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 8564,
+          "end": 8566,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 8623,
           "end": 8626,
           "symbol": "C:gha",
           "original": "gha",
           "renamed": "DefaultWidgetRenderer"
+        },
+        {
+          "start": 8641,
+          "end": 8643,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 8664,
@@ -754815,7 +755978,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "f491a12b5a6e38fb68eb5caf96d161fa5e7bd5c62c7338dd7b6d5ea8213babf3",
-      "outputSha256": "45ed54ef4c08f430f2bc95ab2499e265a1e72553629d94f889d18a583af45f17",
+      "outputSha256": "9d92c9c9238f4bc2662e0c0ada129750e90a5d05726776f7d0c61aebd06e37eb",
       "edits": [
         {
           "start": 611,
@@ -754956,6 +756119,13 @@
           "symbol": "M:wj.a(ZIII)Z",
           "original": "a",
           "renamed": "processInput"
+        },
+        {
+          "start": 4457,
+          "end": 4459,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4525,
@@ -760323,7 +761493,7 @@
       "original": "saa.java",
       "renamed": "saa.java",
       "inputSha256": "94a6d4a0e10c8fc7e61eb4590d3cccc68e7a28e1d7e75788c03df53a6a7515e2",
-      "outputSha256": "6adb7ef9b46d04b08f7e0f231c278002731f0363aafec5592844f21d887f51f4",
+      "outputSha256": "689cb3f2ceb8f3f03b72d2517ee80896497a2a4d770a9a6e0363ea40b1f18845",
       "edits": [
         {
           "start": 313,
@@ -760508,6 +761678,13 @@
           "renamed": "FullscreenFocusCanvas"
         },
         {
+          "start": 5600,
+          "end": 5602,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5628,
           "end": 5631,
           "symbol": "C:uca",
@@ -760520,6 +761697,13 @@
           "symbol": "C:ct",
           "original": "ct",
           "renamed": "OneEvent"
+        },
+        {
+          "start": 6173,
+          "end": 6175,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 6201,
@@ -760746,6 +761930,13 @@
           "renamed": "FridgeCreature"
         },
         {
+          "start": 19506,
+          "end": 19508,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 19679,
           "end": 19682,
           "symbol": "C:jfa",
@@ -760919,6 +762110,13 @@
           "symbol": "M:dg.g(IIII)V",
           "original": "g",
           "renamed": "darkenRectangle"
+        },
+        {
+          "start": 24202,
+          "end": 24204,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 24250,
@@ -774699,7 +775897,7 @@
       "original": "tn.java",
       "renamed": "GameClock.java",
       "inputSha256": "d67bdc5e10a2a346379d0d8cc881fa0f41ff4844fa1be3c9e544c3de8c912e45",
-      "outputSha256": "e6d8cb417053559e2c52891c62bbc8e35c3ba524dcec66f478286a82dabe38d3",
+      "outputSha256": "faeafc3186ed6b59aeb1abe1f80dd91d225ab633634690ea0275d34332f25ee8",
       "edits": [
         {
           "start": 53,
@@ -774709,6 +775907,13 @@
           "renamed": "GameClock"
         },
         {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 569,
           "end": 570,
           "symbol": "M:tn.a(I)V",
@@ -774716,11 +775921,25 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 681,
+          "end": 683,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 852,
           "end": 854,
           "symbol": "C:tn",
           "original": "tn",
           "renamed": "GameClock"
+        },
+        {
+          "start": 1070,
+          "end": 1072,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -778382,7 +779601,7 @@
       "original": "uca.java",
       "renamed": "Crc32Table.java",
       "inputSha256": "bda0824c2aa135d60f15f36c7a552a3577fd67fe648df89414d7b016a9f4ec92",
-      "outputSha256": "22c9b379f13afbd09c062fba0f5de9b182599ec579a7c29cd7a87fbf7b073b5d",
+      "outputSha256": "141911fb89c17e4b7ee873baef7ecf83f33889acf42c8066dc0b4c8b9259bd0e",
       "edits": [
         {
           "start": 50,
@@ -778397,6 +779616,13 @@
           "symbol": "F:uca.field_d:[I",
           "original": "field_d",
           "renamed": "lookupTable"
+        },
+        {
+          "start": 221,
+          "end": 223,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 282,
@@ -785275,7 +786501,7 @@
       "original": "vaa.java",
       "renamed": "GzipDecompressor.java",
       "inputSha256": "f4f231bebdfe65cba5b6ac4fd8ebf7f019ce85e8635128b0da3a94d22b3d6541",
-      "outputSha256": "8a80af712cd5834292698e907f84e14bc3a270d6459280fd4d317acb9349dd46",
+      "outputSha256": "c75a42c9e6af05a364429678c28423acfb94c7b3a91b9a7b35410c2cc66b9ace",
       "edits": [
         {
           "start": 71,
@@ -785334,6 +786560,13 @@
           "renamed": "SnowAnimation"
         },
         {
+          "start": 3359,
+          "end": 3361,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3405,
           "end": 3407,
           "symbol": "C:no",
@@ -785360,6 +786593,13 @@
           "symbol": "C:pw",
           "original": "pw",
           "renamed": "SnowAnimation"
+        },
+        {
+          "start": 3881,
+          "end": 3883,
+          "symbol": "C:af",
+          "original": "af",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3925,
@@ -803486,10 +804726,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "8b0e6f60a1974ab33644b77aea04ef7a0c2b13e0d5a10f2f7ed95dc5762663db",
+    "rulesSha256": "76de429a4bf34a15d4892f1b144e2d40578e87da12c1522b79855479bceb1b5c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "23ad28d54adc2f9505cf95a788bb006120fa5ba8b58f3bfbbbdcc23f9a209892",
+    "outputTreeSha256": "99ba95958fa2d018674153474b5db4d4103cb575e89394116c19e26bb344df64",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

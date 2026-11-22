@@ -116,7 +116,7 @@ final class AccountNameAvailabilityValidator extends ei {
           if (this.nameAvailable) {
             return fk.field_r;
           }
-          stackIn_16_0 = q.field_g;
+          stackIn_16_0 = FullscreenFocusCanvas.field_g;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

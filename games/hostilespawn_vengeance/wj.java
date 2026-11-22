@@ -349,7 +349,7 @@ final class wj extends ph {
             if (null != q.field_g) {
               stackIn_63_0 = q.field_g;
             } else {
-              stackIn_63_0 = ue.field_a;
+              stackIn_63_0 = FullscreenFocusCanvas.field_a;
             }
             var10_int = ((ql) (Object) stackIn_63_0).a(var6, ni.field_e, (byte) 109) ? 1 : 0;
             if ((ni.field_e ? 1 : 0) != var10_int) {

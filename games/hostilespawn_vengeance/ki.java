@@ -5,7 +5,7 @@ final class ki {
     static bd field_b;
     static String field_a;
     static bd field_c;
-    static fk field_f;
+    static AccountRequestState field_f;
     static bd field_e;
     static String field_d;
 

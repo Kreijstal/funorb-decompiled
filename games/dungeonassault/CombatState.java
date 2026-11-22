@@ -1917,7 +1917,7 @@ final class CombatState {
         if (param3 != 2) {
           CombatState.a(-70, 33L);
         }
-        return rm.a((byte) 96, var6, param4, ek.a(this.field_s, (byte) -127, param0, param1), param2);
+        return rm.a((byte) 96, var6, param4, FullscreenFocusCanvas.a(this.field_s, (byte) -127, param0, param1), param2);
     }
 
     final mo a(Raider param0, PacketBuffer param1, int param2) {

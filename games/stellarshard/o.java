@@ -12,7 +12,7 @@ abstract class o {
     static String[] field_g;
     int field_a;
     int field_e;
-    static uc field_l;
+    static AccountRequestState field_l;
     static int field_j;
     static int field_f;
     int field_b;

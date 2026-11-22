@@ -326,7 +326,7 @@ final class fb {
         this.field_o = lj.field_i;
         this.field_k = cf.field_r;
         this.field_p = field_e;
-        this.field_q = pf.field_e;
+        this.field_q = AccountRequestState.field_e;
         if (param0) {
           this.field_a = se.field_o;
         } else {

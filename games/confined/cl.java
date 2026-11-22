@@ -86,20 +86,20 @@ final class cl extends ee {
           }
           try {
             if (0 == we.field_k) {
-              ol.field_a = ek.field_p.a(fa.field_P, -96, eb.field_n);
+              ol.field_a = ek.field_p.requestDirectSocket(fa.field_P, -96, eb.field_n);
               we.field_k = we.field_k + 1;
             }
             if (we.field_k == 1) {
-              if (ol.field_a.field_g == 2) {
+              if (ol.field_a.status == 2) {
                 stackIn_17_0 = sf.a(-1, (byte) -121);
                 return stackIn_17_0;
               }
-              if (ol.field_a.field_g == 1) {
+              if (ol.field_a.status == 1) {
                 we.field_k = we.field_k + 1;
               }
             }
             if (2 == we.field_k) {
-              gk.field_u = new vd((java.net.Socket) (ol.field_a.field_f), ek.field_p);
+              gk.field_u = new vd((java.net.Socket) (ol.field_a.result), ek.field_p);
               var2 = new PacketBuffer(13);
               ql.a(hj.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
               var2.writeByte(93, 15);

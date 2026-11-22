@@ -10,7 +10,7 @@ final class n {
     private int field_h;
     private int field_e;
     static String field_f;
-    static qc field_a;
+    static FullscreenFocusCanvas field_a;
     int field_b;
     private int field_c;
     private boolean field_i;
@@ -457,7 +457,7 @@ final class n {
           }
           return;
         }
-        field_a = (qc) null;
+        field_a = (FullscreenFocusCanvas) null;
         this.field_j = 0;
         if (this.field_e == 0) {
           this.field_j = lb.field_B;

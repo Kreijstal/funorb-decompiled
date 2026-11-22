@@ -128,7 +128,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void a(si param0, java.awt.Frame param1, byte param2) {
+    final static void exitFullscreenFrame(si param0, java.awt.Frame param1, byte param2) {
         mk var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;

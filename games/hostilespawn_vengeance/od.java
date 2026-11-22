@@ -10,7 +10,7 @@ final class od extends fc {
     static java.lang.reflect.Constructor field_F;
     static String field_E;
     static String field_C;
-    static fk field_I;
+    static AccountRequestState field_I;
     static String field_H;
 
     private od(int param0, int param1, int param2, int param3, nn param4, mh param5, ag param6) {

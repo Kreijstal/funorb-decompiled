@@ -6,7 +6,7 @@ final class wj {
     static tg[] field_d;
     static String field_b;
     static int field_e;
-    static mf field_a;
+    static AccountRequestState field_a;
 
     public static void a(int param0) {
         if (param0 == 0) {
@@ -38,6 +38,6 @@ final class wj {
     static {
         field_e = 0;
         field_b = "Login: ";
-        field_a = new mf();
+        field_a = new AccountRequestState();
     }
 }

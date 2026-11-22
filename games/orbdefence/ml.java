@@ -272,7 +272,7 @@ final class ml {
         } else {
           if (0 != of.field_G) {
             if (this.field_l <= 0) {
-              this.field_l = va.field_c;
+              this.field_l = AccountRequestState.field_c;
             }
             this.field_l = this.field_l - 1;
           }

@@ -6,7 +6,7 @@ final class ji extends kn {
     static int field_S;
     static long field_U;
     static int field_R;
-    static ed field_T;
+    static AccountRequestState field_T;
     static fm field_V;
     static int field_O;
     static String field_Q;
@@ -369,7 +369,7 @@ final class ji extends kn {
         field_U = 20000000L;
         field_R = 20;
         field_O = 2;
-        field_T = new ed();
+        field_T = new AccountRequestState();
         field_Q = "Names cannot contain consecutive spaces";
     }
 }

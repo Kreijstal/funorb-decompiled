@@ -42,7 +42,7 @@ final class bk extends IntrusiveNode {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ji.field_T != g.field_a) {
+          if (ji.field_T != DelegatingCanvas.field_a) {
             return false;
           }
           var8 = new AccountCreationResultPanel(jh.field_e, param3);
@@ -53,7 +53,7 @@ final class bk extends IntrusiveNode {
           } else {
             lg.field_a = null;
             ih.field_Q = param6;
-            g.field_a = ci.field_ub;
+            DelegatingCanvas.field_a = ci.field_ub;
             cn.field_f = param5;
             jd.field_d = param2;
             oc.field_o = param4;

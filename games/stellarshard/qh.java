@@ -45,7 +45,7 @@ final class qh {
             return false;
           }
           gi.field_f = sf.field_d[di.field_a];
-          uc.field_b = GameApplet.field_i[di.field_a];
+          AccountRequestState.field_b = GameApplet.field_i[di.field_a];
           di.field_a = 127 & di.field_a + 1;
           stackIn_7_0 = true;
         }

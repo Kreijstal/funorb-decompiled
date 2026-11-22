@@ -5,7 +5,7 @@ final class AchievementNotice extends IntrusiveNode {
     static java.awt.Canvas field_k;
     int field_h;
     int field_g;
-    static pd field_l;
+    static AccountRequestState field_l;
     int field_i;
     int field_p;
     int field_o;
@@ -97,7 +97,7 @@ final class AchievementNotice extends IntrusiveNode {
     }
 
     static {
-        field_l = new pd();
+        field_l = new AccountRequestState();
         field_n = new int[]{3620, 2775, 2145, 1670, 1315, 1050, 850, 700, 587, 500, 440, 392, 357, 330, 310};
     }
 

@@ -4,7 +4,7 @@
 final class ng {
     static String field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, df param6, String param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, String param7, int param8) {
         try {
           hj.field_k = param1;
           wi.field_c = param4;

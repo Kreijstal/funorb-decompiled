@@ -68,7 +68,7 @@ public final class Torquing extends tg {
           }
           if (wp.field_w > 0) {
             if (ki.field_D == null) {
-              dg.field_i = je.a(640, 480, nk.field_u, 0, 0, -62);
+              dg.field_i = je.createFullscreenCanvas(640, 480, nk.field_u, 0, 0, -62);
             } else {
               dg.field_i = ki.field_D.b((byte) -73);
               vp.b(2, -111);
@@ -132,7 +132,7 @@ public final class Torquing extends tg {
           ha.clearStaticReferences(param0 - 132);
           RasterBuffer.a((byte) 84);
           vf.a(param0 ^ 41);
-          pp.a(4);
+          FullscreenFocusCanvas.a(4);
           m.clearStaticReferences(8192);
           AudioOutput.clearStaticReferences();
           wl.clearStaticReferences();
@@ -380,7 +380,7 @@ public final class Torquing extends tg {
           e.clearStaticReferences(true);
           wj.c(false);
           rk.clearStaticReferences(true);
-          gd.a((byte) -119);
+          AccountRequestState.releaseStatics((byte) -119);
           AccountServiceResult.clearStaticReferences((byte) 10);
           fo.h(-2);
           di.c(param0 ^ -3);
@@ -960,7 +960,7 @@ public final class Torquing extends tg {
             qd.field_c[0] = vo.a(-173, i.c((int) param1, 101), GameKeyHandler.field_a[2], 43);
             qd.field_c[2] = vo.a(-194, -1, GameKeyHandler.field_a[6], -34);
             kl.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
-            gd.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
+            AccountRequestState.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
             be.a(new op(vp.field_D, n.field_q, rg.field_v, 6, false));
             tj.field_n = pb.a("achievements_lrg", param1 + 101, "", rg.field_v);
             var46 = mn.a(rg.field_v, "", "glass", 89);
@@ -1815,7 +1815,7 @@ public final class Torquing extends tg {
           ResourceArchive.field_c.b();
           qd.field_b.b();
           if (dg.field_i != null &&
-            dg.field_i.field_b) {
+            dg.field_i.focusLost) {
             ug.a(-95);
             s.b(-23658);
           }
@@ -2083,7 +2083,7 @@ public final class Torquing extends tg {
               vo.field_f[fn.field_c].c(93);
             }
             if (var2_int > 0) {
-              gd.field_b.e();
+              AccountRequestState.field_b.e();
               SoftwareRasterizer.b();
             }
           }
@@ -2117,7 +2117,7 @@ public final class Torquing extends tg {
             }
             if (GzipDecompressor.field_b > var2_int) {
               mk.field_b.a(-86);
-              vi.a(var2_int, gd.field_b, 0, 0, vi.field_a);
+              vi.a(var2_int, AccountRequestState.field_b, 0, 0, vi.field_a);
             }
           }
           return;

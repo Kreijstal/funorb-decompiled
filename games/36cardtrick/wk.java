@@ -171,7 +171,7 @@ final class wk {
         try {
           if (!ia.a((byte) -79)) {
             if (null != gj.field_a &&
-              gj.field_a.field_b) {
+              gj.field_a.focusLost) {
               ga.a(true);
               s.field_d.b(new ol(s.field_d, tk.field_b), (byte) -15);
             }

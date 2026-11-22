@@ -227,7 +227,7 @@ final class sk implements Runnable {
           return;
         }
         try {
-          ae.field_c = param2;
+          AccountRequestState.field_c = param2;
           ge.field_h = param0;
           qg.field_b = param1;
           ub.field_a = param4;

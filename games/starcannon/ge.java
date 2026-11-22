@@ -56,7 +56,7 @@ final class ge {
             return (Sprite[]) (stackIn_2_0);
           }
           if (param0 > 7) {
-            stackIn_7_0 = pf.a(255);
+            stackIn_7_0 = AccountRequestState.a(255);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;

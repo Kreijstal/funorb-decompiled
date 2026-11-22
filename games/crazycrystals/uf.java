@@ -58,7 +58,7 @@ final class uf {
     }
 
     uf(boolean param0) {
-        this.field_a = dd.field_b;
+        this.field_a = FullscreenFocusCanvas.field_b;
         this.field_l = ca.field_m;
         if (!param0) {
           this.field_k = null;

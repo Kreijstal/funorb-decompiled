@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderable, WorldBody, Switchable, SwitchableScope {
+abstract class RoomComponent extends IntrusiveNode implements noa, RoomObjectMarker, Renderable, WorldBody, Switchable, SwitchableScope {
     int typeId;
     private int parentSlot;
     int height;

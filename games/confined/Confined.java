@@ -191,7 +191,7 @@ public final class Confined extends i {
           rj.a(123);
           eh.c(true);
           pb.clearStaticReferences((byte) 70);
-          ie.clearStaticReferences(-75);
+          DelegatingCanvas.clearStaticReferences(-75);
           nh.a(false);
           dg.b(false);
           dl.clearStaticReferences((byte) 101);
@@ -273,7 +273,7 @@ public final class Confined extends i {
           wa.a((byte) -114);
           gd.a((byte) -3);
           sf.b(92);
-          ve.a(-340);
+          AccountRequestState.releaseStatics(-340);
           AccountServiceResult.a(-116);
           vj.a((byte) 125);
           ej.a(true);
@@ -536,7 +536,7 @@ public final class Confined extends i {
                   if (1 == var4) {
                     stackIn_56_2 = ee.field_P;
                   } else {
-                    stackIn_56_2 = ve.field_d;
+                    stackIn_56_2 = AccountRequestState.field_d;
                   }
                   ((ce) (Object) stackIn_55_0).b(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
                 }
@@ -548,7 +548,7 @@ public final class Confined extends i {
               if (1 == var4) {
                 stackIn_56_2 = ee.field_P;
               } else {
-                stackIn_56_2 = ve.field_d;
+                stackIn_56_2 = AccountRequestState.field_d;
               }
               ((ce) (Object) stackIn_55_0).b(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
             }
@@ -1462,7 +1462,7 @@ public final class Confined extends i {
               qn.field_v = new hn();
               id.field_rb = -1;
               pa.field_b = -1;
-              ie.field_a = false;
+              DelegatingCanvas.field_a = false;
               of.field_a = false;
               var2_intLifetime2 = 0;
               while (var2_intLifetime2 < 10) {

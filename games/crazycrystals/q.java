@@ -12,7 +12,7 @@ final class q {
           field_b = (dl[]) null;
           if (ph.field_E != null) {
             fq.a(-75, ph.field_E);
-            ph.field_E.a(te.field_a, (byte) -92);
+            ph.field_E.exitFullscreen(te.field_a, (byte) -92);
             ph.field_E = null;
             return;
           }
@@ -22,7 +22,7 @@ final class q {
           return;
         }
         fq.a(-75, ph.field_E);
-        ph.field_E.a(te.field_a, (byte) -92);
+        ph.field_E.exitFullscreen(te.field_a, (byte) -92);
         ph.field_E = null;
     }
 

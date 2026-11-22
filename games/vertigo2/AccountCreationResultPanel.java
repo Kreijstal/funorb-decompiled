@@ -5,7 +5,7 @@ final class AccountCreationResultPanel extends fj implements ij {
     private boolean field_ub;
     static String field_rb;
     private boolean field_nb;
-    static ee field_qb;
+    static AccountRequestState field_qb;
     static String field_sb;
     static GameplayScreen field_pb;
     private mk field_tb;
@@ -38,7 +38,7 @@ final class AccountCreationResultPanel extends fj implements ij {
           }
           var5 = param3.readBits((byte) -118, 3);
           if (param0 != 12635) {
-            field_qb = (ee) null;
+            field_qb = (AccountRequestState) null;
           }
           var6 = (byte)param3.readBits((byte) -101, 8);
           if (var5 <= 0) {
@@ -220,7 +220,7 @@ final class AccountCreationResultPanel extends fj implements ij {
         field_rb = "TAB - hide chat temporarily";
         field_ob = (int[][]) null;
         field_sb = "Unpacking sound effects";
-        field_qb = new ee();
+        field_qb = new AccountRequestState();
         field_vb = "Instructions";
     }
 }

@@ -113,7 +113,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (var2 != 0 &&
           1 != var2) {
-          if (!pd.field_b) {
+          if (!AccountRequestState.field_b) {
             this.a((byte) -95, "reconnect");
           }
           je.a(-11);

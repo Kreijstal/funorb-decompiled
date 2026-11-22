@@ -10,7 +10,7 @@ abstract class ci {
     static byte[][] field_a;
     static String[][] field_h;
     int field_d;
-    static bd field_e;
+    static AccountRequestState field_e;
     static String field_j;
     static boolean field_b;
 
@@ -168,7 +168,7 @@ abstract class ci {
     static {
         field_h = new String[][]{new String[]{"Your dynamite will not go off in water. Try draining the water away or placing the explosives somewhere dryer. Alternatively, buy a charge - that will work underwater."}};
         field_k = 0.0;
-        field_e = new bd();
+        field_e = new AccountRequestState();
         field_j = "You are not currently logged in to the service. To save your score, progress and Achievements, you must log in or create an account.";
     }
 }

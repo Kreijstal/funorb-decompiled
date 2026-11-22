@@ -72,7 +72,7 @@ final class fg {
           }
           u.field_c = new gi(param1);
           qf.field_g = param2;
-          qc.field_g = param3;
+          FullscreenFocusCanvas.field_g = param3;
           GzipDecompressor.a((byte) 83);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

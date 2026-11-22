@@ -81,9 +81,9 @@ final class j extends ck {
         Object var4Lifetime2;
         try {
           var3 = null;
-          if (null != ql.field_a &&
-            !ql.field_a.equals(param2.getParameter("settings"))) {
-            var3 = ql.field_a;
+          if (null != DelegatingCanvas.field_a &&
+            !DelegatingCanvas.field_a.equals(param2.getParameter("settings"))) {
+            var3 = DelegatingCanvas.field_a;
             var4 = var3;
             var4Lifetime2 = var3;
           }

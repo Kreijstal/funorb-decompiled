@@ -1324,6 +1324,14 @@
       "renamedSymbol": "C:ImageProducerRasterBuffer"
     },
     {
+      "symbol": "C:og",
+      "originalName": "og",
+      "to": "AccountRequestState",
+      "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestState"
+    },
+    {
       "symbol": "C:oj",
       "originalName": "oj",
       "to": "SpriteState",
@@ -3081,7 +3089,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 9 null writes to 6 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ba46063b14891cbc88cc31fd324acc40d1bbee33cda6f6b6425cc4825a7e15e6.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:og.clearStaticReferences(I)V"
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:oh.b(I)V",
@@ -7667,9 +7675,9 @@
     },
     {
       "symbol": "C:og",
-      "renamedSymbol": "C:og",
+      "renamedSymbol": "C:AccountRequestState",
       "originalName": "og",
-      "renamedName": "og",
+      "renamedName": "AccountRequestState",
       "declaration": {
         "file": "og.java",
         "start": 69,
@@ -23012,7 +23020,7 @@
     },
     {
       "symbol": "F:k.field_b:Log;",
-      "renamedSymbol": "F:k.field_b:Log;",
+      "renamedSymbol": "F:k.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -27665,7 +27673,7 @@
     },
     {
       "symbol": "F:og.field_a:Log;",
-      "renamedSymbol": "F:og.field_a:Log;",
+      "renamedSymbol": "F:AccountRequestState.field_a:LAccountRequestState;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -27676,7 +27684,7 @@
     },
     {
       "symbol": "F:og.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:og.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -27687,7 +27695,7 @@
     },
     {
       "symbol": "F:og.field_c:[Lci;",
-      "renamedSymbol": "F:og.field_c:[LSprite;",
+      "renamedSymbol": "F:AccountRequestState.field_c:[LSprite;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -27698,7 +27706,7 @@
     },
     {
       "symbol": "F:og.field_d:I",
-      "renamedSymbol": "F:og.field_d:I",
+      "renamedSymbol": "F:AccountRequestState.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -27709,7 +27717,7 @@
     },
     {
       "symbol": "F:og.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:og.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -27720,7 +27728,7 @@
     },
     {
       "symbol": "F:og.field_f:Lud;",
-      "renamedSymbol": "F:og.field_f:Lud;",
+      "renamedSymbol": "F:AccountRequestState.field_f:Lud;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -27731,7 +27739,7 @@
     },
     {
       "symbol": "F:og.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:og.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestState.field_g:Ljava/lang/String;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -28501,7 +28509,7 @@
     },
     {
       "symbol": "F:pe.field_a:Log;",
-      "renamedSymbol": "F:pe.field_a:Log;",
+      "renamedSymbol": "F:pe.field_a:LAccountRequestState;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -30272,7 +30280,7 @@
     },
     {
       "symbol": "F:qe.field_f:Log;",
-      "renamedSymbol": "F:IsaacCipher.field_f:Log;",
+      "renamedSymbol": "F:IsaacCipher.field_f:LAccountRequestState;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -35057,7 +35065,7 @@
     },
     {
       "symbol": "F:ua.field_d:Log;",
-      "renamedSymbol": "F:ua.field_d:Log;",
+      "renamedSymbol": "F:ua.field_d:LAccountRequestState;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -144254,7 +144262,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#0",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#0",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -144265,7 +144273,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#1",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#1",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -144276,7 +144284,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#10",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#10",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144287,7 +144295,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#11",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#11",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144298,7 +144306,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#12",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#12",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#12",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -144309,7 +144317,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#13",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#13",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#13",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -144320,7 +144328,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#14",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#14",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#14",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -144331,7 +144339,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#2",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#2",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#2",
       "originalName": "var3_ref2",
       "renamedName": "var3_ref2",
       "declaration": {
@@ -144342,7 +144350,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#3",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#3",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -144353,7 +144361,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#4",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#4",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -144364,7 +144372,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#5",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#5",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#5",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -144375,7 +144383,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#6",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#6",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#6",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -144386,7 +144394,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#7",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#7",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#7",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -144397,7 +144405,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#8",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#8",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#8",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -144408,7 +144416,7 @@
     },
     {
       "symbol": "L:og.a(ILjava/io/File;I)[B#9",
-      "renamedSymbol": "L:og.a(ILjava/io/File;I)[B#9",
+      "renamedSymbol": "L:AccountRequestState.a(ILjava/io/File;I)[B#9",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -207911,7 +207919,7 @@
     },
     {
       "symbol": "M:og.a(I)V",
-      "renamedSymbol": "M:og.clearStaticReferences(I)V",
+      "renamedSymbol": "M:AccountRequestState.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -207922,7 +207930,7 @@
     },
     {
       "symbol": "M:og.a(ILjava/io/File;I)[B",
-      "renamedSymbol": "M:og.a(ILjava/io/File;I)[B",
+      "renamedSymbol": "M:AccountRequestState.a(ILjava/io/File;I)[B",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -207933,7 +207941,7 @@
     },
     {
       "symbol": "M:og.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:og.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestState.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -259523,7 +259531,7 @@
     },
     {
       "symbol": "P:og.a(I)V#0",
-      "renamedSymbol": "P:og.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:AccountRequestState.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259534,7 +259542,7 @@
     },
     {
       "symbol": "P:og.a(ILjava/io/File;I)[B#0",
-      "renamedSymbol": "P:og.a(ILjava/io/File;I)[B#0",
+      "renamedSymbol": "P:AccountRequestState.a(ILjava/io/File;I)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259545,7 +259553,7 @@
     },
     {
       "symbol": "P:og.a(ILjava/io/File;I)[B#1",
-      "renamedSymbol": "P:og.a(ILjava/io/File;I)[B#1",
+      "renamedSymbol": "P:AccountRequestState.a(ILjava/io/File;I)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259556,7 +259564,7 @@
     },
     {
       "symbol": "P:og.a(ILjava/io/File;I)[B#2",
-      "renamedSymbol": "P:og.a(ILjava/io/File;I)[B#2",
+      "renamedSymbol": "P:AccountRequestState.a(ILjava/io/File;I)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -277743,7 +277751,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "8bfbc1812a301cfcbc40fab1da01b0fcab103aee37cf028b9cd86e551c55cfff",
+      "outputSha256": "51a20e9ea69f6973fd9556d86cdb64e5f06d1d3beff077cea8c34b48123f9892",
       "edits": [
         {
           "start": 78,
@@ -278112,6 +278120,13 @@
           "renamed": "TutorialText"
         },
         {
+          "start": 18057,
+          "end": 18059,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 18272,
           "end": 18274,
           "symbol": "C:kl",
@@ -278210,6 +278225,13 @@
           "renamed": "PcmPlayerPump"
         },
         {
+          "start": 32455,
+          "end": 32457,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 32516,
           "end": 32518,
           "symbol": "C:nf",
@@ -278222,6 +278244,13 @@
           "symbol": "C:nf",
           "original": "nf",
           "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 32564,
+          "end": 32566,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 32674,
@@ -278250,6 +278279,13 @@
           "symbol": "C:nf",
           "original": "nf",
           "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 33503,
+          "end": 33505,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 34480,
@@ -278292,6 +278328,13 @@
           "symbol": "C:nf",
           "original": "nf",
           "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 35995,
+          "end": 35997,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 36109,
@@ -279085,6 +279128,13 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 83104,
+          "end": 83106,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 83733,
           "end": 83735,
           "symbol": "C:jb",
@@ -279379,6 +279429,13 @@
           "renamed": "units"
         },
         {
+          "start": 94624,
+          "end": 94626,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 95100,
           "end": 95102,
           "symbol": "C:jb",
@@ -279400,11 +279457,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 95416,
+          "end": 95418,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 95455,
           "end": 95457,
           "symbol": "C:mj",
           "original": "mj",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 95575,
+          "end": 95577,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 95588,
@@ -279414,11 +279485,39 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 95668,
+          "end": 95670,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 95812,
+          "end": 95814,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 95825,
           "end": 95827,
           "symbol": "C:mj",
           "original": "mj",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 95945,
+          "end": 95947,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 96107,
+          "end": 96109,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 96492,
@@ -279440,6 +279539,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 96894,
+          "end": 96896,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 98274,
@@ -279510,6 +279616,34 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 102198,
+          "end": 102200,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 102345,
+          "end": 102347,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 102487,
+          "end": 102489,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 102634,
+          "end": 102636,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 102905,
@@ -280231,11 +280365,39 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 158409,
+          "end": 158411,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 158430,
+          "end": 158432,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 158451,
+          "end": 158453,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 158569,
           "end": 158571,
           "symbol": "C:of",
           "original": "of",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 158638,
+          "end": 158640,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 158724,
@@ -281471,6 +281633,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 168435,
+          "end": 168437,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 168438,
           "end": 168439,
           "symbol": "M:og.a(I)V",
@@ -282291,6 +282460,13 @@
           "renamed": "GameShell"
         },
         {
+          "start": 204446,
+          "end": 204448,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 205329,
           "end": 205331,
           "symbol": "C:jb",
@@ -283061,6 +283237,34 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 250106,
+          "end": 250108,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 250269,
+          "end": 250271,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 250641,
+          "end": 250643,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 250829,
+          "end": 250831,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 251403,
           "end": 251404,
           "symbol": "C:l",
@@ -283820,6 +284024,20 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 280196,
+          "end": 280198,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 280267,
+          "end": 280269,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 280401,
           "end": 280402,
           "symbol": "C:l",
@@ -284268,11 +284486,32 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 303725,
+          "end": 303727,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 303850,
+          "end": 303852,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 306691,
           "end": 306692,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 306863,
+          "end": 306865,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 307257,
@@ -284420,6 +284659,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 316445,
+          "end": 316447,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 316607,
@@ -284604,6 +284850,20 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 320831,
+          "end": 320833,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 321004,
+          "end": 321006,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 321288,
           "end": 321290,
           "symbol": "C:jb",
@@ -284630,6 +284890,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 322594,
+          "end": 322596,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 323530,
@@ -284702,6 +284969,41 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 324330,
+          "end": 324332,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 324443,
+          "end": 324445,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 324561,
+          "end": 324563,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 324669,
+          "end": 324671,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 324777,
+          "end": 324779,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 324862,
           "end": 324864,
           "symbol": "C:ia",
@@ -284737,6 +285039,13 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 327459,
+          "end": 327461,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 327726,
           "end": 327728,
           "symbol": "C:ke",
@@ -284770,6 +285079,13 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 328284,
+          "end": 328286,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 328574,
@@ -284989,6 +285305,13 @@
           "renamed": "LevelMap"
         },
         {
+          "start": 344130,
+          "end": 344132,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 344799,
           "end": 344800,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
@@ -285008,6 +285331,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 346447,
+          "end": 346449,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 346846,
@@ -285031,11 +285361,179 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 349154,
+          "end": 349156,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 349225,
+          "end": 349227,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 349365,
+          "end": 349367,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 349645,
+          "end": 349647,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 349716,
+          "end": 349718,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 349819,
+          "end": 349821,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350083,
+          "end": 350085,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350155,
+          "end": 350157,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350258,
+          "end": 350260,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350522,
+          "end": 350524,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350593,
+          "end": 350595,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350696,
+          "end": 350698,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 350963,
+          "end": 350965,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 351079,
+          "end": 351081,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 351092,
           "end": 351094,
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 351286,
+          "end": 351288,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 351394,
+          "end": 351396,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 351601,
+          "end": 351603,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 351672,
+          "end": 351674,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 351863,
+          "end": 351865,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 351934,
+          "end": 351936,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352125,
+          "end": 352127,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352196,
+          "end": 352198,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352387,
+          "end": 352389,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352458,
+          "end": 352460,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 352471,
@@ -285045,11 +285543,179 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 352648,
+          "end": 352650,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352719,
+          "end": 352721,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352911,
+          "end": 352913,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 352983,
+          "end": 352985,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353175,
+          "end": 353177,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353247,
+          "end": 353249,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353439,
+          "end": 353441,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353511,
+          "end": 353513,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353703,
+          "end": 353705,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353775,
+          "end": 353777,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 353968,
+          "end": 353970,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 354040,
+          "end": 354042,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 354053,
           "end": 354055,
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 354232,
+          "end": 354234,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 354399,
+          "end": 354401,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 354566,
+          "end": 354568,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 354733,
+          "end": 354735,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 354900,
+          "end": 354902,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355067,
+          "end": 355069,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355232,
+          "end": 355234,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355304,
+          "end": 355306,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355500,
+          "end": 355502,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355572,
+          "end": 355574,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355768,
+          "end": 355770,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 355840,
+          "end": 355842,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 356053,
@@ -285060,12 +285726,61 @@
           "kind": "label"
         },
         {
+          "start": 356366,
+          "end": 356368,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 356456,
+          "end": 356458,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 356611,
+          "end": 356613,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 356700,
+          "end": 356702,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 357256,
           "end": 357259,
           "symbol": "B:Terraphoenix.u(I)V#0",
           "original": "L44",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 357623,
+          "end": 357625,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 357690,
+          "end": 357692,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 357861,
+          "end": 357863,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 357874,
@@ -285075,11 +285790,46 @@
           "renamed": "MapTile"
         },
         {
+          "start": 357927,
+          "end": 357929,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 358070,
           "end": 358072,
           "symbol": "C:fa",
           "original": "fa",
           "renamed": "Archive"
+        },
+        {
+          "start": 358148,
+          "end": 358150,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 358220,
+          "end": 358222,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 358518,
+          "end": 358520,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 358733,
+          "end": 358735,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 358935,
@@ -285089,11 +285839,95 @@
           "renamed": "Archive"
         },
         {
+          "start": 358963,
+          "end": 358965,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 359033,
+          "end": 359035,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 359307,
+          "end": 359309,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 359522,
+          "end": 359524,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 359818,
+          "end": 359820,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 359888,
+          "end": 359890,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 360549,
+          "end": 360551,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 360611,
+          "end": 360613,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 360648,
+          "end": 360650,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 360711,
+          "end": 360713,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 360950,
           "end": 360952,
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 361347,
+          "end": 361349,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 361410,
+          "end": 361412,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 361870,
@@ -285187,11 +286021,39 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 363523,
+          "end": 363525,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 363536,
           "end": 363538,
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 363586,
+          "end": 363588,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 363752,
+          "end": 363754,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 363815,
+          "end": 363817,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 364365,
@@ -285636,7 +286498,7 @@
       "original": "ad.java",
       "renamed": "TutorialController.java",
       "inputSha256": "c91ab0349d0ad128e7a9239a86312b36042cee2868c6d7f83348a3e457106ed3",
-      "outputSha256": "d98e55f91a6a4d3b45edde78305a84ee02ad453ffb2eed4d6867bf6f2a2e3d88",
+      "outputSha256": "3ddeb0e0a7ad813a4e3b50e3287f51d918346fbf2d98e5c95c5c0d404b604e83",
       "edits": [
         {
           "start": 50,
@@ -285750,6 +286612,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 3107,
+          "end": 3109,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5011,
@@ -285920,6 +286789,20 @@
           "renamed": "units"
         },
         {
+          "start": 11354,
+          "end": 11356,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 11376,
+          "end": 11378,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 14228,
           "end": 14235,
           "symbol": "F:e.field_G:LTerraphoenix;",
@@ -286025,6 +286908,41 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 17837,
+          "end": 17839,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17942,
+          "end": 17944,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18048,
+          "end": 18050,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18153,
+          "end": 18155,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18258,
+          "end": 18260,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 18362,
           "end": 18363,
           "symbol": "C:l",
@@ -286046,6 +286964,20 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 18963,
+          "end": 18965,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18985,
+          "end": 18987,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 19076,
           "end": 19077,
           "symbol": "C:l",
@@ -286058,6 +286990,48 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 19493,
+          "end": 19495,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19581,
+          "end": 19583,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19721,
+          "end": 19723,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19751,
+          "end": 19753,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19873,
+          "end": 19875,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19903,
+          "end": 19905,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 20215,
@@ -287936,6 +288910,13 @@
           "renamed": "TutorialText"
         },
         {
+          "start": 56868,
+          "end": 56870,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 56927,
           "end": 56929,
           "symbol": "C:ql",
@@ -289314,7 +290295,7 @@
       "original": "am.java",
       "renamed": "am.java",
       "inputSha256": "d4f965a29fd9933fc5a9d59444193020e2e6110382c7278e4781721d6563b3fd",
-      "outputSha256": "8682603fa505dcb56773d663625669d79e2e7cc7cddc2d5c6906df032e425408",
+      "outputSha256": "5c668bca02e071caa2c98d00be8523122a0396565f24f57d622e3d14e5d68b37",
       "edits": [
         {
           "start": 61,
@@ -289378,6 +290359,20 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 1163,
+          "end": 1165,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 1198,
+          "end": 1200,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1283,
@@ -291896,7 +292891,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "cd0c5e9a8b31a5bf7cd98e6d198721967ef93b866493ecbb823b02d04548bca8",
-      "outputSha256": "a05c42291b8ac0949085fb570feed79613a9c4f33407c9961779e8205b88b9c5",
+      "outputSha256": "61b5da05ad479f169b5d9ea8156e6c510a564d5c5f9b7ef31052f377b2064083",
       "edits": [
         {
           "start": 66,
@@ -292193,6 +293188,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 25430,
+          "end": 25432,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 31821,
           "end": 31823,
           "symbol": "C:of",
@@ -292394,6 +293396,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 58266,
+          "end": 58268,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 58580,
@@ -294655,7 +295664,7 @@
       "original": "ch.java",
       "renamed": "ch.java",
       "inputSha256": "ba3338e62dac1caa36fac6c4e1bda6d93ee38461d822fcaae5936cba47c31982",
-      "outputSha256": "db9800261467f80c7e2dd27b605cce8d2b18becbc1961c73ab2314befed5ea5b",
+      "outputSha256": "6d26d7749c1ba941264772672cde4dd47624a42d5c4e72c3f1ecffdcd2349b14",
       "edits": [
         {
           "start": 160,
@@ -294707,11 +295716,102 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1833,
+          "end": 1835,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 1989,
+          "end": 1991,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 2002,
           "end": 2004,
           "symbol": "C:of",
           "original": "of",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 2370,
+          "end": 2372,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2517,
+          "end": 2519,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2685,
+          "end": 2687,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2846,
+          "end": 2848,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3043,
+          "end": 3045,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3737,
+          "end": 3739,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3915,
+          "end": 3917,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4145,
+          "end": 4147,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4376,
+          "end": 4378,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4608,
+          "end": 4610,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4781,
+          "end": 4783,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 5579,
@@ -295084,6 +296184,13 @@
           "renamed": "BattleUnit"
         },
         {
+          "start": 24224,
+          "end": 24226,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 24261,
           "end": 24262,
           "symbol": "C:l",
@@ -295126,6 +296233,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 25482,
+          "end": 25484,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 25547,
           "end": 25548,
           "symbol": "C:l",
@@ -295145,6 +296259,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 26724,
+          "end": 26726,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 26789,
@@ -295168,11 +296289,172 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 27301,
+          "end": 27303,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 27379,
+          "end": 27381,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 27657,
+          "end": 27659,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 27931,
+          "end": 27933,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 28076,
+          "end": 28078,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 28298,
+          "end": 28300,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 28889,
+          "end": 28891,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 29132,
+          "end": 29134,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 29286,
+          "end": 29288,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 29521,
+          "end": 29523,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 29662,
+          "end": 29664,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 29845,
+          "end": 29847,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 29985,
+          "end": 29987,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 30140,
+          "end": 30142,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 30695,
+          "end": 30697,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 30784,
+          "end": 30786,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 30901,
+          "end": 30903,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31051,
+          "end": 31053,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31170,
+          "end": 31172,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31251,
+          "end": 31253,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31912,
+          "end": 31914,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 31925,
           "end": 31927,
           "symbol": "C:of",
           "original": "of",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 32018,
+          "end": 32020,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32130,
+          "end": 32132,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 32195,
@@ -295215,6 +296497,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 33316,
+          "end": 33318,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 33381,
@@ -295320,6 +296609,20 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 39038,
+          "end": 39040,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 39155,
+          "end": 39157,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 39168,
@@ -299005,7 +300308,7 @@
       "original": "dd.java",
       "renamed": "dd.java",
       "inputSha256": "b6cf0fc7b4b212fd00195bb410b9d14c08dff95490925d6ebd6e2d75b6554e4f",
-      "outputSha256": "400b124c6473f332608ce2d1142f80c46c65a5d4e17ee729ad70265b416d022e",
+      "outputSha256": "0bc59a176a3e3faadc709d7aefec4c55ce04a8b101d8acc43ca6cc1e5a091f28",
       "edits": [
         {
           "start": 255,
@@ -299155,6 +300458,13 @@
           "renamed": "y"
         },
         {
+          "start": 5545,
+          "end": 5547,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 5708,
           "end": 5710,
           "symbol": "C:ci",
@@ -299188,6 +300498,27 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "MessageKeys"
+        },
+        {
+          "start": 6544,
+          "end": 6546,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6775,
+          "end": 6777,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6925,
+          "end": 6927,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 7217,
@@ -299225,6 +300556,13 @@
           "renamed": "y"
         },
         {
+          "start": 7788,
+          "end": 7790,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 7961,
           "end": 7963,
           "symbol": "C:ci",
@@ -299258,6 +300596,27 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "MessageKeys"
+        },
+        {
+          "start": 8850,
+          "end": 8852,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9085,
+          "end": 9087,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9236,
+          "end": 9238,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 9401,
@@ -299443,7 +300802,7 @@
       "original": "dh.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "6580dd1ebb4997076178198ef722fa3f2458bc35b8e5d1fc6470bb4ea45935b5",
-      "outputSha256": "5bb44ddafd509296692799d768c0797a0f0b7ba2f74cd09c99794e6f620c7158",
+      "outputSha256": "c62ca14686b3fead0bc374afd4fe1b8cccc23c44d034fb6aa34863c7741ea26b",
       "edits": [
         {
           "start": 44,
@@ -300230,11 +301589,25 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 8758,
+          "end": 8760,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 8778,
           "end": 8780,
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 8791,
+          "end": 8793,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 8824,
@@ -302708,7 +304081,7 @@
       "original": "dk.java",
       "renamed": "LevelMap.java",
       "inputSha256": "9fa51f571a0ff0cc857771ef8fcfcc067b55157627c02d1c77825cf6500bd540",
-      "outputSha256": "b2020bd1fa970aa452b7f535c0c339dbeef4f4b881b1de11634ad852633a2034",
+      "outputSha256": "687a090ddeb135e054b37d107ef34554a4f855aff535bdcd774767972fd77591",
       "edits": [
         {
           "start": 50,
@@ -304486,6 +305859,41 @@
           "renamed": "wrapException"
         },
         {
+          "start": 90288,
+          "end": 90290,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 90347,
+          "end": 90349,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 90406,
+          "end": 90408,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 90465,
+          "end": 90467,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 90597,
+          "end": 90599,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 91199,
           "end": 91200,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
@@ -306015,11 +307423,39 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 142650,
+          "end": 142652,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 142714,
+          "end": 142716,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 142825,
+          "end": 142827,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 142932,
           "end": 142933,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 142980,
+          "end": 142982,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 143081,
@@ -306029,11 +307465,32 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 143129,
+          "end": 143131,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 143230,
           "end": 143231,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 143279,
+          "end": 143281,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 143403,
+          "end": 143405,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 143510,
@@ -306043,11 +307500,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 143559,
+          "end": 143561,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 143660,
           "end": 143661,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 143709,
+          "end": 143711,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 143810,
@@ -306057,11 +307528,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 143860,
+          "end": 143862,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 143961,
           "end": 143962,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 144010,
+          "end": 144012,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 144023,
@@ -306078,11 +307563,39 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 144161,
+          "end": 144163,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 144262,
           "end": 144263,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 144315,
+          "end": 144317,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 144468,
+          "end": 144470,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 144621,
+          "end": 144623,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 146651,
@@ -310130,7 +311643,7 @@
       "original": "e.java",
       "renamed": "BattleState.java",
       "inputSha256": "f4936e9bc7cb412874672987d7c7df6b2d63f94bfe5655340b5391c177dcc333",
-      "outputSha256": "ce4811c656340c3b5374beb7553fccd62cd27aea4cd8da597a635458806eeda6",
+      "outputSha256": "a100acdfc59fd34fef585ef02ae71b5c8bdc9c2ec0310ed25ee2024fb5b07233",
       "edits": [
         {
           "start": 50,
@@ -311169,6 +312682,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 33234,
+          "end": 33236,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 33332,
           "end": 33335,
           "symbol": "B:e.a(LTerraphoenix;Z)V#1",
@@ -311221,6 +312741,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 34781,
+          "end": 34783,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 34893,
           "end": 34900,
           "symbol": "F:r.field_c:Ldl;",
@@ -311254,6 +312781,13 @@
           "symbol": "F:dl.field_h:Lr;",
           "original": "field_h",
           "renamed": "unit"
+        },
+        {
+          "start": 35273,
+          "end": 35275,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 35515,
@@ -316161,6 +317695,20 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 164829,
+          "end": 164831,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 165397,
+          "end": 165399,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 165446,
           "end": 165453,
           "symbol": "F:e.field_h:Ldk;",
@@ -316287,6 +317835,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 175127,
+          "end": 175129,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 175644,
           "end": 175646,
           "symbol": "C:jb",
@@ -316380,6 +317935,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 181435,
+          "end": 181437,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 181658,
           "end": 181659,
           "symbol": "C:l",
@@ -316406,6 +317968,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 182441,
+          "end": 182443,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 182636,
@@ -316484,6 +318053,69 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 185517,
+          "end": 185519,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 185589,
+          "end": 185591,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 185661,
+          "end": 185663,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 185778,
+          "end": 185780,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 185850,
+          "end": 185852,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 185922,
+          "end": 185924,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 186039,
+          "end": 186041,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 186118,
+          "end": 186120,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 186198,
+          "end": 186200,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 186418,
@@ -316647,6 +318279,13 @@
           "renamed": "units"
         },
         {
+          "start": 191715,
+          "end": 191717,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 191733,
           "end": 191740,
           "symbol": "F:e.field_C:[Lr;",
@@ -316654,11 +318293,32 @@
           "renamed": "units"
         },
         {
+          "start": 191882,
+          "end": 191884,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 192154,
+          "end": 192156,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 192172,
           "end": 192179,
           "symbol": "F:e.field_C:[Lr;",
           "original": "field_C",
           "renamed": "units"
+        },
+        {
+          "start": 192317,
+          "end": 192319,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 192495,
@@ -316717,6 +318377,13 @@
           "renamed": "units"
         },
         {
+          "start": 193262,
+          "end": 193264,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 193897,
           "end": 193904,
           "symbol": "F:e.field_h:Ldk;",
@@ -316745,11 +318412,25 @@
           "renamed": "unit"
         },
         {
+          "start": 194587,
+          "end": 194589,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 194602,
           "end": 194603,
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 194732,
+          "end": 194734,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 194759,
@@ -316766,6 +318447,13 @@
           "renamed": "BattleUnit"
         },
         {
+          "start": 194932,
+          "end": 194934,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 194959,
           "end": 194960,
           "symbol": "C:r",
@@ -316778,6 +318466,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 195132,
+          "end": 195134,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 195159,
@@ -316794,6 +318489,13 @@
           "renamed": "BattleUnit"
         },
         {
+          "start": 195331,
+          "end": 195333,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 195370,
           "end": 195371,
           "symbol": "C:r",
@@ -316806,6 +318508,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 195585,
+          "end": 195587,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 195624,
@@ -316822,6 +318531,13 @@
           "renamed": "BattleUnit"
         },
         {
+          "start": 195839,
+          "end": 195841,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 195863,
           "end": 195864,
           "symbol": "C:r",
@@ -316836,11 +318552,46 @@
           "renamed": "BattleUnit"
         },
         {
+          "start": 196036,
+          "end": 196038,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 196065,
           "end": 196066,
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 196237,
+          "end": 196239,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 196379,
+          "end": 196381,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 196521,
+          "end": 196523,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 196686,
+          "end": 196688,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 196798,
@@ -317459,6 +319210,13 @@
           "renamed": "BattleUnit"
         },
         {
+          "start": 202983,
+          "end": 202985,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 203253,
           "end": 203254,
           "symbol": "C:r",
@@ -317781,6 +319539,20 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 207865,
+          "end": 207867,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 207914,
+          "end": 207916,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 208029,
           "end": 208030,
           "symbol": "C:l",
@@ -317788,11 +319560,88 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 208557,
+          "end": 208559,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 208734,
           "end": 208736,
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 209567,
+          "end": 209569,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 209644,
+          "end": 209646,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 209721,
+          "end": 209723,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 209802,
+          "end": 209804,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 209884,
+          "end": 209886,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 210067,
+          "end": 210069,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 210144,
+          "end": 210146,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 210221,
+          "end": 210223,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 210302,
+          "end": 210304,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 210384,
+          "end": 210386,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 210786,
@@ -317830,11 +319679,25 @@
           "renamed": "client"
         },
         {
+          "start": 211159,
+          "end": 211161,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 211177,
           "end": 211184,
           "symbol": "F:e.field_G:LTerraphoenix;",
           "original": "field_G",
           "renamed": "client"
+        },
+        {
+          "start": 211369,
+          "end": 211371,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 211387,
@@ -317849,6 +319712,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 211509,
+          "end": 211511,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 211527,
@@ -317898,6 +319768,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 213076,
+          "end": 213078,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 213239,
@@ -338399,7 +340276,7 @@
       "original": "ga.java",
       "renamed": "ga.java",
       "inputSha256": "979694378f55c3414d4dd1dde2f2d0591784e9e4ff218f41cb2f8fd144e8a733",
-      "outputSha256": "dc92e4b9174d5dd99aa401c4cad20bbc071d00a87edc32ce08a0d117641f4824",
+      "outputSha256": "fa107d7bca91eec9befd430db5325cdb09c6bcd544df2adb3b261edaa1e89781",
       "edits": [
         {
           "start": 206,
@@ -338606,6 +340483,13 @@
           "kind": "label"
         },
         {
+          "start": 12771,
+          "end": 12773,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 13622,
           "end": 13624,
           "symbol": "B:ga.a(II)Ljava/lang/String;#0",
@@ -338622,6 +340506,13 @@
           "kind": "label"
         },
         {
+          "start": 13722,
+          "end": 13724,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 14514,
           "end": 14517,
           "symbol": "B:ga.a(II)Ljava/lang/String;#1",
@@ -338636,6 +340527,20 @@
           "original": "L12",
           "renamed": "scanLoop2",
           "kind": "label"
+        },
+        {
+          "start": 14669,
+          "end": 14671,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15263,
+          "end": 15265,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 15479,
@@ -340392,7 +342297,7 @@
       "original": "gi.java",
       "renamed": "gi.java",
       "inputSha256": "9cad62f6f38844aa75c63d2fc98474d132b5c49176614ace99d917c58cbf970b",
-      "outputSha256": "257e89e15e9027967700912defc5d5d481a98fc5814cafec1122eb42a2bb9744",
+      "outputSha256": "9944d9c13f1ce5e7f33db3160a63d0168b7ba2805e6f5023586a3e88cd048677",
       "edits": [
         {
           "start": 67,
@@ -341389,6 +343294,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 48801,
+          "end": 48803,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 48814,
           "end": 48816,
           "symbol": "C:ce",
@@ -341548,7 +343460,7 @@
       "original": "gj.java",
       "renamed": "gj.java",
       "inputSha256": "aa14e67e020b2251532ce03adf0dc3e1a443ecac264d1ba53bd4267340b468a7",
-      "outputSha256": "47d70d718fa7220f6c1fc3fc6da8120513d1693d8725afd0305492cf6638edf6",
+      "outputSha256": "75b5df888ea23b853d7c0b0c55ab7aa3ee1d4fe86faf2abc49bfdb1449b02212",
       "edits": [
         {
           "start": 101,
@@ -341677,6 +343589,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 3049,
+          "end": 3051,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3134,
           "end": 3135,
           "symbol": "M:dh.i(II)V",
@@ -341691,11 +343610,25 @@
           "renamed": "writeString"
         },
         {
+          "start": 3305,
+          "end": 3307,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 3350,
           "end": 3351,
           "symbol": "M:dh.b(Ljava/lang/String;I)V",
           "original": "b",
           "renamed": "writePrefixedString"
+        },
+        {
+          "start": 3352,
+          "end": 3354,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 3471,
@@ -349048,7 +350981,7 @@
       "original": "ji.java",
       "renamed": "ji.java",
       "inputSha256": "30c1cd9f5a9107cf16a9e8f4df07e67d71c4a5b7ae49d50e6bbe8fa1d1a0a326",
-      "outputSha256": "d21cb77c34ed704961537946c914e0ca97b38064eb27f3633b0f0d500720190d",
+      "outputSha256": "54626d09ba71c533a266e87aaf3d69118e7ca6ab3579572a6c001c07c214a2a1",
       "edits": [
         {
           "start": 80,
@@ -349063,6 +350996,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 730,
+          "end": 732,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1386,
@@ -350747,8 +352687,15 @@
       "original": "k.java",
       "renamed": "k.java",
       "inputSha256": "66a7e4e8d3287d731aece0f570acac96233829c8faf9015aa6734a77632d46be",
-      "outputSha256": "5804dd66fc650d83219e0765491efce697b4ca020709505d92958139653445b3",
+      "outputSha256": "b8961d9c06c67ff5d2d661ca9bddfd952364de0d33719ee49e96ff9ffc32170f",
       "edits": [
+        {
+          "start": 121,
+          "end": 123,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 171,
           "end": 173,
@@ -350939,6 +352886,13 @@
           "renamed": "next"
         },
         {
+          "start": 4580,
+          "end": 4582,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 4618,
           "end": 4625,
           "symbol": "F:uf.field_a:Luf;",
@@ -351058,6 +353012,13 @@
           "renamed": "previous"
         },
         {
+          "start": 6303,
+          "end": 6305,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 6340,
           "end": 6347,
           "symbol": "F:jj.field_a:Luf;",
@@ -351147,6 +353108,13 @@
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 8730,
+          "end": 8732,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -352471,7 +354439,7 @@
       "original": "ki.java",
       "renamed": "ki.java",
       "inputSha256": "6786b3aa22aecd9dc99c35414cdea1232c9c672a186ca181190aa682b999fda8",
-      "outputSha256": "324642936d1c54943a910836d0faf930a59f4c2da968abfa90308afda8e958e3",
+      "outputSha256": "7e94130623c676751d0cbd36be89cd1c2af8b1e5e60713f34f92afa9833ed4fb",
       "edits": [
         {
           "start": 78,
@@ -353321,6 +355289,27 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 17921,
+          "end": 17923,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18071,
+          "end": 18073,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18196,
+          "end": 18198,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 18462,
           "end": 18463,
           "symbol": "C:l",
@@ -353347,7 +355336,7 @@
       "original": "kj.java",
       "renamed": "kj.java",
       "inputSha256": "b2d518479852cfb74af92893b6e2d0d3bbb16123e06ceb3354210c50d9d2ae70",
-      "outputSha256": "27a23f2298516b0f43a20e04ba0c76bcaf05f59c7a4f3ccd2a44bb68da621f3e",
+      "outputSha256": "72a6b893698397917474d978263319ba43d38af65c570e777583734f3268e7c1",
       "edits": [
         {
           "start": 64,
@@ -353397,6 +355386,13 @@
           "symbol": "F:gl.field_p:I",
           "original": "field_p",
           "renamed": "width"
+        },
+        {
+          "start": 863,
+          "end": 865,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 998,
@@ -356910,7 +358906,7 @@
       "original": "mk.java",
       "renamed": "LevelEditor.java",
       "inputSha256": "7545c58ef9990f71231a07880f16b28f08fe2c3d25c663fb5c7ff80e76cd30c7",
-      "outputSha256": "00fd006c2530a7d0188be8f98b981ed961fe0b9e2ce7df1db6c1db6cc68272ec",
+      "outputSha256": "a88f6cd19b67fbb5742dbb4daec4810fdf6ef4df3b4625bab366ebe3205dc2fe",
       "edits": [
         {
           "start": 69,
@@ -357345,6 +359341,62 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 12885,
+          "end": 12887,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 12952,
+          "end": 12954,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 13085,
+          "end": 13087,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 13154,
+          "end": 13156,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 13213,
+          "end": 13215,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 13272,
+          "end": 13274,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 13332,
+          "end": 13334,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 13391,
+          "end": 13393,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 13514,
@@ -359673,10 +361725,24 @@
     },
     {
       "original": "og.java",
-      "renamed": "og.java",
+      "renamed": "AccountRequestState.java",
       "inputSha256": "2176c152abf60ead8cd75165dc5dbb76c4583a45a9adee3c78a2bf4460019ea3",
-      "outputSha256": "452e349538cc37e3a41eeee460e0df69295a0f74dcae689d32ccc6e93927b0ba",
+      "outputSha256": "598a0f4f7b23260964e6f41262f64aba3ed387f9799a2e3035997b54e36058cc",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 109,
+          "end": 111,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 182,
           "end": 184,
@@ -359692,6 +361758,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 1277,
+          "end": 1279,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 1417,
           "end": 1419,
           "symbol": "C:jm",
@@ -359704,6 +361777,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2794,
+          "end": 2796,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -360528,7 +362608,7 @@
       "original": "pd.java",
       "renamed": "AccountServiceResult.java",
       "inputSha256": "7235515d322a1c98c08664acbc83d6d363c42fb9849b836ceabda6b2eb7ebb84",
-      "outputSha256": "733a11f95c546c3788de5b20305e754fbb37442f16eb0443b67f413f77ecb36b",
+      "outputSha256": "16bbba2ba4985c99f388ddd13bc8ecaf4b1c64c74f121d9dd1ca331a33698a21",
       "edits": [
         {
           "start": 50,
@@ -360594,6 +362674,13 @@
           "renamed": "pollAccountCreationResult"
         },
         {
+          "start": 576,
+          "end": 578,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 590,
           "end": 592,
           "symbol": "C:qe",
@@ -360620,6 +362707,13 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 789,
+          "end": 791,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1085,
@@ -360697,8 +362791,15 @@
       "original": "pe.java",
       "renamed": "pe.java",
       "inputSha256": "a735676a5828ab7d7a6428a5fb7240811888e43a1217ffa3e936cc4896cec52f",
-      "outputSha256": "9beac8997c2225b1688159c10112061d3ad3c5d272634e0a32b0d69f6a231aff",
+      "outputSha256": "7ec260e761b53faae701df077217c58363cf08b5cc65e3b06c1096ebed66cb8e",
       "edits": [
+        {
+          "start": 179,
+          "end": 181,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
         {
           "start": 327,
           "end": 329,
@@ -360740,6 +362841,13 @@
           "symbol": "M:pe.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1383,
+          "end": 1385,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1446,
@@ -362880,7 +364988,7 @@
       "original": "qe.java",
       "renamed": "IsaacCipher.java",
       "inputSha256": "bb17a4f8531838e8a75a7d7384eef03c1a13a4155ebbd492c9faafebe800f738",
-      "outputSha256": "e6bc91629b2dd4e1fdb546930db877f34ea565113c3c967bdb28c30a9ec84e7f",
+      "outputSha256": "7d5b57e2425e2724a551e3ee7f309d5295409b6783cf3f98cb60057eeecc37c0",
       "edits": [
         {
           "start": 50,
@@ -362895,6 +365003,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 228,
+          "end": 230,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 518,
@@ -371442,7 +373557,7 @@
       "original": "sj.java",
       "renamed": "sj.java",
       "inputSha256": "b0eaf9bc5610ac478560a65504fc41aa34fae7c196209f4ca88b42e9034e7545",
-      "outputSha256": "01bea002e10cd8d71ab60125a4ecd027a6f808a1a0d9660102a79dcd8e84aa58",
+      "outputSha256": "ebccc825752d9d9ca68e86518c1808acae51c5a61980e8c3a2100e1fd7edbefc",
       "edits": [
         {
           "start": 66,
@@ -371478,6 +373593,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1696,
+          "end": 1698,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2481,
@@ -371838,7 +373960,7 @@
       "original": "ta.java",
       "renamed": "ta.java",
       "inputSha256": "27fcd4ff2e18627dc6e5c30f1d29469718f7d49eb51e363d08b1bd9f12a8ff23",
-      "outputSha256": "814cba05ce62e9b2e7457eed8bd91bcbff51291566cb6706f25cb29417b04d4b",
+      "outputSha256": "02ef792e60195a7344f8141498374ee69fbf74a52f0ae65ae869c06003126f17",
       "edits": [
         {
           "start": 518,
@@ -371902,6 +374024,13 @@
           "symbol": "C:vh",
           "original": "vh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1594,
+          "end": 1596,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1725,
@@ -375304,7 +377433,7 @@
       "original": "ua.java",
       "renamed": "ua.java",
       "inputSha256": "70a38e28cd2dc54a4fd7b8fb29f0583b157f422ed0509e03c295b6df1856cc34",
-      "outputSha256": "27d75a790d4d6b91d79ebc3f7d07f13fe4c4e0842c90c2dc704d48481f7e1f2f",
+      "outputSha256": "b9658fb3318f4bc012bba6838e0cc08fd6a548eb54764b6f4fc1edf25207e7f3",
       "edits": [
         {
           "start": 85,
@@ -375312,6 +377441,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 182,
+          "end": 184,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 1429,
@@ -375709,6 +377845,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 9395,
+          "end": 9397,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 10918,
           "end": 10919,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
@@ -375917,6 +378060,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 16768,
+          "end": 16770,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         }
       ]
     },
@@ -375931,7 +378081,7 @@
       "original": "uc.java",
       "renamed": "uc.java",
       "inputSha256": "b44981e251129bb28796f2736bbc7b2c643c901d457022d6a84c0203ccf078dd",
-      "outputSha256": "68d3ddbb859379dd33695a548b853adccfc69ff9ac5c274f19b335fd8e87ceec",
+      "outputSha256": "3d2546ae9a9c925e537f3144b1e33f95d3a9c40adc9b65b2cf81580d639b3cd0",
       "edits": [
         {
           "start": 61,
@@ -376065,6 +378215,13 @@
           "symbol": "C:mj",
           "original": "mj",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 3894,
+          "end": 3896,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4041,
@@ -377302,7 +379459,7 @@
       "original": "ui.java",
       "renamed": "AdminCheatOverlay.java",
       "inputSha256": "733396eaf7a71db9c3c5aea3b6966c3f8ada74180c8a834ee2199f971f66a620",
-      "outputSha256": "c68df40759c07fb4bab80d28775cb1e5dd985d10c52ff39530f432d075bba92b",
+      "outputSha256": "19130f3cbd5bf106fb043b5a5a67443b978a1a965f89c00daf9b156fce25622c",
       "edits": [
         {
           "start": 50,
@@ -377403,6 +379560,356 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 2837,
+          "end": 2839,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 2955,
+          "end": 2957,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3073,
+          "end": 3075,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3240,
+          "end": 3242,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3358,
+          "end": 3360,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 3925,
+          "end": 3927,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4076,
+          "end": 4078,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4872,
+          "end": 4874,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 4984,
+          "end": 4986,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6548,
+          "end": 6550,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6672,
+          "end": 6674,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6801,
+          "end": 6803,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6925,
+          "end": 6927,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7004,
+          "end": 7006,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7133,
+          "end": 7135,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7212,
+          "end": 7214,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7341,
+          "end": 7343,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7420,
+          "end": 7422,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7549,
+          "end": 7551,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7628,
+          "end": 7630,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7757,
+          "end": 7759,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7836,
+          "end": 7838,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 7965,
+          "end": 7967,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8044,
+          "end": 8046,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8174,
+          "end": 8176,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8253,
+          "end": 8255,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8382,
+          "end": 8384,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8461,
+          "end": 8463,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8673,
+          "end": 8675,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8752,
+          "end": 8754,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8882,
+          "end": 8884,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8963,
+          "end": 8965,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9093,
+          "end": 9095,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9172,
+          "end": 9174,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9302,
+          "end": 9304,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9381,
+          "end": 9383,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9511,
+          "end": 9513,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9590,
+          "end": 9592,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9720,
+          "end": 9722,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9801,
+          "end": 9803,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9931,
+          "end": 9933,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10114,
+          "end": 10116,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10240,
+          "end": 10242,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10400,
+          "end": 10402,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 10574,
+          "end": 10576,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 12047,
+          "end": 12049,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 12241,
+          "end": 12243,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 12445,
+          "end": 12447,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 12648,
+          "end": 12650,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 12842,
+          "end": 12844,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 13184,
           "end": 13186,
           "symbol": "C:ij",
@@ -377450,6 +379957,41 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "MessageKeys"
+        },
+        {
+          "start": 14673,
+          "end": 14675,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 14851,
+          "end": 14853,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15029,
+          "end": 15031,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15215,
+          "end": 15217,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15392,
+          "end": 15394,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 15681,
@@ -378697,7 +381239,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "04e97b69a49e86e0be23efb517acff65f42cb45414c135d6040eb5548bad171c",
-      "outputSha256": "a94ae17d7fd2dea0c286fa8a88d2ff72a099b997932360f9fb9f6e4313911c7b",
+      "outputSha256": "1c93a597dceee7cc229407c5993825c42728b40ed52a1b8d1801ed0d339fa2b7",
       "edits": [
         {
           "start": 266,
@@ -378712,6 +381254,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 797,
+          "end": 799,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 811,
@@ -379613,7 +382162,7 @@
       "original": "vl.java",
       "renamed": "vl.java",
       "inputSha256": "9b7d088eb47ea97ace46ef67f0efc52d757793a98af806b396e17aea12a40b04",
-      "outputSha256": "6f59292abafd34de35f29070148a944e6dce65fe2b966d392003de5d883fbe5e",
+      "outputSha256": "7117718247bc7d5a489b609fa4495a8ff4b47abc383360780d83a8a4c69b4008",
       "edits": [
         {
           "start": 148,
@@ -379642,6 +382191,13 @@
           "symbol": "M:vl.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2393,
+          "end": 2395,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 2919,
@@ -379803,6 +382359,48 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8202,
+          "end": 8204,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8328,
+          "end": 8330,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8454,
+          "end": 8456,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8580,
+          "end": 8582,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8706,
+          "end": 8708,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8832,
+          "end": 8834,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 8918,
@@ -380009,6 +382607,41 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 14896,
+          "end": 14898,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 14988,
+          "end": 14990,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15080,
+          "end": 15082,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15174,
+          "end": 15176,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 15268,
+          "end": 15270,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 15511,
           "end": 15513,
           "symbol": "C:jb",
@@ -380028,6 +382661,118 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 15919,
+          "end": 15921,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16017,
+          "end": 16019,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16127,
+          "end": 16129,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16286,
+          "end": 16288,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16763,
+          "end": 16765,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16917,
+          "end": 16919,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17086,
+          "end": 17088,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17253,
+          "end": 17255,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17454,
+          "end": 17456,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18092,
+          "end": 18094,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18316,
+          "end": 18318,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18553,
+          "end": 18555,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18793,
+          "end": 18795,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 18974,
+          "end": 18976,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19155,
+          "end": 19157,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 19310,
+          "end": 19312,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 19323,
@@ -380114,6 +382859,41 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 21902,
+          "end": 21904,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 21992,
+          "end": 21994,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 22082,
+          "end": 22084,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 22174,
+          "end": 22176,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 22264,
+          "end": 22266,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 22499,
           "end": 22501,
           "symbol": "C:jb",
@@ -380135,11 +382915,53 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 22825,
+          "end": 22827,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 22925,
+          "end": 22927,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 23012,
+          "end": 23014,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 23025,
           "end": 23027,
           "symbol": "C:of",
           "original": "of",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 23178,
+          "end": 23180,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 23334,
+          "end": 23336,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 23467,
+          "end": 23469,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 23480,
@@ -380247,6 +383069,27 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 27533,
+          "end": 27535,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 27590,
+          "end": 27592,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 27699,
+          "end": 27701,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 27712,
           "end": 27714,
           "symbol": "C:pd",
@@ -380254,11 +383097,39 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 27956,
+          "end": 27958,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 28174,
+          "end": 28176,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 28384,
           "end": 28386,
           "symbol": "C:nf",
           "original": "nf",
           "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 29446,
+          "end": 29448,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 30249,
+          "end": 30251,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 30560,
@@ -380282,6 +383153,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 30998,
+          "end": 31000,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 31124,
           "end": 31125,
           "symbol": "C:l",
@@ -380294,6 +383172,41 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 31290,
+          "end": 31292,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31414,
+          "end": 31416,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31545,
+          "end": 31547,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31676,
+          "end": 31678,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 31807,
+          "end": 31809,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 32015,
@@ -380324,11 +383237,116 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 32600,
+          "end": 32602,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32656,
+          "end": 32658,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32727,
+          "end": 32729,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32783,
+          "end": 32785,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32848,
+          "end": 32850,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32904,
+          "end": 32906,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 32968,
+          "end": 32970,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33024,
+          "end": 33026,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33088,
+          "end": 33090,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33144,
+          "end": 33146,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 33237,
           "end": 33238,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 33258,
+          "end": 33260,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33388,
+          "end": 33390,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33518,
+          "end": 33520,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33645,
+          "end": 33647,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 33779,
+          "end": 33781,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 33925,
@@ -380359,6 +383377,48 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 34525,
+          "end": 34527,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 34684,
+          "end": 34686,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 34845,
+          "end": 34847,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 35001,
+          "end": 35003,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 35267,
+          "end": 35269,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 35455,
+          "end": 35457,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 35630,
           "end": 35631,
           "symbol": "C:l",
@@ -380371,6 +383431,41 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 35796,
+          "end": 35798,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 35915,
+          "end": 35917,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 36033,
+          "end": 36035,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 36152,
+          "end": 36154,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 36273,
+          "end": 36275,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 36397,
@@ -380696,7 +383791,7 @@
       "original": "wc.java",
       "renamed": "wc.java",
       "inputSha256": "6b2e6f1ae375fe1b1dd5433e1ad2ed8a07b8d03bf62c780d2ba47204dad157a5",
-      "outputSha256": "8201dfcc97e05044954db707b20c2ab35b9a9ec6bdddb2bf93b08e91858cb4c2",
+      "outputSha256": "51c486f70b4b6b1c1b4ca8b90fd4fc53f749890d1a0b5e62dc7e9797c929a8d4",
       "edits": [
         {
           "start": 85,
@@ -380902,11 +383997,81 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 15944,
+          "end": 15946,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16129,
+          "end": 16131,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16322,
+          "end": 16324,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16507,
+          "end": 16509,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 16702,
+          "end": 16704,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
           "start": 17036,
           "end": 17038,
           "symbol": "C:ce",
           "original": "ce",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 17099,
+          "end": 17101,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17242,
+          "end": 17244,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17379,
+          "end": 17381,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17525,
+          "end": 17527,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
+        },
+        {
+          "start": 17664,
+          "end": 17666,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 18390,
@@ -381283,7 +384448,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "ecdab4dfec51fa8d716cfbe7ec21c6bbda1b6c63ba508ed9511830e006a37afd",
-      "outputSha256": "84e56483b417baf03c4af90da6b23b5956cc72aae102e724685a1c3ff2efad01",
+      "outputSha256": "d49711a7c09cd553ce2a945fa28874f8128be7afa75ca820b92cf6f1bfdd1e79",
       "edits": [
         {
           "start": 93,
@@ -381410,6 +384575,13 @@
           "symbol": "M:dh.a(I)I",
           "original": "a",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3961,
+          "end": 3963,
+          "symbol": "C:og",
+          "original": "og",
+          "renamed": "AccountRequestState"
         },
         {
           "start": 4040,
@@ -382102,10 +385274,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "2f4aa73e55d509ce637c2aa359e38523c684e9099ef615fb7dbc4f10d9dc0ad5",
+    "rulesSha256": "a2bb0a986c38a5b8c4c8746e096da345075a644973fc380d2b04b58b65ddd18f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "b4671c147319e60f721352b3adc8925cbcc168883043de4c6ed589d91f021c8d",
+    "outputTreeSha256": "d0d75c8ad24284640f63436ea4c18079e14b5075369599d8729e2b70840a2c3e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

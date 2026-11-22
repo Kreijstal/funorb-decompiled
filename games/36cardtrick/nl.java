@@ -79,7 +79,7 @@ final class nl {
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;
-              sc.a(5, (byte) 126, true);
+              AccountRequestState.a(5, (byte) 126, true);
             }
           }
           stackIn_28_0 = var3;

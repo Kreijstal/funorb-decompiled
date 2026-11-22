@@ -243,7 +243,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_chat_private", -112);
                 if (var2 != null) {
-                  a.field_k = ad.a(-29410, var2);
+                  FullscreenFocusCanvas.field_k = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_x_entered_game", -112);
                 if (null != var2) {
@@ -711,7 +711,7 @@ abstract class gm {
                 }
                 var2 = cd.a("you_are_invited_to_xs_game", -77);
                 if (var2 != null) {
-                  a.field_j = ad.a(-29410, var2);
+                  FullscreenFocusCanvas.field_j = ad.a(-29410, var2);
                 }
                 var2 = cd.a("asking_to_join_xs_game", -99);
                 if (null != var2) {
@@ -803,7 +803,7 @@ abstract class gm {
                 }
                 var2 = cd.a("dob_chatdisabled", -82);
                 if (var2 != null) {
-                  a.field_e = ad.a(-29410, var2);
+                  FullscreenFocusCanvas.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("dob_enterforchat", -91);
                 if (null != var2) {
@@ -1761,7 +1761,7 @@ abstract class gm {
                 }
                 var2 = cd.a("cannot_add_yourself", -121);
                 if (null != var2) {
-                  ed.field_a = ad.a(-29410, var2);
+                  AccountRequestState.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("unable_to_add_friend", -87);
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ abstract class gm {
                 }
                 var2 = cd.a("enterfriend_del", -123);
                 if (null != var2) {
-                  a.field_i = ad.a(-29410, var2);
+                  FullscreenFocusCanvas.field_i = ad.a(-29410, var2);
                 }
                 var2 = cd.a("enterignore_add", -112);
                 if (var2 != null) {
@@ -2850,15 +2850,15 @@ abstract class gm {
                 }
                 var2 = cd.a("hs_mode_name,0", -123);
                 if (var2 != null) {
-                  g.field_b[0] = ad.a(-29410, var2);
+                  DelegatingCanvas.field_b[0] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("hs_mode_name,1", -96);
                 if (null != var2) {
-                  g.field_b[1] = ad.a(-29410, var2);
+                  DelegatingCanvas.field_b[1] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("hs_mode_name,2", -108);
                 if (var2 != null) {
-                  g.field_b[2] = ad.a(-29410, var2);
+                  DelegatingCanvas.field_b[2] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rating_mode_name,0", -116);
                 if (var2 != null) {

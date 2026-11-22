@@ -226,7 +226,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
           var5Lifetime1 = this.field_Z.field_m / 2 + this.field_Z.field_i;
           this.field_Z.field_m = 150;
           this.field_Z.field_i = -this.field_Z.field_m + (var5Lifetime1 - 20);
-          this.field_L = this.addButton((WidgetListener) (this), wm.field_b, 30815);
+          this.field_L = this.addButton((WidgetListener) (this), PlayerViewportLayout.field_b, 30815);
           this.field_L.field_y = false;
           this.field_L.field_i = var5Lifetime1 + 20;
           this.field_L.field_m = this.field_Z.field_m;

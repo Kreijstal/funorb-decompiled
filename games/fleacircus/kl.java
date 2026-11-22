@@ -33,7 +33,7 @@ final class kl {
           }
           var4_int = param1.a(param2, (byte) -100);
           var5 = param1.a(param3, (byte) -15, var4_int);
-          stackIn_3_0 = vb.a(param0 ^ -141, param1, var4_int, var5);
+          stackIn_3_0 = FullscreenFocusCanvas.a(param0 ^ -141, param1, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -483,7 +483,7 @@ final class MenuScreen {
                 lq.a(fd.field_b[3], 70);
               }
               if (this.input.isRightPressed((byte) -102)) {
-                dq.a((byte) -2);
+                AccountRequestState.a((byte) -2);
                 lq.a(fd.field_b[3], -126);
               }
               if (this.input.isPointerHeld((byte) 98)) {

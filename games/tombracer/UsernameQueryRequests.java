@@ -22,20 +22,20 @@ final class UsernameQueryRequests {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (PlayerResultRow.field_y == wt.field_d) {
+          if (PlayerResultRow.accountRequestPending == wt.usernameQueryState) {
             return null;
           }
           if (param0 <= 114) {
             field_b = (int[]) null;
           }
-          if (mua.field_a == wt.field_d &&
+          if (mua.accountRequestComplete == wt.usernameQueryState &&
             param1.equals(uaa.field_a)) {
-            wt.field_d = fta.field_c;
+            wt.usernameQueryState = fta.accountRequestIdle;
             stackIn_11_0 = SnakePitModel.field_t;
             return stackIn_11_0;
           }
           SnakePitModel.field_t = null;
-          wt.field_d = PlayerResultRow.field_y;
+          wt.usernameQueryState = PlayerResultRow.accountRequestPending;
           uaa.field_a = param1;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);

@@ -203,7 +203,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           var38 = var29 * (var12 - 1);
           if (HardwareModelBillboardState.field_d <= param2 &&
             LineShape.field_h >= param2) {
-            var57 = vaa.field_a[param2];
+            var57 = PackedBitSetSupport.field_a[param2];
             var40 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
             var41 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
             var42 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
@@ -273,18 +273,18 @@ abstract class OpenGlBuffer implements GpuBuffer {
             var43Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= HardwareModelBillboardState.field_d) {
-                C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
+                C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, PackedBitSetSupport.field_a[var40Lifetime1], var43Lifetime1);
               }
               if (var41Lifetime1 > LineShape.field_h) {
                 continue;
               }
-              C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, PackedBitSetSupport.field_a[var41Lifetime1], var43Lifetime1);
               continue;
             }
             var44 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
             var45 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
             if (var40Lifetime1 >= HardwareModelBillboardState.field_d) {
-              var58 = vaa.field_a[var40Lifetime1];
+              var58 = PackedBitSetSupport.field_a[var40Lifetime1];
               C2SRoomResultPacket.fillRange((byte) -55, param0, var45, var58, var43Lifetime1);
               C2SRoomResultPacket.fillRange((byte) -55, param1, var44, var58, var45);
               C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, var58, var44);
@@ -292,7 +292,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             if (var41Lifetime1 > LineShape.field_h) {
               continue;
             }
-            var59 = vaa.field_a[var41Lifetime1];
+            var59 = PackedBitSetSupport.field_a[var41Lifetime1];
             C2SRoomResultPacket.fillRange((byte) -55, param0, var45, var59, var43Lifetime1);
             C2SRoomResultPacket.fillRange((byte) -55, param1, var44, var59, var45);
             C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, var59, var44);

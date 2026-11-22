@@ -125,7 +125,7 @@ final class b {
             if (param7) {
               if (param3 == -1) {
                 for (var10 = 0; var10 < wn.field_d.length; var10++) {
-                  if ((g.field_f[var10 / 8] & 1 << (var10 & 7)) != 0) {
+                  if ((DelegatingCanvas.field_f[var10 / 8] & 1 << (var10 & 7)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
                     break;
@@ -234,7 +234,7 @@ final class b {
           return;
         }
         kl.a(rm.field_R, (byte) -114);
-        rm.field_R.a(oc.field_l, -3);
+        rm.field_R.exitFullscreen(oc.field_l, -3);
         if (!param0) {
           field_f = false;
         }
@@ -300,7 +300,7 @@ final class b {
           var17.position = -2 + param1.length;
           h.field_n = var17.readUnsignedShort(674914976);
           wm.field_b = new int[h.field_n];
-          a.field_c = new int[h.field_n];
+          FullscreenFocusCanvas.field_c = new int[h.field_n];
           gg.field_y = new byte[h.field_n][];
           in.field_c = new boolean[h.field_n];
           vk.field_d = new byte[h.field_n][];
@@ -314,7 +314,7 @@ final class b {
             be.field_a[var4] = var16.readUnsignedShort(674914976);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < h.field_n; var4Lifetime1++) {
-            a.field_c[var4Lifetime1] = var17.readUnsignedShort(674914976);
+            FullscreenFocusCanvas.field_c[var4Lifetime1] = var17.readUnsignedShort(674914976);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < h.field_n; var4Lifetime2++) {
             wm.field_b[var4Lifetime2] = var17.readUnsignedShort(674914976);

@@ -46,7 +46,7 @@ final class SnakePitBehaviour extends Behaviour {
             var13 = var5 + var11.getOffsetY(0);
             var14 = SimulationObserver.clipBeamToBox(var11.getSize(0), 12, var13, var11.getSize(0), param2, var12, 2);
             if (var14 > 0) {
-              var15 = wm.clampedFixedRatio(4096, var14, 15);
+              var15 = PlayerViewportLayout.clampedFixedRatio(4096, var14, 15);
               this.applyEffectToSnake(var8 + ChatMessage.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + ChatMessage.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
             }
           }

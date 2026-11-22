@@ -21,7 +21,7 @@ final class rm extends mf {
     int field_L;
     private km[] field_O;
     private int field_V;
-    static a field_R;
+    static FullscreenFocusCanvas field_R;
 
     final static void a(byte param0, String param1) {
         try {

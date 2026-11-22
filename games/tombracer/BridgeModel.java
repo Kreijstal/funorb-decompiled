@@ -71,7 +71,7 @@ final class BridgeModel extends TrapModel {
           var12 = -var8;
           var13 = -1;
           var14 = -1;
-          var35 = vaa.field_a[param0];
+          var35 = PackedBitSetSupport.field_a[param0];
           var16 = param6 - var8;
           C2SRoomResultPacket.fillRange((byte) -55, param4, var16, var35, param6 - param1);
           var17 = param6 + var8;
@@ -93,16 +93,16 @@ final class BridgeModel extends TrapModel {
               var9--;
               var10 = var10 - (var9 << 1);
               if (var9 >= var8) {
-                var30 = vaa.field_a[var9 + param0];
-                var26 = vaa.field_a[-var9 + param0];
+                var30 = PackedBitSetSupport.field_a[var9 + param0];
+                var26 = PackedBitSetSupport.field_a[-var9 + param0];
                 var19 = var26;
                 var20 = param6 + var7_int;
                 var21 = param6 - var7_int;
                 C2SRoomResultPacket.fillRange((byte) -55, param4, var20, var30, var21);
                 C2SRoomResultPacket.fillRange((byte) -55, param4, var20, var26, var21);
               } else {
-                var28 = vaa.field_a[param0 + var9];
-                var29 = vaa.field_a[-var9 + param0];
+                var28 = PackedBitSetSupport.field_a[param0 + var9];
+                var29 = PackedBitSetSupport.field_a[-var9 + param0];
                 var20 = GasVentModel.field_m[var9];
                 var21 = param6 + var7_int;
                 var22 = -var7_int + param6;
@@ -116,8 +116,8 @@ final class BridgeModel extends TrapModel {
                 C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var29, var23);
               }
             }
-            var31 = vaa.field_a[var7_int + param0];
-            var32 = vaa.field_a[-var7_int + param0];
+            var31 = PackedBitSetSupport.field_a[var7_int + param0];
+            var32 = PackedBitSetSupport.field_a[-var7_int + param0];
             var20Lifetime1 = var9 + param6;
             var21Lifetime1 = param6 - var9;
             if (var7_int >= var8) {

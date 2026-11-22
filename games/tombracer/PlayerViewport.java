@@ -139,7 +139,7 @@ final class PlayerViewport {
         TextInputWidget.paintNineSliceFrame(0, TextHotspot.field_f, (byte) -72, this.left, CurrentGraphicsToolkit.toolkit, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
     }
 
-    final void applyLayout(int param0, wm param1, int param2) {
+    final void applyLayout(int param0, PlayerViewportLayout param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -155,19 +155,19 @@ final class PlayerViewport {
           }
           var4_int = LegacyOpenGlWaterTextures.getCanvasWidth(false) - SwitchLinkList.getCanvasHeight(0) / 2;
           var5 = SwitchLinkList.getCanvasHeight(0) / 2;
-          if (mf.field_d == param1) {
+          if (mf.fullViewportLayout == param1) {
             this.setEdges(0, 0, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(0));
             return;
           }
-          if (param1 == OpenGlEnvironmentWaterEffect.field_j) {
+          if (param1 == OpenGlEnvironmentWaterEffect.leftViewportLayout) {
             this.setEdges(0, 0, param2 + 20194, var4_int, SwitchLinkList.getCanvasHeight(param2 ^ -20186));
             return;
           }
-          if (ByteStorage.field_e == param1) {
+          if (ByteStorage.rightViewportLayout == param1) {
             this.setEdges(var4_int, 0, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), var5 << 1);
             return;
           }
-          if (param1 != TripBeamVisual.field_c) {
+          if (param1 != TripBeamVisual.stackedRightViewportLayout) {
             return;
           }
           this.setEdges(var4_int, param0 * var5, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), (param0 + 1) * var5);

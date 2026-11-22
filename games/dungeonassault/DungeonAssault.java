@@ -66,7 +66,7 @@ public final class DungeonAssault extends NetworkGameClient {
               } else {
                 bd.field_f = bd.field_f + 1;
                 if (bd.field_f == 64) {
-                  af.a((byte) 40);
+                  AccountRequestState.a((byte) 40);
                 }
               }
             }
@@ -113,7 +113,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     }
                   }
                   if (fc.a(dc.field_z, (byte) -120)) {
-                    af.a((byte) 114);
+                    AccountRequestState.a((byte) 114);
                   }
                 }
                 fm.field_a = ii.field_F;
@@ -283,7 +283,7 @@ public final class DungeonAssault extends NetworkGameClient {
           }
           go.b((byte) 14);
           if (cm.field_R != null &&
-            cm.field_R.field_g) {
+            cm.field_R.focusLost) {
             ib.a(930);
             hh.a((byte) -128);
           }
@@ -464,7 +464,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   continue scanLoop1;
                 }
                 if (hc.field_c == 62) {
-                  af.a((byte) 9);
+                  AccountRequestState.a((byte) 9);
                   var21 = new CombatState(ra.field_c, true);
                   if (null != ik.field_e &&
                     ik.field_e.field_Y.field_f == var21.field_f) {
@@ -487,7 +487,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   continue scanLoop1;
                 }
                 if (nf.field_A) {
-                  af.a((byte) 14);
+                  AccountRequestState.a((byte) 14);
                   if (nf.field_A) {
                     nf.field_A = false;
                     ik.field_e.a(17158, false);
@@ -566,7 +566,7 @@ public final class DungeonAssault extends NetworkGameClient {
           var3 = new tc();
           var3.field_A.c((byte) 7, 128, 9);
           var3.field_B.c((byte) -120, 128, 9);
-          af.a(true, var3, 22050, 22050, (java.awt.Component) ((Object) c.field_h), -126, 2048, i.field_A);
+          AccountRequestState.a(true, var3, 22050, 22050, (java.awt.Component) ((Object) c.field_h), -126, 2048, i.field_A);
           cm.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
           he.field_p = 16711680;
           dc.field_l = 128;
@@ -663,7 +663,7 @@ public final class DungeonAssault extends NetworkGameClient {
           gj.a((byte) 80);
           c.clearStaticReferences(-9431);
           wk.b(false);
-          ek.a((byte) -115);
+          FullscreenFocusCanvas.a((byte) -115);
           bn.a((byte) -122);
           go.f(10);
           lb.a((byte) 119);
@@ -782,7 +782,7 @@ public final class DungeonAssault extends NetworkGameClient {
           li.a(false);
           ok.f(-16218);
           tb.b((byte) -47);
-          ql.b((byte) 20);
+          DelegatingCanvas.b((byte) 20);
           ik.a(0);
           ra.a((byte) -114);
           ByteStorage.a((byte) 23);
@@ -900,7 +900,7 @@ public final class DungeonAssault extends NetworkGameClient {
           jd.a(1);
           h.a((byte) 16);
           ac.clearStaticReferences(19757);
-          af.clearStaticReferences(0);
+          AccountRequestState.clearStaticReferences(0);
           AccountServiceResult.clearStaticReferences((byte) 75);
           wd.a(115);
           fl.a((byte) 63);
@@ -1098,7 +1098,7 @@ public final class DungeonAssault extends NetworkGameClient {
               co.field_G.a(true, bd.field_f);
               bd.field_f = bd.field_f + 1;
               if (bd.field_f == 64) {
-                af.a((byte) 127);
+                AccountRequestState.a((byte) 127);
               }
             }
           }

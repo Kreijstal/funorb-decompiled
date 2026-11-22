@@ -2853,7 +2853,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (-1 == var5_int) {
             return false;
           }
-          var6 = wm.clampedFixedRatio(4096, var5_int, -110);
+          var6 = PlayerViewportLayout.clampedFixedRatio(4096, var5_int, -110);
           param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

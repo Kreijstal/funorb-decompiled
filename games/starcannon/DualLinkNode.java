@@ -7,7 +7,7 @@ class DualLinkNode extends IntrusiveNode {
     long field_j;
     DualLinkNode secondaryPrevious;
     static volatile int field_i;
-    static pf field_k;
+    static AccountRequestState field_k;
     static String[] field_h;
     static PcmStreamMixer field_l;
 

@@ -187,7 +187,7 @@ final class v {
             }
             var7 = param3;
             jc.a((byte) 111, var7);
-            kf.field_j = a.createAccountSuggestionsResult(param3, -101);
+            kf.field_j = FullscreenFocusCanvas.createAccountSuggestionsResult(param3, -101);
             return;
           }
           stackIn_11_0 = param0 ^ 13172;

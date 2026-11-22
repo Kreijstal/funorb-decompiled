@@ -118,14 +118,14 @@ final class pi extends mi {
             }
             if (qa.field_b == ca.field_f) {
               if (!param5) {
-                dq.field_a = op.a(param4, false, param1, false);
+                AccountRequestState.field_a = op.a(param4, false, param1, false);
               } else {
                 String var10 = (String) null;
-                dq.field_a = WhirlpoolHasher.a(false, (String) null, param4, as.field_b, true);
+                AccountRequestState.field_a = WhirlpoolHasher.a(false, (String) null, param4, as.field_b, true);
               }
               q.outgoingPacket.position = 0;
               q.outgoingPacket.writeByte(param2 - 1336879960, 14);
-              q.outgoingPacket.writeByte(-1336879960, dq.field_a.a(param2 ^ -69).field_c);
+              q.outgoingPacket.writeByte(-1336879960, AccountRequestState.field_a.a(param2 ^ -69).field_c);
               AccountServiceResult.a(param2 - 21, -1);
               ca.field_f = pg.field_a;
             }
@@ -145,7 +145,7 @@ final class pi extends mi {
               wo.a(8, true)) {
               of.field_a = IntKeyLookup.incomingPacket.readLong((byte) 90);
               IntKeyLookup.incomingPacket.position = 0;
-              AceOfSkies.a(param0, param5, dq.field_a, param3, -12209);
+              AceOfSkies.a(param0, param5, AccountRequestState.field_a, param3, -12209);
               ca.field_f = CacheReference.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -208,9 +208,9 @@ final class pi extends mi {
               cf.normalizedPlayerName = vu.normalizePlayerName(param2 ^ 127, var12);
               ArchiveNetworkClient.field_c = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ -95);
               ca.field_f = wq.field_e;
-              if (dq.field_a.a(-78) == SteeringMode.field_a) {
+              if (AccountRequestState.field_a.a(-78) == SteeringMode.field_a) {
                 ef.field_k.a(bm.m(param2 + 113), (byte) 125);
-              } else if (dq.field_a.a(-87) == ds.field_e) {
+              } else if (AccountRequestState.field_a.a(-87) == ds.field_e) {
                 lp.field_f.a(bm.m(111), (byte) 8);
               }
               ld.field_d = false;

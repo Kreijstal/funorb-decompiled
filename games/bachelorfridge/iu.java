@@ -48,7 +48,7 @@ final class iu extends AnimationNode {
         int var9Lifetime3Lifetime1;
         var13 = BachelorFridge.field_y;
         var4 = null;
-        af.field_b.field_vb.children.d(102);
+        AccountRequestState.field_b.field_vb.children.d(102);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + qs.field_n; 0 <= var7; var7--) {
@@ -56,7 +56,7 @@ final class iu extends AnimationNode {
           var9 = 0;
           if (!hl.field_I &&
             on.field_t > var5) {
-            var10_int = af.a(var8_ref_gs.field_p, 26291);
+            var10_int = AccountRequestState.a(var8_ref_gs.field_p, 26291);
             if (var10_int <= var8_ref_gs.a((byte) 122) && (var8_ref_gs.field_i ||
               !DisableAnimation.a((byte) 5, var8_ref_gs.field_g))) {
               var9 = 1;
@@ -90,7 +90,7 @@ final class iu extends AnimationNode {
           for (var8 = 0; qs.field_n > var8; var8++) {
             var15 = kw.field_k[var8];
             if (null != var15.field_h) {
-              af.field_b.field_vb.a(-1, var15.field_h);
+              AccountRequestState.field_b.field_vb.a(-1, var15.field_h);
               var15.field_h.a(param3, 31407, var15.field_h.e(-1), param2, var7Lifetime1);
               if (0 != var15.field_h.field_R) {
                 var4 = var15;
@@ -98,29 +98,29 @@ final class iu extends AnimationNode {
               var7Lifetime1 = var7Lifetime1 + param3;
             }
           }
-          var8Lifetime3 = var6 - (var7Lifetime1 - af.field_b.field_vb.field_p - af.field_b.field_vb.field_hb);
-          af.field_b.field_vb.field_rb = af.field_b.field_vb.field_rb + var8Lifetime3;
-          af.field_b.field_vb.field_p = af.field_b.field_vb.field_p - var8Lifetime3;
+          var8Lifetime3 = var6 - (var7Lifetime1 - AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_vb.field_hb);
+          AccountRequestState.field_b.field_vb.field_rb = AccountRequestState.field_b.field_vb.field_rb + var8Lifetime3;
+          AccountRequestState.field_b.field_vb.field_p = AccountRequestState.field_b.field_vb.field_p - var8Lifetime3;
           if (BoardTile.field_e) {
-            af.field_b.field_vb.field_p = var7Lifetime1;
+            AccountRequestState.field_b.field_vb.field_p = var7Lifetime1;
           }
           if (BoardTile.field_e) {
-            af.field_b.field_vb.field_I = 0;
+            AccountRequestState.field_b.field_vb.field_I = 0;
             BoardTile.field_e = false;
             WidgetTheme.field_l = true;
-            af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
+            AccountRequestState.field_b.field_vb.field_rb = -AccountRequestState.field_b.field_vb.field_p + AccountRequestState.field_b.field_wb.field_p;
           }
-          af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime1;
+          AccountRequestState.field_b.field_vb.field_hb = -AccountRequestState.field_b.field_vb.field_p + var7Lifetime1;
           if (lna.field_q &&
             bi.field_h != null) {
             WidgetTheme.field_l = true;
           }
-          var9Lifetime1 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+          var9Lifetime1 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
           if (WidgetTheme.field_l) {
-            af.field_b.field_vb.field_I = var9Lifetime1 - af.field_b.field_vb.field_rb;
+            AccountRequestState.field_b.field_vb.field_I = var9Lifetime1 - AccountRequestState.field_b.field_vb.field_rb;
           }
-          af.field_b.a(true, 0, param3, param0 * param3 * 2);
-          stackIn_46_0 = (var9Lifetime1 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+          AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+          stackIn_46_0 = (var9Lifetime1 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
           WidgetTheme.field_l = stackIn_46_0;
           return (gs) (var4);
         }
@@ -128,7 +128,7 @@ final class iu extends AnimationNode {
         for (var8Lifetime1 = 0; qs.field_n > var8Lifetime1; var8Lifetime1++) {
           var16 = kw.field_k[var8Lifetime1];
           if (null != var16.field_h) {
-            af.field_b.field_vb.a(-1, var16.field_h);
+            AccountRequestState.field_b.field_vb.a(-1, var16.field_h);
             var16.field_h.a(param3, 31407, var16.field_h.e(-1), param2, var7Lifetime2);
             if (0 != var16.field_h.field_R) {
               var4 = var16;
@@ -136,51 +136,51 @@ final class iu extends AnimationNode {
             var7Lifetime2 = var7Lifetime2 + param3;
           }
         }
-        var8Lifetime2 = var6 - (var7Lifetime2 - af.field_b.field_vb.field_p - af.field_b.field_vb.field_hb);
-        af.field_b.field_vb.field_rb = af.field_b.field_vb.field_rb + var8Lifetime2;
-        af.field_b.field_vb.field_p = af.field_b.field_vb.field_p - var8Lifetime2;
+        var8Lifetime2 = var6 - (var7Lifetime2 - AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_vb.field_hb);
+        AccountRequestState.field_b.field_vb.field_rb = AccountRequestState.field_b.field_vb.field_rb + var8Lifetime2;
+        AccountRequestState.field_b.field_vb.field_p = AccountRequestState.field_b.field_vb.field_p - var8Lifetime2;
         if (BoardTile.field_e) {
-          af.field_b.field_vb.field_p = var7Lifetime2;
+          AccountRequestState.field_b.field_vb.field_p = var7Lifetime2;
           if (!BoardTile.field_e) {
-            af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
+            AccountRequestState.field_b.field_vb.field_hb = -AccountRequestState.field_b.field_vb.field_p + var7Lifetime2;
             if (lna.field_q &&
               bi.field_h != null) {
               WidgetTheme.field_l = true;
             }
-            var9Lifetime2 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+            var9Lifetime2 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
             if (WidgetTheme.field_l) {
-              af.field_b.field_vb.field_I = var9Lifetime2 - af.field_b.field_vb.field_rb;
+              AccountRequestState.field_b.field_vb.field_I = var9Lifetime2 - AccountRequestState.field_b.field_vb.field_rb;
             }
-            af.field_b.a(true, 0, param3, param0 * param3 * 2);
-            stackIn_68_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+            AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+            stackIn_68_0 = (var9Lifetime2 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
             WidgetTheme.field_l = stackIn_68_0;
           } else {
-            af.field_b.field_vb.field_I = 0;
+            AccountRequestState.field_b.field_vb.field_I = 0;
             BoardTile.field_e = false;
             WidgetTheme.field_l = true;
-            af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
-            af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
+            AccountRequestState.field_b.field_vb.field_rb = -AccountRequestState.field_b.field_vb.field_p + AccountRequestState.field_b.field_wb.field_p;
+            AccountRequestState.field_b.field_vb.field_hb = -AccountRequestState.field_b.field_vb.field_p + var7Lifetime2;
             if (!lna.field_q) {
-              var9Lifetime2 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+              var9Lifetime2 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
               if (WidgetTheme.field_l) {
-                af.field_b.field_vb.field_I = var9Lifetime2 - af.field_b.field_vb.field_rb;
+                AccountRequestState.field_b.field_vb.field_I = var9Lifetime2 - AccountRequestState.field_b.field_vb.field_rb;
               }
-              af.field_b.a(true, 0, param3, param0 * param3 * 2);
-              stackIn_75_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+              AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+              stackIn_75_0 = (var9Lifetime2 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
               WidgetTheme.field_l = stackIn_75_0;
             } else {
               if (bi.field_h != null) {
                 WidgetTheme.field_l = true;
               }
-              var9Lifetime2 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+              var9Lifetime2 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
               if (!WidgetTheme.field_l) {
-                af.field_b.a(true, 0, param3, param0 * param3 * 2);
-                stackIn_83_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+                AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+                stackIn_83_0 = (var9Lifetime2 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
                 WidgetTheme.field_l = stackIn_83_0;
               } else {
-                af.field_b.field_vb.field_I = var9Lifetime2 - af.field_b.field_vb.field_rb;
-                af.field_b.a(true, 0, param3, param0 * param3 * 2);
-                stackIn_87_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+                AccountRequestState.field_b.field_vb.field_I = var9Lifetime2 - AccountRequestState.field_b.field_vb.field_rb;
+                AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+                stackIn_87_0 = (var9Lifetime2 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
                 WidgetTheme.field_l = stackIn_87_0;
               }
             }
@@ -188,68 +188,68 @@ final class iu extends AnimationNode {
           return (gs) (var4);
         }
         if (!BoardTile.field_e) {
-          af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
+          AccountRequestState.field_b.field_vb.field_hb = -AccountRequestState.field_b.field_vb.field_p + var7Lifetime2;
           if (lna.field_q) {
             if (bi.field_h == null) {
-              var9Lifetime3 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+              var9Lifetime3 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
               if (!WidgetTheme.field_l) {
-                af.field_b.a(true, 0, param3, param0 * param3 * 2);
-                stackIn_119_0 = (var9Lifetime3 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+                AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+                stackIn_119_0 = (var9Lifetime3 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
                 WidgetTheme.field_l = stackIn_119_0;
               } else {
-                af.field_b.field_vb.field_I = var9Lifetime3 - af.field_b.field_vb.field_rb;
-                af.field_b.a(true, 0, param3, param0 * param3 * 2);
-                stackIn_123_0 = (var9Lifetime3 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+                AccountRequestState.field_b.field_vb.field_I = var9Lifetime3 - AccountRequestState.field_b.field_vb.field_rb;
+                AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+                stackIn_123_0 = (var9Lifetime3 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
                 WidgetTheme.field_l = stackIn_123_0;
               }
               return (gs) (var4);
             }
             WidgetTheme.field_l = true;
           }
-          var9Lifetime3Lifetime1 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+          var9Lifetime3Lifetime1 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
           if (!WidgetTheme.field_l) {
-            af.field_b.a(true, 0, param3, param0 * param3 * 2);
-            stackIn_130_0 = (var9Lifetime3Lifetime1 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+            AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+            stackIn_130_0 = (var9Lifetime3Lifetime1 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
             WidgetTheme.field_l = stackIn_130_0;
           } else {
-            af.field_b.field_vb.field_I = var9Lifetime3Lifetime1 - af.field_b.field_vb.field_rb;
-            af.field_b.a(true, 0, param3, param0 * param3 * 2);
-            stackIn_134_0 = (var9Lifetime3Lifetime1 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+            AccountRequestState.field_b.field_vb.field_I = var9Lifetime3Lifetime1 - AccountRequestState.field_b.field_vb.field_rb;
+            AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+            stackIn_134_0 = (var9Lifetime3Lifetime1 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
             WidgetTheme.field_l = stackIn_134_0;
           }
           return (gs) (var4);
         }
-        af.field_b.field_vb.field_I = 0;
+        AccountRequestState.field_b.field_vb.field_I = 0;
         BoardTile.field_e = false;
         WidgetTheme.field_l = true;
-        af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
-        af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
+        AccountRequestState.field_b.field_vb.field_rb = -AccountRequestState.field_b.field_vb.field_p + AccountRequestState.field_b.field_wb.field_p;
+        AccountRequestState.field_b.field_vb.field_hb = -AccountRequestState.field_b.field_vb.field_p + var7Lifetime2;
         if (lna.field_q) {
           if (bi.field_h == null) {
-            var9Lifetime4 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+            var9Lifetime4 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
             if (!WidgetTheme.field_l) {
-              af.field_b.a(true, 0, param3, param0 * param3 * 2);
-              stackIn_96_0 = (var9Lifetime4 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+              AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+              stackIn_96_0 = (var9Lifetime4 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
               WidgetTheme.field_l = stackIn_96_0;
             } else {
-              af.field_b.field_vb.field_I = var9Lifetime4 - af.field_b.field_vb.field_rb;
-              af.field_b.a(true, 0, param3, param0 * param3 * 2);
-              stackIn_100_0 = (var9Lifetime4 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+              AccountRequestState.field_b.field_vb.field_I = var9Lifetime4 - AccountRequestState.field_b.field_vb.field_rb;
+              AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+              stackIn_100_0 = (var9Lifetime4 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
               WidgetTheme.field_l = stackIn_100_0;
             }
             return (gs) (var4);
           }
           WidgetTheme.field_l = true;
         }
-        var9Lifetime5 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
+        var9Lifetime5 = -AccountRequestState.field_b.field_vb.field_hb - (AccountRequestState.field_b.field_vb.field_p - AccountRequestState.field_b.field_wb.field_p);
         if (!WidgetTheme.field_l) {
-          af.field_b.a(true, 0, param3, param0 * param3 * 2);
-          stackIn_107_0 = (var9Lifetime5 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+          AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+          stackIn_107_0 = (var9Lifetime5 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
           WidgetTheme.field_l = stackIn_107_0;
         } else {
-          af.field_b.field_vb.field_I = var9Lifetime5 - af.field_b.field_vb.field_rb;
-          af.field_b.a(true, 0, param3, param0 * param3 * 2);
-          stackIn_111_0 = (var9Lifetime5 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
+          AccountRequestState.field_b.field_vb.field_I = var9Lifetime5 - AccountRequestState.field_b.field_vb.field_rb;
+          AccountRequestState.field_b.a(true, 0, param3, param0 * param3 * 2);
+          stackIn_111_0 = (var9Lifetime5 == AccountRequestState.field_b.field_vb.field_I + AccountRequestState.field_b.field_vb.field_rb);
           WidgetTheme.field_l = stackIn_111_0;
         }
         return (gs) (var4);

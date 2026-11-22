@@ -131,7 +131,7 @@ final class gn {
         }
     }
 
-    final ue d(int param0) {
+    final FullscreenFocusCanvas d(int param0) {
         this.field_d = hf.field_h;
         this.field_f = qc.field_s;
         if (param0 != 16776960) {
@@ -139,7 +139,7 @@ final class gn {
         }
         this.field_h.a((byte) -125, this.field_p, this.field_s);
         ih.field_s = false;
-        ue var2 = KeyboardInput.a(this.field_s, (byte) -61, gf.field_b, 0, this.field_p, 0);
+        FullscreenFocusCanvas var2 = KeyboardInput.createFullscreenCanvas(this.field_s, (byte) -61, gf.field_b, 0, this.field_p, 0);
         if (var2 == null) {
           this.c(115);
         }
