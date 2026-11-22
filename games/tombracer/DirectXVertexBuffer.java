@@ -19,7 +19,7 @@ final class DirectXVertexBuffer implements VertexStreamBuffer {
 
     public final void close(int param0) {
         if (null != this.field_e) {
-          this.field_e.a(false);
+          this.field_e.release(false);
           this.field_e = null;
           this.field_a = 0;
           if (param0 != 12574) {
@@ -67,7 +67,7 @@ final class DirectXVertexBuffer implements VertexStreamBuffer {
           stackIn_11_0 = (null != this.field_e);
           return stackIn_11_0;
         }
-        this.field_e.a(false);
+        this.field_e.release(false);
         this.field_e = this.field_c.field_jd.createVertexBuffer(this.field_a, var5, 0, var4, this.field_e);
         this.field_b = this.field_a;
         stackIn_15_0 = (null != this.field_e);
@@ -84,7 +84,7 @@ final class DirectXVertexBuffer implements VertexStreamBuffer {
           if (this.field_g) {
             return null;
           }
-          if (jagdx.ah.a(this.field_e.Lock(0, this.field_b, param1 ? 8192 : 0, this.field_c.field_Oc), (byte) 79)) {
+          if (jagdx.Direct3DResult.succeeded(this.field_e.Lock(0, this.field_b, param1 ? 8192 : 0, this.field_c.field_Oc), (byte) 79)) {
             this.field_g = true;
             return (jaclib.memory.Buffer) ((Object) this.field_c.field_Oc);
           }
@@ -93,7 +93,7 @@ final class DirectXVertexBuffer implements VertexStreamBuffer {
         if (this.field_g) {
           return null;
         }
-        if (jagdx.ah.a(this.field_e.Lock(0, this.field_b, param1 ? 8192 : 0, this.field_c.field_Oc), (byte) 79)) {
+        if (jagdx.Direct3DResult.succeeded(this.field_e.Lock(0, this.field_b, param1 ? 8192 : 0, this.field_c.field_Oc), (byte) 79)) {
           this.field_g = true;
           return (jaclib.memory.Buffer) ((Object) this.field_c.field_Oc);
         }
@@ -106,7 +106,7 @@ final class DirectXVertexBuffer implements VertexStreamBuffer {
           if (!this.field_g) {
             return false;
           }
-          if (jagdx.ah.a(this.field_e.Unlock(), (byte) -109)) {
+          if (jagdx.Direct3DResult.succeeded(this.field_e.Unlock(), (byte) -109)) {
             this.field_g = false;
             return true;
           }
@@ -115,7 +115,7 @@ final class DirectXVertexBuffer implements VertexStreamBuffer {
         if (!this.field_g) {
           return false;
         }
-        if (jagdx.ah.a(this.field_e.Unlock(), (byte) -109)) {
+        if (jagdx.Direct3DResult.succeeded(this.field_e.Unlock(), (byte) -109)) {
           this.field_g = false;
           return true;
         }

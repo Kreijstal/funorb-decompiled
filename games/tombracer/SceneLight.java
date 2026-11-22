@@ -53,7 +53,7 @@ abstract class SceneLight extends IntrusiveNode {
         }
         try {
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            Room.field_p[var2_int] = LoadLevelCommand.createToolkitSprites(param0, eta.field_a[var2_int], -82);
+            Room.field_p[var2_int] = LoadLevelCommand.createToolkitSprites(param0, BillboardSpriteData.spritesByType[var2_int], -82);
           }
           WidgetStyleLayer.field_k = new ToolkitSprite[6];
           HardwareSpecularEffect.field_h = new ToolkitSprite[6];

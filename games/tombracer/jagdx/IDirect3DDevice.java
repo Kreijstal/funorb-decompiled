@@ -4,7 +4,7 @@
 package jagdx;
 
 public final class IDirect3DDevice extends jaclib.peer.IUnknown {
-    private jaclib.peer.sha b;
+    private jaclib.peer.PeerReferenceManager b;
     private static float[] a;
 
     public final native int SetLight(int param0, jagdx.D3DLIGHT param1);
@@ -20,10 +20,10 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DSurface getRenderTarget(int param0) {
         jagdx.IDirect3DSurface var2 = new jagdx.IDirect3DSurface(this.b);
         int var3 = this._GetRenderTarget(param0, var2);
-        if (!jagdx.ah.a(var3, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var3, 10643)) {
           return var2;
         }
-        throw new jagdx.eva(String.valueOf(var3));
+        throw new jagdx.Direct3DException(String.valueOf(var3));
     }
 
     public final native int SetSamplerState(int param0, int param1, int param2);
@@ -41,17 +41,17 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DSurface getDepthStencilSurface() {
         jagdx.IDirect3DSurface var1 = new jagdx.IDirect3DSurface(this.b);
         int var2 = this._GetDepthStencilSurface(var1);
-        if (!jagdx.ah.a(var2, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var2, 10643)) {
           return var1;
         }
-        throw new jagdx.eva(String.valueOf(var2));
+        throw new jagdx.Direct3DException(String.valueOf(var2));
     }
 
     public final jagdx.IDirect3DSwapChain getSwapChain(int param0) {
         jagdx.IDirect3DSwapChain var2 = new jagdx.IDirect3DSwapChain(this.b);
         int var3 = this._GetSwapChain(param0, var2);
-        if (jagdx.ah.a(var3, 10643)) {
-          throw new jagdx.eva(String.valueOf(var3));
+        if (jagdx.Direct3DResult.failed(var3, 10643)) {
+          throw new jagdx.Direct3DException(String.valueOf(var3));
         }
         return var2;
     }
@@ -64,10 +64,10 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         }
         jagdx.IDirect3DVertexShader var2 = new jagdx.IDirect3DVertexShader(this.b);
         int var3 = this._CreateVertexShader(param0, var2);
-        if (!jagdx.ah.a(var3, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var3, 10643)) {
           return var2;
         }
-        throw new jagdx.eva(String.valueOf(var3));
+        throw new jagdx.Direct3DException(String.valueOf(var3));
     }
 
     public final native int SetStreamSource(int param0, jagdx.IDirect3DVertexBuffer param1, int param2, int param3);
@@ -86,13 +86,13 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final jagdx.IDirect3DVertexBuffer createVertexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4) {
         if (param4 != null) {
-          param4.a(false);
+          param4.release(false);
         } else {
           param4 = new jagdx.IDirect3DVertexBuffer(this.b);
         }
         int var6 = this._CreateVertexBuffer(param0, param1, param2, param3, param4);
-        if (jagdx.ah.a(var6, 10643)) {
-          throw new jagdx.eva(String.valueOf(var6));
+        if (jagdx.Direct3DResult.failed(var6, 10643)) {
+          throw new jagdx.Direct3DException(String.valueOf(var6));
         }
         return param4;
     }
@@ -123,10 +123,10 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         }
         jagdx.IDirect3DPixelShader var2 = new jagdx.IDirect3DPixelShader(this.b);
         int var3 = this._CreatePixelShader(param0, var2);
-        if (!jagdx.ah.a(var3, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var3, 10643)) {
           return var2;
         }
-        throw new jagdx.eva(String.valueOf(var3));
+        throw new jagdx.Direct3DException(String.valueOf(var3));
     }
 
     private final native int _CreateIndexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4);
@@ -142,8 +142,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DSurface createRenderTarget(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         jagdx.IDirect3DSurface var7 = new jagdx.IDirect3DSurface(this.b);
         int var8 = this._CreateRenderTarget(param0, param1, param2, param3, param4, param5, var7);
-        if (jagdx.ah.a(var8, 10643)) {
-          throw new jagdx.eva(String.valueOf(var8));
+        if (jagdx.Direct3DResult.failed(var8, 10643)) {
+          throw new jagdx.Direct3DException(String.valueOf(var8));
         }
         return var7;
     }
@@ -153,10 +153,10 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DVolumeTexture createVolumeTexture(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         jagdx.IDirect3DVolumeTexture var8 = new jagdx.IDirect3DVolumeTexture(this.b);
         int var9 = this._CreateVolumeTexture(param0, param1, param2, param3, param4, param5, param6, var8);
-        if (!jagdx.ah.a(var9, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var9, 10643)) {
           return var8;
         }
-        throw new jagdx.eva(String.valueOf(var9));
+        throw new jagdx.Direct3DException(String.valueOf(var9));
     }
 
     public final native int _CreateCubeTexture(int param0, int param1, int param2, int param3, int param4, jagdx.IDirect3DCubeTexture param5);
@@ -181,29 +181,29 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (param1 == null) {
           param1 = new jagdx.IDirect3DVertexDeclaration(this.b);
         } else {
-          param1.a(false);
+          param1.release(false);
         }
         int var3 = this._CreateVertexDeclaration(param0, param1);
-        if (!jagdx.ah.a(var3, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var3, 10643)) {
           return param1;
         }
-        throw new jagdx.eva(String.valueOf(var3));
+        throw new jagdx.Direct3DException(String.valueOf(var3));
     }
 
-    IDirect3DDevice(jaclib.peer.sha param0) {
+    IDirect3DDevice(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.b = param0;
     }
 
     public final jagdx.IDirect3DIndexBuffer createIndexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
         if (param4 != null) {
-          param4.a(false);
+          param4.release(false);
         } else {
           param4 = new jagdx.IDirect3DIndexBuffer(this.b);
         }
         int var6 = this._CreateIndexBuffer(param0, param1, param2, param3, param4);
-        if (jagdx.ah.a(var6, 10643)) {
-          throw new jagdx.eva(String.valueOf(var6));
+        if (jagdx.Direct3DResult.failed(var6, 10643)) {
+          throw new jagdx.Direct3DException(String.valueOf(var6));
         }
         return param4;
     }
@@ -211,19 +211,19 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DTexture createTexture(int param0, int param1, int param2, int param3, int param4, int param5) {
         jagdx.IDirect3DTexture var7 = new jagdx.IDirect3DTexture(this.b);
         int var8 = this._CreateTexture(param0, param1, param2, param3, param4, param5, var7);
-        if (!jagdx.ah.a(var8, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var8, 10643)) {
           return var7;
         }
-        throw new jagdx.eva(String.valueOf(var8));
+        throw new jagdx.Direct3DException(String.valueOf(var8));
     }
 
     public final jagdx.IDirect3DCubeTexture createCubeTexture(int param0, int param1, int param2, int param3, int param4) {
         jagdx.IDirect3DCubeTexture var6 = new jagdx.IDirect3DCubeTexture(this.b);
         int var7 = this._CreateCubeTexture(param0, param1, param2, param3, param4, var6);
-        if (!jagdx.ah.a(var7, 10643)) {
+        if (!jagdx.Direct3DResult.failed(var7, 10643)) {
           return var6;
         }
-        throw new jagdx.eva(String.valueOf(var7));
+        throw new jagdx.Direct3DException(String.valueOf(var7));
     }
 
     private final native int _GetDepthStencilSurface(jagdx.IDirect3DSurface param0);

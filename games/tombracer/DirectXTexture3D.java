@@ -28,7 +28,7 @@ final class DirectXTexture3D extends DirectXTexture implements Texture3D {
         this.field_f = this.field_d.field_jd.createVolumeTexture(param2, param3, param4, 1, 0, Direct3DToolkit.d3dFormat(param1, -128, this.field_b), 1);
         var15 = this.field_d.field_Nc;
         var8 = this.field_f.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
-        if (jagdx.ah.a(var8, (byte) -86)) {
+        if (jagdx.Direct3DResult.succeeded(var8, (byte) -86)) {
           var9 = this.field_e.field_b * this.field_g;
           var10 = var9 * this.field_h;
           var11 = var15.getSlicePitch();
@@ -36,17 +36,17 @@ final class DirectXTexture3D extends DirectXTexture implements Texture3D {
             var12 = var15.getRowPitch();
             if (var9 == var12) {
               for (var13 = 0; var13 < this.field_i; var13++) {
-                var15.a(param5, var10 * var13, var11 * var13, var10);
+                var15.putBytes(param5, var10 * var13, var11 * var13, var10);
               }
             } else {
               for (var13 = 0; this.field_i > var13; var13++) {
                 for (var14 = 0; var14 < this.field_h; var14++) {
-                  var15.a(param5, var14 * var9 + var13 * var10, var13 * var11 + var14 * var12, var9);
+                  var15.putBytes(param5, var14 * var9 + var13 * var10, var13 * var11 + var14 * var12, var9);
                 }
               }
             }
           } else {
-            var15.a(param5, 0, 0, var9 * this.field_h * this.field_i);
+            var15.putBytes(param5, 0, 0, var9 * this.field_h * this.field_i);
           }
           this.field_f.UnlockBox(0);
         }

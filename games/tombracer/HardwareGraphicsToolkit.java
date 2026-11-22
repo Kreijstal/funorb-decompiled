@@ -872,7 +872,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0) {
           return (jaclib.memory.heap.NativeHeapBuffer) null;
         }
-        return this.field_t.a(param1, param2);
+        return this.field_t.createBuffer(param1, param2);
     }
 
     private final void usePerspectiveProjection(byte param0) {
@@ -1409,22 +1409,22 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           return false;
         }
         jaclib.memory.Stream var9 = this.streamForBuffer(var11, 125);
-        if (jaclib.memory.Stream.b()) {
-          var9.b(param5);
-          var9.b(param0);
-          var9.b(param1);
-          var9.b(param2);
-          var9.b(param3);
-          var9.b(param4);
+        if (jaclib.memory.Stream.isNativeBigEndian()) {
+          var9.writeFloatBE(param5);
+          var9.writeFloatBE(param0);
+          var9.writeFloatBE(param1);
+          var9.writeFloatBE(param2);
+          var9.writeFloatBE(param3);
+          var9.writeFloatBE(param4);
         } else {
-          var9.a(param5);
-          var9.a(param0);
-          var9.a(param1);
-          var9.a(param2);
-          var9.a(param3);
-          var9.a(param4);
+          var9.writeFloatLE(param5);
+          var9.writeFloatLE(param0);
+          var9.writeFloatLE(param1);
+          var9.writeFloatLE(param2);
+          var9.writeFloatLE(param3);
+          var9.writeFloatLE(param4);
         }
-        var9.a();
+        var9.flush();
         int var10 = 16 % ((param6 - 72) / 44);
         return this.field_cb.unmapBuffer(true);
     }
@@ -1523,80 +1523,80 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var3 = this.field_xb.mapBuffer(param0 - 15870, true);
             if (var3 != null) {
               var4 = this.streamForBuffer(var3, param0 - 14);
-              if (!jaclib.memory.Stream.b()) {
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
+              if (!jaclib.memory.Stream.isNativeBigEndian()) {
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
               } else {
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
               }
-              var4.a();
+              var4.flush();
               if (this.field_xb.unmapBuffer(true)) {
                 break scanLoop1;
               }
@@ -1839,24 +1839,24 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var3 = this.field_hb.mapBuffer(-15730, true);
             if (var3 != null) {
               var4 = this.streamForBuffer(var3, 125);
-              var4.b(0.0f);
-              var4.b(0.0f);
-              var4.b(0.0f);
+              var4.writeFloatBE(0.0f);
+              var4.writeFloatBE(0.0f);
+              var4.writeFloatBE(0.0f);
               for (var5 = 0; var5 <= 256; var5++) {
                 var6 = (double)(var5 * 2) * 3.141592653589793 / 256.0;
                 var8 = (float)Math.cos(var6);
                 var9 = (float)Math.sin(var6);
-                if (jaclib.memory.Stream.b()) {
-                  var4.b(var9);
-                  var4.b(var8);
-                  var4.b(0.0f);
+                if (jaclib.memory.Stream.isNativeBigEndian()) {
+                  var4.writeFloatBE(var9);
+                  var4.writeFloatBE(var8);
+                  var4.writeFloatBE(0.0f);
                 } else {
-                  var4.a(var9);
-                  var4.a(var8);
-                  var4.a(0.0f);
+                  var4.writeFloatLE(var9);
+                  var4.writeFloatLE(var8);
+                  var4.writeFloatLE(0.0f);
                 }
               }
-              var4.a();
+              var4.flush();
               if (this.field_hb.unmapBuffer(true)) {
                 break scanLoop1;
               }
@@ -2353,7 +2353,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           if (param1 < 124) {
             this.underwaterSurfaceHeight(false);
           }
-          this.field_y.a(param0);
+          this.field_y.setBuffer(param0);
           stackIn_3_0 = this.field_y;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2649,7 +2649,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void useHeap(GraphicsHeap param0) {
         try {
           this.field_t = ((HardwareGraphicsHeap) (param0)).field_h;
-          this.field_o = this.field_t.a(32768, false);
+          this.field_o = this.field_t.createBuffer(32768, false);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.FB(" + (param0 != null ? "{...}" : "null") + ')');
         }

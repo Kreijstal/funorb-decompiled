@@ -6,7 +6,7 @@ package jaclib.peer;
 public abstract class Peer {
     protected jaclib.peer.PeerReference reference;
 
-    protected long a() {
+    protected long release() {
         return this.reference.release((byte) 34);
     }
 

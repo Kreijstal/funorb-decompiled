@@ -101,65 +101,65 @@ final class DynamicGeometryBuffer {
           var7 = this.field_b.map(true, (byte) -44);
           if (var7 != null) {
             var8 = param0.streamForBuffer(var7, 125);
-            if (jaclib.memory.Stream.b()) {
+            if (jaclib.memory.Stream.isNativeBigEndian()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = var4_int * 4;
-                var8.a(var5);
-                var8.a(1 + var5);
-                var8.a(2 + var5);
-                var8.a(var5 + 2);
-                var8.a(var5 + 3);
-                var8.a(var5);
+                var8.writeShortBE(var5);
+                var8.writeShortBE(1 + var5);
+                var8.writeShortBE(2 + var5);
+                var8.writeShortBE(var5 + 2);
+                var8.writeShortBE(var5 + 3);
+                var8.writeShortBE(var5);
               }
             } else {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = var4_int * 4;
-                var8.b(var5);
-                var8.b(var5 + 1);
-                var8.b(2 + var5);
-                var8.b(2 + var5);
-                var8.b(var5 + 3);
-                var8.b(var5);
+                var8.writeShortLE(var5);
+                var8.writeShortLE(var5 + 1);
+                var8.writeShortLE(2 + var5);
+                var8.writeShortLE(2 + var5);
+                var8.writeShortLE(var5 + 3);
+                var8.writeShortLE(var5);
               }
             }
-            var8.a();
+            var8.flush();
             this.field_b.unmap((byte) -97);
           }
           var9 = this.field_d.mapBuffer(-15730, true);
           if (var9 != null) {
             var4 = param0.streamForBuffer(var9, 127);
-            if (!jaclib.memory.Stream.b()) {
+            if (!jaclib.memory.Stream.isNativeBigEndian()) {
               for (var5Lifetime1 = 0; var5Lifetime1 < 8191; var5Lifetime1++) {
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
               }
             } else {
               for (var5Lifetime1 = 0; var5Lifetime1 < 8191; var5Lifetime1++) {
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(-1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(-1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(-1.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(0.0f);
+                var4.writeFloatBE(-1.0f);
+                var4.writeFloatBE(0.0f);
               }
             }
-            var4.a();
+            var4.flush();
             this.field_d.unmapBuffer(true);
           }
           return;

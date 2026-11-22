@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class eta {
-    static SpriteData[][] field_a;
+class BillboardSpriteData {
+    static SpriteData[][] spritesByType;
     private static String field_z;
 
     public static void releaseStatics(int param0) {
-        field_a = (SpriteData[][]) null;
+        spritesByType = (SpriteData[][]) null;
         if (param0 != 29574) {
-          eta.releaseStatics(59);
+          BillboardSpriteData.releaseStatics(59);
         }
     }
 

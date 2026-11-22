@@ -13,7 +13,7 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
         return this.a;
     }
 
-    public void a(byte[] param0, int param1, int param2, int param3) {
+    public void putBytes(byte[] param0, int param1, int param2, int param3) {
         if (((0 > param2 ? 1 : 0) | ((param1 < 0 ? 1 : 0) | ((this.b == 0L ? 1 : 0) | (param0 == null ? 1 : 0)) | (param3 + param1 > param0.length ? 1 : 0)) | (param2 + param3 > this.a ? 1 : 0)) == 0) {
           this.put(this.b, param0, param1, param2, param3);
           return;
@@ -31,7 +31,7 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
         return this.b;
     }
 
-    protected final void a(long param0, int param1) {
+    protected final void setAddressAndSize(long param0, int param1) {
         this.b = param0;
         this.a = param1;
     }

@@ -4,7 +4,7 @@
 package jagdx;
 
 public class IDirect3DVolumeTexture extends jagdx.IDirect3DBaseTexture {
-    IDirect3DVolumeTexture(jaclib.peer.sha param0) {
+    IDirect3DVolumeTexture(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 

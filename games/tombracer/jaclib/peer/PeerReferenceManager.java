@@ -3,32 +3,32 @@
  */
 package jaclib.peer;
 
-public final class sha {
+public final class PeerReferenceManager {
     private jaclib.peer.PeerReference c;
     java.lang.ref.ReferenceQueue a;
     private jaclib.peer.PeerReference b;
 
-    public final void b(int param0) {
-        this.a(8841);
+    public final void releaseAll(int param0) {
+        this.drainCollectedPeers(8841);
         while (this.b != null) {
-          this.b(-27558, this.b);
+          this.releaseReference(-27558, this.b);
         }
         if (param0 == 14203) {
-          this.a(8841);
+          this.drainCollectedPeers(8841);
           return;
         }
         this.c = (jaclib.peer.PeerReference) null;
-        this.a(8841);
+        this.drainCollectedPeers(8841);
     }
 
-    public final void c(int param0) {
+    public final void processCollectedPeers(int param0) {
         if (param0 != -24122) {
           return;
         }
-        this.a(8841);
+        this.drainCollectedPeers(8841);
     }
 
-    private final void a(int param0) {
+    private final void drainCollectedPeers(int param0) {
         java.lang.ref.Reference var2;
         jaclib.peer.PeerReference var3;
         jaclib.peer.PeerReference var4;
@@ -36,7 +36,7 @@ public final class sha {
           var2 = this.a.poll();
           if (var2 != null) {
             var3 = (jaclib.peer.PeerReference) ((Object) var2);
-            this.b(-27558, var3);
+            this.releaseReference(-27558, var3);
             continue;
           }
           break;
@@ -45,11 +45,11 @@ public final class sha {
           return;
         }
         var4 = (jaclib.peer.PeerReference) null;
-        this.b(-120, (jaclib.peer.PeerReference) null);
+        this.releaseReference(-120, (jaclib.peer.PeerReference) null);
         return;
     }
 
-    private final void b(int param0, jaclib.peer.PeerReference param1) {
+    private final void releaseReference(int param0, jaclib.peer.PeerReference param1) {
         jaclib.peer.PeerReference var4;
         jaclib.peer.PeerReference var4Lifetime1;
         param1.release((byte) 34);
@@ -63,7 +63,7 @@ public final class sha {
           }
           if (param0 != -27558) {
             var4 = (jaclib.peer.PeerReference) null;
-            this.b(-21, (jaclib.peer.PeerReference) null);
+            this.releaseReference(-21, (jaclib.peer.PeerReference) null);
           }
           if (null != param1.a) {
             param1.a.b = param1.b;
@@ -80,18 +80,18 @@ public final class sha {
           return;
         }
         var4Lifetime1 = (jaclib.peer.PeerReference) null;
-        this.b(-21, (jaclib.peer.PeerReference) null);
+        this.releaseReference(-21, (jaclib.peer.PeerReference) null);
         if (null != param1.a) {
           param1.a.b = param1.b;
         }
         return;
     }
 
-    public sha() {
+    public PeerReferenceManager() {
         this.a = new java.lang.ref.ReferenceQueue();
     }
 
-    final void a(int param0, jaclib.peer.PeerReference param1) {
+    final void registerReference(int param0, jaclib.peer.PeerReference param1) {
         param1.b = null;
         param1.a = this.b;
         if (param0 > 61) {
@@ -104,7 +104,7 @@ public final class sha {
           return;
         }
         jaclib.peer.PeerReference var4 = (jaclib.peer.PeerReference) null;
-        this.a(114, (jaclib.peer.PeerReference) null);
+        this.registerReference(114, (jaclib.peer.PeerReference) null);
         if (null != this.c) {
           this.b.b = param1;
         } else {

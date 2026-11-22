@@ -152,33 +152,33 @@ abstract class MenuScreen extends GameScreen {
             }
             var7 = CircleMovementLocomotor.getMaxVolume((byte) 124);
             if (this.field_k.isHomePressed(0)) {
-              mqa.setSoundVolume(0, (byte) -118);
+              SoundVolumeControl.setSoundVolume(0, (byte) -118);
             }
             if (this.field_k.isEndPressed(-6)) {
-              mqa.setSoundVolume(var7, (byte) 124);
+              SoundVolumeControl.setSoundVolume(var7, (byte) 124);
             }
             if (this.field_k.isPointerHeld((byte) -128)) {
               var8Lifetime1 = -24 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1);
               var9Lifetime1 = -var8Lifetime1 + AgeValidator.field_j;
               var10Lifetime1 = var9Lifetime1 << 1;
               if (var10Lifetime1 <= 0) {
-                mqa.setSoundVolume(0, (byte) 121);
+                SoundVolumeControl.setSoundVolume(0, (byte) 121);
                 if (var11 != 0) {
                   if (var10Lifetime1 < var7) {
-                    mqa.setSoundVolume(var10Lifetime1, (byte) -48);
-                    mqa.setSoundVolume(var7, (byte) 85);
+                    SoundVolumeControl.setSoundVolume(var10Lifetime1, (byte) -48);
+                    SoundVolumeControl.setSoundVolume(var7, (byte) 85);
                   } else {
-                    mqa.setSoundVolume(var7, (byte) 85);
+                    SoundVolumeControl.setSoundVolume(var7, (byte) 85);
                   }
                 }
               } else {
                 if (var10Lifetime1 < var7) {
-                  mqa.setSoundVolume(var10Lifetime1, (byte) -48);
+                  SoundVolumeControl.setSoundVolume(var10Lifetime1, (byte) -48);
                   if (var11 != 0) {
-                    mqa.setSoundVolume(var7, (byte) 85);
+                    SoundVolumeControl.setSoundVolume(var7, (byte) 85);
                   }
                 } else {
-                  mqa.setSoundVolume(var7, (byte) 85);
+                  SoundVolumeControl.setSoundVolume(var7, (byte) 85);
                 }
               }
             }

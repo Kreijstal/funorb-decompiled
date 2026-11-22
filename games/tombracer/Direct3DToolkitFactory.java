@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oua {
+final class Direct3DToolkitFactory {
     final static GraphicsToolkit createDirect3DToolkit(TextureProvider param0, int param1, byte param2, ResourceArchive param3, java.awt.Canvas param4) {
         try {
           Class var5 = null;
@@ -11,7 +11,7 @@ final class oua {
           GraphicsToolkit stackIn_5_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (!mja.loadDirect3DLibraries(param2)) {
+            if (!Direct3DLibraryLoader.loadDirect3DLibraries(param2)) {
               throw new RuntimeException("");
             }
             if (!StringCursor.loadNativeLibrary("jagdx", 480)) {

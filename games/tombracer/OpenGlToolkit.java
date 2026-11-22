@@ -2236,7 +2236,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Hc < 2) {
           var2 = var2 | 16;
         }
-        this.field_O = jaclib.memory.Stream.b();
+        this.field_O = jaclib.memory.Stream.isNativeBigEndian();
         this.field_Yc = this.field_l.arePbuffersAvailable();
         this.field_Q = this.field_l.a("GL_ARB_vertex_buffer_object");
         this.field_S = this.field_l.a("GL_ARB_multisample");

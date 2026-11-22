@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hq extends eta {
+class hq extends BillboardSpriteData {
     static int[] field_b;
     private static String field_z;
 

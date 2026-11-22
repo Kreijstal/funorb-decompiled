@@ -112,7 +112,7 @@ abstract class GraphicsToolkit {
             return stackIn_13_0;
           }
           if (param3 == 3) {
-            stackIn_16_0 = oua.createDirect3DToolkit(param0, param5, (byte) -50, param2, param6);
+            stackIn_16_0 = Direct3DToolkitFactory.createDirect3DToolkit(param0, param5, (byte) -50, param2, param6);
             return stackIn_16_0;
           }
           if (param7 == -17441) {

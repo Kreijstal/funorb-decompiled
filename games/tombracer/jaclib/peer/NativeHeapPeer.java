@@ -3,8 +3,8 @@
  */
 package jaclib.peer;
 
-public class nca extends jaclib.peer.Peer {
-    protected nca(jaclib.peer.sha param0) {
+public class NativeHeapPeer extends jaclib.peer.Peer {
+    protected NativeHeapPeer(jaclib.peer.PeerReferenceManager param0) {
         this.reference = (jaclib.peer.PeerReference) ((Object) new jaclib.peer.NativeHeapPeerReference(this, param0));
     }
 }

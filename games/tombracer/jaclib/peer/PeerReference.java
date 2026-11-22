@@ -8,9 +8,9 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     jaclib.peer.PeerReference a;
     jaclib.peer.PeerReference b;
 
-    PeerReference(jaclib.peer.Peer param0, jaclib.peer.sha param1) {
+    PeerReference(jaclib.peer.Peer param0, jaclib.peer.PeerReferenceManager param1) {
         super(param0, param1.a);
-        param1.a(63, this);
+        param1.registerReference(63, this);
     }
 
     final long release(byte param0) {

@@ -61,14 +61,14 @@ final class DirectXCubeTexture extends DirectXTexture implements CubeTexture {
         var11 = var10;
         for (var6 = 0; var6 < 6; var6++) {
           var7 = this.field_g.LockRect(var6, 0, 0, 0, this.field_f, this.field_f, 0, var11);
-          if (jagdx.ah.a(var7, (byte) 112)) {
+          if (jagdx.Direct3DResult.succeeded(var7, (byte) 112)) {
             var8 = var11.getRowPitch();
             if (var8 != 4 * this.field_f) {
               for (var9 = 0; var9 < this.field_f; var9++) {
-                var10.a(param3[var6], var9 * this.field_f, var9 * var8, this.field_f);
+                var10.putInts(param3[var6], var9 * this.field_f, var9 * var8, this.field_f);
               }
             } else {
-              var10.a(param3[var6], 0, 0, this.field_f * this.field_f);
+              var10.putInts(param3[var6], 0, 0, this.field_f * this.field_f);
             }
             this.field_g.UnlockRect(var6, 0);
           }

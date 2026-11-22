@@ -8,16 +8,16 @@ class ora {
     final void setData(byte[] param0, int param1) {
         if (this.field_b == null ||
           this.field_b.getSize() < param1) {
-          this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param1, false));
+          this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.createBuffer(param1, false));
         }
-        this.field_b.a(param0, 0, 0, param1);
+        this.field_b.putBytes(param0, 0, 0, param1);
     }
 
     ora(OpenGlToolkit param0, byte[] param1, int param2) {
         this.field_a = param0;
-        this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param2, false));
+        this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.createBuffer(param2, false));
         if (param1 != null) {
-          this.field_b.a(param1, 0, 0, param2);
+          this.field_b.putBytes(param1, 0, 0, param2);
         }
     }
 }

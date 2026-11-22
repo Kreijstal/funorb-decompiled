@@ -24,8 +24,8 @@ final class Model extends ToolkitModel {
     private ava[] field_i;
     private short field_Bb;
     private int[][] field_Cb;
-    private oha[] field_lb;
-    private oha[] field_D;
+    private VertexNormal[] field_lb;
+    private VertexNormal[] field_D;
     private short[] field_Eb;
     private int[] field_yb;
     private ModelTriangleRasterizer field_w;
@@ -57,7 +57,7 @@ final class Model extends ToolkitModel {
     private int[] field_rb;
     private int[] field_s;
     private SoftwareGraphicsToolkit field_d;
-    private gna[] field_I;
+    private FaceNormal[] field_I;
     private boolean field_A;
     private short[] field_ob;
     private int[][] field_j;
@@ -148,7 +148,7 @@ final class Model extends ToolkitModel {
     }
 
     private final void computeNormals() {
-        gna dupTemp$0 = null;
+        FaceNormal dupTemp$0 = null;
         int var1;
         int var2;
         int var3;
@@ -164,14 +164,14 @@ final class Model extends ToolkitModel {
         int var13;
         int var14;
         int var15;
-        gna var16;
-        oha var17;
-        oha var18;
-        oha var19;
+        FaceNormal var16;
+        VertexNormal var17;
+        VertexNormal var18;
+        VertexNormal var19;
         int var1Lifetime1;
-        this.field_lb = new oha[this.field_Z];
+        this.field_lb = new VertexNormal[this.field_Z];
         for (var1 = 0; var1 < this.field_Z; var1++) {
-          this.field_lb[var1] = new oha();
+          this.field_lb[var1] = new VertexNormal();
         }
         var1Lifetime1 = 0;
         while (true) {
@@ -212,31 +212,31 @@ final class Model extends ToolkitModel {
               if (var15 != 0) {
                 if (var15 == 1) {
                   if (this.field_I == null) {
-                    this.field_I = new gna[this.field_g];
+                    this.field_I = new FaceNormal[this.field_g];
                   }
-                  dupTemp$0 = new gna();
+                  dupTemp$0 = new FaceNormal();
                   this.field_I[var1Lifetime1] = dupTemp$0;
                   var16 = dupTemp$0;
-                  var16.field_a = var11;
-                  var16.field_c = var12;
-                  var16.field_b = var13;
+                  var16.x = var11;
+                  var16.y = var12;
+                  var16.z = var13;
                 }
               } else {
                 var17 = this.field_lb[var2];
-                var17.field_a = var17.field_a + var11;
-                var17.field_c = var17.field_c + var12;
-                var17.field_b = var17.field_b + var13;
-                var17.field_d = var17.field_d + 1;
+                var17.x = var17.x + var11;
+                var17.y = var17.y + var12;
+                var17.z = var17.z + var13;
+                var17.contributionCount = var17.contributionCount + 1;
                 var18 = this.field_lb[var3];
-                var18.field_a = var18.field_a + var11;
-                var18.field_c = var18.field_c + var12;
-                var18.field_b = var18.field_b + var13;
-                var18.field_d = var18.field_d + 1;
+                var18.x = var18.x + var11;
+                var18.y = var18.y + var12;
+                var18.z = var18.z + var13;
+                var18.contributionCount = var18.contributionCount + 1;
                 var19 = this.field_lb[var4];
-                var19.field_a = var19.field_a + var11;
-                var19.field_c = var19.field_c + var12;
-                var19.field_b = var19.field_b + var13;
-                var19.field_d = var19.field_d + 1;
+                var19.x = var19.x + var11;
+                var19.y = var19.y + var12;
+                var19.z = var19.z + var13;
+                var19.contributionCount = var19.contributionCount + 1;
               }
               var1Lifetime1++;
               break;
@@ -1415,8 +1415,8 @@ final class Model extends ToolkitModel {
         int[] array$5 = null;
         int[] array$6 = null;
         byte[] array$7 = null;
-        oha[] array$8 = null;
-        gna[] array$9 = null;
+        VertexNormal[] array$8 = null;
+        FaceNormal[] array$9 = null;
         short[] array$10 = null;
         byte[] array$11 = null;
         SoftwareModelBillboardState[] array$12 = null;
@@ -1428,9 +1428,9 @@ final class Model extends ToolkitModel {
         int stackIn_17_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_31_0 = 0;
-        gna[] stackIn_131_0 = null;
+        FaceNormal[] stackIn_131_0 = null;
         int stackIn_131_1 = 0;
-        gna stackIn_132_2 = null;
+        FaceNormal stackIn_132_2 = null;
         int stackIn_158_0 = 0;
         int stackIn_183_0 = 0;
         int stackIn_199_0 = 0;
@@ -1647,13 +1647,13 @@ final class Model extends ToolkitModel {
             param0.field_lb = param1.field_lb;
           } else {
             var10Lifetime4 = this.field_Z;
-            array$8 = new oha[var10Lifetime4];
+            array$8 = new VertexNormal[var10Lifetime4];
             param1.field_lb = array$8;
             param0.field_lb = array$8;
           }
           if (this.field_lb != null) {
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_Z; var10Lifetime4++) {
-              param0.field_lb[var10Lifetime4] = new oha(this.field_lb[var10Lifetime4]);
+              param0.field_lb[var10Lifetime4] = new VertexNormal(this.field_lb[var10Lifetime4]);
             }
           } else {
             param0.field_lb = null;
@@ -1664,7 +1664,7 @@ final class Model extends ToolkitModel {
               param0.field_I = param1.field_I;
             } else {
               var10Lifetime4 = this.field_g;
-              array$9 = new gna[var10Lifetime4];
+              array$9 = new FaceNormal[var10Lifetime4];
               param1.field_I = array$9;
               param0.field_I = array$9;
             }
@@ -1674,7 +1674,7 @@ final class Model extends ToolkitModel {
               if (this.field_I[var10Lifetime4] == null) {
                 stackIn_132_2 = null;
               } else {
-                stackIn_132_2 = new gna(this.field_I[var10Lifetime4]);
+                stackIn_132_2 = new FaceNormal(this.field_I[var10Lifetime4]);
               }
               stackIn_131_0[stackIn_131_1] = stackIn_132_2;
             }
@@ -3563,16 +3563,16 @@ final class Model extends ToolkitModel {
         int var10;
         int var11;
         int var12;
-        oha var13;
+        VertexNormal var13;
         int var13_int;
         int var14;
         int var15;
-        oha var15_ref_oha;
+        VertexNormal var15_ref_oha;
         int var16;
         int var17;
         int var18;
-        gna var19;
-        gna var20;
+        FaceNormal var19;
+        FaceNormal var20;
         if (this.field_eb == 1) {
           this.e();
           return;
@@ -3631,7 +3631,7 @@ final class Model extends ToolkitModel {
                 } else {
                   var13 = this.field_lb[this.field_M[var8]];
                 }
-                var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
+                var15 = (var2 * var13.x + var3 * var13.y + var4 * var13.z) / var13.contributionCount >> 16;
                 stackIn_70_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_70_0;
                 var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
@@ -3642,7 +3642,7 @@ final class Model extends ToolkitModel {
                 } else {
                   var13 = this.field_lb[this.field_bb[var8]];
                 }
-                var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
+                var15 = (var2 * var13.x + var3 * var13.y + var4 * var13.z) / var13.contributionCount >> 16;
                 stackIn_77_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_77_0;
                 var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
@@ -3653,7 +3653,7 @@ final class Model extends ToolkitModel {
                 } else {
                   var13 = this.field_lb[this.field_x[var8]];
                 }
-                var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
+                var15 = (var2 * var13.x + var3 * var13.y + var4 * var13.z) / var13.contributionCount >> 16;
                 stackIn_84_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_84_0;
                 var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
@@ -3662,7 +3662,7 @@ final class Model extends ToolkitModel {
               }
               if (var9 == 1) {
                 var20 = this.field_I[var8];
-                var14 = var2 * var20.field_a + var3 * var20.field_c + var4 * var20.field_b >> 16;
+                var14 = var2 * var20.x + var3 * var20.y + var4 * var20.z >> 16;
                 stackIn_90_0 = (var14 <= 256) ? var7 : var6;
                 var15 = stackIn_90_0;
                 var16 = this.clampHslLightness((var5 >> 2) + (var15 * var14 >> 18));
@@ -3682,7 +3682,7 @@ final class Model extends ToolkitModel {
                   } else {
                     var15_ref_oha = this.field_lb[this.field_M[var8]];
                   }
-                  var17 = (var2 * var15_ref_oha.field_a + var3 * var15_ref_oha.field_c + var4 * var15_ref_oha.field_b) / var15_ref_oha.field_d >> 16;
+                  var17 = (var2 * var15_ref_oha.x + var3 * var15_ref_oha.y + var4 * var15_ref_oha.z) / var15_ref_oha.contributionCount >> 16;
                   stackIn_35_0 = (var17 <= 256) ? var7 : var6;
                   var18 = stackIn_35_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
@@ -3693,7 +3693,7 @@ final class Model extends ToolkitModel {
                   } else {
                     var15_ref_oha = this.field_lb[this.field_bb[var8]];
                   }
-                  var17 = (var2 * var15_ref_oha.field_a + var3 * var15_ref_oha.field_c + var4 * var15_ref_oha.field_b) / var15_ref_oha.field_d >> 16;
+                  var17 = (var2 * var15_ref_oha.x + var3 * var15_ref_oha.y + var4 * var15_ref_oha.z) / var15_ref_oha.contributionCount >> 16;
                   stackIn_42_0 = (var17 <= 256) ? var7 : var6;
                   var18 = stackIn_42_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
@@ -3704,7 +3704,7 @@ final class Model extends ToolkitModel {
                   } else {
                     var15_ref_oha = this.field_lb[this.field_x[var8]];
                   }
-                  var17 = (var2 * var15_ref_oha.field_a + var3 * var15_ref_oha.field_c + var4 * var15_ref_oha.field_b) / var15_ref_oha.field_d >> 16;
+                  var17 = (var2 * var15_ref_oha.x + var3 * var15_ref_oha.y + var4 * var15_ref_oha.z) / var15_ref_oha.contributionCount >> 16;
                   stackIn_49_0 = (var17 <= 256) ? var7 : var6;
                   var18 = stackIn_49_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
@@ -3715,7 +3715,7 @@ final class Model extends ToolkitModel {
                   var13_int = (var12 & 127) * this.field_Db >> 7;
                   var14 = tg.hslToHsv((byte) -105, var12 & -128 | var13_int);
                   var19 = this.field_I[var8];
-                  var16 = var2 * var19.field_a + var3 * var19.field_c + var4 * var19.field_b >> 16;
+                  var16 = var2 * var19.x + var3 * var19.y + var4 * var19.z >> 16;
                   stackIn_55_0 = (var16 <= 256) ? var7 : var6;
                   var17 = stackIn_55_0;
                   var18 = (var5 >> 1) + (var17 * var16 >> 17);

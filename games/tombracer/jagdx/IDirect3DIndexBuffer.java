@@ -6,11 +6,11 @@ package jagdx;
 public class IDirect3DIndexBuffer extends jaclib.peer.IUnknown {
     private final native boolean _Update(long param0, int param1, int param2);
 
-    protected final long a() {
-        return super.a();
+    protected final long release() {
+        return super.release();
     }
 
-    IDirect3DIndexBuffer(jaclib.peer.sha param0) {
+    IDirect3DIndexBuffer(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 

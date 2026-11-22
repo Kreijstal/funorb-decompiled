@@ -50,17 +50,17 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
         }
         var12 = this.field_d.field_Nc;
         var9 = this.field_f.LockRect(0, 0, 0, param1, param2, 0, var12);
-        if (jagdx.ah.a(var9, (byte) -117)) {
+        if (jagdx.Direct3DResult.succeeded(var9, (byte) -117)) {
           if (param6 == 0) {
             param6 = param1;
           }
           var10 = var12.getRowPitch();
           if (4 * param1 == var10 &&
             param6 == param1) {
-            var12.a(param4, param5, 0, param2 * param1);
+            var12.putInts(param4, param5, 0, param2 * param1);
           } else {
             for (var11 = 0; param2 > var11; var11++) {
-              var12.a(param4, param5 + var11 * param6, var11 * var10, param1);
+              var12.putInts(param4, param5 + var11 * param6, var11 * var10, param1);
             }
           }
           this.field_f.UnlockRect(0);
@@ -154,7 +154,7 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
         }
         var13 = this.field_d.field_Nc;
         var10 = this.field_f.LockRect(0, 0, 0, param2, param3, 0, var13);
-        if (jagdx.ah.a(var10, (byte) -100)) {
+        if (jagdx.Direct3DResult.succeeded(var10, (byte) -100)) {
           if (param7 == 0) {
             param7 = param2;
           }
@@ -163,14 +163,14 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
           var11 = var13.getRowPitch();
           if (var11 != param2) {
             for (var12 = 0; var12 < param3; var12++) {
-              var13.a(param5, param6 + param7 * var12, var12 * var11, param2);
+              var13.putBytes(param5, param6 + param7 * var12, var12 * var11, param2);
             }
           } else if (param7 != param2) {
             for (var12 = 0; var12 < param3; var12++) {
-              var13.a(param5, param6 + param7 * var12, var12 * var11, param2);
+              var13.putBytes(param5, param6 + param7 * var12, var12 * var11, param2);
             }
           } else {
-            var13.a(param5, param6, 0, param2 * param3);
+            var13.putBytes(param5, param6, 0, param2 * param3);
           }
           this.field_f.UnlockRect(0);
         }

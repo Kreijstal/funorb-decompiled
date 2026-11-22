@@ -8,7 +8,7 @@ public class IDirect3DCubeTexture extends jagdx.IDirect3DBaseTexture {
 
     public final native boolean UnlockRect(int param0, int param1);
 
-    IDirect3DCubeTexture(jaclib.peer.sha param0) {
+    IDirect3DCubeTexture(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 }

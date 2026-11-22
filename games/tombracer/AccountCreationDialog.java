@@ -183,7 +183,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mja.loadDirect3DLibraries((byte) -50)) {
+          if (!Direct3DLibraryLoader.loadDirect3DLibraries((byte) -50)) {
             throw new RuntimeException("");
           }
           if (!StringCursor.loadNativeLibrary("jaggl", 480)) {

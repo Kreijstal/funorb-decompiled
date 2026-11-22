@@ -33,30 +33,30 @@ final class DirectXSwapChain {
         if (this.field_c != null) {
           stackIn_3_0 = this.field_c;
           stackIn_4_1 = (param0) ? false : true;
-          ((jagdx.IDirect3DSurface) (Object) stackIn_3_0).a(stackIn_4_1);
+          ((jagdx.IDirect3DSurface) (Object) stackIn_3_0).release(stackIn_4_1);
           this.field_c = null;
         }
         if (param0) {
           if (null != this.field_a) {
-            this.field_a.a(false);
+            this.field_a.release(false);
             this.field_a = null;
           }
           if (null != this.field_b) {
             stackIn_13_0 = this.field_b;
             stackIn_14_1 = (param0) ? false : true;
-            ((jagdx.IDirect3DSwapChain) (Object) stackIn_13_0).a(stackIn_14_1);
+            ((jagdx.IDirect3DSwapChain) (Object) stackIn_13_0).release(stackIn_14_1);
             this.field_b = null;
           }
         } else {
           this.field_c = (jagdx.IDirect3DSurface) null;
           if (null != this.field_a) {
-            this.field_a.a(false);
+            this.field_a.release(false);
             this.field_a = null;
           }
           if (null != this.field_b) {
             stackIn_23_0 = this.field_b;
             stackIn_24_1 = (param0) ? false : true;
-            ((jagdx.IDirect3DSwapChain) (Object) stackIn_23_0).a(stackIn_24_1);
+            ((jagdx.IDirect3DSwapChain) (Object) stackIn_23_0).release(stackIn_24_1);
             this.field_b = null;
           }
         }

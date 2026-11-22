@@ -10,9 +10,9 @@ public final class Stream {
     private jaclib.memory.Buffer b;
     private int e;
 
-    public final void a(int param0) {
+    public final void writeShortBE(int param0) {
         if (this.a + 1 >= this.c.length) {
-          this.a();
+          this.flush();
         }
         int fieldTemp$0 = this.a;
         this.a = this.a + 1;
@@ -22,9 +22,9 @@ public final class Stream {
         this.c[fieldTemp$1] = (byte)param0;
     }
 
-    public final void b(int param0) {
+    public final void writeShortLE(int param0) {
         if (this.c.length <= this.a + 1) {
-          this.a();
+          this.flush();
         }
         int fieldTemp$0 = this.a;
         this.a = this.a + 1;
@@ -38,15 +38,15 @@ public final class Stream {
 
     public final native static int floatToRawIntBits(float param0);
 
-    public final void a(jaclib.memory.Buffer param0) {
-        this.a(param0, 0, param0.getSize());
+    public final void setBuffer(jaclib.memory.Buffer param0) {
+        this.setBuffer(param0, 0, param0.getSize());
     }
 
     public Stream() {
         this(4096);
     }
 
-    public final void a(float param0) {
+    public final void writeFloatLE(float param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -69,7 +69,7 @@ public final class Stream {
           this.c[fieldTemp$3] = (byte)(var2 >> 24);
           return;
         }
-        this.a();
+        this.flush();
         var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$4 = this.a;
         this.a = this.a + 1;
@@ -85,20 +85,20 @@ public final class Stream {
         this.c[fieldTemp$7] = (byte)(var2Lifetime1 >> 24);
     }
 
-    public final void a() {
+    public final void flush() {
         if (0 >= this.a) {
           return;
         }
         if (this.a + this.d > this.e) {
           throw new RuntimeException();
         }
-        this.b.a(this.c, 0, this.d, this.a);
+        this.b.putBytes(this.c, 0, this.d, this.a);
         this.d = this.d + this.a;
         this.a = 0;
     }
 
-    private final void a(jaclib.memory.Buffer param0, int param1, int param2) {
-        this.a();
+    private final void setBuffer(jaclib.memory.Buffer param0, int param1, int param2) {
+        this.flush();
         this.b = param0;
         this.d = param1;
         this.e = param1 + param2;
@@ -108,9 +108,9 @@ public final class Stream {
         throw new RuntimeException();
     }
 
-    public final void b(float param0) {
+    public final void writeFloatBE(float param0) {
         if (this.a + 3 >= this.c.length) {
-          this.a();
+          this.flush();
         }
         int var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$0 = this.a;
@@ -131,7 +131,7 @@ public final class Stream {
         this.c = new byte[param0];
     }
 
-    public final static boolean b() {
+    public final static boolean isNativeBigEndian() {
         return jaclib.memory.Stream.getLSB(-65536) == -1;
     }
 }

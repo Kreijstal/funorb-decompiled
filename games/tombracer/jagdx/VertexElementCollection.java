@@ -3,14 +3,14 @@
  */
 package jagdx;
 
-public class VertexElementCollection extends jaclib.peer.nca {
+public class VertexElementCollection extends jaclib.peer.NativeHeapPeer {
     public final native void addElement(int param0, int param1, int param2, int param3, int param4, int param5);
 
     public final native void reset();
 
     public final native void finish();
 
-    public VertexElementCollection(jaclib.peer.sha param0) {
+    public VertexElementCollection(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.init();
     }

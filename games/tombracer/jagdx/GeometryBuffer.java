@@ -3,12 +3,12 @@
  */
 package jagdx;
 
-public class GeometryBuffer extends jaclib.peer.nca implements jaclib.memory.Buffer {
+public class GeometryBuffer extends jaclib.peer.NativeHeapPeer implements jaclib.memory.Buffer {
     private final native void putub(byte[] param0, int param1, int param2, int param3);
 
     private final native void init();
 
-    public GeometryBuffer(jaclib.peer.sha param0) {
+    public GeometryBuffer(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.init();
     }
@@ -17,15 +17,15 @@ public class GeometryBuffer extends jaclib.peer.nca implements jaclib.memory.Buf
 
     public final native long getAddress();
 
-    public final void a(byte[] param0, int param1, int param2, int param3) {
+    public final void putBytes(byte[] param0, int param1, int param2, int param3) {
         if (((0 > param2 ? 1 : 0) | ((param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param1 + param3 ? 1 : 0))) != 0) {
-          throw new jagdx.eva();
+          throw new jagdx.Direct3DException();
         }
         if (this.getSize() >= param2 + param3) {
           this.putub(param0, param1, param2, param3);
           return;
         }
-        throw new jagdx.eva();
+        throw new jagdx.Direct3DException();
     }
 
     private final native void getub(byte[] param0, int param1, int param2, int param3);

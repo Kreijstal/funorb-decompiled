@@ -1528,7 +1528,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               this.field_Pc = this.field_Mc.a("GL_ARB_fragment_shader");
               this.field_Mc.a("GL_ARB_fragment_program");
               this.field_Sc = new int[this.field_Vb];
-              if (!jaclib.memory.Stream.b()) {
+              if (!jaclib.memory.Stream.isNativeBigEndian()) {
                 stackIn_21_1 = 5121;
               } else {
                 stackIn_21_1 = 33639;

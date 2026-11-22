@@ -4,7 +4,7 @@
 package jaclib.peer;
 
 class IUnknownReference extends jaclib.peer.PeerReference {
-    IUnknownReference(jaclib.peer.IUnknown param0, jaclib.peer.sha param1) {
+    IUnknownReference(jaclib.peer.IUnknown param0, jaclib.peer.PeerReferenceManager param1) {
         super(param0, param1);
     }
 

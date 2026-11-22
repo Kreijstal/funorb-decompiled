@@ -870,7 +870,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         SecondaryNodeDequeIterator.releaseStatics((byte) -92);
         pda.releaseStatics((byte) -114);
         TrapSpawner.releaseStatics(30000);
-        eta.releaseStatics(29574);
+        BillboardSpriteData.releaseStatics(29574);
         wka.releaseStatics(-31068);
         ooa.releaseStatics(119);
         TextResourceLoader.releaseStatics((byte) -3);

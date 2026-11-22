@@ -3,7 +3,7 @@
  */
 package jagdx;
 
-public class D3DLIGHT extends jaclib.peer.nca {
+public class D3DLIGHT extends jaclib.peer.NativeHeapPeer {
     public final native void SetType(int param0);
 
     public final native void SetDirection(float param0, float param1, float param2);
@@ -22,7 +22,7 @@ public class D3DLIGHT extends jaclib.peer.nca {
 
     public final native void SetPosition(float param0, float param1, float param2);
 
-    public D3DLIGHT(jaclib.peer.sha param0) {
+    public D3DLIGHT(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.Init();
     }

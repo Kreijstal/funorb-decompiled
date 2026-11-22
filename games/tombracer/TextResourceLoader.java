@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TextResourceLoader extends eta {
+final class TextResourceLoader extends BillboardSpriteData {
     static SpriteData field_b;
 
     final static void loadStrings(byte param0, ResourceArchive param1) {

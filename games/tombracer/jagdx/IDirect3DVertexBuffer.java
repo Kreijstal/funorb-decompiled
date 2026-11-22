@@ -6,11 +6,11 @@ package jagdx;
 public class IDirect3DVertexBuffer extends jaclib.peer.IUnknown {
     public final native int Unlock();
 
-    protected final long a() {
-        return super.a();
+    protected final long release() {
+        return super.release();
     }
 
-    IDirect3DVertexBuffer(jaclib.peer.sha param0) {
+    IDirect3DVertexBuffer(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 

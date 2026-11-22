@@ -17,7 +17,7 @@ final class DirectXIndexBuffer implements VertexBuffer {
           var2 = 58 / ((param0 - 54) / 41);
           return false;
         }
-        if (jagdx.ah.a(this.field_d.Unlock(), (byte) -123)) {
+        if (jagdx.Direct3DResult.succeeded(this.field_d.Unlock(), (byte) -123)) {
           this.field_b = false;
           return true;
         }
@@ -44,7 +44,7 @@ final class DirectXIndexBuffer implements VertexBuffer {
           this.field_f = this.field_c;
           return;
         }
-        this.field_d.a(false);
+        this.field_d.release(false);
         this.field_d = this.field_a.field_jd.createIndexBuffer(this.field_c, var5, this.field_g == GpuDataType.field_f ? 101 : 102, var4, this.field_d);
         this.field_f = this.field_c;
     }
@@ -61,7 +61,7 @@ final class DirectXIndexBuffer implements VertexBuffer {
           }
           return null;
         }
-        if (jagdx.ah.a(this.field_d.Lock(0, this.field_f, param0 ? 8192 : 0, this.field_a.field_Oc), (byte) -94)) {
+        if (jagdx.Direct3DResult.succeeded(this.field_d.Lock(0, this.field_f, param0 ? 8192 : 0, this.field_a.field_Oc), (byte) -94)) {
           this.field_b = true;
           return (jaclib.memory.Buffer) ((Object) this.field_a.field_Oc);
         }
@@ -81,7 +81,7 @@ final class DirectXIndexBuffer implements VertexBuffer {
 
     public final void close(int param0) {
         if (this.field_d != null) {
-          this.field_d.a(false);
+          this.field_d.release(false);
           this.field_d = null;
           this.field_c = 0;
           if (param0 != 12574) {

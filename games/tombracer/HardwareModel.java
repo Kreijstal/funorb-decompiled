@@ -1476,12 +1476,12 @@ final class HardwareModel extends ToolkitModel {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             var4 = this.field_S.streamForBuffer(var3, 127);
-            if (jaclib.memory.Stream.b()) {
+            if (jaclib.memory.Stream.isNativeBigEndian()) {
               var5 = 0;
               while (var5 < this.field_v) {
-                var4.a((int) this.field_M[var5]);
-                var4.a((int) this.field_z[var5]);
-                var4.a((int) this.field_V[var5]);
+                var4.writeShortBE((int) this.field_M[var5]);
+                var4.writeShortBE((int) this.field_z[var5]);
+                var4.writeShortBE((int) this.field_V[var5]);
                 var5++;
                 if (var6 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -1496,9 +1496,9 @@ final class HardwareModel extends ToolkitModel {
               (decompiledFrameCompleted1)) {
               var5Lifetime1 = 0;
               while (var5Lifetime1 < this.field_v) {
-                var4.b((int) this.field_M[var5Lifetime1]);
-                var4.b((int) this.field_z[var5Lifetime1]);
-                var4.b((int) this.field_V[var5Lifetime1]);
+                var4.writeShortLE((int) this.field_M[var5Lifetime1]);
+                var4.writeShortLE((int) this.field_z[var5Lifetime1]);
+                var4.writeShortLE((int) this.field_V[var5Lifetime1]);
                 var5Lifetime1++;
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -1508,7 +1508,7 @@ final class HardwareModel extends ToolkitModel {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
-              var4.a();
+              var4.flush();
             }
             if (var2.unmap((byte) 95)) {
               this.field_g.field_a = true;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mqa {
+final class SoundVolumeControl {
     private static String field_z;
 
     final static void setSoundVolume(int param0, byte param1) {

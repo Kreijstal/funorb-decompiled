@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wka extends eta {
+class wka extends BillboardSpriteData {
     static float field_b;
     static BufferedCacheFile field_c;
     static boolean field_d;

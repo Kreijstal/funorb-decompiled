@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mja {
+final class Direct3DLibraryLoader {
     final static boolean loadDirect3DLibraries(byte param0) {
         if (!StringCursor.loadNativeLibrary("jaclib", param0 + 530)) {
           return false;

@@ -10,11 +10,11 @@ public final class NativeHeap {
 
     final synchronized native int allocateBuffer(int param0, boolean param1);
 
-    final synchronized boolean b() {
+    final synchronized boolean isAllocated() {
         return this.a;
     }
 
-    public final synchronized void a() {
+    public final synchronized void close() {
         if (this.a) {
           this.deallocateHeap();
         }
@@ -27,10 +27,10 @@ public final class NativeHeap {
 
     protected final synchronized void finalize() throws Throwable {
         super.finalize();
-        this.a();
+        this.close();
     }
 
-    public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
+    public final jaclib.memory.heap.NativeHeapBuffer createBuffer(int param0, boolean param1) {
         RuntimeException var3;
         if (this.a) {
           return new jaclib.memory.heap.NativeHeapBuffer(this, this.allocateBuffer(param0, param1), param0);

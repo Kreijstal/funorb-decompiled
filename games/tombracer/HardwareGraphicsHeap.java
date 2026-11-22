@@ -14,7 +14,7 @@ final class HardwareGraphicsHeap extends GraphicsHeap {
         if (param0 != 30) {
           HardwareGraphicsHeap.releaseStatics(53);
         }
-        this.field_h.a();
+        this.field_h.close();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

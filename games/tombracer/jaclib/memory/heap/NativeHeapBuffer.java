@@ -15,11 +15,11 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
 
     protected final synchronized void finalize() throws Throwable {
         super.finalize();
-        this.b();
+        this.releaseBuffer();
     }
 
-    private final synchronized boolean a() {
-        if (!this.a.b()) {
+    private final synchronized boolean isValid() {
+        if (!this.a.isAllocated()) {
           return false;
         }
         if (!this.d) {
@@ -28,8 +28,8 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
         return true;
     }
 
-    private final synchronized void b() {
-        if (this.a()) {
+    private final synchronized void releaseBuffer() {
+        if (this.isValid()) {
           this.a.deallocateBuffer(this.b);
         }
         this.d = false;
@@ -46,8 +46,8 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
         this.b = param1;
     }
 
-    public final synchronized void a(byte[] param0, int param1, int param2, int param3) {
-        if (((!this.a() ? 1 : 0) | (param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param3 + param1 ? 1 : 0) | (param2 < 0 ? 1 : 0) | (param3 + param2 > this.c ? 1 : 0)) == 0) {
+    public final synchronized void putBytes(byte[] param0, int param1, int param2, int param3) {
+        if (((!this.isValid() ? 1 : 0) | (param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param3 + param1 ? 1 : 0) | (param2 < 0 ? 1 : 0) | (param3 + param2 > this.c ? 1 : 0)) == 0) {
           this.a.put(this.b, param0, param1, param2, param3);
           return;
         }
