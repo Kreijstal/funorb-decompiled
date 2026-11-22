@@ -27,7 +27,7 @@ abstract class tg extends GameApplet {
         in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, nk.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
         mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, nk.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
-        wb.field_u = ResourceArchive.b(26);
+        wb.field_u = ResourceArchive.createMouseWheelInput(26);
         j.a(k.field_d, (byte) -125);
         b.field_w = param6;
         TooltipPanel.field_p = param1;
@@ -107,7 +107,7 @@ abstract class tg extends GameApplet {
           ra.a((byte) 75);
         }
         if (wb.field_u != null) {
-          da.field_g = wb.field_u.b(0);
+          da.field_g = wb.field_u.pollRotation(0);
         }
         if (oo.a(16158)) {
           var3 = n.c((byte) 57) * 1200;

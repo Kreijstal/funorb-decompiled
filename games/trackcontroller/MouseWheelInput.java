@@ -18,9 +18,9 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void attach(java.awt.Component param0, boolean param1);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
     final static void a(byte param0, int param1) {
         int var2;
@@ -260,7 +260,7 @@ abstract class MouseWheelInput {
         return;
     }
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     final static int a(byte param0, BitmapFont param1, int param2, String param3, String[] param4) {
         int var9 = 0;

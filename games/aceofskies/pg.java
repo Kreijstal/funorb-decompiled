@@ -16,7 +16,7 @@ final class pg {
           if (null == SteeringMode.field_c) {
             return;
           }
-          SteeringMode.field_c.a((java.awt.Component) ((Object) param0), false);
+          SteeringMode.field_c.detach((java.awt.Component) ((Object) param0), false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

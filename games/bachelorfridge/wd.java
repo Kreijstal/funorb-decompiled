@@ -304,7 +304,7 @@ final class wd extends DefaultWidgetRenderer {
             field_w = (Sprite[]) null;
           }
           if (sd.field_c != null) {
-            sd.field_c.a((java.awt.Component) ((Object) param1), true);
+            sd.field_c.detach((java.awt.Component) ((Object) param1), true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

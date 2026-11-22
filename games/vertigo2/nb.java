@@ -197,12 +197,12 @@ final class nb extends TextureOperator {
 
     final static void h(int param0) {
         if (param0 != -14829) {
-          nb.i(-116);
+          nb.createMouseWheelInput(-116);
         }
         hh.a(-20, lr.field_H);
     }
 
-    final static MouseWheelInput i(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

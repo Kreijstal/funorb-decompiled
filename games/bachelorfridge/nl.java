@@ -14,7 +14,7 @@ final class nl {
           CreatureEvent.a(-104, (java.awt.Component) ((Object) param0));
           HailAnimation.a(-30229, (java.awt.Component) ((Object) param0));
           if (null != sd.field_c) {
-            sd.field_c.a((java.awt.Component) ((Object) param0), (byte) -126);
+            sd.field_c.attach((java.awt.Component) ((Object) param0), (byte) -126);
           }
           if (param1 > 51) {
             return;

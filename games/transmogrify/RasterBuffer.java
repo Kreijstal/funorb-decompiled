@@ -53,7 +53,7 @@ abstract class RasterBuffer {
           if (null == ga.field_a) {
             return;
           }
-          ga.field_a.a(false, (java.awt.Component) ((Object) param0));
+          ga.field_a.attach(false, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

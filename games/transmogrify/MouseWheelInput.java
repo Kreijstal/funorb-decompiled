@@ -5,7 +5,7 @@ abstract class MouseWheelInput {
     static Sprite[] field_a;
     static boolean field_b;
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     final static String a(ci param0, byte param1) {
         int var6 = 0;
@@ -78,9 +78,9 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void a(boolean param0, java.awt.Component param1);
+    abstract void attach(boolean param0, java.awt.Component param1);
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void detach(byte param0, java.awt.Component param1);
 
     static {
     }

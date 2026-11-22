@@ -159,7 +159,7 @@ final class nc extends UiWidget {
           }
           ge.a((java.awt.Component) ((Object) param0), (byte) -41);
           if (null != og.field_c) {
-            og.field_c.a((byte) -93, (java.awt.Component) ((Object) param0));
+            og.field_c.attach((byte) -93, (java.awt.Component) ((Object) param0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

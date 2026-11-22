@@ -20,7 +20,7 @@ final class cd {
           if (null == SteeringMode.field_c) {
             return;
           }
-          SteeringMode.field_c.a((java.awt.Component) ((Object) param0), -104);
+          SteeringMode.field_c.attach((java.awt.Component) ((Object) param0), -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

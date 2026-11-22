@@ -10,9 +10,9 @@ abstract class MouseWheelInput {
     static Sprite field_a;
     static String field_f;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
@@ -91,7 +91,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract int b(int param0);
+    abstract int pollRotation(int param0);
 
     static {
         field_b = false;

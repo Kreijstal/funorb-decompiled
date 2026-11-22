@@ -115,7 +115,7 @@ final class nh {
         int var1 = 43 % ((47 - param0) / 61);
     }
 
-    final static MouseWheelInput b(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
           Sprite var2 = null;

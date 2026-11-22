@@ -90,11 +90,11 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract int a(byte param0);
+    abstract int pollRotation(byte param0);
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void detach(java.awt.Component param0, boolean param1);
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void attach(java.awt.Component param0, byte param1);
 
     public static void releaseStatics(byte param0) {
         field_a = null;

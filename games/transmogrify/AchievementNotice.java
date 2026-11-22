@@ -36,7 +36,7 @@ final class AchievementNotice extends IntrusiveNode {
           a.a(37, (java.awt.Component) ((Object) param0));
           kc.a((byte) 104, (java.awt.Component) ((Object) param0));
           if (ga.field_a != null) {
-            ga.field_a.a((byte) -88, (java.awt.Component) ((Object) param0));
+            ga.field_a.detach((byte) -88, (java.awt.Component) ((Object) param0));
           }
           if (param1 >= 95) {
             return;

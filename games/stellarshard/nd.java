@@ -195,7 +195,7 @@ final class nd extends ig {
             nd.a((CharSequence) null, (byte) -126);
           }
           if (og.field_c != null) {
-            og.field_c.a(24186, (java.awt.Component) ((Object) param1));
+            og.field_c.detach(24186, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

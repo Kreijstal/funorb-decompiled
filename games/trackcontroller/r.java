@@ -127,7 +127,7 @@ final class r extends IntrusiveNode {
             field_i = (BufferedSocket) null;
           }
           if (null != rd.field_l) {
-            rd.field_l.a((java.awt.Component) ((Object) param1), 23817);
+            rd.field_l.detach((java.awt.Component) ((Object) param1), 23817);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

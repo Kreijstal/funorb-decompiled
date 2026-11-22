@@ -182,7 +182,7 @@ final class tf {
           og.a((java.awt.Component) ((Object) param1), -1);
           qk.a(-90, (java.awt.Component) ((Object) param1));
           if (null != wb.field_u) {
-            wb.field_u.a(0, (java.awt.Component) ((Object) param1));
+            wb.field_u.detach(0, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

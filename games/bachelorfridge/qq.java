@@ -16,7 +16,7 @@ final class qq extends EventEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            qq.b(82);
+            qq.createMouseWheelInput(82);
           }
           stackIn_4_0 = gt.a(0, param0, (byte) 104, param0.length);
           return stackIn_4_0;
@@ -441,7 +441,7 @@ final class qq extends EventEffect {
         }
     }
 
-    final static MouseWheelInput b(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
           RuntimeException var1_ref = null;

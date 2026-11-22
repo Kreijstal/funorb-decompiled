@@ -171,7 +171,7 @@ abstract class SessionGameApplet extends GameApplet {
         ol.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, NodeHashTableIterator.field_f, this.field_s);
         me.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
         wh.e((byte) -42);
-        ga.field_a = nh.b(1);
+        ga.field_a = nh.createMouseWheelInput(1);
         RasterBuffer.a(AchievementNotice.field_k, 13861);
         rd.field_a = param4;
         ic.field_a = param5;
@@ -431,7 +431,7 @@ abstract class SessionGameApplet extends GameApplet {
           kf.d(param0 ^ 10019);
         }
         if (null != ga.field_a) {
-          f.field_a = ga.field_a.a(-126);
+          f.field_a = ga.field_a.pollRotation(-126);
         }
         if (i.b(true)) {
           var3 = 1200 * wi.b(-70);

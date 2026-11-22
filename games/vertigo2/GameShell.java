@@ -56,7 +56,7 @@ abstract class GameShell extends GameApplet {
           f.c((byte) -6);
         }
         if (null != th.field_g) {
-          uo.field_h = th.field_g.a(100);
+          uo.field_h = th.field_g.pollRotation(100);
         }
         if (oe.q(param1 + 85)) {
           var3 = 1200 * IterableNodeHashTable.b(true);
@@ -492,7 +492,7 @@ abstract class GameShell extends GameApplet {
         f.a(this.field_y, this.field_w, 5000, gi.field_s, np.field_Lb, this.field_s, this.field_p, param7, this.field_n, this.field_o, param4, this.field_u, 5000, 6);
         vi.a(np.field_Lb, this.field_s, this.field_p, this.field_u, this.field_o, param7, gi.field_s, this.field_w, (byte) 112);
         mq.c(1);
-        th.field_g = nb.i(0);
+        th.field_g = nb.createMouseWheelInput(0);
         ap.a(ne.field_F, -8228);
         rh.field_F = param6;
         mk.field_G = param2;

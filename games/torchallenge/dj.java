@@ -111,7 +111,7 @@ class dj extends ng {
         RuntimeException var5 = null;
         try {
           if (param2 > -97) {
-            dj.c((byte) -78);
+            dj.createMouseWheelInput((byte) -78);
           }
           super.a(param0, param1, (byte) -99, param3);
           this.d((byte) 5);
@@ -272,7 +272,7 @@ class dj extends ng {
         fh.field_g = true;
         BufferedSocket.a(true, (byte) -73);
         if (param0 > -51) {
-          dj.c((byte) -1);
+          dj.createMouseWheelInput((byte) -1);
         }
         gj.field_c = 0;
     }
@@ -455,7 +455,7 @@ class dj extends ng {
         }
     }
 
-    final static MouseWheelInput c(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

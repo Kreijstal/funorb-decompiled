@@ -950,7 +950,7 @@ final class ResourceArchive {
         var17 = Torquing.field_u;
         try {
           if (param8 != 65280) {
-            ResourceArchive.b(123);
+            ResourceArchive.createMouseWheelInput(123);
           }
           for (var10_int = -param6; var10_int < 0; var10_int++) {
             for (var11 = -param5; var11 < 0; var11++) {
@@ -992,7 +992,7 @@ final class ResourceArchive {
         }
     }
 
-    final static MouseWheelInput b(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

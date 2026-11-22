@@ -49,7 +49,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (rd.field_l == null) {
             return;
           }
-          rd.field_l.a((java.awt.Component) ((Object) param1), false);
+          rd.field_l.attach((java.awt.Component) ((Object) param1), false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

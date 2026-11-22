@@ -2060,7 +2060,7 @@ public final class Vertigo2 extends GameShell {
             Vertigo2.a((java.awt.Canvas) null, (byte) 15);
           }
           if (th.field_g != null) {
-            th.field_g.a((java.awt.Component) ((Object) param0), param1 + 35);
+            th.field_g.detach((java.awt.Component) ((Object) param0), param1 + 35);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

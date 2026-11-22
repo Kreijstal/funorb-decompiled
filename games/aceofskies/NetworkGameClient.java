@@ -380,7 +380,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         ka.a(-31808, this.field_z, this.field_w, 5000, this.field_F, param1, this.field_A, 5000, fb.field_e, this.field_s, this.field_y, this.field_u, pt.field_b, param2);
         hh.a(this.field_F, this.field_w, this.field_y, param2, (byte) -36, pt.field_b, fb.field_e, this.field_u, this.field_s);
         du.k(-128);
-        SteeringMode.field_c = StrongCacheReference.g(param6 + 8180);
+        SteeringMode.field_c = StrongCacheReference.createMouseWheelInput(param6 + 8180);
         cd.a(ci.field_f, 42);
         SocketArchiveNetworkClient.field_r = param0;
         ks.field_a = param7;
@@ -417,7 +417,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SoftCacheReference.c((byte) 125);
         }
         if (null != SteeringMode.field_c) {
-          nh.field_e = SteeringMode.field_c.b(12);
+          nh.field_e = SteeringMode.field_c.pollRotation(12);
         }
         if (tg.a(-128)) {
           int var3 = SectorCacheStore.a(101) * 1200;

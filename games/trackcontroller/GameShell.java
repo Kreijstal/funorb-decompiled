@@ -565,7 +565,7 @@ abstract class GameShell extends GameApplet {
           vd.k(123);
         }
         if (null != rd.field_l) {
-          NodeHashTableIterator.field_c = rd.field_l.a(86);
+          NodeHashTableIterator.field_c = rd.field_l.pollRotation(86);
         }
         if (gh.a(3100)) {
           var4 = BufferedCacheFile.c(-14496) * 1200;
@@ -780,7 +780,7 @@ abstract class GameShell extends GameApplet {
         uj.a(this.field_t, this.field_w, this.field_p, param3, 5000, this.field_o, this.field_u, 5000, true, rg.field_c, param0, hl.field_F, this.field_q, this.field_r);
         wj.a(this.field_u, rg.field_c, hl.field_F, this.field_q, this.field_t, this.field_o, param3, 101, this.field_p);
         kf.a(false);
-        rd.field_l = lg.a(124);
+        rd.field_l = lg.createMouseWheelInput(124);
         DelegatingCanvas.a(true, ki.field_f);
         rf.field_b = param4;
         cg.field_c = param1;

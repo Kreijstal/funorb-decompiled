@@ -53,7 +53,7 @@ final class j {
           if (wb.field_u == null) {
             return;
           }
-          wb.field_u.a((byte) 71, (java.awt.Component) ((Object) param0));
+          wb.field_u.attach((byte) 71, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -25,7 +25,7 @@ final class ap {
           if (null == th.field_g) {
             return;
           }
-          th.field_g.a((java.awt.Component) ((Object) param0), true);
+          th.field_g.attach((java.awt.Component) ((Object) param0), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

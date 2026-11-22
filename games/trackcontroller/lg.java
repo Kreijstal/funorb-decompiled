@@ -42,7 +42,7 @@ final class lg {
         }
     }
 
-    final static MouseWheelInput a(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

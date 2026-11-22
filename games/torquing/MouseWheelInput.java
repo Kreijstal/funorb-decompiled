@@ -7,7 +7,7 @@ abstract class MouseWheelInput {
     static Sprite field_b;
     static int field_d;
 
-    abstract int b(int param0);
+    abstract int pollRotation(int param0);
 
     final static void a(Sprite param0, boolean param1) {
         try {
@@ -99,9 +99,9 @@ abstract class MouseWheelInput {
         return new k[]{SocketJs5Transport.field_t, np.field_k, cc.field_a, Js5Transport.field_p, eo.field_b, mc.field_k, gp.field_L, lb.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
     static {
         field_d = 0;

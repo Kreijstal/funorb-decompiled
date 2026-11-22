@@ -174,7 +174,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SpiltMilkEvent.d(-1);
         }
         if (null != sd.field_c) {
-          vc.field_a = sd.field_c.a((byte) -127);
+          vc.field_a = sd.field_c.pollRotation((byte) -127);
         }
         if (cia.a(0)) {
           var3 = 1200 * fda.a(0);
@@ -747,7 +747,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         vda.a(this.field_w, this.field_v, 5000, param0, param5, this.field_n, 5000, 64, DiveBomberEvent.field_r, this.field_k, kt.field_k, this.field_r, this.field_t, this.field_l);
         cc.a(param0, this.field_r, -1456477592, this.field_k, this.field_l, DiveBomberEvent.field_r, kt.field_k, this.field_v, this.field_t);
         DualLinkNodeHashTable.c((byte) 69);
-        sd.field_c = qq.b(-5368);
+        sd.field_c = qq.createMouseWheelInput(-5368);
         nl.a(TBomberAnimation.field_y, (byte) 76);
         mj.field_j = param6;
         if (param4) {

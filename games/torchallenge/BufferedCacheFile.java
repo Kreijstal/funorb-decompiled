@@ -417,7 +417,7 @@ final class BufferedCacheFile {
           kb.a((byte) -25, (java.awt.Component) ((Object) param1));
           var2_int = 59 / ((24 - param0) / 36);
           if (ef.field_l != null) {
-            ef.field_l.a((byte) 118, (java.awt.Component) ((Object) param1));
+            ef.field_l.detach((byte) 118, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

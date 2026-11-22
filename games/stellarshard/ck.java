@@ -139,11 +139,11 @@ class ck extends wl implements oi {
     public static void m(int param0) {
         field_ib = (byte[][]) null;
         if (param0 > -100) {
-          ck.n(-17);
+          ck.createMouseWheelInput(-17);
         }
     }
 
-    final static MouseWheelInput n(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

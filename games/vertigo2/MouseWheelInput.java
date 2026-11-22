@@ -15,9 +15,9 @@ abstract class MouseWheelInput {
     static int field_d;
     private static String field_z;
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
     public static void b(int param0) {
         if (param0 == 0) {
@@ -40,7 +40,7 @@ abstract class MouseWheelInput {
         field_k = null;
     }
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void attach(java.awt.Component param0, boolean param1);
 
     static {
         field_z = "il.D(";

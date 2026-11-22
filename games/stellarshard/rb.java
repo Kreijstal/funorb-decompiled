@@ -249,7 +249,7 @@ abstract class rb extends GameApplet {
         sg.a(5000, this.field_D, this.field_C, bb.field_d, ic.field_d, param5, 96, param4, this.field_y, 5000, this.field_A, this.field_z, this.field_r, this.field_o);
         DualLinkDeque.a(69, this.field_r, bb.field_d, this.field_A, ic.field_d, param5, this.field_C, this.field_z, this.field_D);
         bl.a((byte) -62);
-        og.field_c = ck.n(2113632);
+        og.field_c = ck.createMouseWheelInput(2113632);
         nc.a(qd.field_j, (byte) 123);
         nk.field_b = param1;
         ck.field_hb = param3;
@@ -340,7 +340,7 @@ abstract class rb extends GameApplet {
           SpriteState.d((byte) -56);
         }
         if (null != og.field_c) {
-          ke.field_b = og.field_c.b(-115);
+          ke.field_b = og.field_c.pollRotation(-115);
         }
         if (ih.b(12871)) {
           var3 = ea.f((byte) -21) * 1200;

@@ -19,7 +19,7 @@ final class StrongCacheReference extends CacheReference {
         field_s = null;
     }
 
-    final static MouseWheelInput g(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           if (param0 != 8192) {
             return (MouseWheelInput) null;
@@ -69,7 +69,7 @@ final class StrongCacheReference extends CacheReference {
 
     final static void h(int param0) {
         if (param0 <= 28) {
-          StrongCacheReference.g(-8);
+          StrongCacheReference.createMouseWheelInput(-8);
         }
     }
 
