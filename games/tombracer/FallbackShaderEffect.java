@@ -241,9 +241,9 @@ final class FallbackShaderEffect extends ShaderEffect {
             }
             if (GamePacketSender.field_a.field_y != 0) {
               if (PlayerViewport.field_o) {
-                ItemBehaviour.a((byte) 34, param3);
+                ItemBehaviour.writeCancelOpponentSearchRequest((byte) 34, param3);
               } else {
-                HardwareSceneLight.a(param3, (byte) -128);
+                HardwareSceneLight.writeFindOpponentsRequest(param3, (byte) -128);
               }
             }
             CourseStartPacket.updateLobbyGameOptionControls(param3, WaveformOperator.field_n, -21290, true);

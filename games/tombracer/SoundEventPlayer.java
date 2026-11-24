@@ -51,7 +51,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         this.resetCounts(true);
     }
 
-    final static int a(PacketBuffer param0, int param1, IntrusiveDeque param2) {
+    final static int readCsvField(PacketBuffer param0, int param1, IntrusiveDeque param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

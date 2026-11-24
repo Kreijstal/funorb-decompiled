@@ -24,7 +24,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         return (BitDecodable) ((Object) new CharacterChoice());
     }
 
-    final static void a(byte[] param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static void writeNewGameRequest(byte[] param0, boolean param1, int param2, int param3, int param4, int param5) {
         BitPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;

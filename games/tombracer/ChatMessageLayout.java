@@ -39,7 +39,7 @@ abstract class ChatMessageLayout {
           if (!DropdownButtonPainter.field_g &&
             var5 < ValidationMessageWidget.field_K) {
             var11_int = Transform3D.getChatSetting(var15.field_d, -20011);
-            if (var15.a(false) >= var11_int && (var15.field_m ||
+            if (var15.getChatFilterPriority(false) >= var11_int && (var15.field_m ||
               !MouseWheelInput.isIgnored(2180, var15.field_j))) {
               var10 = 1;
             }

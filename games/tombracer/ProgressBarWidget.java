@@ -135,7 +135,7 @@ final class ProgressBarWidget extends UiWidget {
             FriendLookupAndContextMenus.closeContextMenu(-1);
             param1 = false;
           }
-          HazardModel.a(-83, param3, param1);
+          HazardModel.processFriendIgnorePrompt(-83, param3, param1);
           DebouncedValidationSource.processAbuseReportDialog(param1, 104, param4);
           param1 = false;
         }

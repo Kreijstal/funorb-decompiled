@@ -18812,6 +18812,14 @@
       "renamedSymbol": "M:LegacyOpenGlFontMask.readQueuedRequestReply(I)V"
     },
     {
+      "symbol": "M:au.b(Z)V",
+      "originalName": "b",
+      "to": "tickGuestLoginTransition",
+      "evidence": "Advance the guest-login selection-menu transition once. The Boolean true guard returns without changing transition state. Fade-in increments the old counter and opens guest login or guest login with registration at old value>=16,then publishes login-wait state. When login-wait detects non-guest mode,it queues any retained score submission,closes the selection menu and handles the fullscreen flag before publishing fade-out state. Fade-out decrements the old counter and publishes inactive state at old<=0. Preserve identity comparisons,post-increment/decrement values,overflow,all branch and side-effect order and conditional login checks;do not collapse states or submit twice. Complete original-body SHA256 1a47e658be6312b2be2dce801b5e072148e0e850547bb2153c08c7fddd54f8ee. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlFontMask.tickGuestLoginTransition(Z)V"
+    },
+    {
       "symbol": "M:aua.a(Lff;I)Ltu;",
       "originalName": "a",
       "to": "createScoringObserver",
@@ -36076,6 +36084,14 @@
       "renamedSymbol": "M:HazardModel.encode(BLBitPacketBuffer;)V"
     },
     {
+      "symbol": "M:fu.a(IIZ)V",
+      "originalName": "a",
+      "to": "processFriendIgnorePrompt",
+      "evidence": "Process the shared friend/ignore name-entry popup from lobby popup polling. Poll result0 remains pending;accepted result2 with nonempty name uses normalization unless the first character is91. Modes0/1/2/3 dispatch add/remove friend and add/remove ignore with the original full-int request argument. Non-null failure text is cast to String and sent as a chat message. Clear dialog then mode only after processing a nonzero result;preserve cancellation,unrecognized modes,all field reads,partial state on exceptions,late int>-37 static cleanup and diagnostic wrapping. Complete original-body SHA256 b7cf4f193d25d3cc5d7ed1996a8ae2689f8b10f801f20f6d1f7ed656ee9e94b3. Naming only.5complete original bodies,all8compiler-bound callers,56field declarations/42owned,4supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HazardModel.processFriendIgnorePrompt(IIZ)V"
+    },
+    {
       "symbol": "M:fu.a(ILla;Lkh;)V",
       "originalName": "a",
       "to": "decode",
@@ -37930,6 +37946,14 @@
       "evidence": "Draws a toolkit model at a position and rotation through via.drawModelRotated; the monster and item models call it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ChatMessage.drawModelAt(IIIILToolkitModel;I)V"
+    },
+    {
+      "symbol": "M:gqa.a(Z)I",
+      "originalName": "a",
+      "to": "getChatFilterPriority",
+      "evidence": "Return the chat filter priority used both by display filtering against per-channel settings and by message-retention counts. Forced messages return2;channel2messages with positive associated field_n also return2;own-player ID or friend-enabled messages return1;other messages return0 for the normal false argument and11 for true. Preserve repeated field reads,bitwise complement equality,short-circuit ordering,friends query only when global friend-chat mode equals2,and all Boolean/message-state domains. Do not treat the noncanonical11as an array-safe priority or add validation. Complete original-body SHA256 6bcc55cc7d62ceb6667c0b8417830d4903ab9618617827840d68b6dfe6abb561. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ChatMessage.getChatFilterPriority(Z)I"
     },
     {
       "symbol": "M:gr.a(B)Z",
@@ -46676,6 +46700,14 @@
       "renamedSymbol": "M:HardwareSceneLight.setRadius(BI)V"
     },
     {
+      "symbol": "M:jq.a(IB)V",
+      "originalName": "a",
+      "to": "writeFindOpponentsRequest",
+      "evidence": "Write the Find opponents request when the lobby search button is pressed before searching. Complete caller labels resolve Find opponents/Find opponent;the shared button becomes Cancel while searching. Write caller-supplied full-int ciphered opcode,reserve byte length,write subcommand2,course mask bytes,then evaluate -104%((byte-22)/36),write the two current option bytes and packed option bytes,and backpatch length. Preserve full byte/int domains,arithmetic after partial buffer writes,mutable arrays,aliasing,length reads and exact call/exception order;do not reinterpret this as Start Game. Complete original-body SHA256 61af94f4dd18a2db99621566f5b00d3280c388da37a4547f14fb098ad4b86598. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareSceneLight.writeFindOpponentsRequest(IB)V"
+    },
+    {
       "symbol": "M:jq.a(II)V",
       "originalName": "a",
       "to": "setColour",
@@ -50052,6 +50084,14 @@
       "renamedSymbol": "M:PitModel.getEdgeModel(BLPitEdgePiece;)LToolkitModel;"
     },
     {
+      "symbol": "M:kva.a(ILdpa;)Lka;",
+      "originalName": "a",
+      "to": "getStyledPitTileModel",
+      "evidence": "Select a ToolkitModel for a raised pit tile according to pit style and tile category. PitTile.render chooses this selector when its vertical offset is nonzero. Style1 selects model bank90/91/92;all other signed style values select71/72/73. Category1/2 select the latter entries,3 returns null,and0 or any other category selects the bank base. Preserve guard int<90 encode(null) before tile reads,full signed domains,field and array access order,model identity,nullable results and diagnostics. No artwork or physical material identity is inferred. Complete original-body SHA256 88abf4edc51d19774f8925ee2fe4af0655d3ea511bb7adfed63545bbfcefaa44. Naming only.5complete original bodies,all8compiler-bound callers,56field declarations/42owned,4supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;"
+    },
+    {
       "symbol": "M:kva.a(ILla;Lkh;)V",
       "originalName": "a",
       "to": "decode",
@@ -50066,6 +50106,14 @@
       "evidence": "Removes the model from a layer of the RenderScene. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PitModel.removeFromLayer(ILRenderScene;B)V"
+    },
+    {
+      "symbol": "M:kva.a(Ldpa;I)Lka;",
+      "originalName": "a",
+      "to": "getVariedPitTileModel",
+      "evidence": "Select a ToolkitModel for an unraised pit tile using its category,neighbor-occupancy flag and stored room-seeded variation. Category1/2 select29/30 and3 returns null. Otherwise occupied-neighbor flag chooses113/114 at variation50;other tiles use thresholds11/22/33/44/55/66/77/88 to select31..39. All signed categories/variation values remain valid inputs;no clamping/modulo is added. Preserve wrong-int!=44 encode(null) before tile reads,all repeated mutable field reads,array lookups,identity,null returns and diagnostic wrapping. No artwork identity is inferred. Complete original-body SHA256 671b02930629aa60110a929a441b4d311249e05ef4de51e4de6529e5a0197f73. Naming only.5complete original bodies,all8compiler-bound callers,56field declarations/42owned,4supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;"
     },
     {
       "symbol": "M:kva.a(Liq;IIIB)V",
@@ -52666,6 +52714,14 @@
       "evidence": "Adds the model to the layer getSceneLayer returns when it is not yet in the scene. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WallModel.addToScene(ILRenderScene;)V"
+    },
+    {
+      "symbol": "M:lma.b(Lfh;B)I",
+      "originalName": "b",
+      "to": "sampleWallTileVariation",
+      "evidence": "Sample the room-seeded wall-tile variation stored by wall-grid construction in WallTile.field_d. Return zero immediately for nonzero wall variant,then for tile categories other than0/3/4;otherwise draw nextBounded(100,0) from the room random. Preserve early returns before nullable tile access/wrong-byte addToLayer hook,random advancement,all byte/tile/variant domains,wrapped diagnostics and noncanonical tick/model-selector callers. This is a sampling operation,not a pure getter. Complete original-body SHA256 b8d1870c48bb9de62c65ba8befef1c8be403cd11faab827f74c499196aac81f7. Naming only.5complete original bodies,all8compiler-bound callers,56field declarations/42owned,4supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WallModel.sampleWallTileVariation(LWallTile;B)I"
     },
     {
       "symbol": "M:lma.d(I)V",
@@ -61556,6 +61612,14 @@
       "renamedSymbol": "M:TileGridCell.getRow(I)I"
     },
     {
+      "symbol": "M:pd.a(BI)V",
+      "originalName": "a",
+      "to": "writeCancelOpponentSearchRequest",
+      "evidence": "Write Cancel opponent search request when the shared Find opponents/Cancel button is pressed in searching state. Emit caller-supplied full-int ciphered opcode,length1and subcommand3. Byte34takes the direct path;all other byte values clear static int array before the duplicated identical packet writes. Preserve branch shape,buffer aliasing,all byte/opcode values and late packet failures;do not reinterpret this as starting a game. Complete original-body SHA256 8faa7e2801c3f304df10779dc7f82f0cafafb8f212ee4cf07112199f5e48ab82. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ItemBehaviour.writeCancelOpponentSearchRequest(BI)V"
+    },
+    {
       "symbol": "M:pd.a(II)I",
       "originalName": "a",
       "to": "hashState",
@@ -62826,6 +62890,14 @@
       "evidence": "Removes the keyboard and mouse listeners from the canvas.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CharacterChoiceFactory.detachCanvasInput(Ljava/awt/Canvas;Z)V"
+    },
+    {
+      "symbol": "M:pq.a([BZIIII)V",
+      "originalName": "a",
+      "to": "writeNewGameRequest",
+      "evidence": "Write the New Game/Create unrated game request from its named lobby button. Emit caller-supplied ciphered opcode,reserve byte length,write subcommand4and selected configuration value,add128to full-int param2only when Boolean param1is true,evaluate -69/((-65-intparam3)/34),write that value and supplied byte payload,and backpatch. Preserve full signed argument domains,overflow,wire truncation,arithmetic/null failures after existing partial writes,array length/alias observations,diagnostics and order. No request payload redesign or new masking. Complete original-body SHA256 ef42d7c13274af971dd321b194dcfec5e2b94fe27c84997f80cfc4bafc2035cd. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V"
     },
     {
       "symbol": "M:pq.b(I)V",
@@ -70996,6 +71068,14 @@
       "renamedSymbol": "M:SoundEventQueue.stopAll(B)V"
     },
     {
+      "symbol": "M:sqa.a(II[ILjava/lang/String;J)Z",
+      "originalName": "a",
+      "to": "canOpenPlayerQuickChat",
+      "evidence": "Check eligibility for opening player-targeted quick chat. Both the context-menu action and PlayerQuickChatMenuLauncher consume this predicate. After -60%((-intparam1)/49),require a non-null phrase-availability array;for target channel2also require isPlayerReachable using the original long player ID and String. Other channel integers bypass reachability. Preserve full-int arithmetic before the array test,short-circuit order,nullable names,unchanged reachability helper,unused decompiled frame flag and wrapped diagnostics. Complete original-body SHA256 713c8eb493e4f26ea56c8eaee3c49a216e279c5e773980da1d6b666d257d4281. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z"
+    },
+    {
       "symbol": "M:sqa.a(ILfm;)V",
       "originalName": "a",
       "to": "enqueue",
@@ -78532,6 +78612,14 @@
       "renamedSymbol": "M:ViewportManager.applyRequestedSize(I)V"
     },
     {
+      "symbol": "M:vm.d(I)Z",
+      "originalName": "d",
+      "to": "isViewportResizeBlockedByHeapLimit",
+      "evidence": "Report the heap-limit restriction used by DisplaySettingsDialog when deciding whether viewport resizing is unavailable. Return false when the server-provided eligibility value is nonpositive;otherwise true exactly when the viewport minimum-heap field exceeds reported heap MB. MapWaypoint.refreshReportedHeapLimit computes the comparison value from Runtime.maxMemory divided by1048576plus1;canResizeViewport uses the complementary heap condition. Preserve wrong-int!=-1 setRequestedSize(-62,true,91) call before eligibility/heap reads and duplicated branches,including its recursion and side effects. No time/cooldown interpretation is made and no constructor or heap policy is repaired. Complete original-body SHA256 5289ff6dcec0d6efc9ab62798bfb9952e20503c91f2888a64b5983e33f1498aa. Naming only.7complete original bodies,all13compiler-bound callers,71field declarations/51owned,7supporting classes and22purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ViewportManager.isViewportResizeBlockedByHeapLimit(I)Z"
+    },
+    {
       "symbol": "M:vm.e(I)V",
       "originalName": "e",
       "to": "releaseStatics",
@@ -79714,6 +79802,14 @@
       "evidence": "Plays a SoundEvent unless muted, too many sounds play or the id is capped; some ids trigger companion sounds.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoundEventPlayer.play(LSoundEvent;I)LPlayingSound;"
+    },
+    {
+      "symbol": "M:w.a(Luia;ILvna;)I",
+      "originalName": "a",
+      "to": "readCsvField",
+      "evidence": "Read one CSV field from PacketBuffer into a ConsoleHistoryEntry appended to the provided IntrusiveDeque;the record reader repeats this until the mutable CRLF sequence matches. Preserve StringBuilder(8),initial last-byte -1,mutable comma/quote/line-separator fields,unsigned ordinary reads versus signed quote lookahead,sequence-matcher cursor effects,exact unusual unterminated-quote check and message,doubled-quote append/cursor rollback paths,and unconditional quote-flag toggle after quote handling including its unused decompiled frame flag. Append the token before the late int!=-58 static-string clear;return the original last observed byte or -1. Preserve empty/end-of-buffer behavior,all int/null domains,partial cursor/queue writes and wrapped diagnostics;do not repair or standardize the parser. Complete original-body SHA256 62de6723539666cf90740ac0d555b6f759c29abc0711b3e32b1c5e222e04c2bb. Naming only.5complete original bodies,all8compiler-bound callers,56field declarations/42owned,4supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I"
     },
     {
       "symbol": "M:w.a(Z)V",
@@ -187209,7 +187305,7 @@
     },
     {
       "symbol": "L:au.b(Z)V#0",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.b(Z)V#0",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.tickGuestLoginTransition(Z)V#0",
       "originalName": "fieldTemp$6",
       "renamedName": "fieldTemp$6",
       "declaration": {
@@ -187220,7 +187316,7 @@
     },
     {
       "symbol": "L:au.b(Z)V#1",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.b(Z)V#1",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.tickGuestLoginTransition(Z)V#1",
       "originalName": "fieldTemp$7",
       "renamedName": "fieldTemp$7",
       "declaration": {
@@ -187231,7 +187327,7 @@
     },
     {
       "symbol": "L:au.b(Z)V#2",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.b(Z)V#2",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.tickGuestLoginTransition(Z)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -278872,7 +278968,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#0",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#0",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -278883,7 +278979,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#1",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#1",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -278894,7 +278990,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#2",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#2",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -278905,7 +279001,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#3",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#3",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -278916,7 +279012,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#4",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#4",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -278927,7 +279023,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#5",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#5",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -278938,7 +279034,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#6",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#6",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -278949,7 +279045,7 @@
     },
     {
       "symbol": "L:fu.a(IIZ)V#7",
-      "renamedSymbol": "L:HazardModel.a(IIZ)V#7",
+      "renamedSymbol": "L:HazardModel.processFriendIgnorePrompt(IIZ)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -349580,7 +349676,7 @@
     },
     {
       "symbol": "L:jq.a(IB)V#0",
-      "renamedSymbol": "L:HardwareSceneLight.a(IB)V#0",
+      "renamedSymbol": "L:HardwareSceneLight.writeFindOpponentsRequest(IB)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -349591,7 +349687,7 @@
     },
     {
       "symbol": "L:jq.a(IB)V#1",
-      "renamedSymbol": "L:HardwareSceneLight.a(IB)V#1",
+      "renamedSymbol": "L:HardwareSceneLight.writeFindOpponentsRequest(IB)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -349602,7 +349698,7 @@
     },
     {
       "symbol": "L:jq.a(IB)V#2",
-      "renamedSymbol": "L:HardwareSceneLight.a(IB)V#2",
+      "renamedSymbol": "L:HardwareSceneLight.writeFindOpponentsRequest(IB)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -378312,7 +378408,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#0",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#0",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -378323,7 +378419,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#1",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#1",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -378334,7 +378430,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#10",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#10",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#10",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -378345,7 +378441,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#11",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#11",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -378356,7 +378452,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#12",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#12",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#12",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -378367,7 +378463,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#13",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#13",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -378378,7 +378474,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#2",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#2",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -378389,7 +378485,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#3",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#3",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -378400,7 +378496,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#4",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#4",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -378411,7 +378507,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#5",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#5",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#5",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -378422,7 +378518,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#6",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#6",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#6",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -378433,7 +378529,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#7",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#7",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#7",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -378444,7 +378540,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#8",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#8",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#8",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -378455,7 +378551,7 @@
     },
     {
       "symbol": "L:kva.a(ILdpa;)Lka;#9",
-      "renamedSymbol": "L:PitModel.a(ILPitTile;)LToolkitModel;#9",
+      "renamedSymbol": "L:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#9",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -378708,7 +378804,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#0",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#0",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#0",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -378719,7 +378815,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#1",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#1",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -378730,7 +378826,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#10",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#10",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#10",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -378741,7 +378837,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#11",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#11",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#11",
       "originalName": "stackIn_40_0",
       "renamedName": "stackIn_40_0",
       "declaration": {
@@ -378752,7 +378848,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#12",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#12",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#12",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -378763,7 +378859,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#13",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#13",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#13",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -378774,7 +378870,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#14",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#14",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#14",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -378785,7 +378881,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#15",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#15",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#15",
       "originalName": "stackIn_46_2",
       "renamedName": "stackIn_46_2",
       "declaration": {
@@ -378796,7 +378892,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#16",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#16",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#16",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -378807,7 +378903,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#17",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#17",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#17",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -378818,7 +378914,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#18",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#18",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#18",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -378829,7 +378925,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#19",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#19",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#19",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -378840,7 +378936,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#2",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#2",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#2",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -378851,7 +378947,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#20",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#20",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -378862,7 +378958,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#3",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#3",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#3",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -378873,7 +378969,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#4",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#4",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#4",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -378884,7 +378980,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#5",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#5",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#5",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -378895,7 +378991,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#6",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#6",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#6",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -378906,7 +379002,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#7",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#7",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#7",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -378917,7 +379013,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#8",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#8",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#8",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -378928,7 +379024,7 @@
     },
     {
       "symbol": "L:kva.a(Ldpa;I)Lka;#9",
-      "renamedSymbol": "L:PitModel.a(LPitTile;I)LToolkitModel;#9",
+      "renamedSymbol": "L:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#9",
       "originalName": "stackIn_36_0",
       "renamedName": "stackIn_36_0",
       "declaration": {
@@ -392931,7 +393027,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#0",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#0",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -392942,7 +393038,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#1",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#1",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -392953,7 +393049,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#2",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#2",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -392964,7 +393060,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#3",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#3",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -392975,7 +393071,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#4",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#4",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -392986,7 +393082,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#5",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#5",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -392997,7 +393093,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#6",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#6",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -393008,7 +393104,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#7",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#7",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -393019,7 +393115,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#8",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#8",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -393030,7 +393126,7 @@
     },
     {
       "symbol": "L:lma.b(Lfh;B)I#9",
-      "renamedSymbol": "L:WallModel.b(LWallTile;B)I#9",
+      "renamedSymbol": "L:WallModel.sampleWallTileVariation(LWallTile;B)I#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -443344,7 +443440,7 @@
     },
     {
       "symbol": "L:pd.a(BI)V#0",
-      "renamedSymbol": "L:ItemBehaviour.a(BI)V#0",
+      "renamedSymbol": "L:ItemBehaviour.writeCancelOpponentSearchRequest(BI)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -443355,7 +443451,7 @@
     },
     {
       "symbol": "L:pd.a(BI)V#1",
-      "renamedSymbol": "L:ItemBehaviour.a(BI)V#1",
+      "renamedSymbol": "L:ItemBehaviour.writeCancelOpponentSearchRequest(BI)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -450054,7 +450150,7 @@
     },
     {
       "symbol": "L:pq.a([BZIIII)V#0",
-      "renamedSymbol": "L:CharacterChoiceFactory.a([BZIIII)V#0",
+      "renamedSymbol": "L:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -450065,7 +450161,7 @@
     },
     {
       "symbol": "L:pq.a([BZIIII)V#1",
-      "renamedSymbol": "L:CharacterChoiceFactory.a([BZIIII)V#1",
+      "renamedSymbol": "L:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -450076,7 +450172,7 @@
     },
     {
       "symbol": "L:pq.a([BZIIII)V#2",
-      "renamedSymbol": "L:CharacterChoiceFactory.a([BZIIII)V#2",
+      "renamedSymbol": "L:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -450087,7 +450183,7 @@
     },
     {
       "symbol": "L:pq.a([BZIIII)V#3",
-      "renamedSymbol": "L:CharacterChoiceFactory.a([BZIIII)V#3",
+      "renamedSymbol": "L:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -450098,7 +450194,7 @@
     },
     {
       "symbol": "L:pq.a([BZIIII)V#4",
-      "renamedSymbol": "L:CharacterChoiceFactory.a([BZIIII)V#4",
+      "renamedSymbol": "L:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -508827,7 +508923,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#0",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#0",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#0",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -508838,7 +508934,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#1",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#1",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -508849,7 +508945,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#10",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#10",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -508860,7 +508956,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#2",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#2",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -508871,7 +508967,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#3",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#3",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -508882,7 +508978,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#4",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#4",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -508893,7 +508989,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#5",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#5",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -508904,7 +509000,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#6",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#6",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#6",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -508915,7 +509011,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#7",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#7",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#7",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -508926,7 +509022,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#8",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#8",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -508937,7 +509033,7 @@
     },
     {
       "symbol": "L:sqa.a(II[ILjava/lang/String;J)Z#9",
-      "renamedSymbol": "L:SoundEventQueue.a(II[ILjava/lang/String;J)Z#9",
+      "renamedSymbol": "L:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#9",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -570460,7 +570556,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#0",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#0",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#0",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -570471,7 +570567,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#1",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#1",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#1",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -570482,7 +570578,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#10",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#10",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -570493,7 +570589,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#11",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#11",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#11",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -570504,7 +570600,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#12",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#12",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#12",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -570515,7 +570611,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#13",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#13",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#13",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -570526,7 +570622,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#14",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#14",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#14",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -570537,7 +570633,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#15",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#15",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#15",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -570548,7 +570644,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#16",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#16",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#16",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -570559,7 +570655,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#17",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#17",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#17",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -570570,7 +570666,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#18",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#18",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -570581,7 +570677,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#2",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#2",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#2",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -570592,7 +570688,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#3",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#3",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#3",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -570603,7 +570699,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#4",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#4",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#4",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -570614,7 +570710,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#5",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#5",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#5",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -570625,7 +570721,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#6",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#6",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#6",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -570636,7 +570732,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#7",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#7",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#7",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -570647,7 +570743,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#8",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#8",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#8",
       "originalName": "stackIn_36_1",
       "renamedName": "stackIn_36_1",
       "declaration": {
@@ -570658,7 +570754,7 @@
     },
     {
       "symbol": "L:w.a(Luia;ILvna;)I#9",
-      "renamedSymbol": "L:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#9",
+      "renamedSymbol": "L:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#9",
       "originalName": "stackIn_37_2",
       "renamedName": "stackIn_37_2",
       "declaration": {
@@ -594913,9 +595009,9 @@
     },
     {
       "symbol": "M:au.b(Z)V",
-      "renamedSymbol": "M:LegacyOpenGlFontMask.b(Z)V",
+      "renamedSymbol": "M:LegacyOpenGlFontMask.tickGuestLoginTransition(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "tickGuestLoginTransition",
       "declaration": {
         "file": "au.java",
         "start": 105,
@@ -621247,9 +621343,9 @@
     },
     {
       "symbol": "M:fu.a(IIZ)V",
-      "renamedSymbol": "M:HazardModel.a(IIZ)V",
+      "renamedSymbol": "M:HazardModel.processFriendIgnorePrompt(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processFriendIgnorePrompt",
       "declaration": {
         "file": "fu.java",
         "start": 3516,
@@ -624294,9 +624390,9 @@
     },
     {
       "symbol": "M:gqa.a(Z)I",
-      "renamedSymbol": "M:ChatMessage.a(Z)I",
+      "renamedSymbol": "M:ChatMessage.getChatFilterPriority(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getChatFilterPriority",
       "declaration": {
         "file": "gqa.java",
         "start": 365,
@@ -642312,9 +642408,9 @@
     },
     {
       "symbol": "M:jq.a(IB)V",
-      "renamedSymbol": "M:HardwareSceneLight.a(IB)V",
+      "renamedSymbol": "M:HardwareSceneLight.writeFindOpponentsRequest(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeFindOpponentsRequest",
       "declaration": {
         "file": "jq.java",
         "start": 578,
@@ -647702,9 +647798,9 @@
     },
     {
       "symbol": "M:kva.a(ILdpa;)Lka;",
-      "renamedSymbol": "M:PitModel.a(ILPitTile;)LToolkitModel;",
+      "renamedSymbol": "M:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getStyledPitTileModel",
       "declaration": {
         "file": "kva.java",
         "start": 1794,
@@ -647735,9 +647831,9 @@
     },
     {
       "symbol": "M:kva.a(Ldpa;I)Lka;",
-      "renamedSymbol": "M:PitModel.a(LPitTile;I)LToolkitModel;",
+      "renamedSymbol": "M:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVariedPitTileModel",
       "declaration": {
         "file": "kva.java",
         "start": 4118,
@@ -651651,9 +651747,9 @@
     },
     {
       "symbol": "M:lma.b(Lfh;B)I",
-      "renamedSymbol": "M:WallModel.b(LWallTile;B)I",
+      "renamedSymbol": "M:WallModel.sampleWallTileVariation(LWallTile;B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "sampleWallTileVariation",
       "declaration": {
         "file": "lma.java",
         "start": 1027,
@@ -665797,9 +665893,9 @@
     },
     {
       "symbol": "M:pd.a(BI)V",
-      "renamedSymbol": "M:ItemBehaviour.a(BI)V",
+      "renamedSymbol": "M:ItemBehaviour.writeCancelOpponentSearchRequest(BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeCancelOpponentSearchRequest",
       "declaration": {
         "file": "pd.java",
         "start": 9367,
@@ -667964,9 +668060,9 @@
     },
     {
       "symbol": "M:pq.a([BZIIII)V",
-      "renamedSymbol": "M:CharacterChoiceFactory.a([BZIIII)V",
+      "renamedSymbol": "M:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeNewGameRequest",
       "declaration": {
         "file": "pq.java",
         "start": 600,
@@ -680867,9 +680963,9 @@
     },
     {
       "symbol": "M:sqa.a(II[ILjava/lang/String;J)Z",
-      "renamedSymbol": "M:SoundEventQueue.a(II[ILjava/lang/String;J)Z",
+      "renamedSymbol": "M:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "canOpenPlayerQuickChat",
       "declaration": {
         "file": "sqa.java",
         "start": 1632,
@@ -692846,9 +692942,9 @@
     },
     {
       "symbol": "M:vm.d(I)Z",
-      "renamedSymbol": "M:ViewportManager.d(I)Z",
+      "renamedSymbol": "M:ViewportManager.isViewportResizeBlockedByHeapLimit(I)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "isViewportResizeBlockedByHeapLimit",
       "declaration": {
         "file": "vm.java",
         "start": 9550,
@@ -694749,9 +694845,9 @@
     },
     {
       "symbol": "M:w.a(Luia;ILvna;)I",
-      "renamedSymbol": "M:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I",
+      "renamedSymbol": "M:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readCsvField",
       "declaration": {
         "file": "w.java",
         "start": 1442,
@@ -708422,7 +708518,7 @@
     },
     {
       "symbol": "P:au.b(Z)V#0",
-      "renamedSymbol": "P:LegacyOpenGlFontMask.b(Z)V#0",
+      "renamedSymbol": "P:LegacyOpenGlFontMask.tickGuestLoginTransition(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -763774,7 +763870,7 @@
     },
     {
       "symbol": "P:fu.a(IIZ)V#0",
-      "renamedSymbol": "P:HazardModel.a(IIZ)V#0",
+      "renamedSymbol": "P:HazardModel.processFriendIgnorePrompt(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -763785,7 +763881,7 @@
     },
     {
       "symbol": "P:fu.a(IIZ)V#1",
-      "renamedSymbol": "P:HazardModel.a(IIZ)V#1",
+      "renamedSymbol": "P:HazardModel.processFriendIgnorePrompt(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -763796,7 +763892,7 @@
     },
     {
       "symbol": "P:fu.a(IIZ)V#2",
-      "renamedSymbol": "P:HazardModel.a(IIZ)V#2",
+      "renamedSymbol": "P:HazardModel.processFriendIgnorePrompt(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -770319,7 +770415,7 @@
     },
     {
       "symbol": "P:gqa.a(Z)I#0",
-      "renamedSymbol": "P:ChatMessage.a(Z)I#0",
+      "renamedSymbol": "P:ChatMessage.getChatFilterPriority(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -816959,7 +817055,7 @@
     },
     {
       "symbol": "P:jq.a(IB)V#0",
-      "renamedSymbol": "P:HardwareSceneLight.a(IB)V#0",
+      "renamedSymbol": "P:HardwareSceneLight.writeFindOpponentsRequest(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -816970,7 +817066,7 @@
     },
     {
       "symbol": "P:jq.a(IB)V#1",
-      "renamedSymbol": "P:HardwareSceneLight.a(IB)V#1",
+      "renamedSymbol": "P:HardwareSceneLight.writeFindOpponentsRequest(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -828927,7 +829023,7 @@
     },
     {
       "symbol": "P:kva.a(ILdpa;)Lka;#0",
-      "renamedSymbol": "P:PitModel.a(ILPitTile;)LToolkitModel;#0",
+      "renamedSymbol": "P:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -828938,7 +829034,7 @@
     },
     {
       "symbol": "P:kva.a(ILdpa;)Lka;#1",
-      "renamedSymbol": "P:PitModel.a(ILPitTile;)LToolkitModel;#1",
+      "renamedSymbol": "P:PitModel.getStyledPitTileModel(ILPitTile;)LToolkitModel;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -829015,7 +829111,7 @@
     },
     {
       "symbol": "P:kva.a(Ldpa;I)Lka;#0",
-      "renamedSymbol": "P:PitModel.a(LPitTile;I)LToolkitModel;#0",
+      "renamedSymbol": "P:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -829026,7 +829122,7 @@
     },
     {
       "symbol": "P:kva.a(Ldpa;I)Lka;#1",
-      "renamedSymbol": "P:PitModel.a(LPitTile;I)LToolkitModel;#1",
+      "renamedSymbol": "P:PitModel.getVariedPitTileModel(LPitTile;I)LToolkitModel;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -838640,7 +838736,7 @@
     },
     {
       "symbol": "P:lma.b(Lfh;B)I#0",
-      "renamedSymbol": "P:WallModel.b(LWallTile;B)I#0",
+      "renamedSymbol": "P:WallModel.sampleWallTileVariation(LWallTile;B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -838651,7 +838747,7 @@
     },
     {
       "symbol": "P:lma.b(Lfh;B)I#1",
-      "renamedSymbol": "P:WallModel.b(LWallTile;B)I#1",
+      "renamedSymbol": "P:WallModel.sampleWallTileVariation(LWallTile;B)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -870441,7 +870537,7 @@
     },
     {
       "symbol": "P:pd.a(BI)V#0",
-      "renamedSymbol": "P:ItemBehaviour.a(BI)V#0",
+      "renamedSymbol": "P:ItemBehaviour.writeCancelOpponentSearchRequest(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -870452,7 +870548,7 @@
     },
     {
       "symbol": "P:pd.a(BI)V#1",
-      "renamedSymbol": "P:ItemBehaviour.a(BI)V#1",
+      "renamedSymbol": "P:ItemBehaviour.writeCancelOpponentSearchRequest(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -875600,7 +875696,7 @@
     },
     {
       "symbol": "P:pq.a([BZIIII)V#0",
-      "renamedSymbol": "P:CharacterChoiceFactory.a([BZIIII)V#0",
+      "renamedSymbol": "P:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -875611,7 +875707,7 @@
     },
     {
       "symbol": "P:pq.a([BZIIII)V#1",
-      "renamedSymbol": "P:CharacterChoiceFactory.a([BZIIII)V#1",
+      "renamedSymbol": "P:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -875622,7 +875718,7 @@
     },
     {
       "symbol": "P:pq.a([BZIIII)V#2",
-      "renamedSymbol": "P:CharacterChoiceFactory.a([BZIIII)V#2",
+      "renamedSymbol": "P:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -875633,7 +875729,7 @@
     },
     {
       "symbol": "P:pq.a([BZIIII)V#3",
-      "renamedSymbol": "P:CharacterChoiceFactory.a([BZIIII)V#3",
+      "renamedSymbol": "P:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -875644,7 +875740,7 @@
     },
     {
       "symbol": "P:pq.a([BZIIII)V#4",
-      "renamedSymbol": "P:CharacterChoiceFactory.a([BZIIII)V#4",
+      "renamedSymbol": "P:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -875655,7 +875751,7 @@
     },
     {
       "symbol": "P:pq.a([BZIIII)V#5",
-      "renamedSymbol": "P:CharacterChoiceFactory.a([BZIIII)V#5",
+      "renamedSymbol": "P:CharacterChoiceFactory.writeNewGameRequest([BZIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -906587,7 +906683,7 @@
     },
     {
       "symbol": "P:sqa.a(II[ILjava/lang/String;J)Z#0",
-      "renamedSymbol": "P:SoundEventQueue.a(II[ILjava/lang/String;J)Z#0",
+      "renamedSymbol": "P:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -906598,7 +906694,7 @@
     },
     {
       "symbol": "P:sqa.a(II[ILjava/lang/String;J)Z#1",
-      "renamedSymbol": "P:SoundEventQueue.a(II[ILjava/lang/String;J)Z#1",
+      "renamedSymbol": "P:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -906609,7 +906705,7 @@
     },
     {
       "symbol": "P:sqa.a(II[ILjava/lang/String;J)Z#2",
-      "renamedSymbol": "P:SoundEventQueue.a(II[ILjava/lang/String;J)Z#2",
+      "renamedSymbol": "P:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -906620,7 +906716,7 @@
     },
     {
       "symbol": "P:sqa.a(II[ILjava/lang/String;J)Z#3",
-      "renamedSymbol": "P:SoundEventQueue.a(II[ILjava/lang/String;J)Z#3",
+      "renamedSymbol": "P:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -906631,7 +906727,7 @@
     },
     {
       "symbol": "P:sqa.a(II[ILjava/lang/String;J)Z#4",
-      "renamedSymbol": "P:SoundEventQueue.a(II[ILjava/lang/String;J)Z#4",
+      "renamedSymbol": "P:SoundEventQueue.canOpenPlayerQuickChat(II[ILjava/lang/String;J)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -930919,7 +931015,7 @@
     },
     {
       "symbol": "P:vm.d(I)Z#0",
-      "renamedSymbol": "P:ViewportManager.d(I)Z#0",
+      "renamedSymbol": "P:ViewportManager.isViewportResizeBlockedByHeapLimit(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -935671,7 +935767,7 @@
     },
     {
       "symbol": "P:w.a(Luia;ILvna;)I#0",
-      "renamedSymbol": "P:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#0",
+      "renamedSymbol": "P:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -935682,7 +935778,7 @@
     },
     {
       "symbol": "P:w.a(Luia;ILvna;)I#1",
-      "renamedSymbol": "P:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#1",
+      "renamedSymbol": "P:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -935693,7 +935789,7 @@
     },
     {
       "symbol": "P:w.a(Luia;ILvna;)I#2",
-      "renamedSymbol": "P:SoundEventPlayer.a(LPacketBuffer;ILIntrusiveDeque;)I#2",
+      "renamedSymbol": "P:SoundEventPlayer.readCsvField(LPacketBuffer;ILIntrusiveDeque;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -980629,7 +980725,7 @@
       "original": "at.java",
       "renamed": "DisplaySettingsDialog.java",
       "inputSha256": "3905cc2d96cd0db25e1c0ac564cc2467cfcf7eb7537d51b2bf8f83eb36cb61bc",
-      "outputSha256": "0d515e4cabe557ef84cbbeab24b0793cf79cd593c7c413ad94524fb069ddca74",
+      "outputSha256": "110ef1adf20c092ff9a1d888bb90a23f6945b5d404024014882938de42299f5e",
       "edits": [
         {
           "start": 50,
@@ -981078,6 +981174,13 @@
           "symbol": "C:wba",
           "original": "wba",
           "renamed": "OpenGlSceneLight"
+        },
+        {
+          "start": 5492,
+          "end": 5493,
+          "symbol": "M:vm.d(I)Z",
+          "original": "d",
+          "renamed": "isViewportResizeBlockedByHeapLimit"
         },
         {
           "start": 6431,
@@ -982892,7 +982995,7 @@
       "original": "au.java",
       "renamed": "LegacyOpenGlFontMask.java",
       "inputSha256": "d286a85f336500abc7137fc869eda0c4e86c4de9966d2d76b301cf4782d20ddb",
-      "outputSha256": "20a0cb575008727a3968d3bfe8a122d950a5bba1e2a3dd756eec5c71658f3704",
+      "outputSha256": "45bfe872dde766c724dc659efc80b5c203771fc1f287f003a9b0bc28ff5ee67c",
       "edits": [
         {
           "start": 50,
@@ -982907,6 +983010,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "LegacyOpenGlSpriteTexture"
+        },
+        {
+          "start": 105,
+          "end": 106,
+          "symbol": "M:au.b(Z)V",
+          "original": "b",
+          "renamed": "tickGuestLoginTransition"
         },
         {
           "start": 305,
@@ -1065398,7 +1065508,7 @@
       "original": "dfa.java",
       "renamed": "GameScreen.java",
       "inputSha256": "bdc1fc3038265dc53cfba9c0ed945b7333df1cbae0dde347c40544a413380993",
-      "outputSha256": "ad028097dd1c4fb50c654ef85c58ebbf9fa5fdf598b35608ab65aea7950f7259",
+      "outputSha256": "ef4998c6610b3718e4da418992f011d00e32944788d1af3d642eef3e51bf0404",
       "edits": [
         {
           "start": 53,
@@ -1065434,6 +1065544,13 @@
           "symbol": "C:sqa",
           "original": "sqa",
           "renamed": "SoundEventQueue"
+        },
+        {
+          "start": 469,
+          "end": 470,
+          "symbol": "M:sqa.a(II[ILjava/lang/String;J)Z",
+          "original": "a",
+          "renamed": "canOpenPlayerQuickChat"
         },
         {
           "start": 471,
@@ -1079216,7 +1079333,7 @@
       "original": "dpa.java",
       "renamed": "PitTile.java",
       "inputSha256": "8909cac0cabb0b7f7c5f539d2a00a060f73b22d901c980129e7dca0c066099e9",
-      "outputSha256": "26ea021a32b0d89d3b8dfc90a31c226c87d29e08f96ee84f2ffa6a419c473836",
+      "outputSha256": "9d013be90cad9a24492fe4c1153ddb79e8cd389933210e9e73d56c8e39c622d9",
       "edits": [
         {
           "start": 50,
@@ -1079464,11 +1079581,25 @@
           "renamed": "pit"
         },
         {
+          "start": 1601,
+          "end": 1602,
+          "symbol": "M:kva.a(ILdpa;)Lka;",
+          "original": "a",
+          "renamed": "getStyledPitTileModel"
+        },
+        {
           "start": 1658,
           "end": 1665,
           "symbol": "F:dpa.field_e:Lkva;",
           "original": "field_e",
           "renamed": "pit"
+        },
+        {
+          "start": 1666,
+          "end": 1667,
+          "symbol": "M:kva.a(Ldpa;I)Lka;",
+          "original": "a",
+          "renamed": "getVariedPitTileModel"
         },
         {
           "start": 1708,
@@ -1087350,7 +1087481,7 @@
       "original": "eca.java",
       "renamed": "PlayerQuickChatMenuLauncher.java",
       "inputSha256": "b4a1c53c3a5a534f826d4fc0929db91b4e65a4eac90ab7364e01eaa6eeb93423",
-      "outputSha256": "f8a228190597afe98f6ef03a4ed90801bb16e1702be2ff319e8d4e33e80e7b2d",
+      "outputSha256": "f8f6a206727e2cf30a886a3f4313e0b858224a45197afa0882486b6802ee03ae",
       "edits": [
         {
           "start": 50,
@@ -1087386,6 +1087517,13 @@
           "symbol": "C:sqa",
           "original": "sqa",
           "renamed": "SoundEventQueue"
+        },
+        {
+          "start": 652,
+          "end": 653,
+          "symbol": "M:sqa.a(II[ILjava/lang/String;J)Z",
+          "original": "a",
+          "renamed": "canOpenPlayerQuickChat"
         },
         {
           "start": 855,
@@ -1164886,7 +1165024,7 @@
       "original": "fu.java",
       "renamed": "HazardModel.java",
       "inputSha256": "115bdae4cd026520b271a14cce8cb47f916162ae70cf6fc12f5d0c56d5453ed3",
-      "outputSha256": "3a5aa5bf76a7d648f6eae66989d5dd610c3e016735c09d3a66bf0e7cd60958fa",
+      "outputSha256": "81019c8b9ef86e7dd8939e7b6226513303f54f941300e9563fa5f246db553f1b",
       "edits": [
         {
           "start": 50,
@@ -1165090,6 +1165228,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3516,
+          "end": 3517,
+          "symbol": "M:fu.a(IIZ)V",
+          "original": "a",
+          "renamed": "processFriendIgnorePrompt"
         },
         {
           "start": 3837,
@@ -1188392,7 +1188537,7 @@
       "original": "gqa.java",
       "renamed": "ChatMessage.java",
       "inputSha256": "f91a985e4e952317d4be05adba1607558c1c32eba24a3baa0540dbc14efffb4f",
-      "outputSha256": "99548feecae0bcbbb87a7cced10e22ab908cfde097af2f58226f15553789dd7a",
+      "outputSha256": "92049c8fbb47b009bfacd13da8232f50c54055816fcd983bbadb912bcf2c9e8f",
       "edits": [
         {
           "start": 50,
@@ -1188407,6 +1188552,13 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 365,
+          "end": 366,
+          "symbol": "M:gqa.a(Z)I",
+          "original": "a",
+          "renamed": "getChatFilterPriority"
         },
         {
           "start": 576,
@@ -1257039,7 +1257191,7 @@
       "original": "jc.java",
       "renamed": "SimpleHoverMountComponent.java",
       "inputSha256": "b71b6c18dac79c4865261c155a720028151020fed3544063958b493f8b5b1c9c",
-      "outputSha256": "ddbd69f5837478d7c95cf85c600bfdeff1dd31b778e3f0df7633d24683929e66",
+      "outputSha256": "d3eb54eb5590eced4024a18be2589342fa392f8c218e8bcd1554d8ef8f4ff46b",
       "edits": [
         {
           "start": 50,
@@ -1257565,6 +1257717,13 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "CharacterChoiceFactory"
+        },
+        {
+          "start": 3505,
+          "end": 3506,
+          "symbol": "M:pq.a([BZIIII)V",
+          "original": "a",
+          "renamed": "writeNewGameRequest"
         },
         {
           "start": 3507,
@@ -1298812,7 +1298971,7 @@
       "original": "jq.java",
       "renamed": "HardwareSceneLight.java",
       "inputSha256": "9627b53a6a5071acb81487574b022719604bf2e391bd2177b9dd2a7575b30063",
-      "outputSha256": "22748900a2f075a8af37c684829a70ff22cf5aa599c9a962de9b22592fc47845",
+      "outputSha256": "2385b7426a8b7ebd1b852d299ea6da739729eac789be522a5bc3b6cad0a9c4a4",
       "edits": [
         {
           "start": 50,
@@ -1298911,6 +1299070,13 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 578,
+          "end": 579,
+          "symbol": "M:jq.a(IB)V",
+          "original": "a",
+          "renamed": "writeFindOpponentsRequest"
         },
         {
           "start": 615,
@@ -1331042,7 +1331208,7 @@
       "original": "kva.java",
       "renamed": "PitModel.java",
       "inputSha256": "d85fe8112c083136d84f5a820d58d5cf13296a52e605f7a1ea6ec98c940910dc",
-      "outputSha256": "28384e35b877ac8de10c43737e17f5229d099ce8d78e0826f901bd0fd8304f98",
+      "outputSha256": "e76962b68a60a5b4ea534996eb2c03d3440449261655eb0a9af4793caa456ffd",
       "edits": [
         {
           "start": 50,
@@ -1331241,6 +1331407,13 @@
           "renamed": "ToolkitModel"
         },
         {
+          "start": 1794,
+          "end": 1795,
+          "symbol": "M:kva.a(ILdpa;)Lka;",
+          "original": "a",
+          "renamed": "getStyledPitTileModel"
+        },
+        {
           "start": 1808,
           "end": 1811,
           "symbol": "C:dpa",
@@ -1331372,6 +1331545,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "ToolkitModel"
+        },
+        {
+          "start": 4118,
+          "end": 4119,
+          "symbol": "M:kva.a(Ldpa;I)Lka;",
+          "original": "a",
+          "renamed": "getVariedPitTileModel"
         },
         {
           "start": 4120,
@@ -1331785,6 +1331965,13 @@
           "symbol": "C:dpa",
           "original": "dpa",
           "renamed": "PitTile"
+        },
+        {
+          "start": 8880,
+          "end": 8881,
+          "symbol": "M:kva.a(ILdpa;)Lka;",
+          "original": "a",
+          "renamed": "getStyledPitTileModel"
         },
         {
           "start": 8889,
@@ -1356365,7 +1356552,7 @@
       "original": "lma.java",
       "renamed": "WallModel.java",
       "inputSha256": "07db4dba1b98706aa22cebf930d3f234e635771e91213b8601c07b5c7f021d6d",
-      "outputSha256": "f00c5f525ab168b009a1f7ffd8f72be5e84302126cd837cf13d94b24e97b8b4d",
+      "outputSha256": "7bd60a634bdbf55bc79d0c4948b309ece9a938e2e2a3ce4b6e722d9a5500afa9",
       "edits": [
         {
           "start": 50,
@@ -1356464,6 +1356651,13 @@
           "symbol": "M:lma.k(I)Z",
           "original": "k",
           "renamed": "isDynamic"
+        },
+        {
+          "start": 1027,
+          "end": 1028,
+          "symbol": "M:lma.b(Lfh;B)I",
+          "original": "b",
+          "renamed": "sampleWallTileVariation"
         },
         {
           "start": 1029,
@@ -1356583,6 +1356777,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "WallTile"
+        },
+        {
+          "start": 2823,
+          "end": 2824,
+          "symbol": "M:lma.b(Lfh;B)I",
+          "original": "b",
+          "renamed": "sampleWallTileVariation"
         },
         {
           "start": 2826,
@@ -1356814,6 +1357015,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "WallTile"
+        },
+        {
+          "start": 4455,
+          "end": 4456,
+          "symbol": "M:lma.b(Lfh;B)I",
+          "original": "b",
+          "renamed": "sampleWallTileVariation"
         },
         {
           "start": 4458,
@@ -1357500,6 +1357708,13 @@
           "symbol": "M:lma.a(IIILfh;)I",
           "original": "a",
           "renamed": "checkerParity"
+        },
+        {
+          "start": 27073,
+          "end": 27074,
+          "symbol": "M:lma.b(Lfh;B)I",
+          "original": "b",
+          "renamed": "sampleWallTileVariation"
         },
         {
           "start": 27298,
@@ -1380570,7 +1380785,7 @@
       "original": "mna.java",
       "renamed": "ChatMessageLayout.java",
       "inputSha256": "7d170b0f652562bc9501cd6244e2717c533dfd163818e5866885a21277a15736",
-      "outputSha256": "48ddc457c3ad60beb7b1c15b26e596ec3a39f531d0b0c80d4a66557340549729",
+      "outputSha256": "1861f74db00c6843631440a837544b5ef7ebae47b1bd5eec53f3c3490bdcfd9f",
       "edits": [
         {
           "start": 53,
@@ -1380669,6 +1380884,13 @@
           "symbol": "M:gda.a(II)I",
           "original": "a",
           "renamed": "getChatSetting"
+        },
+        {
+          "start": 1074,
+          "end": 1075,
+          "symbol": "M:gqa.a(Z)I",
+          "original": "a",
+          "renamed": "getChatFilterPriority"
         },
         {
           "start": 1132,
@@ -1444414,7 +1444636,7 @@
       "original": "pd.java",
       "renamed": "ItemBehaviour.java",
       "inputSha256": "c25fdaacbccd0a768e823faf7dc37a4fb52b0a1b28fef0fc86e8ee9e30079272",
-      "outputSha256": "d86e71bc20d4e879fc7f68959a16f2e7820abf49470a46e7851f24cb37e7e104",
+      "outputSha256": "6dd02fe31a858b0e65376e95057b5950c6162fad4508b7d4f11be31ec8b7808d",
       "edits": [
         {
           "start": 53,
@@ -1446174,6 +1446396,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 9367,
+          "end": 9368,
+          "symbol": "M:pd.a(BI)V",
+          "original": "a",
+          "renamed": "writeCancelOpponentSearchRequest"
+        },
+        {
           "start": 9404,
           "end": 9406,
           "symbol": "C:kh",
@@ -1446362,7 +1446591,7 @@
       "original": "pe.java",
       "renamed": "OpenGlRectangleTexture.java",
       "inputSha256": "e9a2d5e85509907891d567a0c2a09c0e8ee03c92bfc347e988979423af9820a4",
-      "outputSha256": "6dbcc7dfee58e60d5cc7d3887fd9f50762b20e66a9bd2ca670e2e83e3630f7aa",
+      "outputSha256": "ba4e5051322ba04055cadfc5ff7c5af6a5b04901dde3db0400e3631eafb1aa6a",
       "edits": [
         {
           "start": 50,
@@ -1446454,6 +1446683,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "SoundEventPlayer"
+        },
+        {
+          "start": 1021,
+          "end": 1022,
+          "symbol": "M:w.a(Luia;ILvna;)I",
+          "original": "a",
+          "renamed": "readCsvField"
         },
         {
           "start": 1060,
@@ -1476475,7 +1476711,7 @@
       "original": "pq.java",
       "renamed": "CharacterChoiceFactory.java",
       "inputSha256": "aef72069eda9d4a7802bae1307921baad984cc3dc0beb79101c86f9929b8a776",
-      "outputSha256": "5e6257e4d10561ba1d6a18c75a7488cc7c781e834a307b22b60f853aad84994f",
+      "outputSha256": "a8e291e6e58dfde329e9604015c4515049fdcb68465b481e5fd3a7d3479860ea",
       "edits": [
         {
           "start": 50,
@@ -1476588,6 +1476824,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "CharacterChoice"
+        },
+        {
+          "start": 600,
+          "end": 601,
+          "symbol": "M:pq.a([BZIIII)V",
+          "original": "a",
+          "renamed": "writeNewGameRequest"
         },
         {
           "start": 691,
@@ -1526769,7 +1527012,7 @@
       "original": "rfa.java",
       "renamed": "TombRacerShell.java",
       "inputSha256": "ee9239156511db1a79e1fc580e5d6f6c90add2ec0e44a464a7b8f3c9337f80a6",
-      "outputSha256": "a5077248ed750141e05eba9d082e12b52aeb9bbc7c45a3aef6f0d0c26110acb5",
+      "outputSha256": "0d725757a3dccc1a156d22bff553f4aaacc74b4a2092272935882101430f6398",
       "edits": [
         {
           "start": 74,
@@ -1527402,6 +1527645,13 @@
           "renamed": "LegacyOpenGlFontMask"
         },
         {
+          "start": 3690,
+          "end": 3691,
+          "symbol": "M:au.b(Z)V",
+          "original": "b",
+          "renamed": "tickGuestLoginTransition"
+        },
+        {
           "start": 3750,
           "end": 3752,
           "symbol": "C:kc",
@@ -1527570,6 +1527820,13 @@
           "renamed": "LegacyOpenGlFontMask"
         },
         {
+          "start": 4895,
+          "end": 4896,
+          "symbol": "M:au.b(Z)V",
+          "original": "b",
+          "renamed": "tickGuestLoginTransition"
+        },
+        {
           "start": 4990,
           "end": 4992,
           "symbol": "C:sr",
@@ -1527589,6 +1527846,13 @@
           "symbol": "C:au",
           "original": "au",
           "renamed": "LegacyOpenGlFontMask"
+        },
+        {
+          "start": 5020,
+          "end": 5021,
+          "symbol": "M:au.b(Z)V",
+          "original": "b",
+          "renamed": "tickGuestLoginTransition"
         },
         {
           "start": 5072,
@@ -1536188,7 +1536452,7 @@
       "original": "rk.java",
       "renamed": "ProgressBarWidget.java",
       "inputSha256": "285a43c6b6c51489dcd0aed3b304bab61e9ce9d37f0f8546bd4d734157d41cb6",
-      "outputSha256": "b84c94fb518cc34bccac2f55ef04e1d088a42de270a46708c209b8232bf75673",
+      "outputSha256": "c51ce01296354a2bcf24c38a3d9c526259b1172da3e7e7a2e5502f0a9d42ec62",
       "edits": [
         {
           "start": 50,
@@ -1536588,6 +1536852,13 @@
           "symbol": "C:fu",
           "original": "fu",
           "renamed": "HazardModel"
+        },
+        {
+          "start": 4659,
+          "end": 4660,
+          "symbol": "M:fu.a(IIZ)V",
+          "original": "a",
+          "renamed": "processFriendIgnorePrompt"
         },
         {
           "start": 4693,
@@ -1568023,7 +1568294,7 @@
       "original": "sqa.java",
       "renamed": "SoundEventQueue.java",
       "inputSha256": "ebb43aca7627e7b1a8f90cc3961ae02cc1cd4738a305bb8efbe652dac955ae5c",
-      "outputSha256": "92923cc0ce1e17fd61b3f4ab7527c37b3542865b5079e89e76eb0cd5829d87a7",
+      "outputSha256": "4e438d3cb422edbcd96b71e4db9b20939c42aa9c955e1ccd948265a4c5490f55",
       "edits": [
         {
           "start": 53,
@@ -1568129,6 +1568400,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1632,
+          "end": 1633,
+          "symbol": "M:sqa.a(II[ILjava/lang/String;J)Z",
+          "original": "a",
+          "renamed": "canOpenPlayerQuickChat"
         },
         {
           "start": 2238,
@@ -1588329,7 +1588607,7 @@
       "original": "tna.java",
       "renamed": "DivisionMazeGenerator.java",
       "inputSha256": "e37cc81c7182d08a4bb1b203b0a8ea62821382c1d89dabe3a45dd39aff89f2b5",
-      "outputSha256": "e25d0d851cef24a6bd4ecf575f61ed34ac3ec516cc39874e882f066ada79abb2",
+      "outputSha256": "76d8951ad8003631a4ced455a14105c9f7fb6452e51951ac35729b497a967637",
       "edits": [
         {
           "start": 50,
@@ -1588409,6 +1588687,13 @@
           "renamed": "CourseLayout"
         },
         {
+          "start": 1328,
+          "end": 1329,
+          "symbol": "M:gqa.a(Z)I",
+          "original": "a",
+          "renamed": "getChatFilterPriority"
+        },
+        {
           "start": 1352,
           "end": 1355,
           "symbol": "C:baa",
@@ -1588421,6 +1588706,13 @@
           "symbol": "C:baa",
           "original": "baa",
           "renamed": "GraphicsSelectionState"
+        },
+        {
+          "start": 1542,
+          "end": 1543,
+          "symbol": "M:gqa.a(Z)I",
+          "original": "a",
+          "renamed": "getChatFilterPriority"
         },
         {
           "start": 1562,
@@ -1588456,6 +1588748,13 @@
           "symbol": "C:wea",
           "original": "wea",
           "renamed": "CourseLayout"
+        },
+        {
+          "start": 1860,
+          "end": 1861,
+          "symbol": "M:gqa.a(Z)I",
+          "original": "a",
+          "renamed": "getChatFilterPriority"
         },
         {
           "start": 1888,
@@ -1650580,7 +1650879,7 @@
       "original": "vm.java",
       "renamed": "ViewportManager.java",
       "inputSha256": "b6ca8a33897d7b765a872d5a8224f18a70411c6625006c0eaa12204ef5e8625f",
-      "outputSha256": "0cdbf2b2893c717b0e50fd76706cb28766395a4f62dec0f8681bcfbfc408ae5b",
+      "outputSha256": "fa5e7e3bf9c418e8ab4019e5a4977ebb6bfb2377276e208cde96b0673e0ae470",
       "edits": [
         {
           "start": 50,
@@ -1651288,6 +1651587,13 @@
           "symbol": "M:vm.a(III)V",
           "original": "a",
           "renamed": "setDisplayMode"
+        },
+        {
+          "start": 9550,
+          "end": 9551,
+          "symbol": "M:vm.d(I)Z",
+          "original": "d",
+          "renamed": "isViewportResizeBlockedByHeapLimit"
         },
         {
           "start": 9609,
@@ -1661187,7 +1661493,7 @@
       "original": "vu.java",
       "renamed": "FallbackShaderEffect.java",
       "inputSha256": "84ce867b0238e7337c7d5d2bd40066fd0afca88380febc3f793de451c2fed636",
-      "outputSha256": "78999718dbee40cd9279f04d8f18e024bbfc2dc845ea51a9eb7cc362042fac87",
+      "outputSha256": "b4ab5b6005a7254c9e4c5758a674cb76e8c5fc573a163792b1b3ddccae66f530",
       "edits": [
         {
           "start": 50,
@@ -1662128,11 +1662434,25 @@
           "renamed": "ItemBehaviour"
         },
         {
+          "start": 8632,
+          "end": 8633,
+          "symbol": "M:pd.a(BI)V",
+          "original": "a",
+          "renamed": "writeCancelOpponentSearchRequest"
+        },
+        {
           "start": 8693,
           "end": 8695,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "HardwareSceneLight"
+        },
+        {
+          "start": 8696,
+          "end": 8697,
+          "symbol": "M:jq.a(IB)V",
+          "original": "a",
+          "renamed": "writeFindOpponentsRequest"
         },
         {
           "start": 8762,
@@ -1663781,7 +1664101,7 @@
       "original": "w.java",
       "renamed": "SoundEventPlayer.java",
       "inputSha256": "2e65810e30af567bc92c43292137bdbc35d8fcd8adbcbe155d7c40ac4fd1153d",
-      "outputSha256": "22568d3fd3cd53f8e55a4fe0125d8f8b1e6f43aaa505c54487e3b3dd786dfe36",
+      "outputSha256": "4817db617cca59499af7cc265ae7d6f4549d1e9fb23bd45a24168b7cbe53a9f7",
       "edits": [
         {
           "start": 50,
@@ -1664083,6 +1664403,13 @@
           "symbol": "M:w.a(Z)V",
           "original": "a",
           "renamed": "resetCounts"
+        },
+        {
+          "start": 1442,
+          "end": 1443,
+          "symbol": "M:w.a(Luia;ILvna;)I",
+          "original": "a",
+          "renamed": "readCsvField"
         },
         {
           "start": 1444,
@@ -1694344,10 +1694671,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "f51aad2ac2d9c58a9e601ea5fce24f5fdd4608e12fe2ee2e8990602e09c5f72a",
+    "rulesSha256": "904d2f6bf6635c2be69bb9bad812fc07c8a5e93a36401fd6ac7c43420f335bf6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "e53aa4d1d8139a6fb4c2a78d345d822c0c69b3d15860369752efb17401cfa356",
+    "outputTreeSha256": "9e47159ad33cd5fa244b159dcd365a87c07e65d83af5b414882b732fdadfe188",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

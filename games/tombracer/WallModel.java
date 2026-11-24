@@ -36,7 +36,7 @@ final class WallModel extends TrapModel {
         return 0;
     }
 
-    private final int b(WallTile param0, byte param1) {
+    private final int sampleWallTileVariation(WallTile param0, byte param1) {
         RuntimeException var3 = null;
         RenderScene var4 = null;
         int stackIn_2_0 = 0;
@@ -91,7 +91,7 @@ final class WallModel extends TrapModel {
         super.tick(param0 ^ 0);
         if (param0 != -1) {
           var5 = (WallTile) null;
-          discarded$1 = this.b((WallTile) null, (byte) 19);
+          discarded$1 = this.sampleWallTileVariation((WallTile) null, (byte) 19);
         }
         var6 = (SoundEventPlayer) (this.getRoom(param0 + 58).soundQueue);
         if (var6 == null) {
@@ -141,7 +141,7 @@ final class WallModel extends TrapModel {
         try {
           if (param1 != 76) {
             var6 = (WallTile) null;
-            discarded$0 = this.b((WallTile) null, (byte) -30);
+            discarded$0 = this.sampleWallTileVariation((WallTile) null, (byte) -30);
           }
           if (this.field_y == 0) {
             var4 = param0.field_a;
@@ -808,7 +808,7 @@ final class WallModel extends TrapModel {
             var14.field_g = this;
             if (this.field_y == 0) {
               var14.field_p = this.checkerParity(var10, var12, param0 - 2097153, var14);
-              var14.field_d = this.b(var14, (byte) -94);
+              var14.field_d = this.sampleWallTileVariation(var14, (byte) -94);
             }
             if (var7 == 0) {
               if (var21 != 0 &&

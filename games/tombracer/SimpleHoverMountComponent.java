@@ -91,7 +91,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
             SafeZoneBehaviour.field_u[0] != HardwareVertexNormalAccumulator.field_e) {
             HardwareVertexNormalAccumulator.field_e = SafeZoneBehaviour.field_u[0];
           }
-          CharacterChoiceFactory.a(QueuedByteShortRequest.field_i, true, 0, 17, HardwareVertexNormalAccumulator.field_e, param3);
+          CharacterChoiceFactory.writeNewGameRequest(QueuedByteShortRequest.field_i, true, 0, 17, HardwareVertexNormalAccumulator.field_e, param3);
         }
         if (0 != BrickOperator.field_v.field_y) {
           LegacyOpenGlBloomEffect.field_o = false;

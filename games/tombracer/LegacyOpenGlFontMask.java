@@ -4,7 +4,7 @@
 final class LegacyOpenGlFontMask extends aa {
     LegacyOpenGlSpriteTexture field_d;
 
-    final static void b(boolean param0) {
+    final static void tickGuestLoginTransition(boolean param0) {
         int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
         int var2;

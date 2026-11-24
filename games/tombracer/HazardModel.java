@@ -95,7 +95,7 @@ final class HazardModel extends TrapModel {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void processFriendIgnorePrompt(int param0, int param1, boolean param2) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;

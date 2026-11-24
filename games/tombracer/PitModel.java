@@ -55,7 +55,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final ToolkitModel a(int param0, PitTile param1) {
+    final ToolkitModel getStyledPitTileModel(int param0, PitTile param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -123,7 +123,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final ToolkitModel a(PitTile param0, int param1) {
+    final ToolkitModel getVariedPitTileModel(PitTile param0, int param1) {
         ToolkitModel stackIn_10_0 = null;
         ToolkitModel stackIn_12_0 = null;
         ToolkitModel stackIn_15_0 = null;
@@ -277,7 +277,7 @@ final class PitModel extends TrapModel {
         var7 = -(this.body.getHeight((byte) 55) / 2) + (var6 + 1048576);
         if (param0 != -110) {
           var27 = (PitTile) null;
-          this.a(-101, (PitTile) null);
+          this.getStyledPitTileModel(-101, (PitTile) null);
         }
         for (var8 = 0; var8 < this.field_t; var8++) {
           var9 = -(this.body.getWidth(-53) / 2) + var5 + 1048576;

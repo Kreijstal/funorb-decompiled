@@ -66,9 +66,9 @@ final class PitTile implements Renderable {
         }
         try {
           if (this.field_h != 0) {
-            var4 = this.pit.a(107, this);
+            var4 = this.pit.getStyledPitTileModel(107, this);
           } else {
-            var4 = this.pit.a(this, 44);
+            var4 = this.pit.getVariedPitTileModel(this, 44);
           }
           var5 = GameScreen.positiveModulo(this.field_f, 2048, -54);
           var6 = this.getRenderX((byte) -95);

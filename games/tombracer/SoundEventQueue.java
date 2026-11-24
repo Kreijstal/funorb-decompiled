@@ -45,7 +45,7 @@ abstract class SoundEventQueue {
         }
     }
 
-    final static boolean a(int param0, int param1, int[] param2, String param3, long param4) {
+    final static boolean canOpenPlayerQuickChat(int param0, int param1, int[] param2, String param3, long param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_6_0 = false;

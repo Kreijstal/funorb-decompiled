@@ -347,7 +347,7 @@ final class ViewportManager {
         return false;
     }
 
-    final boolean d(int param0) {
+    final boolean isViewportResizeBlockedByHeapLimit(int param0) {
         if (param0 != -1) {
           this.setRequestedSize(-62, true, 91);
           if (ReportAbuseDialog.field_ub <= 0) {

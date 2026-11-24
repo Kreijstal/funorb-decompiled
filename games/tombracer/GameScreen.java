@@ -15,7 +15,7 @@ abstract class GameScreen {
         String var4Lifetime2;
         String var4Lifetime3;
         if (MenuEntry.field_h == 9) {
-          if (!SoundEventQueue.a(DateValidationSource.field_f, 110, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g, CoinItemComponent.field_I)) {
+          if (!SoundEventQueue.canOpenPlayerQuickChat(DateValidationSource.field_f, 110, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g, CoinItemComponent.field_I)) {
             if (MenuEntry.field_h == 10) {
               if (var3 != 0) {
                 return false;

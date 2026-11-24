@@ -156,7 +156,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
             if (OpenGlSceneLight.field_o != null) {
-              stackIn_48_0 = (OpenGlSceneLight.field_o.d(-1)) ? 1 : 0;
+              stackIn_48_0 = (OpenGlSceneLight.field_o.isViewportResizeBlockedByHeapLimit(-1)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }

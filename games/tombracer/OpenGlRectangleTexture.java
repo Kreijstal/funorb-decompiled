@@ -30,7 +30,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
           }
           stackIn_6_0 = (PacketBuffer) (param0);
           while (stackIn_6_0.position < param0.payload.length) {
-            var3_int = SoundEventPlayer.a(param0, -58, var6);
+            var3_int = SoundEventPlayer.readCsvField(param0, -58, var6);
             if (!NetworkArchiveRequest.matchesCharSequence(param0, QueuedHint.field_j, var3_int, true)) {
               stackIn_6_0 = (PacketBuffer) (param0);
               continue;

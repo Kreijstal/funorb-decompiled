@@ -18,7 +18,7 @@ final class ChatMessage {
     String field_j;
     int field_e;
 
-    final int a(boolean param0) {
+    final int getChatFilterPriority(boolean param0) {
         if (this.field_m) {
           return 2;
         }
