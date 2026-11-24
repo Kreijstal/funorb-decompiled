@@ -42,7 +42,7 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
           }
           var17 = (int[]) null;
           var16 = (IndexedSprite[]) null;
-          LabelledRow.a(param14, param10, (int[]) null, param6, param0, param9, (IndexedSprite[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, param8);
+          LabelledRow.initializeClientUi(param14, param10, (int[]) null, param6, param0, param9, (IndexedSprite[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

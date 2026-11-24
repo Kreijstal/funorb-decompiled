@@ -51,7 +51,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
         }
     }
 
-    final static void a(int param0, int param1, ResourceArchive param2, boolean param3, Sprite[][] param4, int[] param5, String[][] param6, ResourceArchive param7, int[] param8, String[] param9, IndexedSprite[] param10, String[][] param11, String[] param12, Sprite[][] param13, ResourceArchive param14, int param15, int param16, byte[] param17, byte[] param18) {
+    final static void initializeClientUi(int param0, int param1, ResourceArchive param2, boolean param3, Sprite[][] param4, int[] param5, String[][] param6, ResourceArchive param7, int[] param8, String[] param9, IndexedSprite[] param10, String[][] param11, String[] param12, Sprite[][] param13, ResourceArchive param14, int param15, int param16, byte[] param17, byte[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -86,7 +86,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
         String[] var20 = null;
         try {
           var20 = (String[]) null;
-          RoomVariant.a(param12, param9, param3, param0, param17, (String[]) null, 95, param15, param13, param5, param6, param7, param18, param2, param14, param4, param8, param16, param10, param11);
+          RoomVariant.initializeClientUi(param12, param9, param3, param0, param17, (String[]) null, 95, param15, param13, param5, param6, param7, param18, param2, param14, param4, param8, param16, param10, param11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

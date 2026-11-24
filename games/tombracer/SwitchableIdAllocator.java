@@ -7,7 +7,7 @@ final class SwitchableIdAllocator {
     private int nextLocalId;
     private int nextGlobalId;
 
-    final static void a(ResourceArchive param0, String param1, int param2, int param3) {
+    final static void loadGameModels(ResourceArchive param0, String param1, int param2, int param3) {
         int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
@@ -347,7 +347,7 @@ final class SwitchableIdAllocator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawClippedVerticalSpan(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -116 / ((param1 + 4) / 43);
         if (DialogOverlayDrawing.field_b <= param3 &&
           !(param3 > DiskCacheWorker.field_c)) {
@@ -378,7 +378,7 @@ final class SwitchableIdAllocator {
         field_c = null;
         if (param0 != 4) {
           String var2 = (String) null;
-          SwitchableIdAllocator.a((ResourceArchive) null, (String) null, -10, 115);
+          SwitchableIdAllocator.loadGameModels((ResourceArchive) null, (String) null, -10, 115);
         }
     }
 

@@ -27,7 +27,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (HiscoresScreen.field_r <= 0) {
             return;
           }
-          OpacityWidget.a((byte) -53);
+          OpacityWidget.layoutLobbyBottomOverlay((byte) -53);
           LobbyOverlayAndDateValidationState.field_e.layoutFullScreen(37, param0);
           if (null != NineSliceFrame.field_c) {
             if (!DropdownButtonPainter.field_g) {
@@ -40,7 +40,7 @@ final class PressureSwitchComponent extends SwitchComponent {
             var5 = OpenGlSceneLight.field_p[var4_int];
             if (var5 != null) {
               if (var5.field_y != 0) {
-                VoronoiNoiseOperator.a(false, var4_int, var5);
+                VoronoiNoiseOperator.openChatVisibilityMenu(false, var4_int, var5);
               }
               var6 = Transform3D.getChatSetting(var4_int, -20011);
               MembersUpsellMenu.field_y[var4_int].field_R = ColouriseOperator.field_m[var6];

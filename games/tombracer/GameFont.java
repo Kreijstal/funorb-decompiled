@@ -42,12 +42,12 @@ abstract class GameFont {
         GasTrapComponent.field_G = param1;
     }
 
-    final static void a(boolean param0) {
+    final static void layoutPlayerList(boolean param0) {
         LightSource.field_h.setBounds(RasterShape.field_e.field_G - (!UnlockOverlay.field_p ? 0 : 40 + (2 + Cp1252ByteEncoder.field_a + 2)), 18, -23776, 0, 0);
         ShaderEffect.field_b.setBounds(Cp1252ByteEncoder.field_a + 42, 18, -23776, 0, -2 + (RasterShape.field_e.field_G - (Cp1252ByteEncoder.field_a + 40)));
         RadialSelectionPainter.field_j.setPaneBounds(RasterShape.field_e.field_G, 2, (byte) 127, 0, Cp1252ByteEncoder.field_a, -20 + RasterShape.field_e.field_t, 20);
         if (param0) {
-          GameFont.a(false);
+          GameFont.layoutPlayerList(false);
         }
     }
 

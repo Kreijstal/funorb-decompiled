@@ -85,11 +85,11 @@ final class SequencePlayer {
         return (((24 & param2) != 0 ? 1 : 0) | (544 == (544 & param2) ? 1 : 0)) != 0;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3, ResourceArchive param4) {
+    final static void initializeAccountUiResources(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3, ResourceArchive param4) {
         try {
           if (param2 != 1) {
             ResourceArchive var6 = (ResourceArchive) null;
-            SequencePlayer.a((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
+            SequencePlayer.initializeAccountUiResources((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
           }
           DefaultRoomObjectRenderer.field_b = AvailabilityQueryFactory.createAvailabilityQuery((byte) 121, "");
           DefaultRoomObjectRenderer.field_b.complete(-71, false);

@@ -255,7 +255,7 @@ abstract class MazeComponent extends PrefabComponent {
         return 0;
     }
 
-    final static void c(boolean param0, int param1) {
+    final static void layoutSocialAndGamePanels(boolean param0, int param1) {
         int var6 = 0;
         int var11 = 0;
         int stackIn_4_0 = 0;
@@ -409,7 +409,7 @@ abstract class MazeComponent extends PrefabComponent {
           ProgressDialog.field_R.field_w = Player.createScrollbarSprites(ProgressDialog.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
           RasterShape.field_e.setBounds(-10 + ProgressDialog.field_R.field_G, -24 + ProgressDialog.field_R.field_t - 12, -23776, 5, 5);
           Trap.field_q.setBounds(80, 24, -23776, -5 + (ProgressDialog.field_R.field_t - 24), (-80 + ProgressDialog.field_R.field_G) / 2);
-          GameFont.a(false);
+          GameFont.layoutPlayerList(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -433,7 +433,7 @@ abstract class MazeComponent extends PrefabComponent {
         field_G = null;
         field_F = null;
         if (param0) {
-          MazeComponent.c(true, 116);
+          MazeComponent.layoutSocialAndGamePanels(true, 116);
         }
     }
 

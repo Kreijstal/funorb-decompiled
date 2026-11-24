@@ -38,7 +38,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         this.setSize(param0 ^ 1, 4194304, 4194304);
     }
 
-    final static void A(int param0) {
+    final static void initializeAbuseReasonLabels(int param0) {
         QueuedByteShortRequest.field_h = new String[TouchSwitchBehaviour.field_n];
         QueuedByteShortRequest.field_h[17] = CharacterChoiceFactory.field_d;
         QueuedByteShortRequest.field_h[20] = OpenGlIndexBufferReference.field_b;

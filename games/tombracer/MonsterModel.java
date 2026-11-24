@@ -135,7 +135,7 @@ final class MonsterModel extends MotionTrackingModel {
         if (param0 != 28191) {
           return;
         }
-        ScrollControlWidget.a(OpenGlTransform3D.field_f, 0, Corpse.field_i, TombRacerShell.field_C, WallModel.field_r);
+        ScrollControlWidget.beginChatInputTransition(OpenGlTransform3D.field_f, 0, Corpse.field_i, TombRacerShell.field_C, WallModel.field_r);
     }
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {

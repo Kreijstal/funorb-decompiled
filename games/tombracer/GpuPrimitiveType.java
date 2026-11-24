@@ -23,7 +23,7 @@ final class GpuPrimitiveType {
         field_b = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void createSocialAndGamePanelRoots(byte param0, boolean param1) {
         ModelCodecAndSocialPanelState.field_e = !param1 ? new SocialTabbedPanelLayout(BitPacketBuffer.field_p, RoomRegion.field_l) : new SocialTabbedPanelLayout(WheeledMountComponent.field_O, HazardModel.field_t);
         C2SRoomResultPacket.field_c = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_c.addChild(param0 ^ 65, ModelCodecAndSocialPanelState.field_e.field_a);
@@ -35,16 +35,16 @@ final class GpuPrimitiveType {
           PlayerModel.field_a.addChild(-122, ProgressDialog.field_R);
           ProgressDialog.field_R.addChild(-125, RasterShape.field_e);
           ProgressDialog.field_R.addChild(-124, Trap.field_q);
-          MazeComponent.c(param1, param0 ^ -62);
+          MazeComponent.layoutSocialAndGamePanels(param1, param0 ^ -62);
           return;
         }
-        GpuPrimitiveType.a((byte) 33, false);
+        GpuPrimitiveType.createSocialAndGamePanelRoots((byte) 33, false);
         ProgressDialog.field_R = new UiComponent(0L, (UiComponent) null);
         PlayerModel.field_a.addChild(param0 - 64, S2CEventPacket.field_e);
         PlayerModel.field_a.addChild(-122, ProgressDialog.field_R);
         ProgressDialog.field_R.addChild(-125, RasterShape.field_e);
         ProgressDialog.field_R.addChild(-124, Trap.field_q);
-        MazeComponent.c(param1, param0 ^ -62);
+        MazeComponent.layoutSocialAndGamePanels(param1, param0 ^ -62);
     }
 
     static {

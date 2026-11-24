@@ -266,7 +266,7 @@ final class TooltipRenderer {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateLayer(4, (byte) 127).setPaintBeforeMerge(-2, true).setSprites(2, var5);
-          var4.createStateLayer(5, (byte) 107).setSprites(2, FormFieldRow.b(65793, 2, 0, 0, 0)).setPaintBeforeMerge(-2, true).withTextColour(-1, -2147483648);
+          var4.createStateLayer(5, (byte) 107).setSprites(2, FormFieldRow.createBevelNineSlice(65793, 2, 0, 0, 0)).setPaintBeforeMerge(-2, true).withTextColour(-1, -2147483648);
           this.field_u = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.field_l = 0;

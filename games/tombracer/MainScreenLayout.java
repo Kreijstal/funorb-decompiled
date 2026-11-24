@@ -21,7 +21,7 @@ final class MainScreenLayout {
         PerlinNoise2D.field_t.setBounds(HardwareWaterTextures.field_e.field_G, ToolkitSelector.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + ToolkitSelector.field_a;
         RasterShape.field_e.setBounds(HardwareWaterTextures.field_e.field_G, HardwareWaterTextures.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);
-        GameFont.a(false);
+        GameFont.layoutPlayerList(false);
         ImageProducerRasterBuffer.field_j.setBounds(C2SRoomResultPacket.field_a.field_G, 40, -23776, C2SRoomResultPacket.field_a.field_t - 40, 0);
         C2SChooseCharacterPacket.field_a.setBounds(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);
         Obstacle.field_s.setBounds(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);

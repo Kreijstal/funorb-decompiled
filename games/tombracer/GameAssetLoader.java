@@ -161,7 +161,7 @@ final class GameAssetLoader implements LoadingStage {
           this.drawLoadingProgress(65, (byte) 47, DateValidationSource.loadingQuipsShort[4]);
           OpenGlVertexLayout.createTextureProvider(this.field_r, this.field_m, (byte) 55, this.field_h);
           this.drawLoadingProgress(70, (byte) 47, DateValidationSource.loadingQuipsShort[5]);
-          this.d(-10242);
+          this.initializeLobbyGraphics(-10242);
           this.drawLoadingProgress(75, (byte) 47, DateValidationSource.loadingQuipsShort[6]);
           this.field_r = null;
           this.field_m = null;
@@ -170,7 +170,7 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (this.field_j != null) {
-          SwitchableIdAllocator.a(this.field_j, DateValidationSource.loadingQuipsShort[7], 80, -79);
+          SwitchableIdAllocator.loadGameModels(this.field_j, DateValidationSource.loadingQuipsShort[7], 80, -79);
           this.field_j = null;
           C2SActionPacket.resetFrameTiming(-33);
           return;
@@ -352,7 +352,7 @@ final class GameAssetLoader implements LoadingStage {
         }
     }
 
-    private final void d(int param0) {
+    private final void initializeLobbyGraphics(int param0) {
         int var4 = 0;
         Sprite[] array$0 = null;
         int var5 = 0;

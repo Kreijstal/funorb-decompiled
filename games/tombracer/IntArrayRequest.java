@@ -25,7 +25,7 @@ final class IntArrayRequest extends IntrusiveNode {
         var8 = -param5 + param4;
         if (0 == var6) {
           if (var8 != 0) {
-            SwitchableIdAllocator.a(param5, 109, param3, param1, param4);
+            SwitchableIdAllocator.drawClippedVerticalSpan(param5, 109, param3, param1, param4);
           }
           return;
         }

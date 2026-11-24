@@ -190,7 +190,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    final static void a(UiComponent param0, int param1, UiComponent param2, UiComponent param3, UiComponent param4) {
+    final static void beginChatInputTransition(UiComponent param0, int param1, UiComponent param2, UiComponent param3, UiComponent param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -221,7 +221,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             var5 = RendererMode.field_a;
           }
           var7 = (String) null;
-          OpenGlVertexLayout.a(var5, 0, (String) null, RoomLighting.field_d, 127);
+          OpenGlVertexLayout.setChatInputPresentation(var5, 0, (String) null, RoomLighting.field_d, 127);
           CharacterChoiceFactory.field_g.field_N = RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
           CharacterChoiceFactory.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
           CharacterChoiceFactory.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));

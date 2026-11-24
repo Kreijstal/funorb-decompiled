@@ -19,7 +19,7 @@ final class OpenGlVertexLayout extends ChatMessageLayout {
         return null;
     }
 
-    final static void a(String param0, int param1, String param2, int param3, int param4) {
+    final static void setChatInputPresentation(String param0, int param1, String param2, int param3, int param4) {
         try {
           CharacterChoiceFactory.field_g.field_sb = param2;
           CharacterChoiceFactory.field_g.field_G = CharacterChoiceFactory.field_g.field_G + ComponentMount.field_b.field_G;

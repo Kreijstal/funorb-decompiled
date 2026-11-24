@@ -372,12 +372,12 @@ final class CrossedSineBandsOperator extends TextureOperator {
           BufferedSocket.field_g != SoftwareRasterizer.height) && (SoftwareRasterizer.height == FadingDialog.field_C.field_e &&
           FadingDialog.field_C.field_f == SoftwareRasterizer.width)) {
           if (null != C2SChooseRewardPacket.field_a) {
-            MazeComponent.c(false, 2);
+            MazeComponent.layoutSocialAndGamePanels(false, 2);
           } else {
             if (null == WaveformOperator.field_n) {
               MainScreenLayout.layoutMainScreen(-29040);
             } else {
-              MazeComponent.c(true, 2);
+              MazeComponent.layoutSocialAndGamePanels(true, 2);
             }
           }
         }

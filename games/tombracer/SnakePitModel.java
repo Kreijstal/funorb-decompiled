@@ -360,7 +360,7 @@ final class SnakePitModel extends TrapModel {
         return param0 ^ param1;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void layoutLobbyChatAndButtons(int param0, byte param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;

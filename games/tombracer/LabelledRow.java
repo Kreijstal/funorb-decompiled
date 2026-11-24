@@ -107,7 +107,7 @@ final class LabelledRow extends UiComponent {
         this.layoutRow((byte) 123, param3);
     }
 
-    final static void a(Sprite[][] param0, String[][] param1, int[] param2, int param3, ResourceArchive param4, int param5, IndexedSprite[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, ResourceArchive param11, byte param12, int[] param13, Sprite[][] param14, ResourceArchive param15, boolean param16) {
+    final static void initializeClientUi(Sprite[][] param0, String[][] param1, int[] param2, int param3, ResourceArchive param4, int param5, IndexedSprite[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, ResourceArchive param11, byte param12, int[] param13, Sprite[][] param14, ResourceArchive param15, boolean param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -141,7 +141,7 @@ final class LabelledRow extends UiComponent {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          RidgedNoise3D.a(param5, 1, param4, param16, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
+          RidgedNoise3D.initializeClientUi(param5, 1, param4, param16, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
           var17_int = -112 / ((66 - param12) / 41);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

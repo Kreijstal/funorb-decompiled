@@ -1213,7 +1213,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           }
           if (param0 == 14) {
             CircleMovementLocomotor.initializeLobbyCollections(DoorwayComponent.r((byte) 107), SocialTabbedPanelLayout.nextPowerOfTwo(false, 4), (byte) -51, OpenGlBufferObject.e(35040), SocialTabbedPanelLayout.nextPowerOfTwo(false, 2000), MirrorMoverLocomotor.field_o.length, LoadProfileCommand.field_t, 1024, TextSpewerBehaviour.b(19845), 150);
-            AvailabilityQuery.a(-8250, PitBehaviour.b(-80), ChatInputPresentation.b((byte) 123));
+            AvailabilityQuery.initializeLobbyListContainers(-8250, PitBehaviour.b(-80), ChatInputPresentation.b((byte) 123));
             RandomMazeBehaviour.field_n = true;
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
             ConstrainToRectangleLocomotor.showMenuScreen(false, -2, (byte) 90);

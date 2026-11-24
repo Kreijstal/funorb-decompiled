@@ -7,11 +7,11 @@ final class SwitchableId {
     static TextureFormat field_a;
     int id;
 
-    final static void a(int param0) {
-        OpacityWidget.a((byte) -114);
-        SnakePitModel.a(ColouriseOperator.field_m[0].field_n, (byte) -104, ChatMessageLayout.field_d, Cp1252ByteEncoder.field_a, StatReportingScoringObserver.field_i, ToolkitSelector.field_a);
+    final static void layoutLobbyOverlay(int param0) {
+        OpacityWidget.layoutLobbyBottomOverlay((byte) -114);
+        SnakePitModel.layoutLobbyChatAndButtons(ColouriseOperator.field_m[0].field_n, (byte) -104, ChatMessageLayout.field_d, Cp1252ByteEncoder.field_a, StatReportingScoringObserver.field_i, ToolkitSelector.field_a);
         if (param0 < 50) {
-          SwitchableId.a(76);
+          SwitchableId.layoutLobbyOverlay(76);
         }
     }
 

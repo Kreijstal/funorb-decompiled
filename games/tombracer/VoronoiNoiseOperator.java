@@ -15,7 +15,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
     private int field_r;
     private int field_m;
 
-    final static void a(boolean param0, int param1, UiComponent param2) {
+    final static void openChatVisibilityMenu(boolean param0, int param1, UiComponent param2) {
         PlayerContextMenu var10 = null;
         Sprite var11 = null;
         String var12 = null;
@@ -453,7 +453,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           }
           if (param1 != -29355) {
             var9 = (UiComponent) null;
-            VoronoiNoiseOperator.a(false, -120, (UiComponent) null);
+            VoronoiNoiseOperator.openChatVisibilityMenu(false, -120, (UiComponent) null);
           }
           stackIn_5_0 = GraphicsToolkit.createToolkit(param2, var7, param4, param3, var6_int, param0, param5, -17441);
           return stackIn_5_0;

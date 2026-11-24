@@ -70,7 +70,7 @@ final class ChatInputPresentation {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            OpenGlVertexLayout.a((String) (var2), 0, (String) null, RoomLighting.field_d, 122);
+            OpenGlVertexLayout.setChatInputPresentation((String) (var2), 0, (String) null, RoomLighting.field_d, 122);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -145,7 +145,7 @@ final class ChatInputPresentation {
                 }
               }
             }
-            OpenGlVertexLayout.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, OpenGlModelBillboard.field_a[var6], 125);
+            OpenGlVertexLayout.setChatInputPresentation(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, OpenGlModelBillboard.field_a[var6], 125);
             if (!DynamicGeometryBuffer.field_c) {
               ComponentMount.field_b.field_o = false;
             }

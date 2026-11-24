@@ -699,7 +699,7 @@ abstract class AppletGameShell extends GameApplet {
           SimulationObserver.composeAgreementText((byte) -27);
           TextureTransformMode.field_b = LoginMethod.field_c;
           GameAssetLoader.field_t = false;
-          SequencePlayer.a(MusicVolumeControl.field_b, OpenGlTexture2D.field_n, 1, TextureFormat.field_a, WeaveOperator.field_p);
+          SequencePlayer.initializeAccountUiResources(MusicVolumeControl.field_b, OpenGlTexture2D.field_n, 1, TextureFormat.field_a, WeaveOperator.field_p);
           if (ResizingDialog.field_I ||
             null != BrickOperator.field_s) {
             stackIn_101_0 = !(ResizingDialog.field_I);

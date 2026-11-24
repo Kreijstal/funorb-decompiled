@@ -109,7 +109,7 @@ final class ToolkitSelector {
                 if (TextureCombineSource.field_e <= 0) {
                   if (SoftwareTransform3D.field_q > GameKeyHandler.field_a) {
                     if (GameKeyHandler.field_a == 0) {
-                      GpuPrimitiveType.a((byte) -64, true);
+                      GpuPrimitiveType.createSocialAndGamePanelRoots((byte) -64, true);
                     }
                     GameKeyHandler.field_a = GameKeyHandler.field_a + 1;
                   }
@@ -127,7 +127,7 @@ final class ToolkitSelector {
               } else {
                 if (TextureCombineSource.field_e < SoftwareTransform3D.field_q) {
                   if (0 == TextureCombineSource.field_e) {
-                    GpuPrimitiveType.a((byte) -64, false);
+                    GpuPrimitiveType.createSocialAndGamePanelRoots((byte) -64, false);
                   }
                   TextureCombineSource.field_e = TextureCombineSource.field_e + 1;
                 }

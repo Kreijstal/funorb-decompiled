@@ -69,7 +69,7 @@ final class ClippedFilledRectangleRenderer {
           HiscoresScreen.field_r = HiscoresScreen.field_r - 1;
         }
         if (~HiscoresScreen.field_r < param0) {
-          OpacityWidget.a((byte) 44);
+          OpacityWidget.layoutLobbyBottomOverlay((byte) 44);
         }
     }
 

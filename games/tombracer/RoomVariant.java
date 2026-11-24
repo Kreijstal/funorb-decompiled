@@ -28,7 +28,7 @@ final class RoomVariant {
         throw new Error();
     }
 
-    final static void a(String[] args, String[] param1, boolean param2, int param3, byte[] param4, String[] param5, int param6, int param7, Sprite[][] param8, int[] param9, String[][] param10, ResourceArchive param11, byte[] param12, ResourceArchive param13, ResourceArchive param14, Sprite[][] param15, int[] param16, int param17, IndexedSprite[] param18, String[][] param19) {
+    final static void initializeClientUi(String[] args, String[] param1, boolean param2, int param3, byte[] param4, String[] param5, int param6, int param7, Sprite[][] param8, int[] param9, String[][] param10, ResourceArchive param11, byte[] param12, ResourceArchive param13, ResourceArchive param14, Sprite[][] param15, int[] param16, int param17, IndexedSprite[] param18, String[][] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -70,9 +70,9 @@ final class RoomVariant {
           }
           ClientResourceBootstrap.storeSharedResources(param3, param19, param17, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
           ClipFrame.loadLobbyInterface(param2, param14, 2, param13);
-          TrackingCrusherComponent.A(12);
+          TrackingCrusherComponent.initializeAbuseReasonLabels(12);
           RoomComponent.buildMainScreenRoots(false);
-          SwitchableId.a(83);
+          SwitchableId.layoutLobbyOverlay(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -319,7 +319,7 @@ final class AvailabilityQuery {
         }
     }
 
-    final static void a(int param0, UiComponent param1, UiComponent param2) {
+    final static void initializeLobbyListContainers(int param0, UiComponent param1, UiComponent param2) {
         if (param1.field_J == null) {
           param1.field_J = new IntrusiveDeque();
         }

@@ -33,7 +33,7 @@ final class ClipFrame {
         }
     }
 
-    final static void a(boolean param0, byte param1, int param2) {
+    final static void updateContactList(boolean param0, byte param1, int param2) {
         ScrollPanel stackIn_3_0;
         int stackIn_3_1;
         boolean stackIn_3_2;
