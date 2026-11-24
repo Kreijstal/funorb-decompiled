@@ -1879,7 +1879,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   this.field_V = false;
                 }
               }
-              this.field_Cc = this.field_Cc & this.field_l.a("GL_ARB_half_float_pixel");
+              this.field_Cc = this.field_Cc & this.field_l.isExtensionAvailable("GL_ARB_half_float_pixel");
               this.field_bd = this.field_Q;
             }
             if (this.field_k.indexOf("intel") != -1) {
@@ -2214,10 +2214,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (this.field_fb < 12) {
           var2 = var2 | 2;
         }
-        if (!this.field_l.a("GL_ARB_multitexture")) {
+        if (!this.field_l.isExtensionAvailable("GL_ARB_multitexture")) {
           var2 = var2 | 8;
         }
-        if (!this.field_l.a("GL_ARB_texture_env_combine")) {
+        if (!this.field_l.isExtensionAvailable("GL_ARB_texture_env_combine")) {
           var2 = var2 | 32;
         }
         var10 = new int[1];
@@ -2238,20 +2238,20 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         this.field_O = jaclib.memory.Stream.isNativeBigEndian();
         this.field_Yc = this.field_l.arePbuffersAvailable();
-        this.field_Q = this.field_l.a("GL_ARB_vertex_buffer_object");
-        this.field_S = this.field_l.a("GL_ARB_multisample");
-        this.field_G = this.field_l.a("GL_ARB_vertex_program");
-        this.field_l.a("GL_ARB_fragment_program");
-        this.field_wb = this.field_l.a("GL_ARB_vertex_shader");
-        this.field_Vc = this.field_l.a("GL_ARB_fragment_shader");
-        this.field_V = this.field_l.a("GL_EXT_texture3D");
-        this.field_Cc = this.field_l.a("GL_ARB_texture_rectangle");
-        this.field_Kc = this.field_l.a("GL_ARB_texture_cube_map");
-        this.field_z = this.field_l.a("GL_ARB_texture_float");
+        this.field_Q = this.field_l.isExtensionAvailable("GL_ARB_vertex_buffer_object");
+        this.field_S = this.field_l.isExtensionAvailable("GL_ARB_multisample");
+        this.field_G = this.field_l.isExtensionAvailable("GL_ARB_vertex_program");
+        this.field_l.isExtensionAvailable("GL_ARB_fragment_program");
+        this.field_wb = this.field_l.isExtensionAvailable("GL_ARB_vertex_shader");
+        this.field_Vc = this.field_l.isExtensionAvailable("GL_ARB_fragment_shader");
+        this.field_V = this.field_l.isExtensionAvailable("GL_EXT_texture3D");
+        this.field_Cc = this.field_l.isExtensionAvailable("GL_ARB_texture_rectangle");
+        this.field_Kc = this.field_l.isExtensionAvailable("GL_ARB_texture_cube_map");
+        this.field_z = this.field_l.isExtensionAvailable("GL_ARB_texture_float");
         this.field_Gb = false;
-        this.field_id = this.field_l.a("GL_EXT_framebuffer_object");
-        this.field_hc = this.field_l.a("GL_EXT_framebuffer_blit");
-        this.field_ed = this.field_l.a("GL_EXT_framebuffer_multisample");
+        this.field_id = this.field_l.isExtensionAvailable("GL_EXT_framebuffer_object");
+        this.field_hc = this.field_l.isExtensionAvailable("GL_EXT_framebuffer_blit");
+        this.field_ed = this.field_l.isExtensionAvailable("GL_EXT_framebuffer_multisample");
         this.field_Eb = VerticalScrollbar.field_vb.startsWith("mac");
         jaggl.OpenGL.glGetFloatv(2834, RoomPropertyLabels.field_d, 0);
         this.field_Cb = RoomPropertyLabels.field_d[1];

@@ -97,7 +97,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         if (param0 <= 112) {
           return;
         }
-        LegacyOpenGlFlowingWaterEffect.a(true, true, (byte) 97);
+        LegacyOpenGlFlowingWaterEffect.openLoginForm(true, true, (byte) 97);
     }
 
     static {

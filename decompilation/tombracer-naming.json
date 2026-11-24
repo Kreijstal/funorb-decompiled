@@ -17028,6 +17028,14 @@
       "renamedSymbol": "M:UiWidget.handleKeyInput(CLUiWidget;IZ)Z"
     },
     {
+      "symbol": "M:ae.a(III)Z",
+      "originalName": "a",
+      "to": "requiresOpenGlCpuTriangleIndices",
+      "evidence": "OpenGlModel CPU-release code retains its three triangle-index arrays z/hb/Hwhen this predicate is true. Index upload serializes these exact arrays. Preserve guard6100earlytrue for every other full-int value,eager flag16-or393216test,colour-pointer-copy dependency,and the original index-buffer-copy fallback with param2-29503. Complete original-body SHA256 79c45a6563a7bf8e949c3606e7e08308e874c9984d37c726e44e2cb9a86d0da5. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiWidget.requiresOpenGlCpuTriangleIndices(III)Z"
+    },
+    {
       "symbol": "M:ae.a(IIII)V",
       "originalName": "a",
       "to": "renderLayer",
@@ -25380,6 +25388,14 @@
       "renamedSymbol": "M:DamageableBehaviour.hashState(II)I"
     },
     {
+      "symbol": "M:cu.a(III)Z",
+      "originalName": "a",
+      "to": "requiresCpuVertexZ",
+      "evidence": "HardwareModel CPU-release code retains Zcoordinate storage lwhen true;translate independently identifies l=Z. Preserve full-int>=-67indexed-sprite-loader call with null archive BEFORE any flags,mask52-or458752eager evaluation,position-stream-copy fallback and every duplicate good/bad guard path. Complete original-body SHA256 22bd74e11275ab8aefe532e536f6dec74acba09100f0dcebebea1e2ff763f69a. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DamageableBehaviour.requiresCpuVertexZ(III)Z"
+    },
+    {
       "symbol": "M:cu.a(IIII)V",
       "originalName": "a",
       "to": "setStunParameters",
@@ -26298,6 +26314,14 @@
       "evidence": "Stores the music volume, clamped to 255.",
       "confidence": "reviewed",
       "renamedSymbol": "M:C2SSubmitSettingsPacket.setMusicVolume(II)V"
+    },
+    {
+      "symbol": "M:dba.a(III)Z",
+      "originalName": "a",
+      "to": "requiresCpuNormals",
+      "evidence": "HardwareModel CPU-release code retains normal components lb/m/pand byte magnitudes wwhen true;normal upload passes them to copyNormals. Preserve source mask55branch selecting normal-stream-copy versus colour-stream-copy before later65536/544tests,eager final bitwise OR,guard<83releaseStatics first,all masks and conversions. Readiness checks belong to callers and remain unchanged. Complete original-body SHA256 9c569464b3c48fa927fbfaf8724738e238027327467a76ee9375b6d721664bb5. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z"
     },
     {
       "symbol": "M:dba.a(ILkh;)V",
@@ -28372,6 +28396,14 @@
       "renamedSymbol": "M:TextureMetadata.releaseStatics(B)V"
     },
     {
+      "symbol": "M:dw.b(B)V",
+      "originalName": "b",
+      "to": "beginReconnectLogin",
+      "evidence": "When session state10,show reconnect progress with trueand set state11;otherwise retain original TrapModel.b(-1)predicate and conditional duplicate progress path. Then perform optional releaseStatics for byte>-5and set existing reconnect/overlay flagtrue. Preserve all guards/call counts,state order,constant-true-helper call even when branch never runs,and partial effects;no new reconnection behavior. Complete original-body SHA256 73630280a0b98cb606eff4ec97ffba06e8733ecdb9115a89f7b0f67b5dfacfba. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextureMetadata.beginReconnectLogin(B)V"
+    },
+    {
       "symbol": "M:e.w(Z)V",
       "originalName": "w",
       "to": "releaseNative",
@@ -28538,6 +28570,14 @@
       "evidence": "Returns true when every character equals the first one.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoftCacheEntry.hasUniformCharacters(Ljava/lang/String;I)Z"
+    },
+    {
+      "symbol": "M:eba.a(Z)Z",
+      "originalName": "a",
+      "to": "isQuickChatOverlayOpen",
+      "evidence": "Report whether quick-chat help panel exists or quick-chat menu flag is set. Actual help-panel constructor/menu closer and input/draw routing identify both paths. Preserve falseinput earlytrue before either reference/flag read,all short circuits and null behavior;does not test generic dialog visibility. Complete original-body SHA256 f84767a89f1c40de03e9b035e57f5521a605b8bbaa98bd39cca1b65171b5379b. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftCacheEntry.isQuickChatOverlayOpen(Z)Z"
     },
     {
       "symbol": "M:eba.f(I)Ljava/lang/Object;",
@@ -31828,6 +31868,14 @@
       "renamedSymbol": "M:MidiVoiceMixer.mixVoice(II[ILMidiVoice;IZ)V"
     },
     {
+      "symbol": "M:et.a(Z)V",
+      "originalName": "a",
+      "to": "showReconnectProgress",
+      "evidence": "Reset account request state with negated input,set retry/reconnect flag from input,set original connection-progress flagtrue,hide all dialogs,and show Connection lost - attempting to reconnect message. Both incoming calls are reconnect startup. Preserve flag/queue/message order,all Boolean inputs and partial failures;do not initiate socket I/Oor change retry timing here. Complete original-body SHA256 7ff3339f0fedfc9e5342d8c619c06e4f7e75f91dcf76e81ee8bac3821996cfc2. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiVoiceMixer.showReconnectProgress(Z)V"
+    },
+    {
       "symbol": "M:et.b()Lcg;",
       "originalName": "b",
       "to": "firstSubStream",
@@ -33834,6 +33882,14 @@
       "evidence": "Renderable per-frame hook; MonsterModel advances its animation and plays its sounds there. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Renderable.updateAnimation(I)V"
+    },
+    {
+      "symbol": "M:foa.a(B)Z",
+      "originalName": "a",
+      "to": "isReconnectLogin",
+      "evidence": "Read retry/reconnect-login mode used by LoginForm retry handling. Reconnect form disables username entry and uses retry/quit labels;reconnect progress sets flag. Preserve byte<86earlyfalse BEFORE field read and every original flag access;do not infer success or live connection status. Complete original-body SHA256 89a1fd123fab516a6c5fe6067ccae0de82f94577f8426222f4ca176dba55f551. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:S2CRoundDeadlinePacket.isReconnectLogin(B)Z"
     },
     {
       "symbol": "M:foa.a(III)Z",
@@ -36028,6 +36084,14 @@
       "renamedSymbol": "M:Transform3D.rotateZ(I)V"
     },
     {
+      "symbol": "M:gda.b(III)Z",
+      "originalName": "b",
+      "to": "requiresCpuFaceAlpha",
+      "evidence": "OpenGlModel CPU-release code retains per-face alpha owhen true;RGBA generation and alpha animation confirm this byte-array role. Preserve leading full-int remainder guard including all arithmetic failures,eager intermediate OR/negations with262144mask and1048832helper,and short-circuit colour-pointer-copy fallback;do not algebraically simplify. Complete original-body SHA256 4a736436ee2dd94a86a72e0d70c1581cb910cff910cde4c0f99b284b0b7a3740. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Transform3D.requiresCpuFaceAlpha(III)Z"
+    },
+    {
       "symbol": "M:gda.c(I)V",
       "originalName": "c",
       "to": "rotateX",
@@ -36850,6 +36914,14 @@
       "evidence": "Abstract: activates the effect for the given lighting setting. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LegacyOpenGlFlowingWaterEffect.enable(ZI)V"
+    },
+    {
+      "symbol": "M:gl.a(ZZB)V",
+      "originalName": "a",
+      "to": "openLoginForm",
+      "evidence": "Open existing FollowCamera.openLoginForm with two supplied Boolean options,thirdfalse,and nullString. Preserve unused String local and wrong-byte<87call to the EXISTING int-guard formatter overload with-98and nullarguments AFTER form creation. Keep Idescriptor/binding and full formatter body including prescan/allocation/guard81behavior;no byte cast or replacement helper. Complete original-body SHA256 69bc783b23da90beb3f635942a5f4641c4726c384830bd1b060b19fd1e11453a. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V"
     },
     {
       "symbol": "M:gl.b(I)Z",
@@ -39676,6 +39748,14 @@
       "renamedSymbol": "M:InputFieldPainter.releaseStatics(B)V"
     },
     {
+      "symbol": "M:hh.a(IBI)Z",
+      "originalName": "a",
+      "to": "requiresTexCoordArrayCopy",
+      "evidence": "OpenGlModel copy dispatch uses this reserved predicate to choose texture-coordinate float-array copy versus alias. For byte5it returnsfalse;every other byte returnstrue and both int arguments remain unused. Preserve signature,all unused arguments and every return;do not replace with constantfalse or erase callers/evaluation. Complete original-body SHA256 e76d42609c501302d6278d1f1d115ed42f04a0228082a5a4ef628a7370671b6f. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FullscreenUiDrawing.requiresTexCoordArrayCopy(IBI)Z"
+    },
+    {
       "symbol": "M:hh.a(IZ)V",
       "originalName": "a",
       "to": "drawFullscreenPanel",
@@ -40834,6 +40914,14 @@
       "evidence": "Only nulls or resets static fields, like the other releaseStatics cleanup methods.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextureFilter.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:hs.a(ZB)V",
+      "originalName": "a",
+      "to": "drawQuickChatHelp",
+      "evidence": "When help panel exists,darken current raster clip rectangle then draw the panel with64and supplied Boolean. Preserve byte-derived division BEFORE panel lookup,all int clip arithmetic and argument order,clip state,short circuit and exceptions;do not reset clip or draw generic menus. Complete original-body SHA256 a4d75af3b8e2b4ea53b1fabe1d50155896263691a3110ce53624c747596dc492. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextureFilter.drawQuickChatHelp(ZB)V"
     },
     {
       "symbol": "M:hsa.a(I)V",
@@ -42210,6 +42298,14 @@
       "evidence": "True once the position reaches the length.",
       "confidence": "reviewed",
       "renamedSymbol": "M:StringCursor.isAtEnd(I)Z"
+    },
+    {
+      "symbol": "M:in.a(IIB)Z",
+      "originalName": "a",
+      "to": "requiresCpuFaceTextures",
+      "evidence": "OpenGlModel CPU-release code retains per-face texture IDs Iwhen true;face RGBA and constructor use the same IDs. Preserve byte>-5static String-array nulling before tests,eager32768-or2048path,colour-pointer-copy fallback and duplicated guard branches;no mask/domain normalization. Complete original-body SHA256 362e424a0462450f09e672f4114f83c843737853d92e7fbf692f02432ee5489d. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StringCursor.requiresCpuFaceTextures(IIB)Z"
     },
     {
       "symbol": "M:in.a(IZ)V",
@@ -43876,6 +43972,14 @@
       "renamedSymbol": "M:jaggl.OpenGL.attachToThread()Z"
     },
     {
+      "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+      "originalName": "a",
+      "to": "isExtensionAvailable",
+      "evidence": "Query the original per-OpenGL-object extension-name cache,initializing Hashtable from glGetString7939on first use.29actual toolkit capability queries identify role. Preserve cache assignment BEFORE native GLquery,ASCII-space splitting/trim/empty-token handling,case-sensitive keys,duplicate-put behavior,all containsKeycalls,null/failure partial cache state and allocation/call/thread interleavings;no synchronization,GetStringiAPI,normalization or native rename. Complete original-body SHA256 ac372c1133bf29dfcc1a79d2840157fdce822442d82e0aa82e43c03dfc1c2f74. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z"
+    },
+    {
       "symbol": "M:jaggl.OpenGL.b()Z",
       "originalName": "b",
       "to": "detachFromThread",
@@ -44068,6 +44172,14 @@
       "renamedSymbol": "M:SimpleHoverMountComponent.encode(ZLBitPacketBuffer;)V"
     },
     {
+      "symbol": "M:jc.c(III)Z",
+      "originalName": "c",
+      "to": "requiresCpuVertexZ",
+      "evidence": "OpenGlModel CPU-release code retains Zcoordinate array Awhen true;translate identifies A=Z. Preserve full-int!=-23717static Boolean write BEFORE helper evaluation,eager52-or458752tests,position-pointer-copy fallback and all duplicate/cast/negation return paths. Complete original-body SHA256 018f59e0199d2e25ed544525f2a335bda9a6d03de1999246e4ae38f49d329120. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z"
+    },
+    {
       "symbol": "M:jc.n(B)Z",
       "originalName": "n",
       "to": "hasAngle",
@@ -44164,12 +44276,28 @@
       "renamedSymbol": "M:OpenGlTexture3D.bind(B)V"
     },
     {
+      "symbol": "M:jda.a(ZI)V",
+      "originalName": "a",
+      "to": "openLoginFormWithRegistrationOption",
+      "evidence": "Open existing login-form wrapper with first optionfalse,registration-button option from input,and byte116;then retain full-int!=262144static int-89write. LoginForm creates the extra registration button for this Boolean option. Preserve exact forwarding and late guard effect;do not collapse wrapper or add credentials. Complete original-body SHA256 f5b39ac0452abb7f94d04a8aaf1347c1069814ab1b8a192162c36a13f360c340. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GreyscaleOperator.openLoginFormWithRegistrationOption(ZI)V"
+    },
+    {
       "symbol": "M:jda.c(II)[I",
       "originalName": "c",
       "to": "getMonochromeRow",
       "evidence": "Base throws \"This operation does not have a monochrome output\"; operators return one row of 0-4096 values. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GreyscaleOperator.getMonochromeRow(II)[I"
+    },
+    {
+      "symbol": "M:jda.d(III)Z",
+      "originalName": "d",
+      "to": "requiresCpuFaceAlpha",
+      "evidence": "HardwareModel CPU-release code retains face alpha Cwhen true;native colour upload and alpha animation use it. Preserve full-int guard-28090earlyfalse before all helper calls,eager flag256-or262144tests,guard XOR-3045and colour-stream-copy fallback;do not unify with OpenGL alpha predicate. Complete original-body SHA256 19d81d83275ecccc2cb11279131888b07d363185c79848bb5f1a41f8494cf0ee. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GreyscaleOperator.requiresCpuFaceAlpha(III)Z"
     },
     {
       "symbol": "M:je.a(B)Liu;",
@@ -46044,6 +46172,14 @@
       "renamedSymbol": "M:DialogStack.renderLayer(IIII)V"
     },
     {
+      "symbol": "M:jta.a(ZZ)V",
+      "originalName": "a",
+      "to": "processQuickChatHelp",
+      "evidence": "If help panel exists,process its dismissal with supplied Boolean and94and clear retained reference ONLY when it returns true. Preserve no-panel and not-dismissed early paths,optional static int-array nulling for secondBooleanfalse on each exact path,all call/state/exception order and no drawing added. Complete original-body SHA256 bebea7bad335cae3a6a9fbd0a09ae607cdf8e69f41e035d37cf2e3e9729e0877. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DialogStack.processQuickChatHelp(ZZ)V"
+    },
+    {
       "symbol": "M:jta.b(Z)Lae;",
       "originalName": "b",
       "to": "getFocusedChild",
@@ -46474,6 +46610,14 @@
       "evidence": "OpenGlModel constructor creates the normal3component float pointer when this predicate is true;clone otherwise shares or drops the same pointer. Require flag2048 in second int and any mask55bit in first int. Preserve full byte guard,non17guard clearing original private String array before flag tests,and all short-circuit/return behavior. Complete original-body SHA256 0e67965824acf87552701177ea73de36a9d5caededdb3ac8c42d5ebb3b2a9f6d. Naming only. All24published utility class bodies(54owned nonconstructor methods),2explicit constructors,4selected original method bodies,2supporting mask helper bodies,99field declarations and45supporting caller/label/pointer contexts reviewed. Preserve exact original bodies,declarations,field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ScoreSubmission.requiresNormalPointer(IIB)Z"
+    },
+    {
+      "symbol": "M:kb.a(IZ)V",
+      "originalName": "a",
+      "to": "completeAvailabilityQuery",
+      "evidence": "Complete existing availability query with inputBoolean through original int-63call,then apply wrong-full-int!=2753float-field assignment. Shell consumes nullable boxed reply before forwarding it here. Preserve query/null/partial-completion failures BEFORE late float write and original full-int/Boolean domains. Complete original-body SHA256 3ceddee5063a29cba96e555eb92dd04942136c15d2a76dc44532232baf06af95. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScoreSubmission.completeAvailabilityQuery(IZ)V"
     },
     {
       "symbol": "M:kb.a(IZZII)Lka;",
@@ -52284,6 +52428,14 @@
       "renamedSymbol": "M:PerlinNoise2D.decodeParameter(BLPacketBuffer;I)V"
     },
     {
+      "symbol": "M:lva.a(IBI)Z",
+      "originalName": "a",
+      "to": "requiresCpuTexCoords",
+      "evidence": "OpenGlModel CPU-release code retains texture-coordinate float arrays n/ywhen true. Preserve wrong-byte!=-21static String clear BEFORE the short-circuit OR of UVarray-copy and UVpointer-copy decisions. Normal guards currently returnfalse through those dependencies;retain both calls,argument order and full domains. Complete original-body SHA256 8580b6f69b8f8211645365309711dc3345b5f27b97f24e66ca5d004a9f824fd9. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PerlinNoise2D.requiresCpuTexCoords(IBI)Z"
+    },
+    {
       "symbol": "M:lva.a(IZIIIII)I",
       "originalName": "a",
       "to": "noiseAt",
@@ -54836,6 +54988,14 @@
       "renamedSymbol": "M:NodeHashTableIterator.reset(Z)V"
     },
     {
+      "symbol": "M:nd.b(B)Z",
+      "originalName": "b",
+      "to": "isAvailabilityQueryPending",
+      "evidence": "Return true immediately for byte>-88;otherwise negate existing query isComplete52. Preserve wrong-byte shortcut BEFORE query access,null failures,exact guard argument and read/call count;do not change polling or query ownership. Complete original-body SHA256 1736a3430a98c3567d8eb252053b1e208fbfeb086847ed2fee9d25ce38e9a140. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.isAvailabilityQueryPending(B)Z"
+    },
+    {
       "symbol": "M:nda.a(B[II)Lu;",
       "originalName": "a",
       "to": "getSoundById",
@@ -55818,6 +55978,14 @@
       "evidence": "Overlay key handler; MessageOverlay forwards keys to its input field. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AchievementNotificationOverlay.handleKey(ICB)Z"
+    },
+    {
+      "symbol": "M:no.a(III)Z",
+      "originalName": "a",
+      "to": "requiresColourStreamCopy",
+      "evidence": "HardwareModel constructor/copy uses this decision for copying colour stream wrapper E. Native colour upload and matching wrapper field prove role. Preserve initial2048gate and earlyfalse,eager540800/param2/256alternatives,then eager8192/544/65536ANDsource55zero expression. Third int is a REAL mask used directly and in param2^-36949helper guard,despite actual callers commonly passing36864;retain every int value and helper/evaluation order. Complete original-body SHA256 979c5fc2e3c647d92eaef060708562037636bd9af87f81a746f5e094d2bb371c. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AchievementNotificationOverlay.requiresColourStreamCopy(III)Z"
     },
     {
       "symbol": "M:no.a(Ljava/lang/String;JB)V",
@@ -57764,6 +57932,14 @@
       "renamedSymbol": "M:OpenGlTransform3D.rotateX(I)V"
     },
     {
+      "symbol": "M:oba.c(III)Z",
+      "originalName": "c",
+      "to": "requiresNormalStreamCopy",
+      "evidence": "HardwareModel constructor/copy uses this decision for copying its normal stream wrapper O. Native normal upload independently proves stream role. Preserve full-int-19531guard returningfalse otherwise,eager bitwise AND with stream-required decision and eager8192/544/65536alternatives,and the original param2+21579derived guard. Complete original-body SHA256 148a1f2e00cd2d817025e70f92baa017b77ab8578b73042078a14c29f5d51e9f. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlTransform3D.requiresNormalStreamCopy(III)Z"
+    },
+    {
       "symbol": "M:oba.d(I)V",
       "originalName": "d",
       "to": "rotateY",
@@ -57922,6 +58098,14 @@
       "evidence": "Only nulls or resets static fields, like the other releaseStatics cleanup methods.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RenderableNode.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:oea.a(IIB)Z",
+      "originalName": "a",
+      "to": "requiresCpuNormals",
+      "evidence": "OpenGlModel CPU-release code retains normal E/Y/cbcomponents and byte magnitudes Owhen true. Normal rotations and glNormalPointer binding establish role. Preserve eager65536-or544test and earlyreturns,normal-pointer-copy test BEFORE byte-derived remainder guard,mask55branch and final colour-pointer-copy dependency;all partial calls and arithmetic errors remain. Complete original-body SHA256 388fc3fc1fdfab3df9d77ed454afe598713ae38f7a4680ff40bd8807464b9e24. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RenderableNode.requiresCpuNormals(IIB)Z"
     },
     {
       "symbol": "M:oea.a(III)I",
@@ -60660,6 +60844,14 @@
       "renamedSymbol": "M:TermsLinksPanel.onHotspotAction(LHotspotTextWidget;III)V"
     },
     {
+      "symbol": "M:pg.b(Z)V",
+      "originalName": "b",
+      "to": "openGuestLoginWithRegistration",
+      "evidence": "Require guest mode,then set retained return-to-game flagtrue,open login form with registration optiontrue,and switch session state0. Actual fullscreen-membership and guest transition callers verify purpose. Preserve IllegalStateException BEFORE every write for non-guests,full Boolean guard optional String nulling only at end,and all form/state partial failures. Complete original-body SHA256 518c8e09b12c561769420f3fcd5a47375b38d2ec41966b029c54364134e6415b. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TermsLinksPanel.openGuestLoginWithRegistration(Z)V"
+    },
+    {
       "symbol": "M:pg.c(I)Ljava/lang/String;",
       "originalName": "c",
       "to": "linkStart",
@@ -61716,6 +61908,14 @@
       "renamedSymbol": "M:FacePlayerLocomotor.hashState(II)I"
     },
     {
+      "symbol": "M:pt.a(III)Z",
+      "originalName": "a",
+      "to": "requiresCpuVertexY",
+      "evidence": "OpenGlModel CPU-release code retains Ycoordinate array Kwhen true;translate identifies K=Y. Preserve leading full-int remainder/division expression,eager458752-or34test,position-pointer-copy fallback and diagnostic-independent side effects;no axis unification or added bounds. Complete original-body SHA256 e43a521e942f9c45e7ab61e8d48c76a08a66965700b46aefbfe9d8b1fbda1a9b. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FacePlayerLocomotor.requiresCpuVertexY(III)Z"
+    },
+    {
       "symbol": "M:pt.a(IIII)Lupa;",
       "originalName": "a",
       "to": "getOrRequestRatingTable",
@@ -61994,6 +62194,14 @@
       "evidence": "Abstract: maximum number of target components; CauldronComponent returns 3. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PressureSwitchComponent.getMaxTargets(I)I"
+    },
+    {
+      "symbol": "M:pw.C(I)V",
+      "originalName": "C",
+      "to": "advanceLogoAnimation",
+      "evidence": "Read the original empty-if boundary expression involving negative logo delay and250-delay,then increment shared logo animation clock only for full-int-5. Init and completion-gate witnesses establish logo role. Preserve both boundary reads and full integer overflow/short-circuit behavior even though ifbodyempty,earlyreturn and single increment;no time conversion. Complete original-body SHA256 bb5a99be07e264489f05e69773dffdedbe8c45bfa4d36c16fe8011ecaa45440e. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PressureSwitchComponent.advanceLogoAnimation(I)V"
     },
     {
       "symbol": "M:pw.a(ILjava/awt/Canvas;IBLd;)Lha;",
@@ -64458,6 +64666,14 @@
       "evidence": "Calls refreshLayout on the child.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SingleChildWidget.refreshChildLayout(I)V"
+    },
+    {
+      "symbol": "M:qr.c(III)Z",
+      "originalName": "c",
+      "to": "requiresCpuVertexY",
+      "evidence": "HardwareModel CPU-release code retains Ycoordinate array rwhen true;translate identifies r=Y. Preserve full-int!=458752UIpredicate call BEFORE flag reads,eager boolean negations/OR around458752and34mask tests,and short-circuit position-stream-copy fallback. Complete original-body SHA256 0a699c4bc372792b7550014c9f331e2088af5acaebbbebe6073e02a45247d1e3. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SingleChildWidget.requiresCpuVertexY(III)Z"
     },
     {
       "symbol": "M:qr.d(B)Ljava/lang/String;",
@@ -68852,6 +69068,14 @@
       "renamedSymbol": "M:KeyLockBehaviour.hashState(II)I"
     },
     {
+      "symbol": "M:sm.a(III)Z",
+      "originalName": "a",
+      "to": "requiresCpuFaceColours",
+      "evidence": "OpenGlModel CPU-release code retains packed per-face colours Xwhen true;HSL recolour and RGBA lookup confirm role. Preserve guard!=2self-recursion BEFORE every other operation,all540800mask-helper arguments,colour-pointer-copy fallback and both duplicated branches. Do not fix wrong-guard recursion. Complete original-body SHA256 931b22e9e6286b0971472962adbf33f39f0676108936bca98f97267bd37c494b. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:KeyLockBehaviour.requiresCpuFaceColours(III)Z"
+    },
+    {
       "symbol": "M:sm.a(Z)I",
       "originalName": "a",
       "to": "getTypeId",
@@ -69074,6 +69298,14 @@
       "evidence": "Interface method returning the validation source of the widget. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ValidatedTextInputWidget.getValidationSource(B)LValidationSource;"
+    },
+    {
+      "symbol": "M:so.a(IBI)Z",
+      "originalName": "a",
+      "to": "requiresPositionPointerCopy",
+      "evidence": "OpenGlModel copy dispatch uses this decision for copying the position vertex-array pointer g. Toolkit passes gto glVertexPointer. Preserve byte-derived division BEFORE all helpers,eager OR of33/34/52mask helpers followed by eager AND with2048helper,all signed inputs and evaluation/exception order. Complete original-body SHA256 3701d8f466c5e4287b18ff55a1b4f4edc120f7b41d609a68b9054ae9c2380442. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidatedTextInputWidget.requiresPositionPointerCopy(IBI)Z"
     },
     {
       "symbol": "M:so.a(IILae;I)V",
@@ -69362,6 +69594,14 @@
       "evidence": "Clears the queued events.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoundEventQueue.clear(B)V"
+    },
+    {
+      "symbol": "M:sr.a(I)Z",
+      "originalName": "a",
+      "to": "isSelectionMenuActive",
+      "evidence": "Compare current selection/menu transition state against existing inactive token,including opening/steady/closing phases. State machine and overlay fade callers establish inclusive active role. Preserve full-int<115self-recursion BEFORE state reads and both exact token/field reads;do not hardcode zero or replace with separate menu-open flag. Complete original-body SHA256 e85486ebdeb6087500b88d3f3721928a5aa8b33299ee7226dece2ffa7b0a0df2. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MessagePage.isSelectionMenuActive(I)Z"
     },
     {
       "symbol": "M:sr.a(IIII)V",
@@ -70764,6 +71004,14 @@
       "renamedSymbol": "M:WindZoneBehaviour.setDirection(II)V"
     },
     {
+      "symbol": "M:th.b(III)Z",
+      "originalName": "b",
+      "to": "requiresCpuFaceColours",
+      "evidence": "HardwareModel CPU-release code retains packed per-face colours Pwhen true;constructor and native colour upload identify it. Preserve full-int!=8earlytrue,short-circuit OR of540800mask-helper and colour-stream-copy decision,and original param1^36872mask argument;no unconditional second helper evaluation. Complete original-body SHA256 e9e34b26e6ba9229672868aad3e1d8bc34b6b3eb024c8cb3c3154669f98419a2. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WindZoneBehaviour.requiresCpuFaceColours(III)Z"
+    },
+    {
       "symbol": "M:th.g(B)V",
       "originalName": "g",
       "to": "releaseStatics",
@@ -70866,6 +71114,14 @@
       "evidence": "Removes the shared mouse handler as mouse, motion and focus listener from the component.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FixedAngleTrigonometry.detachMouseHandler(ILjava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:tia.b(III)Z",
+      "originalName": "b",
+      "to": "requiresIndexBufferCopy",
+      "evidence": "OpenGlModel copy dispatch uses this decision to copy its index-buffer reference w. Index writer serializes the same triangle-index arrays through w. Preserve full-int!=-23403earlyfalse,eager bitwise AND of flag16and2048helpers,original input order and byteguards121/-112. Complete original-body SHA256 6cad114f78fad8836c805fe441e6abf8c5c54dda83c0bf3b174377b2954ffcb8. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FixedAngleTrigonometry.requiresIndexBufferCopy(III)Z"
     },
     {
       "symbol": "M:tj.a(I)V",
@@ -71218,6 +71474,14 @@
       "evidence": "Subclass flag: when true a bit chooses between a fixed and a random phase. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WhiteLightShooterComponent.canRandomisePhase(I)Z"
+    },
+    {
+      "symbol": "M:tp.a(IBI)Z",
+      "originalName": "a",
+      "to": "requiresCpuVertexX",
+      "evidence": "HardwareModel CPU-release code retains Xcoordinate array Zwhen true;translate identifies Z=X. Preserve wrong-byte!=3earlytrue,eager negated OR involving458752and33mask-helper,and short-circuit position-stream-copy fallback with unchanged int order. Complete original-body SHA256 ba31fd8ad106d1f96f06d8d0ea359da30c6d5bccf2c9e2cbcdcdb0e6fd8769df. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z"
     },
     {
       "symbol": "M:tp.a(IBIIIII)V",
@@ -71954,6 +72218,14 @@
       "evidence": "Abstract factory every concrete component implements to build its Trap. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:KeyItemComponent.createTrap(ZILRoom;)LTrap;"
+    },
+    {
+      "symbol": "M:tta.e(Z)V",
+      "originalName": "e",
+      "to": "openGuestLogin",
+      "evidence": "Require guest mode,then store supplied return-to-game flag,open login form with registration optionfalse,and switch session state0. Preserve predicate-before-writes,Boolean forwarding,call/state ordering and exceptions;no guest-session termination or network request added. Complete original-body SHA256 b2c1f98b30897a31f6a6cbdf080ec0354ef5f1922489c09fec7177d2dd1e6cfd. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:KeyItemComponent.openGuestLogin(Z)V"
     },
     {
       "symbol": "M:tu.a(IILhca;Lfsa;)V",
@@ -72938,6 +73210,14 @@
       "evidence": "Negation of the chat restriction flag ok.field_s. Body matches pool UsernameSuggestionsPanel (isFreeChatAllowed).",
       "confidence": "reviewed",
       "renamedSymbol": "M:AppletGameShell.isFreeChatAllowed(I)Z"
+    },
+    {
+      "symbol": "M:ug.r(I)V",
+      "originalName": "r",
+      "to": "tickLoginAndLogo",
+      "evidence": "If login interface ready,poll login with existing full-int byte-72,false,and actual fullscreen-canvas presence. Otherwise preserve bootstrap>=10gate,logo completion/advance path,and post-logo state0login poll versus pending-login-result callback. Preserve leading full-int<=89cleanup,unused global flag read,all discarded returns,branch/call order and negative/overflow states;no merged polling or clocks. Complete original-body SHA256 612a04eba32b3280eda3dec5d56b9c3972e9a7e64357f99f2b75c027ab6984d0. Naming only. Complete original bodies,all64bound incoming calls,108field declarations/86owned,sixteen supporting classes and19unchanged login/availability/help/selection/logo/extension/full-int formatter witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletGameShell.tickLoginAndLogo(I)V"
     },
     {
       "symbol": "M:ug.s(I)V",
@@ -74244,6 +74524,14 @@
       "renamedSymbol": "M:HazardEffect.getDeathMessageIndex(I)I"
     },
     {
+      "symbol": "M:upa.a(III)Z",
+      "originalName": "a",
+      "to": "requiresTexCoordPointerCopy",
+      "evidence": "OpenGlModel copy dispatch uses this reserved decision to copy its texture-coordinate pointer ab. Actual toolkit binds abto glTexCoordPointer. Preserve full-int!=0earlyfalse and eager bitwise AND:the2048helper MUST still run when UVarray-copy returnsfalse. Keep all unused/full-int domains. Complete original-body SHA256 8afc604df7d98e6182cd5ca868a79b8f93aebcc4951ab0b90c0dd109e9afad87. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RatingTable.requiresTexCoordPointerCopy(III)Z"
+    },
+    {
       "symbol": "M:upa.a(Ljava/lang/String;B)V",
       "originalName": "a",
       "to": "printError",
@@ -74820,6 +75108,14 @@
       "renamedSymbol": "M:C2SChooseRewardPacket.decode(LBitPacketBuffer;B)V"
     },
     {
+      "symbol": "M:uu.a(ZII)Z",
+      "originalName": "a",
+      "to": "requiresPositionStreamCopy",
+      "evidence": "HardwareModel constructor/copy uses this decision for copying position stream wrapper ib;native upload passes XYZarrays to copyPositions. Preserve optional static int33write when Booleanfalse,eager33/34/52helper OR and eager2048AND,all original byte/int helper guards and duplicate branches. Complete original-body SHA256 104ad47544033c099b55853951581f8254691de9f5c3865136466943f3735843. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:C2SChooseRewardPacket.requiresPositionStreamCopy(ZII)Z"
+    },
+    {
       "symbol": "M:uu.b(II)V",
       "originalName": "b",
       "to": "notifyPageResizing",
@@ -74882,6 +75178,14 @@
       "evidence": "Resizes the pass's buffers for a viewport, rounding to powers of two. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LegacyOpenGlBloomEffect.resize(IBI)V"
+    },
+    {
+      "symbol": "M:uv.a(III)Z",
+      "originalName": "a",
+      "to": "requiresCpuVertexX",
+      "evidence": "OpenGlModel CPU-release code retains Xcoordinate array Pwhen true;translate identifies P=X. Preserve wrong-full-int!=1static String-array clear BEFORE all helper tests,eager33-or458752expression,position-pointer-copy fallback and repeated branches. Complete original-body SHA256 cfe67253a1f87dc86d80e687b34767cedc55a1fc536ee4c6a0e412c171aaa2cb. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlBloomEffect.requiresCpuVertexX(III)Z"
     },
     {
       "symbol": "M:uv.a(Ljava/lang/String;Lcn;Ljava/lang/String;I)Lhja;",
@@ -74970,6 +75274,14 @@
       "evidence": "Clears every layer, notifying the listener first.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RenderScene.clear(I)V"
+    },
+    {
+      "symbol": "M:uw.a(III)Z",
+      "originalName": "a",
+      "to": "requiresCpuFaceTextures",
+      "evidence": "HardwareModel CPU-release code retains per-face texture IDs gbwhen true;constructor/native colour upload establish role. Preserve leading full-int division guard and its arithmetic failures,eager negated OR of2048test and32768helper,then short-circuit colour-stream-copy fallback. Do not simplify intermediate booleans. Complete original-body SHA256 c76a23490ae50b804150d06dbbd7e78a83382aac1c1297357d4a2cd2a302eb80. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RenderScene.requiresCpuFaceTextures(III)Z"
     },
     {
       "symbol": "M:uw.a(ILev;)V",
@@ -77274,6 +77586,14 @@
       "evidence": "Abstract: restores the texture stages the effect changed. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HardwareUnlitEffect.disable(I)V"
+    },
+    {
+      "symbol": "M:vta.a(III)Z",
+      "originalName": "a",
+      "to": "requiresNormalStream",
+      "evidence": "HardwareModel constructor/copy uses this decision for whether normal stream Ois required. Native copyNormals establishes role. Preserve full-int!=2048settings/packet-reading helper call BEFORE masks,then short-circuit request2048and source55tests;do not treat helper guard as unused or remove side effects. Complete original-body SHA256 d88e6acb1bfa3b06f635a8e3c2eeea40d5958b2cb7fb546ecaf9bb69e1e05100. Naming only. Complete original bodies,all56bound incoming calls,170field declarations/170owned,twenty-four supporting classes and20unchanged model-storage/axis/pointer/buffer witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareUnlitEffect.requiresNormalStream(III)Z"
     },
     {
       "symbol": "M:vta.a(ILiva;I)V",
@@ -223220,7 +223540,7 @@
     },
     {
       "symbol": "L:cu.a(III)Z#0",
-      "renamedSymbol": "L:DamageableBehaviour.a(III)Z#0",
+      "renamedSymbol": "L:DamageableBehaviour.requiresCpuVertexZ(III)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -228324,7 +228644,7 @@
     },
     {
       "symbol": "L:dba.a(III)Z#0",
-      "renamedSymbol": "L:C2SSubmitSettingsPacket.a(III)Z#0",
+      "renamedSymbol": "L:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#0",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -228335,7 +228655,7 @@
     },
     {
       "symbol": "L:dba.a(III)Z#1",
-      "renamedSymbol": "L:C2SSubmitSettingsPacket.a(III)Z#1",
+      "renamedSymbol": "L:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -228346,7 +228666,7 @@
     },
     {
       "symbol": "L:dba.a(III)Z#2",
-      "renamedSymbol": "L:C2SSubmitSettingsPacket.a(III)Z#2",
+      "renamedSymbol": "L:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#2",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -228357,7 +228677,7 @@
     },
     {
       "symbol": "L:dba.a(III)Z#3",
-      "renamedSymbol": "L:C2SSubmitSettingsPacket.a(III)Z#3",
+      "renamedSymbol": "L:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -228368,7 +228688,7 @@
     },
     {
       "symbol": "L:dba.a(III)Z#4",
-      "renamedSymbol": "L:C2SSubmitSettingsPacket.a(III)Z#4",
+      "renamedSymbol": "L:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -228379,7 +228699,7 @@
     },
     {
       "symbol": "L:dba.a(III)Z#5",
-      "renamedSymbol": "L:C2SSubmitSettingsPacket.a(III)Z#5",
+      "renamedSymbol": "L:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#5",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -239830,7 +240150,7 @@
     },
     {
       "symbol": "L:eba.a(Z)Z#0",
-      "renamedSymbol": "L:SoftCacheEntry.a(Z)Z#0",
+      "renamedSymbol": "L:SoftCacheEntry.isQuickChatOverlayOpen(Z)Z#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -279848,7 +280168,7 @@
     },
     {
       "symbol": "L:gda.b(III)Z#0",
-      "renamedSymbol": "L:Transform3D.b(III)Z#0",
+      "renamedSymbol": "L:Transform3D.requiresCpuFaceAlpha(III)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -279859,7 +280179,7 @@
     },
     {
       "symbol": "L:gda.b(III)Z#1",
-      "renamedSymbol": "L:Transform3D.b(III)Z#1",
+      "renamedSymbol": "L:Transform3D.requiresCpuFaceAlpha(III)Z#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -279870,7 +280190,7 @@
     },
     {
       "symbol": "L:gda.b(III)Z#2",
-      "renamedSymbol": "L:Transform3D.b(III)Z#2",
+      "renamedSymbol": "L:Transform3D.requiresCpuFaceAlpha(III)Z#2",
       "originalName": "stackIn_3_1",
       "renamedName": "stackIn_3_1",
       "declaration": {
@@ -279881,7 +280201,7 @@
     },
     {
       "symbol": "L:gda.b(III)Z#3",
-      "renamedSymbol": "L:Transform3D.b(III)Z#3",
+      "renamedSymbol": "L:Transform3D.requiresCpuFaceAlpha(III)Z#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -290485,7 +290805,7 @@
     },
     {
       "symbol": "L:gl.a(ZZB)V#0",
-      "renamedSymbol": "L:LegacyOpenGlFlowingWaterEffect.a(ZZB)V#0",
+      "renamedSymbol": "L:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -290496,7 +290816,7 @@
     },
     {
       "symbol": "L:gl.a(ZZB)V#1",
-      "renamedSymbol": "L:LegacyOpenGlFlowingWaterEffect.a(ZZB)V#1",
+      "renamedSymbol": "L:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -314905,7 +315225,7 @@
     },
     {
       "symbol": "L:hs.a(ZB)V#0",
-      "renamedSymbol": "L:TextureFilter.a(ZB)V#0",
+      "renamedSymbol": "L:TextureFilter.drawQuickChatHelp(ZB)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -336091,7 +336411,7 @@
     },
     {
       "symbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#0",
-      "renamedSymbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#0",
+      "renamedSymbol": "L:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -336102,7 +336422,7 @@
     },
     {
       "symbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#1",
-      "renamedSymbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#1",
+      "renamedSymbol": "L:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -336113,7 +336433,7 @@
     },
     {
       "symbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#2",
-      "renamedSymbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#2",
+      "renamedSymbol": "L:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z#2",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -336124,7 +336444,7 @@
     },
     {
       "symbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#3",
-      "renamedSymbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#3",
+      "renamedSymbol": "L:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -336135,7 +336455,7 @@
     },
     {
       "symbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#4",
-      "renamedSymbol": "L:jaggl.OpenGL.a(Ljava/lang/String;)Z#4",
+      "renamedSymbol": "L:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -337312,7 +337632,7 @@
     },
     {
       "symbol": "L:jc.c(III)Z#0",
-      "renamedSymbol": "L:SimpleHoverMountComponent.c(III)Z#0",
+      "renamedSymbol": "L:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -337323,7 +337643,7 @@
     },
     {
       "symbol": "L:jc.c(III)Z#1",
-      "renamedSymbol": "L:SimpleHoverMountComponent.c(III)Z#1",
+      "renamedSymbol": "L:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#1",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -337334,7 +337654,7 @@
     },
     {
       "symbol": "L:jc.c(III)Z#2",
-      "renamedSymbol": "L:SimpleHoverMountComponent.c(III)Z#2",
+      "renamedSymbol": "L:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -337345,7 +337665,7 @@
     },
     {
       "symbol": "L:jc.c(III)Z#3",
-      "renamedSymbol": "L:SimpleHoverMountComponent.c(III)Z#3",
+      "renamedSymbol": "L:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -337356,7 +337676,7 @@
     },
     {
       "symbol": "L:jc.c(III)Z#4",
-      "renamedSymbol": "L:SimpleHoverMountComponent.c(III)Z#4",
+      "renamedSymbol": "L:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -337367,7 +337687,7 @@
     },
     {
       "symbol": "L:jc.c(III)Z#5",
-      "renamedSymbol": "L:SimpleHoverMountComponent.c(III)Z#5",
+      "renamedSymbol": "L:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#5",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -394193,7 +394513,7 @@
     },
     {
       "symbol": "L:lva.a(IBI)Z#0",
-      "renamedSymbol": "L:PerlinNoise2D.a(IBI)Z#0",
+      "renamedSymbol": "L:PerlinNoise2D.requiresCpuTexCoords(IBI)Z#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -429437,7 +429757,7 @@
     },
     {
       "symbol": "L:oea.a(IIB)Z#0",
-      "renamedSymbol": "L:RenderableNode.a(IIB)Z#0",
+      "renamedSymbol": "L:RenderableNode.requiresCpuNormals(IIB)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -449006,7 +449326,7 @@
     },
     {
       "symbol": "L:pt.a(III)Z#0",
-      "renamedSymbol": "L:FacePlayerLocomotor.a(III)Z#0",
+      "renamedSymbol": "L:FacePlayerLocomotor.requiresCpuVertexY(III)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -467365,7 +467685,7 @@
     },
     {
       "symbol": "L:qr.c(III)Z#0",
-      "renamedSymbol": "L:SingleChildWidget.c(III)Z#0",
+      "renamedSymbol": "L:SingleChildWidget.requiresCpuVertexY(III)Z#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -467376,7 +467696,7 @@
     },
     {
       "symbol": "L:qr.c(III)Z#1",
-      "renamedSymbol": "L:SingleChildWidget.c(III)Z#1",
+      "renamedSymbol": "L:SingleChildWidget.requiresCpuVertexY(III)Z#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -505744,7 +506064,7 @@
     },
     {
       "symbol": "L:so.a(IBI)Z#0",
-      "renamedSymbol": "L:ValidatedTextInputWidget.a(IBI)Z#0",
+      "renamedSymbol": "L:ValidatedTextInputWidget.requiresPositionPointerCopy(IBI)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -517470,7 +517790,7 @@
     },
     {
       "symbol": "L:th.b(III)Z#0",
-      "renamedSymbol": "L:WindZoneBehaviour.b(III)Z#0",
+      "renamedSymbol": "L:WindZoneBehaviour.requiresCpuFaceColours(III)Z#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -520957,7 +521277,7 @@
     },
     {
       "symbol": "L:tp.a(IBI)Z#0",
-      "renamedSymbol": "L:WhiteLightShooterComponent.a(IBI)Z#0",
+      "renamedSymbol": "L:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -520968,7 +521288,7 @@
     },
     {
       "symbol": "L:tp.a(IBI)Z#1",
-      "renamedSymbol": "L:WhiteLightShooterComponent.a(IBI)Z#1",
+      "renamedSymbol": "L:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -531473,7 +531793,7 @@
     },
     {
       "symbol": "L:ug.r(I)V#0",
-      "renamedSymbol": "L:AppletGameShell.r(I)V#0",
+      "renamedSymbol": "L:AppletGameShell.tickLoginAndLogo(I)V#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -531484,7 +531804,7 @@
     },
     {
       "symbol": "L:ug.r(I)V#1",
-      "renamedSymbol": "L:AppletGameShell.r(I)V#1",
+      "renamedSymbol": "L:AppletGameShell.tickLoginAndLogo(I)V#1",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -531495,7 +531815,7 @@
     },
     {
       "symbol": "L:ug.r(I)V#2",
-      "renamedSymbol": "L:AppletGameShell.r(I)V#2",
+      "renamedSymbol": "L:AppletGameShell.tickLoginAndLogo(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -542451,7 +542771,7 @@
     },
     {
       "symbol": "L:uw.a(III)Z#0",
-      "renamedSymbol": "L:RenderScene.a(III)Z#0",
+      "renamedSymbol": "L:RenderScene.requiresCpuFaceTextures(III)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -542462,7 +542782,7 @@
     },
     {
       "symbol": "L:uw.a(III)Z#1",
-      "renamedSymbol": "L:RenderScene.a(III)Z#1",
+      "renamedSymbol": "L:RenderScene.requiresCpuFaceTextures(III)Z#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -542473,7 +542793,7 @@
     },
     {
       "symbol": "L:uw.a(III)Z#2",
-      "renamedSymbol": "L:RenderScene.a(III)Z#2",
+      "renamedSymbol": "L:RenderScene.requiresCpuFaceTextures(III)Z#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -566860,7 +567180,7 @@
     },
     {
       "symbol": "L:vta.a(III)Z#0",
-      "renamedSymbol": "L:HardwareUnlitEffect.a(III)Z#0",
+      "renamedSymbol": "L:HardwareUnlitEffect.requiresNormalStream(III)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -589927,9 +590247,9 @@
     },
     {
       "symbol": "M:ae.a(III)Z",
-      "renamedSymbol": "M:UiWidget.a(III)Z",
+      "renamedSymbol": "M:UiWidget.requiresOpenGlCpuTriangleIndices(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresOpenGlCpuTriangleIndices",
       "declaration": {
         "file": "ae.java",
         "start": 16709,
@@ -603171,9 +603491,9 @@
     },
     {
       "symbol": "M:cu.a(III)Z",
-      "renamedSymbol": "M:DamageableBehaviour.a(III)Z",
+      "renamedSymbol": "M:DamageableBehaviour.requiresCpuVertexZ(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuVertexZ",
       "declaration": {
         "file": "cu.java",
         "start": 10615,
@@ -604557,9 +604877,9 @@
     },
     {
       "symbol": "M:dba.a(III)Z",
-      "renamedSymbol": "M:C2SSubmitSettingsPacket.a(III)Z",
+      "renamedSymbol": "M:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuNormals",
       "declaration": {
         "file": "dba.java",
         "start": 1829,
@@ -607945,9 +608265,9 @@
     },
     {
       "symbol": "M:dw.b(B)V",
-      "renamedSymbol": "M:TextureMetadata.b(B)V",
+      "renamedSymbol": "M:TextureMetadata.beginReconnectLogin(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "beginReconnectLogin",
       "declaration": {
         "file": "dw.java",
         "start": 650,
@@ -608231,9 +608551,9 @@
     },
     {
       "symbol": "M:eba.a(Z)Z",
-      "renamedSymbol": "M:SoftCacheEntry.a(Z)Z",
+      "renamedSymbol": "M:SoftCacheEntry.isQuickChatOverlayOpen(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isQuickChatOverlayOpen",
       "declaration": {
         "file": "eba.java",
         "start": 4804,
@@ -613192,9 +613512,9 @@
     },
     {
       "symbol": "M:et.a(Z)V",
-      "renamedSymbol": "M:MidiVoiceMixer.a(Z)V",
+      "renamedSymbol": "M:MidiVoiceMixer.showReconnectProgress(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showReconnectProgress",
       "declaration": {
         "file": "et.java",
         "start": 1391,
@@ -616459,9 +616779,9 @@
     },
     {
       "symbol": "M:foa.a(B)Z",
-      "renamedSymbol": "M:S2CRoundDeadlinePacket.a(B)Z",
+      "renamedSymbol": "M:S2CRoundDeadlinePacket.isReconnectLogin(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isReconnectLogin",
       "declaration": {
         "file": "foa.java",
         "start": 781,
@@ -619957,9 +620277,9 @@
     },
     {
       "symbol": "M:gda.b(III)Z",
-      "renamedSymbol": "M:Transform3D.b(III)Z",
+      "renamedSymbol": "M:Transform3D.requiresCpuFaceAlpha(III)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requiresCpuFaceAlpha",
       "declaration": {
         "file": "gda.java",
         "start": 2194,
@@ -621310,9 +621630,9 @@
     },
     {
       "symbol": "M:gl.a(ZZB)V",
-      "renamedSymbol": "M:LegacyOpenGlFlowingWaterEffect.a(ZZB)V",
+      "renamedSymbol": "M:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openLoginForm",
       "declaration": {
         "file": "gl.java",
         "start": 4907,
@@ -625831,9 +626151,9 @@
     },
     {
       "symbol": "M:hh.a(IBI)Z",
-      "renamedSymbol": "M:FullscreenUiDrawing.a(IBI)Z",
+      "renamedSymbol": "M:FullscreenUiDrawing.requiresTexCoordArrayCopy(IBI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresTexCoordArrayCopy",
       "declaration": {
         "file": "hh.java",
         "start": 169,
@@ -627778,9 +628098,9 @@
     },
     {
       "symbol": "M:hs.a(ZB)V",
-      "renamedSymbol": "M:TextureFilter.a(ZB)V",
+      "renamedSymbol": "M:TextureFilter.drawQuickChatHelp(ZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawQuickChatHelp",
       "declaration": {
         "file": "hs.java",
         "start": 1492,
@@ -630253,9 +630573,9 @@
     },
     {
       "symbol": "M:in.a(IIB)Z",
-      "renamedSymbol": "M:StringCursor.a(IIB)Z",
+      "renamedSymbol": "M:StringCursor.requiresCpuFaceTextures(IIB)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuFaceTextures",
       "declaration": {
         "file": "in.java",
         "start": 4653,
@@ -634763,9 +635083,9 @@
     },
     {
       "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
-      "renamedSymbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+      "renamedSymbol": "M:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isExtensionAvailable",
       "declaration": {
         "file": "jaggl/OpenGL.java",
         "start": 1019,
@@ -637084,9 +637404,9 @@
     },
     {
       "symbol": "M:jc.c(III)Z",
-      "renamedSymbol": "M:SimpleHoverMountComponent.c(III)Z",
+      "renamedSymbol": "M:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "requiresCpuVertexZ",
       "declaration": {
         "file": "jc.java",
         "start": 10920,
@@ -637249,9 +637569,9 @@
     },
     {
       "symbol": "M:jda.a(ZI)V",
-      "renamedSymbol": "M:GreyscaleOperator.a(ZI)V",
+      "renamedSymbol": "M:GreyscaleOperator.openLoginFormWithRegistrationOption(ZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openLoginFormWithRegistrationOption",
       "declaration": {
         "file": "jda.java",
         "start": 114,
@@ -637271,9 +637591,9 @@
     },
     {
       "symbol": "M:jda.d(III)Z",
-      "renamedSymbol": "M:GreyscaleOperator.d(III)Z",
+      "renamedSymbol": "M:GreyscaleOperator.requiresCpuFaceAlpha(III)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "requiresCpuFaceAlpha",
       "declaration": {
         "file": "jda.java",
         "start": 336,
@@ -640648,9 +640968,9 @@
     },
     {
       "symbol": "M:jta.a(ZZ)V",
-      "renamedSymbol": "M:DialogStack.a(ZZ)V",
+      "renamedSymbol": "M:DialogStack.processQuickChatHelp(ZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processQuickChatHelp",
       "declaration": {
         "file": "jta.java",
         "start": 1621,
@@ -641363,9 +641683,9 @@
     },
     {
       "symbol": "M:kb.a(IZ)V",
-      "renamedSymbol": "M:ScoreSubmission.a(IZ)V",
+      "renamedSymbol": "M:ScoreSubmission.completeAvailabilityQuery(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "completeAvailabilityQuery",
       "declaration": {
         "file": "kb.java",
         "start": 2705,
@@ -650570,9 +650890,9 @@
     },
     {
       "symbol": "M:lva.a(IBI)Z",
-      "renamedSymbol": "M:PerlinNoise2D.a(IBI)Z",
+      "renamedSymbol": "M:PerlinNoise2D.requiresCpuTexCoords(IBI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuTexCoords",
       "declaration": {
         "file": "lva.java",
         "start": 9268,
@@ -654772,9 +655092,9 @@
     },
     {
       "symbol": "M:nd.b(B)Z",
-      "renamedSymbol": "M:NodeHashTableIterator.b(B)Z",
+      "renamedSymbol": "M:NodeHashTableIterator.isAvailabilityQueryPending(B)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "isAvailabilityQueryPending",
       "declaration": {
         "file": "nd.java",
         "start": 219,
@@ -656422,9 +656742,9 @@
     },
     {
       "symbol": "M:no.a(III)Z",
-      "renamedSymbol": "M:AchievementNotificationOverlay.a(III)Z",
+      "renamedSymbol": "M:AchievementNotificationOverlay.requiresColourStreamCopy(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresColourStreamCopy",
       "declaration": {
         "file": "no.java",
         "start": 7361,
@@ -659524,9 +659844,9 @@
     },
     {
       "symbol": "M:oba.c(III)Z",
-      "renamedSymbol": "M:OpenGlTransform3D.c(III)Z",
+      "renamedSymbol": "M:OpenGlTransform3D.requiresNormalStreamCopy(III)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "requiresNormalStreamCopy",
       "declaration": {
         "file": "oba.java",
         "start": 971,
@@ -659832,9 +660152,9 @@
     },
     {
       "symbol": "M:oea.a(IIB)Z",
-      "renamedSymbol": "M:RenderableNode.a(IIB)Z",
+      "renamedSymbol": "M:RenderableNode.requiresCpuNormals(IIB)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuNormals",
       "declaration": {
         "file": "oea.java",
         "start": 245,
@@ -664353,9 +664673,9 @@
     },
     {
       "symbol": "M:pg.b(Z)V",
-      "renamedSymbol": "M:TermsLinksPanel.b(Z)V",
+      "renamedSymbol": "M:TermsLinksPanel.openGuestLoginWithRegistration(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "openGuestLoginWithRegistration",
       "declaration": {
         "file": "pg.java",
         "start": 286,
@@ -666267,9 +666587,9 @@
     },
     {
       "symbol": "M:pt.a(III)Z",
-      "renamedSymbol": "M:FacePlayerLocomotor.a(III)Z",
+      "renamedSymbol": "M:FacePlayerLocomotor.requiresCpuVertexY(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuVertexY",
       "declaration": {
         "file": "pt.java",
         "start": 1048,
@@ -666729,9 +667049,9 @@
     },
     {
       "symbol": "M:pw.C(I)V",
-      "renamedSymbol": "M:PressureSwitchComponent.C(I)V",
+      "renamedSymbol": "M:PressureSwitchComponent.advanceLogoAnimation(I)V",
       "originalName": "C",
-      "renamedName": "C",
+      "renamedName": "advanceLogoAnimation",
       "declaration": {
         "file": "pw.java",
         "start": 2831,
@@ -670601,9 +670921,9 @@
     },
     {
       "symbol": "M:qr.c(III)Z",
-      "renamedSymbol": "M:SingleChildWidget.c(III)Z",
+      "renamedSymbol": "M:SingleChildWidget.requiresCpuVertexY(III)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "requiresCpuVertexY",
       "declaration": {
         "file": "qr.java",
         "start": 386,
@@ -677883,9 +678203,9 @@
     },
     {
       "symbol": "M:sm.a(III)Z",
-      "renamedSymbol": "M:KeyLockBehaviour.a(III)Z",
+      "renamedSymbol": "M:KeyLockBehaviour.requiresCpuFaceColours(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuFaceColours",
       "declaration": {
         "file": "sm.java",
         "start": 3797,
@@ -678246,9 +678566,9 @@
     },
     {
       "symbol": "M:so.a(IBI)Z",
-      "renamedSymbol": "M:ValidatedTextInputWidget.a(IBI)Z",
+      "renamedSymbol": "M:ValidatedTextInputWidget.requiresPositionPointerCopy(IBI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresPositionPointerCopy",
       "declaration": {
         "file": "so.java",
         "start": 3204,
@@ -678752,9 +679072,9 @@
     },
     {
       "symbol": "M:sr.a(I)Z",
-      "renamedSymbol": "M:MessagePage.a(I)Z",
+      "renamedSymbol": "M:MessagePage.isSelectionMenuActive(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isSelectionMenuActive",
       "declaration": {
         "file": "sr.java",
         "start": 4722,
@@ -681216,9 +681536,9 @@
     },
     {
       "symbol": "M:th.b(III)Z",
-      "renamedSymbol": "M:WindZoneBehaviour.b(III)Z",
+      "renamedSymbol": "M:WindZoneBehaviour.requiresCpuFaceColours(III)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requiresCpuFaceColours",
       "declaration": {
         "file": "th.java",
         "start": 6908,
@@ -681381,9 +681701,9 @@
     },
     {
       "symbol": "M:tia.b(III)Z",
-      "renamedSymbol": "M:FixedAngleTrigonometry.b(III)Z",
+      "renamedSymbol": "M:FixedAngleTrigonometry.requiresIndexBufferCopy(III)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requiresIndexBufferCopy",
       "declaration": {
         "file": "tia.java",
         "start": 2991,
@@ -682041,9 +682361,9 @@
     },
     {
       "symbol": "M:tp.a(IBI)Z",
-      "renamedSymbol": "M:WhiteLightShooterComponent.a(IBI)Z",
+      "renamedSymbol": "M:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuVertexX",
       "declaration": {
         "file": "tp.java",
         "start": 2020,
@@ -683196,9 +683516,9 @@
     },
     {
       "symbol": "M:tta.e(Z)V",
-      "renamedSymbol": "M:KeyItemComponent.e(Z)V",
+      "renamedSymbol": "M:KeyItemComponent.openGuestLogin(Z)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "openGuestLogin",
       "declaration": {
         "file": "tta.java",
         "start": 115,
@@ -684824,9 +685144,9 @@
     },
     {
       "symbol": "M:ug.r(I)V",
-      "renamedSymbol": "M:AppletGameShell.r(I)V",
+      "renamedSymbol": "M:AppletGameShell.tickLoginAndLogo(I)V",
       "originalName": "r",
-      "renamedName": "r",
+      "renamedName": "tickLoginAndLogo",
       "declaration": {
         "file": "ug.java",
         "start": 16441,
@@ -686958,9 +687278,9 @@
     },
     {
       "symbol": "M:upa.a(III)Z",
-      "renamedSymbol": "M:RatingTable.a(III)Z",
+      "renamedSymbol": "M:RatingTable.requiresTexCoordPointerCopy(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresTexCoordPointerCopy",
       "declaration": {
         "file": "upa.java",
         "start": 4575,
@@ -687860,9 +688180,9 @@
     },
     {
       "symbol": "M:uu.a(ZII)Z",
-      "renamedSymbol": "M:C2SChooseRewardPacket.a(ZII)Z",
+      "renamedSymbol": "M:C2SChooseRewardPacket.requiresPositionStreamCopy(ZII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresPositionStreamCopy",
       "declaration": {
         "file": "uu.java",
         "start": 167,
@@ -687981,9 +688301,9 @@
     },
     {
       "symbol": "M:uv.a(III)Z",
-      "renamedSymbol": "M:LegacyOpenGlBloomEffect.a(III)Z",
+      "renamedSymbol": "M:LegacyOpenGlBloomEffect.requiresCpuVertexX(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuVertexX",
       "declaration": {
         "file": "uv.java",
         "start": 18848,
@@ -688135,9 +688455,9 @@
     },
     {
       "symbol": "M:uw.a(III)Z",
-      "renamedSymbol": "M:RenderScene.a(III)Z",
+      "renamedSymbol": "M:RenderScene.requiresCpuFaceTextures(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresCpuFaceTextures",
       "declaration": {
         "file": "uw.java",
         "start": 1103,
@@ -691974,9 +692294,9 @@
     },
     {
       "symbol": "M:vta.a(III)Z",
-      "renamedSymbol": "M:HardwareUnlitEffect.a(III)Z",
+      "renamedSymbol": "M:HardwareUnlitEffect.requiresNormalStream(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresNormalStream",
       "declaration": {
         "file": "vta.java",
         "start": 799,
@@ -699267,7 +699587,7 @@
     },
     {
       "symbol": "P:ae.a(III)Z#0",
-      "renamedSymbol": "P:UiWidget.a(III)Z#0",
+      "renamedSymbol": "P:UiWidget.requiresOpenGlCpuTriangleIndices(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -699278,7 +699598,7 @@
     },
     {
       "symbol": "P:ae.a(III)Z#1",
-      "renamedSymbol": "P:UiWidget.a(III)Z#1",
+      "renamedSymbol": "P:UiWidget.requiresOpenGlCpuTriangleIndices(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -699289,7 +699609,7 @@
     },
     {
       "symbol": "P:ae.a(III)Z#2",
-      "renamedSymbol": "P:UiWidget.a(III)Z#2",
+      "renamedSymbol": "P:UiWidget.requiresOpenGlCpuTriangleIndices(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -728516,7 +728836,7 @@
     },
     {
       "symbol": "P:cu.a(III)Z#0",
-      "renamedSymbol": "P:DamageableBehaviour.a(III)Z#0",
+      "renamedSymbol": "P:DamageableBehaviour.requiresCpuVertexZ(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -728527,7 +728847,7 @@
     },
     {
       "symbol": "P:cu.a(III)Z#1",
-      "renamedSymbol": "P:DamageableBehaviour.a(III)Z#1",
+      "renamedSymbol": "P:DamageableBehaviour.requiresCpuVertexZ(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -728538,7 +728858,7 @@
     },
     {
       "symbol": "P:cu.a(III)Z#2",
-      "renamedSymbol": "P:DamageableBehaviour.a(III)Z#2",
+      "renamedSymbol": "P:DamageableBehaviour.requiresCpuVertexZ(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -731959,7 +732279,7 @@
     },
     {
       "symbol": "P:dba.a(III)Z#0",
-      "renamedSymbol": "P:C2SSubmitSettingsPacket.a(III)Z#0",
+      "renamedSymbol": "P:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -731970,7 +732290,7 @@
     },
     {
       "symbol": "P:dba.a(III)Z#1",
-      "renamedSymbol": "P:C2SSubmitSettingsPacket.a(III)Z#1",
+      "renamedSymbol": "P:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -731981,7 +732301,7 @@
     },
     {
       "symbol": "P:dba.a(III)Z#2",
-      "renamedSymbol": "P:C2SSubmitSettingsPacket.a(III)Z#2",
+      "renamedSymbol": "P:C2SSubmitSettingsPacket.requiresCpuNormals(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -738702,7 +739022,7 @@
     },
     {
       "symbol": "P:dw.b(B)V#0",
-      "renamedSymbol": "P:TextureMetadata.b(B)V#0",
+      "renamedSymbol": "P:TextureMetadata.beginReconnectLogin(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -739208,7 +739528,7 @@
     },
     {
       "symbol": "P:eba.a(Z)Z#0",
-      "renamedSymbol": "P:SoftCacheEntry.a(Z)Z#0",
+      "renamedSymbol": "P:SoftCacheEntry.isQuickChatOverlayOpen(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -749812,7 +750132,7 @@
     },
     {
       "symbol": "P:et.a(Z)V#0",
-      "renamedSymbol": "P:MidiVoiceMixer.a(Z)V#0",
+      "renamedSymbol": "P:MidiVoiceMixer.showReconnectProgress(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -756852,7 +757172,7 @@
     },
     {
       "symbol": "P:foa.a(B)Z#0",
-      "renamedSymbol": "P:S2CRoundDeadlinePacket.a(B)Z#0",
+      "renamedSymbol": "P:S2CRoundDeadlinePacket.isReconnectLogin(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -763837,7 +764157,7 @@
     },
     {
       "symbol": "P:gda.b(III)Z#0",
-      "renamedSymbol": "P:Transform3D.b(III)Z#0",
+      "renamedSymbol": "P:Transform3D.requiresCpuFaceAlpha(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -763848,7 +764168,7 @@
     },
     {
       "symbol": "P:gda.b(III)Z#1",
-      "renamedSymbol": "P:Transform3D.b(III)Z#1",
+      "renamedSymbol": "P:Transform3D.requiresCpuFaceAlpha(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -763859,7 +764179,7 @@
     },
     {
       "symbol": "P:gda.b(III)Z#2",
-      "renamedSymbol": "P:Transform3D.b(III)Z#2",
+      "renamedSymbol": "P:Transform3D.requiresCpuFaceAlpha(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -766752,7 +767072,7 @@
     },
     {
       "symbol": "P:gl.a(ZZB)V#0",
-      "renamedSymbol": "P:LegacyOpenGlFlowingWaterEffect.a(ZZB)V#0",
+      "renamedSymbol": "P:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -766763,7 +767083,7 @@
     },
     {
       "symbol": "P:gl.a(ZZB)V#1",
-      "renamedSymbol": "P:LegacyOpenGlFlowingWaterEffect.a(ZZB)V#1",
+      "renamedSymbol": "P:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -766774,7 +767094,7 @@
     },
     {
       "symbol": "P:gl.a(ZZB)V#2",
-      "renamedSymbol": "P:LegacyOpenGlFlowingWaterEffect.a(ZZB)V#2",
+      "renamedSymbol": "P:LegacyOpenGlFlowingWaterEffect.openLoginForm(ZZB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -776762,7 +777082,7 @@
     },
     {
       "symbol": "P:hh.a(IBI)Z#0",
-      "renamedSymbol": "P:FullscreenUiDrawing.a(IBI)Z#0",
+      "renamedSymbol": "P:FullscreenUiDrawing.requiresTexCoordArrayCopy(IBI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -776773,7 +777093,7 @@
     },
     {
       "symbol": "P:hh.a(IBI)Z#1",
-      "renamedSymbol": "P:FullscreenUiDrawing.a(IBI)Z#1",
+      "renamedSymbol": "P:FullscreenUiDrawing.requiresTexCoordArrayCopy(IBI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -776784,7 +777104,7 @@
     },
     {
       "symbol": "P:hh.a(IBI)Z#2",
-      "renamedSymbol": "P:FullscreenUiDrawing.a(IBI)Z#2",
+      "renamedSymbol": "P:FullscreenUiDrawing.requiresTexCoordArrayCopy(IBI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -781492,7 +781812,7 @@
     },
     {
       "symbol": "P:hs.a(ZB)V#0",
-      "renamedSymbol": "P:TextureFilter.a(ZB)V#0",
+      "renamedSymbol": "P:TextureFilter.drawQuickChatHelp(ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -781503,7 +781823,7 @@
     },
     {
       "symbol": "P:hs.a(ZB)V#1",
-      "renamedSymbol": "P:TextureFilter.a(ZB)V#1",
+      "renamedSymbol": "P:TextureFilter.drawQuickChatHelp(ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -788015,7 +788335,7 @@
     },
     {
       "symbol": "P:in.a(IIB)Z#0",
-      "renamedSymbol": "P:StringCursor.a(IIB)Z#0",
+      "renamedSymbol": "P:StringCursor.requiresCpuFaceTextures(IIB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -788026,7 +788346,7 @@
     },
     {
       "symbol": "P:in.a(IIB)Z#1",
-      "renamedSymbol": "P:StringCursor.a(IIB)Z#1",
+      "renamedSymbol": "P:StringCursor.requiresCpuFaceTextures(IIB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -788037,7 +788357,7 @@
     },
     {
       "symbol": "P:in.a(IIB)Z#2",
-      "renamedSymbol": "P:StringCursor.a(IIB)Z#2",
+      "renamedSymbol": "P:StringCursor.requiresCpuFaceTextures(IIB)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -801820,7 +802140,7 @@
     },
     {
       "symbol": "P:jaggl.OpenGL.a(Ljava/lang/String;)Z#0",
-      "renamedSymbol": "P:jaggl.OpenGL.a(Ljava/lang/String;)Z#0",
+      "renamedSymbol": "P:jaggl.OpenGL.isExtensionAvailable(Ljava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808541,7 +808861,7 @@
     },
     {
       "symbol": "P:jc.c(III)Z#0",
-      "renamedSymbol": "P:SimpleHoverMountComponent.c(III)Z#0",
+      "renamedSymbol": "P:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808552,7 +808872,7 @@
     },
     {
       "symbol": "P:jc.c(III)Z#1",
-      "renamedSymbol": "P:SimpleHoverMountComponent.c(III)Z#1",
+      "renamedSymbol": "P:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -808563,7 +808883,7 @@
     },
     {
       "symbol": "P:jc.c(III)Z#2",
-      "renamedSymbol": "P:SimpleHoverMountComponent.c(III)Z#2",
+      "renamedSymbol": "P:SimpleHoverMountComponent.requiresCpuVertexZ(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -808805,7 +809125,7 @@
     },
     {
       "symbol": "P:jda.a(ZI)V#0",
-      "renamedSymbol": "P:GreyscaleOperator.a(ZI)V#0",
+      "renamedSymbol": "P:GreyscaleOperator.openLoginFormWithRegistrationOption(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808816,7 +809136,7 @@
     },
     {
       "symbol": "P:jda.a(ZI)V#1",
-      "renamedSymbol": "P:GreyscaleOperator.a(ZI)V#1",
+      "renamedSymbol": "P:GreyscaleOperator.openLoginFormWithRegistrationOption(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -808849,7 +809169,7 @@
     },
     {
       "symbol": "P:jda.d(III)Z#0",
-      "renamedSymbol": "P:GreyscaleOperator.d(III)Z#0",
+      "renamedSymbol": "P:GreyscaleOperator.requiresCpuFaceAlpha(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808860,7 +809180,7 @@
     },
     {
       "symbol": "P:jda.d(III)Z#1",
-      "renamedSymbol": "P:GreyscaleOperator.d(III)Z#1",
+      "renamedSymbol": "P:GreyscaleOperator.requiresCpuFaceAlpha(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -808871,7 +809191,7 @@
     },
     {
       "symbol": "P:jda.d(III)Z#2",
-      "renamedSymbol": "P:GreyscaleOperator.d(III)Z#2",
+      "renamedSymbol": "P:GreyscaleOperator.requiresCpuFaceAlpha(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -816252,7 +816572,7 @@
     },
     {
       "symbol": "P:jta.a(ZZ)V#0",
-      "renamedSymbol": "P:DialogStack.a(ZZ)V#0",
+      "renamedSymbol": "P:DialogStack.processQuickChatHelp(ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -816263,7 +816583,7 @@
     },
     {
       "symbol": "P:jta.a(ZZ)V#1",
-      "renamedSymbol": "P:DialogStack.a(ZZ)V#1",
+      "renamedSymbol": "P:DialogStack.processQuickChatHelp(ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -818078,7 +818398,7 @@
     },
     {
       "symbol": "P:kb.a(IZ)V#0",
-      "renamedSymbol": "P:ScoreSubmission.a(IZ)V#0",
+      "renamedSymbol": "P:ScoreSubmission.completeAvailabilityQuery(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -818089,7 +818409,7 @@
     },
     {
       "symbol": "P:kb.a(IZ)V#1",
-      "renamedSymbol": "P:ScoreSubmission.a(IZ)V#1",
+      "renamedSymbol": "P:ScoreSubmission.completeAvailabilityQuery(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -839044,7 +839364,7 @@
     },
     {
       "symbol": "P:lva.a(IBI)Z#0",
-      "renamedSymbol": "P:PerlinNoise2D.a(IBI)Z#0",
+      "renamedSymbol": "P:PerlinNoise2D.requiresCpuTexCoords(IBI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -839055,7 +839375,7 @@
     },
     {
       "symbol": "P:lva.a(IBI)Z#1",
-      "renamedSymbol": "P:PerlinNoise2D.a(IBI)Z#1",
+      "renamedSymbol": "P:PerlinNoise2D.requiresCpuTexCoords(IBI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -839066,7 +839386,7 @@
     },
     {
       "symbol": "P:lva.a(IBI)Z#2",
-      "renamedSymbol": "P:PerlinNoise2D.a(IBI)Z#2",
+      "renamedSymbol": "P:PerlinNoise2D.requiresCpuTexCoords(IBI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -847723,7 +848043,7 @@
     },
     {
       "symbol": "P:nd.b(B)Z#0",
-      "renamedSymbol": "P:NodeHashTableIterator.b(B)Z#0",
+      "renamedSymbol": "P:NodeHashTableIterator.isAvailabilityQueryPending(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -851639,7 +851959,7 @@
     },
     {
       "symbol": "P:no.a(III)Z#0",
-      "renamedSymbol": "P:AchievementNotificationOverlay.a(III)Z#0",
+      "renamedSymbol": "P:AchievementNotificationOverlay.requiresColourStreamCopy(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -851650,7 +851970,7 @@
     },
     {
       "symbol": "P:no.a(III)Z#1",
-      "renamedSymbol": "P:AchievementNotificationOverlay.a(III)Z#1",
+      "renamedSymbol": "P:AchievementNotificationOverlay.requiresColourStreamCopy(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -851661,7 +851981,7 @@
     },
     {
       "symbol": "P:no.a(III)Z#2",
-      "renamedSymbol": "P:AchievementNotificationOverlay.a(III)Z#2",
+      "renamedSymbol": "P:AchievementNotificationOverlay.requiresColourStreamCopy(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -859482,7 +859802,7 @@
     },
     {
       "symbol": "P:oba.c(III)Z#0",
-      "renamedSymbol": "P:OpenGlTransform3D.c(III)Z#0",
+      "renamedSymbol": "P:OpenGlTransform3D.requiresNormalStreamCopy(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -859493,7 +859813,7 @@
     },
     {
       "symbol": "P:oba.c(III)Z#1",
-      "renamedSymbol": "P:OpenGlTransform3D.c(III)Z#1",
+      "renamedSymbol": "P:OpenGlTransform3D.requiresNormalStreamCopy(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -859504,7 +859824,7 @@
     },
     {
       "symbol": "P:oba.c(III)Z#2",
-      "renamedSymbol": "P:OpenGlTransform3D.c(III)Z#2",
+      "renamedSymbol": "P:OpenGlTransform3D.requiresNormalStreamCopy(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -859944,7 +860264,7 @@
     },
     {
       "symbol": "P:oea.a(IIB)Z#0",
-      "renamedSymbol": "P:RenderableNode.a(IIB)Z#0",
+      "renamedSymbol": "P:RenderableNode.requiresCpuNormals(IIB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -859955,7 +860275,7 @@
     },
     {
       "symbol": "P:oea.a(IIB)Z#1",
-      "renamedSymbol": "P:RenderableNode.a(IIB)Z#1",
+      "renamedSymbol": "P:RenderableNode.requiresCpuNormals(IIB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -859966,7 +860286,7 @@
     },
     {
       "symbol": "P:oea.a(IIB)Z#2",
-      "renamedSymbol": "P:RenderableNode.a(IIB)Z#2",
+      "renamedSymbol": "P:RenderableNode.requiresCpuNormals(IIB)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -870218,7 +870538,7 @@
     },
     {
       "symbol": "P:pg.b(Z)V#0",
-      "renamedSymbol": "P:TermsLinksPanel.b(Z)V#0",
+      "renamedSymbol": "P:TermsLinksPanel.openGuestLoginWithRegistration(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -874497,7 +874817,7 @@
     },
     {
       "symbol": "P:pt.a(III)Z#0",
-      "renamedSymbol": "P:FacePlayerLocomotor.a(III)Z#0",
+      "renamedSymbol": "P:FacePlayerLocomotor.requiresCpuVertexY(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -874508,7 +874828,7 @@
     },
     {
       "symbol": "P:pt.a(III)Z#1",
-      "renamedSymbol": "P:FacePlayerLocomotor.a(III)Z#1",
+      "renamedSymbol": "P:FacePlayerLocomotor.requiresCpuVertexY(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -874519,7 +874839,7 @@
     },
     {
       "symbol": "P:pt.a(III)Z#2",
-      "renamedSymbol": "P:FacePlayerLocomotor.a(III)Z#2",
+      "renamedSymbol": "P:FacePlayerLocomotor.requiresCpuVertexY(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -875498,7 +875818,7 @@
     },
     {
       "symbol": "P:pw.C(I)V#0",
-      "renamedSymbol": "P:PressureSwitchComponent.C(I)V#0",
+      "renamedSymbol": "P:PressureSwitchComponent.advanceLogoAnimation(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -886003,7 +886323,7 @@
     },
     {
       "symbol": "P:qr.c(III)Z#0",
-      "renamedSymbol": "P:SingleChildWidget.c(III)Z#0",
+      "renamedSymbol": "P:SingleChildWidget.requiresCpuVertexY(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -886014,7 +886334,7 @@
     },
     {
       "symbol": "P:qr.c(III)Z#1",
-      "renamedSymbol": "P:SingleChildWidget.c(III)Z#1",
+      "renamedSymbol": "P:SingleChildWidget.requiresCpuVertexY(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -886025,7 +886345,7 @@
     },
     {
       "symbol": "P:qr.c(III)Z#2",
-      "renamedSymbol": "P:SingleChildWidget.c(III)Z#2",
+      "renamedSymbol": "P:SingleChildWidget.requiresCpuVertexY(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -902481,7 +902801,7 @@
     },
     {
       "symbol": "P:sm.a(III)Z#0",
-      "renamedSymbol": "P:KeyLockBehaviour.a(III)Z#0",
+      "renamedSymbol": "P:KeyLockBehaviour.requiresCpuFaceColours(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -902492,7 +902812,7 @@
     },
     {
       "symbol": "P:sm.a(III)Z#1",
-      "renamedSymbol": "P:KeyLockBehaviour.a(III)Z#1",
+      "renamedSymbol": "P:KeyLockBehaviour.requiresCpuFaceColours(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -902503,7 +902823,7 @@
     },
     {
       "symbol": "P:sm.a(III)Z#2",
-      "renamedSymbol": "P:KeyLockBehaviour.a(III)Z#2",
+      "renamedSymbol": "P:KeyLockBehaviour.requiresCpuFaceColours(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -903625,7 +903945,7 @@
     },
     {
       "symbol": "P:so.a(IBI)Z#0",
-      "renamedSymbol": "P:ValidatedTextInputWidget.a(IBI)Z#0",
+      "renamedSymbol": "P:ValidatedTextInputWidget.requiresPositionPointerCopy(IBI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -903636,7 +903956,7 @@
     },
     {
       "symbol": "P:so.a(IBI)Z#1",
-      "renamedSymbol": "P:ValidatedTextInputWidget.a(IBI)Z#1",
+      "renamedSymbol": "P:ValidatedTextInputWidget.requiresPositionPointerCopy(IBI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -903647,7 +903967,7 @@
     },
     {
       "symbol": "P:so.a(IBI)Z#2",
-      "renamedSymbol": "P:ValidatedTextInputWidget.a(IBI)Z#2",
+      "renamedSymbol": "P:ValidatedTextInputWidget.requiresPositionPointerCopy(IBI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -904571,7 +904891,7 @@
     },
     {
       "symbol": "P:sr.a(I)Z#0",
-      "renamedSymbol": "P:MessagePage.a(I)Z#0",
+      "renamedSymbol": "P:MessagePage.isSelectionMenuActive(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910038,7 +910358,7 @@
     },
     {
       "symbol": "P:th.b(III)Z#0",
-      "renamedSymbol": "P:WindZoneBehaviour.b(III)Z#0",
+      "renamedSymbol": "P:WindZoneBehaviour.requiresCpuFaceColours(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910049,7 +910369,7 @@
     },
     {
       "symbol": "P:th.b(III)Z#1",
-      "renamedSymbol": "P:WindZoneBehaviour.b(III)Z#1",
+      "renamedSymbol": "P:WindZoneBehaviour.requiresCpuFaceColours(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -910060,7 +910380,7 @@
     },
     {
       "symbol": "P:th.b(III)Z#2",
-      "renamedSymbol": "P:WindZoneBehaviour.b(III)Z#2",
+      "renamedSymbol": "P:WindZoneBehaviour.requiresCpuFaceColours(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -910412,7 +910732,7 @@
     },
     {
       "symbol": "P:tia.b(III)Z#0",
-      "renamedSymbol": "P:FixedAngleTrigonometry.b(III)Z#0",
+      "renamedSymbol": "P:FixedAngleTrigonometry.requiresIndexBufferCopy(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910423,7 +910743,7 @@
     },
     {
       "symbol": "P:tia.b(III)Z#1",
-      "renamedSymbol": "P:FixedAngleTrigonometry.b(III)Z#1",
+      "renamedSymbol": "P:FixedAngleTrigonometry.requiresIndexBufferCopy(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -910434,7 +910754,7 @@
     },
     {
       "symbol": "P:tia.b(III)Z#2",
-      "renamedSymbol": "P:FixedAngleTrigonometry.b(III)Z#2",
+      "renamedSymbol": "P:FixedAngleTrigonometry.requiresIndexBufferCopy(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -911655,7 +911975,7 @@
     },
     {
       "symbol": "P:tp.a(IBI)Z#0",
-      "renamedSymbol": "P:WhiteLightShooterComponent.a(IBI)Z#0",
+      "renamedSymbol": "P:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -911666,7 +911986,7 @@
     },
     {
       "symbol": "P:tp.a(IBI)Z#1",
-      "renamedSymbol": "P:WhiteLightShooterComponent.a(IBI)Z#1",
+      "renamedSymbol": "P:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -911677,7 +911997,7 @@
     },
     {
       "symbol": "P:tp.a(IBI)Z#2",
-      "renamedSymbol": "P:WhiteLightShooterComponent.a(IBI)Z#2",
+      "renamedSymbol": "P:WhiteLightShooterComponent.requiresCpuVertexX(IBI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -914383,7 +914703,7 @@
     },
     {
       "symbol": "P:tta.e(Z)V#0",
-      "renamedSymbol": "P:KeyItemComponent.e(Z)V#0",
+      "renamedSymbol": "P:KeyItemComponent.openGuestLogin(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -917650,7 +917970,7 @@
     },
     {
       "symbol": "P:ug.r(I)V#0",
-      "renamedSymbol": "P:AppletGameShell.r(I)V#0",
+      "renamedSymbol": "P:AppletGameShell.tickLoginAndLogo(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -921357,7 +921677,7 @@
     },
     {
       "symbol": "P:upa.a(III)Z#0",
-      "renamedSymbol": "P:RatingTable.a(III)Z#0",
+      "renamedSymbol": "P:RatingTable.requiresTexCoordPointerCopy(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -921368,7 +921688,7 @@
     },
     {
       "symbol": "P:upa.a(III)Z#1",
-      "renamedSymbol": "P:RatingTable.a(III)Z#1",
+      "renamedSymbol": "P:RatingTable.requiresTexCoordPointerCopy(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -921379,7 +921699,7 @@
     },
     {
       "symbol": "P:upa.a(III)Z#2",
-      "renamedSymbol": "P:RatingTable.a(III)Z#2",
+      "renamedSymbol": "P:RatingTable.requiresTexCoordPointerCopy(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -923106,7 +923426,7 @@
     },
     {
       "symbol": "P:uu.a(ZII)Z#0",
-      "renamedSymbol": "P:C2SChooseRewardPacket.a(ZII)Z#0",
+      "renamedSymbol": "P:C2SChooseRewardPacket.requiresPositionStreamCopy(ZII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -923117,7 +923437,7 @@
     },
     {
       "symbol": "P:uu.a(ZII)Z#1",
-      "renamedSymbol": "P:C2SChooseRewardPacket.a(ZII)Z#1",
+      "renamedSymbol": "P:C2SChooseRewardPacket.requiresPositionStreamCopy(ZII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -923128,7 +923448,7 @@
     },
     {
       "symbol": "P:uu.a(ZII)Z#2",
-      "renamedSymbol": "P:C2SChooseRewardPacket.a(ZII)Z#2",
+      "renamedSymbol": "P:C2SChooseRewardPacket.requiresPositionStreamCopy(ZII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -923381,7 +923701,7 @@
     },
     {
       "symbol": "P:uv.a(III)Z#0",
-      "renamedSymbol": "P:LegacyOpenGlBloomEffect.a(III)Z#0",
+      "renamedSymbol": "P:LegacyOpenGlBloomEffect.requiresCpuVertexX(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -923392,7 +923712,7 @@
     },
     {
       "symbol": "P:uv.a(III)Z#1",
-      "renamedSymbol": "P:LegacyOpenGlBloomEffect.a(III)Z#1",
+      "renamedSymbol": "P:LegacyOpenGlBloomEffect.requiresCpuVertexX(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -923403,7 +923723,7 @@
     },
     {
       "symbol": "P:uv.a(III)Z#2",
-      "renamedSymbol": "P:LegacyOpenGlBloomEffect.a(III)Z#2",
+      "renamedSymbol": "P:LegacyOpenGlBloomEffect.requiresCpuVertexX(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -923645,7 +923965,7 @@
     },
     {
       "symbol": "P:uw.a(III)Z#0",
-      "renamedSymbol": "P:RenderScene.a(III)Z#0",
+      "renamedSymbol": "P:RenderScene.requiresCpuFaceTextures(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -923656,7 +923976,7 @@
     },
     {
       "symbol": "P:uw.a(III)Z#1",
-      "renamedSymbol": "P:RenderScene.a(III)Z#1",
+      "renamedSymbol": "P:RenderScene.requiresCpuFaceTextures(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -923667,7 +923987,7 @@
     },
     {
       "symbol": "P:uw.a(III)Z#2",
-      "renamedSymbol": "P:RenderScene.a(III)Z#2",
+      "renamedSymbol": "P:RenderScene.requiresCpuFaceTextures(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -932181,7 +932501,7 @@
     },
     {
       "symbol": "P:vta.a(III)Z#0",
-      "renamedSymbol": "P:HardwareUnlitEffect.a(III)Z#0",
+      "renamedSymbol": "P:HardwareUnlitEffect.requiresNormalStream(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -932192,7 +932512,7 @@
     },
     {
       "symbol": "P:vta.a(III)Z#1",
-      "renamedSymbol": "P:HardwareUnlitEffect.a(III)Z#1",
+      "renamedSymbol": "P:HardwareUnlitEffect.requiresNormalStream(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -932203,7 +932523,7 @@
     },
     {
       "symbol": "P:vta.a(III)Z#2",
-      "renamedSymbol": "P:HardwareUnlitEffect.a(III)Z#2",
+      "renamedSymbol": "P:HardwareUnlitEffect.requiresNormalStream(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -961755,7 +962075,7 @@
       "original": "ae.java",
       "renamed": "UiWidget.java",
       "inputSha256": "1c19d3830d7977ef7c5d15887d2529ed7b968011240a887675c5292c30da675b",
-      "outputSha256": "cab4fca2ae5670e71f8b61390125040e5652b6fcdc49b03dce17e9243e773331",
+      "outputSha256": "9f081403c2558650c79e47472bbc3ecd528de071d21089cd022cb58ea25c98df",
       "edits": [
         {
           "start": 65,
@@ -962388,6 +962708,13 @@
           "renamed": "getHoverText"
         },
         {
+          "start": 16709,
+          "end": 16710,
+          "symbol": "M:ae.a(III)Z",
+          "original": "a",
+          "renamed": "requiresOpenGlCpuTriangleIndices"
+        },
+        {
           "start": 16824,
           "end": 16826,
           "symbol": "C:qp",
@@ -962421,6 +962748,13 @@
           "symbol": "C:tia",
           "original": "tia",
           "renamed": "FixedAngleTrigonometry"
+        },
+        {
+          "start": 17029,
+          "end": 17030,
+          "symbol": "M:tia.b(III)Z",
+          "original": "b",
+          "renamed": "requiresIndexBufferCopy"
         },
         {
           "start": 17137,
@@ -980287,7 +980621,7 @@
       "original": "au.java",
       "renamed": "LegacyOpenGlFontMask.java",
       "inputSha256": "d286a85f336500abc7137fc869eda0c4e86c4de9966d2d76b301cf4782d20ddb",
-      "outputSha256": "d2ef7695d308da8bc8a93beebbb9685cab704677f38b4572e8595d4be611fd38",
+      "outputSha256": "43559ed93e45a8408a174dd3f665526dc8a195c48752b6f7a494150035121186",
       "edits": [
         {
           "start": 50,
@@ -980514,11 +980848,25 @@
           "renamed": "KeyItemComponent"
         },
         {
+          "start": 1162,
+          "end": 1163,
+          "symbol": "M:tta.e(Z)V",
+          "original": "e",
+          "renamed": "openGuestLogin"
+        },
+        {
           "start": 1206,
           "end": 1208,
           "symbol": "C:pg",
           "original": "pg",
           "renamed": "TermsLinksPanel"
+        },
+        {
+          "start": 1209,
+          "end": 1210,
+          "symbol": "M:pg.b(Z)V",
+          "original": "b",
+          "renamed": "openGuestLoginWithRegistration"
         },
         {
           "start": 1246,
@@ -1003713,7 +1004061,7 @@
       "original": "bra.java",
       "renamed": "FullscreenMembershipDialog.java",
       "inputSha256": "58934c9f32c68ee7fe48cc15ddc8945a2ed73cbf4a86946cac6ef4fb61b28946",
-      "outputSha256": "bc4beaec7e2e3f7bb6e36e38611a5bde4760a8f4ae7db494a4245b9ddd739873",
+      "outputSha256": "2d9bbd76e301d3dcd475ce145e0143a4a3065ce2fa01d876b3f0468231e408fe",
       "edits": [
         {
           "start": 50,
@@ -1003896,6 +1004244,13 @@
           "symbol": "C:pg",
           "original": "pg",
           "renamed": "TermsLinksPanel"
+        },
+        {
+          "start": 2650,
+          "end": 2651,
+          "symbol": "M:pg.b(Z)V",
+          "original": "b",
+          "renamed": "openGuestLoginWithRegistration"
         },
         {
           "start": 2677,
@@ -1023866,7 +1024221,7 @@
       "original": "cka.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "6ac9fb8d7ca9f3fd523ba26d424b59e3f403240ec044c34e1b63cd73f48ef1c8",
-      "outputSha256": "6a51c8583188428c946eec7e2390917f7c49a308353767e5e8510ca5ae5c41e2",
+      "outputSha256": "bb40f91f1fb327d1a85868f6955c1899a84da084c38d377ce79a14d8fe10b7bd",
       "edits": [
         {
           "start": 71,
@@ -1027807,6 +1028162,13 @@
           "renamed": "parseDecimalInt"
         },
         {
+          "start": 62809,
+          "end": 62810,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
           "start": 63543,
           "end": 63546,
           "symbol": "C:ija",
@@ -1028507,11 +1028869,116 @@
           "renamed": "parseDecimalInt"
         },
         {
+          "start": 74922,
+          "end": 74923,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 75013,
+          "end": 75014,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
           "start": 75660,
           "end": 75661,
           "symbol": "M:jaclib.memory.Stream.b()Z",
           "original": "b",
           "renamed": "isNativeBigEndian"
+        },
+        {
+          "start": 75762,
+          "end": 75763,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 75832,
+          "end": 75833,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 75893,
+          "end": 75894,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 75942,
+          "end": 75943,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76009,
+          "end": 76010,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76073,
+          "end": 76074,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76138,
+          "end": 76139,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76198,
+          "end": 76199,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76266,
+          "end": 76267,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76332,
+          "end": 76333,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76427,
+          "end": 76428,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76496,
+          "end": 76497,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 76563,
+          "end": 76564,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
         },
         {
           "start": 76624,
@@ -1045983,7 +1046450,7 @@
       "original": "cu.java",
       "renamed": "DamageableBehaviour.java",
       "inputSha256": "1d1b59f087f7174d7140c57038978e09a4cd9e965c23b50a82c6959a37cfdc97",
-      "outputSha256": "ae6034fa9b84c8fae7ea31db568e2ed8131ff61efc4d4418b954b7d2bfb3a7ee",
+      "outputSha256": "eb04e65ad635a0eb7686446a12f35b0feb24ee6b2c8036d28ac0d3a6a3024eeb",
       "edits": [
         {
           "start": 50,
@@ -1047099,6 +1047566,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 10615,
+          "end": 10616,
+          "symbol": "M:cu.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexZ"
+        },
+        {
           "start": 10694,
           "end": 10696,
           "symbol": "C:cn",
@@ -1047155,6 +1047629,13 @@
           "renamed": "C2SChooseRewardPacket"
         },
         {
+          "start": 10867,
+          "end": 10868,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
+        },
+        {
           "start": 10964,
           "end": 10966,
           "symbol": "C:er",
@@ -1047174,6 +1047655,13 @@
           "symbol": "C:uu",
           "original": "uu",
           "renamed": "C2SChooseRewardPacket"
+        },
+        {
+          "start": 11083,
+          "end": 11084,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
         },
         {
           "start": 11186,
@@ -1055603,7 +1056091,7 @@
       "original": "dba.java",
       "renamed": "C2SSubmitSettingsPacket.java",
       "inputSha256": "40880b386fd9a9c727dc04176d108b91cfda7f6a92e240c122924a54cb40abe8",
-      "outputSha256": "ffbd42f7722f53793776b9ae84187f550d5dd47e2a0e985ba7f8309fcd1bb226",
+      "outputSha256": "e2021aabe04798b5a1ca6cb74d02128f991b407823fea055fbdd7bf304bd1fb5",
       "edits": [
         {
           "start": 50,
@@ -1055879,6 +1056367,13 @@
           "renamed": "soundEffectsVolume"
         },
         {
+          "start": 1829,
+          "end": 1830,
+          "symbol": "M:dba.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuNormals"
+        },
+        {
           "start": 2154,
           "end": 2157,
           "symbol": "C:oba",
@@ -1055886,11 +1056381,25 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 2158,
+          "end": 2159,
+          "symbol": "M:oba.c(III)Z",
+          "original": "c",
+          "renamed": "requiresNormalStreamCopy"
+        },
+        {
           "start": 2230,
           "end": 2232,
           "symbol": "C:no",
           "original": "no",
           "renamed": "AchievementNotificationOverlay"
+        },
+        {
+          "start": 2233,
+          "end": 2234,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
         },
         {
           "start": 2389,
@@ -1055928,11 +1056437,25 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 2531,
+          "end": 2532,
+          "symbol": "M:oba.c(III)Z",
+          "original": "c",
+          "renamed": "requiresNormalStreamCopy"
+        },
+        {
           "start": 2600,
           "end": 2602,
           "symbol": "C:no",
           "original": "no",
           "renamed": "AchievementNotificationOverlay"
+        },
+        {
+          "start": 2603,
+          "end": 2604,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
         },
         {
           "start": 2763,
@@ -1082420,7 +1082943,7 @@
       "original": "dw.java",
       "renamed": "TextureMetadata.java",
       "inputSha256": "e2e6f0646ee758a067c97679e76756a2ce569a8520cf12b73b47f8058b21007c",
-      "outputSha256": "3350d42499aec7e144c1e9b3a15a21028c002e581cf8fdafa27e6b67b0fa5c1e",
+      "outputSha256": "477bff136d412cc5f4e75fe780201cbcb1d0c4ee676dd1699348fb26b66c5b90",
       "edits": [
         {
           "start": 50,
@@ -1082451,6 +1082974,13 @@
           "renamed": "ordinals"
         },
         {
+          "start": 650,
+          "end": 651,
+          "symbol": "M:dw.b(B)V",
+          "original": "b",
+          "renamed": "beginReconnectLogin"
+        },
+        {
           "start": 679,
           "end": 682,
           "symbol": "C:gda",
@@ -1082463,6 +1082993,13 @@
           "symbol": "C:et",
           "original": "et",
           "renamed": "MidiVoiceMixer"
+        },
+        {
+          "start": 713,
+          "end": 714,
+          "symbol": "M:et.a(Z)V",
+          "original": "a",
+          "renamed": "showReconnectProgress"
         },
         {
           "start": 732,
@@ -1082484,6 +1083021,13 @@
           "symbol": "C:et",
           "original": "et",
           "renamed": "MidiVoiceMixer"
+        },
+        {
+          "start": 809,
+          "end": 810,
+          "symbol": "M:et.a(Z)V",
+          "original": "a",
+          "renamed": "showReconnectProgress"
         },
         {
           "start": 830,
@@ -1083490,7 +1084034,7 @@
       "original": "eba.java",
       "renamed": "SoftCacheEntry.java",
       "inputSha256": "91737a552c592864427f620fec0770a20a39ad813be7d16c48e15220f2dbc386",
-      "outputSha256": "cc5cc29a046d2bf2291a764176715494098866dcf1f9a4fdbaf4ecfcd796e9cf",
+      "outputSha256": "eff8e9e2bfe030e86eb48d2735f07b308865ca4cc6314bcd4f31790199b9b247",
       "edits": [
         {
           "start": 50,
@@ -1083631,6 +1084175,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4804,
+          "end": 4805,
+          "symbol": "M:eba.a(Z)Z",
+          "original": "a",
+          "renamed": "isQuickChatOverlayOpen"
         },
         {
           "start": 4929,
@@ -1111459,7 +1112010,7 @@
       "original": "et.java",
       "renamed": "MidiVoiceMixer.java",
       "inputSha256": "cd7ede9fc1b0459cfa34485c16caab61023d6bf4fc6dc75a16f957011b2b4e84",
-      "outputSha256": "c00e1666058ae595f89489e9b0466a342d16122e8ec3db30c3bb28d0a42a5eff",
+      "outputSha256": "38cbc8d1ee68f43feca50992036b50e89eaea6e0b2dc5dfec59635a417af093b",
       "edits": [
         {
           "start": 50,
@@ -1111621,6 +1112172,13 @@
           "symbol": "M:et.b(III)I",
           "original": "b",
           "renamed": "min"
+        },
+        {
+          "start": 1391,
+          "end": 1392,
+          "symbol": "M:et.a(Z)V",
+          "original": "a",
+          "renamed": "showReconnectProgress"
         },
         {
           "start": 1419,
@@ -1141492,7 +1142050,7 @@
       "original": "foa.java",
       "renamed": "S2CRoundDeadlinePacket.java",
       "inputSha256": "f32d1ee0663ae47a71f2f7eb3961a55facff4d6d1e0a55b4b00beab00fa87acd",
-      "outputSha256": "e123a530acaf77bf5e7d5c40da0695bd8c81cfb28aba13e508c95f2c5e2bb870",
+      "outputSha256": "28cbb9fefbc03c51022a21839480e31eebc811701ae19f4229cc5967316b2008",
       "edits": [
         {
           "start": 50,
@@ -1141577,6 +1142135,13 @@
           "symbol": "M:foa.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 781,
+          "end": 782,
+          "symbol": "M:foa.a(B)Z",
+          "original": "a",
+          "renamed": "isReconnectLogin"
         },
         {
           "start": 874,
@@ -1167781,7 +1168346,7 @@
       "original": "gda.java",
       "renamed": "Transform3D.java",
       "inputSha256": "d708465c9bf98f38e365362f483ac2a9875fb2d12325213e6771b3cf50237b38",
-      "outputSha256": "a3ced1af709d39965fbb7177c8115836ab63c08e075002beee89effa8e9a8cda",
+      "outputSha256": "887b646c8c609d7aa563c8ced1cb845e21925b9f8342a185b0790ca5e5d16812",
       "edits": [
         {
           "start": 53,
@@ -1168041,6 +1168606,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2194,
+          "end": 2195,
+          "symbol": "M:gda.b(III)Z",
+          "original": "b",
+          "renamed": "requiresCpuFaceAlpha"
         },
         {
           "start": 2429,
@@ -1173778,7 +1174350,7 @@
       "original": "gja.java",
       "renamed": "HardwareModel.java",
       "inputSha256": "e8ec92bea08367d86b514720b6118bbe540714c99e72b84a81da5309bce6fd80",
-      "outputSha256": "fc9cc640785d917b03cdbf665eff02a8ffd160bfff70dd9353a8ba162d107852",
+      "outputSha256": "a9c32d95170c6c04e7ca984ac53e380aa81d4636518bbc143cff2a33ea0aa588",
       "edits": [
         {
           "start": 69,
@@ -1175836,6 +1176408,13 @@
           "renamed": "WhiteLightShooterComponent"
         },
         {
+          "start": 64007,
+          "end": 64008,
+          "symbol": "M:tp.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexX"
+        },
+        {
           "start": 64123,
           "end": 64124,
           "symbol": "M:hg.b(I)Z",
@@ -1175857,6 +1176436,13 @@
           "renamed": "SingleChildWidget"
         },
         {
+          "start": 64496,
+          "end": 64497,
+          "symbol": "M:qr.c(III)Z",
+          "original": "c",
+          "renamed": "requiresCpuVertexY"
+        },
+        {
           "start": 64610,
           "end": 64611,
           "symbol": "M:hg.b(I)Z",
@@ -1175876,6 +1176462,13 @@
           "symbol": "C:cu",
           "original": "cu",
           "renamed": "DamageableBehaviour"
+        },
+        {
+          "start": 64979,
+          "end": 64980,
+          "symbol": "M:cu.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexZ"
         },
         {
           "start": 65091,
@@ -1175906,6 +1176499,13 @@
           "renamed": "C2SSubmitSettingsPacket"
         },
         {
+          "start": 66061,
+          "end": 66062,
+          "symbol": "M:dba.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuNormals"
+        },
+        {
           "start": 66292,
           "end": 66293,
           "symbol": "M:hg.b(I)Z",
@@ -1175927,6 +1176527,13 @@
           "renamed": "WindZoneBehaviour"
         },
         {
+          "start": 66860,
+          "end": 66861,
+          "symbol": "M:th.b(III)Z",
+          "original": "b",
+          "renamed": "requiresCpuFaceColours"
+        },
+        {
           "start": 66964,
           "end": 66965,
           "symbol": "M:hg.b(I)Z",
@@ -1175939,6 +1176546,13 @@
           "symbol": "C:jda",
           "original": "jda",
           "renamed": "GreyscaleOperator"
+        },
+        {
+          "start": 67232,
+          "end": 67233,
+          "symbol": "M:jda.d(III)Z",
+          "original": "d",
+          "renamed": "requiresCpuFaceAlpha"
         },
         {
           "start": 67340,
@@ -1175974,6 +1176588,13 @@
           "symbol": "C:uw",
           "original": "uw",
           "renamed": "RenderScene"
+        },
+        {
+          "start": 68063,
+          "end": 68064,
+          "symbol": "M:uw.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceTextures"
         },
         {
           "start": 68170,
@@ -1176935,6 +1177556,13 @@
           "renamed": "C2SChooseRewardPacket"
         },
         {
+          "start": 97209,
+          "end": 97210,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
+        },
+        {
           "start": 97312,
           "end": 97314,
           "symbol": "C:ss",
@@ -1176982,6 +1177610,13 @@
           "symbol": "C:no",
           "original": "no",
           "renamed": "AchievementNotificationOverlay"
+        },
+        {
+          "start": 100731,
+          "end": 100732,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
         },
         {
           "start": 101019,
@@ -1177040,11 +1177675,25 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 105541,
+          "end": 105542,
+          "symbol": "M:oba.c(III)Z",
+          "original": "c",
+          "renamed": "requiresNormalStreamCopy"
+        },
+        {
           "start": 105592,
           "end": 105595,
           "symbol": "C:vta",
           "original": "vta",
           "renamed": "HardwareUnlitEffect"
+        },
+        {
+          "start": 105596,
+          "end": 105597,
+          "symbol": "M:vta.a(III)Z",
+          "original": "a",
+          "renamed": "requiresNormalStream"
         },
         {
           "start": 106628,
@@ -1179357,6 +1180006,13 @@
           "renamed": "C2SChooseRewardPacket"
         },
         {
+          "start": 199151,
+          "end": 199152,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
+        },
+        {
           "start": 199237,
           "end": 199240,
           "symbol": "C:foa",
@@ -1179420,11 +1180076,25 @@
           "renamed": "AchievementNotificationOverlay"
         },
         {
+          "start": 199480,
+          "end": 199481,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
+        },
+        {
           "start": 199567,
           "end": 199570,
           "symbol": "C:vta",
           "original": "vta",
           "renamed": "HardwareUnlitEffect"
+        },
+        {
+          "start": 199571,
+          "end": 199572,
+          "symbol": "M:vta.a(III)Z",
+          "original": "a",
+          "renamed": "requiresNormalStream"
         },
         {
           "start": 199641,
@@ -1179439,6 +1180109,13 @@
           "symbol": "C:oba",
           "original": "oba",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 199648,
+          "end": 199649,
+          "symbol": "M:oba.c(III)Z",
+          "original": "c",
+          "renamed": "requiresNormalStreamCopy"
         },
         {
           "start": 199738,
@@ -1179602,7 +1180279,7 @@
       "original": "gl.java",
       "renamed": "LegacyOpenGlFlowingWaterEffect.java",
       "inputSha256": "d0d8900730fca1fb6eb92d6e57435f27e7705985434fd3ffc85a6c77e08b7ddf",
-      "outputSha256": "fdab470d7414eabd0fc6007ed4937decfc5b8aef33bdaf368bbbdef8b0fbbffd",
+      "outputSha256": "2e6cf1db2ee0f273f031fb4d26f1fea5bc5c2020f28aebe464bb4af48ea5f482",
       "edits": [
         {
           "start": 50,
@@ -1179813,6 +1180490,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4907,
+          "end": 4908,
+          "symbol": "M:gl.a(ZZB)V",
+          "original": "a",
+          "renamed": "openLoginForm"
         },
         {
           "start": 5001,
@@ -1208336,7 +1209020,7 @@
       "original": "hh.java",
       "renamed": "FullscreenUiDrawing.java",
       "inputSha256": "780cc0caa4d6bbbbab9664dc0539701b8141eeb2de277e0093f9a7de6edfecf9",
-      "outputSha256": "fe7d5fd71b99d17a55d000e6be484505fab946bfbd9ab72ac95131000626dd44",
+      "outputSha256": "f13d2b6083a590591db718eaeed5f3a14e0bb521dceb3629ee36484ec22ba6cc",
       "edits": [
         {
           "start": 50,
@@ -1208351,6 +1209035,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "ToolkitModel"
+        },
+        {
+          "start": 169,
+          "end": 170,
+          "symbol": "M:hh.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordArrayCopy"
         },
         {
           "start": 321,
@@ -1222085,7 +1222776,7 @@
       "original": "hs.java",
       "renamed": "TextureFilter.java",
       "inputSha256": "9cc7f6e5619811262aa822bae36c3dd8507846ecd1b1790cbffb671e59f8ad28",
-      "outputSha256": "6c015c20a5fb811b984b982e4204d937a98c9c1d184d5f2d0526f88a69c8fe17",
+      "outputSha256": "63a3d0e358b10a642ce972273a848998d9ba264ca8feecb7138f2f6b45e711f0",
       "edits": [
         {
           "start": 50,
@@ -1222114,6 +1222805,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1492,
+          "end": 1493,
+          "symbol": "M:hs.a(ZB)V",
+          "original": "a",
+          "renamed": "drawQuickChatHelp"
         },
         {
           "start": 1584,
@@ -1222247,6 +1222945,13 @@
           "symbol": "C:hs",
           "original": "hs",
           "renamed": "TextureFilter"
+        },
+        {
+          "start": 1843,
+          "end": 1844,
+          "symbol": "M:hs.a(ZB)V",
+          "original": "a",
+          "renamed": "drawQuickChatHelp"
         }
       ]
     },
@@ -1236744,7 +1237449,7 @@
       "original": "in.java",
       "renamed": "StringCursor.java",
       "inputSha256": "9ca3414338be2cdfaebbd175c96f75790529bd70a28ccc641df2826eddf1593d",
-      "outputSha256": "d06d2b6ca082a24b6b05ae988763b0ef176438c4760afc3ae49d4df76cc6e8ca",
+      "outputSha256": "0931a04fad41554dc1aeded39c03f93eb1eb597aea5ad5e8d3329b361527a3c0",
       "edits": [
         {
           "start": 50,
@@ -1237384,6 +1238089,13 @@
           "renamed": "StringCursor"
         },
         {
+          "start": 4391,
+          "end": 4392,
+          "symbol": "M:in.a(IIB)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceTextures"
+        },
+        {
           "start": 4436,
           "end": 4443,
           "symbol": "F:in.field_d:I",
@@ -1237424,6 +1238136,13 @@
           "symbol": "F:in.field_b:I",
           "original": "field_b",
           "renamed": "position"
+        },
+        {
+          "start": 4653,
+          "end": 4654,
+          "symbol": "M:in.a(IIB)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceTextures"
         },
         {
           "start": 4774,
@@ -1240160,7 +1240879,7 @@
       "original": "iqa.java",
       "renamed": "ToolkitInstance.java",
       "inputSha256": "19ad2a7067f2aca92914b2b6d3fa3d4c370e56a9c135437803237192d01d44a3",
-      "outputSha256": "62b630bc689cf5b40feae5167fe1d046efce382d292fdac8932be7a29b843751",
+      "outputSha256": "465ce175156e87ed2e45aacd645104efc635ef91e6ad6f8d0655bb71da27ae8d",
       "edits": [
         {
           "start": 50,
@@ -1240245,6 +1240964,13 @@
           "symbol": "C:jta",
           "original": "jta",
           "renamed": "DialogStack"
+        },
+        {
+          "start": 701,
+          "end": 702,
+          "symbol": "M:jta.a(ZZ)V",
+          "original": "a",
+          "renamed": "processQuickChatHelp"
         },
         {
           "start": 726,
@@ -1251337,7 +1252063,7 @@
       "original": "jaggl/OpenGL.java",
       "renamed": "jaggl/OpenGL.java",
       "inputSha256": "c7b76ffb70263db474b09328b413a672d2b872f9fbc1acf8e195e83bc8293d38",
-      "outputSha256": "e10eaa799d8ae03ef53c91dcf92d624807366c1eeae7c1e8705fd3debd7e087f",
+      "outputSha256": "38a6c9058eb3a1fd4fe377e8b680cf8a6a9e25bfa2ef950b211a56e2aff65802",
       "edits": [
         {
           "start": 230,
@@ -1251345,6 +1252071,13 @@
           "symbol": "M:jaggl.OpenGL.a()Z",
           "original": "a",
           "renamed": "attachToThread"
+        },
+        {
+          "start": 1019,
+          "end": 1020,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
         },
         {
           "start": 11516,
@@ -1252061,7 +1252794,7 @@
       "original": "jc.java",
       "renamed": "SimpleHoverMountComponent.java",
       "inputSha256": "b71b6c18dac79c4865261c155a720028151020fed3544063958b493f8b5b1c9c",
-      "outputSha256": "4176acf561bdd7ea9d5bac297037e215c2350a00a261029c195dd355127a7e5d",
+      "outputSha256": "a1d713cf5fda00fb4861cf2aa6324758c9187cd28e806015493afd0fec2da019",
       "edits": [
         {
           "start": 50,
@@ -1253065,6 +1253798,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 10920,
+          "end": 10921,
+          "symbol": "M:jc.c(III)Z",
+          "original": "c",
+          "renamed": "requiresCpuVertexZ"
+        },
+        {
           "start": 11267,
           "end": 11270,
           "symbol": "C:gha",
@@ -1253086,6 +1253826,13 @@
           "renamed": "ValidatedTextInputWidget"
         },
         {
+          "start": 11469,
+          "end": 11470,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
+        },
+        {
           "start": 11565,
           "end": 11568,
           "symbol": "C:gha",
@@ -1253105,6 +1253852,13 @@
           "symbol": "C:so",
           "original": "so",
           "renamed": "ValidatedTextInputWidget"
+        },
+        {
+          "start": 11764,
+          "end": 11765,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
         },
         {
           "start": 11928,
@@ -1253464,7 +1254218,7 @@
       "original": "jda.java",
       "renamed": "GreyscaleOperator.java",
       "inputSha256": "447ebe4409760659d6b4e9dd125d7980fd31c6e350077e8d681851fb835ed215",
-      "outputSha256": "65f168668886419df566bb88b0a87e3e58667afcba142c0926cfd81f47db726c",
+      "outputSha256": "340d81ecdb59e1c58d76ebc254a8efbecc59e270fcedb5cc9eba9d876cd5dff5",
       "edits": [
         {
           "start": 50,
@@ -1253481,6 +1254235,13 @@
           "renamed": "TextureOperator"
         },
         {
+          "start": 114,
+          "end": 115,
+          "symbol": "M:jda.a(ZI)V",
+          "original": "a",
+          "renamed": "openLoginFormWithRegistrationOption"
+        },
+        {
           "start": 154,
           "end": 156,
           "symbol": "C:gl",
@@ -1253488,11 +1254249,25 @@
           "renamed": "LegacyOpenGlFlowingWaterEffect"
         },
         {
+          "start": 157,
+          "end": 158,
+          "symbol": "M:gl.a(ZZB)V",
+          "original": "a",
+          "renamed": "openLoginForm"
+        },
+        {
           "start": 272,
           "end": 275,
           "symbol": "M:jda.<init>()V",
           "original": "jda",
           "renamed": "GreyscaleOperator"
+        },
+        {
+          "start": 336,
+          "end": 337,
+          "symbol": "M:jda.d(III)Z",
+          "original": "d",
+          "renamed": "requiresCpuFaceAlpha"
         },
         {
           "start": 454,
@@ -1253514,6 +1254289,13 @@
           "symbol": "C:no",
           "original": "no",
           "renamed": "AchievementNotificationOverlay"
+        },
+        {
+          "start": 585,
+          "end": 586,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
         },
         {
           "start": 691,
@@ -1296412,7 +1297194,7 @@
       "original": "jta.java",
       "renamed": "DialogStack.java",
       "inputSha256": "4604dd006a7303f38149820f9136fb7a6c55aa5f0b595d778d7f04636d718fbf",
-      "outputSha256": "6c8de6fe50f49d66b42c1828ee0889a49683f3d6e0a21684851f87c561e92ed7",
+      "outputSha256": "618ce252e233255487692c89544b28092bf2c3f15331f424844341cd2f3b1763",
       "edits": [
         {
           "start": 50,
@@ -1296637,6 +1297419,13 @@
           "symbol": "M:uja.a(I)Lvg;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 1621,
+          "end": 1622,
+          "symbol": "M:jta.a(ZZ)V",
+          "original": "a",
+          "renamed": "processQuickChatHelp"
         },
         {
           "start": 1677,
@@ -1297824,7 +1298613,7 @@
       "original": "jw.java",
       "renamed": "LoginForm.java",
       "inputSha256": "e3aec304083fe19c96e99d5bd660433990097993cae97b8fe2ca9e1a34f8e3e9",
-      "outputSha256": "abcb763b6712e6b8a6806bb15437fe6eaf245a22fcb7a3e285f719c7bfb78b32",
+      "outputSha256": "862afd865307285fd807ecce3af48382da2a62ddb6aa95e71f3e0b9bc2f5ae0d",
       "edits": [
         {
           "start": 50,
@@ -1298658,6 +1299447,13 @@
           "symbol": "C:foa",
           "original": "foa",
           "renamed": "S2CRoundDeadlinePacket"
+        },
+        {
+          "start": 9757,
+          "end": 9758,
+          "symbol": "M:foa.a(B)Z",
+          "original": "a",
+          "renamed": "isReconnectLogin"
         },
         {
           "start": 9885,
@@ -1300005,7 +1300801,7 @@
       "original": "kb.java",
       "renamed": "ScoreSubmission.java",
       "inputSha256": "3b7daf4e32653827d5cffd385522939a2ed3a6ce0665232fd4bf61201c1f3619",
-      "outputSha256": "2d148e3a309c3d0c59d789889d33fc4b818826315eea6726692601887009ff94",
+      "outputSha256": "5eae0d038ece1f522ab68bd91fc9678ca299ce962d418e29995ccafa1247f4ae",
       "edits": [
         {
           "start": 50,
@@ -1300230,6 +1301026,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2705,
+          "end": 2706,
+          "symbol": "M:kb.a(IZ)V",
+          "original": "a",
+          "renamed": "completeAvailabilityQuery"
         },
         {
           "start": 2745,
@@ -1301326,7 +1302129,7 @@
       "original": "kda.java",
       "renamed": "HardwareOpenGlToolkit.java",
       "inputSha256": "fac223ffef77da8fb72b7523fc8ad161d7a6235cec54d954e25341797e0df512",
-      "outputSha256": "ffe4f1a3df99855ce517cf3955704a9d8e49a48aac0e17919ef5842cafda512f",
+      "outputSha256": "a080c7a056f7b1ff4e40fdbbe81e1862c6cf1714c076e36e56678cdca2f59dd8",
       "edits": [
         {
           "start": 50,
@@ -1305032,6 +1305835,90 @@
           "renamed": "parseDecimalInt"
         },
         {
+          "start": 55255,
+          "end": 55256,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 55380,
+          "end": 55381,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 55791,
+          "end": 55792,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 55853,
+          "end": 55854,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 55922,
+          "end": 55923,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 55997,
+          "end": 55998,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 56071,
+          "end": 56072,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 56152,
+          "end": 56153,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 56219,
+          "end": 56220,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 56290,
+          "end": 56291,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 56362,
+          "end": 56363,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
+          "start": 56419,
+          "end": 56420,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
+        },
+        {
           "start": 56543,
           "end": 56544,
           "symbol": "M:jaclib.memory.Stream.b()Z",
@@ -1305086,6 +1305973,13 @@
           "symbol": "M:jb.a(Ljava/lang/CharSequence;B)I",
           "original": "a",
           "renamed": "parseDecimalInt"
+        },
+        {
+          "start": 59490,
+          "end": 59491,
+          "symbol": "M:jaggl.OpenGL.a(Ljava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isExtensionAvailable"
         },
         {
           "start": 60368,
@@ -1357810,7 +1358704,7 @@
       "original": "lva.java",
       "renamed": "PerlinNoise2D.java",
       "inputSha256": "7daee03bf62698272ddc43533da513572d6a9a4538fb61a94a011bfd16762595",
-      "outputSha256": "2fe1aaae552c550c46f6b3f38c8a99c9018cc63d41a7afcb2e84a67e34100624",
+      "outputSha256": "9364a9877d571b81cda66402bfff1ec31f16bc7f37504570ac880592591b1c46",
       "edits": [
         {
           "start": 50,
@@ -1358233,6 +1359127,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 9268,
+          "end": 9269,
+          "symbol": "M:lva.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresCpuTexCoords"
+        },
+        {
           "start": 9443,
           "end": 9445,
           "symbol": "C:hh",
@@ -1358240,11 +1359141,25 @@
           "renamed": "FullscreenUiDrawing"
         },
         {
+          "start": 9446,
+          "end": 9447,
+          "symbol": "M:hh.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordArrayCopy"
+        },
+        {
           "start": 9479,
           "end": 9482,
           "symbol": "C:upa",
           "original": "upa",
           "renamed": "RatingTable"
+        },
+        {
+          "start": 9483,
+          "end": 9484,
+          "symbol": "M:upa.a(III)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordPointerCopy"
         },
         {
           "start": 9556,
@@ -1381930,7 +1382845,7 @@
       "original": "nd.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "efcd23458f934eb32c341bd5b0b984b96bae89a7cf68f6c369987cf28a4bfd8a",
-      "outputSha256": "0e9f876a2f5f0104e0e7e767f764c39c3e5a9008416f39b10ca1b53a2c167ef0",
+      "outputSha256": "4ca8e61e9f33da1b95199f9a82a1a11fe6d69ebb0f8bcb3941b093f9b20271fb",
       "edits": [
         {
           "start": 71,
@@ -1381959,6 +1382874,13 @@
           "symbol": "C:sk",
           "original": "sk",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 219,
+          "end": 220,
+          "symbol": "M:nd.b(B)Z",
+          "original": "b",
+          "renamed": "isAvailabilityQueryPending"
         },
         {
           "start": 313,
@@ -1393824,7 +1394746,7 @@
       "original": "no.java",
       "renamed": "AchievementNotificationOverlay.java",
       "inputSha256": "a5526f0b9fa9846d26205191ecc9fd22f7749a9921d9f33e03da72122284641d",
-      "outputSha256": "6a05d71d689de07796f3cf9bf7307c71ab24ec6bc8528cd810518b758a46a3f4",
+      "outputSha256": "30cc603fa67f76502a08f59f3912bf368ad12307100416288db6677936d3460e",
       "edits": [
         {
           "start": 50,
@@ -1394632,6 +1395554,13 @@
           "renamed": "drawScaled"
         },
         {
+          "start": 7361,
+          "end": 7362,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
+        },
+        {
           "start": 7414,
           "end": 7416,
           "symbol": "C:lf",
@@ -1394876,7 +1395805,7 @@
       "original": "np.java",
       "renamed": "OpenGlModel.java",
       "inputSha256": "5c26c219b1c9559daf84b741364270a1c179b3624bd58c480cf97220eeb9060b",
-      "outputSha256": "2eb57df68ba024f19c197af406ec791955ccf323b7aaaef431ff69d760bca5d4",
+      "outputSha256": "929cbf3084dc6e6325a2e00540814ca8d962c5e2e5a0e4850037ae8abcb86411",
       "edits": [
         {
           "start": 50,
@@ -1395280,6 +1396209,13 @@
           "renamed": "ValidatedTextInputWidget"
         },
         {
+          "start": 19667,
+          "end": 19668,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
+        },
+        {
           "start": 19777,
           "end": 19780,
           "symbol": "C:hha",
@@ -1395544,6 +1396480,13 @@
           "renamed": "FullscreenUiDrawing"
         },
         {
+          "start": 28847,
+          "end": 28848,
+          "symbol": "M:hh.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordArrayCopy"
+        },
+        {
           "start": 29028,
           "end": 29031,
           "symbol": "B:np.a(ZIZILnp;Lnp;)Lka;#2",
@@ -1395557,6 +1396500,13 @@
           "symbol": "C:upa",
           "original": "upa",
           "renamed": "RatingTable"
+        },
+        {
+          "start": 30230,
+          "end": 30231,
+          "symbol": "M:upa.a(III)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordPointerCopy"
         },
         {
           "start": 30279,
@@ -1395608,6 +1396558,13 @@
           "symbol": "C:tia",
           "original": "tia",
           "renamed": "FixedAngleTrigonometry"
+        },
+        {
+          "start": 32839,
+          "end": 32840,
+          "symbol": "M:tia.b(III)Z",
+          "original": "b",
+          "renamed": "requiresIndexBufferCopy"
         },
         {
           "start": 32891,
@@ -1399383,6 +1400340,13 @@
           "renamed": "LegacyOpenGlBloomEffect"
         },
         {
+          "start": 162509,
+          "end": 162510,
+          "symbol": "M:uv.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexX"
+        },
+        {
           "start": 162696,
           "end": 162697,
           "symbol": "M:np.c(I)V",
@@ -1399395,6 +1400359,13 @@
           "symbol": "C:pt",
           "original": "pt",
           "renamed": "FacePlayerLocomotor"
+        },
+        {
+          "start": 163015,
+          "end": 163016,
+          "symbol": "M:pt.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexY"
         },
         {
           "start": 163279,
@@ -1399418,6 +1400389,13 @@
           "renamed": "SimpleHoverMountComponent"
         },
         {
+          "start": 163578,
+          "end": 163579,
+          "symbol": "M:jc.c(III)Z",
+          "original": "c",
+          "renamed": "requiresCpuVertexZ"
+        },
+        {
           "start": 163770,
           "end": 163771,
           "symbol": "M:np.c(I)V",
@@ -1399432,11 +1400410,25 @@
           "renamed": "RenderableNode"
         },
         {
+          "start": 164586,
+          "end": 164587,
+          "symbol": "M:oea.a(IIB)Z",
+          "original": "a",
+          "renamed": "requiresCpuNormals"
+        },
+        {
           "start": 166057,
           "end": 166059,
           "symbol": "C:sm",
           "original": "sm",
           "renamed": "KeyLockBehaviour"
+        },
+        {
+          "start": 166060,
+          "end": 166061,
+          "symbol": "M:sm.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceColours"
         },
         {
           "start": 166439,
@@ -1399446,11 +1400438,25 @@
           "renamed": "Transform3D"
         },
         {
+          "start": 166443,
+          "end": 166444,
+          "symbol": "M:gda.b(III)Z",
+          "original": "b",
+          "renamed": "requiresCpuFaceAlpha"
+        },
+        {
           "start": 166824,
           "end": 166827,
           "symbol": "C:lva",
           "original": "lva",
           "renamed": "PerlinNoise2D"
+        },
+        {
+          "start": 166828,
+          "end": 166829,
+          "symbol": "M:lva.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresCpuTexCoords"
         },
         {
           "start": 167251,
@@ -1399460,11 +1400466,25 @@
           "renamed": "StringCursor"
         },
         {
+          "start": 167254,
+          "end": 167255,
+          "symbol": "M:in.a(IIB)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceTextures"
+        },
+        {
           "start": 167642,
           "end": 167644,
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 167645,
+          "end": 167646,
+          "symbol": "M:ae.a(III)Z",
+          "original": "a",
+          "renamed": "requiresOpenGlCpuTriangleIndices"
         },
         {
           "start": 167753,
@@ -1411482,7 +1412502,7 @@
       "original": "oba.java",
       "renamed": "OpenGlTransform3D.java",
       "inputSha256": "44ac96cbdbd32ac3ce85461f0d79d79fa33d0bd57209d2ea788c43d48d7929b3",
-      "outputSha256": "652cdae197350d485f9a254572b3aae685cce3b063c0f50aeb4f76677070f787",
+      "outputSha256": "bfc2c3fac28b9745e8a2b801f2ffada73343c526b3756a03f434d5613a385813",
       "edits": [
         {
           "start": 50,
@@ -1411611,11 +1412631,25 @@
           "renamed": "GameKeyHandler"
         },
         {
+          "start": 971,
+          "end": 972,
+          "symbol": "M:oba.c(III)Z",
+          "original": "c",
+          "renamed": "requiresNormalStreamCopy"
+        },
+        {
           "start": 1060,
           "end": 1063,
           "symbol": "C:vta",
           "original": "vta",
           "renamed": "HardwareUnlitEffect"
+        },
+        {
+          "start": 1064,
+          "end": 1065,
+          "symbol": "M:vta.a(III)Z",
+          "original": "a",
+          "renamed": "requiresNormalStream"
         },
         {
           "start": 1141,
@@ -1414708,7 +1415742,7 @@
       "original": "oea.java",
       "renamed": "RenderableNode.java",
       "inputSha256": "535542ff11d14d793fa4209fdfe17691b518a66186aad530d4cc09971b812306",
-      "outputSha256": "48c12d1fcf806aa88cb6816499c48bb8baddba0ab88c3b724bdbcac18883d004",
+      "outputSha256": "fd3f5bb1c1cd270146f49c2781159e447631e7c7c7fcfdc8e652aa97d7bf9fa5",
       "edits": [
         {
           "start": 50,
@@ -1414751,6 +1415785,13 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 245,
+          "end": 246,
+          "symbol": "M:oea.a(IIB)Z",
+          "original": "a",
+          "renamed": "requiresCpuNormals"
         },
         {
           "start": 339,
@@ -1462213,7 +1463254,7 @@
       "original": "pg.java",
       "renamed": "TermsLinksPanel.java",
       "inputSha256": "7381ca1d6da8b510ad2d3cd4580a803edbb331eea3d939c60c4173119c13437b",
-      "outputSha256": "b5fbee5eb8ecca9feb3f6e3d9f43fb1a2bf01cd7b3e0eaec875a6d5b5ba4c4b0",
+      "outputSha256": "87958dd96cdc8d96a9fdd9ed74647e3208d263db8c1394247d9402aac029826f",
       "edits": [
         {
           "start": 50,
@@ -1462265,6 +1463306,13 @@
           "renamed": "AccountCreationDialog"
         },
         {
+          "start": 286,
+          "end": 287,
+          "symbol": "M:pg.b(Z)V",
+          "original": "b",
+          "renamed": "openGuestLoginWithRegistration"
+        },
+        {
           "start": 319,
           "end": 322,
           "symbol": "C:qga",
@@ -1462284,6 +1463332,13 @@
           "symbol": "C:jda",
           "original": "jda",
           "renamed": "GreyscaleOperator"
+        },
+        {
+          "start": 429,
+          "end": 430,
+          "symbol": "M:jda.a(ZI)V",
+          "original": "a",
+          "renamed": "openLoginFormWithRegistrationOption"
         },
         {
           "start": 454,
@@ -1466373,7 +1467428,7 @@
       "original": "pka.java",
       "renamed": "DialogOverlayDrawing.java",
       "inputSha256": "92e3684438dacf11e4e242dde1e94b1bde8df90e68d99834916c4018f2e5e587",
-      "outputSha256": "37ffc91b6dfb1a9bed40cd34eb13c044ed9b7eeaa56ffebc75a6be6cf1419e62",
+      "outputSha256": "40bba61b2ac9e3fd679588f84a8f65cdaad41cb579d0e4315079296fa77f09cd",
       "edits": [
         {
           "start": 50,
@@ -1466467,6 +1467522,13 @@
           "renamed": "MessagePage"
         },
         {
+          "start": 774,
+          "end": 775,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
+        },
+        {
           "start": 813,
           "end": 816,
           "symbol": "C:lpa",
@@ -1466542,6 +1467604,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 1192,
+          "end": 1193,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 1236,
@@ -1466656,6 +1467725,13 @@
           "renamed": "MessagePage"
         },
         {
+          "start": 1643,
+          "end": 1644,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
+        },
+        {
           "start": 1745,
           "end": 1748,
           "symbol": "C:lpa",
@@ -1466731,6 +1467807,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 2105,
+          "end": 2106,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 2195,
@@ -1466873,6 +1467956,13 @@
           "renamed": "MessagePage"
         },
         {
+          "start": 2583,
+          "end": 2584,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
+        },
+        {
           "start": 2688,
           "end": 2691,
           "symbol": "C:lpa",
@@ -1466948,6 +1468038,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 3046,
+          "end": 3047,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 3139,
@@ -1467048,6 +1468145,13 @@
           "renamed": "MessagePage"
         },
         {
+          "start": 3482,
+          "end": 3483,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
+        },
+        {
           "start": 3572,
           "end": 3575,
           "symbol": "C:lpa",
@@ -1467123,6 +1468227,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 3892,
+          "end": 3893,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 3970,
@@ -1467264,7 +1468375,7 @@
       "original": "pla.java",
       "renamed": "IntIntHashTable.java",
       "inputSha256": "0a64b89cc2c5df72caadfcc66661c29de4c51545bb9b7fcbbfbe04dc7959513d",
-      "outputSha256": "0f6fc1448c28e487411f7dfe1bca35ef7933290dee8214c13607536da150b06e",
+      "outputSha256": "4598b0d47e42169998c210d189378263fb20dd869f8f3c9ae86aa742f203ae3d",
       "edits": [
         {
           "start": 50,
@@ -1467440,6 +1468551,13 @@
           "symbol": "C:nd",
           "original": "nd",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3561,
+          "end": 3562,
+          "symbol": "M:nd.b(B)Z",
+          "original": "b",
+          "renamed": "isAvailabilityQueryPending"
         },
         {
           "start": 3599,
@@ -1469873,7 +1470991,7 @@
       "original": "pq.java",
       "renamed": "CharacterChoiceFactory.java",
       "inputSha256": "aef72069eda9d4a7802bae1307921baad984cc3dc0beb79101c86f9929b8a776",
-      "outputSha256": "fc6ad5aba152ea561ed56006ae36331efa370d9eaa3da28a7e788d131ee8370b",
+      "outputSha256": "46b2139fcead65cd3b9e45612810c82bee0c20a73559c1bd428bcba8b58b0a01",
       "edits": [
         {
           "start": 50,
@@ -1470224,6 +1471342,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "LegacyOpenGlFlowingWaterEffect"
+        },
+        {
+          "start": 3139,
+          "end": 3140,
+          "symbol": "M:gl.a(ZZB)V",
+          "original": "a",
+          "renamed": "openLoginForm"
         },
         {
           "start": 3224,
@@ -1473645,7 +1474770,7 @@
       "original": "pt.java",
       "renamed": "FacePlayerLocomotor.java",
       "inputSha256": "1a0aa3eb27078347bc167cc8f4c0f210ed85bfffd54db80695800c0819e5dbde",
-      "outputSha256": "d6594ba06864418dfff7de1f36b5d7e76b6162671d1c881512e28a21c3d42a58",
+      "outputSha256": "3f142ee4238fc3e65c8f0c6b3d7e3d3835e2762ae7c8abe601db787869683bc8",
       "edits": [
         {
           "start": 50,
@@ -1473774,6 +1474899,13 @@
           "renamed": "getTypeId"
         },
         {
+          "start": 1048,
+          "end": 1049,
+          "symbol": "M:pt.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexY"
+        },
+        {
           "start": 1189,
           "end": 1191,
           "symbol": "C:mg",
@@ -1473793,6 +1474925,13 @@
           "symbol": "C:so",
           "original": "so",
           "renamed": "ValidatedTextInputWidget"
+        },
+        {
+          "start": 1274,
+          "end": 1275,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
         },
         {
           "start": 1383,
@@ -1474059,6 +1475198,13 @@
           "symbol": "C:pt",
           "original": "pt",
           "renamed": "FacePlayerLocomotor"
+        },
+        {
+          "start": 4069,
+          "end": 4070,
+          "symbol": "M:pt.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexY"
         },
         {
           "start": 4092,
@@ -1476465,7 +1477611,7 @@
       "original": "pw.java",
       "renamed": "PressureSwitchComponent.java",
       "inputSha256": "19652860f2c6894a14691315846b5bf7e1645dd840c842439a196af9e712e84b",
-      "outputSha256": "f4f9cce5a3d7a4072f0cfd51b84029c73b4084aeb9de430db816f2fe7600dbef",
+      "outputSha256": "94a162c0acc3d85e0473e3b94368dc4db21582142759beb019489cef19ea2d41",
       "edits": [
         {
           "start": 50,
@@ -1476893,6 +1478039,13 @@
           "symbol": "M:pw.s(I)Z",
           "original": "s",
           "renamed": "isSwitchable"
+        },
+        {
+          "start": 2831,
+          "end": 2832,
+          "symbol": "M:pw.C(I)V",
+          "original": "C",
+          "renamed": "advanceLogoAnimation"
         },
         {
           "start": 2860,
@@ -1501718,7 +1502871,7 @@
       "original": "qr.java",
       "renamed": "SingleChildWidget.java",
       "inputSha256": "eef4dd698df27a5966dc477c33764aea7e5f463e144355bf0d45648a7fdaaf46",
-      "outputSha256": "9a5630c470f361311e1bee926896908695c53cf5bc02511af25a35c1b664f192",
+      "outputSha256": "fd834b5563d81e4d82d8feef3fbcc28562b624d934b86c6f7706bfff2033c03b",
       "edits": [
         {
           "start": 74,
@@ -1501798,6 +1502951,13 @@
           "renamed": "refreshChildLayout"
         },
         {
+          "start": 386,
+          "end": 387,
+          "symbol": "M:qr.c(III)Z",
+          "original": "c",
+          "renamed": "requiresCpuVertexY"
+        },
+        {
           "start": 543,
           "end": 545,
           "symbol": "C:qr",
@@ -1501824,6 +1502984,13 @@
           "symbol": "C:uu",
           "original": "uu",
           "renamed": "C2SChooseRewardPacket"
+        },
+        {
+          "start": 686,
+          "end": 687,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
         },
         {
           "start": 774,
@@ -1519677,7 +1520844,7 @@
       "original": "rfa.java",
       "renamed": "TombRacerShell.java",
       "inputSha256": "ee9239156511db1a79e1fc580e5d6f6c90add2ec0e44a464a7b8f3c9337f80a6",
-      "outputSha256": "8f338224e02f92eab2e38b4667df0706157b219212c2035336872af81895d0d1",
+      "outputSha256": "a2aa9702443ade7ed06c5bee0b20342d8cfb1e291b9aa3eef6c6e4ab628a484e",
       "edits": [
         {
           "start": 74,
@@ -1520275,6 +1521442,13 @@
           "renamed": "MessagePage"
         },
         {
+          "start": 3659,
+          "end": 3660,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
+        },
+        {
           "start": 3687,
           "end": 3689,
           "symbol": "C:au",
@@ -1520322,6 +1521496,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 3978,
+          "end": 3979,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 4070,
@@ -1520434,6 +1521615,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 4993,
+          "end": 4994,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 5017,
@@ -1520758,6 +1521946,13 @@
           "renamed": "isLoginFlowIncomplete"
         },
         {
+          "start": 8474,
+          "end": 8475,
+          "symbol": "M:ug.r(I)V",
+          "original": "r",
+          "renamed": "tickLoginAndLogo"
+        },
+        {
           "start": 8496,
           "end": 8499,
           "symbol": "C:wna",
@@ -1521036,6 +1522231,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "TextureMetadata"
+        },
+        {
+          "start": 9790,
+          "end": 9791,
+          "symbol": "M:dw.b(B)V",
+          "original": "b",
+          "renamed": "beginReconnectLogin"
         },
         {
           "start": 9852,
@@ -1541969,7 +1543171,7 @@
       "original": "rua.java",
       "renamed": "AccountCreationDialog.java",
       "inputSha256": "05b7565e70155092524ecbfc75a2399511ecba2cea6a3289a7e2d7db1cf35e72",
-      "outputSha256": "b618dc2d029938c0d74b7d3e5be4817e21c580da16fa2757ad3a79d498fc31d7",
+      "outputSha256": "47112cf2d86154b6cb6c9759b6c88ec69b1a8415827d283e7bb7e399d083c932",
       "edits": [
         {
           "start": 50,
@@ -1542054,6 +1543256,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "LegacyOpenGlFlowingWaterEffect"
+        },
+        {
+          "start": 489,
+          "end": 490,
+          "symbol": "M:gl.a(ZZB)V",
+          "original": "a",
+          "renamed": "openLoginForm"
         },
         {
           "start": 569,
@@ -1556547,7 +1557756,7 @@
       "original": "sm.java",
       "renamed": "KeyLockBehaviour.java",
       "inputSha256": "39be85676a5154d7ed93d3cd4c7958767b30924215a7e9732b1be5e780704c7f",
-      "outputSha256": "f2643923ca5dd5f8984c810dcf87550db0ad02f1395e12b2e7598071b156d1eb",
+      "outputSha256": "2609e05630ab20d870416e264d2e5b9424050c885c46bb16ac97b2c60693ca07",
       "edits": [
         {
           "start": 50,
@@ -1556998,6 +1558207,13 @@
           "renamed": "KeyLockBehaviour"
         },
         {
+          "start": 3434,
+          "end": 3435,
+          "symbol": "M:sm.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceColours"
+        },
+        {
           "start": 3491,
           "end": 3492,
           "symbol": "M:sm.c(I)I",
@@ -1557033,11 +1558249,25 @@
           "renamed": "SwitchState"
         },
         {
+          "start": 3797,
+          "end": 3798,
+          "symbol": "M:sm.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceColours"
+        },
+        {
           "start": 3874,
           "end": 3876,
           "symbol": "C:sm",
           "original": "sm",
           "renamed": "KeyLockBehaviour"
+        },
+        {
+          "start": 3877,
+          "end": 3878,
+          "symbol": "M:sm.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceColours"
         },
         {
           "start": 3910,
@@ -1557164,6 +1558394,13 @@
           "symbol": "C:sm",
           "original": "sm",
           "renamed": "KeyLockBehaviour"
+        },
+        {
+          "start": 4993,
+          "end": 4994,
+          "symbol": "M:sm.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceColours"
         },
         {
           "start": 5041,
@@ -1558742,7 +1559979,7 @@
       "original": "so.java",
       "renamed": "ValidatedTextInputWidget.java",
       "inputSha256": "02d84ec558c250ae39e5c553d91477444ee742adf7e4081a1e8f6f10e04c7f80",
-      "outputSha256": "797401161bfa86af011edc8047f74e5f4b790c3c71b4d8c261281a5541e39f06",
+      "outputSha256": "03d057d1883564ba17f466cbefcb4931f92fc452b2f5efa3a085a678d763874b",
       "edits": [
         {
           "start": 50,
@@ -1558785,6 +1560022,13 @@
           "symbol": "C:so",
           "original": "so",
           "renamed": "ValidatedTextInputWidget"
+        },
+        {
+          "start": 291,
+          "end": 292,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
         },
         {
           "start": 465,
@@ -1559156,6 +1560400,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "WidgetListener"
+        },
+        {
+          "start": 3204,
+          "end": 3205,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
         },
         {
           "start": 3309,
@@ -1560785,7 +1562036,7 @@
       "original": "sr.java",
       "renamed": "MessagePage.java",
       "inputSha256": "4d425c14b60c20ec3a6873fc351a32b4c12d111e044177fd02081cfc5831dfed",
-      "outputSha256": "7ee02bef51112abb2d2c1b57f904a6c8dabe32ecf8439dfbd7065816cf33ba4d",
+      "outputSha256": "0ad1484b803bddd404b9519471a983980b51097d9f9e8958c1ed0eb7d0a6ace7",
       "edits": [
         {
           "start": 50,
@@ -1561103,6 +1562354,13 @@
           "renamed": "FocusableWidget"
         },
         {
+          "start": 4722,
+          "end": 4723,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
+        },
+        {
           "start": 4784,
           "end": 4786,
           "symbol": "C:ub",
@@ -1561122,6 +1562380,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MessagePage"
+        },
+        {
+          "start": 4846,
+          "end": 4847,
+          "symbol": "M:sr.a(I)Z",
+          "original": "a",
+          "renamed": "isSelectionMenuActive"
         },
         {
           "start": 4870,
@@ -1573457,7 +1574722,7 @@
       "original": "tc.java",
       "renamed": "IdChatTarget.java",
       "inputSha256": "3dd7261123788e94ae3507e9fdf3a803318cc08eaa755e657c9500e954f637e1",
-      "outputSha256": "ee932ed6fca616dbc0ed762224eccba894c712a3899a4335b24142061b04621d",
+      "outputSha256": "6570fa010daa117388c355af783cea8015a5e2150d0bdd171da401460652c42c",
       "edits": [
         {
           "start": 44,
@@ -1573731,6 +1574996,13 @@
           "symbol": "C:hs",
           "original": "hs",
           "renamed": "TextureFilter"
+        },
+        {
+          "start": 3025,
+          "end": 3026,
+          "symbol": "M:hs.a(ZB)V",
+          "original": "a",
+          "renamed": "drawQuickChatHelp"
         },
         {
           "start": 3172,
@@ -1576562,7 +1577834,7 @@
       "original": "th.java",
       "renamed": "WindZoneBehaviour.java",
       "inputSha256": "2b2bf1d6a66b7a48a924f62478236cf6ed1498f99266ca8259d742a483da3aa3",
-      "outputSha256": "58878f4bad8b6b9b585ef89a8ccb5663760a8220a16629073d41d86e02e60551",
+      "outputSha256": "a4dff5d2d4fa59cd59bbb8612a8cc094ed0e53c41adaf944fbaf66dc97117a22",
       "edits": [
         {
           "start": 50,
@@ -1577202,6 +1578474,13 @@
           "renamed": "getTypeId"
         },
         {
+          "start": 6908,
+          "end": 6909,
+          "symbol": "M:th.b(III)Z",
+          "original": "b",
+          "renamed": "requiresCpuFaceColours"
+        },
+        {
           "start": 7068,
           "end": 7071,
           "symbol": "C:bqa",
@@ -1577221,6 +1578500,13 @@
           "symbol": "C:no",
           "original": "no",
           "renamed": "AchievementNotificationOverlay"
+        },
+        {
+          "start": 7106,
+          "end": 7107,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
         },
         {
           "start": 7192,
@@ -1577818,7 +1579104,7 @@
       "original": "tia.java",
       "renamed": "FixedAngleTrigonometry.java",
       "inputSha256": "d6b0eaa8a5eb611b4751ac199d795d5b8b82a60b0093164a31f1d54f0925a2b7",
-      "outputSha256": "f1a4b5704bb88404036329198a84585ab75051d67821d4d2428891703a20625f",
+      "outputSha256": "a8dcb82e3ec8d93483a006117ab7e2bfadb3cd22d8f2be503312d857f5ddaba0",
       "edits": [
         {
           "start": 50,
@@ -1578050,6 +1579336,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2991,
+          "end": 2992,
+          "symbol": "M:tia.b(III)Z",
+          "original": "b",
+          "renamed": "requiresIndexBufferCopy"
         },
         {
           "start": 3112,
@@ -1581345,7 +1582638,7 @@
       "original": "tp.java",
       "renamed": "WhiteLightShooterComponent.java",
       "inputSha256": "adffc145789533dcbe1ee0671453ee8e8188fff4f80f78fbb1e39d6a77b8234d",
-      "outputSha256": "a0827f8fc17f3f8de09d316db002ff29ded61ac571d9b4b8c21e31929321309f",
+      "outputSha256": "74ca9cb2a6e9af59317b189908dbea3f8be8131e005f8cd048103f25bac754f1",
       "edits": [
         {
           "start": 50,
@@ -1581409,6 +1582702,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "WhiteLightShooterComponent"
+        },
+        {
+          "start": 602,
+          "end": 603,
+          "symbol": "M:tp.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexX"
         },
         {
           "start": 681,
@@ -1581509,6 +1582809,13 @@
           "renamed": "Room"
         },
         {
+          "start": 2020,
+          "end": 2021,
+          "symbol": "M:tp.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexX"
+        },
+        {
           "start": 2284,
           "end": 2286,
           "symbol": "C:ir",
@@ -1581528,6 +1582835,13 @@
           "symbol": "C:uu",
           "original": "uu",
           "renamed": "C2SChooseRewardPacket"
+        },
+        {
+          "start": 2325,
+          "end": 2326,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
         },
         {
           "start": 2405,
@@ -1588722,7 +1590036,7 @@
       "original": "tta.java",
       "renamed": "KeyItemComponent.java",
       "inputSha256": "73c0e8d0b58d279a2a48b43b060b45e4093d5c1e6a87137a58923c256edbcba5",
-      "outputSha256": "89f3728b755e6a13e0be80ad8bf0227d4ce1d7a56aa37a4d91c8edc4e55769c5",
+      "outputSha256": "d46175487de88720d34d880e90bc3f1aff1f3bd591b8c1cb97e0c5b48d630e8b",
       "edits": [
         {
           "start": 50,
@@ -1588737,6 +1590051,13 @@
           "symbol": "C:lea",
           "original": "lea",
           "renamed": "ItemComponent"
+        },
+        {
+          "start": 115,
+          "end": 116,
+          "symbol": "M:tta.e(Z)V",
+          "original": "e",
+          "renamed": "openGuestLogin"
         },
         {
           "start": 148,
@@ -1588758,6 +1590079,13 @@
           "symbol": "C:jda",
           "original": "jda",
           "renamed": "GreyscaleOperator"
+        },
+        {
+          "start": 260,
+          "end": 261,
+          "symbol": "M:jda.a(ZI)V",
+          "original": "a",
+          "renamed": "openLoginFormWithRegistrationOption"
         },
         {
           "start": 286,
@@ -1597623,7 +1598951,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "1d896f8458f4b4cb70e095b2d73a6ef3f3243f87bf158d9094f0b3ee63ec6b9d",
+      "outputSha256": "f220b86701dde2bf0d923572854afe5b128fc001bc0abae9332bd81e9329a67e",
       "edits": [
         {
           "start": 53,
@@ -1598121,6 +1599449,13 @@
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "ScoreSubmission"
+        },
+        {
+          "start": 2979,
+          "end": 2980,
+          "symbol": "M:kb.a(IZ)V",
+          "original": "a",
+          "renamed": "completeAvailabilityQuery"
         },
         {
           "start": 3091,
@@ -1599222,6 +1600557,13 @@
           "renamed": "TextureMetadata"
         },
         {
+          "start": 10227,
+          "end": 10228,
+          "symbol": "M:dw.b(B)V",
+          "original": "b",
+          "renamed": "beginReconnectLogin"
+        },
+        {
           "start": 10250,
           "end": 10253,
           "symbol": "C:epa",
@@ -1599845,6 +1601187,13 @@
           "renamed": "OpenGlModelBillboard"
         },
         {
+          "start": 16441,
+          "end": 16442,
+          "symbol": "M:ug.r(I)V",
+          "original": "r",
+          "renamed": "tickLoginAndLogo"
+        },
+        {
           "start": 16599,
           "end": 16601,
           "symbol": "C:ug",
@@ -1599913,6 +1601262,13 @@
           "symbol": "C:pw",
           "original": "pw",
           "renamed": "PressureSwitchComponent"
+        },
+        {
+          "start": 16855,
+          "end": 16856,
+          "symbol": "M:pw.C(I)V",
+          "original": "C",
+          "renamed": "advanceLogoAnimation"
         },
         {
           "start": 16906,
@@ -1600158,6 +1601514,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "TextureMetadata"
+        },
+        {
+          "start": 18333,
+          "end": 18334,
+          "symbol": "M:dw.b(B)V",
+          "original": "b",
+          "renamed": "beginReconnectLogin"
         },
         {
           "start": 18360,
@@ -1600424,6 +1601787,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "TextureMetadata"
+        },
+        {
+          "start": 19740,
+          "end": 19741,
+          "symbol": "M:dw.b(B)V",
+          "original": "b",
+          "renamed": "beginReconnectLogin"
         },
         {
           "start": 19774,
@@ -1617816,7 +1619186,7 @@
       "original": "upa.java",
       "renamed": "RatingTable.java",
       "inputSha256": "c20d26a72383899208fc6c35c9f86a6b5d5be49d9b56ad14bab303afed618fb0",
-      "outputSha256": "0d351ca9b8fde3ccd2be7ce1f8b71387938547a0468341069b22164865226989",
+      "outputSha256": "8b0f18000a934fd83619b87b05cebc16d57352d881254bb8508980a642a8b385",
       "edits": [
         {
           "start": 50,
@@ -1618470,11 +1619840,25 @@
           "renamed": "popRasterState"
         },
         {
+          "start": 4575,
+          "end": 4576,
+          "symbol": "M:upa.a(III)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordPointerCopy"
+        },
+        {
           "start": 4691,
           "end": 4693,
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "FullscreenUiDrawing"
+        },
+        {
+          "start": 4694,
+          "end": 4695,
+          "symbol": "M:hh.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresTexCoordArrayCopy"
         },
         {
           "start": 4724,
@@ -1623028,7 +1624412,7 @@
       "original": "uu.java",
       "renamed": "C2SChooseRewardPacket.java",
       "inputSha256": "2fe419b9f1238e80a515daf3c0fd44dd46041cbec294b16b67514f52c26eda5a",
-      "outputSha256": "7bcea8438e5cd7881e3462fb6d867a7ad786cfad777b88e2801ea2d669b1e4ae",
+      "outputSha256": "11d399f65659e4250490318533be50917fa71f2124efbf4114c5ea2aedb7b077",
       "edits": [
         {
           "start": 50,
@@ -1623050,6 +1624434,13 @@
           "symbol": "C:ht",
           "original": "ht",
           "renamed": "LobbyGameWidget"
+        },
+        {
+          "start": 167,
+          "end": 168,
+          "symbol": "M:uu.a(ZII)Z",
+          "original": "a",
+          "renamed": "requiresPositionStreamCopy"
         },
         {
           "start": 251,
@@ -1625417,7 +1626808,7 @@
       "original": "uv.java",
       "renamed": "LegacyOpenGlBloomEffect.java",
       "inputSha256": "0759259ed9147122e8e5e4ad487af82df601319f68d50d0f36bfeb1fe7f7fc2a",
-      "outputSha256": "89810103208d0ee0924746a12d0e657901d37ea1ab39ae1d3297f7ccab986415",
+      "outputSha256": "f5d3f9be1ffbe4f4bac7887b4c15c5e07ad0be978928c28ab109e4579a162324",
       "edits": [
         {
           "start": 50,
@@ -1626610,6 +1628001,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 18848,
+          "end": 18849,
+          "symbol": "M:uv.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuVertexX"
+        },
+        {
           "start": 18968,
           "end": 18970,
           "symbol": "C:jj",
@@ -1626631,6 +1628029,13 @@
           "renamed": "ValidatedTextInputWidget"
         },
         {
+          "start": 19065,
+          "end": 19066,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
+        },
+        {
           "start": 19169,
           "end": 19171,
           "symbol": "C:jj",
@@ -1626650,6 +1628055,13 @@
           "symbol": "C:so",
           "original": "so",
           "renamed": "ValidatedTextInputWidget"
+        },
+        {
+          "start": 19292,
+          "end": 19293,
+          "symbol": "M:so.a(IBI)Z",
+          "original": "a",
+          "renamed": "requiresPositionPointerCopy"
         },
         {
           "start": 19405,
@@ -1626727,7 +1628139,7 @@
       "original": "uw.java",
       "renamed": "RenderScene.java",
       "inputSha256": "2c6938891f32592d989edd139d95eb288847cd26dbcda14bf2b0f54f0e7522b7",
-      "outputSha256": "12d6eac32a34fca70bd3dbe3eda1139695fc0e8b392c651b07cd831366d2c074",
+      "outputSha256": "2b4c9a14b3dec4425465bafa31f54e08ccf41cd87d826d115b7fc079f4db6719",
       "edits": [
         {
           "start": 50,
@@ -1626919,6 +1628331,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1103,
+          "end": 1104,
+          "symbol": "M:uw.a(III)Z",
+          "original": "a",
+          "renamed": "requiresCpuFaceTextures"
+        },
+        {
           "start": 1363,
           "end": 1366,
           "symbol": "C:fua",
@@ -1626938,6 +1628357,13 @@
           "symbol": "C:no",
           "original": "no",
           "renamed": "AchievementNotificationOverlay"
+        },
+        {
+          "start": 1398,
+          "end": 1399,
+          "symbol": "M:no.a(III)Z",
+          "original": "a",
+          "renamed": "requiresColourStreamCopy"
         },
         {
           "start": 1470,
@@ -1652372,7 +1653798,7 @@
       "original": "vta.java",
       "renamed": "HardwareUnlitEffect.java",
       "inputSha256": "4aafc14dd9f5f8faed31fc778cf4fa65287b98061672f3717c208ac3cdee4d99",
-      "outputSha256": "1a46231126b6524dc3f77d73695978d14fa1912b027d8f37627a9c0000ae163f",
+      "outputSha256": "64a52a605332614a2c38b126e4644e0cd36737215270ce6368957fd16bddc774",
       "edits": [
         {
           "start": 50,
@@ -1652443,6 +1653869,13 @@
           "symbol": "M:vta.a(BII)V",
           "original": "a",
           "renamed": "setParameters"
+        },
+        {
+          "start": 799,
+          "end": 800,
+          "symbol": "M:vta.a(III)Z",
+          "original": "a",
+          "renamed": "requiresNormalStream"
         },
         {
           "start": 916,
@@ -1673847,7 +1675280,7 @@
       "original": "wqa.java",
       "renamed": "GasTrapComponent.java",
       "inputSha256": "a68395adaf25b87cabb40fe95068bf901d3557edf60cfff6ba4d16547aeea794",
-      "outputSha256": "d204c54dbf5d922edbea751eb461c6b3c872c790d7189ed7fcf8058713ee3cc0",
+      "outputSha256": "701433cc92d669cbe177c65483c7162020cf2b8ae34b7229430c9ce5d6728dc4",
       "edits": [
         {
           "start": 50,
@@ -1673967,6 +1675400,13 @@
           "symbol": "C:eba",
           "original": "eba",
           "renamed": "SoftCacheEntry"
+        },
+        {
+          "start": 1103,
+          "end": 1104,
+          "symbol": "M:eba.a(Z)Z",
+          "original": "a",
+          "renamed": "isQuickChatOverlayOpen"
         },
         {
           "start": 1194,
@@ -1685404,10 +1686844,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "43723fb09c3a1dcdb2a2adb534a35b6ae33c58802046e5ba2792a6b74f0144e8",
+    "rulesSha256": "d7a0bb1f51fd3cf5dc452e4e2689a5bc2343be80586b81c283149866ad298807",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "0c9c9bd196ab72dff8d49f552335919f0bf6ee778a2e902d587c8ef9d2bf0b7c",
+    "outputTreeSha256": "0c4bf98f7935d2b6b894b4d7a9038a9ae706bd2ec5e3e0c8ab472337eb221eef",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -14,14 +14,14 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         this.refreshChildLayout(97);
     }
 
-    final static boolean c(int param0, int param1, int param2) {
+    final static boolean requiresCpuVertexY(int param0, int param1, int param2) {
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
         if (param0 != 458752) {
           SingleChildWidget.a(95);
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | QueuedFixedRequest.hasAnyMask34(param2, -83, param1)) || (C2SChooseRewardPacket.a(true, param2, param1));
+        stackIn_10_0 = !(!stackIn_5_0 | QueuedFixedRequest.hasAnyMask34(param2, -83, param1)) || (C2SChooseRewardPacket.requiresPositionStreamCopy(true, param2, param1));
         return stackIn_10_0;
     }
 

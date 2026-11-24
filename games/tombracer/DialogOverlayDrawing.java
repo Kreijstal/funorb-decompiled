@@ -29,7 +29,7 @@ final class DialogOverlayDrawing {
           var1 = 1;
           if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
-              if (MessagePage.a(125)) {
+              if (MessagePage.isSelectionMenuActive(125)) {
                 var2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2) {
                   var1 = 1;
@@ -42,7 +42,7 @@ final class DialogOverlayDrawing {
             S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
-          if (MessagePage.a(125)) {
+          if (MessagePage.isSelectionMenuActive(125)) {
             var2Lifetime4 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime4) {
               var1 = 1;
@@ -56,7 +56,7 @@ final class DialogOverlayDrawing {
           if (!ResizingDialog.isSelectionMenuOpen(true)) {
             if (PlayPhase.beginReconnectGracePeriod(89)) {
               if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
-                if (!MessagePage.a(125)) {
+                if (!MessagePage.isSelectionMenuActive(125)) {
                   return var1 != 0;
                 }
                 var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -69,7 +69,7 @@ final class DialogOverlayDrawing {
               S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
               var1 = 1;
             }
-            if (!MessagePage.a(125)) {
+            if (!MessagePage.isSelectionMenuActive(125)) {
               return var1 != 0;
             }
             var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -84,7 +84,7 @@ final class DialogOverlayDrawing {
           OpenGlModel.drawSelectionMenu(-69);
           if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
-              if (!MessagePage.a(125)) {
+              if (!MessagePage.isSelectionMenuActive(125)) {
                 return var1 != 0;
               }
               var2Lifetime1Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -97,7 +97,7 @@ final class DialogOverlayDrawing {
             S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
-          if (!MessagePage.a(125)) {
+          if (!MessagePage.isSelectionMenuActive(125)) {
             return var1 != 0;
           }
           var2Lifetime1Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -111,7 +111,7 @@ final class DialogOverlayDrawing {
         TurbulenceNoise3D.drawFullscreenDialog(-1226152383);
         if (PlayPhase.beginReconnectGracePeriod(89)) {
           if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
-            if (!MessagePage.a(125)) {
+            if (!MessagePage.isSelectionMenuActive(125)) {
               return var1 != 0;
             }
             var2Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -124,7 +124,7 @@ final class DialogOverlayDrawing {
           S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
           var1 = 1;
         }
-        if (!MessagePage.a(125)) {
+        if (!MessagePage.isSelectionMenuActive(125)) {
           return var1 != 0;
         }
         var2Lifetime3 = (-1 + PlatformBehaviour.field_o << 8) / 16;

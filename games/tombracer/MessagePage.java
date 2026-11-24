@@ -125,11 +125,11 @@ final class MessagePage extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isSelectionMenuActive(int param0) {
         if (param0 >= 115) {
           return ObjectList.field_c != ObjectList.field_h ? true : false;
         }
-        MessagePage.a(-111);
+        MessagePage.isSelectionMenuActive(-111);
         return ObjectList.field_c != ObjectList.field_h ? true : false;
     }
 

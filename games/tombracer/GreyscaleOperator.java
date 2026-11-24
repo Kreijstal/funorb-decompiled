@@ -4,8 +4,8 @@
 final class GreyscaleOperator extends TextureOperator {
     static int field_m;
 
-    final static void a(boolean param0, int param1) {
-        LegacyOpenGlFlowingWaterEffect.a(false, param0, (byte) 116);
+    final static void openLoginFormWithRegistrationOption(boolean param0, int param1) {
+        LegacyOpenGlFlowingWaterEffect.openLoginForm(false, param0, (byte) 116);
         if (param1 != 262144) {
           field_m = -89;
         }
@@ -15,14 +15,14 @@ final class GreyscaleOperator extends TextureOperator {
         super(1, true);
     }
 
-    final static boolean d(int param0, int param1, int param2) {
+    final static boolean requiresCpuFaceAlpha(int param0, int param1, int param2) {
         if (param1 != -28090) {
           return false;
         }
         if (EdgeDetectOperator.hasFlag256(param0, param2, param1 ^ -3045) | ((262144 & param2) != 0 ? true : false)) {
           return true;
         }
-        if (!AchievementNotificationOverlay.a(param0, param2, 36864)) {
+        if (!AchievementNotificationOverlay.requiresColourStreamCopy(param0, param2, 36864)) {
           return false;
         }
         return true;

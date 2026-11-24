@@ -291,7 +291,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
     }
 
-    final static boolean c(int param0, int param1, int param2) {
+    final static boolean requiresCpuVertexZ(int param0, int param1, int param2) {
         boolean stackIn_3_0 = false;
         boolean stackIn_4_1 = false;
         boolean stackIn_9_0 = false;
@@ -305,7 +305,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           if (stackIn_3_0 | stackIn_4_1) {
             return true;
           }
-          stackIn_9_0 = !(!ValidatedTextInputWidget.a(param2, (byte) -100, param0));
+          stackIn_9_0 = !(!ValidatedTextInputWidget.requiresPositionPointerCopy(param2, (byte) -100, param0));
           return stackIn_9_0;
         }
         stackIn_12_0 = DecodableArrayReader.hasAnyMask52(param0, param2, 97);
@@ -313,7 +313,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         if (stackIn_12_0 | stackIn_13_1) {
           stackIn_18_0 = true;
         } else {
-          if (ValidatedTextInputWidget.a(param2, (byte) -100, param0)) {
+          if (ValidatedTextInputWidget.requiresPositionPointerCopy(param2, (byte) -100, param0)) {
             return true;
           }
           stackIn_18_0 = false;

@@ -27,7 +27,7 @@ final class S2CRoundDeadlinePacket implements GamePacket {
         field_a = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isReconnectLogin(byte param0) {
         if (param0 < 86) {
           return false;
         }

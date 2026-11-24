@@ -225,12 +225,12 @@ final class WindZoneBehaviour extends Behaviour {
         return 26;
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean requiresCpuFaceColours(int param0, int param1, int param2) {
         boolean stackIn_7_0 = false;
         if (param1 != 8) {
           return true;
         }
-        stackIn_7_0 = (S2CNewRoomPacket.hasAnyMask540800(540800, param0, param2)) || (AchievementNotificationOverlay.a(param2, param0, param1 ^ 36872));
+        stackIn_7_0 = (S2CNewRoomPacket.hasAnyMask540800(540800, param0, param2)) || (AchievementNotificationOverlay.requiresColourStreamCopy(param2, param0, param1 ^ 36872));
         return stackIn_7_0;
     }
 

@@ -260,7 +260,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         if (param0 < 27) {
           return;
         }
-        if (S2CRoundDeadlinePacket.a((byte) 91) ||
+        if (S2CRoundDeadlinePacket.isReconnectLogin((byte) 91) ||
           !(this.field_A.field_o.length() <= 0) &&
           !(this.field_C.field_o.length() <= 0)) {
           LegacyOpenGlTexture2D.submitLogin(true, this.field_A.field_o, this.field_C.field_o);

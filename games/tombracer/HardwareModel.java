@@ -1547,7 +1547,7 @@ final class HardwareModel extends ToolkitModel {
             var3 = 0;
             var4 = 0;
             if (null != this.field_Z &&
-              !WhiteLightShooterComponent.a(this.field_h, (byte) 3, this.field_Y)) {
+              !WhiteLightShooterComponent.requiresCpuVertexX(this.field_h, (byte) 3, this.field_Y)) {
               if (null == this.field_ib ||
                 this.field_ib.canDiscardCpuData(16440)) {
                 var2_int = 1;
@@ -1562,7 +1562,7 @@ final class HardwareModel extends ToolkitModel {
               }
             }
             if (null != this.field_r &&
-              !SingleChildWidget.c(458752, this.field_h, this.field_Y)) {
+              !SingleChildWidget.requiresCpuVertexY(458752, this.field_h, this.field_Y)) {
               if (null == this.field_ib ||
                 this.field_ib.canDiscardCpuData(16440)) {
                 var3 = 1;
@@ -1577,7 +1577,7 @@ final class HardwareModel extends ToolkitModel {
               }
             }
             if (this.field_l != null &&
-              !DamageableBehaviour.a(-79, this.field_Y, this.field_h)) {
+              !DamageableBehaviour.requiresCpuVertexZ(-79, this.field_Y, this.field_h)) {
               if (null != this.field_ib &&
                 !this.field_ib.canDiscardCpuData(16440)) {
                 this.field_N = true;
@@ -1613,7 +1613,7 @@ final class HardwareModel extends ToolkitModel {
           }
           boolean decompiledFrameRemainder1 = true;
           if (null != this.field_w &&
-            !C2SSubmitSettingsPacket.a(this.field_h, 98, this.field_Y)) {
+            !C2SSubmitSettingsPacket.requiresCpuNormals(this.field_h, 98, this.field_Y)) {
             boolean decompiledFrameRemainder0 = true;
             if (0 == (55 & this.field_h)) {
               decompiledFrameRemainder0 = (this.field_E == null ||
@@ -1634,7 +1634,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (null != this.field_P &&
-            !WindZoneBehaviour.b(this.field_Y, 8, this.field_h)) {
+            !WindZoneBehaviour.requiresCpuFaceColours(this.field_Y, 8, this.field_h)) {
             if (this.field_E != null &&
               !this.field_E.canDiscardCpuData(16440)) {
               this.field_N = true;
@@ -1646,7 +1646,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (this.field_C != null &&
-            !GreyscaleOperator.d(this.field_h, -28090, this.field_Y)) {
+            !GreyscaleOperator.requiresCpuFaceAlpha(this.field_h, -28090, this.field_Y)) {
             if (null == this.field_E ||
               this.field_E.canDiscardCpuData(16440)) {
               this.field_C = null;
@@ -1672,7 +1672,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (this.field_gb != null &&
-            !RenderScene.a(this.field_h, this.field_Y, -102)) {
+            !RenderScene.requiresCpuFaceTextures(this.field_h, this.field_Y, -102)) {
             if (null != this.field_E &&
               !this.field_E.canDiscardCpuData(16440)) {
               this.field_N = true;
@@ -2443,7 +2443,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (decompiledFrameCompleted9) {
-            stackIn_75_0 = C2SChooseRewardPacket.a(true, param4, this.field_h) ? 1 : 0;
+            stackIn_75_0 = C2SChooseRewardPacket.requiresPositionStreamCopy(true, param4, this.field_h) ? 1 : 0;
           }
           if (stackIn_75_0 == 0) {
             if (!DiskCacheWorker.hasFlag2048((byte) 114, this.field_h, param4)) {
@@ -2532,7 +2532,7 @@ final class HardwareModel extends ToolkitModel {
             (decompiledFrameCompleted7)) {
             param0.field_C = this.field_C;
           }
-          if (AchievementNotificationOverlay.a(this.field_h, param4, 36864)) {
+          if (AchievementNotificationOverlay.requiresColourStreamCopy(this.field_h, param4, 36864)) {
             param0.field_E = param2.field_E;
             param0.field_E.field_h = this.field_E.field_h;
             param0.field_E.field_b = true;
@@ -2648,8 +2648,8 @@ final class HardwareModel extends ToolkitModel {
             param0.field_e = this.field_e;
             param0.field_lb = this.field_lb;
           }
-          if (!OpenGlTransform3D.c(param4, this.field_h, -19531)) {
-            if (HardwareUnlitEffect.a(this.field_h, param4, 2048)) {
+          if (!OpenGlTransform3D.requiresNormalStreamCopy(param4, this.field_h, -19531)) {
+            if (HardwareUnlitEffect.requiresNormalStream(this.field_h, param4, 2048)) {
               param0.field_O = this.field_O;
               if (var13 != 0) {
                 param0.field_O = null;
@@ -4875,7 +4875,7 @@ final class HardwareModel extends ToolkitModel {
           this.field_Y = param1;
           if (param3 ||
             DiskCacheWorker.hasFlag2048((byte) 112, this.field_h, this.field_Y)) {
-            this.field_ib = new HardwareModelVertexStream(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
+            this.field_ib = new HardwareModelVertexStream(C2SChooseRewardPacket.requiresPositionStreamCopy(true, this.field_Y, this.field_h));
           }
           if (param3 ||
             S2CRoundDeadlinePacket.hasFlag2048(this.field_Y, this.field_h, 0)) {
@@ -4883,11 +4883,11 @@ final class HardwareModel extends ToolkitModel {
           }
           if (param3 ||
             S2CMatchResultPacket.hasFlag2048(this.field_h, this.field_Y, 128)) {
-            this.field_E = new HardwareModelVertexStream(AchievementNotificationOverlay.a(this.field_h, this.field_Y, 36864));
+            this.field_E = new HardwareModelVertexStream(AchievementNotificationOverlay.requiresColourStreamCopy(this.field_h, this.field_Y, 36864));
           }
           if (param3 ||
-            HardwareUnlitEffect.a(this.field_h, this.field_Y, 2048)) {
-            this.field_O = new HardwareModelVertexStream(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
+            HardwareUnlitEffect.requiresNormalStream(this.field_h, this.field_Y, 2048)) {
+            this.field_O = new HardwareModelVertexStream(OpenGlTransform3D.requiresNormalStreamCopy(this.field_Y, this.field_h, -19531));
           }
           if (!param3 &&
             !FollowCamera.hasFlag2048(-1, this.field_Y, this.field_h)) {

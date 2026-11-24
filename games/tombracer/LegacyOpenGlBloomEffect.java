@@ -435,18 +435,18 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresCpuVertexX(int param0, int param1, int param2) {
         if (param1 != 1) {
           field_k = (String[]) null;
           if (!(ConsoleParseException.hasAnyMask33(param0, param2, -32842) | (0 != (458752 & param2) ? true : false))) {
-            return ValidatedTextInputWidget.a(param2, (byte) -105, param0) ? true : false;
+            return ValidatedTextInputWidget.requiresPositionPointerCopy(param2, (byte) -105, param0) ? true : false;
           }
           return true;
         }
         if (ConsoleParseException.hasAnyMask33(param0, param2, -32842) | (0 != (458752 & param2) ? true : false)) {
           return true;
         }
-        if (!ValidatedTextInputWidget.a(param2, (byte) -105, param0)) {
+        if (!ValidatedTextInputWidget.requiresPositionPointerCopy(param2, (byte) -105, param0)) {
           return false;
         }
         return true;

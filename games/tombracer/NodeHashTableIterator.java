@@ -9,7 +9,7 @@ final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode field_a;
     private IterableNodeHashTable field_c;
 
-    final static boolean b(byte param0) {
+    final static boolean isAvailabilityQueryPending(byte param0) {
         if (param0 > -88) {
           return true;
         }

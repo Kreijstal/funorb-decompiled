@@ -148,7 +148,7 @@ final class StringCursor {
         if (param0 == 0) {
           return this.length <= this.position ? true : false;
         }
-        StringCursor.a(126, -107, (byte) 95);
+        StringCursor.requiresCpuFaceTextures(126, -107, (byte) 95);
         return this.length <= this.position ? true : false;
     }
 
@@ -156,7 +156,7 @@ final class StringCursor {
         return this.text.substring(0, this.position) + "|" + this.text.substring(this.position);
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean requiresCpuFaceTextures(int param0, int param1, byte param2) {
         if (param2 > -5) {
           field_a = (String[]) null;
           if (!(QueuedByteShortRequest.hasFlag32768(param0, 32768, param1) | ((param0 & 2048) != 0 ? true : false))) {

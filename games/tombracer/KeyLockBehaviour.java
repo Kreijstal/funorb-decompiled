@@ -116,7 +116,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         field_o = null;
         field_r = null;
         if (param0 != 11162931) {
-          KeyLockBehaviour.a(-113, -37, -83);
+          KeyLockBehaviour.requiresCpuFaceColours(-113, -37, -83);
         }
     }
 
@@ -135,9 +135,9 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         return this.field_q;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresCpuFaceColours(int param0, int param1, int param2) {
         if (param0 != 2) {
-          KeyLockBehaviour.a(52, -115, -20);
+          KeyLockBehaviour.requiresCpuFaceColours(52, -115, -20);
           if (!HeapIndexArray.hasAnyMask540800(-1, param2, param1)) {
             return ClippedChildWidget.requiresColorPointerCopy(param1, param2, 13650) ? true : false;
           }
@@ -178,7 +178,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
     final void setMaxLevel(int param0, int param1) {
         this.field_p = param1;
         if (param0 != 0) {
-          KeyLockBehaviour.a(8, -65, -15);
+          KeyLockBehaviour.requiresCpuFaceColours(8, -65, -15);
         }
     }
 

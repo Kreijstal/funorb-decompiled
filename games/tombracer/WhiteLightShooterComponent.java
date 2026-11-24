@@ -17,7 +17,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -120) {
-            WhiteLightShooterComponent.a(106, (byte) 37, 71);
+            WhiteLightShooterComponent.requiresCpuVertexX(106, (byte) 37, 71);
           }
           var5 = null;
           var5_ref = PlayerInputQueue.findRoomDefinition(95, param0);
@@ -64,14 +64,14 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         super(param0, param1);
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean requiresCpuVertexX(int param0, byte param1, int param2) {
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
         if (param1 != 3) {
           return true;
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | IntPoint.hasAnyMask33(param2, param0, (byte) -94)) || (C2SChooseRewardPacket.a(true, param2, param0));
+        stackIn_10_0 = !(!stackIn_5_0 | IntPoint.hasAnyMask33(param2, param0, (byte) -94)) || (C2SChooseRewardPacket.requiresPositionStreamCopy(true, param2, param0));
         return stackIn_10_0;
     }
 

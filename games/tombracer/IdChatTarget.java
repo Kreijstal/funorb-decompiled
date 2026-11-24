@@ -92,7 +92,7 @@ class IdChatTarget extends ChatTarget {
         if (null != RoomViewRenderer.field_c) {
           RoomViewRenderer.field_c.drawFullScreen(param1 + 74, param0);
         }
-        TextureFilter.a(param0, (byte) -91);
+        TextureFilter.drawQuickChatHelp(param0, (byte) -91);
     }
 
     final static void a(int param0, int param1) {

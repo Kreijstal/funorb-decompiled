@@ -109,7 +109,7 @@ abstract class AppletGameShell extends GameApplet {
             }
             var12 = VoronoiNoiseOperator.pollAvailabilityReply((byte) 78);
             if (var12 != null) {
-              ScoreSubmission.a(2753, var12.booleanValue());
+              ScoreSubmission.completeAvailabilityQuery(2753, var12.booleanValue());
             }
           }
           if (var4 == 2) {
@@ -333,7 +333,7 @@ abstract class AppletGameShell extends GameApplet {
             if (!AccountRequestState.field_c) {
               this.reportError(-6738, "reconnect");
             }
-            TextureMetadata.b(param0);
+            TextureMetadata.beginReconnectLogin(param0);
             GraphicsAndAudioMenu.handleLoginResponseCode(var2, (byte) -84, Cp1252ByteEncoder.field_b);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = AdjustedWallClock.currentTimeMillis((byte) -107) + 15000L;
@@ -516,7 +516,7 @@ abstract class AppletGameShell extends GameApplet {
         OpenGlModelBillboard.field_d = null;
     }
 
-    final void r(int param0) {
+    final void tickLoginAndLogo(int param0) {
         int discarded$1 = 0;
         int discarded$3 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
@@ -529,7 +529,7 @@ abstract class AppletGameShell extends GameApplet {
           if (QueuedFixedRequest.field_f < 10) {
           } else {
             if (!LegacyOpenGlSpriteTexture.isLogoAnimationComplete(250)) {
-              PressureSwitchComponent.C(-5);
+              PressureSwitchComponent.advanceLogoAnimation(-5);
             } else {
               if (0 == Transform3D.field_c) {
                 discarded$3 = this.pollLoginResponse((byte) -111, false, false);
@@ -578,7 +578,7 @@ abstract class AppletGameShell extends GameApplet {
             !(var3 >= DateOfBirthPanel.getMouseIdleTicks(false))) {
             this.field_y = false;
             DropAnimation.closeGameSocket(60);
-            TextureMetadata.b((byte) -84);
+            TextureMetadata.beginReconnectLogin((byte) -84);
             GraphicsAndAudioMenu.handleLoginResponseCode(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
@@ -623,7 +623,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           } else {
             if (Transform3D.field_c >= 10) {
-              TextureMetadata.b((byte) -123);
+              TextureMetadata.beginReconnectLogin((byte) -123);
               if (Trap.field_m != 3) {
                 if (Trap.field_m != 4) {
                   if (Trap.field_m != 2) {

@@ -6,7 +6,7 @@ final class C2SChooseRewardPacket implements GamePacket {
     static int field_c;
     private int field_b;
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean requiresPositionStreamCopy(boolean param0, int param1, int param2) {
         if (param0) {
           return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | QueuedFixedRequest.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.hasFlag2048((byte) 61, param2, param1);
         }

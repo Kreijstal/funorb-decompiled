@@ -4,12 +4,12 @@
 final class KeyItemComponent extends ItemComponent {
     static int field_G;
 
-    final static void e(boolean param0) {
+    final static void openGuestLogin(boolean param0) {
         if (!HorizontalGradientOperator.field_m) {
           throw new IllegalStateException();
         }
         GameAssetLoader.field_t = param0;
-        GreyscaleOperator.a(false, 262144);
+        GreyscaleOperator.openLoginFormWithRegistrationOption(false, 262144);
         Transform3D.field_c = 0;
     }
 

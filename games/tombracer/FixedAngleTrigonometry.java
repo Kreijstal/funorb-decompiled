@@ -93,7 +93,7 @@ final class FixedAngleTrigonometry {
         }
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean requiresIndexBufferCopy(int param0, int param1, int param2) {
         if (param1 != -23403) {
           return false;
         }

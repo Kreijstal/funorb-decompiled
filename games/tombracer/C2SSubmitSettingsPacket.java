@@ -60,7 +60,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresCpuNormals(int param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -69,9 +69,9 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         int var3Lifetime1;
         if (param1 >= 83) {
           if ((55 & param0) != 0) {
-            stackIn_4_0 = OpenGlTransform3D.c(param2, param0, -19531);
+            stackIn_4_0 = OpenGlTransform3D.requiresNormalStreamCopy(param2, param0, -19531);
           } else {
-            stackIn_4_0 = AchievementNotificationOverlay.a(param0, param2, 36864);
+            stackIn_4_0 = AchievementNotificationOverlay.requiresColourStreamCopy(param0, param2, 36864);
           }
           var3 = stackIn_4_0 ? 1 : 0;
           stackIn_7_0 = (0 != (65536 & param2));
@@ -79,9 +79,9 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
         C2SSubmitSettingsPacket.releaseStatics((byte) -61);
         if ((55 & param0) != 0) {
-          stackIn_11_0 = OpenGlTransform3D.c(param2, param0, -19531);
+          stackIn_11_0 = OpenGlTransform3D.requiresNormalStreamCopy(param2, param0, -19531);
         } else {
-          stackIn_11_0 = AchievementNotificationOverlay.a(param0, param2, 36864);
+          stackIn_11_0 = AchievementNotificationOverlay.requiresColourStreamCopy(param0, param2, 36864);
         }
         var3Lifetime1 = stackIn_11_0 ? 1 : 0;
         stackIn_14_0 = (0 != (65536 & param2));

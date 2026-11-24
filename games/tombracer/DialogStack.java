@@ -66,7 +66,7 @@ final class DialogStack extends SingleChildWidget {
         return var3;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void processQuickChatHelp(boolean param0, boolean param1) {
         if (null == LobbyOverlayAndDateValidationState.field_d) {
           if (!param1) {
             field_z = (int[]) null;

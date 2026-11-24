@@ -6,7 +6,7 @@ final class FullscreenUiDrawing {
     private static String[] field_a;
     static int[] field_c;
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean requiresTexCoordArrayCopy(int param0, byte param1, int param2) {
         if (param1 != 5) {
           return true;
         }

@@ -226,7 +226,7 @@ final class AchievementNotificationOverlay extends MatchOverlay {
         PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresColourStreamCopy(int param0, int param1, int param2) {
         if (!S2CMatchResultPacket.hasFlag2048(param0, param1, 128)) {
           return false;
         }

@@ -309,19 +309,19 @@ final class DamageableBehaviour extends Behaviour {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresCpuVertexZ(int param0, int param1, int param2) {
         if (param0 >= -67) {
           ResourceArchive var4 = (ResourceArchive) null;
           DamageableBehaviour.loadIndexedSprite(true, -98, (ResourceArchive) null, 106);
           if (!(TripBeamComponent.hasAnyMask52(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false))) {
-            return C2SChooseRewardPacket.a(true, param1, param2) ? true : false;
+            return C2SChooseRewardPacket.requiresPositionStreamCopy(true, param1, param2) ? true : false;
           }
           return true;
         }
         if (TripBeamComponent.hasAnyMask52(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false)) {
           return true;
         }
-        if (!C2SChooseRewardPacket.a(true, param1, param2)) {
+        if (!C2SChooseRewardPacket.requiresPositionStreamCopy(true, param1, param2)) {
           return false;
         }
         return true;

@@ -41,12 +41,12 @@ final class FacePlayerLocomotor extends Locomotor {
         return 7;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresCpuVertexY(int param0, int param1, int param2) {
         int var3 = -78 % ((56 - param0) / 63);
         if (((458752 & param1) != 0 ? true : false) | TimingPattern.hasAnyMask34((byte) -53, param2, param1)) {
           return true;
         }
-        if (!ValidatedTextInputWidget.a(param1, (byte) 90, param2)) {
+        if (!ValidatedTextInputWidget.requiresPositionPointerCopy(param1, (byte) 90, param2)) {
           return false;
         }
         return true;
@@ -137,7 +137,7 @@ final class FacePlayerLocomotor extends Locomotor {
           CrossedSineBandsOperator.field_s = LoginMethod.loadingTextTranslations[param0];
           return;
         }
-        FacePlayerLocomotor.a(-7, 14, 68);
+        FacePlayerLocomotor.requiresCpuVertexY(-7, 14, 68);
         ObjectList.field_b = GameAssetLoader.connectingTranslations[param0];
         ValidationOutcome.field_c = TrackMountComponent.waitingForTextTranslations[param0];
         CrossedSineBandsOperator.field_s = LoginMethod.loadingTextTranslations[param0];

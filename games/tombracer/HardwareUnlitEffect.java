@@ -35,7 +35,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresNormalStream(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param2 != 2048) {
           HardwareUnlitEffect.c((byte) -99);

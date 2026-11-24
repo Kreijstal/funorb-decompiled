@@ -249,12 +249,12 @@ final class PerlinNoise2D extends TextureOperator {
         field_v = null;
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean requiresCpuTexCoords(int param0, byte param1, int param2) {
         boolean stackIn_7_0 = false;
         if (param1 != -21) {
           field_v = (String) null;
         }
-        stackIn_7_0 = (FullscreenUiDrawing.a(param0, (byte) 5, param2)) || (RatingTable.a(param2, 0, param0));
+        stackIn_7_0 = (FullscreenUiDrawing.requiresTexCoordArrayCopy(param0, (byte) 5, param2)) || (RatingTable.requiresTexCoordPointerCopy(param2, 0, param0));
         return stackIn_7_0;
     }
 

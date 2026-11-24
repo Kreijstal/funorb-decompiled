@@ -41,13 +41,13 @@ final class RenderScene {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresCpuFaceTextures(int param0, int param1, int param2) {
         int var3;
         boolean stackIn_3_0 = false;
         boolean stackIn_8_0 = false;
         var3 = -60 / ((param2 - 36) / 54);
         stackIn_3_0 = ((param1 & 2048) != 0);
-        stackIn_8_0 = !(!stackIn_3_0 | DropdownButtonPainter.hasFlag32768(110, param1, param0)) || (AchievementNotificationOverlay.a(param0, param1, 36864));
+        stackIn_8_0 = !(!stackIn_3_0 | DropdownButtonPainter.hasFlag32768(110, param1, param0)) || (AchievementNotificationOverlay.requiresColourStreamCopy(param0, param1, 36864));
         return stackIn_8_0;
     }
 

@@ -131,7 +131,7 @@ final class SoftCacheEntry extends CacheEntry {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isQuickChatOverlayOpen(boolean param0) {
         boolean stackIn_7_0 = false;
         if (!param0) {
           return true;

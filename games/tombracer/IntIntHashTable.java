@@ -97,7 +97,7 @@ final class IntIntHashTable {
         if (param0 != -1) {
           field_b = (String) null;
         }
-        return new LoginTextValue(ArchiveRequest.getRegistrationEmailOrQueryName(false), NodeHashTableIterator.b((byte) -107));
+        return new LoginTextValue(ArchiveRequest.getRegistrationEmailOrQueryName(false), NodeHashTableIterator.isAvailabilityQueryPending((byte) -107));
     }
 
     final int lookup(int param0, int param1) {

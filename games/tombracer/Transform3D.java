@@ -74,7 +74,7 @@ abstract class Transform3D {
         }
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean requiresCpuFaceAlpha(int param0, int param1, int param2) {
         int var3;
         boolean stackIn_2_0 = false;
         boolean stackIn_3_1 = false;

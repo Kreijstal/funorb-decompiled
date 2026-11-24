@@ -9,7 +9,7 @@ final class RenderableNode extends IntrusiveNode {
     static String field_g;
     static UiComponent field_i;
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean requiresCpuNormals(int param0, int param1, byte param2) {
         if ((0 != (65536 & param0) ? true : false) | SequencePlayer.hasMask24OrAll544(param1, -31, param0)) {
           return true;
         }

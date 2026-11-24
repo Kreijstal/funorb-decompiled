@@ -1504,10 +1504,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               if (this.field_md < 12) {
                 throw new RuntimeException("");
               }
-              if (!this.field_Mc.a("GL_ARB_multitexture")) {
+              if (!this.field_Mc.isExtensionAvailable("GL_ARB_multitexture")) {
                 throw new RuntimeException("");
               }
-              if (!this.field_Mc.a("GL_ARB_texture_env_combine")) {
+              if (!this.field_Mc.isExtensionAvailable("GL_ARB_texture_env_combine")) {
                 throw new RuntimeException("");
               }
               var26 = new int[1];
@@ -1517,16 +1517,16 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 throw new RuntimeException("");
               }
               this.field_e = 8;
-              this.field_fd = this.field_Mc.a("GL_ARB_vertex_buffer_object");
-              this.field_Mc.a("GL_ARB_multisample");
-              this.field_sd = this.field_Mc.a("GL_ARB_texture_rectangle");
-              this.field_Ob = this.field_Mc.a("GL_ARB_texture_cube_map");
-              this.field_Wc = this.field_Mc.a("GL_ARB_texture_non_power_of_two");
-              this.field_x = this.field_Mc.a("GL_EXT_texture3D");
-              this.field_Uc = this.field_Mc.a("GL_ARB_vertex_shader");
-              this.field_qd = this.field_Mc.a("GL_ARB_vertex_program");
-              this.field_Pc = this.field_Mc.a("GL_ARB_fragment_shader");
-              this.field_Mc.a("GL_ARB_fragment_program");
+              this.field_fd = this.field_Mc.isExtensionAvailable("GL_ARB_vertex_buffer_object");
+              this.field_Mc.isExtensionAvailable("GL_ARB_multisample");
+              this.field_sd = this.field_Mc.isExtensionAvailable("GL_ARB_texture_rectangle");
+              this.field_Ob = this.field_Mc.isExtensionAvailable("GL_ARB_texture_cube_map");
+              this.field_Wc = this.field_Mc.isExtensionAvailable("GL_ARB_texture_non_power_of_two");
+              this.field_x = this.field_Mc.isExtensionAvailable("GL_EXT_texture3D");
+              this.field_Uc = this.field_Mc.isExtensionAvailable("GL_ARB_vertex_shader");
+              this.field_qd = this.field_Mc.isExtensionAvailable("GL_ARB_vertex_program");
+              this.field_Pc = this.field_Mc.isExtensionAvailable("GL_ARB_fragment_shader");
+              this.field_Mc.isExtensionAvailable("GL_ARB_fragment_program");
               this.field_Sc = new int[this.field_Vb];
               if (!jaclib.memory.Stream.isNativeBigEndian()) {
                 stackIn_21_1 = 5121;
@@ -1597,7 +1597,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                     this.field_fd = false;
                   }
                 }
-                this.field_sd = this.field_sd & this.field_Mc.a("GL_ARB_half_float_pixel");
+                this.field_sd = this.field_sd & this.field_Mc.isExtensionAvailable("GL_ARB_half_float_pixel");
               }
               if (this.field_Nc.indexOf("intel") != -1) {
               }

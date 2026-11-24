@@ -138,7 +138,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(boolean param0, boolean param1, byte param2) {
+    final static void openLoginForm(boolean param0, boolean param1, byte param2) {
         String var5 = (String) null;
         FollowCamera.openLoginForm(param0, param1, false, (String) null);
         if (param2 < 87) {

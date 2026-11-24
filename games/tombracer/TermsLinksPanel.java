@@ -10,12 +10,12 @@ final class TermsLinksPanel extends WidgetContainer implements HotspotListener, 
     private AccountCreationDialog field_w;
     static int[] field_C;
 
-    final static void b(boolean param0) {
+    final static void openGuestLoginWithRegistration(boolean param0) {
         if (!HorizontalGradientOperator.field_m) {
           throw new IllegalStateException();
         }
         GameAssetLoader.field_t = true;
-        GreyscaleOperator.a(true, 262144);
+        GreyscaleOperator.openLoginFormWithRegistrationOption(true, 262144);
         Transform3D.field_c = 0;
         if (!param0) {
           return;

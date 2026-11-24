@@ -50,7 +50,7 @@ final class MidiVoiceMixer extends PcmStream {
         return param0;
     }
 
-    final static void a(boolean param0) {
+    final static void showReconnectProgress(boolean param0) {
         LegacyOpenGlPostProcessEffect.resetAccountRequestState(!param0 ? true : false);
         LoadProfileCommand.field_r = param0 ? true : false;
         VertexAttribute.field_r = true;

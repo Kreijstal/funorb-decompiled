@@ -39,9 +39,9 @@ final class LegacyOpenGlFontMask extends aa {
           PlatformBehaviour.field_o = PlatformBehaviour.field_o + 1;
           if (fieldTemp$7 >= 16) {
             if (!SoftReferenceCache.field_a) {
-              KeyItemComponent.e(true);
+              KeyItemComponent.openGuestLogin(true);
             } else {
-              TermsLinksPanel.b(param0);
+              TermsLinksPanel.openGuestLoginWithRegistration(param0);
             }
             ObjectList.field_c = PcmSamplePlayback.field_i;
           }

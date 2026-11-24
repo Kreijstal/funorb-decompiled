@@ -123,11 +123,11 @@ final class RatingTable extends IntrusiveNode {
         CourseMapWalker.popRasterState(1);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresTexCoordPointerCopy(int param0, int param1, int param2) {
         if (param1 != 0) {
           return false;
         }
-        return FullscreenUiDrawing.a(param2, (byte) 5, param0) & ModelFactory.hasFlag2048(-17, param0, param2);
+        return FullscreenUiDrawing.requiresTexCoordArrayCopy(param2, (byte) 5, param0) & ModelFactory.hasFlag2048(-17, param0, param2);
     }
 
     final static int mixHashBoolean(boolean param0, int param1, byte param2) {

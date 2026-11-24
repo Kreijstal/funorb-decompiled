@@ -129,7 +129,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
               }
             } else {
               if (ResizingDialog.isSelectionMenuOpen(true)) {
-                if (MessagePage.a(119)) {
+                if (MessagePage.isSelectionMenuActive(119)) {
                   LegacyOpenGlFontMask.b(false);
                 } else {
                   var3 = SelectionMenuInput.pollKeyEvents(true);
@@ -139,7 +139,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                   this.updateScreen(true, false);
                 }
               } else {
-                if (!MessagePage.a(125)) {
+                if (!MessagePage.isSelectionMenuActive(125)) {
                   var2 = 1;
                   var3 = -1;
                   while (NanoTickClock.pollKeyEvent(true)) {
@@ -169,7 +169,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
               }
             }
           } else {
-            if (MessagePage.a(126)) {
+            if (MessagePage.isSelectionMenuActive(126)) {
               LegacyOpenGlFontMask.b(false);
             } else {
               var3 = CourseLayoutFactory.pollMenuAction(107);
@@ -281,7 +281,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           PlatformBehaviour.field_w = false;
         }
         if (ColourGradientOperator.isLoginFlowIncomplete(-128)) {
-          this.r(114);
+          this.tickLoginAndLogo(114);
           if (ColourGradientOperator.isLoginFlowIncomplete(-112)) {
             return;
           }
@@ -336,7 +336,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
             var3 = 0;
           }
           if (var3 != 0) {
-            TextureMetadata.b((byte) -16);
+            TextureMetadata.beginReconnectLogin((byte) -16);
           }
         }
     }

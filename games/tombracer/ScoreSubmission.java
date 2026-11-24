@@ -95,7 +95,7 @@ final class ScoreSubmission extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void completeAvailabilityQuery(int param0, boolean param1) {
         DefaultRoomObjectRenderer.field_b.complete(-63, param1);
         if (param0 != 2753) {
           field_p = 0.6975499391555786f;

@@ -84,7 +84,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         return false;
     }
 
-    final static void C(int param0) {
+    final static void advanceLogoAnimation(int param0) {
         if (-SwitchableId.field_b + 0 != TimeSwitchBehaviour.field_r &&
           TimeSwitchBehaviour.field_r != 250 - SwitchableId.field_b) {
         }

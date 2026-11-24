@@ -462,7 +462,7 @@ class UiWidget extends IntrusiveNode {
         return this.field_q;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requiresOpenGlCpuTriangleIndices(int param0, int param1, int param2) {
         if (param2 != 6100) {
           return true;
         }
@@ -472,7 +472,7 @@ class UiWidget extends IntrusiveNode {
         if (ClippedChildWidget.requiresColorPointerCopy(param0, param1, 13650)) {
           return true;
         }
-        if (!FixedAngleTrigonometry.b(param1, param2 - 29503, param0)) {
+        if (!FixedAngleTrigonometry.requiresIndexBufferCopy(param1, param2 - 29503, param0)) {
           return false;
         }
         return true;

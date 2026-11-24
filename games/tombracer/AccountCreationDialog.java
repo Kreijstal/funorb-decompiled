@@ -15,7 +15,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
           this.showAccountServiceResult(-122, true, (AccountServiceResult) null);
         }
         if (this.field_ib) {
-          LegacyOpenGlFlowingWaterEffect.a(true, false, (byte) 101);
+          LegacyOpenGlFlowingWaterEffect.openLoginForm(true, false, (byte) 101);
           return;
         }
         try {

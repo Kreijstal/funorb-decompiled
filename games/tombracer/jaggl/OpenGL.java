@@ -34,7 +34,7 @@ public class OpenGL {
 
     public final native static void glStencilOp(int param0, int param1, int param2);
 
-    public final boolean a(String param0) {
+    public final boolean isExtensionAvailable(String param0) {
         String var2;
         int var3;
         int var4_int;

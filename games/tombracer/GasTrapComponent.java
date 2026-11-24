@@ -49,7 +49,7 @@ final class GasTrapComponent extends PrefabComponent {
         if (null != RoomViewRenderer.field_c) {
           return true;
         }
-        if (!SoftCacheEntry.a(true)) {
+        if (!SoftCacheEntry.isQuickChatOverlayOpen(true)) {
           return false;
         }
         return true;

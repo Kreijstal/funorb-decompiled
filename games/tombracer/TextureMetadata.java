@@ -32,13 +32,13 @@ final class TextureMetadata {
         ordinals = null;
     }
 
-    final static void b(byte param0) {
+    final static void beginReconnectLogin(byte param0) {
         if (Transform3D.field_c == 10) {
-          MidiVoiceMixer.a(true);
+          MidiVoiceMixer.showReconnectProgress(true);
           Transform3D.field_c = 11;
         } else {
           if (!TrapModel.b(-1)) {
-            MidiVoiceMixer.a(true);
+            MidiVoiceMixer.showReconnectProgress(true);
             Transform3D.field_c = 11;
           }
         }

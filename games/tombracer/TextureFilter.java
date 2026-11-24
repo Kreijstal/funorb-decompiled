@@ -37,7 +37,7 @@ final class TextureFilter {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawQuickChatHelp(boolean param0, byte param1) {
         int var2 = 109 / ((-1 - param1) / 54);
         if (LobbyOverlayAndDateValidationState.field_d != null) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, -SoftwareRasterizer.clipTop + SoftwareRasterizer.clipBottom);
@@ -47,7 +47,7 @@ final class TextureFilter {
 
     public static void releaseStatics(int param0) {
         if (param0 != 32768) {
-          TextureFilter.a(false, (byte) -65);
+          TextureFilter.drawQuickChatHelp(false, (byte) -65);
         }
         field_b = null;
         field_d = null;

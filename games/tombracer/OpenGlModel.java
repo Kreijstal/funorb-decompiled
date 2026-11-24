@@ -561,7 +561,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (decompiledFrameCompleted9) {
-            stackIn_79_0 = ValidatedTextInputWidget.a(param1, (byte) -106, this.field_u) ? 1 : 0;
+            stackIn_79_0 = ValidatedTextInputWidget.requiresPositionPointerCopy(param1, (byte) -106, this.field_u) ? 1 : 0;
           }
           if (stackIn_79_0 == 0) {
             if (!ArchiveRequest.hasFlag2048(this.field_u, 0, param1)) {
@@ -793,7 +793,7 @@ final class OpenGlModel extends ToolkitModel {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted4 = true;
           regionExit3: {
-            if (!FullscreenUiDrawing.a(param1, (byte) 5, this.field_u)) {
+            if (!FullscreenUiDrawing.requiresTexCoordArrayCopy(param1, (byte) 5, this.field_u)) {
               param5.field_n = this.field_n;
               param5.field_y = this.field_y;
               if (var13 == 0) {
@@ -829,7 +829,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (decompiledFrameCompleted4) {
-            if (!RatingTable.a(this.field_u, 0, param1)) {
+            if (!RatingTable.requiresTexCoordPointerCopy(this.field_u, 0, param1)) {
               if (!ModelFactory.hasFlag2048(-17, this.field_u, param1)) {
                 param5.field_ab = null;
                 decompiledFrameRemainder0 = (var13 != 0);
@@ -895,7 +895,7 @@ final class OpenGlModel extends ToolkitModel {
             param5.field_z = this.field_z;
             param5.field_H = this.field_H;
           }
-          if (!FixedAngleTrigonometry.b(this.field_u, -23403, param1)) {
+          if (!FixedAngleTrigonometry.requiresIndexBufferCopy(this.field_u, -23403, param1)) {
             if (!PendingAcknowledgementNode.hasFlag2048(-123, param1, this.field_u)) {
               param5.field_w = null;
               if (var13 != 0) {
@@ -4028,7 +4028,7 @@ final class OpenGlModel extends ToolkitModel {
             var2_int = 0;
             var3 = 0;
             if (null != this.field_P &&
-              !LegacyOpenGlBloomEffect.a(this.field_u, 1, this.field_bb)) {
+              !LegacyOpenGlBloomEffect.requiresCpuVertexX(this.field_u, 1, this.field_bb)) {
               if (this.field_g == null ||
                 this.field_g.field_d != null) {
                 if (!this.field_l) {
@@ -4044,7 +4044,7 @@ final class OpenGlModel extends ToolkitModel {
             }
             var4 = 0;
             if (null != this.field_K &&
-              !FacePlayerLocomotor.a(-61, this.field_bb, this.field_u)) {
+              !FacePlayerLocomotor.requiresCpuVertexY(-61, this.field_bb, this.field_u)) {
               if (null != this.field_g &&
                 null == this.field_g.field_d) {
                 this.field_gb = true;
@@ -4062,7 +4062,7 @@ final class OpenGlModel extends ToolkitModel {
               }
             }
             if (this.field_A != null &&
-              !SimpleHoverMountComponent.c(this.field_u, -23717, this.field_bb)) {
+              !SimpleHoverMountComponent.requiresCpuVertexZ(this.field_u, -23717, this.field_bb)) {
               if (this.field_g == null ||
                 null != this.field_g.field_d) {
                 if (!this.field_l) {
@@ -4095,7 +4095,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_O != null &&
-            !RenderableNode.a(this.field_bb, this.field_u, (byte) 115)) {
+            !RenderableNode.requiresCpuNormals(this.field_bb, this.field_u, (byte) 115)) {
             if (null != this.field_F) {
               if (this.field_F.field_d != null) {
                 this.field_cb = null;
@@ -4136,7 +4136,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           var2_intLifetime1 = -95 % ((param0 + 49) / 55);
           if (null != this.field_X &&
-            !KeyLockBehaviour.a(2, this.field_bb, this.field_u)) {
+            !KeyLockBehaviour.requiresCpuFaceColours(2, this.field_bb, this.field_u)) {
             if (null == this.field_kb ||
               null != this.field_kb.field_d) {
               this.field_X = null;
@@ -4148,7 +4148,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (this.field_o != null &&
-            !Transform3D.b(107, this.field_u, this.field_bb)) {
+            !Transform3D.requiresCpuFaceAlpha(107, this.field_u, this.field_bb)) {
             if (null == this.field_kb ||
               null != this.field_kb.field_d) {
               this.field_o = null;
@@ -4160,7 +4160,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (null != this.field_n &&
-            !PerlinNoise2D.a(this.field_bb, (byte) -21, this.field_u)) {
+            !PerlinNoise2D.requiresCpuTexCoords(this.field_bb, (byte) -21, this.field_u)) {
             if (null == this.field_ab ||
               this.field_ab.field_d != null) {
               this.field_n = null;
@@ -4173,7 +4173,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (null != this.field_I &&
-            !StringCursor.a(this.field_bb, this.field_u, (byte) -115)) {
+            !StringCursor.requiresCpuFaceTextures(this.field_bb, this.field_u, (byte) -115)) {
             if (null != this.field_kb &&
               this.field_kb.field_d == null) {
               this.field_gb = true;
@@ -4185,7 +4185,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (this.field_H != null &&
-            !UiWidget.a(this.field_bb, this.field_u, 6100)) {
+            !UiWidget.requiresOpenGlCpuTriangleIndices(this.field_bb, this.field_u, 6100)) {
             if ((this.field_w == null ||
               this.field_w.indexBuffer != null) &&
               (null == this.field_kb ||

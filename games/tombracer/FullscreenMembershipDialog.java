@@ -80,7 +80,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements ButtonL
             field_M = (String[]) null;
           }
           if (param2 == this.field_L) {
-            TermsLinksPanel.b(false);
+            TermsLinksPanel.openGuestLoginWithRegistration(false);
             this.closeDialog(-25050);
             return;
           }
