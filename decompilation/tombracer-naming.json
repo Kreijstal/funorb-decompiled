@@ -697,7 +697,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#0"
+      "renamedSymbol": "B:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#0"
     },
     {
       "symbol": "B:raa.a(IIIII)V#0",
@@ -17620,6 +17620,14 @@
       "renamedSymbol": "M:PitSnake.getSize(I)I"
     },
     {
+      "symbol": "M:aia.h(I)Z",
+      "originalName": "h",
+      "to": "isInCollisionRecovery",
+      "evidence": "Query the snake collision-recovery movement mode,exactly field_o>20. Tick raises this counter after blocked movement and uses the predicate to allow quarter-step movement rather than rollback;the same mode suppresses player chasing and random cooldown. Effect8and the end of fleeing can also seed this counter. Preserve all signed counter values,strict threshold20,guard int!=21302 writing field_m=121 before the read,and every caller;do not relabel this as the separate isScared predicate or infer an item identity. Complete original-body SHA256 b41ee5a0b805395c04fca3b18717568a68c902edf826ab9f17b4b67bdd50f928. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PitSnake.isInCollisionRecovery(I)Z"
+    },
+    {
       "symbol": "M:aia.i(I)V",
       "originalName": "i",
       "to": "releaseStatics",
@@ -19844,6 +19852,14 @@
       "renamedSymbol": "M:PlayTrackCommand.updateLobbyGameList(IIZIIIZ)V"
     },
     {
+      "symbol": "M:bh.a(IZ)Z",
+      "originalName": "a",
+      "to": "supportsBinaryAlphaTexturePixels",
+      "evidence": "Check whether a texture effect permits binary-alpha pixel generation:all int values except1and7. Legacy and hardware texture caches use this predicate to select the loadPixels(int,...) overload when texture mode is not2. That provider overload delegates to generateBinaryAlphaPixels;the byte overload delegates to generateAlphaPixels. The name describes support,not unconditional use independent of other mode checks. Preserve the Boolean true side effect field_o=18 before the predicate and its noncanonical caller;no int narrowing or effect-enum validation. Complete original-body SHA256 1faf71bbf6f03cf91b4b20a11e67d18ced33b650cb41e19d9d2313f577b4bef2. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayTrackCommand.supportsBinaryAlphaTexturePixels(IZ)Z"
+    },
+    {
       "symbol": "M:bh.a([Lbfa;I)Lbfa;",
       "originalName": "a",
       "to": "invoke",
@@ -20546,6 +20562,14 @@
       "evidence": "Called when the room is mirrored; WallModel mirrors its wall tiles. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BlockModel.mirror(I)V"
+    },
+    {
+      "symbol": "M:boa.i(I)Z",
+      "originalName": "i",
+      "to": "usesLargeBlockDragSound",
+      "evidence": "Select the large-block drag sound family for block variants5,8,10,11,12,13,14,15,16. Sole tick caller selects SoundEvent0when true;HardwareGraphicsHeap maps event0to sample8,and GameSoundEffectLoader maps sample8to tr_large_block_drag_loop through MatchProtocol.playSoundEffect. Preserve every signed variant value including16despite the four-bit serialized field,short-circuit reads,and wrong-int!=77 decode(42,null,null) before the predicate. Do not infer physical block size or replace the explicit variant list. Complete original-body SHA256 7f3212ff9aff312b71eb572724a4093b637c1e09f32545737958807d641c5323. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BlockModel.usesLargeBlockDragSound(I)Z"
     },
     {
       "symbol": "M:bp.a(CII)Z",
@@ -26922,6 +26946,14 @@
       "evidence": "Writes a colour into one raster column between two rows.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameScreen.drawVerticalSpan(IIIII)V"
+    },
+    {
+      "symbol": "M:dfa.a(IZI)Z",
+      "originalName": "a",
+      "to": "handleChatShortcutKey",
+      "evidence": "Handle chat shortcut keys in the routed keyboard path. Key9opens player-targeted quick chat after eligibility/channel checks;10opens general quick chat outside opponent-search state;11replies through the stored chat target when permitted and reachable. Preserve every duplicated branch,repeated global key/state reads,all early false/true results,send-throttle calls,full-int request argument,param0unused normally,and Boolean true clearing the Applet field at its existing branch point. Existing helper I/byte descriptors and null arguments remain unchanged;do not collapse the branches or cache mutable global reads. Complete original-body SHA256 a7774c90e80bff9f75559a98c3447462a932e3a12886923d166dd26238a5d291. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameScreen.handleChatShortcutKey(IZI)Z"
     },
     {
       "symbol": "M:dfa.a(ZZI)V",
@@ -42044,6 +42076,14 @@
       "renamedSymbol": "M:TextureCombineOperation.renderLogoSprite(I)V"
     },
     {
+      "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "rasterizeInterpolatedColourTriangle",
+      "evidence": "Rasterize a triangle with interpolated colour components into the supplied pixel array. The six-branch caller sorts the three Y coordinates and permutes all corresponding coordinates/colour components before calling this helper;scanlines use blendInterpolatedColourSpan. Preserve flat-top/degenerate and upper/lower segment branches,all16.16 shifts,int overflow/division/truncation,viewport clipping,row-offset and framebuffer-stride reads,arbitrary signed guard/control param4and its derived byte guards,zero-width span calls,partial pixel writes and wrapped diagnostics. No triangulation,raster-loop or blend math is rewritten and no pixel/runtime equivalence is claimed. Complete original-body SHA256 b1a2f454a15ad0fc2ff580ae36956fd721c06925a8cc9de0a5c8c9c51d8c13d9. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V"
+    },
+    {
       "symbol": "M:id.a(B)Lwea;",
       "originalName": "a",
       "to": "generateLayout",
@@ -42842,6 +42882,14 @@
       "evidence": "Increase the shared master sound volume by the existing32-step signed-remainder expression,capping values>=224to256. Existing setSoundVolume writes the integer and forwards it to both audio players. Preserve full signed integer domain,wrong-full-int cleanup call before subsequent reads,duplicated branches and original setter guard bytes. ChatOverlay Booleanfalse helper runs before delegating,with any recursion or failures retained. Complete original-body SHA256 193fd092363b25570cd930cc3763e50e38b37beb93d2ef8c31c96f21e8201038. Naming only. Complete original bodies,all33bound incoming calls,115field declarations/100owned,fourteen supporting classes and19unchanged dialog/fade/progress/volume/contact/player/game-list witnesses reviewed. Preserve descriptors,full-int and byte domains,unused guards,method visibility/modifiers,all field/parameter/local names,literals,integer overflow/shifts/division,NaN/cast order,array aliases/partial writes,volatile reads and allocation/call/exception order and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ChatOverlay.increaseSoundVolume(Z)V"
+    },
+    {
+      "symbol": "M:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
+      "originalName": "a",
+      "to": "pollLoginHandshake",
+      "evidence": "Poll the login handshake used by initial login and reconnect. It probes connection availability before the int!=50 return-82guard;creates the selected credential target,writes hello14and channel type,reads reply/challenge,then sends the existing login packet. Preserve state identity comparisons,availability gates,reply8disconnect,reply7retry/port swap policy,30000ms timeout distinctions,all -1pending/final codes,error-payload reads,account/session fields,cookie and JavaScript callbacks,caught Throwable behavior,remembered login method and exact cipher initialization order including in-place four-seed +50mutation. Preserve credential/null/Boolean/full-int domains and all partial state/cursor writes. This is the login handshake rather than chat input handling. Complete original-body SHA256 f6b2ea875511b61361c3744864c248d6ce49135ce9f0f0baa7ceb6e1fc5e7a53. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I"
     },
     {
       "symbol": "M:ila.b(I)Z",
@@ -44924,6 +44972,14 @@
       "renamedSymbol": "M:SimpleHoverMountComponent.encode(ZLBitPacketBuffer;)V"
     },
     {
+      "symbol": "M:jc.a(ZZZI)V",
+      "originalName": "a",
+      "to": "updateMainLobbyControls",
+      "evidence": "Update the main lobby controls after sliding-panel layout. Layout/input masks depend on selection/opponent-search/ratings-panel flags;the method updates the queue-position label,tab presses,help button,rated matchmaking eligibility,new-game selection and ratings dismissal. Preserve wrong-Boolean param1false recursive call after tab processing,all gating and member/permission reads,one full-int formatText(89,...) call,packet opcode forwarding and single-choice selection update before writing the new-game request. No UI policy or action order is changed. Complete original-body SHA256 66a0904de6ffa04cd87fdef0a8b1a47a81857ec7f79ad9b44fd0d04136cbd74c. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V"
+    },
+    {
       "symbol": "M:jc.c(III)Z",
       "originalName": "c",
       "to": "requiresCpuVertexZ",
@@ -45394,6 +45450,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FlameShooterComponent.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
+      "originalName": "a",
+      "to": "populateTextCharacterPositions",
+      "evidence": "Populate interior UTF-16 character X positions for a cached text line,with8-bit fixed-point justification spacing. Callers initialize first and final boundaries for left/center/right/multiline layouts;this helper starts at index1and stops before length. Markup characters60and62pin positions across the tag until its close;ordinary spaces add the supplied full-int spacing before shifted accumulation. Preserve wrong-int!=2097152 return before String/font/array access,repeated substring/width calls,base-position reads,charWidth subtraction,integer overflow/shifts,null/alias/bounds failures,partial position writes and wrapped diagnostics. Do not change UTF-16 indexing or infer glyph identities. Complete original-body SHA256 108b9c3504ab71dc5d3be555afa07136246c613f0b451f4c0bf9d6170fd83236. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V"
     },
     {
       "symbol": "M:jh.a(ZILla;)Lfsa;",
@@ -52770,6 +52834,14 @@
       "evidence": "True when the body is mobile or a Trap; dynamic walls register no tile occupancy.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WallModel.isDynamic(I)Z"
+    },
+    {
+      "symbol": "M:lma.l(I)V",
+      "originalName": "l",
+      "to": "refineWallTileShapes",
+      "evidence": "Refine initially category5wall tiles into detailed boundary shapes. addToScene calls this after buildTiles only when detailed geometry is enabled. Inspect a5x5perimeter using room occupancy for static walls or grid bounds for dynamic walls,then select categories7/8/9/10and quarter-turn orientation from counts5/11/15/16and corner/edge tests. Preserve count<5path,all decompiled branch flags,rotation-table indexing,variation/checker resets,the category5restriction,int!=32166 recursion before scene reads and every arithmetic/allocation/partial-state order. No extra neighbor queries or material guesses. Complete original-body SHA256 3f52cc29602c6bd7b8ae80df62323c421893cb56bc2774afbaa8af3dc8ff6537. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WallModel.refineWallTileShapes(I)V"
     },
     {
       "symbol": "M:lma.m(B)I",
@@ -65844,6 +65916,14 @@
       "renamedSymbol": "M:NetworkArchiveRequest.matchesCharSequence(LPacketBuffer;[CIZ)Z"
     },
     {
+      "symbol": "M:qqa.a([ILoc;IB)Lima;",
+      "originalName": "a",
+      "to": "buildTextureProjectionData",
+      "evidence": "Build texture-projection data shared by software,OpenGL and hardware model constructors. For selected face IDs,collect per-texture vertex bounds from three vertex-coordinate arrays and unsigned byte texture indices other than-1;derive integer centers and projection-scale matrices for mapping types. Return ModelTextureProjectionData containing three center arrays and matrix array,including all-null arrays when texture-index data is absent. Preserve byte!=-6 immediate null before model/array reads,allocation sequence,sentinels2147483647/-2147483647,all int/byte/face-count domains,overflow before integer /2,float reciprocal/scaling and sign order,mutable decompiled loop flags,casts/aliasing and exception diagnostics. No model/UV math is simplified. Complete original-body SHA256 5e515e0b17d0f8bb28b57402db95b335df61a8c8b25c21e61f6fe76554a12e54. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;"
+    },
+    {
       "symbol": "M:qqa.b(B)[B",
       "originalName": "b",
       "to": "getBytes",
@@ -66130,6 +66210,14 @@
       "evidence": "Reads the element from the BitPacketBuffer; gha.readDecodableArray calls it on each array entry.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BitElementDecodable.decodeElement(LBitPacketBuffer;Z)V"
+    },
+    {
+      "symbol": "M:qt.a(I)V",
+      "originalName": "a",
+      "to": "readLobbyStateUpdate",
+      "evidence": "Read and apply lobby-state update packet10. Subcommands0..4reset player/game/current-search state;5..7update/remove/clear lobby players;8..13update game listings and flags;14..17adjust invitation/player flags and counts;18..20update current-game players/options;21sets start deadline;22updates queue position/rating;23sets local player ID. Preserve int>-10early return before any packet read,exact unknown-subcommand diagnostic and socket close,all signed/unsigned reads,IDs,list/hash ordering,unlink order,delayed removals,conditional counter increments/decrements,field publication before subsequent reads and partial state on exceptions. State3publishes searching flag before reading option arrays. No packet schema changes or transactional rewrite. Complete original-body SHA256 a87c3d480e52dbd463b4404d0a4365e9cc86ef33bfdf322e28c69eaa8173def0. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationRequests.readLobbyStateUpdate(I)V"
     },
     {
       "symbol": "M:qt.a(IIIIIB)V",
@@ -78700,6 +78788,14 @@
       "renamedSymbol": "M:IntrusiveDeque.startForwardFrom(ILIntrusiveNode;)LIntrusiveNode;"
     },
     {
+      "symbol": "M:vna.a(ZII)Lmu;",
+      "originalName": "a",
+      "to": "updateFriendListControls",
+      "evidence": "Update friend-list controls and return the clicked contact. Scroll/layout work precedes mode-dependent disconnected text or online list rendering. Create missing row widgets,colour same-world/online/offline entries,truncate names,set hover tooltips,open player context menu and optional private-chat/join actions,then handle add/remove friend popup modes0/1. Preserve guard intparam2>-114 recursion before UI reads,all repeated mode/contact/global reads,widget allocation/link and partial layout order,three full-int formatter calls99/114/86,reference-identity world comparisons and all null/Boolean/int domains. The returned contact is consumed by BoulderComponent to add its context-menu action;ignore-list processing stays separate. Complete original-body SHA256 e4d86c90e6301b675422157485853b7feadc3a4b0a2909f24d03da60292cc0e6. Naming only.12complete selected bodies,40compiler-bound callers,272field declarations/76owned,12supporting classes,28purpose witnesses and one complete unchanged full-int formatter reviewed. Preserve descriptors,all int/byte/short/long domains,guards,modifiers/visibility,field/parameter/local names,literals,overflow/division/shifts,floating-point/cast order,aliases/partial writes,allocation/call/exception order and diagnostics. Four Iformatter calls retain full signed domain;byte companion unchanged. No native/class-name-literal edits and no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;"
+    },
+    {
       "symbol": "M:vna.b(B)V",
       "originalName": "b",
       "to": "releaseStatics",
@@ -83553,7 +83649,7 @@
     },
     {
       "symbol": "B:qqa.a([ILoc;IB)Lima;#0",
-      "renamedSymbol": "B:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#0",
+      "renamedSymbol": "B:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#0",
       "originalName": "L0",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -195841,7 +195937,7 @@
     },
     {
       "symbol": "L:bh.a(IZ)Z#0",
-      "renamedSymbol": "L:PlayTrackCommand.a(IZ)Z#0",
+      "renamedSymbol": "L:PlayTrackCommand.supportsBinaryAlphaTexturePixels(IZ)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -200109,7 +200205,7 @@
     },
     {
       "symbol": "L:boa.i(I)Z#0",
-      "renamedSymbol": "L:BlockModel.i(I)Z#0",
+      "renamedSymbol": "L:BlockModel.usesLargeBlockDragSound(I)Z#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -200120,7 +200216,7 @@
     },
     {
       "symbol": "L:boa.i(I)Z#1",
-      "renamedSymbol": "L:BlockModel.i(I)Z#1",
+      "renamedSymbol": "L:BlockModel.usesLargeBlockDragSound(I)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -232526,7 +232622,7 @@
     },
     {
       "symbol": "L:dfa.a(IZI)Z#0",
-      "renamedSymbol": "L:GameScreen.a(IZI)Z#0",
+      "renamedSymbol": "L:GameScreen.handleChatShortcutKey(IZI)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -232537,7 +232633,7 @@
     },
     {
       "symbol": "L:dfa.a(IZI)Z#1",
-      "renamedSymbol": "L:GameScreen.a(IZI)Z#1",
+      "renamedSymbol": "L:GameScreen.handleChatShortcutKey(IZI)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -232548,7 +232644,7 @@
     },
     {
       "symbol": "L:dfa.a(IZI)Z#2",
-      "renamedSymbol": "L:GameScreen.a(IZI)Z#2",
+      "renamedSymbol": "L:GameScreen.handleChatShortcutKey(IZI)Z#2",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -232559,7 +232655,7 @@
     },
     {
       "symbol": "L:dfa.a(IZI)Z#3",
-      "renamedSymbol": "L:GameScreen.a(IZI)Z#3",
+      "renamedSymbol": "L:GameScreen.handleChatShortcutKey(IZI)Z#3",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -232570,7 +232666,7 @@
     },
     {
       "symbol": "L:dfa.a(IZI)Z#4",
-      "renamedSymbol": "L:GameScreen.a(IZI)Z#4",
+      "renamedSymbol": "L:GameScreen.handleChatShortcutKey(IZI)Z#4",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -320581,7 +320677,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#0",
       "originalName": "var17_int",
       "renamedName": "var17_int",
       "declaration": {
@@ -320592,7 +320688,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#1",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -320603,7 +320699,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#10",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#10",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#10",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -320614,7 +320710,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#11",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#11",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#11",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -320625,7 +320721,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#12",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#12",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#12",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -320636,7 +320732,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#13",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#13",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#13",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -320647,7 +320743,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#14",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#14",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#14",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -320658,7 +320754,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#15",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#15",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#15",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -320669,7 +320765,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#16",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#16",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#16",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -320680,7 +320776,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#17",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#17",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#17",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -320691,7 +320787,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#18",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#18",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#18",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -320702,7 +320798,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#19",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#19",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#19",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -320713,7 +320809,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#2",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#2",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#2",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -320724,7 +320820,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#20",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#20",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#20",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -320735,7 +320831,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#21",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#21",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#21",
       "originalName": "var38",
       "renamedName": "var38",
       "declaration": {
@@ -320746,7 +320842,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#22",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#22",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#22",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -320757,7 +320853,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#23",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#23",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#23",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -320768,7 +320864,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#24",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#24",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#24",
       "originalName": "var41",
       "renamedName": "var41",
       "declaration": {
@@ -320779,7 +320875,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#25",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#25",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#25",
       "originalName": "var42",
       "renamedName": "var42",
       "declaration": {
@@ -320790,7 +320886,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#26",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#26",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#26",
       "originalName": "stackIn_77_0",
       "renamedName": "stackIn_77_0",
       "declaration": {
@@ -320801,7 +320897,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#27",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#27",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#27",
       "originalName": "stackIn_77_1",
       "renamedName": "stackIn_77_1",
       "declaration": {
@@ -320812,7 +320908,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#28",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#28",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#28",
       "originalName": "stackIn_78_2",
       "renamedName": "stackIn_78_2",
       "declaration": {
@@ -320823,7 +320919,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#29",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#29",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#29",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -320834,7 +320930,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#3",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#3",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#3",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -320845,7 +320941,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#30",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#30",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#30",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -320856,7 +320952,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#31",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#31",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#31",
       "originalName": "var35Lifetime1",
       "renamedName": "var35Lifetime1",
       "declaration": {
@@ -320867,7 +320963,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#32",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#32",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#32",
       "originalName": "var36Lifetime1",
       "renamedName": "var36Lifetime1",
       "declaration": {
@@ -320878,7 +320974,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#33",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#33",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#33",
       "originalName": "var37Lifetime1",
       "renamedName": "var37Lifetime1",
       "declaration": {
@@ -320889,7 +320985,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#34",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#34",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#34",
       "originalName": "var38Lifetime1",
       "renamedName": "var38Lifetime1",
       "declaration": {
@@ -320900,7 +320996,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#35",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#35",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#35",
       "originalName": "var39Lifetime1",
       "renamedName": "var39Lifetime1",
       "declaration": {
@@ -320911,7 +321007,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#36",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#36",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#36",
       "originalName": "var40Lifetime1",
       "renamedName": "var40Lifetime1",
       "declaration": {
@@ -320922,7 +321018,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#37",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#37",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#37",
       "originalName": "var36Lifetime2",
       "renamedName": "var36Lifetime2",
       "declaration": {
@@ -320933,7 +321029,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#38",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#38",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#38",
       "originalName": "var36Lifetime3",
       "renamedName": "var36Lifetime3",
       "declaration": {
@@ -320944,7 +321040,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#39",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#39",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#39",
       "originalName": "var37Lifetime2",
       "renamedName": "var37Lifetime2",
       "declaration": {
@@ -320955,7 +321051,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#4",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#4",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#4",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -320966,7 +321062,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#40",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#40",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#40",
       "originalName": "var38Lifetime2",
       "renamedName": "var38Lifetime2",
       "declaration": {
@@ -320977,7 +321073,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#41",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#41",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#41",
       "originalName": "var39Lifetime2",
       "renamedName": "var39Lifetime2",
       "declaration": {
@@ -320988,7 +321084,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#42",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#42",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#42",
       "originalName": "var40Lifetime2",
       "renamedName": "var40Lifetime2",
       "declaration": {
@@ -320999,7 +321095,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#43",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#43",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#43",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -321010,7 +321106,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#44",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#44",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#44",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -321021,7 +321117,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#5",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#5",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#5",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -321032,7 +321128,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#6",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#6",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#6",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -321043,7 +321139,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#7",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#7",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#7",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -321054,7 +321150,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#8",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#8",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#8",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -321065,7 +321161,7 @@
     },
     {
       "symbol": "L:ica.a(IIIIII[IIIIIIIIIII)V#9",
-      "renamedSymbol": "L:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#9",
+      "renamedSymbol": "L:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#9",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -326961,7 +327057,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#0",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#0",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#0",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -326972,7 +327068,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#1",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#1",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -326983,7 +327079,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#10",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#10",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#10",
       "originalName": "stackIn_102_0",
       "renamedName": "stackIn_102_0",
       "declaration": {
@@ -326994,7 +327090,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#11",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#11",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#11",
       "originalName": "stackIn_104_0",
       "renamedName": "stackIn_104_0",
       "declaration": {
@@ -327005,7 +327101,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#12",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#12",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#12",
       "originalName": "stackIn_107_0",
       "renamedName": "stackIn_107_0",
       "declaration": {
@@ -327016,7 +327112,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#13",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#13",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#13",
       "originalName": "stackIn_107_1",
       "renamedName": "stackIn_107_1",
       "declaration": {
@@ -327027,7 +327123,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#14",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#14",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#14",
       "originalName": "stackIn_108_2",
       "renamedName": "stackIn_108_2",
       "declaration": {
@@ -327038,7 +327134,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#15",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#15",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#15",
       "originalName": "stackIn_110_1",
       "renamedName": "stackIn_110_1",
       "declaration": {
@@ -327049,7 +327145,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#16",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#16",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#16",
       "originalName": "stackIn_111_2",
       "renamedName": "stackIn_111_2",
       "declaration": {
@@ -327060,7 +327156,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#17",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#17",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#17",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -327071,7 +327167,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#18",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#18",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#18",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -327082,7 +327178,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#19",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#19",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#19",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -327093,7 +327189,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#2",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#2",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#2",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -327104,7 +327200,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#20",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#20",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#20",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -327115,7 +327211,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#21",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#21",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#21",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -327126,7 +327222,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#22",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#22",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#22",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -327137,7 +327233,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#23",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#23",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#23",
       "originalName": "var8_ref_Throwable",
       "renamedName": "var8_ref_Throwable",
       "declaration": {
@@ -327148,7 +327244,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#24",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#24",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#24",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -327159,7 +327255,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#25",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#25",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#25",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -327170,7 +327266,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#26",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#26",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#26",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -327181,7 +327277,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#27",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#27",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#27",
       "originalName": "var6_intLifetime1",
       "renamedName": "var6_intLifetime1",
       "declaration": {
@@ -327192,7 +327288,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#28",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#28",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#28",
       "originalName": "var6_intLifetime2",
       "renamedName": "var6_intLifetime2",
       "declaration": {
@@ -327203,7 +327299,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#29",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#29",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#29",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -327214,7 +327310,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#3",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#3",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#3",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -327225,7 +327321,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#30",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#30",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#30",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -327236,7 +327332,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#31",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#31",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#31",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -327247,7 +327343,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#32",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#32",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#32",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -327258,7 +327354,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#33",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#33",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#33",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -327269,7 +327365,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#34",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#34",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#34",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -327280,7 +327376,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#35",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#35",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#35",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -327291,7 +327387,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#4",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#4",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#4",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -327302,7 +327398,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#5",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#5",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#5",
       "originalName": "stackIn_49_0",
       "renamedName": "stackIn_49_0",
       "declaration": {
@@ -327313,7 +327409,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#6",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#6",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#6",
       "originalName": "stackIn_54_0",
       "renamedName": "stackIn_54_0",
       "declaration": {
@@ -327324,7 +327420,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#7",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#7",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#7",
       "originalName": "stackIn_81_0",
       "renamedName": "stackIn_81_0",
       "declaration": {
@@ -327335,7 +327431,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#8",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#8",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#8",
       "originalName": "stackIn_88_0",
       "renamedName": "stackIn_88_0",
       "declaration": {
@@ -327346,7 +327442,7 @@
     },
     {
       "symbol": "L:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#9",
-      "renamedSymbol": "L:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#9",
+      "renamedSymbol": "L:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#9",
       "originalName": "stackIn_93_0",
       "renamedName": "stackIn_93_0",
       "declaration": {
@@ -339391,7 +339487,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#0",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#0",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -339402,7 +339498,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#1",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#1",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#1",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -339413,7 +339509,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#10",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#10",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#10",
       "originalName": "stackIn_55_1",
       "renamedName": "stackIn_55_1",
       "declaration": {
@@ -339424,7 +339520,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#11",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#11",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#11",
       "originalName": "stackIn_56_2",
       "renamedName": "stackIn_56_2",
       "declaration": {
@@ -339435,7 +339531,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#12",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#12",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#12",
       "originalName": "stackIn_62_0",
       "renamedName": "stackIn_62_0",
       "declaration": {
@@ -339446,7 +339542,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#13",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#13",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#13",
       "originalName": "stackIn_62_1",
       "renamedName": "stackIn_62_1",
       "declaration": {
@@ -339457,7 +339553,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#14",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#14",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#14",
       "originalName": "stackIn_63_2",
       "renamedName": "stackIn_63_2",
       "declaration": {
@@ -339468,7 +339564,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#15",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#15",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#15",
       "originalName": "stackIn_67_0",
       "renamedName": "stackIn_67_0",
       "declaration": {
@@ -339479,7 +339575,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#16",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#16",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#16",
       "originalName": "stackIn_67_1",
       "renamedName": "stackIn_67_1",
       "declaration": {
@@ -339490,7 +339586,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#17",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#17",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#17",
       "originalName": "stackIn_68_2",
       "renamedName": "stackIn_68_2",
       "declaration": {
@@ -339501,7 +339597,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#18",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#18",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#18",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -339512,7 +339608,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#2",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#2",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#2",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -339523,7 +339619,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#3",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#3",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -339534,7 +339630,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#4",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#4",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#4",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -339545,7 +339641,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#5",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#5",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#5",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -339556,7 +339652,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#6",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#6",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#6",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -339567,7 +339663,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#7",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#7",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#7",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -339578,7 +339674,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#8",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#8",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#8",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -339589,7 +339685,7 @@
     },
     {
       "symbol": "L:jc.a(ZZZI)V#9",
-      "renamedSymbol": "L:SimpleHoverMountComponent.a(ZZZI)V#9",
+      "renamedSymbol": "L:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#9",
       "originalName": "stackIn_55_0",
       "renamedName": "stackIn_55_0",
       "declaration": {
@@ -341756,7 +341852,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#0",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#0",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#0",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -341767,7 +341863,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#1",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#1",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#1",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -341778,7 +341874,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#10",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#10",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -341789,7 +341885,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#11",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#11",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -341800,7 +341896,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#12",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#12",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -341811,7 +341907,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#13",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#13",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -341822,7 +341918,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#14",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#14",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -341833,7 +341929,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#2",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#2",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#2",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -341844,7 +341940,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#3",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#3",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#3",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -341855,7 +341951,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#4",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#4",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#4",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -341866,7 +341962,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#5",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#5",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#5",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -341877,7 +341973,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#6",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#6",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#6",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -341888,7 +341984,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#7",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#7",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -341899,7 +341995,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#8",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#8",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#8",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -341910,7 +342006,7 @@
     },
     {
       "symbol": "L:jh.a(ILjava/lang/String;Lil;Lkha;I)V#9",
-      "renamedSymbol": "L:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#9",
+      "renamedSymbol": "L:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -394039,7 +394135,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#0",
-      "renamedSymbol": "L:WallModel.l(I)V#0",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -394050,7 +394146,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#1",
-      "renamedSymbol": "L:WallModel.l(I)V#1",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -394061,7 +394157,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#10",
-      "renamedSymbol": "L:WallModel.l(I)V#10",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -394072,7 +394168,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#11",
-      "renamedSymbol": "L:WallModel.l(I)V#11",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -394083,7 +394179,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#12",
-      "renamedSymbol": "L:WallModel.l(I)V#12",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -394094,7 +394190,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#13",
-      "renamedSymbol": "L:WallModel.l(I)V#13",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -394105,7 +394201,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#14",
-      "renamedSymbol": "L:WallModel.l(I)V#14",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -394116,7 +394212,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#15",
-      "renamedSymbol": "L:WallModel.l(I)V#15",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -394127,7 +394223,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#16",
-      "renamedSymbol": "L:WallModel.l(I)V#16",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#16",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -394138,7 +394234,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#17",
-      "renamedSymbol": "L:WallModel.l(I)V#17",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#17",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -394149,7 +394245,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#18",
-      "renamedSymbol": "L:WallModel.l(I)V#18",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#18",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -394160,7 +394256,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#19",
-      "renamedSymbol": "L:WallModel.l(I)V#19",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#19",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -394171,7 +394267,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#2",
-      "renamedSymbol": "L:WallModel.l(I)V#2",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#2",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -394182,7 +394278,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#20",
-      "renamedSymbol": "L:WallModel.l(I)V#20",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#20",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -394193,7 +394289,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#21",
-      "renamedSymbol": "L:WallModel.l(I)V#21",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#21",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -394204,7 +394300,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#22",
-      "renamedSymbol": "L:WallModel.l(I)V#22",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#22",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -394215,7 +394311,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#3",
-      "renamedSymbol": "L:WallModel.l(I)V#3",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#3",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -394226,7 +394322,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#4",
-      "renamedSymbol": "L:WallModel.l(I)V#4",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#4",
       "originalName": "stackIn_46_2",
       "renamedName": "stackIn_46_2",
       "declaration": {
@@ -394237,7 +394333,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#5",
-      "renamedSymbol": "L:WallModel.l(I)V#5",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -394248,7 +394344,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#6",
-      "renamedSymbol": "L:WallModel.l(I)V#6",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -394259,7 +394355,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#7",
-      "renamedSymbol": "L:WallModel.l(I)V#7",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -394270,7 +394366,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#8",
-      "renamedSymbol": "L:WallModel.l(I)V#8",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -394281,7 +394377,7 @@
     },
     {
       "symbol": "L:lma.l(I)V#9",
-      "renamedSymbol": "L:WallModel.l(I)V#9",
+      "renamedSymbol": "L:WallModel.refineWallTileShapes(I)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -467871,7 +467967,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#0",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#0",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -467882,7 +467978,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#1",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#1",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -467893,7 +467989,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#10",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#10",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -467904,7 +468000,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#11",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#11",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -467915,7 +468011,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#12",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#12",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -467926,7 +468022,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#13",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#13",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -467937,7 +468033,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#14",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#14",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -467948,7 +468044,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#15",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#15",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -467959,7 +468055,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#16",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#16",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -467970,7 +468066,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#17",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#17",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -467981,7 +468077,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#18",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#18",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#18",
       "originalName": "var17_int",
       "renamedName": "var17_int",
       "declaration": {
@@ -467992,7 +468088,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#19",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#19",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#19",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -468003,7 +468099,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#2",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#2",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#2",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -468014,7 +468110,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#20",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#20",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#20",
       "originalName": "var18_int",
       "renamedName": "var18_int",
       "declaration": {
@@ -468025,7 +468121,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#21",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#21",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#21",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -468036,7 +468132,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#22",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#22",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#22",
       "originalName": "var19_int",
       "renamedName": "var19_int",
       "declaration": {
@@ -468047,7 +468143,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#23",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#23",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -468058,7 +468154,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#24",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#24",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -468069,7 +468165,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#25",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#25",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#25",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -468080,7 +468176,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#26",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#26",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#26",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -468091,7 +468187,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#27",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#27",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#27",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -468102,7 +468198,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#28",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#28",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#28",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -468113,7 +468209,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#29",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#29",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#29",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -468124,7 +468220,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#3",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#3",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#3",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -468135,7 +468231,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#30",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#30",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#30",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -468146,7 +468242,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#31",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#31",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#31",
       "originalName": "var45",
       "renamedName": "var45",
       "declaration": {
@@ -468157,7 +468253,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#32",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#32",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#32",
       "originalName": "var46",
       "renamedName": "var46",
       "declaration": {
@@ -468168,7 +468264,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#33",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#33",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#33",
       "originalName": "var47",
       "renamedName": "var47",
       "declaration": {
@@ -468179,7 +468275,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#34",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#34",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#34",
       "originalName": "var48",
       "renamedName": "var48",
       "declaration": {
@@ -468190,7 +468286,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#35",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#35",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#35",
       "originalName": "var49",
       "renamedName": "var49",
       "declaration": {
@@ -468201,7 +468297,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#36",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#36",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#36",
       "originalName": "var50",
       "renamedName": "var50",
       "declaration": {
@@ -468212,7 +468308,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#37",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#37",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#37",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -468223,7 +468319,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#38",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#38",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#38",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -468234,7 +468330,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#4",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#4",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#4",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -468245,7 +468341,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#5",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#5",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#5",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -468256,7 +468352,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#6",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#6",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#6",
       "originalName": "stackIn_61_1",
       "renamedName": "stackIn_61_1",
       "declaration": {
@@ -468267,7 +468363,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#7",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#7",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#7",
       "originalName": "stackIn_62_2",
       "renamedName": "stackIn_62_2",
       "declaration": {
@@ -468278,7 +468374,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#8",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#8",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#8",
       "originalName": "stackIn_64_1",
       "renamedName": "stackIn_64_1",
       "declaration": {
@@ -468289,7 +468385,7 @@
     },
     {
       "symbol": "L:qqa.a([ILoc;IB)Lima;#9",
-      "renamedSymbol": "L:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#9",
+      "renamedSymbol": "L:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#9",
       "originalName": "stackIn_65_2",
       "renamedName": "stackIn_65_2",
       "declaration": {
@@ -470082,7 +470178,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#0",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#0",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#0",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -470093,7 +470189,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#1",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#1",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#1",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -470104,7 +470200,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#10",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#10",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -470115,7 +470211,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#11",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#11",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#11",
       "originalName": "var3_ref_pha",
       "renamedName": "var3_ref_pha",
       "declaration": {
@@ -470126,7 +470222,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#12",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#12",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#12",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -470137,7 +470233,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#13",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#13",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#13",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -470148,7 +470244,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#14",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#14",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#14",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -470159,7 +470255,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#15",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#15",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#15",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -470170,7 +470266,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#16",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#16",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#16",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -470181,7 +470277,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#17",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#17",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#17",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -470192,7 +470288,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#18",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#18",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#18",
       "originalName": "var8_ref_pha",
       "renamedName": "var8_ref_pha",
       "declaration": {
@@ -470203,7 +470299,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#19",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#19",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#19",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -470214,7 +470310,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#2",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#2",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#2",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -470225,7 +470321,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#20",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#20",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#20",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -470236,7 +470332,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#21",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#21",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#21",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -470247,7 +470343,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#22",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#22",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#22",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -470258,7 +470354,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#23",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#23",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#23",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -470269,7 +470365,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#24",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#24",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#24",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -470280,7 +470376,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#25",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#25",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#25",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -470291,7 +470387,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#26",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#26",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#26",
       "originalName": "var17_ref",
       "renamedName": "var17_ref",
       "declaration": {
@@ -470302,7 +470398,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#27",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#27",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#27",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -470313,7 +470409,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#28",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#28",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#28",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -470324,7 +470420,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#29",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#29",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#29",
       "originalName": "var19_ref",
       "renamedName": "var19_ref",
       "declaration": {
@@ -470335,7 +470431,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#3",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#3",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#3",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -470346,7 +470442,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#30",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#30",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#30",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -470357,7 +470453,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#31",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#31",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#31",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -470368,7 +470464,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#32",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#32",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#32",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -470379,7 +470475,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#33",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#33",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#33",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -470390,7 +470486,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#34",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#34",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#34",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -470401,7 +470497,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#35",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#35",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#35",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -470412,7 +470508,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#36",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#36",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#36",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -470423,7 +470519,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#37",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#37",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#37",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -470434,7 +470530,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#38",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#38",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#38",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -470445,7 +470541,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#39",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#39",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#39",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -470456,7 +470552,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#4",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#4",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#4",
       "originalName": "stackIn_62_1",
       "renamedName": "stackIn_62_1",
       "declaration": {
@@ -470467,7 +470563,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#40",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#40",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#40",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -470478,7 +470574,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#41",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#41",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#41",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -470489,7 +470585,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#42",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#42",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#42",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -470500,7 +470596,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#43",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#43",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#43",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -470511,7 +470607,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#44",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#44",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#44",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -470522,7 +470618,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#45",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#45",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#45",
       "originalName": "var3_ref_phaLifetime1",
       "renamedName": "var3_ref_phaLifetime1",
       "declaration": {
@@ -470533,7 +470629,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#46",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#46",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#46",
       "originalName": "var3_longLifetime1",
       "renamedName": "var3_longLifetime1",
       "declaration": {
@@ -470544,7 +470640,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#47",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#47",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#47",
       "originalName": "var3_longLifetime2",
       "renamedName": "var3_longLifetime2",
       "declaration": {
@@ -470555,7 +470651,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#48",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#48",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#48",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -470566,7 +470662,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#49",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#49",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#49",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -470577,7 +470673,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#5",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#5",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -470588,7 +470684,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#50",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#50",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#50",
       "originalName": "var3Lifetime3",
       "renamedName": "var3Lifetime3",
       "declaration": {
@@ -470599,7 +470695,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#51",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#51",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#51",
       "originalName": "var4_intLifetime1",
       "renamedName": "var4_intLifetime1",
       "declaration": {
@@ -470610,7 +470706,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#52",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#52",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#52",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -470621,7 +470717,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#53",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#53",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#53",
       "originalName": "var3Lifetime4",
       "renamedName": "var3Lifetime4",
       "declaration": {
@@ -470632,7 +470728,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#54",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#54",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#54",
       "originalName": "var3Lifetime5",
       "renamedName": "var3Lifetime5",
       "declaration": {
@@ -470643,7 +470739,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#55",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#55",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#55",
       "originalName": "var3Lifetime6",
       "renamedName": "var3Lifetime6",
       "declaration": {
@@ -470654,7 +470750,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#56",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#56",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#56",
       "originalName": "var3_longLifetime2Lifetime1",
       "renamedName": "var3_longLifetime2Lifetime1",
       "declaration": {
@@ -470665,7 +470761,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#57",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#57",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#57",
       "originalName": "var5Lifetime1Lifetime1",
       "renamedName": "var5Lifetime1Lifetime1",
       "declaration": {
@@ -470676,7 +470772,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#58",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#58",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#58",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -470687,7 +470783,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#6",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#6",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#6",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -470698,7 +470794,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#7",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#7",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#7",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -470709,7 +470805,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#8",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#8",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -470720,7 +470816,7 @@
     },
     {
       "symbol": "L:qt.a(I)V#9",
-      "renamedSymbol": "L:AccountCreationRequests.a(I)V#9",
+      "renamedSymbol": "L:AccountCreationRequests.readLobbyStateUpdate(I)V#9",
       "originalName": "var3_long",
       "renamedName": "var3_long",
       "declaration": {
@@ -554298,7 +554394,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#0",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#0",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -554309,7 +554405,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#1",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#1",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#1",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -554320,7 +554416,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#10",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#10",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#10",
       "originalName": "stackIn_51_1",
       "renamedName": "stackIn_51_1",
       "declaration": {
@@ -554331,7 +554427,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#11",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#11",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#11",
       "originalName": "stackIn_55_0",
       "renamedName": "stackIn_55_0",
       "declaration": {
@@ -554342,7 +554438,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#12",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#12",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#12",
       "originalName": "stackIn_107_0",
       "renamedName": "stackIn_107_0",
       "declaration": {
@@ -554353,7 +554449,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#13",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#13",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -554364,7 +554460,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#14",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#14",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#14",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -554375,7 +554471,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#15",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#15",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#15",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -554386,7 +554482,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#16",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#16",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#16",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -554397,7 +554493,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#17",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#17",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#17",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -554408,7 +554504,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#18",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#18",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#18",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -554419,7 +554515,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#19",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#19",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#19",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -554430,7 +554526,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#2",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#2",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#2",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -554441,7 +554537,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#20",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#20",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#20",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -554452,7 +554548,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#21",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#21",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#21",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -554463,7 +554559,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#22",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#22",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#22",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -554474,7 +554570,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#23",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#23",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#23",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -554485,7 +554581,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#24",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#24",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#24",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -554496,7 +554592,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#25",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#25",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#25",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -554507,7 +554603,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#26",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#26",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#26",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -554518,7 +554614,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#27",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#27",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#27",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -554529,7 +554625,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#28",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#28",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#28",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -554540,7 +554636,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#29",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#29",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#29",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -554551,7 +554647,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#3",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#3",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#3",
       "originalName": "stackIn_7_3",
       "renamedName": "stackIn_7_3",
       "declaration": {
@@ -554562,7 +554658,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#30",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#30",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#30",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -554573,7 +554669,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#31",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#31",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#31",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -554584,7 +554680,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#32",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#32",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#32",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -554595,7 +554691,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#33",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#33",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#33",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -554606,7 +554702,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#34",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#34",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#34",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -554617,7 +554713,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#35",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#35",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#35",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -554628,7 +554724,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#36",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#36",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#36",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -554639,7 +554735,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#4",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#4",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#4",
       "originalName": "stackIn_7_4",
       "renamedName": "stackIn_7_4",
       "declaration": {
@@ -554650,7 +554746,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#5",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#5",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#5",
       "originalName": "stackIn_7_5",
       "renamedName": "stackIn_7_5",
       "declaration": {
@@ -554661,7 +554757,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#6",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#6",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#6",
       "originalName": "stackIn_8_6",
       "renamedName": "stackIn_8_6",
       "declaration": {
@@ -554672,7 +554768,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#7",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#7",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#7",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -554683,7 +554779,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#8",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#8",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#8",
       "originalName": "stackIn_47_1",
       "renamedName": "stackIn_47_1",
       "declaration": {
@@ -554694,7 +554790,7 @@
     },
     {
       "symbol": "L:vna.a(ZII)Lmu;#9",
-      "renamedSymbol": "L:IntrusiveDeque.a(ZII)LContactListEntry;#9",
+      "renamedSymbol": "L:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#9",
       "originalName": "stackIn_50_0",
       "renamedName": "stackIn_50_0",
       "declaration": {
@@ -593106,9 +593202,9 @@
     },
     {
       "symbol": "M:aia.h(I)Z",
-      "renamedSymbol": "M:PitSnake.h(I)Z",
+      "renamedSymbol": "M:PitSnake.isInCollisionRecovery(I)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "isInCollisionRecovery",
       "declaration": {
         "file": "aia.java",
         "start": 10693,
@@ -596714,9 +596810,9 @@
     },
     {
       "symbol": "M:bh.a(IZ)Z",
-      "renamedSymbol": "M:PlayTrackCommand.a(IZ)Z",
+      "renamedSymbol": "M:PlayTrackCommand.supportsBinaryAlphaTexturePixels(IZ)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "supportsBinaryAlphaTexturePixels",
       "declaration": {
         "file": "bh.java",
         "start": 24798,
@@ -597847,9 +597943,9 @@
     },
     {
       "symbol": "M:boa.i(I)Z",
-      "renamedSymbol": "M:BlockModel.i(I)Z",
+      "renamedSymbol": "M:BlockModel.usesLargeBlockDragSound(I)Z",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "usesLargeBlockDragSound",
       "declaration": {
         "file": "boa.java",
         "start": 5126,
@@ -607527,9 +607623,9 @@
     },
     {
       "symbol": "M:dfa.a(IZI)Z",
-      "renamedSymbol": "M:GameScreen.a(IZI)Z",
+      "renamedSymbol": "M:GameScreen.handleChatShortcutKey(IZI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleChatShortcutKey",
       "declaration": {
         "file": "dfa.java",
         "start": 208,
@@ -630924,9 +631020,9 @@
     },
     {
       "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
-      "renamedSymbol": "M:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V",
+      "renamedSymbol": "M:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "rasterizeInterpolatedColourTriangle",
       "declaration": {
         "file": "ica.java",
         "start": 219,
@@ -632233,9 +632329,9 @@
     },
     {
       "symbol": "M:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
-      "renamedSymbol": "M:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
+      "renamedSymbol": "M:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollLoginHandshake",
       "declaration": {
         "file": "ila.java",
         "start": 4910,
@@ -639361,9 +639457,9 @@
     },
     {
       "symbol": "M:jc.a(ZZZI)V",
-      "renamedSymbol": "M:SimpleHoverMountComponent.a(ZZZI)V",
+      "renamedSymbol": "M:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMainLobbyControls",
       "declaration": {
         "file": "jc.java",
         "start": 225,
@@ -640153,9 +640249,9 @@
     },
     {
       "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
-      "renamedSymbol": "M:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V",
+      "renamedSymbol": "M:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "populateTextCharacterPositions",
       "declaration": {
         "file": "jh.java",
         "start": 635,
@@ -651824,9 +651920,9 @@
     },
     {
       "symbol": "M:lma.l(I)V",
-      "renamedSymbol": "M:WallModel.l(I)V",
+      "renamedSymbol": "M:WallModel.refineWallTileShapes(I)V",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "refineWallTileShapes",
       "declaration": {
         "file": "lma.java",
         "start": 30524,
@@ -672647,9 +672743,9 @@
     },
     {
       "symbol": "M:qqa.a([ILoc;IB)Lima;",
-      "renamedSymbol": "M:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;",
+      "renamedSymbol": "M:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "buildTextureProjectionData",
       "declaration": {
         "file": "qqa.java",
         "start": 3040,
@@ -673087,9 +673183,9 @@
     },
     {
       "symbol": "M:qt.a(I)V",
-      "renamedSymbol": "M:AccountCreationRequests.a(I)V",
+      "renamedSymbol": "M:AccountCreationRequests.readLobbyStateUpdate(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readLobbyStateUpdate",
       "declaration": {
         "file": "qt.java",
         "start": 1249,
@@ -693085,9 +693181,9 @@
     },
     {
       "symbol": "M:vna.a(ZII)Lmu;",
-      "renamedSymbol": "M:IntrusiveDeque.a(ZII)LContactListEntry;",
+      "renamedSymbol": "M:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateFriendListControls",
       "declaration": {
         "file": "vna.java",
         "start": 3921,
@@ -703909,7 +704005,7 @@
     },
     {
       "symbol": "P:aia.h(I)Z#0",
-      "renamedSymbol": "P:PitSnake.h(I)Z#0",
+      "renamedSymbol": "P:PitSnake.isInCollisionRecovery(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -713028,7 +713124,7 @@
     },
     {
       "symbol": "P:bh.a(IZ)Z#0",
-      "renamedSymbol": "P:PlayTrackCommand.a(IZ)Z#0",
+      "renamedSymbol": "P:PlayTrackCommand.supportsBinaryAlphaTexturePixels(IZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -713039,7 +713135,7 @@
     },
     {
       "symbol": "P:bh.a(IZ)Z#1",
-      "renamedSymbol": "P:PlayTrackCommand.a(IZ)Z#1",
+      "renamedSymbol": "P:PlayTrackCommand.supportsBinaryAlphaTexturePixels(IZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -715052,7 +715148,7 @@
     },
     {
       "symbol": "P:boa.i(I)Z#0",
-      "renamedSymbol": "P:BlockModel.i(I)Z#0",
+      "renamedSymbol": "P:BlockModel.usesLargeBlockDragSound(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -735589,7 +735685,7 @@
     },
     {
       "symbol": "P:dfa.a(IZI)Z#0",
-      "renamedSymbol": "P:GameScreen.a(IZI)Z#0",
+      "renamedSymbol": "P:GameScreen.handleChatShortcutKey(IZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -735600,7 +735696,7 @@
     },
     {
       "symbol": "P:dfa.a(IZI)Z#1",
-      "renamedSymbol": "P:GameScreen.a(IZI)Z#1",
+      "renamedSymbol": "P:GameScreen.handleChatShortcutKey(IZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -735611,7 +735707,7 @@
     },
     {
       "symbol": "P:dfa.a(IZI)Z#2",
-      "renamedSymbol": "P:GameScreen.a(IZI)Z#2",
+      "renamedSymbol": "P:GameScreen.handleChatShortcutKey(IZI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -785892,7 +785988,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -785903,7 +785999,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -785914,7 +786010,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -785925,7 +786021,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -785936,7 +786032,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#12",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#12",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -785947,7 +786043,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#13",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#13",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -785958,7 +786054,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#14",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#14",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -785969,7 +786065,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#15",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#15",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -785980,7 +786076,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#16",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#16",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -785991,7 +786087,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -786002,7 +786098,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -786013,7 +786109,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -786024,7 +786120,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -786035,7 +786131,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -786046,7 +786142,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -786057,7 +786153,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -786068,7 +786164,7 @@
     },
     {
       "symbol": "P:ica.a(IIIIII[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:TextureCombineOperation.a(IIIIII[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:TextureCombineOperation.rasterizeInterpolatedColourTriangle(IIIIII[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -789709,7 +789805,7 @@
     },
     {
       "symbol": "P:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#0",
-      "renamedSymbol": "P:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#0",
+      "renamedSymbol": "P:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -789720,7 +789816,7 @@
     },
     {
       "symbol": "P:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#1",
-      "renamedSymbol": "P:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#1",
+      "renamedSymbol": "P:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -789731,7 +789827,7 @@
     },
     {
       "symbol": "P:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#2",
-      "renamedSymbol": "P:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#2",
+      "renamedSymbol": "P:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -789742,7 +789838,7 @@
     },
     {
       "symbol": "P:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#3",
-      "renamedSymbol": "P:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#3",
+      "renamedSymbol": "P:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -789753,7 +789849,7 @@
     },
     {
       "symbol": "P:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#4",
-      "renamedSymbol": "P:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#4",
+      "renamedSymbol": "P:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -789764,7 +789860,7 @@
     },
     {
       "symbol": "P:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I#5",
-      "renamedSymbol": "P:ChatOverlay.a(ZLjava/lang/String;IILjava/lang/String;Z)I#5",
+      "renamedSymbol": "P:ChatOverlay.pollLoginHandshake(ZLjava/lang/String;IILjava/lang/String;Z)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -810785,7 +810881,7 @@
     },
     {
       "symbol": "P:jc.a(ZZZI)V#0",
-      "renamedSymbol": "P:SimpleHoverMountComponent.a(ZZZI)V#0",
+      "renamedSymbol": "P:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -810796,7 +810892,7 @@
     },
     {
       "symbol": "P:jc.a(ZZZI)V#1",
-      "renamedSymbol": "P:SimpleHoverMountComponent.a(ZZZI)V#1",
+      "renamedSymbol": "P:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -810807,7 +810903,7 @@
     },
     {
       "symbol": "P:jc.a(ZZZI)V#2",
-      "renamedSymbol": "P:SimpleHoverMountComponent.a(ZZZI)V#2",
+      "renamedSymbol": "P:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -810818,7 +810914,7 @@
     },
     {
       "symbol": "P:jc.a(ZZZI)V#3",
-      "renamedSymbol": "P:SimpleHoverMountComponent.a(ZZZI)V#3",
+      "renamedSymbol": "P:SimpleHoverMountComponent.updateMainLobbyControls(ZZZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -812611,7 +812707,7 @@
     },
     {
       "symbol": "P:jh.a(ILjava/lang/String;Lil;Lkha;I)V#0",
-      "renamedSymbol": "P:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#0",
+      "renamedSymbol": "P:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -812622,7 +812718,7 @@
     },
     {
       "symbol": "P:jh.a(ILjava/lang/String;Lil;Lkha;I)V#1",
-      "renamedSymbol": "P:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#1",
+      "renamedSymbol": "P:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -812633,7 +812729,7 @@
     },
     {
       "symbol": "P:jh.a(ILjava/lang/String;Lil;Lkha;I)V#2",
-      "renamedSymbol": "P:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#2",
+      "renamedSymbol": "P:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -812644,7 +812740,7 @@
     },
     {
       "symbol": "P:jh.a(ILjava/lang/String;Lil;Lkha;I)V#3",
-      "renamedSymbol": "P:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#3",
+      "renamedSymbol": "P:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -812655,7 +812751,7 @@
     },
     {
       "symbol": "P:jh.a(ILjava/lang/String;Lil;Lkha;I)V#4",
-      "renamedSymbol": "P:FlameShooterComponent.a(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#4",
+      "renamedSymbol": "P:FlameShooterComponent.populateTextCharacterPositions(ILjava/lang/String;LBitmapFont;LTextLineLayout;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -838824,7 +838920,7 @@
     },
     {
       "symbol": "P:lma.l(I)V#0",
-      "renamedSymbol": "P:WallModel.l(I)V#0",
+      "renamedSymbol": "P:WallModel.refineWallTileShapes(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -887488,7 +887584,7 @@
     },
     {
       "symbol": "P:qqa.a([ILoc;IB)Lima;#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -887499,7 +887595,7 @@
     },
     {
       "symbol": "P:qqa.a([ILoc;IB)Lima;#1",
-      "renamedSymbol": "P:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#1",
+      "renamedSymbol": "P:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -887510,7 +887606,7 @@
     },
     {
       "symbol": "P:qqa.a([ILoc;IB)Lima;#2",
-      "renamedSymbol": "P:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#2",
+      "renamedSymbol": "P:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -887521,7 +887617,7 @@
     },
     {
       "symbol": "P:qqa.a([ILoc;IB)Lima;#3",
-      "renamedSymbol": "P:NetworkArchiveRequest.a([ILModelData;IB)LModelTextureProjectionData;#3",
+      "renamedSymbol": "P:NetworkArchiveRequest.buildTextureProjectionData([ILModelData;IB)LModelTextureProjectionData;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -888610,7 +888706,7 @@
     },
     {
       "symbol": "P:qt.a(I)V#0",
-      "renamedSymbol": "P:AccountCreationRequests.a(I)V#0",
+      "renamedSymbol": "P:AccountCreationRequests.readLobbyStateUpdate(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -931191,7 +931287,7 @@
     },
     {
       "symbol": "P:vna.a(ZII)Lmu;#0",
-      "renamedSymbol": "P:IntrusiveDeque.a(ZII)LContactListEntry;#0",
+      "renamedSymbol": "P:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -931202,7 +931298,7 @@
     },
     {
       "symbol": "P:vna.a(ZII)Lmu;#1",
-      "renamedSymbol": "P:IntrusiveDeque.a(ZII)LContactListEntry;#1",
+      "renamedSymbol": "P:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -931213,7 +931309,7 @@
     },
     {
       "symbol": "P:vna.a(ZII)Lmu;#2",
-      "renamedSymbol": "P:IntrusiveDeque.a(ZII)LContactListEntry;#2",
+      "renamedSymbol": "P:IntrusiveDeque.updateFriendListControls(ZII)LContactListEntry;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -944307,7 +944403,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "ced9298cd7ccd59719cd0994c5dd69de07c4b26938f47d0cf80e21ad0d13d36b",
+      "outputSha256": "a0bfae0f1bb7e1bb988daca2b500f0d2053488de8c36c2b8fac977cc23f6e60d",
       "edits": [
         {
           "start": 96,
@@ -957925,6 +958021,13 @@
           "renamed": "AccountCreationRequests"
         },
         {
+          "start": 32272,
+          "end": 32273,
+          "symbol": "M:qt.a(I)V",
+          "original": "a",
+          "renamed": "readLobbyStateUpdate"
+        },
+        {
           "start": 32367,
           "end": 32370,
           "symbol": "C:ila",
@@ -968797,7 +968900,7 @@
       "original": "aia.java",
       "renamed": "PitSnake.java",
       "inputSha256": "aff17e720c15823ac9044c6fa347ac2e3db501d0f2f23d4a593a437f1f7900e4",
-      "outputSha256": "08276919dea1fffb4cdc0b1897e4f374468ad2a885a95f84062653268394fad3",
+      "outputSha256": "03b503f6373cae1064db44115ce6f72bb4f84a471f101e8efdfd29bdae1d82f4",
       "edits": [
         {
           "start": 50,
@@ -968973,6 +969076,13 @@
           "symbol": "M:aia.a(I)Z",
           "original": "a",
           "renamed": "isScared"
+        },
+        {
+          "start": 1903,
+          "end": 1904,
+          "symbol": "M:aia.h(I)Z",
+          "original": "h",
+          "renamed": "isInCollisionRecovery"
         },
         {
           "start": 1968,
@@ -969444,6 +969554,13 @@
           "renamed": "min"
         },
         {
+          "start": 5403,
+          "end": 5404,
+          "symbol": "M:aia.h(I)Z",
+          "original": "h",
+          "renamed": "isInCollisionRecovery"
+        },
+        {
           "start": 5434,
           "end": 5441,
           "symbol": "F:aia.field_n:I",
@@ -969617,6 +969734,13 @@
           "symbol": "M:aia.a(I)Z",
           "original": "a",
           "renamed": "isScared"
+        },
+        {
+          "start": 8557,
+          "end": 8558,
+          "symbol": "M:aia.h(I)Z",
+          "original": "h",
+          "renamed": "isInCollisionRecovery"
         },
         {
           "start": 8694,
@@ -969848,6 +969972,13 @@
           "symbol": "F:aia.field_n:I",
           "original": "field_n",
           "renamed": "offsetX"
+        },
+        {
+          "start": 10693,
+          "end": 10694,
+          "symbol": "M:aia.h(I)Z",
+          "original": "h",
+          "renamed": "isInCollisionRecovery"
         },
         {
           "start": 10851,
@@ -994859,7 +994990,7 @@
       "original": "bh.java",
       "renamed": "PlayTrackCommand.java",
       "inputSha256": "25f301991d04cb9912bee51ba3a13e222af2d62e8faeb4b0c26a0fef77a00cff",
-      "outputSha256": "33d887a1f7d53d1180919558069978798b38656b3a69260c89454e535228c176",
+      "outputSha256": "e8fdec48c0e5fa6d0b1bbac8a49069e24eceb11b5c31641257a26203d5322124",
       "edits": [
         {
           "start": 50,
@@ -995203,6 +995334,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PlayTrackCommand"
+        },
+        {
+          "start": 3486,
+          "end": 3487,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
         },
         {
           "start": 3535,
@@ -996722,6 +996860,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 24798,
+          "end": 24799,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
         }
       ]
     },
@@ -1003118,7 +1003263,7 @@
       "original": "boa.java",
       "renamed": "BlockModel.java",
       "inputSha256": "7cc675a750a8374d987054a770e6ef49e5757bf5e3edd7ba10e5b1a93f1b484d",
-      "outputSha256": "d7955310946e133fc400d3e89040ed27b70ec778654b52809d62eb55505d3624",
+      "outputSha256": "6fd6c0ce64e8d5d52db8f567b26f04b9247b67347a677e2a2e95ad8bacd87e2d",
       "edits": [
         {
           "start": 50,
@@ -1003611,6 +1003756,13 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 5126,
+          "end": 5127,
+          "symbol": "M:boa.i(I)Z",
+          "original": "i",
+          "renamed": "usesLargeBlockDragSound"
+        },
+        {
           "start": 5188,
           "end": 5190,
           "symbol": "C:kh",
@@ -1003791,6 +1003943,13 @@
           "symbol": "M:vg.l(B)Z",
           "original": "l",
           "renamed": "isLinked"
+        },
+        {
+          "start": 6532,
+          "end": 6533,
+          "symbol": "M:boa.i(I)Z",
+          "original": "i",
+          "renamed": "usesLargeBlockDragSound"
         },
         {
           "start": 6586,
@@ -1035086,7 +1035245,7 @@
       "original": "cm.java",
       "renamed": "CourseStartPacket.java",
       "inputSha256": "d5612b385f76a29639a022f24130241c8fba948495a68272467ae689b1a8f263",
-      "outputSha256": "a36836fdcb52a3226400d77ff227e963e0d1eb49fb49185e917920c1cb0f8a31",
+      "outputSha256": "35def611f3bd3c0a436b44a67459f3ff86820dba7951374c6a8c63e5ad36953a",
       "edits": [
         {
           "start": 50,
@@ -1035215,6 +1035374,13 @@
           "renamed": "TextureCombineOperation"
         },
         {
+          "start": 1494,
+          "end": 1495,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
+        },
+        {
           "start": 1540,
           "end": 1543,
           "symbol": "C:bea",
@@ -1035234,6 +1035400,13 @@
           "symbol": "C:ica",
           "original": "ica",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 1678,
+          "end": 1679,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
         },
         {
           "start": 1725,
@@ -1035257,6 +1035430,13 @@
           "renamed": "TextureCombineOperation"
         },
         {
+          "start": 1872,
+          "end": 1873,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
+        },
+        {
           "start": 1919,
           "end": 1922,
           "symbol": "C:bea",
@@ -1035276,6 +1035456,13 @@
           "symbol": "C:ica",
           "original": "ica",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 2096,
+          "end": 2097,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
         },
         {
           "start": 2141,
@@ -1035299,6 +1035486,13 @@
           "renamed": "TextureCombineOperation"
         },
         {
+          "start": 2315,
+          "end": 2316,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
+        },
+        {
           "start": 2362,
           "end": 2365,
           "symbol": "C:bea",
@@ -1035318,6 +1035512,13 @@
           "symbol": "C:ica",
           "original": "ica",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 2499,
+          "end": 2500,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
         },
         {
           "start": 2547,
@@ -1065508,7 +1065709,7 @@
       "original": "dfa.java",
       "renamed": "GameScreen.java",
       "inputSha256": "bdc1fc3038265dc53cfba9c0ed945b7333df1cbae0dde347c40544a413380993",
-      "outputSha256": "ef4998c6610b3718e4da418992f011d00e32944788d1af3d642eef3e51bf0404",
+      "outputSha256": "f669455dd55bcb2b3e0b6a46608083b44118ffb1f1b44af0d51ffdb9406bf609",
       "edits": [
         {
           "start": 53,
@@ -1065523,6 +1065724,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "HardwareBlendMode"
+        },
+        {
+          "start": 208,
+          "end": 209,
+          "symbol": "M:dfa.a(IZI)Z",
+          "original": "a",
+          "renamed": "handleChatShortcutKey"
         },
         {
           "start": 307,
@@ -1066405,6 +1066613,13 @@
           "symbol": "C:dfa",
           "original": "dfa",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 6158,
+          "end": 6159,
+          "symbol": "M:dfa.a(IZI)Z",
+          "original": "a",
+          "renamed": "handleChatShortcutKey"
         },
         {
           "start": 6185,
@@ -1178166,7 +1178381,7 @@
       "original": "gja.java",
       "renamed": "HardwareModel.java",
       "inputSha256": "e8ec92bea08367d86b514720b6118bbe540714c99e72b84a81da5309bce6fd80",
-      "outputSha256": "72a00556ecd0d66315529c814ccc61566c2844995b4474b611e9eee660d4b1f7",
+      "outputSha256": "8be2557855354c16da6390a7470022dbcd25931b333487e98320a6d648dfe0bb",
       "edits": [
         {
           "start": 69,
@@ -1178643,6 +1178858,13 @@
           "symbol": "C:qqa",
           "original": "qqa",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 14830,
+          "end": 14831,
+          "symbol": "M:qqa.a([ILoc;IB)Lima;",
+          "original": "a",
+          "renamed": "buildTextureProjectionData"
         },
         {
           "start": 14894,
@@ -1227132,7 +1227354,7 @@
       "original": "hsa.java",
       "renamed": "LegacyTextureCache.java",
       "inputSha256": "755ba996e35c9f86dcbb49e3fd3e20e6c53647e83684bc1f76984ddba7393a70",
-      "outputSha256": "37912dcc443992c179474529f684fe1e44a6c685291ea207355574833acb7361",
+      "outputSha256": "4a3527318981fede07fe1a4afe71de14909dbc5639c3adb1dda846db6b10c72d",
       "edits": [
         {
           "start": 50,
@@ -1227590,6 +1227812,13 @@
           "renamed": "PlayTrackCommand"
         },
         {
+          "start": 3953,
+          "end": 3954,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
+        },
+        {
           "start": 4020,
           "end": 4021,
           "symbol": "M:d.a(IIZIFI)[I",
@@ -1227665,6 +1227894,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PlayTrackCommand"
+        },
+        {
+          "start": 6093,
+          "end": 6094,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
         },
         {
           "start": 6167,
@@ -1227749,6 +1227985,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PlayTrackCommand"
+        },
+        {
+          "start": 7774,
+          "end": 7775,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
         },
         {
           "start": 7850,
@@ -1227854,6 +1228097,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PlayTrackCommand"
+        },
+        {
+          "start": 10926,
+          "end": 10927,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
         },
         {
           "start": 10990,
@@ -1230232,7 +1230482,7 @@
       "original": "ica.java",
       "renamed": "TextureCombineOperation.java",
       "inputSha256": "10c39104315be2dc11a78d33f367d38d74c96655b58cddb3053f9b0ee99a1b20",
-      "outputSha256": "4b4a43b898efe964acec0428e309095ccdfc8c2ea2238941da04b9d62f411b2f",
+      "outputSha256": "6168f8b93d11a42f1d06c5b5aa9ced070015e54396fff0a7ad9f01c04f5faf02",
       "edits": [
         {
           "start": 50,
@@ -1230240,6 +1230490,13 @@
           "symbol": "C:ica",
           "original": "ica",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 219,
+          "end": 220,
+          "symbol": "M:ica.a(IIIIII[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "rasterizeInterpolatedColourTriangle"
         },
         {
           "start": 1711,
@@ -1237727,7 +1237984,7 @@
       "original": "ila.java",
       "renamed": "ChatOverlay.java",
       "inputSha256": "f3f23f7fa05c309e6e93abab067ba60c42933206972b84fa00e5c180eeb01cac",
-      "outputSha256": "014fd68aa89d7b8669cf9c5938dc15c031efa467605b9e5df3b5a56e37d387cf",
+      "outputSha256": "32fef6e5e9593f5652cec93f370111a503ea3be9a00fe1014e00160e51c5962f",
       "edits": [
         {
           "start": 50,
@@ -1238498,6 +1238755,13 @@
           "symbol": "F:ila.field_c:Z",
           "original": "field_c",
           "renamed": "panelOpen"
+        },
+        {
+          "start": 4910,
+          "end": 4911,
+          "symbol": "M:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
         },
         {
           "start": 6163,
@@ -1240024,6 +1240288,13 @@
           "symbol": "C:ila",
           "original": "ila",
           "renamed": "ChatOverlay"
+        },
+        {
+          "start": 14926,
+          "end": 14927,
+          "symbol": "M:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
         },
         {
           "start": 14999,
@@ -1257191,7 +1257462,7 @@
       "original": "jc.java",
       "renamed": "SimpleHoverMountComponent.java",
       "inputSha256": "b71b6c18dac79c4865261c155a720028151020fed3544063958b493f8b5b1c9c",
-      "outputSha256": "d3eb54eb5590eced4024a18be2589342fa392f8c218e8bcd1554d8ef8f4ff46b",
+      "outputSha256": "4d7534dcd63bb6014fe95944e9b11b31a39a974c50f773e86705fb1234e1f7e6",
       "edits": [
         {
           "start": 50,
@@ -1257213,6 +1257484,13 @@
           "symbol": "M:jc.A(I)Z",
           "original": "A",
           "renamed": "storesLoopFlag"
+        },
+        {
+          "start": 225,
+          "end": 226,
+          "symbol": "M:jc.a(ZZZI)V",
+          "original": "a",
+          "renamed": "updateMainLobbyControls"
         },
         {
           "start": 297,
@@ -1257563,6 +1257841,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "SimpleHoverMountComponent"
+        },
+        {
+          "start": 2682,
+          "end": 2683,
+          "symbol": "M:jc.a(ZZZI)V",
+          "original": "a",
+          "renamed": "updateMainLobbyControls"
         },
         {
           "start": 2735,
@@ -1285747,7 +1286032,7 @@
       "original": "jh.java",
       "renamed": "FlameShooterComponent.java",
       "inputSha256": "84b6b74e5f574f504683f60c57be1802f59981e7046d88345c80f36b93ea1b2e",
-      "outputSha256": "1145cea916b713c6da62ee940959ad73cbb84e39d8661a3efeec5f6c659aaaf8",
+      "outputSha256": "3fea5d79e1d7795431c0d9b06446e9a9ef0ab6c89a902b7cdf9dfc02fb306113",
       "edits": [
         {
           "start": 50,
@@ -1285825,6 +1286110,13 @@
           "symbol": "C:csa",
           "original": "csa",
           "renamed": "RoomComponent"
+        },
+        {
+          "start": 635,
+          "end": 636,
+          "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
+          "original": "a",
+          "renamed": "populateTextCharacterPositions"
         },
         {
           "start": 664,
@@ -1324980,7 +1325272,7 @@
       "original": "kp.java",
       "renamed": "HardwareTextureCache.java",
       "inputSha256": "10d2560b9e9d5e06abcb73fa8e53e7d0a4e0395fcbd9b50466fe3c4326ca96d2",
-      "outputSha256": "6c4a890f513efdbf001c063efc4090601edabaa8ed805045c713dba8c97fc451",
+      "outputSha256": "56321fd1186e953ad745d748f6ad1ae89f316c71f1fbfa97a9b3eeac9a8b1bde",
       "edits": [
         {
           "start": 50,
@@ -1325172,6 +1325464,13 @@
           "renamed": "PlayTrackCommand"
         },
         {
+          "start": 1802,
+          "end": 1803,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
+        },
+        {
           "start": 1867,
           "end": 1868,
           "symbol": "M:d.a(IIZIFI)[I",
@@ -1325303,6 +1325602,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PlayTrackCommand"
+        },
+        {
+          "start": 3340,
+          "end": 3341,
+          "symbol": "M:bh.a(IZ)Z",
+          "original": "a",
+          "renamed": "supportsBinaryAlphaTexturePixels"
         },
         {
           "start": 3411,
@@ -1356552,7 +1356858,7 @@
       "original": "lma.java",
       "renamed": "WallModel.java",
       "inputSha256": "07db4dba1b98706aa22cebf930d3f234e635771e91213b8601c07b5c7f021d6d",
-      "outputSha256": "7bd60a634bdbf55bc79d0c4948b309ece9a938e2e2a3ce4b6e722d9a5500afa9",
+      "outputSha256": "2fa0685efd4ce4a20ddbfc8c81dad4b4f2c7ec76f873cd6d8afe881d5e993fbe",
       "edits": [
         {
           "start": 50,
@@ -1357766,6 +1358072,13 @@
           "renamed": "RenderScene"
         },
         {
+          "start": 29071,
+          "end": 29072,
+          "symbol": "M:lma.l(I)V",
+          "original": "l",
+          "renamed": "refineWallTileShapes"
+        },
+        {
           "start": 29118,
           "end": 29125,
           "symbol": "F:lma.field_x:[[Lfh;",
@@ -1357892,6 +1358205,13 @@
           "renamed": "useDetailedBoundaryGeometry"
         },
         {
+          "start": 30225,
+          "end": 30226,
+          "symbol": "M:lma.l(I)V",
+          "original": "l",
+          "renamed": "refineWallTileShapes"
+        },
+        {
           "start": 30277,
           "end": 30278,
           "symbol": "M:dg.b(ILuw;)V",
@@ -1357913,6 +1358233,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 30524,
+          "end": 30525,
+          "symbol": "M:lma.l(I)V",
+          "original": "l",
+          "renamed": "refineWallTileShapes"
+        },
+        {
           "start": 30719,
           "end": 30721,
           "symbol": "C:la",
@@ -1357925,6 +1358252,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "WallTile"
+        },
+        {
+          "start": 31084,
+          "end": 31085,
+          "symbol": "M:lma.l(I)V",
+          "original": "l",
+          "renamed": "refineWallTileShapes"
         },
         {
           "start": 31122,
@@ -1369264,7 +1369598,7 @@
       "original": "mda.java",
       "renamed": "Puddle.java",
       "inputSha256": "ddbdb55384f4b4b01acc1c9bbbcdcf74b804b09b9c9e22168a4a31ad1d2b9761",
-      "outputSha256": "0761e643295977010eeea9b8a08a4b9523e86ac6ecd407cf786f716feab152cd",
+      "outputSha256": "0ea1b1e3df29eee6ab309607433a2d1abe2ab6e78f84b52046a4278a27f936f4",
       "edits": [
         {
           "start": 50,
@@ -1370357,6 +1370691,13 @@
           "symbol": "C:dfa",
           "original": "dfa",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 12441,
+          "end": 12442,
+          "symbol": "M:dfa.a(IZI)Z",
+          "original": "a",
+          "renamed": "handleChatShortcutKey"
         },
         {
           "start": 12514,
@@ -1401063,7 +1401404,7 @@
       "original": "np.java",
       "renamed": "OpenGlModel.java",
       "inputSha256": "5c26c219b1c9559daf84b741364270a1c179b3624bd58c480cf97220eeb9060b",
-      "outputSha256": "df00e729b6ee2f387a5f5058814974906e82dd9bfa0cf83e7b238845b3771621",
+      "outputSha256": "199aaa5b595671ff807fe060cc7fcd06b73060011a66da3a52bd98ad6f0e38b4",
       "edits": [
         {
           "start": 50,
@@ -1406443,6 +1406784,13 @@
           "symbol": "C:qqa",
           "original": "qqa",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 184826,
+          "end": 184827,
+          "symbol": "M:qqa.a([ILoc;IB)Lima;",
+          "original": "a",
+          "renamed": "buildTextureProjectionData"
         },
         {
           "start": 184892,
@@ -1475003,7 +1475351,7 @@
       "original": "po.java",
       "renamed": "CachedTextLayout.java",
       "inputSha256": "cbe02e0b8104dda6d35dd4b7b62769bfcf96a6be5226f5131b47d2802d05208a",
-      "outputSha256": "9af18e025d565075316ae141ad9df9af1fe8057e8a72e4936d567ebfea5f69cf",
+      "outputSha256": "7803943ab86b28dc1caae316d9afd3955a2ebc9514c39dc4d47c7c1b73597c26",
       "edits": [
         {
           "start": 50,
@@ -1475251,6 +1475599,13 @@
           "renamed": "FlameShooterComponent"
         },
         {
+          "start": 6097,
+          "end": 6098,
+          "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
+          "original": "a",
+          "renamed": "populateTextCharacterPositions"
+        },
+        {
           "start": 6365,
           "end": 6366,
           "symbol": "M:po.a(ILil;ILjava/lang/String;I)V",
@@ -1475326,6 +1475681,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "FlameShooterComponent"
+        },
+        {
+          "start": 8161,
+          "end": 8162,
+          "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
+          "original": "a",
+          "renamed": "populateTextCharacterPositions"
         },
         {
           "start": 8268,
@@ -1475468,6 +1475830,13 @@
           "renamed": "FlameShooterComponent"
         },
         {
+          "start": 10974,
+          "end": 10975,
+          "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
+          "original": "a",
+          "renamed": "populateTextCharacterPositions"
+        },
+        {
           "start": 11081,
           "end": 11084,
           "symbol": "C:tba",
@@ -1475529,6 +1475898,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "FlameShooterComponent"
+        },
+        {
+          "start": 12009,
+          "end": 12010,
+          "symbol": "M:jh.a(ILjava/lang/String;Lil;Lkha;I)V",
+          "original": "a",
+          "renamed": "populateTextCharacterPositions"
         },
         {
           "start": 12125,
@@ -1508557,7 +1508933,7 @@
       "original": "qqa.java",
       "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "0d7bca66d2097286ee1675936dc761947c5f320dd5f366292c5c38b5d02d5fd4",
-      "outputSha256": "4b9ca37e44ee0cbb33c86ef09bc9c571fe45a7d69dcdc7b54b782344b649d496",
+      "outputSha256": "b12844d9927f2b287423db85f2224665ed95e3dc6843ca91c855102346a5d3ca",
       "edits": [
         {
           "start": 50,
@@ -1508728,6 +1509104,13 @@
           "symbol": "C:ima",
           "original": "ima",
           "renamed": "ModelTextureProjectionData"
+        },
+        {
+          "start": 3040,
+          "end": 3041,
+          "symbol": "M:qqa.a([ILoc;IB)Lima;",
+          "original": "a",
+          "renamed": "buildTextureProjectionData"
         },
         {
           "start": 3056,
@@ -1514510,7 +1514893,7 @@
       "original": "qt.java",
       "renamed": "AccountCreationRequests.java",
       "inputSha256": "f5cbb30fd05912cba1b4cfbc3d7ab519bc9ce6a328453136f0ad646bad42c118",
-      "outputSha256": "053f97c9a9940c8efd4ec4bdce1a63926037e77e1ce4eb2e822478ad78dc06cf",
+      "outputSha256": "63e3540f08e3372adfa44c7621905cb5ca5d5358b8d2ea428c49ba9bdb03d3ef",
       "edits": [
         {
           "start": 50,
@@ -1514756,6 +1515139,20 @@
           "symbol": "C:qt",
           "original": "qt",
           "renamed": "AccountCreationRequests"
+        },
+        {
+          "start": 1201,
+          "end": 1202,
+          "symbol": "M:qt.a(I)V",
+          "original": "a",
+          "renamed": "readLobbyStateUpdate"
+        },
+        {
+          "start": 1249,
+          "end": 1250,
+          "symbol": "M:qt.a(I)V",
+          "original": "a",
+          "renamed": "readLobbyStateUpdate"
         },
         {
           "start": 1303,
@@ -1605826,7 +1606223,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "01b869d5041e23778e98463c56fe9bb9508b101401aa2bbce334efad38249e7a",
+      "outputSha256": "09eeae95d9692ebafbd3ec91a55dcbe821394fb5c1dc97327ea49052916a6923",
       "edits": [
         {
           "start": 53,
@@ -1606527,6 +1606924,13 @@
           "symbol": "C:ila",
           "original": "ila",
           "renamed": "ChatOverlay"
+        },
+        {
+          "start": 3681,
+          "end": 3682,
+          "symbol": "M:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
         },
         {
           "start": 3697,
@@ -1607444,6 +1607848,13 @@
           "symbol": "C:ila",
           "original": "ila",
           "renamed": "ChatOverlay"
+        },
+        {
+          "start": 9756,
+          "end": 9757,
+          "symbol": "M:ila.a(ZLjava/lang/String;IILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
         },
         {
           "start": 9772,
@@ -1622278,7 +1622689,7 @@
       "original": "uka.java",
       "renamed": "BoulderComponent.java",
       "inputSha256": "df4891ae407d0c2e20873082d984268ffa759902d3d4dcf1e5414412aa3cef6a",
-      "outputSha256": "fe1cd09c32f0aeb0c392bf6d35511168e617bd19d4fd0d89241309fdc4fcd980",
+      "outputSha256": "283ddc806c0f9aecd77a1f967ce17e32d2d01e5c841813b51a23d2731d56e782",
       "edits": [
         {
           "start": 50,
@@ -1622370,6 +1622781,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 707,
+          "end": 708,
+          "symbol": "M:vna.a(ZII)Lmu;",
+          "original": "a",
+          "renamed": "updateFriendListControls"
         },
         {
           "start": 774,
@@ -1622475,6 +1622893,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1319,
+          "end": 1320,
+          "symbol": "M:vna.a(ZII)Lmu;",
+          "original": "a",
+          "renamed": "updateFriendListControls"
         },
         {
           "start": 1391,
@@ -1651974,7 +1652399,7 @@
       "original": "vna.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "5cdbc9ad18b3be14b2a70aa222a5477991687468733b49a92d7409b1190084cd",
-      "outputSha256": "c421553b327af358c456384ce6641e5522bb0a91c115aaabcd31b838313ce569",
+      "outputSha256": "079b9e5abcca2bda090793d86cb3821eb8b100131982dd3123c34c8b8410f58d",
       "edits": [
         {
           "start": 50,
@@ -1652362,6 +1652787,13 @@
           "renamed": "ContactListEntry"
         },
         {
+          "start": 3921,
+          "end": 3922,
+          "symbol": "M:vna.a(ZII)Lmu;",
+          "original": "a",
+          "renamed": "updateFriendListControls"
+        },
+        {
           "start": 3973,
           "end": 3975,
           "symbol": "C:iv",
@@ -1652416,6 +1652848,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 5040,
+          "end": 5041,
+          "symbol": "M:vna.a(ZII)Lmu;",
+          "original": "a",
+          "renamed": "updateFriendListControls"
         },
         {
           "start": 5096,
@@ -1653475,6 +1653914,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 16309,
+          "end": 16310,
+          "symbol": "M:vna.a(ZII)Lmu;",
+          "original": "a",
+          "renamed": "updateFriendListControls"
+        },
+        {
           "start": 16368,
           "end": 16375,
           "symbol": "F:vg.field_e:Lvg;",
@@ -1654202,7 +1654648,7 @@
       "original": "voa.java",
       "renamed": "CrossedSineBandsOperator.java",
       "inputSha256": "1ac33ef3db826490e20e9cae7356e521dc4e16b7f4319c76f312abfd9c859656",
-      "outputSha256": "a1be653d56b714eb2c591e9cd705b8154fe7772ce006db58db5ba55387a6e99f",
+      "outputSha256": "c00403244eff8cec51dc61a2f7173f8f8ba2c503af315fe54d1bc9015273f666",
       "edits": [
         {
           "start": 50,
@@ -1655092,6 +1655538,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "SimpleHoverMountComponent"
+        },
+        {
+          "start": 12923,
+          "end": 12924,
+          "symbol": "M:jc.a(ZZZI)V",
+          "original": "a",
+          "renamed": "updateMainLobbyControls"
         },
         {
           "start": 12974,
@@ -1690403,7 +1690856,7 @@
       "original": "ww.java",
       "renamed": "Model.java",
       "inputSha256": "28d3be394b72783da33d6c98af6dcfcd4ec808fb67e748b1271640aceda528d3",
-      "outputSha256": "197c361e30791feb517106c9570c89d971df060207033f764a1fc3ce754759b2",
+      "outputSha256": "da2d0e496b4aa04453a6bd27d046597c746ef00e24ab8583b4ac55c7b65087a0",
       "edits": [
         {
           "start": 50,
@@ -1693965,6 +1694418,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 180530,
+          "end": 180531,
+          "symbol": "M:qqa.a([ILoc;IB)Lima;",
+          "original": "a",
+          "renamed": "buildTextureProjectionData"
+        },
+        {
           "start": 180602,
           "end": 180603,
           "symbol": "M:sfa.a(Ljava/lang/Runnable;)Ltw;",
@@ -1694671,10 +1695131,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "904d2f6bf6635c2be69bb9bad812fc07c8a5e93a36401fd6ac7c43420f335bf6",
+    "rulesSha256": "55260ad6f99da8160b52ef6721fcb7f4bc40ef672f397f8c0a435ef19b493a46",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "9e47159ad33cd5fa244b159dcd365a87c07e65d83af5b414882b732fdadfe188",
+    "outputTreeSha256": "1cadac5c82e47513eb30d038b5a1f561fda0bf0ddcf881984cc16296fef7a2e8",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

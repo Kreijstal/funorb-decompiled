@@ -8,7 +8,7 @@ abstract class GameScreen {
     int field_d;
     int field_c;
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean handleChatShortcutKey(int param0, boolean param1, int param2) {
         String var4 = null;
         int var3 = null != WaveformOperator.field_n ? 1 : 0;
         String var4Lifetime1;
@@ -198,7 +198,7 @@ abstract class GameScreen {
           DropAnimation.closeGameSocket(60);
           return;
         }
-        GameScreen.a(-50, false, 79);
+        GameScreen.handleChatShortcutKey(-50, false, 79);
         RasterizerOperator.closeNetworkAndCacheResources(0);
         if (GameSocketTraffic.isGameSocketActive(param0 - 62)) {
           CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(1, -2988);

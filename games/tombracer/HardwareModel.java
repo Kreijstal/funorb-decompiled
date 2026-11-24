@@ -416,7 +416,7 @@ final class HardwareModel extends ToolkitModel {
             var13 = var13 + var15_int;
             var14_int++;
           } while (var63 == 0);
-          var14_ref = NetworkArchiveRequest.a(var8, param1, this.field_I, (byte) -6);
+          var14_ref = NetworkArchiveRequest.buildTextureProjectionData(var8, param1, this.field_I, (byte) -6);
           var15 = new HardwareFaceNormal[param1.field_o];
           var16 = 0;
           scanLoop1: while (true) {

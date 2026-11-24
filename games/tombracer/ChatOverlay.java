@@ -166,7 +166,7 @@ final class ChatOverlay {
         this.panelOpen = true;
     }
 
-    final static int a(boolean param0, String param1, int param2, int param3, String param4, boolean param5) {
+    final static int pollLoginHandshake(boolean param0, String param1, int param2, int param3, String param4, boolean param5) {
         try {
           int stackIn_4_0 = 0;
           int stackIn_7_0 = 0;
@@ -431,7 +431,7 @@ final class ChatOverlay {
     final static void increaseSoundVolume(boolean param0) {
         if (!param0) {
           String var2 = (String) null;
-          ChatOverlay.a(false, (String) null, 15, -14, (String) null, true);
+          ChatOverlay.pollLoginHandshake(false, (String) null, 15, -14, (String) null, true);
         }
         PenaltyNotice.increaseSoundVolume(256);
     }

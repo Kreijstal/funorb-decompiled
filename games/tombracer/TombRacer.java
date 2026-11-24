@@ -1234,7 +1234,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           }
           if (10 == param0 &&
             RandomMazeBehaviour.field_n) {
-            AccountCreationRequests.a(-64);
+            AccountCreationRequests.readLobbyStateUpdate(-64);
             return true;
           }
           if (param0 == 11) {

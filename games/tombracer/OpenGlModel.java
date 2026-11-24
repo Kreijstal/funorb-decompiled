@@ -4640,7 +4640,7 @@ final class OpenGlModel extends ToolkitModel {
               var11[var14_int] = new OpenGlVertexNormal();
               var14_int++;
             } while (var63 == 0);
-            var14_ref = NetworkArchiveRequest.a(var8, param1, this.field_W, (byte) -6);
+            var14_ref = NetworkArchiveRequest.buildTextureProjectionData(var8, param1, this.field_W, (byte) -6);
             var15 = new OpenGlFaceNormal[param1.field_o];
             var16 = 0;
             scanLoop1: while (true) {

@@ -169,7 +169,7 @@ final class CachedTextLayout extends TextBlockLayout {
               } else {
                 stackIn_40_4 = this.computeJustifySpacing(0, var13, param3, param0.stringWidth(var13));
               }
-              FlameShooterComponent.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
+              FlameShooterComponent.populateTextCharacterPositions(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
             }
             var11 = var11 + param7;
             this.field_c[var12Lifetime1] = var14;
@@ -222,7 +222,7 @@ final class CachedTextLayout extends TextBlockLayout {
           var9 = var8;
           var9.field_c[param0] = param4 - param1.stringWidth(param3);
           var9.field_c[param3.length()] = param4;
-          FlameShooterComponent.a(2097152, param3, param1, var9, 0);
+          FlameShooterComponent.populateTextCharacterPositions(2097152, param3, param1, var9, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "po.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -293,7 +293,7 @@ final class CachedTextLayout extends TextBlockLayout {
           var8 = param2.stringWidth(param3);
           var7.field_c[0] = param1 - (var8 >> 1);
           var7.field_c[param3.length()] = (var8 >> 1) + param1;
-          FlameShooterComponent.a(2097152, param3, param2, var7, 0);
+          FlameShooterComponent.populateTextCharacterPositions(2097152, param3, param2, var7, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "po.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -320,7 +320,7 @@ final class CachedTextLayout extends TextBlockLayout {
           return;
         }
         try {
-          FlameShooterComponent.a(param0 ^ 2113664, param3, param2, var8, 0);
+          FlameShooterComponent.populateTextCharacterPositions(param0 ^ 2113664, param3, param2, var8, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "po.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

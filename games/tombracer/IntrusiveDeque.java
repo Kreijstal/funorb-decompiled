@@ -112,7 +112,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static ContactListEntry a(boolean param0, int param1, int param2) {
+    final static ContactListEntry updateFriendListControls(boolean param0, int param1, int param2) {
         ScrollPanel stackIn_7_0;
         int stackIn_7_1;
         boolean stackIn_7_2;
@@ -150,7 +150,7 @@ final class IntrusiveDeque {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 > -114) {
-            IntrusiveDeque.a(false, -16, -77);
+            IntrusiveDeque.updateFriendListControls(false, -16, -77);
           }
           stackIn_7_0 = TextureCoordinateGeneration.field_b.field_vb;
           stackIn_7_1 = 2;
@@ -425,7 +425,7 @@ final class IntrusiveDeque {
         RuntimeException var3 = null;
         try {
           if (param0 >= -45) {
-            IntrusiveDeque.a(true, 11, -23);
+            IntrusiveDeque.updateFriendListControls(true, 11, -23);
           }
           if (null != param1.previous) {
             param1.unlink(111);

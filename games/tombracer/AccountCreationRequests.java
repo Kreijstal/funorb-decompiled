@@ -36,11 +36,11 @@ final class AccountCreationRequests {
           SelectionMenuInput.field_a = var7;
         }
         if (param5 > -9) {
-          AccountCreationRequests.a(-106);
+          AccountCreationRequests.readLobbyStateUpdate(-106);
         }
     }
 
-    final static void a(int param0) {
+    final static void readLobbyStateUpdate(int param0) {
         int stackIn_12_0 = 0;
         LobbyPlayerEntry stackIn_19_0 = null;
         boolean stackIn_20_1 = false;

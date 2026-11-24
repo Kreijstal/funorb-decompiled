@@ -388,7 +388,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         }
         ToolkitSelector.advanceLobbyTransitions((byte) -98, param1);
         if (ProjectionMode.field_a > 0) {
-          SimpleHoverMountComponent.a(param5, true, param1, param6);
+          SimpleHoverMountComponent.updateMainLobbyControls(param5, true, param1, param6);
         }
         MessageOverlay.field_t.field_x = IndexedSpriteButtonPainter.field_q.field_x;
         MessageOverlay.field_t.field_z = 1;

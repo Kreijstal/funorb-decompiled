@@ -867,7 +867,7 @@ final class WallModel extends TrapModel {
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 <= 40) {
-            this.l(-14);
+            this.refineWallTileShapes(-14);
           }
           if (null != this.tiles) {
             for (var4_int = 0; var4_int < this.field_q; var4_int++) {
@@ -897,7 +897,7 @@ final class WallModel extends TrapModel {
           if (null == this.tiles) {
             this.buildTiles(2097152);
             if (SpriteTileOperator.useDetailedBoundaryGeometry(67)) {
-              this.l(32166);
+              this.refineWallTileShapes(32166);
             }
           }
           super.addToScene(param0, param1);
@@ -906,7 +906,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    private final void l(int param0) {
+    private final void refineWallTileShapes(int param0) {
         int var10 = 0;
         int var11 = 0;
         boolean[] stackIn_45_0 = null;
@@ -930,7 +930,7 @@ final class WallModel extends TrapModel {
         boolean[][] var23;
         var19 = TombRacer.field_G ? 1 : 0;
         if (param0 != 32166) {
-          this.l(-80);
+          this.refineWallTileShapes(-80);
         }
         var2 = this.isDynamic(param0 ^ 32172) ? 1 : 0;
         var3 = this.getRoom(param0 - 32121);

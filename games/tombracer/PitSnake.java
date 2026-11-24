@@ -65,7 +65,7 @@ final class PitSnake extends IntrusiveNode {
             this.field_o = 100 + var17.nextBounded(50, 0);
           }
           var9 = this.isScared(0) ? 1 : 0;
-          var10 = this.h(21302) ? 1 : 0;
+          var10 = this.isInCollisionRecovery(21302) ? 1 : 0;
           if (param4 > -55) {
             this.getSize(-9);
           }
@@ -163,7 +163,7 @@ final class PitSnake extends IntrusiveNode {
           if (param6.isBoxBlocked((Collidable) null, this.size, 2, 1, param3 + this.offsetY, param0 + this.offsetX, false, param5, this.size)) {
             this.field_o = this.field_o + 2;
             this.field_o = MidiVoiceMixer.min(75, this.field_o, 125);
-            if (this.h(21302)) {
+            if (this.isInCollisionRecovery(21302)) {
               this.offsetX = (this.offsetX - var12Lifetime2) / 4 + var12Lifetime2;
               this.offsetY = var13Lifetime1 + (-var13Lifetime1 + this.offsetY) / 4;
             } else {
@@ -253,7 +253,7 @@ final class PitSnake extends IntrusiveNode {
           }
           this.field_l = false;
           if (!this.isScared(0) &&
-            !this.h(21302) &&
+            !this.isInCollisionRecovery(21302) &&
             var6_int != 0 &&
             param1 &&
             0 < this.field_g) {
@@ -319,7 +319,7 @@ final class PitSnake extends IntrusiveNode {
         return this.offsetX;
     }
 
-    private final boolean h(int param0) {
+    private final boolean isInCollisionRecovery(int param0) {
         if (param0 != 21302) {
           this.field_m = 121;
         }

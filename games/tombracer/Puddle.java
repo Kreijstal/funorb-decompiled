@@ -347,7 +347,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         if (OpenGlBufferObject.field_b) {
           return KeySwitchComponent.handleQuickChatKeyInput(param1 + 2097196, param0, param3);
         }
-        if (GameScreen.a(param0, false, param3)) {
+        if (GameScreen.handleChatShortcutKey(param0, false, param3)) {
           return true;
         }
         if (PowerDownItemBehaviour.field_s) {

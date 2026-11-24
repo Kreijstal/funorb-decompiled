@@ -151,7 +151,7 @@ final class BlockModel extends TrapModel {
         this.field_p = 1;
     }
 
-    private final boolean i(int param0) {
+    private final boolean usesLargeBlockDragSound(int param0) {
         boolean stackIn_14_0 = false;
         BitPacketBuffer var3;
         if (param0 != 77) {
@@ -201,7 +201,7 @@ final class BlockModel extends TrapModel {
           var4 = var3.hasMovedThisTick(50, false) ? 1 : 0;
           if ((this.field_r == null ||
             !this.field_r.isLinked((byte) -116)) && var4 != 0) {
-            if (this.i(param0 ^ -78)) {
+            if (this.usesLargeBlockDragSound(param0 ^ -78)) {
               this.field_r = var11.play(new SoundEvent(0, this.getRenderX((byte) -113), this.getRenderY((byte) 118), this.getRenderZ((byte) -114)), -58);
             } else if (this.field_v == 9) {
               this.field_r = var11.play(new SoundEvent(4, this.getRenderX((byte) -112), this.getRenderY((byte) 92), this.getRenderZ((byte) -87)), -58);

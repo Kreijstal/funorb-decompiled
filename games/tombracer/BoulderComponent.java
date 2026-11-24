@@ -26,7 +26,7 @@ final class BoulderComponent extends PathMoverComponent {
         int var5Lifetime1;
         int var6Lifetime1;
         if (param1 < -76) {
-          var3 = IntrusiveDeque.a(param2, param0, -117);
+          var3 = IntrusiveDeque.updateFriendListControls(param2, param0, -117);
           if (var3 != null) {
             UnlockEntryDecoder.field_b.populateItems((byte) -22, false);
             var4 = UnlockEntryDecoder.field_b;
@@ -42,7 +42,7 @@ final class BoulderComponent extends PathMoverComponent {
         }
         String var7 = (String) null;
         BoulderComponent.loadSpritesByName((ResourceArchive) null, (String) null, -33, (String) null);
-        var3Lifetime1 = IntrusiveDeque.a(param2, param0, -117);
+        var3Lifetime1 = IntrusiveDeque.updateFriendListControls(param2, param0, -117);
         if (var3Lifetime1 != null) {
           UnlockEntryDecoder.field_b.populateItems((byte) -22, false);
           var4Lifetime1 = UnlockEntryDecoder.field_b;

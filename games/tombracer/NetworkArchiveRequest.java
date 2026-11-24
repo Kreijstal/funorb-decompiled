@@ -93,7 +93,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static ModelTextureProjectionData a(int[] param0, ModelData param1, int param2, byte param3) {
+    final static ModelTextureProjectionData buildTextureProjectionData(int[] param0, ModelData param1, int param2, byte param3) {
         ModelTextureProjectionData stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;

@@ -120,7 +120,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         var41 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != 0) {
-            PlayTrackCommand.a(75, true);
+            PlayTrackCommand.supportsBinaryAlphaTexturePixels(75, true);
           }
           stackIn_5_0 = SoftwareModelBillboardState.field_i;
           stackIn_5_1 = 2;
@@ -599,7 +599,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         }
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean supportsBinaryAlphaTexturePixels(int param0, boolean param1) {
         boolean stackIn_6_0 = false;
         if (param1) {
           field_o = 18;

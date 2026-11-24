@@ -129,7 +129,7 @@ abstract class AppletGameShell extends GameApplet {
             if (param1) {
               TrackingCrusherComponent.field_G = false;
             } else {
-              var5Lifetime2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.getPendingAccountPassword(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 81), false);
+              var5Lifetime2 = ChatOverlay.pollLoginHandshake(this.field_q, MatchOverlayQueue.getPendingAccountPassword(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 81), false);
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   StatReportingObserverFactory.field_b = QuickChatPhraseSource.field_g;
@@ -316,7 +316,7 @@ abstract class AppletGameShell extends GameApplet {
         if (TrackingCrusherComponent.field_G) {
           return -1;
         }
-        int var2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.getPendingAccountPassword(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) -118), true);
+        int var2 = ChatOverlay.pollLoginHandshake(this.field_q, MatchOverlayQueue.getPendingAccountPassword(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) -118), true);
         if (var2 == -1) {
           return -1;
         }

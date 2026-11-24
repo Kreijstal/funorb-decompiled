@@ -9,7 +9,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static void updateMainLobbyControls(boolean param0, boolean param1, boolean param2, int param3) {
         UiComponent stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
@@ -62,7 +62,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
         ClientRsaModulus.field_b.field_a.processTabPresses((byte) -111);
         if (!param1) {
-          SimpleHoverMountComponent.a(true, true, false, 75);
+          SimpleHoverMountComponent.updateMainLobbyControls(true, true, false, 75);
         }
         if (0 != ImageProducerRasterBuffer.field_j.field_y) {
           ArchiveConnectionFailureHandler.field_g = true;
