@@ -20,7 +20,7 @@ final class IntQueue {
         return this.nodes.isEmpty((byte) 14);
     }
 
-    final static void a(byte param0) {
+    final static void drawDialogOverlay(byte param0) {
         int var1 = -1 / ((param0 + 58) / 37);
         MatchStatistics.drawDialogOverlay((byte) 57, true);
     }

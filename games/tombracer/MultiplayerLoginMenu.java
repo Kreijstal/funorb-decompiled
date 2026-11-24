@@ -53,7 +53,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.getPosition(param0 + 111);
         HardwareModelIndexData.field_f.draw(LegacyOpenGlWaterTextures.getCanvasWidth(false) - HardwareModelIndexData.field_f.width() >> 1, var3 + HardwareModelIndexData.field_f.height() / 2);
-        this.h(var3, 3);
+        this.drawMultiplayerLoginPrompt(var3, 3);
         super.draw(param0, param1);
     }
 
@@ -65,7 +65,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
         return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
     }
 
-    private final void h(int param0, int param1) {
+    private final void drawMultiplayerLoginPrompt(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

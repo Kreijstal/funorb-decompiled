@@ -212,7 +212,7 @@ final class KeySwitchComponent extends SwitchComponent {
           if (null == ItemModel.field_n) {
             return false;
           }
-          if (ItemModel.field_n.a(param2, (byte) -105, param1)) {
+          if (ItemModel.field_n.handleKeyInput(param2, (byte) -105, param1)) {
             return true;
           }
           return false;
@@ -228,7 +228,7 @@ final class KeySwitchComponent extends SwitchComponent {
         if (null == ItemModel.field_n) {
           return false;
         }
-        if (ItemModel.field_n.a(param2, (byte) -105, param1)) {
+        if (ItemModel.field_n.handleKeyInput(param2, (byte) -105, param1)) {
           return true;
         }
         return false;

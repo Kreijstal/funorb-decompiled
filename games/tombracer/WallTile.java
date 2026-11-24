@@ -592,7 +592,7 @@ final class WallTile implements Renderable {
               if (0 != Transform3D.field_c) {
                 C2SSubmitSettingsPacket.drawLoadingFrame(param1, (byte) 94);
               } else {
-                MazeSearchNode.a(false, param0, param2 ^ -128);
+                MazeSearchNode.drawDialogBackdropAndStack(false, param0, param2 ^ -128);
                 LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param1);
               }
             }

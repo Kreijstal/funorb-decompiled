@@ -6,7 +6,7 @@ final class PressureSwitchComponent extends SwitchComponent {
     private int field_L;
     private int field_J;
 
-    final static void a(boolean param0, byte param1, int param2, int param3) {
+    final static void updateChatOverlay(boolean param0, byte param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;

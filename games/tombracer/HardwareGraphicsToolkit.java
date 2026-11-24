@@ -2252,7 +2252,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.applyViewMatrix(false);
     }
 
-    final static void q(int param0) {
+    final static void queueReconnectQuit(int param0) {
         FormFieldRow.queueLoginAction(false, 17);
         int var1 = 36 % ((param0 + 38) / 62);
     }

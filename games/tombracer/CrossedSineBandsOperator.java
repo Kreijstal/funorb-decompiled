@@ -365,7 +365,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5, int param6, int param7, boolean param8, boolean param9) {
+    final static void updateLobbyPanels(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5, int param6, int param7, boolean param8, boolean param9) {
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
         if (!param1 && (SoftwareRasterizer.width != SceneLight.field_i ||

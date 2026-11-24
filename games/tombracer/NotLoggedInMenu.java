@@ -46,7 +46,7 @@ final class NotLoggedInMenu extends MenuScreen {
         }
     }
 
-    private final void h(int param0, int param1) {
+    private final void drawGuestLoginWarning(int param0, int param1) {
         String var13 = null;
         int var8 = 0;
         String var10 = null;
@@ -71,7 +71,7 @@ final class NotLoggedInMenu extends MenuScreen {
           SocketConnector.drawWrappedText(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, HardwareModelIndexData.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
-        this.h(-40, -77);
+        this.drawGuestLoginWarning(-40, -77);
         var8Lifetime1 = var7 * 3;
         String var12 = PitSnake.field_v + "<br>" + ConstrainToFacingArcLocomotor.selectGuestSaveWarning(GameClock.field_b, SignedBitReader.field_c, 21297, SoftwareTransform3D.field_p);
         var10Lifetime1 = GameScreen.replaceCharacter('#', "<br>", var12, 0);
@@ -83,7 +83,7 @@ final class NotLoggedInMenu extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_s.getPosition(param0 ^ 103);
         HardwareModelIndexData.field_f.draw(LegacyOpenGlWaterTextures.getCanvasWidth(false) - HardwareModelIndexData.field_f.width() >> 1, var3 + HardwareModelIndexData.field_f.height() / 2);
-        this.h(-127, var3);
+        this.drawGuestLoginWarning(-127, var3);
         super.draw(param0, param1);
     }
 

@@ -105,7 +105,7 @@ final class HazardModel extends TrapModel {
         CharSequence var7 = null;
         try {
           if (null != GameSocketTraffic.field_a) {
-            var3_int = GameSocketTraffic.field_a.a(param2, 1513);
+            var3_int = GameSocketTraffic.field_a.pollInputResult(param2, 1513);
             if (var3_int != 0) {
               if (var3_int == 2 &&
                 GameSocketTraffic.field_a.field_r != null &&

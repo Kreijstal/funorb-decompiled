@@ -23,7 +23,7 @@ final class TextSpewerBehaviour extends Behaviour {
         }
     }
 
-    final static void a(byte param0, MenuEntry[] param1) {
+    final static void shareMenuDropAnimation(byte param0, MenuEntry[] param1) {
         DropAnimation var7 = null;
         MenuEntry[] var3 = null;
         int var4 = 0;

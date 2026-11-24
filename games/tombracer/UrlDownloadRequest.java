@@ -16,7 +16,7 @@ final class UrlDownloadRequest implements Runnable {
 
     final static void sendRoomCompletedStat(MatchState param0, Room param1, int param2) {
         if (param2 <= 90) {
-          UrlDownloadRequest.a(-49, -51, -30, 34, 111, -46);
+          UrlDownloadRequest.fillRectangleRows(-49, -51, -30, 34, 111, -46);
         }
         if (TextWidgetPainter.isGuestMode(54) ||
           param0.isMenuBackgroundDemo(-25319)) {
@@ -180,7 +180,7 @@ final class UrlDownloadRequest implements Runnable {
         this.field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleRows(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;

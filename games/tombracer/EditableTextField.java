@@ -284,7 +284,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    final static void h(int param0) {
+    final static void processDialogInput(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

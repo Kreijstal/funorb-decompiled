@@ -167,7 +167,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           }
           if (SnakePitTile.hasVisibleDialog(false)) {
             var4_intLifetime1 = 1;
-            IntQueue.a((byte) 126);
+            IntQueue.drawDialogOverlay((byte) 126);
           }
           if (PlayPhase.beginReconnectGracePeriod(param2 ^ 110) &&
             !SnakePitTile.hasVisibleDialog(false)) {
@@ -179,7 +179,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
             } else {
               stackIn_47_0 = true;
             }
-            S2CNewRoomPacket.a(stackIn_47_0, 106);
+            S2CNewRoomPacket.drawDimmedDialogs(stackIn_47_0, 106);
             CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             var5_ref_ssa.popClip(param2 + 84);
           }
@@ -1096,7 +1096,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         }
         if (!RandomMazeBehaviour.field_n ||
           SecondaryNodeDequeIterator.field_a == SpriteTileOperator.field_t) {
-          CharacterPreview.a(8824);
+          CharacterPreview.tickClosingLobbyOverlays(8824);
         }
         this.field_H.updateCurrent((byte) -66);
         WheeledMountComponent.updateSounds((byte) 49);
@@ -1208,7 +1208,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           if (param0 == 9) {
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
             ConstrainToRectangleLocomotor.showMenuScreen(false, 1, (byte) -77);
-            SecondaryLinkQueue.a(param1.readString((byte) -76), -79);
+            SecondaryLinkQueue.setRemovedFromGameMessage(param1.readString((byte) -76), -79);
             return true;
           }
           if (param0 == 14) {
@@ -1539,7 +1539,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
             LobbyOverlayAndDateValidationState.field_c = true;
             if (null != SecondaryNodeDequeIterator.field_a &&
               !SecondaryNodeDequeIterator.field_a.isSpectating((byte) 79)) {
-              SecondaryLinkQueue.a(BufferedCacheFile.field_k, -114);
+              SecondaryLinkQueue.setRemovedFromGameMessage(BufferedCacheFile.field_k, -114);
               SecondaryNodeDequeIterator.field_a = null;
               ConstrainToRectangleLocomotor.showMenuScreen(false, 1, (byte) 122);
             } else {

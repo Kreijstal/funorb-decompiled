@@ -17,24 +17,24 @@ final class MazeSearchNode extends IntrusiveNode {
           field_k = null;
           return;
         }
-        MazeSearchNode.a(true, true, -119);
+        MazeSearchNode.drawDialogBackdropAndStack(true, true, -119);
         field_j = null;
         field_i = null;
         field_k = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void drawDialogBackdropAndStack(boolean param0, boolean param1, int param2) {
         if (!param0) {
           SoftwareRasterizer.clear();
           if (param2 <= -121) {
-            TileGrid.a(param0, (byte) 106);
+            TileGrid.drawDialogStack(param0, (byte) 106);
             return;
           }
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         if (param2 <= -121) {
-          TileGrid.a(param0, (byte) 106);
+          TileGrid.drawDialogStack(param0, (byte) 106);
           return;
         }
     }

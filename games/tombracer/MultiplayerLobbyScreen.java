@@ -89,7 +89,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_5_4 = 13;
               stackIn_5_5 = 61;
               stackIn_6_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
-              QuickChatMenuLayout.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6, -1, 15, var4 != 0, 11, param1);
+              QuickChatMenuLayout.updateLobbyUi(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
             this.drawFadeOverlay(false, 9);
@@ -101,7 +101,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_20_4 = 13;
               stackIn_20_5 = 61;
               stackIn_21_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
-              QuickChatMenuLayout.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_21_6, -1, 15, var4 != 0, 11, param1);
+              QuickChatMenuLayout.updateLobbyUi(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_21_6, -1, 15, var4 != 0, 11, param1);
             }
           }
         } else {
@@ -116,7 +116,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
                 stackIn_70_4 = 13;
                 stackIn_70_5 = 61;
                 stackIn_71_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
-                QuickChatMenuLayout.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_70_4, stackIn_70_5, stackIn_71_6, -1, 15, var4 != 0, 11, param1);
+                QuickChatMenuLayout.updateLobbyUi(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_70_4, stackIn_70_5, stackIn_71_6, -1, 15, var4 != 0, 11, param1);
               }
             } else {
               this.drawFadeOverlay(false, 9);
@@ -128,7 +128,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
                 stackIn_85_4 = 13;
                 stackIn_85_5 = 61;
                 stackIn_86_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
-                QuickChatMenuLayout.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_86_6, -1, 15, var4 != 0, 11, param1);
+                QuickChatMenuLayout.updateLobbyUi(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_86_6, -1, 15, var4 != 0, 11, param1);
               }
             }
             if (LegacyOpenGlCubeTexture.field_p) {
@@ -155,7 +155,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_38_4 = 13;
               stackIn_38_5 = 61;
               stackIn_39_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
-              QuickChatMenuLayout.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, -1, 15, var4 != 0, 11, param1);
+              QuickChatMenuLayout.updateLobbyUi(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
             this.drawFadeOverlay(false, 9);
@@ -167,7 +167,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_53_4 = 13;
               stackIn_53_5 = 61;
               stackIn_54_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
-              QuickChatMenuLayout.a(stackIn_53_0, stackIn_53_1, stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_53_5, stackIn_54_6, -1, 15, var4 != 0, 11, param1);
+              QuickChatMenuLayout.updateLobbyUi(stackIn_53_0, stackIn_53_1, stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_53_5, stackIn_54_6, -1, 15, var4 != 0, 11, param1);
             }
           }
         }
@@ -284,7 +284,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
           return;
         }
         try {
-          TileGrid.a(true, (byte) 99);
+          TileGrid.drawDialogStack(true, (byte) 99);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ala.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -299,7 +299,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
 
     final void draw(byte param0, boolean param1) {
         this.drawFadeOverlay(true, 68);
-        LegacyOpenGlShaderObject.a(SingleChildWidget.a(0), 7);
+        LegacyOpenGlShaderObject.drawLobbyAndUiOverlays(SingleChildWidget.a(0), 7);
         if (param0 != -28) {
           this.onActivated((byte) 98);
         }

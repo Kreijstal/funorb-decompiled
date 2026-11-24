@@ -125,7 +125,7 @@ final class ChatOverlay {
         if (this.panelOpen) {
           stackIn_52_0 = 108;
           stackIn_52_1 = param1;
-          ProgressBarWidget.b(stackIn_52_0, stackIn_52_1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, SwitchLinkList.getCanvasHeight(0) >> 1);
+          ProgressBarWidget.updatePrivateChatInput(stackIn_52_0, stackIn_52_1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, SwitchLinkList.getCanvasHeight(0) >> 1);
           ChatInputPresentation.updateChatInputPresentation((byte) -127);
         }
     }
@@ -162,7 +162,7 @@ final class ChatOverlay {
         MonsterModel.j(28191);
         int var2 = 4;
         int var3 = 16;
-        MazeSolver.a(SwitchLinkList.getCanvasHeight(0) >> 1, 20, var2, -5327, "", var2, var3, var3, LegacyOpenGlWaterTextures.getCanvasWidth(param0) >> 1);
+        MazeSolver.layoutChatInputPopup(SwitchLinkList.getCanvasHeight(0) >> 1, 20, var2, -5327, "", var2, var3, var3, LegacyOpenGlWaterTextures.getCanvasWidth(param0) >> 1);
         this.panelOpen = true;
     }
 
@@ -552,7 +552,7 @@ final class ChatOverlay {
         if (!this.panelOpen) {
           return;
         }
-        ResourceArchive.e(19470);
+        ResourceArchive.restorePreviousUiContext(19470);
         this.panelOpen = false;
     }
 

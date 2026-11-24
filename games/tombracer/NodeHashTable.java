@@ -171,7 +171,7 @@ final class NodeHashTable {
         return null;
     }
 
-    final static void a(int param0) {
+    final static void layoutSlidingLobbyPanels(int param0) {
         int var1 = (-640 + SceneLight.field_i) / 2;
         int var2 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var3 = -(ProjectionMode.field_a * ProjectionMode.field_a) + var2;

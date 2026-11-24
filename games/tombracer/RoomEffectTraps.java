@@ -109,7 +109,7 @@ final class RoomEffectTraps {
         }
     }
 
-    final static void a(byte param0, String param1, boolean param2) {
+    final static void beginGuestLoginTransition(byte param0, String param1, boolean param2) {
         if (param0 != -63) {
           return;
         }
@@ -456,7 +456,7 @@ final class RoomEffectTraps {
           var8 = 0;
           if (param0 <= 51) {
             var24 = (String) null;
-            RoomEffectTraps.a((byte) -93, (String) null, false);
+            RoomEffectTraps.beginGuestLoginTransition((byte) -93, (String) null, false);
           }
           stackIn_12_0 = (param4 > param3) ? param3 : param4;
           var9 = stackIn_12_0;

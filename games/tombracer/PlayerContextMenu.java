@@ -118,7 +118,7 @@ final class PlayerContextMenu {
         if (param3 == var6) {
           return false;
         }
-        boolean discarded$0 = this.a(param3 - 16, var6, param2);
+        boolean discarded$0 = this.handleLobbyGameAction(param3 - 16, var6, param2);
         boolean discarded$1 = this.handleContactAction(var6, (byte) -121, param4);
         boolean discarded$2 = this.handleMessageAction(var6, (byte) -39, param4);
         boolean discarded$3 = this.openReportAbuse(param1, var6, 114);
@@ -169,7 +169,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean handleLobbyGameAction(int param0, int param1, int param2) {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1 == 0) {

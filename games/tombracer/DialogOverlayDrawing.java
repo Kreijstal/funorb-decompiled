@@ -25,7 +25,7 @@ final class DialogOverlayDrawing {
         int var2Lifetime1Lifetime1;
         int var2Lifetime1Lifetime2;
         if (SnakePitTile.hasVisibleDialog(false)) {
-          IntQueue.a((byte) -125);
+          IntQueue.drawDialogOverlay((byte) -125);
           var1 = 1;
           if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
@@ -39,7 +39,7 @@ final class DialogOverlayDrawing {
               }
               return var1 != 0;
             }
-            S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
+            S2CNewRoomPacket.drawDimmedDialogs(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
           if (MessagePage.isSelectionMenuActive(125)) {
@@ -66,7 +66,7 @@ final class DialogOverlayDrawing {
                 }
                 return var1 != 0;
               }
-              S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
+              S2CNewRoomPacket.drawDimmedDialogs(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
               var1 = 1;
             }
             if (!MessagePage.isSelectionMenuActive(125)) {
@@ -94,7 +94,7 @@ final class DialogOverlayDrawing {
               }
               return var1 != 0;
             }
-            S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
+            S2CNewRoomPacket.drawDimmedDialogs(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
           if (!MessagePage.isSelectionMenuActive(125)) {
@@ -121,7 +121,7 @@ final class DialogOverlayDrawing {
             }
             return var1 != 0;
           }
-          S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
+          S2CNewRoomPacket.drawDimmedDialogs(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
           var1 = 1;
         }
         if (!MessagePage.isSelectionMenuActive(125)) {

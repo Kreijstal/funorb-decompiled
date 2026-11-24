@@ -601,7 +601,7 @@ abstract class MenuScreen extends GameScreen {
                     }
                   }
                 }
-                RoomEffectTraps.a((byte) -63, TextureTransformMode.field_a, true);
+                RoomEffectTraps.beginGuestLoginTransition((byte) -63, TextureTransformMode.field_a, true);
                 return true;
               }
               if (var7 == 32 &&
@@ -1159,14 +1159,14 @@ abstract class MenuScreen extends GameScreen {
               (var6 == null)) {
               break scanLoop1;
             }
-            TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var6))[0]], this.items[((int[]) (var6))[1]], this.items[((int[]) (var6))[2]]});
+            TextSpewerBehaviour.shareMenuDropAnimation((byte) -91, new MenuEntry[]{this.items[((int[]) (var6))[0]], this.items[((int[]) (var6))[1]], this.items[((int[]) (var6))[2]]});
             break;
           }
           if (var8 != null) {
-            TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var8))[0]], this.items[((int[]) (var8))[1]]});
+            TextSpewerBehaviour.shareMenuDropAnimation((byte) -91, new MenuEntry[]{this.items[((int[]) (var8))[0]], this.items[((int[]) (var8))[1]]});
           }
           if (null != var4) {
-            TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var4))[0]], this.items[((int[]) (var4))[1]]});
+            TextSpewerBehaviour.shareMenuDropAnimation((byte) -91, new MenuEntry[]{this.items[((int[]) (var4))[0]], this.items[((int[]) (var4))[1]]});
           }
           this.field_k = new MenuInputState(this.items.length);
           return;

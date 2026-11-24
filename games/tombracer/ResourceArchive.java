@@ -74,7 +74,7 @@ final class ResourceArchive {
         field_e = null;
         field_c = null;
         if (param0 != 0) {
-          ResourceArchive.e(22);
+          ResourceArchive.restorePreviousUiContext(22);
         }
     }
 
@@ -157,10 +157,10 @@ final class ResourceArchive {
         }
     }
 
-    final static void e(int param0) {
+    final static void restorePreviousUiContext(int param0) {
         ContentTransitionPhase.restorePreviousUiContext(29585);
         if (param0 != 19470) {
-          ResourceArchive.e(46);
+          ResourceArchive.restorePreviousUiContext(46);
         }
     }
 

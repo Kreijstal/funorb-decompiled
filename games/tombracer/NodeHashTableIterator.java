@@ -60,7 +60,7 @@ final class NodeHashTableIterator implements Iterator {
         GameKeyHandler.shutdownAudioOutputs((byte) 46);
     }
 
-    final static void a(String param0, int param1) {
+    final static void ignoreCountryListResponse(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;

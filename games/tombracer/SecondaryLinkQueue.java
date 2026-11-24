@@ -132,7 +132,7 @@ final class SecondaryLinkQueue {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void setRemovedFromGameMessage(String param0, int param1) {
         try {
           if (param1 >= -69) {
             SecondaryLinkQueue.releaseStatics(10);
@@ -151,7 +151,7 @@ final class SecondaryLinkQueue {
           return;
         }
         String var2 = (String) null;
-        SecondaryLinkQueue.a((String) null, 47);
+        SecondaryLinkQueue.setRemovedFromGameMessage((String) null, 47);
         worldNames = null;
         field_a = null;
     }

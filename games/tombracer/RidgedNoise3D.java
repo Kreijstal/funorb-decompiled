@@ -180,7 +180,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5, String param6, int param7) {
+    final static void updateChatInputPopup(boolean param0, int param1, int param2, byte param3, int param4, int param5, String param6, int param7) {
         RuntimeException var8 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -201,7 +201,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
           if (!DynamicGeometryBuffer.field_c) {
             return;
           }
-          MazeSolver.a(param4, 20, param7, -5327, param6, param5, param2, param2, param1);
+          MazeSolver.layoutChatInputPopup(param4, 20, param7, -5327, param6, param5, param2, param2, param1);
           SimpleMoveLocomotor.field_s.layoutFullScreen(-73, param0);
           if (!param0) {
             return;

@@ -186,10 +186,10 @@ abstract class AppletGameShell extends GameApplet {
                 var7 = DarknessBehaviour.field_o.getResult((byte) -123);
                 if (var7 != null) {
                   var8 = MaskBlendOperator.decodeCp1252(var7.payload, 0, var7.position, 255);
-                  NodeHashTableIterator.a(var8, -1);
+                  NodeHashTableIterator.ignoreCountryListResponse(var8, -1);
                 } else {
                   var10 = (String) null;
-                  NodeHashTableIterator.a((String) null, -1);
+                  NodeHashTableIterator.ignoreCountryListResponse((String) null, -1);
                 }
                 DarknessBehaviour.field_o = null;
               }
@@ -198,7 +198,7 @@ abstract class AppletGameShell extends GameApplet {
               var6 = (Exception) (Object) decompiledCaughtException;
               ClipStack.reportClientError("S1", (byte) 121, (Throwable) ((Object) var6));
               var11 = (String) null;
-              NodeHashTableIterator.a((String) null, -1);
+              NodeHashTableIterator.ignoreCountryListResponse((String) null, -1);
               DarknessBehaviour.field_o = null;
             }
           }
@@ -294,7 +294,7 @@ abstract class AppletGameShell extends GameApplet {
                       }
                     }
                   } else {
-                    FocusableWidget.a(param0 + 9);
+                    FocusableWidget.readQueuedRequestAcknowledgement(param0 + 9);
                   }
                 }
               }
@@ -566,7 +566,7 @@ abstract class AppletGameShell extends GameApplet {
         BoulderComponent.snapshotMouseInput((byte) -44);
         if (!ColourGradientOperator.isLoginFlowIncomplete(-112) &&
           Transform3D.field_c != 11) {
-          EditableTextField.h(100);
+          EditableTextField.processDialogInput(100);
         }
         if (null != HardCacheEntry.field_q) {
           TermsLinksPanel.field_y = HardCacheEntry.field_q.pollWheelRotation(65);

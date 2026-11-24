@@ -196,10 +196,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if (param2 != this.field_E) {
               if (param2 == this.field_y) {
                 if (this.field_x) {
-                  HardwareGraphicsToolkit.q(83);
+                  HardwareGraphicsToolkit.queueReconnectQuit(83);
                 } else {
                   if (!this.field_w) {
-                    TextResourceLoader.b(50);
+                    TextResourceLoader.queueGuestLogin(50);
                   } else {
                     ChatMessage.showFreeAccountPrompt((byte) 62);
                   }

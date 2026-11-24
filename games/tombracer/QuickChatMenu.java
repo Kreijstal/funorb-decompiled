@@ -31,7 +31,7 @@ final class QuickChatMenu extends UiComponent {
         ContextMenuRow[] var6 = this.field_Gb;
         ContextMenuRow[] var2 = var6;
         if (!param0) {
-          this.a(33, (byte) -9, 44);
+          this.handleKeyInput(33, (byte) -9, 44);
         }
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
@@ -240,7 +240,7 @@ final class QuickChatMenu extends UiComponent {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean handleKeyInput(int param0, byte param1, int param2) {
         int var6 = 0;
         int var4;
         int var5;
@@ -256,7 +256,7 @@ final class QuickChatMenu extends UiComponent {
             this.setExpansionTicks(0, 124);
             return true;
           }
-          return this.field_Eb.a(param0, (byte) -105, param2);
+          return this.field_Eb.handleKeyInput(param0, (byte) -105, param2);
         }
         if (null == this.field_Eb &&
           this == ItemModel.field_n &&

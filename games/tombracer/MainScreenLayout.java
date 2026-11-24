@@ -16,7 +16,7 @@ final class MainScreenLayout {
         int var3 = 0;
         BufferedSocket.field_g = SoftwareRasterizer.height;
         SceneLight.field_i = SoftwareRasterizer.width;
-        NodeHashTable.a(16);
+        NodeHashTable.layoutSlidingLobbyPanels(16);
         ClientRsaModulus.field_b.layoutPanels(0, 0, 20, C2SRoomResultPacket.field_a.field_G, -2 + (-40 + C2SRoomResultPacket.field_a.field_t));
         PerlinNoise2D.field_t.setBounds(HardwareWaterTextures.field_e.field_G, ToolkitSelector.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + ToolkitSelector.field_a;

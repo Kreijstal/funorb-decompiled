@@ -68,7 +68,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           var3 = var8;
           if (param0 != -18379) {
             var7 = (StatefulWidgetPainter) null;
-            this.a((byte) -79, (StatefulWidgetPainter) null, false);
+            this.copyStyleTo((byte) -79, (StatefulWidgetPainter) null, false);
           }
           for (var4 = 0; var8.length > var4; var4++) {
             var5 = var8[var4];
@@ -241,7 +241,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
         }
     }
 
-    private final void a(byte param0, StatefulWidgetPainter param1, boolean param2) {
+    private final void copyStyleTo(byte param0, StatefulWidgetPainter param1, boolean param2) {
         int var4_int = 0;
         WidgetStyleLayer dupTemp$0 = null;
         WidgetStyleLayer stackIn_10_0 = null;
@@ -307,7 +307,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
     StatefulWidgetPainter(StatefulWidgetPainter param0, boolean param1) {
         this();
         try {
-          param0.a((byte) -16, this, param1);
+          param0.copyStyleTo((byte) -16, this, param1);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

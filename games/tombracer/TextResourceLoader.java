@@ -3048,7 +3048,7 @@ final class TextResourceLoader extends BillboardSpriteData {
         decompiledBody.run();
     }
 
-    final static void b(int param0) {
+    final static void queueGuestLogin(int param0) {
         try {
           FormFieldRow.queueLoginAction(false, 4);
           int var1_int = 74 / ((param0 + 31) / 39);

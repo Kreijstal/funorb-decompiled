@@ -7,7 +7,7 @@ final class LegacyOpenGlShaderObject {
     static int[] field_b;
     long field_a;
 
-    final static void a(boolean param0, int param1) {
+    final static void drawLobbyAndUiOverlays(boolean param0, int param1) {
         NodeHashTableIterator.drawLobbyAndModalOverlays(-1, param0);
         IdChatTarget.drawUiOverlays(param0, 0);
         if (param1 != 7) {

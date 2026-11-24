@@ -186,7 +186,7 @@ class FocusableWidget extends UiWidget {
         this.field_y = true;
     }
 
-    final static void a(int param0) {
+    final static void readQueuedRequestAcknowledgement(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -275,7 +275,7 @@ class FocusableWidget extends UiWidget {
             return null;
           }
           if (param3 != -82) {
-            FocusableWidget.a(23);
+            FocusableWidget.readQueuedRequestAcknowledgement(23);
           }
           stackIn_6_0 = RoomViewRenderer.takeDecodedOpaqueSprites(1500);
           return stackIn_6_0;
@@ -359,21 +359,21 @@ class FocusableWidget extends UiWidget {
           if (param3 <= -40) {
             return;
           }
-          FocusableWidget.a(14);
+          FocusableWidget.readQueuedRequestAcknowledgement(14);
           return;
         }
         if (!(this.field_h instanceof ButtonListener)) {
           if (param3 <= -40) {
             return;
           }
-          FocusableWidget.a(14);
+          FocusableWidget.readQueuedRequestAcknowledgement(14);
           return;
         }
         ((ButtonListener) (this.field_h)).onButtonActivated(param0, param2, this, param1, (byte) 115);
         if (param3 <= -40) {
           return;
         }
-        FocusableWidget.a(14);
+        FocusableWidget.readQueuedRequestAcknowledgement(14);
     }
 
     static {

@@ -30,7 +30,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         boolean stackIn_68_2 = false;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
-        NodeHashTable.a(16);
+        NodeHashTable.layoutSlidingLobbyPanels(16);
         if (ProxySocketConnector.field_f < 0) {
           PerlinNoise2D.field_t.field_r = null;
           stackIn_55_0 = C2SRoomResultPacket.field_a;

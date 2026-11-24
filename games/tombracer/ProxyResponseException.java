@@ -11,7 +11,7 @@ final class ProxyResponseException extends IOException {
         super(param0);
     }
 
-    final static void a(int param0) {
+    final static void resetMidiChannelVolumeTargets(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;

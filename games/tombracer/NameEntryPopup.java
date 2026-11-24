@@ -190,7 +190,7 @@ final class NameEntryPopup extends UiComponent {
         return true;
     }
 
-    final int a(boolean param0, int param1) {
+    final int pollInputResult(boolean param0, int param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

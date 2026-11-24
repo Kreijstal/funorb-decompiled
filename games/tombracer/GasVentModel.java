@@ -9,7 +9,7 @@ final class GasVentModel extends TrapModel {
     static int field_p;
     private int field_o;
 
-    final static void i(int param0) {
+    final static void tickClosingSocialPanels(int param0) {
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
@@ -24,7 +24,7 @@ final class GasVentModel extends TrapModel {
             }
             return;
           }
-          NodeHashTable.a(16);
+          NodeHashTable.layoutSlidingLobbyPanels(16);
           if (GameKeyHandler.field_a <= 0) {
             if (TextureCombineSource.field_e > 0) {
               LegacyOpenGlShaderLinker.layoutBottomPanels(TextureCombineSource.field_e, 199);
@@ -42,7 +42,7 @@ final class GasVentModel extends TrapModel {
               decompiledFrameRemainder0 = false;
             }
             else {
-              NodeHashTable.a(16);
+              NodeHashTable.layoutSlidingLobbyPanels(16);
               decompiledFrameRemainder0 = !(GameKeyHandler.field_a <= 0);
               if (decompiledFrameRemainder0) {
                 LegacyOpenGlShaderLinker.layoutBottomPanels(GameKeyHandler.field_a, 199);
@@ -58,7 +58,7 @@ final class GasVentModel extends TrapModel {
               TextureCombineSource.field_e = TextureCombineSource.field_e - 1;
             }
             if (param0 < ProjectionMode.field_a) {
-              NodeHashTable.a(16);
+              NodeHashTable.layoutSlidingLobbyPanels(16);
             }
             if (GameKeyHandler.field_a > 0) {
               LegacyOpenGlShaderLinker.layoutBottomPanels(GameKeyHandler.field_a, 199);

@@ -22,7 +22,7 @@ final class MenuEntry {
         }
     }
 
-    final static void a(int param0, int param1, IntArrayRequest param2) {
+    final static void writeIntArrayRequest(int param0, int param1, IntArrayRequest param2) {
         BitPacketBuffer var3 = null;
         try {
           if (param1 != -23814) {
@@ -420,14 +420,14 @@ final class MenuEntry {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
+    final static void updateLobbyUi(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
         ArchiveNetworkClient.field_b = null;
-        RemovedFromGameMenu.d((byte) 118);
+        RemovedFromGameMenu.showPendingGameRemovalMessage((byte) 118);
         if (param5 == -22919) {
-          param3 = ProgressBarWidget.a(param12, param3, (byte) 107, param0, param9, param10, param7);
-          CrossedSineBandsOperator.a(param13, param4, param5 + 27015, param8, param1, param3, param12, param6, param2, param11);
-          BoulderComponent.b(param13, -125, param11);
-          PressureSwitchComponent.a(param3, (byte) -112, param7, param13);
+          param3 = ProgressBarWidget.processLobbyPopups(param12, param3, (byte) 107, param0, param9, param10, param7);
+          CrossedSineBandsOperator.updateLobbyPanels(param13, param4, param5 + 27015, param8, param1, param3, param12, param6, param2, param11);
+          BoulderComponent.updateSocialContacts(param13, -125, param11);
+          PressureSwitchComponent.updateChatOverlay(param3, (byte) -112, param7, param13);
           return;
         }
     }
@@ -450,7 +450,7 @@ final class MenuEntry {
           var5 = var10.width();
           var6 = var10.height();
           if (param0 != -30323) {
-            MenuEntry.a(39, 63, false, true, true, 14, -127, -48, false, 75, -103, false, -22, 2);
+            MenuEntry.updateLobbyUi(39, 63, false, true, true, 14, -127, -48, false, 75, -103, false, -22, 2);
           }
           var7 = param1 + var5 / 2 - this.field_b;
           var8 = param2 - (this.field_i - var6 / 2);
@@ -473,7 +473,7 @@ final class MenuEntry {
           return MessageDialog.field_X;
         }
         if (param0 != -28425) {
-          MenuEntry.a(-43, -1, false, true, false, -66, -12, 75, false, -21, 73, false, -95, 84);
+          MenuEntry.updateLobbyUi(-43, -1, false, true, false, -66, -12, 75, false, -21, 73, false, -95, 84);
         }
         return this.field_l ? HardwareSpecularEffect.field_h[this.field_f] : WidgetStyleLayer.field_k[this.field_f];
     }

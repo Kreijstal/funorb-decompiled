@@ -50,7 +50,7 @@ final class ClippedFilledRectangleRenderer {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, var22, var11);
           }
           if (param3 < 88) {
-            ClippedFilledRectangleRenderer.b(-52);
+            ClippedFilledRectangleRenderer.tickClosingChatOverlay(-52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,7 +60,7 @@ final class ClippedFilledRectangleRenderer {
         }
     }
 
-    final static void b(int param0) {
+    final static void tickClosingChatOverlay(int param0) {
         if (FadingDialog.field_C.field_e != ValidationStatusIcon.field_E) {
           VertexArrayPointer.field_b = VertexArrayPointer.field_b + (-ValidationStatusIcon.field_E + FadingDialog.field_C.field_e);
           ValidationStatusIcon.field_E = FadingDialog.field_C.field_e;

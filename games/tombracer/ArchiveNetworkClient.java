@@ -63,7 +63,7 @@ abstract class ArchiveNetworkClient {
           }
           var5 = (IntArrayRequest) (Player.field_I.first(param1 ^ 91));
           while (var5 != null) {
-            MenuEntry.a(param0, -23814, var5);
+            MenuEntry.writeIntArrayRequest(param0, -23814, var5);
             var5 = (IntArrayRequest) (Player.field_I.next(121));
           }
           return;

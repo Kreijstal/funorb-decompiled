@@ -30,14 +30,14 @@ final class QueuedFixedRequestWriter {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final static void updateChatInputForChannel(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
         if (OpenGlUnderwaterEffect.field_q != param3) {
           var7 = SneakHintCharacter.field_i;
         } else {
           var7 = BitPackedColour.field_a;
         }
-        RidgedNoise3D.a(param6, param5, param1, (byte) 53, param0, param2, var7, param4);
+        RidgedNoise3D.updateChatInputPopup(param6, param5, param1, (byte) 53, param0, param2, var7, param4);
     }
 
     public static void releaseStatics(byte param0) {

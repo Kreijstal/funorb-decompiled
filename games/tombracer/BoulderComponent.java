@@ -12,7 +12,7 @@ final class BoulderComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void b(int param0, int param1, boolean param2) {
+    final static void updateSocialContacts(int param0, int param1, boolean param2) {
         ContactListEntry var3 = null;
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;

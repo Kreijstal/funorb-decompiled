@@ -127,7 +127,7 @@ final class ProgressBarWidget extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    final static boolean a(int param0, boolean param1, byte param2, int param3, int param4, int param5, int param6) {
+    final static boolean processLobbyPopups(int param0, boolean param1, byte param2, int param3, int param4, int param5, int param6) {
         if (GasTrapComponent.isDialogOpen((byte) -118)) {
           ToolkitInstance.a(-109, param3, param5, param1);
           if (UnlockEntryDecoder.field_b != null &&
@@ -140,7 +140,7 @@ final class ProgressBarWidget extends UiWidget {
           param1 = false;
         }
         if (param2 != 107) {
-          ProgressBarWidget.a(-24, false, (byte) 37, -109, 107, 111, -35);
+          ProgressBarWidget.processLobbyPopups(-24, false, (byte) 37, -109, 107, 111, -35);
         }
         return param1;
     }
@@ -235,11 +235,11 @@ final class ProgressBarWidget extends UiWidget {
         }
     }
 
-    final static void b(int param0, boolean param1, int param2, int param3) {
+    final static void updatePrivateChatInput(int param0, boolean param1, int param2, int param3) {
         if (param0 <= 83) {
           return;
         }
-        QueuedFixedRequestWriter.a(param3, ToolkitSelector.field_a, StatReportingScoringObserver.field_i, 2, ChatMessageLayout.field_d, param2, param1);
+        QueuedFixedRequestWriter.updateChatInputForChannel(param3, ToolkitSelector.field_a, StatReportingScoringObserver.field_i, 2, ChatMessageLayout.field_d, param2, param1);
     }
 
     private ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

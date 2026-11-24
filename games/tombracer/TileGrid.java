@@ -31,7 +31,7 @@ final class TileGrid implements Renderable {
         return param2 + (-this.firstColumn + (-this.firstRow + param1) * this.columnSpan);
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawDialogStack(boolean param0, byte param1) {
         int var2 = -75 / ((param1 + 12) / 44);
         DisplayNameValidator.field_a.renderWithTooltip(-42, 0, 0);
     }

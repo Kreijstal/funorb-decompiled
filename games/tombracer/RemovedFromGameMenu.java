@@ -13,7 +13,7 @@ final class RemovedFromGameMenu extends MenuScreen {
         }
     }
 
-    final static void d(byte param0) {
+    final static void showPendingGameRemovalMessage(byte param0) {
         String var2 = null;
         if (null != ProxyResponseException.field_b) {
           var2 = ProxyResponseException.field_b;

@@ -27,7 +27,7 @@ final class MazeSolver {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void layoutChatInputPopup(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         ClientMemoryVertexArray.field_e.field_r = param4;

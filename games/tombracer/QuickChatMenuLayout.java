@@ -66,10 +66,10 @@ final class QuickChatMenuLayout {
         return;
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, int param10, boolean param11) {
-        MenuEntry.a(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, param0, param1, param8, param6, param10, param2);
+    final static void updateLobbyUi(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, int param10, boolean param11) {
+        MenuEntry.updateLobbyUi(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, param0, param1, param8, param6, param10, param2);
         if (param5 < 12) {
-          QuickChatMenuLayout.a(true, -67, 8, false, -52, 39, true, -85, -41, false, -10, true);
+          QuickChatMenuLayout.updateLobbyUi(true, -67, 8, false, -52, 39, true, -85, -41, false, -10, true);
         }
     }
 

@@ -134,7 +134,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                 } else {
                   var3 = SelectionMenuInput.pollKeyEvents(true);
                   if (var3 == 1) {
-                    RoomEffectTraps.a((byte) -63, TextureTransformMode.field_a, true);
+                    RoomEffectTraps.beginGuestLoginTransition((byte) -63, TextureTransformMode.field_a, true);
                   }
                   this.updateScreen(true, false);
                 }
@@ -179,7 +179,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                   this.updateScreen(true, false);
                 } else {
                   if (var3 == 4) {
-                    RoomEffectTraps.a((byte) -63, ClientResourceBootstrap.field_b, false);
+                    RoomEffectTraps.beginGuestLoginTransition((byte) -63, ClientResourceBootstrap.field_b, false);
                     FlagSet.field_c = true;
                     this.updateScreen(true, false);
                   } else {

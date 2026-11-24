@@ -12,7 +12,7 @@ final class CharacterPreview extends IntrusiveNode {
         field_g = null;
         field_f = null;
         if (!param0) {
-          CharacterPreview.a(-58);
+          CharacterPreview.tickClosingLobbyOverlays(-58);
         }
     }
 
@@ -36,12 +36,12 @@ final class CharacterPreview extends IntrusiveNode {
         this.field_j.play(param0, false, 0, 0, true);
     }
 
-    final static void a(int param0) {
-        ClippedFilledRectangleRenderer.b(-1);
+    final static void tickClosingLobbyOverlays(int param0) {
+        ClippedFilledRectangleRenderer.tickClosingChatOverlay(-1);
         if (param0 != 8824) {
           return;
         }
-        GasVentModel.i(0);
+        GasVentModel.tickClosingSocialPanels(0);
     }
 
     final void tick(int param0) {

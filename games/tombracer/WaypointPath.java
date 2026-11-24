@@ -70,7 +70,7 @@ final class WaypointPath {
             ClipStack.reportClientError("QC2", (byte) 122, (Throwable) null);
             return;
           }
-          DraggableWidget.a(-1, var4);
+          DraggableWidget.setSinglePhraseShortcut(-1, var4);
           var12 = (BitmapFont) null;
           MembersUpsellMenu.field_w = DrawOfferMenu.createStyledComponent(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
           BoulderComponent.field_M = DrawOfferMenu.createStyledComponent(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);

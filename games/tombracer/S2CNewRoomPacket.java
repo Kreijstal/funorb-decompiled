@@ -119,8 +119,8 @@ final class S2CNewRoomPacket implements GamePacket {
         field_g = null;
     }
 
-    final static void a(boolean param0, int param1) {
-        MazeSearchNode.a(true, param0, -127);
+    final static void drawDimmedDialogs(boolean param0, int param1) {
+        MazeSearchNode.drawDialogBackdropAndStack(true, param0, -127);
         if (param1 < 103) {
           field_g = (String) null;
         }
