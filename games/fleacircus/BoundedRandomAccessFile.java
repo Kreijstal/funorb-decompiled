@@ -5,7 +5,7 @@ import java.io.*;
 
 final class BoundedRandomAccessFile {
     private long field_f;
-    static sf field_g;
+    static PcmSample field_g;
     static AccountServiceResult field_b;
     static int[] field_e;
     static ResourceArchive field_d;
@@ -23,7 +23,7 @@ final class BoundedRandomAccessFile {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          field_g = (sf) null;
+          field_g = (PcmSample) null;
         }
         return !uc.field_c.a(-19) ? true : false;
     }

@@ -109,7 +109,7 @@ abstract class ByteStorage {
                         si.f(var2, var3, var8_ref_p.field_e * 2, var10, 128 - var8_ref_p.field_e * 4);
                         break regionExit1;
                       case 3:
-                        nm.a(var2, var8_ref_p, var3, param0 ^ 11187);
+                        PcmResampler.a(var2, var8_ref_p, var3, param0 ^ 11187);
                         break regionExit1;
                       case 21:
                         ic.a(var2, var3, var8_ref_p, (byte) 107);

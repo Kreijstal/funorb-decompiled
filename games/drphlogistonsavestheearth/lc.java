@@ -268,7 +268,7 @@ final class lc extends IntrusiveNode {
 
     final static void c(byte param0) {
         ja.field_Q = fg.a(1);
-        ng.field_c = new k();
+        PcmResampler.field_c = new k();
         int var1 = -73 % ((param0 - 47) / 52);
         FullscreenFocusCanvas.a((byte) -29, true, true);
     }

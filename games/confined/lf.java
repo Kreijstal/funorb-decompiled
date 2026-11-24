@@ -7,7 +7,7 @@ final class lf extends mf {
     static int[] field_m;
     static nf field_j;
     static String field_h;
-    static bi field_i;
+    static PcmSample field_i;
 
     final static void a(int param0, int param1, bj param2) {
         CipherPacketBuffer var8 = null;
@@ -170,7 +170,7 @@ final class lf extends mf {
               }
             }
             if (param0 != -84) {
-              field_i = (bi) null;
+              field_i = (PcmSample) null;
             }
             lh.field_b = oe.field_W;
           }

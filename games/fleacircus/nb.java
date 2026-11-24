@@ -4,7 +4,7 @@
 final class nb {
     static f field_a;
     static fa field_c;
-    static sf field_f;
+    static PcmSample field_f;
     static int field_g;
     static int[] field_d;
     static int field_i;

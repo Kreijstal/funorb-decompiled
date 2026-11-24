@@ -34,7 +34,7 @@ final class nc {
           }
           var4_int = param1.a(param2, false);
           var5 = param1.a(var4_int, param0, param3 ^ 125);
-          stackIn_4_0 = u.a(0, param1, var5, var4_int);
+          stackIn_4_0 = PcmResampler.a(0, param1, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

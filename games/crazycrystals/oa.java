@@ -3,7 +3,7 @@
  */
 final class oa {
     static int field_b;
-    static ko field_e;
+    static PcmSample field_e;
     private int field_h;
     private int field_a;
     private int field_m;
@@ -242,7 +242,7 @@ final class oa {
         this.field_h = param2;
         this.field_f = param0;
         if (param1 < 18) {
-          field_e = (ko) null;
+          field_e = (PcmSample) null;
         }
     }
 

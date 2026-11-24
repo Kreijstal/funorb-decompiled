@@ -8,7 +8,7 @@ final class gi extends ah {
     static String field_hb;
     private double field_gb;
     static byte[] field_db;
-    static bi field_eb;
+    static PcmSample field_eb;
 
     final static vk a(m param0, byte param1, mi param2, String param3, String param4) {
         int var5_int = 0;

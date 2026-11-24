@@ -7,7 +7,7 @@ final class bf {
     static wh field_a;
     static int field_b;
     private DualLinkNode field_g;
-    static sf field_d;
+    static PcmSample field_d;
     static int field_h;
     static String field_f;
 
@@ -85,7 +85,7 @@ final class bf {
               eb.a("updatelinks", new Object[]{"options", var3 + "options.ws"}, -11745, param1);
               eb.a("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, -11745, param1);
               if (param0 != 32010) {
-                field_d = (sf) null;
+                field_d = (PcmSample) null;
               }
               eb.a("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 43755, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

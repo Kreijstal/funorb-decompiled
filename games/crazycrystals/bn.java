@@ -12,22 +12,22 @@ final class bn {
     static lg field_g;
     private fc field_a;
 
-    private final ko a(int param0, int param1, int[] param2, boolean param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ko var8 = null;
+        PcmSample var8 = null;
         ha var9 = null;
-        ko var10 = null;
-        ko stackIn_4_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_11_0 = null;
-        ko stackIn_16_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ko var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param1 >>> 12 | 65527 & param1 << 4) ^ param0;
           var5_int = var5_int | param1 << 16;
@@ -35,7 +35,7 @@ final class bn {
             this.field_a = (fc) null;
           }
           var6 = (long)var5_int;
-          var8 = (ko) (this.field_a.a(var6, 0));
+          var8 = (PcmSample) (this.field_a.a(var6, 0));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -43,12 +43,12 @@ final class bn {
           if (param2 != null &&
             param2[0] <= 0) {
             stackIn_8_0 = null;
-            return (ko) (stackIn_8_0);
+            return (PcmSample) (stackIn_8_0);
           }
           var9 = ha.a(this.field_d, param1, param0);
           if (var9 == null) {
             stackIn_11_0 = null;
-            return (ko) (stackIn_11_0);
+            return (PcmSample) (stackIn_11_0);
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
@@ -72,11 +72,11 @@ final class bn {
         }
     }
 
-    final ko a(int param0, boolean param1, int[] param2) {
+    final PcmSample a(int param0, boolean param1, int[] param2) {
         RuntimeException var4 = null;
-        ko stackIn_2_0 = null;
-        ko stackIn_5_0 = null;
-        ko stackIn_8_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -87,7 +87,7 @@ final class bn {
             return stackIn_2_0;
           }
           if (param1) {
-            stackIn_5_0 = (ko) null;
+            stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
           if (1 != this.field_e.a(param0, 0)) {
@@ -122,10 +122,10 @@ final class bn {
         field_i = null;
     }
 
-    private final ko a(int param0, int param1, int param2, int[] param3) {
-        ko discarded$0 = null;
-        ko stackIn_4_0 = null;
-        ko stackIn_19_0 = null;
+    private final PcmSample a(int param0, int param1, int param2, int[] param3) {
+        PcmSample discarded$0 = null;
+        PcmSample stackIn_4_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -133,10 +133,10 @@ final class bn {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ko var8 = null;
+        PcmSample var8 = null;
         bl var9 = null;
         int[] var10 = null;
-        ko var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           if (param1 >= -20) {
             var10 = (int[]) null;
@@ -145,7 +145,7 @@ final class bn {
           var5_int = (param0 >>> 12 | (536875007 & param0) << 4) ^ param2;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (ko) (this.field_a.a(var6, 0));
+          var8 = (PcmSample) (this.field_a.a(var6, 0));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -184,7 +184,7 @@ final class bn {
         }
     }
 
-    final ko a(int[] param0, boolean param1, int param2) {
+    final PcmSample a(int[] param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_3_0;
         int stackIn_3_1;
@@ -192,9 +192,9 @@ final class bn {
         int[] stackIn_3_3;
         Object stackIn_4_0;
         boolean stackIn_4_4;
-        ko stackIn_5_0 = null;
-        ko stackIn_9_0 = null;
-        ko stackIn_12_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_9_0 = null;
+        PcmSample stackIn_12_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -208,7 +208,7 @@ final class bn {
             if (!param1) {
               throw new RuntimeException();
             }
-            stackIn_12_0 = (ko) null;
+            stackIn_12_0 = (PcmSample) null;
             return stackIn_12_0;
           }
           stackIn_3_0 = this;

@@ -136,9 +136,9 @@ final class qh extends dl {
     final static boolean c(byte param0) {
         if (param0 < 31) {
           field_z = 27;
-          return ci.field_f;
+          return PcmResampler.field_f;
         }
-        return ci.field_f;
+        return PcmResampler.field_f;
     }
 
     qh() {

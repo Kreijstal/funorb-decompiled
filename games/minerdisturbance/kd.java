@@ -286,7 +286,7 @@ final class kd {
           DualLinkNode.field_r = oc.a(AccountCreationResultPanel.field_xb, (byte) 125, "pump32", "", wk.field_c);
           pk.field_c = bb.a("benefit_orbs", wk.field_c, -115, "members_expansion_screen");
           ClientException.field_f = bb.a("button_text", wk.field_c, param0 - 235, "members_expansion_screen");
-          wm.field_g = md.a("button_highlights", wk.field_c, 10, "members_expansion_screen");
+          PcmResampler.field_g = md.a("button_highlights", wk.field_c, 10, "members_expansion_screen");
           wk.field_c = null;
           AccountCreationResultPanel.field_xb = null;
         }
@@ -332,10 +332,10 @@ final class kd {
         ql.field_m.a(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ClientException.field_f.f(508 + (127 - ClientException.field_f.field_x) / 2, 315);
         if (0 == this.field_c.field_e) {
-          wm.field_g[0].f(508, 299);
+          PcmResampler.field_g[0].f(508, 299);
         } else {
           if (this.field_c.field_e == 1) {
-            wm.field_g[1].f(508, 387);
+            PcmResampler.field_g[1].f(508, 387);
           }
         }
         if (param0 != 117) {

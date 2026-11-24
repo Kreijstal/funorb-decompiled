@@ -4,7 +4,7 @@
 final class fg extends IntrusiveNode {
     int[] field_o;
     int field_k;
-    static sf field_l;
+    static PcmSample field_l;
     static ia field_x;
     int field_v;
     PlatformTask[] field_s;

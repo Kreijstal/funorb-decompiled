@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nj {
-    static ko field_c;
+    static PcmSample field_c;
     String field_b;
     String[] field_o;
     int field_f;

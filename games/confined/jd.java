@@ -9,7 +9,7 @@ final class jd {
     static PrimaryNodeDeque field_f;
     static int field_g;
     static boolean field_c;
-    static bi field_a;
+    static PcmSample field_a;
 
     public static void clearStaticReferences(byte param0) {
         field_e = null;

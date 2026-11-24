@@ -8,7 +8,7 @@ final class th {
     static sf field_c;
     static he[] field_b;
 
-    final static void a(int param0, int param1, int param2, vk param3) {
+    final static void a(int param0, int param1, int param2, PcmSample param3) {
         if (param0 != -27610) {
           return;
         }

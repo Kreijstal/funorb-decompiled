@@ -3,9 +3,9 @@
  */
 final class d {
     static double[] field_c;
-    static bi field_g;
+    static PcmSample field_g;
     static String field_e;
-    static bi field_b;
+    static PcmSample field_b;
     static boolean field_d;
     static int field_a;
     static String field_f;
@@ -20,7 +20,7 @@ final class d {
           field_g = null;
           return;
         }
-        field_b = (bi) null;
+        field_b = (PcmSample) null;
         field_g = null;
     }
 

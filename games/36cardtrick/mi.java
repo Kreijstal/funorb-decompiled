@@ -32,7 +32,7 @@ class mi extends ff {
         }
     }
 
-    final static void a(int param0, ib param1, int param2, int param3) {
+    final static void a(int param0, PcmSample param1, int param2, int param3) {
         try {
           gh.a(RawPcmStream.a(param1, param2, param3), (byte) -111);
           int var4_int = 81 % ((31 - param0) / 46);

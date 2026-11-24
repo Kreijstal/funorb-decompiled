@@ -1154,7 +1154,7 @@ public final class stellarshard extends rb implements cf {
           if (null != na.field_j &&
             DualLinkDequeIterator.field_i) {
             boolean decompiledNaturalLoopExit1 = false;
-            while (!(decompiledNaturalLoopExit1 = (!qh.c(103)))) {
+            while (!(decompiledNaturalLoopExit1 = (!PcmResampler.c(103)))) {
               stackIn_270_0 = gi.field_f;
               stackIn_270_1 = 13;
               if (var15 == 0) {
@@ -2263,7 +2263,7 @@ public final class stellarshard extends rb implements cf {
                           decompiledFrameCompleted5 = false;
                           break;
                         }
-                        if (!qh.c(89)) {
+                        if (!PcmResampler.c(89)) {
                           decompiledFrameCompleted4 = false;
                           break;
                         }
@@ -2323,7 +2323,7 @@ public final class stellarshard extends rb implements cf {
             decompiledFrameRemainder17 = (stackIn_981_0Lifetime1 != 0);
             if ((decompiledFrameRemainder17) &&
               (decompiledFrameRemainder17 = (na.field_j == null))) {
-              while (qh.c(89)) {
+              while (PcmResampler.c(89)) {
                 stackIn_1026_0 = ~gi.field_f;
                 if (var15 != 0) {
                   decompiledFrameCompleted2 = false;
@@ -2692,7 +2692,7 @@ public final class stellarshard extends rb implements cf {
             }
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!qh.c(79)))) {
+          while (!(decompiledNaturalLoopExit0 = (!PcmResampler.c(79)))) {
             stackIn_1305_0 = null;
             stackIn_1305_1 = na.field_j;
             if (var15 == 0) {
@@ -2920,7 +2920,7 @@ public final class stellarshard extends rb implements cf {
           lh.a((byte) -16);
           GzipDecompressor.clearStaticReferences(-127);
           wf.b(param0 + 227);
-          qh.clearStaticReferences(param0 - 15392);
+          PcmResampler.clearStaticReferences(param0 - 15392);
           tj.clearStaticReferences();
           ad.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
@@ -3155,7 +3155,7 @@ public final class stellarshard extends rb implements cf {
                           }
                           DelegatingCanvas.b((byte) 109);
                           this.d(-20880);
-                          var3 = new qh(22050, AudioMixer.field_m);
+                          var3 = new PcmResampler(22050, AudioMixer.field_m);
                           if (!pk.a(-12663, 0)) {
                             sb.field_e = new PcmSample[41];
                             if (var11 != 0) {
@@ -3164,68 +3164,68 @@ public final class stellarshard extends rb implements cf {
                           } else {
                             sb.field_e = new PcmSample[61];
                           }
-                          sb.field_e[0] = kj.a(wk.field_a, "", "afterburner").a().a((qh) (var3));
-                          sb.field_e[1] = kj.a(wk.field_a, "", "bounce-gun").a().a((qh) (var3));
-                          sb.field_e[2] = kj.a(wk.field_a, "", "collision_asteroid").a().a((qh) (var3));
-                          sb.field_e[3] = kj.a(wk.field_a, "", "collision_ice").a().a((qh) (var3));
-                          sb.field_e[4] = kj.a(wk.field_a, "", "collision_iron").a().a((qh) (var3));
-                          sb.field_e[5] = kj.a(wk.field_a, "", "combined-homer_loop_1000ms").a().a((qh) (var3));
-                          sb.field_e[6] = kj.a(wk.field_a, "", "combined-shooter_loop_1000ms").a().a((qh) (var3));
-                          sb.field_e[7] = kj.a(wk.field_a, "", "dual-laser_loop_100ms").a().a((qh) (var3));
-                          sb.field_e[8] = kj.a(wk.field_a, "", "enemy_shoot").a().a((qh) (var3));
-                          sb.field_e[9] = kj.a(wk.field_a, "", "explosion_asteroid_large").a().a((qh) (var3));
-                          sb.field_e[10] = kj.a(wk.field_a, "", "explosion_asteroid_medium").a().a((qh) (var3));
-                          sb.field_e[11] = kj.a(wk.field_a, "", "explosion_asteroid_small").a().a((qh) (var3));
-                          sb.field_e[12] = kj.a(wk.field_a, "", "explosion_enemy").a().a((qh) (var3));
-                          sb.field_e[13] = kj.a(wk.field_a, "", "explosion_ice_large").a().a((qh) (var3));
-                          sb.field_e[14] = kj.a(wk.field_a, "", "explosion_ice_medium").a().a((qh) (var3));
-                          sb.field_e[15] = kj.a(wk.field_a, "", "explosion_ice_small").a().a((qh) (var3));
-                          sb.field_e[16] = kj.a(wk.field_a, "", "explosion_iron_large").a().a((qh) (var3));
-                          sb.field_e[17] = kj.a(wk.field_a, "", "explosion_iron_medium").a().a((qh) (var3));
-                          sb.field_e[18] = kj.a(wk.field_a, "", "explosion_iron_small").a().a((qh) (var3));
-                          sb.field_e[19] = kj.a(wk.field_a, "", "explosion_player").a().a((qh) (var3));
-                          sb.field_e[20] = kj.a(wk.field_a, "", "flame-cannon_loop_300-500ms").a().a((qh) (var3));
-                          sb.field_e[21] = kj.a(wk.field_a, "", "heavy-cannon").a().a((qh) (var3));
-                          sb.field_e[22] = kj.a(wk.field_a, "", "hex-cannon_70ms_loop").a().a((qh) (var3));
-                          sb.field_e[23] = kj.a(wk.field_a, "", "homing_loop_200ms").a().a((qh) (var3));
-                          sb.field_e[24] = kj.a(wk.field_a, "", "laser_70ms_loop").a().a((qh) (var3));
-                          sb.field_e[25] = kj.a(wk.field_a, "", "mega-laser_loop_500ms").a().a((qh) (var3));
-                          sb.field_e[26] = kj.a(wk.field_a, "", "mine_loop_200ms").a().a((qh) (var3));
-                          sb.field_e[27] = kj.a(wk.field_a, "", "narrowgun").a().a((qh) (var3));
-                          sb.field_e[28] = kj.a(wk.field_a, "", "nuke_explosion").a().a((qh) (var3));
-                          sb.field_e[29] = kj.a(wk.field_a, "", "powerup_invulnerability").a().a((qh) (var3));
-                          sb.field_e[30] = kj.a(wk.field_a, "", "powerup_phase_shield").a().a((qh) (var3));
-                          sb.field_e[31] = kj.a(wk.field_a, "", "powerup_shield").a().a((qh) (var3));
-                          sb.field_e[32] = kj.a(wk.field_a, "", "powerup_weapon").a().a((qh) (var3));
-                          sb.field_e[33] = kj.a(wk.field_a, "", "quad-cannon").a().a((qh) (var3));
-                          sb.field_e[34] = kj.a(wk.field_a, "", "super-cannon").a().a((qh) (var3));
-                          sb.field_e[35] = kj.a(wk.field_a, "", "thruster").a().a((qh) (var3));
-                          sb.field_e[36] = kj.a(wk.field_a, "", "title_explosion").a().a((qh) (var3));
-                          sb.field_e[37] = kj.a(wk.field_a, "", "title_shinesound").a().a((qh) (var3));
-                          sb.field_e[38] = kj.a(wk.field_a, "", "trigun").a().a((qh) (var3));
-                          sb.field_e[39] = kj.a(wk.field_a, "", "wavegun").a().a((qh) (var3));
-                          sb.field_e[40] = kj.a(wk.field_a, "", "hit").a().a((qh) (var3));
+                          sb.field_e[0] = kj.a(wk.field_a, "", "afterburner").a().resample((PcmResampler) (var3));
+                          sb.field_e[1] = kj.a(wk.field_a, "", "bounce-gun").a().resample((PcmResampler) (var3));
+                          sb.field_e[2] = kj.a(wk.field_a, "", "collision_asteroid").a().resample((PcmResampler) (var3));
+                          sb.field_e[3] = kj.a(wk.field_a, "", "collision_ice").a().resample((PcmResampler) (var3));
+                          sb.field_e[4] = kj.a(wk.field_a, "", "collision_iron").a().resample((PcmResampler) (var3));
+                          sb.field_e[5] = kj.a(wk.field_a, "", "combined-homer_loop_1000ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[6] = kj.a(wk.field_a, "", "combined-shooter_loop_1000ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[7] = kj.a(wk.field_a, "", "dual-laser_loop_100ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[8] = kj.a(wk.field_a, "", "enemy_shoot").a().resample((PcmResampler) (var3));
+                          sb.field_e[9] = kj.a(wk.field_a, "", "explosion_asteroid_large").a().resample((PcmResampler) (var3));
+                          sb.field_e[10] = kj.a(wk.field_a, "", "explosion_asteroid_medium").a().resample((PcmResampler) (var3));
+                          sb.field_e[11] = kj.a(wk.field_a, "", "explosion_asteroid_small").a().resample((PcmResampler) (var3));
+                          sb.field_e[12] = kj.a(wk.field_a, "", "explosion_enemy").a().resample((PcmResampler) (var3));
+                          sb.field_e[13] = kj.a(wk.field_a, "", "explosion_ice_large").a().resample((PcmResampler) (var3));
+                          sb.field_e[14] = kj.a(wk.field_a, "", "explosion_ice_medium").a().resample((PcmResampler) (var3));
+                          sb.field_e[15] = kj.a(wk.field_a, "", "explosion_ice_small").a().resample((PcmResampler) (var3));
+                          sb.field_e[16] = kj.a(wk.field_a, "", "explosion_iron_large").a().resample((PcmResampler) (var3));
+                          sb.field_e[17] = kj.a(wk.field_a, "", "explosion_iron_medium").a().resample((PcmResampler) (var3));
+                          sb.field_e[18] = kj.a(wk.field_a, "", "explosion_iron_small").a().resample((PcmResampler) (var3));
+                          sb.field_e[19] = kj.a(wk.field_a, "", "explosion_player").a().resample((PcmResampler) (var3));
+                          sb.field_e[20] = kj.a(wk.field_a, "", "flame-cannon_loop_300-500ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[21] = kj.a(wk.field_a, "", "heavy-cannon").a().resample((PcmResampler) (var3));
+                          sb.field_e[22] = kj.a(wk.field_a, "", "hex-cannon_70ms_loop").a().resample((PcmResampler) (var3));
+                          sb.field_e[23] = kj.a(wk.field_a, "", "homing_loop_200ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[24] = kj.a(wk.field_a, "", "laser_70ms_loop").a().resample((PcmResampler) (var3));
+                          sb.field_e[25] = kj.a(wk.field_a, "", "mega-laser_loop_500ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[26] = kj.a(wk.field_a, "", "mine_loop_200ms").a().resample((PcmResampler) (var3));
+                          sb.field_e[27] = kj.a(wk.field_a, "", "narrowgun").a().resample((PcmResampler) (var3));
+                          sb.field_e[28] = kj.a(wk.field_a, "", "nuke_explosion").a().resample((PcmResampler) (var3));
+                          sb.field_e[29] = kj.a(wk.field_a, "", "powerup_invulnerability").a().resample((PcmResampler) (var3));
+                          sb.field_e[30] = kj.a(wk.field_a, "", "powerup_phase_shield").a().resample((PcmResampler) (var3));
+                          sb.field_e[31] = kj.a(wk.field_a, "", "powerup_shield").a().resample((PcmResampler) (var3));
+                          sb.field_e[32] = kj.a(wk.field_a, "", "powerup_weapon").a().resample((PcmResampler) (var3));
+                          sb.field_e[33] = kj.a(wk.field_a, "", "quad-cannon").a().resample((PcmResampler) (var3));
+                          sb.field_e[34] = kj.a(wk.field_a, "", "super-cannon").a().resample((PcmResampler) (var3));
+                          sb.field_e[35] = kj.a(wk.field_a, "", "thruster").a().resample((PcmResampler) (var3));
+                          sb.field_e[36] = kj.a(wk.field_a, "", "title_explosion").a().resample((PcmResampler) (var3));
+                          sb.field_e[37] = kj.a(wk.field_a, "", "title_shinesound").a().resample((PcmResampler) (var3));
+                          sb.field_e[38] = kj.a(wk.field_a, "", "trigun").a().resample((PcmResampler) (var3));
+                          sb.field_e[39] = kj.a(wk.field_a, "", "wavegun").a().resample((PcmResampler) (var3));
+                          sb.field_e[40] = kj.a(wk.field_a, "", "hit").a().resample((PcmResampler) (var3));
                           if (pk.a(-12663, 0)) {
-                            sb.field_e[41] = kj.a(wk.field_a, "", "collect_ghost").a().a((qh) (var3));
-                            sb.field_e[42] = kj.a(wk.field_a, "", "eerie_creak1").a().a((qh) (var3));
-                            sb.field_e[43] = kj.a(wk.field_a, "", "eerie_creak2").a().a((qh) (var3));
-                            sb.field_e[44] = kj.a(wk.field_a, "", "eerie_creak3").a().a((qh) (var3));
-                            sb.field_e[45] = kj.a(wk.field_a, "", "eerie_creak4").a().a((qh) (var3));
-                            sb.field_e[46] = ad.a(mf.field_b, "", "heartbeat").b().a((qh) (var3));
-                            sb.field_e[47] = kj.a(wk.field_a, "", "howling1").a().a((qh) (var3));
-                            sb.field_e[48] = kj.a(wk.field_a, "", "howling2").a().a((qh) (var3));
-                            sb.field_e[49] = kj.a(wk.field_a, "", "howling3").a().a((qh) (var3));
-                            sb.field_e[50] = kj.a(wk.field_a, "", "howling4").a().a((qh) (var3));
-                            sb.field_e[51] = kj.a(wk.field_a, "", "static2").a().a((qh) (var3));
-                            sb.field_e[52] = kj.a(wk.field_a, "", "static3").a().a((qh) (var3));
-                            sb.field_e[53] = kj.a(wk.field_a, "", "static4").a().a((qh) (var3));
-                            sb.field_e[54] = kj.a(wk.field_a, "", "trans1").a().a((qh) (var3));
-                            sb.field_e[55] = kj.a(wk.field_a, "", "trans2").a().a((qh) (var3));
-                            sb.field_e[56] = kj.a(wk.field_a, "", "trans3").a().a((qh) (var3));
-                            sb.field_e[57] = ad.a(mf.field_b, "", "cyber_laugh1").b().a((qh) (var3));
-                            sb.field_e[58] = ad.a(mf.field_b, "", "cyber_laugh2").b().a((qh) (var3));
-                            sb.field_e[59] = ad.a(mf.field_b, "", "cyber_laugh4").b().a((qh) (var3));
-                            sb.field_e[60] = ad.a(mf.field_b, "", "cyber_laugh5_rev").b().a((qh) (var3));
+                            sb.field_e[41] = kj.a(wk.field_a, "", "collect_ghost").a().resample((PcmResampler) (var3));
+                            sb.field_e[42] = kj.a(wk.field_a, "", "eerie_creak1").a().resample((PcmResampler) (var3));
+                            sb.field_e[43] = kj.a(wk.field_a, "", "eerie_creak2").a().resample((PcmResampler) (var3));
+                            sb.field_e[44] = kj.a(wk.field_a, "", "eerie_creak3").a().resample((PcmResampler) (var3));
+                            sb.field_e[45] = kj.a(wk.field_a, "", "eerie_creak4").a().resample((PcmResampler) (var3));
+                            sb.field_e[46] = ad.a(mf.field_b, "", "heartbeat").b().resample((PcmResampler) (var3));
+                            sb.field_e[47] = kj.a(wk.field_a, "", "howling1").a().resample((PcmResampler) (var3));
+                            sb.field_e[48] = kj.a(wk.field_a, "", "howling2").a().resample((PcmResampler) (var3));
+                            sb.field_e[49] = kj.a(wk.field_a, "", "howling3").a().resample((PcmResampler) (var3));
+                            sb.field_e[50] = kj.a(wk.field_a, "", "howling4").a().resample((PcmResampler) (var3));
+                            sb.field_e[51] = kj.a(wk.field_a, "", "static2").a().resample((PcmResampler) (var3));
+                            sb.field_e[52] = kj.a(wk.field_a, "", "static3").a().resample((PcmResampler) (var3));
+                            sb.field_e[53] = kj.a(wk.field_a, "", "static4").a().resample((PcmResampler) (var3));
+                            sb.field_e[54] = kj.a(wk.field_a, "", "trans1").a().resample((PcmResampler) (var3));
+                            sb.field_e[55] = kj.a(wk.field_a, "", "trans2").a().resample((PcmResampler) (var3));
+                            sb.field_e[56] = kj.a(wk.field_a, "", "trans3").a().resample((PcmResampler) (var3));
+                            sb.field_e[57] = ad.a(mf.field_b, "", "cyber_laugh1").b().resample((PcmResampler) (var3));
+                            sb.field_e[58] = ad.a(mf.field_b, "", "cyber_laugh2").b().resample((PcmResampler) (var3));
+                            sb.field_e[59] = ad.a(mf.field_b, "", "cyber_laugh4").b().resample((PcmResampler) (var3));
+                            sb.field_e[60] = ad.a(mf.field_b, "", "cyber_laugh5_rev").b().resample((PcmResampler) (var3));
                           }
                           var4_ref2 = new gk(wk.field_a, mf.field_b);
                           wk.field_a = null;
@@ -3254,10 +3254,10 @@ public final class stellarshard extends rb implements cf {
                   rd.a((byte) -89, 30.0f, ak.a("", lg.field_e, bh.field_a, (byte) 51, am.field_e));
                   return;
                 }
-                rd.a((byte) -63, 20.0f, ak.a("", qh.field_f, PacketBuffer.field_n, (byte) 51, qd.field_e));
+                rd.a((byte) -63, 20.0f, ak.a("", PcmResampler.field_f, PacketBuffer.field_n, (byte) 51, qd.field_e));
                 return;
               }
-              rd.a((byte) -90, 10.0f, ak.a("", qh.field_f, mf.field_b, (byte) 51, qd.field_e));
+              rd.a((byte) -90, 10.0f, ak.a("", PcmResampler.field_f, mf.field_b, (byte) 51, qd.field_e));
               return;
             }
             rd.a((byte) -71, 8.0f, ak.a("", ma.field_o, wk.field_a, (byte) 51, hc.field_k));
@@ -4470,7 +4470,7 @@ public final class stellarshard extends rb implements cf {
                 var7_ref = SocketConnector.field_f;
               }
               if (e.field_e == 6) {
-                var7_ref = qh.field_h;
+                var7_ref = PcmResampler.field_h;
               }
               if (e.field_e == 7) {
                 var7_ref = we.field_e;

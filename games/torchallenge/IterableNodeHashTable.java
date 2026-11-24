@@ -210,7 +210,7 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void a(byte param0) {
-        fe var1 = cj.field_h[9];
+        PcmSample var1 = cj.field_h[9];
         int var2 = ab.field_g[9];
         var1.field_l = var1.field_k.length;
         if (param0 == -86) {

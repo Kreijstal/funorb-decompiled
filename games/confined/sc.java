@@ -3,7 +3,7 @@
  */
 abstract class sc {
     sd[] field_c;
-    static bi[] field_h;
+    static PcmSample[] field_h;
     static int[] field_i;
     static rf field_a;
     static String field_e;
@@ -274,7 +274,7 @@ abstract class sc {
     }
 
     static {
-        field_h = new bi[4];
+        field_h = new PcmSample[4];
         field_i = new int[8192];
         field_a = new rf();
         field_e = "Charge#cannon#This weapon is difficult to control,#since it takes time to charge and#will fire as soon as it is ready.";

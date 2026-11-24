@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ti extends rd {
-    static ko field_l;
+    static PcmSample field_l;
     static boolean field_o;
     private int field_n;
     private int field_k;
-    static ko field_m;
+    static PcmSample field_m;
     static String field_j;
 
     final static int a(int param0, CharSequence param1) {

@@ -6,7 +6,7 @@ abstract class fb {
     static String field_b;
     static String field_d;
     fq field_a;
-    static ko field_c;
+    static PcmSample field_c;
 
     public static void a(byte param0) {
         field_b = null;

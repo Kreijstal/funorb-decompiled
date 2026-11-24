@@ -31,7 +31,7 @@ final class BufferedSocket implements Runnable {
         int var9 = 0;
         int var13 = stellarshard.field_B;
         int var8Lifetime1;
-        qh.field_a = AccountServiceResult.a("commonui", (byte) -123, param2, "frame_top");
+        PcmResampler.field_a = AccountServiceResult.a("commonui", (byte) -123, param2, "frame_top");
         DirectByteStorage.field_g = AccountServiceResult.a("commonui", (byte) 122, param2, "frame_bottom");
         ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
         ImageProducerRasterBuffer.field_i = AccountServiceResult.a("commonui", (byte) 85, param2, "button");

@@ -8,18 +8,18 @@ final class PcmSample extends AbstractAudioSample {
     byte[] field_n;
     int field_p;
 
-    final PcmSample a(qh param0) {
-        this.field_n = param0.a(85, this.field_n);
-        this.field_m = param0.a(this.field_m, 15);
+    final PcmSample resample(PcmResampler param0) {
+        this.field_n = param0.resampleBytes(85, this.field_n);
+        this.field_m = param0.scaleRate(this.field_m, 15);
         if (this.field_l != this.field_p) {
-          this.field_l = param0.b(this.field_l, -10689);
-          this.field_p = param0.b(this.field_p, -10689);
+          this.field_l = param0.scalePosition(this.field_l, -10689);
+          this.field_p = param0.scalePosition(this.field_p, -10689);
           if (this.field_l == this.field_p) {
             this.field_l = this.field_l - 1;
           }
           return this;
         }
-        int dupTemp$0 = param0.b(this.field_l, -10689);
+        int dupTemp$0 = param0.scalePosition(this.field_l, -10689);
         this.field_p = dupTemp$0;
         this.field_l = dupTemp$0;
         return this;

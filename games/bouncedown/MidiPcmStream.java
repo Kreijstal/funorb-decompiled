@@ -794,7 +794,7 @@ final class MidiPcmStream extends PcmStream {
         kl stackOut_3_0;
         kl var5;
         int var6_int;
-        ue var6;
+        PcmSample var6;
         kl var7;
         kl var8;
         int var9;

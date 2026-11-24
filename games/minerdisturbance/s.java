@@ -52,7 +52,7 @@ final class s extends hc {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!wm.field_f.a(0)) {
+          if (!PcmResampler.field_f.a(0)) {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }

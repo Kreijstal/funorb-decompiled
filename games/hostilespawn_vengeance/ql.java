@@ -141,7 +141,7 @@ class ql {
         int stackIn_64_1 = 0;
         int stackIn_68_0 = 0;
         int stackIn_71_1 = 0;
-        jb stackIn_78_0 = null;
+        PcmSample stackIn_78_0 = null;
         int stackIn_90_0 = 0;
         RuntimeException stackIn_102_0 = null;
         StringBuilder stackIn_102_1 = null;
@@ -164,7 +164,7 @@ class ql {
         int var12 = 0;
         int var13 = 0;
         int var14_int = 0;
-        jb var14 = null;
+        PcmSample var14 = null;
         int var15 = 0;
         int var11Lifetime1;
         int var11Lifetime2;

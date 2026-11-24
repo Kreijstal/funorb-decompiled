@@ -9,7 +9,7 @@ final class wc implements uj {
 
     final static boolean b(byte param0) {
         int var1 = -108 / ((-67 - param0) / 51);
-        return !wm.field_f.a(0) ? true : false;
+        return !PcmResampler.field_f.a(0) ? true : false;
     }
 
     public final void a(boolean param0) {

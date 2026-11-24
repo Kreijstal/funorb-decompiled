@@ -37,8 +37,8 @@ final class fd extends IntrusiveNode {
         if (param0) {
           return false;
         }
-        ib var3 = (ib) null;
-        fd.a(-68, (ib) null, false);
+        PcmSample var3 = (PcmSample) null;
+        fd.a(-68, (PcmSample) null, false);
         return false;
     }
 
@@ -53,15 +53,15 @@ final class fd extends IntrusiveNode {
     public static void b(byte param0) {
         field_q = null;
         if (param0 != 3) {
-          ib var2 = (ib) null;
-          fd.a(21, (ib) null, false);
+          PcmSample var2 = (PcmSample) null;
+          fd.a(21, (PcmSample) null, false);
           field_g = null;
           return;
         }
         field_g = null;
     }
 
-    final static void a(int param0, ib param1, boolean param2) {
+    final static void a(int param0, PcmSample param1, boolean param2) {
         try {
           gh.a(RawPcmStream.a(param1, 100, param0), (byte) -109);
           if (param2) {

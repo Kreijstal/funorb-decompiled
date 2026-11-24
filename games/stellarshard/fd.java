@@ -56,9 +56,9 @@ final class fd extends si {
     final static boolean d(byte param0) {
         if (param0 != -21) {
           field_mb = false;
-          return qh.field_g;
+          return PcmResampler.field_g;
         }
-        return qh.field_g;
+        return PcmResampler.field_g;
     }
 
     static {

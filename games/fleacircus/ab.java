@@ -4,7 +4,7 @@
 final class ab {
     static int field_b;
     static int field_d;
-    static sf field_a;
+    static PcmSample field_a;
     static int[] field_c;
 
     final static String a(int param0, byte[] param1) {
@@ -38,7 +38,7 @@ final class ab {
         field_c = null;
         field_a = null;
         if (param0 != 0) {
-          field_a = (sf) null;
+          field_a = (PcmSample) null;
         }
     }
 

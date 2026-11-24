@@ -119,7 +119,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final void a(ue param0, int param1, int param2) {
+    final void a(PcmSample param0, int param1, int param2) {
         this.a(RawPcmStream.a(param0, param1, param2));
     }
 

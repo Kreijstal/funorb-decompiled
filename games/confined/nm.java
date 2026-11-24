@@ -9,7 +9,7 @@ final class nm extends gk {
     private double field_E;
     static String field_D;
     private dc field_H;
-    static bi field_F;
+    static PcmSample field_F;
     static int field_I;
     private boolean field_B;
 
@@ -60,7 +60,7 @@ final class nm extends gk {
         }
     }
 
-    nm(pm param0, bi param1, dc param2, int param3) {
+    nm(pm param0, PcmSample param1, dc param2, int param3) {
         super(param0, param1);
         try {
           this.field_n.e(param1.field_o.length * param3 >> 8);

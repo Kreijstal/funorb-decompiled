@@ -3,7 +3,7 @@
  */
 abstract class ab extends og {
     private int field_B;
-    static ko field_z;
+    static PcmSample field_z;
     static te field_D;
     private ol field_E;
     boolean field_C;

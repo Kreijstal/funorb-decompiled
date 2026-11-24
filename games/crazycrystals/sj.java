@@ -5,7 +5,7 @@ import java.util.*;
 
 final class sj {
     static int field_c;
-    static ko field_d;
+    static PcmSample field_d;
     int field_e;
     int field_a;
     static java.util.zip.CRC32 field_b;

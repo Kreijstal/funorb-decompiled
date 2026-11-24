@@ -16,7 +16,7 @@ final class ub implements uj {
     }
 
     public final void a(boolean param0) {
-        wm.field_e = true;
+        PcmResampler.field_e = true;
         if (param0) {
           field_a = (String[]) null;
           vi.field_h = true;

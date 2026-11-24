@@ -6,7 +6,7 @@ final class ji {
     static AccountServiceResult field_d;
     static String field_b;
     static jb field_e;
-    static bi field_a;
+    static PcmSample field_a;
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         di.a(param3, this.field_c, (byte) -38, param1, param4, param0);
@@ -101,7 +101,7 @@ final class ji {
         field_d = null;
         field_a = null;
         if (param0 <= 51) {
-          field_a = (bi) null;
+          field_a = (PcmSample) null;
         }
         field_e = null;
         field_b = null;

@@ -3,7 +3,7 @@
  */
 final class fg extends eh {
     static String field_nb;
-    static bi field_mb;
+    static PcmSample field_mb;
     String field_ob;
     int field_lb;
     String field_kb;

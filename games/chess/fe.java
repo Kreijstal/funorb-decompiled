@@ -11,11 +11,11 @@ final class fe {
     private kl field_b;
     private kl field_c;
 
-    final lm a(int param0, int[] param1, byte param2) {
+    final PcmSample a(int param0, int[] param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        lm stackIn_2_0 = null;
-        lm stackIn_5_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -54,10 +54,10 @@ final class fe {
         field_d = null;
     }
 
-    final lm a(String param0, boolean param1, String param2) {
+    final PcmSample a(String param0, boolean param1, String param2) {
         RuntimeException var4 = null;
         java.applet.Applet var5 = null;
-        lm stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -134,13 +134,13 @@ final class fe {
         }
     }
 
-    private final lm a(String param0, int param1, String param2, int[] param3) {
+    private final PcmSample a(String param0, int param1, String param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
-        lm stackIn_5_0 = null;
-        lm stackIn_10_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -153,10 +153,10 @@ final class fe {
           var5_int = this.field_f.a(param0, 0);
           if (0 > var5_int) {
             stackIn_2_0 = null;
-            return (lm) (stackIn_2_0);
+            return (PcmSample) (stackIn_2_0);
           }
           if (param1 != 1) {
-            stackIn_5_0 = (lm) null;
+            stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
           var6 = this.field_f.a(param2, 7, var5_int);
@@ -241,10 +241,10 @@ final class fe {
         }
     }
 
-    final lm a(String param0, String param1, int param2) {
+    final PcmSample a(String param0, String param1, int param2) {
         RuntimeException var4 = null;
-        lm stackIn_2_0 = null;
-        lm stackIn_4_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -256,7 +256,7 @@ final class fe {
             stackIn_4_0 = this.a((int[]) null, param1, 21887, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (lm) null;
+          stackIn_2_0 = (PcmSample) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -278,10 +278,10 @@ final class fe {
         }
     }
 
-    private final lm a(int[] param0, byte param1, int param2, int param3) {
-        lm stackIn_2_0 = null;
+    private final PcmSample a(int[] param0, byte param1, int param2, int param3) {
+        PcmSample stackIn_2_0 = null;
         Object stackIn_13_0 = null;
-        lm stackIn_19_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -289,14 +289,14 @@ final class fe {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        lm var8 = null;
+        PcmSample var8 = null;
         hi var9 = null;
-        lm var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param2 ^ ((536875007 & param3) << 4 | param3 >>> 12);
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (lm) (this.field_c.a(41, var6));
+          var8 = (PcmSample) (this.field_c.a(41, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -313,7 +313,7 @@ final class fe {
             var9 = hi.a(this.field_f, param3, param2);
             if (var9 == null) {
               stackIn_13_0 = null;
-              return (lm) (stackIn_13_0);
+              return (PcmSample) (stackIn_13_0);
             }
             this.field_b.a(param1 ^ -97, var6, var9);
           }
@@ -339,14 +339,14 @@ final class fe {
         }
     }
 
-    private final lm a(int[] param0, String param1, int param2, String param3) {
+    private final PcmSample a(int[] param0, String param1, int param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         java.applet.Applet var7 = null;
         Object stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        lm stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -359,7 +359,7 @@ final class fe {
           var5_int = this.field_a.a(param1, 0);
           if (var5_int < 0) {
             stackIn_2_0 = null;
-            return (lm) (stackIn_2_0);
+            return (PcmSample) (stackIn_2_0);
           }
           if (param2 != 21887) {
             var7 = (java.applet.Applet) null;
@@ -371,7 +371,7 @@ final class fe {
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
-          return (lm) (stackIn_7_0);
+          return (PcmSample) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -398,27 +398,27 @@ final class fe {
         }
     }
 
-    private final lm a(boolean param0, int param1, int param2, int[] param3) {
+    private final PcmSample a(boolean param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        lm var8 = null;
+        PcmSample var8 = null;
         ck var9 = null;
-        lm var10 = null;
-        lm stackIn_4_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_11_0 = null;
-        lm stackIn_15_0 = null;
+        PcmSample stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lm var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param1 ^ (param2 >>> 12 | param2 << 4 & 65524);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (lm) (this.field_c.a(92, var6));
+          var8 = (PcmSample) (this.field_c.a(92, var6));
           if (!param0) {
             fe.a(8, 56, 11);
           }
@@ -429,12 +429,12 @@ final class fe {
           if (param3 != null &&
             param3[0] <= 0) {
             stackIn_8_0 = null;
-            return (lm) (stackIn_8_0);
+            return (PcmSample) (stackIn_8_0);
           }
           var9 = ck.a(this.field_a, param2, param1);
           if (var9 == null) {
             stackIn_11_0 = null;
-            return (lm) (stackIn_11_0);
+            return (PcmSample) (stackIn_11_0);
           }
           var10 = var9.a();
           var8Lifetime1 = var10;
@@ -474,10 +474,10 @@ final class fe {
         }
     }
 
-    final lm a(int[] param0, int param1, int param2) {
+    final PcmSample a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        lm stackIn_2_0 = null;
-        lm stackIn_7_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

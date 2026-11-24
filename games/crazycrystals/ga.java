@@ -16,7 +16,7 @@ class ga extends pc {
     static am field_B;
     static int[] field_J;
     static dl field_E;
-    static ko field_H;
+    static PcmSample field_H;
 
     private final void l(int param0) {
         int var2 = 0;

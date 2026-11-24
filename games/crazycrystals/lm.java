@@ -9,7 +9,7 @@ final class lm {
     String field_b;
     String field_f;
     static dl[] field_g;
-    static ko field_a;
+    static PcmSample field_a;
     static sj field_e;
     static f[] field_d;
 

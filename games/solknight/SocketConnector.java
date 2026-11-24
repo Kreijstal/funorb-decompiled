@@ -17,9 +17,9 @@ abstract class SocketConnector {
         return new java.net.Socket(this.field_c, this.field_b);
     }
 
-    final static ud a(byte param0, sh param1, int param2) {
+    final static ud a(byte param0, PcmSample param1, int param2) {
         RuntimeException var3 = null;
-        sh var4 = null;
+        PcmSample var4 = null;
         ud stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -27,8 +27,8 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -76) {
-            var4 = (sh) null;
-            SocketConnector.a((byte) -126, (sh) null, -3);
+            var4 = (PcmSample) null;
+            SocketConnector.a((byte) -126, (PcmSample) null, -3);
           }
           stackIn_3_0 = qb.a(true, RawPcmStream.a(param1, 100, param2));
           return stackIn_3_0;

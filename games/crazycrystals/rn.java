@@ -7,7 +7,7 @@ final class rn extends rd {
     static int[] field_j;
     static jg[] field_o;
     private int field_m;
-    static ko field_p;
+    static PcmSample field_p;
     static bf field_r;
     static String field_q;
     static vc field_k;

@@ -6,7 +6,7 @@ final class fh {
     private int[] field_d;
     static String field_e;
     static String field_c;
-    static bi field_b;
+    static PcmSample field_b;
 
     public static void clearStaticReferences(boolean param0) {
         if (param0) {
@@ -16,7 +16,7 @@ final class fh {
           field_a = (byte[][][]) null;
           return;
         }
-        field_b = (bi) null;
+        field_b = (PcmSample) null;
         field_b = null;
         field_c = null;
         field_e = null;

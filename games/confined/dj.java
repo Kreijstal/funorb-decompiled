@@ -355,7 +355,7 @@ final class dj extends ee {
         boolean stackIn_200_12;
         int stackIn_205_0 = 0;
         int stackIn_205_1 = 0;
-        bi stackIn_206_2 = null;
+        PcmSample stackIn_206_2 = null;
         int stackIn_222_0 = 0;
         Object stackIn_239_0;
         Object stackIn_239_5;

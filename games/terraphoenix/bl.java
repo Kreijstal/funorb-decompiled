@@ -248,7 +248,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 115, "efficency");
                 if (null != var2) {
-                  m.field_b = ll.a(0, var2);
+                  PcmResampler.field_b = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 126, "basescore");
                 if (null != var2) {
@@ -400,7 +400,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 92, "notenoughtus");
                 if (var2 != null) {
-                  m.field_h = ll.a(param0 - 96, var2);
+                  PcmResampler.field_h = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 76, "outofammo");
                 if (var2 != null) {
@@ -2220,7 +2220,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 106, "incgren");
                 if (var2 != null) {
-                  m.field_a = ll.a(0, var2);
+                  PcmResampler.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "backtomissel");
                 if (var2 != null) {

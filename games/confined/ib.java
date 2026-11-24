@@ -17,7 +17,7 @@ final class ib extends fj {
     static long[][] field_T;
     private nf field_K;
     static int field_W;
-    static bi field_J;
+    static PcmSample field_J;
     static int[] field_M;
 
     public static void clearStaticReferences(byte param0) {

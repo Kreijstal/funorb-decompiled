@@ -3,7 +3,7 @@
  */
 final class lp {
     static byte[][][] field_a;
-    static ko field_b;
+    static PcmSample field_b;
     static String field_c;
 
     public static void a(int param0) {

@@ -7,7 +7,7 @@ final class lk {
     static ej field_d;
     static String field_c;
     static int[] field_b;
-    static bi[] field_e;
+    static PcmSample[] field_e;
     private static String field_z;
 
     public static void a(boolean param0) {
@@ -28,7 +28,7 @@ final class lk {
         field_z = "lk.A(";
         field_f = "Checking";
         field_a = "Miniboss? Is that what you call me?";
-        field_e = new bi[4];
+        field_e = new PcmSample[4];
         field_c = "You drop a few power-ups if you die. Try to pick them up again!";
     }
 }

@@ -362,7 +362,7 @@ final class lk extends UiComponent {
         if (param0 != 10) {
           lk.k(67);
         }
-        stackIn_7_0 = (10 <= bh.field_t) && (!ci.field_f) && (!qh.j(32391));
+        stackIn_7_0 = (10 <= bh.field_t) && (!PcmResampler.field_f) && (!qh.j(32391));
         return stackIn_7_0;
     }
 

@@ -62,7 +62,7 @@ final class b extends IntrusiveNode {
         return var1;
     }
 
-    final ji a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -112,7 +112,7 @@ final class b extends IntrusiveNode {
         this.field_V = null;
         var12 = this.field_I;
         this.field_I = null;
-        return new ji(this.field_B, var12, this.field_u, this.field_H, this.field_w);
+        return new PcmSample(this.field_B, var12, this.field_u, this.field_H, this.field_w);
     }
 
     private final static boolean a(ResourceArchive param0) {
@@ -127,7 +127,7 @@ final class b extends IntrusiveNode {
         return true;
     }
 
-    final ji a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -159,7 +159,7 @@ final class b extends IntrusiveNode {
           }
         }
         this.field_V = null;
-        return new ji(this.field_B, var1, this.field_u, this.field_H, this.field_w);
+        return new PcmSample(this.field_B, var1, this.field_u, this.field_H, this.field_w);
     }
 
     final static int readBit() {

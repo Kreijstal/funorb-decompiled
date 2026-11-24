@@ -769,7 +769,7 @@ public final class MinerDisturbance extends ob {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameRemainder1 = true;
           if (vi.field_h ||
-            wm.field_e) {
+            PcmResampler.field_e) {
             SoftwareRasterizer.d();
             decompiledFrameRemainder1 = (var8 != 0);
           }
@@ -4789,7 +4789,7 @@ public final class MinerDisturbance extends ob {
           hn.a(param0 - 1);
           CipherPacketBuffer.clearStaticReferences(false);
           c.clearStaticReferences((byte) -73);
-          wm.a(param0 - 8);
+          PcmResampler.a(param0 - 8);
           ql.b(0);
           pk.a(-94);
           DualLinkNode.a(-483);

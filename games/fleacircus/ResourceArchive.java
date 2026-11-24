@@ -17,7 +17,7 @@ final class ResourceArchive {
     static ed field_k;
     static boolean[] field_j;
     static String field_e;
-    static sf field_n;
+    static PcmSample field_n;
 
     private final synchronized boolean a(int[] param0, int param1, int param2, int param3) {
         Object[] array$0 = null;
@@ -498,7 +498,7 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 37) {
-            field_n = (sf) null;
+            field_n = (PcmSample) null;
           }
           if (!this.b((byte) -111)) {
             return false;

@@ -145,7 +145,7 @@ final class h extends ee {
         this.field_T = new double[3];
         this.field_X = new hm((pm) (this), ki.field_a);
         try {
-          this.field_Q = new kh((pm) (this), (bi) null, 0);
+          this.field_Q = new kh((pm) (this), (PcmSample) null, 0);
           this.field_L = param1.field_L;
           this.field_G = param1.field_G;
           this.field_bb = param2;

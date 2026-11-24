@@ -8,8 +8,8 @@ final class e extends ei {
     private String field_p;
 
     final static void e(int param0) {
-        if (null != ng.field_c) {
-          ng.field_c.a((byte) -20);
+        if (null != PcmResampler.field_c) {
+          PcmResampler.field_c.a((byte) -20);
           if (null == af.field_g) {
             if (param0 == -20480) {
               rb.a((byte) -102);

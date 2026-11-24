@@ -32,7 +32,7 @@ final class ik extends wi {
     private dd field_E;
     private int field_N;
 
-    final static pd a(sf param0, byte param1) {
+    final static pd a(PcmSample param0, byte param1) {
         RuntimeException var2 = null;
         pd stackIn_2_0 = null;
         pd stackIn_4_0 = null;

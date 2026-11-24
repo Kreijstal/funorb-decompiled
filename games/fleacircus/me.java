@@ -7,7 +7,7 @@ final class me implements ComponentLayout {
     static String field_b;
     private fa field_j;
     static String field_c;
-    static sf field_k;
+    static PcmSample field_k;
     static String field_a;
     static String field_f;
     private int field_h;

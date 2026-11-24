@@ -5,7 +5,7 @@ abstract class kc {
     static String field_g;
     static qk field_c;
     static fh field_a;
-    static sf field_e;
+    static PcmSample field_e;
     static int field_f;
     static int field_b;
     static ResourceArchive field_d;

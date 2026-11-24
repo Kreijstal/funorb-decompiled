@@ -3,7 +3,7 @@
  */
 abstract class rd extends oh {
     static boolean field_h;
-    static ko field_i;
+    static PcmSample field_i;
     static PlatformTaskDispatcher field_g;
     static int field_f;
 
@@ -143,7 +143,7 @@ abstract class rd extends oh {
             }
           }
           if (param1 > -80) {
-            field_i = (ko) null;
+            field_i = (PcmSample) null;
           }
           stackIn_14_0 = var4;
           return stackIn_14_0;

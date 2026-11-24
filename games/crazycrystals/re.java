@@ -5,7 +5,7 @@ final class re extends ue {
     int field_f;
     private int field_l;
     private int[] field_t;
-    static ko field_h;
+    static PcmSample field_h;
     static String field_p;
     private int field_q;
     static String field_j;

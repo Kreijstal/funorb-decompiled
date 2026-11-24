@@ -4,7 +4,7 @@
 abstract class tk {
     static int field_b;
     static al field_f;
-    static bi[] field_c;
+    static PcmSample[] field_c;
     static String[] field_e;
     static od field_a;
     static String field_d;
@@ -47,7 +47,7 @@ abstract class tk {
     static {
         field_b = 0;
         field_f = new al("");
-        field_c = new bi[13];
+        field_c = new PcmSample[13];
         field_d = "Level";
         field_g = 0;
     }

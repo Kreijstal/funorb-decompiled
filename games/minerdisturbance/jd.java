@@ -6,9 +6,9 @@ final class jd {
     private int field_c;
     private ve[] field_b;
 
-    final ji a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new ji(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     final static jd a(ResourceArchive param0, String param1, String param2) {

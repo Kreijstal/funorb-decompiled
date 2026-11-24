@@ -6,9 +6,9 @@ final class fk {
     private int field_a;
     private int field_b;
 
-    final bi a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new bi(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
     final static fk a(mi param0, int param1, int param2) {

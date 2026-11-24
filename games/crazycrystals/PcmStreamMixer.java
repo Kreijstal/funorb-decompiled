@@ -33,7 +33,7 @@ final class PcmStreamMixer extends PcmStream {
         this.field_l.addFirst(93, param0);
     }
 
-    final void a(ko param0, int param1, int param2, int param3) {
+    final void a(PcmSample param0, int param1, int param2, int param3) {
         this.b(RawPcmStream.a(param0, param1, param2, param3));
     }
 

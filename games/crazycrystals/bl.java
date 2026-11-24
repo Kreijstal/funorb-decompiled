@@ -233,7 +233,7 @@ final class bl extends IntrusiveNode {
         }
     }
 
-    final ko a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -283,7 +283,7 @@ final class bl extends IntrusiveNode {
         this.field_B = null;
         var12 = this.field_C;
         this.field_C = null;
-        return new ko(this.field_H, var12, this.field_D, this.field_k, this.field_r);
+        return new PcmSample(this.field_H, var12, this.field_D, this.field_k, this.field_r);
     }
 
     private final static void a(byte[] param0, int param1) {
@@ -336,7 +336,7 @@ final class bl extends IntrusiveNode {
         field_L = null;
     }
 
-    final ko a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -368,7 +368,7 @@ final class bl extends IntrusiveNode {
           }
         }
         this.field_B = null;
-        return new ko(this.field_H, var1, this.field_D, this.field_k, this.field_r);
+        return new PcmSample(this.field_H, var1, this.field_D, this.field_k, this.field_r);
     }
 
     private bl(byte[] param0) throws IOException {

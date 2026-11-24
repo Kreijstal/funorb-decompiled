@@ -24,10 +24,10 @@ final class pl extends IntrusiveNode {
     dk field_A;
     int field_p;
     static String field_s;
-    ko field_t;
+    PcmSample field_t;
     int field_w;
     static dl[] field_B;
-    static ko field_h;
+    static PcmSample field_h;
 
     final void d(int param0) {
         this.field_v = null;

@@ -14,7 +14,7 @@ abstract class ah extends ee {
     int field_S;
     private int field_V;
 
-    ah(hn param0, double param1, double param2, double param3, ee param4, bi param5) {
+    ah(hn param0, double param1, double param2, double param3, ee param4, PcmSample param5) {
         super(param0, param4.field_E, param4.field_t, param4.field_D, param1, param2);
         this.field_V = 0;
         this.field_S = 1;
@@ -54,7 +54,7 @@ abstract class ah extends ee {
         return true;
     }
 
-    ah(hn param0, ee param1, double param2, double param3, double param4, double[] param5, double param6, double param7, double param8, bi param9) {
+    ah(hn param0, ee param1, double param2, double param3, double param4, double[] param5, double param6, double param7, double param8, PcmSample param9) {
         super(param0, param1.field_E, param1.field_t, param1.field_D, param2, param3);
         double var17_double = 0.0;
         double var19 = 0.0;
@@ -241,7 +241,7 @@ abstract class ah extends ee {
         }
     }
 
-    ah(hn param0, dj param1, double param2, double param3, double param4, bi param5) {
+    ah(hn param0, dj param1, double param2, double param3, double param4, PcmSample param5) {
         super(param0, param1.field_E, param1.field_t, param1.field_D, param2, param3);
         double[] var13 = null;
         double[] var12 = null;

@@ -127,7 +127,7 @@ final class kn {
         int var61Lifetime3;
         var62 = Confined.field_J ? 1 : 0;
         try {
-          var64 = new kh((pm) null, (bi) null, 0);
+          var64 = new kh((pm) null, (PcmSample) null, 0);
           var11 = 32.0 * param4.field_R;
           if (param5 != -1212126616) {
             var63 = (vg) null;

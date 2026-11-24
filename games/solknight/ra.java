@@ -54,9 +54,9 @@ final class ra {
         return var3;
     }
 
-    final sh b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new sh(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     final static ra a(Archive param0, String param1, String param2) {

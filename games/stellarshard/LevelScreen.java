@@ -1508,7 +1508,7 @@ final class LevelScreen extends ib {
             qj.field_a.a(SocketConnector.field_f, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
             e.field_g[6].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(qh.field_h, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime1, 16777215, -1);
+            qj.field_a.a(PcmResampler.field_h, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime1, 16777215, -1);
             e.field_g[7].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
             qj.field_a.a(we.field_e, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime1, 16777215, -1);

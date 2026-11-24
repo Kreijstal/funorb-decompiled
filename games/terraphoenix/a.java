@@ -26,7 +26,7 @@ final class a {
         if (param3 <= 32) {
           return -113;
         }
-        return m.a(1);
+        return PcmResampler.a(1);
     }
 
     final static boolean a(String param0, int param1, String param2) {

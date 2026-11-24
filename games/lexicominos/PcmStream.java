@@ -3,7 +3,7 @@
  */
 abstract class PcmStream extends IntrusiveNode {
     volatile boolean field_j;
-    kh field_k;
+    AbstractAudioSample field_k;
     PcmStream field_i;
     int field_h;
 

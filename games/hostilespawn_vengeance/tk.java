@@ -59,7 +59,7 @@ final class tk {
         }
     }
 
-    final static void a(int param0, jb[] param1, int param2, boolean param3) {
+    final static void a(int param0, PcmSample[] param1, int param2, boolean param3) {
         try {
           if (!param3) {
             field_d = 29;

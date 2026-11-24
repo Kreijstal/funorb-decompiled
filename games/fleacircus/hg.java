@@ -8,8 +8,8 @@ final class hg extends IntrusiveNode {
     int field_m;
     static ob field_i;
     static int[] field_q;
-    static sf field_n;
-    static sf field_k;
+    static PcmSample field_n;
+    static PcmSample field_k;
     static String[] field_p;
 
     final static boolean a(String param0, int param1) {
@@ -76,7 +76,7 @@ final class hg extends IntrusiveNode {
         field_l = null;
         field_o = null;
         if (param0 < 104) {
-          field_n = (sf) null;
+          field_n = (PcmSample) null;
         }
         field_q = null;
         field_n = null;

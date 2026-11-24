@@ -3,7 +3,7 @@
  */
 final class jc {
     static boolean field_b;
-    static ko field_a;
+    static PcmSample field_a;
     private static String field_z;
 
     public static void a(int param0) {

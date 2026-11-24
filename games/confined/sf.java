@@ -10,7 +10,7 @@ final class sf extends IntrusiveNode {
     static java.awt.Frame field_o;
     int field_u;
     static String field_s;
-    static bi field_p;
+    static PcmSample field_p;
     int field_n;
 
     final static void c(int param0) {
@@ -92,7 +92,7 @@ final class sf extends IntrusiveNode {
         int var3 = Confined.field_J ? 1 : 0;
         int var2Lifetime1;
         if (param1 > -58) {
-          field_p = (bi) null;
+          field_p = (PcmSample) null;
           gk.field_u = null;
           we.field_k = 0;
           ol.field_a = null;

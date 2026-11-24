@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    static bi field_b;
+    static PcmSample field_b;
     static int[] field_c;
     static String field_d;
     static String field_a;

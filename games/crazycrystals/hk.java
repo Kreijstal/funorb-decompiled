@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class hk extends pb {
     static jp field_d;
-    static ko field_e;
+    static PcmSample field_e;
 
     hk() {
     }
@@ -41,7 +41,7 @@ abstract class hk extends pb {
 
     final int a(byte param0, boolean param1) {
         if (param0 >= -53) {
-          field_e = (ko) null;
+          field_e = (PcmSample) null;
           return 30;
         }
         return 30;
@@ -62,7 +62,7 @@ abstract class hk extends pb {
         field_d = null;
         field_e = null;
         if (param0 != 6388) {
-          field_e = (ko) null;
+          field_e = (PcmSample) null;
         }
     }
 

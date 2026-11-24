@@ -11,7 +11,7 @@ final class hf {
     int field_c;
     static int[] field_d;
     static int field_b;
-    static sf field_g;
+    static PcmSample field_g;
 
     public static void clearStaticReferences(int param0) {
         field_g = null;

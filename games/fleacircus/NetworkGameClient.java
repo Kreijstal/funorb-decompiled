@@ -709,7 +709,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 } else {
                   of.field_c = aj.field_w;
                   ii.a((byte) -88);
-                  ci.field_f = false;
+                  PcmResampler.field_f = false;
                   bh.field_t = 10;
                 }
               }
@@ -718,7 +718,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 4) {
             if (!va.field_m) {
               bh.field_t = 10;
-              ci.field_f = true;
+              PcmResampler.field_f = true;
             } else {
               hi.a((byte) -38, BoundedRandomAccessFile.getApplet((byte) -113));
             }

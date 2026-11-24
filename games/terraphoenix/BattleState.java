@@ -713,7 +713,7 @@ final class BattleState {
                   if (this.field_q.field_jb < var8 && (!(-10 + var8 <= this.field_q.field_jb) ||
                     this.field_m ||
                     !(10 <= this.field_q.field_jb))) {
-                    var3 = m.field_h;
+                    var3 = PcmResampler.field_h;
                   }
                   if (!this.field_m &&
                     this.field_q.field_nb.field_c <= 0 &&

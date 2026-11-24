@@ -5,7 +5,7 @@ final class th extends ah {
     static String[] field_eb;
     static String field_fb;
     private oi field_db;
-    static bi field_bb;
+    static PcmSample field_bb;
     static volatile boolean field_cb;
 
     th(hn param0, dj param1) {
@@ -71,7 +71,7 @@ final class th extends ah {
           this.field_ab.a((byte) 91, var17);
           var8 = var17[9];
           if (param2 >= -5) {
-            field_bb = (bi) null;
+            field_bb = (PcmSample) null;
           }
           var10 = var17[10];
           var12 = var17[11];

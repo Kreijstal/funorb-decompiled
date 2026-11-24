@@ -8,7 +8,7 @@ final class gf {
     static String field_b;
     private static int field_c;
     static String field_f;
-    static sf field_g;
+    static PcmSample field_g;
 
     final synchronized static byte[] a(int param0, int param1) {
         int fieldTemp$2 = 0;

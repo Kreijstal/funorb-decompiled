@@ -3,7 +3,7 @@
  */
 final class ri {
     static od field_c;
-    static bi field_b;
+    static PcmSample field_b;
     static String[] field_a;
 
     public static void a(byte param0) {

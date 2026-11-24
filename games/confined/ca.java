@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca extends IntrusiveNode {
-    static bi field_r;
+    static PcmSample field_r;
     int[] field_p;
     int field_m;
     static String field_q;

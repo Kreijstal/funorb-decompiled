@@ -13,26 +13,26 @@ final class me {
     static int field_d;
     static int field_b;
 
-    private final sh a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        sh var8 = null;
+        PcmSample var8 = null;
         ra var9 = null;
-        sh var10 = null;
-        sh stackIn_2_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
-        sh stackIn_15_0 = null;
+        PcmSample stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sh var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param3 ^ (param2 >>> 12 | 65533 & param2 << 4);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (sh) (this.field_i.a(true, var6));
+          var8 = (PcmSample) (this.field_i.a(true, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -40,7 +40,7 @@ final class me {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_6_0 = null;
-            return (sh) (stackIn_6_0);
+            return (PcmSample) (stackIn_6_0);
           }
           if (param1 != 1264444880) {
             this.field_c = (Archive) null;
@@ -80,10 +80,10 @@ final class me {
         field_f = null;
     }
 
-    final sh a(int[] param0, int param1, int param2) {
+    final PcmSample a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        sh stackIn_2_0 = null;
-        sh stackIn_6_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -112,26 +112,26 @@ final class me {
         }
     }
 
-    private final sh a(int param0, int param1, int[] param2, byte param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        sh var8 = null;
+        PcmSample var8 = null;
         sl var9 = null;
-        sh stackIn_2_0 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
-        sh stackIn_17_0 = null;
-        sh stackIn_19_0 = null;
+        PcmSample stackIn_17_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sh var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param1 ^ (65524 & param0 << 4 | param0 >>> 12);
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (sh) (this.field_i.a(true, var6));
+          var8 = (PcmSample) (this.field_i.a(true, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -139,7 +139,7 @@ final class me {
           if (param2 != null &&
             param2[0] <= 0) {
             stackIn_6_0 = null;
-            return (sh) (stackIn_6_0);
+            return (PcmSample) (stackIn_6_0);
           }
           var9 = (sl) (this.field_j.a(true, var6));
           if (var9 == null) {
@@ -155,7 +155,7 @@ final class me {
           }
           var9.unlink(10);
           if (param3 > -52) {
-            stackIn_17_0 = (sh) null;
+            stackIn_17_0 = (PcmSample) null;
             return stackIn_17_0;
           }
           this.field_i.a((byte) 40, var8Lifetime1, var6);
@@ -196,10 +196,10 @@ final class me {
         }
     }
 
-    final sh a(int param0, int param1, int[] param2) {
+    final PcmSample a(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
-        sh stackIn_5_0 = null;
-        sh stackIn_8_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

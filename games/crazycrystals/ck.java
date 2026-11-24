@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck extends ud {
-    static ko field_cb;
+    static PcmSample field_cb;
     static String[] field_fb;
     static String field_eb;
     static am field_db;

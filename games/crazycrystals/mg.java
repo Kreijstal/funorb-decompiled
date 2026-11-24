@@ -4,7 +4,7 @@
 abstract class mg {
     static dl[] field_b;
     static String field_h;
-    static ko field_d;
+    static PcmSample field_d;
     static int field_e;
     static db field_c;
     static int field_a;

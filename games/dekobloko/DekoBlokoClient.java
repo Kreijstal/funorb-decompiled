@@ -2632,8 +2632,8 @@ public final class DekoBlokoClient extends FunOrbClient {
             NetworkSupport010.rawSoundState0017 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_quake", integerArgument1 ^ 0);
             MixedSupport030.rawSoundState0006 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_special_item_explode", integerArgument1 ^ 0);
             pcmResamplerLocal24 = new PcmResampler(22050, 11025);
-            NetworkSupport010.rawSoundState0017 = NetworkSupport010.rawSoundState0017.computeRawSound1632(pcmResamplerLocal24);
-            MixedSupport030.rawSoundState0006 = MixedSupport030.rawSoundState0006.computeRawSound1632(pcmResamplerLocal24);
+            NetworkSupport010.rawSoundState0017 = NetworkSupport010.rawSoundState0017.resample(pcmResamplerLocal24);
+            MixedSupport030.rawSoundState0006 = MixedSupport030.rawSoundState0006.resample(pcmResamplerLocal24);
             SceneWidget.rawSoundState0022 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_poison", integerArgument1 ^ 0);
             MixedSupport103.rawSoundState0018 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_glass_lower", 0);
             SceneWidgetPart003.rawSoundArrayState0001[2] = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_bucket_glass_crack2_2", integerArgument1 + 0);

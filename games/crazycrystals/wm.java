@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wm {
-    static ko field_a;
+    static PcmSample field_a;
     private int field_g;
     private int field_f;
     private int field_c;

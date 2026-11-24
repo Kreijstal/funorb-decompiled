@@ -49,7 +49,7 @@ abstract class wj extends hf implements vc {
             var5 = (ad) null;
             wj.a((byte) -96, -124, (ad) null, -100);
           }
-          stackIn_6_0 = o.a(true);
+          stackIn_6_0 = PcmResampler.a(true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

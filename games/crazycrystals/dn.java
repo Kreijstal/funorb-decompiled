@@ -6,7 +6,7 @@ final class dn {
     static int[] field_a;
     static String field_c;
     static String field_b;
-    static ko field_e;
+    static PcmSample field_e;
     private static String field_z;
 
     public static void a(int param0) {

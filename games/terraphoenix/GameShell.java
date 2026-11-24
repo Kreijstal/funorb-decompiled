@@ -77,7 +77,7 @@ abstract class GameShell extends GameApplet {
         int var4 = qh.field_d - 1;
         byte[] var5 = new byte[var4];
         LevelEditor.field_j.b(0, var5, var4, 0);
-        m.a(dg.a(false), var3 != 0, ll.a(0, var5), param0 + 118);
+        PcmResampler.a(dg.a(false), var3 != 0, ll.a(0, var5), param0 + 118);
     }
 
     final int h(byte param0) {

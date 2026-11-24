@@ -9,7 +9,7 @@ final class an extends nk {
     static ef field_q;
     static String[] field_o;
     static boolean field_r;
-    static ko field_s;
+    static PcmSample field_s;
     static String field_u;
 
     public static void b(byte param0) {

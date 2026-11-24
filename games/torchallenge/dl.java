@@ -15,7 +15,7 @@ final class dl extends IntrusiveNode {
     static java.awt.Color field_l;
     int field_p;
     static BitmapFont field_H;
-    fe field_k;
+    PcmSample field_k;
     int field_y;
     int field_m;
     int field_G;

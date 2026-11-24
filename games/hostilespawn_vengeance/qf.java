@@ -507,7 +507,7 @@ final class qf extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final jb a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -557,7 +557,7 @@ final class qf extends IntrusiveNode {
         this.field_p = null;
         var12 = this.field_s;
         this.field_s = null;
-        return new jb(this.field_l, var12, this.field_u, this.field_B, this.field_n);
+        return new PcmSample(this.field_l, var12, this.field_u, this.field_B, this.field_n);
     }
 
     final static int readBits(int param0) {
@@ -723,7 +723,7 @@ final class qf extends IntrusiveNode {
         return var0;
     }
 
-    final jb c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -755,7 +755,7 @@ final class qf extends IntrusiveNode {
           }
         }
         this.field_p = null;
-        return new jb(this.field_l, var1, this.field_u, this.field_B, this.field_n);
+        return new PcmSample(this.field_l, var1, this.field_u, this.field_B, this.field_n);
     }
 
     static {

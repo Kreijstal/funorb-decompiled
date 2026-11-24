@@ -76,7 +76,7 @@ final class ff extends nh {
         }
         var6 = var9.readUnsignedShort((byte) 62);
         try {
-          var10 = qh.field_e.a(32767, var6);
+          var10 = PcmResampler.field_e.a(32767, var6);
           IntrusiveDequeCursor.field_b = var10.e(0);
           if (!oe.field_d.equals(wf.field_b)) {
             stackIn_23_0 = var10.field_y;

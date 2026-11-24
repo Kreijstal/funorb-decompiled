@@ -4,7 +4,7 @@
 final class jc {
     static MouseInput field_b;
     static String field_e;
-    static jb[] field_c;
+    static PcmSample[] field_c;
     static String field_d;
     static bd field_a;
 
@@ -43,7 +43,7 @@ final class jc {
               if (param4 == 8965) {
                 return;
               }
-              field_c = (jb[]) null;
+              field_c = (PcmSample[]) null;
               return;
             }
             param1 = mn.field_a[var5_int];
@@ -92,7 +92,7 @@ final class jc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 65) {
-            field_c = (jb[]) null;
+            field_c = (PcmSample[]) null;
           }
           if (rl.a(2884, param0, param3, param2)) {
             return rf.a(-58);
@@ -124,7 +124,7 @@ final class jc {
           var1_int = mn.field_a[0];
           var2 = 1;
           if (param0 >= -94) {
-            field_c = (jb[]) null;
+            field_c = (PcmSample[]) null;
           }
           while (mn.field_a.length > var2) {
             var3 = mn.field_a[var2];
@@ -162,7 +162,7 @@ final class jc {
     static {
         field_e = "This password contains your Player Name, and would be easy to guess";
         field_d = "If you do nothing the game will revert to normal view in <%0> seconds.";
-        field_c = new jb[65];
+        field_c = new PcmSample[65];
         field_b = new MouseInput();
     }
 }

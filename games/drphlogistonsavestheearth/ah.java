@@ -337,7 +337,7 @@ final class ah extends pj implements fh, ke {
         field_L = null;
     }
 
-    final static void a(vk param0, int param1, int param2) {
+    final static void a(PcmSample param0, int param1, int param2) {
         if (param0 == null) {
           return;
         }

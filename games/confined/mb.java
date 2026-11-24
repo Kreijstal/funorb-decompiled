@@ -142,7 +142,7 @@ final class mb extends ka {
         }
     }
 
-    mb(pm param0, double param1, double param2, double param3, bi param4) {
+    mb(pm param0, double param1, double param2, double param3, PcmSample param4) {
         super(param0, param1, param4);
         try {
           this.field_Q = param2 * this.field_C;

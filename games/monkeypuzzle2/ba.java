@@ -19,12 +19,12 @@ abstract class ba {
         Throwable decompiledCaughtException = null;
         var1 = wj.field_k;
         synchronized (var1) {
-          if (o.field_b == bh.field_e) {
+          if (PcmResampler.field_b == bh.field_e) {
             return false;
           }
-          oa.field_H = oi.field_e[o.field_b];
-          rd.field_p = ProxySocketConnector.field_d[o.field_b];
-          o.field_b = o.field_b - param0 & 127;
+          oa.field_H = oi.field_e[PcmResampler.field_b];
+          rd.field_p = ProxySocketConnector.field_d[PcmResampler.field_b];
+          PcmResampler.field_b = PcmResampler.field_b - param0 & 127;
           stackIn_6_0 = true;
         }
         return stackIn_6_0;

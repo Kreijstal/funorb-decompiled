@@ -5,7 +5,7 @@ final class ad extends um {
     static dl field_h;
     static String field_j;
     private int field_g;
-    static ko field_k;
+    static PcmSample field_k;
     private int field_i;
 
     final void a(byte param0) {

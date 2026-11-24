@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il {
-    static ue[] field_a;
+    static PcmSample[] field_a;
     static int[] field_d;
     static eh field_c;
     static int[] field_e;
@@ -120,7 +120,7 @@ final class il {
 
     static {
         field_d = new int[8192];
-        field_a = new ue[16];
+        field_a = new PcmSample[16];
         field_c = new eh(9, 0, 4, 1);
     }
 }

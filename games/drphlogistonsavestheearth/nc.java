@@ -318,8 +318,8 @@ final class nc extends hf {
         }
         try {
           hl.field_b = param1;
-          ol.field_a = new ma(ng.field_c, wi.field_e, param0, sg.field_a, hl.field_b);
-          ng.field_c.a((byte) -110, (vg) (ol.field_a));
+          ol.field_a = new ma(PcmResampler.field_c, wi.field_e, param0, sg.field_a, hl.field_b);
+          PcmResampler.field_c.a((byte) -110, (vg) (ol.field_a));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "nc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

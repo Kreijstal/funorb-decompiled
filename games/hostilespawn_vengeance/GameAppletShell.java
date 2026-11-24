@@ -86,7 +86,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           field_h.addFocusListener((java.awt.event.FocusListener) (this));
           field_h.requestFocus();
-          nm.field_a = true;
+          PcmResampler.field_a = true;
           i.field_i = true;
           pc.field_a = true;
           ih.field_s = false;
@@ -620,7 +620,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           oa.field_f = 31 & 1 + oa.field_f;
           var6 = this;
           synchronized (var6) {
-            nm.field_a = i.field_i;
+            PcmResampler.field_a = i.field_i;
           }
           if (!param0) {
             field_c = (String) null;

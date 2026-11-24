@@ -14,7 +14,7 @@ final class we {
     int field_s;
     private int field_p;
     static int field_g;
-    static bi field_b;
+    static PcmSample field_b;
     byte[][] field_d;
     int[] field_u;
     ni[] field_j;

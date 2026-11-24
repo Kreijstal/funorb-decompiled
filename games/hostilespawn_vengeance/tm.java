@@ -21,7 +21,7 @@ final class tm extends IntrusiveNode {
     int field_B;
     int field_w;
     int field_l;
-    jb field_r;
+    PcmSample field_r;
     int field_j;
     static int field_q;
     int field_i;

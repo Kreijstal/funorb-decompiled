@@ -217,7 +217,7 @@ final class a {
 
     final static void a(byte param0, boolean param1) {
         int var2 = -114 / ((37 - param0) / 59);
-        ng.field_c.a(0, 0, 0);
+        PcmResampler.field_c.a(0, 0, 0);
     }
 
     a(String param0, boolean param1) {

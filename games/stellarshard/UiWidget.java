@@ -576,7 +576,7 @@ class UiWidget extends IntrusiveNode {
         if (param0 != -94) {
           field_s = (Sprite) null;
           if (cg.field_a) {
-            qh.field_d = true;
+            PcmResampler.field_d = true;
             FullscreenFocusCanvas.a(true, -844);
             eg.field_d = 0;
             return;
@@ -584,7 +584,7 @@ class UiWidget extends IntrusiveNode {
           throw new IllegalStateException();
         }
         if (cg.field_a) {
-          qh.field_d = true;
+          PcmResampler.field_d = true;
           FullscreenFocusCanvas.a(true, -844);
           eg.field_d = 0;
           return;

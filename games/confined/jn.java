@@ -9,7 +9,7 @@ final class jn extends ga implements el {
     static String field_O;
     private int field_P;
     private ok field_T;
-    static bi field_U;
+    static PcmSample field_U;
     private dh field_S;
 
     final rg a(String param0, uk param1, boolean param2) {
@@ -59,7 +59,7 @@ final class jn extends ga implements el {
 
     public static void j(int param0) {
         if (param0 < 94) {
-          field_U = (bi) null;
+          field_U = (PcmSample) null;
         }
         field_O = null;
         field_U = null;

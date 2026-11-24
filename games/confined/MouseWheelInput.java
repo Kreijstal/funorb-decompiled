@@ -3,7 +3,7 @@
  */
 abstract class MouseWheelInput {
     static String field_b;
-    static bi field_a;
+    static PcmSample field_a;
 
     final static void a(int param0, double param1, double param2, double param3) {
         int var7_int = 0;
@@ -16,7 +16,7 @@ abstract class MouseWheelInput {
         var11 = Confined.field_J ? 1 : 0;
         try {
           if (param0 != -1942300510) {
-            field_a = (bi) null;
+            field_a = (PcmSample) null;
           }
           var7_int = (int)(325.94932345220167 * param1);
           var8 = (int)(param2 * 325.94932345220167);

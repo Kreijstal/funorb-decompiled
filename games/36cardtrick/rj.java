@@ -17,7 +17,7 @@ final class rj {
     int[] field_i;
     int field_v;
     int[] field_c;
-    ib[] field_D;
+    PcmSample[] field_D;
     int[] field_u;
     static String field_w;
     byte[][] field_s;
@@ -45,7 +45,7 @@ final class rj {
         int var3 = 0;
         int var2;
         int var5;
-        ib var4;
+        PcmSample var4;
         var5 = Main.field_T;
         if (null == this.field_l) {
           return;
@@ -163,7 +163,7 @@ final class rj {
           this.field_k = new int[this.field_a];
           this.field_C = new int[this.field_a];
           var5Lifetime3 = param0.readUnsignedShort((byte) 72);
-          this.field_D = new ib[var5Lifetime3];
+          this.field_D = new PcmSample[var5Lifetime3];
           this.field_I = new int[var5Lifetime3];
           this.field_L = new int[var5Lifetime3];
           this.field_t = new int[var5Lifetime3];

@@ -82,7 +82,7 @@ final class NodeHashTableIterator implements Iterator {
         cf.a((byte) -107);
         sg.field_a = param0 ? true : false;
         pj.field_F = true;
-        ng.field_c.j(300);
+        PcmResampler.field_c.j(300);
         nc.a(field_c, false, (byte) 79);
     }
 

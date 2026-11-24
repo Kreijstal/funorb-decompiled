@@ -3,7 +3,7 @@
  */
 final class qp extends IntrusiveNode {
     int field_h;
-    static ko field_i;
+    static PcmSample field_i;
     static boolean field_f;
     static String[] field_g;
 

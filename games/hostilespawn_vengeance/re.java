@@ -710,7 +710,7 @@ final class re {
         var3 = new le(0L, (le) null);
         var4 = new le(0L, (le) null);
         var5 = new le(0L, (le) null);
-        var9.field_pb = nm.field_f.h();
+        var9.field_pb = PcmResampler.field_f.h();
         var13 = var9.field_pb.field_D;
         var7 = 0;
         while (var13.length > var7) {
@@ -1581,7 +1581,7 @@ final class re {
                   stackIn_151_0 = dd.field_o;
                   stackIn_151_1 = 10;
                   if (om.field_b) {
-                    stackIn_152_2 = nm.field_c;
+                    stackIn_152_2 = PcmResampler.field_c;
                   } else {
                     stackIn_152_2 = ja.field_h;
                   }
@@ -4896,15 +4896,15 @@ final class re {
           IsaacGenerator.field_h = null;
         }
         dd.field_o[4] = bh.field_j;
-        dd.field_o[15] = nm.field_c;
-        dd.field_o[13] = nm.field_c;
-        dd.field_o[10] = nm.field_c;
+        dd.field_o[15] = PcmResampler.field_c;
+        dd.field_o[13] = PcmResampler.field_c;
+        dd.field_o[10] = PcmResampler.field_c;
         stackIn_8_0 = dd.field_o;
         stackIn_8_1 = 10;
         if (!om.field_b) {
           stackIn_9_2 = ja.field_h;
         } else {
-          stackIn_9_2 = nm.field_c;
+          stackIn_9_2 = PcmResampler.field_c;
         }
         stackIn_8_0[stackIn_8_1] = stackIn_9_2;
         var2 = 0;

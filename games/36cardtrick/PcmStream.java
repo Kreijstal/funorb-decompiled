@@ -5,7 +5,7 @@ abstract class PcmStream extends IntrusiveNode {
     int field_j;
     PcmStream field_g;
     volatile boolean field_h;
-    ea field_i;
+    AbstractAudioSample field_i;
 
     int getSchedulingPriority() {
         return 255;

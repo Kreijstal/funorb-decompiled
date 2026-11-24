@@ -54,9 +54,9 @@ final class ei {
         return new ei(new PacketBuffer(var3));
     }
 
-    final ue b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new ue(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     final static ei a(gk param0, String param1, String param2) {

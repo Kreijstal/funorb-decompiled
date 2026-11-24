@@ -177,7 +177,7 @@ abstract class GameClient extends AppletShell {
             this.field_o = false;
             kc.a((byte) 18);
             va.a(2);
-            cl.a(u.field_a, true, 2);
+            cl.a(PcmResampler.field_a, true, 2);
             Slime.b(-20);
             dl.field_b = true;
             nj.field_n = fa.correctedCurrentTimeMillis(126) + 15000L;
@@ -306,7 +306,7 @@ abstract class GameClient extends AppletShell {
             rk.a(stackIn_98_0, stackIn_98_1, stackIn_99_2, stackIn_102_3);
           }
           if (id.field_g) {
-            u.a((byte) -10);
+            PcmResampler.a((byte) -10);
           }
           if (kg.field_k == null) {
             kg.field_k = lc.h(-126);

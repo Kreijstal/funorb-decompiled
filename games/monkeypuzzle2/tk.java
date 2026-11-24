@@ -13,7 +13,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (var2_int != 0 && var2_int != 65535 &&
               ak.a(-1, (char) var2_int)) {
               var3 = 1 + jk.field_w & 127;
-              if (o.field_b != var3) {
+              if (PcmResampler.field_b != var3) {
                 oi.field_e[jk.field_w] = -1;
                 ProxySocketConnector.field_d[jk.field_w] = (char)var2_int;
                 jk.field_w = var3;
@@ -63,7 +63,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (0 <= var2_int) {
             var3 = jk.field_w + 1 & 127;
-            if (o.field_b != var3) {
+            if (PcmResampler.field_b != var3) {
               oi.field_e[jk.field_w] = var2_int;
               ProxySocketConnector.field_d[jk.field_w] = (char)0;
               jk.field_w = var3;

@@ -141,7 +141,7 @@ class vj extends eb {
         }
         jl.field_I.b(false);
         if (null == vi.field_n) {
-          vi.field_n = new na(jl.field_I, m.field_e);
+          vi.field_n = new na(jl.field_I, PcmResampler.field_e);
         }
         jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
     }

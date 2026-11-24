@@ -17,7 +17,7 @@ final class jd {
     private boolean field_s;
     int field_j;
     int field_k;
-    static sf field_q;
+    static PcmSample field_q;
     int field_r;
     static int field_t;
     int field_b;

@@ -52,14 +52,14 @@ final class gd extends IntrusiveNode {
           return;
         }
         pm var2 = (pm) null;
-        gd.a(21, 49, (bi) null, (pm) null);
+        gd.a(21, 49, (PcmSample) null, (pm) null);
         field_r = null;
         field_q = null;
         field_m = null;
         field_t = null;
     }
 
-    final static void a(int param0, int param1, bi param2, pm param3) {
+    final static void a(int param0, int param1, PcmSample param2, pm param3) {
         try {
           da.a(param0, 0, param2, false, param3);
           int var4_int = -74 / ((param1 + 76) / 32);

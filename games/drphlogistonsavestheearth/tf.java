@@ -105,8 +105,8 @@ final class tf extends ca {
             var6 = sg.field_f[var3];
             if (NodeHashTableIterator.field_g == 2 &&
               var2 == 1) {
-              if (lk.field_i.length < ng.field_d.length) {
-                stackIn_20_0 = ng.field_d.length;
+              if (lk.field_i.length < PcmResampler.field_d.length) {
+                stackIn_20_0 = PcmResampler.field_d.length;
               } else {
                 stackIn_20_0 = lk.field_i.length;
               }

@@ -8,7 +8,7 @@ final class AccountCreationResultPanel extends na implements vd {
     static am field_mb;
     private dc field_pb;
     static String field_rb;
-    static ko field_nb;
+    static PcmSample field_nb;
     private boolean field_sb;
 
     final boolean g(byte param0) {

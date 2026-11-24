@@ -79,7 +79,7 @@ final class h {
         if (param1 != 4) {
           return;
         }
-        fe var2 = cg.field_a[param0];
+        PcmSample var2 = cg.field_a[param0];
         int var3 = hb.field_b[param0];
         ol.a(-127, var2, var3);
     }

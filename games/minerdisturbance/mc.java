@@ -66,7 +66,7 @@ final class mc {
             this.field_o = true;
             ke.field_V = true;
             this.field_q.h((byte) 78);
-            wm.a(false);
+            PcmResampler.a(false);
             return;
           }
           this.field_y = 100;

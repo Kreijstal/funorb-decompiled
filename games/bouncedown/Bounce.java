@@ -164,7 +164,7 @@ public final class Bounce extends GameClient {
           fk.a((byte) 118);
           g.a(6623);
           qj.a(-112);
-          u.clearStaticReferences(0);
+          PcmResampler.clearStaticReferences(0);
           gg.clearStaticReferences();
           te.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
@@ -525,7 +525,7 @@ public final class Bounce extends GameClient {
               }
             }
           }
-          if (u.field_g) {
+          if (PcmResampler.field_g) {
             this.field_E = false;
           }
           if (this.field_E) {
@@ -602,7 +602,7 @@ public final class Bounce extends GameClient {
                 }
                 if (decompiledSharedTail0) {
                   stackIn_241_0 = ld.field_l;
-                  if (!u.field_g) {
+                  if (!PcmResampler.field_g) {
                     stackIn_242_1 = AccountCreationResultPanel.field_mb;
                   } else {
                     stackIn_242_1 = wj.field_c;
@@ -681,9 +681,9 @@ public final class Bounce extends GameClient {
             jk.field_q != -1 &&
             (vh.field_e != 0 ||
             ng.field_a[83] ||
-            ng.field_a[84])) && (u.field_g &&
+            ng.field_a[84])) && (PcmResampler.field_g &&
             MusicPatchPcmStream.field_o == null)) {
-            u.field_g = false;
+            PcmResampler.field_g = false;
             if (null == MusicPatchPcmStream.field_o) {
               MusicPatchPcmStream.field_o = new mj();
               if (var10 != 0) {
@@ -717,7 +717,7 @@ public final class Bounce extends GameClient {
               }
             }
           }
-          if (u.field_g) {
+          if (PcmResampler.field_g) {
             if (vk.field_b == 1) {
               if (ng.field_a[96] ||
                 ng.field_a[nj.field_m]) {
@@ -779,7 +779,7 @@ public final class Bounce extends GameClient {
           ua.field_c[-2 + ua.field_b].field_d = 6;
           ua.field_c[ua.field_b - 3].field_d = 6;
           if (null == MusicPatchPcmStream.field_o ||
-            !u.field_g) {
+            !PcmResampler.field_g) {
             ca.a(false);
           }
           var2_int = 0;
@@ -804,10 +804,10 @@ public final class Bounce extends GameClient {
                   he.field_n[var2_int].a(il.field_a, (byte) 106);
                 } else {
                   if (null == MusicPatchPcmStream.field_o ||
-                    !u.field_g) {
+                    !PcmResampler.field_g) {
                     he.field_n[var2_int].a(ua.field_c, nj.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
                   }
-                  if (!u.field_g) {
+                  if (!PcmResampler.field_g) {
                     if (he.field_n[var2_int].field_h != 0) {
                       dupTemp$14 = he.field_n[var2_int];
                       dupTemp$14.field_c = dupTemp$14.field_c - 0.35;
@@ -1183,7 +1183,7 @@ public final class Bounce extends GameClient {
 
     private final void b(boolean param0, int param1) {
         Throwable decompiledCaughtException = null;
-        u var3 = null;
+        PcmResampler var3 = null;
         Object var3_ref = null;
         int var3_int = 0;
         Object var3_ref2 = null;
@@ -1235,22 +1235,22 @@ public final class Bounce extends GameClient {
             ed.a((byte) -127);
             hg.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
             this.e(4);
-            var3 = new u(22050, AudioOutput.field_r);
-            il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().a(var3);
-            il.field_a[3] = ei.a(pa.field_c, "", "slime_grows").b().a(var3);
-            il.field_a[4] = ei.a(pa.field_c, "", "slime_jump").b().a(var3);
-            il.field_a[5] = ei.a(pa.field_c, "", "slime_jump_large").b().a(var3);
-            il.field_a[6] = ei.a(pa.field_c, "", "slime_jump_small").b().a(var3);
-            il.field_a[7] = ei.a(pa.field_c, "", "slime_land").b().a(var3);
-            il.field_a[8] = ei.a(pa.field_c, "", "slime_reduces").b().a(var3);
-            il.field_a[9] = ei.a(pa.field_c, "", "squish").b().a(var3);
+            var3 = new PcmResampler(22050, AudioOutput.field_r);
+            il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().resample(var3);
+            il.field_a[3] = ei.a(pa.field_c, "", "slime_grows").b().resample(var3);
+            il.field_a[4] = ei.a(pa.field_c, "", "slime_jump").b().resample(var3);
+            il.field_a[5] = ei.a(pa.field_c, "", "slime_jump_large").b().resample(var3);
+            il.field_a[6] = ei.a(pa.field_c, "", "slime_jump_small").b().resample(var3);
+            il.field_a[7] = ei.a(pa.field_c, "", "slime_land").b().resample(var3);
+            il.field_a[8] = ei.a(pa.field_c, "", "slime_reduces").b().resample(var3);
+            il.field_a[9] = ei.a(pa.field_c, "", "squish").b().resample(var3);
             hg.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
             this.e(4);
-            il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().a(var3);
-            il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().a(var3);
-            il.field_a[13] = te.a(IntrusiveNode.field_e, "", "slime_laughs").a().a(var3);
-            il.field_a[14] = te.a(IntrusiveNode.field_e, "", "slime_ooh").a().a(var3);
-            il.field_a[15] = te.a(IntrusiveNode.field_e, "", "slime_ow").a().a(var3);
+            il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().resample(var3);
+            il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().resample(var3);
+            il.field_a[13] = te.a(IntrusiveNode.field_e, "", "slime_laughs").a().resample(var3);
+            il.field_a[14] = te.a(IntrusiveNode.field_e, "", "slime_ooh").a().resample(var3);
+            il.field_a[15] = te.a(IntrusiveNode.field_e, "", "slime_ow").a().resample(var3);
             hg.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.e(4);
@@ -1277,7 +1277,7 @@ public final class Bounce extends GameClient {
             return;
           }
           if (null == ub.field_a) {
-            u.field_g = false;
+            PcmResampler.field_g = false;
             var3_int = 0;
             do {
               if (!(var3_int < ua.field_b)) {
@@ -1583,7 +1583,7 @@ public final class Bounce extends GameClient {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameCompleted1 = true;
             na.d();
-            if (u.field_g) {
+            if (PcmResampler.field_g) {
               if (vk.field_b == 1 &&
                 he.field_n[0].field_n > 1) {
                 he.field_n[0].field_n = 1;
@@ -1704,10 +1704,10 @@ public final class Bounce extends GameClient {
                     continue;
                   }
                 } else {
-                  if (!u.field_g) {
+                  if (!PcmResampler.field_g) {
                     break scanLoop3;
                   }
-                  u.field_g = false;
+                  PcmResampler.field_g = false;
                 }
                 if (null != MusicPatchPcmStream.field_o) {
                   MusicPatchPcmStream.field_o.field_b = true;
@@ -1742,7 +1742,7 @@ public final class Bounce extends GameClient {
             }
           }
           if (-1 != jk.field_q &&
-            u.field_g) {
+            PcmResampler.field_g) {
             na.a(64, 0, 512, 480, 0, 64);
             if (jk.field_q == 0 ||
               jk.field_q == 1 ||
@@ -1766,7 +1766,7 @@ public final class Bounce extends GameClient {
             }
           }
           boolean decompiledFrameRemainder1 = true;
-          if ((u.field_g) &&
+          if ((PcmResampler.field_g) &&
             (decompiledFrameRemainder1 = (null != MusicPatchPcmStream.field_o)) &&
             (decompiledFrameRemainder1 = (rj.field_j == -1))) {
             MusicPatchPcmStream.field_o.a(23417);
@@ -1787,11 +1787,11 @@ public final class Bounce extends GameClient {
             }
           }
           if (vk.field_b == 1 ||
-            !u.field_g) {
+            !PcmResampler.field_g) {
             if (he.field_n[0].field_n > 1) {
               he.field_n[0].field_n = 1;
             }
-            if (u.field_g) {
+            if (PcmResampler.field_g) {
               var5_int = od.field_f.b(ui.field_j + "100000");
               na.e(-4 - var5_int / 2 + 322, 451, 8 + (var5_int - 4), 26, 0);
               ve.a(30, 449, ig.field_d, (byte) -100, var5_int + 8, -(var5_int / 2) + 316);

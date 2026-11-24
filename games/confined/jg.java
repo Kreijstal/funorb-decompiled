@@ -10,7 +10,7 @@ abstract class jg {
     static bm[] field_d;
     static Calendar field_c;
     static int[] field_f;
-    static bi field_e;
+    static PcmSample field_e;
     static double[] field_b;
 
     abstract void a(byte param0);
@@ -154,7 +154,7 @@ abstract class jg {
         tk.field_e = null;
         fj.field_s = null;
         if (param0 != 15229) {
-          field_e = (bi) null;
+          field_e = (PcmSample) null;
         }
         tf.field_d = null;
         jc.field_d = null;

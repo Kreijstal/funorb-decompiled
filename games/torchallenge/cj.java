@@ -12,7 +12,7 @@ final class cj {
     static boolean field_d;
     static String field_a;
     static int field_g;
-    static fe[] field_h;
+    static PcmSample[] field_h;
     static boolean field_e;
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -87,7 +87,7 @@ final class cj {
         field_k = "Just play";
         field_a = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_i = 20000000L;
-        field_h = new fe[13];
+        field_h = new PcmSample[13];
         field_e = true;
     }
 }

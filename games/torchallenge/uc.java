@@ -180,7 +180,7 @@ final class uc extends ng {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9) {
-        fe var12 = null;
+        PcmSample var12 = null;
         int var10 = qk.a(param4, param1, param2, param5, 120, param3, param7, param6);
         if (!param8) {
           field_T = (String) null;

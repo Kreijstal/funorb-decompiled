@@ -8,7 +8,7 @@ final class je {
     static String[] field_i;
     static int field_e;
     static String field_g;
-    static ko field_f;
+    static PcmSample field_f;
     static mb field_b;
     static int[][] field_d;
     static int[] field_c;

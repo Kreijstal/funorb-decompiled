@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PcmSample extends gs {
+final class PcmSample extends AbstractAudioSample {
     int loopEnd;
     int loopStart;
     byte[] samples;

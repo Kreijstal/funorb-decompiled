@@ -7,7 +7,7 @@ final class vk {
     byte[][] field_l;
     private int field_G;
     int[][] field_o;
-    bi[] field_e;
+    PcmSample[] field_e;
     int[] field_u;
     int[] field_w;
     int field_i;
@@ -44,7 +44,7 @@ final class vk {
         int var3 = 0;
         int var2;
         int var5;
-        bi var4;
+        PcmSample var4;
         var5 = Confined.field_J ? 1 : 0;
         if (null == this.field_h) {
           return;
@@ -251,7 +251,7 @@ final class vk {
           this.field_c = new int[var5Lifetime3];
           this.field_j = new int[var5Lifetime3];
           this.field_u = new int[var5Lifetime3];
-          this.field_e = new bi[var5Lifetime3];
+          this.field_e = new PcmSample[var5Lifetime3];
           this.field_F = new int[var5Lifetime3];
           this.field_s = new int[var5Lifetime3];
           this.field_v = new int[var5Lifetime3];

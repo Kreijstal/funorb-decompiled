@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fg {
-    static jb[] field_b;
+    static PcmSample[] field_b;
     static String field_a;
     static int[] field_c;
     static bd field_d;
@@ -93,7 +93,7 @@ final class fg {
           return (java.awt.Container) ((Object) DirectByteStorage.field_n);
         }
         if (param0 != -31) {
-          field_b = (jb[]) null;
+          field_b = (PcmSample[]) null;
         }
         return (java.awt.Container) ((Object) bn.c(-1));
     }
@@ -163,7 +163,7 @@ final class fg {
     }
 
     static {
-        field_b = new jb[27];
+        field_b = new PcmSample[27];
         field_a = "Please enter your age in years";
         field_c = new int[]{3, 4};
     }

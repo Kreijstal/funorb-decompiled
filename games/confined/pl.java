@@ -8,7 +8,7 @@ abstract class pl extends DualLinkNode {
     int field_u;
     int field_v;
     int field_s;
-    static bi field_y;
+    static PcmSample field_y;
 
     final static void a(mi param0, boolean param1) {
         ph var2 = null;
@@ -24,7 +24,7 @@ abstract class pl extends DualLinkNode {
           if (param1) {
             return;
           }
-          field_y = (bi) null;
+          field_y = (PcmSample) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

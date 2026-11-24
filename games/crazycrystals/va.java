@@ -5,7 +5,7 @@ import java.io.*;
 
 final class va extends IOException {
     static int field_c;
-    static ko field_b;
+    static PcmSample field_b;
     static String field_a;
     static int field_d;
 

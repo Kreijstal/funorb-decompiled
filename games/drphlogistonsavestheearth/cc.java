@@ -10,7 +10,7 @@ final class cc extends IntrusiveNode {
     int field_j;
     int field_u;
     int field_n;
-    vk field_C;
+    PcmSample field_C;
     int field_h;
     int field_x;
     static int field_B;

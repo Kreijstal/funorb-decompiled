@@ -6,7 +6,7 @@ class ul extends rg {
     private boolean field_Z;
     static boolean field_W;
     private int field_S;
-    static bi field_P;
+    static PcmSample field_P;
     private int field_R;
     static mi field_U;
     private long field_T;

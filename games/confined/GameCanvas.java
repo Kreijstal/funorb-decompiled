@@ -7,7 +7,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     java.awt.Frame field_e;
     static mi field_a;
     static String field_c;
-    static bi field_d;
+    static PcmSample field_d;
     static String field_g;
 
     public final void paint(java.awt.Graphics param0) {

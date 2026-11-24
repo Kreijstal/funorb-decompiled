@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class se {
-    static bi field_a;
+    static PcmSample field_a;
 
     final static void a(int param0) {
         int[] var1 = null;
@@ -70,7 +70,7 @@ final class se {
           var9_double = param6.field_E + param2[9] * param6.field_C;
           var11 = param6.field_t + param6.field_C * param2[10];
           if (param1) {
-            field_a = (bi) null;
+            field_a = (PcmSample) null;
           }
           var13 = param6.field_D + param2[11] * param6.field_C;
           var15 = param4 * 1.0;
@@ -134,7 +134,7 @@ final class se {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 >= -113) {
-          field_a = (bi) null;
+          field_a = (PcmSample) null;
           field_a = null;
           return;
         }

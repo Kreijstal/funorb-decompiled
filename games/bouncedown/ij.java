@@ -325,7 +325,7 @@ final class ij {
           }
           var2Lifetime55 = AccountNameAvailabilityValidator.a((byte) 48, "p1");
           if (var2Lifetime55 != null) {
-            u.field_f = c.a(0, var2Lifetime55);
+            PcmResampler.field_f = c.a(0, var2Lifetime55);
           }
           var2Lifetime56 = AccountNameAvailabilityValidator.a((byte) 48, "p2");
           if (null != var2Lifetime56) {

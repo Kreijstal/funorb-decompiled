@@ -7,7 +7,7 @@ abstract class gi {
     static byte[] field_c;
     static uc field_b;
     static String[] field_a;
-    static sf field_d;
+    static PcmSample field_d;
 
     final static boolean a(int param0, char param1) {
         if (Character.isISOControl(param1)) {
@@ -36,7 +36,7 @@ abstract class gi {
             return false;
           }
           if (!param1) {
-            field_d = (sf) null;
+            field_d = (PcmSample) null;
           }
           int var2_int = sg.field_h.e(-114);
           if (var2_int > 0) {

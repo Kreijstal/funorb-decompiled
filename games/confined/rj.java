@@ -5,7 +5,7 @@ final class rj {
     static String[] field_c;
     static int field_a;
     static byte[][] field_f;
-    static bi field_b;
+    static PcmSample field_b;
     static GameAppletShell field_e;
     static String field_d;
 

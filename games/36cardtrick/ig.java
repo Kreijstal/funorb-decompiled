@@ -53,7 +53,7 @@ final class ig extends IntrusiveNode {
         return var0;
     }
 
-    final ib c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -85,10 +85,10 @@ final class ig extends IntrusiveNode {
           }
         }
         this.field_w = null;
-        return new ib(this.field_C, var1, this.field_G, this.field_m, this.field_v);
+        return new PcmSample(this.field_C, var1, this.field_G, this.field_m, this.field_v);
     }
 
-    final ib a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -138,7 +138,7 @@ final class ig extends IntrusiveNode {
         this.field_w = null;
         var12 = this.field_p;
         this.field_p = null;
-        return new ib(this.field_C, var12, this.field_G, this.field_m, this.field_v);
+        return new PcmSample(this.field_C, var12, this.field_G, this.field_m, this.field_v);
     }
 
     final static int readBits(int param0) {

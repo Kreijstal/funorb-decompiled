@@ -3,7 +3,7 @@
  */
 final class nl extends IntrusiveNode {
     int field_p;
-    static vk[] field_r;
+    static PcmSample[] field_r;
     int field_h;
     int field_l;
     static he[][] field_n;
@@ -119,7 +119,7 @@ final class nl extends IntrusiveNode {
     }
 
     static {
-        field_r = new vk[74];
+        field_r = new PcmSample[74];
         field_n = new he[3][];
         field_i = new String[]{"By rating", "By win percentage"};
         field_o = "To server list";

@@ -5,12 +5,12 @@ final class ic {
     static String field_d;
     static nf field_a;
     static int field_b;
-    static bi[] field_c;
+    static PcmSample[] field_c;
 
     public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 <= 3) {
-          field_c = (bi[]) null;
+          field_c = (PcmSample[]) null;
           field_a = null;
           field_c = null;
           return;
@@ -79,6 +79,6 @@ final class ic {
     static {
         field_b = 0;
         field_d = "A";
-        field_c = new bi[13];
+        field_c = new PcmSample[13];
     }
 }

@@ -1557,7 +1557,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (fk.field_x == null) {
             td.a(72.0f, BoundedRandomAccessFile.field_l, false);
             this.a(-128);
-            fk.field_x = new ko[2];
+            fk.field_x = new PcmSample[2];
             fk.field_x[0] = bl.a(ma.field_p, "initialset", "crystal1").a();
             fk.field_x[1] = bl.a(ma.field_p, "initialset", "crystal2").a();
             nk.field_j = ha.a(vm.field_k, "initialset", "ball-bounce").b();
@@ -1576,7 +1576,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == fo.field_i) {
             td.a(76.0f, BoundedRandomAccessFile.field_l, false);
             this.a(-124);
-            fo.field_i = new ko[4];
+            fo.field_i = new PcmSample[4];
             fo.field_i[0] = ha.a(vm.field_k, "initialset", "footstep-rocky").b();
             fo.field_i[1] = ha.a(vm.field_k, "initialset", "footstep-grass").b();
             fo.field_i[2] = ha.a(vm.field_k, "initialset", "footstep-metal").b();

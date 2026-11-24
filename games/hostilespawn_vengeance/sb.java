@@ -16,7 +16,7 @@ final class sb {
           var1 = ByteStorage.field_c;
           synchronized (var1) {
             ae.field_s = ae.field_s + 1;
-            ee.field_e = nm.field_j;
+            ee.field_e = PcmResampler.field_j;
             if (uc.field_b < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 qh.field_m[var2] = false;
@@ -33,7 +33,7 @@ final class sb {
                 qh.field_m[var2] = true;
               }
             }
-            nm.field_j = oa.field_a;
+            PcmResampler.field_j = oa.field_a;
           }
           if (param0 != -113) {
             var5 = (bd) null;

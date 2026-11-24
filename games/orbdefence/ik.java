@@ -8,7 +8,7 @@ final class ik extends IntrusiveNode {
     byte[] field_j;
     int field_l;
     byte[] field_h;
-    dl[] field_g;
+    PcmSample[] field_g;
     short[] field_m;
 
     final static hf a(RawPcmStream param0, int param1) {
@@ -159,7 +159,7 @@ final class ik extends IntrusiveNode {
     final void c(boolean param0) {
         this.field_i = null;
         if (param0) {
-          this.field_g = (dl[]) null;
+          this.field_g = (PcmSample[]) null;
         }
     }
 
@@ -205,7 +205,7 @@ final class ik extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_g[var9] = (dl) (var7);
+                  this.field_g[var9] = (PcmSample) (var7);
                   this.field_i[var9] = 0;
                 }
               }
@@ -373,7 +373,7 @@ final class ik extends IntrusiveNode {
           this.field_i = new int[128];
           this.field_m = new short[128];
           this.field_j = new byte[128];
-          this.field_g = new dl[128];
+          this.field_g = new PcmSample[128];
           this.field_h = new byte[128];
           this.field_f = new rc[128];
           var38 = new PacketBuffer(param0);

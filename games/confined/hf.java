@@ -7,7 +7,7 @@ abstract class hf extends ee {
     ee field_R;
     static String field_X;
     double field_Y;
-    static bi field_T;
+    static PcmSample field_T;
     pm field_W;
     double field_V;
     int field_Q;

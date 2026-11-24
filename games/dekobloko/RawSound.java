@@ -8,7 +8,7 @@ final class RawSound extends AbstractAudioSample {
     boolean booleanState0192;
     int integerState0796;
 
-    final RawSound computeRawSound1632(PcmResampler pcmResamplerArgument1) {
+    final RawSound resample(PcmResampler pcmResamplerArgument1) {
         this.byteArrayState0028 = pcmResamplerArgument1.resample(14, this.byteArrayState0028);
         this.integerState0794 = pcmResamplerArgument1.scaleRate(false, this.integerState0794);
         if (this.integerState0795 != this.integerState0796) {

@@ -435,7 +435,7 @@ final class kk {
         int[] var19;
         var14 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (s.field_S == null) {
-          s.field_S = o.a(41, 10, 3, 1, -114);
+          s.field_S = PcmResampler.a(41, 10, 3, 1, -114);
         }
         if (param0 < 39) {
           var15 = (Throwable) null;

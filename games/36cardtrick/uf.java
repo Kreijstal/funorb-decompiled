@@ -877,7 +877,7 @@ final class uf extends sf {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ib stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
         RawPcmStream stackIn_17_0 = null;

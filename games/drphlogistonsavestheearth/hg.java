@@ -33,9 +33,9 @@ final class hg extends hc {
           if (fk.field_q != pj.field_D) {
             return false;
           }
-          var8 = new AccountCreationResultPanel(ng.field_c, param6);
+          var8 = new AccountCreationResultPanel(PcmResampler.field_c, param6);
           var7 = var8;
-          ng.field_c.a((byte) -109, (vg) (var8));
+          PcmResampler.field_c.a((byte) -109, (vg) (var8));
           if (wh.a(false)) {
             var8.p(248);
             return true;

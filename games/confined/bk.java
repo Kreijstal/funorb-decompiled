@@ -4,7 +4,7 @@
 final class bk extends mf {
     static String field_i;
     static int[] field_h;
-    static bi[] field_j;
+    static PcmSample[] field_j;
 
     final static jb a(int param0, boolean param1, boolean param2, int param3) {
         bd var8 = null;
@@ -124,7 +124,7 @@ final class bk extends mf {
 
     static {
         field_i = "<col=FFFFFF>Other missiles:</col> awarded at random whenever nothing else is due.";
-        field_j = new bi[4];
+        field_j = new PcmSample[4];
         field_h = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1};
     }
 }

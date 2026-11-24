@@ -156,7 +156,7 @@ final class MouseInputListener implements java.awt.event.MouseListener, java.awt
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static hf a(dl param0, byte param1) {
+    final static hf a(PcmSample param0, byte param1) {
         RuntimeException var2 = null;
         hf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

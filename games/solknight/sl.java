@@ -244,7 +244,7 @@ final class sl extends IntrusiveNode {
         field_l = null;
     }
 
-    final sh c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -276,10 +276,10 @@ final class sl extends IntrusiveNode {
           }
         }
         this.field_I = null;
-        return new sh(this.field_y, var1, this.field_i, this.field_r, this.field_M);
+        return new PcmSample(this.field_y, var1, this.field_i, this.field_r, this.field_M);
     }
 
-    final sh a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -329,7 +329,7 @@ final class sl extends IntrusiveNode {
         this.field_I = null;
         var12 = this.field_v;
         this.field_v = null;
-        return new sh(this.field_y, var12, this.field_i, this.field_r, this.field_M);
+        return new PcmSample(this.field_y, var12, this.field_i, this.field_r, this.field_M);
     }
 
     private final static void a(byte[] param0, int param1) {

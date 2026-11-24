@@ -500,6 +500,14 @@
       "renamedSymbol": "C:ArchiveIndex"
     },
     {
+      "symbol": "C:lm",
+      "originalName": "lm",
+      "to": "PcmSample",
+      "evidence": "Signed-byte PCM sample data with retained sample rate,byte-array identity,loop start/end and ping-pong flag. Complete original constructors preserve direct byte-array aliases or exact new-byte-array allocation,assignment order,default booleans and full argument domains;no validation or copies added. Original constructor SHA256s a185c8eff555a0c7e5110a857d257dfae87a055b2177c6f0276dfe541eca4080,0830c887e28d6e93c94f251d8e4d61c3d671776fb2bff0d015e8eda5179f29a2,f6a683110dd86815e5d9fe08c3f60bfd384c362b23789ffeed6f44c34a58e3b6. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmSample"
+    },
+    {
       "symbol": "C:md",
       "originalName": "md",
       "to": "AudioOutput",
@@ -570,6 +578,14 @@
       "evidence": "IntrusiveNode with payload and cursor, big-endian primitive/string codecs, ISAAC opcode and RSA block helpers; same role as GeoBlox PacketBuffer.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PacketBuffer"
+    },
+    {
+      "symbol": "C:pb",
+      "originalName": "pb",
+      "to": "AbstractAudioSample",
+      "evidence": "Abstract intrusive sound-data node retaining the original single int scheduling counter and empty package-visible constructor,shared by the sample reference in the PCM stream scheduler. Preserve default field state and inherited node semantics. Original constructor SHA256s 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AbstractAudioSample"
     },
     {
       "symbol": "C:pj",
@@ -6251,9 +6267,9 @@
     },
     {
       "symbol": "C:lm",
-      "renamedSymbol": "C:lm",
+      "renamedSymbol": "C:PcmSample",
       "originalName": "lm",
-      "renamedName": "lm",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "lm.java",
         "start": 50,
@@ -6790,9 +6806,9 @@
     },
     {
       "symbol": "C:pb",
-      "renamedSymbol": "C:pb",
+      "renamedSymbol": "C:AbstractAudioSample",
       "originalName": "pb",
-      "renamedName": "pb",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "pb.java",
         "start": 53,
@@ -24258,7 +24274,7 @@
     },
     {
       "symbol": "F:kf.field_s:[Llm;",
-      "renamedSymbol": "F:kf.field_s:[Llm;",
+      "renamedSymbol": "F:kf.field_s:[LPcmSample;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -26447,7 +26463,7 @@
     },
     {
       "symbol": "F:lm.field_k:I",
-      "renamedSymbol": "F:lm.field_k:I",
+      "renamedSymbol": "F:PcmSample.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -26458,7 +26474,7 @@
     },
     {
       "symbol": "F:lm.field_l:I",
-      "renamedSymbol": "F:lm.field_l:I",
+      "renamedSymbol": "F:PcmSample.field_l:I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -26469,7 +26485,7 @@
     },
     {
       "symbol": "F:lm.field_m:[B",
-      "renamedSymbol": "F:lm.field_m:[B",
+      "renamedSymbol": "F:PcmSample.field_m:[B",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -26480,7 +26496,7 @@
     },
     {
       "symbol": "F:lm.field_n:I",
-      "renamedSymbol": "F:lm.field_n:I",
+      "renamedSymbol": "F:PcmSample.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -26491,7 +26507,7 @@
     },
     {
       "symbol": "F:lm.field_o:Z",
-      "renamedSymbol": "F:lm.field_o:Z",
+      "renamedSymbol": "F:PcmSample.field_o:Z",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -29351,7 +29367,7 @@
     },
     {
       "symbol": "F:nm.field_l:Lpb;",
-      "renamedSymbol": "F:PcmStream.field_l:Lpb;",
+      "renamedSymbol": "F:PcmStream.field_l:LAbstractAudioSample;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -31023,7 +31039,7 @@
     },
     {
       "symbol": "F:pb.field_j:I",
-      "renamedSymbol": "F:pb.field_j:I",
+      "renamedSymbol": "F:AbstractAudioSample.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -32387,7 +32403,7 @@
     },
     {
       "symbol": "F:qd.field_H:Llm;",
-      "renamedSymbol": "F:qd.field_H:Llm;",
+      "renamedSymbol": "F:qd.field_H:LPcmSample;",
       "originalName": "field_H",
       "renamedName": "field_H",
       "declaration": {
@@ -38129,7 +38145,7 @@
     },
     {
       "symbol": "F:um.field_l:[Llm;",
-      "renamedSymbol": "F:ResourceArchive.field_l:[Llm;",
+      "renamedSymbol": "F:ResourceArchive.field_l:[LPcmSample;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -63539,7 +63555,7 @@
     },
     {
       "symbol": "L:ck.a()Llm;#0",
-      "renamedSymbol": "L:ck.a()Llm;#0",
+      "renamedSymbol": "L:ck.a()LPcmSample;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -83658,7 +83674,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#0",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#0",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -83669,7 +83685,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#1",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#1",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -83680,7 +83696,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#2",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#2",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -83691,7 +83707,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#3",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#3",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#3",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -83702,7 +83718,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#4",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#4",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -83713,7 +83729,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#5",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#5",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -83724,7 +83740,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#6",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#6",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -83735,7 +83751,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#7",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#7",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -83746,7 +83762,7 @@
     },
     {
       "symbol": "L:fe.a(I[IB)Llm;#8",
-      "renamedSymbol": "L:fe.a(I[IB)Llm;#8",
+      "renamedSymbol": "L:fe.a(I[IB)LPcmSample;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -83790,7 +83806,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#0",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#0",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -83801,7 +83817,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#1",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#1",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -83812,7 +83828,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#10",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#10",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#10",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -83823,7 +83839,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#11",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#11",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#11",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -83834,7 +83850,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#12",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#12",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#12",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -83845,7 +83861,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#13",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#13",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -83856,7 +83872,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#14",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#14",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -83867,7 +83883,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#2",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#2",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -83878,7 +83894,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#3",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#3",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -83889,7 +83905,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#4",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#4",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -83900,7 +83916,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#5",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#5",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#5",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -83911,7 +83927,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#6",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#6",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#6",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -83922,7 +83938,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#7",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#7",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#7",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -83933,7 +83949,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#8",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#8",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#8",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -83944,7 +83960,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#9",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#9",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#9",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -83955,7 +83971,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#0",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#0",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -83966,7 +83982,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#1",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#1",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -83977,7 +83993,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#2",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#2",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -83988,7 +84004,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#3",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#3",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -83999,7 +84015,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#4",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#4",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -84010,7 +84026,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#5",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#5",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -84021,7 +84037,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#6",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#6",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#6",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -84032,7 +84048,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#7",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#7",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#7",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -84043,7 +84059,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#8",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#8",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84054,7 +84070,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#9",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#9",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84208,7 +84224,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#0",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#0",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -84219,7 +84235,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#1",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#1",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -84230,7 +84246,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#2",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#2",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -84241,7 +84257,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#3",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#3",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -84252,7 +84268,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#4",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#4",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -84263,7 +84279,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#5",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#5",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -84274,7 +84290,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#6",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#6",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -84285,7 +84301,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#7",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#7",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#7",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -84296,7 +84312,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#8",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#8",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84307,7 +84323,7 @@
     },
     {
       "symbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#9",
-      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#9",
+      "renamedSymbol": "L:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84318,7 +84334,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#0",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#0",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -84329,7 +84345,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#1",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#1",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -84340,7 +84356,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#10",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#10",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#10",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -84351,7 +84367,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#11",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#11",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#11",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -84362,7 +84378,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#12",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#12",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#12",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -84373,7 +84389,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#13",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#13",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84384,7 +84400,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#14",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#14",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#14",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -84395,7 +84411,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#15",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#15",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84406,7 +84422,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#2",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#2",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -84417,7 +84433,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#3",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#3",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -84428,7 +84444,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#4",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#4",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -84439,7 +84455,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#5",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#5",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -84450,7 +84466,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#6",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#6",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#6",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -84461,7 +84477,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#7",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#7",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#7",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -84472,7 +84488,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#8",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#8",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#8",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -84483,7 +84499,7 @@
     },
     {
       "symbol": "L:fe.a(ZII[I)Llm;#9",
-      "renamedSymbol": "L:fe.a(ZII[I)Llm;#9",
+      "renamedSymbol": "L:fe.a(ZII[I)LPcmSample;#9",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -84494,7 +84510,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#0",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#0",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#0",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -84505,7 +84521,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#1",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#1",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -84516,7 +84532,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#10",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#10",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -84527,7 +84543,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#11",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#11",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -84538,7 +84554,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#12",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#12",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#12",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -84549,7 +84565,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#13",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#13",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84560,7 +84576,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#2",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#2",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#2",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -84571,7 +84587,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#3",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#3",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#3",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -84582,7 +84598,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#4",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#4",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#4",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -84593,7 +84609,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#5",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#5",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#5",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -84604,7 +84620,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#6",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#6",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84615,7 +84631,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#7",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#7",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#7",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -84626,7 +84642,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#8",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#8",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -84637,7 +84653,7 @@
     },
     {
       "symbol": "L:fe.a([IBII)Llm;#9",
-      "renamedSymbol": "L:fe.a([IBII)Llm;#9",
+      "renamedSymbol": "L:fe.a([IBII)LPcmSample;#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -84648,7 +84664,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#0",
-      "renamedSymbol": "L:fe.a([III)Llm;#0",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -84659,7 +84675,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#1",
-      "renamedSymbol": "L:fe.a([III)Llm;#1",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -84670,7 +84686,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#2",
-      "renamedSymbol": "L:fe.a([III)Llm;#2",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -84681,7 +84697,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#3",
-      "renamedSymbol": "L:fe.a([III)Llm;#3",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -84692,7 +84708,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#4",
-      "renamedSymbol": "L:fe.a([III)Llm;#4",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -84703,7 +84719,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#5",
-      "renamedSymbol": "L:fe.a([III)Llm;#5",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -84714,7 +84730,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#6",
-      "renamedSymbol": "L:fe.a([III)Llm;#6",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84725,7 +84741,7 @@
     },
     {
       "symbol": "L:fe.a([III)Llm;#7",
-      "renamedSymbol": "L:fe.a([III)Llm;#7",
+      "renamedSymbol": "L:fe.a([III)LPcmSample;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84736,7 +84752,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#0",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#0",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -84747,7 +84763,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#1",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#1",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -84758,7 +84774,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#10",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#10",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#10",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -84769,7 +84785,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#11",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#11",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#11",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -84780,7 +84796,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#12",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#12",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#12",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -84791,7 +84807,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#13",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#13",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#13",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -84802,7 +84818,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#14",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#14",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84813,7 +84829,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#15",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#15",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84824,7 +84840,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#2",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#2",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -84835,7 +84851,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#3",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#3",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -84846,7 +84862,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#4",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#4",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -84857,7 +84873,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#5",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#5",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -84868,7 +84884,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#6",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#6",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -84879,7 +84895,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#7",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#7",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#7",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -84890,7 +84906,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#8",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#8",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#8",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -84901,7 +84917,7 @@
     },
     {
       "symbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#9",
-      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#9",
+      "renamedSymbol": "L:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#9",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -86727,7 +86743,7 @@
     },
     {
       "symbol": "L:g.a(BI)Llm;#0",
-      "renamedSymbol": "L:DelegatingCanvas.a(BI)Llm;#0",
+      "renamedSymbol": "L:DelegatingCanvas.a(BI)LPcmSample;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -86738,7 +86754,7 @@
     },
     {
       "symbol": "L:g.a(BI)Llm;#1",
-      "renamedSymbol": "L:DelegatingCanvas.a(BI)Llm;#1",
+      "renamedSymbol": "L:DelegatingCanvas.a(BI)LPcmSample;#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -86749,7 +86765,7 @@
     },
     {
       "symbol": "L:g.a(BI)Llm;#2",
-      "renamedSymbol": "L:DelegatingCanvas.a(BI)Llm;#2",
+      "renamedSymbol": "L:DelegatingCanvas.a(BI)LPcmSample;#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -86760,7 +86776,7 @@
     },
     {
       "symbol": "L:g.a(BI)Llm;#3",
-      "renamedSymbol": "L:DelegatingCanvas.a(BI)Llm;#3",
+      "renamedSymbol": "L:DelegatingCanvas.a(BI)LPcmSample;#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -86771,7 +86787,7 @@
     },
     {
       "symbol": "L:g.a(BI)Llm;#4",
-      "renamedSymbol": "L:DelegatingCanvas.a(BI)Llm;#4",
+      "renamedSymbol": "L:DelegatingCanvas.a(BI)LPcmSample;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -92623,7 +92639,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#0",
-      "renamedSymbol": "L:hi.a()Llm;#0",
+      "renamedSymbol": "L:hi.a()LPcmSample;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -92634,7 +92650,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#1",
-      "renamedSymbol": "L:hi.a()Llm;#1",
+      "renamedSymbol": "L:hi.a()LPcmSample;#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -92645,7 +92661,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#2",
-      "renamedSymbol": "L:hi.a()Llm;#2",
+      "renamedSymbol": "L:hi.a()LPcmSample;#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -92656,7 +92672,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#3",
-      "renamedSymbol": "L:hi.a()Llm;#3",
+      "renamedSymbol": "L:hi.a()LPcmSample;#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -92667,7 +92683,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#4",
-      "renamedSymbol": "L:hi.a()Llm;#4",
+      "renamedSymbol": "L:hi.a()LPcmSample;#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -92678,7 +92694,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#5",
-      "renamedSymbol": "L:hi.a()Llm;#5",
+      "renamedSymbol": "L:hi.a()LPcmSample;#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -92689,7 +92705,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#6",
-      "renamedSymbol": "L:hi.a()Llm;#6",
+      "renamedSymbol": "L:hi.a()LPcmSample;#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -92700,7 +92716,7 @@
     },
     {
       "symbol": "L:hi.a()Llm;#7",
-      "renamedSymbol": "L:hi.a()Llm;#7",
+      "renamedSymbol": "L:hi.a()LPcmSample;#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -92953,7 +92969,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#0",
-      "renamedSymbol": "L:hi.a([I)Llm;#0",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -92964,7 +92980,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#1",
-      "renamedSymbol": "L:hi.a([I)Llm;#1",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#1",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -92975,7 +92991,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#2",
-      "renamedSymbol": "L:hi.a([I)Llm;#2",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -92986,7 +93002,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#3",
-      "renamedSymbol": "L:hi.a([I)Llm;#3",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -92997,7 +93013,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#4",
-      "renamedSymbol": "L:hi.a([I)Llm;#4",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -93008,7 +93024,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#5",
-      "renamedSymbol": "L:hi.a([I)Llm;#5",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -93019,7 +93035,7 @@
     },
     {
       "symbol": "L:hi.a([I)Llm;#6",
-      "renamedSymbol": "L:hi.a([I)Llm;#6",
+      "renamedSymbol": "L:hi.a([I)LPcmSample;#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -195242,7 +195258,7 @@
     },
     {
       "symbol": "L:wf.a(Llm;I)V#0",
-      "renamedSymbol": "L:wf.a(Llm;I)V#0",
+      "renamedSymbol": "L:wf.a(LPcmSample;I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -195253,7 +195269,7 @@
     },
     {
       "symbol": "L:wf.a(Llm;I)V#1",
-      "renamedSymbol": "L:wf.a(Llm;I)V#1",
+      "renamedSymbol": "L:wf.a(LPcmSample;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -204669,7 +204685,7 @@
     },
     {
       "symbol": "M:ck.a()Llm;",
-      "renamedSymbol": "M:ck.a()Llm;",
+      "renamedSymbol": "M:ck.a()LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208266,7 +208282,7 @@
     },
     {
       "symbol": "M:fe.a(I[IB)Llm;",
-      "renamedSymbol": "M:fe.a(I[IB)Llm;",
+      "renamedSymbol": "M:fe.a(I[IB)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208288,7 +208304,7 @@
     },
     {
       "symbol": "M:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;",
-      "renamedSymbol": "M:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;",
+      "renamedSymbol": "M:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208299,7 +208315,7 @@
     },
     {
       "symbol": "M:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;",
-      "renamedSymbol": "M:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;",
+      "renamedSymbol": "M:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208321,7 +208337,7 @@
     },
     {
       "symbol": "M:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;",
-      "renamedSymbol": "M:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;",
+      "renamedSymbol": "M:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208332,7 +208348,7 @@
     },
     {
       "symbol": "M:fe.a(ZII[I)Llm;",
-      "renamedSymbol": "M:fe.a(ZII[I)Llm;",
+      "renamedSymbol": "M:fe.a(ZII[I)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208343,7 +208359,7 @@
     },
     {
       "symbol": "M:fe.a([IBII)Llm;",
-      "renamedSymbol": "M:fe.a([IBII)Llm;",
+      "renamedSymbol": "M:fe.a([IBII)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208354,7 +208370,7 @@
     },
     {
       "symbol": "M:fe.a([III)Llm;",
-      "renamedSymbol": "M:fe.a([III)Llm;",
+      "renamedSymbol": "M:fe.a([III)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208365,7 +208381,7 @@
     },
     {
       "symbol": "M:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;",
-      "renamedSymbol": "M:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;",
+      "renamedSymbol": "M:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -208904,7 +208920,7 @@
     },
     {
       "symbol": "M:g.a(BI)Llm;",
-      "renamedSymbol": "M:DelegatingCanvas.a(BI)Llm;",
+      "renamedSymbol": "M:DelegatingCanvas.a(BI)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -210477,7 +210493,7 @@
     },
     {
       "symbol": "M:hi.a()Llm;",
-      "renamedSymbol": "M:hi.a()Llm;",
+      "renamedSymbol": "M:hi.a()LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -210554,7 +210570,7 @@
     },
     {
       "symbol": "M:hi.a([I)Llm;",
-      "renamedSymbol": "M:hi.a([I)Llm;",
+      "renamedSymbol": "M:hi.a([I)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -215900,9 +215916,9 @@
     },
     {
       "symbol": "M:lm.<init>(II)V",
-      "renamedSymbol": "M:lm.<init>(II)V",
+      "renamedSymbol": "M:PcmSample.<init>(II)V",
       "originalName": "lm",
-      "renamedName": "lm",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "lm.java",
         "start": 163,
@@ -215911,9 +215927,9 @@
     },
     {
       "symbol": "M:lm.<init>(I[BII)V",
-      "renamedSymbol": "M:lm.<init>(I[BII)V",
+      "renamedSymbol": "M:PcmSample.<init>(I[BII)V",
       "originalName": "lm",
-      "renamedName": "lm",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "lm.java",
         "start": 332,
@@ -215922,9 +215938,9 @@
     },
     {
       "symbol": "M:lm.<init>(I[BIIZ)V",
-      "renamedSymbol": "M:lm.<init>(I[BIIZ)V",
+      "renamedSymbol": "M:PcmSample.<init>(I[BIIZ)V",
       "originalName": "lm",
-      "renamedName": "lm",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "lm.java",
         "start": 523,
@@ -217660,7 +217676,7 @@
     },
     {
       "symbol": "M:na.<init>(Llm;II)V",
-      "renamedSymbol": "M:PcmSampleStream.<init>(Llm;II)V",
+      "renamedSymbol": "M:PcmSampleStream.<init>(LPcmSample;II)V",
       "originalName": "na",
       "renamedName": "PcmSampleStream",
       "declaration": {
@@ -217671,7 +217687,7 @@
     },
     {
       "symbol": "M:na.<init>(Llm;III)V",
-      "renamedSymbol": "M:PcmSampleStream.<init>(Llm;III)V",
+      "renamedSymbol": "M:PcmSampleStream.<init>(LPcmSample;III)V",
       "originalName": "na",
       "renamedName": "PcmSampleStream",
       "declaration": {
@@ -217781,7 +217797,7 @@
     },
     {
       "symbol": "M:na.a(Llm;II)Lna;",
-      "renamedSymbol": "M:PcmSampleStream.a(Llm;II)LPcmSampleStream;",
+      "renamedSymbol": "M:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -217792,7 +217808,7 @@
     },
     {
       "symbol": "M:na.a(Llm;III)Lna;",
-      "renamedSymbol": "M:PcmSampleStream.a(Llm;III)LPcmSampleStream;",
+      "renamedSymbol": "M:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -220839,9 +220855,9 @@
     },
     {
       "symbol": "M:pb.<init>()V",
-      "renamedSymbol": "M:pb.<init>()V",
+      "renamedSymbol": "M:AbstractAudioSample.<init>()V",
       "originalName": "pb",
-      "renamedName": "pb",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "pb.java",
         "start": 90,
@@ -229397,7 +229413,7 @@
     },
     {
       "symbol": "M:wf.a(Llm;I)V",
-      "renamedSymbol": "M:wf.a(Llm;I)V",
+      "renamedSymbol": "M:wf.a(LPcmSample;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -247767,7 +247783,7 @@
     },
     {
       "symbol": "P:fe.a(I[IB)Llm;#0",
-      "renamedSymbol": "P:fe.a(I[IB)Llm;#0",
+      "renamedSymbol": "P:fe.a(I[IB)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247778,7 +247794,7 @@
     },
     {
       "symbol": "P:fe.a(I[IB)Llm;#1",
-      "renamedSymbol": "P:fe.a(I[IB)Llm;#1",
+      "renamedSymbol": "P:fe.a(I[IB)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247789,7 +247805,7 @@
     },
     {
       "symbol": "P:fe.a(I[IB)Llm;#2",
-      "renamedSymbol": "P:fe.a(I[IB)Llm;#2",
+      "renamedSymbol": "P:fe.a(I[IB)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -247822,7 +247838,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#0",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#0",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247833,7 +247849,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#1",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#1",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247844,7 +247860,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#2",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#2",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -247855,7 +247871,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#3",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)Llm;#3",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ILjava/lang/String;[I)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -247866,7 +247882,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#0",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#0",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247877,7 +247893,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#1",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#1",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247888,7 +247904,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#2",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)Llm;#2",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -247943,7 +247959,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#0",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#0",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247954,7 +247970,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#1",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#1",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247965,7 +247981,7 @@
     },
     {
       "symbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#2",
-      "renamedSymbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)Llm;#2",
+      "renamedSymbol": "P:fe.a(Ljava/lang/String;ZLjava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -247976,7 +247992,7 @@
     },
     {
       "symbol": "P:fe.a(ZII[I)Llm;#0",
-      "renamedSymbol": "P:fe.a(ZII[I)Llm;#0",
+      "renamedSymbol": "P:fe.a(ZII[I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247987,7 +248003,7 @@
     },
     {
       "symbol": "P:fe.a(ZII[I)Llm;#1",
-      "renamedSymbol": "P:fe.a(ZII[I)Llm;#1",
+      "renamedSymbol": "P:fe.a(ZII[I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247998,7 +248014,7 @@
     },
     {
       "symbol": "P:fe.a(ZII[I)Llm;#2",
-      "renamedSymbol": "P:fe.a(ZII[I)Llm;#2",
+      "renamedSymbol": "P:fe.a(ZII[I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248009,7 +248025,7 @@
     },
     {
       "symbol": "P:fe.a(ZII[I)Llm;#3",
-      "renamedSymbol": "P:fe.a(ZII[I)Llm;#3",
+      "renamedSymbol": "P:fe.a(ZII[I)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -248020,7 +248036,7 @@
     },
     {
       "symbol": "P:fe.a([IBII)Llm;#0",
-      "renamedSymbol": "P:fe.a([IBII)Llm;#0",
+      "renamedSymbol": "P:fe.a([IBII)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248031,7 +248047,7 @@
     },
     {
       "symbol": "P:fe.a([IBII)Llm;#1",
-      "renamedSymbol": "P:fe.a([IBII)Llm;#1",
+      "renamedSymbol": "P:fe.a([IBII)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248042,7 +248058,7 @@
     },
     {
       "symbol": "P:fe.a([IBII)Llm;#2",
-      "renamedSymbol": "P:fe.a([IBII)Llm;#2",
+      "renamedSymbol": "P:fe.a([IBII)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248053,7 +248069,7 @@
     },
     {
       "symbol": "P:fe.a([IBII)Llm;#3",
-      "renamedSymbol": "P:fe.a([IBII)Llm;#3",
+      "renamedSymbol": "P:fe.a([IBII)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -248064,7 +248080,7 @@
     },
     {
       "symbol": "P:fe.a([III)Llm;#0",
-      "renamedSymbol": "P:fe.a([III)Llm;#0",
+      "renamedSymbol": "P:fe.a([III)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248075,7 +248091,7 @@
     },
     {
       "symbol": "P:fe.a([III)Llm;#1",
-      "renamedSymbol": "P:fe.a([III)Llm;#1",
+      "renamedSymbol": "P:fe.a([III)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248086,7 +248102,7 @@
     },
     {
       "symbol": "P:fe.a([III)Llm;#2",
-      "renamedSymbol": "P:fe.a([III)Llm;#2",
+      "renamedSymbol": "P:fe.a([III)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248097,7 +248113,7 @@
     },
     {
       "symbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#0",
-      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#0",
+      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248108,7 +248124,7 @@
     },
     {
       "symbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#1",
-      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#1",
+      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248119,7 +248135,7 @@
     },
     {
       "symbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#2",
-      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#2",
+      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248130,7 +248146,7 @@
     },
     {
       "symbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#3",
-      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)Llm;#3",
+      "renamedSymbol": "P:fe.a([ILjava/lang/String;ILjava/lang/String;)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -249274,7 +249290,7 @@
     },
     {
       "symbol": "P:g.a(BI)Llm;#0",
-      "renamedSymbol": "P:DelegatingCanvas.a(BI)Llm;#0",
+      "renamedSymbol": "P:DelegatingCanvas.a(BI)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -249285,7 +249301,7 @@
     },
     {
       "symbol": "P:g.a(BI)Llm;#1",
-      "renamedSymbol": "P:DelegatingCanvas.a(BI)Llm;#1",
+      "renamedSymbol": "P:DelegatingCanvas.a(BI)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -252695,7 +252711,7 @@
     },
     {
       "symbol": "P:hi.a([I)Llm;#0",
-      "renamedSymbol": "P:hi.a([I)Llm;#0",
+      "renamedSymbol": "P:hi.a([I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -266973,7 +266989,7 @@
     },
     {
       "symbol": "P:lm.<init>(II)V#0",
-      "renamedSymbol": "P:lm.<init>(II)V#0",
+      "renamedSymbol": "P:PcmSample.<init>(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -266984,7 +267000,7 @@
     },
     {
       "symbol": "P:lm.<init>(II)V#1",
-      "renamedSymbol": "P:lm.<init>(II)V#1",
+      "renamedSymbol": "P:PcmSample.<init>(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -266995,7 +267011,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BII)V#0",
-      "renamedSymbol": "P:lm.<init>(I[BII)V#0",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -267006,7 +267022,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BII)V#1",
-      "renamedSymbol": "P:lm.<init>(I[BII)V#1",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -267017,7 +267033,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BII)V#2",
-      "renamedSymbol": "P:lm.<init>(I[BII)V#2",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -267028,7 +267044,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BII)V#3",
-      "renamedSymbol": "P:lm.<init>(I[BII)V#3",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -267039,7 +267055,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BIIZ)V#0",
-      "renamedSymbol": "P:lm.<init>(I[BIIZ)V#0",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -267050,7 +267066,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BIIZ)V#1",
-      "renamedSymbol": "P:lm.<init>(I[BIIZ)V#1",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -267061,7 +267077,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BIIZ)V#2",
-      "renamedSymbol": "P:lm.<init>(I[BIIZ)V#2",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -267072,7 +267088,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BIIZ)V#3",
-      "renamedSymbol": "P:lm.<init>(I[BIIZ)V#3",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -267083,7 +267099,7 @@
     },
     {
       "symbol": "P:lm.<init>(I[BIIZ)V#4",
-      "renamedSymbol": "P:lm.<init>(I[BIIZ)V#4",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -271175,7 +271191,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;II)V#0",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;II)V#0",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -271186,7 +271202,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;II)V#1",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;II)V#1",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -271197,7 +271213,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;II)V#2",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;II)V#2",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -271208,7 +271224,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;III)V#0",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;III)V#0",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -271219,7 +271235,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;III)V#1",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;III)V#1",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -271230,7 +271246,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;III)V#2",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;III)V#2",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -271241,7 +271257,7 @@
     },
     {
       "symbol": "P:na.<init>(Llm;III)V#3",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Llm;III)V#3",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -272055,7 +272071,7 @@
     },
     {
       "symbol": "P:na.a(Llm;II)Lna;#0",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;II)LPcmSampleStream;#0",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272066,7 +272082,7 @@
     },
     {
       "symbol": "P:na.a(Llm;II)Lna;#1",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;II)LPcmSampleStream;#1",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -272077,7 +272093,7 @@
     },
     {
       "symbol": "P:na.a(Llm;II)Lna;#2",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;II)LPcmSampleStream;#2",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -272088,7 +272104,7 @@
     },
     {
       "symbol": "P:na.a(Llm;III)Lna;#0",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;III)LPcmSampleStream;#0",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272099,7 +272115,7 @@
     },
     {
       "symbol": "P:na.a(Llm;III)Lna;#1",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;III)LPcmSampleStream;#1",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -272110,7 +272126,7 @@
     },
     {
       "symbol": "P:na.a(Llm;III)Lna;#2",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;III)LPcmSampleStream;#2",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -272121,7 +272137,7 @@
     },
     {
       "symbol": "P:na.a(Llm;III)Lna;#3",
-      "renamedSymbol": "P:PcmSampleStream.a(Llm;III)LPcmSampleStream;#3",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -300688,7 +300704,7 @@
     },
     {
       "symbol": "P:wf.a(Llm;I)V#0",
-      "renamedSymbol": "P:wf.a(Llm;I)V#0",
+      "renamedSymbol": "P:wf.a(LPcmSample;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300699,7 +300715,7 @@
     },
     {
       "symbol": "P:wf.a(Llm;I)V#1",
-      "renamedSymbol": "P:wf.a(Llm;I)V#1",
+      "renamedSymbol": "P:wf.a(LPcmSample;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -312016,8 +312032,22 @@
       "original": "ck.java",
       "renamed": "ck.java",
       "inputSha256": "de08dd09aed8a34d1135cabb925f08027c46fe3248d44b639d9978e290189ce2",
-      "outputSha256": "5eab593299794b59045de37f295d32d6626d7d29a9320f4b2add28320ae2de4b",
+      "outputSha256": "873ec60981a75c90b4fbff5a0dec9e0833f098c6b81a5a38deb6c8797f750ac7",
       "edits": [
+        {
+          "start": 142,
+          "end": 144,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 202,
+          "end": 204,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
         {
           "start": 306,
           "end": 308,
@@ -318727,7 +318757,7 @@
       "original": "fe.java",
       "renamed": "fe.java",
       "inputSha256": "296ebd3fb2c7c5161cf19b59352c75252d5f113c0ead6cbfb5c8848f1e3bcfc1",
-      "outputSha256": "1430e82c140c1846ece24b7084481f980dc7eea94ca91f9003d6d429f8229059",
+      "outputSha256": "426befdc053a0b0078e280f90cf9c8fcc9558c714fb5fe4589d67d723e289cea",
       "edits": [
         {
           "start": 67,
@@ -318744,11 +318774,46 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 263,
+          "end": 265,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 381,
+          "end": 383,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 412,
+          "end": 414,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 1491,
           "end": 1492,
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1854,
+          "end": 1856,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 1993,
+          "end": 1995,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 3227,
@@ -318779,6 +318844,41 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 4960,
+          "end": 4962,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 5152,
+          "end": 5154,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 5183,
+          "end": 5185,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 5693,
+          "end": 5695,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 5780,
+          "end": 5782,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 6973,
           "end": 6974,
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
@@ -318807,11 +318907,88 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 9456,
+          "end": 9458,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 9551,
+          "end": 9553,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 9582,
+          "end": 9584,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 10053,
+          "end": 10055,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 10750,
           "end": 10751,
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 10936,
+          "end": 10938,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 11002,
+          "end": 11004,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 11069,
+          "end": 11071,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 11373,
+          "end": 11375,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 11421,
+          "end": 11423,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 11639,
+          "end": 11641,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 12181,
+          "end": 12183,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 12414,
@@ -318828,11 +319005,102 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 13236,
+          "end": 13238,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 13503,
+          "end": 13505,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 14012,
+          "end": 14014,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 14450,
+          "end": 14452,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 15392,
           "end": 15393,
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 15552,
+          "end": 15554,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 15709,
+          "end": 15711,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 15757,
+          "end": 15759,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 15782,
+          "end": 15784,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 15884,
+          "end": 15886,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 16100,
+          "end": 16102,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 16298,
+          "end": 16300,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 16616,
+          "end": 16618,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 16783,
+          "end": 16785,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 17611,
@@ -318847,6 +319115,27 @@
           "symbol": "M:fe.a(JI)V",
           "original": "a",
           "renamed": "sleepIgnoringInterrupts"
+        },
+        {
+          "start": 18286,
+          "end": 18288,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 18377,
+          "end": 18379,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 18408,
+          "end": 18410,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 19490,
@@ -319485,7 +319774,7 @@
       "original": "g.java",
       "renamed": "DelegatingCanvas.java",
       "inputSha256": "ce3addc6f8f68d30f7ec83adeb73b888a741480d961e2832e2f9aad379726c23",
-      "outputSha256": "f3d487774621f86c0e33e09325a7d9f9fc99d018d0f16badb6cc6c5cea69daed",
+      "outputSha256": "1fc5dd7c39c36cd459e3cdb74d2816396ad1d00fc7f2823412e3a97f0edc468d",
       "edits": [
         {
           "start": 50,
@@ -319563,6 +319852,34 @@
           "symbol": "M:g.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2435,
+          "end": 2437,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 2531,
+          "end": 2533,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 2545,
+          "end": 2547,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 2882,
+          "end": 2884,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 4621,
@@ -321980,7 +322297,7 @@
       "original": "hi.java",
       "renamed": "hi.java",
       "inputSha256": "d1128b33f868a84d264e3beac8b6f18f4f2276c61baaea5328da0a5f32481716",
-      "outputSha256": "8dfcb2f2b721a139353b86843ef7fdc71475093055f58cc7db3f372b3337ea5a",
+      "outputSha256": "ad5ada4426b7240ec48f400849d2fbcdddb0e18db5be42c77d8435a63fb38190",
       "edits": [
         {
           "start": 80,
@@ -322102,6 +322419,20 @@
           "renamed": "readBits"
         },
         {
+          "start": 4657,
+          "end": 4659,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 6191,
+          "end": 6193,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 9221,
           "end": 9222,
           "symbol": "M:hi.b()I",
@@ -322156,6 +322487,20 @@
           "symbol": "M:ql.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 22310,
+          "end": 22312,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 23280,
+          "end": 23282,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 24208,
@@ -327870,7 +328215,7 @@
       "original": "kf.java",
       "renamed": "kf.java",
       "inputSha256": "c2e642da5e02c6bdcefce3a7d005e9522f81f8299672f61158114c0e85539ae4",
-      "outputSha256": "8918c0e2193539bcb1ed124cd4a1ba3aeb2314071ee1f2e576f29fde641f1aa7",
+      "outputSha256": "50ae663760dbb44d5c71b9691cd25c38869ad01369aa14a98617a28398dbb550",
       "edits": [
         {
           "start": 61,
@@ -327878,6 +328223,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 131,
+          "end": 133,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 237,
@@ -327894,6 +328246,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 3794,
+          "end": 3796,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 4902,
           "end": 4903,
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
@@ -327906,6 +328265,13 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 9124,
+          "end": 9126,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 9195,
@@ -331901,10 +332267,46 @@
     },
     {
       "original": "lm.java",
-      "renamed": "lm.java",
+      "renamed": "PcmSample.java",
       "inputSha256": "0cde195de6eb06a2ffa194c6d01dcd2a708c2e0f957b3160d494f9b7d7583a21",
-      "outputSha256": "0cde195de6eb06a2ffa194c6d01dcd2a708c2e0f957b3160d494f9b7d7583a21",
-      "edits": []
+      "outputSha256": "2a5f94bd061c5c44068cf0b85eb6646f7f9fab3ba033616e1f28d5df216f1491",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:pb",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
+        },
+        {
+          "start": 163,
+          "end": 165,
+          "symbol": "M:lm.<init>(II)V",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 332,
+          "end": 334,
+          "symbol": "M:lm.<init>(I[BII)V",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 523,
+          "end": 525,
+          "symbol": "M:lm.<init>(I[BIIZ)V",
+          "original": "lm",
+          "renamed": "PcmSample"
+        }
+      ]
     },
     {
       "original": "ln.java",
@@ -332221,7 +332623,7 @@
       "original": "md.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "e69fb459eb70e779f870736d68c68ea18d18e0015969384562cd6dc8a2bb0ae5",
-      "outputSha256": "5874655d1af8cdcd2657da204e9078714f9a56e13bac393adb365d297b3e74da",
+      "outputSha256": "7fb6cb784e6cf929c5871437c446751fe59bfafe3c488f4587d85c2ed90aae15",
       "edits": [
         {
           "start": 44,
@@ -332572,6 +332974,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 7634,
+          "end": 7636,
+          "symbol": "C:pb",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 7671,
@@ -334208,7 +334617,7 @@
       "original": "na.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "d9a4bdd8b30d1f90a8fc8e9a3f0abb2ec65164af09594bbb4a3f9f060edf72ca",
-      "outputSha256": "e4aed2679495d7dc965fed72719c861afc891a27bc3c7d1432d7cafbbb6578ea",
+      "outputSha256": "7d72798f371af2529e9b1afd58e9ad5ce3591dcb56055bd37c4ac5113bb57044",
       "edits": [
         {
           "start": 50,
@@ -334288,6 +334697,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 10264,
+          "end": 10266,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 10435,
           "end": 10437,
           "symbol": "C:na",
@@ -334316,6 +334732,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 12675,
+          "end": 12677,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 12745,
           "end": 12746,
           "symbol": "M:na.a([IIIII)I",
@@ -334337,11 +334760,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 13024,
+          "end": 13026,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 13174,
           "end": 13176,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 13181,
+          "end": 13183,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 13310,
@@ -334358,11 +334795,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 13358,
+          "end": 13360,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 13526,
           "end": 13528,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 13539,
+          "end": 13541,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 13925,
@@ -334379,11 +334830,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 13969,
+          "end": 13971,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 14124,
           "end": 14126,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 14134,
+          "end": 14136,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 14323,
@@ -334400,11 +334865,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 14373,
+          "end": 14375,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 14550,
           "end": 14552,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 14563,
+          "end": 14565,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 15096,
@@ -334435,11 +334914,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 15410,
+          "end": 15412,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 15560,
           "end": 15562,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 15567,
+          "end": 15569,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 15696,
@@ -334456,11 +334949,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 15744,
+          "end": 15746,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 15912,
           "end": 15914,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 15925,
+          "end": 15927,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 16312,
@@ -334477,11 +334984,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 16356,
+          "end": 16358,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 16511,
           "end": 16513,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 16521,
+          "end": 16523,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 16710,
@@ -334498,11 +335019,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 16760,
+          "end": 16762,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 16937,
           "end": 16939,
           "symbol": "C:na",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 16950,
+          "end": 16952,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 17474,
@@ -334538,6 +335073,13 @@
           "symbol": "P:na.a(I)V#0",
           "original": "param0",
           "renamed": "sampleCount"
+        },
+        {
+          "start": 24314,
+          "end": 24316,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 24459,
@@ -334594,6 +335136,13 @@
           "symbol": "M:na.f()V",
           "original": "f",
           "renamed": "recomputeGains"
+        },
+        {
+          "start": 25093,
+          "end": 25095,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 25397,
@@ -334708,11 +335257,25 @@
           "renamed": "mixInto"
         },
         {
+          "start": 37017,
+          "end": 37019,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 37242,
           "end": 37243,
           "symbol": "M:na.a(I)V",
           "original": "a",
           "renamed": "skip"
+        },
+        {
+          "start": 37297,
+          "end": 37299,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 37658,
@@ -334890,11 +335453,32 @@
           "renamed": "unlink"
         },
         {
+          "start": 47309,
+          "end": 47311,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 47604,
           "end": 47605,
           "symbol": "M:na.c()I",
           "original": "c",
           "renamed": "getSchedulingPriority"
+        },
+        {
+          "start": 47786,
+          "end": 47788,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 47930,
+          "end": 47932,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 48284,
@@ -334974,6 +335558,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 62616,
+          "end": 62618,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 62799,
           "end": 62801,
           "symbol": "C:na",
@@ -334988,6 +335579,20 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 62888,
+          "end": 62890,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 62949,
+          "end": 62951,
+          "symbol": "C:pb",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
+        },
+        {
           "start": 63219,
           "end": 63220,
           "symbol": "M:na.f()V",
@@ -335000,6 +335605,20 @@
           "symbol": "M:na.<init>(Llm;III)V",
           "original": "na",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 63246,
+          "end": 63248,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 63319,
+          "end": 63321,
+          "symbol": "C:pb",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 63591,
@@ -336337,7 +336956,7 @@
       "original": "nm.java",
       "renamed": "PcmStream.java",
       "inputSha256": "fbc10186fd3b069abb17e23e62fe6787cd8c4cf3a68aedfec7e9e0adc2de1eca",
-      "outputSha256": "bbabe59c1992545ba915bfc67675f669c0ea11f9b91ec1992f68cf8aecb2ea36",
+      "outputSha256": "8590c7021b0e5cc3aaefba480e22e42e28b497744d5a80da234ea430abc39557",
       "edits": [
         {
           "start": 53,
@@ -336359,6 +336978,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 135,
+          "end": 137,
+          "symbol": "C:pb",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 166,
@@ -341056,16 +341682,30 @@
     },
     {
       "original": "pb.java",
-      "renamed": "pb.java",
+      "renamed": "AbstractAudioSample.java",
       "inputSha256": "8698748ea35ab14b557a6bc9a1405143a8348637c6171cfa953836c1effb1a8b",
-      "outputSha256": "fdb8a89b54085c146d387449397b64538596da61d2e7d05846b2d0212d8d4e8b",
+      "outputSha256": "7351cbf0d3ad7031a4a41cfbb9869d95b9977bfb955323c524a34b1cfa2056fe",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:pb",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
+        },
         {
           "start": 64,
           "end": 65,
           "symbol": "C:o",
           "original": "o",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 90,
+          "end": 92,
+          "symbol": "M:pb.<init>()V",
+          "original": "pb",
+          "renamed": "AbstractAudioSample"
         }
       ]
     },
@@ -343518,7 +344158,7 @@
       "original": "qd.java",
       "renamed": "qd.java",
       "inputSha256": "bbd4b6a1f50b366378866b286f690f017e83cf2a60aa02522e3683d9b77b97de",
-      "outputSha256": "2213ba65fe636e0207cee3713344d10ec1c21efc5bc4f92b94d1d4bc5c161dd5",
+      "outputSha256": "a5b83ec990852b0cc643d6d8602b3ab40b22af52ac29a98a1e9327edae7d0dbe",
       "edits": [
         {
           "start": 61,
@@ -343526,6 +344166,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 120,
+          "end": 122,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 403,
@@ -349200,7 +349847,7 @@
       "original": "um.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "ee9af87296d55c66030e04f5b9ca906c18970121e2975a09d15ce039020f5b3f",
-      "outputSha256": "71c2854db703d61bd3a8fbed6ceee56f15dfc2f71d745ccbc0621546c02714e1",
+      "outputSha256": "ea1d76f2e030a517497792d0a6a636e7d393e17f02e53e5f7b656e5d17b4e691",
       "edits": [
         {
           "start": 50,
@@ -349229,6 +349876,13 @@
           "symbol": "C:jk",
           "original": "jk",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 360,
+          "end": 362,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 501,
@@ -349271,6 +349925,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 11116,
+          "end": 11118,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 12420,
@@ -349558,6 +350219,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 32977,
+          "end": 32979,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         }
       ]
     },
@@ -350954,7 +351622,7 @@
       "original": "vl.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "8de0606ebae13e554aeac2566ed44254c5ca5ff525fad7e34dd8f639805871b6",
-      "outputSha256": "cdd9878a9e7f27ff4b85c0e9009c9dadd0edcfd83b48d613c376ff066b355d47",
+      "outputSha256": "0219fea49b4aff3d2971cdc29d4f8d9ecfbe6738262d564657ae0fd234c14aa0",
       "edits": [
         {
           "start": 50,
@@ -351151,6 +351819,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 10417,
+          "end": 10419,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 10676,
@@ -352369,7 +353044,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "003c3c0ae99610accc1e1879d918d137392f72aa52ea4599d58258587bf5ab26",
-      "outputSha256": "70e0fa2846c077c40cd27600ac3411aa23d3fc99740b3693162e9999d5c48f83",
+      "outputSha256": "09774d21e253bddcfc19b984047adac0df2532a9b49cb75339bcac7149ffe7fb",
       "edits": [
         {
           "start": 1444,
@@ -352405,6 +353080,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8901,
+          "end": 8903,
+          "symbol": "C:lm",
+          "original": "lm",
+          "renamed": "PcmSample"
         },
         {
           "start": 9013,
@@ -352901,10 +353583,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/chess"
     },
-    "rulesSha256": "38c729d6c9713aff6bd3f9cf94166d0d49bf4082ca637d8b2dc0a198809c1058",
+    "rulesSha256": "bdd257a6cc62cc5529ac6aed5c5d5415e29a5836ea3eefe27e17177f539ced66",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
-    "outputTreeSha256": "a2693e26fe77180b4994b2714b6c6fc6b9743fa123c6240a2e0e13ea3acd2e10",
+    "outputTreeSha256": "541bdcc258fbbfd386bf89b6e4976fcd704e11eb8cf4b542d93c91e47cb8bc8b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

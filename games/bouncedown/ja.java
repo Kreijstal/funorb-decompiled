@@ -37,14 +37,14 @@ final class ja {
             field_c = (int[]) null;
           }
           var3_int = param2.field_mb - param0.field_mb;
-          if (param2.field_kb == u.field_d) {
+          if (param2.field_kb == PcmResampler.field_d) {
             var3_int -= 200;
           } else {
             if (null == param2.field_kb) {
               var3_int += 200;
             }
           }
-          if (param0.field_kb != u.field_d) {
+          if (param0.field_kb != PcmResampler.field_d) {
             if (param0.field_kb == null) {
               var3_int -= 200;
             }

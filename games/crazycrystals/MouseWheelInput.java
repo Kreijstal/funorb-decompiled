@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static ko field_k;
+    static PcmSample field_k;
     static int[] field_a;
     static boolean field_j;
     static int field_g;

@@ -9,7 +9,7 @@ final class mh {
     private IntrusiveNode field_c;
     static java.awt.Frame field_b;
     static String field_f;
-    static dl[] field_a;
+    static PcmSample[] field_a;
 
     final void a(long param0, byte param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;

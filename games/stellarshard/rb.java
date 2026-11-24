@@ -163,7 +163,7 @@ abstract class rb extends GameApplet {
             df.a(false, hf.a((byte) -96));
           }
           if (var4 == 6 &&
-            qh.field_d) {
+            PcmResampler.field_d) {
             eg.field_d = 10;
           }
           if (var4 == 7) {
@@ -472,7 +472,7 @@ abstract class rb extends GameApplet {
           ol.b(-114);
           gk.a(false);
           am.field_i = fl.field_c;
-          qh.field_d = false;
+          PcmResampler.field_d = false;
           hc.a(am.field_g, lk.field_i, wf.field_e, uj.field_f, (byte) -88);
           if (v.field_b ||
             null != IterableNodeHashTable.field_g) {
@@ -483,7 +483,7 @@ abstract class rb extends GameApplet {
             IterableNodeHashTable.a(stackIn_100_0, stackIn_102_1, stackIn_102_2, stackIn_103_3);
           }
           if (wi.field_a) {
-            qh.a(true);
+            PcmResampler.a(true);
           }
           if (pg.field_cb == null) {
             pg.field_cb = fk.d(75);

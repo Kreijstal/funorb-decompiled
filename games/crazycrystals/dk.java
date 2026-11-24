@@ -11,7 +11,7 @@ final class dk extends IntrusiveNode {
     static int field_q;
     static int field_h;
     short[] field_n;
-    ko[] field_m;
+    PcmSample[] field_m;
     static bc field_o;
     int field_g;
 
@@ -55,7 +55,7 @@ final class dk extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_m[var8] = (ko) (var7);
+                  this.field_m[var8] = (PcmSample) (var7);
                   this.field_k[var8] = 0;
                 }
               }
@@ -260,7 +260,7 @@ final class dk extends IntrusiveNode {
           this.field_i = new byte[128];
           this.field_n = new short[128];
           this.field_k = new int[128];
-          this.field_m = new ko[128];
+          this.field_m = new PcmSample[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; 0 != var38.payload[var3 + var38.position]; var3++) {
           }

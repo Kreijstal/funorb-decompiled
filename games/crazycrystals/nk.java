@@ -4,7 +4,7 @@
 class nk extends ik {
     static String field_m;
     static String[] field_h;
-    static ko field_j;
+    static PcmSample field_j;
     static String field_l;
     String field_i;
     static String field_k;
@@ -29,7 +29,7 @@ class nk extends ik {
           field_n = null;
           return;
         }
-        field_j = (ko) null;
+        field_j = (PcmSample) null;
         field_h = null;
         field_m = null;
         field_n = null;

@@ -10,7 +10,7 @@ final class tl {
     static boolean field_g;
     int field_j;
     static int[] field_d;
-    static bi field_b;
+    static PcmSample field_b;
     static int[] field_i;
     static e field_e;
     static int field_f;

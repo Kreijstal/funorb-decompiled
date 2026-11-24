@@ -12,7 +12,7 @@ final class nf extends IntrusiveNode {
     static String field_p;
     private int[] field_k;
     byte[] field_s;
-    jb[] field_q;
+    PcmSample[] field_q;
     byte[] field_i;
 
     final static boolean a(String param0, int param1) {
@@ -120,7 +120,7 @@ final class nf extends IntrusiveNode {
           var5_int = 1;
           var6 = 0;
           if (param3 != -20752) {
-            this.field_q = (jb[]) null;
+            this.field_q = (PcmSample[]) null;
           }
           var7 = null;
           for (var8 = 0; var8 < 128; var8++) {
@@ -141,7 +141,7 @@ final class nf extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_q[var8] = (jb) (var7);
+                  this.field_q[var8] = (PcmSample) (var7);
                   this.field_k[var8] = 0;
                 }
               }
@@ -311,7 +311,7 @@ final class nf extends IntrusiveNode {
           this.field_r = new short[128];
           this.field_s = new byte[128];
           this.field_l = new byte[128];
-          this.field_q = new jb[128];
+          this.field_q = new PcmSample[128];
           this.field_i = new byte[128];
           this.field_k = new int[128];
           var38 = new PacketBuffer(param0);

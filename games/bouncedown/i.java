@@ -12,10 +12,10 @@ final class i {
     private gk field_i;
     private uk field_e;
 
-    final ue a(int param0, int param1, int[] param2) {
+    final PcmSample a(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
-        ue stackIn_3_0 = null;
-        ue stackIn_9_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -65,11 +65,11 @@ final class i {
         }
     }
 
-    private final ue a(int[] param0, int param1, int param2, int param3) {
-        ue discarded$0 = null;
-        ue stackIn_2_0 = null;
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+        PcmSample discarded$0 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
-        ue stackIn_19_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -77,15 +77,15 @@ final class i {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ue var8 = null;
+        PcmSample var8 = null;
         te var9 = null;
         int[] var10 = null;
-        ue var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param1 ^ (param2 >>> 12 | 65532 & param2 << 4);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (ue) (this.field_e.a(param3 ^ -1911228517, var6));
+          var8 = (PcmSample) (this.field_e.a(param3 ^ -1911228517, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -93,7 +93,7 @@ final class i {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_6_0 = null;
-            return (ue) (stackIn_6_0);
+            return (PcmSample) (stackIn_6_0);
           }
           if (param3 != -1911228444) {
             var10 = (int[]) null;
@@ -129,27 +129,27 @@ final class i {
         }
     }
 
-    private final ue a(int param0, int param1, int[] param2, byte param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         long var7 = 0L;
-        ue var9 = null;
+        PcmSample var9 = null;
         ei var10 = null;
-        ue var11 = null;
-        ue stackIn_2_0 = null;
-        ue stackIn_13_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ue var9Lifetime1;
+        PcmSample var9Lifetime1;
         try {
           var5_int = ((-805302273 & param1) << 4 | param1 >>> 12) ^ param0;
           var5_int = var5_int | param1 << 16;
           var6 = -109 % ((param3 - 18) / 61);
           var7 = (long)var5_int;
-          var9 = (ue) (this.field_e.a(45, var7));
+          var9 = (PcmSample) (this.field_e.a(45, var7));
           if (var9 != null) {
             stackIn_2_0 = var9;
             return stackIn_2_0;
@@ -184,11 +184,11 @@ final class i {
         }
     }
 
-    final ue a(int[] param0, int param1, int param2) {
+    final PcmSample a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        ue stackIn_2_0 = null;
-        ue stackIn_5_0 = null;
-        ue stackIn_8_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -199,7 +199,7 @@ final class i {
             return stackIn_2_0;
           }
           if (param1 != 0) {
-            stackIn_5_0 = (ue) null;
+            stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
           if (this.field_i.a((byte) 47, param2) != 1) {

@@ -60,7 +60,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 124, "idlemessage20min");
                 if (null != var2) {
-                  u.field_a = c.a(0, var2);
+                  PcmResampler.field_a = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 111, "error_js5crc");
                 if (var2 != null) {

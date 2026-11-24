@@ -31,9 +31,9 @@ final class ol {
         }
     }
 
-    final static e a(int param0, fe param1, int param2) {
+    final static e a(int param0, PcmSample param1, int param2) {
         RuntimeException var3 = null;
-        fe var4 = null;
+        PcmSample var4 = null;
         e stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -41,8 +41,8 @@ final class ol {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -116) {
-            var4 = (fe) null;
-            ol.a(-70, (fe) null, -27);
+            var4 = (PcmSample) null;
+            ol.a(-70, (PcmSample) null, -27);
           }
           stackIn_3_0 = we.a(RawPcmStream.a(param1, 100, param2), 6222);
           return stackIn_3_0;

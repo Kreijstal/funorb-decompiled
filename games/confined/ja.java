@@ -9,7 +9,7 @@ final class ja {
     private jf field_f;
     private tj[] field_a;
     private java.math.BigInteger field_e;
-    static bi[] field_b;
+    static PcmSample[] field_b;
     static int field_d;
     static String field_g;
 
@@ -185,7 +185,7 @@ final class ja {
 
     final static boolean c(byte param0) {
         if (param0 >= -53) {
-          field_b = (bi[]) null;
+          field_b = (PcmSample[]) null;
           return true;
         }
         return true;
@@ -252,7 +252,7 @@ final class ja {
     }
 
     static {
-        field_b = new bi[4];
+        field_b = new PcmSample[4];
         field_d = 48;
         field_g = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }

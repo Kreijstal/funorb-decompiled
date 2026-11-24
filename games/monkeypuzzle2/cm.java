@@ -25,9 +25,9 @@ final class cm extends WidgetContainer implements ql {
         if (!(GzipDecompressor.field_c <= 2)) {
           GzipDecompressor.field_c = 2;
         }
-        o.field_a = (14 & param0) >> 2;
-        if (2 < o.field_a) {
-          o.field_a = 2;
+        PcmResampler.field_a = (14 & param0) >> 2;
+        if (2 < PcmResampler.field_a) {
+          PcmResampler.field_a = 2;
         }
         ak.field_v = param0 & 3;
         if (!(ak.field_v <= 2)) {

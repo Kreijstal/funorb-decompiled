@@ -20,7 +20,7 @@ class vf implements fe, pj {
     static int field_l;
     static va field_q;
     int field_m;
-    static bi field_n;
+    static PcmSample field_n;
     static int field_c;
 
     public void a(byte param0, int param1, boolean param2, fj param3, int param4) {
@@ -75,7 +75,7 @@ class vf implements fe, pj {
             param0.field_p = (sc) ((Object) new c());
           }
           if (param1 >= -81) {
-            field_n = (bi) null;
+            field_n = (PcmSample) null;
           }
           if (!this.field_f) {
             this.b(2147483647, param0);
@@ -331,7 +331,7 @@ class vf implements fe, pj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            field_n = (bi) null;
+            field_n = (PcmSample) null;
           }
           stackIn_3_0 = this.a(param1, 14525, 0, param0);
           return stackIn_3_0;

@@ -8,7 +8,7 @@ final class ua implements Runnable {
     PlatformTaskDispatcher field_b;
     static ji field_f;
     static String field_a;
-    static jb[] field_c;
+    static PcmSample[] field_c;
 
     public final void run() {
         int var1_int = 0;
@@ -50,7 +50,7 @@ final class ua implements Runnable {
 
     final static float a(byte param0, float param1, float param2, float param3) {
         if (param0 > 0) {
-          field_c = (jb[]) null;
+          field_c = (PcmSample[]) null;
         }
         if (!(param2 < param1)) {
           if (param2 > param1) {
@@ -76,6 +76,6 @@ final class ua implements Runnable {
 
     static {
         field_a = "Player Name: ";
-        field_c = new jb[]{};
+        field_c = new PcmSample[]{};
     }
 }

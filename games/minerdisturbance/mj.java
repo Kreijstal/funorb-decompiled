@@ -9,12 +9,12 @@ final class mj extends IntrusiveNode {
     int field_q;
 
     final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3, ResourceArchive param4) {
-        wm.field_f = DualLinkNode.a(-10218, "");
+        PcmResampler.field_f = DualLinkNode.a(-10218, "");
         if (param2 < 34) {
           return;
         }
         try {
-          wm.field_f.a(false, false);
+          PcmResampler.field_f.a(false, false);
           jf.a(param1, param3, (byte) 18, param4);
           im.a((byte) 79);
           AccountRequestState.field_h = mc.field_t;

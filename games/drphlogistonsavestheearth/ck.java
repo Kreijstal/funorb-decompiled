@@ -28,7 +28,7 @@ final class ck {
         if (param0 <= 71) {
           field_d = (he[]) null;
         }
-        ng.field_c.a((byte) -112, (vg) (fb.field_e));
+        PcmResampler.field_c.a((byte) -112, (vg) (fb.field_e));
         fb.field_e.a(33, pi.field_O);
         fb.field_e.g((byte) -125);
     }

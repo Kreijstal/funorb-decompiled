@@ -201,7 +201,7 @@ class AudioOutput {
         int var9;
         Object var10;
         PcmStream var11;
-        ea var12;
+        AbstractAudioSample var12;
         int var13;
         PcmStream var14;
         int var15_int;

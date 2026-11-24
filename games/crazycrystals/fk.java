@@ -6,7 +6,7 @@ final class fk extends lb {
     static int field_v;
     static String field_q;
     static String field_t;
-    static ko[] field_x;
+    static PcmSample[] field_x;
     private pm field_w;
     static int field_s;
     static String field_y;

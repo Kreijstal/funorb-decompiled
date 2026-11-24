@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class wc extends IntrusiveNode {
-    sf[] field_m;
+    PcmSample[] field_m;
     de[] field_j;
     int field_k;
     static String field_p;
@@ -60,7 +60,7 @@ final class wc extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_m[var8] = (sf) (var7);
+                  this.field_m[var8] = (PcmSample) (var7);
                   this.field_i[var8] = 0;
                 }
               }
@@ -298,7 +298,7 @@ final class wc extends IntrusiveNode {
           this.field_i = new int[128];
           this.field_o = new byte[128];
           this.field_r = new byte[128];
-          this.field_m = new sf[128];
+          this.field_m = new PcmSample[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }

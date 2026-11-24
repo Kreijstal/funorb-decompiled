@@ -31,7 +31,7 @@ class ka extends pm {
         return false;
     }
 
-    ka(pm param0, double param1, bi param2) {
+    ka(pm param0, double param1, PcmSample param2) {
         this(param0.field_A, param0.field_E, param0.field_t, param0.field_D, param0.field_C * param1, param2);
     }
 
@@ -353,7 +353,7 @@ class ka extends pm {
         }
     }
 
-    ka(hn param0, double param1, double param2, double param3, double param4, bi param5) {
+    ka(hn param0, double param1, double param2, double param3, double param4, PcmSample param5) {
         super(param0, param1, param2, param3, param4);
         RuntimeException var11 = null;
         RuntimeException stackIn_7_0 = null;

@@ -8,7 +8,7 @@ final class bf {
     private boolean field_i;
     int field_k;
     private long field_e;
-    static fe[][] field_c;
+    static PcmSample[][] field_c;
     private String field_a;
     String field_n;
     static int[] field_f;
@@ -27,7 +27,7 @@ final class bf {
         }
         field_o = (int[][]) null;
         field_d = (int[][]) null;
-        field_c = (fe[][]) null;
+        field_c = (PcmSample[][]) null;
     }
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
@@ -120,7 +120,7 @@ final class bf {
 
     static {
         field_o = new int[][]{new int[]{15, 16}, new int[]{46, 47}};
-        field_c = new fe[3][9];
+        field_c = new PcmSample[3][9];
         field_f = new int[]{40, 60, 35};
         field_d = new int[][]{new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 224, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}};
         field_l = new int[4];

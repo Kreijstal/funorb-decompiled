@@ -4,7 +4,7 @@
 final class tg {
     static int field_b;
     static char[] field_d;
-    static ko field_c;
+    static PcmSample field_c;
     static String field_a;
     static byte[][] field_e;
 

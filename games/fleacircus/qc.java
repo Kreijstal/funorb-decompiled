@@ -13,7 +13,7 @@ final class qc {
     }
 
     final static void a(int param0) {
-        if (!ci.field_f) {
+        if (!PcmResampler.field_f) {
           throw new IllegalStateException();
         }
         tb.field_c = true;

@@ -73,10 +73,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_d = null;
     }
 
-    final static lm a(byte param0, int param1) {
+    final static PcmSample a(byte param0, int param1) {
         int var6 = 0;
         int var7 = Chess.field_G;
-        lm var2 = new lm(22050, param1);
+        PcmSample var2 = new PcmSample(22050, param1);
         double var3 = 6.283185307179586 / (double)param1;
         byte[] var5 = var2.field_m;
         if (param0 == -34) {
@@ -85,7 +85,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           return var2;
         }
-        return (lm) null;
+        return (PcmSample) null;
     }
 
     final static boolean a(int param0, String param1, String param2) {

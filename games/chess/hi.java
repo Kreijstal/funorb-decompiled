@@ -163,7 +163,7 @@ final class hi extends IntrusiveNode {
         return var1;
     }
 
-    final lm a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -213,7 +213,7 @@ final class hi extends IntrusiveNode {
         this.field_l = null;
         var12 = this.field_j;
         this.field_j = null;
-        return new lm(this.field_P, var12, this.field_q, this.field_G, this.field_N);
+        return new PcmSample(this.field_P, var12, this.field_q, this.field_G, this.field_N);
     }
 
     private final float[] e(int param0) {
@@ -568,7 +568,7 @@ final class hi extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final lm a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -600,7 +600,7 @@ final class hi extends IntrusiveNode {
           }
         }
         this.field_l = null;
-        return new lm(this.field_P, var1, this.field_q, this.field_G, this.field_N);
+        return new PcmSample(this.field_P, var1, this.field_q, this.field_G, this.field_N);
     }
 
     final static void b(byte[] param0) {

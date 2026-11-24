@@ -42,11 +42,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             var3 = (String) null;
             FullscreenFocusCanvas.a((String) null, (byte) 111);
           }
-          if (wm.field_f.a(0) &&
-            !param0.equals(wm.field_f.a(false))) {
-            wm.field_f = DualLinkNode.a(-10218, param0);
+          if (PcmResampler.field_f.a(0) &&
+            !param0.equals(PcmResampler.field_f.a(false))) {
+            PcmResampler.field_f = DualLinkNode.a(-10218, param0);
           }
-          stackIn_6_0 = wm.field_f;
+          stackIn_6_0 = PcmResampler.field_f;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

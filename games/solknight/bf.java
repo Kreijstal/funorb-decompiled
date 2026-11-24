@@ -14,7 +14,7 @@ final class bf {
     private int field_l;
     private int field_d;
     Sprite[] field_j;
-    static sh[] field_b;
+    static PcmSample[] field_b;
     private int field_h;
     private int field_n;
     static oc field_f;
@@ -330,7 +330,7 @@ final class bf {
           this.field_j = null;
           return;
         }
-        field_b = (sh[]) null;
+        field_b = (PcmSample[]) null;
         this.field_d = 0;
         this.field_g = 256;
         this.field_k = null;
@@ -370,7 +370,7 @@ final class bf {
 
     static {
         field_a = -1;
-        field_b = new sh[36];
+        field_b = new PcmSample[36];
         field_m = "You have 1 unread message!";
     }
 }

@@ -7,7 +7,7 @@ import java.util.*;
 final class uk extends nf {
     private int field_h;
     private int field_k;
-    static ko field_i;
+    static PcmSample field_i;
     static boolean field_j;
 
     public static void c(int param0) {

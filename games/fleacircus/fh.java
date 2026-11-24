@@ -38,7 +38,7 @@ final class fh {
         this.field_d = param0;
     }
 
-    final static pd a(byte param0, sf param1, int param2, int param3) {
+    final static pd a(byte param0, PcmSample param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         pd stackIn_1_0 = null;
@@ -75,7 +75,7 @@ final class fh {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static pd $cfr$intArgs$a$cb0bc10e6b69(int param0, sf param1, int param2, int param3) {
+    final static pd $cfr$intArgs$a$cb0bc10e6b69(int param0, PcmSample param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         pd stackIn_1_0 = null;

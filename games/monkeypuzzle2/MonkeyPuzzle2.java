@@ -138,7 +138,7 @@ public final class MonkeyPuzzle2 extends bi {
           dk.clearStaticReferences(117);
           qd.a(false);
           kd.clearStaticReferences((byte) 91);
-          o.a((byte) 112);
+          PcmResampler.a((byte) 112);
           ud.clearStaticReferences(-93);
           ma.a((byte) 94);
           e.clearStaticReferences((byte) 31);
@@ -795,7 +795,7 @@ public final class MonkeyPuzzle2 extends bi {
           wg.a(-106);
           gj.a((byte) -31);
           if (!ok.a(false)) {
-            s.field_S = o.a(41, 10, 3, 1, -46);
+            s.field_S = PcmResampler.a(41, 10, 3, 1, -46);
             cg.a(false);
           }
           return true;

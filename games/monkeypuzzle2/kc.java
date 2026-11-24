@@ -47,7 +47,7 @@ abstract class kc {
         try {
           var1 = wj.field_k;
           synchronized (var1) {
-            o.field_b = bh.field_e;
+            PcmResampler.field_b = bh.field_e;
             WeightedObjectCache.field_c = WeightedObjectCache.field_c + 1;
             if (param0 < 86) {
               field_b = (Boolean) null;

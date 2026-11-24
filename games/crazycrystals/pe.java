@@ -11,7 +11,7 @@ final class pe extends IntrusiveNode {
     int field_j;
     int field_o;
     static String field_n;
-    static ko field_h;
+    static PcmSample field_h;
     static int field_i;
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -144,7 +144,7 @@ final class pe extends IntrusiveNode {
     public static void d(int param0) {
         field_n = null;
         if (param0 != 1) {
-          field_h = (ko) null;
+          field_h = (PcmSample) null;
         }
         field_h = null;
         field_p = null;

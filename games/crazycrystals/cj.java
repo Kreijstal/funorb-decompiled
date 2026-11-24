@@ -4,7 +4,7 @@
 final class cj extends qf implements Cloneable {
     private int field_z;
     private boolean field_B;
-    static ko field_x;
+    static PcmSample field_x;
     private int field_D;
     static int field_A;
     static String field_E;
@@ -1263,7 +1263,7 @@ final class cj extends qf implements Cloneable {
           je.field_j = je.field_j + 10;
           b.field_a = b.field_a + 10;
           if (param2 > 0) {
-            field_x = (ko) null;
+            field_x = (PcmSample) null;
           }
           this.field_B = true;
           wd.field_j = wd.field_j + 1;

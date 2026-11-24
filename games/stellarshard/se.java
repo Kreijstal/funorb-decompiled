@@ -126,7 +126,7 @@ final class se extends WidgetContainer implements oi {
           if (this.field_I != param2) {
             return;
           }
-          qh.a(!param3);
+          PcmResampler.a(!param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

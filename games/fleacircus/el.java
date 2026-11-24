@@ -5,7 +5,7 @@ final class el extends wi {
     private bi field_z;
     dd field_w;
     private boolean field_x;
-    static sf field_C;
+    static PcmSample field_C;
     static dd[] field_s;
     private int field_q;
     private dd field_y;

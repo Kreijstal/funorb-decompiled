@@ -6,7 +6,7 @@ final class sf extends ig implements sk {
     private int field_Z;
     static boolean field_U;
     static bd field_ab;
-    static jb[] field_V;
+    static PcmSample[] field_V;
     static int[] field_X;
     static String field_Y;
     static bd field_T;
@@ -33,7 +33,7 @@ final class sf extends ig implements sk {
           si.f(param3, param1, param0, param2);
           return;
         }
-        field_V = (jb[]) null;
+        field_V = (PcmSample[]) null;
         pf.b(511);
         si.f(param3, param1, param0, param2);
     }
@@ -131,6 +131,6 @@ final class sf extends ig implements sk {
     static {
         field_U = false;
         field_Y = "Find the <%0>";
-        field_V = new jb[51];
+        field_V = new PcmSample[51];
     }
 }

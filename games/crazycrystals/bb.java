@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bb extends qf implements Cloneable {
-    static ko field_x;
+    static PcmSample field_x;
     static dl[] field_y;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
@@ -41,7 +41,7 @@ final class bb extends qf implements Cloneable {
         field_y = null;
         field_x = null;
         if (!param0) {
-          field_x = (ko) null;
+          field_x = (PcmSample) null;
         }
     }
 

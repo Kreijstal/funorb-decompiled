@@ -404,6 +404,14 @@
       "renamedSymbol": "C:GameKeyHandler"
     },
     {
+      "symbol": "C:lk",
+      "originalName": "lk",
+      "to": "AbstractAudioSample",
+      "evidence": "Abstract intrusive sound-data node retaining the original single int scheduling counter and empty package-visible constructor,shared by the sample reference in the PCM stream scheduler. Preserve default field state and inherited node semantics. Original constructor SHA256s 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AbstractAudioSample"
+    },
+    {
       "symbol": "C:ll",
       "originalName": "ll",
       "to": "SoftwareRasterizer",
@@ -5978,9 +5986,9 @@
     },
     {
       "symbol": "C:lk",
-      "renamedSymbol": "C:lk",
+      "renamedSymbol": "C:AbstractAudioSample",
       "originalName": "lk",
-      "renamedName": "lk",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "lk.java",
         "start": 53,
@@ -18221,7 +18229,7 @@
     },
     {
       "symbol": "F:lk.field_i:I",
-      "renamedSymbol": "F:lk.field_i:I",
+      "renamedSymbol": "F:AbstractAudioSample.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -29496,7 +29504,7 @@
     },
     {
       "symbol": "F:wh.field_i:Llk;",
-      "renamedSymbol": "F:PcmStream.field_i:Llk;",
+      "renamedSymbol": "F:PcmStream.field_i:LAbstractAudioSample;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -154104,9 +154112,9 @@
     },
     {
       "symbol": "M:lk.<init>()V",
-      "renamedSymbol": "M:lk.<init>()V",
+      "renamedSymbol": "M:AbstractAudioSample.<init>()V",
       "originalName": "lk",
-      "renamedName": "lk",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "lk.java",
         "start": 91,
@@ -228985,7 +228993,7 @@
       "original": "bh.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "3760ce508789f6c81b8c6e67cd04cae264d70d3af0d9e9e33ecb9254f61d039d",
-      "outputSha256": "a6903b5ac80916d6ccc593d641194768c8000870bbfe5ad4cfeab02103b6e6c5",
+      "outputSha256": "2dfc323707fb0c1ae78aed70870cc29ff2306c8d006f063aa50b0ee3f665ecae",
       "edits": [
         {
           "start": 50,
@@ -229905,6 +229913,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 63225,
+          "end": 63227,
+          "symbol": "C:lk",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
+        },
+        {
           "start": 63495,
           "end": 63496,
           "symbol": "M:bh.h()V",
@@ -229924,6 +229939,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 63595,
+          "end": 63597,
+          "symbol": "C:lk",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 63867,
@@ -251428,7 +251450,7 @@
       "original": "ik.java",
       "renamed": "PcmSample.java",
       "inputSha256": "640a63d51a81e34d6102330892b6750f811e2b027b5b515215b969e5803223c1",
-      "outputSha256": "19c5fc042e3e1a8d1840e6a5f0808cfd69db2c79a6c3a1553ad28822ed7066e2",
+      "outputSha256": "691dfd92d54d1c3264a360e75cc6e59b504939fcd38f6fad2d7f2631b132ac5b",
       "edits": [
         {
           "start": 50,
@@ -251436,6 +251458,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:lk",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 163,
@@ -258051,16 +258080,30 @@
     },
     {
       "original": "lk.java",
-      "renamed": "lk.java",
+      "renamed": "AbstractAudioSample.java",
       "inputSha256": "df35b7a9b696de1a667851713e9043fff6ef7dd06347a1a37840cebebdd44322",
-      "outputSha256": "0e3d63a400dd1445f72b4fa50c3ee1bbc03b54e16871aeabfc6f05c45b0f606a",
+      "outputSha256": "0b22ea6aead4d3c823d01262c9022a46046ae27fcc13102af28c8b56373d2a18",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:lk",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
+        },
         {
           "start": 64,
           "end": 66,
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "symbol": "M:lk.<init>()V",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
         }
       ]
     },
@@ -269410,7 +269453,7 @@
       "original": "oa.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "0e26a5a64c06207c2373f05f2e08a90dad0e656fcd52c2c8f8dfeabfbdbc7c2e",
-      "outputSha256": "fc76eb01bd9e3681b1ea1d158410dab44ea054cfd6b1cf5a753d9f1c84adb656",
+      "outputSha256": "dc21716e845171df414eda7471ffc430e242c1c61086be32ad1e334ff3adf57d",
       "edits": [
         {
           "start": 44,
@@ -269901,6 +269944,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 9334,
+          "end": 9336,
+          "symbol": "C:lk",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 9371,
@@ -298660,7 +298710,7 @@
       "original": "wh.java",
       "renamed": "PcmStream.java",
       "inputSha256": "4adc49ce3ce9cac2eccf00ead4a5fca9caaeaa68b1606c9db4a914152126bf88",
-      "outputSha256": "939458bfd9e2291d732cc199685addeaf7f7bd6fd3d37ab5c4b71cb6385ce1c8",
+      "outputSha256": "e7da4d3b957cc0f67806c7fac137d19734508e14c48fb170cd25b4fc1679bbb3",
       "edits": [
         {
           "start": 53,
@@ -298675,6 +298725,13 @@
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 73,
+          "end": 75,
+          "symbol": "C:lk",
+          "original": "lk",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 119,
@@ -299159,10 +299216,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "45df84270ce3712bf705a28585ef7ca98847ef88b94fbb63785b1b72f0a76aa6",
+    "rulesSha256": "4b501eb20af26cea1cd7271e48539da5442e7f33ef09e8adf3ff7a0b1b9ba943",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "46fa8bdaf8bb629e80d4a4bc530dad8181019208e6364bf13eb704f82f53cd6a",
+    "outputTreeSha256": "f80ee338371584d64b1872943befd67abf0c57aa471941cb225180c4fdd2db9a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

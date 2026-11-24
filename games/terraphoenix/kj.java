@@ -54,7 +54,7 @@ final class kj implements WidgetActionListener {
         int var2;
         var2 = Terraphoenix.field_V;
         if (param0 == 95) {
-          m.field_e = null;
+          PcmResampler.field_e = null;
           fd.field_k = false;
           if (qi.field_b) {
             nb.field_b.l(54);
@@ -63,18 +63,18 @@ final class kj implements WidgetActionListener {
           var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              m.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              PcmResampler.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
             } else {
-              m.field_e = ol.field_Lb;
+              PcmResampler.field_e = ol.field_Lb;
             }
-            m.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) m.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
+            PcmResampler.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) PcmResampler.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
           }
           nb.field_b.h((byte) -126);
           vj.a(param0 ^ -24476);
           return;
         }
         field_b = (PcmStreamMixer) null;
-        m.field_e = null;
+        PcmResampler.field_e = null;
         fd.field_k = false;
         if (qi.field_b) {
           nb.field_b.l(54);
@@ -82,11 +82,11 @@ final class kj implements WidgetActionListener {
           var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              m.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              PcmResampler.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
             } else {
-              m.field_e = ol.field_Lb;
+              PcmResampler.field_e = ol.field_Lb;
             }
-            m.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) m.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
+            PcmResampler.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) PcmResampler.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
           }
           nb.field_b.h((byte) -126);
           vj.a(param0 ^ -24476);

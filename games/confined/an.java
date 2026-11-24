@@ -8,7 +8,7 @@ final class an extends IntrusiveNode {
     static java.math.BigInteger field_r;
     int field_s;
     static int[] field_p;
-    static bi field_q;
+    static PcmSample field_q;
 
     final static int a(int param0, int param1) {
         int var2 = param1 >>> 1;

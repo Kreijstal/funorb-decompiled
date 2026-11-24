@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ol {
-    static bi field_c;
+    static PcmSample field_c;
     static String field_b;
     static PlatformTask field_a;
 
@@ -64,7 +64,7 @@ final class ol {
         field_b = null;
         field_c = null;
         if (param0 != 0) {
-          field_c = (bi) null;
+          field_c = (PcmSample) null;
         }
         field_a = null;
     }

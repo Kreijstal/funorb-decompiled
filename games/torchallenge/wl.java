@@ -13,7 +13,7 @@ final class wl {
     static String field_d;
     private int field_a;
     private int field_j;
-    static fe[][] field_c;
+    static PcmSample[][] field_c;
 
     final void c(int param0) {
         int stackIn_34_0;
@@ -591,7 +591,7 @@ final class wl {
     public static void b(int param0) {
         field_d = null;
         field_b = null;
-        field_c = (fe[][]) null;
+        field_c = (PcmSample[][]) null;
         field_l = null;
         if (param0 != 10) {
           ResourceArchive var2 = (ResourceArchive) null;
@@ -712,7 +712,7 @@ final class wl {
 
     static {
         field_d = "Email: ";
-        field_c = new fe[14][3];
+        field_c = new PcmSample[14][3];
         field_l = new int[]{1, 1, 1, 1, 1, 2};
         field_b = new IntrusiveDeque();
     }

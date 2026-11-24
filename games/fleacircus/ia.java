@@ -15,12 +15,12 @@ final class ia extends IntrusiveNode {
     static int[][] field_p;
     static int[] field_q;
 
-    final static sf a(int param0, int param1, int param2) {
+    final static PcmSample a(int param0, int param1, int param2) {
         byte[] var4 = null;
         double var5 = 0.0;
         int var7 = 0;
         int var8 = fleas.field_A ? 1 : 0;
-        sf var3 = new sf(22050, param0);
+        PcmSample var3 = new PcmSample(22050, param0);
         byte[] var4Lifetime1;
         double var5Lifetime1;
         int var7Lifetime1;

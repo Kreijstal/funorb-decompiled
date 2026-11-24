@@ -39,16 +39,16 @@ abstract class wi {
     }
 
     final static void b(int param0) {
-        ci var1 = null;
-        ci var1Lifetime1;
+        PcmResampler var1 = null;
+        PcmResampler var1Lifetime1;
         if (param0 == -14277) {
-          var1 = new ci(22050, AudioOutput.field_a);
-          jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
+          var1 = new PcmResampler(22050, AudioOutput.field_a);
+          jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().resample(var1);
           return;
         }
         wi.clearStaticReferences(true);
-        var1Lifetime1 = new ci(22050, AudioOutput.field_a);
-        jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1Lifetime1);
+        var1Lifetime1 = new PcmResampler(22050, AudioOutput.field_a);
+        jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().resample(var1Lifetime1);
     }
 
     final static e a(int param0) {

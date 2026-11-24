@@ -30,10 +30,10 @@ final class RawPcmStream extends PcmStream {
         int var1 = this.field_y * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_o == 0) {
-          var1 = var1 - var1 * this.field_u / (((ue) (this.field_j)).field_h.length << 8);
+          var1 = var1 - var1 * this.field_u / (((PcmSample) (this.field_j)).field_h.length << 8);
         } else {
           if (this.field_o >= 0) {
-            var1 = var1 - var1 * this.field_m / ((ue) (this.field_j)).field_h.length;
+            var1 = var1 - var1 * this.field_m / ((PcmSample) (this.field_j)).field_h.length;
           }
         }
         return var1 > 255 ? 255 : var1;
@@ -45,7 +45,7 @@ final class RawPcmStream extends PcmStream {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        ue var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -58,7 +58,7 @@ final class RawPcmStream extends PcmStream {
           this.skipFrames(param2);
           return;
         }
-        var4 = (ue) (this.field_j);
+        var4 = (PcmSample) (this.field_j);
         var5 = this.field_m << 8;
         var6 = this.field_n << 8;
         var7 = var4.field_h.length << 8;
@@ -228,7 +228,7 @@ final class RawPcmStream extends PcmStream {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        ue var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -253,7 +253,7 @@ final class RawPcmStream extends PcmStream {
             this.recomputeGains();
           }
         }
-        var2 = (ue) (this.field_j);
+        var2 = (PcmSample) (this.field_j);
         var3 = this.field_m << 8;
         var4 = this.field_n << 8;
         var5 = var2.field_h.length << 8;
@@ -513,14 +513,14 @@ final class RawPcmStream extends PcmStream {
             if (this.field_t == -256 &&
               (this.field_u & 255) == 0) {
               if (AudioOutput.field_s) {
-                return RawPcmStream.b(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this);
+                return RawPcmStream.b(0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this);
               }
-              return RawPcmStream.b(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this);
+              return RawPcmStream.b(((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this);
             }
             if (AudioOutput.field_s) {
-              return RawPcmStream.a(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this, this.field_t, param4);
+              return RawPcmStream.a(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this, this.field_t, param4);
             }
-            return RawPcmStream.a(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this, this.field_t, param4);
+            return RawPcmStream.a(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this, this.field_t, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -530,15 +530,15 @@ final class RawPcmStream extends PcmStream {
           if (this.field_t == -256 &&
             (this.field_u & 255) == 0) {
             if (!AudioOutput.field_s) {
-              param1 = RawPcmStream.b(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this);
+              param1 = RawPcmStream.b(((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this);
             } else {
-              param1 = RawPcmStream.b(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this);
+              param1 = RawPcmStream.b(0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this);
             }
           } else {
             if (!AudioOutput.field_s) {
-              param1 = RawPcmStream.b(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this, this.field_t, param4);
+              param1 = RawPcmStream.b(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this, this.field_t, param4);
             } else {
-              param1 = RawPcmStream.a(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this, this.field_t, param4);
+              param1 = RawPcmStream.a(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this, this.field_t, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -554,7 +554,7 @@ final class RawPcmStream extends PcmStream {
     }
 
     final synchronized boolean e() {
-        return this.field_u < 0 || this.field_u >= ((ue) (this.field_j)).field_h.length << 8;
+        return this.field_u < 0 || this.field_u >= ((PcmSample) (this.field_j)).field_h.length << 8;
     }
 
     private final boolean l() {
@@ -765,14 +765,14 @@ final class RawPcmStream extends PcmStream {
             if (this.field_t == 256 &&
               (this.field_u & 255) == 0) {
               if (AudioOutput.field_s) {
-                return RawPcmStream.a(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this);
+                return RawPcmStream.a(0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this);
               }
-              return RawPcmStream.a(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this);
+              return RawPcmStream.a(((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this);
             }
             if (AudioOutput.field_s) {
-              return RawPcmStream.d(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this, this.field_t, param4);
+              return RawPcmStream.d(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, this, this.field_t, param4);
             }
-            return RawPcmStream.b(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this, this.field_t, param4);
+            return RawPcmStream.b(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, this, this.field_t, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -782,15 +782,15 @@ final class RawPcmStream extends PcmStream {
           if (this.field_t == 256 &&
             (this.field_u & 255) == 0) {
             if (!AudioOutput.field_s) {
-              param1 = RawPcmStream.a(((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this);
+              param1 = RawPcmStream.a(((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this);
             } else {
-              param1 = RawPcmStream.a(0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this);
+              param1 = RawPcmStream.a(0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this);
             }
           } else {
             if (!AudioOutput.field_s) {
-              param1 = RawPcmStream.c(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this, this.field_t, param4);
+              param1 = RawPcmStream.c(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, this, this.field_t, param4);
             } else {
-              param1 = RawPcmStream.b(0, 0, ((ue) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this, this.field_t, param4);
+              param1 = RawPcmStream.b(0, 0, ((PcmSample) (this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, this, this.field_t, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -1158,7 +1158,7 @@ final class RawPcmStream extends PcmStream {
         return param5 >> 1;
     }
 
-    final static RawPcmStream a(ue param0, int param1, int param2, int param3) {
+    final static RawPcmStream a(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_h == null) {
           return null;
         }
@@ -1173,7 +1173,7 @@ final class RawPcmStream extends PcmStream {
     }
 
     final synchronized void g(int param0) {
-        int var2 = ((ue) (this.field_j)).field_h.length << 8;
+        int var2 = ((PcmSample) (this.field_j)).field_h.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -1626,7 +1626,7 @@ final class RawPcmStream extends PcmStream {
 
     final synchronized void d(int param0) {
         param0 = param0 << 8;
-        int var2 = ((ue) (this.field_j)).field_h.length << 8;
+        int var2 = ((PcmSample) (this.field_j)).field_h.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -1718,7 +1718,7 @@ final class RawPcmStream extends PcmStream {
         return this.field_x < 0 ? -1 : this.field_x;
     }
 
-    final static RawPcmStream a(ue param0, int param1, int param2) {
+    final static RawPcmStream a(PcmSample param0, int param1, int param2) {
         if (param0.field_h == null) {
           return null;
         }
@@ -1728,8 +1728,8 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private RawPcmStream(ue param0, int param1, int param2) {
-        this.field_j = (ic) ((Object) param0);
+    private RawPcmStream(PcmSample param0, int param1, int param2) {
+        this.field_j = (AbstractAudioSample) ((Object) param0);
         this.field_m = param0.field_i;
         this.field_n = param0.field_l;
         this.field_p = param0.field_j;
@@ -1740,8 +1740,8 @@ final class RawPcmStream extends PcmStream {
         this.recomputeGains();
     }
 
-    private RawPcmStream(ue param0, int param1, int param2, int param3) {
-        this.field_j = (ic) ((Object) param0);
+    private RawPcmStream(PcmSample param0, int param1, int param2, int param3) {
+        this.field_j = (AbstractAudioSample) ((Object) param0);
         this.field_m = param0.field_i;
         this.field_n = param0.field_l;
         this.field_p = param0.field_j;

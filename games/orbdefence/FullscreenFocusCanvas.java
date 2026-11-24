@@ -20,8 +20,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 > -85) {
-            dl var4 = (dl) null;
-            FullscreenFocusCanvas.a(7, (dl) null, 115);
+            PcmSample var4 = (PcmSample) null;
+            FullscreenFocusCanvas.a(7, (PcmSample) null, 115);
           }
           tj.a(param0, this.field_c, -23144);
         } catch (RuntimeException runtimeException) {
@@ -32,7 +32,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static hf a(int param0, dl param1, int param2) {
+    final static hf a(int param0, PcmSample param1, int param2) {
         RuntimeException var3 = null;
         hf stackIn_2_0 = null;
         hf stackIn_4_0 = null;

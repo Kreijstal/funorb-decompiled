@@ -371,7 +371,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime58 = ImageProducerRasterBuffer.a(false, "ioncannon");
           if (var2Lifetime58 != null) {
-            qh.field_h = se.a(0, var2Lifetime58);
+            PcmResampler.field_h = se.a(0, var2Lifetime58);
           }
           var2Lifetime59 = ImageProducerRasterBuffer.a(false, "wavegun");
           if (var2Lifetime59 != null) {

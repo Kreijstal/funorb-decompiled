@@ -271,7 +271,7 @@ final class d extends wd {
             if (var2 == 4) {
               db.field_V = 1;
               var3 = var1.readString(true);
-              u.field_d = ((String) (var3)).intern();
+              PcmResampler.field_d = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte((byte) -117);
               ij.a(var4, 2);
               return;

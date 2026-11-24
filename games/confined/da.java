@@ -8,7 +8,7 @@ final class da {
     static String field_a;
     private double field_d;
     static boolean field_i;
-    static bi field_g;
+    static PcmSample field_g;
     static RawPcmStream field_j;
     static int field_h;
     private double field_k;
@@ -279,7 +279,7 @@ final class da {
         this.field_c = 0.0;
     }
 
-    final static void a(int param0, int param1, bi param2, boolean param3, pm param4) {
+    final static void a(int param0, int param1, PcmSample param2, boolean param3, pm param4) {
         gk var5 = null;
         try {
           var5 = new gk(param4, param2, param1);

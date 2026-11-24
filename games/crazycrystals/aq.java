@@ -4,7 +4,7 @@
 final class aq extends wc {
     static boolean field_r;
     static volatile int field_s;
-    static ko field_t;
+    static PcmSample field_t;
 
     private aq(vc param0, int param1) {
         super(param0, param1);

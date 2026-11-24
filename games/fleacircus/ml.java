@@ -90,7 +90,7 @@ final class ml extends dk {
     }
 
     final static void d(byte param0) {
-        if (!ci.field_f) {
+        if (!PcmResampler.field_f) {
           throw new IllegalStateException();
         }
         tb.field_c = true;

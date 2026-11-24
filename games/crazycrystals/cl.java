@@ -10,7 +10,7 @@ final class cl extends hk {
     static int[] field_j;
     static String field_i;
     private int field_l;
-    static ko field_m;
+    static PcmSample field_m;
     private int field_k;
     static dl[] field_n;
     private int field_g;
@@ -45,7 +45,7 @@ final class cl extends hk {
         try {
           var4 = (ln) (vm.field_j[param0].elementAt(r.field_i[param0]));
           if (param1 != 23041505) {
-            field_m = (ko) null;
+            field_m = (PcmSample) null;
           }
           var5 = (18 + (m.field_l[param0] * 16384 + 73728)) / 37;
           if (var4.field_e < 0) {

@@ -26,14 +26,14 @@ final class eb {
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
         cf.a((byte) -107);
-        ng.field_c.j(300);
+        PcmResampler.field_c.j(300);
         pi.field_O = new wa(qf.field_c, (String) null, sg.field_a, param1, param2);
-        fb.field_e = new el(ng.field_c, pi.field_O);
+        fb.field_e = new el(PcmResampler.field_c, pi.field_O);
         if (param3 != 10) {
           return;
         }
         try {
-          ng.field_c.a((byte) -125, (vg) (fb.field_e));
+          PcmResampler.field_c.a((byte) -125, (vg) (fb.field_e));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "eb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

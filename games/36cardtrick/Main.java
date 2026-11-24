@@ -1482,14 +1482,14 @@ public final class Main extends c {
         kc dupTemp$0 = null;
         kc dupTemp$1 = null;
         kc dupTemp$2 = null;
-        ib var3 = null;
+        PcmSample var3 = null;
         int var3_int = 0;
         kc var3_ref = null;
         RuntimeException var3_ref2 = null;
-        ib var4_ref_ib = null;
+        PcmSample var4_ref_ib = null;
         int var4 = 0;
         int var5 = 0;
-        ib var6 = null;
+        PcmSample var6 = null;
         int var46 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -1608,7 +1608,7 @@ public final class Main extends c {
                         var3.field_k = var3.field_h.length;
                         ve.field_c = RawPcmStream.a(var3, 100, 30);
                         ve.field_c.e(-1);
-                        var4_ref_ib = new ib(jd.field_c[15].field_l, jd.field_c[15].field_h.length + 1000);
+                        var4_ref_ib = new PcmSample(jd.field_c[15].field_l, jd.field_c[15].field_h.length + 1000);
                         og.a(jd.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, jd.field_c[15].field_h.length);
                         lh.field_d = RawPcmStream.a(var4_ref_ib, 100, 96);
                         lh.field_d.c(0, var4_ref_ib.field_h.length);

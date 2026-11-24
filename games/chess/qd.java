@@ -5,7 +5,7 @@ final class qd extends IntrusiveNode {
     int field_C;
     int field_y;
     int field_p;
-    lm field_H;
+    PcmSample field_H;
     int field_o;
     int field_v;
     static String field_I;

@@ -5,7 +5,7 @@ final class fi extends IntrusiveNode {
     int[] field_m;
     boolean field_p;
     static String field_k;
-    static sf field_n;
+    static PcmSample field_n;
     int field_i;
     static int field_j;
     static String field_l;

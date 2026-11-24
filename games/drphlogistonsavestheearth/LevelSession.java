@@ -337,7 +337,7 @@ final class LevelSession {
           this.k(-18);
         }
         if (this.field_z.m() &&
-          this.field_z.f() == ((vk) (this.field_z.field_i)).field_i.length) {
+          this.field_z.f() == ((PcmSample) (this.field_z.field_i)).field_i.length) {
           this.field_z.i(-1);
           th.a(-27610, 32, e.a(105, (int)this.field_N), nl.field_r[8]);
         }

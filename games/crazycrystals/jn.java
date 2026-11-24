@@ -6,7 +6,7 @@ final class jn extends se {
     static int field_p;
     static String field_n;
     static dl[] field_o;
-    static ko field_m;
+    static PcmSample field_m;
     static int field_q;
     static String field_l;
     static String field_k;

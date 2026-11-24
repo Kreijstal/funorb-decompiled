@@ -4,7 +4,7 @@
 final class ih extends PacketBuffer {
     private int field_o;
     private pc field_n;
-    static sf field_l;
+    static PcmSample field_l;
     static String field_m;
 
     final void k(int param0) {
@@ -102,7 +102,7 @@ final class ih extends PacketBuffer {
           ud.field_c = true;
           return;
         }
-        field_l = (sf) null;
+        field_l = (PcmSample) null;
         af.a(ef.field_j, true, oa.field_o, (byte) 54);
         ud.field_c = true;
     }

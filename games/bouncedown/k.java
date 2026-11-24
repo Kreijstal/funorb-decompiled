@@ -69,7 +69,7 @@ final class k extends lc implements rc {
           if (this.field_F != param4) {
             return;
           }
-          u.a((byte) -10);
+          PcmResampler.a((byte) -10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

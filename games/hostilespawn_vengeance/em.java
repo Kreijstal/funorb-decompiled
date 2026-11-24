@@ -3,7 +3,7 @@
  */
 final class em {
     static int field_c;
-    static jb[] field_a;
+    static PcmSample[] field_a;
     static String field_b;
     private static String field_z;
 
@@ -20,7 +20,7 @@ final class em {
     static {
         field_z = "em.A(";
         field_c = 0;
-        field_a = new jb[28];
+        field_a = new PcmSample[28];
         field_b = "Continue";
     }
 }

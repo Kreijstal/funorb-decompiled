@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class bp {
-    static ko field_a;
+    static PcmSample field_a;
     static int[] field_c;
     static Vector field_b;
 
@@ -15,7 +15,7 @@ final class bp {
           field_b = null;
           return;
         }
-        field_a = (ko) null;
+        field_a = (PcmSample) null;
         field_a = null;
         field_c = null;
         field_b = null;

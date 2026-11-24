@@ -65,7 +65,7 @@ final class ch extends l {
           field_B = 33;
         }
         ga.field_i = null;
-        ng.field_d = null;
+        PcmResampler.field_d = null;
         lk.field_i = null;
     }
 

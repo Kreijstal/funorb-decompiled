@@ -6,7 +6,7 @@ final class hb extends IntrusiveNode {
     static PcmStreamMixer field_l;
     static AudioOutput field_h;
     static boolean field_g;
-    static ko field_k;
+    static PcmSample field_k;
     int field_j;
     int field_f;
 

@@ -24,10 +24,10 @@ final class wi {
         RuntimeException decompiledCaughtException = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          ng.field_c.a(nl.field_m, ri.field_d, true, 0);
-          ng.field_c.b(false);
+          PcmResampler.field_c.a(nl.field_m, ri.field_d, true, 0);
+          PcmResampler.field_c.b(false);
           while (th.a(param0 - 94)) {
-            ng.field_c.a(di.field_c, sj.field_g, 127);
+            PcmResampler.field_c.a(di.field_c, sj.field_g, 127);
           }
           if (param0 != pe.field_b) {
             var1_int = pe.field_b;
@@ -106,12 +106,12 @@ final class wi {
         }
     }
 
-    final static vk a(int param0, int param1, int param2) {
+    final static PcmSample a(int param0, int param1, int param2) {
         byte[] var4 = null;
         double var5 = 0.0;
         int var7 = 0;
         int var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        vk var3 = new vk(22050, param0);
+        PcmSample var3 = new PcmSample(22050, param0);
         byte[] var4Lifetime1;
         double var5Lifetime1;
         int var7Lifetime1;

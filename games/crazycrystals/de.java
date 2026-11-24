@@ -3,7 +3,7 @@
  */
 final class de extends f implements Cloneable {
     static dl field_k;
-    static ko field_l;
+    static PcmSample field_l;
     ea field_j;
     private int field_i;
 
@@ -30,7 +30,7 @@ final class de extends f implements Cloneable {
           if (!param0) {
             return true;
           }
-          field_l = (ko) null;
+          field_l = (PcmSample) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class de extends f implements Cloneable {
         if (param4 == 12) {
           return qk.a(param2, param4 + 86, param0, param1, false, param3);
         }
-        field_l = (ko) null;
+        field_l = (PcmSample) null;
         return qk.a(param2, param4 + 86, param0, param1, false, param3);
     }
 
@@ -159,7 +159,7 @@ final class de extends f implements Cloneable {
           var4 = var2.field_u;
           hd.a(false);
           if (param0 >= -58) {
-            field_l = (ko) null;
+            field_l = (PcmSample) null;
           }
           kn.field_p = new dl(var3, var4 * 3 / 4);
           kn.field_p.a();
@@ -223,7 +223,7 @@ final class de extends f implements Cloneable {
           if (param0 == 16736352) {
             return true;
           }
-          field_l = (ko) null;
+          field_l = (PcmSample) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

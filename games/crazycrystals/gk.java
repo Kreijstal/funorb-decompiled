@@ -5,7 +5,7 @@ final class gk implements wo {
     private int field_f;
     private int field_b;
     static e field_e;
-    static ko field_j;
+    static PcmSample field_j;
     static dl[] field_d;
     private int field_i;
     private int field_l;

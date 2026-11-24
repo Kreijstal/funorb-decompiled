@@ -63,7 +63,7 @@ class AudioOutput {
                   PcmStream var14 = var11;
                   PcmStream var14Lifetime1 = var11;
                   while (var11 != null) {
-                    gs var12 = var11.field_f;
+                    AbstractAudioSample var12 = var11.field_f;
                     if (var12 != null &&
                       var12.field_e > var8_int) {
                       var5 = var5 | 1 << var7_int;

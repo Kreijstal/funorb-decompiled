@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb {
-    static bi field_f;
+    static PcmSample field_f;
     static int[] field_e;
     private PrimaryNodeDeque field_b;
     private IntrusiveNode field_c;

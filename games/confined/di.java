@@ -4,7 +4,7 @@
 final class di {
     static String[] field_g;
     static String field_e;
-    static bi field_a;
+    static PcmSample field_a;
     static String field_c;
     static String field_b;
     static od field_d;
@@ -208,7 +208,7 @@ final class di {
         }
         i.field_o = i.field_o | 1 << param2;
         if (param0 != -30867) {
-          field_a = (bi) null;
+          field_a = (PcmSample) null;
         }
         oj.field_B = oj.field_B | 1 << param2;
         qn.field_v.field_u.addLast((IntrusiveNode) (new an(param2)), (byte) -110);

@@ -6,7 +6,7 @@ final class cg {
     static byte[][][] field_i;
     static Sprite field_g;
     static Sprite[] field_d;
-    static fe[] field_a;
+    static PcmSample[] field_a;
     static int[] field_e;
     static boolean[][] field_h;
     static Sprite[][][] field_b;
@@ -48,7 +48,7 @@ final class cg {
     }
 
     static {
-        field_a = new fe[17];
+        field_a = new PcmSample[17];
         levelNames = new String[]{"Tower0", "Tower1", "Tower2", "Tower3", "Tower4", "Tower5", "boss1", "boss2", "boss3"};
         field_e = new int[2];
         field_b = new Sprite[3][2][32];

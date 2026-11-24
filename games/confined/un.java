@@ -3,7 +3,7 @@
  */
 final class un {
     static mi field_a;
-    static bi field_h;
+    static PcmSample field_h;
     static byte[][] field_i;
     static String field_b;
     static String field_d;
@@ -51,7 +51,7 @@ final class un {
     final static void c(int param0) {
         tj.a(param0 ^ 18996, rd.field_Jb, (String) null);
         if (param0 != -18997) {
-          field_h = (bi) null;
+          field_h = (PcmSample) null;
         }
     }
 

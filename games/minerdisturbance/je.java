@@ -575,7 +575,7 @@ final class je {
           var29 = var29 * var30 >> 8;
           var18Lifetime1 = (var21 + var27 & 255) << 16 | (var22 + var28 & 255) << 8 | var23 + var29 & 255;
           if (!vi.field_h) {
-            stackIn_22_0 = (!wm.field_e) ? 1 : 0;
+            stackIn_22_0 = (!PcmResampler.field_e) ? 1 : 0;
           } else {
             stackIn_22_0 = 0;
           }
@@ -1330,7 +1330,7 @@ final class je {
         }
         var6 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
         var7 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
-        if (!wm.field_e) {
+        if (!PcmResampler.field_e) {
           stackIn_14_0 = (!vi.field_h) ? 1 : 0;
         } else {
           stackIn_14_0 = 0;

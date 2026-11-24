@@ -295,14 +295,14 @@ final class jk extends si {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            ng.field_d = new String[var4];
-            kg.a(pj.field_A, 0, ng.field_d, 0, var4);
+            PcmResampler.field_d = new String[var4];
+            kg.a(pj.field_A, 0, PcmResampler.field_d, 0, var4);
             ga.field_i = new String[var3_int - var4 - 1];
             kg.a(pj.field_A, var4 + 1, ga.field_i, 0, -var4 + var3_int - 1);
-            if (lk.field_i.length >= ng.field_d.length) {
+            if (lk.field_i.length >= PcmResampler.field_d.length) {
               stackIn_58_0 = lk.field_i.length;
             } else {
-              stackIn_58_0 = ng.field_d.length;
+              stackIn_58_0 = PcmResampler.field_d.length;
             }
             var5 = stackIn_58_0;
             if (wg.field_h.length >= ga.field_i.length) {
@@ -331,10 +331,10 @@ final class jk extends si {
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_68_0 = sg.field_f;
               stackIn_68_1 = 6 + var8Lifetime2;
-              if (0 > -var5 + (var8Lifetime2 + ng.field_d.length)) {
+              if (0 > -var5 + (var8Lifetime2 + PcmResampler.field_d.length)) {
                 stackIn_69_2 = "";
               } else {
-                stackIn_69_2 = ng.field_d[ng.field_d.length + (var8Lifetime2 - var5)];
+                stackIn_69_2 = PcmResampler.field_d[PcmResampler.field_d.length + (var8Lifetime2 - var5)];
               }
               stackIn_68_0[stackIn_68_1] = stackIn_69_2;
             }

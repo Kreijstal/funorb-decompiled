@@ -93,7 +93,7 @@ final class ri extends na {
         }
         MusicPatchPcmStream.field_p = null;
         ok.field_a = null;
-        fe var1 = cj.field_h[10];
+        PcmSample var1 = cj.field_h[10];
         if (param0 >= 122) {
           var2 = ab.field_g[10];
           ol.a(-118, var1, var2);

@@ -7,7 +7,7 @@ abstract class n {
     String field_b;
     static int field_d;
     static String field_e;
-    static bi field_a;
+    static PcmSample field_a;
     int field_c;
 
     final static PcmStreamMixer a(int param0) {
@@ -31,7 +31,7 @@ abstract class n {
         field_e = null;
         field_a = null;
         if (param0 < 112) {
-          field_a = (bi) null;
+          field_a = (PcmSample) null;
         }
     }
 

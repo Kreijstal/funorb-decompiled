@@ -1284,6 +1284,14 @@
       "renamedSymbol": "C:PcmStream"
     },
     {
+      "symbol": "C:m",
+      "originalName": "m",
+      "to": "PcmResampler",
+      "evidence": "Fourteen-tap polyphase signed-byte PCM resampler with original input/output rate integers and optional fixed-point coefficient table. Preserve equal-rate constructor early return,original normalization helper and division/store/allocation order,phase bounds,sinc threshold and exact window coefficients,Math sin/cos/floor evaluation and int casts. Original constructor SHA256 e15a28547b58943d5271890129b67442a73edaeed17a1a240d6d48d779a6bf94. Keep early null return for byte guard other than109,rate-scaling false flag clearing the coefficient table before the table test,and bad position byte invoking rate scaling with false before its table test. Preserve byte46,true and109 guards in the sample wrapper and all original aliases/partial writes. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmResampler"
+    },
+    {
       "symbol": "C:mf",
       "originalName": "mf",
       "to": "AsyncRequest",
@@ -2740,6 +2748,14 @@
       "renamedSymbol": "M:GameShell.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:gg.a(Lm;)Lgg;",
+      "originalName": "a",
+      "to": "resample",
+      "evidence": "Resample this sample in place through the original resampler:store the returned byte array,then scaled sample rate,and transform original loop endpoints. Equal endpoints use one retained helper result;unequal endpoints are transformed separately and decrement the start if they collapse. Preserve exact helper guards,call/write ordering,full domains,partial mutations and return-this identity. Keep early null return for byte guard other than109,rate-scaling false flag clearing the coefficient table before the table test,and bad position byte invoking rate scaling with false before its table test. Preserve byte46,true and109 guards in the sample wrapper and all original aliases/partial writes. Complete original-body SHA256 8bde66f63818936b314fd150fc95dd2501e0c3413f140141589bb838ff4dad32. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSample.resample(LPcmResampler;)LPcmSample;"
+    },
+    {
       "symbol": "M:gi.a(BJ)V",
       "originalName": "a",
       "to": "sleepMillis",
@@ -3513,7 +3529,31 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 5 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a37cf2041e922e3db9d3250bd73b2558553f3227700be035f64dbecf05b63642.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:m.clearStaticReferences(B)V"
+      "renamedSymbol": "M:PcmResampler.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:m.a(BI)I",
+      "originalName": "a",
+      "to": "scalePosition",
+      "evidence": "With a retained coefficient table,scale the original sample position through long multiplication/division,int cast and plus6;otherwise retain it. Preserve each exact guard:return sentinels before work where present,clear the retained static reference or call the original helper in the original order. Keep early null return for byte guard other than109,rate-scaling false flag clearing the coefficient table before the table test,and bad position byte invoking rate scaling with false before its table test. Preserve byte46,true and109 guards in the sample wrapper and all original aliases/partial writes. Complete original-body SHA256 0c56f2e097290d9fdcc203573d3206bac86cfce20f50cffad78758dbfc7b62db. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.scalePosition(BI)I"
+    },
+    {
+      "symbol": "M:m.a(B[B)[B",
+      "originalName": "a",
+      "to": "resampleBytes",
+      "evidence": "Run the original14-tap coefficient convolution and rate-phase stepping into an int accumulation buffer,then round with32768 and shift16 and clamp to signed-byte range. Preserve input-array identity when the coefficient table is absent,output length long multiplication/cast plus14,int overflow,allocation/exception order,all captured global reads and diagnostic wrapping. Keep game-specific guard effects:Bounce false returns null after work,Dr bad byte invokes account helper,Flea computes the original remainder division,Hostile bad int clears the retained static reference,and Miner false stores output rate minus34 before processing. Keep early null return for byte guard other than109,rate-scaling false flag clearing the coefficient table before the table test,and bad position byte invoking rate scaling with false before its table test. Preserve byte46,true and109 guards in the sample wrapper and all original aliases/partial writes. Complete original-body SHA256 6637b8eb3a9c0b28a7a8332f6bb835685dee45ec939d0f9b77cbd03c34560f16. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.resampleBytes(B[B)[B"
+    },
+    {
+      "symbol": "M:m.a(IZ)I",
+      "originalName": "a",
+      "to": "scaleRate",
+      "evidence": "With a retained coefficient table,scale the original full-width rate/count through long multiplication and division followed by int cast;otherwise retain the supplied value. Keep original guard-specific returns,extra helper calls and arithmetic/exception order. Keep early null return for byte guard other than109,rate-scaling false flag clearing the coefficient table before the table test,and bad position byte invoking rate scaling with false before its table test. Preserve byte46,true and109 guards in the sample wrapper and all original aliases/partial writes. Complete original-body SHA256 8b68f069e2d27c59748bcf3bc2cfa4ccc3ab0a5351d26c7cf0eb97031735500a. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.scaleRate(IZ)I"
     },
     {
       "symbol": "M:mb.b(Z)V",
@@ -8309,9 +8349,9 @@
     },
     {
       "symbol": "C:m",
-      "renamedSymbol": "C:m",
+      "renamedSymbol": "C:PcmResampler",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "PcmResampler",
       "declaration": {
         "file": "m.java",
         "start": 50,
@@ -26371,7 +26411,7 @@
     },
     {
       "symbol": "F:m.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:m.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -26382,7 +26422,7 @@
     },
     {
       "symbol": "F:m.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:m.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -26393,7 +26433,7 @@
     },
     {
       "symbol": "F:m.field_c:I",
-      "renamedSymbol": "F:m.field_c:I",
+      "renamedSymbol": "F:PcmResampler.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -26404,7 +26444,7 @@
     },
     {
       "symbol": "F:m.field_d:[[I",
-      "renamedSymbol": "F:m.field_d:[[I",
+      "renamedSymbol": "F:PcmResampler.field_d:[[I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -26415,7 +26455,7 @@
     },
     {
       "symbol": "F:m.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:m.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -26426,7 +26466,7 @@
     },
     {
       "symbol": "F:m.field_f:I",
-      "renamedSymbol": "F:m.field_f:I",
+      "renamedSymbol": "F:PcmResampler.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -26437,7 +26477,7 @@
     },
     {
       "symbol": "F:m.field_g:Lci;",
-      "renamedSymbol": "F:m.field_g:LSprite;",
+      "renamedSymbol": "F:PcmResampler.field_g:LSprite;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -26448,7 +26488,7 @@
     },
     {
       "symbol": "F:m.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:m.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -107661,7 +107701,7 @@
     },
     {
       "symbol": "L:gg.a(Lm;)Lgg;#0",
-      "renamedSymbol": "L:PcmSample.a(Lm;)LPcmSample;#0",
+      "renamedSymbol": "L:PcmSample.resample(LPcmResampler;)LPcmSample;#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -138252,7 +138292,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#0",
-      "renamedSymbol": "L:m.<init>(II)V#0",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -138263,7 +138303,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#1",
-      "renamedSymbol": "L:m.<init>(II)V#1",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -138274,7 +138314,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#2",
-      "renamedSymbol": "L:m.<init>(II)V#2",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -138285,7 +138325,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#3",
-      "renamedSymbol": "L:m.<init>(II)V#3",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -138296,7 +138336,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#4",
-      "renamedSymbol": "L:m.<init>(II)V#4",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -138307,7 +138347,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#5",
-      "renamedSymbol": "L:m.<init>(II)V#5",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -138318,7 +138358,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#6",
-      "renamedSymbol": "L:m.<init>(II)V#6",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -138329,7 +138369,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#7",
-      "renamedSymbol": "L:m.<init>(II)V#7",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -138340,7 +138380,7 @@
     },
     {
       "symbol": "L:m.<init>(II)V#8",
-      "renamedSymbol": "L:m.<init>(II)V#8",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -138351,7 +138391,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#0",
-      "renamedSymbol": "L:m.a(B[B)[B#0",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -138362,7 +138402,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#1",
-      "renamedSymbol": "L:m.a(B[B)[B#1",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#1",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -138373,7 +138413,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#10",
-      "renamedSymbol": "L:m.a(B[B)[B#10",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -138384,7 +138424,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#11",
-      "renamedSymbol": "L:m.a(B[B)[B#11",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -138395,7 +138435,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#12",
-      "renamedSymbol": "L:m.a(B[B)[B#12",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -138406,7 +138446,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#13",
-      "renamedSymbol": "L:m.a(B[B)[B#13",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -138417,7 +138457,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#14",
-      "renamedSymbol": "L:m.a(B[B)[B#14",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -138428,7 +138468,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#15",
-      "renamedSymbol": "L:m.a(B[B)[B#15",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#15",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -138439,7 +138479,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#16",
-      "renamedSymbol": "L:m.a(B[B)[B#16",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#16",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -138450,7 +138490,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#17",
-      "renamedSymbol": "L:m.a(B[B)[B#17",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -138461,7 +138501,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#18",
-      "renamedSymbol": "L:m.a(B[B)[B#18",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#18",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -138472,7 +138512,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#19",
-      "renamedSymbol": "L:m.a(B[B)[B#19",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#19",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -138483,7 +138523,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#2",
-      "renamedSymbol": "L:m.a(B[B)[B#2",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#2",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -138494,7 +138534,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#20",
-      "renamedSymbol": "L:m.a(B[B)[B#20",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#20",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -138505,7 +138545,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#21",
-      "renamedSymbol": "L:m.a(B[B)[B#21",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#21",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -138516,7 +138556,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#22",
-      "renamedSymbol": "L:m.a(B[B)[B#22",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#22",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -138527,7 +138567,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#3",
-      "renamedSymbol": "L:m.a(B[B)[B#3",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#3",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -138538,7 +138578,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#4",
-      "renamedSymbol": "L:m.a(B[B)[B#4",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#4",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -138549,7 +138589,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#5",
-      "renamedSymbol": "L:m.a(B[B)[B#5",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -138560,7 +138600,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#6",
-      "renamedSymbol": "L:m.a(B[B)[B#6",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#6",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -138571,7 +138611,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#7",
-      "renamedSymbol": "L:m.a(B[B)[B#7",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -138582,7 +138622,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#8",
-      "renamedSymbol": "L:m.a(B[B)[B#8",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -138593,7 +138633,7 @@
     },
     {
       "symbol": "L:m.a(B[B)[B#9",
-      "renamedSymbol": "L:m.a(B[B)[B#9",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(B[B)[B#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -138604,7 +138644,7 @@
     },
     {
       "symbol": "L:m.a(I)I#0",
-      "renamedSymbol": "L:m.a(I)I#0",
+      "renamedSymbol": "L:PcmResampler.a(I)I#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -138615,7 +138655,7 @@
     },
     {
       "symbol": "L:m.a(I)I#1",
-      "renamedSymbol": "L:m.a(I)I#1",
+      "renamedSymbol": "L:PcmResampler.a(I)I#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -138626,7 +138666,7 @@
     },
     {
       "symbol": "L:m.a(I)I#10",
-      "renamedSymbol": "L:m.a(I)I#10",
+      "renamedSymbol": "L:PcmResampler.a(I)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -138637,7 +138677,7 @@
     },
     {
       "symbol": "L:m.a(I)I#2",
-      "renamedSymbol": "L:m.a(I)I#2",
+      "renamedSymbol": "L:PcmResampler.a(I)I#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -138648,7 +138688,7 @@
     },
     {
       "symbol": "L:m.a(I)I#3",
-      "renamedSymbol": "L:m.a(I)I#3",
+      "renamedSymbol": "L:PcmResampler.a(I)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -138659,7 +138699,7 @@
     },
     {
       "symbol": "L:m.a(I)I#4",
-      "renamedSymbol": "L:m.a(I)I#4",
+      "renamedSymbol": "L:PcmResampler.a(I)I#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -138670,7 +138710,7 @@
     },
     {
       "symbol": "L:m.a(I)I#5",
-      "renamedSymbol": "L:m.a(I)I#5",
+      "renamedSymbol": "L:PcmResampler.a(I)I#5",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -138681,7 +138721,7 @@
     },
     {
       "symbol": "L:m.a(I)I#6",
-      "renamedSymbol": "L:m.a(I)I#6",
+      "renamedSymbol": "L:PcmResampler.a(I)I#6",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -138692,7 +138732,7 @@
     },
     {
       "symbol": "L:m.a(I)I#7",
-      "renamedSymbol": "L:m.a(I)I#7",
+      "renamedSymbol": "L:PcmResampler.a(I)I#7",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -138703,7 +138743,7 @@
     },
     {
       "symbol": "L:m.a(I)I#8",
-      "renamedSymbol": "L:m.a(I)I#8",
+      "renamedSymbol": "L:PcmResampler.a(I)I#8",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -138714,7 +138754,7 @@
     },
     {
       "symbol": "L:m.a(I)I#9",
-      "renamedSymbol": "L:m.a(I)I#9",
+      "renamedSymbol": "L:PcmResampler.a(I)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -138725,7 +138765,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#0",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#0",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -138736,7 +138776,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#1",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#1",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#1",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -138747,7 +138787,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#10",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#10",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -138758,7 +138798,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#11",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#11",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -138769,7 +138809,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#2",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#2",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#2",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -138780,7 +138820,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#3",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#3",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#3",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -138791,7 +138831,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#4",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#4",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#4",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -138802,7 +138842,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#5",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#5",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -138813,7 +138853,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#6",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#6",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -138824,7 +138864,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#7",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#7",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#7",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -138835,7 +138875,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#8",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#8",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -138846,7 +138886,7 @@
     },
     {
       "symbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#9",
-      "renamedSymbol": "L:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#9",
+      "renamedSymbol": "L:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -200941,9 +200981,9 @@
     },
     {
       "symbol": "M:gg.a(Lm;)Lgg;",
-      "renamedSymbol": "M:PcmSample.a(Lm;)LPcmSample;",
+      "renamedSymbol": "M:PcmSample.resample(LPcmResampler;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resample",
       "declaration": {
         "file": "gg.java",
         "start": 172,
@@ -206980,9 +207020,9 @@
     },
     {
       "symbol": "M:m.<init>(II)V",
-      "renamedSymbol": "M:m.<init>(II)V",
+      "renamedSymbol": "M:PcmResampler.<init>(II)V",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "PcmResampler",
       "declaration": {
         "file": "m.java",
         "start": 7902,
@@ -206991,7 +207031,7 @@
     },
     {
       "symbol": "M:m.a(B)V",
-      "renamedSymbol": "M:m.clearStaticReferences(B)V",
+      "renamedSymbol": "M:PcmResampler.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -207002,9 +207042,9 @@
     },
     {
       "symbol": "M:m.a(BI)I",
-      "renamedSymbol": "M:m.a(BI)I",
+      "renamedSymbol": "M:PcmResampler.scalePosition(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "scalePosition",
       "declaration": {
         "file": "m.java",
         "start": 4757,
@@ -207013,9 +207053,9 @@
     },
     {
       "symbol": "M:m.a(B[B)[B",
-      "renamedSymbol": "M:m.a(B[B)[B",
+      "renamedSymbol": "M:PcmResampler.resampleBytes(B[B)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resampleBytes",
       "declaration": {
         "file": "m.java",
         "start": 5032,
@@ -207024,7 +207064,7 @@
     },
     {
       "symbol": "M:m.a(I)I",
-      "renamedSymbol": "M:m.a(I)I",
+      "renamedSymbol": "M:PcmResampler.a(I)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -207035,9 +207075,9 @@
     },
     {
       "symbol": "M:m.a(IZ)I",
-      "renamedSymbol": "M:m.a(IZ)I",
+      "renamedSymbol": "M:PcmResampler.scaleRate(IZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "scaleRate",
       "declaration": {
         "file": "m.java",
         "start": 1916,
@@ -207046,7 +207086,7 @@
     },
     {
       "symbol": "M:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V",
-      "renamedSymbol": "M:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V",
+      "renamedSymbol": "M:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -240827,7 +240867,7 @@
     },
     {
       "symbol": "P:gg.a(Lm;)Lgg;#0",
-      "renamedSymbol": "P:PcmSample.a(Lm;)LPcmSample;#0",
+      "renamedSymbol": "P:PcmSample.resample(LPcmResampler;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257129,7 +257169,7 @@
     },
     {
       "symbol": "P:m.<init>(II)V#0",
-      "renamedSymbol": "P:m.<init>(II)V#0",
+      "renamedSymbol": "P:PcmResampler.<init>(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257140,7 +257180,7 @@
     },
     {
       "symbol": "P:m.<init>(II)V#1",
-      "renamedSymbol": "P:m.<init>(II)V#1",
+      "renamedSymbol": "P:PcmResampler.<init>(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -257151,7 +257191,7 @@
     },
     {
       "symbol": "P:m.a(B)V#0",
-      "renamedSymbol": "P:m.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:PcmResampler.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257162,7 +257202,7 @@
     },
     {
       "symbol": "P:m.a(BI)I#0",
-      "renamedSymbol": "P:m.a(BI)I#0",
+      "renamedSymbol": "P:PcmResampler.scalePosition(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257173,7 +257213,7 @@
     },
     {
       "symbol": "P:m.a(BI)I#1",
-      "renamedSymbol": "P:m.a(BI)I#1",
+      "renamedSymbol": "P:PcmResampler.scalePosition(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -257184,7 +257224,7 @@
     },
     {
       "symbol": "P:m.a(B[B)[B#0",
-      "renamedSymbol": "P:m.a(B[B)[B#0",
+      "renamedSymbol": "P:PcmResampler.resampleBytes(B[B)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257195,7 +257235,7 @@
     },
     {
       "symbol": "P:m.a(B[B)[B#1",
-      "renamedSymbol": "P:m.a(B[B)[B#1",
+      "renamedSymbol": "P:PcmResampler.resampleBytes(B[B)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -257206,7 +257246,7 @@
     },
     {
       "symbol": "P:m.a(I)I#0",
-      "renamedSymbol": "P:m.a(I)I#0",
+      "renamedSymbol": "P:PcmResampler.a(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257217,7 +257257,7 @@
     },
     {
       "symbol": "P:m.a(IZ)I#0",
-      "renamedSymbol": "P:m.a(IZ)I#0",
+      "renamedSymbol": "P:PcmResampler.scaleRate(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257228,7 +257268,7 @@
     },
     {
       "symbol": "P:m.a(IZ)I#1",
-      "renamedSymbol": "P:m.a(IZ)I#1",
+      "renamedSymbol": "P:PcmResampler.scaleRate(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -257239,7 +257279,7 @@
     },
     {
       "symbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#0",
-      "renamedSymbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#0",
+      "renamedSymbol": "P:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -257250,7 +257290,7 @@
     },
     {
       "symbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#1",
-      "renamedSymbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#1",
+      "renamedSymbol": "P:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -257261,7 +257301,7 @@
     },
     {
       "symbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#2",
-      "renamedSymbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#2",
+      "renamedSymbol": "P:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -257272,7 +257312,7 @@
     },
     {
       "symbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#3",
-      "renamedSymbol": "P:m.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#3",
+      "renamedSymbol": "P:PcmResampler.a(Ljava/applet/Applet;ZLjava/lang/String;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -278759,7 +278799,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "545eb9d0cd8644f62a0ca01e670350ca2b4cd20d20af8c797b1416ce348f2d85",
+      "outputSha256": "5c0afbe0714767b7a9c86e0416215142ad5f6bca56f10806ff60a2a23ad8f967",
       "edits": [
         {
           "start": 78,
@@ -279359,6 +279399,13 @@
           "renamed": "PcmPlayerPump"
         },
         {
+          "start": 36484,
+          "end": 36485,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 36506,
           "end": 36508,
           "symbol": "C:jb",
@@ -279373,11 +279420,32 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 36588,
+          "end": 36589,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 37315,
           "end": 37317,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 37336,
+          "end": 37337,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 37413,
+          "end": 37414,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 37434,
@@ -279681,6 +279749,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 56873,
+          "end": 56874,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 57015,
           "end": 57016,
           "symbol": "M:mi.d(I)V",
@@ -279940,6 +280015,13 @@
           "renamed": "AccountNameAvailabilityValidator"
         },
         {
+          "start": 62549,
+          "end": 62550,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 62558,
           "end": 62560,
           "symbol": "C:nk",
@@ -279982,11 +280064,25 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 63212,
+          "end": 63213,
+          "symbol": "M:gg.a(Lm;)Lgg;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 63377,
           "end": 63379,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 63425,
+          "end": 63426,
+          "symbol": "M:gg.a(Lm;)Lgg;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 63873,
@@ -280962,6 +281058,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 138590,
+          "end": 138591,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 140647,
           "end": 140648,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
@@ -281638,6 +281741,13 @@
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 163434,
+          "end": 163435,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 163436,
@@ -285739,6 +285849,20 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 315986,
+          "end": 315987,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 316007,
+          "end": 316008,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 316408,
           "end": 316409,
           "symbol": "C:l",
@@ -285893,6 +286017,13 @@
           "renamed": "TutorialText"
         },
         {
+          "start": 319171,
+          "end": 319172,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 319192,
           "end": 319194,
           "symbol": "C:jb",
@@ -285907,6 +286038,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 319273,
+          "end": 319274,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 319308,
           "end": 319309,
           "symbol": "C:l",
@@ -285914,11 +286052,32 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 319323,
+          "end": 319324,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 319543,
+          "end": 319544,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 319563,
           "end": 319565,
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 319701,
+          "end": 319702,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 319723,
@@ -285933,6 +286092,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 319768,
+          "end": 319769,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 320831,
@@ -286234,6 +286400,13 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "TutorialText"
+        },
+        {
+          "start": 333960,
+          "end": 333961,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 334405,
@@ -286861,6 +287034,13 @@
           "renamed": "AccountRequestState"
         },
         {
+          "start": 357636,
+          "end": 357637,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 357690,
           "end": 357692,
           "symbol": "C:og",
@@ -287363,7 +287543,7 @@
       "original": "a.java",
       "renamed": "a.java",
       "inputSha256": "cff95b13a6a67fafe50ed805d79fdc48e7c9905cde02b3840e988d36fb457ea8",
-      "outputSha256": "1fc29eb2ccc59298ef6974264a0557b370c185abb835e0a9d1e37f1ac658f2ea",
+      "outputSha256": "d2dce964a4ccb6d20cf38cef6720db50cc3ad5686e8442e398be7fd2a8785439",
       "edits": [
         {
           "start": 65,
@@ -287399,6 +287579,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "LevelMap"
+        },
+        {
+          "start": 705,
+          "end": 706,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2134,
@@ -294172,7 +294359,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "cd0c5e9a8b31a5bf7cd98e6d198721967ef93b866493ecbb823b02d04548bca8",
-      "outputSha256": "0e7b6d77ef3e79d25b4230f29fa63afead207e1ba7284ba2756b03657ad6803b",
+      "outputSha256": "6390a4444305657903bec423bb1f7a87ac58c9768583f3fdaae7dc5c1ed74405",
       "edits": [
         {
           "start": 66,
@@ -294350,6 +294537,13 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 10137,
+          "end": 10138,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 10290,
           "end": 10292,
           "symbol": "C:dl",
@@ -294383,6 +294577,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 16189,
+          "end": 16190,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 16678,
@@ -294789,6 +294990,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 91682,
+          "end": 91683,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 92150,
@@ -313106,7 +313314,7 @@
       "original": "e.java",
       "renamed": "BattleState.java",
       "inputSha256": "f4936e9bc7cb412874672987d7c7df6b2d63f94bfe5655340b5391c177dcc333",
-      "outputSha256": "a100acdfc59fd34fef585ef02ae71b5c8bdc9c2ec0310ed25ee2024fb5b07233",
+      "outputSha256": "62b893ee4f8de1ad3af2b5f39a5bfd812079d5aee19cc38b2d5de58d493ba16b",
       "edits": [
         {
           "start": 50,
@@ -313935,6 +314143,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "BattleUnit"
+        },
+        {
+          "start": 25841,
+          "end": 25842,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 26171,
@@ -343239,7 +343454,7 @@
       "original": "gf.java",
       "renamed": "GameShell.java",
       "inputSha256": "ca6cb6732c5dc683ccb17dfa55299f9f304631db3a264a0fd2ddc1e9c63c3ee2",
-      "outputSha256": "056d48f596794be44d13a30ccc9254fead02a520c37fe772f31367626159baae",
+      "outputSha256": "8b4c18a92acf254b19ee46788de85bfde2260b361b09d2e9790b5629dc43bd0a",
       "edits": [
         {
           "start": 53,
@@ -343303,6 +343518,13 @@
           "symbol": "C:mk",
           "original": "mk",
           "renamed": "LevelEditor"
+        },
+        {
+          "start": 2377,
+          "end": 2378,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2828,
@@ -344010,7 +344232,7 @@
       "original": "gg.java",
       "renamed": "PcmSample.java",
       "inputSha256": "b87ddbe50f95e82cf19ed5fdcbefd262305e9895bbfe7e7dde05cc41cd36fee6",
-      "outputSha256": "e7699b2d6c2599007f5862d43018a02646ea10cdd9bd26f9162383708a6f2504",
+      "outputSha256": "b5eca19949670876120673c9dea8240ac9ebf5544609175a3139d172bd24bb7b",
       "edits": [
         {
           "start": 50,
@@ -344032,6 +344254,55 @@
           "symbol": "C:gg",
           "original": "gg",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 172,
+          "end": 173,
+          "symbol": "M:gg.a(Lm;)Lgg;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 174,
+          "end": 175,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 216,
+          "end": 217,
+          "symbol": "M:m.a(B[B)[B",
+          "original": "a",
+          "renamed": "resampleBytes"
+        },
+        {
+          "start": 275,
+          "end": 276,
+          "symbol": "M:m.a(IZ)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
+          "start": 374,
+          "end": 375,
+          "symbol": "M:m.a(BI)I",
+          "original": "a",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 434,
+          "end": 435,
+          "symbol": "M:m.a(BI)I",
+          "original": "a",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 629,
+          "end": 630,
+          "symbol": "M:m.a(BI)I",
+          "original": "a",
+          "renamed": "scalePosition"
         },
         {
           "start": 757,
@@ -358626,7 +358897,7 @@
       "original": "kj.java",
       "renamed": "kj.java",
       "inputSha256": "b2d518479852cfb74af92893b6e2d0d3bbb16123e06ceb3354210c50d9d2ae70",
-      "outputSha256": "f765179607f4c1bea93ef7d9c9569b4b2a51a9573dbaba31342db51729699b27",
+      "outputSha256": "1803350196d8103a69b9f2fa66bf04e209715104d7ec278b406622833da3e753",
       "edits": [
         {
           "start": 64,
@@ -358727,11 +358998,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2097,
+          "end": 2098,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 2252,
           "end": 2254,
           "symbol": "C:db",
           "original": "db",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 2333,
+          "end": 2334,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2345,
@@ -358741,11 +359026,39 @@
           "renamed": "MessageKeys"
         },
         {
+          "start": 2440,
+          "end": 2441,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 2491,
+          "end": 2492,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 2552,
+          "end": 2553,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 2780,
           "end": 2782,
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "PcmStreamMixer"
+        },
+        {
+          "start": 2798,
+          "end": 2799,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2932,
@@ -358755,11 +359068,39 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 3013,
+          "end": 3014,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 3025,
           "end": 3027,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "MessageKeys"
+        },
+        {
+          "start": 3120,
+          "end": 3121,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 3171,
+          "end": 3172,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 3232,
+          "end": 3233,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         }
       ]
     },
@@ -361539,10 +361880,17 @@
     },
     {
       "original": "m.java",
-      "renamed": "m.java",
+      "renamed": "PcmResampler.java",
       "inputSha256": "0a767a5f83b65e4e585193028d4579a9f4ec5c57edaf39d3e58373cbf4e36960",
-      "outputSha256": "cc0b3c5d575068c131d9ef2e338905a718d006a92138e4342cffaf75e342a174",
+      "outputSha256": "39eee307c270f24a03a89e842ba6965dfe7d41327258c51535d030b43f422e12",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 227,
           "end": 229,
@@ -361565,6 +361913,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1916,
+          "end": 1917,
+          "symbol": "M:m.a(IZ)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
           "start": 2203,
           "end": 2204,
           "symbol": "M:m.a(B)V",
@@ -361577,6 +361932,13 @@
           "symbol": "C:he",
           "original": "he",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 3186,
+          "end": 3187,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 3471,
@@ -361593,11 +361955,39 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4757,
+          "end": 4758,
+          "symbol": "M:m.a(BI)I",
+          "original": "a",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 4829,
+          "end": 4830,
+          "symbol": "M:m.a(IZ)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
+          "start": 5032,
+          "end": 5033,
+          "symbol": "M:m.a(B[B)[B",
+          "original": "a",
+          "renamed": "resampleBytes"
+        },
+        {
           "start": 7756,
           "end": 7757,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 7902,
+          "end": 7903,
+          "symbol": "M:m.<init>(II)V",
+          "original": "m",
+          "renamed": "PcmResampler"
         }
       ]
     },
@@ -365072,7 +365462,7 @@
       "original": "nl.java",
       "renamed": "nl.java",
       "inputSha256": "b274210e66bc5e4561e98d10b6bdd13d8981e226e6360a95d085b9121103073e",
-      "outputSha256": "2492c18fbb22b3af1aa8f99f70fd92afb183b83a7d609f953f2e10360ccbefea",
+      "outputSha256": "d841e5cf755690cf95e0d01fe630a1c0a59ec9c91569e7d64de6775b410f5f0e",
       "edits": [
         {
           "start": 153,
@@ -365101,6 +365491,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2579,
+          "end": 2580,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 3653,
@@ -367196,8 +367593,15 @@
       "original": "pg.java",
       "renamed": "pg.java",
       "inputSha256": "b917b0bc57ef23c6271bb0d1c1206324d4bf36208bcfae0e6552a147a7819d50",
-      "outputSha256": "63b03e815100998fc38722829ca3f048d82afb157cf55c6c8f8fde9149e9eeb4",
+      "outputSha256": "11d46c2cba7f1ecc714faef3b35cc577d13ded545f0e18fb3bc35a9edaeae8c9",
       "edits": [
+        {
+          "start": 354,
+          "end": 355,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 390,
           "end": 392,
@@ -382946,7 +383350,7 @@
       "original": "uc.java",
       "renamed": "uc.java",
       "inputSha256": "b44981e251129bb28796f2736bbc7b2c643c901d457022d6a84c0203ccf078dd",
-      "outputSha256": "3d2546ae9a9c925e537f3144b1e33f95d3a9c40adc9b65b2cf81580d639b3cd0",
+      "outputSha256": "1c57e4ce42dd6d6b42a3dc107c247bff29ea856271da87148e4fb35bca173f8c",
       "edits": [
         {
           "start": 61,
@@ -382989,6 +383393,13 @@
           "symbol": "F:dh.field_i:[B",
           "original": "field_i",
           "renamed": "payload"
+        },
+        {
+          "start": 1277,
+          "end": 1278,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 1384,
@@ -387298,7 +387709,7 @@
       "original": "vj.java",
       "renamed": "vj.java",
       "inputSha256": "2b09d36d5712ce49fb7cbe5a822d9a9aefe5aa86576b908b66a32a3c4aec880a",
-      "outputSha256": "2d42f1e43b9f4adbd242df564de1c3e57410cd6aadff86f0ca2fcab8664a9d32",
+      "outputSha256": "ceb7def48866ea261a9208e4df37128989f954abfd3c3775076fd67900c09889",
       "edits": [
         {
           "start": 198,
@@ -387383,6 +387794,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5006,
+          "end": 5007,
+          "symbol": "C:m",
+          "original": "m",
+          "renamed": "PcmResampler"
         },
         {
           "start": 5050,
@@ -390972,10 +391390,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "6dabfad91b2f9c5f1b4e8ed551c538bd509df1250d1831c965af68892e33ba12",
+    "rulesSha256": "af6f89053ff15b113eabf6a5332d3f924d2af1f954d6a7e16d5387867b650bcb",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "6e40c9d2ca369e0bdeb180c458a9cdc58dd27586acd03eb5631b54afb4bfed52",
+    "outputTreeSha256": "74d63049177d0e09302b2fe6cd1ee63fadc048851b4f5ce499bb9b05b6ae3a56",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

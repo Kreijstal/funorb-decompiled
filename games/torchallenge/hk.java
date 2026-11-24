@@ -14,7 +14,7 @@ final class hk {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        fe var3 = null;
+        PcmSample var3 = null;
         int var4 = 0;
         int var6 = 0;
         var6 = TorChallenge.field_F ? 1 : 0;

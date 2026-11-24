@@ -5,7 +5,7 @@ final class ne {
     static double field_c;
     static String field_a;
     static String field_d;
-    static bi field_b;
+    static PcmSample field_b;
 
     public static void a(byte param0) {
         int var1 = -40 / ((-70 - param0) / 52);

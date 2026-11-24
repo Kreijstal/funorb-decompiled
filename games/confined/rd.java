@@ -4,7 +4,7 @@
 final class rd extends id {
     private u field_Pb;
     boolean field_Ob;
-    static bi field_Hb;
+    static PcmSample field_Hb;
     static String field_Jb;
     rd field_Tb;
     private int field_Sb;
@@ -770,7 +770,7 @@ final class rd extends id {
 
     final double j(int param0) {
         if (param0 != -7672) {
-          field_Hb = (bi) null;
+          field_Hb = (PcmSample) null;
           return (double)(this.field_Lb << 16);
         }
         return (double)(this.field_Lb << 16);

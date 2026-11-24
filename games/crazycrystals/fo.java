@@ -9,7 +9,7 @@ final class fo extends IntrusiveNode {
     int field_n;
     int field_j;
     static int[] field_m;
-    static ko[] field_i;
+    static PcmSample[] field_i;
     fo field_k;
 
     final static void a(int param0, byte param1) {

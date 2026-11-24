@@ -5,7 +5,7 @@ final class lm extends ae {
     static java.math.BigInteger field_z;
     byte field_B;
     PacketBuffer field_C;
-    static jb[] field_A;
+    static PcmSample[] field_A;
     int field_x;
     static bd field_y;
 
@@ -174,6 +174,6 @@ final class lm extends ae {
 
     static {
         field_z = new java.math.BigInteger("65537");
-        field_A = new jb[26];
+        field_A = new PcmSample[26];
     }
 }

@@ -29,7 +29,7 @@ public final class fleas extends NetworkGameClient {
         int stackIn_74_0 = 0;
         int stackIn_74_1 = 0;
         int stackIn_143_0 = 0;
-        sf stackIn_144_1 = null;
+        PcmSample stackIn_144_1 = null;
         int stackIn_165_0 = 0;
         int stackIn_182_0 = 0;
         int stackIn_182_1 = 0;
@@ -1044,7 +1044,7 @@ public final class fleas extends NetworkGameClient {
           ih.j(8);
           al.clearStaticReferences(true);
           wi.clearStaticReferences(false);
-          ci.clearStaticReferences((byte) 127);
+          PcmResampler.clearStaticReferences((byte) 127);
           gd.clearStaticReferences(-1);
           ec.clearStaticReferences(124);
           hk.clearStaticReferences();
@@ -1890,31 +1890,31 @@ public final class fleas extends NetworkGameClient {
     }
 
     private final void j(byte param0) {
-        ci var2 = null;
+        PcmResampler var2 = null;
         try {
-          var2 = new ci(22050, AudioOutput.field_a);
-          ic.field_ab = qf.a(pb.field_a, "", "FLEA_drops").b().a(var2);
-          fi.field_n = qf.a(pb.field_a, "", "FLEA_flea_die").b().a(var2);
-          nb.field_f = qf.a(pb.field_a, "", "FLEA_escape").b().a(var2);
-          BoundedRandomAccessFile.field_g = qf.a(pb.field_a, "", "FLEA_placeblock").b().a(var2);
-          el.field_C = qf.a(pb.field_a, "", "FLEA_placeramp").b().a(var2);
-          ih.field_l = qf.a(pb.field_a, "", "FLEA_balloon").b().a(var2);
+          var2 = new PcmResampler(22050, AudioOutput.field_a);
+          ic.field_ab = qf.a(pb.field_a, "", "FLEA_drops").b().resample(var2);
+          fi.field_n = qf.a(pb.field_a, "", "FLEA_flea_die").b().resample(var2);
+          nb.field_f = qf.a(pb.field_a, "", "FLEA_escape").b().resample(var2);
+          BoundedRandomAccessFile.field_g = qf.a(pb.field_a, "", "FLEA_placeblock").b().resample(var2);
+          el.field_C = qf.a(pb.field_a, "", "FLEA_placeramp").b().resample(var2);
+          ih.field_l = qf.a(pb.field_a, "", "FLEA_balloon").b().resample(var2);
           int var3 = 36 / ((-23 - param0) / 33);
-          hg.field_n = qf.a(pb.field_a, "", "FLEA_land").b().a(var2);
-          me.field_k = qf.a(pb.field_a, "", "FLEA_spring").b().a(var2);
-          bf.field_d = qf.a(pb.field_a, "", "FLEA_spinplatform").b().a(var2);
-          ab.field_a = qf.a(pb.field_a, "", "FLEA_bomb").b().a(var2);
-          ah.field_a = qf.a(pb.field_a, "", "FLEA_drowning").b().a(var2);
-          ResourceArchive.field_n = qf.a(pb.field_a, "", "FLEA_fanloop").b().a(var2);
-          hi.field_p = qf.a(pb.field_a, "", "FLEA_spider").b().a(var2);
-          uh.field_s = qf.a(pb.field_a, "", "FLEA_teleport_in").b().a(var2);
-          gi.field_d = qf.a(pb.field_a, "", "FLEA_noplace").b().a(var2);
-          hg.field_k = qf.a(pb.field_a, "", "FLEA_gravity_up").b().a(var2);
-          ha.field_o = qf.a(pb.field_a, "", "FLEA_gravity_down").b().a(var2);
-          gf.field_g = qf.a(pb.field_a, "", "FLEA_switch").b().a(var2);
-          fg.field_l = qf.a(pb.field_a, "", "FLEA_crumble").b().a(var2);
-          hf.field_g = qf.a(pb.field_a, "", "FLEA_bridgecollapse").b().a(var2);
-          kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().a(var2);
+          hg.field_n = qf.a(pb.field_a, "", "FLEA_land").b().resample(var2);
+          me.field_k = qf.a(pb.field_a, "", "FLEA_spring").b().resample(var2);
+          bf.field_d = qf.a(pb.field_a, "", "FLEA_spinplatform").b().resample(var2);
+          ab.field_a = qf.a(pb.field_a, "", "FLEA_bomb").b().resample(var2);
+          ah.field_a = qf.a(pb.field_a, "", "FLEA_drowning").b().resample(var2);
+          ResourceArchive.field_n = qf.a(pb.field_a, "", "FLEA_fanloop").b().resample(var2);
+          hi.field_p = qf.a(pb.field_a, "", "FLEA_spider").b().resample(var2);
+          uh.field_s = qf.a(pb.field_a, "", "FLEA_teleport_in").b().resample(var2);
+          gi.field_d = qf.a(pb.field_a, "", "FLEA_noplace").b().resample(var2);
+          hg.field_k = qf.a(pb.field_a, "", "FLEA_gravity_up").b().resample(var2);
+          ha.field_o = qf.a(pb.field_a, "", "FLEA_gravity_down").b().resample(var2);
+          gf.field_g = qf.a(pb.field_a, "", "FLEA_switch").b().resample(var2);
+          fg.field_l = qf.a(pb.field_a, "", "FLEA_crumble").b().resample(var2);
+          hf.field_g = qf.a(pb.field_a, "", "FLEA_bridgecollapse").b().resample(var2);
+          kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().resample(var2);
           pb.field_a = null;
           oj.field_i = RawPcmStream.a(ResourceArchive.field_n, 100, 0);
           oj.field_i.g(-1);
@@ -1955,7 +1955,7 @@ public final class fleas extends NetworkGameClient {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
         int stackIn_44_0 = 0;
-        sf stackIn_48_1 = null;
+        PcmSample stackIn_48_1 = null;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2491,13 +2491,13 @@ public final class fleas extends NetworkGameClient {
           while (!(decompiledNaturalLoopExit0 = (!(var3Lifetime2 < oe.field_a)))) {
             var4 = fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]];
             stackIn_314_0 = var4;
-            stackIn_314_1 = ci.field_c[var3Lifetime2];
+            stackIn_314_1 = PcmResampler.field_c[var3Lifetime2];
             if (var24 == 0) {
               boolean decompiledFrameRemainder4 = true;
               if (stackIn_314_0 == stackIn_314_1 ||
                 ~fg.field_u[var3Lifetime2] == ~var4) {
                 if (0 != ok.field_s[var3Lifetime2]) {
-                  if ((ci.field_c[var3Lifetime2] == 8)) {
+                  if ((PcmResampler.field_c[var3Lifetime2] == 8)) {
                     var7 = id.field_h[var3Lifetime2] * 16;
                     var13 = 0;
                     var8 = uf.field_e[var3Lifetime2] * 16;
@@ -2529,7 +2529,7 @@ public final class fleas extends NetworkGameClient {
                 }
                 else {
                   if (kb.field_i == 0) {
-                    fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)ci.field_c[var3Lifetime2];
+                    fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)PcmResampler.field_c[var3Lifetime2];
                   }
                   if (kb.field_i == 4) {
                     fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)fg.field_u[var3Lifetime2];

@@ -30,8 +30,8 @@ final class gm extends hf {
             field_J = 66;
           }
           if (af.field_g == null) {
-            af.field_g = new tf(ng.field_c, mf.field_u);
-            ng.field_c.a((byte) -111, (vg) (af.field_g));
+            af.field_g = new tf(PcmResampler.field_c, mf.field_u);
+            PcmResampler.field_c.a((byte) -111, (vg) (af.field_g));
           }
           af.field_g.a(param2, param3, 6, param1);
           wj.c();

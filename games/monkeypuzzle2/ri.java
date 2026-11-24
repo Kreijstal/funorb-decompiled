@@ -251,7 +251,7 @@ final class ri {
         PcmSample var6 = null;
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          ii.field_D = new o(22050, AudioOutput.field_i);
+          ii.field_D = new PcmResampler(22050, AudioOutput.field_i);
           wd.field_i = new ud(param2, param3);
           WeightedObjectCache.field_i = IterableNodeHashTable.a(2570, "music/Monkey Puzzle Panic", "", wd.field_i, param0);
           uh.field_e = IterableNodeHashTable.a(2570, "music/Monkey Puzzle TitleScreen", "", wd.field_i, param0);
@@ -270,7 +270,7 @@ final class ri {
             if (var6 == null) {
               System.out.println(var8[var5]);
             }
-            ke.field_h[var5] = var6.a(ii.field_D);
+            ke.field_h[var5] = var6.resample(ii.field_D);
           }
           wd.field_i = null;
           ii.field_D = null;

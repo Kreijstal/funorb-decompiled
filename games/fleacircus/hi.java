@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hi extends IntrusiveNode {
-    static sf field_p;
+    static PcmSample field_p;
     static int field_q;
     static String field_k;
     int field_l;
@@ -14,7 +14,7 @@ final class hi extends IntrusiveNode {
 
     final static boolean a(byte param0) {
         if (param0 != -72) {
-          field_p = (sf) null;
+          field_p = (PcmSample) null;
           return d.field_L;
         }
         return d.field_L;
@@ -84,7 +84,7 @@ final class hi extends IntrusiveNode {
     public static void clearStaticReferences(byte param0) {
         field_p = null;
         if (param0 >= -63) {
-          field_p = (sf) null;
+          field_p = (PcmSample) null;
           field_k = null;
           return;
         }

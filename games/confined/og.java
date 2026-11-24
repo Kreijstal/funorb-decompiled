@@ -8,7 +8,7 @@ final class og extends n {
     static float field_h;
     static double[] field_g;
     private java.net.ProxySelector field_j;
-    static bi field_f;
+    static PcmSample field_f;
     static e field_i;
 
     public static void d(int param0) {

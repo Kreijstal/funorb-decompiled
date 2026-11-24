@@ -124,7 +124,7 @@ final class qc {
           }
           stackIn_72_0 = 107;
           while (true) {
-            if (!qh.c(stackIn_72_0)) {
+            if (!PcmResampler.c(stackIn_72_0)) {
               stackIn_86_0 = 0;
               return stackIn_86_0;
             }
@@ -199,7 +199,7 @@ final class qc {
         int var7Lifetime1Lifetime1;
         var9 = stellarshard.field_B;
         try {
-          qh.field_g = true;
+          PcmResampler.field_g = true;
           rb.field_s = param0;
           if (rb.field_s == 0) {
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);

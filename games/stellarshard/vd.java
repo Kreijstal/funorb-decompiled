@@ -22,7 +22,7 @@ final class vd {
         try {
           var1_int = 0;
           var2 = 0;
-          while (qh.c(55)) {
+          while (PcmResampler.c(55)) {
             ua.field_i.a(0);
             if (ua.field_i.c(-107)) {
               var1_int = 1;

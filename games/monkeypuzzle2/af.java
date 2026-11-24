@@ -30,7 +30,7 @@ final class af {
         RuntimeException decompiledCaughtException = null;
         try {
           mh.a(-104, (java.awt.Component) ((Object) param1));
-          o.a((java.awt.Component) ((Object) param1), true);
+          PcmResampler.a((java.awt.Component) ((Object) param1), true);
           if (eb.field_A != null) {
             eb.field_A.attach((java.awt.Component) ((Object) param1), -8206);
           }

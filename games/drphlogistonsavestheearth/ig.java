@@ -10,7 +10,7 @@ final class ig extends IntrusiveNode {
     ri[] field_q;
     static vj field_t;
     byte[] field_m;
-    vk[] field_j;
+    PcmSample[] field_j;
     byte[] field_s;
     static int field_k;
     static String field_i;
@@ -59,7 +59,7 @@ final class ig extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_j[var8] = (vk) (var7);
+                  this.field_j[var8] = (PcmSample) (var7);
                   this.field_r[var8] = 0;
                 }
               }
@@ -254,7 +254,7 @@ final class ig extends IntrusiveNode {
         int var29Lifetime3Lifetime1;
         int var29Lifetime3Lifetime2;
         try {
-          this.field_j = new vk[128];
+          this.field_j = new PcmSample[128];
           this.field_p = new short[128];
           this.field_m = new byte[128];
           this.field_s = new byte[128];

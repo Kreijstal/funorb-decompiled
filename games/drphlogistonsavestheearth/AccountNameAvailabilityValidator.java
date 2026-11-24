@@ -42,7 +42,7 @@ final class AccountNameAvailabilityValidator extends ei {
             AccountNameAvailabilityValidator.e(69);
           }
           if (!param1.equals(this.checkedName)) {
-            var3 = ng.pollAccountNameCheck(param1, param0 ^ 11774);
+            var3 = PcmResampler.pollAccountNameCheck(param1, param0 ^ 11774);
             if (var3 != null &&
               null == var3.message) {
               this.nameAvailable = var3.success;
@@ -102,7 +102,7 @@ final class AccountNameAvailabilityValidator extends ei {
             return stackIn_4_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var4 = ng.pollAccountNameCheck(param1, 3582);
+            var4 = PcmResampler.pollAccountNameCheck(param1, 3582);
             if (var4 == null) {
               return null;
             }

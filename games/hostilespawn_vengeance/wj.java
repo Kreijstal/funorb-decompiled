@@ -163,7 +163,7 @@ final class wj extends ph {
         int stackIn_100_0 = 0;
         boolean stackIn_104_0 = false;
         PcmStreamMixer stackIn_133_0 = null;
-        jb[] stackIn_133_1 = null;
+        PcmSample[] stackIn_133_1 = null;
         int stackIn_134_2 = 0;
         int stackIn_162_0 = 0;
         int stackIn_185_0 = 0;
@@ -638,7 +638,7 @@ final class wj extends ph {
                   stackIn_246_0 = dd.field_o;
                   stackIn_246_1 = 10;
                   if (om.field_b) {
-                    stackIn_247_2 = nm.field_c;
+                    stackIn_247_2 = PcmResampler.field_c;
                   } else {
                     stackIn_247_2 = ja.field_h;
                   }
@@ -736,7 +736,7 @@ final class wj extends ph {
                 stackIn_285_0 = dd.field_o;
                 stackIn_285_1 = 10;
                 if (om.field_b) {
-                  stackIn_286_2 = nm.field_c;
+                  stackIn_286_2 = PcmResampler.field_c;
                 } else {
                   stackIn_286_2 = ja.field_h;
                 }

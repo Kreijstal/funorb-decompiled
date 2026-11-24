@@ -39,7 +39,7 @@ final class tk extends IntrusiveNode {
     private static jg[] field_L;
     private static VorbisFloor[] field_E;
 
-    final vk a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -89,7 +89,7 @@ final class tk extends IntrusiveNode {
         this.field_t = null;
         var12 = this.field_o;
         this.field_o = null;
-        return new vk(this.field_i, var12, this.field_m, this.field_r, this.field_H);
+        return new PcmSample(this.field_i, var12, this.field_m, this.field_r, this.field_H);
     }
 
     final static float unpackVorbisFloat(int param0) {
@@ -578,7 +578,7 @@ final class tk extends IntrusiveNode {
         }
     }
 
-    final vk c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -610,7 +610,7 @@ final class tk extends IntrusiveNode {
           }
         }
         this.field_t = null;
-        return new vk(this.field_i, var1, this.field_m, this.field_r, this.field_H);
+        return new PcmSample(this.field_i, var1, this.field_m, this.field_r, this.field_H);
     }
 
     final static void b(byte[] param0) {

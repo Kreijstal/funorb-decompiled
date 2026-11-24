@@ -12,7 +12,7 @@ final class tk extends IntrusiveNode {
     RawPcmStream field_k;
     int field_F;
     int field_w;
-    sf field_z;
+    PcmSample field_z;
     int field_t;
     int field_o;
     de field_i;

@@ -552,7 +552,7 @@ final class wj extends fb {
         if (!cg.field_a) {
           throw new IllegalStateException();
         }
-        qh.field_d = true;
+        PcmResampler.field_d = true;
         FullscreenFocusCanvas.a(false, -844);
         eg.field_d = 0;
     }

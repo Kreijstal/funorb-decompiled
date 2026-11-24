@@ -65,7 +65,7 @@ final class nl {
               var3_int = -19 / ((param0 + 28) / 32);
               var4 = new java.net.URL(param2.getCodeBase(), param1);
               var4 = bb.a((byte) 119, var4, param2);
-              m.a(param2, true, var4.toString(), 0);
+              PcmResampler.a(param2, true, var4.toString(), 0);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;

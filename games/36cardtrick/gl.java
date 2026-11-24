@@ -320,7 +320,7 @@ final class gl extends hl {
         return r.a(al.field_a, (byte) 123);
     }
 
-    final static void a(int param0, ib param1, int param2, int param3) {
+    final static void a(int param0, PcmSample param1, int param2, int param3) {
         RawPcmStream var4 = null;
         DelayedPcmStream var5 = null;
         if (param3 != 804) {

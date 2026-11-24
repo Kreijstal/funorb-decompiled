@@ -165,7 +165,7 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    final fe c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -197,7 +197,7 @@ final class VorbisSample extends IntrusiveNode {
           }
         }
         this.field_J = null;
-        return new fe(this.field_A, var1, this.field_N, this.field_P, this.field_H);
+        return new PcmSample(this.field_A, var1, this.field_N, this.field_P, this.field_H);
     }
 
     final static void b(byte[] param0) {
@@ -339,7 +339,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    final fe a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -389,7 +389,7 @@ final class VorbisSample extends IntrusiveNode {
         this.field_J = null;
         var12 = this.field_k;
         this.field_k = null;
-        return new fe(this.field_A, var12, this.field_N, this.field_P, this.field_H);
+        return new PcmSample(this.field_A, var12, this.field_N, this.field_P, this.field_H);
     }
 
     final static float unpackVorbisFloat(int param0) {

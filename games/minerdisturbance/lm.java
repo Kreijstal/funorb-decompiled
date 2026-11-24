@@ -53,12 +53,12 @@ final class lm extends kn implements f, sh {
         if (ic.field_l == ci.field_e) {
           return km.field_b;
         }
-        if (!wm.field_f.a(0)) {
-          return wm.field_f.a(false);
+        if (!PcmResampler.field_f.a(0)) {
+          return PcmResampler.field_f.a(false);
         }
         int var1 = 104 % ((param0 - 25) / 54);
         if (ci.field_e == AccountRequestState.field_h) {
-          return wm.field_f.a(false);
+          return PcmResampler.field_f.a(false);
         }
         return pl.field_a;
     }
@@ -229,7 +229,7 @@ final class lm extends kn implements f, sh {
         var2.a(50, -73, 20, 270, var3);
         var3 += 50;
         this.a(-1, var2);
-        var3 = var3 + (5 + this.a(false, wm.field_c, var3, SpriteState.field_w, 170, this.field_N));
+        var3 = var3 + (5 + this.a(false, PcmResampler.field_c, var3, SpriteState.field_w, 170, this.field_N));
         this.field_P.a(40, -39, 496 - var5 >> 1, var5, var3);
         this.field_J.a(40, -54, var4 + 3, 60, var3 + 15);
         this.field_J.field_y = (rm) (this);

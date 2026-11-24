@@ -135041,7 +135041,7 @@
       "to": "cachedIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawSound.computeRawSound1632(LPcmResampler;)LRawSound;#0"
+      "renamedSymbol": "L:RawSound.resample(LPcmResampler;)LRawSound;#0"
     },
     {
       "symbol": "L:ue.a(II)I#0",
@@ -164118,10 +164118,10 @@
     {
       "symbol": "M:ud.a(Lje;)Lud;",
       "originalName": "a",
-      "to": "computeRawSound1632",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawSound.computeRawSound1632(LPcmResampler;)LRawSound;"
+      "to": "resample",
+      "evidence": "Resample this sample in place through the original resampler:store the returned byte array,then scaled sample rate,and transform original loop endpoints. Equal endpoints use one retained helper result;unequal endpoints are transformed separately and decrement the start if they collapse. Preserve exact helper guards,call/write ordering,full domains,partial mutations and return-this identity. Keep the already meaningful resampler aliases resample,scaleRate and scalePosition unchanged. Their original guard paths remain:resample clears its static reference after processing for non14 guard,scaleRate true returns minus86 before scaling,and scalePosition guard below17 stores output rate12 before scaling. Sample wrapper uses original14/false/86/36/114 guards and preserves ordered endpoint collapse handling. Complete original-body SHA256 1f8ed748a26f1ded2b22fcc4b0f3de5b4e32bb6f04c707ab45b771b1cb7ee8d1. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawSound.resample(LPcmResampler;)LRawSound;"
     },
     {
       "symbol": "M:ue.a(B)V",
@@ -217441,7 +217441,7 @@
       "to": "pcmResamplerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawSound.computeRawSound1632(LPcmResampler;)LRawSound;#0"
+      "renamedSymbol": "P:RawSound.resample(LPcmResampler;)LRawSound;#0"
     },
     {
       "symbol": "P:ue.a(B)V#0",
@@ -412653,7 +412653,7 @@
     },
     {
       "symbol": "L:ud.a(Lje;)Lud;#0",
-      "renamedSymbol": "L:RawSound.computeRawSound1632(LPcmResampler;)LRawSound;#0",
+      "renamedSymbol": "L:RawSound.resample(LPcmResampler;)LRawSound;#0",
       "originalName": "dupTemp$0",
       "renamedName": "cachedIntegerLocal1",
       "declaration": {
@@ -456257,9 +456257,9 @@
     },
     {
       "symbol": "M:ud.a(Lje;)Lud;",
-      "renamedSymbol": "M:RawSound.computeRawSound1632(LPcmResampler;)LRawSound;",
+      "renamedSymbol": "M:RawSound.resample(LPcmResampler;)LRawSound;",
       "originalName": "a",
-      "renamedName": "computeRawSound1632",
+      "renamedName": "resample",
       "declaration": {
         "file": "ud.java",
         "start": 172,
@@ -530210,7 +530210,7 @@
     },
     {
       "symbol": "P:ud.a(Lje;)Lud;#0",
-      "renamedSymbol": "P:RawSound.computeRawSound1632(LPcmResampler;)LRawSound;#0",
+      "renamedSymbol": "P:RawSound.resample(LPcmResampler;)LRawSound;#0",
       "originalName": "param0",
       "renamedName": "pcmResamplerArgument1",
       "declaration": {
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "022b0ab476ae0fd07fc4d81bf3fe551b8c5939aa454e063d06589ebbbc318be4",
+      "outputSha256": "d4259a01250caf21ef9e644583949e5442e8d0c44a9100e163d37dd86cf8a4a1",
       "edits": [
         {
           "start": 57,
@@ -746188,7 +746188,7 @@
           "end": 98901,
           "symbol": "M:ud.a(Lje;)Lud;",
           "original": "a",
-          "renamed": "computeRawSound1632"
+          "renamed": "resample"
         },
         {
           "start": 98902,
@@ -746230,7 +746230,7 @@
           "end": 98950,
           "symbol": "M:ud.a(Lje;)Lud;",
           "original": "a",
-          "renamed": "computeRawSound1632"
+          "renamed": "resample"
         },
         {
           "start": 98951,
@@ -1651519,7 +1651519,7 @@
       "original": "ud.java",
       "renamed": "RawSound.java",
       "inputSha256": "3fa0329c543ce87e7f2d03ded5c2b4c0c96e18dc87d25431a8cf85a56d13a68d",
-      "outputSha256": "c882ecc7f215af5ed132de178ff15d4341e779fbebaa7e8778f1a0cb8df72db1",
+      "outputSha256": "337ebaf1cc43149ab351e33e8e370757b4b5c5d9f93e3d0f08f635740c385d79",
       "edits": [
         {
           "start": 50,
@@ -1651582,7 +1651582,7 @@
           "end": 173,
           "symbol": "M:ud.a(Lje;)Lud;",
           "original": "a",
-          "renamed": "computeRawSound1632"
+          "renamed": "resample"
         },
         {
           "start": 174,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "541f1262a840ec72fc92c89afd08095ebc4c1061cc85d7764180137d7a4eb556",
+    "rulesSha256": "3a1814baa42d65f458ae5d228a1f27baf893c080e51bde3a69a898b300fe25dc",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "72128446b2929720f940b83a8fe202fbb2ad4269d2cf0592b8c030237c55e266",
+    "outputTreeSha256": "345bc1779e5792b925db88213d3583dfb5c71afaa93dd73e8661edd5415b2352",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kh extends dc {
-    static bi field_fb;
+    static PcmSample field_fb;
     static jg field_gb;
     static String field_W;
 
@@ -101,7 +101,7 @@ final class kh extends dc {
         var26 = var25;
         var5 = var26.field_f - 1;
         if (!param2) {
-          field_fb = (bi) null;
+          field_fb = (PcmSample) null;
         }
         for (var6 = 0; var6 < var26.field_f; var6++) {
           boolean decompiledFrameRemainder0 = true;
@@ -143,7 +143,7 @@ final class kh extends dc {
         lc var3 = this.field_T.field_A.field_x;
         lc var2 = var3;
         if (param0 >= -117) {
-          field_fb = (bi) null;
+          field_fb = (PcmSample) null;
         }
         this.field_S = null;
         this.field_eb = var3.field_r[0];
@@ -161,7 +161,7 @@ final class kh extends dc {
         field_W = null;
     }
 
-    kh(pm param0, bi param1, int param2) {
+    kh(pm param0, PcmSample param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -209,7 +209,7 @@ final class kh extends dc {
 
     private final boolean a(double param0, byte param1, boolean param2, double param3, double param4, double param5, double param6, double param7, double param8, double param9, double param10) {
         if (param1 != -32) {
-          field_fb = (bi) null;
+          field_fb = (PcmSample) null;
         }
         param5 = param5 - param10;
         param7 = param7 - param9;

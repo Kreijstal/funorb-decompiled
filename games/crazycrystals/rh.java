@@ -7,7 +7,7 @@ final class rh {
     static boolean[] field_a;
     static String field_e;
     private String field_c;
-    static ko field_g;
+    static PcmSample field_g;
     private boolean field_b;
 
     rh(String param0) {

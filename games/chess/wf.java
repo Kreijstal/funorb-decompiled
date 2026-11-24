@@ -238,7 +238,7 @@ final class wf extends ma implements ha, mj {
         field_P = null;
     }
 
-    final static void a(lm param0, int param1) {
+    final static void a(PcmSample param0, int param1) {
         if (param0 == null) {
           return;
         }

@@ -5,7 +5,7 @@ final class ih {
     static String field_c;
     static int field_b;
     static mi field_d;
-    static bi field_e;
+    static PcmSample field_e;
     static int field_a;
 
     public static void a(int param0) {

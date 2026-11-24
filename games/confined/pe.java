@@ -4,7 +4,7 @@
 final class pe extends IntrusiveNode {
     static va field_p;
     static volatile int field_n;
-    static bi field_o;
+    static PcmSample field_o;
     static int field_q;
     static int field_m;
 
@@ -26,7 +26,7 @@ final class pe extends IntrusiveNode {
         var9 = Confined.field_J ? 1 : 0;
         try {
           if (param4 != 3694) {
-            field_o = (bi) null;
+            field_o = (PcmSample) null;
           }
           var5_int = 0;
           var6 = -1;
@@ -129,7 +129,7 @@ final class pe extends IntrusiveNode {
           ci.a(param0, "", -81);
           me.a((byte) 74, param0);
           if (param1 != 11) {
-            field_o = (bi) null;
+            field_o = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "pe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -157,7 +157,7 @@ final class pe extends IntrusiveNode {
         var7 = Confined.field_J ? 1 : 0;
         try {
           if (param1 >= -63) {
-            field_o = (bi) null;
+            field_o = (PcmSample) null;
           }
           if (wd.field_f != lk.field_d) {
             return false;

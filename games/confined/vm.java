@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class vm extends hf {
-    static bi field_cb;
+    static PcmSample field_cb;
     static String field_ab;
     private int field_db;
     private static long[] field_fb;
@@ -101,7 +101,7 @@ final class vm extends hf {
               }
             }
             if (param0 != 37) {
-              field_cb = (bi) null;
+              field_cb = (PcmSample) null;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

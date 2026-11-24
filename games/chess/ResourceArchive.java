@@ -14,7 +14,7 @@ final class ResourceArchive {
     static wf field_b;
     static PlatformTaskDispatcher field_g;
     static int field_a;
-    static lm[] field_l;
+    static PcmSample[] field_l;
 
     public static void d(byte param0) {
         field_b = null;
@@ -332,7 +332,7 @@ final class ResourceArchive {
 
     final byte[] a(int param0, int param1, int param2) {
         if (param2 != 5847) {
-          field_l = (lm[]) (this.field_m[2]);
+          field_l = (PcmSample[]) (this.field_m[2]);
         }
         return this.a(true, (int[]) null, param1, param0);
     }
@@ -936,6 +936,6 @@ final class ResourceArchive {
         field_c = new km(640, 480);
         field_h = "No players";
         field_a = 0;
-        field_l = new lm[13];
+        field_l = new PcmSample[13];
     }
 }

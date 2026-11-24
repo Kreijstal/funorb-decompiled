@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class d {
-    static ko[] field_b;
+    static PcmSample[] field_b;
     static int[] field_a;
     static dl[] field_c;
 
@@ -61,7 +61,7 @@ final class d {
     }
 
     static {
-        field_b = new ko[7];
+        field_b = new PcmSample[7];
         field_a = new int[8192];
     }
 }

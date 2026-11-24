@@ -44,7 +44,7 @@ final class uc extends PacketBuffer {
     }
 
     final static void l(int param0, int param1) {
-        m.a(1);
+        PcmResampler.a(1);
         if (param0 != 3795) {
           field_q = (String) null;
         }

@@ -43,11 +43,11 @@ final class Slime {
         var10 = Bounce.field_N;
         var4 = 0;
         if (param1) {
-          this.a((Platform[]) null, (PcmStreamMixer) null, 62, (ue[]) null, -0.16860739722231136, (byte) 54);
+          this.a((Platform[]) null, (PcmStreamMixer) null, 62, (PcmSample[]) null, -0.16860739722231136, (byte) 54);
         }
         na.d();
         var5 = 0;
-        if (u.field_g ||
+        if (PcmResampler.field_g ||
           MusicPatchPcmStream.field_o != null &&
           MusicPatchPcmStream.field_o.field_d) {
           if (0 == param0) {
@@ -55,7 +55,7 @@ final class Slime {
             var4 = param2 / 2;
             na.e(2, -32 + (2 + var5), -4 + param2, 156, 0);
             ve.a(160, var5 - 32, cl.field_p, (byte) -99, param2, 0);
-            gk.field_e.a(u.field_f, var4, var5 + 64, 16777215, -1);
+            gk.field_e.a(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
             jh.field_s.a(gd.field_b[nj.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
           }
           if (param0 == 1) {
@@ -143,7 +143,7 @@ final class Slime {
           var4 = var4 - var6.field_s / 2;
           var5 -= 32;
           var6.e();
-          if ((u.field_g ||
+          if ((PcmResampler.field_g ||
             MusicPatchPcmStream.field_o != null &&
             MusicPatchPcmStream.field_o.field_d) && 0 < this.field_n) {
             var6.a(var4, var5);
@@ -163,7 +163,7 @@ final class Slime {
             if ((param0 + 1) * 8 > var6_int) {
               w.field_c[var6_int].b((int)((double)param2 + this.field_u), 0, -741572379, (int)this.field_o, (int)(-34.0 + (480.0 - this.field_e)));
             }
-            if (u.field_g ||
+            if (PcmResampler.field_g ||
               null != MusicPatchPcmStream.field_o &&
               MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
@@ -182,7 +182,7 @@ final class Slime {
             if (var6_intLifetime1Lifetime1 < 3 * param0 + 3) {
               vb.field_m[var6_intLifetime1Lifetime1].b((int)(this.field_u + (double)param2), 0, -741572379, (int)this.field_o, (int)(-(this.field_e / 2.0) + this.field_j));
             }
-            if (u.field_g ||
+            if (PcmResampler.field_g ||
               MusicPatchPcmStream.field_o != null &&
               MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
@@ -193,7 +193,7 @@ final class Slime {
           }
           if (this.field_p == 3) {
             ci.field_G[param0].b((int)((double)param2 + this.field_u), 0, -741572379, 100 + ((int)this.field_o - 4 * this.field_f), (int)(this.field_j - this.field_e / 2.0));
-            if (u.field_g ||
+            if (PcmResampler.field_g ||
               MusicPatchPcmStream.field_o != null &&
               MusicPatchPcmStream.field_o.field_d) {
               na.d();
@@ -205,7 +205,7 @@ final class Slime {
         }
     }
 
-    final void a(Platform[] param0, PcmStreamMixer param1, int param2, ue[] param3, double param4, byte param5) {
+    final void a(Platform[] param0, PcmStreamMixer param1, int param2, PcmSample[] param3, double param4, byte param5) {
         RuntimeException stackIn_249_0 = null;
         StringBuilder stackIn_249_1 = null;
         String stackIn_250_2 = null;
@@ -598,7 +598,7 @@ final class Slime {
         this.field_f = 0;
     }
 
-    final void a(ue[] param0, boolean param1) {
+    final void a(PcmSample[] param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -626,10 +626,10 @@ final class Slime {
         }
     }
 
-    final void a(ue[] param0, byte param1) {
+    final void a(PcmSample[] param0, byte param1) {
         try {
           if (param1 != 106) {
-            this.a((Platform[]) null, (PcmStreamMixer) null, -3, (ue[]) null, -0.052863935081619066, (byte) 41);
+            this.a((Platform[]) null, (PcmStreamMixer) null, -3, (PcmSample[]) null, -0.052863935081619066, (byte) 41);
           }
           if (this.field_r != null) {
             if (wd.field_x) {

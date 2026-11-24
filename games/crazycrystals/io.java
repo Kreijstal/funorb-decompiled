@@ -7,7 +7,7 @@ final class io extends rf {
     private dl field_K;
     private n field_L;
     private String field_N;
-    static ko field_H;
+    static PcmSample field_H;
     static am field_M;
     static String field_J;
     static int field_O;

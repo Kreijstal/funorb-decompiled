@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qf extends ea {
-    static ko field_w;
+    static PcmSample field_w;
     boolean field_u;
     private boolean field_v;
     static String[] field_t;
@@ -405,7 +405,7 @@ abstract class qf extends ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 17512) {
-            field_w = (ko) null;
+            field_w = (PcmSample) null;
           }
           if (1 == param5) {
             this.field_v = true;

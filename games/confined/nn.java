@@ -11,7 +11,7 @@ final class nn extends IntrusiveNode {
     int field_r;
     static String field_v;
     static nf[] field_t;
-    static bi field_o;
+    static PcmSample field_o;
     static String[] field_p;
 
     final static al[] b(int param0) {

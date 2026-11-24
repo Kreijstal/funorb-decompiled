@@ -6,10 +6,10 @@ final class cf {
     static int[] field_b;
     static mk field_a;
     static int[] field_g;
-    static ko field_f;
+    static PcmSample field_f;
     static String field_h;
     static java.awt.Color field_e;
-    static ko field_d;
+    static PcmSample field_d;
 
     final static sj a(int param0, int param1) {
         int var3 = 0;

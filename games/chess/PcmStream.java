@@ -5,7 +5,7 @@ abstract class PcmStream extends IntrusiveNode {
     PcmStream field_j;
     int field_m;
     volatile boolean field_k;
-    pb field_l;
+    AbstractAudioSample field_l;
 
     abstract void mixInto(int[] param0, int param1, int param2);
 

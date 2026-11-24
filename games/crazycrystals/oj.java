@@ -9,7 +9,7 @@ final class oj extends om {
     private int field_G;
     static int field_y;
     private int field_z;
-    static ko[] field_L;
+    static PcmSample[] field_L;
     static String field_M;
     private boolean field_I;
     private int field_F;
@@ -356,7 +356,7 @@ final class oj extends om {
 
     static {
         field_M = "This ball has a subtle difference from the last one. Did you notice?";
-        field_L = new ko[7];
+        field_L = new PcmSample[7];
         field_C = "Here be crystals.";
         field_y = 640;
     }

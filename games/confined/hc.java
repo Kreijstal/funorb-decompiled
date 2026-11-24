@@ -4,7 +4,7 @@
 final class hc extends IntrusiveNode {
     static String field_u;
     byte[] field_q;
-    static bi field_p;
+    static PcmSample field_p;
     static String field_s;
     static int field_n;
     int field_o;

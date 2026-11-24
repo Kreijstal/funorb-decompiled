@@ -322,7 +322,7 @@ abstract class jc extends fe implements rk {
     }
 
     final static void a(byte param0, boolean param1) {
-        wm.field_f.a(false, param1);
+        PcmResampler.field_f.a(false, param1);
         int var2 = -20 / ((param0 + 33) / 35);
     }
 

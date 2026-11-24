@@ -1428,7 +1428,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-124, "create_displayname");
                 if (null != var2) {
-                  wm.field_c = bh.a(var2, 122);
+                  PcmResampler.field_c = bh.a(var2, 122);
                 }
                 var2 = e.a(106, "create_password");
                 if (null != var2) {

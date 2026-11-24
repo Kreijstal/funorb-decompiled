@@ -4,7 +4,7 @@
 final class jj {
     static int field_b;
     static am field_c;
-    static ko field_a;
+    static PcmSample field_a;
 
     final static void a(int param0) {
         if (oi.field_c != null) {
@@ -12,7 +12,7 @@ final class jj {
           oi.field_c = null;
         }
         if (param0 != 4) {
-          field_a = (ko) null;
+          field_a = (PcmSample) null;
         }
     }
 

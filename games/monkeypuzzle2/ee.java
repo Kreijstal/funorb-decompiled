@@ -222,10 +222,10 @@ final class ee extends jk {
 
     final static te[] j(int param0) {
         if (param0 == 44) {
-          return new te[]{rd.field_o, GameApplet.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
+          return new te[]{rd.field_o, GameApplet.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, PcmResampler.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
         }
         field_F = -9;
-        return new te[]{rd.field_o, GameApplet.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
+        return new te[]{rd.field_o, GameApplet.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, PcmResampler.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
     }
 
     static {

@@ -163,7 +163,7 @@ final class db {
             ii.field_F = ei.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
           }
           ei.field_G.o(3);
-          qh.b(-21923);
+          PcmResampler.b(-21923);
         }
     }
 

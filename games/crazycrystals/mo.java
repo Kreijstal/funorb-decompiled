@@ -7,7 +7,7 @@ final class mo extends IntrusiveNode {
     static vc field_m;
     static int[] field_h;
     static int field_f;
-    static ko field_i;
+    static PcmSample field_i;
     static int field_l;
     int field_j;
 

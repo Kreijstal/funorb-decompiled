@@ -79,7 +79,7 @@ final class mg {
 
     final static void a(boolean param0, int param1, int param2) {
         int var4 = 0;
-        fe var3 = bf.field_c[param2][param1];
+        PcmSample var3 = bf.field_c[param2][param1];
         int var4Lifetime1;
         if (param0) {
           var4 = bf.field_d[param1][param2];

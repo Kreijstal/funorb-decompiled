@@ -7,7 +7,7 @@ final class cg extends IntrusiveNode {
     int field_A;
     int field_E;
     int field_F;
-    ji field_D;
+    PcmSample field_D;
     int field_M;
     int field_p;
     int field_B;

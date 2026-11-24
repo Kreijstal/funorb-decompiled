@@ -556,12 +556,28 @@
       "renamedSymbol": "C:MouseWheelHandler"
     },
     {
+      "symbol": "C:me",
+      "originalName": "me",
+      "to": "AbstractAudioSample",
+      "evidence": "Abstract intrusive sound-data node retaining the original single int scheduling counter and empty package-visible constructor,shared by the sample reference in the PCM stream scheduler. Preserve default field state and inherited node semantics. Original constructor SHA256s 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AbstractAudioSample"
+    },
+    {
       "symbol": "C:mg",
       "originalName": "mg",
       "to": "GzipDecompressor",
       "evidence": "Complete owned inflater method, fields and constructors reviewed: gzip magic31/139, lazy raw Inflater, caller output, original input offset/length and reset/error paths. Preserve guards/early returns, TerraPhoenix caller-supplied input offset and unrelated static helpers/initializers.",
       "confidence": "reviewed",
       "renamedSymbol": "C:GzipDecompressor"
+    },
+    {
+      "symbol": "C:ng",
+      "originalName": "ng",
+      "to": "PcmResampler",
+      "evidence": "Fourteen-tap polyphase signed-byte PCM resampler with original input/output rate integers and optional fixed-point coefficient table. Preserve equal-rate constructor early return,original normalization helper and division/store/allocation order,phase bounds,sinc threshold and exact window coefficients,Math sin/cos/floor evaluation and int casts. Original constructor SHA256s 64ba456f48ec109fb8f23a6a891cfe2ec12d592a6b30b6cf99ebd1dfbf6c573b. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmResampler"
     },
     {
       "symbol": "C:oa",
@@ -690,6 +706,14 @@
       "evidence": "Owns a circular primary-link IntrusiveNode sentinel and an independent shared pending-node traversal cursor. Complete constructor and all instance methods independently reviewed,including every guard-dependent side effect and all partial link/cursor updates. Static helpers unchanged. Preserve argument widths/domains,guards,overflow,partial effects,aliasing,exceptions,modifiers and existing meaningful names. No native owner/type-use declarations or exact quoted class literals;identifier-only change.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IntrusiveDeque"
+    },
+    {
+      "symbol": "C:vk",
+      "originalName": "vk",
+      "to": "PcmSample",
+      "evidence": "Signed-byte PCM sample data with retained sample rate,byte-array identity,loop start/end and ping-pong flag. Complete original constructors preserve direct byte-array aliases or exact new-byte-array allocation,assignment order,default booleans and full argument domains;no validation or copies added. Original constructor SHA256s 7168466646a7cf08c08e63d0a56e828048a2dd86631abbf0de6b1e7a81265070,35c69d20f1b9751e96361d55397d1e85a45ac814df907c1f6a2550cc6b912e55,cf062d68e407aad6a480420e6b67802e8285b0a7617ecb23e13552d25b7c62db. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmSample"
     },
     {
       "symbol": "F:bl.field_h:Ljava/lang/Thread;",
@@ -2532,12 +2556,28 @@
       "renamedSymbol": "M:nc.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ng.a(BI)I",
+      "originalName": "a",
+      "to": "scaleRate",
+      "evidence": "With a retained coefficient table,scale the original full-width rate/count through long multiplication and division followed by int cast;otherwise retain the supplied value. Keep original guard-specific returns,extra helper calls and arithmetic/exception order. Complete original-body SHA256 8fcd34cd40083c9a62813831e8a6b3367e2ab969112c351c17481641f31c8248. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.scaleRate(BI)I"
+    },
+    {
       "symbol": "M:ng.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 bb962b6ca3d4deafd388784533778c169c6809735f9c8cc01dbf1fd369f03b30.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ng.clearStaticReferences(I)V"
+      "renamedSymbol": "M:PcmResampler.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ng.a(IB)I",
+      "originalName": "a",
+      "to": "scalePosition",
+      "evidence": "With a retained coefficient table,scale the original sample position through long multiplication/division,int cast and plus6;otherwise retain it. Preserve each exact guard:return sentinels before work where present,clear the retained static reference or call the original helper in the original order. Complete original-body SHA256 72992512b5d648d6115d9183e400344ee86ac2389c237544b54bec1c29235bc3. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.scalePosition(IB)I"
     },
     {
       "symbol": "M:ng.a(Ljava/lang/String;I)Log;",
@@ -2545,7 +2585,15 @@
       "to": "pollAccountNameCheck",
       "evidence": "Complete query declaration/body and validator constructor/text/status/reset bodies, cache fields and explicit availability diagnostics reviewed. Query returns pending null before int!=3582 early null guard. Matching complete consumes exact cached result; otherwise cache/name/state written in that order. Text byte<=47 invokes pk.d(-100) before syntax validation. Status validation calls pk.e(69) for int!=8192 after syntax, then derives query guard with int^11774; preserve computed full-int domain, calls and failures. Reset always clears checkedName then wrong byte!=-27 clears availability flag. All result/error/cache-write order, defaults and RuntimeException wrapping retained. Full original argument domains, stale-name handling, pending behavior, shared singleton identity and allocation/error context remain unchanged; identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;"
+      "renamedSymbol": "M:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;"
+    },
+    {
+      "symbol": "M:ng.a([BB)[B",
+      "originalName": "a",
+      "to": "resampleBytes",
+      "evidence": "Run the original14-tap coefficient convolution and rate-phase stepping into an int accumulation buffer,then round with32768 and shift16 and clamp to signed-byte range. Preserve input-array identity when the coefficient table is absent,output length long multiplication/cast plus14,int overflow,allocation/exception order,all captured global reads and diagnostic wrapping. Keep game-specific guard effects:Bounce false returns null after work,Dr bad byte invokes account helper,Flea computes the original remainder division,Hostile bad int clears the retained static reference,and Miner false stores output rate minus34 before processing. Complete original-body SHA256 bb6cc72e123046ca8f59fe178954cd78fe37fc41669a2d42a23eb8ab4935dff2. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.resampleBytes([BB)[B"
     },
     {
       "symbol": "M:nk.a()V",
@@ -3490,6 +3538,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 2a5d03524f1dc82f7a42b1bbff71e2f4d4061d954fb8c03493ea90da8bed9d08.",
       "confidence": "reviewed",
       "renamedSymbol": "M:vj.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:vk.a(Lng;)Lvk;",
+      "originalName": "a",
+      "to": "resample",
+      "evidence": "Resample this sample in place through the original resampler:store the returned byte array,then scaled sample rate,and transform original loop endpoints. Equal endpoints use one retained helper result;unequal endpoints are transformed separately and decrement the start if they collapse. Preserve exact helper guards,call/write ordering,full domains,partial mutations and return-this identity. Complete original-body SHA256 49d7e750632f085495676057553e259154a16ac55172c9b1d3623fdd8565c2b1. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSample.resample(LPcmResampler;)LPcmSample;"
     },
     {
       "symbol": "M:wd.a(I)V",
@@ -5943,9 +5999,9 @@
     },
     {
       "symbol": "C:me",
-      "renamedSymbol": "C:me",
+      "renamedSymbol": "C:AbstractAudioSample",
       "originalName": "me",
-      "renamedName": "me",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "me.java",
         "start": 53,
@@ -6108,9 +6164,9 @@
     },
     {
       "symbol": "C:ng",
-      "renamedSymbol": "C:ng",
+      "renamedSymbol": "C:PcmResampler",
       "originalName": "ng",
-      "renamedName": "ng",
+      "renamedName": "PcmResampler",
       "declaration": {
         "file": "ng.java",
         "start": 50,
@@ -7296,9 +7352,9 @@
     },
     {
       "symbol": "C:vk",
-      "renamedSymbol": "C:vk",
+      "renamedSymbol": "C:PcmSample",
       "originalName": "vk",
-      "renamedName": "vk",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "vk.java",
         "start": 50,
@@ -10530,7 +10586,7 @@
     },
     {
       "symbol": "F:cc.field_C:Lvk;",
-      "renamedSymbol": "F:cc.field_C:Lvk;",
+      "renamedSymbol": "F:cc.field_C:LPcmSample;",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -18153,7 +18209,7 @@
     },
     {
       "symbol": "F:ic.field_i:Lme;",
-      "renamedSymbol": "F:PcmStream.field_i:Lme;",
+      "renamedSymbol": "F:PcmStream.field_i:LAbstractAudioSample;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -18549,7 +18605,7 @@
     },
     {
       "symbol": "F:ig.field_j:[Lvk;",
-      "renamedSymbol": "F:ig.field_j:[Lvk;",
+      "renamedSymbol": "F:ig.field_j:[LPcmSample;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -23521,7 +23577,7 @@
     },
     {
       "symbol": "F:me.field_h:I",
-      "renamedSymbol": "F:me.field_h:I",
+      "renamedSymbol": "F:AbstractAudioSample.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -24621,7 +24677,7 @@
     },
     {
       "symbol": "F:ng.field_a:[[I",
-      "renamedSymbol": "F:ng.field_a:[[I",
+      "renamedSymbol": "F:PcmResampler.field_a:[[I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -24632,7 +24688,7 @@
     },
     {
       "symbol": "F:ng.field_b:[Lhe;",
-      "renamedSymbol": "F:ng.field_b:[Lhe;",
+      "renamedSymbol": "F:PcmResampler.field_b:[Lhe;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -24643,7 +24699,7 @@
     },
     {
       "symbol": "F:ng.field_c:Lk;",
-      "renamedSymbol": "F:ng.field_c:Lk;",
+      "renamedSymbol": "F:PcmResampler.field_c:Lk;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -24654,7 +24710,7 @@
     },
     {
       "symbol": "F:ng.field_d:[Ljava/lang/String;",
-      "renamedSymbol": "F:ng.field_d:[Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_d:[Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -24665,7 +24721,7 @@
     },
     {
       "symbol": "F:ng.field_e:I",
-      "renamedSymbol": "F:ng.field_e:I",
+      "renamedSymbol": "F:PcmResampler.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -24676,7 +24732,7 @@
     },
     {
       "symbol": "F:ng.field_f:[Lhe;",
-      "renamedSymbol": "F:ng.field_f:[Lhe;",
+      "renamedSymbol": "F:PcmResampler.field_f:[Lhe;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -24687,7 +24743,7 @@
     },
     {
       "symbol": "F:ng.field_g:I",
-      "renamedSymbol": "F:ng.field_g:I",
+      "renamedSymbol": "F:PcmResampler.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -25380,7 +25436,7 @@
     },
     {
       "symbol": "F:nl.field_r:[Lvk;",
-      "renamedSymbol": "F:nl.field_r:[Lvk;",
+      "renamedSymbol": "F:nl.field_r:[LPcmSample;",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -28317,7 +28373,7 @@
     },
     {
       "symbol": "F:qk.field_g:Lng;",
-      "renamedSymbol": "F:qk.field_g:Lng;",
+      "renamedSymbol": "F:qk.field_g:LPcmResampler;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -34422,7 +34478,7 @@
     },
     {
       "symbol": "F:vk.field_i:[B",
-      "renamedSymbol": "F:vk.field_i:[B",
+      "renamedSymbol": "F:PcmSample.field_i:[B",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -34433,7 +34489,7 @@
     },
     {
       "symbol": "F:vk.field_j:I",
-      "renamedSymbol": "F:vk.field_j:I",
+      "renamedSymbol": "F:PcmSample.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -34444,7 +34500,7 @@
     },
     {
       "symbol": "F:vk.field_k:I",
-      "renamedSymbol": "F:vk.field_k:I",
+      "renamedSymbol": "F:PcmSample.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -34455,7 +34511,7 @@
     },
     {
       "symbol": "F:vk.field_l:I",
-      "renamedSymbol": "F:vk.field_l:I",
+      "renamedSymbol": "F:PcmSample.field_l:I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -34466,7 +34522,7 @@
     },
     {
       "symbol": "F:vk.field_m:Z",
-      "renamedSymbol": "F:vk.field_m:Z",
+      "renamedSymbol": "F:PcmSample.field_m:Z",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -42639,7 +42695,7 @@
     },
     {
       "symbol": "L:ah.a(Lvk;II)V#0",
-      "renamedSymbol": "L:ah.a(Lvk;II)V#0",
+      "renamedSymbol": "L:ah.a(LPcmSample;II)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -55212,7 +55268,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#0",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#0",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -55223,7 +55279,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#1",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#1",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -55234,7 +55290,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#2",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#2",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#2",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -55245,7 +55301,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#3",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#3",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -55256,7 +55312,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#4",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#4",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#4",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -55267,7 +55323,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#5",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#5",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#5",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -55278,7 +55334,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#6",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#6",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#6",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -55289,7 +55345,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#7",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#7",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -55300,7 +55356,7 @@
     },
     {
       "symbol": "L:cf.a(II[I)Lvk;#8",
-      "renamedSymbol": "L:cf.a(II[I)Lvk;#8",
+      "renamedSymbol": "L:cf.a(II[I)LPcmSample;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -55311,7 +55367,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#0",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#0",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -55322,7 +55378,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#1",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#1",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -55333,7 +55389,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#10",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#10",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#10",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -55344,7 +55400,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#11",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#11",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -55355,7 +55411,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#12",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#12",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#12",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -55366,7 +55422,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#13",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#13",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -55377,7 +55433,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#2",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#2",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -55388,7 +55444,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#3",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#3",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -55399,7 +55455,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#4",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#4",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -55410,7 +55466,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#5",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#5",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#5",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -55421,7 +55477,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#6",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#6",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#6",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -55432,7 +55488,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#7",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#7",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#7",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -55443,7 +55499,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#8",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#8",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#8",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -55454,7 +55510,7 @@
     },
     {
       "symbol": "L:cf.a(II[II)Lvk;#9",
-      "renamedSymbol": "L:cf.a(II[II)Lvk;#9",
+      "renamedSymbol": "L:cf.a(II[II)LPcmSample;#9",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -55553,7 +55609,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#0",
-      "renamedSymbol": "L:cf.a([III)Lvk;#0",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -55564,7 +55620,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#1",
-      "renamedSymbol": "L:cf.a([III)Lvk;#1",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -55575,7 +55631,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#2",
-      "renamedSymbol": "L:cf.a([III)Lvk;#2",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -55586,7 +55642,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#3",
-      "renamedSymbol": "L:cf.a([III)Lvk;#3",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -55597,7 +55653,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#4",
-      "renamedSymbol": "L:cf.a([III)Lvk;#4",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -55608,7 +55664,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#5",
-      "renamedSymbol": "L:cf.a([III)Lvk;#5",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -55619,7 +55675,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#6",
-      "renamedSymbol": "L:cf.a([III)Lvk;#6",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -55630,7 +55686,7 @@
     },
     {
       "symbol": "L:cf.a([III)Lvk;#7",
-      "renamedSymbol": "L:cf.a([III)Lvk;#7",
+      "renamedSymbol": "L:cf.a([III)LPcmSample;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -55641,7 +55697,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#0",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#0",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -55652,7 +55708,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#1",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#1",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#1",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -55663,7 +55719,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#10",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#10",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#10",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -55674,7 +55730,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#11",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#11",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#11",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -55685,7 +55741,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#12",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#12",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#12",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -55696,7 +55752,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#13",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#13",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#13",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -55707,7 +55763,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#14",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#14",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -55718,7 +55774,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#15",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#15",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#15",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -55729,7 +55785,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#16",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#16",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -55740,7 +55796,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#2",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#2",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -55751,7 +55807,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#3",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#3",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -55762,7 +55818,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#4",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#4",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -55773,7 +55829,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#5",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#5",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -55784,7 +55840,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#6",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#6",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -55795,7 +55851,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#7",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#7",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -55806,7 +55862,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#8",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#8",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#8",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -55817,7 +55873,7 @@
     },
     {
       "symbol": "L:cf.b(II[II)Lvk;#9",
-      "renamedSymbol": "L:cf.b(II[II)Lvk;#9",
+      "renamedSymbol": "L:cf.b(II[II)LPcmSample;#9",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -93536,7 +93592,7 @@
     },
     {
       "symbol": "L:kb.a()Lvk;#0",
-      "renamedSymbol": "L:kb.a()Lvk;#0",
+      "renamedSymbol": "L:kb.a()LPcmSample;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -110421,7 +110477,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#0",
-      "renamedSymbol": "L:ng.<init>(II)V#0",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -110432,7 +110488,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#1",
-      "renamedSymbol": "L:ng.<init>(II)V#1",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -110443,7 +110499,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#2",
-      "renamedSymbol": "L:ng.<init>(II)V#2",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -110454,7 +110510,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#3",
-      "renamedSymbol": "L:ng.<init>(II)V#3",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -110465,7 +110521,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#4",
-      "renamedSymbol": "L:ng.<init>(II)V#4",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -110476,7 +110532,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#5",
-      "renamedSymbol": "L:ng.<init>(II)V#5",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -110487,7 +110543,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#6",
-      "renamedSymbol": "L:ng.<init>(II)V#6",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -110498,7 +110554,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#7",
-      "renamedSymbol": "L:ng.<init>(II)V#7",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -110509,7 +110565,7 @@
     },
     {
       "symbol": "L:ng.<init>(II)V#8",
-      "renamedSymbol": "L:ng.<init>(II)V#8",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -110520,7 +110576,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#0",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#0",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -110531,7 +110587,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#1",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#1",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -110542,7 +110598,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#2",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#2",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#2",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -110553,7 +110609,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#3",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#3",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -110564,7 +110620,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#4",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#4",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -110575,7 +110631,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#5",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#5",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -110586,7 +110642,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#6",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#6",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -110597,7 +110653,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#7",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#7",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -110608,7 +110664,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#8",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#8",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -110619,7 +110675,7 @@
     },
     {
       "symbol": "L:ng.a(Ljava/lang/String;I)Log;#9",
-      "renamedSymbol": "L:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#9",
+      "renamedSymbol": "L:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -110630,7 +110686,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#0",
-      "renamedSymbol": "L:ng.a([BB)[B#0",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#0",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -110641,7 +110697,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#1",
-      "renamedSymbol": "L:ng.a([BB)[B#1",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#1",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -110652,7 +110708,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#10",
-      "renamedSymbol": "L:ng.a([BB)[B#10",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -110663,7 +110719,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#11",
-      "renamedSymbol": "L:ng.a([BB)[B#11",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -110674,7 +110730,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#12",
-      "renamedSymbol": "L:ng.a([BB)[B#12",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -110685,7 +110741,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#13",
-      "renamedSymbol": "L:ng.a([BB)[B#13",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -110696,7 +110752,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#14",
-      "renamedSymbol": "L:ng.a([BB)[B#14",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -110707,7 +110763,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#15",
-      "renamedSymbol": "L:ng.a([BB)[B#15",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#15",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -110718,7 +110774,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#16",
-      "renamedSymbol": "L:ng.a([BB)[B#16",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -110729,7 +110785,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#17",
-      "renamedSymbol": "L:ng.a([BB)[B#17",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#17",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -110740,7 +110796,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#18",
-      "renamedSymbol": "L:ng.a([BB)[B#18",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#18",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -110751,7 +110807,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#19",
-      "renamedSymbol": "L:ng.a([BB)[B#19",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#19",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -110762,7 +110818,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#2",
-      "renamedSymbol": "L:ng.a([BB)[B#2",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#2",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -110773,7 +110829,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#20",
-      "renamedSymbol": "L:ng.a([BB)[B#20",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#20",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -110784,7 +110840,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#21",
-      "renamedSymbol": "L:ng.a([BB)[B#21",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#21",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -110795,7 +110851,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#22",
-      "renamedSymbol": "L:ng.a([BB)[B#22",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#22",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -110806,7 +110862,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#3",
-      "renamedSymbol": "L:ng.a([BB)[B#3",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#3",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -110817,7 +110873,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#4",
-      "renamedSymbol": "L:ng.a([BB)[B#4",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -110828,7 +110884,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#5",
-      "renamedSymbol": "L:ng.a([BB)[B#5",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -110839,7 +110895,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#6",
-      "renamedSymbol": "L:ng.a([BB)[B#6",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -110850,7 +110906,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#7",
-      "renamedSymbol": "L:ng.a([BB)[B#7",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -110861,7 +110917,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#8",
-      "renamedSymbol": "L:ng.a([BB)[B#8",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -110872,7 +110928,7 @@
     },
     {
       "symbol": "L:ng.a([BB)[B#9",
-      "renamedSymbol": "L:ng.a([BB)[B#9",
+      "renamedSymbol": "L:PcmResampler.resampleBytes([BB)[B#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144554,7 +144610,7 @@
     },
     {
       "symbol": "L:th.a(IIILvk;)V#0",
-      "renamedSymbol": "L:th.a(IIILvk;)V#0",
+      "renamedSymbol": "L:th.a(IIILPcmSample;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -145621,7 +145677,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#0",
-      "renamedSymbol": "L:tk.a([I)Lvk;#0",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -145632,7 +145688,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#1",
-      "renamedSymbol": "L:tk.a([I)Lvk;#1",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#1",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -145643,7 +145699,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#2",
-      "renamedSymbol": "L:tk.a([I)Lvk;#2",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -145654,7 +145710,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#3",
-      "renamedSymbol": "L:tk.a([I)Lvk;#3",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -145665,7 +145721,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#4",
-      "renamedSymbol": "L:tk.a([I)Lvk;#4",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -145676,7 +145732,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#5",
-      "renamedSymbol": "L:tk.a([I)Lvk;#5",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -145687,7 +145743,7 @@
     },
     {
       "symbol": "L:tk.a([I)Lvk;#6",
-      "renamedSymbol": "L:tk.a([I)Lvk;#6",
+      "renamedSymbol": "L:tk.a([I)LPcmSample;#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -146028,7 +146084,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#0",
-      "renamedSymbol": "L:tk.c()Lvk;#0",
+      "renamedSymbol": "L:tk.c()LPcmSample;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -146039,7 +146095,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#1",
-      "renamedSymbol": "L:tk.c()Lvk;#1",
+      "renamedSymbol": "L:tk.c()LPcmSample;#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -146050,7 +146106,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#2",
-      "renamedSymbol": "L:tk.c()Lvk;#2",
+      "renamedSymbol": "L:tk.c()LPcmSample;#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -146061,7 +146117,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#3",
-      "renamedSymbol": "L:tk.c()Lvk;#3",
+      "renamedSymbol": "L:tk.c()LPcmSample;#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -146072,7 +146128,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#4",
-      "renamedSymbol": "L:tk.c()Lvk;#4",
+      "renamedSymbol": "L:tk.c()LPcmSample;#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -146083,7 +146139,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#5",
-      "renamedSymbol": "L:tk.c()Lvk;#5",
+      "renamedSymbol": "L:tk.c()LPcmSample;#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -146094,7 +146150,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#6",
-      "renamedSymbol": "L:tk.c()Lvk;#6",
+      "renamedSymbol": "L:tk.c()LPcmSample;#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -146105,7 +146161,7 @@
     },
     {
       "symbol": "L:tk.c()Lvk;#7",
-      "renamedSymbol": "L:tk.c()Lvk;#7",
+      "renamedSymbol": "L:tk.c()LPcmSample;#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -157820,7 +157876,7 @@
     },
     {
       "symbol": "L:vk.a(Lng;)Lvk;#0",
-      "renamedSymbol": "L:vk.a(Lng;)Lvk;#0",
+      "renamedSymbol": "L:PcmSample.resample(LPcmResampler;)LPcmSample;#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -159272,7 +159328,7 @@
     },
     {
       "symbol": "L:we.a(ZLvk;)V#0",
-      "renamedSymbol": "L:we.a(ZLvk;)V#0",
+      "renamedSymbol": "L:we.a(ZLPcmSample;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -160284,7 +160340,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#0",
-      "renamedSymbol": "L:wi.a(III)Lvk;#0",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160295,7 +160351,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#1",
-      "renamedSymbol": "L:wi.a(III)Lvk;#1",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -160306,7 +160362,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#2",
-      "renamedSymbol": "L:wi.a(III)Lvk;#2",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -160317,7 +160373,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#3",
-      "renamedSymbol": "L:wi.a(III)Lvk;#3",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -160328,7 +160384,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#4",
-      "renamedSymbol": "L:wi.a(III)Lvk;#4",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160339,7 +160395,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#5",
-      "renamedSymbol": "L:wi.a(III)Lvk;#5",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#5",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -160350,7 +160406,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#6",
-      "renamedSymbol": "L:wi.a(III)Lvk;#6",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#6",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -160361,7 +160417,7 @@
     },
     {
       "symbol": "L:wi.a(III)Lvk;#7",
-      "renamedSymbol": "L:wi.a(III)Lvk;#7",
+      "renamedSymbol": "L:wi.a(III)LPcmSample;#7",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -165641,7 +165697,7 @@
     },
     {
       "symbol": "M:ag.<init>(Lvk;II)V",
-      "renamedSymbol": "M:PcmSampleStream.<init>(Lvk;II)V",
+      "renamedSymbol": "M:PcmSampleStream.<init>(LPcmSample;II)V",
       "originalName": "ag",
       "renamedName": "PcmSampleStream",
       "declaration": {
@@ -165652,7 +165708,7 @@
     },
     {
       "symbol": "M:ag.<init>(Lvk;III)V",
-      "renamedSymbol": "M:PcmSampleStream.<init>(Lvk;III)V",
+      "renamedSymbol": "M:PcmSampleStream.<init>(LPcmSample;III)V",
       "originalName": "ag",
       "renamedName": "PcmSampleStream",
       "declaration": {
@@ -165751,7 +165807,7 @@
     },
     {
       "symbol": "M:ag.a(Lvk;II)Lag;",
-      "renamedSymbol": "M:PcmSampleStream.a(Lvk;II)LPcmSampleStream;",
+      "renamedSymbol": "M:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -165762,7 +165818,7 @@
     },
     {
       "symbol": "M:ag.a(Lvk;III)Lag;",
-      "renamedSymbol": "M:PcmSampleStream.a(Lvk;III)LPcmSampleStream;",
+      "renamedSymbol": "M:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -165894,7 +165950,7 @@
     },
     {
       "symbol": "M:ag.b(Lvk;II)Lag;",
-      "renamedSymbol": "M:PcmSampleStream.b(Lvk;II)LPcmSampleStream;",
+      "renamedSymbol": "M:PcmSampleStream.b(LPcmSample;II)LPcmSampleStream;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -165905,7 +165961,7 @@
     },
     {
       "symbol": "M:ag.b(Lvk;III)Lag;",
-      "renamedSymbol": "M:PcmSampleStream.b(Lvk;III)LPcmSampleStream;",
+      "renamedSymbol": "M:PcmSampleStream.b(LPcmSample;III)LPcmSampleStream;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -166345,7 +166401,7 @@
     },
     {
       "symbol": "M:ah.a(Lvk;II)V",
-      "renamedSymbol": "M:ah.a(Lvk;II)V",
+      "renamedSymbol": "M:ah.a(LPcmSample;II)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -168501,7 +168557,7 @@
     },
     {
       "symbol": "M:cf.a(II[I)Lvk;",
-      "renamedSymbol": "M:cf.a(II[I)Lvk;",
+      "renamedSymbol": "M:cf.a(II[I)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -168512,7 +168568,7 @@
     },
     {
       "symbol": "M:cf.a(II[II)Lvk;",
-      "renamedSymbol": "M:cf.a(II[II)Lvk;",
+      "renamedSymbol": "M:cf.a(II[II)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -168534,7 +168590,7 @@
     },
     {
       "symbol": "M:cf.a([III)Lvk;",
-      "renamedSymbol": "M:cf.a([III)Lvk;",
+      "renamedSymbol": "M:cf.a([III)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -168545,7 +168601,7 @@
     },
     {
       "symbol": "M:cf.b(II[II)Lvk;",
-      "renamedSymbol": "M:cf.b(II[II)Lvk;",
+      "renamedSymbol": "M:cf.b(II[II)LPcmSample;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -176421,7 +176477,7 @@
     },
     {
       "symbol": "M:kb.a()Lvk;",
-      "renamedSymbol": "M:kb.a()Lvk;",
+      "renamedSymbol": "M:kb.a()LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -179160,9 +179216,9 @@
     },
     {
       "symbol": "M:me.<init>()V",
-      "renamedSymbol": "M:me.<init>()V",
+      "renamedSymbol": "M:AbstractAudioSample.<init>()V",
       "originalName": "me",
-      "renamedName": "me",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "me.java",
         "start": 91,
@@ -180018,9 +180074,9 @@
     },
     {
       "symbol": "M:ng.<init>(II)V",
-      "renamedSymbol": "M:ng.<init>(II)V",
+      "renamedSymbol": "M:PcmResampler.<init>(II)V",
       "originalName": "ng",
-      "renamedName": "ng",
+      "renamedName": "PcmResampler",
       "declaration": {
         "file": "ng.java",
         "start": 5302,
@@ -180029,9 +180085,9 @@
     },
     {
       "symbol": "M:ng.a(BI)I",
-      "renamedSymbol": "M:ng.a(BI)I",
+      "renamedSymbol": "M:PcmResampler.scaleRate(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "scaleRate",
       "declaration": {
         "file": "ng.java",
         "start": 5049,
@@ -180040,7 +180096,7 @@
     },
     {
       "symbol": "M:ng.a(I)V",
-      "renamedSymbol": "M:ng.clearStaticReferences(I)V",
+      "renamedSymbol": "M:PcmResampler.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -180051,9 +180107,9 @@
     },
     {
       "symbol": "M:ng.a(IB)I",
-      "renamedSymbol": "M:ng.a(IB)I",
+      "renamedSymbol": "M:PcmResampler.scalePosition(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "scalePosition",
       "declaration": {
         "file": "ng.java",
         "start": 3150,
@@ -180062,7 +180118,7 @@
     },
     {
       "symbol": "M:ng.a(Ljava/lang/String;I)Log;",
-      "renamedSymbol": "M:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;",
+      "renamedSymbol": "M:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;",
       "originalName": "a",
       "renamedName": "pollAccountNameCheck",
       "declaration": {
@@ -180073,9 +180129,9 @@
     },
     {
       "symbol": "M:ng.a([BB)[B",
-      "renamedSymbol": "M:ng.a([BB)[B",
+      "renamedSymbol": "M:PcmResampler.resampleBytes([BB)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resampleBytes",
       "declaration": {
         "file": "ng.java",
         "start": 253,
@@ -186354,7 +186410,7 @@
     },
     {
       "symbol": "M:th.a(IIILvk;)V",
-      "renamedSymbol": "M:th.a(IIILvk;)V",
+      "renamedSymbol": "M:th.a(IIILPcmSample;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -186552,7 +186608,7 @@
     },
     {
       "symbol": "M:tk.a([I)Lvk;",
-      "renamedSymbol": "M:tk.a([I)Lvk;",
+      "renamedSymbol": "M:tk.a([I)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -186585,7 +186641,7 @@
     },
     {
       "symbol": "M:tk.c()Lvk;",
-      "renamedSymbol": "M:tk.c()Lvk;",
+      "renamedSymbol": "M:tk.c()LPcmSample;",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -189115,9 +189171,9 @@
     },
     {
       "symbol": "M:vk.<init>(II)V",
-      "renamedSymbol": "M:vk.<init>(II)V",
+      "renamedSymbol": "M:PcmSample.<init>(II)V",
       "originalName": "vk",
-      "renamedName": "vk",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "vk.java",
         "start": 769,
@@ -189126,9 +189182,9 @@
     },
     {
       "symbol": "M:vk.<init>(I[BII)V",
-      "renamedSymbol": "M:vk.<init>(I[BII)V",
+      "renamedSymbol": "M:PcmSample.<init>(I[BII)V",
       "originalName": "vk",
-      "renamedName": "vk",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "vk.java",
         "start": 938,
@@ -189137,9 +189193,9 @@
     },
     {
       "symbol": "M:vk.<init>(I[BIIZ)V",
-      "renamedSymbol": "M:vk.<init>(I[BIIZ)V",
+      "renamedSymbol": "M:PcmSample.<init>(I[BIIZ)V",
       "originalName": "vk",
-      "renamedName": "vk",
+      "renamedName": "PcmSample",
       "declaration": {
         "file": "vk.java",
         "start": 1129,
@@ -189148,9 +189204,9 @@
     },
     {
       "symbol": "M:vk.a(Lng;)Lvk;",
-      "renamedSymbol": "M:vk.a(Lng;)Lvk;",
+      "renamedSymbol": "M:PcmSample.resample(LPcmResampler;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resample",
       "declaration": {
         "file": "vk.java",
         "start": 172,
@@ -189500,7 +189556,7 @@
     },
     {
       "symbol": "M:we.a(ZLvk;)V",
-      "renamedSymbol": "M:we.a(ZLvk;)V",
+      "renamedSymbol": "M:we.a(ZLPcmSample;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -189731,7 +189787,7 @@
     },
     {
       "symbol": "M:wi.a(III)Lvk;",
-      "renamedSymbol": "M:wi.a(III)Lvk;",
+      "renamedSymbol": "M:wi.a(III)LPcmSample;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -191513,7 +191569,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;II)V#0",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;II)V#0",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -191524,7 +191580,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;II)V#1",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;II)V#1",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -191535,7 +191591,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;II)V#2",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;II)V#2",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -191546,7 +191602,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;III)V#0",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;III)V#0",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -191557,7 +191613,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;III)V#1",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;III)V#1",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -191568,7 +191624,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;III)V#2",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;III)V#2",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -191579,7 +191635,7 @@
     },
     {
       "symbol": "P:ag.<init>(Lvk;III)V#3",
-      "renamedSymbol": "P:PcmSampleStream.<init>(Lvk;III)V#3",
+      "renamedSymbol": "P:PcmSampleStream.<init>(LPcmSample;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -192382,7 +192438,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;II)Lag;#0",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;II)LPcmSampleStream;#0",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192393,7 +192449,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;II)Lag;#1",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;II)LPcmSampleStream;#1",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192404,7 +192460,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;II)Lag;#2",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;II)LPcmSampleStream;#2",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;II)LPcmSampleStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -192415,7 +192471,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;III)Lag;#0",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;III)LPcmSampleStream;#0",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192426,7 +192482,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;III)Lag;#1",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;III)LPcmSampleStream;#1",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192437,7 +192493,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;III)Lag;#2",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;III)LPcmSampleStream;#2",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -192448,7 +192504,7 @@
     },
     {
       "symbol": "P:ag.a(Lvk;III)Lag;#3",
-      "renamedSymbol": "P:PcmSampleStream.a(Lvk;III)LPcmSampleStream;#3",
+      "renamedSymbol": "P:PcmSampleStream.a(LPcmSample;III)LPcmSampleStream;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -193493,7 +193549,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;II)Lag;#0",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;II)LPcmSampleStream;#0",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;II)LPcmSampleStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -193504,7 +193560,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;II)Lag;#1",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;II)LPcmSampleStream;#1",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;II)LPcmSampleStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -193515,7 +193571,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;II)Lag;#2",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;II)LPcmSampleStream;#2",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;II)LPcmSampleStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -193526,7 +193582,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;III)Lag;#0",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;III)LPcmSampleStream;#0",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;III)LPcmSampleStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -193537,7 +193593,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;III)Lag;#1",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;III)LPcmSampleStream;#1",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;III)LPcmSampleStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -193548,7 +193604,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;III)Lag;#2",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;III)LPcmSampleStream;#2",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;III)LPcmSampleStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -193559,7 +193615,7 @@
     },
     {
       "symbol": "P:ag.b(Lvk;III)Lag;#3",
-      "renamedSymbol": "P:PcmSampleStream.b(Lvk;III)LPcmSampleStream;#3",
+      "renamedSymbol": "P:PcmSampleStream.b(LPcmSample;III)LPcmSampleStream;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -194703,7 +194759,7 @@
     },
     {
       "symbol": "P:ah.a(Lvk;II)V#0",
-      "renamedSymbol": "P:ah.a(Lvk;II)V#0",
+      "renamedSymbol": "P:ah.a(LPcmSample;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194714,7 +194770,7 @@
     },
     {
       "symbol": "P:ah.a(Lvk;II)V#1",
-      "renamedSymbol": "P:ah.a(Lvk;II)V#1",
+      "renamedSymbol": "P:ah.a(LPcmSample;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -194725,7 +194781,7 @@
     },
     {
       "symbol": "P:ah.a(Lvk;II)V#2",
-      "renamedSymbol": "P:ah.a(Lvk;II)V#2",
+      "renamedSymbol": "P:ah.a(LPcmSample;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -199114,7 +199170,7 @@
     },
     {
       "symbol": "P:cf.a(II[I)Lvk;#0",
-      "renamedSymbol": "P:cf.a(II[I)Lvk;#0",
+      "renamedSymbol": "P:cf.a(II[I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -199125,7 +199181,7 @@
     },
     {
       "symbol": "P:cf.a(II[I)Lvk;#1",
-      "renamedSymbol": "P:cf.a(II[I)Lvk;#1",
+      "renamedSymbol": "P:cf.a(II[I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -199136,7 +199192,7 @@
     },
     {
       "symbol": "P:cf.a(II[I)Lvk;#2",
-      "renamedSymbol": "P:cf.a(II[I)Lvk;#2",
+      "renamedSymbol": "P:cf.a(II[I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -199147,7 +199203,7 @@
     },
     {
       "symbol": "P:cf.a(II[II)Lvk;#0",
-      "renamedSymbol": "P:cf.a(II[II)Lvk;#0",
+      "renamedSymbol": "P:cf.a(II[II)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -199158,7 +199214,7 @@
     },
     {
       "symbol": "P:cf.a(II[II)Lvk;#1",
-      "renamedSymbol": "P:cf.a(II[II)Lvk;#1",
+      "renamedSymbol": "P:cf.a(II[II)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -199169,7 +199225,7 @@
     },
     {
       "symbol": "P:cf.a(II[II)Lvk;#2",
-      "renamedSymbol": "P:cf.a(II[II)Lvk;#2",
+      "renamedSymbol": "P:cf.a(II[II)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -199180,7 +199236,7 @@
     },
     {
       "symbol": "P:cf.a(II[II)Lvk;#3",
-      "renamedSymbol": "P:cf.a(II[II)Lvk;#3",
+      "renamedSymbol": "P:cf.a(II[II)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -199202,7 +199258,7 @@
     },
     {
       "symbol": "P:cf.a([III)Lvk;#0",
-      "renamedSymbol": "P:cf.a([III)Lvk;#0",
+      "renamedSymbol": "P:cf.a([III)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -199213,7 +199269,7 @@
     },
     {
       "symbol": "P:cf.a([III)Lvk;#1",
-      "renamedSymbol": "P:cf.a([III)Lvk;#1",
+      "renamedSymbol": "P:cf.a([III)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -199224,7 +199280,7 @@
     },
     {
       "symbol": "P:cf.a([III)Lvk;#2",
-      "renamedSymbol": "P:cf.a([III)Lvk;#2",
+      "renamedSymbol": "P:cf.a([III)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -199235,7 +199291,7 @@
     },
     {
       "symbol": "P:cf.b(II[II)Lvk;#0",
-      "renamedSymbol": "P:cf.b(II[II)Lvk;#0",
+      "renamedSymbol": "P:cf.b(II[II)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -199246,7 +199302,7 @@
     },
     {
       "symbol": "P:cf.b(II[II)Lvk;#1",
-      "renamedSymbol": "P:cf.b(II[II)Lvk;#1",
+      "renamedSymbol": "P:cf.b(II[II)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -199257,7 +199313,7 @@
     },
     {
       "symbol": "P:cf.b(II[II)Lvk;#2",
-      "renamedSymbol": "P:cf.b(II[II)Lvk;#2",
+      "renamedSymbol": "P:cf.b(II[II)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -199268,7 +199324,7 @@
     },
     {
       "symbol": "P:cf.b(II[II)Lvk;#3",
-      "renamedSymbol": "P:cf.b(II[II)Lvk;#3",
+      "renamedSymbol": "P:cf.b(II[II)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -224304,7 +224360,7 @@
     },
     {
       "symbol": "P:ng.<init>(II)V#0",
-      "renamedSymbol": "P:ng.<init>(II)V#0",
+      "renamedSymbol": "P:PcmResampler.<init>(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224315,7 +224371,7 @@
     },
     {
       "symbol": "P:ng.<init>(II)V#1",
-      "renamedSymbol": "P:ng.<init>(II)V#1",
+      "renamedSymbol": "P:PcmResampler.<init>(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -224326,7 +224382,7 @@
     },
     {
       "symbol": "P:ng.a(BI)I#0",
-      "renamedSymbol": "P:ng.a(BI)I#0",
+      "renamedSymbol": "P:PcmResampler.scaleRate(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224337,7 +224393,7 @@
     },
     {
       "symbol": "P:ng.a(BI)I#1",
-      "renamedSymbol": "P:ng.a(BI)I#1",
+      "renamedSymbol": "P:PcmResampler.scaleRate(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -224348,7 +224404,7 @@
     },
     {
       "symbol": "P:ng.a(I)V#0",
-      "renamedSymbol": "P:ng.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:PcmResampler.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224359,7 +224415,7 @@
     },
     {
       "symbol": "P:ng.a(IB)I#0",
-      "renamedSymbol": "P:ng.a(IB)I#0",
+      "renamedSymbol": "P:PcmResampler.scalePosition(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224370,7 +224426,7 @@
     },
     {
       "symbol": "P:ng.a(IB)I#1",
-      "renamedSymbol": "P:ng.a(IB)I#1",
+      "renamedSymbol": "P:PcmResampler.scalePosition(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -224381,7 +224437,7 @@
     },
     {
       "symbol": "P:ng.a(Ljava/lang/String;I)Log;#0",
-      "renamedSymbol": "P:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#0",
+      "renamedSymbol": "P:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224392,7 +224448,7 @@
     },
     {
       "symbol": "P:ng.a(Ljava/lang/String;I)Log;#1",
-      "renamedSymbol": "P:ng.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#1",
+      "renamedSymbol": "P:PcmResampler.pollAccountNameCheck(Ljava/lang/String;I)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -224403,7 +224459,7 @@
     },
     {
       "symbol": "P:ng.a([BB)[B#0",
-      "renamedSymbol": "P:ng.a([BB)[B#0",
+      "renamedSymbol": "P:PcmResampler.resampleBytes([BB)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224414,7 +224470,7 @@
     },
     {
       "symbol": "P:ng.a([BB)[B#1",
-      "renamedSymbol": "P:ng.a([BB)[B#1",
+      "renamedSymbol": "P:PcmResampler.resampleBytes([BB)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -239671,7 +239727,7 @@
     },
     {
       "symbol": "P:th.a(IIILvk;)V#0",
-      "renamedSymbol": "P:th.a(IIILvk;)V#0",
+      "renamedSymbol": "P:th.a(IIILPcmSample;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -239682,7 +239738,7 @@
     },
     {
       "symbol": "P:th.a(IIILvk;)V#1",
-      "renamedSymbol": "P:th.a(IIILvk;)V#1",
+      "renamedSymbol": "P:th.a(IIILPcmSample;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -239693,7 +239749,7 @@
     },
     {
       "symbol": "P:th.a(IIILvk;)V#2",
-      "renamedSymbol": "P:th.a(IIILvk;)V#2",
+      "renamedSymbol": "P:th.a(IIILPcmSample;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -239704,7 +239760,7 @@
     },
     {
       "symbol": "P:th.a(IIILvk;)V#3",
-      "renamedSymbol": "P:th.a(IIILvk;)V#3",
+      "renamedSymbol": "P:th.a(IIILPcmSample;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -240111,7 +240167,7 @@
     },
     {
       "symbol": "P:tk.a([I)Lvk;#0",
-      "renamedSymbol": "P:tk.a([I)Lvk;#0",
+      "renamedSymbol": "P:tk.a([I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -245666,7 +245722,7 @@
     },
     {
       "symbol": "P:vk.<init>(II)V#0",
-      "renamedSymbol": "P:vk.<init>(II)V#0",
+      "renamedSymbol": "P:PcmSample.<init>(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -245677,7 +245733,7 @@
     },
     {
       "symbol": "P:vk.<init>(II)V#1",
-      "renamedSymbol": "P:vk.<init>(II)V#1",
+      "renamedSymbol": "P:PcmSample.<init>(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -245688,7 +245744,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BII)V#0",
-      "renamedSymbol": "P:vk.<init>(I[BII)V#0",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -245699,7 +245755,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BII)V#1",
-      "renamedSymbol": "P:vk.<init>(I[BII)V#1",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -245710,7 +245766,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BII)V#2",
-      "renamedSymbol": "P:vk.<init>(I[BII)V#2",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -245721,7 +245777,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BII)V#3",
-      "renamedSymbol": "P:vk.<init>(I[BII)V#3",
+      "renamedSymbol": "P:PcmSample.<init>(I[BII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -245732,7 +245788,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BIIZ)V#0",
-      "renamedSymbol": "P:vk.<init>(I[BIIZ)V#0",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -245743,7 +245799,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BIIZ)V#1",
-      "renamedSymbol": "P:vk.<init>(I[BIIZ)V#1",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -245754,7 +245810,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BIIZ)V#2",
-      "renamedSymbol": "P:vk.<init>(I[BIIZ)V#2",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -245765,7 +245821,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BIIZ)V#3",
-      "renamedSymbol": "P:vk.<init>(I[BIIZ)V#3",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -245776,7 +245832,7 @@
     },
     {
       "symbol": "P:vk.<init>(I[BIIZ)V#4",
-      "renamedSymbol": "P:vk.<init>(I[BIIZ)V#4",
+      "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -245787,7 +245843,7 @@
     },
     {
       "symbol": "P:vk.a(Lng;)Lvk;#0",
-      "renamedSymbol": "P:vk.a(Lng;)Lvk;#0",
+      "renamedSymbol": "P:PcmSample.resample(LPcmResampler;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -246590,7 +246646,7 @@
     },
     {
       "symbol": "P:we.a(ZLvk;)V#0",
-      "renamedSymbol": "P:we.a(ZLvk;)V#0",
+      "renamedSymbol": "P:we.a(ZLPcmSample;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -246601,7 +246657,7 @@
     },
     {
       "symbol": "P:we.a(ZLvk;)V#1",
-      "renamedSymbol": "P:we.a(ZLvk;)V#1",
+      "renamedSymbol": "P:we.a(ZLPcmSample;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -246986,7 +247042,7 @@
     },
     {
       "symbol": "P:wi.a(III)Lvk;#0",
-      "renamedSymbol": "P:wi.a(III)Lvk;#0",
+      "renamedSymbol": "P:wi.a(III)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -246997,7 +247053,7 @@
     },
     {
       "symbol": "P:wi.a(III)Lvk;#1",
-      "renamedSymbol": "P:wi.a(III)Lvk;#1",
+      "renamedSymbol": "P:wi.a(III)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247008,7 +247064,7 @@
     },
     {
       "symbol": "P:wi.a(III)Lvk;#2",
-      "renamedSymbol": "P:wi.a(III)Lvk;#2",
+      "renamedSymbol": "P:wi.a(III)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -249168,7 +249224,7 @@
       "original": "DrPhlogistonSavesTheEarth.java",
       "renamed": "DrPhlogistonSavesTheEarth.java",
       "inputSha256": "d08742c4f6dcb2da2de3f10028a67ba8940b89ec189849e723acae4bf28b03cc",
-      "outputSha256": "19dbec633d5b41c5d4db725728dd0dd6baa0261a8324a988404323dd6f7ad305",
+      "outputSha256": "d709dffadaaa5c85e5dbf8eef529516705dc2d347ae048a7d420d74b8bce003a",
       "edits": [
         {
           "start": 112,
@@ -249526,6 +249582,13 @@
           "symbol": "M:wg.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 18458,
+          "end": 18460,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 18461,
@@ -250473,11 +250536,95 @@
           "renamed": "GameClientShell"
         },
         {
+          "start": 46082,
+          "end": 46083,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 46229,
+          "end": 46230,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 46408,
+          "end": 46409,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 46594,
+          "end": 46595,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 46783,
+          "end": 46784,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 47016,
+          "end": 47017,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 47196,
+          "end": 47197,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 47254,
           "end": 47256,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 47291,
+          "end": 47292,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 47460,
+          "end": 47461,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 47642,
+          "end": 47643,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 47825,
+          "end": 47826,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 48007,
+          "end": 48008,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 48066,
@@ -250487,11 +250634,67 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 48107,
+          "end": 48108,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 48281,
+          "end": 48282,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 48466,
+          "end": 48467,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 48653,
+          "end": 48654,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 48840,
+          "end": 48841,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 49025,
+          "end": 49026,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 49211,
+          "end": 49212,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 49270,
           "end": 49272,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 49311,
+          "end": 49312,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 49358,
@@ -250501,11 +250704,46 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 49402,
+          "end": 49403,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 49449,
           "end": 49451,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 49493,
+          "end": 49494,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 49670,
+          "end": 49671,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 49858,
+          "end": 49859,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 50045,
+          "end": 50046,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 50104,
@@ -250515,11 +250753,60 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 50147,
+          "end": 50148,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 50323,
+          "end": 50324,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 50507,
+          "end": 50508,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 50566,
           "end": 50568,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 50607,
+          "end": 50608,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 50779,
+          "end": 50780,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 50966,
+          "end": 50967,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 51155,
+          "end": 51156,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 51214,
@@ -250529,11 +250816,46 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 51260,
+          "end": 51261,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 51307,
           "end": 51309,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 51355,
+          "end": 51356,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 51533,
+          "end": 51534,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 51724,
+          "end": 51725,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 51913,
+          "end": 51914,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 51972,
@@ -250543,11 +250865,74 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 52017,
+          "end": 52018,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 52064,
           "end": 52066,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 52106,
+          "end": 52107,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 52280,
+          "end": 52281,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 52468,
+          "end": 52469,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 52655,
+          "end": 52656,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 52842,
+          "end": 52843,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 53029,
+          "end": 53030,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 53215,
+          "end": 53216,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 53401,
+          "end": 53402,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 53460,
@@ -250557,11 +250942,39 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 53505,
+          "end": 53506,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 53682,
+          "end": 53683,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 53870,
+          "end": 53871,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 53929,
           "end": 53931,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 53973,
+          "end": 53974,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 54020,
@@ -250571,11 +250984,46 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 54063,
+          "end": 54064,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 54238,
+          "end": 54239,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 54424,
+          "end": 54425,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 54483,
           "end": 54485,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 54525,
+          "end": 54526,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 54701,
+          "end": 54702,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 54760,
@@ -250585,11 +251033,53 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 54804,
+          "end": 54805,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 54980,
+          "end": 54981,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 55169,
+          "end": 55170,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 55356,
+          "end": 55357,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 55415,
           "end": 55417,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 55458,
+          "end": 55459,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 55635,
+          "end": 55636,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 55694,
@@ -250599,11 +251089,95 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 55739,
+          "end": 55740,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 55916,
+          "end": 55917,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 56106,
+          "end": 56107,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 56296,
+          "end": 56297,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 56484,
+          "end": 56485,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
           "start": 56543,
           "end": 56545,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 56587,
+          "end": 56588,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 56762,
+          "end": 56763,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 56877,
+          "end": 56878,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 57063,
+          "end": 57064,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 57296,
+          "end": 57297,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 57485,
+          "end": 57486,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 57670,
+          "end": 57671,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
         },
         {
           "start": 57922,
@@ -250723,6 +251297,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 71011,
+          "end": 71013,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 71089,
@@ -250877,6 +251458,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 81393,
+          "end": 81395,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 81403,
@@ -251096,6 +251684,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 93868,
+          "end": 93870,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 96284,
           "end": 96286,
           "symbol": "C:gi",
@@ -251157,7 +251752,7 @@
       "original": "a.java",
       "renamed": "a.java",
       "inputSha256": "04146de74cba8d4664adfbae4d9ed9cbce1eda78b30c2996359df6e8bb0770d5",
-      "outputSha256": "0a05862a1d17392172badb7d3473ab49d69f96a7307b61cf1ec47222511d124e",
+      "outputSha256": "af20b1c824938f414e662496f2f556cc6db40ebe5d71f265b3cd018044ef5f07",
       "edits": [
         {
           "start": 1985,
@@ -251186,6 +251781,13 @@
           "symbol": "C:aj",
           "original": "aj",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 7393,
+          "end": 7395,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 8463,
@@ -251479,7 +252081,7 @@
       "original": "ag.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "cf059515739c3d24345dee2a4ad416d95eb6115b2ffaf6c1598cd9291c710dcf",
-      "outputSha256": "bd9141fd676da1cc81faad38556804ac08fa32e3ea4ddce3cb3e4db009638f43",
+      "outputSha256": "440093e90dc2c4411a0c54388627996bedc2232ecc839114b2bdcb98da38da10",
       "edits": [
         {
           "start": 50,
@@ -251503,6 +252105,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 3768,
+          "end": 3770,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 4140,
           "end": 4142,
           "symbol": "C:ag",
@@ -251522,6 +252131,13 @@
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 8028,
+          "end": 8030,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 8211,
@@ -251559,6 +252175,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 13174,
+          "end": 13176,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 13345,
           "end": 13347,
           "symbol": "C:ag",
@@ -251571,6 +252194,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 13680,
+          "end": 13682,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 13897,
@@ -251613,6 +252243,13 @@
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 18339,
+          "end": 18341,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 18522,
@@ -251671,11 +252308,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 24222,
+          "end": 24224,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 24372,
           "end": 24374,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 24379,
+          "end": 24381,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 24508,
@@ -251692,11 +252343,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 24556,
+          "end": 24558,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 24724,
           "end": 24726,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 24737,
+          "end": 24739,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 25123,
@@ -251713,11 +252378,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 25167,
+          "end": 25169,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 25322,
           "end": 25324,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 25332,
+          "end": 25334,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 25521,
@@ -251734,11 +252413,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 25571,
+          "end": 25573,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 25748,
           "end": 25750,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 25761,
+          "end": 25763,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 26285,
@@ -251760,6 +252453,20 @@
           "symbol": "M:ag.b()I",
           "original": "b",
           "renamed": "getSchedulingPriority"
+        },
+        {
+          "start": 30633,
+          "end": 30635,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 30777,
+          "end": 30779,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 31064,
@@ -251790,11 +252497,25 @@
           "renamed": "mixInto"
         },
         {
+          "start": 37792,
+          "end": 37794,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 38017,
           "end": 38018,
           "symbol": "M:ag.d(I)V",
           "original": "d",
           "renamed": "skipFrames"
+        },
+        {
+          "start": 38072,
+          "end": 38074,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 38433,
@@ -251958,6 +252679,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 48614,
+          "end": 48616,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 48986,
           "end": 48988,
           "symbol": "C:ag",
@@ -251972,6 +252700,13 @@
           "renamed": "skipFrames"
         },
         {
+          "start": 50964,
+          "end": 50966,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 51592,
           "end": 51593,
           "symbol": "M:gi.a(I)V",
@@ -251984,6 +252719,13 @@
           "symbol": "M:ag.k()V",
           "original": "k",
           "renamed": "recomputeGains"
+        },
+        {
+          "start": 51744,
+          "end": 51746,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 52048,
@@ -252061,6 +252803,20 @@
           "symbol": "M:ag.<init>(Lvk;II)V",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 56440,
+          "end": 56442,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 56501,
+          "end": 56503,
+          "symbol": "C:me",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 56771,
@@ -252161,11 +252917,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 62278,
+          "end": 62280,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 62428,
           "end": 62430,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 62435,
+          "end": 62437,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 62564,
@@ -252182,11 +252952,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 62612,
+          "end": 62614,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 62780,
           "end": 62782,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 62793,
+          "end": 62795,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 63180,
@@ -252203,11 +252987,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 63224,
+          "end": 63226,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 63379,
           "end": 63381,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 63389,
+          "end": 63391,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 63578,
@@ -252224,6 +253022,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 63628,
+          "end": 63630,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 63805,
           "end": 63807,
           "symbol": "C:ag",
@@ -252231,11 +253036,25 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 63818,
+          "end": 63820,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 64296,
           "end": 64298,
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 64301,
+          "end": 64303,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 64472,
@@ -252252,6 +253071,20 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 64558,
+          "end": 64560,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 64631,
+          "end": 64633,
+          "symbol": "C:me",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
+        },
+        {
           "start": 64903,
           "end": 64904,
           "symbol": "M:ag.k()V",
@@ -252264,7 +253097,7 @@
       "original": "ah.java",
       "renamed": "ah.java",
       "inputSha256": "4f4dfe428be720830ce2a56c26ad305c20dcaed70f07be250e9a8c92ef7b0291",
-      "outputSha256": "4a52591c5369dacc3c6953821ba102173f0032e18e40457837f69acb35e146b5",
+      "outputSha256": "feff325323ac676b97faa36c57452f453714ceeedef19c7381d3814462a5e6bc",
       "edits": [
         {
           "start": 233,
@@ -252363,6 +253196,13 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 13613,
+          "end": 13615,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 13732,
@@ -255827,7 +256667,7 @@
       "original": "cc.java",
       "renamed": "cc.java",
       "inputSha256": "7a1372a38e2fdb524405e8a4eda94641a985fff96ebc23606052d57c594861bd",
-      "outputSha256": "75b6b8a1707bddb6e264018fe77cc1801b74d3f592b5ce4d06fed75dafd62f84",
+      "outputSha256": "a42b4259c1f174a135e40a428a04d691d88e56e5ee3a631822901bcf0b8564ce",
       "edits": [
         {
           "start": 61,
@@ -255835,6 +256675,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 216,
+          "end": 218,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 414,
@@ -256096,7 +256943,7 @@
       "original": "cf.java",
       "renamed": "cf.java",
       "inputSha256": "0e2b26bd83719594a947e7e61b37c0b13086f997647e68a8c6cfb89ac0994897",
-      "outputSha256": "66075f0099b5952f6e3de26846459903aa2c777585e41297410047933d65ed4f",
+      "outputSha256": "c833d8e89d15c6858d74fa50bf3ee7ab3467f00d94c3e87a3e194ed508665ba7",
       "edits": [
         {
           "start": 329,
@@ -256104,6 +256951,55 @@
           "symbol": "C:oi",
           "original": "oi",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 554,
+          "end": 556,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 707,
+          "end": 709,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 755,
+          "end": 757,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 822,
+          "end": 824,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 1038,
+          "end": 1040,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 1324,
+          "end": 1326,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 1963,
+          "end": 1965,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 2010,
@@ -256127,6 +257023,69 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 3968,
+          "end": 3970,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4033,
+          "end": 4035,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4152,
+          "end": 4154,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4228,
+          "end": 4230,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4253,
+          "end": 4255,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4319,
+          "end": 4321,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4535,
+          "end": 4537,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 4739,
+          "end": 4741,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 5139,
+          "end": 5141,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 6059,
           "end": 6060,
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
@@ -256141,6 +257100,27 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 6497,
+          "end": 6499,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 6615,
+          "end": 6617,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 6646,
+          "end": 6648,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
           "start": 7824,
           "end": 7825,
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
@@ -256153,6 +257133,27 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8395,
+          "end": 8397,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 8486,
+          "end": 8488,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 8517,
+          "end": 8519,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 9531,
@@ -256174,7 +257175,7 @@
       "original": "ch.java",
       "renamed": "ch.java",
       "inputSha256": "4d22973765af0301fccea7065db9563b3530828ce6126d9789e65ece23696285",
-      "outputSha256": "902c857bf54ecfe3df6a286382769a28930e388310e98ca22290bf441a443a5b",
+      "outputSha256": "65fd95d6691de3ddc53d49797d7a2618ba91b764c8bbcdd3bc9040af5d19c03f",
       "edits": [
         {
           "start": 317,
@@ -256189,6 +257190,13 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2020,
+          "end": 2022,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2716,
@@ -256408,8 +257416,15 @@
       "original": "ck.java",
       "renamed": "ck.java",
       "inputSha256": "634527df9d2abd46bfd03dd1d3db309f39cc2aaa385d7eeae01e59a8e42ac2be",
-      "outputSha256": "b83a91b8a58c2fb13862ded388ba913ec7728c9f79cb6e53c03d62ca07ece58d",
+      "outputSha256": "17753c599425e2dc22bfddb26357e528f37a870550b46575884d166a934eae5a",
       "edits": [
+        {
+          "start": 777,
+          "end": 779,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 1242,
           "end": 1243,
@@ -258739,8 +259754,22 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "f7faa845adc5dd2d2c9fa6306f42e39a4a136574a41c4bb2cf392c14332901dc",
-      "outputSha256": "582fd9bd57fbe41361fadd9851dd09717b94395e1a58eb5b39f75a06d2c82272",
+      "outputSha256": "84fa3eb7b09f1947c579c20147d795cd63668471fe6178e0796f7a4ab2c80c69",
       "edits": [
+        {
+          "start": 238,
+          "end": 240,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 262,
+          "end": 264,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 1371,
           "end": 1372,
@@ -258832,8 +259861,29 @@
       "original": "eb.java",
       "renamed": "eb.java",
       "inputSha256": "2696f66afb640d3a1c5f3cafc2676b985eccbb1ca9cd2b2aec04fae1360e1867",
-      "outputSha256": "67f73908e4612f5a80222d29b463bd06da64f4ee8dac77bf25d3fca5d327fd99",
+      "outputSha256": "2e32425d276aff581de381d3688107b36961a4d981ab8025c787b39e9a558065",
       "edits": [
+        {
+          "start": 708,
+          "end": 710,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 839,
+          "end": 841,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 944,
+          "end": 946,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 1063,
           "end": 1064,
@@ -262515,7 +263565,7 @@
       "original": "gm.java",
       "renamed": "gm.java",
       "inputSha256": "39d5ff37bb14fc888adb2054456c61d9945fc3a07a2127551474612a38c76b9e",
-      "outputSha256": "6bcd08aa4ce401536c8c66760927c7b0f651a7054b94f669c802abe68e059a05",
+      "outputSha256": "c2ba647d8f0f1ad5b1fa2bd4a8ab3a92561d8e621cc2e1c76e4b5d15487d60d9",
       "edits": [
         {
           "start": 585,
@@ -262523,6 +263573,20 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 976,
+          "end": 978,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 1013,
+          "end": 1015,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 1247,
@@ -263278,7 +264342,7 @@
       "original": "hg.java",
       "renamed": "hg.java",
       "inputSha256": "6a1555f52eed499fef2570ceea0ed88a16a99e11d1176ed46c7c38b20fa78622",
-      "outputSha256": "04816d4c833bd5c90f6dba3acdfd3c4e147a1b77ada92bea865e9a8be7301e0c",
+      "outputSha256": "95205db44d3dd9b67708978c276b567c34adf686964c34d56422a8c903ad99cb",
       "edits": [
         {
           "start": 161,
@@ -263307,6 +264371,20 @@
           "symbol": "C:qd",
           "original": "qd",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 1103,
+          "end": 1105,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 1157,
+          "end": 1159,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2746,
@@ -264309,7 +265387,7 @@
       "original": "ic.java",
       "renamed": "PcmStream.java",
       "inputSha256": "c5070eca8a60467ebe2d2ea4585847ef9c0614445718ae27ff69cac4d34dba7f",
-      "outputSha256": "2eb625e103452cb82b1fed8e628dc562cf3fce58ce9667131c73160491f8c922",
+      "outputSha256": "86bab41190e91eeb0e5e7240b96c5aee53376144f2c987f373f517ded2e1dec8",
       "edits": [
         {
           "start": 53,
@@ -264324,6 +265402,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 90,
+          "end": 92,
+          "symbol": "C:me",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 106,
@@ -264422,7 +265507,7 @@
       "original": "id.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "bb4866f2c32a1c7fd74657e78d92144424fac0e208d5e35b2af11f293cfa7f72",
-      "outputSha256": "39c57cc64f0ae029cba1fb9b02cae13b2f2e1c4e0215a00905181bc4cd8c48a4",
+      "outputSha256": "dc9ee03a5cd30670c4774a6d1e5bb7431f0534c5cf0017c657f550e180aa8f4c",
       "edits": [
         {
           "start": 44,
@@ -264682,6 +265767,13 @@
           "symbol": "C:ic",
           "original": "ic",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 5635,
+          "end": 5637,
+          "symbol": "C:me",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 5672,
@@ -265245,7 +266337,7 @@
       "original": "ig.java",
       "renamed": "ig.java",
       "inputSha256": "8b21bab3ba050b7183e56c14c5a679ed404ddd6459512f60df6c853dbb75f178",
-      "outputSha256": "f21d84690526063bae82d90c0822c8181bd7a68dccb69d925733855fce656528",
+      "outputSha256": "7bf4fa2834bf4a4638263e2366543f4da9e27d16620e3931e5b49edb613a94f7",
       "edits": [
         {
           "start": 61,
@@ -265253,6 +266345,20 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 247,
+          "end": 249,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 1876,
+          "end": 1878,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 2984,
@@ -265274,6 +266380,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 7561,
+          "end": 7563,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 7830,
@@ -265968,7 +267081,7 @@
       "original": "j.java",
       "renamed": "LevelSession.java",
       "inputSha256": "b9bcd10eb969364c919e4886fb9d547406c6bed586f4c26fd957560acd1b4dbc",
-      "outputSha256": "2bfb312765d0f1ab001edc06e5954cdfe465cbd029dadb337c8b80857f8f150f",
+      "outputSha256": "6e6aea4c77d5ccd8f0adf746f336b713bb0a76a39d2027a877668f0be193b6d0",
       "edits": [
         {
           "start": 71,
@@ -266039,6 +267152,13 @@
           "symbol": "C:am",
           "original": "am",
           "renamed": "MusicPatchPcmStream"
+        },
+        {
+          "start": 11740,
+          "end": 11742,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 12117,
@@ -268566,7 +269686,7 @@
       "original": "jk.java",
       "renamed": "jk.java",
       "inputSha256": "cd4db0e9ca24f27273db39798e3cf1c5ccea6aff423580374b24c2cf8a6b92f2",
-      "outputSha256": "fc3448e8918ce6045e8a86f8dbd1d3e45a8cb2bd028b57635743d0a7537909dc",
+      "outputSha256": "49e37ff055513855613e61a0bd09eded3f72ab0caf1650a4ef577047d71227fa",
       "edits": [
         {
           "start": 1660,
@@ -268716,11 +269836,60 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 11345,
+          "end": 11347,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 11408,
+          "end": 11410,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 11602,
+          "end": 11604,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 11721,
+          "end": 11723,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 12405,
           "end": 12407,
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "GameClientShell"
+        },
+        {
+          "start": 12835,
+          "end": 12837,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 12946,
+          "end": 12948,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 12957,
+          "end": 12959,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 13714,
@@ -268990,7 +270159,7 @@
       "original": "kb.java",
       "renamed": "kb.java",
       "inputSha256": "069031d62995aa05a9ba35a50a8cb222bc155437539c959c9821de9398cb1396",
-      "outputSha256": "038a2e32d996f19723f2b0e6536eb779f76a723bc5a021090169544564fd87c7",
+      "outputSha256": "f862a9498fd842bd62cf17adeb21b7e595f687bcc3a4fb8fb25be7002a210692",
       "edits": [
         {
           "start": 337,
@@ -268998,6 +270167,20 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 365,
+          "end": 367,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 425,
+          "end": 427,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 714,
@@ -269991,7 +271174,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "a15072c6b7daca62a5fedf414172b3f7177c71b78e41c524cd37c9bc9c34912b",
-      "outputSha256": "8f4c7ca0b5c3264f1e2754bf8a29f10f48726191ed5949d1411c1929efde993e",
+      "outputSha256": "bb7171a9989b05b304537a25706f4e7fd913b2d91ebcf720434225e5ab062319",
       "edits": [
         {
           "start": 61,
@@ -270020,6 +271203,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9354,
+          "end": 9356,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 9431,
@@ -272496,16 +273686,30 @@
     },
     {
       "original": "me.java",
-      "renamed": "me.java",
+      "renamed": "AbstractAudioSample.java",
       "inputSha256": "5c96012540695c1aa1b123c721b1245707cdd506bc80dbcaf84aea51364852c0",
-      "outputSha256": "82a635e12bab61fa400519010248b106828dfe200774ad786d2aa644b4556fca",
+      "outputSha256": "5d65afde75de1a543ad2ddb451a95a76f588621734eab83c94c43e8813faa465",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:me",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
+        },
         {
           "start": 64,
           "end": 66,
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "symbol": "M:me.<init>()V",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
         }
       ]
     },
@@ -273831,7 +275035,7 @@
       "original": "nc.java",
       "renamed": "nc.java",
       "inputSha256": "e65b9df91a949ffc722498a8095f9adcda1193bc5f1a8cf3ea380c32c273d923",
-      "outputSha256": "850e6dac06b82bbc793cffacbe43df2d98a06ef50dc47e32d352be198a7e7ebc",
+      "outputSha256": "61a9b40e6d9f7bcfef85ed6dd713a4ec291e88295c63295200fd371243c8e7f3",
       "edits": [
         {
           "start": 498,
@@ -274156,6 +275360,20 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 14111,
+          "end": 14113,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 14178,
+          "end": 14180,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 14297,
           "end": 14298,
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
@@ -274259,10 +275477,31 @@
     },
     {
       "original": "ng.java",
-      "renamed": "ng.java",
+      "renamed": "PcmResampler.java",
       "inputSha256": "4432a2d984467ad97ba76deffe423208b97b09a76c595130a024e192a5b53cc4",
-      "outputSha256": "c73a17ec0d242a68b42bdb34023b464a65b5fdbf10c47e92593ab51bb8ff94c6",
+      "outputSha256": "a33128e7964a24aff25c973c2f53fdf2f6f360f3b97e7c3f905c8d5198f84b95",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 253,
+          "end": 254,
+          "symbol": "M:ng.a([BB)[B",
+          "original": "a",
+          "renamed": "resampleBytes"
+        },
+        {
+          "start": 1100,
+          "end": 1102,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 1103,
           "end": 1104,
@@ -274276,6 +275515,13 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3150,
+          "end": 3151,
+          "symbol": "M:ng.a(IB)I",
+          "original": "a",
+          "renamed": "scalePosition"
         },
         {
           "start": 3427,
@@ -274332,6 +275578,20 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 5049,
+          "end": 5050,
+          "symbol": "M:ng.a(BI)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
+          "start": 5302,
+          "end": 5304,
+          "symbol": "M:ng.<init>(II)V",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 6712,
@@ -274862,7 +276122,7 @@
       "original": "nl.java",
       "renamed": "nl.java",
       "inputSha256": "79e7d4765e42d04c1d37be2fdd5ece2a24a6c88eab65c7e6f1d9f9bbf0bc887a",
-      "outputSha256": "e769ba68a7a7400aa0e241215600e6bead653e82f9ae97bd1d830a84b976bd7b",
+      "outputSha256": "756c60853a47f0877df15900518420708103028bc0c9cb175de3f3fd80f32a05",
       "edits": [
         {
           "start": 61,
@@ -274870,6 +276130,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 94,
+          "end": 96,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 640,
@@ -274891,6 +276158,13 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3959,
+          "end": 3961,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         }
       ]
     },
@@ -279146,7 +280420,7 @@
       "original": "ol.java",
       "renamed": "ol.java",
       "inputSha256": "b61b7c0af8e2c6b0dd5b8024b033ad20ec1c420984dc12ade1c4190e6ac6ba31",
-      "outputSha256": "a71d9ec7c21478f97fa46485f78de070fe27541e422823b6e890701219f5b4d1",
+      "outputSha256": "7684473c4d8a884f691460a3edac07733be065a374a8314f66e60c8f185fb350",
       "edits": [
         {
           "start": 67,
@@ -279212,6 +280486,20 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 2559,
+          "end": 2561,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 2787,
+          "end": 2789,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 2823,
           "end": 2825,
           "symbol": "C:oi",
@@ -279259,6 +280547,13 @@
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "LoginMenuScreen"
+        },
+        {
+          "start": 3776,
+          "end": 3778,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 3812,
@@ -279315,6 +280610,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5156,
+          "end": 5158,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 5192,
@@ -279399,6 +280701,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 6196,
+          "end": 6198,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 6232,
@@ -280584,7 +281893,7 @@
       "original": "pk.java",
       "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "36849a5c87a4eb7fcec97a36e6a7d7af0823f0a2a25390687bac3c0c74bce293",
-      "outputSha256": "8846dd44326c8d6e35ff255b9be9c92516662bb1c9d0776bc529529316a3e6d6",
+      "outputSha256": "3fd25744ad917968773f0c51c48b4a6a942f2edcfa89621bd7f3ca51d6afc9f2",
       "edits": [
         {
           "start": 50,
@@ -280657,6 +281966,13 @@
           "renamed": "checkedName"
         },
         {
+          "start": 1199,
+          "end": 1201,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 1202,
           "end": 1203,
           "symbol": "M:ng.a(Ljava/lang/String;I)Log;",
@@ -280725,6 +282041,13 @@
           "symbol": "F:pk.field_r:Ljava/lang/String;",
           "original": "field_r",
           "renamed": "checkedName"
+        },
+        {
+          "start": 3244,
+          "end": 3246,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 3247,
@@ -282974,8 +284297,15 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "3408bc4959836c4fc8404da8098eae0698b30d2e41c5387284722ae5a36f0fba",
-      "outputSha256": "60341fb963e98314ba536d3a05d8b292026b64df2dd294e8bee5b5af6718d3d9",
+      "outputSha256": "e4930d7dd157bdd3921747d2cf07d1078805ea2f4caeb71f1136f7c9726a0e4c",
       "edits": [
+        {
+          "start": 213,
+          "end": 215,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 2118,
           "end": 2119,
@@ -283218,7 +284548,7 @@
       "original": "re.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "52e30fe9afe582a917f287f1eac13745a7f6c9e989bce56585da1265c1edc2f8",
-      "outputSha256": "844e534f87066b778ea435f63cabf728edc94ad2b6374accda1e911c88f6d078",
+      "outputSha256": "fb1928362caa116c8aebd373d7a8095ff34d61e5caa1f8622dae5dd3d9712a8a",
       "edits": [
         {
           "start": 71,
@@ -283681,6 +285011,13 @@
           "symbol": "F:gi.field_e:Lgi;",
           "original": "field_e",
           "renamed": "next"
+        },
+        {
+          "start": 2425,
+          "end": 2427,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2550,
@@ -285274,7 +286611,7 @@
       "original": "sd.java",
       "renamed": "sd.java",
       "inputSha256": "92856c6febc0393c42e1f536b4af6d814f16d2f8d512b2b838cfe2fd205b5037",
-      "outputSha256": "401cbf0218698c0082dc2de0610ab9de9b717b37c40be5bacfbfda70ef99b6b3",
+      "outputSha256": "7ac34ea3375b70c9af0708ef5bb935ff8d4de029f471612be6d624aac923d9c9",
       "edits": [
         {
           "start": 120,
@@ -285296,6 +286633,34 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2124,
+          "end": 2126,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 2207,
+          "end": 2209,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 2242,
+          "end": 2244,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 2413,
+          "end": 2415,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2689,
@@ -286791,7 +288156,7 @@
       "original": "tf.java",
       "renamed": "tf.java",
       "inputSha256": "1d16238d92c33c729166b07a6a671c79348457777ce8b5e947ed971cba972395",
-      "outputSha256": "0e95833ec96651c59f0f724f1f544361a052d8b3ed2b410dbc6d2353fba8add3",
+      "outputSha256": "aba877c50b4ca46e63a5d273ca53dbcdec10f4d599c73fca60ac09b3b9c337f1",
       "edits": [
         {
           "start": 1682,
@@ -286827,6 +288192,20 @@
           "symbol": "C:re",
           "original": "re",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3471,
+          "end": 3473,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 3523,
+          "end": 3525,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
         },
         {
           "start": 5288,
@@ -287304,8 +288683,15 @@
       "original": "th.java",
       "renamed": "th.java",
       "inputSha256": "7147046b75757cfdbc1276bb982356f48c42acd10258723dfd5ec1490eb465dd",
-      "outputSha256": "90998369a4b5be749047ad2024c6cc182e2e8e786ef1d03cd97aa281c6ad7312",
+      "outputSha256": "2d2b6f52f90698afd6f5e8286d984ef8fbe46cd31358d7e67894c7df36078f56",
       "edits": [
+        {
+          "start": 252,
+          "end": 254,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
         {
           "start": 407,
           "end": 409,
@@ -287495,7 +288881,7 @@
       "original": "tk.java",
       "renamed": "tk.java",
       "inputSha256": "458eb24b6b66851cb04f278b4c1dc086fc4188d022d7269e028289564a4c01ab",
-      "outputSha256": "8421854974d67cdc154dd8726c2241c6ba252c98adac7539e4ed335bc9b84991",
+      "outputSha256": "78d896bb3db9530c7cf8638e9576396a319852510e11bca3f1d880598e88d073",
       "edits": [
         {
           "start": 80,
@@ -287517,6 +288903,20 @@
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "VorbisFloor"
+        },
+        {
+          "start": 1156,
+          "end": 1158,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 2690,
+          "end": 2692,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 2787,
@@ -287678,6 +289078,20 @@
           "symbol": "M:tk.d(I)I",
           "original": "d",
           "renamed": "readBits"
+        },
+        {
+          "start": 22578,
+          "end": 22580,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 23548,
+          "end": 23550,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 24476,
@@ -288238,7 +289652,7 @@
       "original": "ug.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "ad67494625c88b9e97af127a76d1987c0abdd5b60fd796691f104f81940986f7",
-      "outputSha256": "2312627fe54f6ac6d6780614e79669080185196a0fe7edac0d95459e594c405b",
+      "outputSha256": "f96b6e8138ab062db260a99ad21be4789d6fe501e7261eef794eab1700d16d4d",
       "edits": [
         {
           "start": 71,
@@ -288799,6 +290213,13 @@
           "symbol": "M:vd.e(I)Lgi;",
           "original": "e",
           "renamed": "nextForward"
+        },
+        {
+          "start": 47479,
+          "end": 47481,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 47772,
@@ -291112,10 +292533,102 @@
     },
     {
       "original": "vk.java",
-      "renamed": "vk.java",
+      "renamed": "PcmSample.java",
       "inputSha256": "bfc4bb06fa546053d8c505ca1f01a685ad505eefdf55530c0db0c58cea0d1546",
-      "outputSha256": "bfc4bb06fa546053d8c505ca1f01a685ad505eefdf55530c0db0c58cea0d1546",
-      "edits": []
+      "outputSha256": "b1d6f6dd60a842cb4ea18a3416083c00b6c9574942669f23fc2c197e09fc43d6",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:me",
+          "original": "me",
+          "renamed": "AbstractAudioSample"
+        },
+        {
+          "start": 169,
+          "end": 171,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 172,
+          "end": 173,
+          "symbol": "M:vk.a(Lng;)Lvk;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 174,
+          "end": 176,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 217,
+          "end": 218,
+          "symbol": "M:ng.a([BB)[B",
+          "original": "a",
+          "renamed": "resampleBytes"
+        },
+        {
+          "start": 277,
+          "end": 278,
+          "symbol": "M:ng.a(BI)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
+          "start": 383,
+          "end": 384,
+          "symbol": "M:ng.a(IB)I",
+          "original": "a",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 444,
+          "end": 445,
+          "symbol": "M:ng.a(IB)I",
+          "original": "a",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 640,
+          "end": 641,
+          "symbol": "M:ng.a(IB)I",
+          "original": "a",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 769,
+          "end": 771,
+          "symbol": "M:vk.<init>(II)V",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 938,
+          "end": 940,
+          "symbol": "M:vk.<init>(I[BII)V",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 1129,
+          "end": 1131,
+          "symbol": "M:vk.<init>(I[BIIZ)V",
+          "original": "vk",
+          "renamed": "PcmSample"
+        }
+      ]
     },
     {
       "original": "vl.java",
@@ -291495,7 +293008,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "c404ea30530cdc84f30ac319ed5d9de023f1f76ead5c7c44e5cdd9479625acd2",
-      "outputSha256": "f190805c9f6bcf638cd9add448470c176c16963f69404e75f47582c38e71c401",
+      "outputSha256": "6101b0724a679e9a8207cefdd1393298adf3347c1cc121454d455bf521b86317",
       "edits": [
         {
           "start": 283,
@@ -291503,6 +293016,13 @@
           "symbol": "M:we.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 574,
+          "end": 576,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 742,
@@ -291785,8 +293305,29 @@
       "original": "wi.java",
       "renamed": "wi.java",
       "inputSha256": "ff21399c7294c5aef91718d487fb35cd580d14bb8583b25fbb6640b1b6fd1ce6",
-      "outputSha256": "a82361e4fcb98f9ee31287d75c46cdcefd9a9800cbfad9c710e295aeb54fadde",
+      "outputSha256": "09278af2a19dde79e07f2f1f448e25c4e435332f4627479760320bdeb4a6fa9e",
       "edits": [
+        {
+          "start": 715,
+          "end": 717,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 772,
+          "end": 774,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 843,
+          "end": 845,
+          "symbol": "C:ng",
+          "original": "ng",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 1103,
           "end": 1105,
@@ -291814,6 +293355,27 @@
           "symbol": "M:ie.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgl;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3694,
+          "end": 3696,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 3884,
+          "end": 3886,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
+        },
+        {
+          "start": 3898,
+          "end": 3900,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "PcmSample"
         },
         {
           "start": 4808,
@@ -292011,10 +293573,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/drphlogistonsavestheearth"
     },
-    "rulesSha256": "35e65f480c93db2931c1b151a16e2419cdce6d448245d521653b7757db274b9d",
+    "rulesSha256": "81803ab28b0bebd43553ca7c7d0faf0e051b315a92b1b8cf18c030385456d84a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "589b39701d1699b248c655935c4ffefa2dfb12984c3d5e9d58b09a0213f88c4b",
-    "outputTreeSha256": "1be0b85445cf0f9fe04ed6abf915a2aed7c95e12c731b11f8fbf374503de8a8b",
+    "outputTreeSha256": "48d62a88badb2fbb97b6880e97ae4a69ce052251aaf2baec6fdadf7a1cad234e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

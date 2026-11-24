@@ -1573,7 +1573,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2) {
-        this.field_f = (gs) ((Object) param0);
+        this.field_f = (AbstractAudioSample) ((Object) param0);
         this.field_s = param0.loopStart;
         this.field_t = param0.loopEnd;
         this.field_m = param0.pingPongLoop;
@@ -1585,7 +1585,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
-        this.field_f = (gs) ((Object) param0);
+        this.field_f = (AbstractAudioSample) ((Object) param0);
         this.field_s = param0.loopStart;
         this.field_t = param0.loopEnd;
         this.field_m = param0.pingPongLoop;

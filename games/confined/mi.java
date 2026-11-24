@@ -12,7 +12,7 @@ final class mi {
     static nf field_a;
     private Object[] field_d;
     static int[] field_c;
-    static bi[] field_b;
+    static PcmSample[] field_b;
 
     private final synchronized boolean b(int param0, byte param1) {
         if (param1 != 23) {
@@ -422,7 +422,7 @@ final class mi {
         field_b = null;
         field_c = null;
         if (param0 > -61) {
-          field_b = (bi[]) null;
+          field_b = (PcmSample[]) null;
         }
     }
 
@@ -874,6 +874,6 @@ final class mi {
         field_g = 0;
         field_a = new nf(540, 140);
         field_c = new int[8192];
-        field_b = new bi[4];
+        field_b = new PcmSample[4];
     }
 }

@@ -8,7 +8,7 @@ final class uh extends IntrusiveNode {
     static dd[] field_m;
     int field_j;
     int field_l;
-    static sf field_s;
+    static PcmSample field_s;
     static String field_o;
     static dd field_k;
     int field_i;

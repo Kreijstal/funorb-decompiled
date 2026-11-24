@@ -32,11 +32,11 @@ final class vd {
         }
     }
 
-    final dl a(int param0, byte param1, int[] param2) {
+    final PcmSample a(int param0, byte param1, int[] param2) {
         RuntimeException var4 = null;
-        dl stackIn_3_0 = null;
-        dl stackIn_6_0 = null;
-        dl stackIn_9_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -47,7 +47,7 @@ final class vd {
             return stackIn_3_0;
           }
           if (param1 != 92) {
-            stackIn_6_0 = (dl) null;
+            stackIn_6_0 = (PcmSample) null;
             return stackIn_6_0;
           }
           if (this.field_c.a((byte) 104, param0) != 1) {
@@ -69,10 +69,10 @@ final class vd {
         }
     }
 
-    final dl a(int param0, int[] param1, int param2) {
+    final PcmSample a(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        dl stackIn_2_0 = null;
-        dl stackIn_8_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -104,27 +104,27 @@ final class vd {
         }
     }
 
-    private final dl a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        dl var8 = null;
+        PcmSample var8 = null;
         cm var9 = null;
         int var10 = 0;
-        dl var11 = null;
-        dl stackIn_3_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_10_0 = null;
-        dl stackIn_15_0 = null;
+        PcmSample stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dl var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param1 ^ ((-536866817 & param3) << 4 | param3 >>> 12);
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (dl) (this.field_g.a(var6, -1));
+          var8 = (PcmSample) (this.field_g.a(var6, -1));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -137,7 +137,7 @@ final class vd {
           var10 = -10 / ((param2 + 57) / 57);
           if (var9 == null) {
             stackIn_10_0 = null;
-            return (dl) (stackIn_10_0);
+            return (PcmSample) (stackIn_10_0);
           }
           var11 = var9.a();
           var8Lifetime1 = var11;
@@ -161,25 +161,25 @@ final class vd {
         }
     }
 
-    private final dl a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        dl var8 = null;
+        PcmSample var8 = null;
         nj var9 = null;
-        dl stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_11_0 = null;
-        dl stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dl var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param0 & param3 << 4 | param3 >>> 12) ^ param2;
           var5_int = var5_int | param3 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (dl) (this.field_g.a(var6, -1));
+          var8 = (PcmSample) (this.field_g.a(var6, -1));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -193,7 +193,7 @@ final class vd {
             var9 = nj.a(this.field_b, param3, param2);
             if (var9 == null) {
               stackIn_11_0 = null;
-              return (dl) (stackIn_11_0);
+              return (PcmSample) (stackIn_11_0);
             }
             this.field_d.a(var6, (byte) -93, var9);
           }

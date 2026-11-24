@@ -572,6 +572,14 @@
       "renamedSymbol": "C:GameEntity"
     },
     {
+      "symbol": "C:qh",
+      "originalName": "qh",
+      "to": "PcmResampler",
+      "evidence": "Fourteen-tap polyphase signed-byte PCM resampler with original input/output rate integers and optional fixed-point coefficient table. Preserve equal-rate constructor early return,original normalization helper and division/store/allocation order,phase bounds,sinc threshold and exact window coefficients,Math sin/cos/floor evaluation and int casts. Original constructor SHA256 5c8b896b66db9a19b730b40f4059745ea3fcb37472aabafe146c9f7cfd8b98c7. Keep the original remainder expressions in byte resampling and rate scaling,the exact bad-position-guard rate-helper call,and full signed/overflow/division behavior. Sample wrapper uses original85/15/minus10689 guards and exact endpoint write/return-this ordering. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmResampler"
+    },
+    {
       "symbol": "C:rc",
       "originalName": "rc",
       "to": "NanoFrameTimer",
@@ -2921,7 +2929,31 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 242555c09cc00dd28a84eceef101443cbed26e1a35d5c49931c928e8668a7d3e.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qh.clearStaticReferences(I)V"
+      "renamedSymbol": "M:PcmResampler.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:qh.a(II)I",
+      "originalName": "a",
+      "to": "scaleRate",
+      "evidence": "With a retained coefficient table,scale the original full-width rate/count through long multiplication and division followed by int cast;otherwise retain the supplied value. Keep original guard-specific returns,extra helper calls and arithmetic/exception order. Keep the original remainder expressions in byte resampling and rate scaling,the exact bad-position-guard rate-helper call,and full signed/overflow/division behavior. Sample wrapper uses original85/15/minus10689 guards and exact endpoint write/return-this ordering. Complete original-body SHA256 eb657b8bada47fbba7953d3742387f5ac9f93c2dff950991c11be186b920a587. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.scaleRate(II)I"
+    },
+    {
+      "symbol": "M:qh.a(I[B)[B",
+      "originalName": "a",
+      "to": "resampleBytes",
+      "evidence": "Run the original14-tap coefficient convolution and rate-phase stepping into an int accumulation buffer,then round with32768 and shift16 and clamp to signed-byte range. Preserve input-array identity when the coefficient table is absent,output length long multiplication/cast plus14,int overflow,allocation/exception order,all captured global reads and diagnostic wrapping. Keep game-specific guard effects:Bounce false returns null after work,Dr bad byte invokes account helper,Flea computes the original remainder division,Hostile bad int clears the retained static reference,and Miner false stores output rate minus34 before processing. Keep the original remainder expressions in byte resampling and rate scaling,the exact bad-position-guard rate-helper call,and full signed/overflow/division behavior. Sample wrapper uses original85/15/minus10689 guards and exact endpoint write/return-this ordering. Complete original-body SHA256 e2a19bc3bf49e375e93cccab07687e22f0323a0f7a793c66766c0eea01c0ec8a. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.resampleBytes(I[B)[B"
+    },
+    {
+      "symbol": "M:qh.b(II)I",
+      "originalName": "b",
+      "to": "scalePosition",
+      "evidence": "With a retained coefficient table,scale the original sample position through long multiplication/division,int cast and plus6;otherwise retain it. Preserve each exact guard:return sentinels before work where present,clear the retained static reference or call the original helper in the original order. Keep the original remainder expressions in byte resampling and rate scaling,the exact bad-position-guard rate-helper call,and full signed/overflow/division behavior. Sample wrapper uses original85/15/minus10689 guards and exact endpoint write/return-this ordering. Complete original-body SHA256 6f97e73202396b101a683bba6853409a7783757530e08673e3cd35a68b1d761b. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmResampler.scalePosition(II)I"
     },
     {
       "symbol": "M:qj.a(B)V",
@@ -3146,6 +3178,14 @@
       "evidence": "Complete declaration/body reviewed: Clears c/a then int!=-8749 writes static char b=14; retain byte/char literal and condition. Name states static cleanup role while retaining all guards, helper calls, exception context and non-reference writes; identifiers only.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountRequestState.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:ud.a(Lqh;)Lud;",
+      "originalName": "a",
+      "to": "resample",
+      "evidence": "Resample this sample in place through the original resampler:store the returned byte array,then scaled sample rate,and transform original loop endpoints. Equal endpoints use one retained helper result;unequal endpoints are transformed separately and decrement the start if they collapse. Preserve exact helper guards,call/write ordering,full domains,partial mutations and return-this identity. Keep the original remainder expressions in byte resampling and rate scaling,the exact bad-position-guard rate-helper call,and full signed/overflow/division behavior. Sample wrapper uses original85/15/minus10689 guards and exact endpoint write/return-this ordering. Complete original-body SHA256 086ed4c498ab01a1e9bee7c021e9ab1ac216088396cb3b80a27933645a6e0aee. Naming only. Complete original selected and supporting bodies,constructors and field declarations source-reviewed against compiler-bound immutable originals;preserve all fields,literals,argument widths/domains,guards,int/long overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,modifiers and native/override bindings. Existing meaningful aliases remain unchanged. No intentional native/class-name-literal edits or whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSample.resample(LPcmResampler;)LPcmSample;"
     },
     {
       "symbol": "M:ue.b(B)V",
@@ -6029,9 +6069,9 @@
     },
     {
       "symbol": "C:qh",
-      "renamedSymbol": "C:qh",
+      "renamedSymbol": "C:PcmResampler",
       "originalName": "qh",
-      "renamedName": "qh",
+      "renamedName": "PcmResampler",
       "declaration": {
         "file": "qh.java",
         "start": 69,
@@ -24553,7 +24593,7 @@
     },
     {
       "symbol": "F:qh.field_a:[Lpb;",
-      "renamedSymbol": "F:qh.field_a:[LSprite;",
+      "renamedSymbol": "F:PcmResampler.field_a:[LSprite;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -24564,7 +24604,7 @@
     },
     {
       "symbol": "F:qh.field_b:I",
-      "renamedSymbol": "F:qh.field_b:I",
+      "renamedSymbol": "F:PcmResampler.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -24575,7 +24615,7 @@
     },
     {
       "symbol": "F:qh.field_c:I",
-      "renamedSymbol": "F:qh.field_c:I",
+      "renamedSymbol": "F:PcmResampler.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -24586,7 +24626,7 @@
     },
     {
       "symbol": "F:qh.field_d:Z",
-      "renamedSymbol": "F:qh.field_d:Z",
+      "renamedSymbol": "F:PcmResampler.field_d:Z",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -24597,7 +24637,7 @@
     },
     {
       "symbol": "F:qh.field_e:Lwk;",
-      "renamedSymbol": "F:qh.field_e:Lwk;",
+      "renamedSymbol": "F:PcmResampler.field_e:Lwk;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -24608,7 +24648,7 @@
     },
     {
       "symbol": "F:qh.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:qh.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -24619,7 +24659,7 @@
     },
     {
       "symbol": "F:qh.field_g:Z",
-      "renamedSymbol": "F:qh.field_g:Z",
+      "renamedSymbol": "F:PcmResampler.field_g:Z",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -24630,7 +24670,7 @@
     },
     {
       "symbol": "F:qh.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:qh.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmResampler.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -24641,7 +24681,7 @@
     },
     {
       "symbol": "F:qh.field_i:[[I",
-      "renamedSymbol": "F:qh.field_i:[[I",
+      "renamedSymbol": "F:PcmResampler.field_i:[[I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -121210,7 +121250,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#0",
-      "renamedSymbol": "L:qh.<init>(II)V#0",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -121221,7 +121261,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#1",
-      "renamedSymbol": "L:qh.<init>(II)V#1",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -121232,7 +121272,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#2",
-      "renamedSymbol": "L:qh.<init>(II)V#2",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -121243,7 +121283,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#3",
-      "renamedSymbol": "L:qh.<init>(II)V#3",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -121254,7 +121294,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#4",
-      "renamedSymbol": "L:qh.<init>(II)V#4",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -121265,7 +121305,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#5",
-      "renamedSymbol": "L:qh.<init>(II)V#5",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -121276,7 +121316,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#6",
-      "renamedSymbol": "L:qh.<init>(II)V#6",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -121287,7 +121327,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#7",
-      "renamedSymbol": "L:qh.<init>(II)V#7",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -121298,7 +121338,7 @@
     },
     {
       "symbol": "L:qh.<init>(II)V#8",
-      "renamedSymbol": "L:qh.<init>(II)V#8",
+      "renamedSymbol": "L:PcmResampler.<init>(II)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -121309,7 +121349,7 @@
     },
     {
       "symbol": "L:qh.a(II)I#0",
-      "renamedSymbol": "L:qh.a(II)I#0",
+      "renamedSymbol": "L:PcmResampler.scaleRate(II)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -121320,7 +121360,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#0",
-      "renamedSymbol": "L:qh.a(ILha;)V#0",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -121331,7 +121371,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#1",
-      "renamedSymbol": "L:qh.a(ILha;)V#1",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#1",
       "originalName": "var10_int",
       "renamedName": "var10_int",
       "declaration": {
@@ -121342,7 +121382,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#10",
-      "renamedSymbol": "L:qh.a(ILha;)V#10",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -121353,7 +121393,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#11",
-      "renamedSymbol": "L:qh.a(ILha;)V#11",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#11",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -121364,7 +121404,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#12",
-      "renamedSymbol": "L:qh.a(ILha;)V#12",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#12",
       "originalName": "var6_ref2",
       "renamedName": "var6_ref2",
       "declaration": {
@@ -121375,7 +121415,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#13",
-      "renamedSymbol": "L:qh.a(ILha;)V#13",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#13",
       "originalName": "var6_ref3",
       "renamedName": "var6_ref3",
       "declaration": {
@@ -121386,7 +121426,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#14",
-      "renamedSymbol": "L:qh.a(ILha;)V#14",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#14",
       "originalName": "var6_ref4",
       "renamedName": "var6_ref4",
       "declaration": {
@@ -121397,7 +121437,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#15",
-      "renamedSymbol": "L:qh.a(ILha;)V#15",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#15",
       "originalName": "var6_ref5",
       "renamedName": "var6_ref5",
       "declaration": {
@@ -121408,7 +121448,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#16",
-      "renamedSymbol": "L:qh.a(ILha;)V#16",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#16",
       "originalName": "var6_ref6",
       "renamedName": "var6_ref6",
       "declaration": {
@@ -121419,7 +121459,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#17",
-      "renamedSymbol": "L:qh.a(ILha;)V#17",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#17",
       "originalName": "var6_ref7",
       "renamedName": "var6_ref7",
       "declaration": {
@@ -121430,7 +121470,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#18",
-      "renamedSymbol": "L:qh.a(ILha;)V#18",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#18",
       "originalName": "var6_ref8",
       "renamedName": "var6_ref8",
       "declaration": {
@@ -121441,7 +121481,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#19",
-      "renamedSymbol": "L:qh.a(ILha;)V#19",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#19",
       "originalName": "var6_ref9",
       "renamedName": "var6_ref9",
       "declaration": {
@@ -121452,7 +121492,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#2",
-      "renamedSymbol": "L:qh.a(ILha;)V#2",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#2",
       "originalName": "stackIn_71_0",
       "renamedName": "stackIn_71_0",
       "declaration": {
@@ -121463,7 +121503,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#20",
-      "renamedSymbol": "L:qh.a(ILha;)V#20",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#20",
       "originalName": "var6_ref10",
       "renamedName": "var6_ref10",
       "declaration": {
@@ -121474,7 +121514,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#21",
-      "renamedSymbol": "L:qh.a(ILha;)V#21",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#21",
       "originalName": "var6_ref11",
       "renamedName": "var6_ref11",
       "declaration": {
@@ -121485,7 +121525,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#22",
-      "renamedSymbol": "L:qh.a(ILha;)V#22",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#22",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -121496,7 +121536,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#23",
-      "renamedSymbol": "L:qh.a(ILha;)V#23",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#23",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -121507,7 +121547,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#24",
-      "renamedSymbol": "L:qh.a(ILha;)V#24",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#24",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -121518,7 +121558,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#25",
-      "renamedSymbol": "L:qh.a(ILha;)V#25",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#25",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -121529,7 +121569,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#26",
-      "renamedSymbol": "L:qh.a(ILha;)V#26",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#26",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -121540,7 +121580,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#27",
-      "renamedSymbol": "L:qh.a(ILha;)V#27",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#27",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -121551,7 +121591,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#28",
-      "renamedSymbol": "L:qh.a(ILha;)V#28",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#28",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -121562,7 +121602,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#29",
-      "renamedSymbol": "L:qh.a(ILha;)V#29",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#29",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -121573,7 +121613,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#3",
-      "renamedSymbol": "L:qh.a(ILha;)V#3",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#3",
       "originalName": "stackIn_71_1",
       "renamedName": "stackIn_71_1",
       "declaration": {
@@ -121584,7 +121624,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#30",
-      "renamedSymbol": "L:qh.a(ILha;)V#30",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#30",
       "originalName": "var16_ref",
       "renamedName": "var16_ref",
       "declaration": {
@@ -121595,7 +121635,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#31",
-      "renamedSymbol": "L:qh.a(ILha;)V#31",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#31",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -121606,7 +121646,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#32",
-      "renamedSymbol": "L:qh.a(ILha;)V#32",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#32",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -121617,7 +121657,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#33",
-      "renamedSymbol": "L:qh.a(ILha;)V#33",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#33",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -121628,7 +121668,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#34",
-      "renamedSymbol": "L:qh.a(ILha;)V#34",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#34",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -121639,7 +121679,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#35",
-      "renamedSymbol": "L:qh.a(ILha;)V#35",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#35",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -121650,7 +121690,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#36",
-      "renamedSymbol": "L:qh.a(ILha;)V#36",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#36",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -121661,7 +121701,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#37",
-      "renamedSymbol": "L:qh.a(ILha;)V#37",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#37",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -121672,7 +121712,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#38",
-      "renamedSymbol": "L:qh.a(ILha;)V#38",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#38",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -121683,7 +121723,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#39",
-      "renamedSymbol": "L:qh.a(ILha;)V#39",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#39",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -121694,7 +121734,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#4",
-      "renamedSymbol": "L:qh.a(ILha;)V#4",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#4",
       "originalName": "stackIn_72_2",
       "renamedName": "stackIn_72_2",
       "declaration": {
@@ -121705,7 +121745,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#40",
-      "renamedSymbol": "L:qh.a(ILha;)V#40",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#40",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -121716,7 +121756,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#41",
-      "renamedSymbol": "L:qh.a(ILha;)V#41",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#41",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -121727,7 +121767,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#42",
-      "renamedSymbol": "L:qh.a(ILha;)V#42",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#42",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -121738,7 +121778,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#43",
-      "renamedSymbol": "L:qh.a(ILha;)V#43",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#43",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -121749,7 +121789,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#44",
-      "renamedSymbol": "L:qh.a(ILha;)V#44",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#44",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -121760,7 +121800,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#45",
-      "renamedSymbol": "L:qh.a(ILha;)V#45",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#45",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -121771,7 +121811,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#46",
-      "renamedSymbol": "L:qh.a(ILha;)V#46",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#46",
       "originalName": "decompiledCaughtParameter5",
       "renamedName": "decompiledCaughtParameter5",
       "declaration": {
@@ -121782,7 +121822,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#47",
-      "renamedSymbol": "L:qh.a(ILha;)V#47",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#47",
       "originalName": "decompiledCaughtParameter6",
       "renamedName": "decompiledCaughtParameter6",
       "declaration": {
@@ -121793,7 +121833,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#48",
-      "renamedSymbol": "L:qh.a(ILha;)V#48",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#48",
       "originalName": "decompiledCaughtParameter7",
       "renamedName": "decompiledCaughtParameter7",
       "declaration": {
@@ -121804,7 +121844,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#49",
-      "renamedSymbol": "L:qh.a(ILha;)V#49",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#49",
       "originalName": "decompiledCaughtParameter8",
       "renamedName": "decompiledCaughtParameter8",
       "declaration": {
@@ -121815,7 +121855,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#5",
-      "renamedSymbol": "L:qh.a(ILha;)V#5",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -121826,7 +121866,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#50",
-      "renamedSymbol": "L:qh.a(ILha;)V#50",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#50",
       "originalName": "decompiledCaughtParameter9",
       "renamedName": "decompiledCaughtParameter9",
       "declaration": {
@@ -121837,7 +121877,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#51",
-      "renamedSymbol": "L:qh.a(ILha;)V#51",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#51",
       "originalName": "decompiledCaughtParameter10",
       "renamedName": "decompiledCaughtParameter10",
       "declaration": {
@@ -121848,7 +121888,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#52",
-      "renamedSymbol": "L:qh.a(ILha;)V#52",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#52",
       "originalName": "decompiledCaughtParameter11",
       "renamedName": "decompiledCaughtParameter11",
       "declaration": {
@@ -121859,7 +121899,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#53",
-      "renamedSymbol": "L:qh.a(ILha;)V#53",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#53",
       "originalName": "decompiledCaughtParameter12",
       "renamedName": "decompiledCaughtParameter12",
       "declaration": {
@@ -121870,7 +121910,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#54",
-      "renamedSymbol": "L:qh.a(ILha;)V#54",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#54",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -121881,7 +121921,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#55",
-      "renamedSymbol": "L:qh.a(ILha;)V#55",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#55",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -121892,7 +121932,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#6",
-      "renamedSymbol": "L:qh.a(ILha;)V#6",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -121903,7 +121943,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#7",
-      "renamedSymbol": "L:qh.a(ILha;)V#7",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -121914,7 +121954,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#8",
-      "renamedSymbol": "L:qh.a(ILha;)V#8",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -121925,7 +121965,7 @@
     },
     {
       "symbol": "L:qh.a(ILha;)V#9",
-      "renamedSymbol": "L:qh.a(ILha;)V#9",
+      "renamedSymbol": "L:PcmResampler.a(ILha;)V#9",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -121936,7 +121976,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#0",
-      "renamedSymbol": "L:qh.a(I[B)[B#0",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#0",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -121947,7 +121987,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#1",
-      "renamedSymbol": "L:qh.a(I[B)[B#1",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#1",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -121958,7 +121998,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#10",
-      "renamedSymbol": "L:qh.a(I[B)[B#10",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -121969,7 +122009,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#11",
-      "renamedSymbol": "L:qh.a(I[B)[B#11",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -121980,7 +122020,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#12",
-      "renamedSymbol": "L:qh.a(I[B)[B#12",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -121991,7 +122031,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#13",
-      "renamedSymbol": "L:qh.a(I[B)[B#13",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -122002,7 +122042,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#14",
-      "renamedSymbol": "L:qh.a(I[B)[B#14",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -122013,7 +122053,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#15",
-      "renamedSymbol": "L:qh.a(I[B)[B#15",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#15",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -122024,7 +122064,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#16",
-      "renamedSymbol": "L:qh.a(I[B)[B#16",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -122035,7 +122075,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#17",
-      "renamedSymbol": "L:qh.a(I[B)[B#17",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#17",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -122046,7 +122086,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#18",
-      "renamedSymbol": "L:qh.a(I[B)[B#18",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#18",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -122057,7 +122097,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#19",
-      "renamedSymbol": "L:qh.a(I[B)[B#19",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#19",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -122068,7 +122108,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#2",
-      "renamedSymbol": "L:qh.a(I[B)[B#2",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#2",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -122079,7 +122119,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#20",
-      "renamedSymbol": "L:qh.a(I[B)[B#20",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#20",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -122090,7 +122130,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#21",
-      "renamedSymbol": "L:qh.a(I[B)[B#21",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#21",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -122101,7 +122141,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#22",
-      "renamedSymbol": "L:qh.a(I[B)[B#22",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#22",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -122112,7 +122152,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#3",
-      "renamedSymbol": "L:qh.a(I[B)[B#3",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#3",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -122123,7 +122163,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#4",
-      "renamedSymbol": "L:qh.a(I[B)[B#4",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -122134,7 +122174,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#5",
-      "renamedSymbol": "L:qh.a(I[B)[B#5",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -122145,7 +122185,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#6",
-      "renamedSymbol": "L:qh.a(I[B)[B#6",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -122156,7 +122196,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#7",
-      "renamedSymbol": "L:qh.a(I[B)[B#7",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -122167,7 +122207,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#8",
-      "renamedSymbol": "L:qh.a(I[B)[B#8",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -122178,7 +122218,7 @@
     },
     {
       "symbol": "L:qh.a(I[B)[B#9",
-      "renamedSymbol": "L:qh.a(I[B)[B#9",
+      "renamedSymbol": "L:PcmResampler.resampleBytes(I[B)[B#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -122189,7 +122229,7 @@
     },
     {
       "symbol": "L:qh.c(I)Z#0",
-      "renamedSymbol": "L:qh.c(I)Z#0",
+      "renamedSymbol": "L:PcmResampler.c(I)Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -122200,7 +122240,7 @@
     },
     {
       "symbol": "L:qh.c(I)Z#1",
-      "renamedSymbol": "L:qh.c(I)Z#1",
+      "renamedSymbol": "L:PcmResampler.c(I)Z#1",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -122211,7 +122251,7 @@
     },
     {
       "symbol": "L:qh.c(I)Z#2",
-      "renamedSymbol": "L:qh.c(I)Z#2",
+      "renamedSymbol": "L:PcmResampler.c(I)Z#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -122222,7 +122262,7 @@
     },
     {
       "symbol": "L:qh.c(I)Z#3",
-      "renamedSymbol": "L:qh.c(I)Z#3",
+      "renamedSymbol": "L:PcmResampler.c(I)Z#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -122233,7 +122273,7 @@
     },
     {
       "symbol": "L:qh.c(I)Z#4",
-      "renamedSymbol": "L:qh.c(I)Z#4",
+      "renamedSymbol": "L:PcmResampler.c(I)Z#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144893,7 +144933,7 @@
     },
     {
       "symbol": "L:ud.a(Lqh;)Lud;#0",
-      "renamedSymbol": "L:PcmSample.a(Lqh;)LPcmSample;#0",
+      "renamedSymbol": "L:PcmSample.resample(LPcmResampler;)LPcmSample;#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -172338,9 +172378,9 @@
     },
     {
       "symbol": "M:qh.<init>(II)V",
-      "renamedSymbol": "M:qh.<init>(II)V",
+      "renamedSymbol": "M:PcmResampler.<init>(II)V",
       "originalName": "qh",
-      "renamedName": "qh",
+      "renamedName": "PcmResampler",
       "declaration": {
         "file": "qh.java",
         "start": 14899,
@@ -172349,7 +172389,7 @@
     },
     {
       "symbol": "M:qh.a(I)V",
-      "renamedSymbol": "M:qh.clearStaticReferences(I)V",
+      "renamedSymbol": "M:PcmResampler.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -172360,9 +172400,9 @@
     },
     {
       "symbol": "M:qh.a(II)I",
-      "renamedSymbol": "M:qh.a(II)I",
+      "renamedSymbol": "M:PcmResampler.scaleRate(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "scaleRate",
       "declaration": {
         "file": "qh.java",
         "start": 326,
@@ -172371,7 +172411,7 @@
     },
     {
       "symbol": "M:qh.a(ILha;)V",
-      "renamedSymbol": "M:qh.a(ILha;)V",
+      "renamedSymbol": "M:PcmResampler.a(ILha;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -172382,9 +172422,9 @@
     },
     {
       "symbol": "M:qh.a(I[B)[B",
-      "renamedSymbol": "M:qh.a(I[B)[B",
+      "renamedSymbol": "M:PcmResampler.resampleBytes(I[B)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resampleBytes",
       "declaration": {
         "file": "qh.java",
         "start": 1375,
@@ -172393,7 +172433,7 @@
     },
     {
       "symbol": "M:qh.a(Z)V",
-      "renamedSymbol": "M:qh.a(Z)V",
+      "renamedSymbol": "M:PcmResampler.a(Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -172404,7 +172444,7 @@
     },
     {
       "symbol": "M:qh.b(I)V",
-      "renamedSymbol": "M:qh.b(I)V",
+      "renamedSymbol": "M:PcmResampler.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -172415,9 +172455,9 @@
     },
     {
       "symbol": "M:qh.b(II)I",
-      "renamedSymbol": "M:qh.b(II)I",
+      "renamedSymbol": "M:PcmResampler.scalePosition(II)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "scalePosition",
       "declaration": {
         "file": "qh.java",
         "start": 4159,
@@ -172426,7 +172466,7 @@
     },
     {
       "symbol": "M:qh.c(I)Z",
-      "renamedSymbol": "M:qh.c(I)Z",
+      "renamedSymbol": "M:PcmResampler.c(I)Z",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -176122,9 +176162,9 @@
     },
     {
       "symbol": "M:ud.a(Lqh;)Lud;",
-      "renamedSymbol": "M:PcmSample.a(Lqh;)LPcmSample;",
+      "renamedSymbol": "M:PcmSample.resample(LPcmResampler;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resample",
       "declaration": {
         "file": "ud.java",
         "start": 172,
@@ -220188,7 +220228,7 @@
     },
     {
       "symbol": "P:qh.<init>(II)V#0",
-      "renamedSymbol": "P:qh.<init>(II)V#0",
+      "renamedSymbol": "P:PcmResampler.<init>(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220199,7 +220239,7 @@
     },
     {
       "symbol": "P:qh.<init>(II)V#1",
-      "renamedSymbol": "P:qh.<init>(II)V#1",
+      "renamedSymbol": "P:PcmResampler.<init>(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -220210,7 +220250,7 @@
     },
     {
       "symbol": "P:qh.a(I)V#0",
-      "renamedSymbol": "P:qh.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:PcmResampler.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220221,7 +220261,7 @@
     },
     {
       "symbol": "P:qh.a(II)I#0",
-      "renamedSymbol": "P:qh.a(II)I#0",
+      "renamedSymbol": "P:PcmResampler.scaleRate(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220232,7 +220272,7 @@
     },
     {
       "symbol": "P:qh.a(II)I#1",
-      "renamedSymbol": "P:qh.a(II)I#1",
+      "renamedSymbol": "P:PcmResampler.scaleRate(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -220243,7 +220283,7 @@
     },
     {
       "symbol": "P:qh.a(ILha;)V#0",
-      "renamedSymbol": "P:qh.a(ILha;)V#0",
+      "renamedSymbol": "P:PcmResampler.a(ILha;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220254,7 +220294,7 @@
     },
     {
       "symbol": "P:qh.a(ILha;)V#1",
-      "renamedSymbol": "P:qh.a(ILha;)V#1",
+      "renamedSymbol": "P:PcmResampler.a(ILha;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -220265,7 +220305,7 @@
     },
     {
       "symbol": "P:qh.a(I[B)[B#0",
-      "renamedSymbol": "P:qh.a(I[B)[B#0",
+      "renamedSymbol": "P:PcmResampler.resampleBytes(I[B)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220276,7 +220316,7 @@
     },
     {
       "symbol": "P:qh.a(I[B)[B#1",
-      "renamedSymbol": "P:qh.a(I[B)[B#1",
+      "renamedSymbol": "P:PcmResampler.resampleBytes(I[B)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -220287,7 +220327,7 @@
     },
     {
       "symbol": "P:qh.a(Z)V#0",
-      "renamedSymbol": "P:qh.a(Z)V#0",
+      "renamedSymbol": "P:PcmResampler.a(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220298,7 +220338,7 @@
     },
     {
       "symbol": "P:qh.b(I)V#0",
-      "renamedSymbol": "P:qh.b(I)V#0",
+      "renamedSymbol": "P:PcmResampler.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220309,7 +220349,7 @@
     },
     {
       "symbol": "P:qh.b(II)I#0",
-      "renamedSymbol": "P:qh.b(II)I#0",
+      "renamedSymbol": "P:PcmResampler.scalePosition(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220320,7 +220360,7 @@
     },
     {
       "symbol": "P:qh.b(II)I#1",
-      "renamedSymbol": "P:qh.b(II)I#1",
+      "renamedSymbol": "P:PcmResampler.scalePosition(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -220331,7 +220371,7 @@
     },
     {
       "symbol": "P:qh.c(I)Z#0",
-      "renamedSymbol": "P:qh.c(I)Z#0",
+      "renamedSymbol": "P:PcmResampler.c(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -230044,7 +230084,7 @@
     },
     {
       "symbol": "P:ud.a(Lqh;)Lud;#0",
-      "renamedSymbol": "P:PcmSample.a(Lqh;)LPcmSample;#0",
+      "renamedSymbol": "P:PcmSample.resample(LPcmResampler;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -239465,7 +239505,7 @@
       "original": "db.java",
       "renamed": "db.java",
       "inputSha256": "b78e644c97540ea3e84079f3ab2d308810377b622b7feab194d6400d65a01c81",
-      "outputSha256": "21d5449f324658493bc24650ac7782b92e9919ac3b13e7179ccecb956d6a8a0b",
+      "outputSha256": "9280667ddf7316bd4b6c4b5f942cc72b955e2eaf710a0d43fcaab39df789905a",
       "edits": [
         {
           "start": 84,
@@ -239508,6 +239548,13 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 5398,
+          "end": 5400,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 7934,
@@ -243018,7 +243065,7 @@
       "original": "fd.java",
       "renamed": "fd.java",
       "inputSha256": "ecab36501190fb79f0812ba749e1e4c9476acf28a14d4a3a816b9b9a868d45cd",
-      "outputSha256": "a7c4f9070c944a1450424e07b098ef32dc7c22469526422075f49dd56de65f72",
+      "outputSha256": "601d6c345b10e7dbcafe910e795ffbbe7ccdd4d185762b009c82afc177b0ca86",
       "edits": [
         {
           "start": 229,
@@ -243026,6 +243073,20 @@
           "symbol": "M:fd.a(BII)I",
           "original": "a",
           "renamed": "integerPower"
+        },
+        {
+          "start": 1635,
+          "end": 1637,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 1672,
+          "end": 1674,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         }
       ]
     },
@@ -243223,7 +243284,7 @@
       "original": "ff.java",
       "renamed": "ff.java",
       "inputSha256": "85b5eb417ee3ef02198d1757fbc32d9cb5b52d6b016e20c44cb591e660a13322",
-      "outputSha256": "34d1cbb09ce5d6ec8d1621c380b6c03216f883b8f1ddd80ee4ae54f95e427361",
+      "outputSha256": "a2dfbd3de76c294b7e1f165336442e52e67da6770844ee0543dd1d7abe5bb321",
       "edits": [
         {
           "start": 370,
@@ -243345,6 +243406,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 2069,
+          "end": 2071,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 2106,
           "end": 2108,
           "symbol": "C:ug",
@@ -243428,7 +243496,7 @@
       "original": "fh.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "0004f3a270b2ea05491703dc56a4d9a5f8085a4a58983c004c3fdf2108838b40",
-      "outputSha256": "9eccfbed00fe77df75afd822445dadfbf8663a3747045d6efb7fa1475fd36ef7",
+      "outputSha256": "789e2e4f184c04b94e3ffa6c647b48579318536594d178db895163f506e139a7",
       "edits": [
         {
           "start": 69,
@@ -243485,6 +243553,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 854,
+          "end": 856,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 867,
@@ -244090,7 +244165,7 @@
       "original": "g.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "77faddad9c8f71d771635c62840885c778c05dd260251099067a3593342d98ed",
-      "outputSha256": "2135cf127623e082adbf10d94241517ed0ca017acae03e677a1325b480ae8613",
+      "outputSha256": "0e93cfd4a8224e85a876a9db4271bfcd0f74931197b58ddef9864182d419ca3d",
       "edits": [
         {
           "start": 65,
@@ -244797,6 +244872,13 @@
           "symbol": "C:s",
           "original": "s",
           "renamed": "DualLinkDequeIterator"
+        },
+        {
+          "start": 86544,
+          "end": 86546,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 91787,
@@ -250431,7 +250513,7 @@
       "original": "ie.java",
       "renamed": "SpriteState.java",
       "inputSha256": "3235ad512282b2247e454a95cc0f2db874038843683057af9b19fd69959e8af6",
-      "outputSha256": "070a7c0b3bba123097c026acb7bddb433cdee14b13c94c3f43ecda886872eaa7",
+      "outputSha256": "b3198e55ea305f63f930b76f0b3bb88f3be74599838ac3d60ae1352c9401f994",
       "edits": [
         {
           "start": 53,
@@ -250460,6 +250542,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 1082,
+          "end": 1084,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 1132,
@@ -250939,7 +251028,7 @@
       "original": "ij.java",
       "renamed": "LevelScreen.java",
       "inputSha256": "d1b1ec6548947fcdcee86c1e323ba5109f52cde0225167635ffe1527215e1858",
-      "outputSha256": "9b2c298c5f6ad41f7cb7c0fb107a1e38da8e01b56500e3a9ece88caa6bba7739",
+      "outputSha256": "738c7720380a71ad8fac4f00ce526b0f6fd5967a7213a7858cf1538fbb5744fa",
       "edits": [
         {
           "start": 50,
@@ -251983,6 +252072,13 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 55575,
+          "end": 55577,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 56758,
@@ -256900,7 +256996,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "d78bd59cfc777075e7ec4d776b384fe43b39eddbc23bc9f2d697fb9408ed4030",
-      "outputSha256": "4644b2371c8aafb2711e3af2e4d1564f38e8e6730c046cc68eab0b8f1816475b",
+      "outputSha256": "da21d31ad6d2ba2aed0742105b9e6e2624d17860d45271ca83a8f25e6c04a14f",
       "edits": [
         {
           "start": 61,
@@ -257447,6 +257543,13 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 14059,
+          "end": 14061,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 14136,
@@ -260406,7 +260509,7 @@
       "original": "o.java",
       "renamed": "o.java",
       "inputSha256": "aecc6e17a98a3cfa3ac1ffe9df91f1d50e4cc15b7e344c90c56344fd5b0b0fe5",
-      "outputSha256": "643359a31874e354697c4fc57306a99f825b4b0bb662074111683d1f99acd281",
+      "outputSha256": "e4e86df45fad8725994b80a05f84cc36fe90bd40676bd7afb8053f83a590c27b",
       "edits": [
         {
           "start": 148,
@@ -260449,6 +260552,13 @@
           "symbol": "F:ka.field_k:I",
           "original": "field_k",
           "renamed": "position"
+        },
+        {
+          "start": 986,
+          "end": 988,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 1027,
@@ -265355,7 +265465,7 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "6825d59d6646485c20bc6870974dfe3e881dbaf9ac45b06f9f61c6b745afe476",
-      "outputSha256": "a90c1cb36901e608170171fa2c5245a5dafaa2a22d6c71d40a4183ce14d82dfc",
+      "outputSha256": "5309b95903ccbc0d69b54dae4d587bdb44086635186a39119cd85e75fdea8995",
       "edits": [
         {
           "start": 123,
@@ -265419,6 +265529,20 @@
           "symbol": "C:eb",
           "original": "eb",
           "renamed": "KeyHandler"
+        },
+        {
+          "start": 4187,
+          "end": 4189,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 6547,
+          "end": 6549,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 6658,
@@ -269775,16 +269899,37 @@
     },
     {
       "original": "qh.java",
-      "renamed": "qh.java",
+      "renamed": "PcmResampler.java",
       "inputSha256": "aff4d5a0642c9d6de291fe95c1ad3d34a0b3210f1859b85ae75cfe6965e7e656",
-      "outputSha256": "0eec25ec0161ed2c96f395ae641793e2f1f191f76f7145aa5541cbe991bb83a4",
+      "outputSha256": "61dca0ac44a2b7cad97396247172f46051587ed0544af653b4a3584e3aa34510",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 224,
           "end": 226,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 326,
+          "end": 327,
+          "symbol": "M:qh.a(II)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
+          "start": 608,
+          "end": 610,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 978,
@@ -269808,6 +269953,27 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 1375,
+          "end": 1376,
+          "symbol": "M:qh.a(I[B)[B",
+          "original": "a",
+          "renamed": "resampleBytes"
+        },
+        {
+          "start": 4159,
+          "end": 4160,
+          "symbol": "M:qh.b(II)I",
+          "original": "b",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 4366,
+          "end": 4367,
+          "symbol": "M:qh.a(II)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
           "start": 4441,
           "end": 4442,
           "symbol": "M:qh.a(I)V",
@@ -269827,6 +269993,13 @@
           "symbol": "M:oj.b(I)Lgg;",
           "original": "b",
           "renamed": "beginForward"
+        },
+        {
+          "start": 6981,
+          "end": 6983,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 7156,
@@ -270102,6 +270275,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 14899,
+          "end": 14901,
+          "symbol": "M:qh.<init>(II)V",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 15186,
           "end": 15188,
           "symbol": "C:fe",
@@ -270216,7 +270396,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "3e5076e23275ad062f4a11c48984dd5cbd68c92fa1fd6de82fa6b81014509dfa",
-      "outputSha256": "05c36a4019a8bc25670b16da318c6dd2b356d649572f40351781ca9bf22f50af",
+      "outputSha256": "7649aabc516e18a0a45d09a0182f194cdc291e9ab6097170344eb8d06b6aee82",
       "edits": [
         {
           "start": 64,
@@ -270422,6 +270602,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 4969,
+          "end": 4971,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 5906,
           "end": 5913,
           "symbol": "F:ka.field_k:I",
@@ -270541,6 +270728,13 @@
           "renamed": "WidgetContainer"
         },
         {
+          "start": 14619,
+          "end": 14621,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 14762,
           "end": 14764,
           "symbol": "C:ai",
@@ -270560,6 +270754,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 15062,
+          "end": 15064,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 15846,
@@ -271049,7 +271250,7 @@
       "original": "rj.java",
       "renamed": "UiWidget.java",
       "inputSha256": "c840ce1d54ea64b8d5ecbf643c3c89b8a5228f991fd2ad83992cdfe9e0c0f25e",
-      "outputSha256": "055a59eaf22b651e6e3015d0dabde991b4bc98fce7d2aa1964598e85c0f8a21a",
+      "outputSha256": "d4bf92c37956967cd1393154f6d1b24e905ddb574a18d94d71aade4fde7281b0",
       "edits": [
         {
           "start": 65,
@@ -271230,11 +271431,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 19986,
+          "end": 19988,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 20017,
           "end": 20019,
           "symbol": "C:va",
           "original": "va",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 20186,
+          "end": 20188,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 20215,
@@ -272029,7 +272244,7 @@
       "original": "sd.java",
       "renamed": "ScorePopup.java",
       "inputSha256": "73f50c2632b548e14aba0349b3b22337adc59f5ddd6eb2f978a1064d074fb3d0",
-      "outputSha256": "7809771c297cd2898bc7b6dd90f6a3847651aed9f5e39487396e1d960b1f279e",
+      "outputSha256": "e4590a9f7f77db50283024969ae7746e5c37a5ec80140bc518eb06e3d24613a5",
       "edits": [
         {
           "start": 50,
@@ -272431,6 +272646,13 @@
           "renamed": "value"
         },
         {
+          "start": 4884,
+          "end": 4886,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 4927,
           "end": 4934,
           "symbol": "F:sd.field_e:I",
@@ -272660,7 +272882,7 @@
       "original": "se.java",
       "renamed": "se.java",
       "inputSha256": "dbf7b080018b5ac4e75df035a3e6f746ce99fed4c196564a77f9518d2649029d",
-      "outputSha256": "f1ab01f3347904ee74ce0b68bcb48e3a1838efdf89d3087fffa572edadc65622",
+      "outputSha256": "ddf52cb271f5682dfd1e7f126b82c65f6ce8a51bfb562fbc1d9627174f95384c",
       "edits": [
         {
           "start": 61,
@@ -272731,6 +272953,13 @@
           "symbol": "M:oj.b(B)Lgg;",
           "original": "b",
           "renamed": "nextForward"
+        },
+        {
+          "start": 4482,
+          "end": 4484,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 5252,
@@ -273304,7 +273533,7 @@
       "original": "stellarshard.java",
       "renamed": "stellarshard.java",
       "inputSha256": "a8f31243b6bc3e79958dc16124f28b5ff43bd2bc95d8d805e17f8b5f4da9baa2",
-      "outputSha256": "83e77135e3edea5b3e3996159dd1be8af643bf8aaeaf46e30997d427141194b4",
+      "outputSha256": "d7f917862b9c35d515b78e0df6a6bed293efcb0051f8321ba6c992c3810dd2f6",
       "edits": [
         {
           "start": 159,
@@ -274481,6 +274710,13 @@
           "symbol": "C:s",
           "original": "s",
           "renamed": "DualLinkDequeIterator"
+        },
+        {
+          "start": 41940,
+          "end": 41942,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 43307,
@@ -277115,6 +277351,13 @@
           "renamed": "y"
         },
         {
+          "start": 101697,
+          "end": 101699,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 102747,
           "end": 102754,
           "symbol": "F:a.field_h:[Lqe;",
@@ -277218,6 +277461,13 @@
           "symbol": "C:s",
           "original": "s",
           "renamed": "DualLinkDequeIterator"
+        },
+        {
+          "start": 104672,
+          "end": 104674,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 106127,
@@ -277720,6 +277970,13 @@
           "renamed": "LevelScreen"
         },
         {
+          "start": 118513,
+          "end": 118515,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 122070,
           "end": 122072,
           "symbol": "C:mh",
@@ -278152,6 +278409,13 @@
           "symbol": "M:sl.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 125398,
+          "end": 125400,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 125401,
@@ -278840,6 +279104,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 132031,
+          "end": 132033,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 132041,
           "end": 132043,
           "symbol": "C:ba",
@@ -278866,6 +279137,860 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 132486,
+          "end": 132487,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 132489,
+          "end": 132491,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 132583,
+          "end": 132584,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 132586,
+          "end": 132588,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 132688,
+          "end": 132689,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 132691,
+          "end": 132693,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 132788,
+          "end": 132789,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 132791,
+          "end": 132793,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 132889,
+          "end": 132890,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 132892,
+          "end": 132894,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133002,
+          "end": 133003,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133005,
+          "end": 133007,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133117,
+          "end": 133118,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133120,
+          "end": 133122,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133225,
+          "end": 133226,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133228,
+          "end": 133230,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133323,
+          "end": 133324,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133326,
+          "end": 133328,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133434,
+          "end": 133435,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133437,
+          "end": 133439,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133547,
+          "end": 133548,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133550,
+          "end": 133552,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133659,
+          "end": 133660,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133662,
+          "end": 133664,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133762,
+          "end": 133763,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133765,
+          "end": 133767,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133869,
+          "end": 133870,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133872,
+          "end": 133874,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 133977,
+          "end": 133978,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 133980,
+          "end": 133982,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134084,
+          "end": 134085,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134087,
+          "end": 134089,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134192,
+          "end": 134193,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134195,
+          "end": 134197,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134301,
+          "end": 134302,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134304,
+          "end": 134306,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134409,
+          "end": 134410,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134412,
+          "end": 134414,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134513,
+          "end": 134514,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134516,
+          "end": 134518,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134628,
+          "end": 134629,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134631,
+          "end": 134633,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134728,
+          "end": 134729,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134731,
+          "end": 134733,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134836,
+          "end": 134837,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134839,
+          "end": 134841,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 134941,
+          "end": 134942,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 134944,
+          "end": 134946,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135044,
+          "end": 135045,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135047,
+          "end": 135049,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135153,
+          "end": 135154,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135156,
+          "end": 135158,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135256,
+          "end": 135257,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135259,
+          "end": 135261,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135353,
+          "end": 135354,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135356,
+          "end": 135358,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135455,
+          "end": 135456,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135458,
+          "end": 135460,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135566,
+          "end": 135567,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135569,
+          "end": 135571,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135674,
+          "end": 135675,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135677,
+          "end": 135679,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135776,
+          "end": 135777,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135779,
+          "end": 135781,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135878,
+          "end": 135879,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135881,
+          "end": 135883,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 135977,
+          "end": 135978,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 135980,
+          "end": 135982,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136077,
+          "end": 136078,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136080,
+          "end": 136082,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136173,
+          "end": 136174,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136176,
+          "end": 136178,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136276,
+          "end": 136277,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136279,
+          "end": 136281,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136380,
+          "end": 136381,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136383,
+          "end": 136385,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136474,
+          "end": 136475,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136477,
+          "end": 136479,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136569,
+          "end": 136570,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136572,
+          "end": 136574,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136660,
+          "end": 136661,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136663,
+          "end": 136665,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136812,
+          "end": 136813,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136815,
+          "end": 136817,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 136914,
+          "end": 136915,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 136917,
+          "end": 136919,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137016,
+          "end": 137017,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137019,
+          "end": 137021,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137118,
+          "end": 137119,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137121,
+          "end": 137123,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137220,
+          "end": 137221,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137223,
+          "end": 137225,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137319,
+          "end": 137320,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137322,
+          "end": 137324,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137417,
+          "end": 137418,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137420,
+          "end": 137422,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137515,
+          "end": 137516,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137518,
+          "end": 137520,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137613,
+          "end": 137614,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137616,
+          "end": 137618,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137711,
+          "end": 137712,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137714,
+          "end": 137716,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137808,
+          "end": 137809,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137811,
+          "end": 137813,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 137905,
+          "end": 137906,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 137908,
+          "end": 137910,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138002,
+          "end": 138003,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138005,
+          "end": 138007,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138098,
+          "end": 138099,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138101,
+          "end": 138103,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138194,
+          "end": 138195,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138197,
+          "end": 138199,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138290,
+          "end": 138291,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138293,
+          "end": 138295,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138392,
+          "end": 138393,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138395,
+          "end": 138397,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138494,
+          "end": 138495,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138497,
+          "end": 138499,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138596,
+          "end": 138597,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138599,
+          "end": 138601,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 138702,
+          "end": 138703,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 138705,
+          "end": 138707,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 138996,
@@ -278924,11 +280049,25 @@
           "renamed": "MouseHandler"
         },
         {
+          "start": 140236,
+          "end": 140238,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 140248,
           "end": 140250,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 140372,
+          "end": 140374,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 140869,
@@ -280195,6 +281334,13 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 185925,
+          "end": 185927,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 188258,
           "end": 188260,
           "symbol": "C:wg",
@@ -280391,8 +281537,15 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "e2e86fba4c31a1a88a4dc1d53b5d2f52df3dee5ed5f59a18f9986360bb259f66",
-      "outputSha256": "281d4e598cc0edac2465270d15bd8a13587555234c19c08e8ba6772645079d33",
+      "outputSha256": "ac1bd646f5be6de63139111cb99189637d47695ad200bf88040812c39631c69e",
       "edits": [
+        {
+          "start": 3641,
+          "end": 3643,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 3709,
           "end": 3711,
@@ -280498,8 +281651,15 @@
       "original": "td.java",
       "renamed": "td.java",
       "inputSha256": "a61dc97e490f777633fcbdc90bd7e375b81dac3b841641eea8b03fe4a5192145",
-      "outputSha256": "82ff0cd28605a20ed6d5886ed0c47c983795629e167a3d0a120133a17934fb3f",
+      "outputSha256": "4e5539028ce870b211382dfd10c5414c088f4ce337c770f18b651a30b469e098",
       "edits": [
+        {
+          "start": 721,
+          "end": 723,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 771,
           "end": 773,
@@ -281336,7 +282496,7 @@
       "original": "ud.java",
       "renamed": "PcmSample.java",
       "inputSha256": "bfea6354dd68b6bd007792b031d0c7f64de615505827bf30d6d882049ae5f71d",
-      "outputSha256": "7be5e7b61a341523d8c9f54763c439983a5b2251fe9656dd7efa8d25654ff3bd",
+      "outputSha256": "30463de0e2c23cc358f6d16fd38f5f6a9361eff2e3fd1cb1c4779084ba309a59",
       "edits": [
         {
           "start": 50,
@@ -281358,6 +282518,55 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 172,
+          "end": 173,
+          "symbol": "M:ud.a(Lqh;)Lud;",
+          "original": "a",
+          "renamed": "resample"
+        },
+        {
+          "start": 174,
+          "end": 176,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
+          "start": 217,
+          "end": 218,
+          "symbol": "M:qh.a(I[B)[B",
+          "original": "a",
+          "renamed": "resampleBytes"
+        },
+        {
+          "start": 268,
+          "end": 269,
+          "symbol": "M:qh.a(II)I",
+          "original": "a",
+          "renamed": "scaleRate"
+        },
+        {
+          "start": 365,
+          "end": 366,
+          "symbol": "M:qh.b(II)I",
+          "original": "b",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 422,
+          "end": 423,
+          "symbol": "M:qh.b(II)I",
+          "original": "b",
+          "renamed": "scalePosition"
+        },
+        {
+          "start": 614,
+          "end": 615,
+          "symbol": "M:qh.b(II)I",
+          "original": "b",
+          "renamed": "scalePosition"
         },
         {
           "start": 739,
@@ -283028,8 +284237,15 @@
       "original": "vd.java",
       "renamed": "vd.java",
       "inputSha256": "32678d55e46d0edb2468e20bcf82ef3609fbfd66d00d738a65d434a04c0ace88",
-      "outputSha256": "8853e267bcdd9a5161d9b1540a941ef30e2cd89da792fc71341f4d0b82e99979",
+      "outputSha256": "865f30f648adc468ed84dfd6d6b031ef9a1ea40d9c494b4112e96bfb5e6b2acb",
       "edits": [
+        {
+          "start": 600,
+          "end": 602,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
         {
           "start": 852,
           "end": 854,
@@ -284844,7 +286060,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "c14e87995273a30d48e81b0329ccc78e9cecb76910e5de18faab995e7e0578f4",
-      "outputSha256": "c00fb5c485c9f93933b28e072beb15d2970dd60893441989b79068ca5c9fa765",
+      "outputSha256": "ce053fca9de7df7a17cde28164d680f9fb766d201a032155c55f91f4e410cdda",
       "edits": [
         {
           "start": 97,
@@ -285582,6 +286798,13 @@
           "renamed": "payload"
         },
         {
+          "start": 21812,
+          "end": 21814,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
+        },
+        {
           "start": 21839,
           "end": 21841,
           "symbol": "C:va",
@@ -286260,7 +287483,7 @@
       "original": "wl.java",
       "renamed": "wl.java",
       "inputSha256": "4661d14ca12d38fd64fda15417fb3aa6d5f0e6fc6447f594a188334c6e892011",
-      "outputSha256": "45eb3f1df777d23d0ae87af5ea00726c3d607a3f035dafdce62d137392b1447d",
+      "outputSha256": "e67781d260418bae481ddaeb46171d8db0bb6a44fee5ca4cb6d8dbb902fff4fe",
       "edits": [
         {
           "start": 292,
@@ -286275,6 +287498,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2221,
+          "end": 2223,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "PcmResampler"
         },
         {
           "start": 2891,
@@ -286364,10 +287594,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "2635b5f3ba2e1fd90d9e3f12d818106014da03fb74022244bd57be6348b5d3ce",
+    "rulesSha256": "a5eebd1805d2330fa1397d7f47de7bbba2cfc2a4855bf659cacbd4ae5b74d91e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "ee016dcbddd9a70b7733761a652f3c49ba84a404b88542b9fb324a816eb392f6",
+    "outputTreeSha256": "a4d66b6bab67da5fbf0e6708a4f22a9d54ea4dcf00777a4e4bd5eedd918c3bae",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

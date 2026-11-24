@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class cb extends pn implements Cloneable {
-    static ko field_p;
+    static PcmSample field_p;
     int field_v;
     int field_u;
     static int field_w;

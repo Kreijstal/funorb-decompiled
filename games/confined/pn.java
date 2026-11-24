@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pn {
-    static bi field_k;
+    static PcmSample field_k;
     static nf[] field_l;
     private int field_j;
     nf field_d;
@@ -149,7 +149,7 @@ final class pn {
 
     final pn a(boolean param0, int param1) {
         if (param1 != 0) {
-          field_k = (bi) null;
+          field_k = (PcmSample) null;
         }
         this.field_i = param0 ? true : false;
         return this;

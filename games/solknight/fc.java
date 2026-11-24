@@ -10,7 +10,7 @@ final class fc extends IntrusiveNode {
     private int[] field_k;
     byte[] field_r;
     byte[] field_p;
-    sh[] field_q;
+    PcmSample[] field_q;
     static gl field_l;
     int field_j;
     short[] field_s;
@@ -304,7 +304,7 @@ final class fc extends IntrusiveNode {
                   }
                 }
                 if (var8 != null) {
-                  this.field_q[var9] = (sh) (var8);
+                  this.field_q[var9] = (PcmSample) (var8);
                   this.field_k[var9] = 0;
                 }
               }
@@ -485,7 +485,7 @@ final class fc extends IntrusiveNode {
           this.field_p = new byte[128];
           this.field_h = new byte[128];
           this.field_i = new g[128];
-          this.field_q = new sh[128];
+          this.field_q = new PcmSample[128];
           this.field_s = new short[128];
           this.field_k = new int[128];
           var38 = new PacketBuffer(param0);

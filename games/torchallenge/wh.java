@@ -22,7 +22,7 @@ final class wh {
         if (param2 > -49) {
           return;
         }
-        fe var3 = wl.field_c[param1][param0];
+        PcmSample var3 = wl.field_c[param1][param0];
         int var4 = wc.field_c[param1][param0];
         ol.a(-127, var3, var4);
     }

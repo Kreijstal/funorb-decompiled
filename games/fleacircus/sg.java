@@ -130,9 +130,9 @@ final class sg {
         }
         stackIn_9_0 = (var8.readUnsignedByte(false) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        ci.field_e = var8.readString(0);
+        PcmResampler.field_e = var8.readString(0);
         if (var4 == 0) {
-          qi.field_d = ci.field_e;
+          qi.field_d = PcmResampler.field_e;
         } else {
           qi.field_d = var8.readString(0);
         }

@@ -20,7 +20,7 @@ final class he extends IntrusiveNode {
     int field_A;
     int field_f;
     int field_z;
-    dl field_D;
+    PcmSample field_D;
     int field_v;
     int field_i;
     rc field_x;

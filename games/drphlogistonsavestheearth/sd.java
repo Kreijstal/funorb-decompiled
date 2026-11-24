@@ -66,17 +66,17 @@ final class sd {
     }
 
     final static void a(byte param0) {
-        ng.field_c.j(300);
+        PcmResampler.field_c.j(300);
         if (null == af.field_g) {
-          af.field_g = new tf(ng.field_c, mf.field_u);
-          ng.field_c.a((byte) -95, (vg) (af.field_g));
+          af.field_g = new tf(PcmResampler.field_c, mf.field_u);
+          PcmResampler.field_c.a((byte) -95, (vg) (af.field_g));
           if (param0 != -124) {
             field_e = 33;
             return;
           }
           return;
         }
-        ng.field_c.a((byte) -95, (vg) (af.field_g));
+        PcmResampler.field_c.a((byte) -95, (vg) (af.field_g));
         if (param0 == -124) {
           return;
         }

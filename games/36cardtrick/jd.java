@@ -8,7 +8,7 @@ final class jd implements Runnable {
     private java.net.Socket field_k;
     private OutputStream field_e;
     private int field_i;
-    static ib[] field_c;
+    static PcmSample[] field_c;
     private InputStream field_l;
     private boolean field_f;
     private byte[] field_j;
@@ -300,7 +300,7 @@ final class jd implements Runnable {
     }
 
     static {
-        field_c = new ib[16];
+        field_c = new PcmSample[16];
         field_g = 20;
     }
 }

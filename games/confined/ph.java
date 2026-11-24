@@ -70,7 +70,7 @@ final class ph extends IntrusiveNode {
         }
     }
 
-    final bi b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -102,7 +102,7 @@ final class ph extends IntrusiveNode {
           }
         }
         this.field_q = null;
-        return new bi(this.field_r, var1, this.field_m, this.field_I, this.field_R);
+        return new PcmSample(this.field_r, var1, this.field_m, this.field_I, this.field_R);
     }
 
     final static int readBit() {
@@ -705,7 +705,7 @@ final class ph extends IntrusiveNode {
         return true;
     }
 
-    final bi a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -755,7 +755,7 @@ final class ph extends IntrusiveNode {
         this.field_q = null;
         var12 = this.field_M;
         this.field_M = null;
-        return new bi(this.field_r, var12, this.field_m, this.field_I, this.field_R);
+        return new PcmSample(this.field_r, var12, this.field_m, this.field_I, this.field_R);
     }
 
     static {

@@ -4,7 +4,7 @@
 final class fb extends IntrusiveNode {
     byte[] field_n;
     static String field_i;
-    fe[] field_k;
+    PcmSample[] field_k;
     ab[] field_o;
     int field_p;
     private int[] field_m;
@@ -62,7 +62,7 @@ final class fb extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_k[var8] = (fe) (var7);
+                  this.field_k[var8] = (PcmSample) (var7);
                   this.field_m[var8] = 0;
                 }
               }
@@ -238,7 +238,7 @@ final class fb extends IntrusiveNode {
           this.field_n = new byte[128];
           this.field_o = new ab[128];
           this.field_j = new short[128];
-          this.field_k = new fe[128];
+          this.field_k = new PcmSample[128];
           this.field_q = new byte[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {

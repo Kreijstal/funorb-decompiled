@@ -186,7 +186,7 @@ final class te extends IntrusiveNode {
         field_u = true;
     }
 
-    final ue a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -236,7 +236,7 @@ final class te extends IntrusiveNode {
         this.field_M = null;
         var12 = this.field_s;
         this.field_s = null;
-        return new ue(this.field_j, var12, this.field_H, this.field_A, this.field_g);
+        return new PcmSample(this.field_j, var12, this.field_H, this.field_A, this.field_g);
     }
 
     final static te a(gk param0, String param1, String param2) {
@@ -713,7 +713,7 @@ final class te extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final ue a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -745,7 +745,7 @@ final class te extends IntrusiveNode {
           }
         }
         this.field_M = null;
-        return new ue(this.field_j, var1, this.field_H, this.field_A, this.field_g);
+        return new PcmSample(this.field_j, var1, this.field_H, this.field_A, this.field_g);
     }
 
     private final static void a(byte[] param0, int param1) {

@@ -372,6 +372,14 @@
       "renamedSymbol": "C:ImageProducerRasterBuffer"
     },
     {
+      "symbol": "C:fh",
+      "originalName": "fh",
+      "to": "AbstractAudioSample",
+      "evidence": "Abstract intrusive sound-data node retaining the original single int scheduling counter and empty package-visible constructor,shared by the sample reference in the PCM stream scheduler. Preserve default field state and inherited node semantics. Original constructor SHA256s 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Naming only. Complete selected sample classes,all50selected constructor bodies,20resampling bodies and115field declarations source-reviewed against immutable compiler-bound definitions. Preserve every original field/body,literal,guard,JVM width/domain,int/long overflow,FP/cast,alias,partial write,allocation/call/exception order,modifier and native/override binding. Existing meaningful aliases stay unchanged;native and class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AbstractAudioSample"
+    },
+    {
       "symbol": "C:gd",
       "originalName": "gd",
       "to": "AchievementNotice",
@@ -5021,9 +5029,9 @@
     },
     {
       "symbol": "C:fh",
-      "renamedSymbol": "C:fh",
+      "renamedSymbol": "C:AbstractAudioSample",
       "originalName": "fh",
-      "renamedName": "fh",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "fh.java",
         "start": 53,
@@ -8123,7 +8131,7 @@
     },
     {
       "symbol": "F:ag.field_g:Lfh;",
-      "renamedSymbol": "F:PcmStream.field_g:Lfh;",
+      "renamedSymbol": "F:PcmStream.field_g:LAbstractAudioSample;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -13777,7 +13785,7 @@
     },
     {
       "symbol": "F:fh.field_g:I",
-      "renamedSymbol": "F:fh.field_g:I",
+      "renamedSymbol": "F:AbstractAudioSample.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -154390,9 +154398,9 @@
     },
     {
       "symbol": "M:fh.<init>()V",
-      "renamedSymbol": "M:fh.<init>()V",
+      "renamedSymbol": "M:AbstractAudioSample.<init>()V",
       "originalName": "fh",
-      "renamedName": "fh",
+      "renamedName": "AbstractAudioSample",
       "declaration": {
         "file": "fh.java",
         "start": 91,
@@ -229155,7 +229163,7 @@
       "original": "ag.java",
       "renamed": "PcmStream.java",
       "inputSha256": "871bdba6b4d4ce40cb6efc8d4556539bb01d5346e598ad3a8d547b8eddc43883",
-      "outputSha256": "fac97ea242feedca67a95c47ed94268d7e3323f046ded065c98025cb011711d4",
+      "outputSha256": "0625af075036f9f734994287066a964770d27bdde87dbad9467e94a64d58e39e",
       "edits": [
         {
           "start": 53,
@@ -229170,6 +229178,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 120,
+          "end": 122,
+          "symbol": "C:fh",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 136,
@@ -231190,7 +231205,7 @@
       "original": "bb.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "c3e05b928b7533ceed62fcd8e10ed7cb64a7ee18ea01c4a09bb345843fad5147",
-      "outputSha256": "45fa25097e20e17acad8d52d1e89ebbf5137f8e57389d88de6b05146b1ad8dbf",
+      "outputSha256": "649ed487cec75489f4b6fa668036462740c3b14ff18bfaee711d3a4e9fb4ae91",
       "edits": [
         {
           "start": 50,
@@ -232138,6 +232153,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 63648,
+          "end": 63650,
+          "symbol": "C:fh",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
+        },
+        {
           "start": 63918,
           "end": 63919,
           "symbol": "M:bb.k()V",
@@ -232157,6 +232179,13 @@
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 64018,
+          "end": 64020,
+          "symbol": "C:fh",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 64290,
@@ -242356,16 +242385,30 @@
     },
     {
       "original": "fh.java",
-      "renamed": "fh.java",
+      "renamed": "AbstractAudioSample.java",
       "inputSha256": "376fa1da8375262800f040f72d7fe06bdcfc827c84ca8872961e3ed829cabc62",
-      "outputSha256": "09f241cd85be366b86fe1ca65e08138771c135f491e2329765617d7c000ca30c",
+      "outputSha256": "af944199a52ab1a5f5895370d5493b39f643962452cd3094f9dc31721d7fd68e",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:fh",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
+        },
         {
           "start": 64,
           "end": 66,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "symbol": "M:fh.<init>()V",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
         }
       ]
     },
@@ -245101,7 +245144,7 @@
       "original": "hb.java",
       "renamed": "PcmSample.java",
       "inputSha256": "8e4df387102a5f33ae5f9d082efa9e9b2694f0e41927c489cb8738d7bea66a87",
-      "outputSha256": "632d27864555b05d7c8a640914ec6e51f2d86c3be38aa3c4ead069f64763b8f2",
+      "outputSha256": "d8c55009ed6d9c47bd3ee580ecf54266a61ef1128c822f43a05fdf2e4f3bb7a9",
       "edits": [
         {
           "start": 50,
@@ -245109,6 +245152,13 @@
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:fh",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 163,
@@ -265963,7 +266013,7 @@
       "original": "qh.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "8feb5b4678e6bb4d7139a9524119080efff34937dbfcf6be92bf4af2669e306f",
-      "outputSha256": "9e341f7f5abf0e800605ef13af1b8663cf6ae9d684688f800c50aa7b102c8c39",
+      "outputSha256": "8e7024026bab33525a7bd5e3a8508836e0f8af17114ce064a39f8852832464bd",
       "edits": [
         {
           "start": 44,
@@ -266433,6 +266483,13 @@
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 8669,
+          "end": 8671,
+          "symbol": "C:fh",
+          "original": "fh",
+          "renamed": "AbstractAudioSample"
         },
         {
           "start": 8706,
@@ -282888,10 +282945,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/transmogrify"
     },
-    "rulesSha256": "550d1d61ba270c79b11f3e38b7d90ce4eb55bee80bb5531c66880138117ddd94",
+    "rulesSha256": "8e7b3de2c49c378c7ae1b3e961290615395f85650d13eb92ddcb180173f7512e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
-    "outputTreeSha256": "a82e6c74dbfc186799d36366f5da69221f18a19fee9efee84069fea3e80dfd02",
+    "outputTreeSha256": "3da3fdf6bceef4dd552abf210bb90105f947c0bdf3d90efa71293d3d5fd0a890",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

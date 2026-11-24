@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class wc extends lb {
-    static ko field_q;
+    static PcmSample field_q;
 
     wc(int param0) {
         this(ai.field_h, param0);
@@ -10,7 +10,7 @@ class wc extends lb {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 > -51) {
-          field_q = (ko) null;
+          field_q = (PcmSample) null;
           field_q = null;
           return;
         }

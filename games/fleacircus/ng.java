@@ -11,10 +11,10 @@ final class ng {
     static int[] field_a;
     private hc field_f;
 
-    final sf a(int param0, boolean param1, int[] param2) {
+    final PcmSample a(int param0, boolean param1, int[] param2) {
         RuntimeException var4 = null;
-        sf stackIn_3_0 = null;
-        sf stackIn_9_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -46,30 +46,30 @@ final class ng {
         }
     }
 
-    private final sf a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        sf var8 = null;
+        PcmSample var8 = null;
         qf var9 = null;
-        sf var10 = null;
-        sf stackIn_2_0 = null;
-        sf stackIn_6_0 = null;
-        sf stackIn_17_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_6_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sf var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           if (param3 <= 7) {
-            stackIn_2_0 = (sf) null;
+            stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
           var5_int = (param1 >>> 12 | (-1879044097 & param1) << 4) ^ param0;
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int;
-          var8 = (sf) (this.field_f.a(var6, -1110));
+          var8 = (PcmSample) (this.field_f.a(var6, -1110));
           if (var8 != null) {
             stackIn_6_0 = var8;
             return stackIn_6_0;
@@ -133,10 +133,10 @@ final class ng {
         }
     }
 
-    final sf a(int[] param0, int param1, int param2) {
+    final PcmSample a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        sf stackIn_3_0 = null;
-        sf stackIn_6_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -177,25 +177,25 @@ final class ng {
         }
     }
 
-    private final sf a(int param0, int param1, byte param2, int[] param3) {
+    private final PcmSample a(int param0, int param1, byte param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        sf var8 = null;
+        PcmSample var8 = null;
         hk var9 = null;
-        sf stackIn_2_0 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_17_0 = null;
-        sf stackIn_19_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sf var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = ((-1879044097 & param0) << 4 | param0 >>> 12) ^ param1;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (sf) (this.field_f.a(var6, -1110));
+          var8 = (PcmSample) (this.field_f.a(var6, -1110));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -218,7 +218,7 @@ final class ng {
           var8Lifetime1 = var9.a(param3);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
-            return (sf) (stackIn_17_0);
+            return (PcmSample) (stackIn_17_0);
           }
           var9.unlink(-1);
           this.field_f.a(var8Lifetime1, true, var6);

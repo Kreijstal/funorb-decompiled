@@ -1089,7 +1089,7 @@ abstract class dc extends DualLinkNode {
         }
     }
 
-    dc(pm param0, bi param1, int param2) {
+    dc(pm param0, PcmSample param1, int param2) {
         try {
           this.field_T = param0;
           if (param1 != null) {

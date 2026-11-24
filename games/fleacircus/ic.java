@@ -3,7 +3,7 @@
  */
 final class ic extends jj implements da {
     static java.awt.Font field_bb;
-    static sf field_ab;
+    static PcmSample field_ab;
     static char[] field_db;
     private bb field_cb;
 

@@ -91,7 +91,7 @@ final class nk {
         int var6 = 0;
         int var8 = 0;
         var8 = Bounce.field_N;
-        if (u.field_g) {
+        if (PcmResampler.field_g) {
           return;
         }
         if (!param2) {
@@ -174,7 +174,7 @@ final class nk {
                         ld.field_l.f(-22719);
                       } else {
                         stackIn_103_0 = ld.field_l;
-                        if (u.field_g) {
+                        if (PcmResampler.field_g) {
                           stackIn_104_1 = wj.field_c;
                         } else {
                           stackIn_104_1 = AccountCreationResultPanel.field_mb;
@@ -321,7 +321,7 @@ final class nk {
             l.field_c = l.field_c - fa.field_c;
             bk.field_c = var4;
             ta.field_c = 1.0;
-            u.field_g = true;
+            PcmResampler.field_g = true;
             vk.field_b = 1;
             fa.field_c = 0;
             if (rd.field_a) {

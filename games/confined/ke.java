@@ -5,7 +5,7 @@ final class ke extends ga implements ge, el, pg {
     private wh field_H;
     static String field_ab;
     static double field_Z;
-    static bi field_cb;
+    static PcmSample field_cb;
     private wh field_R;
     ak field_O;
     private na field_T;

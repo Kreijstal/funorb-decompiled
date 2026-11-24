@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class gk extends IntrusiveNode {
-    static bi field_q;
-    bi field_s;
+    static PcmSample field_q;
+    PcmSample field_s;
     int field_m;
     boolean field_x;
     pm field_t;
@@ -137,7 +137,7 @@ class gk extends IntrusiveNode {
         return;
     }
 
-    gk(pm param0, bi param1) {
+    gk(pm param0, PcmSample param1) {
         this(param0, param1, -1, false);
     }
 
@@ -331,11 +331,11 @@ class gk extends IntrusiveNode {
         this.f(128);
     }
 
-    gk(pm param0, bi param1, int param2, boolean param3) {
+    gk(pm param0, PcmSample param1, int param2, boolean param3) {
         this(param0.field_A, param0, param1, param2, param3);
     }
 
-    gk(pm param0, bi param1, int param2) {
+    gk(pm param0, PcmSample param1, int param2) {
         this(param0, param1, param2, false);
     }
 
@@ -357,7 +357,7 @@ class gk extends IntrusiveNode {
         var2_int = -9 % ((-15 - param0) / 48);
     }
 
-    gk(hn param0, pm param1, bi param2, int param3, boolean param4) {
+    gk(hn param0, pm param1, PcmSample param2, int param3, boolean param4) {
         this.field_m = 96;
         this.field_w = 1.0;
         this.field_x = true;

@@ -18,7 +18,7 @@ final class DualLinkDeque implements Iterable {
         int stackIn_4_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_59_0 = 0;
-        jb[] stackIn_59_1 = null;
+        PcmSample[] stackIn_59_1 = null;
         int stackIn_59_2 = 0;
         boolean stackIn_60_3;
         RuntimeException stackIn_90_0 = null;

@@ -189,7 +189,7 @@ final class wc extends id {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8_int = 0;
-        bi var8 = null;
+        PcmSample var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -357,7 +357,7 @@ final class wc extends id {
     final void a(int param0, int param1) {
         int var12 = 0;
         double var3;
-        bi var3_ref_bi;
+        PcmSample var3_ref_bi;
         int var3_int;
         int var4;
         double var5;
@@ -371,7 +371,7 @@ final class wc extends id {
         kh var13;
         int var15;
         mb var16;
-        bi var17;
+        PcmSample var17;
         double[] var21;
         double var3Lifetime1;
         double var5Lifetime1;
@@ -390,7 +390,7 @@ final class wc extends id {
               var9 = Math.random() * 6.283185307179586;
               var11 = Math.sin(var9) * var7;
               var13_double = Math.cos(var9) * var7;
-              ri.a((IntrusiveNode) (this), 0, new ka(this.field_A, this.field_E + var11, var13_double + this.field_t, this.field_D + var5, 0.5, (bi) null));
+              ri.a((IntrusiveNode) (this), 0, new ka(this.field_A, this.field_E + var11, var13_double + this.field_t, this.field_D + var5, 0.5, (PcmSample) null));
             }
             this.c((byte) -24, param1);
             return;

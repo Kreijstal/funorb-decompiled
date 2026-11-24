@@ -231,7 +231,7 @@ final class hk extends IntrusiveNode {
         field_O = 0;
     }
 
-    final sf a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -281,7 +281,7 @@ final class hk extends IntrusiveNode {
         this.field_r = null;
         var12 = this.field_s;
         this.field_s = null;
-        return new sf(this.field_D, var12, this.field_i, this.field_K, this.field_k);
+        return new PcmSample(this.field_D, var12, this.field_i, this.field_K, this.field_k);
     }
 
     private final void a(byte[] param0) throws IOException {
@@ -315,7 +315,7 @@ final class hk extends IntrusiveNode {
         }
     }
 
-    final sf b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -347,7 +347,7 @@ final class hk extends IntrusiveNode {
           }
         }
         this.field_r = null;
-        return new sf(this.field_D, var1, this.field_i, this.field_K, this.field_k);
+        return new PcmSample(this.field_D, var1, this.field_i, this.field_K, this.field_k);
     }
 
     final static int readBits(int param0) {

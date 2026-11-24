@@ -8,7 +8,7 @@ final class kl extends IntrusiveNode {
     static String field_m;
     ch field_o;
     int field_k;
-    ue field_w;
+    PcmSample field_w;
     int field_l;
     rj field_D;
     int field_z;

@@ -300,7 +300,7 @@ final class MidiPcmStream extends PcmStream {
         boolean stackIn_18_3;
         qd var5;
         int var6_int;
-        lm var6;
+        PcmSample var6;
         qd var7;
         qd var8;
         int var9;

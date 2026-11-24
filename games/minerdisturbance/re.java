@@ -3,7 +3,7 @@
  */
 final class re implements uj {
     static int[] field_c;
-    static ji[] field_a;
+    static PcmSample[] field_a;
     static int field_b;
     static int field_d;
 
@@ -344,7 +344,7 @@ final class re implements uj {
     public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -10887) {
-          field_a = (ji[]) null;
+          field_a = (PcmSample[]) null;
         }
         field_c = null;
     }

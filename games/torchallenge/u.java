@@ -11,9 +11,9 @@ final class u {
     static int[][][] field_b;
 
     final static void a(int param0, int param1) {
-        fe var2 = null;
+        PcmSample var2 = null;
         int var3 = 0;
-        fe var2Lifetime1;
+        PcmSample var2Lifetime1;
         int var3Lifetime1;
         if (0 > param1) {
           return;
@@ -44,22 +44,22 @@ final class u {
         field_c = null;
     }
 
-    private final fe a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        fe var8 = null;
+        PcmSample var8 = null;
         q var9 = null;
         int[] var10 = null;
-        fe var11 = null;
-        fe stackIn_5_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        fe stackIn_16_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fe var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           if (param0 != 0) {
             var10 = (int[]) null;
@@ -68,7 +68,7 @@ final class u {
           var5_int = (param3 << 4 & 65533 | param3 >>> 12) ^ param2;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (fe) (this.field_g.a((byte) 97, var6));
+          var8 = (PcmSample) (this.field_g.a((byte) 97, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -76,7 +76,7 @@ final class u {
           if (param1 != null &&
             0 >= param1[0]) {
             stackIn_9_0 = null;
-            return (fe) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = q.a(this.field_d, param3, param2);
           if (var9 == null) {
@@ -104,11 +104,11 @@ final class u {
         }
     }
 
-    final fe a(int param0, int param1, int[] param2) {
+    final PcmSample a(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
         int[] var5 = null;
-        fe stackIn_4_0 = null;
-        fe stackIn_7_0 = null;
+        PcmSample stackIn_4_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -141,10 +141,10 @@ final class u {
         }
     }
 
-    final fe a(int param0, int[] param1, int param2) {
+    final PcmSample a(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        fe stackIn_3_0 = null;
-        fe stackIn_8_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -261,32 +261,32 @@ final class u {
         }
     }
 
-    private final fe a(byte param0, int[] param1, int param2, int param3) {
+    private final PcmSample a(byte param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        fe var8 = null;
+        PcmSample var8 = null;
         VorbisSample var9 = null;
-        fe stackIn_2_0 = null;
-        fe stackIn_5_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_14_0 = null;
         Object stackIn_18_0 = null;
-        fe stackIn_20_0 = null;
+        PcmSample stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fe var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param2 ^ (param3 >>> 12 | (param3 & -268431361) << 4);
           if (param0 <= 109) {
-            stackIn_2_0 = (fe) null;
+            stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
           var5_int = var5_int | param3 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (fe) (this.field_g.a((byte) 89, var6));
+          var8 = (PcmSample) (this.field_g.a((byte) 89, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -294,21 +294,21 @@ final class u {
           if (param1 != null &&
             0 >= param1[0]) {
             stackIn_9_0 = null;
-            return (fe) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = (VorbisSample) (this.field_f.a((byte) 100, var6));
           if (var9 == null) {
             var9 = VorbisSample.a(this.field_e, param3, param2);
             if (var9 == null) {
               stackIn_14_0 = null;
-              return (fe) (stackIn_14_0);
+              return (PcmSample) (stackIn_14_0);
             }
             this.field_f.a(-101, var9, var6);
           }
           var8Lifetime1 = var9.a(param1);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
-            return (fe) (stackIn_18_0);
+            return (PcmSample) (stackIn_18_0);
           }
           var9.unlink(true);
           this.field_g.a(-98, var8Lifetime1, var6);

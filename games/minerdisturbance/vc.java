@@ -10,7 +10,7 @@ final class vc extends IntrusiveNode {
     static String field_w;
     int field_q;
     static String field_u;
-    ji[] field_v;
+    PcmSample[] field_v;
     static Sprite[] field_p;
     short[] field_t;
     static Sprite[] field_o;
@@ -82,14 +82,14 @@ final class vc extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_v[var8] = (ji) (var7);
+                  this.field_v[var8] = (PcmSample) (var7);
                   this.field_n[var8] = 0;
                 }
               }
             }
           }
           if (param1 != -31) {
-            this.field_v = (ji[]) null;
+            this.field_v = (PcmSample[]) null;
           }
           stackIn_24_0 = var5_int;
           return stackIn_24_0 != 0;
@@ -265,7 +265,7 @@ final class vc extends IntrusiveNode {
           this.field_r = new byte[128];
           this.field_y = new ng[128];
           this.field_s = new byte[128];
-          this.field_v = new ji[128];
+          this.field_v = new PcmSample[128];
           this.field_x = new byte[128];
           this.field_n = new int[128];
           this.field_t = new short[128];

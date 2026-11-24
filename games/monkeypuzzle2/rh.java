@@ -217,162 +217,162 @@ abstract class rh extends WidgetContainer {
         byte[] var2Lifetime38;
         try {
           gf.field_b = param1;
-          var2 = o.a((byte) 76, "score_colon_space");
+          var2 = PcmResampler.a((byte) 76, "score_colon_space");
           if (null != var2) {
             be.a(var2, (byte) 112);
           }
-          var2Lifetime1 = o.a((byte) 76, "instructions_1");
+          var2Lifetime1 = PcmResampler.a((byte) 76, "instructions_1");
           if (var2Lifetime1 != null) {
             mk.field_j = be.a(var2Lifetime1, (byte) 111);
           }
-          var2Lifetime2 = o.a((byte) 76, "instructions_2");
+          var2Lifetime2 = PcmResampler.a((byte) 76, "instructions_2");
           if (null != var2Lifetime2) {
             WeightedObjectCache.field_a = be.a(var2Lifetime2, (byte) -104);
           }
-          var2Lifetime3 = o.a((byte) 76, "tips,0");
+          var2Lifetime3 = PcmResampler.a((byte) 76, "tips,0");
           if (var2Lifetime3 != null) {
             th.field_n[0] = be.a(var2Lifetime3, (byte) 68);
           }
-          var2Lifetime4 = o.a((byte) 76, "tips,1");
+          var2Lifetime4 = PcmResampler.a((byte) 76, "tips,1");
           if (null != var2Lifetime4) {
             th.field_n[1] = be.a(var2Lifetime4, (byte) 100);
           }
-          var2Lifetime5 = o.a((byte) 76, "tips,2");
+          var2Lifetime5 = PcmResampler.a((byte) 76, "tips,2");
           if (null != var2Lifetime5) {
             th.field_n[2] = be.a(var2Lifetime5, (byte) 66);
           }
-          var2Lifetime6 = o.a((byte) 76, "tips,3");
+          var2Lifetime6 = PcmResampler.a((byte) 76, "tips,3");
           if (null != var2Lifetime6) {
             th.field_n[3] = be.a(var2Lifetime6, (byte) -36);
           }
-          var2Lifetime7 = o.a((byte) 76, "tips,4");
+          var2Lifetime7 = PcmResampler.a((byte) 76, "tips,4");
           if (null != var2Lifetime7) {
             th.field_n[4] = be.a(var2Lifetime7, (byte) 100);
           }
-          var2Lifetime8 = o.a((byte) 76, "notShowingTips");
+          var2Lifetime8 = PcmResampler.a((byte) 76, "notShowingTips");
           if (var2Lifetime8 != null) {
             lg.field_I = be.a(var2Lifetime8, (byte) -57);
           }
-          var2Lifetime9 = o.a((byte) 76, "youHaveSeen");
+          var2Lifetime9 = PcmResampler.a((byte) 76, "youHaveSeen");
           if (null != var2Lifetime9) {
             AccountCreationResultPanel.field_kb = be.a(var2Lifetime9, (byte) -44);
           }
-          var2Lifetime10 = o.a((byte) 76, "wellDone");
+          var2Lifetime10 = PcmResampler.a((byte) 76, "wellDone");
           if (null != var2Lifetime10) {
             wj.field_h = be.a(var2Lifetime10, (byte) -87);
           }
-          var2Lifetime11 = o.a((byte) 76, "youScored");
+          var2Lifetime11 = PcmResampler.a((byte) 76, "youScored");
           if (var2Lifetime11 != null) {
             cl.field_b = be.a(var2Lifetime11, (byte) -66);
           }
-          var2Lifetime12 = o.a((byte) 76, "pressEnter");
+          var2Lifetime12 = PcmResampler.a((byte) 76, "pressEnter");
           if (null != var2Lifetime12) {
             lb.field_A = be.a(var2Lifetime12, (byte) 77);
           }
-          var2Lifetime13 = o.a((byte) 76, "levelComplete");
+          var2Lifetime13 = PcmResampler.a((byte) 76, "levelComplete");
           if (null != var2Lifetime13) {
             sc.field_d = be.a(var2Lifetime13, (byte) -109);
           }
-          var2Lifetime14 = o.a((byte) 76, "speedBonus");
+          var2Lifetime14 = PcmResampler.a((byte) 76, "speedBonus");
           if (var2Lifetime14 != null) {
             ff.field_a = be.a(var2Lifetime14, (byte) 122);
           }
-          var2Lifetime15 = o.a((byte) 76, "cancel");
+          var2Lifetime15 = PcmResampler.a((byte) 76, "cancel");
           if (null != var2Lifetime15) {
             be.a(var2Lifetime15, (byte) 119);
           }
-          var2Lifetime16 = o.a((byte) 76, "close");
+          var2Lifetime16 = PcmResampler.a((byte) 76, "close");
           if (var2Lifetime16 != null) {
             be.a(var2Lifetime16, (byte) -41);
           }
-          var2Lifetime17 = o.a((byte) 76, "members");
+          var2Lifetime17 = PcmResampler.a((byte) 76, "members");
           if (var2Lifetime17 != null) {
             be.a(var2Lifetime17, (byte) 105);
           }
-          var2Lifetime18 = o.a((byte) 76, "tipsColon");
+          var2Lifetime18 = PcmResampler.a((byte) 76, "tipsColon");
           if (var2Lifetime18 != null) {
             pe.field_c = be.a(var2Lifetime18, (byte) -80);
           }
-          var2Lifetime19 = o.a((byte) 76, "achievement_names,0");
+          var2Lifetime19 = PcmResampler.a((byte) 76, "achievement_names,0");
           if (var2Lifetime19 != null) {
             rb.field_hb[0] = be.a(var2Lifetime19, (byte) -44);
           }
-          var2Lifetime20 = o.a((byte) 76, "achievement_names,1");
+          var2Lifetime20 = PcmResampler.a((byte) 76, "achievement_names,1");
           if (null != var2Lifetime20) {
             rb.field_hb[1] = be.a(var2Lifetime20, (byte) 94);
           }
-          var2Lifetime21 = o.a((byte) 76, "achievement_names,2");
+          var2Lifetime21 = PcmResampler.a((byte) 76, "achievement_names,2");
           if (null != var2Lifetime21) {
             rb.field_hb[2] = be.a(var2Lifetime21, (byte) -68);
           }
-          var2Lifetime22 = o.a((byte) 76, "achievement_names,3");
+          var2Lifetime22 = PcmResampler.a((byte) 76, "achievement_names,3");
           if (null != var2Lifetime22) {
             rb.field_hb[3] = be.a(var2Lifetime22, (byte) 89);
           }
-          var2Lifetime23 = o.a((byte) 76, "achievement_names,4");
+          var2Lifetime23 = PcmResampler.a((byte) 76, "achievement_names,4");
           if (null != var2Lifetime23) {
             rb.field_hb[4] = be.a(var2Lifetime23, (byte) 122);
           }
-          var2Lifetime24 = o.a((byte) 76, "achievement_names,5");
+          var2Lifetime24 = PcmResampler.a((byte) 76, "achievement_names,5");
           if (null != var2Lifetime24) {
             rb.field_hb[5] = be.a(var2Lifetime24, (byte) -107);
           }
-          var2Lifetime25 = o.a((byte) 76, "achievement_names,6");
+          var2Lifetime25 = PcmResampler.a((byte) 76, "achievement_names,6");
           if (null != var2Lifetime25) {
             rb.field_hb[6] = be.a(var2Lifetime25, (byte) -89);
           }
-          var2Lifetime26 = o.a((byte) 76, "achievement_names,7");
+          var2Lifetime26 = PcmResampler.a((byte) 76, "achievement_names,7");
           if (var2Lifetime26 != null) {
             rb.field_hb[7] = be.a(var2Lifetime26, (byte) 85);
           }
-          var2Lifetime27 = o.a((byte) 76, "achievement_names,8");
+          var2Lifetime27 = PcmResampler.a((byte) 76, "achievement_names,8");
           if (null != var2Lifetime27) {
             rb.field_hb[8] = be.a(var2Lifetime27, (byte) -28);
           }
-          var2Lifetime28 = o.a((byte) 76, "achievement_names,9");
+          var2Lifetime28 = PcmResampler.a((byte) 76, "achievement_names,9");
           if (null != var2Lifetime28) {
             rb.field_hb[9] = be.a(var2Lifetime28, (byte) 70);
           }
-          var2Lifetime29 = o.a((byte) 76, "achievement_criteria,0");
+          var2Lifetime29 = PcmResampler.a((byte) 76, "achievement_criteria,0");
           if (null != var2Lifetime29) {
             ki.field_r[0] = be.a(var2Lifetime29, (byte) 87);
           }
-          var2Lifetime30 = o.a((byte) 76, "achievement_criteria,1");
+          var2Lifetime30 = PcmResampler.a((byte) 76, "achievement_criteria,1");
           if (null != var2Lifetime30) {
             ki.field_r[1] = be.a(var2Lifetime30, (byte) -122);
           }
-          var2Lifetime31 = o.a((byte) 76, "achievement_criteria,2");
+          var2Lifetime31 = PcmResampler.a((byte) 76, "achievement_criteria,2");
           if (null != var2Lifetime31) {
             ki.field_r[2] = be.a(var2Lifetime31, (byte) 92);
           }
-          var2Lifetime32 = o.a((byte) 76, "achievement_criteria,3");
+          var2Lifetime32 = PcmResampler.a((byte) 76, "achievement_criteria,3");
           if (var2Lifetime32 != null) {
             ki.field_r[3] = be.a(var2Lifetime32, (byte) 84);
           }
-          var2Lifetime33 = o.a((byte) 76, "achievement_criteria,4");
+          var2Lifetime33 = PcmResampler.a((byte) 76, "achievement_criteria,4");
           if (var2Lifetime33 != null) {
             ki.field_r[4] = be.a(var2Lifetime33, (byte) 65);
           }
-          var2Lifetime34 = o.a((byte) 76, "achievement_criteria,5");
+          var2Lifetime34 = PcmResampler.a((byte) 76, "achievement_criteria,5");
           if (param0 != -9585) {
             return;
           }
           if (null != var2Lifetime34) {
             ki.field_r[5] = be.a(var2Lifetime34, (byte) 125);
           }
-          var2Lifetime35 = o.a((byte) 76, "achievement_criteria,6");
+          var2Lifetime35 = PcmResampler.a((byte) 76, "achievement_criteria,6");
           if (var2Lifetime35 != null) {
             ki.field_r[6] = be.a(var2Lifetime35, (byte) -33);
           }
-          var2Lifetime36 = o.a((byte) 76, "achievement_criteria,7");
+          var2Lifetime36 = PcmResampler.a((byte) 76, "achievement_criteria,7");
           if (var2Lifetime36 != null) {
             ki.field_r[7] = be.a(var2Lifetime36, (byte) -115);
           }
-          var2Lifetime37 = o.a((byte) 76, "achievement_criteria,8");
+          var2Lifetime37 = PcmResampler.a((byte) 76, "achievement_criteria,8");
           if (null != var2Lifetime37) {
             ki.field_r[8] = be.a(var2Lifetime37, (byte) -106);
           }
-          var2Lifetime38 = o.a((byte) 76, "achievement_criteria,9");
+          var2Lifetime38 = PcmResampler.a((byte) 76, "achievement_criteria,9");
           if (null != var2Lifetime38) {
             ki.field_r[9] = be.a(var2Lifetime38, (byte) 95);
           }

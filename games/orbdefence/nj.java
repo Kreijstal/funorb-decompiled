@@ -105,7 +105,7 @@ final class nj extends IntrusiveNode {
         return var1;
     }
 
-    final dl a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -155,7 +155,7 @@ final class nj extends IntrusiveNode {
         this.field_z = null;
         var12 = this.field_q;
         this.field_q = null;
-        return new dl(this.field_A, var12, this.field_F, this.field_k, this.field_G);
+        return new PcmSample(this.field_A, var12, this.field_F, this.field_k, this.field_G);
     }
 
     public static void clearStaticReferences() {
@@ -695,7 +695,7 @@ final class nj extends IntrusiveNode {
         }
     }
 
-    final dl a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -727,7 +727,7 @@ final class nj extends IntrusiveNode {
           }
         }
         this.field_z = null;
-        return new dl(this.field_A, var1, this.field_F, this.field_k, this.field_G);
+        return new PcmSample(this.field_A, var1, this.field_F, this.field_k, this.field_G);
     }
 
     final static float unpackVorbisFloat(int param0) {

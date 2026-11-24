@@ -159,7 +159,7 @@ final class ScorePopup {
             var4 = SocketConnector.field_f;
           }
           if (this.value == -6) {
-            var4 = qh.field_h;
+            var4 = PcmResampler.field_h;
           }
           if (this.value == -7) {
             var4 = we.field_e;

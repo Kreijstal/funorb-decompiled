@@ -7,7 +7,7 @@ abstract class pm extends DualLinkNode {
     static nf[] field_w;
     double field_E;
     oi field_v;
-    static bi field_x;
+    static PcmSample field_x;
     static String[] field_B;
     double field_t;
     double field_C;
@@ -28,7 +28,7 @@ abstract class pm extends DualLinkNode {
     void g(int param0) {
         this.field_z = true;
         if (param0 != 26402) {
-          field_x = (bi) null;
+          field_x = (PcmSample) null;
         }
     }
 
@@ -36,7 +36,7 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(int param0, ah param1);
 
-    final ka a(byte param0, bi param1, double param2) {
+    final ka a(byte param0, PcmSample param1, double param2) {
         ka var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -363,7 +363,7 @@ abstract class pm extends DualLinkNode {
         try {
           rn.field_c = param3[2 + param2] * param1[9] + (param3[1 + param2] * param1[6] + (this.field_E + param1[3] * param3[param2]));
           if (param0) {
-            field_x = (bi) null;
+            field_x = (PcmSample) null;
           }
           ud.field_o = param1[7] * param3[1 + param2] + (param1[4] * param3[param2] + this.field_t) + param1[10] * param3[param2 + 2];
           dh.field_sb = param1[5] * param3[param2] + this.field_D + param1[8] * param3[param2 + 1] + param3[2 + param2] * param1[11];
@@ -837,7 +837,7 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(cl param0, byte param1);
 
-    final ka a(int param0, bi param1, double param2, double param3, double param4) {
+    final ka a(int param0, PcmSample param1, double param2, double param3, double param4) {
         sk discarded$1 = null;
         mb var9 = null;
         RuntimeException var9_ref = null;
@@ -1067,7 +1067,7 @@ abstract class pm extends DualLinkNode {
           }
           var3 = (fg) (AccountCreationResultPanel.field_Db.a((long)var2.hashCode(), -1));
           if (!param1) {
-            field_x = (bi) null;
+            field_x = (PcmSample) null;
           }
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_ob);

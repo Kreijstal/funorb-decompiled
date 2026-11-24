@@ -23,20 +23,20 @@ final class cf {
         field_g = (he[]) null;
     }
 
-    private final vk a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        vk var8 = null;
+        PcmSample var8 = null;
         tk var9 = null;
-        vk stackIn_5_0 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_18_0 = null;
-        vk stackIn_20_0 = null;
+        PcmSample stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vk var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param1 >>> 12 | (4095 & param1) << 4) ^ param0;
           var5_int = var5_int | param1 << 16;
@@ -44,7 +44,7 @@ final class cf {
             cf.a((byte) -46);
           }
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (vk) (this.field_f.a(true, var6));
+          var8 = (PcmSample) (this.field_f.a(true, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -64,7 +64,7 @@ final class cf {
           var8Lifetime1 = var9.a(param2);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
-            return (vk) (stackIn_18_0);
+            return (PcmSample) (stackIn_18_0);
           }
           var9.unlink(-16175);
           this.field_f.a(var8Lifetime1, var6, -1);
@@ -118,28 +118,28 @@ final class cf {
         }
     }
 
-    private final vk b(int param0, int param1, int[] param2, int param3) {
-        vk discarded$1 = null;
+    private final PcmSample b(int param0, int param1, int[] param2, int param3) {
+        PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        vk var8 = null;
+        PcmSample var8 = null;
         kb var9 = null;
         int[] var10 = null;
-        vk var11 = null;
-        vk stackIn_2_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_8_0 = null;
-        vk stackIn_16_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vk var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param3 ^ (param0 >>> 12 | (param0 & 536875007) << 4);
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (vk) (this.field_f.a(true, var6));
+          var8 = (PcmSample) (this.field_f.a(true, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -151,7 +151,7 @@ final class cf {
           if (param2 != null &&
             param2[0] <= 0) {
             stackIn_8_0 = null;
-            return (vk) (stackIn_8_0);
+            return (PcmSample) (stackIn_8_0);
           }
           var9 = kb.a(this.field_d, param0, param3);
           if (var9 == null) {
@@ -191,11 +191,11 @@ final class cf {
         field_a = null;
     }
 
-    final vk a(int param0, int param1, int[] param2) {
+    final PcmSample a(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
         int[] var5 = null;
-        vk stackIn_5_0 = null;
-        vk stackIn_8_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -239,10 +239,10 @@ final class cf {
         }
     }
 
-    final vk a(int[] param0, int param1, int param2) {
+    final PcmSample a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        vk stackIn_3_0 = null;
-        vk stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

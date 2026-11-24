@@ -8,7 +8,7 @@ final class qk extends IOException {
     static int[] field_f;
     static boolean field_c;
     static String field_e;
-    static ng field_g;
+    static PcmResampler field_g;
     static int[] field_b;
     static String field_d;
 

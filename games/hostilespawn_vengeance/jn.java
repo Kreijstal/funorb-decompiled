@@ -152,7 +152,7 @@ final class jn extends fc {
         Throwable decompiledCaughtException = null;
         var1_ref = ByteStorage.field_c;
         synchronized (var1_ref) {
-          if (nm.field_j == ee.field_e) {
+          if (PcmResampler.field_j == ee.field_e) {
             return false;
           }
           pj.field_e = cm.field_a[ee.field_e];

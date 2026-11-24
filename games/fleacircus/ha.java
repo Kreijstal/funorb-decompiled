@@ -10,7 +10,7 @@ final class ha extends IntrusiveNode {
     int field_n;
     static String field_p;
     static String field_j;
-    static sf field_o;
+    static PcmSample field_o;
     static boolean field_k;
 
     final static void a(int param0) {

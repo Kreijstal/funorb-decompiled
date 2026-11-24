@@ -16,7 +16,7 @@ final class hg extends IntrusiveNode {
     static qf field_E;
     int field_n;
     int field_q;
-    sh field_u;
+    PcmSample field_u;
     int field_x;
     int field_h;
     int field_o;

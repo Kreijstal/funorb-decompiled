@@ -62,9 +62,9 @@ final class va {
         return new va(new PacketBuffer(var3));
     }
 
-    final jb a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new jb(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     private va(PacketBuffer param0) {

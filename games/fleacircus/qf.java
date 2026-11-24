@@ -54,9 +54,9 @@ final class qf {
         return var3;
     }
 
-    final sf b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new sf(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     final static qf a(ResourceArchive param0, String param1, String param2) {

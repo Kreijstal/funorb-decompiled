@@ -252,7 +252,7 @@ final class jh extends wb implements qk {
         this.field_F = false;
     }
 
-    final static void a(int param0, byte param1, int param2, jb[] param3, int param4) {
+    final static void a(int param0, byte param1, int param2, PcmSample[] param3, int param4) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -292,7 +292,7 @@ final class jh extends wb implements qk {
         ph var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        jb[] var6 = null;
+        PcmSample[] var6 = null;
         ph stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -307,8 +307,8 @@ final class jh extends wb implements qk {
           this.field_x = this.field_x + 38;
           var4.a(-30 + this.field_s, var5, 0, 15, 30);
           if (param2 != 50) {
-            var6 = (jb[]) null;
-            jh.a(113, (byte) 58, 125, (jb[]) null, 37);
+            var6 = (PcmSample[]) null;
+            jh.a(113, (byte) 58, 125, (PcmSample[]) null, 37);
           }
           this.a(param2 + 51398, var4);
           this.c(0);

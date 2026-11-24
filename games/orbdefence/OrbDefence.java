@@ -795,7 +795,7 @@ public final class OrbDefence extends NetworkGameClient {
                             if (!param0) {
                               return false;
                             }
-                            mh.field_a = new dl[60];
+                            mh.field_a = new PcmSample[60];
                             bg.a(param1 - 2027485875);
                             cj.field_b = new vd(kd.field_q, AccountCreationResultPanel.field_hb);
                             mh.field_a[0] = cm.a(kd.field_q, "", "Orb_defence_select_menu_item").a();

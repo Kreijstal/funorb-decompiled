@@ -17,7 +17,7 @@ class lb implements wo, fi {
     private boolean field_f;
     int field_a;
     static boolean field_k;
-    static ko field_d;
+    static PcmSample field_d;
 
     public final int c(qm param0, int param1) {
         int discarded$1 = 0;

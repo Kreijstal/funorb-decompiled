@@ -10,7 +10,7 @@ final class hm extends dc {
     private double field_hb;
     static int field_qb;
     private double[] field_jb;
-    static bi field_pb;
+    static PcmSample field_pb;
     static String field_W;
     private double field_ub;
     static String field_gb;
@@ -397,7 +397,7 @@ final class hm extends dc {
         return false;
     }
 
-    hm(pm param0, bi param1) {
+    hm(pm param0, PcmSample param1) {
         super(param0, param1, 0);
     }
 

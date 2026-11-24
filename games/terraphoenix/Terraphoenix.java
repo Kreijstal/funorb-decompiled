@@ -1004,9 +1004,9 @@ public final class Terraphoenix extends GameShell {
           }
           if (ma.field_I != 0) {
             if (532 <= ef.field_j &&
-              (488 - m.field_g.field_t) <= MouseWheelInput.field_b &&
+              (488 - PcmResampler.field_g.field_t) <= MouseWheelInput.field_b &&
               632 > ef.field_j &&
-              MouseWheelInput.field_b < (516 - m.field_g.field_t)) {
+              MouseWheelInput.field_b < (516 - PcmResampler.field_g.field_t)) {
               boolean decompiledSharedTail1 = !(this.field_cb < this.field_bb.length());
               if (!decompiledSharedTail1) {
                 this.field_mb = this.field_mb - (this.field_bb.length() - this.field_cb) * 5;
@@ -1022,9 +1022,9 @@ public final class Terraphoenix extends GameShell {
               }
             }
             if (ef.field_j >= 532 &&
-              MouseWheelInput.field_b >= (520 - m.field_g.field_t) &&
+              MouseWheelInput.field_b >= (520 - PcmResampler.field_g.field_t) &&
               ef.field_j < 632 &&
-              (548 - m.field_g.field_t) > MouseWheelInput.field_b) {
+              (548 - PcmResampler.field_g.field_t) > MouseWheelInput.field_b) {
               this.field_mb = 500;
               gd.field_c = 10;
               qd.$cfr$intArgs$a$e9dea5688aa5(64, 33);
@@ -1608,7 +1608,7 @@ public final class Terraphoenix extends GameShell {
         Object var3_ref = null;
         int var3_int = 0;
         RuntimeException var3_ref2 = null;
-        m var4 = null;
+        PcmResampler var4 = null;
         Object var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -1747,7 +1747,7 @@ public final class Terraphoenix extends GameShell {
           DualLinkNode.a(AccountNameAvailabilityValidator.field_q, (byte) -74, 80.0f);
           this.a((byte) -89);
           var3 = new da(ee.field_G, mi.field_h);
-          var4 = new m(22050, PcmPlayerService.field_u);
+          var4 = new PcmResampler(22050, PcmPlayerService.field_u);
           mi.field_h = null;
           ee.field_G = null;
           var5 = 0;
@@ -1767,13 +1767,13 @@ public final class Terraphoenix extends GameShell {
               var5 > 21) &&
               (var5 != 82 &&
               83 != var5)) {
-              GameApplet.field_g[var5] = var3.a(sk.field_b[var5], param1 + 107).a(var4);
+              GameApplet.field_g[var5] = var3.a(sk.field_b[var5], param1 + 107).resample(var4);
             }
             if (var5 >= 1 &&
               var5 <= 21 ||
               (var5 == 82 ||
               83 == var5) || var6 != 0) {
-              GameApplet.field_g[var5] = var3.a(-1, sk.field_b[var5]).a(var4);
+              GameApplet.field_g[var5] = var3.a(-1, sk.field_b[var5]).resample(var4);
             }
             var5++;
             if (var6 == 0) {
@@ -3624,7 +3624,7 @@ public final class Terraphoenix extends GameShell {
             this.field_I.field_a[this.field_nb[this.field_qb].field_i.field_g] > 0 &&
             8 > this.field_nb[this.field_qb].field_i.field_d) {
             this.field_Eb = new String[1];
-            this.field_Eb[0] = m.field_a;
+            this.field_Eb[0] = PcmResampler.field_a;
             if (ma.field_I != 0) {
               qd.$cfr$intArgs$a$e9dea5688aa5(23, 24);
               dupTemp$15 = this.field_nb[this.field_qb].field_i.field_g;
@@ -4259,7 +4259,7 @@ public final class Terraphoenix extends GameShell {
           hd.clearStaticReferences((byte) 107);
           IntrusiveDeque.clearStaticReferences(-22208);
           MidiPcmStream.c((byte) 107);
-          m.clearStaticReferences((byte) 89);
+          PcmResampler.clearStaticReferences((byte) 89);
           PcmPlayerService.clearStaticReferences();
           da.a(18210);
           qa.a(-79);
@@ -8353,7 +8353,7 @@ public final class Terraphoenix extends GameShell {
               468 < this.field_mb) {
               SoftwareRasterizer.d(0, 0, 640, 480, 0, 8 * this.field_mb - 3744);
             }
-            m.field_g.d(0, 480 - m.field_g.field_t);
+            PcmResampler.field_g.d(0, 480 - PcmResampler.field_g.field_t);
             if (this.field_bb != null) {
               var5Lifetime1Lifetime1 = 16776960;
               var6_ref_String = this.field_bb.substring(0, this.field_cb);
@@ -8421,17 +8421,17 @@ public final class Terraphoenix extends GameShell {
             }
             TutorialText.field_e.d(0, 0);
             if (ef.field_j >= 532 &&
-              488 - m.field_g.field_t <= MouseWheelInput.field_b &&
+              488 - PcmResampler.field_g.field_t <= MouseWheelInput.field_b &&
               632 > ef.field_j &&
-              MouseWheelInput.field_b < 516 - m.field_g.field_t) {
-              SoftwareRasterizer.d(532, 488 - m.field_g.field_t, 100, 28, 16777215, 128);
+              MouseWheelInput.field_b < 516 - PcmResampler.field_g.field_t) {
+              SoftwareRasterizer.d(532, 488 - PcmResampler.field_g.field_t, 100, 28, 16777215, 128);
             }
             decompiledFrameRemainder12 = !(ef.field_j < 532);
             if ((decompiledFrameRemainder12) &&
-              (decompiledFrameRemainder12 = !(520 - m.field_g.field_t > MouseWheelInput.field_b)) &&
+              (decompiledFrameRemainder12 = !(520 - PcmResampler.field_g.field_t > MouseWheelInput.field_b)) &&
               (decompiledFrameRemainder12 = !(632 <= ef.field_j)) &&
-              (decompiledFrameRemainder12 = !((548 - m.field_g.field_t) <= MouseWheelInput.field_b))) {
-              SoftwareRasterizer.d(532, 520 - m.field_g.field_t, 100, 28, 16777215, 128);
+              (decompiledFrameRemainder12 = !((548 - PcmResampler.field_g.field_t) <= MouseWheelInput.field_b))) {
+              SoftwareRasterizer.d(532, 520 - PcmResampler.field_g.field_t, 100, 28, 16777215, 128);
               decompiledFrameRemainder12 = (var10 != 0);
             }
           }
@@ -8754,7 +8754,7 @@ public final class Terraphoenix extends GameShell {
           pc.field_e = qb.a("title_missionbrief", (byte) -36, "menu_graphics", ab.field_a);
           ki.field_ab = qb.a("title_missionselect", (byte) -36, "menu_graphics", ab.field_a);
           le.field_p = qb.a("title_debriefing", (byte) -36, "menu_graphics", ab.field_a);
-          m.field_g = il.a("introbase", "menu_graphics", ab.field_a, -1);
+          PcmResampler.field_g = il.a("introbase", "menu_graphics", ab.field_a, -1);
           u.field_e = ig.a(ab.field_a, param0 ^ -2020, "zmasks", "");
           nb.field_d = ig.a(ab.field_a, 0, "combatbuttons", "");
           bl.field_b = ig.a(ab.field_a, 0, "researchbuttons", "menu_graphics");
@@ -9314,7 +9314,7 @@ public final class Terraphoenix extends GameShell {
               }
               var15 = stackIn_180_0 + stackIn_180_1;
               if (var14 > 0) {
-                AccountRequestState.field_f.b(m.field_b, var6, var11, 16777215, 0);
+                AccountRequestState.field_f.b(PcmResampler.field_b, var6, var11, 16777215, 0);
                 AccountRequestState.field_f.a(100 * var15 / var14 + "%", var9, var11, 16777215, 0);
                 var12 = var12 * var15 / var14;
               }

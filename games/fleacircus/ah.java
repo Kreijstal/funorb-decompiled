@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ah {
     private int field_b;
-    static sf field_a;
+    static PcmSample field_a;
     static boolean field_c;
     private int field_d;
     static int[] field_g;

@@ -24,7 +24,7 @@ class fj extends IntrusiveNode {
     int field_v;
     static String field_A;
     static String field_D;
-    static bi field_G;
+    static PcmSample field_G;
 
     void a(int param0, int param1, int param2, fj param3, int param4, int param5) {
         try {

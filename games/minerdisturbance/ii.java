@@ -6,7 +6,7 @@ final class ii {
     static IntrusiveDeque field_b;
     static int field_a;
 
-    final static sa a(ji param0, boolean param1) {
+    final static sa a(PcmSample param0, boolean param1) {
         RuntimeException var2 = null;
         sa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

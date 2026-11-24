@@ -1424,7 +1424,7 @@ final class rb {
         var18 = MinerDisturbance.field_ab;
         try {
           if (!vi.field_h &&
-            !wm.field_e) {
+            !PcmResampler.field_e) {
             for (var10 = param2 * 4; var10 <= 4 + 4 * param0; var10++) {
               for (var11 = param3 * 4; var11 >= 4 + param1 * 4; var11--) {
                 var7_int = 8 * var10 - li.field_c;

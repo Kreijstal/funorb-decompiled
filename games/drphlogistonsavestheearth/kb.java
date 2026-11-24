@@ -14,9 +14,9 @@ final class kb {
         return new kb(new PacketBuffer(var3));
     }
 
-    final vk a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new vk(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_a / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_a / 1000);
     }
 
     final static kb a(vj param0, String param1, String param2) {

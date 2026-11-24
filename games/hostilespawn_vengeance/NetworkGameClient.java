@@ -85,7 +85,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           rb.e(-2);
           h.field_b = ti.createMouseWheelInput((byte) -55);
           ea.a(GameAppletShell.field_h, 0);
-          nm.field_i = param6;
+          PcmResampler.field_i = param6;
           ck.field_e = param4;
           tb.field_P = param7;
           ll.field_d = param2;
@@ -172,7 +172,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + jd.field_q;
         byte[] var5 = new byte[var4];
         sc.field_g.a(0, var4, var5, (byte) 82);
-        ArchiveIndex.a(bn.c(-1), nm.a(125, var5), (byte) -97, var3 != 0);
+        ArchiveIndex.a(bn.c(-1), PcmResampler.a(125, var5), (byte) -97, var3 != 0);
     }
 
     private final void a(int param0, String param1, int param2, int param3, byte param4) {
@@ -657,7 +657,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           im.field_c = ByteStorage.a(param1 ^ 9811, ck.field_e, true, false, 1);
           mb.field_m = ByteStorage.a(96, uh.field_k, true, false, 1);
-          ll.field_b = ByteStorage.a(114, nm.field_i, true, false, 1);
+          ll.field_b = ByteStorage.a(114, PcmResampler.field_i, true, false, 1);
           wd.field_a = im.field_c;
           ResourceArchive.field_a = mb.field_m;
           pb.field_Kb = 2;
@@ -700,7 +700,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             hf.field_c = wj.e((byte) -98);
             GameCanvas.field_b = uj.e(1);
           }
-          nm.a(GameCanvas.field_b, ll.field_b, param1 - 9887, hf.field_c);
+          PcmResampler.a(GameCanvas.field_b, ll.field_b, param1 - 9887, hf.field_c);
           mb.field_m = null;
           im.field_c = null;
           ll.field_b = null;
