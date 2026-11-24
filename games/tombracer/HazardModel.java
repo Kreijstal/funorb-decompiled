@@ -124,7 +124,7 @@ final class HazardModel extends TrapModel {
                   var5 = MeshMaterialColour.requestRemoveFriend(var4, (byte) 102, param1);
                 }
                 if (ResourceArchive.field_k == 2) {
-                  var5 = Bzip2State.a(-3, var4, param1);
+                  var5 = Bzip2State.requestAddIgnore(-3, var4, param1);
                 }
                 if (3 == ResourceArchive.field_k) {
                   var5 = SelectionMenuInput.requestRemoveIgnoredUser(var4, param1, false, var4);

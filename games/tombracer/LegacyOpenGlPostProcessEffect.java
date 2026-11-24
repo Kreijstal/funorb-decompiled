@@ -8,7 +8,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
 
     abstract void apply(LegacyOpenGlTexture2D param0, int param1, byte param2, LegacyOpenGlTexture2D param3);
 
-    final static void a(boolean param0) {
+    final static void resetAccountRequestState(boolean param0) {
         TileOperator.field_p = param0 ? true : false;
         LoadProfileCommand.field_r = false;
         FormFieldRow.queueLoginAction(false, -1);

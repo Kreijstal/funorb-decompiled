@@ -2927,14 +2927,14 @@ final class ModelTriangleRasterizer {
             this.fillGradientTriangle((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
             return;
           }
-          if (!this.field_k.j(param22)) {
+          if (!this.field_k.isTextureLowDetail(param22)) {
             stackIn_6_1 = this.field_k.field_I;
           } else {
             stackIn_6_1 = 64;
           }
           this.field_i = stackIn_6_1;
           this.field_r = this.field_i - 1;
-          this.field_f = this.field_k.f(param22);
+          this.field_f = this.field_k.getTextureAlphaMode(param22);
           this.field_d = this.field_k.d(param22);
         }
         this.field_l = param18;
@@ -4822,14 +4822,14 @@ final class ModelTriangleRasterizer {
             this.fillGradientTriangleArgb((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
             return;
           }
-          if (!this.field_k.j(param22)) {
+          if (!this.field_k.isTextureLowDetail(param22)) {
             stackIn_6_1 = this.field_k.field_I;
           } else {
             stackIn_6_1 = 64;
           }
           this.field_i = stackIn_6_1;
           this.field_r = this.field_i - 1;
-          this.field_f = this.field_k.f(param22);
+          this.field_f = this.field_k.getTextureAlphaMode(param22);
           this.field_d = this.field_k.d(param22);
         }
         this.field_l = param18;

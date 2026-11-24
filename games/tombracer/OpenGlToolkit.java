@@ -314,7 +314,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glTexEnvi(8960, 34200 + param2, param3);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setViewportOffset(int param0, int param1, int param2) {
         this.field_Pc = param1;
         this.field_g = param2;
         this.applyViewport((byte) -114);
@@ -2038,7 +2038,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return (SceneLight) ((Object) new OpenGlSceneLight(param0, param1, param2, param3, param4, param5));
     }
 
-    final boolean i(int param0) {
+    final boolean supportsUnderwaterEffect(int param0) {
         if (param0 != 7085) {
           return true;
         }

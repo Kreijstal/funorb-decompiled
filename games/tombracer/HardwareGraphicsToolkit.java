@@ -367,7 +367,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(float param0, int param1) {
+    final void setOrthographicScale(float param0, int param1) {
         if (param1 != -229) {
           this.field_cb = (VertexStreamBuffer) null;
         }
@@ -740,7 +740,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int stackIn_10_0 = 0;
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
-        param4 = param4 & this.p(-112);
+        param4 = param4 & this.supportsUnderwaterEffect(-112);
         if (param5 != -25) {
           this.field_eb = (GpuCubeTextureSource) null;
         }
@@ -1624,7 +1624,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, GpuPrimitiveType param4, int param5, int param6);
 
-    private final boolean p(int param0) {
+    private final boolean supportsUnderwaterEffect(int param0) {
         if (param0 > -41) {
           GpuPrimitiveType var3 = (GpuPrimitiveType) null;
           this.drawPrimitives(-55, (GpuPrimitiveType) null, 17, -88);
@@ -2089,7 +2089,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         this.useOrthographicProjection(-89);
-        this.a((float)param6, -229);
+        this.setOrthographicScale((float)param6, -229);
         this.setFogEnabled(false, -103);
         this.setLightingEnabled(0, false);
         this.setDepthTestEnabled(0, false);
@@ -2309,7 +2309,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final AffineTransform3D getActiveTextureTransform(int param0) {
         if (param0 != 0) {
-          this.a(-0.6965478658676147f, 12);
+          this.setOrthographicScale(-0.6965478658676147f, 12);
         }
         return this.field_hc[this.field_Cc];
     }

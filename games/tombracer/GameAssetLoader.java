@@ -258,7 +258,7 @@ final class GameAssetLoader implements LoadingStage {
                 var5_int = param0.charAt(var4_int);
                 if (!Character.isWhitespace((char) var5_int)) {
                   var6 = Character.digit((char) var5_int, 16);
-                  var9.j(var6, 4);
+                  var9.writeNibble(var6, 4);
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {

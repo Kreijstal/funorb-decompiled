@@ -51,7 +51,7 @@ final class MidiVoiceMixer extends PcmStream {
     }
 
     final static void a(boolean param0) {
-        LegacyOpenGlPostProcessEffect.a(!param0 ? true : false);
+        LegacyOpenGlPostProcessEffect.resetAccountRequestState(!param0 ? true : false);
         LoadProfileCommand.field_r = param0 ? true : false;
         VertexAttribute.field_r = true;
         DisplayNameValidator.field_a.hideAllDialogs(true);

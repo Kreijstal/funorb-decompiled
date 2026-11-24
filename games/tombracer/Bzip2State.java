@@ -35,7 +35,7 @@ final class Bzip2State {
     int field_z;
     int[] field_a;
 
-    final static String a(int param0, String param1, int param2) {
+    final static String requestAddIgnore(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         BitPacketBuffer var5 = null;

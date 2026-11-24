@@ -21340,6 +21340,14 @@
       "renamedSymbol": "M:CourseMapPath.readLastLoginMethod(BLjava/applet/Applet;)LLoginMethod;"
     },
     {
+      "symbol": "M:cc.a(BLpfa;)Z",
+      "originalName": "a",
+      "to": "isWalkerAtEndpoint",
+      "evidence": "Test signed16.16walker coordinates shifted>>16against either stored endpoint through the existing X/Y tables. Preserve byte>-92earlyfalse before any walker/array access,original endpoint lookup and short-circuit order,all negative coordinates/bounds failures and diagnostics. Complete original-body SHA256 1fcb2cb4664cd181a53b8e98000ba9d8110275af32816a8d41f944da82d227a6. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z"
+    },
+    {
       "symbol": "M:cc.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -21370,6 +21378,14 @@
       "evidence": "Writes the session cookie for the cookie prefix and host through document.cookie.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CourseMapPath.writeSessionCookie(ILjava/applet/Applet;Ljava/lang/String;)V"
+    },
+    {
+      "symbol": "M:cc.a(Lpfa;IB)Z",
+      "originalName": "a",
+      "to": "matchesWalkerDirectionKey",
+      "evidence": "After the retained endpoint test,choose stored bend coordinates or opposite endpoint and accept the direction-key aliases corresponding to the dominant signed delta. Preserve overflowing squared-delta comparison with vertical ties,all dynamic key constants and96..99aliases,full-int key values,lookup/call/exception order and wrong-byte!=116earlytrue only AFTER coordinate/delta work. Complete original-body SHA256 ca5e3247fff89fd2a5538d536de4d81ae54c78942f34c328998eee68d9086317. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z"
     },
     {
       "symbol": "M:cc.a(Z)Z",
@@ -22452,6 +22468,14 @@
       "renamedSymbol": "M:OpenGlToolkit.readPixels(IIBII)[I"
     },
     {
+      "symbol": "M:cka.a(III)V",
+      "originalName": "a",
+      "to": "setViewportOffset",
+      "evidence": "Store viewport y-offset from param1and x-offset from param2,then apply viewport and scissor through original byte-114/83calls. Existing post-process chain installs offscreen offsets and resets both to0. Preserve argument order,all int overflow,toolkit call/partial-state order,and late full-int!=4float-field overwrite after both updates. Complete original-body SHA256 ed2b1ec4c61dfb72222e05d42ea759f8602de5844e584dfbc7f622af31aafe4f. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.setViewportOffset(III)V"
+    },
+    {
       "symbol": "M:cka.a(IIII)V",
       "originalName": "a",
       "to": "setPostProcessBounds",
@@ -23074,6 +23098,14 @@
       "evidence": "Sets the 2D untextured state (mode 1).",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlToolkit.prepareSolidRendering(B)V"
+    },
+    {
+      "symbol": "M:cka.i(I)Z",
+      "originalName": "i",
+      "to": "supportsUnderwaterEffect",
+      "evidence": "Query existing effect slot3support. Legacy toolkit delegates through its manager with intMAX/3after wrong-guard earlytrue;hardware toolkit queries its shader slot3with1185after the original wrong-guard null-buffer bind. Constructors/factory verify both actual underwater roles. Preserve distinct full-int guards,return/null/exception paths and each factory/fallback rather than unifying implementations. Complete original-body SHA256 8b356bbef04de97428eaf6b3358fd3cd8fbef0fe42019000e80cf435fae7f691. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.supportsUnderwaterEffect(I)Z"
     },
     {
       "symbol": "M:cka.i(II)V",
@@ -29772,6 +29804,14 @@
       "renamedSymbol": "M:HardwareGraphicsToolkit.writeLineVertices(FFFFFFB)Z"
     },
     {
+      "symbol": "M:eo.a(FI)V",
+      "originalName": "a",
+      "to": "setOrthographicScale",
+      "evidence": "Set the scale used by orthographic matrix bounds and invalidate that projection only when primitive float!= detects a change. Preserve NaN always-invalidates and signed-zero equality,wrong-full-int guard clearing the vertex buffer BEFORE comparison,exact param1^-229invalidation argument,downstream wrong-guard overwrite/update behavior and all partial-state/exception order. Complete original-body SHA256 5d7d28b3ec7c533fe882cf23e85fc5bb0f5c196fa576c1397e00e1cecff43619. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareGraphicsToolkit.setOrthographicScale(FI)V"
+    },
+    {
       "symbol": "M:eo.a(I)Lza;",
       "originalName": "a",
       "to": "createHeap",
@@ -30602,6 +30642,14 @@
       "evidence": "Clears the active unit's texture transform mode and sets its transform to identity.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HardwareGraphicsToolkit.resetTextureTransform(B)V"
+    },
+    {
+      "symbol": "M:eo.p(I)Z",
+      "originalName": "p",
+      "to": "supportsUnderwaterEffect",
+      "evidence": "Query existing effect slot3support. Legacy toolkit delegates through its manager with intMAX/3after wrong-guard earlytrue;hardware toolkit queries its shader slot3with1185after the original wrong-guard null-buffer bind. Constructors/factory verify both actual underwater roles. Preserve distinct full-int guards,return/null/exception paths and each factory/fallback rather than unifying implementations. Complete original-body SHA256 c567b76133c41accac91a325c82c772ba6ec20105aa38d458c5b12256eec9782. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareGraphicsToolkit.supportsUnderwaterEffect(I)Z"
     },
     {
       "symbol": "M:eo.q(B)V",
@@ -47404,6 +47452,14 @@
       "renamedSymbol": "M:BitPacketBuffer.readCipheredOpcode(I)I"
     },
     {
+      "symbol": "M:kh.j(II)V",
+      "originalName": "j",
+      "to": "writeNibble",
+      "evidence": "Write the low4bits of the supplied full-int value into the current bit-write state. Preserve mask-before-guard,all duplicated good/bad full-int guard paths,additive byte merges rather than OR,position increment before old-byte read/write,all split cases and eager next-byte zero/write,bit-count updates,invalid-state Java shift masking and partial mutations on bounds errors. Do not replace with the general writeBits method. Complete original-body SHA256 3e78b4eb5cf325ae5b6c52406de5a21b700d2fa89ccda3e2a2a6c53e40742663. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.writeNibble(II)V"
+    },
+    {
       "symbol": "M:kh.k(I)V",
       "originalName": "k",
       "to": "endBitWrite",
@@ -55644,6 +55700,14 @@
       "renamedSymbol": "M:DottedRectangleRenderer.drawDottedRectangle(IIIIZ)V"
     },
     {
+      "symbol": "M:nna.a(ILjava/lang/String;I)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "requestAddIgnore",
+      "evidence": "Validate account name,self check,client state,duplicate-ignore status,100entry limit and friend conflict in original order,returning the first original error or null after queuing the supplied opcode,byte-length slot,marker2and supplied name. Preserve no local list/count update,all field/packet partial writes/backpatches,full-int state/opcode inputs,distinct formatter calls retaining existing Ioverload with125/94rather than byte casts,all formatting allocation/guard/exception behavior and diagnostics. Complete original-body SHA256 01712179675a074213d22df98f238974e67d727b77ec3580ee3c6ae804f90659. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:no.a(B)V",
       "originalName": "a",
       "to": "update",
@@ -57962,6 +58026,14 @@
       "evidence": "Runs the pass from a source texture into a target texture.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.apply(LLegacyOpenGlTexture2D;IBLLegacyOpenGlTexture2D;)V"
+    },
+    {
+      "symbol": "M:oga.a(Z)V",
+      "originalName": "a",
+      "to": "resetAccountRequestState",
+      "evidence": "Set original login-form option from input,clear the retained profile flag,queue pending action-1through original false-option call,and then set registration and username-query state tokens to accountRequestIdle in that order. Bound login-form and connection-dialog callers verify account role. Preserve flag/queue/token partial writes and all call/order/exception behavior;no account/network state redesign. Complete original-body SHA256 0ef47d36ff66fadd5c8c1453b800610658119d5532fa96aa758d9dd635544d57. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.resetAccountRequestState(Z)V"
     },
     {
       "symbol": "M:oga.b(B)Z",
@@ -62242,6 +62314,14 @@
       "evidence": "Counts the set bits of a BitSet.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArchiveNetworkClient.countSetBits(Ljava/util/BitSet;I)I"
+    },
+    {
+      "symbol": "M:qda.b(B)I",
+      "originalName": "b",
+      "to": "pollArchiveServerConnection",
+      "evidence": "Advance the original async archive socket/session handshake and return pending/success/failure status. Preserve attempt-cap status handling BEFORE byte guard,all independent stageifs that can advance several phases per call,request/socket allocation order,8byte session header then15opcode/int revision and13byte write,30second ack deadline,one-byte ack/read/failure paths,socket installation and state cleanup,IOException-to-failure translation and outer unchecked/checked exception handling. Do not change retries,ports,timeouts or add validation. Complete original-body SHA256 c791db69c4cb55a6928f9363c69573c4774a7dee7fee0ea729e838af96d1b8de. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveNetworkClient.pollArchiveServerConnection(B)I"
     },
     {
       "symbol": "M:qda.b(I)Z",
@@ -67964,6 +68044,14 @@
       "renamedSymbol": "M:SoftwareGraphicsToolkit.isBloomEnabled()Z"
     },
     {
+      "symbol": "M:sfa.f(I)I",
+      "originalName": "f",
+      "to": "getTextureAlphaMode",
+      "evidence": "Return the texture metadata alpha mode from one original provider metadata call with byte-5. Downstream raster span uses2for texel alpha,1for zero/nonzero cutout and other values for supplied interpolated alpha. Preserve lookup count/order,all int texture IDs,provider/null/exception behavior and return every raw value without normalization. Complete original-body SHA256 26bfa86663346fd4ab70be7a848dab05b208f602eddef83a1eabdf661c2f44aa. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareGraphicsToolkit.getTextureAlphaMode(I)I"
+    },
+    {
       "symbol": "M:sfa.f(II)V",
       "originalName": "f",
       "to": "setDepthRange",
@@ -68026,6 +68114,14 @@
       "evidence": "di creates and adopts a native heap only when the toolkit returns true; the software toolkit returns false. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoftwareGraphicsToolkit.supportsHeap()Z"
+    },
+    {
+      "symbol": "M:sfa.j(I)Z",
+      "originalName": "j",
+      "to": "isTextureLowDetail",
+      "evidence": "Return true immediately when software global low-detail override is set;otherwise return the texture metadata low-detail flag through the original byte-17lookup. Downstream rasterization/texture loading uses64instead of configured texture size. Preserve short-circuit before provider access,all invalid-ID/null/exception behavior and unmodified lookup/result. Complete original-body SHA256 48e8b1f221199ef8ce01ce76b6e35c4cfd87fb56c82a7fae24f7d2ba0095c57a. Naming only. Complete original body and all15bound incoming-call contexts,367field declarations,four supporting classes and nine unchanged viewport/projection/effect/alpha/account witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareGraphicsToolkit.isTextureLowDetail(I)Z"
     },
     {
       "symbol": "M:sfa.k()V",
@@ -76026,6 +76122,14 @@
       "evidence": "Factories return a new array of their record type with the given length. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CourseLayoutFactory.createArray(II)[LBitDecodable;"
+    },
+    {
+      "symbol": "M:vk.c(I)I",
+      "originalName": "c",
+      "to": "pollMenuAction",
+      "evidence": "Drain key events through retained menu navigation/activation,track key13,then map pointer coordinates and return the original selected action. Preserve wrong-full-int<53return95AFTERkey draining butBEFOREpointer work,action2/5or key13cleanup conditions,mode2/no-action countdown using10999L-elapsed and integer division/cast,and original action2plus dialog-rebuild order on expiry. Preserve every input/clock/global-state call and exception order. Complete original-body SHA256 b2e0a411f78cf20635debe881047a40ab94dd0455f3bd71c193e60468764a05c. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CourseLayoutFactory.pollMenuAction(I)I"
     },
     {
       "symbol": "M:vka.a(ZILla;)Lfsa;",
@@ -201741,7 +201845,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#0",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#0",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -201752,7 +201856,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#1",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#1",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -201763,7 +201867,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#2",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#2",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -201774,7 +201878,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#3",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#3",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -201785,7 +201889,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#4",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#4",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -201796,7 +201900,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#5",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#5",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -201807,7 +201911,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#6",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#6",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -201818,7 +201922,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#7",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#7",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -201829,7 +201933,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#8",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#8",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#8",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -201840,7 +201944,7 @@
     },
     {
       "symbol": "L:cc.a(BLpfa;)Z#9",
-      "renamedSymbol": "L:CourseMapPath.a(BLCourseMapWalker;)Z#9",
+      "renamedSymbol": "L:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -202049,7 +202153,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#0",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#0",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -202060,7 +202164,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#1",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#1",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -202071,7 +202175,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#10",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#10",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#10",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -202082,7 +202186,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#11",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#11",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -202093,7 +202197,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#12",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#12",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -202104,7 +202208,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#13",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#13",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -202115,7 +202219,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#14",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#14",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -202126,7 +202230,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#15",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#15",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -202137,7 +202241,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#16",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#16",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#16",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -202148,7 +202252,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#17",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#17",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#17",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -202159,7 +202263,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#18",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#18",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#18",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -202170,7 +202274,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#19",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#19",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#19",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -202181,7 +202285,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#2",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#2",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#2",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -202192,7 +202296,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#3",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#3",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#3",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -202203,7 +202307,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#4",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#4",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#4",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -202214,7 +202318,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#5",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#5",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#5",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -202225,7 +202329,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#6",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#6",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#6",
       "originalName": "stackIn_53_0",
       "renamedName": "stackIn_53_0",
       "declaration": {
@@ -202236,7 +202340,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#7",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#7",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#7",
       "originalName": "stackIn_53_1",
       "renamedName": "stackIn_53_1",
       "declaration": {
@@ -202247,7 +202351,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#8",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#8",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#8",
       "originalName": "stackIn_54_2",
       "renamedName": "stackIn_54_2",
       "declaration": {
@@ -202258,7 +202362,7 @@
     },
     {
       "symbol": "L:cc.a(Lpfa;IB)Z#9",
-      "renamedSymbol": "L:CourseMapPath.a(LCourseMapWalker;IB)Z#9",
+      "renamedSymbol": "L:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -249261,7 +249365,7 @@
     },
     {
       "symbol": "L:eo.p(I)Z#0",
-      "renamedSymbol": "L:HardwareGraphicsToolkit.p(I)Z#0",
+      "renamedSymbol": "L:HardwareGraphicsToolkit.supportsUnderwaterEffect(I)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -365487,7 +365591,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#0",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#0",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -365498,7 +365602,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#1",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#1",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -365509,7 +365613,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#10",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#10",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -365520,7 +365624,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#11",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#11",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#11",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -365531,7 +365635,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#2",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#2",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#2",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -365542,7 +365646,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#3",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#3",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#3",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -365553,7 +365657,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#4",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#4",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#4",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -365564,7 +365668,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#5",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#5",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#5",
       "originalName": "fieldTemp$5",
       "renamedName": "fieldTemp$5",
       "declaration": {
@@ -365575,7 +365679,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#6",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#6",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#6",
       "originalName": "fieldTemp$6",
       "renamedName": "fieldTemp$6",
       "declaration": {
@@ -365586,7 +365690,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#7",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#7",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#7",
       "originalName": "fieldTemp$9",
       "renamedName": "fieldTemp$9",
       "declaration": {
@@ -365597,7 +365701,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#8",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#8",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#8",
       "originalName": "fieldTemp$7",
       "renamedName": "fieldTemp$7",
       "declaration": {
@@ -365608,7 +365712,7 @@
     },
     {
       "symbol": "L:kh.j(II)V#9",
-      "renamedSymbol": "L:BitPacketBuffer.j(II)V#9",
+      "renamedSymbol": "L:BitPacketBuffer.writeNibble(II)V#9",
       "originalName": "fieldTemp$8",
       "renamedName": "fieldTemp$8",
       "declaration": {
@@ -411456,7 +411560,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -411467,7 +411571,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -411478,7 +411582,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#10",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#10",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#10",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -411489,7 +411593,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#11",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#11",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#11",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -411500,7 +411604,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#12",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#12",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#12",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -411511,7 +411615,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#13",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#13",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#13",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -411522,7 +411626,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#14",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#14",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -411533,7 +411637,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#15",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#15",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -411544,7 +411648,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -411555,7 +411659,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -411566,7 +411670,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#4",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -411577,7 +411681,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#5",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#5",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#5",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -411588,7 +411692,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#6",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#6",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#6",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -411599,7 +411703,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#7",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#7",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#7",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -411610,7 +411714,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#8",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#8",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#8",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -411621,7 +411725,7 @@
     },
     {
       "symbol": "L:nna.a(ILjava/lang/String;I)Ljava/lang/String;#9",
-      "renamedSymbol": "L:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#9",
+      "renamedSymbol": "L:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#9",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -453069,7 +453173,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#0",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#0",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#0",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -453080,7 +453184,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#1",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#1",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#1",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -453091,7 +453195,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#10",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#10",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -453102,7 +453206,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#11",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#11",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -453113,7 +453217,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#2",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#2",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#2",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -453124,7 +453228,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#3",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#3",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#3",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -453135,7 +453239,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#4",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#4",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#4",
       "originalName": "stackIn_36_0",
       "renamedName": "stackIn_36_0",
       "declaration": {
@@ -453146,7 +453250,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#5",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#5",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -453157,7 +453261,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#6",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#6",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#6",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -453168,7 +453272,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#7",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#7",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#7",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -453179,7 +453283,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#8",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#8",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -453190,7 +453294,7 @@
     },
     {
       "symbol": "L:qda.b(B)I#9",
-      "renamedSymbol": "L:ArchiveNetworkClient.b(B)I#9",
+      "renamedSymbol": "L:ArchiveNetworkClient.pollArchiveServerConnection(B)I#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -550210,7 +550314,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#0",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#0",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#0",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -550221,7 +550325,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#1",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#1",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#1",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -550232,7 +550336,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#10",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#10",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -550243,7 +550347,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#2",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#2",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -550254,7 +550358,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#3",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#3",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#3",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -550265,7 +550369,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#4",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#4",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#4",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -550276,7 +550380,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#5",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#5",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -550287,7 +550391,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#6",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#6",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -550298,7 +550402,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#7",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#7",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -550309,7 +550413,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#8",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#8",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -550320,7 +550424,7 @@
     },
     {
       "symbol": "L:vk.c(I)I#9",
-      "renamedSymbol": "L:CourseLayoutFactory.c(I)I#9",
+      "renamedSymbol": "L:CourseLayoutFactory.pollMenuAction(I)I#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -596839,9 +596943,9 @@
     },
     {
       "symbol": "M:cc.a(BLpfa;)Z",
-      "renamedSymbol": "M:CourseMapPath.a(BLCourseMapWalker;)Z",
+      "renamedSymbol": "M:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isWalkerAtEndpoint",
       "declaration": {
         "file": "cc.java",
         "start": 6895,
@@ -596894,9 +596998,9 @@
     },
     {
       "symbol": "M:cc.a(Lpfa;IB)Z",
-      "renamedSymbol": "M:CourseMapPath.a(LCourseMapWalker;IB)Z",
+      "renamedSymbol": "M:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "matchesWalkerDirectionKey",
       "declaration": {
         "file": "cc.java",
         "start": 1913,
@@ -598654,9 +598758,9 @@
     },
     {
       "symbol": "M:cka.a(III)V",
-      "renamedSymbol": "M:OpenGlToolkit.a(III)V",
+      "renamedSymbol": "M:OpenGlToolkit.setViewportOffset(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setViewportOffset",
       "declaration": {
         "file": "cka.java",
         "start": 9106,
@@ -599523,9 +599627,9 @@
     },
     {
       "symbol": "M:cka.i(I)Z",
-      "renamedSymbol": "M:OpenGlToolkit.i(I)Z",
+      "renamedSymbol": "M:OpenGlToolkit.supportsUnderwaterEffect(I)Z",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "supportsUnderwaterEffect",
       "declaration": {
         "file": "cka.java",
         "start": 68943,
@@ -609951,9 +610055,9 @@
     },
     {
       "symbol": "M:eo.a(FI)V",
-      "renamedSymbol": "M:HardwareGraphicsToolkit.a(FI)V",
+      "renamedSymbol": "M:HardwareGraphicsToolkit.setOrthographicScale(FI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setOrthographicScale",
       "declaration": {
         "file": "eo.java",
         "start": 10053,
@@ -611117,9 +611221,9 @@
     },
     {
       "symbol": "M:eo.p(I)Z",
-      "renamedSymbol": "M:HardwareGraphicsToolkit.p(I)Z",
+      "renamedSymbol": "M:HardwareGraphicsToolkit.supportsUnderwaterEffect(I)Z",
       "originalName": "p",
-      "renamedName": "p",
+      "renamedName": "supportsUnderwaterEffect",
       "declaration": {
         "file": "eo.java",
         "start": 50053,
@@ -642687,9 +642791,9 @@
     },
     {
       "symbol": "M:kh.j(II)V",
-      "renamedSymbol": "M:BitPacketBuffer.j(II)V",
+      "renamedSymbol": "M:BitPacketBuffer.writeNibble(II)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "writeNibble",
       "declaration": {
         "file": "kh.java",
         "start": 4099,
@@ -656063,9 +656167,9 @@
     },
     {
       "symbol": "M:nna.a(ILjava/lang/String;I)Ljava/lang/String;",
-      "renamedSymbol": "M:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;",
+      "renamedSymbol": "M:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestAddIgnore",
       "declaration": {
         "file": "nna.java",
         "start": 681,
@@ -659869,9 +659973,9 @@
     },
     {
       "symbol": "M:oga.a(Z)V",
-      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.a(Z)V",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.resetAccountRequestState(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetAccountRequestState",
       "declaration": {
         "file": "oga.java",
         "start": 225,
@@ -667151,9 +667255,9 @@
     },
     {
       "symbol": "M:qda.b(B)I",
-      "renamedSymbol": "M:ArchiveNetworkClient.b(B)I",
+      "renamedSymbol": "M:ArchiveNetworkClient.pollArchiveServerConnection(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollArchiveServerConnection",
       "declaration": {
         "file": "qda.java",
         "start": 1975,
@@ -676534,9 +676638,9 @@
     },
     {
       "symbol": "M:sfa.f(I)I",
-      "renamedSymbol": "M:SoftwareGraphicsToolkit.f(I)I",
+      "renamedSymbol": "M:SoftwareGraphicsToolkit.getTextureAlphaMode(I)I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "getTextureAlphaMode",
       "declaration": {
         "file": "sfa.java",
         "start": 138356,
@@ -676633,9 +676737,9 @@
     },
     {
       "symbol": "M:sfa.j(I)Z",
-      "renamedSymbol": "M:SoftwareGraphicsToolkit.j(I)Z",
+      "renamedSymbol": "M:SoftwareGraphicsToolkit.isTextureLowDetail(I)Z",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "isTextureLowDetail",
       "declaration": {
         "file": "sfa.java",
         "start": 13839,
@@ -689998,9 +690102,9 @@
     },
     {
       "symbol": "M:vk.c(I)I",
-      "renamedSymbol": "M:CourseLayoutFactory.c(I)I",
+      "renamedSymbol": "M:CourseLayoutFactory.pollMenuAction(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "pollMenuAction",
       "declaration": {
         "file": "vk.java",
         "start": 400,
@@ -715705,7 +715809,7 @@
     },
     {
       "symbol": "P:cc.a(BLpfa;)Z#0",
-      "renamedSymbol": "P:CourseMapPath.a(BLCourseMapWalker;)Z#0",
+      "renamedSymbol": "P:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -715716,7 +715820,7 @@
     },
     {
       "symbol": "P:cc.a(BLpfa;)Z#1",
-      "renamedSymbol": "P:CourseMapPath.a(BLCourseMapWalker;)Z#1",
+      "renamedSymbol": "P:CourseMapPath.isWalkerAtEndpoint(BLCourseMapWalker;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -715870,7 +715974,7 @@
     },
     {
       "symbol": "P:cc.a(Lpfa;IB)Z#0",
-      "renamedSymbol": "P:CourseMapPath.a(LCourseMapWalker;IB)Z#0",
+      "renamedSymbol": "P:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -715881,7 +715985,7 @@
     },
     {
       "symbol": "P:cc.a(Lpfa;IB)Z#1",
-      "renamedSymbol": "P:CourseMapPath.a(LCourseMapWalker;IB)Z#1",
+      "renamedSymbol": "P:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -715892,7 +715996,7 @@
     },
     {
       "symbol": "P:cc.a(Lpfa;IB)Z#2",
-      "renamedSymbol": "P:CourseMapPath.a(LCourseMapWalker;IB)Z#2",
+      "renamedSymbol": "P:CourseMapPath.matchesWalkerDirectionKey(LCourseMapWalker;IB)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -719775,7 +719879,7 @@
     },
     {
       "symbol": "P:cka.a(III)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.a(III)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.setViewportOffset(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -719786,7 +719890,7 @@
     },
     {
       "symbol": "P:cka.a(III)V#1",
-      "renamedSymbol": "P:OpenGlToolkit.a(III)V#1",
+      "renamedSymbol": "P:OpenGlToolkit.setViewportOffset(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -719797,7 +719901,7 @@
     },
     {
       "symbol": "P:cka.a(III)V#2",
-      "renamedSymbol": "P:OpenGlToolkit.a(III)V#2",
+      "renamedSymbol": "P:OpenGlToolkit.setViewportOffset(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -721887,7 +721991,7 @@
     },
     {
       "symbol": "P:cka.i(I)Z#0",
-      "renamedSymbol": "P:OpenGlToolkit.i(I)Z#0",
+      "renamedSymbol": "P:OpenGlToolkit.supportsUnderwaterEffect(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -743128,7 +743232,7 @@
     },
     {
       "symbol": "P:eo.a(FI)V#0",
-      "renamedSymbol": "P:HardwareGraphicsToolkit.a(FI)V#0",
+      "renamedSymbol": "P:HardwareGraphicsToolkit.setOrthographicScale(FI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -743139,7 +743243,7 @@
     },
     {
       "symbol": "P:eo.a(FI)V#1",
-      "renamedSymbol": "P:HardwareGraphicsToolkit.a(FI)V#1",
+      "renamedSymbol": "P:HardwareGraphicsToolkit.setOrthographicScale(FI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -746010,7 +746114,7 @@
     },
     {
       "symbol": "P:eo.p(I)Z#0",
-      "renamedSymbol": "P:HardwareGraphicsToolkit.p(I)Z#0",
+      "renamedSymbol": "P:HardwareGraphicsToolkit.supportsUnderwaterEffect(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -821734,7 +821838,7 @@
     },
     {
       "symbol": "P:kh.j(II)V#0",
-      "renamedSymbol": "P:BitPacketBuffer.j(II)V#0",
+      "renamedSymbol": "P:BitPacketBuffer.writeNibble(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -821745,7 +821849,7 @@
     },
     {
       "symbol": "P:kh.j(II)V#1",
-      "renamedSymbol": "P:BitPacketBuffer.j(II)V#1",
+      "renamedSymbol": "P:BitPacketBuffer.writeNibble(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -851214,7 +851318,7 @@
     },
     {
       "symbol": "P:nna.a(ILjava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -851225,7 +851329,7 @@
     },
     {
       "symbol": "P:nna.a(ILjava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "P:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "P:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -851236,7 +851340,7 @@
     },
     {
       "symbol": "P:nna.a(ILjava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "P:Bzip2State.a(ILjava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "P:Bzip2State.requestAddIgnore(ILjava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -860366,7 +860470,7 @@
     },
     {
       "symbol": "P:oga.a(Z)V#0",
-      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.a(Z)V#0",
+      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.resetAccountRequestState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -876800,7 +876904,7 @@
     },
     {
       "symbol": "P:qda.b(B)I#0",
-      "renamedSymbol": "P:ArchiveNetworkClient.b(B)I#0",
+      "renamedSymbol": "P:ArchiveNetworkClient.pollArchiveServerConnection(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -900428,7 +900532,7 @@
     },
     {
       "symbol": "P:sfa.f(I)I#0",
-      "renamedSymbol": "P:SoftwareGraphicsToolkit.f(I)I#0",
+      "renamedSymbol": "P:SoftwareGraphicsToolkit.getTextureAlphaMode(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -900494,7 +900598,7 @@
     },
     {
       "symbol": "P:sfa.j(I)Z#0",
-      "renamedSymbol": "P:SoftwareGraphicsToolkit.j(I)Z#0",
+      "renamedSymbol": "P:SoftwareGraphicsToolkit.isTextureLowDetail(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -927873,7 +927977,7 @@
     },
     {
       "symbol": "P:vk.c(I)I#0",
-      "renamedSymbol": "P:CourseLayoutFactory.c(I)I#0",
+      "renamedSymbol": "P:CourseLayoutFactory.pollMenuAction(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -964465,7 +964569,7 @@
       "original": "ag.java",
       "renamed": "FollowCamera.java",
       "inputSha256": "2ac327ac89a0a2fa10fee2d813c6a43058a9277cffa331be83ad255a34a94875",
-      "outputSha256": "6201591b304dbe6598ee432af4e06356c18e3346f945e773d1754e2fe4ad1335",
+      "outputSha256": "7c44cea4fd59ebf69bd565b6be6dbe504debd05c6dcbc4b7d2253ce3d5cc2d18",
       "edits": [
         {
           "start": 50,
@@ -964585,6 +964689,13 @@
           "symbol": "C:oga",
           "original": "oga",
           "renamed": "LegacyOpenGlPostProcessEffect"
+        },
+        {
+          "start": 793,
+          "end": 794,
+          "symbol": "M:oga.a(Z)V",
+          "original": "a",
+          "renamed": "resetAccountRequestState"
         },
         {
           "start": 814,
@@ -1010018,7 +1010129,7 @@
       "original": "cc.java",
       "renamed": "CourseMapPath.java",
       "inputSha256": "c51f47c6fd02cd7e0b898cc5e471c6d888ee30f368f8c03b0670a7486c8236ad",
-      "outputSha256": "5a7747d76609564952f31597a64c552834dc51caf4b1f28414f02d9682797e8c",
+      "outputSha256": "41dd3d25f2040fc43a3b2371a351eed9e1f8943ef6bea69c6dba965393efaa28",
       "edits": [
         {
           "start": 50,
@@ -1010252,11 +1010363,25 @@
           "renamed": "hasBend"
         },
         {
+          "start": 1913,
+          "end": 1914,
+          "symbol": "M:cc.a(Lpfa;IB)Z",
+          "original": "a",
+          "renamed": "matchesWalkerDirectionKey"
+        },
+        {
           "start": 1915,
           "end": 1918,
           "symbol": "C:pfa",
           "original": "pfa",
           "renamed": "CourseMapWalker"
+        },
+        {
+          "start": 2571,
+          "end": 2572,
+          "symbol": "M:cc.a(BLpfa;)Z",
+          "original": "a",
+          "renamed": "isWalkerAtEndpoint"
         },
         {
           "start": 2735,
@@ -1010425,6 +1010550,13 @@
           "symbol": "M:cc.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 6895,
+          "end": 6896,
+          "symbol": "M:cc.a(BLpfa;)Z",
+          "original": "a",
+          "renamed": "isWalkerAtEndpoint"
         },
         {
           "start": 6910,
@@ -1023380,7 +1023512,7 @@
       "original": "cka.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "6ac9fb8d7ca9f3fd523ba26d424b59e3f403240ec044c34e1b63cd73f48ef1c8",
-      "outputSha256": "aaf692f9fa2197b3205aac3efc7b5674c8a907eb3bc40b4518e04c97f69711fc",
+      "outputSha256": "6a51c8583188428c946eec7e2390917f7c49a308353767e5e8510ca5ae5c41e2",
       "edits": [
         {
           "start": 71,
@@ -1023990,6 +1024122,13 @@
           "symbol": "M:cka.b(IIII)V",
           "original": "b",
           "renamed": "setAlphaCombineArgument"
+        },
+        {
+          "start": 9106,
+          "end": 9107,
+          "symbol": "M:cka.a(III)V",
+          "original": "a",
+          "renamed": "setViewportOffset"
         },
         {
           "start": 9222,
@@ -1027585,6 +1027724,13 @@
           "symbol": "C:wba",
           "original": "wba",
           "renamed": "OpenGlSceneLight"
+        },
+        {
+          "start": 68943,
+          "end": 68944,
+          "symbol": "M:cka.i(I)Z",
+          "original": "i",
+          "renamed": "supportsUnderwaterEffect"
         },
         {
           "start": 69051,
@@ -1049897,7 +1050043,7 @@
       "original": "cw.java",
       "renamed": "LegacyPostProcessChain.java",
       "inputSha256": "d11dfd12e224a76be8f4d63fa0973eef1bc4b4fd659a81f842b64a3d6f3a7f87",
-      "outputSha256": "d8a5654a71482829de1438efefc38fc6024c2cf102881705e16cd2260b9f872e",
+      "outputSha256": "52407abde5713121783bad7d1aa89c08f2a9509a779f90b6fbd53c484b86bb30",
       "edits": [
         {
           "start": 50,
@@ -1050474,6 +1050620,13 @@
           "renamed": "setDrawBuffer"
         },
         {
+          "start": 7211,
+          "end": 7212,
+          "symbol": "M:cka.a(III)V",
+          "original": "a",
+          "renamed": "setViewportOffset"
+        },
+        {
           "start": 7376,
           "end": 7377,
           "symbol": "M:cw.c(I)Z",
@@ -1050682,6 +1050835,13 @@
           "symbol": "M:cka.b(Lks;I)V",
           "original": "b",
           "renamed": "popReadDrawFramebuffer"
+        },
+        {
+          "start": 9301,
+          "end": 9302,
+          "symbol": "M:cka.a(III)V",
+          "original": "a",
+          "renamed": "setViewportOffset"
         },
         {
           "start": 10296,
@@ -1092472,7 +1092632,7 @@
       "original": "eo.java",
       "renamed": "HardwareGraphicsToolkit.java",
       "inputSha256": "04951f02319c9adfeafb9ac8e4ed8bc5ffdbc08453d0c94ed081510674e0b0f0",
-      "outputSha256": "fc02e02419ef749d4d20a66771d23d938e26bce55a48b348c710bb29898ba863",
+      "outputSha256": "15929201295ac79cfb564acd0b8baf95d29bb93d3c8cdbe75efeb3d8353668f1",
       "edits": [
         {
           "start": 74,
@@ -1093399,6 +1093559,13 @@
           "renamed": "setTextureCombineMode"
         },
         {
+          "start": 10053,
+          "end": 10054,
+          "symbol": "M:eo.a(FI)V",
+          "original": "a",
+          "renamed": "setOrthographicScale"
+        },
+        {
           "start": 10140,
           "end": 10142,
           "symbol": "C:qm",
@@ -1094027,6 +1094194,13 @@
           "symbol": "M:eo.a(IIIZZI)V",
           "original": "a",
           "renamed": "selectShaderEffect"
+        },
+        {
+          "start": 21222,
+          "end": 21223,
+          "symbol": "M:eo.p(I)Z",
+          "original": "p",
+          "renamed": "supportsUnderwaterEffect"
         },
         {
           "start": 21287,
@@ -1096698,6 +1096872,13 @@
           "renamed": "GpuPrimitiveType"
         },
         {
+          "start": 50053,
+          "end": 50054,
+          "symbol": "M:eo.p(I)Z",
+          "original": "p",
+          "renamed": "supportsUnderwaterEffect"
+        },
+        {
           "start": 50107,
           "end": 50109,
           "symbol": "C:iw",
@@ -1098352,6 +1098533,13 @@
           "renamed": "useOrthographicProjection"
         },
         {
+          "start": 65970,
+          "end": 65971,
+          "symbol": "M:eo.a(FI)V",
+          "original": "a",
+          "renamed": "setOrthographicScale"
+        },
+        {
           "start": 66007,
           "end": 66008,
           "symbol": "M:eo.b(ZI)V",
@@ -1098938,6 +1099126,13 @@
           "symbol": "M:eo.C(I)Lasa;",
           "original": "C",
           "renamed": "getActiveTextureTransform"
+        },
+        {
+          "start": 72922,
+          "end": 72923,
+          "symbol": "M:eo.a(FI)V",
+          "original": "a",
+          "renamed": "setOrthographicScale"
         },
         {
           "start": 73028,
@@ -1110889,7 +1111084,7 @@
       "original": "et.java",
       "renamed": "MidiVoiceMixer.java",
       "inputSha256": "cd7ede9fc1b0459cfa34485c16caab61023d6bf4fc6dc75a16f957011b2b4e84",
-      "outputSha256": "a74fe76cd280bf9697527254af639eebc2cbc7a586d31b031ba1323201949693",
+      "outputSha256": "c00e1666058ae595f89489e9b0466a342d16122e8ec3db30c3bb28d0a42a5eff",
       "edits": [
         {
           "start": 50,
@@ -1111058,6 +1111253,13 @@
           "symbol": "C:oga",
           "original": "oga",
           "renamed": "LegacyOpenGlPostProcessEffect"
+        },
+        {
+          "start": 1423,
+          "end": 1424,
+          "symbol": "M:oga.a(Z)V",
+          "original": "a",
+          "renamed": "resetAccountRequestState"
         },
         {
           "start": 1458,
@@ -1160080,7 +1160282,7 @@
       "original": "fu.java",
       "renamed": "HazardModel.java",
       "inputSha256": "115bdae4cd026520b271a14cce8cb47f916162ae70cf6fc12f5d0c56d5453ed3",
-      "outputSha256": "dc5a37b7dc5dca64a95dbe0164e1dc0b3d19baddc72ad2b12351b3a20afe87c1",
+      "outputSha256": "282fce56d8ca6a99eaed4c20232f6ecef133485099530a3ffd5f1c6afcb6869e",
       "edits": [
         {
           "start": 50,
@@ -1160403,6 +1160605,13 @@
           "symbol": "C:nna",
           "original": "nna",
           "renamed": "Bzip2State"
+        },
+        {
+          "start": 4643,
+          "end": 4644,
+          "symbol": "M:nna.a(ILjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestAddIgnore"
         },
         {
           "start": 4707,
@@ -1173124,7 +1173333,7 @@
       "original": "gja.java",
       "renamed": "HardwareModel.java",
       "inputSha256": "e8ec92bea08367d86b514720b6118bbe540714c99e72b84a81da5309bce6fd80",
-      "outputSha256": "6ad9eaebbd2cc3c4ad454f5dc6cdfd4d525c2d08c67d51bccc733785afee6478",
+      "outputSha256": "fc9cc640785d917b03cdbf665eff02a8ffd160bfff70dd9353a8ba162d107852",
       "edits": [
         {
           "start": 69,
@@ -1174718,6 +1174927,13 @@
           "symbol": "C:hs",
           "original": "hs",
           "renamed": "TextureFilter"
+        },
+        {
+          "start": 52318,
+          "end": 52319,
+          "symbol": "M:eo.a(FI)V",
+          "original": "a",
+          "renamed": "setOrthographicScale"
         },
         {
           "start": 52365,
@@ -1244407,7 +1244623,7 @@
       "original": "iua.java",
       "renamed": "ModelTriangleRasterizer.java",
       "inputSha256": "349ff61b08bfd161f2217d8bd5282f961a062bb984df1e61b2880d8e34127e5e",
-      "outputSha256": "4e716cf09ab1738592a0e351db46a8c958a4e2e2651e52ea6bd9793349c73f0e",
+      "outputSha256": "6bfc66ff035171cf71cee4a645249d0aff86e800385d669f85f8349df3d3c47b",
       "edits": [
         {
           "start": 50,
@@ -1245467,6 +1245683,20 @@
           "renamed": "alphaBlend"
         },
         {
+          "start": 115447,
+          "end": 115448,
+          "symbol": "M:sfa.j(I)Z",
+          "original": "j",
+          "renamed": "isTextureLowDetail"
+        },
+        {
+          "start": 115689,
+          "end": 115690,
+          "symbol": "M:sfa.f(I)I",
+          "original": "f",
+          "renamed": "getTextureAlphaMode"
+        },
+        {
           "start": 121285,
           "end": 121286,
           "symbol": "M:iua.a([I[IIIIFFFFFFFFFFFFFFFF)V",
@@ -1245703,6 +1245933,20 @@
           "symbol": "M:l.a(III)I",
           "original": "a",
           "renamed": "alphaBlend"
+        },
+        {
+          "start": 194849,
+          "end": 194850,
+          "symbol": "M:sfa.j(I)Z",
+          "original": "j",
+          "renamed": "isTextureLowDetail"
+        },
+        {
+          "start": 195091,
+          "end": 195092,
+          "symbol": "M:sfa.f(I)I",
+          "original": "f",
+          "renamed": "getTextureAlphaMode"
         },
         {
           "start": 200687,
@@ -1307448,7 +1307692,7 @@
       "original": "kh.java",
       "renamed": "BitPacketBuffer.java",
       "inputSha256": "14f8422ea540f5ef3d436ebf8f1e599da60207f639ed3266734932c453e500d2",
-      "outputSha256": "4fdcf13f2b558aaee9a68e6f6b81817e546bfdcba8090ab9f9e700e59bce87a8",
+      "outputSha256": "a84e52f3f77ca6461ae49734407bde5886bde64b66538b1adc2a55e34ec0096d",
       "edits": [
         {
           "start": 50,
@@ -1308037,6 +1308281,13 @@
           "symbol": "M:kh.k(II)V",
           "original": "k",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 4099,
+          "end": 4100,
+          "symbol": "M:kh.j(II)V",
+          "original": "j",
+          "renamed": "writeNibble"
         },
         {
           "start": 4541,
@@ -1346394,7 +1346645,7 @@
       "original": "lja.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "166a4f92f16110b93fbc35ead7c37279e23464885f24906fca005e7beb74953c",
-      "outputSha256": "4da3b46805c58e2929791e8b3ca67f1ad6e220bb4ba58363c86be2829b935425",
+      "outputSha256": "afcbb344c8f92af038463f15e0bbf5175879285d03c0ffb92d609612c4e11d20",
       "edits": [
         {
           "start": 50,
@@ -1346801,6 +1347052,13 @@
           "symbol": "C:nna",
           "original": "nna",
           "renamed": "Bzip2State"
+        },
+        {
+          "start": 4463,
+          "end": 4464,
+          "symbol": "M:nna.a(ILjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestAddIgnore"
         },
         {
           "start": 4616,
@@ -1392728,7 +1392986,7 @@
       "original": "nna.java",
       "renamed": "Bzip2State.java",
       "inputSha256": "70aeb89b1d314ae518da4fe34402e70f27e5d209eac4dcb3a576efda32cd588c",
-      "outputSha256": "6b8f5a2fa864b995423baee235000a0b41c9c453c7f3bfe14c2396949ccc41d9",
+      "outputSha256": "c2648617716cf4ec4b093f0f9819b217f2b5a54b16b50771fd20936fb9daf0ad",
       "edits": [
         {
           "start": 50,
@@ -1392736,6 +1392994,13 @@
           "symbol": "C:nna",
           "original": "nna",
           "renamed": "Bzip2State"
+        },
+        {
+          "start": 681,
+          "end": 682,
+          "symbol": "M:nna.a(ILjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestAddIgnore"
         },
         {
           "start": 792,
@@ -1415087,7 +1415352,7 @@
       "original": "oga.java",
       "renamed": "LegacyOpenGlPostProcessEffect.java",
       "inputSha256": "696671fd6f33e7daf9f056520d5dab8e6098ffdaa396291bd9835de6eeddbd8a",
-      "outputSha256": "db1c5e7f5bfe99147f16597c6d04f428ccb02e8f9f3167cc82477cc3981188a2",
+      "outputSha256": "1e2d4dba63e9c122c7c83db8ad4eada1d007058b0de90cac8c58dd653c8c9f78",
       "edits": [
         {
           "start": 53,
@@ -1415144,6 +1415409,13 @@
           "symbol": "C:rt",
           "original": "rt",
           "renamed": "LegacyOpenGlTexture2D"
+        },
+        {
+          "start": 225,
+          "end": 226,
+          "symbol": "M:oga.a(Z)V",
+          "original": "a",
+          "renamed": "resetAccountRequestState"
         },
         {
           "start": 253,
@@ -1419743,7 +1420015,7 @@
       "original": "oka.java",
       "renamed": "MembersUpsellMenu.java",
       "inputSha256": "1e332267f114d0d3ceb213358e99dc825adf02d6c1262244ebaf4d8719fae5d2",
-      "outputSha256": "9b6b6a890a0b55e2ecebf5accfb8bc47faa6e49ebd1d69035d985bb58d640803",
+      "outputSha256": "f016e3b78b78577cf0c2de6a7bbbfd91703078092f21b8989070af9683658219",
       "edits": [
         {
           "start": 50,
@@ -1421312,6 +1421584,13 @@
           "symbol": "M:vna.f(I)Lvg;",
           "original": "f",
           "renamed": "first"
+        },
+        {
+          "start": 12457,
+          "end": 12458,
+          "symbol": "M:cc.a(Lpfa;IB)Z",
+          "original": "a",
+          "renamed": "matchesWalkerDirectionKey"
         },
         {
           "start": 12743,
@@ -1479418,7 +1479697,7 @@
       "original": "qda.java",
       "renamed": "ArchiveNetworkClient.java",
       "inputSha256": "2d203ffb179ba0ba01ce78f91a5c51891fe5a047bfb09cdbbde2a63117d37a28",
-      "outputSha256": "aba6f6530c7fbb631709cc00c4c6c93cc4dccf2edccf58ba908021962bdc529c",
+      "outputSha256": "734596aa7a709aa8e2b0551450d28fef7e1ef07cfbccd393b1b442fed1fca117",
       "edits": [
         {
           "start": 92,
@@ -1479524,6 +1479803,13 @@
           "symbol": "C:qda",
           "original": "qda",
           "renamed": "ArchiveNetworkClient"
+        },
+        {
+          "start": 838,
+          "end": 839,
+          "symbol": "M:qda.b(B)I",
+          "original": "b",
+          "renamed": "pollArchiveServerConnection"
         },
         {
           "start": 890,
@@ -1479678,6 +1479964,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1975,
+          "end": 1976,
+          "symbol": "M:qda.b(B)I",
+          "original": "b",
+          "renamed": "pollArchiveServerConnection"
         },
         {
           "start": 2293,
@@ -1518561,7 +1518854,7 @@
       "original": "rfa.java",
       "renamed": "TombRacerShell.java",
       "inputSha256": "ee9239156511db1a79e1fc580e5d6f6c90add2ec0e44a464a7b8f3c9337f80a6",
-      "outputSha256": "d7e93ba676361ffe245dbf312b109e59a5d46a7b857ed009e44f0e8de88612f0",
+      "outputSha256": "be104960cfc850b6ab8368b7b5493d4b8ad646461e5c5ed833eac85132db91e3",
       "edits": [
         {
           "start": 74,
@@ -1519318,6 +1519611,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "CourseLayoutFactory"
+        },
+        {
+          "start": 5075,
+          "end": 5076,
+          "symbol": "M:vk.c(I)I",
+          "original": "c",
+          "renamed": "pollMenuAction"
         },
         {
           "start": 5165,
@@ -1549194,7 +1549494,7 @@
       "original": "sfa.java",
       "renamed": "SoftwareGraphicsToolkit.java",
       "inputSha256": "90d0446d6752c8be5dfc9273c2995f335067d1d6375e3476d2f90f8120e85d3c",
-      "outputSha256": "b0c1b998fb5390dd67329c9703c0aa41b6581d7918237d68415cfb1b1af31625",
+      "outputSha256": "8096e9a13f6e83cf4c1a9ded90dbb13e571457ff571264437a2066f8c597994d",
       "edits": [
         {
           "start": 50,
@@ -1549629,6 +1549929,13 @@
           "symbol": "C:za",
           "original": "za",
           "renamed": "GraphicsHeap"
+        },
+        {
+          "start": 13839,
+          "end": 13840,
+          "symbol": "M:sfa.j(I)Z",
+          "original": "j",
+          "renamed": "isTextureLowDetail"
         },
         {
           "start": 13942,
@@ -1550100,6 +1550407,13 @@
           "renamed": "getTexturePixels"
         },
         {
+          "start": 38969,
+          "end": 38970,
+          "symbol": "M:sfa.j(I)Z",
+          "original": "j",
+          "renamed": "isTextureLowDetail"
+        },
+        {
           "start": 39164,
           "end": 39165,
           "symbol": "M:ha.a([IIIIII)Lnh;",
@@ -1550182,6 +1550496,13 @@
           "symbol": "M:sfa.h(I)[I",
           "original": "h",
           "renamed": "getTexturePixels"
+        },
+        {
+          "start": 40433,
+          "end": 40434,
+          "symbol": "M:sfa.j(I)Z",
+          "original": "j",
+          "renamed": "isTextureLowDetail"
         },
         {
           "start": 40628,
@@ -1550954,6 +1551275,13 @@
           "renamed": "fillRectangle"
         },
         {
+          "start": 138356,
+          "end": 138357,
+          "symbol": "M:sfa.f(I)I",
+          "original": "f",
+          "renamed": "getTextureAlphaMode"
+        },
+        {
           "start": 138400,
           "end": 138401,
           "symbol": "M:d.a(BI)Ldw;",
@@ -1551461,7 +1551789,7 @@
       "original": "si.java",
       "renamed": "BlockComponent.java",
       "inputSha256": "3775a77475bbb333f664a47107aaf33e948de78829b362ade7e54db6333d8c47",
-      "outputSha256": "01c437d161cd582c6289f8d2d911a90d20f6dd5411f9a9f06ff85147eff68e80",
+      "outputSha256": "36e0592bf245b86f776625b167ff64186cef86ab5ae9ff75b3d403be4be6ff32",
       "edits": [
         {
           "start": 50,
@@ -1551982,6 +1552310,13 @@
           "renamed": "ArchiveNetworkClient"
         },
         {
+          "start": 4067,
+          "end": 4068,
+          "symbol": "M:qda.b(B)I",
+          "original": "b",
+          "renamed": "pollArchiveServerConnection"
+        },
+        {
           "start": 4100,
           "end": 4103,
           "symbol": "C:uja",
@@ -1552015,6 +1552350,13 @@
           "symbol": "C:qda",
           "original": "qda",
           "renamed": "ArchiveNetworkClient"
+        },
+        {
+          "start": 4202,
+          "end": 4203,
+          "symbol": "M:qda.b(B)I",
+          "original": "b",
+          "renamed": "pollArchiveServerConnection"
         },
         {
           "start": 4238,
@@ -1559936,7 +1560278,7 @@
       "original": "sra.java",
       "renamed": "GameAssetLoader.java",
       "inputSha256": "6995010bca06370c530d55f896a5434e05121a65cb42067094121ad977f8ff04",
-      "outputSha256": "3c1e257f97581692356f2178c5e43656f8076701d1e65c6e6531b2e6bc0d0cfd",
+      "outputSha256": "3dbbe848a42e4f8cf0bbfbaa7ccb5c3590c764f86758aba49376b6a87328d81b",
       "edits": [
         {
           "start": 71,
@@ -1561869,6 +1562211,13 @@
           "symbol": "M:kh.i(I)V",
           "original": "i",
           "renamed": "beginBitWrite"
+        },
+        {
+          "start": 9287,
+          "end": 9288,
+          "symbol": "M:kh.j(II)V",
+          "original": "j",
+          "renamed": "writeNibble"
         },
         {
           "start": 9704,
@@ -1622417,7 +1622766,7 @@
       "original": "uua.java",
       "renamed": "LegacyOpenGlEffectManager.java",
       "inputSha256": "474d2fc710d4b63ec8b330e8995881655d1838b239db548a94390e63281cf180",
-      "outputSha256": "a9f3f40b21b62676f28bd419b14c3e072c1caef78b4b3bdd3aa5e6e676793bd5",
+      "outputSha256": "b5e305323f9a861239906e0102e4bc87d82fbabcfb71c7e755bf0cfe3a738606",
       "edits": [
         {
           "start": 50,
@@ -1622509,6 +1622858,13 @@
           "symbol": "F:uua.field_b:Lcka;",
           "original": "field_b",
           "renamed": "toolkit"
+        },
+        {
+          "start": 385,
+          "end": 386,
+          "symbol": "M:cka.i(I)Z",
+          "original": "i",
+          "renamed": "supportsUnderwaterEffect"
         },
         {
           "start": 884,
@@ -1638959,7 +1639315,7 @@
       "original": "vk.java",
       "renamed": "CourseLayoutFactory.java",
       "inputSha256": "2679974d12c809986908c541f9d312968cc916dec7244e0abcdad2c8a8e4e6b2",
-      "outputSha256": "46377e6acda83fcbcd767564ae67a730f2f3cc32464699e9529966df56e4fb34",
+      "outputSha256": "f800c1bd1c18733f153935a58870d5497790b6f6b94a300a9a7a4690f0c0d712",
       "edits": [
         {
           "start": 50,
@@ -1639009,6 +1639365,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "IntNode"
+        },
+        {
+          "start": 400,
+          "end": 401,
+          "symbol": "M:vk.c(I)I",
+          "original": "c",
+          "renamed": "pollMenuAction"
         },
         {
           "start": 828,
@@ -1683945,10 +1684308,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "c1a9a2a7cb83c12c905fa44bf4f8b8450b49f88d264851cc1b28e2cc7b488c37",
+    "rulesSha256": "88830ab0833bfd3231bb42b4048707435476f76e6ae76c9d3fbe1624f19aad69",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "0acd034e4e1e05e3a6f3bc5b42d37c09e867dd6b4647142a29d15326eddf35e9",
+    "outputTreeSha256": "b2f84b9ecac4b418674fb9df3da6bb48d267eda41e8c25591ac91470639dde49",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

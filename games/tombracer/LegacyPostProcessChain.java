@@ -209,7 +209,7 @@ final class LegacyPostProcessChain {
           this.field_o = param1;
           this.field_t.pushReadDrawFramebuffer((Framebuffer) (this.field_d), (byte) 81);
           this.field_d.setDrawBuffer(0, (byte) -91);
-          this.field_t.a(4, -this.field_t.field_I + (this.field_g + this.field_q), -this.field_o);
+          this.field_t.setViewportOffset(4, -this.field_t.field_I + (this.field_g + this.field_q), -this.field_o);
           return true;
         }
         if (param4 != 0) {
@@ -273,7 +273,7 @@ final class LegacyPostProcessChain {
             if (var5 == null &&
               -1 + var6 == var7) {
               this.field_t.popReadDrawFramebuffer(this.field_i, 0);
-              this.field_t.a(4, 0, 0);
+              this.field_t.setViewportOffset(4, 0, 0);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.field_g);
               jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 1.0f);

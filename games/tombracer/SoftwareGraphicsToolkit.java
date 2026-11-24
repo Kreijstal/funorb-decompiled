@@ -384,7 +384,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     final void useHeap(GraphicsHeap param0) {
     }
 
-    final boolean j(int param0) {
+    final boolean isTextureLowDetail(int param0) {
         if (this.field_e) {
           return true;
         }
@@ -1090,7 +1090,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
               if (var12 == null) {
                 return;
               }
-              if (!this.j(param6)) {
+              if (!this.isTextureLowDetail(param6)) {
                 stackIn_12_0 = this.field_I;
               } else {
                 stackIn_12_0 = 64;
@@ -1134,7 +1134,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
               if (var12 == null) {
                 return;
               }
-              if (!this.j(param6)) {
+              if (!this.isTextureLowDetail(param6)) {
                 stackIn_12_0 = this.field_I;
               } else {
                 stackIn_12_0 = 64;
@@ -3065,7 +3065,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int f(int param0) {
+    final int getTextureAlphaMode(int param0) {
         return this.field_c.metadata((byte) -5, param0).field_d;
     }
 

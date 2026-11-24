@@ -139,13 +139,13 @@ final class BlockComponent extends PrefabComponent {
           if (StatReportingScoringObserver.field_l.processNetwork(81)) {
             return 0;
           }
-          return ArchiveNetworkClient.b((byte) -66);
+          return ArchiveNetworkClient.pollArchiveServerConnection((byte) -66);
         }
         IntrusiveDequeCursor.field_a.processSources(-121);
         if (StatReportingScoringObserver.field_l.processNetwork(81)) {
           return 0;
         }
-        return ArchiveNetworkClient.b((byte) -66);
+        return ArchiveNetworkClient.pollArchiveServerConnection((byte) -66);
     }
 
     final int getRenderLayer(int param0) {

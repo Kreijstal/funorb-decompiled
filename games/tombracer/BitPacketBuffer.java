@@ -129,7 +129,7 @@ final class BitPacketBuffer extends PacketBuffer {
         this.writeCipheredOpcode(-21, -101);
     }
 
-    final void j(int param0, int param1) {
+    final void writeNibble(int param0, int param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$4 = 0;

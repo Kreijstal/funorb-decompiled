@@ -16,7 +16,7 @@ final class CourseLayoutFactory implements BitDecodableFactory {
         return IntNode.field_j;
     }
 
-    final static int c(int param0) {
+    final static int pollMenuAction(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;

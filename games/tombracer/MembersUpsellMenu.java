@@ -365,7 +365,7 @@ final class MembersUpsellMenu extends MenuScreen {
           while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var9 != null) {
-              if (var9.a(this.field_x, param0, (byte) 116)) {
+              if (var9.matchesWalkerDirectionKey(this.field_x, param0, (byte) 116)) {
                 if (this.field_v == var9.field_i) {
                   stackIn_43_0 = var9.field_g;
                 } else {

@@ -172,7 +172,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
             if (MessagePage.a(126)) {
               LegacyOpenGlFontMask.b(false);
             } else {
-              var3 = CourseLayoutFactory.c(107);
+              var3 = CourseLayoutFactory.pollMenuAction(107);
               if (var3 != 2) {
                 if (var3 == 3) {
                   StringCursor.a(-30600, true);

@@ -54,7 +54,7 @@ final class CourseMapPath extends IntrusiveNode {
         return -1 != this.field_j ? true : false;
     }
 
-    final boolean a(CourseMapWalker param0, int param1, byte param2) {
+    final boolean matchesWalkerDirectionKey(CourseMapWalker param0, int param1, byte param2) {
         int stackIn_11_0 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_14_1 = 0;
@@ -74,7 +74,7 @@ final class CourseMapPath extends IntrusiveNode {
         int var9 = 0;
         int var8Lifetime1;
         try {
-          if (!this.a((byte) -95, param0)) {
+          if (!this.isWalkerAtEndpoint((byte) -95, param0)) {
             return false;
           }
           var4_int = param0.field_j >> 16;
@@ -195,7 +195,7 @@ final class CourseMapPath extends IntrusiveNode {
         field_l = null;
     }
 
-    private final boolean a(byte param0, CourseMapWalker param1) {
+    private final boolean isWalkerAtEndpoint(byte param0, CourseMapWalker param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

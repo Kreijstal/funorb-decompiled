@@ -1223,7 +1223,7 @@ final class HardwareModel extends ToolkitModel {
               var22 < this.field_S.field_D) {
             }
           }
-          this.field_S.a((float)param2, -229);
+          this.field_S.setOrthographicScale((float)param2, -229);
           this.field_S.prepareOrthographicModelRendering((byte) 102);
           this.field_S.setModelTransform(var6, (byte) 88);
           this.renderBuffers((byte) -100);

@@ -40,7 +40,7 @@ abstract class ArchiveNetworkClient {
 
     final int getUrgentRequestCount(int param0) {
         if (param0 != -3) {
-          ArchiveNetworkClient.b((byte) 52);
+          ArchiveNetworkClient.pollArchiveServerConnection((byte) 52);
         }
         return this.field_e.size((byte) -56) + this.field_m.size((byte) -92);
     }
@@ -74,7 +74,7 @@ abstract class ArchiveNetworkClient {
         }
     }
 
-    final static int b(byte param0) {
+    final static int pollArchiveServerConnection(byte param0) {
         try {
           int stackIn_16_0 = 0;
           int stackIn_26_0 = 0;

@@ -12,7 +12,7 @@ final class LegacyOpenGlEffectManager {
     private int parameters0;
 
     final void selectEffect(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
-        param2 = param2 & this.toolkit.i(7085);
+        param2 = param2 & this.toolkit.supportsUnderwaterEffect(7085);
         if (param0 > 34) {
           boolean decompiledFrameRemainder0 = true;
           if (!param2) {
