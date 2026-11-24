@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ara extends UiComponent {
+final class QuickChatHelpPanel extends UiComponent {
     static UiComponent field_ub;
     static int field_xb;
     static boolean field_wb;
@@ -9,7 +9,7 @@ final class ara extends UiComponent {
     private UiComponent field_tb;
     static SpriteData field_vb;
 
-    final boolean a(boolean param0, int param1) {
+    final boolean processAndCheckDismissal(boolean param0, int param1) {
         boolean stackIn_9_0 = false;
         if (param1 < 7) {
           field_yb = (String) null;
@@ -128,7 +128,7 @@ final class ara extends UiComponent {
         }
     }
 
-    ara(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
+    QuickChatHelpPanel(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -239,7 +239,7 @@ final class ara extends UiComponent {
         field_ub = null;
         field_vb = null;
         if (param0) {
-          ara.releaseStatics(true);
+          QuickChatHelpPanel.releaseStatics(true);
         }
     }
 

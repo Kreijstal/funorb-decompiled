@@ -12,7 +12,7 @@ final class NativeGraphicsHeap extends GraphicsHeap {
         field_i = null;
     }
 
-    final void b(byte param0) {
+    final void closeHeap(byte param0) {
         this.field_h.close();
         if (param0 < 83) {
           NativeGraphicsHeap.releaseStatics(126);

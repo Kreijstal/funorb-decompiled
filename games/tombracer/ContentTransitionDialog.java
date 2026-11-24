@@ -8,7 +8,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
     private int field_O;
     private int field_Q;
     static String field_L;
-    private rg field_P;
+    private OpacityWidget field_P;
     private int field_S;
     private UiWidget field_T;
     private int field_U;
@@ -25,10 +25,10 @@ abstract class ContentTransitionDialog extends ResizingDialog {
             this.field_P.unlink(83);
           }
           if (param1 == null) {
-            this.field_P = new rg();
+            this.field_P = new OpacityWidget();
           } else {
             param1.setBounds((byte) -31, param1.field_m, param1.field_p, 6, this.field_S + 6);
-            this.field_P = new rg(param1);
+            this.field_P = new OpacityWidget(param1);
           }
           this.addChild(this.field_P, -1);
           this.field_T = null;

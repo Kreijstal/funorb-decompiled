@@ -7,7 +7,7 @@ final class LobbyOverlayAndDateValidationState {
     static BitmapFont field_g;
     static String field_b;
     static String field_f;
-    static ara field_d;
+    static QuickChatHelpPanel field_d;
     static boolean field_c;
     private static String field_z;
 

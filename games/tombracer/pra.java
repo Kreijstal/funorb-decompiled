@@ -69,7 +69,7 @@ final class pra {
           HiscoresScreen.field_r = HiscoresScreen.field_r - 1;
         }
         if (~HiscoresScreen.field_r < param0) {
-          rg.a((byte) 44);
+          OpacityWidget.a((byte) 44);
         }
     }
 

@@ -74,7 +74,7 @@ final class DialogStack extends SingleChildWidget {
           }
           return;
         }
-        if (!LobbyOverlayAndDateValidationState.field_d.a(param0, 94)) {
+        if (!LobbyOverlayAndDateValidationState.field_d.processAndCheckDismissal(param0, 94)) {
           if (!param1) {
             field_z = (int[]) null;
             return;

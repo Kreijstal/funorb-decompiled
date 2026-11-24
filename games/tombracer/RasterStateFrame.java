@@ -41,7 +41,7 @@ final class RasterStateFrame extends IntrusiveNode {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_7_0 = rg.field_A;
+            stackIn_7_0 = OpacityWidget.field_A;
             return stackIn_7_0;
           }
           if (param1.charAt(0) == 34) {

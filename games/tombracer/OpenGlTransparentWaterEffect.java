@@ -83,7 +83,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           this.field_f = param2;
           this.field_e = param0;
           if (param1 != null &&
-            this.field_f.c(-30634) &&
+            this.field_f.hasWaterNoiseTextures(-30634) &&
             this.field_e.field_qd) {
             this.field_d = CharacterChoice.compileAssemblyProgram((byte) -70, this.field_e, param1.getFileByName("gl", (byte) 123, "transparent_water"), 34336);
             return;

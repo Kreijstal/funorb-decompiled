@@ -77,7 +77,7 @@ final class IntArrayRequest extends IntrusiveNode {
           var12 = HardwareModelBillboardState.field_d;
           var10 = (HardwareModelBillboardState.field_d - var14 << 12) / var13;
         }
-        ara.drawClippedLine(0, param3, var9, var10, var11, var12);
+        QuickChatHelpPanel.drawClippedLine(0, param3, var9, var10, var11, var12);
         return;
     }
 
@@ -117,10 +117,10 @@ final class IntArrayRequest extends IntrusiveNode {
         RuntimeException var1 = null;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          for (var1_int = 0; var1_int < ara.field_xb; var1_int++) {
+          for (var1_int = 0; var1_int < QuickChatHelpPanel.field_xb; var1_int++) {
             CourseLayout.field_d[var1_int] = null;
           }
-          ara.field_xb = 0;
+          QuickChatHelpPanel.field_xb = 0;
           if (param0 != 5) {
             field_j = (String) null;
           }

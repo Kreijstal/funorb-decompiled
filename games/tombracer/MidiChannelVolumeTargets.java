@@ -273,9 +273,9 @@ final class MidiChannelVolumeTargets {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            ara.field_ub = new UiComponent(0L, param8);
-            ara.field_ub.field_r = ShooterComponent.field_G;
-            LobbyOverlayAndDateValidationState.field_e.addChild(-128, ara.field_ub);
+            QuickChatHelpPanel.field_ub = new UiComponent(0L, param8);
+            QuickChatHelpPanel.field_ub.field_r = ShooterComponent.field_G;
+            LobbyOverlayAndDateValidationState.field_e.addChild(-128, QuickChatHelpPanel.field_ub);
             stackIn_31_0 = HeapIndexArray.e(540800) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&

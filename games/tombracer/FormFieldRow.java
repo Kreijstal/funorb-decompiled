@@ -106,7 +106,7 @@ final class FormFieldRow extends SingleChildWidget {
         return ConveyorBehaviour.createBevelNineSlice(param0, 1, param3, 1, param4, 1, 3, true, param2);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void queueLoginAction(boolean param0, int param1) {
         if (param0) {
           return;
         }

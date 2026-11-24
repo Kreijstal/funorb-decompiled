@@ -64,7 +64,7 @@ final class MessagePage extends WidgetContainer implements ButtonListener {
                 this.field_y.dismiss((byte) -1);
                 break;
               }
-              FormFieldRow.a(false, this.field_w[var6_int]);
+              FormFieldRow.queueLoginAction(false, this.field_w[var6_int]);
               break;
             }
           }

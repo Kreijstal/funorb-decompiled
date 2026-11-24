@@ -57,7 +57,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         field_v = null;
     }
 
-    final static int r(int param0) {
+    final static int pollLoginAction(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -77,7 +77,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           }
           if (SoftwareRenderTarget.field_a != -1) {
             var1_int = SoftwareRenderTarget.field_a;
-            FormFieldRow.a(false, -1);
+            FormFieldRow.queueLoginAction(false, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }

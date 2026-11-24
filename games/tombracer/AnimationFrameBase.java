@@ -20,7 +20,7 @@ final class AnimationFrameBase extends IntrusiveNode {
         if (var1 == null) {
           return false;
         }
-        stackIn_9_0 = (!ara.field_wb) && (var1.field_e);
+        stackIn_9_0 = (!QuickChatHelpPanel.field_wb) && (var1.field_e);
         return stackIn_9_0;
     }
 

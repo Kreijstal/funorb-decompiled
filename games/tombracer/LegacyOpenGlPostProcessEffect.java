@@ -11,7 +11,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
     final static void a(boolean param0) {
         TileOperator.field_p = param0 ? true : false;
         LoadProfileCommand.field_r = false;
-        FormFieldRow.a(false, -1);
+        FormFieldRow.queueLoginAction(false, -1);
         LegacyOpenGlTexture.registrationRequestState = fta.accountRequestIdle;
         ProgressDialogLauncher.usernameQueryState = fta.accountRequestIdle;
     }

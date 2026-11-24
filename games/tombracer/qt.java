@@ -432,7 +432,7 @@ final class qt {
           }
           var8 = new AccountCreationDialog(DisplayNameValidator.field_a, param5);
           DisplayNameValidator.field_a.pushDialog(var8, 88);
-          if (rg.hasTuhstatbutCookie(7)) {
+          if (OpacityWidget.hasTuhstatbutCookie(7)) {
             var8.h(param1);
             return true;
           }

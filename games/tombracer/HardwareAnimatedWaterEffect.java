@@ -102,7 +102,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         if (param0 != 1185) {
           return false;
         }
-        return this.field_d.c(param0 - 31819);
+        return this.field_d.hasWaterNoiseTextures(param0 - 31819);
     }
 
     final void refreshState(boolean param0, int param1) {

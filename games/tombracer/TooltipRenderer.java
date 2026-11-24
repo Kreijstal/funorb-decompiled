@@ -25,7 +25,7 @@ final class TooltipRenderer {
     WidgetPainter field_r;
     int field_t;
 
-    final void a(byte param0) {
+    final void popRasterState(byte param0) {
         CourseMapWalker.popRasterState(1);
         if (param0 < 22) {
           TooltipRenderer.releaseStatics(-128);

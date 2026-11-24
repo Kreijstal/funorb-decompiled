@@ -10,11 +10,11 @@ final class HuffmanCodec {
     private int[] field_d;
     private byte[] field_e;
 
-    final static void a(boolean param0) {
+    final static void showQuickChatHelp(boolean param0) {
         if (param0) {
           return;
         }
-        LobbyOverlayAndDateValidationState.field_d = new ara(WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p);
+        LobbyOverlayAndDateValidationState.field_d = new QuickChatHelpPanel(WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p);
     }
 
     public static void releaseStatics(int param0) {

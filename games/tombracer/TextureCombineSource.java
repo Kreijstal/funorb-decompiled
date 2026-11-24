@@ -116,7 +116,7 @@ final class TextureCombineSource {
         int incrementValue$2 = param1;
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$2, (byte) 47, param0);
-        ara.field_vb = SpriteData.loadSprite(param2, "", "hud_score");
+        QuickChatHelpPanel.field_vb = SpriteData.loadSprite(param2, "", "hud_score");
         OpenGlDisplayLists.field_g = SpriteData.loadSprite(param2, "", "hud_room");
         CharacterChoice.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
         LegacyOpenGlTexture3D.field_l = SpriteData.loadSprite(param2, "", "hud_timer_head");

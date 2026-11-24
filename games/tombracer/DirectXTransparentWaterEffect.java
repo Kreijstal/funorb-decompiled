@@ -182,7 +182,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.field_g = param2;
         this.field_e = param0;
         if (param1 != null &&
-          this.field_g.c(-30634) &&
+          this.field_g.hasWaterNoiseTextures(-30634) &&
           (65535 & this.field_e.field_ld.VertexShaderVersion) >= 257) {
           this.field_f = this.field_e.field_jd.createVertexShader(param1.getFileByName("dx", (byte) 114, "transparent_water"));
         } else {

@@ -12,14 +12,14 @@ final class HardwareWaterTextures {
     private HardwareGraphicsToolkit field_b;
     private GpuTexture2D[] field_a;
 
-    final boolean c(int param0) {
+    final boolean hasWaterNoiseTextures(int param0) {
         if (param0 != -30634) {
           return true;
         }
         return !this.field_g ? this.field_d != null ? true : false : null != this.field_c ? true : false;
     }
 
-    final boolean b(int param0) {
+    final boolean ensureNormalTexture(int param0) {
         byte[] var25 = null;
         byte[] var22 = null;
         byte[] var19 = null;

@@ -528,7 +528,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_B == param2) {
-            ChatMessage.a((byte) 70);
+            ChatMessage.showFreeAccountPrompt((byte) 70);
           } else {
             if (param2 == this.field_F) {
               discarded$1 = this.submitRegistration(-1);

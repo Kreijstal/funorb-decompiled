@@ -107,7 +107,7 @@ final class SimpleActionBehaviour extends Behaviour {
             return stackIn_4_0;
           }
           if (255 < var2_int) {
-            stackIn_8_0 = rg.field_A;
+            stackIn_8_0 = OpacityWidget.field_A;
             return stackIn_8_0;
           }
           var3 = rga.splitPreservingEmptyParts(32287, param1, '.');

@@ -214,7 +214,7 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
     final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         int var11;
         int var12;
-        if (this.field_b.n()) {
+        if (this.field_b.isDisposed()) {
           throw new IllegalStateException();
         }
         if (!this.prepareAffine(param0, param1, param2, param3, param4, param5)) {

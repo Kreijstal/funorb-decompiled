@@ -30,8 +30,8 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
             return true;
           }
           if (param2 == 27) {
-            stackIn_17_0 = !(ara.field_wb);
-            ara.field_wb = stackIn_17_0;
+            stackIn_17_0 = !(QuickChatHelpPanel.field_wb);
+            QuickChatHelpPanel.field_wb = stackIn_17_0;
             return true;
           }
           if (param2 == 5) {
@@ -381,7 +381,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         ConsoleHistoryEntry.releaseStatics((byte) -124);
         ByteArrayCopies.releaseStatics((byte) 117);
         EditableTextField.releaseStatics(-53);
-        ara.releaseStatics(false);
+        QuickChatHelpPanel.releaseStatics(false);
         wj.releaseStatics((byte) 41);
         DialogStack.releaseStatics(false);
         FullscreenFailureDialog.releaseStatics(param0 + 3666);
@@ -393,7 +393,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         AccountContentTransitionDialog.releaseStatics(param0 ^ -3666);
         MessageDialog.releaseStatics(7707);
         AccountRegistrationPanel.releaseStatics(0);
-        tha.releaseStatics(99);
+        FreeAccountPromptPanel.releaseStatics(99);
         LoginForm.releaseStatics(91);
         DisplayNameForm.releaseStatics(true);
         UsernameQueryRequests.releaseStatics(param0 + 32687);
@@ -893,7 +893,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         DialogButtonPainter.releaseStatics(-113);
         InputFieldPainter.releaseStatics((byte) 126);
         PasswordInputPainter.releaseStatics((byte) 112);
-        rg.releaseStatics((byte) -127);
+        OpacityWidget.releaseStatics((byte) -127);
         IndexedSpriteButtonPainter.releaseStatics((byte) -55);
         ContactListEntry.releaseStatics((byte) 101);
         LoadingStep.releaseStatics(param0 ^ 3690);

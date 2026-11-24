@@ -8,7 +8,7 @@ final class SwitchableId {
     int id;
 
     final static void a(int param0) {
-        rg.a((byte) -114);
+        OpacityWidget.a((byte) -114);
         SnakePitModel.a(ColouriseOperator.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, StatReportingScoringObserver.field_i, ToolkitSelector.field_a);
         if (param0 < 50) {
           SwitchableId.a(76);

@@ -643,8 +643,8 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 31) {
-                stackIn_324_0 = !(ara.field_wb);
-                ara.field_wb = stackIn_324_0;
+                stackIn_324_0 = !(QuickChatHelpPanel.field_wb);
+                QuickChatHelpPanel.field_wb = stackIn_324_0;
                 return true;
               }
               if ((19 != var7 ||
@@ -842,7 +842,7 @@ abstract class MenuScreen extends GameScreen {
             if (param0 != 30) {
               if (param0 == 31) {
                 stackIn_16_0 = new StringBuilder().append(var3).append(" ");
-                if (!ara.field_wb) {
+                if (!QuickChatHelpPanel.field_wb) {
                   stackIn_17_1 = Behaviour.field_h.toLowerCase();
                 } else {
                   stackIn_17_1 = PathMoverComponent.field_H.toLowerCase();

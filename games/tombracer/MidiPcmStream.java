@@ -1082,7 +1082,7 @@ class MidiPcmStream extends PcmStream {
         var3 = TombRacer.field_G ? 1 : 0;
         var4 = (MidiPatch) (this.field_r.firstWithKey(param0));
         while (var4 != null) {
-          var4.a(false);
+          var4.clearEncodedSampleIds(false);
           var4 = (MidiPatch) (this.field_r.nextWithKey(param0 ^ 20806));
           if (var3 == 0) {
             continue;

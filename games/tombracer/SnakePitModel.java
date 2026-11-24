@@ -400,7 +400,7 @@ final class SnakePitModel extends TrapModel {
               var11++;
               var7Lifetime1 = -2 + (3 + var11 * (LobbyOverlayAndDateValidationState.field_e.field_t - 6 + 2) / (1 + ConsoleHistoryEntry.field_g)) - var13;
               if (var12 >= 5) {
-                ara.field_ub.setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
+                QuickChatHelpPanel.field_ub.setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
               } else {
                 OpenGlSceneLight.field_p[var12].setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
                 PitSnakeModel.field_c[var12].setBounds(var9 - param2, var7Lifetime1, -23776, 0, param2);

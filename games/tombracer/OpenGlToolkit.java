@@ -2414,7 +2414,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var4 = TombRacer.field_G ? 1 : 0;
         IntrusiveNode var1 = this.field_qb.first(-80);
         while (var1 != null) {
-          ((NativeGraphicsHeap) (var1)).b((byte) 87);
+          ((NativeGraphicsHeap) (var1)).closeHeap((byte) 87);
           var1 = this.field_qb.next(125);
         }
         if (null != this.field_L) {

@@ -65,7 +65,7 @@ abstract class SceneLight extends IntrusiveNode {
           }
           IntArrayRequest.field_h = QuickChatParamType.createToolkitSprite(SkeletonComponentBase.field_F, param0, (byte) 127);
           ArchiveSource.field_a = LoadLevelCommand.createToolkitSprites(param0, RoundWinnerPhase.field_p, -79);
-          RasterStateFrame.field_i = QuickChatParamType.createToolkitSprite(ara.field_vb, param0, (byte) -20);
+          RasterStateFrame.field_i = QuickChatParamType.createToolkitSprite(QuickChatHelpPanel.field_vb, param0, (byte) -20);
           ColourFillOperator.field_m = QuickChatParamType.createToolkitSprite(OpenGlDisplayLists.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = QuickChatParamType.createToolkitSprite(CharacterChoice.field_c, param0, (byte) 25);
           ByteArrayCopies.field_b = QuickChatParamType.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);

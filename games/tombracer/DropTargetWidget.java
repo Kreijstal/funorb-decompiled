@@ -54,7 +54,7 @@ final class DropTargetWidget extends SingleChildWidget {
           }
           if (param1.field_c != 0 ||
             param1.field_o != 0) {
-            for (var2_int = 0; ara.field_xb > var2_int; var2_int++) {
+            for (var2_int = 0; QuickChatHelpPanel.field_xb > var2_int; var2_int++) {
               var3 = CourseLayout.field_d[var2_int];
               if (2 == var3.field_d &&
                 param1.field_c == var3.field_c &&

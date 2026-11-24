@@ -44,7 +44,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           var4 = var6;
           var5 = ToolkitModel.compileShader((byte) 123, param1.getFileByName("gl", (byte) 127, "environment_mapped_water_f"), 35632, param0);
           this.field_k = PasswordValidator.linkShaderProgram(new OpenGlShader[]{var6, var5}, param0, 1);
-          stackIn_12_1 = (this.field_k != null) && (this.field_f.b(-37));
+          stackIn_12_1 = (this.field_k != null) && (this.field_f.ensureNormalTexture(-37));
           this.field_e = stackIn_12_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

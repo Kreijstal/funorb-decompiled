@@ -230,7 +230,7 @@ final class QuickChatMenu extends UiComponent {
               ComponentTargetList.closeQuickChatMenu(param3 - 48);
               HardwareSceneLight.resetChatRateLimit((byte) -25);
             } else {
-              HuffmanCodec.a(false);
+              HuffmanCodec.showQuickChatHelp(false);
               ComponentTargetList.closeQuickChatMenu(param3 + 7);
             }
           }

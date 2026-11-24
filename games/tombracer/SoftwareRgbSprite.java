@@ -747,7 +747,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         int var26Lifetime1Lifetime2Lifetime1;
         int var26Lifetime1Lifetime2Lifetime2;
         int var28Lifetime1Lifetime1Lifetime1;
-        if (this.field_b.n()) {
+        if (this.field_b.isDisposed()) {
           throw new IllegalStateException();
         }
         boolean decompiledFrameRemainder1 = true;
@@ -3208,7 +3208,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         int var19Lifetime1Lifetime2Lifetime1;
         int var19Lifetime1Lifetime2Lifetime2;
         int var21Lifetime1Lifetime1Lifetime1;
-        if (this.field_b.n()) {
+        if (this.field_b.isDisposed()) {
           throw new IllegalStateException();
         }
         var6 = this.field_b.field_K;

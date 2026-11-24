@@ -31,7 +31,7 @@ abstract class mna {
         var4 = null;
         var5 = 0;
         var6 = 0;
-        var7 = -1 + ara.field_xb;
+        var7 = -1 + QuickChatHelpPanel.field_xb;
         var8 = 116 / ((-27 - param0) / 50);
         while (var7 >= 0) {
           var15 = CourseLayout.field_d[var7];
@@ -68,7 +68,7 @@ abstract class mna {
           var7--;
         }
         var7Lifetime1 = 0;
-        for (var8Lifetime1 = 0; var8Lifetime1 < ara.field_xb; var8Lifetime1++) {
+        for (var8Lifetime1 = 0; var8Lifetime1 < QuickChatHelpPanel.field_xb; var8Lifetime1++) {
           var16 = CourseLayout.field_d[var8Lifetime1];
           if (null != var16.field_l) {
             VertexStreamLayout.field_d.field_tb.addChild(-125, var16.field_l);

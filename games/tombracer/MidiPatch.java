@@ -12,7 +12,7 @@ final class MidiPatch extends IntrusiveNode {
     private int[] field_k;
     byte[] field_f;
 
-    final void a(boolean param0) {
+    final void clearEncodedSampleIds(boolean param0) {
         this.field_k = null;
         if (param0) {
           MidiPatch.loadingMessage(-65);

@@ -73,7 +73,7 @@ final class TutorialHints {
           this.field_e = var5;
           var6 = DateFieldsWidget.field_C[4] - 10;
           if (1 == this.field_e) {
-            this.queueHint(tha.field_A, (MessagePanel) null, var6, param0 ^ -9888);
+            this.queueHint(FreeAccountPromptPanel.field_A, (MessagePanel) null, var6, param0 ^ -9888);
           }
         }
         this.field_k = var10.hasCollectedTreasure(-107);

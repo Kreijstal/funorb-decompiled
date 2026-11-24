@@ -150,7 +150,7 @@ final class SeededGradientNoise3D extends NoiseSliceGenerator {
     }
 
     final static void initializeChatHistory(int param0, byte param1) {
-        ara.field_xb = 0;
+        QuickChatHelpPanel.field_xb = 0;
         if (param1 != -71) {
           return;
         }

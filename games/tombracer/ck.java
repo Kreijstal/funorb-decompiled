@@ -123,7 +123,7 @@ final class ck {
           PerlinNoise2D.field_t = new UiComponent(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;
           ImageProducerRasterBuffer.field_j = new UiComponent(0L, ClipStack.field_g, S2CActionPacket.field_g.toUpperCase());
-          C2SChooseCharacterPacket.field_a = new UiComponent(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
+          C2SChooseCharacterPacket.field_a = new UiComponent(0L, CharacterSelectPhase.field_s, FreeAccountPromptPanel.field_B.toUpperCase());
           Obstacle.field_s = new UiComponent(0L, CommonChooseReward.field_c);
           HardwareFaceNormal.field_b = new UiComponent(0L, AccountNameResolver.field_f, SnakePitModel.field_m);
           RandomBrickOperator.field_r = new UiComponent(0L, AccountRequestUsernameSelector.field_a, TestModel.field_r);

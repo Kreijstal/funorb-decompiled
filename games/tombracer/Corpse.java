@@ -159,7 +159,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
             return stackIn_6_0;
           }
           if (var2_int > 63) {
-            stackIn_10_0 = rg.field_A;
+            stackIn_10_0 = OpacityWidget.field_A;
             return stackIn_10_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

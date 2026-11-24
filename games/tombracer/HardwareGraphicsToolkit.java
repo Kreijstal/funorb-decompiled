@@ -300,7 +300,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (!this.field_Fc) {
           var1 = this.field_ic.first(-80);
           while (var1 != null) {
-            ((HardwareGraphicsHeap) (var1)).b((byte) 30);
+            ((HardwareGraphicsHeap) (var1)).closeHeap((byte) 30);
             var1 = this.field_ic.next(110);
           }
           var1_ref = this.field_oc.keys();
@@ -2253,7 +2253,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final static void q(int param0) {
-        FormFieldRow.a(false, 17);
+        FormFieldRow.queueLoginAction(false, 17);
         int var1 = 36 % ((param0 + 38) / 62);
     }
 

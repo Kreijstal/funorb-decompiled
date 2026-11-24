@@ -670,7 +670,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           ResizingDialog.field_D = param0;
-          FormFieldRow.a(false, 12);
+          FormFieldRow.queueLoginAction(false, 12);
           if (param1 >= -24) {
             DefaultRoomObjectRenderer.releaseStatics(-102);
           }

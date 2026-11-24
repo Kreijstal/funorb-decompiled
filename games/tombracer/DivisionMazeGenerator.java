@@ -39,7 +39,7 @@ final class DivisionMazeGenerator extends MazeGenerator {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             GraphicsSelectionState.field_b[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < ara.field_xb; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < QuickChatHelpPanel.field_xb; var2_intLifetime1++) {
             if (CourseLayout.field_d[var2_intLifetime1].field_d == param1.field_d) {
               dupTemp$3 = CourseLayout.field_d[var2_intLifetime1].a(false);
               GraphicsSelectionState.field_b[dupTemp$3] = GraphicsSelectionState.field_b[dupTemp$3] + 1;
@@ -51,7 +51,7 @@ final class DivisionMazeGenerator extends MazeGenerator {
           dupTemp$0 = param1.a(false);
           GraphicsSelectionState.field_b[dupTemp$0] = GraphicsSelectionState.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < ara.field_xb; var3++) {
+          for (var3 = 0; var3 < QuickChatHelpPanel.field_xb; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_d == CourseLayout.field_d[var3].field_d) {
               var4 = CourseLayout.field_d[var3].a(false);
@@ -66,9 +66,9 @@ final class DivisionMazeGenerator extends MazeGenerator {
               CourseLayout.field_d[incrementValue$2] = CourseLayout.field_d[var3];
             }
           }
-          ara.field_xb = var2_intLifetime2;
-          fieldTemp$1 = ara.field_xb;
-          ara.field_xb = ara.field_xb + 1;
+          QuickChatHelpPanel.field_xb = var2_intLifetime2;
+          fieldTemp$1 = QuickChatHelpPanel.field_xb;
+          QuickChatHelpPanel.field_xb = QuickChatHelpPanel.field_xb + 1;
           CourseLayout.field_d[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

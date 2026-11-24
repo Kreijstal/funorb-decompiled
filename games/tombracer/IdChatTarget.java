@@ -99,7 +99,7 @@ class IdChatTarget extends ChatTarget {
         if (param1 != -2886) {
           return;
         }
-        PowerUpItemBehaviour.r(-93);
+        PowerUpItemBehaviour.pollLoginAction(-93);
     }
 
     IdChatTarget(long param0, String param1) {

@@ -1100,6 +1100,14 @@
       "renamedSymbol": "C:HoverListener"
     },
     {
+      "symbol": "C:ara",
+      "originalName": "ara",
+      "to": "QuickChatHelpPanel",
+      "evidence": "UiComponent showing Quick Chat Help and Shortcut Reference,with six key/description rows and a close component. Constructor measures text,builds title/content children and positions the panel. The process method lays out pointer state and its true result causes DialogStack to remove this panel. Preserve original constructor allocation order,all full-width argument/field domains and unrelated static clipped-line/chat/HUD globals. Original constructor SHA256s a1bb515454028c56a4e404c48fb780d9efc2f725238a3008282daaabefc75390. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:QuickChatHelpPanel"
+    },
+    {
       "symbol": "C:as",
       "originalName": "as",
       "to": "LegacyOpenGlShoreWaveWaterEffect",
@@ -6804,6 +6812,14 @@
       "renamedSymbol": "C:TombRacerShell"
     },
     {
+      "symbol": "C:rg",
+      "originalName": "rg",
+      "to": "OpacityWidget",
+      "evidence": "SingleChildWidget with integer opacity initialized256 by both constructors. ContentTransitionDialog changes that field during fade-out/fade-in. RenderLayer skips null child,zero opacity and nonzero layer;at256it renders directly,otherwise it renders into an offscreen Sprite,pops the raster state and alpha-draws the result. Preserve exact original child.renderLayer arguments,unclamped full opacity domain,normal-path-only raster restoration,allocations and unrelated static menu/layout/cookie helpers/globals. Original constructor SHA256s 154dac65ac272ce0b34c9fb65223c89c482197ec9b1244e23bd37afb15fbad22,2edb564a1d2547083bd42613c376b94e431aed668c70635462d65324f51d1f3c. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:OpacityWidget"
+    },
+    {
       "symbol": "C:rh",
       "originalName": "rh",
       "to": "TouchSwitchBehaviour",
@@ -7522,6 +7538,14 @@
       "evidence": "bda.readBehaviour builds it for type 26, which the behaviour name table fua.field_c labels \"Wind Zone\".",
       "confidence": "reviewed",
       "renamedSymbol": "C:WindZoneBehaviour"
+    },
+    {
+      "symbol": "C:tha",
+      "originalName": "tha",
+      "to": "FreeAccountPromptPanel",
+      "evidence": "WidgetContainer offering Create a free Account,Go Back and Just play beneath the account-benefits paragraph. Constructor installs three focusable buttons,listeners and bounds;activation opens registration,returns to the blank login form,or requests guest play. Existing key handling retains previous/next focus behavior. Preserve original rendering,all guard side effects,randomized-palette static helper and unrelated game labels. Original constructor SHA256s d2a495eaccfb257e9d52ed560f1cc6fb98e233cd7f336c7c1f879bca14e4243b. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FreeAccountPromptPanel"
     },
     {
       "symbol": "C:ti",
@@ -17732,6 +17756,14 @@
       "renamedSymbol": "M:S2CPlayerProfilePacket.getProfile(Z)LPlayerProfile;"
     },
     {
+      "symbol": "M:aoa.b(Z)V",
+      "originalName": "b",
+      "to": "beginGuestPlay",
+      "evidence": "Request guest play by showing the progress dialog then queuing login action4. The action dispatcher sets guest-mode/state10 or clears/reloads an existing session. Keep all caller modes and original false-argument self-recursion,including repeated progress-dialog/action writes;do not turn it into credential login or repair recursion. Complete original-body SHA256 4588c5e3555f940d2f272748b300fb4e5584e98b297a8af47852db3a8e48af6b. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:S2CPlayerProfilePacket.beginGuestPlay(Z)V"
+    },
+    {
       "symbol": "M:ap.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -17849,7 +17881,7 @@
       "to": "drawClippedLine",
       "evidence": "Draws a line into the scanline buffer, using fast paths for horizontal and vertical lines and Bresenham otherwise.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ara.drawClippedLine(IIIIII)V"
+      "renamedSymbol": "M:QuickChatHelpPanel.drawClippedLine(IIIIII)V"
     },
     {
       "symbol": "M:ara.a(Z)V",
@@ -17857,7 +17889,15 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ara.releaseStatics(Z)V"
+      "renamedSymbol": "M:QuickChatHelpPanel.releaseStatics(Z)V"
+    },
+    {
+      "symbol": "M:ara.a(ZI)Z",
+      "originalName": "a",
+      "to": "processAndCheckDismissal",
+      "evidence": "Process QuickChatHelpPanel pointer layout with original constant42/true,then report whether DialogStack should remove it. Preserve ignored boolean parameter,guard<7label clear,exact input/button predicates and all inherited calls. Complete original-body SHA256 6f35424e5f205745f443062abed851c024d78fdf6af1ee074e6268269faddc87. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:QuickChatHelpPanel.processAndCheckDismissal(ZI)Z"
     },
     {
       "symbol": "M:as.a(II)I",
@@ -23314,6 +23354,14 @@
       "evidence": "Folds a character for account names: spaces and no-break spaces become underscores and brackets, hyphens and hashes are kept, as in other games' foldAccountNameChar.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NativeGraphicsHeap.foldAccountNameChar(BC)C"
+    },
+    {
+      "symbol": "M:cp.b(B)V",
+      "originalName": "b",
+      "to": "closeHeap",
+      "evidence": "Close the retained jaclib NativeHeap with the existing external binding. NativeGraphicsHeap calls close before its byte<83releaseStatics(126) branch;HardwareGraphicsHeap calls releaseStatics(53) before close on a byte other than30. Preserve these different orders,all partial clears and arithmetic exceptions in the latter release helper;do not add idempotence or cleanup finally blocks. Complete original-body SHA256 a4d65b29437fb15b433938bd2615d97a57c207cf3597f34bc703db4241e4f878. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeGraphicsHeap.closeHeap(B)V"
     },
     {
       "symbol": "M:cp.b(I)V",
@@ -36604,6 +36652,14 @@
       "renamedSymbol": "M:FunOrbConsole.releaseConsoleStatics(I)V"
     },
     {
+      "symbol": "M:gqa.a(B)V",
+      "originalName": "a",
+      "to": "showFreeAccountPrompt",
+      "evidence": "Construct FreeAccountPromptPanel and pass it to the retained content-transition dialog with original guard75;keep allocation/transition before negative-byte label clear and all exception behavior. Complete original-body SHA256 47102900c3feb93a3101df030fd55af2403a90dbc7eb22b6cf9919ca2507efbc. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ChatMessage.showFreeAccountPrompt(B)V"
+    },
+    {
       "symbol": "M:gqa.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -39282,6 +39338,22 @@
       "evidence": "Runs the queued reflection checks (field reads/writes, method calls) and writes their results to the packet.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HardwareWaterTextures.writeReflectionCheckResponse(ZLBitPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:hk.b(I)Z",
+      "originalName": "b",
+      "to": "ensureNormalTexture",
+      "evidence": "Lazily create/cache the normal-and-height3Dwater texture. Preserve seeded noise generation and wrapped-byte cache,16slices of128by128wrapped neighbour gradients,the mixed float/double normalization,RGB127offset and original height in alpha,all casts/overflow/array aliases and createTexture3D arguments. Guard modulo executes after generation or cached lookup and can fail after state mutation;preserve this order and returned non-null test. Complete original-body SHA256 2d5d7db41db0a3fcad1742afe022f70a137a011e5abcd9f82470314457bb0103. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareWaterTextures.ensureNormalTexture(I)Z"
+    },
+    {
+      "symbol": "M:hk.c(I)Z",
+      "originalName": "c",
+      "to": "hasWaterNoiseTextures",
+      "evidence": "On guard-30634query only the retained top-level2Dtexture-array or3Dtexture reference selected by field_g. Other guards returntrue. Preserve that exact test;do not strengthen it to inspect every array entry or both independently created noise resources. Complete original-body SHA256 4d8259fa05147c137bd177431bb0b359c6e10fbed8c28712412eb602a71c2d48. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareWaterTextures.hasWaterNoiseTextures(I)Z"
     },
     {
       "symbol": "M:hka.a(ILuia;)Ltaa;",
@@ -45172,6 +45244,14 @@
       "renamedSymbol": "M:FormFieldRow.renderLayer(IIII)V"
     },
     {
+      "symbol": "M:jsa.a(ZI)V",
+      "originalName": "a",
+      "to": "queueLoginAction",
+      "evidence": "Store the supplied full-width action value in the one-shot login UI action slot when the boolean argument isfalse;true returns. Preserve-1as the reset value and all other integer values without validation or narrowing. Complete original-body SHA256 1f5da772129cee679a0f23f79f480ff16f3c10862209f95d8cbbdb24c5f094d9. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FormFieldRow.queueLoginAction(ZI)V"
+    },
+    {
       "symbol": "M:jsa.d(B)Ljava/lang/String;",
       "originalName": "d",
       "to": "getHoverText",
@@ -47156,6 +47236,14 @@
       "renamedSymbol": "M:DebouncedValidationSource.computeMessage(I)Ljava/lang/String;"
     },
     {
+      "symbol": "M:kn.a(B)V",
+      "originalName": "a",
+      "to": "popRasterState",
+      "evidence": "Delegate to CourseMapWalker.popRasterState(1),then retain the original byte<22TooltipRenderer.releaseStatics(-128) branch. Preserve normal-path ordering and full guard domain;do not introduce finally restoration. Complete original-body SHA256 9466b28a43e88b59355e2086de7eea0726cc553e808db4cf09f6a6a6ec9b7b80. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TooltipRenderer.popRasterState(B)V"
+    },
+    {
       "symbol": "M:kn.a(BIIII)V",
       "originalName": "a",
       "to": "setClip",
@@ -47698,6 +47786,14 @@
       "evidence": "Walks the Huffman tree over the packed bits to recover the requested number of bytes.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HuffmanCodec.decode(IBI[BI[B)I"
+    },
+    {
+      "symbol": "M:kra.a(Z)V",
+      "originalName": "a",
+      "to": "showQuickChatHelp",
+      "evidence": "When boolean argument isfalse,construct QuickChatHelpPanel using the original six style references and store it as the active help panel;true returns without allocation or mutation. Keep exact argument evaluation/allocation/store order. Complete original-body SHA256 11fa8c5cf06fd2ca6cbc9fd3005e86334ea9bba0fae01b24d16f8adb66171456. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HuffmanCodec.showQuickChatHelp(Z)V"
     },
     {
       "symbol": "M:ks.a(B)V",
@@ -64345,7 +64441,7 @@
       "to": "renderLayer",
       "evidence": "Called once per layer index by renderWithTooltip up to getTopLayer. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rg.renderLayer(IIII)V"
+      "renamedSymbol": "M:OpacityWidget.renderLayer(IIII)V"
     },
     {
       "symbol": "M:rg.e(I)V",
@@ -64353,7 +64449,7 @@
       "to": "initializeMenuActionLabels",
       "evidence": "GameAssetLoader calls it to fill the 42 menu action labels and the death message tables from loaded text.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rg.initializeMenuActionLabels(I)V"
+      "renamedSymbol": "M:OpacityWidget.initializeMenuActionLabels(I)V"
     },
     {
       "symbol": "M:rg.e(III)Z",
@@ -64361,7 +64457,7 @@
       "to": "hasFlag65536",
       "evidence": "Tests bit 65536 of a model flag word.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rg.hasFlag65536(III)Z"
+      "renamedSymbol": "M:OpacityWidget.hasFlag65536(III)Z"
     },
     {
       "symbol": "M:rg.f(I)Z",
@@ -64369,7 +64465,7 @@
       "to": "hasTuhstatbutCookie",
       "evidence": "Account creation checks the applet's tuhstatbut cookie through it.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rg.hasTuhstatbutCookie(I)Z"
+      "renamedSymbol": "M:OpacityWidget.hasTuhstatbutCookie(I)Z"
     },
     {
       "symbol": "M:rg.h(B)V",
@@ -64377,7 +64473,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rg.releaseStatics(B)V"
+      "renamedSymbol": "M:OpacityWidget.releaseStatics(B)V"
     },
     {
       "symbol": "M:rga.a(B)V",
@@ -64954,6 +65050,14 @@
       "evidence": "Called when the respawn timer expires; weapon and power-up items replace their payload with a fresh copy. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PowerUpItemBehaviour.onRespawn(B)V"
+    },
+    {
+      "symbol": "M:rl.r(I)I",
+      "originalName": "r",
+      "to": "pollLoginAction",
+      "evidence": "Poll the login UI action flow. PowerUpItemBehaviour first processes pointer/dialog/key input,then consumes a queued action and resets its slot to-1,otherwise preserves the original login/account-request state fallbacks and exact precedence. BlockComponent is the wrapper that delegates with guard-95and retains its own<=94static-label clear. Preserve all original ignored arguments,early returns,side effects,wrapping,full domains and fallback codes. Complete original-body SHA256 587fceff1572dc0d2ffb2abca6fb70e0f21d4544d4ba65263653b5e770f263b1. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PowerUpItemBehaviour.pollLoginAction(I)I"
     },
     {
       "symbol": "M:rla.a(B)V",
@@ -67060,6 +67164,14 @@
       "renamedSymbol": "M:SoftwareGraphicsToolkit.refreshContexts()V"
     },
     {
+      "symbol": "M:sfa.n()Z",
+      "originalName": "n",
+      "to": "isDisposed",
+      "evidence": "Return the SoftwareGraphicsToolkit lifecycle flag,initializedfalse in construction and settrue by dispose. Preserve the direct field read and caller IllegalStateException checks;do not infer or add resource validity checks. Complete original-body SHA256 444f6cecd613e9bf5c10fb7c0d687770f2362f75359f1c79fc939a74ddbd995e. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareGraphicsToolkit.isDisposed()Z"
+    },
+    {
       "symbol": "M:sfa.s(IIIII)V",
       "originalName": "s",
       "to": "drawCircle",
@@ -67194,6 +67306,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BlockComponent.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:si.a(IIIZ)I",
+      "originalName": "a",
+      "to": "pollLoginAction",
+      "evidence": "Poll the login UI action flow. PowerUpItemBehaviour first processes pointer/dialog/key input,then consumes a queued action and resets its slot to-1,otherwise preserves the original login/account-request state fallbacks and exact precedence. BlockComponent is the wrapper that delegates with guard-95and retains its own<=94static-label clear. Preserve all original ignored arguments,early returns,side effects,wrapping,full domains and fallback codes. Complete original-body SHA256 c43664e9fb464a46dd8facb0785957e0af4017ae4c23f67dc9a7a0369bce8b76. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BlockComponent.pollLoginAction(IIIZ)I"
     },
     {
       "symbol": "M:si.a(ZILla;)Lfsa;",
@@ -69521,7 +69641,15 @@
       "to": "handleKeyInput",
       "evidence": "Overridden by text and container widgets to consume a typed character. Same shape as Zombie Dawn Multi cf (UiWidget). Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tha.handleKeyInput(CLUiWidget;IZ)Z"
+      "renamedSymbol": "M:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z"
+    },
+    {
+      "symbol": "M:tha.a(I)V",
+      "originalName": "a",
+      "to": "ensureRandomizedHslPalette",
+      "evidence": "Initialize the cached65536-entry HSL-style RGB palette only when absent. Preserve allocation before the single Math.random call,random gamma expression,all double operations/Math.pow calls,callsites906,original unusual saturation mask906,full-int guard label write,and partial array state on failure. Never normalize the mask or replace random output. Complete original-body SHA256 0c841d2ebfefe80b2c4105a14a3d4790fcee91625fc2d7a2953990af4d6242be. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V"
     },
     {
       "symbol": "M:tha.a(IIII)V",
@@ -69529,7 +69657,7 @@
       "to": "renderLayer",
       "evidence": "Called once per layer index by renderWithTooltip up to getTopLayer. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tha.renderLayer(IIII)V"
+      "renamedSymbol": "M:FreeAccountPromptPanel.renderLayer(IIII)V"
     },
     {
       "symbol": "M:tha.a(IILrj;IB)V",
@@ -69537,7 +69665,7 @@
       "to": "onButtonActivated",
       "evidence": "Applies the suggestion of the activated button. Body matches several games UsernameSuggestionsPanel.onButtonActivated. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tha.onButtonActivated(IILFocusableWidget;IB)V"
+      "renamedSymbol": "M:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V"
     },
     {
       "symbol": "M:tha.c(I)V",
@@ -69545,7 +69673,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tha.releaseStatics(I)V"
+      "renamedSymbol": "M:FreeAccountPromptPanel.releaseStatics(I)V"
     },
     {
       "symbol": "M:tia.a(B)V",
@@ -69828,6 +69956,14 @@
       "renamedSymbol": "M:MidiPatch.loadSamples(I[BLSoundCache;[I)Z"
     },
     {
+      "symbol": "M:tn.a(Z)V",
+      "originalName": "a",
+      "to": "clearEncodedSampleIds",
+      "evidence": "Clear only the retained encoded per-note sample-ID array used by loadSamples;retain loaded PcmSample references and all other patch data. Preserve null store before thetrue-argument loadingMessage(-65) call,including its original recursion/failure behavior. Complete original-body SHA256 1c7e4f6c730b7a95438e9ec3ae8377c35bd1a26154f470fd781bad83617331f6. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPatch.clearEncodedSampleIds(Z)V"
+    },
+    {
       "symbol": "M:tna.a(IIILhj;II)V",
       "originalName": "a",
       "to": "divide",
@@ -69858,6 +69994,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DivisionMazeGenerator.releaseStatics(Z)V"
+    },
+    {
+      "symbol": "M:to.b(B)V",
+      "originalName": "b",
+      "to": "closeHeap",
+      "evidence": "Close the retained jaclib NativeHeap with the existing external binding. NativeGraphicsHeap calls close before its byte<83releaseStatics(126) branch;HardwareGraphicsHeap calls releaseStatics(53) before close on a byte other than30. Preserve these different orders,all partial clears and arithmetic exceptions in the latter release helper;do not add idempotence or cleanup finally blocks. Complete original-body SHA256 c950df2ab1fe14dc7529d120775d046b4ad9fc54c3dcc00bcf2db5affd163eaa. Naming only. Three instance-purpose class contracts,4constructor bodies,15selected complete nonnative methods and53field declarations reviewed with bound callers,resource-state/label/action/opacity witnesses. Preserve exact bodies/declarations,all field/parameter/local names,literals,descriptors,full argument domains,overflow/FP/casts,aliases,partial writes,allocation/call/exception ordering,modifiers/visibility,native/override bindings and existing meaningful aliases. Unselected static helper purposes are not inferred from a class name. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareGraphicsHeap.closeHeap(B)V"
     },
     {
       "symbol": "M:to.b(I)V",
@@ -80435,9 +80579,9 @@
     },
     {
       "symbol": "C:ara",
-      "renamedSymbol": "C:ara",
+      "renamedSymbol": "C:QuickChatHelpPanel",
       "originalName": "ara",
-      "renamedName": "ara",
+      "renamedName": "QuickChatHelpPanel",
       "declaration": {
         "file": "ara.java",
         "start": 50,
@@ -89180,9 +89324,9 @@
     },
     {
       "symbol": "C:rg",
-      "renamedSymbol": "C:rg",
+      "renamedSymbol": "C:OpacityWidget",
       "originalName": "rg",
-      "renamedName": "rg",
+      "renamedName": "OpacityWidget",
       "declaration": {
         "file": "rg.java",
         "start": 50,
@@ -90214,9 +90358,9 @@
     },
     {
       "symbol": "C:tha",
-      "renamedSymbol": "C:tha",
+      "renamedSymbol": "C:FreeAccountPromptPanel",
       "originalName": "tha",
-      "renamedName": "tha",
+      "renamedName": "FreeAccountPromptPanel",
       "declaration": {
         "file": "tha.java",
         "start": 50,
@@ -94658,7 +94802,7 @@
     },
     {
       "symbol": "F:ara.field_tb:Ljea;",
-      "renamedSymbol": "F:ara.field_tb:LUiComponent;",
+      "renamedSymbol": "F:QuickChatHelpPanel.field_tb:LUiComponent;",
       "originalName": "field_tb",
       "renamedName": "field_tb",
       "declaration": {
@@ -94669,7 +94813,7 @@
     },
     {
       "symbol": "F:ara.field_ub:Ljea;",
-      "renamedSymbol": "F:ara.field_ub:LUiComponent;",
+      "renamedSymbol": "F:QuickChatHelpPanel.field_ub:LUiComponent;",
       "originalName": "field_ub",
       "renamedName": "field_ub",
       "declaration": {
@@ -94680,7 +94824,7 @@
     },
     {
       "symbol": "F:ara.field_vb:Ljpa;",
-      "renamedSymbol": "F:ara.field_vb:LSpriteData;",
+      "renamedSymbol": "F:QuickChatHelpPanel.field_vb:LSpriteData;",
       "originalName": "field_vb",
       "renamedName": "field_vb",
       "declaration": {
@@ -94691,7 +94835,7 @@
     },
     {
       "symbol": "F:ara.field_wb:Z",
-      "renamedSymbol": "F:ara.field_wb:Z",
+      "renamedSymbol": "F:QuickChatHelpPanel.field_wb:Z",
       "originalName": "field_wb",
       "renamedName": "field_wb",
       "declaration": {
@@ -94702,7 +94846,7 @@
     },
     {
       "symbol": "F:ara.field_xb:I",
-      "renamedSymbol": "F:ara.field_xb:I",
+      "renamedSymbol": "F:QuickChatHelpPanel.field_xb:I",
       "originalName": "field_xb",
       "renamedName": "field_xb",
       "declaration": {
@@ -94713,7 +94857,7 @@
     },
     {
       "symbol": "F:ara.field_yb:Ljava/lang/String;",
-      "renamedSymbol": "F:ara.field_yb:Ljava/lang/String;",
+      "renamedSymbol": "F:QuickChatHelpPanel.field_yb:Ljava/lang/String;",
       "originalName": "field_yb",
       "renamedName": "field_yb",
       "declaration": {
@@ -110377,7 +110521,7 @@
     },
     {
       "symbol": "F:era.field_d:Lara;",
-      "renamedSymbol": "F:LobbyOverlayAndDateValidationState.field_d:Lara;",
+      "renamedSymbol": "F:LobbyOverlayAndDateValidationState.field_d:LQuickChatHelpPanel;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -133334,7 +133478,7 @@
     },
     {
       "symbol": "F:lc.field_P:Lrg;",
-      "renamedSymbol": "F:ContentTransitionDialog.field_P:Lrg;",
+      "renamedSymbol": "F:ContentTransitionDialog.field_P:LOpacityWidget;",
       "originalName": "field_P",
       "renamedName": "field_P",
       "declaration": {
@@ -150802,7 +150946,7 @@
     },
     {
       "symbol": "F:rg.field_A:Lhra;",
-      "renamedSymbol": "F:rg.field_A:LValidationOutcome;",
+      "renamedSymbol": "F:OpacityWidget.field_A:LValidationOutcome;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -150813,7 +150957,7 @@
     },
     {
       "symbol": "F:rg.field_B:I",
-      "renamedSymbol": "F:rg.field_B:I",
+      "renamedSymbol": "F:OpacityWidget.field_B:I",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -150824,7 +150968,7 @@
     },
     {
       "symbol": "F:rg.field_y:I",
-      "renamedSymbol": "F:rg.field_y:I",
+      "renamedSymbol": "F:OpacityWidget.field_y:I",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -150835,7 +150979,7 @@
     },
     {
       "symbol": "F:rg.field_z:I",
-      "renamedSymbol": "F:rg.field_z:I",
+      "renamedSymbol": "F:OpacityWidget.field_z:I",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -156929,7 +157073,7 @@
     },
     {
       "symbol": "F:tha.field_A:Ljava/lang/String;",
-      "renamedSymbol": "F:tha.field_A:Ljava/lang/String;",
+      "renamedSymbol": "F:FreeAccountPromptPanel.field_A:Ljava/lang/String;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -156940,7 +157084,7 @@
     },
     {
       "symbol": "F:tha.field_B:Ljava/lang/String;",
-      "renamedSymbol": "F:tha.field_B:Ljava/lang/String;",
+      "renamedSymbol": "F:FreeAccountPromptPanel.field_B:Ljava/lang/String;",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -156951,7 +157095,7 @@
     },
     {
       "symbol": "F:tha.field_w:Lrj;",
-      "renamedSymbol": "F:tha.field_w:LFocusableWidget;",
+      "renamedSymbol": "F:FreeAccountPromptPanel.field_w:LFocusableWidget;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -156962,7 +157106,7 @@
     },
     {
       "symbol": "F:tha.field_x:Lrj;",
-      "renamedSymbol": "F:tha.field_x:LFocusableWidget;",
+      "renamedSymbol": "F:FreeAccountPromptPanel.field_x:LFocusableWidget;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -156973,7 +157117,7 @@
     },
     {
       "symbol": "F:tha.field_y:Ljava/lang/String;",
-      "renamedSymbol": "F:tha.field_y:Ljava/lang/String;",
+      "renamedSymbol": "F:FreeAccountPromptPanel.field_y:Ljava/lang/String;",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -156984,7 +157128,7 @@
     },
     {
       "symbol": "F:tha.field_z:Lrj;",
-      "renamedSymbol": "F:tha.field_z:LFocusableWidget;",
+      "renamedSymbol": "F:FreeAccountPromptPanel.field_z:LFocusableWidget;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -179358,7 +179502,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#0",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#0",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -179369,7 +179513,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#1",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#1",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -179380,7 +179524,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#10",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#10",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#10",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -179391,7 +179535,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#11",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#11",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#11",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -179402,7 +179546,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#12",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#12",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#12",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -179413,7 +179557,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#13",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#13",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#13",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -179424,7 +179568,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#14",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#14",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -179435,7 +179579,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#15",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#15",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#15",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -179446,7 +179590,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#16",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#16",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#16",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -179457,7 +179601,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#17",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#17",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#17",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -179468,7 +179612,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#18",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#18",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#18",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -179479,7 +179623,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#19",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#19",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#19",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -179490,7 +179634,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#2",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#2",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#2",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -179501,7 +179645,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#20",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#20",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#20",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -179512,7 +179656,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#21",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#21",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#21",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -179523,7 +179667,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#22",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#22",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#22",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -179534,7 +179678,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#23",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#23",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#23",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -179545,7 +179689,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#24",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#24",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#24",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -179556,7 +179700,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#25",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#25",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#25",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -179567,7 +179711,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#3",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#3",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#3",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -179578,7 +179722,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#4",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#4",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -179589,7 +179733,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#5",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#5",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#5",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -179600,7 +179744,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#6",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#6",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#6",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -179611,7 +179755,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#7",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#7",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#7",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -179622,7 +179766,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#8",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#8",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#8",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -179633,7 +179777,7 @@
     },
     {
       "symbol": "L:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#9",
-      "renamedSymbol": "L:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#9",
+      "renamedSymbol": "L:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#9",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -179644,7 +179788,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#0",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#0",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#0",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -179655,7 +179799,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#1",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#1",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#1",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -179666,7 +179810,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#10",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#10",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -179677,7 +179821,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#11",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#11",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -179688,7 +179832,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#12",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#12",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -179699,7 +179843,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#13",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#13",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -179710,7 +179854,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#14",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#14",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -179721,7 +179865,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#15",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#15",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#15",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -179732,7 +179876,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#16",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#16",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#16",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -179743,7 +179887,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#17",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#17",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#17",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -179754,7 +179898,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#18",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#18",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#18",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -179765,7 +179909,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#19",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#19",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#19",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -179776,7 +179920,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#2",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#2",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -179787,7 +179931,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#20",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#20",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -179798,7 +179942,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#3",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#3",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#3",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -179809,7 +179953,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#4",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#4",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -179820,7 +179964,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#5",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#5",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -179831,7 +179975,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#6",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#6",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -179842,7 +179986,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#7",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#7",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -179853,7 +179997,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#8",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#8",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -179864,7 +180008,7 @@
     },
     {
       "symbol": "L:ara.a(IIIIII)V#9",
-      "renamedSymbol": "L:ara.drawClippedLine(IIIIII)V#9",
+      "renamedSymbol": "L:QuickChatHelpPanel.drawClippedLine(IIIIII)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -179875,7 +180019,7 @@
     },
     {
       "symbol": "L:ara.a(ZI)Z#0",
-      "renamedSymbol": "L:ara.a(ZI)Z#0",
+      "renamedSymbol": "L:QuickChatHelpPanel.processAndCheckDismissal(ZI)Z#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -179886,7 +180030,7 @@
     },
     {
       "symbol": "L:ara.a(ZI)Z#1",
-      "renamedSymbol": "L:ara.a(ZI)Z#1",
+      "renamedSymbol": "L:QuickChatHelpPanel.processAndCheckDismissal(ZI)Z#1",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -308773,7 +308917,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#0",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#0",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#0",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -308784,7 +308928,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#1",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#1",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#1",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -308795,7 +308939,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#10",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#10",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -308806,7 +308950,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#11",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#11",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -308817,7 +308961,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#12",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#12",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -308828,7 +308972,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#13",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#13",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -308839,7 +308983,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#14",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#14",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -308850,7 +308994,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#15",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#15",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -308861,7 +309005,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#16",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#16",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -308872,7 +309016,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#17",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#17",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -308883,7 +309027,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#18",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#18",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -308894,7 +309038,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#19",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#19",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -308905,7 +309049,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#2",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#2",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#2",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -308916,7 +309060,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#20",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#20",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#20",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -308927,7 +309071,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#21",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#21",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#21",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -308938,7 +309082,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#22",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#22",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#22",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -308949,7 +309093,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#23",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#23",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#23",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -308960,7 +309104,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#24",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#24",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#24",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -308971,7 +309115,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#3",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#3",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#3",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -308982,7 +309126,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#4",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#4",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#4",
       "originalName": "var2_ref_byte__",
       "renamedName": "var2_ref_byte__",
       "declaration": {
@@ -308993,7 +309137,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#5",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#5",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#5",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -309004,7 +309148,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#6",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#6",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#6",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -309015,7 +309159,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#7",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#7",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -309026,7 +309170,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#8",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#8",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -309037,7 +309181,7 @@
     },
     {
       "symbol": "L:hk.b(I)Z#9",
-      "renamedSymbol": "L:HardwareWaterTextures.b(I)Z#9",
+      "renamedSymbol": "L:HardwareWaterTextures.ensureNormalTexture(I)Z#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -479812,7 +479956,7 @@
     },
     {
       "symbol": "L:rg.<init>(Lae;)V#0",
-      "renamedSymbol": "L:rg.<init>(LUiWidget;)V#0",
+      "renamedSymbol": "L:OpacityWidget.<init>(LUiWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -479823,7 +479967,7 @@
     },
     {
       "symbol": "L:rg.a(B)V#0",
-      "renamedSymbol": "L:rg.a(B)V#0",
+      "renamedSymbol": "L:OpacityWidget.a(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -479834,7 +479978,7 @@
     },
     {
       "symbol": "L:rg.a(B)V#1",
-      "renamedSymbol": "L:rg.a(B)V#1",
+      "renamedSymbol": "L:OpacityWidget.a(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -479845,7 +479989,7 @@
     },
     {
       "symbol": "L:rg.a(B)V#2",
-      "renamedSymbol": "L:rg.a(B)V#2",
+      "renamedSymbol": "L:OpacityWidget.a(B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -479856,7 +480000,7 @@
     },
     {
       "symbol": "L:rg.a(B)V#3",
-      "renamedSymbol": "L:rg.a(B)V#3",
+      "renamedSymbol": "L:OpacityWidget.a(B)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -479867,7 +480011,7 @@
     },
     {
       "symbol": "L:rg.a(IIII)V#0",
-      "renamedSymbol": "L:rg.renderLayer(IIII)V#0",
+      "renamedSymbol": "L:OpacityWidget.renderLayer(IIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -483167,7 +483311,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#0",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#0",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -483178,7 +483322,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#1",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#1",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -483189,7 +483333,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#10",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#10",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -483200,7 +483344,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#2",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#2",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -483211,7 +483355,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#3",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#3",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -483222,7 +483366,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#4",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#4",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -483233,7 +483377,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#5",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#5",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -483244,7 +483388,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#6",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#6",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#6",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -483255,7 +483399,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#7",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#7",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#7",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -483266,7 +483410,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#8",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#8",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#8",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -483277,7 +483421,7 @@
     },
     {
       "symbol": "L:rl.r(I)I#9",
-      "renamedSymbol": "L:PowerUpItemBehaviour.r(I)I#9",
+      "renamedSymbol": "L:PowerUpItemBehaviour.pollLoginAction(I)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -516464,7 +516608,7 @@
     },
     {
       "symbol": "L:tha.<init>()V#0",
-      "renamedSymbol": "L:tha.<init>()V#0",
+      "renamedSymbol": "L:FreeAccountPromptPanel.<init>()V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -516475,7 +516619,7 @@
     },
     {
       "symbol": "L:tha.<init>()V#1",
-      "renamedSymbol": "L:tha.<init>()V#1",
+      "renamedSymbol": "L:FreeAccountPromptPanel.<init>()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -516486,7 +516630,7 @@
     },
     {
       "symbol": "L:tha.<init>()V#2",
-      "renamedSymbol": "L:tha.<init>()V#2",
+      "renamedSymbol": "L:FreeAccountPromptPanel.<init>()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -516497,7 +516641,7 @@
     },
     {
       "symbol": "L:tha.<init>()V#3",
-      "renamedSymbol": "L:tha.<init>()V#3",
+      "renamedSymbol": "L:FreeAccountPromptPanel.<init>()V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -516508,7 +516652,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#0",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#0",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -516519,7 +516663,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#1",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#1",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -516530,7 +516674,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#2",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#2",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -516541,7 +516685,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#3",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#3",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#3",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -516552,7 +516696,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#4",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#4",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -516563,7 +516707,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#5",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#5",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#5",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -516574,7 +516718,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#6",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#6",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -516585,7 +516729,7 @@
     },
     {
       "symbol": "L:tha.a(CLae;IZ)Z#7",
-      "renamedSymbol": "L:tha.handleKeyInput(CLUiWidget;IZ)Z#7",
+      "renamedSymbol": "L:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -516596,7 +516740,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#0",
-      "renamedSymbol": "L:tha.a(I)V#0",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -516607,7 +516751,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#1",
-      "renamedSymbol": "L:tha.a(I)V#1",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#1",
       "originalName": "var1_double",
       "renamedName": "var1_double",
       "declaration": {
@@ -516618,7 +516762,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#10",
-      "renamedSymbol": "L:tha.a(I)V#10",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#10",
       "originalName": "var16_double",
       "renamedName": "var16_double",
       "declaration": {
@@ -516629,7 +516773,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#11",
-      "renamedSymbol": "L:tha.a(I)V#11",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#11",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -516640,7 +516784,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#12",
-      "renamedSymbol": "L:tha.a(I)V#12",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#12",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -516651,7 +516795,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#13",
-      "renamedSymbol": "L:tha.a(I)V#13",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#13",
       "originalName": "var18_double",
       "renamedName": "var18_double",
       "declaration": {
@@ -516662,7 +516806,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#14",
-      "renamedSymbol": "L:tha.a(I)V#14",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -516673,7 +516817,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#15",
-      "renamedSymbol": "L:tha.a(I)V#15",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -516684,7 +516828,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#16",
-      "renamedSymbol": "L:tha.a(I)V#16",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -516695,7 +516839,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#17",
-      "renamedSymbol": "L:tha.a(I)V#17",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#17",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -516706,7 +516850,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#18",
-      "renamedSymbol": "L:tha.a(I)V#18",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#18",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -516717,7 +516861,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#19",
-      "renamedSymbol": "L:tha.a(I)V#19",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#19",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -516728,7 +516872,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#2",
-      "renamedSymbol": "L:tha.a(I)V#2",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -516739,7 +516883,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#20",
-      "renamedSymbol": "L:tha.a(I)V#20",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -516750,7 +516894,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#3",
-      "renamedSymbol": "L:tha.a(I)V#3",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -516761,7 +516905,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#4",
-      "renamedSymbol": "L:tha.a(I)V#4",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -516772,7 +516916,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#5",
-      "renamedSymbol": "L:tha.a(I)V#5",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -516783,7 +516927,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#6",
-      "renamedSymbol": "L:tha.a(I)V#6",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -516794,7 +516938,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#7",
-      "renamedSymbol": "L:tha.a(I)V#7",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -516805,7 +516949,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#8",
-      "renamedSymbol": "L:tha.a(I)V#8",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -516816,7 +516960,7 @@
     },
     {
       "symbol": "L:tha.a(I)V#9",
-      "renamedSymbol": "L:tha.a(I)V#9",
+      "renamedSymbol": "L:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#9",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -516827,7 +516971,7 @@
     },
     {
       "symbol": "L:tha.a(IIII)V#0",
-      "renamedSymbol": "L:tha.renderLayer(IIII)V#0",
+      "renamedSymbol": "L:FreeAccountPromptPanel.renderLayer(IIII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -516838,7 +516982,7 @@
     },
     {
       "symbol": "L:tha.a(IIII)V#1",
-      "renamedSymbol": "L:tha.renderLayer(IIII)V#1",
+      "renamedSymbol": "L:FreeAccountPromptPanel.renderLayer(IIII)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -516849,7 +516993,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#0",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#0",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -516860,7 +517004,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#1",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#1",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -516871,7 +517015,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#2",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#2",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -516882,7 +517026,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#3",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#3",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -516893,7 +517037,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#4",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#4",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -516904,7 +517048,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#5",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#5",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -516915,7 +517059,7 @@
     },
     {
       "symbol": "L:tha.a(IILrj;IB)V#6",
-      "renamedSymbol": "L:tha.onButtonActivated(IILFocusableWidget;IB)V#6",
+      "renamedSymbol": "L:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -516926,7 +517070,7 @@
     },
     {
       "symbol": "L:tha.c(I)V#0",
-      "renamedSymbol": "L:tha.releaseStatics(I)V#0",
+      "renamedSymbol": "L:FreeAccountPromptPanel.releaseStatics(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -590384,9 +590528,9 @@
     },
     {
       "symbol": "M:aoa.b(Z)V",
-      "renamedSymbol": "M:S2CPlayerProfilePacket.b(Z)V",
+      "renamedSymbol": "M:S2CPlayerProfilePacket.beginGuestPlay(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "beginGuestPlay",
       "declaration": {
         "file": "aoa.java",
         "start": 864,
@@ -590560,9 +590704,9 @@
     },
     {
       "symbol": "M:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V",
-      "renamedSymbol": "M:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V",
+      "renamedSymbol": "M:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V",
       "originalName": "ara",
-      "renamedName": "ara",
+      "renamedName": "QuickChatHelpPanel",
       "declaration": {
         "file": "ara.java",
         "start": 3971,
@@ -590571,7 +590715,7 @@
     },
     {
       "symbol": "M:ara.a(IIIIII)V",
-      "renamedSymbol": "M:ara.drawClippedLine(IIIIII)V",
+      "renamedSymbol": "M:QuickChatHelpPanel.drawClippedLine(IIIIII)V",
       "originalName": "a",
       "renamedName": "drawClippedLine",
       "declaration": {
@@ -590582,7 +590726,7 @@
     },
     {
       "symbol": "M:ara.a(Z)V",
-      "renamedSymbol": "M:ara.releaseStatics(Z)V",
+      "renamedSymbol": "M:QuickChatHelpPanel.releaseStatics(Z)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -590593,9 +590737,9 @@
     },
     {
       "symbol": "M:ara.a(ZI)Z",
-      "renamedSymbol": "M:ara.a(ZI)Z",
+      "renamedSymbol": "M:QuickChatHelpPanel.processAndCheckDismissal(ZI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processAndCheckDismissal",
       "declaration": {
         "file": "ara.java",
         "start": 245,
@@ -599525,9 +599669,9 @@
     },
     {
       "symbol": "M:cp.b(B)V",
-      "renamedSymbol": "M:NativeGraphicsHeap.b(B)V",
+      "renamedSymbol": "M:NativeGraphicsHeap.closeHeap(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "closeHeap",
       "declaration": {
         "file": "cp.java",
         "start": 280,
@@ -620634,9 +620778,9 @@
     },
     {
       "symbol": "M:gqa.a(B)V",
-      "renamedSymbol": "M:ChatMessage.a(B)V",
+      "renamedSymbol": "M:ChatMessage.showFreeAccountPrompt(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showFreeAccountPrompt",
       "declaration": {
         "file": "gqa.java",
         "start": 1814,
@@ -624957,9 +625101,9 @@
     },
     {
       "symbol": "M:hk.b(I)Z",
-      "renamedSymbol": "M:HardwareWaterTextures.b(I)Z",
+      "renamedSymbol": "M:HardwareWaterTextures.ensureNormalTexture(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "ensureNormalTexture",
       "declaration": {
         "file": "hk.java",
         "start": 450,
@@ -624968,9 +625112,9 @@
     },
     {
       "symbol": "M:hk.c(I)Z",
-      "renamedSymbol": "M:HardwareWaterTextures.c(I)Z",
+      "renamedSymbol": "M:HardwareWaterTextures.hasWaterNoiseTextures(I)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "hasWaterNoiseTextures",
       "declaration": {
         "file": "hk.java",
         "start": 238,
@@ -639114,9 +639258,9 @@
     },
     {
       "symbol": "M:jsa.a(ZI)V",
-      "renamedSymbol": "M:FormFieldRow.a(ZI)V",
+      "renamedSymbol": "M:FormFieldRow.queueLoginAction(ZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueLoginAction",
       "declaration": {
         "file": "jsa.java",
         "start": 4465,
@@ -642403,9 +642547,9 @@
     },
     {
       "symbol": "M:kn.a(B)V",
-      "renamedSymbol": "M:TooltipRenderer.a(B)V",
+      "renamedSymbol": "M:TooltipRenderer.popRasterState(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "popRasterState",
       "declaration": {
         "file": "kn.java",
         "start": 476,
@@ -643294,9 +643438,9 @@
     },
     {
       "symbol": "M:kra.a(Z)V",
-      "renamedSymbol": "M:HuffmanCodec.a(Z)V",
+      "renamedSymbol": "M:HuffmanCodec.showQuickChatHelp(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showQuickChatHelp",
       "declaration": {
         "file": "kra.java",
         "start": 233,
@@ -671003,9 +671147,9 @@
     },
     {
       "symbol": "M:rg.<init>()V",
-      "renamedSymbol": "M:rg.<init>()V",
+      "renamedSymbol": "M:OpacityWidget.<init>()V",
       "originalName": "rg",
-      "renamedName": "rg",
+      "renamedName": "OpacityWidget",
       "declaration": {
         "file": "rg.java",
         "start": 10507,
@@ -671014,9 +671158,9 @@
     },
     {
       "symbol": "M:rg.<init>(Lae;)V",
-      "renamedSymbol": "M:rg.<init>(LUiWidget;)V",
+      "renamedSymbol": "M:OpacityWidget.<init>(LUiWidget;)V",
       "originalName": "rg",
-      "renamedName": "rg",
+      "renamedName": "OpacityWidget",
       "declaration": {
         "file": "rg.java",
         "start": 160,
@@ -671025,7 +671169,7 @@
     },
     {
       "symbol": "M:rg.a(B)V",
-      "renamedSymbol": "M:rg.a(B)V",
+      "renamedSymbol": "M:OpacityWidget.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -671036,7 +671180,7 @@
     },
     {
       "symbol": "M:rg.a(IIII)V",
-      "renamedSymbol": "M:rg.renderLayer(IIII)V",
+      "renamedSymbol": "M:OpacityWidget.renderLayer(IIII)V",
       "originalName": "a",
       "renamedName": "renderLayer",
       "declaration": {
@@ -671047,7 +671191,7 @@
     },
     {
       "symbol": "M:rg.e(I)V",
-      "renamedSymbol": "M:rg.initializeMenuActionLabels(I)V",
+      "renamedSymbol": "M:OpacityWidget.initializeMenuActionLabels(I)V",
       "originalName": "e",
       "renamedName": "initializeMenuActionLabels",
       "declaration": {
@@ -671058,7 +671202,7 @@
     },
     {
       "symbol": "M:rg.e(III)Z",
-      "renamedSymbol": "M:rg.hasFlag65536(III)Z",
+      "renamedSymbol": "M:OpacityWidget.hasFlag65536(III)Z",
       "originalName": "e",
       "renamedName": "hasFlag65536",
       "declaration": {
@@ -671069,7 +671213,7 @@
     },
     {
       "symbol": "M:rg.f(I)Z",
-      "renamedSymbol": "M:rg.hasTuhstatbutCookie(I)Z",
+      "renamedSymbol": "M:OpacityWidget.hasTuhstatbutCookie(I)Z",
       "originalName": "f",
       "renamedName": "hasTuhstatbutCookie",
       "declaration": {
@@ -671080,7 +671224,7 @@
     },
     {
       "symbol": "M:rg.g(B)I",
-      "renamedSymbol": "M:rg.g(B)I",
+      "renamedSymbol": "M:OpacityWidget.g(B)I",
       "originalName": "g",
       "renamedName": "g",
       "declaration": {
@@ -671091,7 +671235,7 @@
     },
     {
       "symbol": "M:rg.h(B)V",
-      "renamedSymbol": "M:rg.releaseStatics(B)V",
+      "renamedSymbol": "M:OpacityWidget.releaseStatics(B)V",
       "originalName": "h",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -672136,9 +672280,9 @@
     },
     {
       "symbol": "M:rl.r(I)I",
-      "renamedSymbol": "M:PowerUpItemBehaviour.r(I)I",
+      "renamedSymbol": "M:PowerUpItemBehaviour.pollLoginAction(I)I",
       "originalName": "r",
-      "renamedName": "r",
+      "renamedName": "pollLoginAction",
       "declaration": {
         "file": "rl.java",
         "start": 1638,
@@ -675568,9 +675712,9 @@
     },
     {
       "symbol": "M:sfa.n()Z",
-      "renamedSymbol": "M:SoftwareGraphicsToolkit.n()Z",
+      "renamedSymbol": "M:SoftwareGraphicsToolkit.isDisposed()Z",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "isDisposed",
       "declaration": {
         "file": "sfa.java",
         "start": 17395,
@@ -675810,9 +675954,9 @@
     },
     {
       "symbol": "M:si.a(IIIZ)I",
-      "renamedSymbol": "M:BlockComponent.a(IIIZ)I",
+      "renamedSymbol": "M:BlockComponent.pollLoginAction(IIIZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollLoginAction",
       "declaration": {
         "file": "si.java",
         "start": 4495,
@@ -679847,9 +679991,9 @@
     },
     {
       "symbol": "M:tha.<init>()V",
-      "renamedSymbol": "M:tha.<init>()V",
+      "renamedSymbol": "M:FreeAccountPromptPanel.<init>()V",
       "originalName": "tha",
-      "renamedName": "tha",
+      "renamedName": "FreeAccountPromptPanel",
       "declaration": {
         "file": "tha.java",
         "start": 5165,
@@ -679858,7 +680002,7 @@
     },
     {
       "symbol": "M:tha.a(CLae;IZ)Z",
-      "renamedSymbol": "M:tha.handleKeyInput(CLUiWidget;IZ)Z",
+      "renamedSymbol": "M:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z",
       "originalName": "a",
       "renamedName": "handleKeyInput",
       "declaration": {
@@ -679869,9 +680013,9 @@
     },
     {
       "symbol": "M:tha.a(I)V",
-      "renamedSymbol": "M:tha.a(I)V",
+      "renamedSymbol": "M:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "ensureRandomizedHslPalette",
       "declaration": {
         "file": "tha.java",
         "start": 600,
@@ -679880,7 +680024,7 @@
     },
     {
       "symbol": "M:tha.a(IIII)V",
-      "renamedSymbol": "M:tha.renderLayer(IIII)V",
+      "renamedSymbol": "M:FreeAccountPromptPanel.renderLayer(IIII)V",
       "originalName": "a",
       "renamedName": "renderLayer",
       "declaration": {
@@ -679891,7 +680035,7 @@
     },
     {
       "symbol": "M:tha.a(IILrj;IB)V",
-      "renamedSymbol": "M:tha.onButtonActivated(IILFocusableWidget;IB)V",
+      "renamedSymbol": "M:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V",
       "originalName": "a",
       "renamedName": "onButtonActivated",
       "declaration": {
@@ -679902,7 +680046,7 @@
     },
     {
       "symbol": "M:tha.c(I)V",
-      "renamedSymbol": "M:tha.releaseStatics(I)V",
+      "renamedSymbol": "M:FreeAccountPromptPanel.releaseStatics(I)V",
       "originalName": "c",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -680408,9 +680552,9 @@
     },
     {
       "symbol": "M:tn.a(Z)V",
-      "renamedSymbol": "M:MidiPatch.a(Z)V",
+      "renamedSymbol": "M:MidiPatch.clearEncodedSampleIds(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearEncodedSampleIds",
       "declaration": {
         "file": "tn.java",
         "start": 265,
@@ -680496,9 +680640,9 @@
     },
     {
       "symbol": "M:to.b(B)V",
-      "renamedSymbol": "M:HardwareGraphicsHeap.b(B)V",
+      "renamedSymbol": "M:HardwareGraphicsHeap.closeHeap(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "closeHeap",
       "declaration": {
         "file": "to.java",
         "start": 290,
@@ -702375,7 +702519,7 @@
     },
     {
       "symbol": "P:aoa.b(Z)V#0",
-      "renamedSymbol": "P:S2CPlayerProfilePacket.b(Z)V#0",
+      "renamedSymbol": "P:S2CPlayerProfilePacket.beginGuestPlay(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702694,7 +702838,7 @@
     },
     {
       "symbol": "P:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#0",
-      "renamedSymbol": "P:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#0",
+      "renamedSymbol": "P:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702705,7 +702849,7 @@
     },
     {
       "symbol": "P:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#1",
-      "renamedSymbol": "P:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#1",
+      "renamedSymbol": "P:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -702716,7 +702860,7 @@
     },
     {
       "symbol": "P:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#2",
-      "renamedSymbol": "P:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#2",
+      "renamedSymbol": "P:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -702727,7 +702871,7 @@
     },
     {
       "symbol": "P:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#3",
-      "renamedSymbol": "P:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#3",
+      "renamedSymbol": "P:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -702738,7 +702882,7 @@
     },
     {
       "symbol": "P:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#4",
-      "renamedSymbol": "P:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#4",
+      "renamedSymbol": "P:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -702749,7 +702893,7 @@
     },
     {
       "symbol": "P:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V#5",
-      "renamedSymbol": "P:ara.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#5",
+      "renamedSymbol": "P:QuickChatHelpPanel.<init>(LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;LUiComponent;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -702760,7 +702904,7 @@
     },
     {
       "symbol": "P:ara.a(IIIIII)V#0",
-      "renamedSymbol": "P:ara.drawClippedLine(IIIIII)V#0",
+      "renamedSymbol": "P:QuickChatHelpPanel.drawClippedLine(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702771,7 +702915,7 @@
     },
     {
       "symbol": "P:ara.a(IIIIII)V#1",
-      "renamedSymbol": "P:ara.drawClippedLine(IIIIII)V#1",
+      "renamedSymbol": "P:QuickChatHelpPanel.drawClippedLine(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -702782,7 +702926,7 @@
     },
     {
       "symbol": "P:ara.a(IIIIII)V#2",
-      "renamedSymbol": "P:ara.drawClippedLine(IIIIII)V#2",
+      "renamedSymbol": "P:QuickChatHelpPanel.drawClippedLine(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -702793,7 +702937,7 @@
     },
     {
       "symbol": "P:ara.a(IIIIII)V#3",
-      "renamedSymbol": "P:ara.drawClippedLine(IIIIII)V#3",
+      "renamedSymbol": "P:QuickChatHelpPanel.drawClippedLine(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -702804,7 +702948,7 @@
     },
     {
       "symbol": "P:ara.a(IIIIII)V#4",
-      "renamedSymbol": "P:ara.drawClippedLine(IIIIII)V#4",
+      "renamedSymbol": "P:QuickChatHelpPanel.drawClippedLine(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -702815,7 +702959,7 @@
     },
     {
       "symbol": "P:ara.a(IIIIII)V#5",
-      "renamedSymbol": "P:ara.drawClippedLine(IIIIII)V#5",
+      "renamedSymbol": "P:QuickChatHelpPanel.drawClippedLine(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -702826,7 +702970,7 @@
     },
     {
       "symbol": "P:ara.a(Z)V#0",
-      "renamedSymbol": "P:ara.releaseStatics(Z)V#0",
+      "renamedSymbol": "P:QuickChatHelpPanel.releaseStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702837,7 +702981,7 @@
     },
     {
       "symbol": "P:ara.a(ZI)Z#0",
-      "renamedSymbol": "P:ara.a(ZI)Z#0",
+      "renamedSymbol": "P:QuickChatHelpPanel.processAndCheckDismissal(ZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702848,7 +702992,7 @@
     },
     {
       "symbol": "P:ara.a(ZI)Z#1",
-      "renamedSymbol": "P:ara.a(ZI)Z#1",
+      "renamedSymbol": "P:QuickChatHelpPanel.processAndCheckDismissal(ZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -722780,7 +722924,7 @@
     },
     {
       "symbol": "P:cp.b(B)V#0",
-      "renamedSymbol": "P:NativeGraphicsHeap.b(B)V#0",
+      "renamedSymbol": "P:NativeGraphicsHeap.closeHeap(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -766582,7 +766726,7 @@
     },
     {
       "symbol": "P:gqa.a(B)V#0",
-      "renamedSymbol": "P:ChatMessage.a(B)V#0",
+      "renamedSymbol": "P:ChatMessage.showFreeAccountPrompt(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -776724,7 +776868,7 @@
     },
     {
       "symbol": "P:hk.b(I)Z#0",
-      "renamedSymbol": "P:HardwareWaterTextures.b(I)Z#0",
+      "renamedSymbol": "P:HardwareWaterTextures.ensureNormalTexture(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -776735,7 +776879,7 @@
     },
     {
       "symbol": "P:hk.c(I)Z#0",
-      "renamedSymbol": "P:HardwareWaterTextures.c(I)Z#0",
+      "renamedSymbol": "P:HardwareWaterTextures.hasWaterNoiseTextures(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -814553,7 +814697,7 @@
     },
     {
       "symbol": "P:jsa.a(ZI)V#0",
-      "renamedSymbol": "P:FormFieldRow.a(ZI)V#0",
+      "renamedSymbol": "P:FormFieldRow.queueLoginAction(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -814564,7 +814708,7 @@
     },
     {
       "symbol": "P:jsa.a(ZI)V#1",
-      "renamedSymbol": "P:FormFieldRow.a(ZI)V#1",
+      "renamedSymbol": "P:FormFieldRow.queueLoginAction(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -822264,7 +822408,7 @@
     },
     {
       "symbol": "P:kn.a(B)V#0",
-      "renamedSymbol": "P:TooltipRenderer.a(B)V#0",
+      "renamedSymbol": "P:TooltipRenderer.popRasterState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -824112,7 +824256,7 @@
     },
     {
       "symbol": "P:kra.a(Z)V#0",
-      "renamedSymbol": "P:HuffmanCodec.a(Z)V#0",
+      "renamedSymbol": "P:HuffmanCodec.showQuickChatHelp(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888352,7 +888496,7 @@
     },
     {
       "symbol": "P:rg.<init>(Lae;)V#0",
-      "renamedSymbol": "P:rg.<init>(LUiWidget;)V#0",
+      "renamedSymbol": "P:OpacityWidget.<init>(LUiWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888363,7 +888507,7 @@
     },
     {
       "symbol": "P:rg.a(B)V#0",
-      "renamedSymbol": "P:rg.a(B)V#0",
+      "renamedSymbol": "P:OpacityWidget.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888374,7 +888518,7 @@
     },
     {
       "symbol": "P:rg.a(IIII)V#0",
-      "renamedSymbol": "P:rg.renderLayer(IIII)V#0",
+      "renamedSymbol": "P:OpacityWidget.renderLayer(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888385,7 +888529,7 @@
     },
     {
       "symbol": "P:rg.a(IIII)V#1",
-      "renamedSymbol": "P:rg.renderLayer(IIII)V#1",
+      "renamedSymbol": "P:OpacityWidget.renderLayer(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -888396,7 +888540,7 @@
     },
     {
       "symbol": "P:rg.a(IIII)V#2",
-      "renamedSymbol": "P:rg.renderLayer(IIII)V#2",
+      "renamedSymbol": "P:OpacityWidget.renderLayer(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -888407,7 +888551,7 @@
     },
     {
       "symbol": "P:rg.a(IIII)V#3",
-      "renamedSymbol": "P:rg.renderLayer(IIII)V#3",
+      "renamedSymbol": "P:OpacityWidget.renderLayer(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -888418,7 +888562,7 @@
     },
     {
       "symbol": "P:rg.e(I)V#0",
-      "renamedSymbol": "P:rg.initializeMenuActionLabels(I)V#0",
+      "renamedSymbol": "P:OpacityWidget.initializeMenuActionLabels(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888429,7 +888573,7 @@
     },
     {
       "symbol": "P:rg.e(III)Z#0",
-      "renamedSymbol": "P:rg.hasFlag65536(III)Z#0",
+      "renamedSymbol": "P:OpacityWidget.hasFlag65536(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888440,7 +888584,7 @@
     },
     {
       "symbol": "P:rg.e(III)Z#1",
-      "renamedSymbol": "P:rg.hasFlag65536(III)Z#1",
+      "renamedSymbol": "P:OpacityWidget.hasFlag65536(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -888451,7 +888595,7 @@
     },
     {
       "symbol": "P:rg.e(III)Z#2",
-      "renamedSymbol": "P:rg.hasFlag65536(III)Z#2",
+      "renamedSymbol": "P:OpacityWidget.hasFlag65536(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -888462,7 +888606,7 @@
     },
     {
       "symbol": "P:rg.f(I)Z#0",
-      "renamedSymbol": "P:rg.hasTuhstatbutCookie(I)Z#0",
+      "renamedSymbol": "P:OpacityWidget.hasTuhstatbutCookie(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888473,7 +888617,7 @@
     },
     {
       "symbol": "P:rg.g(B)I#0",
-      "renamedSymbol": "P:rg.g(B)I#0",
+      "renamedSymbol": "P:OpacityWidget.g(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888484,7 +888628,7 @@
     },
     {
       "symbol": "P:rg.h(B)V#0",
-      "renamedSymbol": "P:rg.releaseStatics(B)V#0",
+      "renamedSymbol": "P:OpacityWidget.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -891091,7 +891235,7 @@
     },
     {
       "symbol": "P:rl.r(I)I#0",
-      "renamedSymbol": "P:PowerUpItemBehaviour.r(I)I#0",
+      "renamedSymbol": "P:PowerUpItemBehaviour.pollLoginAction(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -899880,7 +900024,7 @@
     },
     {
       "symbol": "P:si.a(IIIZ)I#0",
-      "renamedSymbol": "P:BlockComponent.a(IIIZ)I#0",
+      "renamedSymbol": "P:BlockComponent.pollLoginAction(IIIZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -899891,7 +900035,7 @@
     },
     {
       "symbol": "P:si.a(IIIZ)I#1",
-      "renamedSymbol": "P:BlockComponent.a(IIIZ)I#1",
+      "renamedSymbol": "P:BlockComponent.pollLoginAction(IIIZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -899902,7 +900046,7 @@
     },
     {
       "symbol": "P:si.a(IIIZ)I#2",
-      "renamedSymbol": "P:BlockComponent.a(IIIZ)I#2",
+      "renamedSymbol": "P:BlockComponent.pollLoginAction(IIIZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -899913,7 +900057,7 @@
     },
     {
       "symbol": "P:si.a(IIIZ)I#3",
-      "renamedSymbol": "P:BlockComponent.a(IIIZ)I#3",
+      "renamedSymbol": "P:BlockComponent.pollLoginAction(IIIZ)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -908691,7 +908835,7 @@
     },
     {
       "symbol": "P:tha.a(CLae;IZ)Z#0",
-      "renamedSymbol": "P:tha.handleKeyInput(CLUiWidget;IZ)Z#0",
+      "renamedSymbol": "P:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908702,7 +908846,7 @@
     },
     {
       "symbol": "P:tha.a(CLae;IZ)Z#1",
-      "renamedSymbol": "P:tha.handleKeyInput(CLUiWidget;IZ)Z#1",
+      "renamedSymbol": "P:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -908713,7 +908857,7 @@
     },
     {
       "symbol": "P:tha.a(CLae;IZ)Z#2",
-      "renamedSymbol": "P:tha.handleKeyInput(CLUiWidget;IZ)Z#2",
+      "renamedSymbol": "P:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -908724,7 +908868,7 @@
     },
     {
       "symbol": "P:tha.a(CLae;IZ)Z#3",
-      "renamedSymbol": "P:tha.handleKeyInput(CLUiWidget;IZ)Z#3",
+      "renamedSymbol": "P:FreeAccountPromptPanel.handleKeyInput(CLUiWidget;IZ)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -908735,7 +908879,7 @@
     },
     {
       "symbol": "P:tha.a(I)V#0",
-      "renamedSymbol": "P:tha.a(I)V#0",
+      "renamedSymbol": "P:FreeAccountPromptPanel.ensureRandomizedHslPalette(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908746,7 +908890,7 @@
     },
     {
       "symbol": "P:tha.a(IIII)V#0",
-      "renamedSymbol": "P:tha.renderLayer(IIII)V#0",
+      "renamedSymbol": "P:FreeAccountPromptPanel.renderLayer(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908757,7 +908901,7 @@
     },
     {
       "symbol": "P:tha.a(IIII)V#1",
-      "renamedSymbol": "P:tha.renderLayer(IIII)V#1",
+      "renamedSymbol": "P:FreeAccountPromptPanel.renderLayer(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -908768,7 +908912,7 @@
     },
     {
       "symbol": "P:tha.a(IIII)V#2",
-      "renamedSymbol": "P:tha.renderLayer(IIII)V#2",
+      "renamedSymbol": "P:FreeAccountPromptPanel.renderLayer(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -908779,7 +908923,7 @@
     },
     {
       "symbol": "P:tha.a(IIII)V#3",
-      "renamedSymbol": "P:tha.renderLayer(IIII)V#3",
+      "renamedSymbol": "P:FreeAccountPromptPanel.renderLayer(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -908790,7 +908934,7 @@
     },
     {
       "symbol": "P:tha.a(IILrj;IB)V#0",
-      "renamedSymbol": "P:tha.onButtonActivated(IILFocusableWidget;IB)V#0",
+      "renamedSymbol": "P:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908801,7 +908945,7 @@
     },
     {
       "symbol": "P:tha.a(IILrj;IB)V#1",
-      "renamedSymbol": "P:tha.onButtonActivated(IILFocusableWidget;IB)V#1",
+      "renamedSymbol": "P:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -908812,7 +908956,7 @@
     },
     {
       "symbol": "P:tha.a(IILrj;IB)V#2",
-      "renamedSymbol": "P:tha.onButtonActivated(IILFocusableWidget;IB)V#2",
+      "renamedSymbol": "P:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -908823,7 +908967,7 @@
     },
     {
       "symbol": "P:tha.a(IILrj;IB)V#3",
-      "renamedSymbol": "P:tha.onButtonActivated(IILFocusableWidget;IB)V#3",
+      "renamedSymbol": "P:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -908834,7 +908978,7 @@
     },
     {
       "symbol": "P:tha.a(IILrj;IB)V#4",
-      "renamedSymbol": "P:tha.onButtonActivated(IILFocusableWidget;IB)V#4",
+      "renamedSymbol": "P:FreeAccountPromptPanel.onButtonActivated(IILFocusableWidget;IB)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -908845,7 +908989,7 @@
     },
     {
       "symbol": "P:tha.c(I)V#0",
-      "renamedSymbol": "P:tha.releaseStatics(I)V#0",
+      "renamedSymbol": "P:FreeAccountPromptPanel.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -909824,7 +909968,7 @@
     },
     {
       "symbol": "P:tn.a(Z)V#0",
-      "renamedSymbol": "P:MidiPatch.a(Z)V#0",
+      "renamedSymbol": "P:MidiPatch.clearEncodedSampleIds(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910077,7 +910221,7 @@
     },
     {
       "symbol": "P:to.b(B)V#0",
-      "renamedSymbol": "P:HardwareGraphicsHeap.b(B)V#0",
+      "renamedSymbol": "P:HardwareGraphicsHeap.closeHeap(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -940595,7 +940739,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "2ee2dc0219316d9975917f2907d488b2f748fc0e5578945d71911bee188fdd51",
+      "outputSha256": "0e4773827ffc6a2915c56497e7fc7cd67fb9a408dabe1d58174709c357ae2279",
       "edits": [
         {
           "start": 96,
@@ -940673,6 +940817,20 @@
           "symbol": "C:rsa",
           "original": "rsa",
           "renamed": "ConstrainToLatticeLocomotor"
+        },
+        {
+          "start": 912,
+          "end": 915,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 939,
+          "end": 942,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 1244,
@@ -944091,6 +944249,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 11063,
+          "end": 11066,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 11067,
           "end": 11068,
           "symbol": "M:ara.a(Z)V",
@@ -944243,6 +944408,13 @@
           "symbol": "M:mr.f(I)V",
           "original": "f",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 11344,
+          "end": 11347,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 11348,
@@ -951089,6 +951261,13 @@
           "symbol": "M:poa.c(B)V",
           "original": "c",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 22855,
+          "end": 22857,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 22858,
@@ -973133,7 +973312,7 @@
       "original": "aoa.java",
       "renamed": "S2CPlayerProfilePacket.java",
       "inputSha256": "4b51f599041c05f453f78b78c94eba941ed3944e589d248aa39dbd6b2900bc71",
-      "outputSha256": "950cbb67379c924a8812ff80ba9b262381d670238b6722bf068507a793715546",
+      "outputSha256": "1e8816734dcc243a54bc79bbee004d45b3f8e091fc0d59326ec75c212d2a4237",
       "edits": [
         {
           "start": 50,
@@ -973255,6 +973434,13 @@
           "renamed": "rampChannelVolumeSamples"
         },
         {
+          "start": 864,
+          "end": 865,
+          "symbol": "M:aoa.b(Z)V",
+          "original": "b",
+          "renamed": "beginGuestPlay"
+        },
+        {
           "start": 892,
           "end": 894,
           "symbol": "C:wt",
@@ -973276,11 +973462,25 @@
           "renamed": "FormFieldRow"
         },
         {
+          "start": 922,
+          "end": 923,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
+        },
+        {
           "start": 968,
           "end": 971,
           "symbol": "C:aoa",
           "original": "aoa",
           "renamed": "S2CPlayerProfilePacket"
+        },
+        {
+          "start": 972,
+          "end": 973,
+          "symbol": "M:aoa.b(Z)V",
+          "original": "b",
+          "renamed": "beginGuestPlay"
         },
         {
           "start": 1022,
@@ -973935,10 +974135,17 @@
     },
     {
       "original": "ara.java",
-      "renamed": "ara.java",
+      "renamed": "QuickChatHelpPanel.java",
       "inputSha256": "cacfc38f50f02140b74158e656e9496e5d8e95533a183f5762bfc84c5e761697",
-      "outputSha256": "c406f0b907399c686c2e8fd3343e1af6715a1d83f27d73f1fe56a816aa6f1d22",
+      "outputSha256": "45d07938abd4833d1039d14a234130c902e0649c2defcdb74cd058b5182e979f",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
         {
           "start": 62,
           "end": 65,
@@ -973966,6 +974173,13 @@
           "symbol": "C:jpa",
           "original": "jpa",
           "renamed": "SpriteData"
+        },
+        {
+          "start": 245,
+          "end": 246,
+          "symbol": "M:ara.a(ZI)Z",
+          "original": "a",
+          "renamed": "processAndCheckDismissal"
         },
         {
           "start": 449,
@@ -974043,6 +974257,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3971,
+          "end": 3974,
+          "symbol": "M:ara.<init>(Ljea;Ljea;Ljea;Ljea;Ljea;Ljea;)V",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 3975,
@@ -974337,6 +974558,13 @@
           "symbol": "M:ara.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 8340,
+          "end": 8343,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 8344,
@@ -984636,7 +984864,7 @@
       "original": "bd.java",
       "renamed": "RasterStateFrame.java",
       "inputSha256": "f602633c3151bd16d97fcafe054f1d8e137383f1ff4cbe75008457a827e6d4d2",
-      "outputSha256": "b4b82b4d70e2597f9d2de6527e9330a6188fe394f8bc8b4673d6dd00283b791c",
+      "outputSha256": "2db7e7d17da09e90155443ad59272b9bed9c98348374325b8661967788da0fff",
       "edits": [
         {
           "start": 50,
@@ -984721,6 +984949,13 @@
           "symbol": "C:is",
           "original": "is",
           "renamed": "NameEntryPopup"
+        },
+        {
+          "start": 1204,
+          "end": 1206,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 1382,
@@ -1017292,7 +1017527,7 @@
       "original": "ck.java",
       "renamed": "ck.java",
       "inputSha256": "c0a80db8e18cf77ac2c9b8766d4811d55dd22f50e39e07a3a406d065318537bf",
-      "outputSha256": "e71fecdb312c51764825f7b150a444acf58fa4e0e9b318203de5135ee4ebc473",
+      "outputSha256": "01e5c4ede8b8a5b271e92b6d5d1b8ab9f895cc1543b8e26898c39297d60e25ab",
       "edits": [
         {
           "start": 122,
@@ -1018007,6 +1018242,13 @@
           "symbol": "C:uda",
           "original": "uda",
           "renamed": "CharacterSelectPhase"
+        },
+        {
+          "start": 5306,
+          "end": 5309,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 5344,
@@ -1020594,7 +1020836,7 @@
       "original": "cka.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "6ac9fb8d7ca9f3fd523ba26d424b59e3f403240ec044c34e1b63cd73f48ef1c8",
-      "outputSha256": "d6ad7e4a7f174f7ff8f0734b94da91c35c251f3214b5630ed3d180edd5934e21",
+      "outputSha256": "973aede0ab71ae0d8b870c1b996d7e750597e25cc1e6e7c97b29bccc488e6681",
       "edits": [
         {
           "start": 71,
@@ -1025513,6 +1025755,13 @@
           "symbol": "C:cp",
           "original": "cp",
           "renamed": "NativeGraphicsHeap"
+        },
+        {
+          "start": 82427,
+          "end": 82428,
+          "symbol": "M:cp.b(B)V",
+          "original": "b",
+          "renamed": "closeHeap"
         },
         {
           "start": 82472,
@@ -1032437,7 +1032686,7 @@
       "original": "cp.java",
       "renamed": "NativeGraphicsHeap.java",
       "inputSha256": "40fd937d7c1144ec6ecf3511810bd13c4956ecdd5c002a0c2d472e5d6ccaf202",
-      "outputSha256": "d7a3391132d42967845fd36f0e50d1e28335f9842f07fb4c50b17bfc3c57ac0e",
+      "outputSha256": "1fd1192e404dd1915df3a484fede2cf457d7331c0f550f040a80b2ef7aa397cb",
       "edits": [
         {
           "start": 50,
@@ -1032459,6 +1032708,13 @@
           "symbol": "M:cp.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 280,
+          "end": 281,
+          "symbol": "M:cp.b(B)V",
+          "original": "b",
+          "renamed": "closeHeap"
         },
         {
           "start": 318,
@@ -1071322,7 +1071578,7 @@
       "original": "dp.java",
       "renamed": "OpenGlEnvironmentWaterEffect.java",
       "inputSha256": "85787be9f2a0f7090ee826eddbe73ef2dcc12e3791076958254420fa5a4fb2a9",
-      "outputSha256": "0d21d69cf4dea3c740a98cbbe9b2f382a311e997f7efacff0b1e4ac357cb0c96",
+      "outputSha256": "9307eb3615e385a0b2b1f8bcdf12f563bf3093e2d94a939e00ceb02a0bf66f54",
       "edits": [
         {
           "start": 50,
@@ -1071498,6 +1071754,13 @@
           "symbol": "C:pr",
           "original": "pr",
           "renamed": "OpenGlShader"
+        },
+        {
+          "start": 1540,
+          "end": 1541,
+          "symbol": "M:hk.b(I)Z",
+          "original": "b",
+          "renamed": "ensureNormalTexture"
         },
         {
           "start": 2512,
@@ -1089014,7 +1089277,7 @@
       "original": "eo.java",
       "renamed": "HardwareGraphicsToolkit.java",
       "inputSha256": "04951f02319c9adfeafb9ac8e4ed8bc5ffdbc08453d0c94ed081510674e0b0f0",
-      "outputSha256": "ef31f20370a9aacc3d46472d41fbe8d7cf8e49fb2a3613518236ae1db1279a60",
+      "outputSha256": "8e4847dadb77bb5a735134c67987dbfeda62b0cd7b581496aef407c5b07f640f",
       "edits": [
         {
           "start": 74,
@@ -1089610,6 +1089873,13 @@
           "symbol": "C:to",
           "original": "to",
           "renamed": "HardwareGraphicsHeap"
+        },
+        {
+          "start": 8225,
+          "end": 8226,
+          "symbol": "M:to.b(B)V",
+          "original": "b",
+          "renamed": "closeHeap"
         },
         {
           "start": 8272,
@@ -1095228,6 +1095498,13 @@
           "symbol": "C:jsa",
           "original": "jsa",
           "renamed": "FormFieldRow"
+        },
+        {
+          "start": 70986,
+          "end": 70987,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
         },
         {
           "start": 71067,
@@ -1106616,7 +1106893,7 @@
       "original": "era.java",
       "renamed": "LobbyOverlayAndDateValidationState.java",
       "inputSha256": "5dbcee2f9d983a4c2db3155b519ad4399b36e5aaa3b96e47c62195bdbd8bbf25",
-      "outputSha256": "35fbb5348dcd0b1189ba3db16d4c79efec72459edb4042acbc29f895ee209af9",
+      "outputSha256": "3a370d508b45ebef3e34e812fb2800e888fc434e4af1b72211dd5ea9d2589939",
       "edits": [
         {
           "start": 50,
@@ -1106638,6 +1106915,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 192,
+          "end": 195,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 292,
@@ -1108323,7 +1108607,7 @@
       "original": "eua.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "13fe2ce113d9cf1ac4d7a6f04bb338dd40660af64492816788d7d8dbfeef45a3",
-      "outputSha256": "2dcb356073af5263707ae93d259a2d7fc1428a097a70d2b2cf3a336578087364",
+      "outputSha256": "f7f0e0f1f2ea06c5cc738ac728a00645b0314836b0a780eb82f8f92e2ef91948",
       "edits": [
         {
           "start": 50,
@@ -1108765,6 +1109049,13 @@
           "symbol": "C:kra",
           "original": "kra",
           "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 8066,
+          "end": 8067,
+          "symbol": "M:kra.a(Z)V",
+          "original": "a",
+          "renamed": "showQuickChatHelp"
         },
         {
           "start": 8090,
@@ -1111497,7 +1111788,7 @@
       "original": "fba.java",
       "renamed": "fba.java",
       "inputSha256": "755d2a83114d1914d8f197b865566e4ea3ac719de2978f16d0664b18014af40d",
-      "outputSha256": "f9d1de187688ac71df5801fb9f3b4f7c00d1f27cd12620f505b7daf3d3871b89",
+      "outputSha256": "6ff4e2aa564b7ba3975781b535b35cab8306a4cf00adfacb09b0f40f39917776",
       "edits": [
         {
           "start": 106,
@@ -1111598,6 +1111889,34 @@
           "renamed": "acquireByteArray"
         },
         {
+          "start": 3329,
+          "end": 3331,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
+          "start": 3373,
+          "end": 3375,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
+          "start": 3401,
+          "end": 3403,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
+          "start": 3414,
+          "end": 3416,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 3460,
           "end": 3462,
           "symbol": "C:tw",
@@ -1111610,6 +1111929,13 @@
           "symbol": "C:tw",
           "original": "tw",
           "renamed": "SoftwareRenderContext"
+        },
+        {
+          "start": 3508,
+          "end": 3510,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 3633,
@@ -1112046,6 +1112372,34 @@
           "renamed": "IsaacCipher"
         },
         {
+          "start": 6627,
+          "end": 6629,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
+          "start": 6670,
+          "end": 6672,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
+          "start": 6696,
+          "end": 6698,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
+          "start": 6709,
+          "end": 6711,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 6762,
           "end": 6764,
           "symbol": "C:tw",
@@ -1112058,6 +1112412,13 @@
           "symbol": "C:tw",
           "original": "tw",
           "renamed": "SoftwareRenderContext"
+        },
+        {
+          "start": 6809,
+          "end": 6811,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 6935,
@@ -1134164,7 +1134525,7 @@
       "original": "fn.java",
       "renamed": "HardwareAnimatedWaterEffect.java",
       "inputSha256": "eb8dcd62dc07dbef32de42753e340e7b59678ecfcb4ce3b4207c189a710cf208",
-      "outputSha256": "a6ce0bb50a66955a3374c218425101e3689cfa9f193d72a8846dacafd892a24a",
+      "outputSha256": "17fa5ce3ac7cbd431cf0af3f590e44ef19eba4dad45ae08ea06e0f38aa10fb3b",
       "edits": [
         {
           "start": 50,
@@ -1134872,6 +1135233,13 @@
           "symbol": "M:fn.c(I)Z",
           "original": "c",
           "renamed": "isSupported"
+        },
+        {
+          "start": 3359,
+          "end": 3360,
+          "symbol": "M:hk.c(I)Z",
+          "original": "c",
+          "renamed": "hasWaterNoiseTextures"
         },
         {
           "start": 3400,
@@ -1136807,7 +1137175,7 @@
       "original": "fp.java",
       "renamed": "TextureCombineSource.java",
       "inputSha256": "dada9344e21332b4c14702f7b167392780563ab290e2fddbe9c93b7e79d561c7",
-      "outputSha256": "dae6290d7f39a869f46c2580551480047df5441561390c511942adfd98569c25",
+      "outputSha256": "e0fb16cc5751d546c3468eb937fc22b1efbef8efba7064c31678ca8eeae9f23a",
       "edits": [
         {
           "start": 71,
@@ -1137529,6 +1137897,13 @@
           "symbol": "M:sra.a(IBLjava/lang/String;)V",
           "original": "a",
           "renamed": "drawLoadingProgress"
+        },
+        {
+          "start": 4948,
+          "end": 4951,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 4963,
@@ -1157852,7 +1158227,7 @@
       "original": "g.java",
       "renamed": "RoomDefinition.java",
       "inputSha256": "4b974c28c0d4d099b8e89c39272222ea7b9f75a4767f3edcdb4a62d635a71a30",
-      "outputSha256": "68bf76ded981742c45706770098ec42e4aa14752d5cf49900ad5ed20d96540f0",
+      "outputSha256": "fde9a448cd412cc25bf8ff2b5229f891293c9ef9bf89c8dbd08493b91693e258",
       "edits": [
         {
           "start": 50,
@@ -1157876,11 +1158251,25 @@
           "renamed": "RoomHeader"
         },
         {
+          "start": 1271,
+          "end": 1274,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 1275,
           "end": 1276,
           "symbol": "M:ara.a(IIIIII)V",
           "original": "a",
           "renamed": "drawClippedLine"
+        },
+        {
+          "start": 2391,
+          "end": 2394,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 2395,
@@ -1176808,7 +1177197,7 @@
       "original": "gpa.java",
       "renamed": "SwitchableId.java",
       "inputSha256": "1f4d83c7d6a9d3565faab8e36479bf69141eda0f2c4e2b4ce63286afd71f1d9a",
-      "outputSha256": "5ceed5e962469d9db04ebd1bf1b06c61fffb2a4ef1f69d1bfa203046d0521acb",
+      "outputSha256": "80e257ef7009869e6ae0659bfa600a584b9aea1668c312101094bc4ec206bb9b",
       "edits": [
         {
           "start": 50,
@@ -1176837,6 +1177226,13 @@
           "symbol": "F:gpa.field_d:I",
           "original": "field_d",
           "renamed": "id"
+        },
+        {
+          "start": 196,
+          "end": 198,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 223,
@@ -1178329,7 +1178725,7 @@
       "original": "gqa.java",
       "renamed": "ChatMessage.java",
       "inputSha256": "f91a985e4e952317d4be05adba1607558c1c32eba24a3baa0540dbc14efffb4f",
-      "outputSha256": "5f3d7b803aa9d1e80b4c2a2f33f5179fc5a5eb7b3802d9483306dedc765a052b",
+      "outputSha256": "5ad8d288be26bfbaf7503d3703ad4b0aadf21562ac34599a35ac33744ad48b26",
       "edits": [
         {
           "start": 50,
@@ -1178409,11 +1178805,25 @@
           "renamed": "multiplyFixed"
         },
         {
+          "start": 1814,
+          "end": 1815,
+          "symbol": "M:gqa.a(B)V",
+          "original": "a",
+          "renamed": "showFreeAccountPrompt"
+        },
+        {
           "start": 1850,
           "end": 1851,
           "symbol": "M:mpa.a(ILae;)V",
           "original": "a",
           "renamed": "transitionToContent"
+        },
+        {
+          "start": 1860,
+          "end": 1863,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 1968,
@@ -1181705,7 +1182115,7 @@
       "original": "gva.java",
       "renamed": "DefaultRoomObjectRenderer.java",
       "inputSha256": "10944d92ce67825b6fa33fb1362598ca16067ebab34dd0d564c7e68ce2e9bdfc",
-      "outputSha256": "e0e54bd17fdf0a1d81fc43dbbc8407ec93e18df97355b5d399580d07654c4896",
+      "outputSha256": "bff7538a19e9124824f1a11d64d187bb466df05d573263aa563051a0ee538b5b",
       "edits": [
         {
           "start": 50,
@@ -1183588,6 +1183998,13 @@
           "symbol": "C:jsa",
           "original": "jsa",
           "renamed": "FormFieldRow"
+        },
+        {
+          "start": 26102,
+          "end": 26103,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
         },
         {
           "start": 26159,
@@ -1205070,7 +1205487,7 @@
       "original": "hk.java",
       "renamed": "HardwareWaterTextures.java",
       "inputSha256": "35b0696c0f81ae178698f15596ab655ebbc2da2f8dd83ccce0968cd9f028dd2c",
-      "outputSha256": "136559f8366c5cafa850eea2f0af878cfe6dbec54f1a2aff3716125608d33b62",
+      "outputSha256": "f307520685038217f992fa82757395d79aca1554c6cae8c65b1f20dec15854d5",
       "edits": [
         {
           "start": 69,
@@ -1205120,6 +1205537,20 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "GpuTexture2D"
+        },
+        {
+          "start": 238,
+          "end": 239,
+          "symbol": "M:hk.c(I)Z",
+          "original": "c",
+          "renamed": "hasWaterNoiseTextures"
+        },
+        {
+          "start": 450,
+          "end": 451,
+          "symbol": "M:hk.b(I)Z",
+          "original": "b",
+          "renamed": "ensureNormalTexture"
         },
         {
           "start": 1199,
@@ -1223853,7 +1224284,7 @@
       "original": "ij.java",
       "renamed": "MessageDialog.java",
       "inputSha256": "8c51fe723be39f66437e875ab6dba9a7995868f973e129ff99d0ec7b6fdf9654",
-      "outputSha256": "f105f5caca883be8f31d66f737cb9cd9b5ffe1a1af78e7f513514967611a809f",
+      "outputSha256": "c936fd9d8e3d7f8043aeaa29f6853a9f22e572c25a02e2d4af4aa838a621f4aa",
       "edits": [
         {
           "start": 44,
@@ -1223952,6 +1224383,13 @@
           "symbol": "C:jsa",
           "original": "jsa",
           "renamed": "FormFieldRow"
+        },
+        {
+          "start": 878,
+          "end": 879,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
         },
         {
           "start": 906,
@@ -1224638,7 +1225076,7 @@
       "original": "ija.java",
       "renamed": "CanvasImageBuffer.java",
       "inputSha256": "3315f091ecd48d7c580864b366d9eec14e6ec283918452ef54c5e7e89d14b78b",
-      "outputSha256": "28f59fbe96ba10be423887eb0670fff7320115687bd67e2e7bd37c50aa5bc735",
+      "outputSha256": "b47e5d8f4fac4680f478cc5cf727ced9308f380713824e4f73ac2c17486c503e",
       "edits": [
         {
           "start": 53,
@@ -1224718,6 +1225156,20 @@
           "renamed": "KaleidoscopeOperator"
         },
         {
+          "start": 563,
+          "end": 566,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
+        },
+        {
+          "start": 567,
+          "end": 568,
+          "symbol": "M:tha.a(I)V",
+          "original": "a",
+          "renamed": "ensureRandomizedHslPalette"
+        },
+        {
           "start": 623,
           "end": 626,
           "symbol": "C:ija",
@@ -1224760,6 +1225212,20 @@
           "renamed": "KaleidoscopeOperator"
         },
         {
+          "start": 823,
+          "end": 826,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
+        },
+        {
+          "start": 827,
+          "end": 828,
+          "symbol": "M:tha.a(I)V",
+          "original": "a",
+          "renamed": "ensureRandomizedHslPalette"
+        },
+        {
           "start": 875,
           "end": 876,
           "symbol": "M:ija.a(B)V",
@@ -1224786,7 +1225252,7 @@
       "original": "ik.java",
       "renamed": "IntArrayRequest.java",
       "inputSha256": "3235c19de78e44876fef00694dce0a870f62a81ad3a53a321c6642f240b7006e",
-      "outputSha256": "fcf64e441ca621368525120b2d338d99e0358c40ee3cd07f4c7dd8355c9b93a4",
+      "outputSha256": "1ff3e3d42964f9f30e78e3abd03de9d0f087f75d5bce0e52bf4c347e6a6d2bb0",
       "edits": [
         {
           "start": 50,
@@ -1224964,6 +1225430,13 @@
           "renamed": "HardwareModelBillboardState"
         },
         {
+          "start": 2254,
+          "end": 2257,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 2258,
           "end": 2259,
           "symbol": "M:ara.a(IIIIII)V",
@@ -1225062,11 +1225535,25 @@
           "renamed": "clearChatHistory"
         },
         {
+          "start": 3372,
+          "end": 3375,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 3412,
           "end": 3415,
           "symbol": "C:wea",
           "original": "wea",
           "renamed": "CourseLayout"
+        },
+        {
+          "start": 3464,
+          "end": 3467,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 3778,
@@ -1225916,7 +1226403,7 @@
       "original": "ila.java",
       "renamed": "ChatOverlay.java",
       "inputSha256": "f3f23f7fa05c309e6e93abab067ba60c42933206972b84fa00e5c180eeb01cac",
-      "outputSha256": "05546abebde5e4016924892793dfd04dd4666ef57826bb5e32c65124c19310f0",
+      "outputSha256": "09e5056e95c8d34605e6444dd095c4cfc19243cb5d08d1f731a7128d49a368b7",
       "edits": [
         {
           "start": 50,
@@ -1226108,11 +1226595,25 @@
           "renamed": "disableWithPanel"
         },
         {
+          "start": 838,
+          "end": 841,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 907,
           "end": 910,
           "symbol": "C:wea",
           "original": "wea",
           "renamed": "CourseLayout"
+        },
+        {
+          "start": 924,
+          "end": 927,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 961,
@@ -1226206,11 +1226707,25 @@
           "renamed": "lastShownMessage"
         },
         {
+          "start": 1960,
+          "end": 1963,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 2010,
           "end": 2013,
           "symbol": "C:wea",
           "original": "wea",
           "renamed": "CourseLayout"
+        },
+        {
+          "start": 2027,
+          "end": 2030,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 2088,
@@ -1248434,7 +1248949,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "6d7f6d1281f31ca1b029b6531795e1f9ee1948d17bf105b6d2f18cb4b3e2b59d",
+      "outputSha256": "610e9187209b88a670925787c4bc1194226cf54e65912fd46ff9d48121713b12",
       "edits": [
         {
           "start": 50,
@@ -1250374,6 +1250889,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 10620,
+          "end": 10623,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 10634,
@@ -1272755,6 +1273277,13 @@
           "renamed": "FormFieldRow"
         },
         {
+          "start": 128277,
+          "end": 128278,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
+        },
+        {
           "start": 128412,
           "end": 128415,
           "symbol": "C:tba",
@@ -1287916,7 +1288445,7 @@
       "original": "jsa.java",
       "renamed": "FormFieldRow.java",
       "inputSha256": "dd031f2d02fd6dc73e1b829d9a46134afca77ac4a90fc7a750565a111112de52",
-      "outputSha256": "ad2c8d4502de531d99b5f940ac8366874c665a5ab8d91318a7cea0798e40a6ce",
+      "outputSha256": "9198f713d56e5e92e93dd56039def9c63661c4ed5a1b887a7901e96b0a2b271a",
       "edits": [
         {
           "start": 50,
@@ -1288122,6 +1288651,13 @@
           "renamed": "createBevelNineSlice"
         },
         {
+          "start": 4465,
+          "end": 4466,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
+        },
+        {
           "start": 4555,
           "end": 4557,
           "symbol": "C:bf",
@@ -1288226,7 +1288762,7 @@
       "original": "jta.java",
       "renamed": "DialogStack.java",
       "inputSha256": "4604dd006a7303f38149820f9136fb7a6c55aa5f0b595d778d7f04636d718fbf",
-      "outputSha256": "b72ad0a53a4e2d52d3656fb046b06566bbbc1850cb77aa5415cc4b15d37468a1",
+      "outputSha256": "30ac5ec1f4ee970b2862842e3a398b865874828129e78c56d54b1ed2f574070a",
       "edits": [
         {
           "start": 50,
@@ -1288465,6 +1289001,13 @@
           "symbol": "C:era",
           "original": "era",
           "renamed": "LobbyOverlayAndDateValidationState"
+        },
+        {
+          "start": 1838,
+          "end": 1839,
+          "symbol": "M:ara.a(ZI)Z",
+          "original": "a",
+          "renamed": "processAndCheckDismissal"
         },
         {
           "start": 1984,
@@ -1289624,7 +1290167,7 @@
       "original": "jw.java",
       "renamed": "LoginForm.java",
       "inputSha256": "e3aec304083fe19c96e99d5bd660433990097993cae97b8fe2ca9e1a34f8e3e9",
-      "outputSha256": "1997b9a6e7cd7084f227c9b5733f710c29fac14f7ae155fbbd6abdea81bf08b4",
+      "outputSha256": "f7c05e80be87161342c76ebf0d0dc80121748ecba89d23f9e995f5899dc9a952",
       "edits": [
         {
           "start": 50,
@@ -1290306,6 +1290849,13 @@
           "renamed": "ChatMessage"
         },
         {
+          "start": 7782,
+          "end": 7783,
+          "symbol": "M:gqa.a(B)V",
+          "original": "a",
+          "renamed": "showFreeAccountPrompt"
+        },
+        {
           "start": 7885,
           "end": 7888,
           "symbol": "C:qfa",
@@ -1290654,7 +1291204,7 @@
       "original": "k.java",
       "renamed": "DropTargetWidget.java",
       "inputSha256": "e1a89c4bb2fb2f5f6c2148f0f7bce67d3849e739aa617298354c5f1a310836d8",
-      "outputSha256": "d101c53a7976dcc70f7f47249e828ba1c22e24684233c33f49961158ad3a8537",
+      "outputSha256": "843fd706ae1ae6455f7cb1f36c082be55f755dca88454ab6f41833ec782d1da1",
       "edits": [
         {
           "start": 50,
@@ -1290830,6 +1291380,13 @@
           "symbol": "C:gqa",
           "original": "gqa",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 2238,
+          "end": 2241,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 2298,
@@ -1297357,7 +1297914,7 @@
       "original": "kf.java",
       "renamed": "SoftwareIndexedSprite.java",
       "inputSha256": "30db66991e3cbd82f38d07f8540cff085b32ed4e83644cbfdbbef2a3fc494e2e",
-      "outputSha256": "b6f08895f209fac372adb63b19294ed18c2033daf074b5484dd196184569f617",
+      "outputSha256": "b534a3f5fc910f2ce8300f5adc4fcaf74c85541e7c2ff4edeb3522742c43c3be",
       "edits": [
         {
           "start": 50,
@@ -1297864,6 +1298421,13 @@
           "renamed": "draw"
         },
         {
+          "start": 133915,
+          "end": 133916,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
+        },
+        {
           "start": 134045,
           "end": 134052,
           "symbol": "F:pf.field_l:I",
@@ -1298114,6 +1298678,13 @@
           "symbol": "M:kf.a(IIIIIIII)V",
           "original": "a",
           "renamed": "drawScaled"
+        },
+        {
+          "start": 191363,
+          "end": 191364,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
         },
         {
           "start": 191666,
@@ -1306837,7 +1307408,7 @@
       "original": "kn.java",
       "renamed": "TooltipRenderer.java",
       "inputSha256": "7415ff98c1b6f0e94605889c8e4e3dd3bf9f03024f2e9a73df8014cea721e2ca",
-      "outputSha256": "ea2b2441b6562648421201752db50b06b0145b80ba38eb892388d5fe7ab89779",
+      "outputSha256": "d92521616dfa6036d00a35e8beb4f75144211de254a677b7fc4c62ab07846eeb",
       "edits": [
         {
           "start": 50,
@@ -1306915,6 +1307486,13 @@
           "symbol": "C:isa",
           "original": "isa",
           "renamed": "WidgetPainter"
+        },
+        {
+          "start": 476,
+          "end": 477,
+          "symbol": "M:kn.a(B)V",
+          "original": "a",
+          "renamed": "popRasterState"
         },
         {
           "start": 501,
@@ -1313380,7 +1313958,7 @@
       "original": "kra.java",
       "renamed": "HuffmanCodec.java",
       "inputSha256": "49e5734f9582ee9e0d14efad7fbd806dcd52bec196105f0d4d72845bda204600",
-      "outputSha256": "073a83b1aeb17fe1e239157eabac1a87a56bd31845697f93b133485ea7d45a16",
+      "outputSha256": "a0624b33ff6316b150665781b94f379bb9593de86e204560545f5f7bf5b48a2b",
       "edits": [
         {
           "start": 71,
@@ -1313397,11 +1313975,25 @@
           "renamed": "RendererOption"
         },
         {
+          "start": 233,
+          "end": 234,
+          "symbol": "M:kra.a(Z)V",
+          "original": "a",
+          "renamed": "showQuickChatHelp"
+        },
+        {
           "start": 311,
           "end": 314,
           "symbol": "C:era",
           "original": "era",
           "renamed": "LobbyOverlayAndDateValidationState"
+        },
+        {
+          "start": 329,
+          "end": 332,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 333,
@@ -1316112,7 +1316704,7 @@
       "original": "kua.java",
       "renamed": "Corpse.java",
       "inputSha256": "407d9f7f0407b7242142dd55436be3a4bdda009edc1f8fb1ae791e89faa56f8e",
-      "outputSha256": "3525364a2d0dc40349bfd7f5a020a2fb62e06a975445bfdf5e7840a9286b0ebf",
+      "outputSha256": "d52c0701862c06241b9b5a53549bf6626cdb84b94ae67307f71e88ac3a28ba41",
       "edits": [
         {
           "start": 50,
@@ -1316456,6 +1317048,13 @@
           "symbol": "C:is",
           "original": "is",
           "renamed": "NameEntryPopup"
+        },
+        {
+          "start": 5205,
+          "end": 5207,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 5486,
@@ -1319490,7 +1320089,7 @@
       "original": "l.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "e56f649f2603989f3ec8b95daa188951258795ab268f822dd99ab4e664b32f84",
-      "outputSha256": "163d2ac6c18e89e6950b4510e2947f33c87e5f4f9e59bb10f9e2ec60cdf6fbc0",
+      "outputSha256": "1707f844a894d8fa666f217e3740a09ffa9f25aeb91c55eb23deb7d748f386ee",
       "edits": [
         {
           "start": 44,
@@ -1321229,6 +1321828,13 @@
           "symbol": "M:ji.d(I)Lvg;",
           "original": "d",
           "renamed": "firstWithKey"
+        },
+        {
+          "start": 39961,
+          "end": 39962,
+          "symbol": "M:tn.a(Z)V",
+          "original": "a",
+          "renamed": "clearEncodedSampleIds"
         },
         {
           "start": 39989,
@@ -1332743,7 +1333349,7 @@
       "original": "lc.java",
       "renamed": "ContentTransitionDialog.java",
       "inputSha256": "df9a34730ce8fddd6ff1f51cd5a087830b1f17d7dfcb6144c5134960050e9edb",
-      "outputSha256": "b02562d7cc54ca075cd7d0add6f869d9873e531e428d1ef3bb839c2596bd8ba1",
+      "outputSha256": "81d43e46e3ecf7705aca9f6d25dbbeff50c59ddddcc7ce6d46e9eb8bb98dbb9c",
       "edits": [
         {
           "start": 53,
@@ -1332758,6 +1333364,13 @@
           "symbol": "C:ofa",
           "original": "ofa",
           "renamed": "ResizingDialog"
+        },
+        {
+          "start": 235,
+          "end": 237,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 284,
@@ -1332795,11 +1333408,25 @@
           "renamed": "unlink"
         },
         {
+          "start": 781,
+          "end": 783,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 825,
           "end": 826,
           "symbol": "M:ae.a(BIIII)V",
           "original": "a",
           "renamed": "setBounds"
+        },
+        {
+          "start": 924,
+          "end": 926,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 963,
@@ -1365565,7 +1366192,7 @@
       "original": "mna.java",
       "renamed": "mna.java",
       "inputSha256": "7d170b0f652562bc9501cd6244e2717c533dfd163818e5866885a21277a15736",
-      "outputSha256": "74d3e282a086ecd99a002295ff6f0870b01a71582029cab9be1d8d0eac459f53",
+      "outputSha256": "a01e42be5ca16780a4540e580a109b58558452335e2d66998c72a8c6efc70f5a",
       "edits": [
         {
           "start": 70,
@@ -1365608,6 +1366235,13 @@
           "symbol": "M:vna.d(I)V",
           "original": "d",
           "renamed": "clear"
+        },
+        {
+          "start": 791,
+          "end": 794,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 895,
@@ -1365741,6 +1366375,13 @@
           "symbol": "C:bn",
           "original": "bn",
           "renamed": "VortexBehaviour"
+        },
+        {
+          "start": 2178,
+          "end": 2181,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 2229,
@@ -1367150,7 +1367791,7 @@
       "original": "mp.java",
       "renamed": "MidiChannelVolumeTargets.java",
       "inputSha256": "3defd611e9b82b6b98e62aafa97eefe6b0c826bb63e94896a9b3e5c9c0780918",
-      "outputSha256": "dabb665b64e25402b888821329b89218b498c7f07ae156ae45f1841e5992a9ff",
+      "outputSha256": "4287279e735f7b7a3ecd0f25d47a6380db9de272a915aa2e42d28ec404d56957",
       "edits": [
         {
           "start": 50,
@@ -1368322,11 +1368963,25 @@
           "renamed": "ConsoleHistoryEntry"
         },
         {
+          "start": 10728,
+          "end": 10731,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 10747,
           "end": 10750,
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 10776,
+          "end": 10779,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 10799,
@@ -1368348,6 +1369003,13 @@
           "symbol": "M:jea.b(ILjea;)V",
           "original": "b",
           "renamed": "addChild"
+        },
+        {
+          "start": 10843,
+          "end": 10846,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 10885,
@@ -1368960,7 +1369622,7 @@
       "original": "mr.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "3c6f904ccfd9f3b94a303bc84e5d3ae5ec2858acca365f59a284886bce634a95",
-      "outputSha256": "5f41432c0618e47732f83227a44921601454105b8b96bf8dc0a0401eab05e44c",
+      "outputSha256": "a1ee8d3a4b9bb665746d2513287d1c8e9e1f76cd808f769913a9b46bf62bfb6e",
       "edits": [
         {
           "start": 50,
@@ -1370697,6 +1371359,13 @@
           "symbol": "C:gqa",
           "original": "gqa",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 19864,
+          "end": 19865,
+          "symbol": "M:gqa.a(B)V",
+          "original": "a",
+          "renamed": "showFreeAccountPrompt"
         },
         {
           "start": 19972,
@@ -1382536,7 +1383205,7 @@
       "original": "nk.java",
       "renamed": "AnimationFrameBase.java",
       "inputSha256": "a43924a2b8b3def8812283ac565683a54fe2119c7bdef8cdc68761b0b27714ba",
-      "outputSha256": "cb981d4eeaa84e09ff8312a7ae7a397687b22fe8aa3604f2b9e132011aa8c903",
+      "outputSha256": "8cd8f83584c0e090f5ab5078b0051766aa6f505d3ee1b8fd7aaff7f9688497f2",
       "edits": [
         {
           "start": 50,
@@ -1382586,6 +1383255,13 @@
           "symbol": "M:uv.b(Z)Llqa;",
           "original": "b",
           "renamed": "getCurrentRendererOption"
+        },
+        {
+          "start": 499,
+          "end": 502,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 590,
@@ -1384280,7 +1384956,7 @@
       "original": "no.java",
       "renamed": "no.java",
       "inputSha256": "a5526f0b9fa9846d26205191ecc9fd22f7749a9921d9f33e03da72122284641d",
-      "outputSha256": "973f51b8e644c0438bc6b6f3f98dd71e6c46371f0b1c1237832a659509af0ae9",
+      "outputSha256": "fdabd3c80609f92f8e4a56c88533c493657f58686633922fcc9bc8b7fddbb602",
       "edits": [
         {
           "start": 61,
@@ -1385135,6 +1385811,13 @@
           "symbol": "M:kaa.a(IIZ)Z",
           "original": "a",
           "renamed": "hasMask24OrAll544"
+        },
+        {
+          "start": 7714,
+          "end": 7716,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 7717,
@@ -1399809,7 +1400492,7 @@
       "original": "ob.java",
       "renamed": "SceneLight.java",
       "inputSha256": "b629303d1c78fe36313efc9b96e28402e9cb455deda78833cf7230badfbf8063",
-      "outputSha256": "483676a92d96abd010e211e485f7340b5522ec504d29849328057743bb76ca20",
+      "outputSha256": "14f55be2596a2854a0d86918b9646fbcfe7a6aeb2ace4dd21297da681b3e5fa3",
       "edits": [
         {
           "start": 53,
@@ -1400195,6 +1400878,13 @@
           "symbol": "M:su.a(Ljpa;Lha;B)Lnh;",
           "original": "a",
           "renamed": "createToolkitSprite"
+        },
+        {
+          "start": 2001,
+          "end": 2004,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 2046,
@@ -1401693,7 +1402383,7 @@
       "original": "oba.java",
       "renamed": "OpenGlTransform3D.java",
       "inputSha256": "44ac96cbdbd32ac3ce85461f0d79d79fa33d0bd57209d2ea788c43d48d7929b3",
-      "outputSha256": "2a1df599200805dc92ecc5bb312d3eb56348dbba133895aa930b6a523e56d8d0",
+      "outputSha256": "be977ddf8aff916ffc068789dac83d3a6a0e85bf6baef3e60d1327917b6144ef",
       "edits": [
         {
           "start": 50,
@@ -1401841,6 +1402531,13 @@
           "symbol": "M:kaa.a(IIZ)Z",
           "original": "a",
           "renamed": "hasMask24OrAll544"
+        },
+        {
+          "start": 1172,
+          "end": 1174,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 1175,
@@ -1406120,7 +1406817,7 @@
       "original": "oga.java",
       "renamed": "LegacyOpenGlPostProcessEffect.java",
       "inputSha256": "696671fd6f33e7daf9f056520d5dab8e6098ffdaa396291bd9835de6eeddbd8a",
-      "outputSha256": "2d933db3175873134d6b562dc8252a3ed6d01481c3e705a30e7e64435573b0c3",
+      "outputSha256": "c62b9718cfc2ca30c480d4ec2fb0dcd106317728487678b46cb25482999f52bc",
       "edits": [
         {
           "start": 53,
@@ -1406198,6 +1406895,13 @@
           "symbol": "C:jsa",
           "original": "jsa",
           "renamed": "FormFieldRow"
+        },
+        {
+          "start": 330,
+          "end": 331,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
         },
         {
           "start": 352,
@@ -1409598,7 +1410302,7 @@
       "original": "oja.java",
       "renamed": "DirectXEnvironmentWaterEffect.java",
       "inputSha256": "45baf26e0e20288dc7d656f7dcdd4f609e6716a6572e0334edc99c353e37e34f",
-      "outputSha256": "d0e9a05523646ba222a2b7983b507f014ca31abae9234e2e8bc623d676cda074",
+      "outputSha256": "95c6d8430105124beb4f390ce723e913a4727225d8a7db9857c3b41cc406ac57",
       "edits": [
         {
           "start": 50,
@@ -1409781,6 +1410485,13 @@
           "symbol": "M:cn.a(Ljava/lang/String;BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "getFileByName"
+        },
+        {
+          "start": 2357,
+          "end": 2358,
+          "symbol": "M:hk.b(I)Z",
+          "original": "b",
+          "renamed": "ensureNormalTexture"
         },
         {
           "start": 2423,
@@ -1414486,7 +1415197,7 @@
       "original": "oo.java",
       "renamed": "SnakePitModel.java",
       "inputSha256": "f96edbd0ce967238fd638fc6c06e58d433d871c88aa7cab38ff947dfbc2930ef",
-      "outputSha256": "e9d7dfa119738af5bae5e29e5203eca416f548556eeb078304ae34e695a6ebc3",
+      "outputSha256": "63960257b5c0387aa0dc05177fdfa4a9b4474b59cd355c1a915abca45ddc29f7",
       "edits": [
         {
           "start": 50,
@@ -1415292,6 +1416003,13 @@
           "symbol": "C:gka",
           "original": "gka",
           "renamed": "ConsoleHistoryEntry"
+        },
+        {
+          "start": 13747,
+          "end": 13750,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 13760,
@@ -1430505,7 +1431223,7 @@
       "original": "pf.java",
       "renamed": "SoftwareToolkitSprite.java",
       "inputSha256": "2f970839db6f5c14f0b63d31cd1bf0de83e30392f1693f394195463a13ff601e",
-      "outputSha256": "3c07c07181e1f5ecc854b6d16b2ace0f6b2537e9c24d8d9b7dfb11a52bf3c54a",
+      "outputSha256": "890069fea0f22c3da72ab6f16707622cd10fcc0545a99662455afec2cb89fc2d",
       "edits": [
         {
           "start": 53,
@@ -1430935,6 +1431653,13 @@
           "renamed": "drawAffine"
         },
         {
+          "start": 7856,
+          "end": 7857,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
+        },
+        {
           "start": 7936,
           "end": 7937,
           "symbol": "M:pf.a(FFFFFF)Z",
@@ -1431227,7 +1431952,7 @@
       "original": "pfa.java",
       "renamed": "CourseMapWalker.java",
       "inputSha256": "9267e31959f65fd2b8f88443bb1f5171d847e78786da1c5e3fe54ecee88c8a0e",
-      "outputSha256": "b2d7b232cc4896428b2b00c88184144c9db894360ac8045e4ad7372c60146dc2",
+      "outputSha256": "6364463b3598834c3a0a73a1c0f69c538e8d333f7a768816c0094411cf42938d",
       "edits": [
         {
           "start": 50,
@@ -1435911,6 +1436636,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 23620,
+          "end": 23623,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 23634,
@@ -1440960,6 +1441692,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 47646,
+          "end": 47649,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
+        },
+        {
           "start": 47660,
           "end": 47663,
           "symbol": "C:jaa",
@@ -1442148,6 +1442887,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 53333,
+          "end": 53336,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 53348,
@@ -1454251,7 +1454997,7 @@
       "original": "pja.java",
       "renamed": "OpenGlTransparentWaterEffect.java",
       "inputSha256": "d463ef5a61cb7c829d9080516f00904d11bd7b1e1832e2e1e46f6a81ba4c683f",
-      "outputSha256": "f15340642c0b911c0463b3ba00941f9f9e192737cb9ce22278fa2bb1d24dd18c",
+      "outputSha256": "e9f4856c6336f2af81abfee094a869953b52aba96607c8d02ea85d1aad8f792c",
       "edits": [
         {
           "start": 50,
@@ -1454525,6 +1455271,13 @@
           "symbol": "C:hk",
           "original": "hk",
           "renamed": "HardwareWaterTextures"
+        },
+        {
+          "start": 2783,
+          "end": 2784,
+          "symbol": "M:hk.c(I)Z",
+          "original": "c",
+          "renamed": "hasWaterNoiseTextures"
         },
         {
           "start": 2860,
@@ -1461186,7 +1461939,7 @@
       "original": "pra.java",
       "renamed": "pra.java",
       "inputSha256": "4e69eda48fdfe8d432328f3c6dd3d55fc1b993d8a333c37db2995864f65bc666",
-      "outputSha256": "337da7564526aaa5cdd38376c7586df005276d2b86fb4f43e5af32ce8f836e43",
+      "outputSha256": "5010eab8328294b24ec901714ff9712bb0123b2de1246d0a03cf24f32954281f",
       "edits": [
         {
           "start": 106,
@@ -1461579,6 +1462332,13 @@
           "symbol": "C:pk",
           "original": "pk",
           "renamed": "HiscoresScreen"
+        },
+        {
+          "start": 2846,
+          "end": 2848,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         }
       ]
     },
@@ -1465080,7 +1465840,7 @@
       "original": "pw.java",
       "renamed": "PressureSwitchComponent.java",
       "inputSha256": "19652860f2c6894a14691315846b5bf7e1645dd840c842439a196af9e712e84b",
-      "outputSha256": "df9e6780bb8bb93eb1fcb68a27bbf29915558558642c4833c9da092c9e785d5f",
+      "outputSha256": "61d071b70c473c8facb2377bfe27b3fbb19d2771720875bd890fdee818daeeb8",
       "edits": [
         {
           "start": 50,
@@ -1465202,6 +1465962,13 @@
           "renamed": "HiscoresScreen"
         },
         {
+          "start": 876,
+          "end": 878,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 904,
           "end": 907,
           "symbol": "C:era",
@@ -1465321,6 +1466088,13 @@
           "renamed": "StripedMazeGenerator"
         },
         {
+          "start": 1617,
+          "end": 1620,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 1653,
           "end": 1655,
           "symbol": "C:fj",
@@ -1465333,6 +1466107,34 @@
           "symbol": "C:wla",
           "original": "wla",
           "renamed": "ReportAbuseDialog"
+        },
+        {
+          "start": 1674,
+          "end": 1677,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 1696,
+          "end": 1699,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 1718,
+          "end": 1721,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 1740,
+          "end": 1743,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 1770,
@@ -1471417,7 +1472219,7 @@
       "original": "qh.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "297deb7b6be6c8d5c3ced20a65c12c6f29d1cdf537d06d984c0ca4a0ed3f8ddc",
-      "outputSha256": "85255a2f42ec18b8c95222f6478291956a1bd01afa77950941ac37b336776d80",
+      "outputSha256": "42368d68b4f55eec1902ecb85024272a434428ae519df294fd6d4e39e9a16898",
       "edits": [
         {
           "start": 71,
@@ -1475870,6 +1476672,13 @@
           "symbol": "M:gl.$cfr$intArgs$a$53ce4ab4c593(ILjava/lang/String;[Ljava/lang/String;)Ljava/lang/String;",
           "original": "$cfr$intArgs$a$53ce4ab4c593",
           "renamed": "formatText"
+        },
+        {
+          "start": 33744,
+          "end": 33747,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 33776,
@@ -1486163,7 +1486972,7 @@
       "original": "qna.java",
       "renamed": "FullscreenDialogLayout.java",
       "inputSha256": "01f37cf59d73fd6d989bf5e02077e8bf8283d387400a3a442c27f8cd21ecc41b",
-      "outputSha256": "2ee6b50a7e75022d2750279dbaa330e30d5a29581a20a961a1a943a33b0bbb0f",
+      "outputSha256": "f9a935c2b1e86f6daec9fa816f29f007e5c2aba8c596123b9d8b5273eaba1ed7",
       "edits": [
         {
           "start": 50,
@@ -1486255,6 +1487064,13 @@
           "symbol": "C:jba",
           "original": "jba",
           "renamed": "AgeValidator"
+        },
+        {
+          "start": 1877,
+          "end": 1879,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 1892,
@@ -1486404,6 +1487220,13 @@
           "renamed": "AgeValidator"
         },
         {
+          "start": 2659,
+          "end": 2661,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 2674,
           "end": 2677,
           "symbol": "C:lra",
@@ -1486544,6 +1487367,13 @@
           "renamed": "IdolItemComponent"
         },
         {
+          "start": 3400,
+          "end": 3402,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 3415,
           "end": 3418,
           "symbol": "C:lra",
@@ -1486577,6 +1487407,13 @@
           "symbol": "C:jma",
           "original": "jma",
           "renamed": "SwitchState"
+        },
+        {
+          "start": 3511,
+          "end": 3513,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 3526,
@@ -1486698,6 +1487535,13 @@
           "renamed": "S2CEventPacket"
         },
         {
+          "start": 4220,
+          "end": 4222,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 4235,
           "end": 4238,
           "symbol": "C:lra",
@@ -1486815,6 +1487659,13 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "WindZoneBehaviour"
+        },
+        {
+          "start": 5000,
+          "end": 5002,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 5015,
@@ -1486971,6 +1487822,13 @@
           "renamed": "RadialSelectionWidget"
         },
         {
+          "start": 5872,
+          "end": 5874,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 5887,
           "end": 5890,
           "symbol": "C:lra",
@@ -1487095,6 +1487953,13 @@
           "symbol": "C:lqa",
           "original": "lqa",
           "renamed": "RendererOption"
+        },
+        {
+          "start": 6616,
+          "end": 6618,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 6631,
@@ -1495328,7 +1496193,7 @@
       "original": "qt.java",
       "renamed": "qt.java",
       "inputSha256": "f5cbb30fd05912cba1b4cfbc3d7ab519bc9ce6a328453136f0ad646bad42c118",
-      "outputSha256": "067eb6143b011d54fb57c8ce871fe21ff3b572787dad199bdfa1c47da5af6e9e",
+      "outputSha256": "48d785d683053b99ca1bacfbc498db3d5629e04deabbb8f1a80fdaa139ee996f",
       "edits": [
         {
           "start": 66,
@@ -1497380,6 +1498245,13 @@
           "symbol": "M:jta.c(Lae;I)V",
           "original": "c",
           "renamed": "pushDialog"
+        },
+        {
+          "start": 15851,
+          "end": 15853,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 15854,
@@ -1500706,7 +1501578,7 @@
       "original": "raa.java",
       "renamed": "SoftwareRgbSprite.java",
       "inputSha256": "6cf8d6f10475dd40b6701d77cc26aeb0dd3ed89e2e6cd1cc750d8d5987a43ec3",
-      "outputSha256": "4e1b0944de0f574c17f3b200459cdf55f15b543ca94509be12a67a6a16fbfd6e",
+      "outputSha256": "1ca880b5215e9776d8127fb66ffb50c80b8d0f0cf375f9e2b6fa10c22ea2fe1f",
       "edits": [
         {
           "start": 50,
@@ -1500931,6 +1501803,13 @@
           "symbol": "M:raa.a(IIIIIIII)V",
           "original": "a",
           "renamed": "drawScaled"
+        },
+        {
+          "start": 33553,
+          "end": 33554,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
         },
         {
           "start": 33856,
@@ -1501442,6 +1502321,13 @@
           "symbol": "M:raa.a(IIIII)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 153339,
+          "end": 153340,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
         },
         {
           "start": 153469,
@@ -1508669,10 +1509555,17 @@
     },
     {
       "original": "rg.java",
-      "renamed": "rg.java",
+      "renamed": "OpacityWidget.java",
       "inputSha256": "408895d6a1e7c01473368cd929cc5d2390f955aa1990071cb20f65bf79c126f8",
-      "outputSha256": "7b9cdd5c342937910c973eb5a757dfafe7ca87c87263505a5d2d2843f38a95c5",
+      "outputSha256": "d621f382293352e565dd9c297ff2fb7c4773f9d6403a14958e54dc54a1aa7582",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
         {
           "start": 61,
           "end": 63,
@@ -1508686,6 +1509579,13 @@
           "symbol": "C:hra",
           "original": "hra",
           "renamed": "ValidationOutcome"
+        },
+        {
+          "start": 160,
+          "end": 162,
+          "symbol": "M:rg.<init>(Lae;)V",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 163,
@@ -1509617,6 +1510517,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 3487,
+          "end": 3490,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 3508,
@@ -1512076,6 +1512983,13 @@
           "renamed": "LargeByteArrayPoolStorage"
         },
         {
+          "start": 10507,
+          "end": 10509,
+          "symbol": "M:rg.<init>()V",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 10541,
           "end": 10544,
           "symbol": "C:isa",
@@ -1512202,6 +1513116,13 @@
           "renamed": "hasFlag65536"
         },
         {
+          "start": 11437,
+          "end": 11439,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 11440,
           "end": 11441,
           "symbol": "M:rg.e(III)Z",
@@ -1512242,6 +1513163,13 @@
           "symbol": "M:di.a(I)Ljava/applet/Applet;",
           "original": "a",
           "renamed": "getApplet"
+        },
+        {
+          "start": 11741,
+          "end": 11743,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 11744,
@@ -1517041,7 +1517969,7 @@
       "original": "rl.java",
       "renamed": "PowerUpItemBehaviour.java",
       "inputSha256": "f96b0a8f038130a4dabd5690da1d356853dccb09bf0c63c5816c34903e0ba446",
-      "outputSha256": "d5304d691dad62b771a10b0f1219c673a2de8b4a8e4bd908fc075a2b1dd47338",
+      "outputSha256": "37ef8241d6e3b7d7a43cf847171bc47e5ee31ecf6411957fccd8d476ddc7532a",
       "edits": [
         {
           "start": 50,
@@ -1517212,6 +1518140,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 1638,
+          "end": 1639,
+          "symbol": "M:rl.r(I)I",
+          "original": "r",
+          "renamed": "pollLoginAction"
+        },
+        {
           "start": 2044,
           "end": 2046,
           "symbol": "C:ej",
@@ -1517315,6 +1518250,13 @@
           "symbol": "C:jsa",
           "original": "jsa",
           "renamed": "FormFieldRow"
+        },
+        {
+          "start": 2324,
+          "end": 2325,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
         },
         {
           "start": 2432,
@@ -1537399,7 +1538341,7 @@
       "original": "sfa.java",
       "renamed": "SoftwareGraphicsToolkit.java",
       "inputSha256": "90d0446d6752c8be5dfc9273c2995f335067d1d6375e3476d2f90f8120e85d3c",
-      "outputSha256": "9e4b7e170ac162ff66bd2fd1e7181900a2548c8125335d74bdbe551ea1a1ca8e",
+      "outputSha256": "734b30371823cbe5f871b43bc91f976f959be97881b3b715e3ce524232d52bcc",
       "edits": [
         {
           "start": 50,
@@ -1538051,6 +1538993,13 @@
           "symbol": "C:ww",
           "original": "ww",
           "renamed": "Model"
+        },
+        {
+          "start": 17395,
+          "end": 17396,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
         },
         {
           "start": 17455,
@@ -1539617,7 +1540566,7 @@
       "original": "si.java",
       "renamed": "BlockComponent.java",
       "inputSha256": "3775a77475bbb333f664a47107aaf33e948de78829b362ade7e54db6333d8c47",
-      "outputSha256": "0b07db76cb689ef63b81b481925ac4d5b23e991a753920905882cdb5b6f507a6",
+      "outputSha256": "01c437d161cd582c6289f8d2d911a90d20f6dd5411f9a9f06ff85147eff68e80",
       "edits": [
         {
           "start": 50,
@@ -1540215,6 +1541164,13 @@
           "renamed": "RoomComponent"
         },
         {
+          "start": 4495,
+          "end": 4496,
+          "symbol": "M:si.a(IIIZ)I",
+          "original": "a",
+          "renamed": "pollLoginAction"
+        },
+        {
           "start": 4589,
           "end": 4596,
           "symbol": "F:si.field_F:[Ljava/lang/String;",
@@ -1540229,11 +1541185,25 @@
           "renamed": "PowerUpItemBehaviour"
         },
         {
+          "start": 4636,
+          "end": 4637,
+          "symbol": "M:rl.r(I)I",
+          "original": "r",
+          "renamed": "pollLoginAction"
+        },
+        {
           "start": 4669,
           "end": 4671,
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "PowerUpItemBehaviour"
+        },
+        {
+          "start": 4672,
+          "end": 4673,
+          "symbol": "M:rl.r(I)I",
+          "original": "r",
+          "renamed": "pollLoginAction"
         },
         {
           "start": 4702,
@@ -1544955,7 +1545925,7 @@
       "original": "sna.java",
       "renamed": "TutorialHints.java",
       "inputSha256": "3805c5046032cbeffb26cc52c094747c764dd49751996eb9cd4dea3620f3e156",
-      "outputSha256": "93e1a282e879d2c00ca33d9c1f867aebd6f834be7b84acfd0b3d7a7b01601396",
+      "outputSha256": "976e0d3d0030c3a7800d4ac22e722614a9ebb4102c1a224ca994b4f90dbdd660",
       "edits": [
         {
           "start": 50,
@@ -1545236,6 +1546206,13 @@
           "symbol": "M:sna.a(Ljava/lang/String;Lms;II)V",
           "original": "a",
           "renamed": "queueHint"
+        },
+        {
+          "start": 2311,
+          "end": 2314,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 2325,
@@ -1547622,7 +1548599,7 @@
       "original": "sr.java",
       "renamed": "MessagePage.java",
       "inputSha256": "4d425c14b60c20ec3a6873fc351a32b4c12d111e044177fd02081cfc5831dfed",
-      "outputSha256": "9758228223bcef5f900def9c5c9278e23e028cb632c8e9b14048cc19b1bbb88f",
+      "outputSha256": "7ee02bef51112abb2d2c1b57f904a6c8dabe32ecf8439dfbd7065816cf33ba4d",
       "edits": [
         {
           "start": 50,
@@ -1547791,6 +1548768,13 @@
           "symbol": "C:jsa",
           "original": "jsa",
           "renamed": "FormFieldRow"
+        },
+        {
+          "start": 2436,
+          "end": 2437,
+          "symbol": "M:jsa.a(ZI)V",
+          "original": "a",
+          "renamed": "queueLoginAction"
         },
         {
           "start": 2670,
@@ -1547994,7 +1548978,7 @@
       "original": "sra.java",
       "renamed": "GameAssetLoader.java",
       "inputSha256": "6995010bca06370c530d55f896a5434e05121a65cb42067094121ad977f8ff04",
-      "outputSha256": "d5b51b61b62cf20e887088e66a9b46cbb2c8ae530404c2a5bdb2d979ba55f6e3",
+      "outputSha256": "e370316dd2da5397fd03288ac834dab1b1804c18f6fb47c14d618bad7600e235",
       "edits": [
         {
           "start": 71,
@@ -1550039,6 +1551023,13 @@
           "symbol": "M:sra.b(I)Z",
           "original": "b",
           "renamed": "loadStep"
+        },
+        {
+          "start": 11627,
+          "end": 11629,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 11630,
@@ -1560154,7 +1561145,7 @@
       "original": "tc.java",
       "renamed": "IdChatTarget.java",
       "inputSha256": "3dd7261123788e94ae3507e9fdf3a803318cc08eaa755e657c9500e954f637e1",
-      "outputSha256": "590a38dc1d48d746ca6558787697ab5743c005bf69e0ae2ac348e8d6f2076195",
+      "outputSha256": "ac20d31b8b27b9c801f5e74bc3c59e260f551125488afd1e452bebdf59fb3e7e",
       "edits": [
         {
           "start": 44,
@@ -1560414,6 +1561405,13 @@
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "PowerUpItemBehaviour"
+        },
+        {
+          "start": 3175,
+          "end": 3176,
+          "symbol": "M:rl.r(I)I",
+          "original": "r",
+          "renamed": "pollLoginAction"
         },
         {
           "start": 3194,
@@ -1561074,7 +1562072,7 @@
       "original": "tda.java",
       "renamed": "SeededGradientNoise3D.java",
       "inputSha256": "fb44bbdc606655597bd73e3115fcfca9896b6a17736652966c465f8d497b2738",
-      "outputSha256": "6b59ae9a095ca61d6e79c8d04e31c2fa85125b38d29e7a7eb7c885815a682582",
+      "outputSha256": "bbd00497accc5c1c5da0650e6b8f525265c9f173492e1f393acba4a53357b3dd",
       "edits": [
         {
           "start": 71,
@@ -1561516,6 +1562514,13 @@
           "symbol": "M:tda.a(IB)V",
           "original": "a",
           "renamed": "initializeChatHistory"
+        },
+        {
+          "start": 6127,
+          "end": 6130,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 6210,
@@ -1563944,10 +1564949,17 @@
     },
     {
       "original": "tha.java",
-      "renamed": "tha.java",
+      "renamed": "FreeAccountPromptPanel.java",
       "inputSha256": "d152b888a4b593449c908b424327f6d210dde58c81d0975780a01b5b44b1bda2",
-      "outputSha256": "b163da8aa63a6e0722fc9d4b03e9b0b22416ec185070608e1e3a421a7da81f22",
+      "outputSha256": "3042e4df1ea10d982d8b4558cd31fd446482a0e1eaeb43d5f2a51b667a88ea55",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
+        },
         {
           "start": 62,
           "end": 63,
@@ -1564026,6 +1565038,13 @@
           "renamed": "renderLayer"
         },
         {
+          "start": 600,
+          "end": 601,
+          "symbol": "M:tha.a(I)V",
+          "original": "a",
+          "renamed": "ensureRandomizedHslPalette"
+        },
+        {
           "start": 1274,
           "end": 1277,
           "symbol": "C:cla",
@@ -1564066,6 +1565085,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5165,
+          "end": 5168,
+          "symbol": "M:tha.<init>()V",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
         },
         {
           "start": 5204,
@@ -1564271,6 +1565297,20 @@
           "renamed": "FocusableWidget"
         },
         {
+          "start": 6898,
+          "end": 6901,
+          "symbol": "C:tha",
+          "original": "tha",
+          "renamed": "FreeAccountPromptPanel"
+        },
+        {
+          "start": 6902,
+          "end": 6903,
+          "symbol": "M:tha.a(I)V",
+          "original": "a",
+          "renamed": "ensureRandomizedHslPalette"
+        },
+        {
           "start": 6974,
           "end": 6976,
           "symbol": "C:pn",
@@ -1564304,6 +1565344,13 @@
           "symbol": "C:aoa",
           "original": "aoa",
           "renamed": "S2CPlayerProfilePacket"
+        },
+        {
+          "start": 7211,
+          "end": 7212,
+          "symbol": "M:aoa.b(Z)V",
+          "original": "b",
+          "renamed": "beginGuestPlay"
         },
         {
           "start": 7720,
@@ -1566085,7 +1567132,7 @@
       "original": "tn.java",
       "renamed": "MidiPatch.java",
       "inputSha256": "1fbe6d6ca7eeb84635644e09bb25dc2e7944ae06def21e1bcc686047ed04c0c2",
-      "outputSha256": "fb69bd2556868a3ee53a4775baa55dee8b584c6be2b19b3df273c3f46e34bbac",
+      "outputSha256": "4d53077091dd289bed2cbf9861526711383dffc1bded1fbeb25fe8dbdcdbc679",
       "edits": [
         {
           "start": 50,
@@ -1566121,6 +1567168,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 265,
+          "end": 266,
+          "symbol": "M:tn.a(Z)V",
+          "original": "a",
+          "renamed": "clearEncodedSampleIds"
         },
         {
           "start": 346,
@@ -1567038,7 +1568092,7 @@
       "original": "tna.java",
       "renamed": "DivisionMazeGenerator.java",
       "inputSha256": "e37cc81c7182d08a4bb1b203b0a8ea62821382c1d89dabe3a45dd39aff89f2b5",
-      "outputSha256": "0f8d9a59b323f9b71d29023b0e277d5f17d39acb500fe9e4f0d4ec3021718342",
+      "outputSha256": "e25d0d851cef24a6bd4ecf575f61ed34ac3ec516cc39874e882f066ada79abb2",
       "edits": [
         {
           "start": 50,
@@ -1567097,6 +1568151,13 @@
           "renamed": "GraphicsSelectionState"
         },
         {
+          "start": 1158,
+          "end": 1161,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 1211,
           "end": 1214,
           "symbol": "C:wea",
@@ -1567137,6 +1568198,13 @@
           "symbol": "C:baa",
           "original": "baa",
           "renamed": "GraphicsSelectionState"
+        },
+        {
+          "start": 1680,
+          "end": 1683,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 1792,
@@ -1567193,6 +1568261,34 @@
           "symbol": "C:wea",
           "original": "wea",
           "renamed": "CourseLayout"
+        },
+        {
+          "start": 2295,
+          "end": 2298,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 2353,
+          "end": 2356,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 2377,
+          "end": 2380,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 2392,
+          "end": 2395,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 2420,
@@ -1567536,7 +1568632,7 @@
       "original": "to.java",
       "renamed": "HardwareGraphicsHeap.java",
       "inputSha256": "40b55dee26cc3c60b30a37f3750840e9c5a62c555e0c1cc3dc5a2c09a4f92fdf",
-      "outputSha256": "99975b59765899e3dac40d60b8d8a4ffa8c3273a41ddb2aae370df4397a80719",
+      "outputSha256": "1046b4b76712dc56ee82f78093f30477708ff8ec6d0416b82c675eefbea5cbca",
       "edits": [
         {
           "start": 50,
@@ -1567551,6 +1568647,13 @@
           "symbol": "C:za",
           "original": "za",
           "renamed": "GraphicsHeap"
+        },
+        {
+          "start": 290,
+          "end": 291,
+          "symbol": "M:to.b(B)V",
+          "original": "b",
+          "renamed": "closeHeap"
         },
         {
           "start": 345,
@@ -1583921,7 +1585024,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "cc3313643199b4d8061d4033ca5711a1b69fcf2715f79bad1c1e128e79771466",
+      "outputSha256": "6cd653af0e48845f5fd13436b863645af7874120defcc166135c6ade51f8283c",
       "edits": [
         {
           "start": 53,
@@ -1584293,6 +1585396,13 @@
           "symbol": "C:si",
           "original": "si",
           "renamed": "BlockComponent"
+        },
+        {
+          "start": 2513,
+          "end": 2514,
+          "symbol": "M:si.a(IIIZ)I",
+          "original": "a",
+          "renamed": "pollLoginAction"
         },
         {
           "start": 2515,
@@ -1586241,6 +1587351,13 @@
           "renamed": "getFrameRate"
         },
         {
+          "start": 18193,
+          "end": 18195,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
+        },
+        {
           "start": 18244,
           "end": 18247,
           "symbol": "C:ada",
@@ -1587261,6 +1588378,13 @@
           "symbol": "C:aoa",
           "original": "aoa",
           "renamed": "S2CPlayerProfilePacket"
+        },
+        {
+          "start": 22480,
+          "end": 22481,
+          "symbol": "M:aoa.b(Z)V",
+          "original": "b",
+          "renamed": "beginGuestPlay"
         },
         {
           "start": 22523,
@@ -1606038,7 +1607162,7 @@
       "original": "usa.java",
       "renamed": "DirectXTransparentWaterEffect.java",
       "inputSha256": "cc5c12c9b210f3170407569cfa1717caafef1f3d8f697ec1ec54efbf984fe419",
-      "outputSha256": "44ec35540f9b9096e693f526bae9444819b1231d064513dbb4283665b306b4eb",
+      "outputSha256": "384f9eca317482310846ad571d599e74d7fa6e05983bc65be1a36243143317af",
       "edits": [
         {
           "start": 50,
@@ -1606697,6 +1607821,13 @@
           "symbol": "C:hk",
           "original": "hk",
           "renamed": "HardwareWaterTextures"
+        },
+        {
+          "start": 5862,
+          "end": 5863,
+          "symbol": "M:hk.c(I)Z",
+          "original": "c",
+          "renamed": "hasWaterNoiseTextures"
         },
         {
           "start": 5994,
@@ -1634121,7 +1635252,7 @@
       "original": "vqa.java",
       "renamed": "SoftwareArgbSprite.java",
       "inputSha256": "555aa3d3725c6f5f2d3288c3172da859f79061c8344369debc0d9b102572c8a0",
-      "outputSha256": "2e2ad0d9667877247062114363bbd7744f870fb6f4d867f78f5120f948e7424c",
+      "outputSha256": "3bb496a0e82234fc381377f5d03a6fd431b60db89f4b469b8ea40b20e73e2206",
       "edits": [
         {
           "start": 50,
@@ -1634831,6 +1635962,13 @@
           "renamed": "drawScaled"
         },
         {
+          "start": 154565,
+          "end": 154566,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
+        },
+        {
           "start": 154868,
           "end": 154875,
           "symbol": "F:pf.field_l:I",
@@ -1635074,6 +1636212,13 @@
           "symbol": "M:vqa.a(IIIII)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 183714,
+          "end": 183715,
+          "symbol": "M:sfa.n()Z",
+          "original": "n",
+          "renamed": "isDisposed"
         },
         {
           "start": 183844,
@@ -1638889,7 +1640034,7 @@
       "original": "vua.java",
       "renamed": "ClippedChildWidget.java",
       "inputSha256": "128ddbb05d0cd478c574389d2c1118839e1c940300a1f6f6507cc292cab8d714",
-      "outputSha256": "9c742b7bcdf19e893f54102b203869310402b1b7f00b95f63c29c20d3ab030de",
+      "outputSha256": "377c9b33acdd8828933fd69286aff60a5eb8abf4545034a12f80a7b7496062ba",
       "edits": [
         {
           "start": 50,
@@ -1639011,6 +1640156,13 @@
           "renamed": "OpenGlIndexBufferReference"
         },
         {
+          "start": 2109,
+          "end": 2110,
+          "symbol": "M:kn.a(B)V",
+          "original": "a",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 2424,
           "end": 2427,
           "symbol": "C:afa",
@@ -1639044,6 +1640196,13 @@
           "symbol": "C:afa",
           "original": "afa",
           "renamed": "OpenGlIndexBufferReference"
+        },
+        {
+          "start": 2689,
+          "end": 2690,
+          "symbol": "M:kn.a(B)V",
+          "original": "a",
+          "renamed": "popRasterState"
         },
         {
           "start": 2752,
@@ -1639093,6 +1640252,13 @@
           "symbol": "C:afa",
           "original": "afa",
           "renamed": "OpenGlIndexBufferReference"
+        },
+        {
+          "start": 3246,
+          "end": 3247,
+          "symbol": "M:kn.a(B)V",
+          "original": "a",
+          "renamed": "popRasterState"
         },
         {
           "start": 3290,
@@ -1654475,7 +1655641,7 @@
       "original": "wn.java",
       "renamed": "SimpleActionBehaviour.java",
       "inputSha256": "85613f2efd06d424a6e8c5981c50a1dbee5c2e6f01d5da4606774418deeaa586",
-      "outputSha256": "c7703214c06fb1fdc86b80439cac3150f7f06406ca4d0343f8d0a0d5ac13482e",
+      "outputSha256": "1bfedb4065d9db85246136a0fa684a200594a7cf5f39520d94ff50f5a0f24904",
       "edits": [
         {
           "start": 50,
@@ -1654798,6 +1655964,13 @@
           "symbol": "C:is",
           "original": "is",
           "renamed": "NameEntryPopup"
+        },
+        {
+          "start": 3291,
+          "end": 3293,
+          "symbol": "C:rg",
+          "original": "rg",
+          "renamed": "OpacityWidget"
         },
         {
           "start": 3368,
@@ -1662786,7 +1663959,7 @@
       "original": "wv.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "1f8857dc3d362a84fbf3ab9af26e90d2770eacabc67c8a8e1df01e8be7183658",
-      "outputSha256": "09322a09bcd64defe9b8b580904681d5ed5afdf1d2546fbd6b94a82f0896ffdc",
+      "outputSha256": "f836569b9e2ddefe0d07663779b76f6352e35dca80d7eaf8f98adbcfa1bcd2e9",
       "edits": [
         {
           "start": 53,
@@ -1664893,6 +1666066,20 @@
           "renamed": "ConstrainToLatticeLocomotor"
         },
         {
+          "start": 21876,
+          "end": 21879,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 21907,
+          "end": 21910,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
+        },
+        {
           "start": 22539,
           "end": 22542,
           "symbol": "C:caa",
@@ -1665206,6 +1666393,13 @@
           "symbol": "C:wba",
           "original": "wba",
           "renamed": "OpenGlSceneLight"
+        },
+        {
+          "start": 28471,
+          "end": 28474,
+          "symbol": "C:ara",
+          "original": "ara",
+          "renamed": "QuickChatHelpPanel"
         },
         {
           "start": 28520,
@@ -1670043,10 +1671237,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "88e10e81785d7ca280113e7f7275c6775a8796048b1b018de04777200bbefb08",
+    "rulesSha256": "ebb84a0551d55a76b4ceba568f06acabcfa2d69fdd41b7c2dc8f5ae5db4b7f83",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "babbda3c959afa6c97ee2e1c9d0d7e5af39025a2ad8bad3ef20e7e82350acd0b",
+    "outputTreeSha256": "03ec3811a46716ed014f4230ffeeab9f9feb4490c9910523cd08a585400bc4db",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

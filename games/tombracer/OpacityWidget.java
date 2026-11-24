@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rg extends SingleChildWidget {
+final class OpacityWidget extends SingleChildWidget {
     static ValidationOutcome field_A;
     int field_y;
     static int field_z;
     static int field_B;
 
-    rg(UiWidget param0) {
+    OpacityWidget(UiWidget param0) {
         super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (WidgetPainter) null, (WidgetListener) null);
         try {
           param0.setBounds((byte) -31, this.field_m, this.field_p, 0, 0);
@@ -93,7 +93,7 @@ final class rg extends SingleChildWidget {
         MidiPatchEnvelope.field_k[12] = TextureCombineSource.field_b;
         MidiPatchEnvelope.field_k[0] = DraggableWidget.field_B;
         MidiPatchEnvelope.field_k[10] = ConsoleValue.field_b;
-        MidiPatchEnvelope.field_k[9] = tha.field_y;
+        MidiPatchEnvelope.field_k[9] = FreeAccountPromptPanel.field_y;
         MidiPatchEnvelope.field_k[3] = HardwareModelVertexStream.field_d;
         MidiPatchEnvelope.field_k[4] = S2CPlayerSyncPacket.field_e;
         MidiPatchEnvelope.field_k[11] = SoftwareRenderTarget.field_f;
@@ -237,7 +237,7 @@ final class rg extends SingleChildWidget {
         HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
     }
 
-    public rg() {
+    public OpacityWidget() {
         super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
         this.field_y = 256;
     }
@@ -268,7 +268,7 @@ final class rg extends SingleChildWidget {
         if (param1 <= -32) {
           return 0 != (65536 & param2) ? true : false;
         }
-        rg.hasFlag65536(30, 88, 2);
+        OpacityWidget.hasFlag65536(30, 88, 2);
         return 0 != (65536 & param2) ? true : false;
     }
 
@@ -281,7 +281,7 @@ final class rg extends SingleChildWidget {
 
     final static int g(byte param0) {
         if (param0 < 66) {
-          rg.hasTuhstatbutCookie(79);
+          OpacityWidget.hasTuhstatbutCookie(79);
           return MotionTrackingModel.field_p;
         }
         return MotionTrackingModel.field_p;

@@ -72,8 +72,8 @@ final class ChatMessage {
         return var3 * param2 - (-(var5Lifetime1 * var4Lifetime1) - (var6Lifetime1 * var4Lifetime1 >> 16));
     }
 
-    final static void a(byte param0) {
-        um.field_l.transitionToContent(75, new tha());
+    final static void showFreeAccountPrompt(byte param0) {
+        um.field_l.transitionToContent(75, new FreeAccountPromptPanel());
         if (param0 < 0) {
           field_k = (String) null;
         }

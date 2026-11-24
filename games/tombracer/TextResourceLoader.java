@@ -253,7 +253,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -74, "mu_gamelist_all_games");
                 if (var2 != null) {
-                  tha.field_B = BitPackedColour.decodeText((byte) 98, var2);
+                  FreeAccountPromptPanel.field_B = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 107, "mu_gamelist_status");
                 if (null != var2) {
@@ -3050,7 +3050,7 @@ final class TextResourceLoader extends BillboardSpriteData {
 
     final static void b(int param0) {
         try {
-          FormFieldRow.a(false, 4);
+          FormFieldRow.queueLoginAction(false, 4);
           int var1_int = 74 / ((param0 + 31) / 39);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jga.C(" + param0 + ')');

@@ -30,11 +30,11 @@ final class S2CPlayerProfilePacket implements GamePacket {
         ((FadingMidiPcmStream) (RewardChoicePhase.field_n.field_n)).rampChannelVolumeSamples(-30515, 0, var2, param1);
     }
 
-    final static void b(boolean param0) {
+    final static void beginGuestPlay(boolean param0) {
         ProgressDialogLauncher.showProgressDialog((byte) 126);
-        FormFieldRow.a(false, 4);
+        FormFieldRow.queueLoginAction(false, 4);
         if (!param0) {
-          S2CPlayerProfilePacket.b(false);
+          S2CPlayerProfilePacket.beginGuestPlay(false);
         }
     }
 

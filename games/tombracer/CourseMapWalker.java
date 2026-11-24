@@ -551,7 +551,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_death", (byte) 106);
                 if (var2 != null) {
-                  tha.field_A = BitPackedColour.decodeText((byte) 62, var2);
+                  FreeAccountPromptPanel.field_A = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_treasure", (byte) 123);
                 if (var2 != null) {
@@ -1093,7 +1093,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_machinegun", (byte) 104);
                 if (var2 != null) {
-                  tha.field_y = BitPackedColour.decodeText((byte) 95, var2);
+                  FreeAccountPromptPanel.field_y = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_shotgun", (byte) 125);
                 if (var2 != null) {
@@ -1229,7 +1229,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_finished", (byte) 119);
                 if (null != var2) {
-                  ara.field_yb = BitPackedColour.decodeText((byte) 102, var2);
+                  QuickChatHelpPanel.field_yb = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_failedtofinish", (byte) 107);
                 if (var2 != null) {

@@ -10,7 +10,7 @@ final class HardwareGraphicsHeap extends GraphicsHeap {
     jaclib.memory.heap.NativeHeap field_h;
     static int[] field_n;
 
-    final void b(byte param0) {
+    final void closeHeap(byte param0) {
         if (param0 != 30) {
           HardwareGraphicsHeap.releaseStatics(53);
         }

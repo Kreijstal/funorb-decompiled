@@ -96,7 +96,7 @@ abstract class AppletGameShell extends GameApplet {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = TombRacer.field_G ? 1 : 0;
-          var4 = BlockComponent.a(ApproachPlayerLocomotor.field_t, TermsLinksPanel.field_y, 103, param2);
+          var4 = BlockComponent.pollLoginAction(ApproachPlayerLocomotor.field_t, TermsLinksPanel.field_y, 103, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -574,7 +574,7 @@ abstract class AppletGameShell extends GameApplet {
         if (HeapIndexArray.e(540800)) {
           var3 = ByteGameMessageSender.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
-            !(rg.g((byte) 118) <= var3) &&
+            !(OpacityWidget.g((byte) 118) <= var3) &&
             !(var3 >= DateOfBirthPanel.b(false))) {
             this.field_y = false;
             DropAnimation.closeGameSocket(60);
@@ -707,7 +707,7 @@ abstract class AppletGameShell extends GameApplet {
             FollowCamera.openLoginForm(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
           if (NotLoggedInMenu.field_r) {
-            S2CPlayerProfilePacket.b(true);
+            S2CPlayerProfilePacket.beginGuestPlay(true);
           }
           if (null == ScoreStandings.field_c) {
             ScoreStandings.field_c = GraphicsAndAudioMenu.getPcmStreamMixer((byte) -91);

@@ -27,7 +27,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (HiscoresScreen.field_r <= 0) {
             return;
           }
-          rg.a((byte) -53);
+          OpacityWidget.a((byte) -53);
           LobbyOverlayAndDateValidationState.field_e.layoutFullScreen(37, param0);
           if (null != NineSliceFrame.field_c) {
             if (!DropdownButtonPainter.field_g) {
@@ -47,8 +47,8 @@ final class PressureSwitchComponent extends SwitchComponent {
               PitModel.field_p[var4_int].field_r = StripedMazeGenerator.field_c[var6];
             }
           }
-          if (0 != ara.field_ub.field_y) {
-            RoomViewRenderer.field_c = new ReportAbuseDialog(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
+          if (0 != QuickChatHelpPanel.field_ub.field_y) {
+            RoomViewRenderer.field_c = new ReportAbuseDialog(QuickChatHelpPanel.field_ub.field_q, QuickChatHelpPanel.field_ub.field_A, QuickChatHelpPanel.field_ub.field_G, QuickChatHelpPanel.field_ub.field_t, param2, WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
           }
           var9 = mna.a((byte) 73, param3, ToolkitSelector.field_a, mna.field_d);
           if (var9 != null) {

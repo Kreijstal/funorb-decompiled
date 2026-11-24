@@ -1075,7 +1075,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           this.isInPlayPhase(63);
         }
         if (this.matchState.hasFinishedCourse((byte) 90, param1)) {
-          var3 = RewardChoicePhase.createTextMessage(-41, LegacyOpenGlFlowingWaterEffect.formatText(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+          var3 = RewardChoicePhase.createTextMessage(-41, LegacyOpenGlFlowingWaterEffect.formatText(124, QuickChatHelpPanel.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
         } else {
           if (this.matchState.hasTimedOut((byte) -66, param1)) {
             var3 = RewardChoicePhase.createTextMessage(-79, LegacyOpenGlFlowingWaterEffect.formatText(107, FloatTrigTables.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));

@@ -17,7 +17,7 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
           }
           if (param0) {
             KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;
-            tha.a(906);
+            FreeAccountPromptPanel.ensureRandomizedHslPalette(906);
           }
           return;
         }
@@ -28,7 +28,7 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
         }
         if (param0) {
           KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;
-          tha.a(906);
+          FreeAccountPromptPanel.ensureRandomizedHslPalette(906);
         }
     }
 

@@ -504,7 +504,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return (ToolkitModel) ((Object) new Model(this, param0, param1, param3, param4, param2));
     }
 
-    final boolean n() {
+    final boolean isDisposed() {
         return this.field_z;
     }
 

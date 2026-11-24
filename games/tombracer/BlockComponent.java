@@ -160,12 +160,12 @@ final class BlockComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static int a(int param0, int param1, int param2, boolean param3) {
+    final static int pollLoginAction(int param0, int param1, int param2, boolean param3) {
         if (param2 <= 94) {
           restartMessages = (String[]) null;
-          return PowerUpItemBehaviour.r(-95);
+          return PowerUpItemBehaviour.pollLoginAction(-95);
         }
-        return PowerUpItemBehaviour.r(-95);
+        return PowerUpItemBehaviour.pollLoginAction(-95);
     }
 
     final void applyDefaults(byte param0) {

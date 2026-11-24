@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tha extends WidgetContainer implements ButtonListener {
+final class FreeAccountPromptPanel extends WidgetContainer implements ButtonListener {
     static String field_A;
     static String field_B;
     private FocusableWidget field_x;
@@ -16,7 +16,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         super.renderLayer(param0, param1, 0, param3);
     }
 
-    final static void a(int param0) {
+    final static void ensureRandomizedHslPalette(int param0) {
         RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
         RuntimeException var1 = null;
@@ -138,7 +138,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         }
     }
 
-    public tha() {
+    public FreeAccountPromptPanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_z = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) null);
         this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
@@ -180,7 +180,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param4 < 44) {
-            tha.a(-94);
+            FreeAccountPromptPanel.ensureRandomizedHslPalette(-94);
           }
           if (param2 == this.field_w) {
             HardwareTurbulentWaterNoise.showBlankLoginForm(-804227775);
@@ -193,7 +193,7 @@ final class tha extends WidgetContainer implements ButtonListener {
           if (this.field_x != param2) {
             return;
           }
-          S2CPlayerProfilePacket.b(true);
+          S2CPlayerProfilePacket.beginGuestPlay(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -34,10 +34,10 @@ final class ChatOverlay {
         if (param0 != 1366884705) {
           this.disableWithPanel(-116);
         }
-        if (ara.field_xb == 0) {
+        if (QuickChatHelpPanel.field_xb == 0) {
           return null;
         }
-        return CourseLayout.field_d[-1 + ara.field_xb];
+        return CourseLayout.field_d[-1 + QuickChatHelpPanel.field_xb];
     }
 
     final void update(byte param0, boolean param1, boolean param2) {
@@ -77,8 +77,8 @@ final class ChatOverlay {
           var10 = new String[10];
           var7 = var10;
           while (var6 < 10) {
-            if (0 <= -var6 + (ara.field_xb - 1)) {
-              var8_ref_gqa = CourseLayout.field_d[-1 + ara.field_xb - var6];
+            if (0 <= -var6 + (QuickChatHelpPanel.field_xb - 1)) {
+              var8_ref_gqa = CourseLayout.field_d[-1 + QuickChatHelpPanel.field_xb - var6];
               if (var8_ref_gqa != this.lastShownMessage) {
                 if (var8_ref_gqa.field_f != null &&
                   var8_ref_gqa.field_m) {

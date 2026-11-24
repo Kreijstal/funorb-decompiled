@@ -95,11 +95,11 @@ final class fba {
             return (byte[]) null;
           }
           if (5000 == param0 &&
-            rg.field_B > 0) {
-            fieldTemp$3 = rg.field_B - 1;
-            rg.field_B = rg.field_B - 1;
+            OpacityWidget.field_B > 0) {
+            fieldTemp$3 = OpacityWidget.field_B - 1;
+            OpacityWidget.field_B = OpacityWidget.field_B - 1;
             var2_ref_byte__ = SoftwareRenderContext.field_f[fieldTemp$3];
-            SoftwareRenderContext.field_f[rg.field_B] = null;
+            SoftwareRenderContext.field_f[OpacityWidget.field_B] = null;
             return var2_ref_byte__;
           }
           if (param0 != 30000) {
@@ -177,11 +177,11 @@ final class fba {
           }
           return new byte[param0];
         }
-        if (rg.field_B > 0) {
-          fieldTemp$16 = rg.field_B - 1;
-          rg.field_B = rg.field_B - 1;
+        if (OpacityWidget.field_B > 0) {
+          fieldTemp$16 = OpacityWidget.field_B - 1;
+          OpacityWidget.field_B = OpacityWidget.field_B - 1;
           var2_ref_byte__Lifetime3 = SoftwareRenderContext.field_f[fieldTemp$16];
-          SoftwareRenderContext.field_f[rg.field_B] = null;
+          SoftwareRenderContext.field_f[OpacityWidget.field_B] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param0 != 30000) {
