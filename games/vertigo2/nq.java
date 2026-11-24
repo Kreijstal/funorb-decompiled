@@ -1025,7 +1025,7 @@ final class nq extends rk {
           } else {
             stackIn_407_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_406_1).append(stackIn_407_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_406_1).append(stackIn_407_2).append(')').toString());
         }
     }
 
@@ -1047,7 +1047,7 @@ final class nq extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "nq.F(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "nq.F(" + param0 + ')');
         }
     }
 
@@ -1064,11 +1064,11 @@ final class nq extends rk {
             nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (Model) null, -20, 0, (int[]) null);
           }
           var13 = new UiPanel(0L, (UiPanel) null);
-          var13.field_Bb = fk.c(-127, param5, param9);
-          var13.field_Q = fk.c(-127, param12, param2);
-          var13.field_cb = fk.c(-127, param3, param6);
-          var13.field_T = fk.c(-128, param0, param4);
-          var13.field_gb = fk.c(-127, param11, param8);
+          var13.field_Bb = CrossfadingMidiPcmStream.c(-127, param5, param9);
+          var13.field_Q = CrossfadingMidiPcmStream.c(-127, param12, param2);
+          var13.field_cb = CrossfadingMidiPcmStream.c(-127, param3, param6);
+          var13.field_T = CrossfadingMidiPcmStream.c(-128, param0, param4);
+          var13.field_gb = CrossfadingMidiPcmStream.c(-127, param11, param8);
           var13.field_A = param1;
           var13.field_z = param7;
           stackIn_4_0 = var13;
@@ -1083,7 +1083,7 @@ final class nq extends rk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -1103,7 +1103,7 @@ final class nq extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "nq.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "nq.B(" + param0 + ')');
         }
     }
 
@@ -1125,7 +1125,7 @@ final class nq extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "nq.D(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "nq.D(" + param0 + ')');
         }
     }
 

@@ -66,7 +66,7 @@ abstract class cm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "cm.I(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "cm.I(" + param0 + ',' + param1 + ')');
         }
     }
 

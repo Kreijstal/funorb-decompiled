@@ -7,7 +7,7 @@ final class ej {
     static String field_b;
     static vi field_f;
     static String[] field_e;
-    static ec field_a;
+    static PcmStreamMixer field_a;
     static int field_h;
     static int[] field_g;
 

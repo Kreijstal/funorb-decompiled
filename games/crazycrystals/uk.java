@@ -52,7 +52,7 @@ final class uk extends nf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class uk extends nf {
                   pc.field_u[var2].field_h) {
                   if (pc.field_u[var2].field_g[0] > ke.field_b[var2]) {
                     var3 = pc.field_u[var2].field_g[0] - ke.field_b[var2];
-                    ka.field_n = ka.field_n - var3;
+                    MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n - var3;
                     ei.field_F = ei.field_F - 2 * var3;
                     sm.field_f = sm.field_f - var3 * 2;
                     ke.field_b[var2] = pc.field_u[var2].field_g[0];
@@ -162,7 +162,7 @@ final class uk extends nf {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var1_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var1_ref2), "uk.J(" + param0 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var1_ref2), "uk.J(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -241,7 +241,7 @@ final class uk extends nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

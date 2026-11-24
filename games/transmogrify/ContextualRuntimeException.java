@@ -52,7 +52,7 @@ final class ContextualRuntimeException extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var16 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var16), "kl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var16), "kl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ')');
         }
     }
 
@@ -2112,7 +2112,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("returntogame", (byte) 114);
                 if (var2 != null) {
-                  lc.field_L = eg.a(120, var2);
+                  MidiPcmStream.field_L = eg.a(120, var2);
                 }
                 var2 = kb.a("endgameresign", (byte) 108);
                 if (var2 != null) {
@@ -3091,7 +3091,7 @@ final class ContextualRuntimeException extends RuntimeException {
                   } else {
                     stackIn_2626_2 = "{...}";
                   }
-                  throw ch.a((Throwable) ((Object) stackIn_2625_0), ((StringBuilder) (Object) stackIn_2625_1).append(stackIn_2626_2).append(')').toString());
+                  throw ch.wrapClientException((Throwable) ((Object) stackIn_2625_0), ((StringBuilder) (Object) stackIn_2625_1).append(stackIn_2626_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2634_0 = (!GameApplet.field_b);
@@ -3204,7 +3204,7 @@ final class ContextualRuntimeException extends RuntimeException {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3256,7 +3256,7 @@ final class ContextualRuntimeException extends RuntimeException {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -3317,7 +3317,7 @@ final class ContextualRuntimeException extends RuntimeException {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

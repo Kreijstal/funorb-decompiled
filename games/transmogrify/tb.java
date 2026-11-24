@@ -81,7 +81,7 @@ final class tb {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class tb {
           var4 = -1L;
           hi.a(0, var4, var2, var3, param0);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "tb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "tb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

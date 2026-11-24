@@ -68,7 +68,7 @@ final class nm implements Runnable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class nm implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              di.a((Throwable) ((Object) var2_ref), 1, (String) null);
+              MidiPcmStream.a((Throwable) ((Object) var2_ref), 1, (String) null);
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -181,7 +181,7 @@ final class nm implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class nm implements Runnable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class nm implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class nm implements Runnable {
           }
           this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

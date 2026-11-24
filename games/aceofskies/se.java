@@ -12,7 +12,7 @@ final class se {
           field_a = null;
           bigGameFont = null;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "se.A(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "se.A(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1_ref), "se.B(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1_ref), "se.B(" + param0 + ')');
         }
     }
 

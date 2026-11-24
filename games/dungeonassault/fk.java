@@ -56,7 +56,7 @@ final class fk extends kl {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class fk extends kl {
           }
           lo.a(85, true, param1.field_b, 64, param1.field_f);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "fk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "fk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class fk extends kl {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw AccountServiceResult.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -470,7 +470,7 @@ final class fk extends kl {
           discarded$1 = new rh(580, 394, 80, 160, 16711680, 768, 249);
           qh.a(-13716, this.field_o, 24);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class fk extends kl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

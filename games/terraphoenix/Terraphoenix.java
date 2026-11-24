@@ -2165,9 +2165,9 @@ public final class Terraphoenix extends GameShell {
           }
           PcmPlayerService.configureAudio(22050, true, 10);
           d.field_I = PcmPlayerService.createOutput(DirectByteStorage.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
-          WidgetContainer.field_E = new vg();
+          WidgetContainer.field_E = new PcmStreamMixer();
           d.field_I.setRootStream(WidgetContainer.field_E);
-          uk.field_b = new wl();
+          uk.field_b = new MidiPcmStream();
           uk.field_b.a(9, 128, -51);
           WidgetContainer.field_E.a(uk.field_b);
           this.a(true, false, 13, true, true);
@@ -4258,7 +4258,7 @@ public final class Terraphoenix extends GameShell {
           lg.a(-2);
           hd.clearStaticReferences((byte) 107);
           IntrusiveDeque.clearStaticReferences(-22208);
-          wl.c((byte) 107);
+          MidiPcmStream.c((byte) 107);
           m.clearStaticReferences((byte) 89);
           PcmPlayerService.clearStaticReferences();
           da.a(18210);
@@ -4323,7 +4323,7 @@ public final class Terraphoenix extends GameShell {
           il.b((byte) 113);
           sh.clearStaticReferences(-96);
           fk.clearStaticReferences();
-          vd.clearStaticReferences((byte) 41);
+          MusicPatchPcmStream.clearStaticReferences((byte) 41);
           p.clearStaticReferences(-24869);
           mh.clearStaticReferences(1);
           BitmapFont.clearStaticReferences();

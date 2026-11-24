@@ -58,7 +58,7 @@ final class si {
         try {
           this.field_a = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

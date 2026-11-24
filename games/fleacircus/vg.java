@@ -197,7 +197,7 @@ final class vg extends wi {
           this.field_l = param2;
           this.field_d = this.field_G.field_H + this.field_G.field_K;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

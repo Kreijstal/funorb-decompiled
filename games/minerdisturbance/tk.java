@@ -54,7 +54,7 @@ final class tk implements uj {
             }
             ie.a(param1, true);
           } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw lj.wrapClientException((Throwable) ((Object) runtimeException), "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -74,7 +74,7 @@ final class tk implements uj {
           }
           var3.writeShort((byte) 124, param0.field_n);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class tk implements uj {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class tk implements uj {
           return;
         }
         tb.field_a = 1;
-        gd.field_x = 3;
+        MusicPatchPcmStream.field_x = 3;
     }
 
     final static ud[] a(int param0, CipherPacketBuffer param1) {
@@ -218,7 +218,7 @@ final class tk implements uj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

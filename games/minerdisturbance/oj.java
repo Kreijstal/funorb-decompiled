@@ -114,7 +114,7 @@ final class oj extends jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "oj.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "oj.E(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class oj extends jc {
           this.field_L = 256;
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class oj extends jc {
           param0.field_c.field_f = param0;
           param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "oj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class oj extends jc {
           param0.field_c.field_f = param0;
           param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "oj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 }

@@ -61,7 +61,7 @@ final class be extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class be extends IntrusiveNode {
             }
             op.a(~param1, param2);
           } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "be.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wn.wrapClientException((Throwable) ((Object) runtimeException), "be.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

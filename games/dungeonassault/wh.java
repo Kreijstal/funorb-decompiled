@@ -41,7 +41,7 @@ final class wh {
           this.field_f = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class wh {
             stackIn_4_0 = null;
             return (gp) (stackIn_4_0);
           }
-          var2 = new gp(param0, hg.field_t, fe.field_g, jc.field_f, jn.field_k, ub.field_q);
+          var2 = new gp(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, ub.field_q);
           sb.a(500);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -76,7 +76,7 @@ final class wh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

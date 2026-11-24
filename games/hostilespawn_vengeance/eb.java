@@ -62,7 +62,7 @@ final class eb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

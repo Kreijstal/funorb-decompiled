@@ -7,7 +7,7 @@ class ch {
     private double field_l;
     private double field_i;
     private int field_o;
-    kh field_n;
+    VolumeRampingMidiPcmStream field_n;
     private long field_c;
     mn[] field_g;
     static String field_b;
@@ -115,7 +115,7 @@ class ch {
         return this.field_g[param0];
     }
 
-    ch(kh param0, mn[] param1) {
+    ch(VolumeRampingMidiPcmStream param0, mn[] param1) {
         this.field_o = 8000;
         this.field_c = 0L;
         this.field_j = 100;
@@ -123,7 +123,7 @@ class ch {
           this.field_n = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ch.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ch.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

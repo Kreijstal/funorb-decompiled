@@ -4,7 +4,7 @@
 final class si {
     static long[] field_f;
     static String field_c;
-    static rc[] field_b;
+    static RawPcmStream[] field_b;
     static int field_d;
     static String field_e;
     static boolean field_a;
@@ -74,13 +74,13 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "si.A(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "si.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_c = "Play the game without logging in just yet";
-        field_b = new rc[5];
+        field_b = new RawPcmStream[5];
         field_e = "Please log in";
         field_a = false;
         field_f = new long[32];

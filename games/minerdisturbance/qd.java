@@ -48,7 +48,7 @@ final class qd extends kn implements sh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class qd extends kn implements sh {
           }
           oj.a(12, 3);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "qd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class qd extends kn implements sh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -400,7 +400,7 @@ final class qd extends kn implements sh {
             if (0 <= IsaacRandom.field_m[var4Lifetime2]) {
               stackIn_116_1 = nk.field_u;
             } else {
-              stackIn_116_1 = vd.field_z;
+              stackIn_116_1 = CrossfadingMidiPcmStream.field_z;
             }
             hn.field_b = stackIn_115_0 + stackIn_116_1;
           }
@@ -412,7 +412,7 @@ final class qd extends kn implements sh {
           while (ne.field_K.length > var5Lifetime3) {
             var7Lifetime2 = IsaacRandom.field_m[var5Lifetime3];
             if (0 > var7Lifetime2) {
-              var6Lifetime1 = var6Lifetime1 + vd.field_z;
+              var6Lifetime1 = var6Lifetime1 + CrossfadingMidiPcmStream.field_z;
             } else {
               var8Lifetime1 = hl.a(ne.field_K[var5Lifetime3], true, -15388);
               var9 = -(var8Lifetime1 >> 1) + rj.field_e;
@@ -435,7 +435,7 @@ final class qd extends kn implements sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class qd extends kn implements sh {
           }
           fg.a((byte) 5, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -476,7 +476,7 @@ final class qd extends kn implements sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2_ref), "qd.G(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2_ref), "qd.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -499,7 +499,7 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[4] = qe.field_e;
         GameAppletShell.field_g[5] = ng.field_i;
         GameAppletShell.field_g[21] = md.field_a;
-        GameAppletShell.field_g[19] = gd.field_t;
+        GameAppletShell.field_g[19] = MusicPatchPcmStream.field_t;
         GameAppletShell.field_g[18] = ee.field_H;
         GameAppletShell.field_g[20] = ri.field_b;
         GameAppletShell.field_g[16] = dn.field_n;

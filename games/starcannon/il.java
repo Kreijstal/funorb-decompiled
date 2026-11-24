@@ -30,7 +30,7 @@ final class il {
           }
           param0.field_l = this.field_l;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "il.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "il.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class il {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class il {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class il {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -79,7 +79,7 @@ final class Archive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class Archive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class Archive {
           param1 < this.field_g.field_r[param0]) {
           return true;
         }
-        if (!rq.field_y) {
+        if (!MusicPatchPcmStream.field_y) {
           return false;
         }
         throw new IllegalArgumentException(param0 + " " + param1);
@@ -223,7 +223,7 @@ final class Archive {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class Archive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ final class Archive {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param3 != null);
-            throw wn.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(w.a(var9.length, var9, -115)).append(" ").append(w.a(var9.length - 2, var9, 67)).append(" ").append(this.field_g.field_j[param1]).append(" ").append(this.field_g.field_o).toString());
+            throw wn.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(w.a(var9.length, var9, -115)).append(" ").append(w.a(var9.length - 2, var9, 67)).append(" ").append(this.field_g.field_j[param1]).append(" ").append(this.field_g.field_o).toString());
           }
           if (this.field_b) {
             this.field_e[param1] = null;
@@ -573,7 +573,7 @@ final class Archive {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
@@ -636,7 +636,7 @@ final class Archive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -704,7 +704,7 @@ final class Archive {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw wn.a((Throwable) (stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) (stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -736,7 +736,7 @@ final class Archive {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -826,7 +826,7 @@ final class Archive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -837,7 +837,7 @@ final class Archive {
         if (param0 < 0 ||
           this.field_g.field_r.length <= param0 ||
           this.field_g.field_r[param0] == 0) {
-          if (rq.field_y) {
+          if (MusicPatchPcmStream.field_y) {
             throw new IllegalArgumentException(Integer.toString(param0));
           }
           return false;
@@ -860,7 +860,7 @@ final class Archive {
           this.field_d = param2;
           this.field_b = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

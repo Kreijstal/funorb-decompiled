@@ -19,9 +19,9 @@ final class Slime {
     private int field_m;
     double field_e;
     double field_u;
-    private pi field_r;
+    private RawPcmStream field_r;
     double field_j;
-    private pi field_g;
+    private RawPcmStream field_g;
     double field_q;
 
     final void a(int param0, boolean param1, int param2) {
@@ -43,13 +43,13 @@ final class Slime {
         var10 = Bounce.field_N;
         var4 = 0;
         if (param1) {
-          this.a((Platform[]) null, (rb) null, 62, (ue[]) null, -0.16860739722231136, (byte) 54);
+          this.a((Platform[]) null, (PcmStreamMixer) null, 62, (ue[]) null, -0.16860739722231136, (byte) 54);
         }
         na.d();
         var5 = 0;
         if (u.field_g ||
-          ka.field_o != null &&
-          ka.field_o.field_d) {
+          MusicPatchPcmStream.field_o != null &&
+          MusicPatchPcmStream.field_o.field_d) {
           if (0 == param0) {
             var5 = 32 + param2 / 2;
             var4 = param2 / 2;
@@ -66,10 +66,10 @@ final class Slime {
             gk.field_e.a(c.field_a, var4, var5 + 64, 16777215, -1);
             if (2 != field_a) {
               jh.field_s.a(wa.field_a, var4, var5 + 64 + 24, 16744576, -1);
-              jh.field_s.a(ka.field_k, var4, 20 + var5 + 64 + 24, 16744576, -1);
+              jh.field_s.a(MusicPatchPcmStream.field_k, var4, 20 + var5 + 64 + 24, 16744576, -1);
             } else {
               gk.field_e.a(wa.field_a, var4, 18 + (var5 + 64), 16744576, -1);
-              gk.field_e.a(ka.field_k, var4, 14 + (var5 + 64) + 18, 16744576, -1);
+              gk.field_e.a(MusicPatchPcmStream.field_k, var4, 14 + (var5 + 64) + 18, 16744576, -1);
             }
           }
           if (param0 == 2) {
@@ -144,8 +144,8 @@ final class Slime {
           var5 -= 32;
           var6.e();
           if ((u.field_g ||
-            ka.field_o != null &&
-            ka.field_o.field_d) && 0 < this.field_n) {
+            MusicPatchPcmStream.field_o != null &&
+            MusicPatchPcmStream.field_o.field_d) && 0 < this.field_n) {
             var6.a(var4, var5);
           }
           na.e(param2, 0, 512 + param2, 446);
@@ -164,8 +164,8 @@ final class Slime {
               w.field_c[var6_int].b((int)((double)param2 + this.field_u), 0, -741572379, (int)this.field_o, (int)(-34.0 + (480.0 - this.field_e)));
             }
             if (u.field_g ||
-              null != ka.field_o &&
-              ka.field_o.field_d) {
+              null != MusicPatchPcmStream.field_o &&
+              MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
               na.d();
               w.field_c[8 * param0 + 7].a(var4 - 25, var5 - 75);
@@ -183,8 +183,8 @@ final class Slime {
               vb.field_m[var6_intLifetime1Lifetime1].b((int)(this.field_u + (double)param2), 0, -741572379, (int)this.field_o, (int)(-(this.field_e / 2.0) + this.field_j));
             }
             if (u.field_g ||
-              ka.field_o != null &&
-              ka.field_o.field_d) {
+              MusicPatchPcmStream.field_o != null &&
+              MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
               na.d();
               vb.field_m[2 + param0 * 3].b(var4, 0, -741572379, (int)this.field_o, var5);
@@ -194,8 +194,8 @@ final class Slime {
           if (this.field_p == 3) {
             ci.field_G[param0].b((int)((double)param2 + this.field_u), 0, -741572379, 100 + ((int)this.field_o - 4 * this.field_f), (int)(this.field_j - this.field_e / 2.0));
             if (u.field_g ||
-              ka.field_o != null &&
-              ka.field_o.field_d) {
+              MusicPatchPcmStream.field_o != null &&
+              MusicPatchPcmStream.field_o.field_d) {
               na.d();
               var5 += 18;
               ci.field_G[param0].b(var4, 0, -741572379, (int)this.field_o, var5);
@@ -205,7 +205,7 @@ final class Slime {
         }
     }
 
-    final void a(Platform[] param0, rb param1, int param2, ue[] param3, double param4, byte param5) {
+    final void a(Platform[] param0, PcmStreamMixer param1, int param2, ue[] param3, double param4, byte param5) {
         RuntimeException stackIn_249_0 = null;
         StringBuilder stackIn_249_1 = null;
         String stackIn_250_2 = null;
@@ -329,7 +329,7 @@ final class Slime {
                   param1.a(param3[6], 100, 96 * md.field_w / 256);
                 }
                 if (vk.field_b == 1 &&
-                  null == ka.field_o) {
+                  null == MusicPatchPcmStream.field_o) {
                   if (nb.field_e < 6) {
                     nb.field_e = nb.field_e + 1;
                     qf.field_c = qf.field_c + 10000;
@@ -353,7 +353,7 @@ final class Slime {
                   param1.a(param3[0], 100, 96 * md.field_w / 256);
                 }
                 if (vk.field_b == 1 &&
-                  ka.field_o == null) {
+                  MusicPatchPcmStream.field_o == null) {
                   if (k.field_C < 6) {
                     k.field_C = k.field_C + 1;
                     qf.field_c = qf.field_c + 100000;
@@ -388,7 +388,7 @@ final class Slime {
                 if (wd.field_x) {
                   if (null == this.field_r) {
                     if (64.0 < this.field_o) {
-                      this.field_r = pi.a(param3[8], 100, 0);
+                      this.field_r = RawPcmStream.a(param3[8], 100, 0);
                       var10 = (int)(128.0 - this.field_o);
                       if (var10 < 0) {
                         var10 = 0;
@@ -422,7 +422,7 @@ final class Slime {
                     }
                   } else {
                     if (126.0 > this.field_o) {
-                      this.field_g = pi.a(param3[3], 100, 0);
+                      this.field_g = RawPcmStream.a(param3[3], 100, 0);
                       var10 = (int)(-32.0 + this.field_o);
                       if (var10 < 0) {
                         var10 = 0;
@@ -570,7 +570,7 @@ final class Slime {
           } else {
             stackIn_256_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_249_0), ((StringBuilder) (Object) stackIn_255_1).append(stackIn_256_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_249_0), ((StringBuilder) (Object) stackIn_255_1).append(stackIn_256_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -610,7 +610,7 @@ final class Slime {
             this.field_g = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ud.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ud.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -629,7 +629,7 @@ final class Slime {
     final void a(ue[] param0, byte param1) {
         try {
           if (param1 != 106) {
-            this.a((Platform[]) null, (rb) null, -3, (ue[]) null, -0.052863935081619066, (byte) 41);
+            this.a((Platform[]) null, (PcmStreamMixer) null, -3, (ue[]) null, -0.052863935081619066, (byte) 41);
           }
           if (this.field_r != null) {
             if (wd.field_x) {
@@ -638,7 +638,7 @@ final class Slime {
             this.field_r = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

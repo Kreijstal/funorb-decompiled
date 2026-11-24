@@ -26,7 +26,7 @@ class ji extends ng {
           param1.writeLong(252186072, this.field_e);
           param1.writeBase38String(this.field_c, (byte) -118);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ class ji extends ng {
           this.field_e = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

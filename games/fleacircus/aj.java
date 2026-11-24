@@ -73,7 +73,7 @@ final class aj extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class aj extends DualLinkNode {
             ui.field_pb.attach(0, (java.awt.Component) ((Object) param1));
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "aj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "aj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class aj extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class aj extends DualLinkNode {
           ag.field_a = false;
           jk.field_r = vk.field_O;
           pb.field_d = fb.field_b;
-          ob.field_e = th.field_s;
+          ob.field_e = CrossfadingMidiPcmStream.field_s;
           vk.field_O = 0;
         }
         if (param0 != 28003) {
@@ -220,7 +220,7 @@ final class aj extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class aj extends DualLinkNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -337,7 +337,7 @@ final class aj extends DualLinkNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

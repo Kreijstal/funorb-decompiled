@@ -13,7 +13,7 @@ final class ke {
             field_a = (PacketBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ke.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ke.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class ke {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

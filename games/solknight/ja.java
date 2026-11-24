@@ -39,7 +39,7 @@ final class ja {
             }
           }
           if (null != ua.field_I) {
-            stackIn_20_0 = ua.field_I.d(144);
+            stackIn_20_0 = ua.field_I.isMidiReady(144);
             if (!stackIn_20_0) {
               dj.field_j = null;
               return;
@@ -49,7 +49,7 @@ final class ja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1_ref), "ja.A(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "ja.A(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1_ref), "ja.D(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "ja.D(" + param0 + ')');
         }
     }
 

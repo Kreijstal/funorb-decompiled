@@ -63,7 +63,7 @@ final class wl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class wl {
           var4 = -1L;
           ke.a(849743536, var2, param0, var3, var4);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "wl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "wl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "wl.B(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "wl.B(" + param0 + ')');
         }
     }
 

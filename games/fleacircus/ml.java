@@ -77,7 +77,7 @@ final class ml extends dk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class ml extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "ml.AA(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "ml.AA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ml extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "ml.EA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "ml.EA(" + param0 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class ml extends dk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -10,7 +10,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "th.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "th.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent = param0;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "th.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "th.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

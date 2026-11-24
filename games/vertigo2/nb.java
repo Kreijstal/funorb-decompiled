@@ -22,7 +22,7 @@ final class nb extends TextureOperator {
           tn.a(bi.field_j / 2, bi.field_e / 2, 55);
           ar.a(param1.field_M + param1.field_t, (byte) 92, param2.field_M + param2.field_t, param1.field_t, param2.field_t);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "nb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "nb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class nb extends TextureOperator {
         ln.field_c = 127 & var3;
         stackIn_5_0 = (0 != (var3 & 128));
         cb.field_Ib = stackIn_5_0;
-        rq.field_u = var8.readUnsignedByte(-11);
+        MusicPatchPcmStream.field_u = var8.readUnsignedByte(-11);
         ug.field_a = var8.readLong(-31016);
         if (ln.field_c == 2) {
           ck.field_J = var8.readUnsignedShort((byte) -11);
@@ -296,7 +296,7 @@ final class nb extends TextureOperator {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw wn.a((Throwable) (stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) (stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class nb extends TextureOperator {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class nb extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2_ref), "nb.J(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2_ref), "nb.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -395,7 +395,7 @@ final class nb extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var7), "nb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var7), "nb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

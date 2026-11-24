@@ -95,7 +95,7 @@ final class AccountCreationResultPanel extends bd implements da {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class AccountCreationResultPanel extends bd implements da {
             field_xb = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ua.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ua.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class AccountCreationResultPanel extends bd implements da {
         try {
           this.field_ub = param1;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

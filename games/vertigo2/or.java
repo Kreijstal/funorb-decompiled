@@ -162,7 +162,7 @@ final class or {
           param0[3] = (int)(65536.0 * (var3_double + var11 - var22 - var17));
           param0[11] = (int)((var22 + var3_double - var17 - var11) * 65536.0);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "or.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "or.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class or {
           n.field_b = new ga(AccountServiceResult.field_e, eb.field_d);
           AccountServiceResult.field_e.b(n.field_b, 0);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "or.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "or.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class or {
           this.field_d = var5;
           this.c((byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "or.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "or.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class or {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

@@ -12,7 +12,7 @@ final class qk {
           int var2_int = 12 % ((26 - param1) / 62);
           vd.a(false, -536866817, ki.field_d);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "qk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "qk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

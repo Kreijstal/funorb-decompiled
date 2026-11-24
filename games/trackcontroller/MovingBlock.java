@@ -22,7 +22,7 @@ final class MovingBlock extends IntrusiveNode {
         int var2 = 0;
         int var3 = 112 / ((-44 - param0) / 39);
         while (var2 < gi.field_o) {
-          var1[var2] = new IndexedSprite(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], qk.field_M[var2], qe.field_z);
+          var1[var2] = new IndexedSprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], qk.field_M[var2], CrossfadingMidiPcmStream.field_z);
           var2++;
         }
         ff.b(112);

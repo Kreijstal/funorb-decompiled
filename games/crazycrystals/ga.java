@@ -230,7 +230,7 @@ class ga extends pc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ class ga extends pc {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -416,7 +416,7 @@ class ga extends pc {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -497,7 +497,7 @@ class ga extends pc {
           }
           int var5_int = 26 / ((param1 + 50) / 59);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ga.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ga.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -549,7 +549,7 @@ class ga extends pc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "ga.F(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "ga.F(" + param0 + ')');
         }
     }
 
@@ -689,7 +689,7 @@ class ga extends pc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -716,7 +716,7 @@ class ga extends pc {
           this.field_G = true;
           this.field_K = lo.correctedCurrentTimeMillis((byte) -91);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

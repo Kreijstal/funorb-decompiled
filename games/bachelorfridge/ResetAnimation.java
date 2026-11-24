@@ -47,7 +47,7 @@ final class ResetAnimation extends EventAnimation {
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 >= 0) {
           if (this.field_l == 25) {
-            jja.a(256, -1, 48);
+            MusicPatchPcmStream.a(256, -1, 48);
             this.e(48);
           }
           return false;

@@ -55,7 +55,7 @@ final class tb {
           param0.field_o = param1;
           param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "tb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

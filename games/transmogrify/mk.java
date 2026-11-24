@@ -111,7 +111,7 @@ abstract class mk extends aj {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ abstract class mk extends aj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ abstract class mk extends aj {
           this.field_A = false;
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ abstract class mk extends aj {
         }
         if (qk.field_c == null) {
           qk.field_c = new Sprite(this.field_l, this.field_h);
-          oj.a(qk.field_c, 256);
+          CrossfadingMidiPcmStream.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
@@ -189,7 +189,7 @@ abstract class mk extends aj {
         }
         if (this.field_l > qk.field_c.field_n) {
           qk.field_c = new Sprite(this.field_l, this.field_h);
-          oj.a(qk.field_c, 256);
+          CrossfadingMidiPcmStream.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
@@ -198,7 +198,7 @@ abstract class mk extends aj {
           return;
         }
         if (qk.field_c.field_m >= this.field_h) {
-          oj.a(qk.field_c, 256);
+          CrossfadingMidiPcmStream.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
@@ -207,7 +207,7 @@ abstract class mk extends aj {
           return;
         }
         qk.field_c = new Sprite(this.field_l, this.field_h);
-        oj.a(qk.field_c, 256);
+        CrossfadingMidiPcmStream.a(qk.field_c, 256);
         sb.c();
         this.a(0, (byte) -81, 0);
         super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);

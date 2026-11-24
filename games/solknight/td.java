@@ -127,7 +127,7 @@ final class td implements j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "td.D(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "td.D(" + param0 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class td implements j {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class td implements j {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class td implements j {
           this.field_p = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

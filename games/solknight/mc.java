@@ -17,11 +17,11 @@ final class mc {
           }
           return uf.field_r;
         }
-        if (!lh.field_o.c((byte) -121)) {
+        if (!MusicPatchPcmStream.field_o.c((byte) -121)) {
           return IsaacRandom.field_e;
         }
-        if (!lh.field_o.a(2, "commonui")) {
-          return vb.field_i + " - " + lh.field_o.d(-1, "commonui") + "%";
+        if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
+          return vb.field_i + " - " + MusicPatchPcmStream.field_o.d(-1, "commonui") + "%";
         }
         if (!DelegatingCanvas.field_c.c((byte) -121)) {
           return ri.field_d;
@@ -242,7 +242,7 @@ final class mc {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class mc {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

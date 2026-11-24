@@ -23,14 +23,14 @@ final class fe implements rd {
             var8 = param0[param3].field_r;
             param0[0].a(param4, param5, param1);
             param0[2].a(-var7 + (param4 + param2), param5, param1);
-            SoftwareRasterizer.b(uh.field_C);
+            SoftwareRasterizer.b(CrossfadingMidiPcmStream.field_C);
             SoftwareRasterizer.f(param4 + var6_int, param5, -var7 + (param2 + param4), param0[1].field_x + param5);
             var9 = var6_int + param4;
             var10 = -var7 + param2 + param4;
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].a(param4, param5, param1);
             }
-            SoftwareRasterizer.a(uh.field_C);
+            SoftwareRasterizer.a(CrossfadingMidiPcmStream.field_C);
             return;
           }
           return;
@@ -44,7 +44,7 @@ final class fe implements rd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class fe implements rd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 

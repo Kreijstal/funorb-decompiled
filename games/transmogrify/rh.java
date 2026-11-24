@@ -21,7 +21,7 @@ abstract class rh extends DualLinkNode {
 
     final static tf[] d(int param0) {
         if (param0 == -26481) {
-          return new tf[]{WordLanguage.field_m, og.field_d, PacketBuffer.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, oj.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
+          return new tf[]{WordLanguage.field_m, og.field_d, PacketBuffer.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, CrossfadingMidiPcmStream.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
         }
         return (tf[]) null;
     }

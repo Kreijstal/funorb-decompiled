@@ -58,7 +58,7 @@ final class jr implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class jr implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2_ref), "jr.D(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2_ref), "jr.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class jr implements Runnable {
         qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));
         bf.field_c.a(86, MouseWheelInput.field_k.field_Fb, Archive.field_f, 0, 0);
         int var1 = 2 + Archive.field_f;
-        im.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (db.field_S ? var1 : 0), !db.field_S ? 0 : var1, 0);
+        im.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (MidiPcmStream.field_S ? var1 : 0), !MidiPcmStream.field_S ? 0 : var1, 0);
         po.b((byte) -52);
         DirectByteStorage.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db - 40, 0);
         qn.field_s.a(121, ud.field_A.field_Fb, 30, 0, 0);
@@ -142,13 +142,13 @@ final class jr implements Runnable {
         ve.field_f.a(73, 48, 30, 5, 155);
         int var2 = 52 / ((param0 - 27) / 42);
         ok.field_b.a(78, 48, 30, 5, 205);
-        int var3 = !db.field_S ? 200 : 250;
+        int var3 = !MidiPcmStream.field_S ? 200 : 250;
         tp.field_Nb.a(98, 363 - var3, 30, 5, var3 + 5);
         MouseInputHandler.field_b.a(72, -365 + (-5 + (ud.field_A.field_Fb - 5)), 30, 5, 370);
         uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db - 5 - 32), 5, ja.field_b.field_Fb - 10, 3124);
         int var4 = (ud.field_A.field_Fb + 2) / 2;
         b.field_h.a(125, -2 + var4, 40, -40 + ud.field_A.field_db, 0);
-        if (!db.field_S) {
+        if (!MidiPcmStream.field_S) {
           var4 = 0;
         }
         la.field_f.a(74, ud.field_A.field_Fb - var4, 40, -40 + ud.field_A.field_db, var4);

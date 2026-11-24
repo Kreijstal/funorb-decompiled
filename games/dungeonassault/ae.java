@@ -450,7 +450,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ae.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ae.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

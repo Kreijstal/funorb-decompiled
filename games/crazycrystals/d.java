@@ -36,7 +36,7 @@ final class d {
           try {
             hk.a(1, param0);
           } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dn.wrapClientException((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

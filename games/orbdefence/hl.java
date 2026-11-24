@@ -29,7 +29,7 @@ abstract class hl extends ej {
           this.a(this.field_Q, (byte) 74);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hl.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hl.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ abstract class hl extends ej {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ abstract class hl extends ej {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ abstract class hl extends ej {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ abstract class hl extends ej {
           this.field_T = param3;
           this.b(-6142, param1);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

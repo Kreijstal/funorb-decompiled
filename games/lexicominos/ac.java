@@ -28,14 +28,14 @@ final class ac {
             var7 = param2[1].field_r;
             param2[0].d(param3, param1);
             param2[2].d(-var6 + param3 + param4, param1);
-            SoftwareRasterizer.b(uh.field_C);
+            SoftwareRasterizer.b(CrossfadingMidiPcmStream.field_C);
             SoftwareRasterizer.f(var5_int + param3, param1, param4 + (param3 - var6), param1 + param2[1].field_x);
             var8 = var5_int + param3;
             var9 = param4 + (param3 - var6);
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
               param2[1].d(param3, param1);
             }
-            SoftwareRasterizer.a(uh.field_C);
+            SoftwareRasterizer.a(CrossfadingMidiPcmStream.field_C);
             return;
           }
           return;
@@ -49,7 +49,7 @@ final class ac {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -20,7 +20,7 @@ final class tc extends kf {
           var3.field_G = true;
           var3.a(0, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "tc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "tc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class tc extends kf {
           }
           sg.field_k = 0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "tc.B(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "tc.B(" + param0 + ')');
         }
     }
 

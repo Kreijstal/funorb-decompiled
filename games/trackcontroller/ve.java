@@ -282,7 +282,7 @@ final class ve extends ug {
           vb.field_a = new int[gi.field_o];
           var2.position = -(gi.field_o * 8) + (param1.length - 7);
           ab.field_a = var2.readUnsignedShort((byte) -57);
-          qe.field_p = var2.readUnsignedShort((byte) -119);
+          CrossfadingMidiPcmStream.field_p = var2.readUnsignedShort((byte) -119);
           var3 = (var2.readUnsignedByte(16383) & 255) + 1;
           var4 = 0;
           do {
@@ -312,7 +312,7 @@ final class ve extends ug {
           do {
             if (!(var4 < gi.field_o)) {
               var2.position = param1.length - 7 - gi.field_o * 8 + 3 - var3 * 3;
-              qe.field_z = new int[var3];
+              CrossfadingMidiPcmStream.field_z = new int[var3];
               break;
             }
             j.field_f[var4] = var2.readUnsignedShort((byte) -62);
@@ -321,12 +321,12 @@ final class ve extends ug {
           var4 = 1;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 <= var4))) {
-            qe.field_z[var4] = var2.readUnsignedMedium(8);
-            stackIn_42_0 = ~qe.field_z[var4];
+            CrossfadingMidiPcmStream.field_z[var4] = var2.readUnsignedMedium(8);
+            stackIn_42_0 = ~CrossfadingMidiPcmStream.field_z[var4];
             stackIn_42_1 = -1;
             if (var15 == 0) {
               if (stackIn_42_0 == stackIn_42_1) {
-                qe.field_z[var4] = 1;
+                CrossfadingMidiPcmStream.field_z[var4] = 1;
               }
               var4++;
               continue;

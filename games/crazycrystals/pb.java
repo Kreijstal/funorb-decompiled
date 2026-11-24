@@ -32,7 +32,7 @@ abstract class pb {
             field_a = 19;
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pb.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pb.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ abstract class pb {
           hc.field_a = new ni(param1);
           ch.field_d = new pk(oi.field_d, hc.field_a);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

@@ -70,7 +70,7 @@ final class od extends cb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class od extends cb {
         try {
           this.field_j = new jg(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class od extends cb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class od extends cb {
                 !wi.field_v.k()) {
                 return;
               }
-              wi.field_v = rc.b(re.field_a[param1], 100, param2, param0);
+              wi.field_v = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
               mg.a(1963987425, wi.field_v);
             } else {
               if (param1 != 42) {
@@ -171,7 +171,7 @@ final class od extends cb {
                     decompiledFrameCompleted1 = false;
                   }
                   if (decompiledFrameCompleted1) {
-                    mh.field_b[var4_int] = rc.b(re.field_a[param1], 100, param2, param0);
+                    mh.field_b[var4_int] = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
                     mg.a(param3 + 1963987421, mh.field_b[var4_int]);
                     decompiledFrameRemainder0 = false;
                   }
@@ -194,7 +194,7 @@ final class od extends cb {
                       decompiledFrameCompleted0 = false;
                     }
                     if (decompiledFrameCompleted0) {
-                      si.field_b[var6] = rc.b(re.field_a[param1], 100, param2, param0);
+                      si.field_b[var6] = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
                       mg.a(1963987425, si.field_b[var6]);
                       decompiledFrameRemainder0 = false;
                     }
@@ -209,7 +209,7 @@ final class od extends cb {
                   !df.field_a.k()) {
                   return;
                 }
-                df.field_a = rc.b(re.field_a[param1], 100, param2, param0);
+                df.field_a = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
                 mg.a(1963987425, df.field_a);
               }
             }
@@ -218,7 +218,7 @@ final class od extends cb {
               !qg.field_b.k()) {
               return;
             }
-            qg.field_b = rc.b(re.field_a[param1], 100, param2, param0);
+            qg.field_b = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
             mg.a(param3 + 1963987421, qg.field_b);
           }
           if (param3 == 4) {
@@ -229,7 +229,7 @@ final class od extends cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var4), "od.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var4), "od.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

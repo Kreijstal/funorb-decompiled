@@ -284,8 +284,8 @@ final class dd extends kk {
               }
               if (param1 &&
                 this.a(tb.field_d + nh.field_n, v.field_m + nh.field_f, field_G[var9], field_G[var10], field_G[var11], var12, var13, var14_int)) {
-                fieldTemp$13 = mi.field_v;
-                mi.field_v = mi.field_v + 1;
+                fieldTemp$13 = MusicPatchPcmStream.field_v;
+                MusicPatchPcmStream.field_v = MusicPatchPcmStream.field_v + 1;
                 pd.field_Nb[fieldTemp$13] = param2;
                 param1 = false;
               }

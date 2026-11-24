@@ -18,7 +18,7 @@ final class mm {
           var3.writeByte(param1.field_q, param2 - 202);
           var3.writeByte(param1.field_o, -69);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "mm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "mm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class mm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

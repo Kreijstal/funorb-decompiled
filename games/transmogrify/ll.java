@@ -39,7 +39,7 @@ final class ll extends bi implements df {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ll extends bi implements df {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "ll.AA(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "ll.AA(" + param0 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class ll extends bi implements df {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ch.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -230,16 +230,16 @@ final class ll extends bi implements df {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static boolean c(boolean param0) {
         if (!param0) {
           ll.c(true);
-          return ej.field_n;
+          return MusicPatchPcmStream.field_n;
         }
-        return ej.field_n;
+        return MusicPatchPcmStream.field_n;
     }
 
     static {

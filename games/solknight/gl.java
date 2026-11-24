@@ -146,7 +146,7 @@ final class gl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class gl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -240,9 +240,9 @@ final class gl {
           }
           tg.field_I.a();
           var1.f(0, 0);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "gl.H(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gl.H(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class gl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

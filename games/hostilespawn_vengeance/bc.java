@@ -150,7 +150,7 @@ final class bc extends IntrusiveNode {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param11).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class bc extends IntrusiveNode {
           vg.field_e[incrementValue$1] = new v(IntrusiveNode.field_b, 989, 1151, 256, 1);
           incrementValue$2 = var1;
           var1++;
-          vg.field_e[incrementValue$2] = new v(kh.field_V, 1375, 1225, 192, 2);
+          vg.field_e[incrementValue$2] = new v(VolumeRampingMidiPcmStream.field_V, 1375, 1225, 192, 2);
           incrementValue$3 = var1;
           var1++;
           vg.field_e[incrementValue$3] = new v(ki.field_a, 822, 1229, 225, 3, true);
@@ -251,7 +251,7 @@ final class bc extends IntrusiveNode {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

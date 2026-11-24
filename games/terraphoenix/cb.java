@@ -14,20 +14,20 @@ final class cb extends jc {
     static int field_I;
 
     final static void a(boolean param0, int param1) {
-        wl stackIn_3_0 = null;
-        wl stackIn_11_0 = null;
+        MidiPcmStream stackIn_3_0 = null;
+        MidiPcmStream stackIn_11_0 = null;
         if (!param0) {
           stackIn_11_0 = uk.field_b;
           if (param1 == 6) {
-            ((wl) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+            ((MidiPcmStream) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
           } else {
             if (param1 == 4) {
-              ((wl) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+              ((MidiPcmStream) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
             } else {
               if (param1 == 5) {
-                ((wl) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
               } else {
-                ((wl) (Object) stackIn_11_0).a(true, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_11_0).a(true, (byte) 127, ca.field_a[param1]);
               }
             }
           }
@@ -35,15 +35,15 @@ final class cb extends jc {
           field_I = -26;
           stackIn_3_0 = uk.field_b;
           if (param1 == 6) {
-            ((wl) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
+            ((MidiPcmStream) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
           } else {
             if (param1 == 4) {
-              ((wl) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
+              ((MidiPcmStream) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
             } else {
               if (param1 == 5) {
-                ((wl) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
               } else {
-                ((wl) (Object) stackIn_3_0).a(true, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_3_0).a(true, (byte) 127, ca.field_a[param1]);
               }
             }
           }

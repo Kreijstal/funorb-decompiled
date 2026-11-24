@@ -121,7 +121,7 @@ final class BufferedSocket implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var8), "sb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var8), "sb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -335,7 +335,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class BufferedSocket implements Runnable {
             field_o = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -405,7 +405,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -444,7 +444,7 @@ final class BufferedSocket implements Runnable {
           this.field_q = this.field_j.getOutputStream();
           this.field_a = param2;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

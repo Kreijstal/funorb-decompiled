@@ -130,7 +130,7 @@ final class ti implements nn {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class ti implements nn {
           this.field_e = param1;
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

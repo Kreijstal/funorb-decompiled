@@ -219,7 +219,7 @@ final class hb {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw pn.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
+            throw pn.wrapClientException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -412,7 +412,7 @@ final class hb {
           } else {
             stackIn_126_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_121_0), ((StringBuilder) (Object) stackIn_125_1).append(stackIn_126_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_121_0), ((StringBuilder) (Object) stackIn_125_1).append(stackIn_126_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ final class hb {
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "hb.B(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "hb.B(" + param0 + ')');
         }
     }
 

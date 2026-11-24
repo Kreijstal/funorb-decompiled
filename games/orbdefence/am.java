@@ -96,7 +96,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var2_ref), "am.C(" + param0 + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "am.C(" + param0 + ',' + param1 + ')');
         }
     }
 

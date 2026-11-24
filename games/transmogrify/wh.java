@@ -89,7 +89,7 @@ final class wh extends lj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class wh extends lj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (var1), "wh.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) (var1), "wh.C(" + param0 + ')');
         }
     }
 

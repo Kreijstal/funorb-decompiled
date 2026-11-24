@@ -17,7 +17,7 @@ final class kd {
 
     final static void a(int param0, byte param1, rl param2, int param3, boolean param4) {
         RuntimeException var5 = null;
-        se stackIn_2_0 = null;
+        CrossfadingMidiPcmStream stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_2_2 = 0;
         boolean stackIn_3_3 = false;
@@ -30,7 +30,7 @@ final class kd {
           stackIn_2_1 = param3;
           stackIn_2_2 = 0;
           stackIn_3_3 = !(param4);
-          ((se) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_3_3, param2, 1000000, param0);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_3_3, param2, 1000000, param0);
           if (param1 == 101) {
             return;
           }
@@ -46,7 +46,7 @@ final class kd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

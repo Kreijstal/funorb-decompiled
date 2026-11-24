@@ -18,7 +18,7 @@ final class q {
 
     final static void a(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
-          gd.field_y = param7;
+          MusicPatchPcmStream.field_y = param7;
           jl.field_fb = param1;
           fb.field_a = param3;
           if (param6 != 20) {
@@ -33,7 +33,7 @@ final class q {
           uf.field_r = new nm(param1);
           ke.field_U = new bk(aj.field_c, uf.field_r);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "q.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "q.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

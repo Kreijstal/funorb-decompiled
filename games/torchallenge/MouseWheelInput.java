@@ -39,12 +39,12 @@ abstract class MouseWheelInput {
             var3 = pe.field_db[ui.field_c.field_j];
             if (var3 == 2 ||
               var3 == 5) {
-              fj.b((byte) -103);
+              CrossfadingMidiPcmStream.b((byte) -103);
             }
           } else {
             if (var2 != 0 &&
               RandomAccessCacheFile.field_c != 2) {
-              fj.b((byte) -105);
+              CrossfadingMidiPcmStream.b((byte) -105);
             }
           }
           if (var3 == 0 &&

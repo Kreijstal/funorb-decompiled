@@ -157,7 +157,7 @@ final class db extends sh {
             var1_int = qk.a(-1, var9.x, var9.y, -1, 123, BufferedSocket.field_p.y, -1, BufferedSocket.field_p.x);
             var1_int = sh.field_r * var1_int / 256;
             fh.field_h[1] = var1_int;
-            fj.field_p[1] = var7.field_y;
+            CrossfadingMidiPcmStream.field_p[1] = var7.field_y;
           }
           fh.field_h[0] = 0;
           for (var5 = 0; var5 < var3; var5++) {
@@ -169,7 +169,7 @@ final class db extends sh {
               var1_intLifetime1 = var1_intLifetime1 * sh.field_r / 256;
               if (fh.field_h[0] <= var1_intLifetime1) {
                 fh.field_h[0] = var1_intLifetime1;
-                fj.field_p[0] = var8.field_y;
+                CrossfadingMidiPcmStream.field_p[0] = var8.field_y;
               }
             }
           }

@@ -39,7 +39,7 @@ final class ti extends ba implements wc {
           }
           this.field_M = -param1 + (uc.field_C - this.field_r);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ti.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ti.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ti extends ba implements wc {
           }
           this.field_N = param0;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ti.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ti.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class ti extends ba implements wc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "ti.Q(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "ti.Q(" + param0 + ')');
         }
     }
 

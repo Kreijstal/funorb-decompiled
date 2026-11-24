@@ -60,15 +60,15 @@ final class dc {
     final static String a(int param0) {
         if (param0 >= -109) {
           dc.a((byte) -113);
-          if (tc.field_u == null) {
+          if (CrossfadingMidiPcmStream.field_u == null) {
             return "";
           }
-          return tc.field_u;
+          return CrossfadingMidiPcmStream.field_u;
         }
-        if (tc.field_u == null) {
+        if (CrossfadingMidiPcmStream.field_u == null) {
           return "";
         }
-        return tc.field_u;
+        return CrossfadingMidiPcmStream.field_u;
     }
 
     dc() {

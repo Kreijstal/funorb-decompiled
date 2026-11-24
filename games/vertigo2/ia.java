@@ -105,7 +105,7 @@ final class ia extends rk {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class ia extends rk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class ia extends rk {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
         }
     }
 

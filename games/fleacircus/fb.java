@@ -55,7 +55,7 @@ final class fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "fb.D(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "fb.D(" + param0 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class fb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class fb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

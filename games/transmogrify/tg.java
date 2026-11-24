@@ -51,7 +51,7 @@ final class tg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class tg {
             field_d = 117;
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "tg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "tg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

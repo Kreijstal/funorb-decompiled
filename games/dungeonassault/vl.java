@@ -15,7 +15,7 @@ final class vl extends hl {
           param0.writePrefixedString(2, this.field_o);
           param0.writeBase38String(this.field_n, (byte) 101);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "vl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "vl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class vl extends hl {
         int var3 = DungeonAssault.field_K;
         q[] var1 = new q[dk.field_d];
         for (var2 = 0; dk.field_d > var2; var2++) {
-          var1[var2] = new q(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
+          var1[var2] = new q(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
         }
         if (param0 <= -62) {
           sb.a(500);
@@ -106,7 +106,7 @@ final class vl extends hl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class vl extends hl {
           this.field_o = param0;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

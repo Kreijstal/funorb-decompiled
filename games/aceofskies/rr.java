@@ -44,7 +44,7 @@ final class rr {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw pn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -298,7 +298,7 @@ final class rr {
             }
             v.a(true, param2);
           } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "rr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

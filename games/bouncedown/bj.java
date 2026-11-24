@@ -56,7 +56,7 @@ final class bj extends ak {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class bj extends ak {
           super.a(param0, param1, param2, param3, (int) (char)param4, param5);
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "bj.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "bj.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class bj extends ak {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -299,7 +299,7 @@ final class bj extends ak {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class bj extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "bj.LA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "bj.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class bj extends ak {
           this.field_F = param7 ? true : false;
           this.field_x = param6;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "bj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "bj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -398,7 +398,7 @@ final class bj extends ak {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

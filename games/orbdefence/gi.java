@@ -4,7 +4,7 @@
 final class gi {
     static boolean field_b;
     static int field_a;
-    static t field_f;
+    static CrossfadingMidiPcmStream field_f;
     static int[] field_c;
     static int field_e;
     static String field_d;
@@ -67,7 +67,7 @@ final class gi {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class gi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -57) {
-            field_f = (t) null;
+            field_f = (CrossfadingMidiPcmStream) null;
           }
           if (ck.field_j != null) {
             ck.field_j.field_M.a(args, (byte) -34);
@@ -113,7 +113,7 @@ final class gi {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

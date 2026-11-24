@@ -21,7 +21,7 @@ final class li implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "li.B(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "li.B(" + param0 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class li implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "li.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "li.A(" + param0 + ')');
         }
     }
 
@@ -1444,7 +1444,7 @@ final class li implements uj {
                 }
                 var2 = e.a(86, "create_email_confirm");
                 if (var2 != null) {
-                  di.field_cb = bh.a(var2, param0 - 9178);
+                  MidiPcmStream.field_cb = bh.a(var2, param0 - 9178);
                 }
                 var2 = e.a(39, "create_age");
                 if (var2 != null) {
@@ -1560,7 +1560,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-106, "create_password_hint");
                 if (var2 != null) {
-                  di.field_E = bh.a(var2, -125);
+                  MidiPcmStream.field_E = bh.a(var2, -125);
                 }
                 var2 = e.a(22, "create_password_confirm_tooltip");
                 if (var2 != null) {
@@ -1672,7 +1672,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-111, "create_alert_invalidage");
                 if (var2 != null) {
-                  vd.field_r = bh.a(var2, -124);
+                  CrossfadingMidiPcmStream.field_r = bh.a(var2, -124);
                 }
                 var2 = e.a(-118, "create_alert_yearrange");
                 if (null != var2) {
@@ -2905,31 +2905,31 @@ final class li implements uj {
                 }
                 var2 = e.a(-109, "mustlogin3,1");
                 if (var2 != null) {
-                  gd.field_C[1] = bh.a(var2, 26);
+                  MusicPatchPcmStream.field_C[1] = bh.a(var2, 26);
                 }
                 var2 = e.a(-106, "mustlogin3,2");
                 if (null != var2) {
-                  gd.field_C[2] = bh.a(var2, 43);
+                  MusicPatchPcmStream.field_C[2] = bh.a(var2, 43);
                 }
                 var2 = e.a(param0 ^ -9302, "mustlogin3,3");
                 if (null != var2) {
-                  gd.field_C[3] = bh.a(var2, -119);
+                  MusicPatchPcmStream.field_C[3] = bh.a(var2, -119);
                 }
                 var2 = e.a(param0 - 9362, "mustlogin3,4");
                 if (null != var2) {
-                  gd.field_C[4] = bh.a(var2, -127);
+                  MusicPatchPcmStream.field_C[4] = bh.a(var2, -127);
                 }
                 var2 = e.a(-125, "mustlogin3,5");
                 if (null != var2) {
-                  gd.field_C[5] = bh.a(var2, param0 - 9377);
+                  MusicPatchPcmStream.field_C[5] = bh.a(var2, param0 - 9377);
                 }
                 var2 = e.a(param0 - 9161, "mustlogin3,6");
                 if (null != var2) {
-                  gd.field_C[6] = bh.a(var2, param0 - 9241);
+                  MusicPatchPcmStream.field_C[6] = bh.a(var2, param0 - 9241);
                 }
                 var2 = e.a(param0 ^ -9294, "mustlogin3,7");
                 if (var2 != null) {
-                  gd.field_C[7] = bh.a(var2, -122);
+                  MusicPatchPcmStream.field_C[7] = bh.a(var2, -122);
                 }
                 var2 = e.a(88, "discard");
                 if (var2 != null) {
@@ -3076,7 +3076,7 @@ final class li implements uj {
                   } else {
                     stackIn_2630_2 = "{...}";
                   }
-                  throw lj.a((Throwable) ((Object) stackIn_2629_0), ((StringBuilder) (Object) stackIn_2629_1).append(stackIn_2630_2).append(')').toString());
+                  throw lj.wrapClientException((Throwable) ((Object) stackIn_2629_0), ((StringBuilder) (Object) stackIn_2629_1).append(stackIn_2630_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2638_0 = (!GameAppletShell.field_h);
@@ -3102,7 +3102,7 @@ final class li implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "li.C(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "li.C(" + param0 + ')');
         }
     }
 

@@ -89,7 +89,7 @@ abstract class sg extends ta {
           this.field_A = false;
           this.field_D = 0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ abstract class sg extends ta {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

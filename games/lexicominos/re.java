@@ -80,7 +80,7 @@ abstract class re extends ql {
           this.field_Y = param4;
           this.a(param1, (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ abstract class re extends ql {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ abstract class re extends ql {
           this.b((byte) 57, (w) (this.field_U));
           this.field_W = null;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "re.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "re.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ abstract class re extends ql {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

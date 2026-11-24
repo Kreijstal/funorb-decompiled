@@ -34,7 +34,7 @@ class c extends v {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ class c extends v {
           }
           param0.b(param1 ^ 47, this.field_d);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "c.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "c.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ class c extends v {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ class c extends v {
           this.field_d = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -367,7 +367,7 @@ class c extends v {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "c.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "c.B(" + param0 + ')');
         }
     }
 

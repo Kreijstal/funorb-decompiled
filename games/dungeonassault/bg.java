@@ -146,7 +146,7 @@ final class bg extends qe {
         if (ed.c(true)) {
           oi.f((byte) 100);
         } else {
-          ri.a(tc.field_u, -113);
+          ri.a(CrossfadingMidiPcmStream.field_u, -113);
         }
         this.field_r = new rh(58, 394, 80, 160, 255, 197376, 240);
         this.field_w = new rh(580, 394, 80, 160, 255, 197376, 240);
@@ -184,7 +184,7 @@ final class bg extends qe {
           }
           this.field_v.b(s.field_b[0], param2, var5_int);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bg.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bg.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class bg extends qe {
           param1 += 15;
           la.field_b.b(var9, param1, param5, param0, -1);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class bg extends qe {
           param0 += 15;
           la.field_b.b(var10, param0, param4, param6, -1);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bg.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bg.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -449,7 +449,7 @@ final class bg extends qe {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -496,7 +496,7 @@ final class bg extends qe {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -530,7 +530,7 @@ final class bg extends qe {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -650,7 +650,7 @@ final class bg extends qe {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -775,7 +775,7 @@ final class bg extends qe {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -813,7 +813,7 @@ final class bg extends qe {
           if (hh.field_s != wf.field_w) {
             if (ic.field_y == hh.field_s &&
               !ed.c(true)) {
-              this.field_b = (kl) ((Object) new ce(tc.field_u.toLowerCase()));
+              this.field_b = (kl) ((Object) new ce(CrossfadingMidiPcmStream.field_u.toLowerCase()));
             }
           } else {
             if (ed.c(true)) {

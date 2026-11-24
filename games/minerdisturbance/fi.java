@@ -13,7 +13,7 @@ final class fi {
         field_a = null;
     }
 
-    final static void a(byte param0, ResourceArchive param1, hg param2, int param3) {
+    final static void a(byte param0, ResourceArchive param1, PcmStreamMixer param2, int param3) {
         try {
           kc.field_d = param3 * pl.getTickRate((byte) -116) / 1000;
           gn.a(param1, (byte) -101);
@@ -26,7 +26,7 @@ final class fi {
           ii.a(140);
           mn.field_x = 0 - kc.field_d;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "fi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -70,7 +70,7 @@ final class WordDictionary {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class WordDictionary {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class WordDictionary {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class WordDictionary {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -274,7 +274,7 @@ final class WordDictionary {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -339,7 +339,7 @@ final class WordDictionary {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -392,11 +392,11 @@ final class WordDictionary {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(jc param0, int param1, int param2, ci param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, ci param3) {
         try {
           tf.field_a = wi.b(-125) * param1 / 1000;
           kf.a(param3, (byte) -80);
@@ -409,7 +409,7 @@ final class WordDictionary {
           ra.a(0);
           si.field_l = -tf.field_a + 0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ad.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ad.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

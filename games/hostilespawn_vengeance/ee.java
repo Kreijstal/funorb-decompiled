@@ -89,7 +89,7 @@ final class ee {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class ee {
           this.field_i.write(param1, param2, param3);
           this.field_f = this.field_f + (long)param3;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ee.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ee.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class ee {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+            throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -368,7 +368,7 @@ final class ee {
           }
           this.field_i.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -30,7 +30,7 @@ final class hc extends dl {
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -80,7 +80,7 @@ final class s {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class s {
         try {
           tn.a(1, param1, param0, param2);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "s.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "s.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class s {
         this.field_c = NodeHashTableIterator.field_g;
         this.field_j = ep.field_x;
         this.field_g = tn.field_t;
-        this.field_a = jt.field_t;
+        this.field_a = CrossfadingMidiPcmStream.field_t;
         this.field_f = m.field_f;
         this.field_e = sj.field_b;
         this.field_l = km.field_b;

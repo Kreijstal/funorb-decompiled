@@ -59,7 +59,7 @@ final class AccountServiceResult {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "ed.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "ed.E(" + param0 + ')');
         }
     }
 
@@ -89,8 +89,8 @@ final class AccountServiceResult {
           if (sj.field_h != null) {
             sj.field_h.s(2121792);
           }
-          di.field_D = new cl(param1, param0, false, true, true);
-          de.field_a.a((byte) -126, (fe) (di.field_D));
+          MidiPcmStream.field_D = new cl(param1, param0, false, true, true);
+          de.field_a.a((byte) -126, (fe) (MidiPcmStream.field_D));
           if (param2 == -1) {
             return;
           }
@@ -112,7 +112,7 @@ final class AccountServiceResult {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

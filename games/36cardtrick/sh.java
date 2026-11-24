@@ -7,7 +7,7 @@ final class sh extends mh {
     static ff field_k;
     static qi field_i;
     static int[] field_l;
-    static qj field_e;
+    static PcmStreamMixer field_e;
     static qk field_g;
     static String field_h;
 

@@ -29,7 +29,7 @@ final class ap extends ob {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2_ref), "ap.J(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2_ref), "ap.J(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class ap extends ob {
             } else {
               stackIn_44_2 = "{...}";
             }
-            throw dn.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
+            throw dn.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -184,7 +184,7 @@ final class ap extends ob {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var3), "ap.K(" + param0 + ',' + param1 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var3), "ap.K(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -228,7 +228,7 @@ final class ap extends ob {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var2), "ap.L(" + param0 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var2), "ap.L(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -387,7 +387,7 @@ final class ap extends ob {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "ap.M(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "ap.M(" + param0 + ')');
         }
     }
 
@@ -699,7 +699,7 @@ final class ap extends ob {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var2_ref2), "ap.E(" + param0 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var2_ref2), "ap.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -721,7 +721,7 @@ final class ap extends ob {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "ap.G(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "ap.G(" + param0 + ')');
         }
     }
 

@@ -83,7 +83,7 @@ final class dd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "dd.A(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "dd.A(" + param0 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class dd {
             }
             if (param2 == 8) {
               if (k.field_b) {
-                param1 = se.field_x;
+                param1 = CrossfadingMidiPcmStream.field_x;
               } else {
                 param1 = ah.field_h;
               }
@@ -129,7 +129,7 @@ final class dd {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

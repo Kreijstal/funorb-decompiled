@@ -30,7 +30,7 @@ class wj extends kk {
           }
           param1.writeBase38String((byte) 112, this.field_n);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ class wj extends kk {
           this.field_n = param1;
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

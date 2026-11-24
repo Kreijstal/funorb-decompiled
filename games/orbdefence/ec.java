@@ -57,7 +57,7 @@ final class ec extends ta implements ai {
           var4_int = null != this.field_A ? this.field_I.a(this.field_A, 260, this.field_I.field_H) : 0;
           this.a(0, 0, var4_int + 22, (byte) -90, 288);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ec extends ta implements ai {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ec extends ta implements ai {
           }
           var6_intLifetime1 = -66 / ((param0 + 3) / 62);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ec.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ec.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class ec extends ta implements ai {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class ec extends ta implements ai {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw dd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -248,7 +248,7 @@ final class ec extends ta implements ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "ec.H(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "ec.H(" + param0 + ')');
         }
     }
 

@@ -51,7 +51,7 @@ final class jb extends IntrusiveNode {
           if (!param0) {
             stackIn_4_0 = sj.field_d;
           } else {
-            stackIn_4_0 = di.field_x;
+            stackIn_4_0 = MidiPcmStream.field_x;
           }
           var30 = stackIn_4_0;
           var28 = var30;
@@ -274,7 +274,7 @@ final class jb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var5), "jb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var5), "jb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class jb extends IntrusiveNode {
           if (!param0) {
             stackIn_4_0 = sj.field_d;
           } else {
-            stackIn_4_0 = di.field_x;
+            stackIn_4_0 = MidiPcmStream.field_x;
           }
           var30 = stackIn_4_0;
           var28 = var30;
@@ -561,7 +561,7 @@ final class jb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var5), "jb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var5), "jb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 }

@@ -55,7 +55,7 @@ class pn extends d {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ class pn extends d {
         try {
           this.listener = param1;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ class pn extends d {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ class pn extends d {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ class pn extends d {
           var3.writeByte(param2.field_n, 125);
           var3.writeShort(param2.field_x, -1783);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "pn.BA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "pn.BA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -319,7 +319,7 @@ class pn extends d {
           }
           jm.field_B = param1;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "pn.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "pn.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

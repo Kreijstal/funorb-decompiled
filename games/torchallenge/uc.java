@@ -33,7 +33,7 @@ final class uc extends ng {
               if (SpriteState.field_t == param0) {
                 return;
               }
-              SectorCacheStore.field_a.b((byte) 31);
+              SectorCacheStore.field_a.stopPlayback((byte) 31);
               bh.field_o.flushAndMarkDrainCheck();
               SpriteState.field_t = param0;
               if (SpriteState.field_t != null) {
@@ -195,7 +195,7 @@ final class uc extends ng {
           hc.field_Q = true;
           var12 = ia.field_i[param4][dg.field_T[4]][0];
           var12.field_l = var12.field_k.length;
-          ki.field_d = nc.a(var12, 100, var10, var11);
+          ki.field_d = RawPcmStream.a(var12, 100, var10, var11);
           ki.field_d.e(-1);
           ki.field_d.e(0, var12.field_k.length);
           we.a(ki.field_d, 6222);

@@ -74,7 +74,7 @@ final class SecondaryNodeDeque implements Iterable {
           }
           param1.field_t.field_q = param1;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "qc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

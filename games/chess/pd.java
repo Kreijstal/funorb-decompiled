@@ -66,7 +66,7 @@ final class pd extends ci {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class pd extends ci {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class pd extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2), "pd.K(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2), "pd.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class pd extends ci {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

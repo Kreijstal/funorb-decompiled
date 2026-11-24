@@ -31,8 +31,8 @@ final class pi extends si {
           if (!param0) {
             field_W = (String) null;
           }
-          if (null != ug.field_I) {
-            ug.field_I.field_V.a(2, param1);
+          if (null != MidiPcmStream.field_I) {
+            MidiPcmStream.field_I.field_V.a(2, param1);
           }
           if (null == dd.field_g) {
             return;

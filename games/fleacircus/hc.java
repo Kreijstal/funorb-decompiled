@@ -166,7 +166,7 @@ final class hc {
           param0.field_h.field_a = param0;
           param0.field_c = param2;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "hc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "hc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

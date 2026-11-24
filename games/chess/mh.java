@@ -99,7 +99,7 @@ final class mh {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

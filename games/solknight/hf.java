@@ -344,7 +344,7 @@ final class hf {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -362,7 +362,7 @@ final class hf {
           if (~this.field_f == ~IntrusiveDeque.field_f) {
             return 1;
           }
-          if (lh.field_p == 2 &&
+          if (MusicPatchPcmStream.field_p == 2 &&
             BufferedSocket.a((byte) -105, this.field_h)) {
             return 1;
           }
@@ -387,7 +387,7 @@ final class hf {
           gf.field_cb = new s(u.field_b, ClientException.field_a);
           u.field_b.b(gf.field_cb, param1 ^ 17105);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "hf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

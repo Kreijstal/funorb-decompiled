@@ -42,7 +42,7 @@ final class mo extends IntrusiveNode {
           this.field_k = param0;
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

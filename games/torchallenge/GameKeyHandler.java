@@ -18,7 +18,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               jj.a((byte) 118, (char) var2_int)) {
               var3 = 127 & 1 + b.field_M;
               if (var3 != ja.field_f) {
-                fj.field_C[b.field_M] = -1;
+                CrossfadingMidiPcmStream.field_C[b.field_M] = -1;
                 ql.field_k[b.field_M] = (char)var2_int;
                 b.field_M = var3;
               }
@@ -131,7 +131,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (0 <= var2_int) {
               var3 = 127 & b.field_M + 1;
               if (ja.field_f != var3) {
-                fj.field_C[b.field_M] = var2_int;
+                CrossfadingMidiPcmStream.field_C[b.field_M] = var2_int;
                 ql.field_k[b.field_M] = (char)0;
                 b.field_M = var3;
               }

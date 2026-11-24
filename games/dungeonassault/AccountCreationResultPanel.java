@@ -18,7 +18,7 @@ final class AccountCreationResultPanel extends nk implements vg {
         try {
           this.field_Ob = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class AccountCreationResultPanel extends nk implements vg {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw AccountServiceResult.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -162,7 +162,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           up.b(-121);
           this.j((byte) 77);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "jb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -251,16 +251,16 @@ final class AccountCreationResultPanel extends nk implements vg {
           lg.field_w.j(-33);
         }
         if (param0 < -69) {
-          if (null != hg.field_r) {
-            hg.field_r.j((byte) -115);
+          if (null != MusicPatchPcmStream.field_r) {
+            MusicPatchPcmStream.field_r.j((byte) -115);
           }
           tb.a((byte) -81);
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         AccountCreationResultPanel.a(true, (String) null, (java.applet.Applet) null);
-        if (null != hg.field_r) {
-          hg.field_r.j((byte) -115);
+        if (null != MusicPatchPcmStream.field_r) {
+          MusicPatchPcmStream.field_r.j((byte) -115);
         }
         tb.a((byte) -81);
     }

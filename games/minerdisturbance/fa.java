@@ -56,10 +56,10 @@ final class fa {
         RuntimeException var1_ref = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          if (null == di.field_x) {
+          if (null == MidiPcmStream.field_x) {
             return;
           }
-          var4 = di.field_x;
+          var4 = MidiPcmStream.field_x;
           var1 = var4;
           if (param0 != 15257) {
             return;
@@ -71,7 +71,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "fa.B(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "fa.B(" + param0 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class fa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

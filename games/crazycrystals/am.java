@@ -4,9 +4,9 @@
 final class am {
     static String field_f;
     static String field_a;
-    static tj field_e;
+    static PcmStreamMixer field_e;
     static int field_g;
-    private kg field_d;
+    private RawPcmStream field_d;
     private boolean field_h;
     private double field_b;
     private double field_i;
@@ -213,7 +213,7 @@ final class am {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
         }
         stackIn_29_0 = mi.field_A;
         try {
@@ -240,11 +240,11 @@ final class am {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(tj param0, int param1, db param2, int param3) {
+    final static void a(PcmStreamMixer param0, int param1, db param2, int param3) {
         try {
           lc.field_a = param3 * sm.d((byte) -104) / 1000;
           nl.a(param2, 640);
@@ -254,7 +254,7 @@ final class am {
           on.a(-85);
           sn.field_c = param1 - lc.field_a;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "am.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "am.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class am {
         }
     }
 
-    am(kg param0) {
+    am(RawPcmStream param0) {
         this.field_b = 0.0;
         this.field_h = false;
         this.field_i = 0.0;
@@ -326,7 +326,7 @@ final class am {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

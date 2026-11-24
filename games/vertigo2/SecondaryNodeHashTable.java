@@ -20,7 +20,7 @@ final class SecondaryNodeHashTable {
           df.field_l = new fj(AccountServiceResult.field_e, sg.field_a, param2, tk.field_e, bf.field_a);
           AccountServiceResult.field_e.b(df.field_l, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "fi.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fi.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class SecondaryNodeHashTable {
           param0.secondaryKey = param1;
           param0.secondaryPrevious.secondaryNext = param0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

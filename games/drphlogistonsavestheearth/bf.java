@@ -1055,7 +1055,7 @@ final class bf {
           if (this.field_Q != 42) {
             if (!this.field_s && (this.field_Q == 62 ||
               this.field_Q == 63)) {
-              var3_int = (int)sd.field_a.field_N + am.field_p;
+              var3_int = (int)sd.field_a.field_N + MusicPatchPcmStream.field_p;
               var4 = (int)sd.field_a.field_D + ri.field_q;
               var5 = (int)(-this.field_o - (double)this.field_I + (double)var3_int);
               var6_int = (int)((double)var4 - ((double)this.field_t + this.field_N));
@@ -1539,7 +1539,7 @@ final class bf {
             }
             if ((var23 == 18)) {
               var16 = 18;
-              var6 = -var2_double + ((double)am.field_p + sd.field_a.field_N);
+              var6 = -var2_double + ((double)MusicPatchPcmStream.field_p + sd.field_a.field_N);
               var4 = (double)(int)(this.field_N + 127.0);
               var8 = -var4 + (sd.field_a.field_D + (double)ri.field_q);
               var21 = Math.sqrt(var6 * var6 + var8 * var8);
@@ -1554,7 +1554,7 @@ final class bf {
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
             var16 = 12;
-            var17 = (int)sd.field_a.field_N + am.field_p;
+            var17 = (int)sd.field_a.field_N + MusicPatchPcmStream.field_p;
             var18 = ri.field_q + (int)sd.field_a.field_D;
             var8 = (double)(int)((double)var18 - ((double)this.field_t + this.field_N));
             var6 = (double)(int)((double)var17 - (this.field_o + (double)this.field_I));
@@ -1651,7 +1651,7 @@ final class bf {
             var8 = -10.0;
             var10 = this.field_j / 4.0;
             var12 = bb.field_h[this.field_Q];
-            var13 = (int)sd.field_a.field_N + am.field_p;
+            var13 = (int)sd.field_a.field_N + MusicPatchPcmStream.field_p;
             var14 = (int)sd.field_a.field_D + ri.field_q;
             var15 = Math.atan2((double)var14 - var6, (double)var13 - var4);
             var23 = this.field_Q;
@@ -1708,7 +1708,7 @@ final class bf {
                       }
                       var10 = 0.0;
                       var8 = 0.0;
-                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, (double)am.field_p + sd.field_a.field_N, sd.field_a.field_D + (double)ri.field_q);
+                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, (double)MusicPatchPcmStream.field_p + sd.field_a.field_N, sd.field_a.field_D + (double)ri.field_q);
                       sd.field_a.a(24, this.field_b);
                       if (var24 == 0) {
                         break regionExit1;
@@ -1726,7 +1726,7 @@ final class bf {
                           var4 = 41.0 + this.field_o;
                         }
                       }
-                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, sd.field_a.field_N + (double)am.field_p, sd.field_a.field_D + (double)ri.field_q);
+                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, sd.field_a.field_N + (double)MusicPatchPcmStream.field_p, sd.field_a.field_D + (double)ri.field_q);
                       this.field_b.field_l = this.field_V;
                       sd.field_a.a(-2 + sd.field_a.field_gb, param0 - 63);
                       sd.field_a.a(24, this.field_b);

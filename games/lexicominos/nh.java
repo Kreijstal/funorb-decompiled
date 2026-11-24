@@ -14,7 +14,7 @@ final class nh {
         if (param0 != 0) {
           return;
         }
-        uh.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
+        CrossfadingMidiPcmStream.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -71,7 +71,7 @@ final class nh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

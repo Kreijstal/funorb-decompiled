@@ -212,7 +212,7 @@ final class b {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class b {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

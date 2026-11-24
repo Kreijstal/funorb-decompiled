@@ -215,7 +215,7 @@ final class ra {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 

@@ -57,7 +57,7 @@ final class kj extends TextureOperator {
         if (!this.field_z) {
           stackIn_8_3 = param1;
         } else {
-          stackIn_8_3 = fk.field_x - param1;
+          stackIn_8_3 = CrossfadingMidiPcmStream.field_x - param1;
         }
         var26 = this.c(stackIn_7_1, stackIn_7_2, stackIn_8_3);
         var22 = var26[0];
@@ -146,7 +146,7 @@ final class kj extends TextureOperator {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class kj extends TextureOperator {
         stackIn_6_1 = 0;
         stackIn_6_2 = -1;
         if (this.field_z) {
-          stackIn_7_3 = -param0 + fk.field_x;
+          stackIn_7_3 = -param0 + CrossfadingMidiPcmStream.field_x;
         } else {
           stackIn_7_3 = param0;
         }
@@ -234,7 +234,7 @@ final class kj extends TextureOperator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 

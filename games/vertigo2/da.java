@@ -47,7 +47,7 @@ abstract class da extends de implements ih {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ abstract class da extends de implements ih {
             this.b(-114, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,7 +96,7 @@ abstract class da extends de implements ih {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

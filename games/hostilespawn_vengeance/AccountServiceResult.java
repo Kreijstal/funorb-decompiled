@@ -43,7 +43,7 @@ final class AccountServiceResult {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class AccountServiceResult {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class AccountServiceResult {
           u.a(-1, param1.field_j, true, param0, param1.field_l, 31);
           param1.field_i = -1;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

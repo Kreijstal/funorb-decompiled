@@ -37,7 +37,7 @@ final class wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "wd.D(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "wd.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class wd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class wd {
           var7 = hh.field_c.get(11);
           var8 = hh.field_c.get(12);
           var9 = hh.field_c.get(13);
-          return th.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_P[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return CrossfadingMidiPcmStream.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_P[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }

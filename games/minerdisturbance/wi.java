@@ -13,7 +13,7 @@ final class wi extends eg {
     static ae field_s;
     static int field_t;
     static we field_A;
-    static rc field_v;
+    static RawPcmStream field_v;
     static String field_z;
 
     public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
@@ -66,7 +66,7 @@ final class wi extends eg {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -46,7 +46,7 @@ final class dp extends TextureOperator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class dp extends TextureOperator {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class dp extends TextureOperator {
           var1 = kb.field_a;
           synchronized (var1) {
             mm.field_a = mm.field_a + 1;
-            rq.field_B = ah.field_l;
+            MusicPatchPcmStream.field_B = ah.field_l;
             if (fh.field_w < 0) {
               var5 = 0;
               var2 = var5;
@@ -302,7 +302,7 @@ final class dp extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1_ref), "dp.F(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1_ref), "dp.F(" + param0 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class dp extends TextureOperator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -7,7 +7,7 @@ final class haa extends TileEffect {
 
     final boolean b(int param0) {
         if (20 == this.field_g) {
-          jja.a(48, -1, 41);
+          MusicPatchPcmStream.a(48, -1, 41);
         }
         int fieldTemp$0 = this.field_g - 1;
         this.field_g = this.field_g - 1;

@@ -131,10 +131,10 @@ final class fb extends ql {
             ln.field_a.field_c[var4Lifetime1Lifetime1 - 1] = 0;
             ln.field_a.field_c[1 + var4Lifetime1Lifetime1] = 0;
             if (0 < wa.field_p) {
-              kd.a(16, 1);
+              CrossfadingMidiPcmStream.a(16, 1);
               nh.field_E.a((byte) 46, this.field_p);
             } else {
-              kd.a(17, param0 + 2);
+              CrossfadingMidiPcmStream.a(17, param0 + 2);
               nh.field_E.a((byte) 46, this.field_r);
             }
             le.field_D = 9000;
@@ -178,7 +178,7 @@ final class fb extends ql {
           this.field_n = this.field_o;
           this.field_g = 1000;
           this.field_o = null;
-          kd.a(17, param0 + 2);
+          CrossfadingMidiPcmStream.a(17, param0 + 2);
           nh.field_E.a(-1, 8360, -1);
         }
         if (0 <= this.field_g) {
@@ -187,7 +187,7 @@ final class fb extends ql {
             cm.a(this.field_p, false);
             this.field_n.field_u = null;
             this.field_n.field_i = -1;
-            kd.a(14, 1);
+            CrossfadingMidiPcmStream.a(14, 1);
             nh.field_E.a((byte) 46, this.field_q);
             var4Lifetime3 = this.field_p.b(-4);
             ln.field_a.field_c[var4Lifetime3] = 0;
@@ -224,32 +224,32 @@ final class fb extends ql {
           if (uj.field_p.field_g < var4Lifetime4) {
             uj.field_p.field_g = var4Lifetime4;
           }
-          if (!dl.field_l &&
+          if (!MusicPatchPcmStream.field_l &&
             var3.field_g <= 5 + this.field_r.field_g) {
-            dl.field_l = true;
+            MusicPatchPcmStream.field_l = true;
             nh.field_E.a(-1, param0 ^ -8361, -1);
             this.field_e = 300;
           }
           if (-10 + this.field_r.field_g > var3.field_g) {
             var3.field_g = this.field_r.field_g - 10;
           }
-          if (dl.field_l &&
+          if (MusicPatchPcmStream.field_l &&
             var3.field_e < this.field_r.field_e) {
             var11.field_l.field_f = var11.field_l.field_f + 0.2;
           } else {
-            if (dl.field_l &&
+            if (MusicPatchPcmStream.field_l &&
               this.field_r.field_e < var3.field_e) {
               var11.field_l.field_f = var11.field_l.field_f - 0.2;
             }
           }
-          if (dl.field_l) {
+          if (MusicPatchPcmStream.field_l) {
             if (this.field_e <= 0) {
               mf.a(false, 3);
             } else {
               this.field_e = this.field_e - 1;
             }
           }
-          if (dl.field_l &&
+          if (MusicPatchPcmStream.field_l &&
             (7 & 300 - this.field_e) == 0) {
             var13 = new oc(this.field_t);
             var13.field_e = var13.field_e + ((int)(4.0 * Math.random()) - 1);
@@ -355,7 +355,7 @@ final class fb extends ql {
           this.field_d = null;
         }
         this.field_m = new v(je.field_b, 24 * this.field_k.field_e, 24 + this.field_k.field_g * 24);
-        kd.a(3, 1);
+        CrossfadingMidiPcmStream.a(3, 1);
         this.field_g = -1;
         this.field_s = false;
         if (pm.field_h &&
@@ -402,7 +402,7 @@ final class fb extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var5), "fb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var5), "fb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -451,7 +451,7 @@ final class fb extends ql {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

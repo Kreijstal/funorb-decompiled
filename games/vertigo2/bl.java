@@ -350,7 +350,7 @@ final class bl extends l {
             var4Lifetime3++;
           }
           if (da.field_j != 2) {
-            ve.field_d.a(param0, fk.b(gb.field_d, 1282642017, PacketBuffer.field_n), 0, (byte) 80);
+            ve.field_d.a(param0, CrossfadingMidiPcmStream.b(gb.field_d, 1282642017, PacketBuffer.field_n), 0, (byte) 80);
           } else {
             ve.field_d.a(param0, -1, -1, (byte) 80);
           }
@@ -358,7 +358,7 @@ final class bl extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "bl.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "bl.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -812,7 +812,7 @@ final class bl extends l {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

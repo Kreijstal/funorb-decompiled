@@ -24,7 +24,7 @@ final class jd extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2), "jd.F(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2), "jd.F(" + param0 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class jd extends PacketBuffer {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class jd extends PacketBuffer {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw fc.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -270,7 +270,7 @@ final class jd extends PacketBuffer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class jd extends PacketBuffer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class jd extends PacketBuffer {
             this.m(55);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "jd.G(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jd.G(" + param0 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class jd extends PacketBuffer {
             this.l(69);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "jd.D(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jd.D(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class jd extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var3), "jd.A(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var3), "jd.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -392,7 +392,7 @@ final class jd extends PacketBuffer {
           u.field_b.j(1);
           nf.a(false, kh.field_b, -96);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class jd extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var3), "jd.C(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var3), "jd.C(" + param0 + ',' + param1 + ')');
         }
     }
 

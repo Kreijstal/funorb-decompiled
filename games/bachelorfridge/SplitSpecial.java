@@ -170,11 +170,11 @@ final class SplitSpecial extends SpecialOrder {
                 var6 = var7;
                 if (null != var7.field_zb &&
                   var7.field_zb.field_T) {
-                  jja.field_m = var7.field_Ab;
+                  MusicPatchPcmStream.field_m = var7.field_Ab;
                 } else if (0 == var7.field_R) {
                   if (var7.field_Db.field_T &&
                     var15 != 0) {
-                    jja.field_m = var7.field_xb;
+                    MusicPatchPcmStream.field_m = var7.field_xb;
                   }
                 } else {
                   var16 = var7.field_xb;

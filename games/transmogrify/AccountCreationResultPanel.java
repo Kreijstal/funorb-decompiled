@@ -19,7 +19,7 @@ final class AccountCreationResultPanel extends ik implements df {
             this.field_lb = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "sf.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "sf.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class AccountCreationResultPanel extends ik implements df {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class AccountCreationResultPanel extends ik implements df {
             }
           }
           if (null != jk.field_D) {
-            stackIn_20_0 = jk.field_D.a((byte) -54);
+            stackIn_20_0 = jk.field_D.isMidiReady((byte) -54);
             if (stackIn_20_0) {
               return;
             }
@@ -144,7 +144,7 @@ final class AccountCreationResultPanel extends ik implements df {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1_ref), "sf.IA(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1_ref), "sf.IA(" + param0 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class AccountCreationResultPanel extends ik implements df {
           this.a((lj) null, -59, -50, 24, 58);
           return super.m(0);
         }
-        AccountServiceResult var2 = oj.pollAccountCreationResult((byte) 32);
+        AccountServiceResult var2 = CrossfadingMidiPcmStream.pollAccountCreationResult((byte) 32);
         if (var2 != null) {
           this.showAccountCreationResult(param0 + 0, false, var2);
           if (param0 == 0) {
@@ -206,7 +206,7 @@ final class AccountCreationResultPanel extends ik implements df {
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -26,7 +26,7 @@ final class ik extends kn implements be, sh, f {
           var5 = param0;
           ((ui) ((Object) var3)).a(false, false, var5);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ik.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ik.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class ik extends kn implements be, sh, f {
           super.a(param0, param1, (byte) 123, param3);
           this.field_K.field_E = this.a(true);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ik.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ik.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -397,9 +397,9 @@ final class ik extends kn implements be, sh, f {
         String var2 = oa.a((byte) -120, eb.field_g, new String[]{this.e((byte) 88), this.q(4979)});
         int var3 = 20;
         var3 = var3 + this.a(170, var3, id.field_i, this.field_P, -2791);
-        var3 = var3 + (5 + this.a(20, di.field_cb, "", this.field_M, var3, (byte) -116, 170));
+        var3 = var3 + (5 + this.a(20, MidiPcmStream.field_cb, "", this.field_M, var3, (byte) -116, 170));
         var3 = var3 + this.a(170, var3, tk.field_c, this.field_J, -2791);
-        var3 = var3 + (5 + this.a(170, di.field_E, var3, this.field_O, -100, DirectByteStorage.field_d));
+        var3 = var3 + (5 + this.a(170, MidiPcmStream.field_E, var3, this.field_O, -100, DirectByteStorage.field_d));
         var3 = var3 + (5 + this.a(170, SpriteState.field_w, var3, this.field_I, -100, wm.field_c));
         var3 = var3 + this.a(oc.field_j, this.field_Q, 170, var3, 105);
         am var4 = new am(46, var3, this.field_v - 90, 25, this.field_V, true, -120 + this.field_v, 5, sl.field_q, 11579568, mc.field_x);
@@ -561,7 +561,7 @@ final class ik extends kn implements be, sh, f {
               var1_int = var1_int + (SpriteState.field_z + (sn.field_d + nk.field_u));
             } else {
               gh.field_b.a(var6, var8Lifetime1, var1_int + he.field_a, var5, -1);
-              var1_int = var1_int + vd.field_z;
+              var1_int = var1_int + CrossfadingMidiPcmStream.field_z;
             }
           }
           if (param0 > -86) {
@@ -571,7 +571,7 @@ final class ik extends kn implements be, sh, f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "ik.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "ik.E(" + param0 + ')');
         }
     }
 
@@ -614,7 +614,7 @@ final class ik extends kn implements be, sh, f {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

@@ -85,7 +85,7 @@ final class hf {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class hf {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

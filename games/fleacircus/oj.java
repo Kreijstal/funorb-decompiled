@@ -3,7 +3,7 @@
  */
 final class oj extends IntrusiveNode {
     byte[] field_l;
-    static ie field_i;
+    static RawPcmStream field_i;
     static int field_k;
     static String field_j;
 
@@ -20,7 +20,7 @@ final class oj extends IntrusiveNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

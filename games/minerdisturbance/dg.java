@@ -8,7 +8,7 @@ final class dg {
     final static void a(byte param0) {
         vl.h(-1);
         wi.field_C = true;
-        gd.field_B = true;
+        MusicPatchPcmStream.field_B = true;
         if (param0 == 117) {
           mb.field_b.n(21974);
           DirectByteStorage.a(false, ArchiveProvider.field_a, param0 ^ 117);
@@ -64,7 +64,7 @@ final class dg {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

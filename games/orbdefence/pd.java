@@ -479,7 +479,7 @@ final class pd extends IntrusiveNode {
           this.field_A = (int)(256.0 * Math.random());
           this.field_m = 0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

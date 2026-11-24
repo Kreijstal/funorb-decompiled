@@ -3,7 +3,7 @@
  */
 final class mh implements uj {
     static double field_a;
-    static rc[] field_b;
+    static RawPcmStream[] field_b;
     static boolean field_f;
     static Sprite field_d;
     static int field_c;
@@ -46,13 +46,13 @@ final class mh implements uj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final void a(boolean param0) {
         tb.field_a = 1;
-        gd.field_x = 1;
+        MusicPatchPcmStream.field_x = 1;
         if (param0) {
           field_c = -35;
         }
@@ -67,7 +67,7 @@ final class mh implements uj {
         int var2Lifetime1;
         var4 = MinerDisturbance.field_ab;
         try {
-          var1 = di.field_O;
+          var1 = MidiPcmStream.field_O;
           synchronized (var1) {
             dn.field_w = ll.field_d;
             hb.field_b = hb.field_b + 1;
@@ -94,7 +94,7 @@ final class mh implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "mh.C(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "mh.C(" + param0 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class mh implements uj {
     }
 
     static {
-        field_b = new rc[5];
+        field_b = new RawPcmStream[5];
         field_a = Math.atan2(1.0, 0.0);
     }
 }

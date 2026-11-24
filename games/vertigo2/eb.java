@@ -128,7 +128,7 @@ final class eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "eb.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "eb.B(" + param0 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class eb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

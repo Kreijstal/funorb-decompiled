@@ -253,7 +253,7 @@ final class op {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -70,7 +70,7 @@ final class nn extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class nn extends IntrusiveNode {
           }
           param0.field_M = null;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "nn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "nn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class nn extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class nn extends IntrusiveNode {
           }
           param1.field_B = false;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "nn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "nn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

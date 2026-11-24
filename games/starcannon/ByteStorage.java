@@ -18,19 +18,19 @@ abstract class ByteStorage {
           if (param1 < 10) {
             field_d = 21;
           }
-          ji.a(lh.field_s, 0, ed.field_p, (byte) 44, true, param0, og.field_b);
-          for (var2_int = 0; var2_int < ed.field_p; var2_int++) {
+          ji.a(lh.field_s, 0, DelayedPcmStream.field_p, (byte) 44, true, param0, og.field_b);
+          for (var2_int = 0; var2_int < DelayedPcmStream.field_p; var2_int++) {
             jk.field_c[param0 + var2_int] = var2_int;
           }
-          ji.a(mh.field_j, param0, param0 + ed.field_p, (byte) 121, false, param0 + param0, t.field_u);
-          if (param0 < ed.field_p) {
-            ed.field_p = param0;
+          ji.a(mh.field_j, param0, param0 + DelayedPcmStream.field_p, (byte) 121, false, param0 + param0, t.field_u);
+          if (param0 < DelayedPcmStream.field_p) {
+            DelayedPcmStream.field_p = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kk.A(" + param0 + ',' + param1 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2), "kk.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ abstract class ByteStorage {
         try {
           ik.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "kk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

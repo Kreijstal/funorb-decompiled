@@ -112,7 +112,7 @@ final class PetAttackAnimation extends EventAnimation {
         }
         if (!this.field_v) {
           this.field_v = true;
-          jja.a(192, -1, 42);
+          MusicPatchPcmStream.a(192, -1, 42);
           this.screen.field_s.field_d = this.screen.field_s.field_d + 2;
           if (!(this.screen.field_s.field_d >= 100)) {
             return false;

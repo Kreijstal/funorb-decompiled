@@ -42,7 +42,7 @@ final class ik extends wi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -84) {
-            stackIn_4_0 = sg.a((byte) 20, ie.a(param0, 100, 96));
+            stackIn_4_0 = sg.a((byte) 20, RawPcmStream.a(param0, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (pd) null;
@@ -57,7 +57,7 @@ final class ik extends wi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ik extends wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -244,13 +244,13 @@ final class ik extends wi {
         if (this.field_i &&
           0 <= this.field_x &&
           this.field_z.length > this.field_x) {
-          if (ei.field_H[98]) {
+          if (MidiPcmStream.field_H[98]) {
             if (this.field_v < 0) {
               this.field_x = this.field_x - 1;
               this.field_v = ij.field_L;
             }
           } else {
-            if (!ei.field_H[99]) {
+            if (!MidiPcmStream.field_H[99]) {
               this.field_v = -1;
             } else {
               if (this.field_v < 0) {
@@ -409,7 +409,7 @@ final class ik extends wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1_ref), "ik.E(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1_ref), "ik.E(" + param0 + ')');
         }
     }
 
@@ -505,7 +505,7 @@ final class ik extends wi {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

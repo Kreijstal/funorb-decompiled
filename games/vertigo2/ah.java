@@ -16,7 +16,7 @@ class ah extends mo {
           var2.writeByte(1, param0 - 46);
           var2.writeByte(0, -100);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ah.D(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ah.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -28,7 +28,7 @@ class ah extends mo {
             ah.a((byte) 82);
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ah.F(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ah.F(" + param0 + ')');
         }
     }
 
@@ -1192,7 +1192,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -42, "ITEMS_1");
                 if (null != var2) {
-                  fk.field_A = in.a(0, var2);
+                  CrossfadingMidiPcmStream.field_A = in.a(0, var2);
                 }
                 var2 = en.a((byte) -42, "MULTIPLAYER");
                 if (var2 != null) {
@@ -1280,7 +1280,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -18, "STATS_STARTLEVEL");
                 if (var2 != null) {
-                  fk.field_G = in.a(0, var2);
+                  CrossfadingMidiPcmStream.field_G = in.a(0, var2);
                 }
                 var2 = en.a((byte) -75, "STATS_TARGETLEVEL");
                 if (null != var2) {
@@ -1336,11 +1336,11 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -55, "PURPLE");
                 if (null != var2) {
-                  rq.field_A = in.a(0, var2);
+                  MusicPatchPcmStream.field_A = in.a(0, var2);
                 }
                 var2 = en.a((byte) -124, "BLUE");
                 if (var2 != null) {
-                  rq.field_x = in.a(0, var2);
+                  MusicPatchPcmStream.field_x = in.a(0, var2);
                 }
                 var2 = en.a((byte) -124, "PLAYER_1");
                 if (null != var2) {
@@ -1545,7 +1545,7 @@ class ah extends mo {
                   } else {
                     stackIn_1293_2 = "{...}";
                   }
-                  throw wn.a((Throwable) ((Object) stackIn_1292_0), ((StringBuilder) (Object) stackIn_1292_1).append(stackIn_1293_2).append(')').toString());
+                  throw wn.wrapClientException((Throwable) ((Object) stackIn_1292_0), ((StringBuilder) (Object) stackIn_1292_1).append(stackIn_1293_2).append(')').toString());
                 }
                 if (GameApplet.field_a != 0) {
                   Vertigo2.field_L = (var4 == 0);

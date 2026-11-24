@@ -125,7 +125,7 @@ abstract class ab extends GameApplet {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -338,7 +338,7 @@ abstract class ab extends GameApplet {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ abstract class ab extends GameApplet {
                 } else {
                   d.field_c = kc.field_P;
                   ee.f(0);
-                  lh.field_l = false;
+                  MusicPatchPcmStream.field_l = false;
                   fj.field_i = 10;
                 }
               }
@@ -407,7 +407,7 @@ abstract class ab extends GameApplet {
           if (var4 == 4) {
             if (!cl.field_m) {
               fj.field_i = 10;
-              lh.field_l = true;
+              MusicPatchPcmStream.field_l = true;
             } else {
               gd.a(-1, ia.g(84));
             }
@@ -530,7 +530,7 @@ abstract class ab extends GameApplet {
             this.i(-48);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ab.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ab.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -631,7 +631,7 @@ abstract class ab extends GameApplet {
           }
           fc.field_l.a(param0 ^ -3);
         }
-        mf.f(-11214);
+        MidiPcmStream.f(-11214);
         jh.b(param0 ^ -405);
         if (!bl.a((byte) -81) &&
           11 != fj.field_i) {
@@ -737,10 +737,10 @@ abstract class ab extends GameApplet {
           if (vd.field_b != 0) {
             af.field_c = IsaacRandom.a(og.field_c, 82);
           }
-          lh.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
+          MusicPatchPcmStream.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
           DelegatingCanvas.field_c = pj.a(AccountRequestState.field_g, (byte) -126, 1, false, true);
           AccountCreationResultPanel.field_ub = pj.a(aj.field_u, (byte) 52, 1, false, true);
-          pl.field_d = lh.field_o;
+          pl.field_d = MusicPatchPcmStream.field_o;
           ai.field_b = DelegatingCanvas.field_c;
           kj.field_R = 2;
         }
@@ -762,13 +762,13 @@ abstract class ab extends GameApplet {
           }
         }
         if (3 == kj.field_R &&
-          pj.a(DelegatingCanvas.field_c, -16925, lh.field_o, AccountCreationResultPanel.field_ub) &&
+          pj.a(DelegatingCanvas.field_c, -16925, MusicPatchPcmStream.field_o, AccountCreationResultPanel.field_ub) &&
           td.a(-3, AccountCreationResultPanel.field_ub)) {
           ProxyAuthenticationRequiredException.b(32);
           GzipDecompressor.a(-15617);
           pe.field_m = te.field_J;
           kk.field_c = false;
-          d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, AccountCreationResultPanel.field_ub, lh.field_o);
+          d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, AccountCreationResultPanel.field_ub, MusicPatchPcmStream.field_o);
           if (bl.field_p ||
             null != s.field_hb) {
             stackIn_101_0 = !(bl.field_p);
@@ -786,7 +786,7 @@ abstract class ab extends GameApplet {
           IsaacRandom.a(AccountCreationResultPanel.field_ub, GameKeyHandler.field_c, param0 ^ -4, ce.field_c);
           DelegatingCanvas.field_c = null;
           AccountCreationResultPanel.field_ub = null;
-          lh.field_o = null;
+          MusicPatchPcmStream.field_o = null;
           de.a((java.applet.Applet) (this), param0 + 3);
           mh.a(8192);
           kj.field_R = 10;
@@ -920,7 +920,7 @@ abstract class ab extends GameApplet {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -114,7 +114,7 @@ public final class Lexicominos extends nk {
                                 if (!param1) {
                                   return false;
                                 }
-                                kj.c(true);
+                                MusicPatchPcmStream.c(true);
                                 kc.field_m[0] = VorbisSample.a(gl.field_a, "", "turnover_page").c();
                                 kc.field_m[1] = VorbisSample.a(gl.field_a, "", "drop_book").c();
                                 kc.field_m[4] = VorbisSample.a(gl.field_a, "", "x2").c();
@@ -150,10 +150,10 @@ public final class Lexicominos extends nk {
                     al.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, fj.field_y), 5.0f);
                     return false;
                   }
-                  al.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", kj.field_p, e.field_h), 4.0f);
+                  al.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", MusicPatchPcmStream.field_p, e.field_h), 4.0f);
                   return false;
                 }
-                al.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", kj.field_p, e.field_h), 1.0f);
+                al.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", MusicPatchPcmStream.field_p, e.field_h), 1.0f);
                 return false;
               }
               al.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, li.field_P), 0.0f);
@@ -180,7 +180,7 @@ public final class Lexicominos extends nk {
             while (!(decompiledNaturalLoopExit4 = (!(aa.field_i.length > var3_int)))) {
               if (var17 == 0) {
                 if (aa.field_i[var3_int] != null) {
-                  uh.field_n.field_A.a(0, aa.field_i[var3_int], (byte) 102, vb.field_r, ga.field_a);
+                  CrossfadingMidiPcmStream.field_n.field_A.a(0, aa.field_i[var3_int], (byte) 102, vb.field_r, ga.field_a);
                 }
                 var3_int++;
                 continue;
@@ -188,7 +188,7 @@ public final class Lexicominos extends nk {
               break;
             }
             if (decompiledNaturalLoopExit4) {
-              uh.field_n.field_A.c(-94);
+              CrossfadingMidiPcmStream.field_n.field_A.c(-94);
               ga.field_a = null;
               vb.field_r = null;
               SecondaryNodeDequeIterator.field_b = null;
@@ -578,7 +578,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var3_ref2), "Lexicominos.BB(" + param0 + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var3_ref2), "Lexicominos.BB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -589,13 +589,13 @@ public final class Lexicominos extends nk {
           if (param1 <= 57) {
             Lexicominos.o(111);
           }
-          uh.field_D = param0;
+          CrossfadingMidiPcmStream.field_D = param0;
           ij.field_p = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var3), "Lexicominos.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var3), "Lexicominos.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -655,7 +655,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -905,7 +905,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_122_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(')').toString());
         }
     }
 
@@ -920,7 +920,7 @@ public final class Lexicominos extends nk {
           bl.a((byte) 111);
           eb.b((byte) -100);
           hb.clearStaticReferences((byte) 76);
-          uh.a((byte) 120);
+          CrossfadingMidiPcmStream.a((byte) 120);
           bi.a(-1);
           of.clearStaticReferences(param0 ^ -80);
           ka.a((byte) -81);
@@ -966,11 +966,11 @@ public final class Lexicominos extends nk {
           IntrusiveNode.b(true);
           vg.b(0);
           fd.a((byte) -61);
-          hl.c(true);
+          MidiPcmStream.c(true);
           na.clearStaticReferences(true);
           cb.clearStaticReferences(param0 + 29073);
           MidiTrackReader.clearStaticReferences();
-          kj.clearStaticReferences((byte) 37);
+          MusicPatchPcmStream.clearStaticReferences((byte) 37);
           fg.clearStaticReferences(param0 - 55);
           wh.a(param0 - 167);
           bk.a((byte) 98);
@@ -1147,7 +1147,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "Lexicominos.I(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.I(" + param0 + ')');
         }
         if (GameAppletShell.field_k) {
           field_L = (var3 == 0);
@@ -1172,7 +1172,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "Lexicominos.PA(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.PA(" + param0 + ')');
         }
     }
 
@@ -1184,17 +1184,17 @@ public final class Lexicominos extends nk {
           ik.field_h = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
           wj.field_j = new PcmStreamMixer();
           ik.field_h.setRootStream(wj.field_j);
-          uh.field_n = new uh();
-          uh.field_n.field_s = new hl(uh.field_n.field_A);
-          uh.field_n.field_A.a(128, true, 9);
-          uh.field_n.field_s.a(128, true, 9);
-          ce.field_b.setRootStream(uh.field_n);
+          CrossfadingMidiPcmStream.field_n = new CrossfadingMidiPcmStream();
+          CrossfadingMidiPcmStream.field_n.field_s = new MidiPcmStream(CrossfadingMidiPcmStream.field_n.field_A);
+          CrossfadingMidiPcmStream.field_n.field_A.a(128, true, 9);
+          CrossfadingMidiPcmStream.field_n.field_s.a(128, true, 9);
+          ce.field_b.setRootStream(CrossfadingMidiPcmStream.field_n);
           this.a(false, param0, true, (byte) 18, false);
           ea.field_b = 0;
           g.field_n = 10640990;
           SecondaryNodeDequeIterator.field_c = 3941155;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
         }
     }
 
@@ -1211,7 +1211,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "Lexicominos.TA(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.TA(" + param0 + ')');
         }
     }
 
@@ -1257,7 +1257,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.NA(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.NA(" + param0 + ')');
         }
     }
 
@@ -1286,7 +1286,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "Lexicominos.RA(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.RA(" + param0 + ')');
         }
     }
 
@@ -1308,7 +1308,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "Lexicominos.K(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.K(" + param0 + ')');
         }
     }
 
@@ -1316,7 +1316,7 @@ public final class Lexicominos extends nk {
         try {
           this.a(14, "lexicominos", (byte) -107);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.init()");
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.init()");
         }
     }
 
@@ -1468,7 +1468,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2_ref), "Lexicominos.D(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2_ref), "Lexicominos.D(" + param0 + ')');
         }
     }
 
@@ -1502,7 +1502,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1562,7 +1562,7 @@ public final class Lexicominos extends nk {
                 sc.field_g = sc.field_g | vc.field_D.field_i;
                 MouseWheelInput.field_a = MouseWheelInput.field_a & ~vc.field_D.field_i;
                 vc.field_D = null;
-                kj.c(!param0);
+                MusicPatchPcmStream.c(!param0);
                 qf.a(this, 117);
                 decompiledFrameRemainder0 = (aa.field_j == 7);
                 if ((decompiledFrameRemainder0) &&
@@ -1631,7 +1631,7 @@ public final class Lexicominos extends nk {
                     var2_int = 1;
                     hb.a(gd.field_l, true);
                     if (this.a((byte) -86, true)) {
-                      kj.c(!param0);
+                      MusicPatchPcmStream.c(!param0);
                       this.g((byte) -83);
                       dl.b(5);
                       oj.field_g = true;
@@ -1642,7 +1642,7 @@ public final class Lexicominos extends nk {
                   if (var4 != 0) {
                     hb.a(gd.field_l, true);
                     if (this.a((byte) -86, true)) {
-                      kj.c(!param0);
+                      MusicPatchPcmStream.c(!param0);
                       this.g((byte) -83);
                       dl.b(5);
                       oj.field_g = true;
@@ -1654,7 +1654,7 @@ public final class Lexicominos extends nk {
           } else {
             hb.a(gd.field_l, true);
             if (this.a((byte) -86, true)) {
-              kj.c(!param0);
+              MusicPatchPcmStream.c(!param0);
               this.g((byte) -83);
               dl.b(5);
               oj.field_g = true;
@@ -1875,7 +1875,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "Lexicominos.M(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.M(" + param0 + ')');
         }
     }
 
@@ -2011,7 +2011,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -2136,7 +2136,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -2154,7 +2154,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1), "Lexicominos.LA(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1), "Lexicominos.LA(" + param0 + ')');
         }
     }
 
@@ -2275,7 +2275,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var5), "Lexicominos.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var5), "Lexicominos.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2305,7 +2305,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2434,7 +2434,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 

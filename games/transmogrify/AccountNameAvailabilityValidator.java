@@ -75,7 +75,7 @@ final class AccountNameAvailabilityValidator extends me {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class AccountNameAvailabilityValidator extends me {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class AccountNameAvailabilityValidator extends me {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class AccountNameAvailabilityValidator extends me {
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (nd.a((byte) -106, param0)) {
+          if (DelayedPcmStream.a((byte) -106, param0)) {
             stackIn_6_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
             return stackIn_6_0;
           }
@@ -209,7 +209,7 @@ final class AccountNameAvailabilityValidator extends me {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

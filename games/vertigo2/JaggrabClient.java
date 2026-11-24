@@ -38,7 +38,7 @@ final class JaggrabClient implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class JaggrabClient implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "qb.A(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "qb.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class JaggrabClient implements Runnable {
           this.field_g = param1;
           this.field_j = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

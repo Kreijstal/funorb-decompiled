@@ -68,7 +68,7 @@ final class rc {
         }
         if (jq.field_b != 2) {
           if (jq.field_b == 3) {
-            va.field_s.a(16777215, (byte) 81, -1, 40, fk.field_A, var5);
+            va.field_s.a(16777215, (byte) 81, -1, 40, CrossfadingMidiPcmStream.field_A, var5);
             var6Lifetime1 = 30;
             var7Lifetime1 = 130 + var3 + var4 * 2;
             var8Lifetime1 = vj.field_g[0].field_y;
@@ -217,7 +217,7 @@ final class rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var6), "rc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var6), "rc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -353,7 +353,7 @@ final class rc {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 

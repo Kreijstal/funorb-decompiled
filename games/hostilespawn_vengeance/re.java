@@ -519,7 +519,7 @@ final class re {
           if (var8 >= 10) {
             var10_ref = ae.field_r;
           } else {
-            var10_ref = kh.field_fb[var11][var8];
+            var10_ref = VolumeRampingMidiPcmStream.field_fb[var11][var8];
           }
           dupTemp$0 = var10_ref.toUpperCase();
           var12 = dupTemp$0;
@@ -553,7 +553,7 @@ final class re {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1185,7 +1185,7 @@ final class re {
         }
         StringBuilder discarded$2 = var4.append(rl.field_c + 1);
         StringBuilder discarded$3 = var4.append(" <col=ffffff>");
-        StringBuilder discarded$4 = var4.append(kh.field_fb[bm.field_c][rl.field_c].toUpperCase());
+        StringBuilder discarded$4 = var4.append(VolumeRampingMidiPcmStream.field_fb[bm.field_c][rl.field_c].toUpperCase());
         StringBuilder discarded$5 = var4.append("</col>");
         if (param0 != 84) {
           this.j((byte) 35);
@@ -1239,7 +1239,7 @@ final class re {
         var4Lifetime1 = var3;
         this.a((byte) -36, var3.toUpperCase());
         if (ta.p(3)) {
-          wh.field_d.a(kh.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
+          wh.field_d.a(VolumeRampingMidiPcmStream.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
           al.field_Z.a(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
           hm.a(576, ul.field_J, false, 30, 353, 32);
           return;
@@ -1254,7 +1254,7 @@ final class re {
             var15 = var14;
             if (var15.field_m) {
               if (null != var15.field_l) {
-                var4Lifetime2 = kh.field_X;
+                var4Lifetime2 = VolumeRampingMidiPcmStream.field_X;
                 var5 = var14.field_p[FullscreenFocusCanvas.field_e];
                 var19 = var14.field_l[FullscreenFocusCanvas.field_e];
                 var7 = fg.a(var15, FullscreenFocusCanvas.field_e, false, ch.field_h);
@@ -1326,7 +1326,7 @@ final class re {
           }
           stackIn_38_0 = var4Lifetime2;
         }
-        if (stackIn_38_0 != kh.field_X &&
+        if (stackIn_38_0 != VolumeRampingMidiPcmStream.field_X &&
           var15 != null &&
           p.field_m[bm.field_c].field_m &&
           var15.field_l != null &&
@@ -1587,7 +1587,7 @@ final class re {
                   }
                   stackIn_151_0[stackIn_151_1] = stackIn_152_2;
                   if (ta.p(3)) {
-                    stackIn_156_0 = (w.field_r != 0);
+                    stackIn_156_0 = (MidiPcmStream.field_r != 0);
                     stackIn_159_1 = !(ei.field_q.isEmpty(-20049));
                     if (wb.a(stackIn_156_0, stackIn_159_1, false, rg.a((byte) -51)) != null) {
                       this.field_s = 9;
@@ -1698,17 +1698,17 @@ final class re {
                   (decompiledFrameRemainder10) &&
                   (decompiledFrameRemainder9) &&
                   (decompiledFrameRemainder8)) {
-                  kh.field_ab.a(0);
+                  VolumeRampingMidiPcmStream.field_ab.a(0);
                   this.field_j = 1;
                   this.field_s = 0;
-                  if (w.field_r > 0) {
+                  if (MidiPcmStream.field_r > 0) {
                     if (13 != this.field_d) {
                       stackIn_188_0 = rl.field_c;
                     } else {
                       stackIn_188_0 = 10;
                     }
                     var4_int = stackIn_188_0;
-                    ib.a(bm.field_c, w.field_r, var4_int, 102);
+                    ib.a(bm.field_c, MidiPcmStream.field_r, var4_int, 102);
                     this.field_s = 4;
                   }
                   if (this.field_s != 0) {
@@ -1872,8 +1872,8 @@ final class re {
                   if (jh.field_ab == 1) {
                     db.a(true, 256, vg.field_h);
                   }
-                  qb.field_k = qb.field_k + w.field_r;
-                  w.field_r = 0;
+                  qb.field_k = qb.field_k + MidiPcmStream.field_r;
+                  MidiPcmStream.field_r = 0;
                   var16 = bm.field_b;
                   var13 = var16;
                   var10 = var13;
@@ -1982,8 +1982,8 @@ final class re {
               }
               if ((decompiledFrameCompleted0) &&
                 (this.field_d == 10)) {
-                if (0 < w.field_r) {
-                  ib.a(bm.field_c, w.field_r, rl.field_c, 109);
+                if (0 < MidiPcmStream.field_r) {
+                  ib.a(bm.field_c, MidiPcmStream.field_r, rl.field_c, 109);
                   cf.field_s = 0;
                 }
                 rg.a((byte) -21);
@@ -2057,12 +2057,12 @@ final class re {
             this.field_j = 1;
             vj.field_s = 0;
             AccountNameAvailabilityValidator.field_s = 0;
-            kh.field_ab.a(0);
+            VolumeRampingMidiPcmStream.field_ab.a(0);
             u.field_e = u.field_e - ei.field_l;
             ja.field_d = ja.field_d + 1;
             cf.field_s = 0;
-            qb.field_k = qb.field_k + w.field_r;
-            w.field_r = 0;
+            qb.field_k = qb.field_k + MidiPcmStream.field_r;
+            MidiPcmStream.field_r = 0;
             rl.field_c = -1;
             le.field_D = 0;
             var14 = bm.field_b;
@@ -2078,20 +2078,20 @@ final class re {
                   continue;
                 }
               } else {
-                kh.field_ib[2] = 0;
-                kh.field_ib[0] = 600;
-                kh.field_ib[3] = 0;
+                VolumeRampingMidiPcmStream.field_ib[2] = 0;
+                VolumeRampingMidiPcmStream.field_ib[0] = 600;
+                VolumeRampingMidiPcmStream.field_ib[3] = 0;
                 eh.field_g = 64;
-                kh.field_ib[1] = 0;
-                kh.field_U[0] = 1;
-                kh.field_U[1] = 0;
+                VolumeRampingMidiPcmStream.field_ib[1] = 0;
+                VolumeRampingMidiPcmStream.field_U[0] = 1;
+                VolumeRampingMidiPcmStream.field_U[1] = 0;
                 jf.field_g = 0;
                 qh.field_k = 0;
               }
               if (1 == bm.field_c &&
                 hh.field_d == 0) {
-                kh.field_U[0] = 0;
-                kh.field_ib[0] = 0;
+                VolumeRampingMidiPcmStream.field_U[0] = 0;
+                VolumeRampingMidiPcmStream.field_ib[0] = 0;
               }
               rf.field_f = 0;
               ResourceArchive.field_h = 0;
@@ -2214,7 +2214,7 @@ final class re {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -2407,7 +2407,7 @@ final class re {
                         rl.field_c = var8;
                       }
                       hh.field_d = rl.field_c;
-                      kh.field_ab.a(0);
+                      VolumeRampingMidiPcmStream.field_ab.a(0);
                     }
                     var8++;
                   }
@@ -2465,18 +2465,18 @@ final class re {
         wh.field_d.c(mb.field_k.toUpperCase(), 10 + param3, 22 + param1, 16776960, -1);
         var6 = 8 + param3;
         var7 = param1 + 30;
-        var18 = new boolean[kh.field_ib.length];
+        var18 = new boolean[VolumeRampingMidiPcmStream.field_ib.length];
         var17 = var18;
         var8 = var17;
         var9 = 0;
-        while (var9 < kh.field_ib.length) {
+        while (var9 < VolumeRampingMidiPcmStream.field_ib.length) {
           stackIn_86_0 = var8;
           stackIn_86_1 = var9;
           if (var14 != 0) {
             while (true) {
               if (stackIn_86_0[stackIn_86_1]) {
                 s.a(var9, 65792, var7, var6);
-                var10 = kh.field_ib[var9];
+                var10 = VolumeRampingMidiPcmStream.field_ib[var9];
                 if (0 > var10) {
                   var10 = 0;
                 }
@@ -2504,7 +2504,7 @@ final class re {
               return;
             }
           }
-          stackIn_6_2 = !(kh.field_ib[var9] <= 0);
+          stackIn_6_2 = !(VolumeRampingMidiPcmStream.field_ib[var9] <= 0);
           stackIn_86_0[stackIn_86_1] = stackIn_6_2;
           var9++;
           if (var14 == 0) {
@@ -2518,7 +2518,7 @@ final class re {
         var9 = 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var9 >= 8))) {
-          stackOut_11_0 = kh.field_Q[var9];
+          stackOut_11_0 = VolumeRampingMidiPcmStream.field_Q[var9];
           stackIn_43_0 = stackOut_11_0 ? 1 : 0;
           stackIn_12_0 = stackOut_11_0;
           if (var14 == 0) {
@@ -2526,7 +2526,7 @@ final class re {
               dn.a(-4 + var6, param2 - 169, var9, var7 - 10, 16772608);
               if (var9 != 0) {
                 regionExit1: {
-                  var10 = kh.field_ib[an.field_r[var9]];
+                  var10 = VolumeRampingMidiPcmStream.field_ib[an.field_r[var9]];
                   var8[an.field_r[var9]] = false;
                   var11_int = var9;
                   switch (var11_int) {
@@ -2597,7 +2597,7 @@ final class re {
           stackIn_47_1 = var9;
           if (stackIn_47_0[stackIn_47_1]) {
             s.a(var9, 65792, var7, var6);
-            var10 = kh.field_ib[var9];
+            var10 = VolumeRampingMidiPcmStream.field_ib[var9];
             if (0 > var10) {
               var10 = 0;
             } else {
@@ -2682,7 +2682,7 @@ final class re {
           this.a(-98, false);
         }
         var3Lifetime1 = rl.field_c - hh.field_d;
-        if (0 < w.field_r) {
+        if (0 < MidiPcmStream.field_r) {
           if (rl.field_c > hh.field_d) {
             var12Lifetime2 = var11 + "<br>" + vg.a(new String[]{Integer.toString(-hh.field_d + rl.field_c)}, 77, GameCanvas.field_f);
             var14 = var12Lifetime2;
@@ -2714,8 +2714,8 @@ final class re {
             var5Lifetime3 = var14 + "<br>" + ki.field_d + jh.a((byte) -73, var3Lifetime2);
           }
         }
-        if (w.field_r > 0) {
-          var5Lifetime3 = var5Lifetime3 + "<br>" + vg.a(new String[]{Integer.toString(w.field_r)}, 99, hj.field_s);
+        if (MidiPcmStream.field_r > 0) {
+          var5Lifetime3 = var5Lifetime3 + "<br>" + vg.a(new String[]{Integer.toString(MidiPcmStream.field_r)}, 99, hj.field_s);
         }
         if (50 <= sg.field_i) {
           var6_ref_String = sg.d(24);
@@ -2855,7 +2855,7 @@ final class re {
               stackIn_19_0 = ~var12;
               stackIn_19_1 = -11;
               if (stackIn_19_0 > stackIn_19_1) {
-                var13.field_fb = kh.field_fb[var10][var12].toUpperCase();
+                var13.field_fb = VolumeRampingMidiPcmStream.field_fb[var10][var12].toUpperCase();
                 stackIn_33_0 = var13;
                 stackIn_34_1 = !(gn.field_k[var10] < var12);
                 stackIn_33_0.field_jb = stackIn_34_1;
@@ -2991,7 +2991,7 @@ final class re {
         var3 = this.a((bd) null, eh.field_h, var3, (String) null, (byte) 80, km.field_A[0]);
         var3 = this.a((bd) null, ga.field_c, var3, (String) null, (byte) 80, pi.field_b);
         var3 = this.a(mb.field_k, param0 ^ 58, var3);
-        var3 = this.a((bd) null, w.field_A, var3, (String) null, (byte) 80, this.e((byte) -44, 0));
+        var3 = this.a((bd) null, MidiPcmStream.field_A, var3, (String) null, (byte) 80, this.e((byte) -44, 0));
         var3 = this.a((bd) null, uj.field_q, var3, (String) null, (byte) 80, this.e((byte) -44, 1));
         var3 = this.a((bd) null, h.field_f, var3, (String) null, (byte) 80, this.e((byte) -44, 2));
         var3 = this.a((bd) null, tk.field_b, var3, (String) null, (byte) 80, this.e((byte) -44, 3));
@@ -3669,7 +3669,7 @@ final class re {
         var5 = var12;
         var5Lifetime1 = var12;
         var5Lifetime2 = var12;
-        if (0 < w.field_r) {
+        if (0 < MidiPcmStream.field_r) {
           if (hh.field_d >= rl.field_c) {
             var4 = sg.field_i / 50;
             var5Lifetime2 = var12 + "<br>" + oa.field_j + jh.a((byte) -80, var4);
@@ -3684,8 +3684,8 @@ final class re {
             var5Lifetime2 = var13 + "<br>" + oa.field_j + jh.a((byte) -128, var4);
           }
         }
-        if (w.field_r > 0) {
-          var5Lifetime2 = var5Lifetime2 + "<br>" + vg.a(new String[]{"<col=ffffff>" + w.field_r + "</col>"}, 84, o.field_j);
+        if (MidiPcmStream.field_r > 0) {
+          var5Lifetime2 = var5Lifetime2 + "<br>" + vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 84, o.field_j);
         }
         if (sg.field_i >= 50) {
           var11 = sg.d(24);
@@ -3695,16 +3695,16 @@ final class re {
           }
         }
         if (param1 == 9) {
-          stackIn_15_0 = (w.field_r != 0);
+          stackIn_15_0 = (MidiPcmStream.field_r != 0);
           stackIn_18_1 = (ei.field_q.isEmpty(-20049)) ? false : true;
           if (wb.a(stackIn_15_0, stackIn_18_1, false, rg.a((byte) -117)) != null) {
             stackIn_21_0 = new String[]{ch.field_d.toLowerCase()};
             stackIn_21_1 = 74;
             stackIn_21_2 = new StringBuilder();
-            stackIn_22_3 = (w.field_r == 0) ? false : true;
+            stackIn_22_3 = (MidiPcmStream.field_r == 0) ? false : true;
             stackIn_25_4 = (ei.field_q.isEmpty(-20049)) ? false : true;
             stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(cj.a(wb.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
-            stackIn_28_3 = (0 == w.field_r) ? false : true;
+            stackIn_28_3 = (0 == MidiPcmStream.field_r) ? false : true;
             stackIn_31_4 = (ei.field_q.isEmpty(-20049)) ? false : true;
             var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(cj.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
             al.field_Z.a(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
@@ -3943,10 +3943,10 @@ final class re {
           }
           if (rl.field_c == 5) {
             var4 = id.field_b;
-            if (kh.field_U[0] == 5 ||
-              5 == kh.field_U[1]) {
+            if (VolumeRampingMidiPcmStream.field_U[0] == 5 ||
+              5 == VolumeRampingMidiPcmStream.field_U[1]) {
               var4 = od.field_E;
-              if (0 >= kh.field_ib[2]) {
+              if (0 >= VolumeRampingMidiPcmStream.field_ib[2]) {
                 var4 = g.field_O;
               }
             }
@@ -3987,7 +3987,7 @@ final class re {
         String dupTemp$0 = var11.toUpperCase();
         var10 = dupTemp$0;
         var5Lifetime3 = dupTemp$0;
-        var6 = var10 + "  <col=ffffff>" + kh.field_fb[bm.field_c][rl.field_c].toUpperCase() + "</col>";
+        var6 = var10 + "  <col=ffffff>" + VolumeRampingMidiPcmStream.field_fb[bm.field_c][rl.field_c].toUpperCase() + "</col>";
         var7 = 62;
         var7 = var7 + 16 * wh.field_d.a(var6, 60, var7, 288, 146, 16776960, -1, 0, 0, 16);
         var7 += 8;
@@ -4044,7 +4044,7 @@ final class re {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4097,7 +4097,7 @@ final class re {
           si.a(var5, var7, var6, var8, 0, 160 * var4 / 480);
           si.d(0, 0, 640, var4);
           this.a(1 + var7 + var8, var7 - 2, var5 - 2, -18, 1 + var5 + var6);
-          mk.field_L.b(dl.field_p, var9, var10, 16777215, -1);
+          mk.field_L.b(MusicPatchPcmStream.field_p, var9, var10, 16777215, -1);
           var10 += 38;
           var12 = wh.field_d;
           var13 = 16776960;
@@ -4125,7 +4125,7 @@ final class re {
               var21 = ki.field_d + jh.a((byte) -78, var14);
               var22 = var21.toUpperCase();
               ((vm) ((Object) var12)).b(var22, var9, var10, var13, -1);
-              var23 = vg.a(new String[]{"<col=ffffff>" + w.field_r + "</col>"}, 67, o.field_j.toUpperCase());
+              var23 = vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 67, o.field_j.toUpperCase());
               var10 += 36;
               mk.field_L.b(var23, var9, var10, var13, -1);
               var11 = sg.d(24);
@@ -4475,7 +4475,7 @@ final class re {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -4602,32 +4602,32 @@ final class re {
         ea.field_d = 0.5f;
         GameCanvas.field_a = 0.30000001192092896f;
         an.field_n = 0.20000000298023224f;
-        var5 = kd.field_v.j();
+        var5 = CrossfadingMidiPcmStream.field_v.j();
         if (GameCanvas.field_a != var5) {
-          kd.field_v.d(ua.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.d(ua.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
         }
-        var5Lifetime1 = kd.field_v.h();
+        var5Lifetime1 = CrossfadingMidiPcmStream.field_v.h();
         if (var5Lifetime1 != qm.field_O) {
-          kd.field_v.f(ua.a((byte) -68, qm.field_O, var5Lifetime1, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.f(ua.a((byte) -68, qm.field_O, var5Lifetime1, 0.07000000029802322f));
         }
-        var5Lifetime2 = kd.field_v.f();
+        var5Lifetime2 = CrossfadingMidiPcmStream.field_v.f();
         if (param3 != -99) {
           return;
         }
         if (var5Lifetime2 != ea.field_d) {
-          kd.field_v.b(ua.a((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.b(ua.a((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
         }
-        var5Lifetime3 = kd.field_v.g();
+        var5Lifetime3 = CrossfadingMidiPcmStream.field_v.g();
         if (var5Lifetime3 != ag.field_w) {
-          kd.field_v.e(ua.a((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
+          CrossfadingMidiPcmStream.field_v.e(ua.a((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
         }
-        var5Lifetime4 = kd.field_v.k();
+        var5Lifetime4 = CrossfadingMidiPcmStream.field_v.k();
         if (an.field_n != var5Lifetime4) {
-          kd.field_v.c(ua.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.c(ua.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
         }
-        var5Lifetime5 = kd.field_v.e();
+        var5Lifetime5 = CrossfadingMidiPcmStream.field_v.e();
         if (vb.field_Jb != var5Lifetime5) {
-          kd.field_v.a(ua.a((byte) -114, vb.field_Jb, var5Lifetime5, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.a(ua.a((byte) -114, vb.field_Jb, var5Lifetime5, 0.009999999776482582f));
         }
         fieldTemp$0 = ch.field_q + 1;
         ch.field_q = ch.field_q + 1;
@@ -4789,7 +4789,7 @@ final class re {
           tk.field_c = param5;
           cl.field_l = param3;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "re.IB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "re.IB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -5104,7 +5104,7 @@ final class re {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

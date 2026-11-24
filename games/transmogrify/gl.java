@@ -21,7 +21,7 @@ final class gl extends fi {
           this.field_v = param0;
           this.field_A = 256;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class gl extends fi {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class gl extends fi {
         }
         int var6 = -59 / ((77 - param3) / 34);
         Sprite var7 = new Sprite(this.field_v.field_l, this.field_v.field_h);
-        oj.a(var7, 256);
+        CrossfadingMidiPcmStream.a(var7, 256);
         this.field_v.a(0, 0, param2, (byte) -117);
         fi.c(true);
         var7.e(this.field_p + param0, this.field_n + param1, this.field_A);

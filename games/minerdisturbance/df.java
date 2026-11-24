@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class df {
-    static rc field_a;
+    static RawPcmStream field_a;
     static String field_c;
     static wh field_b;
 
@@ -24,7 +24,7 @@ final class df {
         field_b = null;
         field_c = null;
         if (param0 < 115) {
-          field_a = (rc) null;
+          field_a = (RawPcmStream) null;
           field_a = null;
           return;
         }

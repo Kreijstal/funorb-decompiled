@@ -70,7 +70,7 @@ final class qb {
           var11 = -var11;
         }
         if (2048 > var9) {
-          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
+          var12 = 320 + (CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
           var13 = param5 * 64 / 256 + (param1 * 64 - param2);
           dl.field_n[1] = var12;
           dl.field_n[0] = var12;
@@ -84,7 +84,7 @@ final class qb {
         if (var9 > 1024) {
           var11 = -var11;
         }
-        var12Lifetime1 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
+        var12Lifetime1 = 320 + (CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
         var13Lifetime1 = param5 * 64 / 256 + (param1 * 64 - param2);
         dl.field_n[1] = var12Lifetime1;
         dl.field_n[0] = var12Lifetime1;

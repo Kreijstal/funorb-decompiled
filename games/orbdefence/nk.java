@@ -495,7 +495,7 @@ final class nk {
           stackIn_162_1 = var8 % 11;
           if (var20 == 0) {
             if (stackIn_162_0 == stackIn_162_1) {
-              var9_ref_String = t.a(-415993727, new String[]{var28}, ia.field_e);
+              var9_ref_String = CrossfadingMidiPcmStream.a(-415993727, new String[]{var28}, ia.field_e);
             }
             cc.field_t.a(Integer.toString(var8 + 1), -4 - var5 + (320 + 79 * var8), 387, 0, -1, 128);
             ob.field_I.a(var9_ref_String, -4 - var5 + (320 + 79 * var8) - 39 - 1, 358, 76, 33, 0, 0, 1, 1, 12);
@@ -521,20 +521,20 @@ final class nk {
         ob.field_I.a(Integer.toString(var4), 200, 24, 16777215, -1);
         boolean decompiledSharedTail3 = !(0 < wf.field_c.field_e[0].field_f);
         if (!decompiledSharedTail3) {
-          ob.field_I.b(t.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
+          ob.field_I.b(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
           var4 = 32;
           var5 = 526;
           if (wj.field_m == 1) {
             var5 = 465;
             var4 = 48;
           }
-          jd.field_c.b(t.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_f)}, rl.field_d), var5, var4, 16777215, -1);
+          jd.field_c.b(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_f)}, rl.field_d), var5, var4, 16777215, -1);
           decompiledSharedTail3 = (var20 != 0);
         }
         if (decompiledSharedTail3) {
-          ob.field_I.b(t.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
+          ob.field_I.b(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
         }
-        var31 = new String[][]{new String[]{jg.field_l, jg.field_l + " I", jg.field_l + " II", jg.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", ug.field_o, cd.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", b.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", lj.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{gl.field_c, gl.field_c, gl.field_c + " II", gl.field_c + " III", lj.field_B, ob.field_E}};
+        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", ug.field_o, cd.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", b.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{gl.field_c, gl.field_c, gl.field_c + " II", gl.field_c + " III", MidiPcmStream.field_B, ob.field_E}};
         var5 = this.field_f;
         var6 = 0;
         var7 = uh.field_b * wf.field_c.field_f.field_c + eh.field_a;
@@ -906,7 +906,7 @@ final class nk {
             jd.field_c.b(ei.field_b, 530, 420, 16777215, 0);
           }
           if (var7 == 2) {
-            jd.field_c.b(t.field_k, 530, 420, 16777215, 0);
+            jd.field_c.b(CrossfadingMidiPcmStream.field_k, 530, 420, 16777215, 0);
           }
           jd.field_c.a(Integer.toString(var8), 625, 420, 16777215, 0);
           if (var5 == 5) {
@@ -955,7 +955,7 @@ final class nk {
           }
           var15_ref = null;
           if (var3_int > 0) {
-            var15_ref_String = t.a(param0 - 415993729, new String[]{Integer.toString(var3_int)}, d.field_h);
+            var15_ref_String = CrossfadingMidiPcmStream.a(param0 - 415993729, new String[]{Integer.toString(var3_int)}, d.field_h);
             if (this.field_a != var14_int) {
               if (hi.field_m == 0) {
                 MouseInputListener.a(mh.field_a[47], (byte) -11);
@@ -1013,7 +1013,7 @@ final class nk {
           if (var16 < 0) {
             var16 = 0;
           }
-          var15_ref_String = t.a(param0 ^ -415993725, new String[]{Integer.toString(var16)}, nb.field_p);
+          var15_ref_String = CrossfadingMidiPcmStream.a(param0 ^ -415993725, new String[]{Integer.toString(var16)}, nb.field_p);
           if (hi.field_m == -150 && (wf.field_c.field_x % 11 != 0 &&
             0 < wf.field_c.field_x ||
             wf.field_c.field_x == 0 ||
@@ -1038,7 +1038,7 @@ final class nk {
           if (0 > var15) {
             var15 = 0;
           }
-          var14 = t.a(param0 - 415993729, new String[]{Integer.toString(var15)}, nb.field_p);
+          var14 = CrossfadingMidiPcmStream.a(param0 - 415993729, new String[]{Integer.toString(var15)}, nb.field_p);
         }
         var37 = (oj) (wf.field_c.field_b.beginForward((byte) 126));
         while (var37 != null) {
@@ -1055,9 +1055,9 @@ final class nk {
           if (var20 != 0) {
             if (wf.field_c.field_e[0].b(true) >= 9999) {
               var14 = ci.field_m;
-              var14 = t.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
+              var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
             } else {
-              var14 = t.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
+              var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
             }
           }
         } else {
@@ -1067,7 +1067,7 @@ final class nk {
             decompiledSharedTail2 = (var20 != 0);
           }
           if (decompiledSharedTail2) {
-            var14 = t.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
+            var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
           }
         }
         ob.field_I.c(var14, 362, 30, 0, 0);
@@ -1083,9 +1083,9 @@ final class nk {
             vl.field_d >= 10 &&
             ua.field_a <= 630 &&
             vl.field_d <= 42) {
-            ob.field_I.a(jg.field_n[25], 635, 49, 0, 0);
-            ob.field_I.a(jg.field_n[25], 634, 50, 0, 0);
-            ob.field_I.a(jg.field_n[25], 635, 50, 16777215, -1);
+            ob.field_I.a(MusicPatchPcmStream.field_n[25], 635, 49, 0, 0);
+            ob.field_I.a(MusicPatchPcmStream.field_n[25], 634, 50, 0, 0);
+            ob.field_I.a(MusicPatchPcmStream.field_n[25], 635, 50, 16777215, -1);
           }
         }
         if (1 != of.field_G) {
@@ -3058,7 +3058,7 @@ final class nk {
           var3.writeByte(param1.field_g, -68);
           var3.writeShort((byte) -60, param1.field_h);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -3138,7 +3138,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "nk.D(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "nk.D(" + param0 + ')');
         }
     }
 

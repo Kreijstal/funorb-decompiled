@@ -68,7 +68,7 @@ class np extends rj {
           var4 = -1L;
           lm.a(false, var2, var4, param1, var3);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "np.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "np.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ class np extends rj {
           this.field_J.addLast(param0, false);
           param0.field_r = (rj) (this);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "np.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "np.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

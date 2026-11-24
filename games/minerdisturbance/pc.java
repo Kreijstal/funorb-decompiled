@@ -43,7 +43,7 @@ class pc extends hn {
             field_k = -121;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "pc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "pc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ class pc extends hn {
           this.field_j = param0;
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "pc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "pc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

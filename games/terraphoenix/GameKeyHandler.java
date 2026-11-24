@@ -4,7 +4,7 @@
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static String field_c;
-    static vg field_a;
+    static PcmStreamMixer field_a;
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         RuntimeException stackIn_6_0 = null;
@@ -112,7 +112,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         var4 = Terraphoenix.field_V;
         try {
           if (param1) {
-            field_a = (vg) null;
+            field_a = (PcmStreamMixer) null;
           }
           if (param0.field_g == null) {
             return;

@@ -196,7 +196,7 @@ abstract class ok extends UiWidget implements je {
         }
     }
 
-    final static void a(k param0, int param1, byte param2, Archive param3) {
+    final static void a(PcmStreamMixer param0, int param1, byte param2, Archive param3) {
         GzipDecompressor.field_c = BufferedCacheFile.c(-14496) * param1 / 1000;
         if (param2 != 52) {
           return;

@@ -14,7 +14,7 @@ abstract class vm extends jb implements ha {
             this.field_j = (qn) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "vm.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vm.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ abstract class vm extends jb implements ha {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw fk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -153,7 +153,7 @@ abstract class vm extends jb implements ha {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ abstract class vm extends jb implements ha {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -201,7 +201,7 @@ abstract class vm extends jb implements ha {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ abstract class vm extends jb implements ha {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param4).append(')').toString());
         }
     }
 

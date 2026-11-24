@@ -25,7 +25,7 @@ final class DirectByteStorage extends ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "ja.H(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "ja.H(" + param0 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class DirectByteStorage extends ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2_ref), "ja.D(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "ja.D(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -452,7 +452,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 }

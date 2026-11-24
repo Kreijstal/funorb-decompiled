@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     static String[] field_g;
     DualLinkNode nextSecondaryNode;
     static PacketBuffer field_l;
-    static jt field_e;
+    static CrossfadingMidiPcmStream field_e;
     static String[] field_k;
     static Sprite[] field_h;
 

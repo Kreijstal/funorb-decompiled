@@ -39,7 +39,7 @@ final class ri {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class ri {
         String stackIn_3_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1_int = di.a(true);
+          var1_int = MidiPcmStream.a(true);
           var2 = var1_int / 50;
           var3 = -(var2 * 1000) + var1_int * 1000 / 50;
           var5 = 73 % ((param0 - 56) / 53);
@@ -66,7 +66,7 @@ final class ri {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "ri.D(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "ri.D(" + param0 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class ri {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class ri {
                         if (0 < param3.field_E &&
                           param3.field_x != null) {
                           dupTemp$0 = param3.field_x[var8];
-                          di.field_V[dupTemp$0] = di.field_V[dupTemp$0] + 1;
+                          MidiPcmStream.field_V[dupTemp$0] = MidiPcmStream.field_V[dupTemp$0] + 1;
                         }
                         ik.field_T = ik.field_T + 1;
                         break;
@@ -226,9 +226,9 @@ final class ri {
             null != param3.field_x) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(di.field_V.length <= var9Lifetime1)) {
-              var10Lifetime1 = di.field_V[var9Lifetime1];
-              di.field_V[var9Lifetime1] = var8Lifetime1;
+            while (!(MidiPcmStream.field_V.length <= var9Lifetime1)) {
+              var10Lifetime1 = MidiPcmStream.field_V[var9Lifetime1];
+              MidiPcmStream.field_V[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -247,7 +247,7 @@ final class ri {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class ri {
             ri.a(true, 81, 23, (pb) null, -39);
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ri.G(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ri.G(" + param0 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class ri {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class ri {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ final class ri {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "ri.F(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "ri.F(" + param0 + ')');
         }
     }
 
@@ -424,7 +424,7 @@ final class ri {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var4), "ri.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var4), "ri.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class ri {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ final class ri {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

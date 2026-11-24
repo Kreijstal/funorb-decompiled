@@ -54,7 +54,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class dc extends og implements im, vd, fd {
           int var5_int = -55 / ((param1 + 50) / 59);
           this.field_G.field_x = this.k(-103);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "dc.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "dc.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class dc extends og implements im, vd, fd {
         CharSequence var7 = null;
         Object stackIn_4_0 = null;
         Object stackIn_6_0 = null;
-        wg stackIn_9_0;
+        MidiPcmStream stackIn_9_0;
         db stackIn_9_1;
         bn stackIn_9_2;
         rm stackIn_9_3;
@@ -373,7 +373,7 @@ final class dc extends og implements im, vd, fd {
             } else {
               stackIn_10_5 = 2205;
             }
-            if (!((wg) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_10_5)) {
+            if (!((MidiPcmStream) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_10_5)) {
               return null;
             }
             ra.field_d.a(-22072, var3_long, var5);
@@ -391,7 +391,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -430,7 +430,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -445,7 +445,7 @@ final class dc extends og implements im, vd, fd {
           }
           ((ga) ((Object) var3)).a(false, -100, var4);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "dc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "dc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -490,7 +490,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -531,7 +531,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -585,7 +585,7 @@ final class dc extends og implements im, vd, fd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -18,7 +18,7 @@ final class om extends ml {
         try {
           int var2_int = -48 / ((-83 - param1) / 39);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "om.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "om.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class om extends ml {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class om extends ml {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

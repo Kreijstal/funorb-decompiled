@@ -115,7 +115,7 @@ final class AccountNameAvailabilityValidator extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "kh.E(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "kh.E(" + param0 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class AccountNameAvailabilityValidator extends ip {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class AccountNameAvailabilityValidator extends ip {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

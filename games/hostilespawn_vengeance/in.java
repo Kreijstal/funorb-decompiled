@@ -84,7 +84,7 @@ abstract class in {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ abstract class in {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ abstract class in {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -237,25 +237,25 @@ abstract class in {
         try {
           var4 = new String[8];
           var4[0] = pc.field_b;
-          var4[1] = Integer.toString(kh.field_ib[an.field_r[1]]);
-          var4[2] = Integer.toString((9 + kh.field_ib[an.field_r[2]]) / 10);
-          var4[3] = Integer.toString((kh.field_ib[an.field_r[3]] + 49) / 50);
-          var4[4] = Integer.toString((kh.field_ib[an.field_r[4]] + 4) / 5);
-          var4[5] = Integer.toString(kh.field_ib[an.field_r[5]]);
-          var4[6] = Integer.toString(kh.field_ib[an.field_r[6]]);
-          var4[7] = Integer.toString(kh.field_ib[an.field_r[7]]);
+          var4[1] = Integer.toString(VolumeRampingMidiPcmStream.field_ib[an.field_r[1]]);
+          var4[2] = Integer.toString((9 + VolumeRampingMidiPcmStream.field_ib[an.field_r[2]]) / 10);
+          var4[3] = Integer.toString((VolumeRampingMidiPcmStream.field_ib[an.field_r[3]] + 49) / 50);
+          var4[4] = Integer.toString((VolumeRampingMidiPcmStream.field_ib[an.field_r[4]] + 4) / 5);
+          var4[5] = Integer.toString(VolumeRampingMidiPcmStream.field_ib[an.field_r[5]]);
+          var4[6] = Integer.toString(VolumeRampingMidiPcmStream.field_ib[an.field_r[6]]);
+          var4[7] = Integer.toString(VolumeRampingMidiPcmStream.field_ib[an.field_r[7]]);
           for (var1_int = 0; var1_int < 2; var1_int++) {
             var2 = 8;
             if (1 == var1_int) {
               var2 = 632 - qa.field_g[0].field_u;
             }
             var3 = 8;
-            var5 = kh.field_U[var1_int];
+            var5 = VolumeRampingMidiPcmStream.field_U[var1_int];
             if (var5 >= 0) {
               var6 = 16772608;
               var7 = an.field_r[var5];
               if (var7 >= 0 &&
-                kh.field_ib[var7] <= 0) {
+                VolumeRampingMidiPcmStream.field_ib[var7] <= 0) {
                 var6 = 16728128;
               }
               if (var1_int == 0) {
@@ -286,7 +286,7 @@ abstract class in {
               if (var5 >= 0) {
                 var8_ref_String = var4[var5];
                 if (0 <= var7 &&
-                  kh.field_ib[var7] <= 0) {
+                  VolumeRampingMidiPcmStream.field_ib[var7] <= 0) {
                   var8_ref_String = nf.field_p.toUpperCase();
                 }
                 if (var1_int != 0) {
@@ -311,8 +311,8 @@ abstract class in {
           }
           var5Lifetime1 = 150;
           var6Lifetime1 = 5;
-          for (var1_intLifetime1 = 0; var1_intLifetime1 < kh.field_Q.length; var1_intLifetime1++) {
-            if (kh.field_Q[var1_intLifetime1] &&
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < VolumeRampingMidiPcmStream.field_Q.length; var1_intLifetime1++) {
+            if (VolumeRampingMidiPcmStream.field_Q[var1_intLifetime1] &&
               an.field_r[var1_intLifetime1] >= 0) {
             }
           }
@@ -320,7 +320,7 @@ abstract class in {
             field_b = 104;
           }
           for (var1_intLifetime2 = 0; var1_intLifetime2 < 8; var1_intLifetime2++) {
-            if (kh.field_Q[var1_intLifetime2]) {
+            if (VolumeRampingMidiPcmStream.field_Q[var1_intLifetime2]) {
               if ((5 & el.field_m) == 0 &&
                 j.field_c >= -7 + var5Lifetime1 &&
                 j.field_c < ti.field_j.field_z + var5Lifetime1 + 9 &&
@@ -344,7 +344,7 @@ abstract class in {
               }
               ti.field_j.e(var5Lifetime1, var6Lifetime1);
               if (var1_intLifetime2 > 0 &&
-                kh.field_ib[an.field_r[var1_intLifetime2]] <= 0) {
+                VolumeRampingMidiPcmStream.field_ib[an.field_r[var1_intLifetime2]] <= 0) {
                 var8 = 0;
                 for (var9 = 0; di.field_b[var1_intLifetime2].field_A > var9; var9 += 2) {
                   for (var10 = 0; di.field_b[var1_intLifetime2].field_z > var10; var10 += 2) {
@@ -358,7 +358,7 @@ abstract class in {
               } else {
                 di.field_b[var1_intLifetime2].b(var5Lifetime1 + 4, var6Lifetime1, di.field_b[var1_intLifetime2].field_z / 2, di.field_b[var1_intLifetime2].field_A / 2, 256);
               }
-              if (kh.field_cb[var1_intLifetime2]) {
+              if (VolumeRampingMidiPcmStream.field_cb[var1_intLifetime2]) {
                 var8Lifetime1 = 12 + var5Lifetime1;
                 var9Lifetime1 = var6Lifetime1 + 3;
                 of.field_e.a('2', var8Lifetime1 - 1, var9Lifetime1, 65793);
@@ -390,7 +390,7 @@ abstract class in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "in.F(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "in.F(" + param0 + ')');
         }
     }
 

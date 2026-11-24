@@ -29,7 +29,7 @@ final class ClientException extends RuntimeException {
             field_e = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ak.C(" + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + opcode + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ak.C(" + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + opcode + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

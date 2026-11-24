@@ -6,7 +6,7 @@ final class ac {
     private vj field_e;
     static int[] field_f;
     static java.awt.Image field_h;
-    static ec field_b;
+    static PcmStreamMixer field_b;
     static sj[] field_d;
     static he[] field_g;
     static int[] field_j;

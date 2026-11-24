@@ -50,7 +50,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           this.field_l = new fc(seed);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "dl.F(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "dl.F(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

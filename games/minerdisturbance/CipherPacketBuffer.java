@@ -15,7 +15,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           this.field_v = new IsaacRandom(param0);
           int var3_int = -24 % ((param1 - 64) / 40);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ld.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ld.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

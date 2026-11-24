@@ -174,7 +174,7 @@ final class ul {
         field_c = null;
     }
 
-    final boolean e() {
+    final boolean hasMidiData() {
         return this.field_f.payload != null;
     }
 

@@ -4,7 +4,7 @@
 abstract class pl extends IntrusiveNode {
     int field_j;
 
-    abstract int a(lb param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     private pl() throws Throwable {
         throw new Error();

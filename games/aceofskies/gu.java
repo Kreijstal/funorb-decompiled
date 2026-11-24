@@ -22,7 +22,7 @@ final class gu {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "gu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class gu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "gu.A(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "gu.A(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class gu {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -159,16 +159,16 @@ final class gu {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final void a(java.applet.Applet param0, byte param1) {
         try {
-          jt.a("jagex-last-login-method", this.field_b, 31536000L, param0, 0);
+          CrossfadingMidiPcmStream.a("jagex-last-login-method", this.field_b, 31536000L, param0, 0);
           int var3_int = 79 / ((param1 - 77) / 44);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "gu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

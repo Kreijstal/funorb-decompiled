@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends ph implements ga {
     static BufferedSocket field_sb;
     static String field_qb;
     static hj[] field_rb;
-    static ed field_tb;
+    static DelayedPcmStream field_tb;
     private boolean field_ob;
     private boolean field_ub;
 
@@ -22,7 +22,7 @@ final class AccountCreationResultPanel extends ph implements ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -49) {
-            field_tb = (ed) null;
+            field_tb = (DelayedPcmStream) null;
           }
           var4 = (String) null;
           stackIn_3_0 = bf.a(0, false, (String) null, (byte) 6, param1, param2, 0);
@@ -43,7 +43,7 @@ final class AccountCreationResultPanel extends ph implements ga {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class AccountCreationResultPanel extends ph implements ga {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class AccountCreationResultPanel extends ph implements ga {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -171,13 +171,13 @@ final class AccountCreationResultPanel extends ph implements ga {
         try {
           this.field_pb = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void p(int param0) {
         if (param0 != 10341) {
-          field_tb = (ed) null;
+          field_tb = (DelayedPcmStream) null;
         }
         this.showAccountCreationResult(true, fb.createAccountErrorResult(KeyboardInput.field_d, 248, 0), 10476);
     }

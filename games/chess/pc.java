@@ -53,7 +53,7 @@ final class pc extends ci {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -192,10 +192,10 @@ final class pc extends ci {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (!(var16 < re.field_j)))) {
               stackIn_19_0 = null;
-              stackIn_19_1 = mi.field_t[var16];
+              stackIn_19_1 = MusicPatchPcmStream.field_t[var16];
               if (var27 == 0) {
                 if (stackIn_19_0 != stackIn_19_1) {
-                  this.field_Jb[var16] = new ci(0L, param10, mi.field_t[var16]);
+                  this.field_Jb[var16] = new ci(0L, param10, MusicPatchPcmStream.field_t[var16]);
                   this.field_Jb[var16].field_fb = 0;
                   stackIn_15_0 = this.field_Jb[var16];
                   stackIn_16_1 = (param11 != null);
@@ -382,7 +382,7 @@ final class pc extends ci {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param12).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ final class pc extends ci {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -987,7 +987,7 @@ final class pc extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var5_ref), "pc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var5_ref), "pc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

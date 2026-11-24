@@ -357,7 +357,7 @@ final class dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "dc.B(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "dc.B(" + param0 + ',' + param1 + ')');
         }
     }
 

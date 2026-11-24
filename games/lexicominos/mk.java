@@ -32,7 +32,7 @@ final class mk extends IntrusiveNode {
           this.field_i = param0;
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

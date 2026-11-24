@@ -37,7 +37,7 @@ final class cg extends me {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1_ref), "cg.E(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1_ref), "cg.E(" + param0 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class cg extends me {
         try {
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class cg extends me {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class cg extends me {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

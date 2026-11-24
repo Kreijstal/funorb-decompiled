@@ -10,7 +10,7 @@ final class jk extends hf {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "jk.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jk.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class jk extends hf {
           }
           df.b(16);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "jk.M(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jk.M(" + param0 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class jk extends hf {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 

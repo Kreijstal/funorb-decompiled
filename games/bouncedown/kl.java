@@ -14,7 +14,7 @@ final class kl extends IntrusiveNode {
     int field_z;
     int field_y;
     int field_s;
-    pi field_i;
+    RawPcmStream field_i;
     int field_n;
     int field_h;
     int field_j;

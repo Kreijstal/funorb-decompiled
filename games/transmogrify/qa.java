@@ -48,7 +48,7 @@ final class qa extends h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "qa.D(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "qa.D(" + param0 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class qa extends h {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

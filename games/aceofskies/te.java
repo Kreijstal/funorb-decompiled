@@ -37,7 +37,7 @@ final class te extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -56,7 +56,7 @@ final class te extends IntrusiveNode {
           }
           Bullet.field_g = 0;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "te.D(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "te.D(" + obfuscationGuard + ')');
         }
     }
 

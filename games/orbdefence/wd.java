@@ -97,7 +97,7 @@ final class wd {
               }
             }
             if (h.field_A >= og.field_o) {
-              lj.field_u = kb.field_m;
+              MidiPcmStream.field_u = kb.field_m;
               if (!bh.field_b) {
                 kb.field_m = kb.field_m - 1;
                 if (kb.field_m < 0) {
@@ -184,7 +184,7 @@ final class wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var2), "wd.E(" + param0 + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var2), "wd.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class wd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 

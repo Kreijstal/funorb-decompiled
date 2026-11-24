@@ -301,7 +301,7 @@ abstract class wh extends DualLinkNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ib.field_f = ug.a("", param0 ^ param0);
+          ib.field_f = MidiPcmStream.a("", param0 ^ param0);
           ib.field_f.a(false, -87);
           kk.a(param0 + 168, param3, param1, param2);
           lc.c((byte) 109);

@@ -72,7 +72,7 @@ final class me extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class me extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1_ref), "me.F(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1_ref), "me.F(" + param0 + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class me extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

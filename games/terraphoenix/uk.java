@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uk {
-    static wl field_b;
+    static MidiPcmStream field_b;
     static String[] field_a;
     static boolean field_c;
 

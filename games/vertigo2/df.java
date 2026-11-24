@@ -91,7 +91,7 @@ final class df extends de implements ih, wr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class df extends de implements ih, wr {
             field_j = (byte[][][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "df.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "df.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

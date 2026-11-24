@@ -89,7 +89,7 @@ final class pf {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ final class pf {
           }
           em.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
           bm.field_K = af.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
-          ei.field_M = -(var3_intLifetime1 >> 1) + af.field_b;
+          MidiPcmStream.field_M = -(var3_intLifetime1 >> 1) + af.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < fb.field_d.length; var4Lifetime2++) {
             stackIn_115_0 = em.field_d;
             if (0 > m.field_c[var4Lifetime2]) {
@@ -412,11 +412,11 @@ final class pf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var3), "pf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var3), "pf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static ContextualRuntimeException a(Throwable param0, String param1) {
+    final static ContextualRuntimeException wrapClientException(Throwable param0, String param1) {
         ContextualRuntimeException var2 = null;
         if (!(param0 instanceof ContextualRuntimeException)) {
           var2 = new ContextualRuntimeException(param0, param1);

@@ -28,7 +28,7 @@ final class s {
           param0.field_i = var5.readInt((byte) -3);
           var5.backpatchByteLength((byte) -128, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class s {
           var9.appendCrc32(var4, -30532);
           var9.backpatchByteLength((byte) -110, var9.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "s.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "s.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

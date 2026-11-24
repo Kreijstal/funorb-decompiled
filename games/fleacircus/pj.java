@@ -121,7 +121,7 @@ final class pj extends cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "pj.B(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "pj.B(" + param0 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class pj extends cb {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class pj extends cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var5), "pj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var5), "pj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class pj extends cb {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw pf.a((Throwable) ((Object) var1), "pj.E(" + param0 + ')');
+            throw pf.wrapClientException((Throwable) ((Object) var1), "pj.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

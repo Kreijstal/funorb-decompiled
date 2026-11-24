@@ -67,7 +67,7 @@ final class qj extends re {
             this.b(90, (w) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "qj.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "qj.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class qj extends re {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

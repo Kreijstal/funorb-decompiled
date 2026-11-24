@@ -20,7 +20,7 @@ final class uf extends sf {
     private int[] field_C;
     private int field_k;
     private rj field_J;
-    private li[] field_O;
+    private RawPcmStream[] field_O;
     private int[] field_eb;
     private boolean field_P;
     private int[] field_L;
@@ -880,12 +880,12 @@ final class uf extends sf {
         ib stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        li stackIn_17_0 = null;
+        RawPcmStream stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        li stackIn_20_0 = null;
+        RawPcmStream stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         Throwable decompiledCaughtException = null;
-        li var7 = null;
+        RawPcmStream var7 = null;
         Object var8 = null;
         this.d(param0);
         if (param3 > field_nb[7999] &&
@@ -911,14 +911,14 @@ final class uf extends sf {
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = li.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7 = RawPcmStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
           var7.c(this.field_J.field_A[param1], this.field_J.field_u[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_J.field_z[param1] == 0) ? 0 : -1;
-          ((li) (Object) stackIn_17_0).e(stackIn_18_1);
+          ((RawPcmStream) (Object) stackIn_17_0).e(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_J.field_z[param1] != 2) ? false : true;
-          ((li) (Object) stackIn_20_0).a(stackIn_21_1);
+          ((RawPcmStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.h(param2);
             var7.b(AudioOutput.field_m >> 7, param4 * this.field_jb * this.field_B >> 12, param5);
@@ -1038,7 +1038,7 @@ final class uf extends sf {
         this.field_A = 1;
     }
 
-    final int a(qj param0) {
+    final int onScheduledEvent(PcmStreamMixer param0) {
         if (this.g() &&
           !this.field_P) {
           return -1;
@@ -1082,7 +1082,7 @@ final class uf extends sf {
         this.field_m = new int[this.field_J.field_m];
         this.field_lb = new int[this.field_J.field_m];
         this.field_l = new boolean[this.field_J.field_m];
-        this.field_O = new li[this.field_J.field_m];
+        this.field_O = new RawPcmStream[this.field_J.field_m];
         this.d();
     }
 

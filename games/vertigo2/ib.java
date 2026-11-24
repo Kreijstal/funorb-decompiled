@@ -64,12 +64,12 @@ final class ib {
             lf.field_y = rh.field_O;
           }
           aa.field_Vb = param1;
-          fk.field_x = -1 + param1;
+          CrossfadingMidiPcmStream.field_x = -1 + param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

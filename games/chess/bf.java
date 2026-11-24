@@ -80,7 +80,7 @@ abstract class bf extends ma implements ee {
             bf.clearStaticReferences(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

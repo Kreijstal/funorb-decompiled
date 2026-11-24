@@ -35,7 +35,7 @@ final class pj extends nb implements ue, jk, ag {
           var4 = param0;
           ((rl) ((Object) var3)).a(var4, -1, false);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "pj.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "pj.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -492,7 +492,7 @@ final class pj extends nb implements ue, jk, ag {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -549,7 +549,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -590,7 +590,7 @@ final class pj extends nb implements ue, jk, ag {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -599,7 +599,7 @@ final class pj extends nb implements ue, jk, ag {
           super.a(param0, param1, param2, param3);
           this.field_I.field_D = this.h(-5210);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "pj.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "pj.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

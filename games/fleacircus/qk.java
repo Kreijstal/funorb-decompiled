@@ -119,7 +119,7 @@ final class qk {
           param0.field_p.field_m = param0;
           param0.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "qk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "qk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

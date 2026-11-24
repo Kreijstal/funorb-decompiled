@@ -10,7 +10,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         try {
           this.a(-1, "crazycrystals", 14);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "CrazyCrystals.init()");
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "CrazyCrystals.init()");
         }
     }
 
@@ -287,7 +287,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               if (uo.field_o == ke.field_b[jo.field_o]) {
                 ei.field_F = ei.field_F + 8;
                 sm.field_f = sm.field_f + 8;
-                ka.field_n = ka.field_n + 4;
+                MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n + 4;
                 je.field_j = je.field_j + 5;
                 we.field_h = we.field_h + 8;
                 fp.field_a = fp.field_a + 8;
@@ -533,7 +533,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "CrazyCrystals.P(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "CrazyCrystals.P(" + param0 + ')');
         }
     }
 
@@ -577,7 +577,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           oa.b(-98);
           f.a(100);
           AudioOutput.clearStaticReferences();
-          wg.e(64);
+          MidiPcmStream.e(64);
           am.clearStaticReferences(117);
           me.a((byte) 127);
           IntrusiveDeque.clearStaticReferences(118);
@@ -598,7 +598,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           IntrusiveNode.clearStaticReferences(-24894);
           pl.a(-124);
           ic.clearStaticReferences();
-          ka.a((byte) 120);
+          MusicPatchPcmStream.a((byte) 120);
           to.clearStaticReferences((byte) -109);
           rp.clearStaticReferences(2);
           dn.a(param0 - 210);
@@ -874,7 +874,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "CrazyCrystals.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "CrazyCrystals.A(" + param0 + ')');
         }
     }
 
@@ -1031,7 +1031,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2_ref), "CrazyCrystals.I(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2_ref), "CrazyCrystals.I(" + param0 + ')');
         }
     }
 
@@ -1059,7 +1059,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "CrazyCrystals.Q(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "CrazyCrystals.Q(" + param0 + ')');
         }
     }
 
@@ -1087,7 +1087,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "CrazyCrystals.J(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "CrazyCrystals.J(" + param0 + ')');
         }
     }
 
@@ -1154,7 +1154,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                               return;
                             }
                             IsaacRandom.field_e = new int[][]{new int[]{MouseWheelInput.field_g, vp.field_b, kp.field_j, tg.field_b}, new int[]{rk.field_d, pa.field_E, oo.field_i, ji.field_t}, new int[]{96, 97, 98, 99}};
-                            fq.field_x = new wg();
+                            fq.field_x = new MidiPcmStream();
                             fq.field_x.a(128, 9, (byte) -103);
                             gf.field_c.setRootStream(fq.field_x);
                             aa.field_b = new bn(vm.field_k, ma.field_p);
@@ -1689,7 +1689,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3_ref2), "CrazyCrystals.R(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3_ref2), "CrazyCrystals.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1700,7 +1700,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             CrazyCrystals.m(-45);
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "CrazyCrystals.O(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "CrazyCrystals.O(" + param0 + ')');
         }
     }
 
@@ -1714,7 +1714,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           AudioOutput.configureAudio(22050, true, 10);
           hb.field_h = AudioOutput.createOutput(te.field_a, (java.awt.Component) ((Object) jd.field_D), 0, 0);
           gf.field_c = AudioOutput.createOutput(te.field_a, (java.awt.Component) ((Object) jd.field_D), 1, 22050);
-          tb.field_d = new tj();
+          tb.field_d = new PcmStreamMixer();
           hb.field_h.setRootStream(tb.field_d);
           this.a(true, false, true, true, -1);
           ao.field_e = 16760896;
@@ -1722,7 +1722,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           jn.field_i = 1;
           qo.c((byte) 107);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "CrazyCrystals.H(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "CrazyCrystals.H(" + param0 + ')');
         }
     }
 
@@ -1960,7 +1960,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2_ref), "CrazyCrystals.F(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2_ref), "CrazyCrystals.F(" + param0 + ')');
         }
     }
 

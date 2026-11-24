@@ -18,8 +18,8 @@ final class wk extends ic {
           if (IntrusiveNode.field_c != null) {
             IntrusiveNode.field_c.o(77);
           }
-          kb.field_O = new fg(param2, param0, false, true, true);
-          bg.field_K.c(0, kb.field_O);
+          MidiPcmStream.field_O = new fg(param2, param0, false, true, true);
+          bg.field_K.c(0, MidiPcmStream.field_O);
           if (param1 < -27) {
             return;
           }

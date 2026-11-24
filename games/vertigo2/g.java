@@ -118,7 +118,7 @@ final class g {
               }
             }
             if (var2 != 0) {
-              db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
+              MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
             }
           } else {
             if (1 == lc.field_b) {
@@ -136,7 +136,7 @@ final class g {
                 }
               }
               if (var2 != 0) {
-                db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
+                MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
               }
             } else {
               if (2 != lc.field_b &&
@@ -144,7 +144,7 @@ final class g {
                 3 != lc.field_b &&
                 lc.field_b != 4 &&
                 lc.field_b != 18) {
-                db.a(false, 12, (byte) -128, op.field_d, true, 12);
+                MidiPcmStream.a(false, 12, (byte) -128, op.field_d, true, 12);
               } else {
                 var1 = 0;
                 var2 = 0;
@@ -160,7 +160,7 @@ final class g {
                   }
                 }
                 if (var2 != 0) {
-                  db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
+                  MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                 }
               }
             }
@@ -209,7 +209,7 @@ final class g {
                 }
               }
               if (var2 != 0) {
-                db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
+                MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
               }
               if (an.field_c) {
                 ln.field_d = null;
@@ -238,7 +238,7 @@ final class g {
               }
               return;
             }
-            db.a(false, 12, (byte) -128, op.field_d, true, 12);
+            MidiPcmStream.a(false, 12, (byte) -128, op.field_d, true, 12);
             if (an.field_c) {
               ln.field_d = null;
               an.field_c = false;
@@ -298,7 +298,7 @@ final class g {
               stackIn_120_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.h(9979)) ? 0 : 1;
               var2 = stackIn_120_0;
               if (var2 != 0) {
-                db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
+                MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
               }
               if (an.field_c) {
                 ln.field_d = null;
@@ -329,7 +329,7 @@ final class g {
             }
           }
           if (var2 != 0) {
-            db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
+            MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
             if (an.field_c) {
               ln.field_d = null;
               an.field_c = false;

@@ -18,7 +18,7 @@ final class InvincibleAnimation extends EventAnimation {
           if (25 != this.field_l) {
             return false;
           }
-          jja.a(256, -1, 31);
+          MusicPatchPcmStream.a(256, -1, 31);
           this.d(15084);
           return false;
         }

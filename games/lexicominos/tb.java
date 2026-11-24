@@ -85,12 +85,12 @@ abstract class tb {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = hl.a(true, param0) ? 1 : 0;
+          var3 = MidiPcmStream.a(true, param0) ? 1 : 0;
           if (param1 > -18) {
             stackIn_5_0 = (TriangleMesh) null;
             return stackIn_5_0;
           }
-          var4 = hl.a(true, param0) ? 1 : 0;
+          var4 = MidiPcmStream.a(true, param0) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_w = (short)param0.g(16, 26527);
           var5.field_h = hi.a(param0, (byte) -94, 16, var5.field_h);
@@ -117,10 +117,10 @@ abstract class tb {
             var5.field_x = hi.a(param0, (byte) -127, 16, var5.field_x);
             var5.field_P = hi.a(param0, (byte) -124, 16, var5.field_P);
           }
-          if (hl.a(true, param0)) {
+          if (MidiPcmStream.a(true, param0)) {
             var5.field_q = hi.a(param0, (byte) -77, 16, var5.field_q);
           }
-          if (hl.a(true, param0)) {
+          if (MidiPcmStream.a(true, param0)) {
             var5.field_J = NodeHashTableIterator.a(0, param0, 16, var5.field_J);
             var6 = 0;
             var7 = 0;
@@ -169,7 +169,7 @@ abstract class tb {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 

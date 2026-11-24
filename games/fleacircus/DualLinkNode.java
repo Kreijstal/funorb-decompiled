@@ -140,7 +140,7 @@ class DualLinkNode extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "pa.M(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "pa.M(" + param0 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ class DualLinkNode extends IntrusiveNode {
         try {
           dl.field_s = param1;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "pa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -485,7 +485,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -512,9 +512,9 @@ class DualLinkNode extends IntrusiveNode {
 
     final static void a(byte param0) {
         int var1 = 0;
-        if (th.field_D < 224) {
-          var1 = th.field_D % 32;
-          lg.a(-91, -var1 + (32 + th.field_D));
+        if (CrossfadingMidiPcmStream.field_D < 224) {
+          var1 = CrossfadingMidiPcmStream.field_D % 32;
+          lg.a(-91, -var1 + (32 + CrossfadingMidiPcmStream.field_D));
         } else {
           lg.a(-118, 256);
         }

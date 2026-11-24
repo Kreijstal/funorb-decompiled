@@ -29,7 +29,7 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var4), "ca.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var4), "ca.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class ca {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "ca.B(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "ca.B(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class ca {
           field_h = null;
           field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ca.F(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ca.F(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var3), "ca.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var3), "ca.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class ca {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 

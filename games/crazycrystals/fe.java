@@ -31,7 +31,7 @@ final class fe extends l {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class fe extends l {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -144,40 +144,40 @@ final class fe extends l {
     final static void b(int param0) {
         int var1_int = 0;
         int var2 = CrazyCrystals.field_B;
-        sc.field_i[0] = new am(kg.a(fk.field_x[0], 100, 0));
-        sc.field_i[1] = new am(kg.a(fk.field_x[1], 100, 0));
-        ga.field_B = new am(kg.a(nk.field_j, 100, 0));
-        ua.field_a = new am(kg.a(uk.field_i, 100, 0));
-        cb.field_n = new am(kg.a(aq.field_t, 100, 0));
-        tm.field_f = new am(kg.a(qf.field_w, 100, 0));
+        sc.field_i[0] = new am(RawPcmStream.a(fk.field_x[0], 100, 0));
+        sc.field_i[1] = new am(RawPcmStream.a(fk.field_x[1], 100, 0));
+        ga.field_B = new am(RawPcmStream.a(nk.field_j, 100, 0));
+        ua.field_a = new am(RawPcmStream.a(uk.field_i, 100, 0));
+        cb.field_n = new am(RawPcmStream.a(aq.field_t, 100, 0));
+        tm.field_f = new am(RawPcmStream.a(qf.field_w, 100, 0));
         for (var1_int = 0; var1_int < 4; var1_int++) {
-          il.field_h[var1_int] = new am(kg.a(fo.field_i[var1_int], 100, 0));
+          il.field_h[var1_int] = new am(RawPcmStream.a(fo.field_i[var1_int], 100, 0));
         }
         if (param0 != 42806) {
           return;
         }
         try {
-          AccountServiceResult.field_e = new am(kg.a(rn.field_p, 100, 0));
-          td.field_e = new am(kg.a(ti.field_l, 100, 0));
-          bc.field_a = new am(kg.a(mg.field_d, 100, 0));
-          dn.field_d = new am(kg.a(io.field_H, 100, 0));
-          wp.field_b = new am(kg.a(cf.field_f, 100, 0));
-          bn.field_h = new am(kg.a(lm.field_a, 100, 0));
-          pm.field_b = new am(kg.a(jc.field_a, 100, 0));
-          so.field_g = new am(kg.a(oa.field_e, 100, 0));
-          fn.field_h = new am(kg.a(gk.field_j, 100, 0));
-          FullscreenFocusCanvas.field_c = new am(kg.a(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 0));
-          cn.field_e = new am(kg.a(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
-          jj.field_c = new am(kg.a(an.field_s, 100, 0));
-          m.field_n = new am(kg.a(cl.field_m, 100, 0));
-          MouseInputHandler.field_d = new am(kg.a(ab.field_z, 100, 0));
-          rb.field_g = new am(kg.a(AccountCreationResultPanel.field_nb, 100, 0));
-          ln.field_f = new am(kg.a(tg.field_c, 100, 0));
-          oj.field_E = new am(kg.a(va.field_b, 100, 0));
-          c.field_q = new am(kg.a(ga.field_H, 100, 0));
+          AccountServiceResult.field_e = new am(RawPcmStream.a(rn.field_p, 100, 0));
+          td.field_e = new am(RawPcmStream.a(ti.field_l, 100, 0));
+          bc.field_a = new am(RawPcmStream.a(mg.field_d, 100, 0));
+          dn.field_d = new am(RawPcmStream.a(io.field_H, 100, 0));
+          wp.field_b = new am(RawPcmStream.a(cf.field_f, 100, 0));
+          bn.field_h = new am(RawPcmStream.a(lm.field_a, 100, 0));
+          pm.field_b = new am(RawPcmStream.a(jc.field_a, 100, 0));
+          so.field_g = new am(RawPcmStream.a(oa.field_e, 100, 0));
+          fn.field_h = new am(RawPcmStream.a(gk.field_j, 100, 0));
+          FullscreenFocusCanvas.field_c = new am(RawPcmStream.a(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 0));
+          cn.field_e = new am(RawPcmStream.a(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
+          jj.field_c = new am(RawPcmStream.a(an.field_s, 100, 0));
+          m.field_n = new am(RawPcmStream.a(cl.field_m, 100, 0));
+          MouseInputHandler.field_d = new am(RawPcmStream.a(ab.field_z, 100, 0));
+          rb.field_g = new am(RawPcmStream.a(AccountCreationResultPanel.field_nb, 100, 0));
+          ln.field_f = new am(RawPcmStream.a(tg.field_c, 100, 0));
+          oj.field_E = new am(RawPcmStream.a(va.field_b, 100, 0));
+          c.field_q = new am(RawPcmStream.a(ga.field_H, 100, 0));
           e.b((byte) -122);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "fe.G(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fe.G(" + param0 + ')');
         }
     }
 

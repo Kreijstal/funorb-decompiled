@@ -67,7 +67,7 @@ final class hi {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class hi {
             stackIn_37_0 = var6;
             stackIn_38_1 = !(var4 < 0);
             var7Lifetime1 = ii.a(stackIn_37_0, stackIn_38_1, 0);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + uh.field_D;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + CrossfadingMidiPcmStream.field_D;
             if (var4 >= 0) {
               if (bc.field_H.field_d != var4) {
                 stackIn_43_0 = sc.field_d;
@@ -182,7 +182,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1), "hi.B(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1), "hi.B(" + param0 + ')');
         }
     }
 

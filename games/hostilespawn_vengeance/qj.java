@@ -66,7 +66,7 @@ final class qj extends IntrusiveNode {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+            throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -93,7 +93,7 @@ final class qj extends IntrusiveNode {
         try {
           var2 = ae.a(param0, "jagex-last-login-method", 0);
           if (var2 == null) {
-            stackIn_3_0 = w.field_S;
+            stackIn_3_0 = MidiPcmStream.field_S;
             return stackIn_3_0;
           }
           var3 = pe.p(274);
@@ -103,7 +103,7 @@ final class qj extends IntrusiveNode {
           var4 = 0;
           while (true) {
             if (var4 >= var3.length) {
-              stackIn_13_0 = w.field_S;
+              stackIn_13_0 = MidiPcmStream.field_S;
               return stackIn_13_0;
             }
             var5 = var3[var4];
@@ -125,7 +125,7 @@ final class qj extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class qj extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "qj.C(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "qj.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class qj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class qj extends IntrusiveNode {
           s.field_e = (var2_intLifetime2 & 1) << 16;
           s.field_e = s.field_e + param0.readUnsignedShort(8);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -336,7 +336,7 @@ final class qj extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -367,7 +367,7 @@ final class qj extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -34,7 +34,7 @@ final class vf {
             var8.q(127);
             return true;
           }
-          wl.field_Q = null;
+          MidiPcmStream.field_Q = null;
           oe.field_a = param1;
           ra.field_m = param5;
           cg.field_H = param6;

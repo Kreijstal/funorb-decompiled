@@ -19,7 +19,7 @@ class pm extends fn {
           this.field_e = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ class pm extends fn {
             this.a(-32);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

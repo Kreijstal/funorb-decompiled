@@ -41,7 +41,7 @@ final class bd extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class bd extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2_ref), "bd.A(" + param0 + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2_ref), "bd.A(" + param0 + ',' + param1 + ')');
         }
     }
 

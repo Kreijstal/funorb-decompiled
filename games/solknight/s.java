@@ -19,7 +19,7 @@ final class s extends gf {
           }
           super.c(param0 + 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "s.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "s.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

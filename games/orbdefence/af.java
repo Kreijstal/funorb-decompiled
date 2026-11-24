@@ -35,7 +35,7 @@ final class af {
             }
             var1_int = 91 % ((param0 + 74) / 37);
           } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
+            throw dd.wrapClientException((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -82,7 +82,7 @@ final class af {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class af {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class af {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

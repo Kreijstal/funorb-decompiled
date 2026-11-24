@@ -145,7 +145,7 @@ abstract class wm {
           if (!bo.field_c) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
-            stackIn_7_4 = mi.field_n;
+            stackIn_7_4 = MusicPatchPcmStream.field_n;
           } else {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
@@ -362,7 +362,7 @@ abstract class wm {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
         }
     }
 
@@ -523,7 +523,7 @@ abstract class wm {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
         }
     }
 

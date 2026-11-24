@@ -309,7 +309,7 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "hh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var3), "hh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class hh {
           GameCanvas.field_c = new dh(param2);
           sj.field_a = new sg(ig.field_N, GameCanvas.field_c);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -554,7 +554,7 @@ final class hh {
           } else {
             stackIn_119_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(')').toString());
         }
     }
 

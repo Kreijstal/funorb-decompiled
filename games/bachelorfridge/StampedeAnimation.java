@@ -140,7 +140,7 @@ final class StampedeAnimation extends EventAnimation {
         if (var3 % this.field_D == this.field_D >> 1) {
           if (!this.field_w) {
             this.field_w = true;
-            jja.a(256, -1, 56);
+            MusicPatchPcmStream.a(256, -1, 56);
           }
           var5 = var3 / this.field_D + 1;
           this.a(var5, 41);

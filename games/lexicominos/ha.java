@@ -19,7 +19,7 @@ final class ha {
         try {
           uf.a(param0, -108, param1, false);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ha.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ha.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -283,7 +283,7 @@ final class ha {
             rk.field_c.attach(true, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class ha {
           }
           this.field_g.field_a = -var2_int + 18;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -390,7 +390,7 @@ final class ha {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

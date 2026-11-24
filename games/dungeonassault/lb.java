@@ -65,7 +65,7 @@ final class lb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "lb.B(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "lb.B(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class lb {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class lb {
           wm.a((byte) -52, gf.field_i / 2, gf.field_c / param3);
           mi.a(param0.field_N, 25570, param0.field_E + param0.field_N, param1.field_N, param1.field_N + param1.field_E);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "lb.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lb.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class lb {
         try {
           this.a(param0, -13182, param1);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

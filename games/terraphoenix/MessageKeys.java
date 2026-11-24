@@ -1826,7 +1826,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_emailvalid", false);
                 if (var2 != null) {
-                  vd.field_p = ll.a(param0 ^ 3, var2);
+                  MusicPatchPcmStream.field_p = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("create_account_success", false);
                 if (null != var2) {
@@ -2984,7 +2984,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("pleasewait_dotdotdot", false);
                 if (null != var2) {
-                  vd.field_o = ll.a(0, var2);
+                  MusicPatchPcmStream.field_o = ll.a(0, var2);
                 }
                 var2 = bc.a("serviceunavailable", false);
                 if (var2 != null) {

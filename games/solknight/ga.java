@@ -73,7 +73,7 @@ final class ga extends WidgetContainer implements ge, ka {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class ga extends WidgetContainer implements ge, ka {
         this.field_K = new qb("", (dg) null, 12);
         af var1 = new af(jh.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, ua.field_G.field_F, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cd.field_a, var1, (dg) null);
-        this.field_J = new pj(mf.field_x, (dg) null);
+        this.field_J = new pj(MidiPcmStream.field_x, (dg) null);
         this.field_I = new pj(nf.field_X, (dg) null);
         this.field_K.field_z = ql.field_u;
         this.field_K.a(new AccountNameAvailabilityValidator(this.field_K), false);
@@ -120,7 +120,7 @@ final class ga extends WidgetContainer implements ge, ka {
           var4 = param1;
           ((vg) ((Object) var3)).a(74, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ga.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ga.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class ga extends WidgetContainer implements ge, ka {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class ga extends WidgetContainer implements ge, ka {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class ga extends WidgetContainer implements ge, ka {
           super.a(param0, param1, param2, param3);
           this.field_J.field_B = this.e((byte) -119);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ga.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ga.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class ga extends WidgetContainer implements ge, ka {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class ga extends WidgetContainer implements ge, ka {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

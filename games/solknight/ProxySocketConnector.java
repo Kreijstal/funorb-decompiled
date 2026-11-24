@@ -151,7 +151,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "qk.E(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "qk.E(" + param0 + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -430,7 +430,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

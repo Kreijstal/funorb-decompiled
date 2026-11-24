@@ -10,5 +10,5 @@ abstract class hg extends IntrusiveNode {
         throw new Error();
     }
 
-    abstract int a(PcmStreamMixer param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 }

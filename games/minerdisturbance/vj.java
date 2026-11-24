@@ -12,7 +12,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "vj.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vj.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           param0.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
           this.a((byte) -45);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "vj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           this.c(-1494965825);
           param2.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "vj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_n);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "vj.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vj.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

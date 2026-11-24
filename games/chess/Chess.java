@@ -137,7 +137,7 @@ public final class Chess extends gb {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param17).append(',').append(param18).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param17).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -951,7 +951,7 @@ public final class Chess extends gb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1275,7 +1275,7 @@ public final class Chess extends gb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1283,9 +1283,9 @@ public final class Chess extends gb {
         this.a(14, 12, 0, 11, 14, false, -4, 10);
         aa.field_f = ug.field_b;
         nh.field_m = false;
-        vl var4 = new vl();
+        MidiPcmStream var4 = new MidiPcmStream();
         var4.b(128, 16383, 9);
-        vl var3 = new vl();
+        MidiPcmStream var3 = new MidiPcmStream();
         var3.b(128, 16383, 9);
         d.a(var3, 22050, var4, oc.field_l, (java.awt.Component) ((Object) DirectByteStorage.field_h), true, (byte) -71);
         kj.field_h = 255;
@@ -1413,7 +1413,7 @@ public final class Chess extends gb {
           if (pk.field_j &&
             !r.field_bc &&
             !fi.field_a) {
-            mi.a((byte) -78, var3 != 0);
+            MusicPatchPcmStream.a((byte) -78, var3 != 0);
             if (hl.field_h) {
               pd.field_Lb.a((byte) -37, var4 != 0);
             }
@@ -1597,7 +1597,7 @@ public final class Chess extends gb {
         IntrusiveNode.a((byte) -91);
         tn.a(-2);
         AudioOutput.clearStaticReferences();
-        vl.clearStaticReferences(-1);
+        MidiPcmStream.clearStaticReferences(-1);
         mc.a((byte) 47);
         pi.b(-107);
         qb.a((byte) -113);
@@ -1615,7 +1615,7 @@ public final class Chess extends gb {
         kl.a((byte) -66);
         qd.a(27265);
         al.clearStaticReferences();
-        mi.c((byte) 124);
+        MusicPatchPcmStream.c((byte) 124);
         sh.c(-119);
         of.clearStaticReferences(false);
         le.a(-485);
@@ -2055,7 +2055,7 @@ public final class Chess extends gb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

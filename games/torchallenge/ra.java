@@ -849,7 +849,7 @@ final class ra {
           stackIn_8_0 = (var4 > 0) ? 1 : -1;
           var6 = stackIn_8_0;
           var4 = var4 * var6;
-          var8 = fj.field_m[var4];
+          var8 = CrossfadingMidiPcmStream.field_m[var4];
           if (var4 >= 511 &&
             var4 < 1536) {
             stackIn_13_0 = 1;
@@ -857,13 +857,13 @@ final class ra {
             stackIn_13_0 = -1;
           }
           var6Lifetime1 = stackIn_13_0;
-          this.field_e[var13][0][0] = var6Lifetime1 * (fj.a(1870096848, var8, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
+          this.field_e[var13][0][0] = var6Lifetime1 * (CrossfadingMidiPcmStream.a(1870096848, var8, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
           var5 = (-512 + (-16 + (-var3 + var2))) % 2048;
           this.field_e[var13][0][1] = this.field_e[var13][0][0];
           stackIn_16_0 = (var5 > 0) ? 1 : -1;
           var7 = stackIn_16_0;
           var5 = var7 * var5;
-          var8Lifetime1 = fj.field_m[var5];
+          var8Lifetime1 = CrossfadingMidiPcmStream.field_m[var5];
           if (var5 >= 511 &&
             1536 > var5) {
             stackIn_20_0 = 1;
@@ -872,7 +872,7 @@ final class ra {
           }
           var7Lifetime1 = stackIn_20_0;
           var5Lifetime1 = (496 + (var2 - var3)) % 2048;
-          this.field_e[var13][1][0] = var7Lifetime1 * (fj.a(1870096848, var8Lifetime1, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
+          this.field_e[var13][1][0] = var7Lifetime1 * (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime1, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
           stackIn_23_0 = (var5Lifetime1 > 0) ? 1 : -1;
           var7Lifetime2 = stackIn_23_0;
           var5Lifetime1 = var7Lifetime2 * var5Lifetime1;
@@ -883,14 +883,14 @@ final class ra {
             stackIn_27_0 = -1;
           }
           var7Lifetime3 = stackIn_27_0;
-          var8Lifetime2 = fj.field_m[var5Lifetime1];
-          this.field_e[var13][1][1] = (fj.a(1870096848, var8Lifetime2, ng.field_H[var9] << 16) >> 16) * var7Lifetime3 + ng.field_K[var9];
+          var8Lifetime2 = CrossfadingMidiPcmStream.field_m[var5Lifetime1];
+          this.field_e[var13][1][1] = (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime2, ng.field_H[var9] << 16) >> 16) * var7Lifetime3 + ng.field_K[var9];
           if (var13 == 0) {
             var10 = (var2 - var3 - 16) % 2048;
             stackIn_32_0 = (var10 <= 0) ? -1 : 1;
             var12 = stackIn_32_0;
             var10 = var12 * var10;
-            var8Lifetime3 = fj.field_m[var10];
+            var8Lifetime3 = CrossfadingMidiPcmStream.field_m[var10];
             if (var10 >= 511 &&
               var10 < 1536) {
               stackIn_36_0 = 1;
@@ -898,7 +898,7 @@ final class ra {
               stackIn_36_0 = -1;
             }
             var12Lifetime2 = stackIn_36_0;
-            this.field_h[var13][0] = (fj.a(1870096848, var8Lifetime3, ub.field_k[var9] << 16) >> 16) * var12Lifetime2 + ub.field_a[var9];
+            this.field_h[var13][0] = (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime3, ub.field_k[var9] << 16) >> 16) * var12Lifetime2 + ub.field_a[var9];
           } else {
             this.field_h[var13][0] = this.field_h[-1 + var13][31];
           }
@@ -909,7 +909,7 @@ final class ra {
             stackIn_41_0 = (var11 > 0) ? 1 : -1;
             var12Lifetime1 = stackIn_41_0;
             var11 = var12Lifetime1 * var11;
-            var8Lifetime4 = fj.field_m[var11];
+            var8Lifetime4 = CrossfadingMidiPcmStream.field_m[var11];
             if (var11 >= 511 &&
               var11 < 1536) {
               stackIn_45_0 = 1;
@@ -917,7 +917,7 @@ final class ra {
               stackIn_45_0 = -1;
             }
             var12Lifetime1Lifetime1 = stackIn_45_0;
-            this.field_h[var13][31] = (fj.a(1870096848, var8Lifetime4, ub.field_k[var9] << 16) >> 16) * var12Lifetime1Lifetime1 + ub.field_a[var9];
+            this.field_h[var13][31] = (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime4, ub.field_k[var9] << 16) >> 16) * var12Lifetime1Lifetime1 + ub.field_a[var9];
           }
           h.a(0, this.field_h[var13][31], this.field_h[var13], this.field_h[var13][0], 32);
           var13++;

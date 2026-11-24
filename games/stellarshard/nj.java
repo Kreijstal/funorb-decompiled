@@ -20,7 +20,7 @@ final class nj {
     static double[] field_e;
     private static long field_j;
     static double[] field_h;
-    static hl field_o;
+    static PcmStreamMixer field_o;
     static double[] field_l;
     static String field_s;
 

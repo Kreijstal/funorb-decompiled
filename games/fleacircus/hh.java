@@ -5,7 +5,7 @@ import java.util.*;
 
 final class hh {
     static Calendar field_c;
-    static th field_b;
+    static CrossfadingMidiPcmStream field_b;
     static bi[] field_a;
 
     public static void a(boolean param0) {

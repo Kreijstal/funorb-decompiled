@@ -119,7 +119,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "f.C(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "f.C(" + param0 + ',' + param1 + ')');
         }
     }
 

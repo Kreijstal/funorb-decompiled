@@ -82,7 +82,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var4_int = 68 % ((-44 - param2) / 62);
           this.a(480, 73, 640, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ph.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ph.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -394,7 +394,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 

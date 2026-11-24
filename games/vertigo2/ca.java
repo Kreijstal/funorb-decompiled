@@ -42,7 +42,7 @@ final class ca {
           var12 = var12 + param4;
           gk.field_c.a(72, var9_int, var12, param0 - var12 / 2, -(var9_int / 2) + param5);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ca.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ca.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

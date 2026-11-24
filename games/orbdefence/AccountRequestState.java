@@ -39,7 +39,7 @@ final class AccountRequestState {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class AccountRequestState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "va.toString()");
+          throw dd.wrapClientException((Throwable) ((Object) var1), "va.toString()");
         }
     }
 
@@ -63,7 +63,7 @@ final class AccountRequestState {
           field_a = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "va.C(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "va.C(" + param0 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class AccountRequestState {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dd.a((Throwable) ((Object) var2), "va.D(" + param0 + ',' + param1 + ')');
+            throw dd.wrapClientException((Throwable) ((Object) var2), "va.D(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -357,7 +357,7 @@ final class AccountRequestState {
           }
           var2Lifetime9 = jk.a(1, "frztext");
           if (var2Lifetime9 != null) {
-            t.field_k = bk.a(var2Lifetime9, -12465);
+            CrossfadingMidiPcmStream.field_k = bk.a(var2Lifetime9, -12465);
           }
           var2Lifetime10 = jk.a(1, "aoetext");
           if (var2Lifetime10 != null) {
@@ -569,7 +569,7 @@ final class AccountRequestState {
           }
           var2Lifetime62 = jk.a(1, "fastblastname");
           if (var2Lifetime62 != null) {
-            jg.field_l = bk.a(var2Lifetime62, -12465);
+            MusicPatchPcmStream.field_l = bk.a(var2Lifetime62, -12465);
           }
           var2Lifetime63 = jk.a(1, "electroshockername");
           if (var2Lifetime63 != null) {
@@ -757,7 +757,7 @@ final class AccountRequestState {
           }
           var2Lifetime109 = jk.a(1, "bb4");
           if (null != var2Lifetime109) {
-            lj.field_B = bk.a(var2Lifetime109, -12465);
+            MidiPcmStream.field_B = bk.a(var2Lifetime109, -12465);
           }
           var2Lifetime110 = jk.a(1, "es5");
           if (null != var2Lifetime110) {
@@ -1074,7 +1074,7 @@ final class AccountRequestState {
           } else {
             stackIn_665_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_664_0), ((StringBuilder) (Object) stackIn_664_1).append(stackIn_665_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_664_0), ((StringBuilder) (Object) stackIn_664_1).append(stackIn_665_2).append(',').append(param1).append(')').toString());
         }
         if (GameAppletShell.field_e) {
           OrbDefence.field_D = (var3 == 0);

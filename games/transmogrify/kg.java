@@ -60,7 +60,7 @@ abstract class kg extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_n = ej.a(-1, 16, var7);
+                                field_n = MusicPatchPcmStream.a(-1, 16, var7);
                               }
                             } else {
                               field_m = -1;
@@ -70,7 +70,7 @@ abstract class kg extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_m = ej.a(-1, 16, var6);
+                          field_m = MusicPatchPcmStream.a(-1, 16, var6);
                         }
                       } else {
                         field_w = -1;
@@ -80,7 +80,7 @@ abstract class kg extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_w = ej.a(-1, 16, var5);
+                    field_w = MusicPatchPcmStream.a(-1, 16, var5);
                   }
                 } else {
                   field_H = field_u;
@@ -94,7 +94,7 @@ abstract class kg extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_F = ej.a(-1, 16, var3);
+            field_F = MusicPatchPcmStream.a(-1, 16, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

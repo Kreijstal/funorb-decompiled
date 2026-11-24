@@ -63,7 +63,7 @@ final class cd extends pk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class cd extends pk {
           return;
         }
         if (!this.a((byte) -9)) {
-          this.field_v = mi.field_r;
+          this.field_v = MusicPatchPcmStream.field_r;
           if (this.field_y) {
             if (!this.c(82)) {
               if (param0 != 34) {
@@ -237,7 +237,7 @@ final class cd extends pk {
           re.field_u.field_r = v.field_i.field_t;
           fd.a(28773);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "cd.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cd.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class cd extends pk {
           var6.writeBytes(param1, (byte) -45, 0, param1.length);
           var6.backpatchByteLength(var6.position - var7, -1);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class cd extends pk {
           this.field_r = param3;
           this.field_s = param4;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "cd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

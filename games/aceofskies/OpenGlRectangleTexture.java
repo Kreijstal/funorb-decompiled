@@ -24,7 +24,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareText
           this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), kk.a(this.field_c, (byte) -117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareText
           jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, WeightedObjectCache.a(this.field_h, -29824), 5126, param4, param5 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareText
           jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_j, this.field_i, 0, 32993, this.field_g.field_Bc, param3, param4 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareText
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareText
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ik.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ik.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

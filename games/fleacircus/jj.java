@@ -41,7 +41,7 @@ abstract class jj extends db {
           }
           wa.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "jj.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "jj.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

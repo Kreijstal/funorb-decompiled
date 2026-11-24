@@ -63,13 +63,13 @@ final class re implements uj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public final void a(boolean param0) {
         tb.field_a = 1;
-        gd.field_x = 0;
+        MusicPatchPcmStream.field_x = 0;
         if (param0) {
           String var3 = (String) null;
           re.a(-10, false, true, (String) null, false, (String) null);
@@ -106,7 +106,7 @@ final class re implements uj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class re implements uj {
             }
             if (qd.field_Q == ka.field_d &&
               IntrusiveDeque.a(0, 8)) {
-              gd.field_s = kj.field_a.readLong(81);
+              MusicPatchPcmStream.field_s = kj.field_a.readLong(81);
               kj.field_a.position = 0;
               cm.a((byte) 6, param4, param0, tb.field_d, param2);
               qd.field_Q = nn.field_m;
@@ -332,7 +332,7 @@ final class re implements uj {
             } else {
               stackIn_104_2 = "{...}";
             }
-            throw lj.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+            throw lj.wrapClientException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

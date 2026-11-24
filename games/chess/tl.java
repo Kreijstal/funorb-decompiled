@@ -59,7 +59,7 @@ final class tl extends ci {
           }
           wb.a(param1.field_x, param1.field_v, param1.field_u);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "tl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class tl extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "tl.H(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "tl.H(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class tl extends ci {
             field_Gb = (PlatformTask) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "tl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class tl extends ci {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

@@ -92,7 +92,7 @@ final class hc {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -131,10 +131,10 @@ final class hc {
               var3 = var3 + param1;
             }
             ic.a((byte) -126, var3);
-            var6 = ed.a(-1, var3, "%3a", ":");
-            var7 = ed.a(-1, var6, "%40", "@");
-            var8 = ed.a(-1, var7, "%26", "&");
-            var9 = ed.a(-1, var8, "%23", "#");
+            var6 = DelayedPcmStream.a(-1, var3, "%3a", ":");
+            var7 = DelayedPcmStream.a(-1, var6, "%40", "@");
+            var8 = DelayedPcmStream.a(-1, var7, "%26", "&");
+            var9 = DelayedPcmStream.a(-1, var8, "%23", "#");
             if (null == IterableNodeHashTable.field_b) {
               return;
             }
@@ -199,7 +199,7 @@ final class hc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class hc {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 

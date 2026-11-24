@@ -128,10 +128,10 @@ final class ff {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = di.a((byte) 111, var10[var17]);
+                      var12[var17] = MidiPcmStream.a((byte) 111, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param0.requestDeclaredMethod(var8, di.a((byte) 122, var20), 75, var12);
+                    var18.field_q[var5] = param0.requestDeclaredMethod(var8, MidiPcmStream.a((byte) 122, var20), 75, var12);
                     var18.field_v[var5] = var21;
                   }
                 } else {
@@ -145,7 +145,7 @@ final class ff {
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_p[var5] = var9;
-                  var18.field_r[var5] = param0.requestDeclaredField(di.a((byte) 120, var15), var16, 21268);
+                  var18.field_r[var5] = param0.requestDeclaredField(MidiPcmStream.a((byte) 120, var15), var16, 21268);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ final class ff {
             } else {
               stackIn_46_2 = "{...}";
             }
-            throw lj.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw lj.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

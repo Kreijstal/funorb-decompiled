@@ -42,14 +42,14 @@ final class sk extends ph {
     }
 
     final static String a(int param0, long param1) {
-        mi.field_u.setTime(new Date(param1));
-        int var3 = mi.field_u.get(7);
-        int var4 = mi.field_u.get(param0);
-        int var5 = mi.field_u.get(2);
-        int var6 = mi.field_u.get(1);
-        int var7 = mi.field_u.get(11);
-        int var8 = mi.field_u.get(12);
-        int var9 = mi.field_u.get(13);
+        MusicPatchPcmStream.field_u.setTime(new Date(param1));
+        int var3 = MusicPatchPcmStream.field_u.get(7);
+        int var4 = MusicPatchPcmStream.field_u.get(param0);
+        int var5 = MusicPatchPcmStream.field_u.get(2);
+        int var6 = MusicPatchPcmStream.field_u.get(1);
+        int var7 = MusicPatchPcmStream.field_u.get(11);
+        int var8 = MusicPatchPcmStream.field_u.get(12);
+        int var9 = MusicPatchPcmStream.field_u.get(13);
         return sn.field_f[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ij.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

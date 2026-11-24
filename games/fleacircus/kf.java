@@ -167,7 +167,7 @@ final class kf extends IntrusiveNode {
             } else {
               stackIn_41_2 = "{...}";
             }
-            throw pf.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+            throw pf.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

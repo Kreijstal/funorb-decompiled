@@ -11,7 +11,7 @@ final class ig extends WidgetContainer implements ka {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_m;
         int var6 = this.field_j + param0;
-        ua.field_G.a(se.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, ua.field_G.field_F);
+        ua.field_G.a(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, ua.field_G.field_F);
         super.a(param0, param1, param2, 0);
     }
 
@@ -29,7 +29,7 @@ final class ig extends WidgetContainer implements ka {
     public ig() {
         super(0, 0, 476, 225, (j) null);
         this.field_E = new pj(DelegatingCanvas.field_g, (dg) null);
-        this.field_F = new pj(mf.field_F, (dg) null);
+        this.field_F = new pj(MidiPcmStream.field_F, (dg) null);
         this.field_G = new pj(pf.field_c, (dg) null);
         gh var1 = new gh();
         this.field_E.field_w = (j) ((Object) var1);
@@ -84,7 +84,7 @@ final class ig extends WidgetContainer implements ka {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ig extends WidgetContainer implements ka {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class ig extends WidgetContainer implements ka {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

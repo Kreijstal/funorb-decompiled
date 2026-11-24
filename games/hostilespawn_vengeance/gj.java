@@ -37,7 +37,7 @@ final class gj {
           }
           wi.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class gj {
         if (param0 != -17) {
           field_d = (bd) null;
         }
-        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, kd.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, ee.field_a};
+        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, CrossfadingMidiPcmStream.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, ee.field_a};
     }
 
     final static u[] a(boolean param0, CipherPacketBuffer param1) {
@@ -130,7 +130,7 @@ final class gj {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

@@ -15,7 +15,7 @@ final class gr extends sp implements ij {
           }
           int var6_int = -23 % ((-63 - param2) / 51);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "gr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "gr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class gr extends sp implements ij {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wn.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class gr extends sp implements ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2_ref), "gr.A(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2_ref), "gr.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class gr extends sp implements ij {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class gr extends sp implements ij {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

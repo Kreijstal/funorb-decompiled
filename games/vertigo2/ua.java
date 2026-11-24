@@ -74,7 +74,7 @@ final class ua {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class ua {
           }
           no.field_d = 0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ua.C(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ua.C(" + param0 + ')');
         }
     }
 

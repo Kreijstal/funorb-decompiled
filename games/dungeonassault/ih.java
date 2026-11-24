@@ -251,7 +251,7 @@ final class ih extends qe {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -486,8 +486,8 @@ final class ih extends qe {
     }
 
     final static void a(byte param0) {
-        tc.field_u = ra.field_c.readString(param0 ^ -92);
-        CharSequence var2 = (CharSequence) ((Object) tc.field_u);
+        CrossfadingMidiPcmStream.field_u = ra.field_c.readString(param0 ^ -92);
+        CharSequence var2 = (CharSequence) ((Object) CrossfadingMidiPcmStream.field_u);
         nn.field_k = jm.a(param0, var2);
     }
 

@@ -52,7 +52,7 @@ final class ib implements rd {
             this.field_c.a(param3.field_u, var13 + (param1 + param3.field_t), param3.field_o + param0 + this.field_f, param3.field_j - this.field_d - var13, param3.field_v - (this.field_d << 1), this.field_e, this.field_l, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class ib implements rd {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
           param2--;
         }
@@ -118,7 +118,7 @@ final class ib implements rd {
           this.field_f = param2;
           this.field_l = param4;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class cg extends IntrusiveNode {
     static int field_H;
     static String field_r;
     int field_u;
-    rc field_w;
+    RawPcmStream field_w;
     static String[][] field_K;
     int field_J;
     ng field_z;

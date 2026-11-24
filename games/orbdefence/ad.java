@@ -115,7 +115,7 @@ final class ad {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "ad.C(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "ad.C(" + param0 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ad {
           lh.a(param1, "", false);
           bm.a(12979, param1);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ad.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ad.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

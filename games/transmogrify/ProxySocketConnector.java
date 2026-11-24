@@ -52,7 +52,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class ProxySocketConnector extends SocketConnector {
         try {
           this.field_f = java.net.ProxySelector.getDefault();
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "nl.<init>()");
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "nl.<init>()");
         }
     }
 
@@ -145,7 +145,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1_ref), "nl.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1_ref), "nl.C(" + param0 + ')');
         }
     }
 
@@ -520,7 +520,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
           decompiledCaughtException = decompiledCaughtParameter3;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "nl.D(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "nl.D(" + param0 + ')');
         }
     }
 
@@ -536,7 +536,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "nl.E(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "nl.E(" + param0 + ')');
         }
     }
 

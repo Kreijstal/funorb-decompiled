@@ -13,7 +13,7 @@ final class ub {
         field_a = null;
     }
 
-    final static void a(PlatformTaskDispatcher param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, int param2, int param3, java.awt.Component param4, MidiPcmStream param5, boolean param6, int param7) {
         try {
           PcmPlayerService.configureAudio(param7, param1, 10);
           if (param6) {
@@ -21,14 +21,14 @@ final class ub {
           }
           kj.field_P = PcmPlayerService.createOutput(param0, param4, 0, param2);
           ql.field_r = PcmPlayerService.createOutput(param0, param4, 1, param3);
-          ti.field_f = new e();
+          ti.field_f = new PcmStreamMixer();
           ak.field_a = 1000 * param3 / param7;
           ql.field_r.setRootStream(ti.field_f);
           ua.field_I = param5;
           ua.field_I.d(1349013231, la.field_k);
           kj.field_P.setRootStream(ua.field_I);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ub.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ub.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -70,8 +70,8 @@ final class ub {
           var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
           return var6.toString();
         }
-        mf var12 = (mf) null;
-        ub.a((PlatformTaskDispatcher) null, true, 99, 116, (java.awt.Component) null, (mf) null, false, 43);
+        MidiPcmStream var12 = (MidiPcmStream) null;
+        ub.a((PlatformTaskDispatcher) null, true, 99, 116, (java.awt.Component) null, (MidiPcmStream) null, false, 43);
         var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         return var6.toString();

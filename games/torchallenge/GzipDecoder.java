@@ -331,7 +331,7 @@ final class GzipDecoder {
         vb.field_r = param6;
         mg.field_e = param3;
         vk.field_j = param5;
-        pg.field_m = param2;
+        MusicPatchPcmStream.field_m = param2;
         mc.field_o = param1;
         MouseInputHandler.field_d = param7;
         BufferedSocket.field_d = param4;

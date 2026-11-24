@@ -52,7 +52,7 @@ final class fc {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ed.field_o = SecondaryNodeDequeIterator.a("frame_top", 112, "commonui", param3);
+          DelayedPcmStream.field_o = SecondaryNodeDequeIterator.a("frame_top", 112, "commonui", param3);
           ti.field_e = SecondaryNodeDequeIterator.a("frame_bottom", 122, "commonui", param3);
           jk.field_g = vk.a("commonui", 63, "jagex_logo_grey", param3);
           t.field_r = SecondaryNodeDequeIterator.a("button", 94, "commonui", param3);
@@ -103,7 +103,7 @@ final class fc {
           wf.a(-80);
           t.field_r = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "fc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "fc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class fc {
         try {
           vj.a(param0.payload, param4, param2, param1, param0.position, (byte) 99, param3);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "fc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "fc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

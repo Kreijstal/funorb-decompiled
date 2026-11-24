@@ -100,7 +100,7 @@ final class si extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -614,7 +614,7 @@ final class si extends IntrusiveNode {
           } else {
             stackIn_208_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
         }
     }
 

@@ -86,7 +86,7 @@ final class fb implements rd {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -114,9 +114,9 @@ final class fb implements rd {
           !(oc.field_a.length >= param2)) {
           oc.field_a = new int[2 * param2];
         }
-        if (null == hl.field_N ||
-          !(param2 <= hl.field_N.length)) {
-          hl.field_N = new int[param2 * 2];
+        if (null == MidiPcmStream.field_N ||
+          !(param2 <= MidiPcmStream.field_N.length)) {
+          MidiPcmStream.field_N = new int[param2 * 2];
         }
         if (null == oj.field_j ||
           !(oj.field_j.length >= param2)) {
@@ -155,7 +155,7 @@ final class fb implements rd {
           this.field_k = param1;
           this.field_q = param5;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

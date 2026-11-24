@@ -57,7 +57,7 @@ final class kl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class kl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "kl.D(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "kl.D(" + param0 + ')');
         }
     }
 

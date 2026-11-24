@@ -201,7 +201,7 @@ final class bb {
           param2.field_h = var5.readInt((byte) -109);
           var5.backpatchByteLength(-var4 + var5.position, param0 ^ 31702);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "bb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

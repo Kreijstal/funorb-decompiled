@@ -106,7 +106,7 @@ final class dj {
           he.field_y = p.a(13863, "commonui", param2, "frame_bottom");
           DualLinkDeque.field_c = fk.a(param2, "jagex_logo_grey", 91, "commonui");
           FullscreenFocusCanvas.field_b = p.a(13863, "commonui", param2, "button");
-          wd.field_C = t.a("commonui", param2, "validation", -69);
+          wd.field_C = CrossfadingMidiPcmStream.a("commonui", param2, "validation", -69);
           pc.field_bb = (kc) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
           lm.field_f = (kc) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
           if (param1 <= 91) {
@@ -156,7 +156,7 @@ final class dj {
           oc.g((byte) -105);
           FullscreenFocusCanvas.field_b = new hj[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class dj {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ final class dj {
         try {
           this.a(0, (byte) -126, param0.length, param0);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "dj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class dj {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -488,7 +488,7 @@ final class dj {
           this.field_a = 0L;
           this.field_m = new byte[param2];
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

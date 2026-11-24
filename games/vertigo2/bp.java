@@ -26,7 +26,7 @@ final class bp extends TextureOperator {
               uh.field_sc = false;
               var3_int = 1;
             }
-            tq.a(bh.field_M, var3_int != 0, db.h(2), (byte) -128, od.a((byte) -18));
+            tq.a(bh.field_M, var3_int != 0, MidiPcmStream.h(2), (byte) -128, od.a((byte) -18));
           } else {
             if (!nl.a((byte) 107)) {
               bi.c();
@@ -57,7 +57,7 @@ final class bp extends TextureOperator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class bp extends TextureOperator {
             var12 = JaggrabClient.field_b[var10] * var11 >> 12;
             var13 = eh.field_b[var10] * var11 >> 12;
             var14 = (var12 >> 12) + var9 & rm.field_z;
-            var15 = param1 + (var13 >> 12) & fk.field_x;
+            var15 = param1 + (var13 >> 12) & CrossfadingMidiPcmStream.field_x;
             var32 = this.c(0, 3, var15);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];
@@ -140,7 +140,7 @@ final class bp extends TextureOperator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class bp extends TextureOperator {
           var9 = var8 * JaggrabClient.field_b[var7] >> 12;
           var10 = var8 * eh.field_b[var7] >> 12;
           var11 = var6 + (var9 >> 12) & rm.field_z;
-          var12 = (var10 >> 12) + param0 & fk.field_x;
+          var12 = (var10 >> 12) + param0 & CrossfadingMidiPcmStream.field_x;
           var27 = this.a(0, -1, var12);
           var15[var6] = var27[var11];
         }

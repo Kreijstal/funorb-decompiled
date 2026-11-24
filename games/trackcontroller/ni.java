@@ -3,7 +3,7 @@
  */
 final class ni extends di {
     private lb field_o;
-    static k field_n;
+    static PcmStreamMixer field_n;
     static boolean[] keyDown;
 
     final ud a(int param0, String param1) {

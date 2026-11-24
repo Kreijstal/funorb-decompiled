@@ -26,7 +26,7 @@ final class ck extends ud {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ck.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ck.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class ck extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "ck.T(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "ck.T(" + param0 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class ck extends ud {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

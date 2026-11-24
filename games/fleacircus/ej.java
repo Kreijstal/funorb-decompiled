@@ -99,7 +99,7 @@ final class ej {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "ej.A(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "ej.A(" + param0 + ')');
         }
     }
 

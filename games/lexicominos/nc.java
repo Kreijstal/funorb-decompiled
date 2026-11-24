@@ -66,7 +66,7 @@ final class nc extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -81,8 +81,8 @@ final class nc extends IntrusiveNode {
         try {
           this.field_q = param3;
           this.field_s = param5;
-          fieldTemp$0 = hl.field_B;
-          hl.field_B = hl.field_B + 1;
+          fieldTemp$0 = MidiPcmStream.field_B;
+          MidiPcmStream.field_B = MidiPcmStream.field_B + 1;
           this.field_j = fieldTemp$0 & 65535;
           this.field_i = param2;
           this.field_o = param4;
@@ -90,7 +90,7 @@ final class nc extends IntrusiveNode {
           this.field_l = param1;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "nc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "nc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -477,7 +477,7 @@ abstract class ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "qb.C(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "qb.C(" + param0 + ')');
         }
     }
 
@@ -486,7 +486,7 @@ abstract class ByteStorage {
           field_b = null;
           int var1_int = 107 / ((param0 + 36) / 38);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "qb.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "qb.A(" + param0 + ')');
         }
     }
 
@@ -3529,7 +3529,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_2591_2 = "{...}";
                   }
-                  throw dn.a((Throwable) ((Object) stackIn_2590_0), ((StringBuilder) (Object) stackIn_2590_1).append(stackIn_2591_2).append(',').append(param1).append(')').toString());
+                  throw dn.wrapClientException((Throwable) ((Object) stackIn_2590_0), ((StringBuilder) (Object) stackIn_2590_1).append(stackIn_2591_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameAppletShell.field_e;

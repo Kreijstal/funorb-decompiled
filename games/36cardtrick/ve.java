@@ -6,7 +6,7 @@ abstract class ve {
     static String field_b;
     static int[] field_d;
     static boolean field_e;
-    static li field_c;
+    static RawPcmStream field_c;
     private static String field_z;
 
     public static void a(int param0) {

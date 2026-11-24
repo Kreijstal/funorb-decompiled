@@ -68,7 +68,7 @@ final class MenuScreen {
           var8.a(true);
           CipherPacketBuffer.brassSliderSprites[3].draw(var9 + param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class MenuScreen {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -405,7 +405,7 @@ final class MenuScreen {
           RenderSprite[] var14 = ko.brassFrameSprites;
           hb.a(var11, 0, var10, 1, 1, var12, var13, var9, (byte) 104, var14);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -710,7 +710,7 @@ final class MenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -802,7 +802,7 @@ final class MenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -816,7 +816,7 @@ final class MenuScreen {
             field_g = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.S(" + obfuscationGuard + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontMetricsArchive != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.S(" + obfuscationGuard + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontMetricsArchive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -838,7 +838,7 @@ final class MenuScreen {
           RenderSprite[] var15 = ko.brassFrameSprites;
           hb.a(var12, 0, var11, 1, 1, var13, var14, var10, (byte) 98, var15);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -943,7 +943,7 @@ final class MenuScreen {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1482,7 +1482,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "nk.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "nk.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1493,7 +1493,7 @@ final class MenuScreen {
           this.a(82, FlightSession.rendererManager.a((byte) 75), -(var5 >> 1) + 320, var5, param0 + 26, 60, 1442840524);
           kn.titleFont.drawCenteredText(111, -12046068, -1, 67 + param0, 320, param2);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1514,7 +1514,7 @@ final class MenuScreen {
           var11.a(true);
           int var7 = -128 % ((param2 + 32) / 50);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

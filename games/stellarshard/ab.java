@@ -15,7 +15,7 @@ final class ab {
         return (he) null;
     }
 
-    final static void a(pf param0, boolean param1, int param2, hl param3) {
+    final static void a(pf param0, boolean param1, int param2, PcmStreamMixer param3) {
         try {
           tc.field_p = param2 * ea.f((byte) -106) / 1000;
           hj.a(param0, 23987);

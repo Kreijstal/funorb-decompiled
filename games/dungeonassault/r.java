@@ -29,8 +29,8 @@ final class r {
             return false;
           }
           if (param0 == 2) {
-            var4 = tc.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
-            var5 = mf.field_d[param3] - (-wa.field_m[param3] - tc.field_w[param3]);
+            var4 = CrossfadingMidiPcmStream.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
+            var5 = mf.field_d[param3] - (-wa.field_m[param3] - CrossfadingMidiPcmStream.field_w[param3]);
             if (var5 > var4) {
               return true;
             }
@@ -40,8 +40,8 @@ final class r {
             return !(param2 >= param3);
           }
           r.a((byte) -57, 96);
-          var4Lifetime3 = tc.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
-          var5Lifetime3 = mf.field_d[param3] - (-wa.field_m[param3] - tc.field_w[param3]);
+          var4Lifetime3 = CrossfadingMidiPcmStream.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
+          var5Lifetime3 = mf.field_d[param3] - (-wa.field_m[param3] - CrossfadingMidiPcmStream.field_w[param3]);
           if (var5Lifetime3 > var4Lifetime3) {
             return true;
           }
@@ -63,8 +63,8 @@ final class r {
           return false;
         }
         if (param0 == 2) {
-          var4Lifetime1 = tc.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
-          var5Lifetime1 = mf.field_d[param3] - (-wa.field_m[param3] - tc.field_w[param3]);
+          var4Lifetime1 = CrossfadingMidiPcmStream.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
+          var5Lifetime1 = mf.field_d[param3] - (-wa.field_m[param3] - CrossfadingMidiPcmStream.field_w[param3]);
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -74,8 +74,8 @@ final class r {
           return !(param2 >= param3);
         }
         r.a((byte) -57, 96);
-        var4Lifetime2 = tc.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
-        var5Lifetime2 = mf.field_d[param3] - (-wa.field_m[param3] - tc.field_w[param3]);
+        var4Lifetime2 = CrossfadingMidiPcmStream.field_w[param2] + mf.field_d[param2] + wa.field_m[param2];
+        var5Lifetime2 = mf.field_d[param3] - (-wa.field_m[param3] - CrossfadingMidiPcmStream.field_w[param3]);
         if (var5Lifetime2 > var4Lifetime2) {
           return true;
         }

@@ -110,7 +110,7 @@ final class wc {
                 }
                 else {
                   pc.a(1);
-                  ej.field_k = false;
+                  MusicPatchPcmStream.field_k = false;
                   stackIn_31_0 = var7;
                   return stackIn_31_0;
                 }
@@ -161,7 +161,7 @@ final class wc {
               } else {
                 aa.field_d.a(ha.b(95), 0);
               }
-              ej.field_k = false;
+              MusicPatchPcmStream.field_k = false;
               if (var7_ref_String != null) {
                 v.a(0, var7_ref_String, ha.b(121));
               }
@@ -196,8 +196,8 @@ final class wc {
               GameKeyHandler.a(0)) {
               pc.a(1);
               if (ca.field_e == 7 &&
-                !ej.field_k) {
-                ej.field_k = true;
+                !MusicPatchPcmStream.field_k) {
+                MusicPatchPcmStream.field_k = true;
                 stackIn_79_0 = -1;
                 return stackIn_79_0;
               }
@@ -205,25 +205,25 @@ final class wc {
                 ca.field_e = 3;
               }
               Transmogrify.field_B = WordLanguage.field_l.readString(12248);
-              ej.field_k = false;
+              MusicPatchPcmStream.field_k = false;
               stackIn_84_0 = ca.field_e;
               return stackIn_84_0;
             }
             if (null == nk.field_b) {
-              if (ej.field_k) {
+              if (MusicPatchPcmStream.field_k) {
                 if (mc.b(true) <= 30000L) {
                   Transmogrify.field_B = bd.field_s;
                 } else {
                   Transmogrify.field_B = ng.field_h;
                 }
-                ej.field_k = false;
+                MusicPatchPcmStream.field_k = false;
                 stackIn_92_0 = 3;
                 return stackIn_92_0;
               }
               var7Lifetime1 = lf.field_c;
               lf.field_c = kf.field_p;
               kf.field_p = var7Lifetime1;
-              ej.field_k = true;
+              MusicPatchPcmStream.field_k = true;
             }
             stackIn_94_0 = -1;
             return stackIn_94_0;
@@ -243,7 +243,7 @@ final class wc {
             } else {
               stackIn_101_2 = "{...}";
             }
-            throw ch.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+            throw ch.wrapClientException((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -299,7 +299,7 @@ final class wc {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw ch.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw ch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -445,7 +445,7 @@ final class wc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "wc.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "wc.C(" + param0 + ')');
         }
     }
 

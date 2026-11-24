@@ -24,7 +24,7 @@ abstract class mi extends DualLinkNode {
           var4 = -1L;
           wg.a((byte) 111, var3, param1, var2, var4);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "mi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "mi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

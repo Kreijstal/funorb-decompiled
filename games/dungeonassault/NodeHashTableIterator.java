@@ -74,7 +74,7 @@ final class NodeHashTableIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "ho.C(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "ho.C(" + param0 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class NodeHashTableIterator implements Iterator {
           this.table = param0;
           this.reset((byte) 67);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

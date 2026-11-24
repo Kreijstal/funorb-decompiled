@@ -87,7 +87,7 @@ final class ve extends ci {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (vl.field_A == ci.field_ub) {
+          if (MidiPcmStream.field_A == ci.field_ub) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -106,7 +106,7 @@ final class ve extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "ve.B(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "ve.B(" + param0 + ')');
         }
     }
 

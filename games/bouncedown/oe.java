@@ -12,7 +12,7 @@ final class oe {
     private int field_f;
     private int[] field_e;
 
-    final boolean d() {
+    final boolean hasMidiData() {
         return this.field_i.payload != null;
     }
 

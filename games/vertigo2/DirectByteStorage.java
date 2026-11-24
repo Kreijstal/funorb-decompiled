@@ -74,7 +74,7 @@ final class DirectByteStorage extends ByteStorage {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw wn.a((Throwable) ((Object) var1_ref), "vb.E(" + param0 + ')');
+            throw wn.wrapClientException((Throwable) ((Object) var1_ref), "vb.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -101,7 +101,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "vb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "vb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -48,10 +48,10 @@ final class AccountCreationResultPanel extends na implements vd {
 
     final static void n(int param0) {
         int var1_int = 0;
-        kg var4 = null;
-        kg var5 = null;
-        kg var6 = null;
-        kg var7 = null;
+        RawPcmStream var4 = null;
+        RawPcmStream var5 = null;
+        RawPcmStream var6 = null;
+        RawPcmStream var7 = null;
         int var3 = CrazyCrystals.field_B;
         try {
           uh.field_n = false;
@@ -61,16 +61,16 @@ final class AccountCreationResultPanel extends na implements vd {
           for (var1_int = 0; var1_int < 3; var1_int++) {
             q.field_a[var1_int] = new vh();
           }
-          var4 = kg.a(wm.field_a, 100, 0);
+          var4 = RawPcmStream.a(wm.field_a, 100, 0);
           var4.f(-1);
           ck.field_db = new am(var4);
-          var5 = kg.a(fb.field_c, 100, 0);
+          var5 = RawPcmStream.a(fb.field_c, 100, 0);
           var5.f(-1);
           vk.field_N = new am(var5);
-          var6 = kg.a(pe.field_h, 100, 0);
+          var6 = RawPcmStream.a(pe.field_h, 100, 0);
           var6.f(-1);
           fp.field_c = new am(var6);
-          var7 = kg.a(nj.field_c, 100, 0);
+          var7 = RawPcmStream.a(nj.field_c, 100, 0);
           var7.f(-1);
           aa.field_a = new am(var7);
           nh.field_F = je.field_j;
@@ -82,7 +82,7 @@ final class AccountCreationResultPanel extends na implements vd {
           ld.field_y = 0;
           ue.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "sa.T(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sa.T(" + param0 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class AccountCreationResultPanel extends na implements vd {
         try {
           this.field_pb = param1;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class AccountCreationResultPanel extends na implements vd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class AccountCreationResultPanel extends na implements vd {
           this.i((byte) -121);
           int var6_int = 62 / ((param0 - 83) / 36);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "sa.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sa.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

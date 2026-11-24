@@ -25,7 +25,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "ti.G(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "ti.G(" + param0 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, rq.field_t, param0, AccountRequestState.field_b, ja.field_e, ip.field_a, pn.field_N);
+          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, MusicPatchPcmStream.field_t, param0, AccountRequestState.field_b, ja.field_e, ip.field_a, pn.field_N);
           kb.field_d = gk.a(param1, "lobby", "chatfilter", true);
           ba.field_f[1] = uo.field_j;
           ba.field_f[2] = vg.field_a;
@@ -46,7 +46,7 @@ final class ti {
             field_b = (ve) null;
           }
           ba.field_f[0] = lo.field_g;
-          rq.a(IntrusiveNode.field_e, param2 - 2, param3);
+          MusicPatchPcmStream.a(IntrusiveNode.field_e, param2 - 2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class ti {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "ti.D(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "ti.D(" + param0 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class ti {
             field_b = (ve) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ti.F(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ti.F(" + param0 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class ti {
         try {
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ti.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ti.B(" + param0 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "ti.C(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "ti.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ final class ti {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 

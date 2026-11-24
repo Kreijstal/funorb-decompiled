@@ -45,7 +45,7 @@ final class t implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class t implements Runnable {
           }
           hm.field_F = -sq.field_e + 0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "t.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "t.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class t implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class t implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -472,8 +472,8 @@ final class t implements Runnable {
           var11.field_O = 1;
           j.field_q = new UiPanel(0L, var8);
           j.field_q.field_Bb = hq.a(gk.a(param3, "lobby", "heading", true), 202);
-          rq.field_t = new UiPanel(0L, (UiPanel) null);
-          rq.field_t.field_Bb = ml.a((byte) -13, 8421504, false, 4210752, 120, param4);
+          MusicPatchPcmStream.field_t = new UiPanel(0L, (UiPanel) null);
+          MusicPatchPcmStream.field_t.field_Bb = ml.a((byte) -13, 8421504, false, 4210752, 120, param4);
           RasterBuffer.field_a = new UiPanel(0L, (UiPanel) null);
           RasterBuffer.field_a.field_Bb = vl.a(114, 3, 0, 1, 6316128, 6316128);
           vf.field_B = new UiPanel(0L, (UiPanel) null);
@@ -488,9 +488,9 @@ final class t implements Runnable {
           eh.field_a.field_W = tn.a("closebutton_mouseover", param3, -90, "lobby");
           gn.field_f = new UiPanel(0L, var8);
           gn.field_f.field_Bb = ml.a((byte) -13, 3815994, true, 2039583, 40, true);
-          db.field_t = new UiPanel(0L, var10);
-          db.field_t.field_R = 2;
-          db.field_t.field_Bb = ml.a((byte) -13, 3815994, true, 2039583, 30, false);
+          MidiPcmStream.field_t = new UiPanel(0L, var10);
+          MidiPcmStream.field_t.field_R = 2;
+          MidiPcmStream.field_t.field_Bb = ml.a((byte) -13, 3815994, true, 2039583, 30, false);
           kl.field_Ib = new UiPanel(0L, var10);
           kl.field_Ib.field_R = 2;
           kl.field_Ib.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, false);
@@ -724,7 +724,7 @@ final class t implements Runnable {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -767,7 +767,7 @@ final class t implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -786,7 +786,7 @@ final class t implements Runnable {
           }
           this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class ol {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "ol.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "ol.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -120,7 +120,7 @@ final class gh {
         this.field_c = null;
     }
 
-    final boolean c() {
+    final boolean hasMidiData() {
         return this.field_h.field_n != null;
     }
 

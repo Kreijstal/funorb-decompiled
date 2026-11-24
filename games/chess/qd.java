@@ -80,7 +80,7 @@ final class qd extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class qd extends IntrusiveNode {
           ArchiveProvider.field_d = new vn(jh.field_e, tk.field_a, param1, SecondaryNodeHashTable.field_g, ag.field_e);
           jh.field_e.b(ArchiveProvider.field_d, (byte) -27);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

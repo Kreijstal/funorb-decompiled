@@ -16,7 +16,7 @@ final class dl {
         try {
           nj.field_e.a(false, param1, !param0 ? true : false, 1000000, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class dl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class dl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class dl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "dl.B(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "dl.B(" + param0 + ')');
         }
     }
 
@@ -188,16 +188,16 @@ final class dl {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "dl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "dl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(int param0) {
         if (param0 < 52) {
           field_a = (String) null;
-          return gd.field_B;
+          return MusicPatchPcmStream.field_B;
         }
-        return gd.field_B;
+        return MusicPatchPcmStream.field_B;
     }
 
     public static void clearStaticReferences(byte param0) {

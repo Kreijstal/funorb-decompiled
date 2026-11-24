@@ -14,7 +14,7 @@ final class je {
     static int field_i;
     private java.math.BigInteger field_e;
     static int field_b;
-    static mb field_c;
+    static PcmStreamMixer field_c;
     static String field_a;
 
     final static o a(int param0, cf[] param1) {
@@ -39,7 +39,7 @@ final class je {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class je {
         field_d = null;
         field_l = null;
         if (!param0) {
-          field_c = (mb) null;
+          field_c = (PcmStreamMixer) null;
         }
         field_c = null;
         field_a = null;
@@ -196,7 +196,7 @@ final class je {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class je {
         try {
           jh.b();
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class je {
             this.field_m = this.field_h.a(true, 255, (byte) 0, 255, (byte) 91);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

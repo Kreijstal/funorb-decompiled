@@ -135,7 +135,7 @@ final class ql extends ud {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param2).append(')').toString());
         }
     }
 

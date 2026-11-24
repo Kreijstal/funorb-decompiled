@@ -27,7 +27,7 @@ final class pe extends IntrusiveNode {
             pe.d(-95);
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class pe extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "pe.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "pe.A(" + param0 + ')');
         }
     }
 

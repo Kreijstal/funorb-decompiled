@@ -37,7 +37,7 @@ final class gb {
           if (param0 != -28993) {
             gb.clearStaticReferences(16);
           }
-          var2 = new qj(param1, GameApplet.field_e, ImageProducerRasterBuffer.field_t, pg.field_r, lg.field_e, td.field_m, h.field_a);
+          var2 = new qj(param1, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, lg.field_e, td.field_m, h.field_a);
           p.a(0);
           stackIn_6_0 = var2;
           return stackIn_6_0;

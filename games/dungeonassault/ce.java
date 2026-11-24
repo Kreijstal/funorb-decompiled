@@ -130,7 +130,7 @@ final class ce extends kl {
           this.field_f.addFirst(this.field_r, false);
           this.field_f.addFirst(this.field_n, false);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

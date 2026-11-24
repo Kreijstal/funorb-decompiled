@@ -49,7 +49,7 @@ final class hr extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "hr.J(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "hr.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class hr extends TextureOperator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

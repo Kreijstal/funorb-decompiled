@@ -103,7 +103,7 @@ final class gf {
                     if (var20 != 14) {
                       if (0 == var20) {
                         this.field_j[0].a((int)this.field_m + this.field_u, 20, 2097152, -113, 1, this.field_q + (int)this.field_i);
-                        this.field_j[1].a((int)this.field_m + hi.a(this.field_y, param0 ^ 16506, ug.field_m), 10, 8192, 112, 1, (int)this.field_i + hi.a(this.field_J, param0 - 16506, ug.field_m));
+                        this.field_j[1].a((int)this.field_m + hi.a(this.field_y, param0 ^ 16506, MidiPcmStream.field_m), 10, 8192, 112, 1, (int)this.field_i + hi.a(this.field_J, param0 - 16506, MidiPcmStream.field_m));
                       } else {
                         if (var20 != 5 &&
                           var20 != 10 &&

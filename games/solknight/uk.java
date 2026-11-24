@@ -45,7 +45,7 @@ final class uk extends a {
             var6 = (String) null;
             this.a((String) null, false);
           }
-          if (lh.a(var5, (byte) -112)) {
+          if (MusicPatchPcmStream.a(var5, (byte) -112)) {
             stackIn_15_0 = uh.field_P;
             return stackIn_15_0;
           }
@@ -80,7 +80,7 @@ final class uk extends a {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class uk extends a {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class uk extends a {
           this.field_l = param2;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class uk extends a {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

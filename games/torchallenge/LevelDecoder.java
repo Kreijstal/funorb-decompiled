@@ -223,7 +223,7 @@ final class LevelDecoder {
               BufferedSocket.field_p.field_f = ((LevelEntity) (var16)).field_f;
             }
             ol.field_g = ba.field_i;
-            pg.d(0);
+            MusicPatchPcmStream.d(0);
             qk.field_lb = 0;
             wj.field_a = 0;
             cb.field_c = new int[DualLinkNode.field_m][4];

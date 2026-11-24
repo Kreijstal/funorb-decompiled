@@ -19,9 +19,9 @@ final class rh {
         }
     }
 
-    final static e a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 0) {
-          return (e) null;
+          return (PcmStreamMixer) null;
         }
         return ti.field_f;
     }

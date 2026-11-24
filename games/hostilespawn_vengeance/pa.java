@@ -339,7 +339,7 @@ final class pa extends ql {
           } else {
             stackIn_141_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class pa extends ql {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ final class pa extends ql {
           this.field_h[var10] = new we(ih.field_y[var10 + 1]);
           var10++;
         }
-        kd.a(10, param0 ^ 1);
+        CrossfadingMidiPcmStream.a(10, param0 ^ 1);
         nh.field_E.a(-1, 8360, -1);
         this.field_j = new v(re.field_B, 0, 0, 200, false);
         this.field_j.field_l = 0;
@@ -595,7 +595,7 @@ final class pa extends ql {
               break regionExit1;
             }
             if (of.field_d != dn.field_i) {
-              kd.a(0, 1);
+              CrossfadingMidiPcmStream.a(0, 1);
               nh.field_E.a((byte) 46, ih.field_y[0]);
               this.field_k.field_d = -this.field_k.field_h + var3.field_g * 24 - 60;
               this.field_k.field_l = 24 * var3.field_e - 100;
@@ -615,7 +615,7 @@ final class pa extends ql {
           }
         }
         if (this.field_e.field_l == 0 &&
-          kh.field_Q[7]) {
+          VolumeRampingMidiPcmStream.field_Q[7]) {
           this.field_e.field_d = -180 + var3.field_g * 24;
           this.field_e.field_l = -60 + var3.field_e * 24;
         }
@@ -723,7 +723,7 @@ final class pa extends ql {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ final class pa extends ql {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

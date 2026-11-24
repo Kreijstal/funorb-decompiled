@@ -34,7 +34,7 @@ final class fl extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -62,16 +62,16 @@ final class fl extends IntrusiveNode {
             ch.a((byte) -16, var5, param1);
             var5 = (fn) (cb.field_a.nextBackward(4));
           }
-          var4 = (al) (hg.field_n.beginBackward(-24172));
+          var4 = (al) (MusicPatchPcmStream.field_n.beginBackward(-24172));
           while (var4 != null) {
             hl.a(param1, -124, var4);
-            var4 = (al) (hg.field_n.nextBackward(4));
+            var4 = (al) (MusicPatchPcmStream.field_n.nextBackward(4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "fl.B(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "fl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class fl extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

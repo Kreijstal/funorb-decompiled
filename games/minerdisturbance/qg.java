@@ -13,7 +13,7 @@ final class qg implements ad {
     static String field_e;
     static String field_g;
     private we field_c;
-    static rc field_b;
+    static RawPcmStream field_b;
     private int field_a;
     private int field_m;
     private int field_l;
@@ -41,7 +41,7 @@ final class qg implements ad {
           this.field_m = param7;
           this.field_l = param5;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class qg implements ad {
             this.field_c.a(param2.field_s, param2.field_u + param1 + var13, this.field_h + param3 + param2.field_t, param2.field_v - this.field_i - var13, param2.field_q - (this.field_i << 1), this.field_j, this.field_k, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "qg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class qg implements ad {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class qg implements ad {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw lj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw lj.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

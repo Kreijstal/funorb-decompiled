@@ -36,7 +36,7 @@ final class ub extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "ticketing_xunread");
                 if (var2 != null) {
-                  um.field_n = ea.a(0, var2);
+                  MusicPatchPcmStream.field_n = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "ticketing_gotowebsite");
                 if (null != var2) {
@@ -3071,7 +3071,7 @@ final class ub extends IntrusiveNode {
                   } else {
                     stackIn_2598_2 = "{...}";
                   }
-                  throw pn.a((Throwable) ((Object) stackIn_2597_0), ((StringBuilder) (Object) stackIn_2597_1).append(stackIn_2598_2).append(')').toString());
+                  throw pn.wrapClientException((Throwable) ((Object) stackIn_2597_0), ((StringBuilder) (Object) stackIn_2597_1).append(stackIn_2598_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameAppletShell.field_a;
@@ -3099,7 +3099,7 @@ final class ub extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -3111,7 +3111,7 @@ final class ub extends IntrusiveNode {
             ub.a(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ')');
         }
     }
 

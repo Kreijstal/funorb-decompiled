@@ -26,7 +26,7 @@ final class RawPcmStream extends PcmStream {
         this.integerState0197 = integerArgument1;
         this.integerState0205 = integerArgument2;
         this.integerState0200 = 0;
-        this.performAction0457();
+        this.recomputeGains();
     }
 
     final static RawPcmStream computeRawPcmStream0450(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
@@ -188,7 +188,7 @@ final class RawPcmStream extends PcmStream {
         integerArgument3 = integerArgument3 + integerArgument2;
         if (this.integerState0203 < 0) {
           if (this.integerState0199 <= 0) {
-            this.performAction0454();
+            this.cancelRamp();
             this.unlink((byte) 121);
             return;
           }
@@ -196,7 +196,7 @@ final class RawPcmStream extends PcmStream {
         }
         if (this.integerState0203 >= integerLocal9) {
           if (this.integerState0199 >= 0) {
-            this.performAction0454();
+            this.cancelRamp();
             this.unlink((byte) 113);
             return;
           }
@@ -206,7 +206,7 @@ final class RawPcmStream extends PcmStream {
           if (!this.booleanState0033) {
             if (this.integerState0199 >= 0) {
               while (true) {
-                integerLocal11 = this.computeInteger0446(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+                integerLocal11 = this.mixForwardSegment(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
                 if (this.integerState0203 < integerLocal8) {
                   return;
                 }
@@ -214,7 +214,7 @@ final class RawPcmStream extends PcmStream {
               }
             }
             while (true) {
-              integerLocal11 = this.computeInteger0435(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+              integerLocal11 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
               if (this.integerState0203 >= integerLocal7) {
                 return;
               }
@@ -222,7 +222,7 @@ final class RawPcmStream extends PcmStream {
             }
           }
           if (this.integerState0199 < 0) {
-            integerLocal11 = this.computeInteger0435(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+            integerLocal11 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
             if (this.integerState0203 >= integerLocal7) {
               return;
             }
@@ -230,13 +230,13 @@ final class RawPcmStream extends PcmStream {
             this.integerState0199 = -this.integerState0199;
           }
           while (true) {
-            integerLocal11 = this.computeInteger0446(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+            integerLocal11 = this.mixForwardSegment(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
             if (this.integerState0203 < integerLocal8) {
               return;
             }
             this.integerState0203 = integerLocal8 + integerLocal8 - 1 - this.integerState0203;
             this.integerState0199 = -this.integerState0199;
-            integerLocal11 = this.computeInteger0435(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+            integerLocal11 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
             if (this.integerState0203 >= integerLocal7) {
               return;
             }
@@ -249,7 +249,7 @@ final class RawPcmStream extends PcmStream {
           if (!this.booleanState0033) {
             if (this.integerState0199 < 0) {
               while (true) {
-                integerLocal11 = this.computeInteger0435(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+                integerLocal11 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
                 if (this.integerState0203 >= integerLocal7) {
                   return;
                 }
@@ -265,7 +265,7 @@ final class RawPcmStream extends PcmStream {
               this.integerState0201 = 0;
             } else {
               while (true) {
-                integerLocal11 = this.computeInteger0446(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+                integerLocal11 = this.mixForwardSegment(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
                 if (this.integerState0203 < integerLocal8) {
                   return;
                 }
@@ -284,7 +284,7 @@ final class RawPcmStream extends PcmStream {
           }
           else {
             if (this.integerState0199 < 0) {
-              integerLocal11 = this.computeInteger0435(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+              integerLocal11 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
               if (this.integerState0203 >= integerLocal7) {
                 return;
               }
@@ -296,7 +296,7 @@ final class RawPcmStream extends PcmStream {
             }
             if (frameRemainderLocal14) {
               do {
-                integerLocal11 = this.computeInteger0446(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+                integerLocal11 = this.mixForwardSegment(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
                 if (this.integerState0203 < integerLocal8) {
                   return;
                 }
@@ -307,7 +307,7 @@ final class RawPcmStream extends PcmStream {
                 if (integerLocal2 == 0) {
                   break;
                 }
-                integerLocal11 = this.computeInteger0435(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+                integerLocal11 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
                 if (this.integerState0203 >= integerLocal7) {
                   return;
                 }
@@ -320,20 +320,20 @@ final class RawPcmStream extends PcmStream {
           }
         }
         if (this.integerState0199 >= 0) {
-          discarded$4 = this.computeInteger0446(integerArrayArgument1, integerLocal11, integerLocal9, integerArgument3, 0);
+          discarded$4 = this.mixForwardSegment(integerArrayArgument1, integerLocal11, integerLocal9, integerArgument3, 0);
           if (this.integerState0203 >= integerLocal9) {
             this.integerState0203 = integerLocal9;
-            this.performAction0454();
+            this.cancelRamp();
             this.unlink((byte) 123);
           }
           return;
         }
-        discarded$3 = this.computeInteger0435(integerArrayArgument1, integerLocal11, 0, integerArgument3, 0);
+        discarded$3 = this.mixBackwardSegment(integerArrayArgument1, integerLocal11, 0, integerArgument3, 0);
         if (this.integerState0203 >= 0) {
           return;
         }
         this.integerState0203 = -1;
-        this.performAction0454();
+        this.cancelRamp();
         this.unlink((byte) 124);
         return;
     }
@@ -346,7 +346,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final int computeInteger0435(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final int mixBackwardSegment(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1;
         do {
           if (this.integerState0200 <= 0) {
@@ -497,7 +497,7 @@ final class RawPcmStream extends PcmStream {
           this.integerState0206 == integerLocal2 &&
           this.integerState0204 == integerLocal3) {
           if (this.integerState0197 != -2147483648) {
-            this.performAction0457();
+            this.recomputeGains();
             return false;
           }
           this.integerState0197 = 0;
@@ -806,7 +806,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    private final void performAction0457() {
+    private final void recomputeGains() {
         this.integerState0195 = this.integerState0197;
         this.integerState0206 = RawPcmStream.computeInteger0452(this.integerState0197, this.integerState0205);
         this.integerState0204 = RawPcmStream.computeInteger0448(this.integerState0197, this.integerState0205);
@@ -1139,7 +1139,7 @@ final class RawPcmStream extends PcmStream {
         return integerLocal1 > 255 ? 255 : integerLocal1;
     }
 
-    private final int computeInteger0446(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final int mixForwardSegment(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1;
         do {
           if (this.integerState0200 <= 0) {
@@ -1394,13 +1394,13 @@ final class RawPcmStream extends PcmStream {
         this.integerState0203 = integerArgument1;
     }
 
-    private final void performAction0454() {
+    private final void cancelRamp() {
         if (this.integerState0200 != 0) {
           if (this.integerState0197 == -2147483648) {
             this.integerState0197 = 0;
           }
           this.integerState0200 = 0;
-          this.performAction0457();
+          this.recomputeGains();
           return;
         }
     }
@@ -1484,7 +1484,7 @@ final class RawPcmStream extends PcmStream {
               integerArgument1 = this.integerState0200;
             }
             this.integerState0200 = 0;
-            this.performAction0457();
+            this.recomputeGains();
           }
         }
         rawSoundLocal4 = (RawSound) (this.abstractAudioSampleState0001);
@@ -1497,7 +1497,7 @@ final class RawPcmStream extends PcmStream {
         }
         if (this.integerState0203 < 0) {
           if (this.integerState0199 <= 0) {
-            this.performAction0454();
+            this.cancelRamp();
             this.unlink((byte) 123);
             return;
           }
@@ -1505,7 +1505,7 @@ final class RawPcmStream extends PcmStream {
         }
         if (this.integerState0203 >= integerLocal7) {
           if (this.integerState0199 >= 0) {
-            this.performAction0454();
+            this.cancelRamp();
             this.unlink((byte) 119);
             return;
           }
@@ -1618,7 +1618,7 @@ final class RawPcmStream extends PcmStream {
         if (this.integerState0199 >= 0) {
           if (this.integerState0203 >= integerLocal7) {
             this.integerState0203 = integerLocal7;
-            this.performAction0454();
+            this.cancelRamp();
             this.unlink((byte) 122);
           }
           return;
@@ -1627,7 +1627,7 @@ final class RawPcmStream extends PcmStream {
           return;
         }
         this.integerState0203 = -1;
-        this.performAction0454();
+        this.cancelRamp();
         this.unlink((byte) 105);
     }
 
@@ -1721,6 +1721,6 @@ final class RawPcmStream extends PcmStream {
         this.integerState0197 = integerArgument3;
         this.integerState0205 = integerArgument4;
         this.integerState0203 = 0;
-        this.performAction0457();
+        this.recomputeGains();
     }
 }

@@ -236,7 +236,7 @@ final class el {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2_ref), "el.A(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2_ref), "el.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class el {
           }
           ca.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "el.E(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "el.E(" + param0 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class el {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class el {
           }
           this.a(param0, (byte) -114);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

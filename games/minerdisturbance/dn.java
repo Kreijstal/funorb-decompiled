@@ -10,7 +10,7 @@ final class dn extends IntrusiveNode {
     private int field_r;
     private int field_q;
     private int field_v;
-    static rc[] field_t;
+    static RawPcmStream[] field_t;
     private int field_p;
 
     final boolean a(byte param0) {
@@ -45,7 +45,7 @@ final class dn extends IntrusiveNode {
           }
           return true;
         }
-        field_t = (rc[]) null;
+        field_t = (RawPcmStream[]) null;
         var2Lifetime1 = -li.field_c + (this.field_p >> 4);
         var3Lifetime1 = (this.field_o >> 4) - ClientException.field_d;
         if (0 > var2Lifetime1) {
@@ -97,7 +97,7 @@ final class dn extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class dn extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class dn extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -226,6 +226,6 @@ final class dn extends IntrusiveNode {
         field_s = "FROM ONLY";
         field_w = 0;
         field_n = "Log In/Register";
-        field_t = new rc[25];
+        field_t = new RawPcmStream[25];
     }
 }

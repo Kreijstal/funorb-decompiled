@@ -34,7 +34,7 @@ final class pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "pg.B(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "pg.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class pg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 

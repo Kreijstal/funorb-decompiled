@@ -16,7 +16,7 @@ final class DirectByteStorage extends ByteStorage {
           }
           param1.addFocusListener(i.field_J);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "f.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "f.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(param0);
           this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "f.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "f.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

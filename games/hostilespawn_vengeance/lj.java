@@ -84,7 +84,7 @@ abstract class lj extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "lj.O(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "lj.O(" + param0 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ abstract class lj extends DualLinkNode {
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(')').toString());
         }
     }
 

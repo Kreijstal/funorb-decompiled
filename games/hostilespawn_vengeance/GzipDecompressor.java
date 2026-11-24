@@ -55,7 +55,7 @@ final class GzipDecompressor {
             }
             this.field_g.reset();
           } catch (RuntimeException runtimeException) {
-            throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "fh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "fh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

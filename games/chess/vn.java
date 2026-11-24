@@ -19,30 +19,30 @@ class vn extends bj implements mj {
     private boolean field_tb;
 
     final static void l(int param0) {
-        mi.field_t = new String[re.field_j];
-        mi.field_t[5] = sa.field_f;
-        mi.field_t[11] = ii.field_N;
-        mi.field_t[17] = fl.field_s;
-        mi.field_t[6] = kn.field_E;
-        mi.field_t[20] = mn.field_j;
-        mi.field_t[9] = sj.field_f;
-        mi.field_t[4] = ri.field_h;
-        mi.field_t[19] = kn.field_K;
-        mi.field_t[15] = va.field_e;
+        MusicPatchPcmStream.field_t = new String[re.field_j];
+        MusicPatchPcmStream.field_t[5] = sa.field_f;
+        MusicPatchPcmStream.field_t[11] = ii.field_N;
+        MusicPatchPcmStream.field_t[17] = fl.field_s;
+        MusicPatchPcmStream.field_t[6] = kn.field_E;
+        MusicPatchPcmStream.field_t[20] = mn.field_j;
+        MusicPatchPcmStream.field_t[9] = sj.field_f;
+        MusicPatchPcmStream.field_t[4] = ri.field_h;
+        MusicPatchPcmStream.field_t[19] = kn.field_K;
+        MusicPatchPcmStream.field_t[15] = va.field_e;
         if (param0 == 6) {
-          mi.field_t[21] = le.field_b;
-          mi.field_t[7] = SecondaryNodeDequeIterator.field_e;
-          mi.field_t[18] = kn.field_J;
-          mi.field_t[16] = fb.field_G;
-          mi.field_t[13] = oa.field_c;
+          MusicPatchPcmStream.field_t[21] = le.field_b;
+          MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
+          MusicPatchPcmStream.field_t[18] = kn.field_J;
+          MusicPatchPcmStream.field_t[16] = fb.field_G;
+          MusicPatchPcmStream.field_t[13] = oa.field_c;
           return;
         }
         field_Eb = (String) null;
-        mi.field_t[21] = le.field_b;
-        mi.field_t[7] = SecondaryNodeDequeIterator.field_e;
-        mi.field_t[18] = kn.field_J;
-        mi.field_t[16] = fb.field_G;
-        mi.field_t[13] = oa.field_c;
+        MusicPatchPcmStream.field_t[21] = le.field_b;
+        MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
+        MusicPatchPcmStream.field_t[18] = kn.field_J;
+        MusicPatchPcmStream.field_t[16] = fb.field_G;
+        MusicPatchPcmStream.field_t[13] = oa.field_c;
     }
 
     vn(fm param0, lh param1, String param2, boolean param3, boolean param4) {
@@ -57,7 +57,7 @@ class vn extends bj implements mj {
           this.field_wb.field_W = true;
           this.b(this.field_wb, 95);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ class vn extends bj implements mj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ class vn extends bj implements mj {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ class vn extends bj implements mj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

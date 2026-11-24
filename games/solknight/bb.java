@@ -42,7 +42,7 @@ final class bb extends WidgetContainer implements pi, ka {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class bb extends WidgetContainer implements pi, ka {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class bb extends WidgetContainer implements pi, ka {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ final class bb extends WidgetContainer implements pi, ka {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -409,7 +409,7 @@ final class bb extends WidgetContainer implements pi, ka {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -435,7 +435,7 @@ final class bb extends WidgetContainer implements pi, ka {
           var3.a(param0 ^ -110, false, var4);
           this.field_L.l(param0 ^ -125);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "bb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "bb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -453,7 +453,7 @@ final class bb extends WidgetContainer implements pi, ka {
             this.field_E = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "bb.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "bb.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

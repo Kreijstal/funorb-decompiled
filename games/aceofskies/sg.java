@@ -16,7 +16,7 @@ final class sg {
           var3.writeByte(param1 - 1336879868, param2.field_l);
           var3.writeByte(-1336879960, param2.field_f);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "sg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "sg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

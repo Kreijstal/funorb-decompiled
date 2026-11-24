@@ -39,7 +39,7 @@ final class em extends hi {
           cb.field_a.a(param0 ^ -101);
           li.field_a.e(0, 0, 640, 480, ef.field_k);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class em extends hi {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class em extends hi {
           ih.a(tl.field_e, 0, q.field_b, mf.field_d);
           kg.a(0, (byte) -83, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "em.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class em extends hi {
           this.field_n = param1;
           this.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class em extends hi {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class em extends hi {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

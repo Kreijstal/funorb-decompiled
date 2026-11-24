@@ -8,7 +8,7 @@ final class bf {
     private int[] field_a;
     static qe[] field_f;
     private int[] field_l;
-    static ge field_h;
+    static ReverbPcmStream field_h;
     private int field_g;
     static int field_b;
     static cn field_d;
@@ -117,7 +117,7 @@ final class bf {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "bf.H(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "bf.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -258,12 +258,12 @@ final class bf {
           }
           var4 = var15.readUnsignedByte(true);
           if (var4 != 0) {
-            ah.field_c[0] = tc.field_u;
+            ah.field_c[0] = CrossfadingMidiPcmStream.field_u;
             var5 = var3.field_i;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               ah.field_c[var6_int] = var13.readString(-108);
             }
-            hg.a(param0 + 12087, var5, var4);
+            MusicPatchPcmStream.a(param0 + 12087, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               dj.a(var15, (byte) 123);
               if (var6_intLifetime1 != 0) {
@@ -284,9 +284,9 @@ final class bf {
               var19[0][var10 * 4] = i.field_t[var11];
               var19[0][1 + var10 * 4] = mf.field_d[var11];
               var19[0][2 + var10 * 4] = wa.field_m[var11];
-              var19[0][4 * var10 + 3] = tc.field_w[var11];
+              var19[0][4 * var10 + 3] = CrossfadingMidiPcmStream.field_w[var11];
               if (eh.a(true, ah.field_c[var11]) &&
-                wa.field_m[var11] + mf.field_d[var11] + tc.field_w[var11] == 0) {
+                wa.field_m[var11] + mf.field_d[var11] + CrossfadingMidiPcmStream.field_w[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -302,9 +302,9 @@ final class bf {
               var19[1][var14 * 4] = i.field_t[var11Lifetime1];
               var19[1][4 * var14 + 1] = mf.field_d[var11Lifetime1];
               var19[1][4 * var14 + 2] = wa.field_m[var11Lifetime1];
-              var19[1][var14 * 4 + 3] = tc.field_w[var11Lifetime1];
+              var19[1][var14 * 4 + 3] = CrossfadingMidiPcmStream.field_w[var11Lifetime1];
               if (eh.a(true, ah.field_c[var11Lifetime1]) &&
-                tc.field_w[var11Lifetime1] + wa.field_m[var11Lifetime1] + mf.field_d[var11Lifetime1] == 0) {
+                CrossfadingMidiPcmStream.field_w[var11Lifetime1] + wa.field_m[var11Lifetime1] + mf.field_d[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -319,7 +319,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "bf.E(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "bf.E(" + param0 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "bf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "bf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -399,7 +399,7 @@ final class bf {
             bf.clearStaticReferences((byte) -43);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

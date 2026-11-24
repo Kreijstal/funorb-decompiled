@@ -8,7 +8,7 @@ abstract class gi extends IntrusiveNode {
         throw new Error();
     }
 
-    abstract int a(jc param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     abstract void a();
 }

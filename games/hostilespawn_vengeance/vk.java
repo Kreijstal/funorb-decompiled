@@ -33,7 +33,7 @@ final class vk extends uh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "vk.D(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1_ref), "vk.D(" + param0 + ')');
         }
     }
 

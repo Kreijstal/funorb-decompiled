@@ -6,7 +6,7 @@ abstract class tb {
     static int field_g;
     bh[] field_h;
     static IntrusiveDeque field_b;
-    static tj field_d;
+    static PcmStreamMixer field_d;
     static String field_f;
     static String field_c;
     static int field_a;
@@ -64,7 +64,7 @@ abstract class tb {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class tb {
         try {
           mc.field_q = param1.readUnsignedShort((byte) -7) << 5;
           if (param0 != -31416) {
-            field_d = (tj) null;
+            field_d = (PcmStreamMixer) null;
           }
           var2_int = param1.readUnsignedByte(255);
           jn.field_q = (7 & var2_int) << 18;
@@ -90,7 +90,7 @@ abstract class tb {
           of.field_D = of.field_D + (var2_intLifetime2 >> 1);
           jd.field_I = jd.field_I + param1.readUnsignedShort((byte) -7);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,7 +125,7 @@ abstract class tb {
           var9.appendCrc32(var4, (byte) -75);
           var9.backpatchByteLength((byte) 68, var9.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ abstract class tb {
           an.field_q.a(param4, param3, 1 + param0, 0, -1);
           an.field_q.a(param4, param3, param0, param2, -1);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -331,7 +331,7 @@ abstract class tb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "tb.H(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "tb.H(" + param0 + ')');
         }
     }
 

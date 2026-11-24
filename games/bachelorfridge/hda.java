@@ -14,8 +14,8 @@ final class hda extends k {
         if (param0 != -91) {
           hda.a((byte) 27, true);
         }
-        if (null != jja.field_m) {
-          DreamsAnimation.b(-25942, jja.field_m);
+        if (null != MusicPatchPcmStream.field_m) {
+          DreamsAnimation.b(-25942, MusicPatchPcmStream.field_m);
         }
         if (NetworkGameClient.field_u != null) {
           NetworkGameClient.field_u.a((byte) -120, param1);
@@ -211,7 +211,7 @@ final class hda extends k {
               if (param1 == uw.field_o) {
                 return;
               }
-              uf.field_c.b(true);
+              uf.field_c.stopPlayback(true);
               BoardChangeBatch.field_l.flushAndMarkDrainCheck();
               uw.field_o = param1;
               if (uw.field_o != null) {

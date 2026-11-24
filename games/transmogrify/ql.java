@@ -49,14 +49,14 @@ final class ql {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static od a(int param0, int param1, int param2, PcmSample param3, int param4) {
         PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
-        nd var6 = null;
+        DelayedPcmStream var6 = null;
         od var7 = null;
         od stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -84,7 +84,7 @@ final class ql {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
         }
     }
 

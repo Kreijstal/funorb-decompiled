@@ -114,7 +114,7 @@ final class jg extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "jg.A(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1_ref), "jg.A(" + param0 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class jg extends ak {
           this.field_x = param0;
           this.field_E = 256;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

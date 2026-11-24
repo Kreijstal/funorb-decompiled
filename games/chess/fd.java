@@ -63,7 +63,7 @@ final class fd extends IntrusiveNode {
           var2 = hi.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "fd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "fd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

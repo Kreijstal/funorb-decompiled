@@ -165,7 +165,7 @@ final class ok extends wi {
           this.field_D = this.field_I.field_N;
           this.field_d = (int)((double)this.field_I.field_N * ((double)this.field_I.a(this.field_v, -this.field_O - this.field_q + this.field_n) + 0.5));
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ok.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ok.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

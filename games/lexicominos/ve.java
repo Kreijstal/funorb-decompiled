@@ -66,7 +66,7 @@ abstract class ve {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ abstract class ve {
               } else {
                 pg.field_d = var6_int;
                 a.field_c = -1;
-                uf.field_m = uh.field_l;
+                uf.field_m = CrossfadingMidiPcmStream.field_l;
               }
             }
             if (param1 != -25) {
@@ -152,7 +152,7 @@ abstract class ve {
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
                   a.field_c = -1;
-                  uf.field_m = uh.field_l;
+                  uf.field_m = CrossfadingMidiPcmStream.field_l;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -229,7 +229,7 @@ abstract class ve {
                 }
               }
               if (jd.field_c > 0) {
-                hl.field_F = true;
+                MidiPcmStream.field_F = true;
               }
               ed.field_q.a(l.field_F, param1 ^ -48);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -239,7 +239,7 @@ abstract class ve {
               stackIn_73_0 = pg.field_d;
               return stackIn_73_0;
             }
-            if (uf.field_m == uh.field_l &&
+            if (uf.field_m == CrossfadingMidiPcmStream.field_l &&
               dc.d(param1 + 27)) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-96);
               if (7 == pg.field_d &&
@@ -290,7 +290,7 @@ abstract class ve {
             } else {
               stackIn_103_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param5).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

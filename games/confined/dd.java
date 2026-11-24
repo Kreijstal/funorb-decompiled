@@ -52,7 +52,7 @@ final class dd extends bl {
     private int[] field_B;
     private int[] field_r;
     private int field_C;
-    private vc[] field_t;
+    private RawPcmStream[] field_t;
     private int[] field_mb;
     private vk field_P;
     private int field_ob;
@@ -69,7 +69,7 @@ final class dd extends bl {
         }
     }
 
-    final int a(be param0) {
+    final int onScheduledEvent(PcmStreamMixer param0) {
         if (this.e() &&
           !this.field_X) {
           return -1;
@@ -110,12 +110,12 @@ final class dd extends bl {
         bi stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        vc stackIn_17_0 = null;
+        RawPcmStream stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        vc stackIn_20_0 = null;
+        RawPcmStream stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         Throwable decompiledCaughtException = null;
-        vc var7 = null;
+        RawPcmStream var7 = null;
         Object var8 = null;
         this.c(param0);
         if (param3 > field_rb[7999] &&
@@ -141,14 +141,14 @@ final class dd extends bl {
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = vc.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7 = RawPcmStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
           var7.d(this.field_J.field_j[param1], this.field_J.field_u[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_J.field_C[param1] == 0) ? 0 : -1;
-          ((vc) (Object) stackIn_17_0).c(stackIn_18_1);
+          ((RawPcmStream) (Object) stackIn_17_0).c(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_J.field_C[param1] != 2) ? false : true;
-          ((vc) (Object) stackIn_20_0).c(stackIn_21_1);
+          ((RawPcmStream) (Object) stackIn_20_0).c(stackIn_21_1);
           if (param2 != 0) {
             var7.e(param2);
             var7.a(AudioOutput.field_k >> 7, param4 * this.field_W * this.field_ob >> 12, param5);
@@ -1057,7 +1057,7 @@ final class dd extends bl {
         this.field_vb = new int[this.field_J.field_t];
         this.field_K = new int[this.field_J.field_t];
         this.field_V = new boolean[this.field_J.field_t];
-        this.field_t = new vc[this.field_J.field_t];
+        this.field_t = new RawPcmStream[this.field_J.field_t];
         this.g();
     }
 

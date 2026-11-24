@@ -1797,7 +1797,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "create_alert_invalidage");
                 if (null != var2) {
-                  ol.field_m = ta.a(32200, var2);
+                  MusicPatchPcmStream.field_m = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_alert_yearrange");
                 if (var2 != null) {

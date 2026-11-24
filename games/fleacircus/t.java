@@ -233,13 +233,13 @@ final class t {
         fb.field_a.a(50, 100, 0, -4575, 380);
         GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
         cm.field_i.a(50, 100, 540, -4575, 380);
-        th.field_z.a(50, 100, 540, -4575, 380);
+        CrossfadingMidiPcmStream.field_z.a(50, 100, 540, -4575, 380);
         mf.field_e.a(50, 100, 540, -4575, 380);
         ca.field_L.a(1);
         fb.field_a.a(1);
         GzipDecompressor.field_b.a(1);
         cm.field_i.a(1);
-        th.field_z.a(1);
+        CrossfadingMidiPcmStream.field_z.a(1);
         mf.field_e.a(1);
         if (param0) {
           discarded$0 = this.a(24, -60, (byte) 102);
@@ -289,13 +289,13 @@ final class t {
           fb.field_a.a(50, 100, 0, param0 ^ -6937, 380);
           GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
           cm.field_i.a(50, 100, 540, param0 - 7333, 380);
-          th.field_z.a(50, 100, 540, -4575, 380);
+          CrossfadingMidiPcmStream.field_z.a(50, 100, 540, -4575, 380);
           mf.field_e.a(50, 100, 540, -4575, 380);
           ca.field_L.a(1);
           fb.field_a.a(1);
           GzipDecompressor.field_b.a(1);
           cm.field_i.a(1);
-          th.field_z.a(1);
+          CrossfadingMidiPcmStream.field_z.a(1);
           mf.field_e.a(1);
         }
     }
@@ -866,7 +866,7 @@ final class t {
                         }
                         if (var6 != 12) {
                           if (var6 == 13) {
-                            var4 = th.field_D;
+                            var4 = CrossfadingMidiPcmStream.field_D;
                             if (this.field_b.g(-115)) {
                               lg.a(-104, 0);
                             }
@@ -891,8 +891,8 @@ final class t {
                                 }
                               }
                             }
-                            if (var4 != th.field_D) {
-                              cb.field_w.field_A = th.field_D;
+                            if (var4 != CrossfadingMidiPcmStream.field_D) {
+                              cb.field_w.field_A = CrossfadingMidiPcmStream.field_D;
                               ik.a(wj.field_b[1], (byte) -84);
                               break regionExit1;
                             }

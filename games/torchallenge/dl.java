@@ -8,7 +8,7 @@ final class dl extends IntrusiveNode {
     int field_i;
     static int[] field_s;
     int field_u;
-    nc field_K;
+    RawPcmStream field_K;
     int field_F;
     fb field_q;
     int field_w;

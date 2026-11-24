@@ -13,7 +13,7 @@ abstract class r extends gg implements nk {
             this.b((byte) 39);
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "r.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,7 +25,7 @@ abstract class r extends gg implements nk {
           }
           gb.a(param0.field_B, param0.field_x, param0.field_r);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "r.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ abstract class r extends gg implements nk {
           }
           this.a(param0 ^ -1323);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "r.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,7 +110,7 @@ abstract class r extends gg implements nk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ abstract class r extends gg implements nk {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

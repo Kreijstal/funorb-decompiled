@@ -39,7 +39,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class vc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1_ref2), "vc.E(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1_ref2), "vc.E(" + param0 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var10), "vc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var10), "vc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

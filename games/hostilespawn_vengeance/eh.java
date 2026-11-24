@@ -9,7 +9,7 @@ final class eh {
     static bd field_b;
     static int[] field_f;
     static int field_d;
-    static wm field_c;
+    static PcmStreamMixer field_c;
 
     public static void clearStaticReferences(boolean param0) {
         field_a = null;

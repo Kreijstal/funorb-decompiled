@@ -69,7 +69,7 @@ final class ib implements ComponentLayout {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class ib implements ComponentLayout {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class ib implements ComponentLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1_ref), "ib.E(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1_ref), "ib.E(" + param0 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class ib implements ComponentLayout {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pf.a((Throwable) (stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw pf.wrapClientException((Throwable) (stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class ib implements ComponentLayout {
         try {
           field_a = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ')');
         }
     }
 
@@ -359,7 +359,7 @@ final class ib implements ComponentLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

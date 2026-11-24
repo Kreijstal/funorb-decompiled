@@ -18,7 +18,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.focusLost = true;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ue.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ue.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -97,14 +97,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (wb.field_R > 0) {
         }
         if (!param1) {
-          w.field_r = w.field_r + param0;
+          MidiPcmStream.field_r = MidiPcmStream.field_r + param0;
           qb.field_k = qb.field_k - param0;
           if (0 >= rf.field_f) {
           }
           return;
         }
         FullscreenFocusCanvas.a((byte) -119);
-        w.field_r = w.field_r + param0;
+        MidiPcmStream.field_r = MidiPcmStream.field_r + param0;
         qb.field_k = qb.field_k - param0;
         if (0 >= rf.field_f) {
         }
@@ -120,7 +120,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             field_h = (bd) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

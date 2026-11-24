@@ -19,7 +19,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ql.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ql.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ql.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ql.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

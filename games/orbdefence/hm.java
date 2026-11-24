@@ -59,7 +59,7 @@ final class hm extends ta implements ai {
           }
           bm.field_d.b((byte) 74, (pj) (kg.field_j));
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class hm extends ta implements ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class hm extends ta implements ai {
           pc.$cfr$intArgs$a$c64d0b17f51c(53, 0, 160, 0, param2, 120, ul.field_b, 0, 0, param3, 1920, param0);
           jl.a(0, 160, param1, 0, -1, 120, 0, 0, ul.field_b, 0);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class hm extends ta implements ai {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class hm extends ta implements ai {
           }
           bm.field_d.b((byte) 74, (pj) (kg.field_j));
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 }

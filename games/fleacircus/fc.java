@@ -489,7 +489,7 @@ final class fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "fc.B(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "fc.B(" + param0 + ')');
         }
     }
 
@@ -546,7 +546,7 @@ final class fc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

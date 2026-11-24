@@ -42,7 +42,7 @@ final class vf implements jm {
             d.field_Mb = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class vf implements jm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

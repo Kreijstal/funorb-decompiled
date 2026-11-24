@@ -145,7 +145,7 @@ abstract class rg extends gm {
             rg.a(53, false, (SoundPlayback) null, -102);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "rg.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rg.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

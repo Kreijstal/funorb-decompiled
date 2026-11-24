@@ -48,7 +48,7 @@ final class OpenGlFramebuffer implements up {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -93,8 +93,8 @@ final class OpenGlFramebuffer implements up {
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
           if (param0 > -106) {
-            jt var20 = (jt) null;
-            OpenGlFramebuffer.a(-122, (SystemTaskService) null, (java.awt.Component) null, 3, true, (jt) null, -104, 35);
+            CrossfadingMidiPcmStream var20 = (CrossfadingMidiPcmStream) null;
+            OpenGlFramebuffer.a(-122, (SystemTaskService) null, (java.awt.Component) null, 3, true, (CrossfadingMidiPcmStream) null, -104, 35);
           }
           int var12Lifetime1 = var7Lifetime1 - var3Lifetime1;
           int var13Lifetime1 = -var4 + var8Lifetime1;
@@ -123,7 +123,7 @@ final class OpenGlFramebuffer implements up {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "wj.N(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "wj.N(" + param0 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class OpenGlFramebuffer implements up {
         try {
           this.a(0, 0, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "wj.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wj.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class OpenGlFramebuffer implements up {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -232,10 +232,10 @@ final class OpenGlFramebuffer implements up {
         super.finalize();
     }
 
-    final static void a(int param0, SystemTaskService param1, java.awt.Component param2, int param3, boolean param4, jt param5, int param6, int param7) {
+    final static void a(int param0, SystemTaskService param1, java.awt.Component param2, int param3, boolean param4, CrossfadingMidiPcmStream param5, int param6, int param7) {
         try {
           AudioOutput.configureAudio(param3, param4, 10);
-          um.field_m = AudioOutput.createOutput(param1, param2, 0, param6);
+          MusicPatchPcmStream.field_m = AudioOutput.createOutput(param1, param2, 0, param6);
           RendererBitmapFont.field_a = AudioOutput.createOutput(param1, param2, 1, param7);
           qn.pcmMixer = new PcmStreamMixer();
           int var8_int = -86 % ((param0 + 12) / 37);
@@ -243,9 +243,9 @@ final class OpenGlFramebuffer implements up {
           RendererBitmapFont.field_a.setRootStream(qn.pcmMixer);
           DualLinkNode.field_e = param5;
           DualLinkNode.field_e.a((byte) 125, RendererManager.field_c);
-          um.field_m.setRootStream(DualLinkNode.field_e);
+          MusicPatchPcmStream.field_m.setRootStream(DualLinkNode.field_e);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class OpenGlFramebuffer implements up {
           jaggl.OpenGL.glGenFramebuffersEXT(1, ho.field_c, 0);
           this.field_d = ho.field_c[0];
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

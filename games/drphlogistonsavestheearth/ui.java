@@ -8,7 +8,7 @@ final class ui {
         wi.b(-1);
         if (param1 != 1) {
           vj var3 = (vj) null;
-          ui.a((ec) null, (byte) 78, 8, (vj) null);
+          ui.a((PcmStreamMixer) null, (byte) 78, 8, (vj) null);
         }
     }
 
@@ -96,7 +96,7 @@ final class ui {
         }
     }
 
-    final static void a(ec param0, byte param1, int param2, vj param3) {
+    final static void a(PcmStreamMixer param0, byte param1, int param2, vj param3) {
         try {
           wk.field_i = AccountNameAvailabilityValidator.d((byte) 9) * param2 / 1000;
           c.a(false, param3);

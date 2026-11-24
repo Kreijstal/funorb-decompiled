@@ -41,7 +41,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.DA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.DA(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -172,7 +172,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           ua.field_d = 0L;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.start()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.start()");
         }
     }
 
@@ -213,7 +213,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "fj.W(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "fj.W(" + param0 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) (var2), "fj.KA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) (var2), "fj.KA(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "fj.getDocumentBase()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "fj.getDocumentBase()");
         }
     }
 
@@ -405,7 +405,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "fj.getAppletContext()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "fj.getAppletContext()");
         }
     }
 
@@ -428,7 +428,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -504,7 +504,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -577,7 +577,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+            throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -743,7 +743,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw CipherPacketBuffer.a((Throwable) (var1), "fj.run()");
+            throw CipherPacketBuffer.wrapClientException((Throwable) (var1), "fj.run()");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -809,7 +809,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.BA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -821,7 +821,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           ua.field_d = 4000L + fa.correctedCurrentTimeMillis(-81);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.stop()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.stop()");
         }
     }
 
@@ -863,7 +863,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.GA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.GA(" + param0 + ')');
         }
     }
 
@@ -887,7 +887,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -922,7 +922,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -951,7 +951,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.destroy()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fj.destroy()");
         }
     }
 

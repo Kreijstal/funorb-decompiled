@@ -96,13 +96,13 @@ final class fl {
           param2.next.previous = param2;
           param2.key = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static nd a(PcmStream param0, int param1, int param2) {
+    final static DelayedPcmStream a(PcmStream param0, int param1, int param2) {
         RuntimeException var3 = null;
-        nd stackIn_3_0 = null;
+        DelayedPcmStream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -111,7 +111,7 @@ final class fl {
           if (param1 != -11039) {
             field_c = true;
           }
-          stackIn_3_0 = new nd(param0, param2 * AudioOutput.field_p / 1000);
+          stackIn_3_0 = new DelayedPcmStream(param0, param2 * AudioOutput.field_p / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class fl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

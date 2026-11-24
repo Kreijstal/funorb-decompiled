@@ -3,7 +3,7 @@
  */
 final class ud extends IntrusiveNode {
     int field_l;
-    qi field_h;
+    RawPcmStream field_h;
     static int[] field_i;
     IntrusiveNode field_m;
     static String field_j;
@@ -57,7 +57,7 @@ final class ud extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -70,18 +70,18 @@ final class ud extends IntrusiveNode {
             ud.a((byte) 27, (lc) null, -57);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ud.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ud.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ud(qi param0, IntrusiveNode param1) {
+    ud(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
           this.field_l = param0.e();
           this.field_m = param1;
           this.field_h.h(128 + this.field_l * wc.field_a >> 8);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

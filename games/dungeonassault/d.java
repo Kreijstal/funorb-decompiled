@@ -80,7 +80,7 @@ final class d {
         try {
           var9 = fm.field_f.a(var5, -19256);
           sa.field_t = var9.c((byte) -122);
-          if (tk.field_v.equals(tc.field_u)) {
+          if (tk.field_v.equals(CrossfadingMidiPcmStream.field_u)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.field_D;

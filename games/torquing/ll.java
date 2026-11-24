@@ -194,7 +194,7 @@ final class ll extends kj {
           return;
         }
         int var7 = this.field_h * param1 >> 12;
-        kl.a(var5, 16011, var4, var6, var7, this.field_a);
+        DelayedPcmStream.a(var5, 16011, var4, var6, var7, this.field_a);
     }
 
     static {

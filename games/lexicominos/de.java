@@ -14,7 +14,7 @@ final class de extends RuntimeException {
           ja.b((byte) -111);
           SoftwareRasterizer.a(param0.field_y, param0.field_r, param0.field_x);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class de extends RuntimeException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class de extends RuntimeException {
           SoftwareRasterizer.a();
           we.a((byte) -65, param3);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

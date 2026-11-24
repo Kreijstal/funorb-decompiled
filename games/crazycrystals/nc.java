@@ -174,7 +174,7 @@ final class nc extends ue {
           this.field_d[0] = (ik) ((Object) new mh(320, 190, AccountServiceResult.field_a, 2));
           this.field_d[1] = (ik) ((Object) new mh(320, 295, fk.field_y, 2));
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

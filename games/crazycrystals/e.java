@@ -22,16 +22,16 @@ final class e {
     }
 
     final static void b(byte param0) {
-        vl.field_f = new am(kg.a(hk.field_e, 100, 0));
-        SecondaryNodeDeque.field_d = new am(kg.a(rh.field_g, 100, 0));
+        vl.field_f = new am(RawPcmStream.a(hk.field_e, 100, 0));
+        SecondaryNodeDeque.field_d = new am(RawPcmStream.a(rh.field_g, 100, 0));
         if (param0 >= -95) {
           field_a = (String) null;
         }
-        tl.field_a = new am(kg.a(mo.field_i, 100, 0));
-        jo.field_p = new am(kg.a(pl.field_h, 100, 0));
-        AccountCreationResultPanel.field_mb = new am(kg.a(sj.field_d, 100, 0));
-        io.field_M = new am(kg.a(jn.field_m, 100, 0));
-        ec.field_k = new am(kg.a(bb.field_x, 100, 0));
+        tl.field_a = new am(RawPcmStream.a(mo.field_i, 100, 0));
+        jo.field_p = new am(RawPcmStream.a(pl.field_h, 100, 0));
+        AccountCreationResultPanel.field_mb = new am(RawPcmStream.a(sj.field_d, 100, 0));
+        io.field_M = new am(RawPcmStream.a(jn.field_m, 100, 0));
+        ec.field_k = new am(RawPcmStream.a(bb.field_x, 100, 0));
     }
 
     public static void a(boolean param0) {
@@ -56,7 +56,7 @@ final class e {
           jn.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
           bb.field_x = bl.a(param2, "initialset", "explode-into-sparks").a();
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class e {
           lg.a(1);
           sb.field_B = new dl[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "e.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class e {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

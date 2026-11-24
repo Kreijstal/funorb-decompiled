@@ -12,7 +12,7 @@ final class hd extends hi {
         try {
           int var4_int = 5 % ((89 - param1) / 34);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "hd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class hd extends hi {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class hd extends hi {
                   var19 < 5) {
                   var5.field_c = el.a((double)var10, (double)nh.field_E.field_e, 16, (double)var11, (double)nh.field_E.field_g);
                   ca.a(81.5, 1, 37.0, true, 64);
-                  kd.a(0, 1);
+                  CrossfadingMidiPcmStream.a(0, 1);
                 }
                 regionExit1: {
                   var39Lifetime2.field_G = 0;
@@ -209,7 +209,7 @@ final class hd extends hi {
                     var30_double = gj.a(var26_double, -4);
                     var32 = sf.a(param0 ^ 37, var28_double);
                     var34 = 1.0 + Math.atan2((double)(-j.field_c) + var30_double, (double)(-rb.field_m) + var32) * 128.0 / 3.141592653589793;
-                    if (dl.field_l) {
+                    if (MusicPatchPcmStream.field_l) {
                       var34 = 0.0;
                     }
                     if (2 == ln.field_a.field_y[var7]) {
@@ -580,7 +580,7 @@ final class hd extends hi {
           }
           if (var12 == 0 &&
             3 == ha.field_t) {
-            kd.a(0, 1);
+            CrossfadingMidiPcmStream.a(0, 1);
           }
           for (var13Lifetime2 = 0; DualLinkNode.field_o > var13Lifetime2; var13Lifetime2++) {
             var43 = vj.field_w[var13Lifetime2];
@@ -599,7 +599,7 @@ final class hd extends hi {
                 var17Lifetime1 < 3) {
                 r.field_a = 1;
                 ca.a(19.0, 0, 32.4, true, 0);
-                kd.a(0, 1);
+                CrossfadingMidiPcmStream.a(0, 1);
                 tg.field_a = true;
               }
             } else {
@@ -685,7 +685,7 @@ final class hd extends hi {
               if (null != ec.field_b) {
                 ec.field_b.g(uh.field_i * jh.field_db / 400);
               } else {
-                ec.field_b = b.a(lm.field_A[5], 100, uh.field_i * jh.field_db / 400);
+                ec.field_b = RawPcmStream.a(lm.field_A[5], 100, uh.field_i * jh.field_db / 400);
                 ec.field_b.d(-1);
                 eh.field_c.b(ec.field_b);
               }
@@ -697,7 +697,7 @@ final class hd extends hi {
             }
             if (mg.field_c > 0) {
               if (null == q.field_i) {
-                q.field_i = b.a(fg.field_b[25], 100, uh.field_i * mg.field_c / 400);
+                q.field_i = RawPcmStream.a(fg.field_b[25], 100, uh.field_i * mg.field_c / 400);
                 q.field_i.d(-1);
                 eh.field_c.b(q.field_i);
               } else {
@@ -711,7 +711,7 @@ final class hd extends hi {
             }
             if (tb.field_N > 0) {
               if (e.field_l == null) {
-                e.field_l = b.a(fg.field_b[26], 100, 10);
+                e.field_l = RawPcmStream.a(fg.field_b[26], 100, 10);
                 e.field_l.d(-1);
                 eh.field_c.b(e.field_l);
               } else {
@@ -747,7 +747,7 @@ final class hd extends hi {
           } else {
             stackIn_368_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_367_0), ((StringBuilder) (Object) stackIn_367_1).append(stackIn_368_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_367_0), ((StringBuilder) (Object) stackIn_367_1).append(stackIn_368_2).append(')').toString());
         }
     }
 
@@ -793,7 +793,7 @@ final class hd extends hi {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -804,7 +804,7 @@ final class hd extends hi {
         try {
           this.field_o = new li(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -838,7 +838,7 @@ final class hd extends hi {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -881,7 +881,7 @@ final class hd extends hi {
         try {
           ln.field_a.field_c[param3] = param4;
           if (param2.field_t > 0 &&
-            !dl.field_l) {
+            !MusicPatchPcmStream.field_l) {
             param2.field_l.a(param2.field_t, param2.field_K, param2.field_j, false, ln.field_a);
             param2.b((byte) 117);
             param2.field_t = param2.field_t - 1;
@@ -914,7 +914,7 @@ final class hd extends hi {
               param2.field_c = param2.field_c + 128.0;
             }
             var6Lifetime4 = 0;
-            if (dl.field_l) {
+            if (MusicPatchPcmStream.field_l) {
               fj.field_Pb = 0.0;
               var6Lifetime4 = 1;
             } else {
@@ -1179,7 +1179,7 @@ final class hd extends hi {
             while (0.0 > fj.field_Pb) {
               fj.field_Pb = fj.field_Pb + 256.0;
             }
-            if (dl.field_l) {
+            if (MusicPatchPcmStream.field_l) {
               fj.field_Pb = 0.0;
             }
             if (nh.field_H != 0) {
@@ -1262,44 +1262,44 @@ final class hd extends hi {
             }
             if (0 < NetworkGameClient.field_u) {
               NetworkGameClient.field_u = NetworkGameClient.field_u - 1;
-              if (kh.field_U[0] == 3 &&
-                kh.field_ib[an.field_r[kh.field_U[0]]] > 0) {
-                dupTemp$0 = an.field_r[kh.field_U[0]];
-                kh.field_ib[dupTemp$0] = kh.field_ib[dupTemp$0] - 1;
-                MouseInput.field_a[0] = ld.a(-44, kh.field_U[0]);
-                var6Lifetime3 = kh.field_U[0];
+              if (VolumeRampingMidiPcmStream.field_U[0] == 3 &&
+                VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[0]]] > 0) {
+                dupTemp$0 = an.field_r[VolumeRampingMidiPcmStream.field_U[0]];
+                VolumeRampingMidiPcmStream.field_ib[dupTemp$0] = VolumeRampingMidiPcmStream.field_ib[dupTemp$0] - 1;
+                MouseInput.field_a[0] = ld.a(-44, VolumeRampingMidiPcmStream.field_U[0]);
+                var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[0];
                 hf.field_i = var6Lifetime3;
               }
-              if (kh.field_U[1] == 3 &&
-                kh.field_ib[an.field_r[kh.field_U[1]]] > 0) {
-                dupTemp$1 = an.field_r[kh.field_U[1]];
-                kh.field_ib[dupTemp$1] = kh.field_ib[dupTemp$1] - 1;
-                MouseInput.field_a[1] = ld.a(-11, kh.field_U[1]);
-                var6Lifetime3 = kh.field_U[1];
+              if (VolumeRampingMidiPcmStream.field_U[1] == 3 &&
+                VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[1]]] > 0) {
+                dupTemp$1 = an.field_r[VolumeRampingMidiPcmStream.field_U[1]];
+                VolumeRampingMidiPcmStream.field_ib[dupTemp$1] = VolumeRampingMidiPcmStream.field_ib[dupTemp$1] - 1;
+                MouseInput.field_a[1] = ld.a(-11, VolumeRampingMidiPcmStream.field_U[1]);
+                var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[1];
                 hf.field_i = var6Lifetime3;
               }
             }
             if (MouseInput.field_a[0] <= 0) {
               if (null == of.field_h &&
                 jf.field_c == 0) {
-                if (0 < kh.field_U[0]) {
+                if (0 < VolumeRampingMidiPcmStream.field_U[0]) {
                   if (GzipDecompressor.field_c[0] &&
-                    kh.field_ib[an.field_r[kh.field_U[0]]] <= 0) {
+                    VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[0]]] <= 0) {
                     MouseInput.field_a[0] = ld.a(-7, 0);
                     var6Lifetime3 = 0;
                   }
                   if (GzipDecompressor.field_c[0] &&
-                    kh.field_ib[an.field_r[kh.field_U[0]]] > 0) {
-                    dupTemp$2 = an.field_r[kh.field_U[0]];
-                    kh.field_ib[dupTemp$2] = kh.field_ib[dupTemp$2] - 1;
-                    MouseInput.field_a[0] = ld.a(-25, kh.field_U[0]);
-                    var6Lifetime3 = kh.field_U[0];
+                    VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[0]]] > 0) {
+                    dupTemp$2 = an.field_r[VolumeRampingMidiPcmStream.field_U[0]];
+                    VolumeRampingMidiPcmStream.field_ib[dupTemp$2] = VolumeRampingMidiPcmStream.field_ib[dupTemp$2] - 1;
+                    MouseInput.field_a[0] = ld.a(-25, VolumeRampingMidiPcmStream.field_U[0]);
+                    var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[0];
                   }
                 } else {
                   if (GzipDecompressor.field_c[0] &&
                     dn.field_j < 2) {
                     MouseInput.field_a[0] = ld.a(bm.a(param4, -39), 0);
-                    if (kh.field_U[1] == 0) {
+                    if (VolumeRampingMidiPcmStream.field_U[1] == 0) {
                       MouseInput.field_a[1] = MouseInput.field_a[0];
                     }
                     var6Lifetime3 = 0;
@@ -1308,33 +1308,33 @@ final class hd extends hi {
               }
             } else {
               MouseInput.field_a[0] = MouseInput.field_a[0] - 1;
-              if (GzipDecompressor.field_c[0] && (!(an.field_r[kh.field_U[0]] >= 0) ||
-                !(kh.field_ib[an.field_r[kh.field_U[0]]] <= 0))) {
-                var6Lifetime3 = kh.field_U[0];
+              if (GzipDecompressor.field_c[0] && (!(an.field_r[VolumeRampingMidiPcmStream.field_U[0]] >= 0) ||
+                !(VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[0]]] <= 0))) {
+                var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[0];
               }
             }
             if (MouseInput.field_a[1] <= 0) {
               if (of.field_h == null &&
                 jf.field_c == 0) {
-                if (kh.field_U[1] > 0) {
+                if (VolumeRampingMidiPcmStream.field_U[1] > 0) {
                   if (GzipDecompressor.field_c[1] &&
-                    kh.field_ib[an.field_r[kh.field_U[1]]] <= 0) {
+                    VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[1]]] <= 0) {
                     MouseInput.field_a[1] = ld.a(-104, 0);
                     var6Lifetime3 = 0;
                   }
                   if (GzipDecompressor.field_c[1] &&
-                    0 < kh.field_ib[an.field_r[kh.field_U[1]]]) {
-                    dupTemp$3 = an.field_r[kh.field_U[1]];
-                    kh.field_ib[dupTemp$3] = kh.field_ib[dupTemp$3] - 1;
-                    MouseInput.field_a[1] = ld.a(param4 - 105, kh.field_U[1]);
-                    var6Lifetime3 = kh.field_U[1];
+                    0 < VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[1]]]) {
+                    dupTemp$3 = an.field_r[VolumeRampingMidiPcmStream.field_U[1]];
+                    VolumeRampingMidiPcmStream.field_ib[dupTemp$3] = VolumeRampingMidiPcmStream.field_ib[dupTemp$3] - 1;
+                    MouseInput.field_a[1] = ld.a(param4 - 105, VolumeRampingMidiPcmStream.field_U[1]);
+                    var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[1];
                   }
                 } else {
                   if (GzipDecompressor.field_c[1] &&
                     dn.field_j < 2) {
                     MouseInput.field_a[1] = ld.a(-104, 0);
                     var6Lifetime3 = 0;
-                    if (kh.field_U[0] == 0) {
+                    if (VolumeRampingMidiPcmStream.field_U[0] == 0) {
                       MouseInput.field_a[0] = MouseInput.field_a[1];
                     }
                   }
@@ -1343,14 +1343,14 @@ final class hd extends hi {
             } else {
               MouseInput.field_a[1] = MouseInput.field_a[1] - 1;
               if (var6Lifetime3 < 0 &&
-                GzipDecompressor.field_c[1] && (!(0 <= an.field_r[kh.field_U[1]]) ||
-                !(0 >= kh.field_ib[an.field_r[kh.field_U[1]]]))) {
-                var6Lifetime3 = kh.field_U[1];
+                GzipDecompressor.field_c[1] && (!(0 <= an.field_r[VolumeRampingMidiPcmStream.field_U[1]]) ||
+                !(0 >= VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[1]]]))) {
+                var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[1];
               }
             }
           }
           if (var6Lifetime3 > 0 &&
-            kh.field_ib[an.field_r[var6Lifetime3]] <= 0) {
+            VolumeRampingMidiPcmStream.field_ib[an.field_r[var6Lifetime3]] <= 0) {
             var6Lifetime3 = -1;
           }
           if (null != rc.field_c &&
@@ -1403,7 +1403,7 @@ final class hd extends hi {
           } else {
             stackIn_326_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_325_0), ((StringBuilder) (Object) stackIn_325_1).append(stackIn_326_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_325_0), ((StringBuilder) (Object) stackIn_325_1).append(stackIn_326_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

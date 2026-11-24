@@ -45,8 +45,8 @@ abstract class uh {
           field_r = null;
           return;
         }
-        lc var2 = (lc) null;
-        uh.a((java.awt.Component) null, 16, -39, (PlatformTaskDispatcher) null, (lc) null, true);
+        MidiPcmStream var2 = (MidiPcmStream) null;
+        uh.a((java.awt.Component) null, 16, -39, (PlatformTaskDispatcher) null, (MidiPcmStream) null, true);
         field_d = null;
         field_o = null;
         field_r = null;
@@ -60,14 +60,14 @@ abstract class uh {
         return this.a((byte) 72) >= 20 ? true : false;
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, PlatformTaskDispatcher param3, lc param4, boolean param5) {
+    final static void a(java.awt.Component param0, int param1, int param2, PlatformTaskDispatcher param3, MidiPcmStream param4, boolean param5) {
         try {
           aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
           if (param2 != -21) {
             field_q = 117;
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "uh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "uh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ abstract class uh {
         boolean stackIn_3_1 = false;
         long var6;
         pj var8;
-        lc var9;
+        MidiPcmStream var9;
         var6 = (long)param4 + ((long)param0 << 32);
         var8 = new pj();
         var8.field_z = param3;
@@ -98,8 +98,8 @@ abstract class uh {
           this.field_a.a((byte) -128, var8);
           return var8;
         }
-        var9 = (lc) null;
-        uh.a((java.awt.Component) null, -79, 112, (PlatformTaskDispatcher) null, (lc) null, false);
+        var9 = (MidiPcmStream) null;
+        uh.a((java.awt.Component) null, -79, 112, (PlatformTaskDispatcher) null, (MidiPcmStream) null, false);
         var8.field_j = var6;
         if (param2) {
           if (this.a((byte) -110) >= 20) {

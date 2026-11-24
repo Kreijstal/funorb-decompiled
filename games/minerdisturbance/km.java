@@ -4,7 +4,7 @@
 final class km {
     static String field_c;
     static String field_b;
-    static di field_a;
+    static MidiPcmStream field_a;
 
     final static void b(byte param0) {
         d.field_d[93] = 43;

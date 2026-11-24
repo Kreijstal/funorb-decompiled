@@ -41,7 +41,7 @@ final class kd implements WidgetRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -108,8 +108,8 @@ final class kd implements WidgetRenderer {
         try {
           dh.field_B.f(0, param1);
           if (qk.field_e == null ||
-            !(qk.field_e.length >= ej.field_p.length())) {
-            qk.field_e = new int[ej.field_p.length()];
+            !(qk.field_e.length >= MusicPatchPcmStream.field_p.length())) {
+            qk.field_e = new int[MusicPatchPcmStream.field_p.length()];
           }
           var2_int = dc.field_a % 750;
           for (var3 = 0; var3 < qk.field_e.length; var3++) {
@@ -124,9 +124,9 @@ final class kd implements WidgetRenderer {
               var2_int += 750;
             }
           }
-          var3Lifetime1 = hk.field_a.a(ej.field_p);
+          var3Lifetime1 = hk.field_a.a(MusicPatchPcmStream.field_p);
           hk.field_a.b(10325023, -1);
-          hk.field_a.a(ej.field_p, 34 + (12 * wl.field_K.field_n - var3Lifetime1 >> 1), param1 + ((-hk.field_a.field_y + wl.field_K.field_m - hk.field_a.field_t >> 1) + 114 + hk.field_a.field_y), (int[]) null, qk.field_e);
+          hk.field_a.a(MusicPatchPcmStream.field_p, 34 + (12 * wl.field_K.field_n - var3Lifetime1 >> 1), param1 + ((-hk.field_a.field_y + wl.field_K.field_m - hk.field_a.field_t >> 1) + 114 + hk.field_a.field_y), (int[]) null, qk.field_e);
           if (0 <= jl.field_j &&
             3 > jl.field_j) {
             var4_int = 10;
@@ -310,7 +310,7 @@ final class kd implements WidgetRenderer {
             IntrusiveNode.field_d.a("FPS: " + ub.field_a, 630, 30, 65535, -1);
             IntrusiveNode.field_d.a("LPS: " + oc.field_y, 630, 60, 65535, -1);
           }
-          var15 = (AchievementUnlockEvent) (oj.field_u.beginForward((byte) -95));
+          var15 = (AchievementUnlockEvent) (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95));
           var8Lifetime2 = var15;
           if (var8Lifetime2 != null) {
             var10Lifetime2 = da.field_C;
@@ -334,7 +334,7 @@ final class kd implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "kd.E(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "kd.E(" + param0 + ',' + param1 + ')');
         }
     }
 

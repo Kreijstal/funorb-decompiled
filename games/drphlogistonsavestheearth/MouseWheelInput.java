@@ -162,7 +162,7 @@ abstract class MouseWheelInput {
         try {
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!ug.a(-1, (char) var3) &&
+            if (!MidiPcmStream.a(-1, (char) var3) &&
               !lb.a((char) var3, true)) {
               return true;
             }

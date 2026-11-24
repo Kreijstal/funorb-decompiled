@@ -106,7 +106,7 @@ final class vh extends eh {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class vh extends eh {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw sd.a((Throwable) ((Object) var3_ref), "vh.S(" + param0 + ',' + param1 + ')');
+            throw sd.wrapClientException((Throwable) ((Object) var3_ref), "vh.S(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -208,7 +208,7 @@ final class vh extends eh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ final class vh extends eh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "vh.H(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2), "vh.H(" + param0 + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class vh extends eh {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw sd.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -345,7 +345,7 @@ final class vh extends eh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "vh.T(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "vh.T(" + param0 + ')');
         }
     }
 
@@ -394,7 +394,7 @@ final class vh extends eh {
           }
           var6 = 3 * param0;
           var7 = var5_int - 10;
-          ed.d(-121);
+          DelayedPcmStream.d(-121);
           if (param2.field_O > 0 &&
             param2.field_u != null) {
             ae.a(-5607);
@@ -498,7 +498,7 @@ final class vh extends eh {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -538,7 +538,7 @@ final class vh extends eh {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw sd.a((Throwable) ((Object) var2_ref), "vh.P(" + param0 + ')');
+            throw sd.wrapClientException((Throwable) ((Object) var2_ref), "vh.P(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -865,7 +865,7 @@ final class vh extends eh {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw sd.a((Throwable) ((Object) var2_ref2), "vh.F(" + param0 + ')');
+            throw sd.wrapClientException((Throwable) ((Object) var2_ref2), "vh.F(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -913,7 +913,7 @@ final class vh extends eh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

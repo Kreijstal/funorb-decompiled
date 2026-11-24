@@ -227,7 +227,7 @@ final class va {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param8).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param8).append(')').toString());
         }
     }
 

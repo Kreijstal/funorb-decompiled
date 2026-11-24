@@ -31,7 +31,7 @@ final class go extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "go.C(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "go.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class go extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "go.B(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "go.B(" + param0 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class go extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3), "go.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3), "go.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -22,23 +22,23 @@ final class ce {
             if (n.field_a != null &&
               n.field_a.focusLost) {
               re.a(0);
-              ed.field_q.a((byte) 85, (UiWidget) (new vj(ed.field_q, cb.field_d)));
+              DelayedPcmStream.field_q.a((byte) 85, (UiWidget) (new vj(DelayedPcmStream.field_q, cb.field_d)));
             }
             return;
           }
           if (param0 >= -92) {
             field_a = (o) null;
           }
-          ed.field_q.a((byte) -127, true, KeyboardInput.field_e, ie.field_z);
-          ed.field_q.h(-10597);
+          DelayedPcmStream.field_q.a((byte) -127, true, KeyboardInput.field_e, ie.field_z);
+          DelayedPcmStream.field_q.h(-10597);
           while (ad.e((byte) -123)) {
-            ed.field_q.a(lb.field_B, -125, StarCannon.field_E);
+            DelayedPcmStream.field_q.a(lb.field_B, -125, StarCannon.field_E);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "ce.C(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "ce.C(" + param0 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class ce {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "ce.B(" + param0 + ',' + param1 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2), "ce.B(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -47,7 +47,7 @@ final class GzipDecompressor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "k.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "k.B(" + param0 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class GzipDecompressor {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw wn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw wn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

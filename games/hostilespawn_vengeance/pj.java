@@ -75,7 +75,7 @@ final class pj extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "pj.H(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "pj.H(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class pj extends ql {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (0 <= this.field_y.field_l &&
-            kh.field_Q[4]) {
+            VolumeRampingMidiPcmStream.field_Q[4]) {
             this.field_u = true;
           }
           if (this.field_r.field_l >= 0 &&
@@ -106,7 +106,7 @@ final class pj extends ql {
           }
           var10 = mm.field_m[0].field_j;
           if (this.field_s.field_l >= 0 &&
-            kh.field_Q[5]) {
+            VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_w = true;
           }
           if (param0 >= ~this.field_x[0].field_l &&
@@ -155,14 +155,14 @@ final class pj extends ql {
             of.field_d != dn.field_i) {
             r.field_a = 1;
             this.field_q = false;
-            kd.a(0, 1);
+            CrossfadingMidiPcmStream.a(0, 1);
             nh.field_E.a((byte) 46, this.field_j);
           }
           if (var3Lifetime1 > this.field_d) {
             this.field_d = var3Lifetime1;
             if (this.field_A[2]) {
               r.field_a = 0;
-              kd.a(4, param0 ^ -2);
+              CrossfadingMidiPcmStream.a(4, param0 ^ -2);
               nh.field_E.a(-1, 8360, -1);
               if (var3Lifetime1 == 3) {
                 le.field_D = 5;
@@ -218,7 +218,7 @@ final class pj extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "pj.C(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "pj.C(" + param0 + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class pj extends ql {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class pj extends ql {
             field_v = -116;
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "pj.B(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "pj.B(" + param0 + ')');
         }
     }
 
@@ -304,16 +304,16 @@ final class pj extends ql {
           var10 = var12;
           var9 = var10;
           var15 = var9;
-          kd.a(0, param0 + 1);
+          CrossfadingMidiPcmStream.a(0, param0 + 1);
           this.field_j = new oc(var12[2], var12[3]);
           nh.field_E.a((byte) 46, this.field_j);
           this.field_y = new v(m.field_k, var12[4] * 24 - 100, 24 * (-5 + var12[5]) - 30, 200);
-          if (kh.field_Q[4]) {
+          if (VolumeRampingMidiPcmStream.field_Q[4]) {
             this.field_y.field_l = -1;
           }
           this.field_s = new v(bn.field_n, 0, var12[7] * 24, 200);
           this.field_s.field_l = 24 * (3 + var12[6]);
-          if (kh.field_Q[5]) {
+          if (VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_s.field_l = -1;
           }
           this.field_r = new v(AccountServiceResult.field_f, 0, 24 * (1 + var12[9]), 200);
@@ -382,7 +382,7 @@ final class pj extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "pj.G(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "pj.G(" + param0 + ')');
         }
     }
 
@@ -404,7 +404,7 @@ final class pj extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "pj.D(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "pj.D(" + param0 + ')');
         }
     }
 
@@ -429,7 +429,7 @@ final class pj extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "pj.E(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "pj.E(" + param0 + ')');
         }
     }
 

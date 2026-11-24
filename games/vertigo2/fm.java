@@ -24,7 +24,7 @@ final class fm {
           field_e = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "fm.A(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fm.A(" + param0 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class fm {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 

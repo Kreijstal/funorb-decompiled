@@ -115,7 +115,7 @@ final class vc extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -637,7 +637,7 @@ final class vc extends IntrusiveNode {
           } else {
             stackIn_208_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
         }
     }
 

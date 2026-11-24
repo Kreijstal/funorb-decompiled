@@ -63,7 +63,7 @@ final class i extends si {
           var4.field_J = true;
           var4.a(-1463, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

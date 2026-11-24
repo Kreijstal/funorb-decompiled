@@ -158,7 +158,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var9), "ui.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var9), "ui.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "ui.E(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "ui.E(" + param0 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class ui {
           field_e = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) runtimeException), "ui.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ui.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -345,7 +345,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (var1), "ui.A(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) (var1), "ui.A(" + param0 + ')');
         }
     }
 

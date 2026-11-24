@@ -15,7 +15,7 @@ final class p {
         GameApplet.field_e = null;
         td.field_m = null;
         lg.field_e = null;
-        pg.field_r = null;
+        MusicPatchPcmStream.field_r = null;
         if (param0 != 0) {
           field_c = (String[][]) null;
         }
@@ -58,12 +58,12 @@ final class p {
         }
         var12 = wi.field_a[var8];
         var13 = wi.field_a[var9];
-        SocketConnector.field_l[param3][param2][0][0] = 320 + var10 * (fj.a(1870096848, var12, 23592960) >> 16);
-        SocketConnector.field_l[param3][param2][0][1] = 320 + var11 * (fj.a(1870096848, var13, 23592960) >> 16);
-        SocketConnector.field_l[param3][param2][1][0] = (fj.a(1870096848, var12, 19398656) >> 16) * var10 + 320;
-        SocketConnector.field_l[param3][param2][1][1] = 320 + var11 * (fj.a(1870096848, var13, 19398656) >> 16);
-        SocketConnector.field_l[param3][param2][2][0] = (fj.a(1870096848, var12, 18874368) >> 16) * var10 + 320;
-        SocketConnector.field_l[param3][param2][2][1] = 320 + var11 * (fj.a(1870096848, var13, 18874368) >> 16);
+        SocketConnector.field_l[param3][param2][0][0] = 320 + var10 * (CrossfadingMidiPcmStream.a(1870096848, var12, 23592960) >> 16);
+        SocketConnector.field_l[param3][param2][0][1] = 320 + var11 * (CrossfadingMidiPcmStream.a(1870096848, var13, 23592960) >> 16);
+        SocketConnector.field_l[param3][param2][1][0] = (CrossfadingMidiPcmStream.a(1870096848, var12, 19398656) >> 16) * var10 + 320;
+        SocketConnector.field_l[param3][param2][1][1] = 320 + var11 * (CrossfadingMidiPcmStream.a(1870096848, var13, 19398656) >> 16);
+        SocketConnector.field_l[param3][param2][2][0] = (CrossfadingMidiPcmStream.a(1870096848, var12, 18874368) >> 16) * var10 + 320;
+        SocketConnector.field_l[param3][param2][2][1] = 320 + var11 * (CrossfadingMidiPcmStream.a(1870096848, var13, 18874368) >> 16);
         vb.field_a[param3][param2] = param4 + param1 / 32;
         if (param6 > -5) {
           return;
@@ -80,11 +80,11 @@ final class p {
           param4 > 64) &&
           (param4 > 0 ||
           param4 < -64)) {
-          nj.field_b[vb.field_a[param3][param2]][0] = 360 + (fj.a(1870096848, fj.field_m[16 + var8], 23592960) >> 16);
-          nj.field_b[vb.field_a[param3][param2]][1] = 296 + (fj.a(1870096848, fj.field_m[var8 + 16], 19398656) >> 16);
+          nj.field_b[vb.field_a[param3][param2]][0] = 360 + (CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[16 + var8], 23592960) >> 16);
+          nj.field_b[vb.field_a[param3][param2]][1] = 296 + (CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[var8 + 16], 19398656) >> 16);
         } else {
-          nj.field_b[vb.field_a[param3][param2]][0] = -(fj.a(1870096848, fj.field_m[16 + var8], 23592960) >> 16) + 360;
-          nj.field_b[vb.field_a[param3][param2]][1] = -(fj.a(1870096848, fj.field_m[var8 + 16], 19398656) >> 16) + 296;
+          nj.field_b[vb.field_a[param3][param2]][0] = -(CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[16 + var8], 23592960) >> 16) + 360;
+          nj.field_b[vb.field_a[param3][param2]][1] = -(CrossfadingMidiPcmStream.a(1870096848, CrossfadingMidiPcmStream.field_m[var8 + 16], 19398656) >> 16) + 296;
         }
     }
 

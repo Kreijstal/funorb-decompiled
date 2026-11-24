@@ -345,7 +345,7 @@ final class FlightSession {
           } else {
             stackIn_184_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_183_0), ((StringBuilder) (Object) stackIn_183_1).append(stackIn_184_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_183_0), ((StringBuilder) (Object) stackIn_183_1).append(stackIn_184_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -408,7 +408,7 @@ final class FlightSession {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -456,7 +456,7 @@ final class FlightSession {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -488,7 +488,7 @@ final class FlightSession {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(',').append(colourOrBlastRadius).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(',').append(colourOrBlastRadius).append(')').toString());
         }
     }
 
@@ -517,7 +517,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var2), "pk.IA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "pk.IA(" + obfuscationGuard + ')');
         }
     }
 
@@ -738,7 +738,7 @@ final class FlightSession {
           } else {
             stackIn_184_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_183_0), ((StringBuilder) (Object) stackIn_183_1).append(stackIn_184_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_183_0), ((StringBuilder) (Object) stackIn_183_1).append(stackIn_184_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -800,7 +800,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var3), "pk.S(" + obfuscationGuard + ',' + waveNumber + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "pk.S(" + obfuscationGuard + ',' + waveNumber + ')');
         }
     }
 
@@ -889,7 +889,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.F(" + obfuscationGuard + ',' + arcadeMode + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.F(" + obfuscationGuard + ',' + arcadeMode + ')');
         }
     }
 
@@ -1083,7 +1083,7 @@ final class FlightSession {
           } else {
             stackIn_173_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_172_1).append(stackIn_173_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_172_1).append(stackIn_173_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1103,7 +1103,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.M(" + index + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.M(" + index + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1209,7 +1209,7 @@ final class FlightSession {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -1235,7 +1235,7 @@ final class FlightSession {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1312,7 +1312,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.HB(" + settledValue + ',' + digitCount + ',' + top + ',' + suppressLeadingZeros + ',' + remainingAnimationTicks + ',' + targetValue + ',' + right + ',' + alternateGlyphBank + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.HB(" + settledValue + ',' + digitCount + ',' + top + ',' + suppressLeadingZeros + ',' + remainingAnimationTicks + ',' + targetValue + ',' + right + ',' + alternateGlyphBank + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1331,7 +1331,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3_ref = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var3_ref), "pk.JA(" + index + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3_ref), "pk.JA(" + index + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1351,7 +1351,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.A(" + obfuscationGuard + ',' + index + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.A(" + obfuscationGuard + ',' + index + ')');
         }
     }
 
@@ -1374,7 +1374,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var2), "pk.GA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "pk.GA(" + obfuscationGuard + ')');
         }
     }
 
@@ -1532,7 +1532,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var2_ref), "pk.NA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2_ref), "pk.NA(" + obfuscationGuard + ')');
         }
     }
 
@@ -1551,7 +1551,7 @@ final class FlightSession {
           var8.spawnBurst(yAccelerationQ8, xQ8, spreadQ8, durationTicks, yQ8, radiusQ8, -1588713311);
           this.screenParticleCount = this.screenParticleCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.AA(" + radiusQ8 + ',' + xQ8 + ',' + durationTicks + ',' + yAccelerationQ8 + ',' + yQ8 + ',' + spreadQ8 + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.AA(" + radiusQ8 + ',' + xQ8 + ',' + durationTicks + ',' + yAccelerationQ8 + ',' + yQ8 + ',' + spreadQ8 + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1565,7 +1565,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var1 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var1), "pk.BA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "pk.BA(" + obfuscationGuard + ')');
         }
     }
 
@@ -1597,7 +1597,7 @@ final class FlightSession {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(colourOrBlastRadius).append(',').append(lifetimeTicks).append(',').append(obfuscationGuard).append(',').append(depthPhase).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(colourOrBlastRadius).append(',').append(lifetimeTicks).append(',').append(obfuscationGuard).append(',').append(depthPhase).append(')').toString());
         }
     }
 
@@ -1651,7 +1651,7 @@ final class FlightSession {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1673,7 +1673,7 @@ final class FlightSession {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1697,7 +1697,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.VA(" + growthStepQ8 + ',' + xQ8 + ',' + radiusQ8 + ',' + obfuscationGuard + ',' + durationTicks + ',' + yQ8 + ',' + alphaScale + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.VA(" + growthStepQ8 + ',' + xQ8 + ',' + radiusQ8 + ',' + obfuscationGuard + ',' + durationTicks + ',' + yQ8 + ',' + alphaScale + ')');
         }
     }
 
@@ -1737,7 +1737,7 @@ final class FlightSession {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -1790,7 +1790,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var3), "pk.LA(" + points + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "pk.LA(" + points + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1815,7 +1815,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.MA(" + baseCost + ',' + upgradeCode + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.MA(" + baseCost + ',' + upgradeCode + ')');
         }
     }
 
@@ -1837,7 +1837,7 @@ final class FlightSession {
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var5 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var5), "pk.B(" + foregroundWeight + ',' + foreground + ',' + redBlueMask + ',' + background + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var5), "pk.B(" + foregroundWeight + ',' + foreground + ',' + redBlueMask + ',' + background + ')');
         }
     }
 
@@ -1850,7 +1850,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var2), "pk.TA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "pk.TA(" + obfuscationGuard + ')');
         }
     }
 
@@ -1869,7 +1869,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3_ref = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var3_ref), "pk.K(" + obfuscationGuard + ',' + index + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3_ref), "pk.K(" + obfuscationGuard + ',' + index + ')');
         }
     }
 
@@ -1884,7 +1884,7 @@ final class FlightSession {
           this.bullets[this.bulletCount] = var3;
           int var4 = -12 / ((-3 - obfuscationGuard) / 40);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.UA(" + obfuscationGuard + ',' + index + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.UA(" + obfuscationGuard + ',' + index + ')');
         }
     }
 
@@ -2421,7 +2421,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.SA(" + obfuscationGuard + ',' + processInput + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.SA(" + obfuscationGuard + ',' + processInput + ')');
         }
     }
 
@@ -2445,7 +2445,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.WA(" + worldY + ',' + obfuscationGuard + ',' + worldX + ',' + diameter + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.WA(" + worldY + ',' + obfuscationGuard + ',' + worldX + ',' + diameter + ')');
         }
     }
 
@@ -2475,7 +2475,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.QA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.QA(" + obfuscationGuard + ')');
         }
     }
 
@@ -2642,7 +2642,7 @@ final class FlightSession {
           } else {
             stackIn_151_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_146_0), ((StringBuilder) (Object) stackIn_150_1).append(stackIn_151_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_146_0), ((StringBuilder) (Object) stackIn_150_1).append(stackIn_151_2).append(')').toString());
         }
     }
 
@@ -2674,7 +2674,7 @@ final class FlightSession {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(',').append(pickupCode).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(',').append(pickupCode).append(')').toString());
         }
     }
 
@@ -2723,7 +2723,7 @@ final class FlightSession {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -2831,7 +2831,7 @@ final class FlightSession {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -2893,7 +2893,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var4 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var4), "pk.BB(" + screenFlag + ',' + awardFlag + ',' + accuracyTarget + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var4), "pk.BB(" + screenFlag + ',' + awardFlag + ',' + accuracyTarget + ')');
         }
     }
 
@@ -3068,7 +3068,7 @@ final class FlightSession {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(insetOffset).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(insetOffset).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -3120,7 +3120,7 @@ final class FlightSession {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -3227,7 +3227,7 @@ final class FlightSession {
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.DA(" + obfuscationGuard + ',' + upgradeCode + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.DA(" + obfuscationGuard + ',' + upgradeCode + ')');
         }
     }
 
@@ -3318,7 +3318,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.FA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.FA(" + obfuscationGuard + ')');
         }
     }
 
@@ -3687,7 +3687,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var2), "pk.N(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "pk.N(" + obfuscationGuard + ')');
         }
     }
 
@@ -3696,7 +3696,7 @@ final class FlightSession {
           int var2_int = -5 % ((obfuscationGuard + 73) / 34);
           this.paused = false;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.Q(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.Q(" + obfuscationGuard + ')');
         }
     }
 
@@ -3709,7 +3709,7 @@ final class FlightSession {
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var1 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var1), "pk.RA(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "pk.RA(" + param0 + ')');
         }
     }
 
@@ -3751,7 +3751,7 @@ final class FlightSession {
           return stackIn_44_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.AB(" + obfuscationGuard + ',' + typeIndex + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.AB(" + obfuscationGuard + ',' + typeIndex + ')');
         }
     }
 
@@ -3787,7 +3787,7 @@ final class FlightSession {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -3835,7 +3835,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var3), "pk.E(" + obfuscationGuard + ',' + volumeStep + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "pk.E(" + obfuscationGuard + ',' + volumeStep + ')');
         }
     }
 
@@ -3855,7 +3855,7 @@ final class FlightSession {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -3896,7 +3896,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.HA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.HA(" + obfuscationGuard + ')');
         }
     }
 
@@ -3915,7 +3915,7 @@ final class FlightSession {
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var5 = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var5), "pk.FB(" + obfuscationGuard + ',' + depthPhase + ',' + normalScale + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var5), "pk.FB(" + obfuscationGuard + ',' + depthPhase + ',' + normalScale + ')');
         }
     }
 
@@ -3962,7 +3962,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) failure), "pk.OA(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) failure), "pk.OA(" + obfuscationGuard + ')');
         }
     }
 
@@ -4007,7 +4007,7 @@ final class FlightSession {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(count).append(',').append(pickupCount).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(count).append(',').append(pickupCount).append(')').toString());
         }
     }
 
@@ -4185,7 +4185,7 @@ final class FlightSession {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
-          throw pn.a((Throwable) ((Object) var2_ref), "pk.I(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2_ref), "pk.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -4260,7 +4260,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.<init>()");
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pk.<init>()");
         }
     }
 

@@ -58,7 +58,7 @@ final class gi {
         try {
           jj.field_A.b(0, 0, 640, 480, se.field_u);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class gi {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

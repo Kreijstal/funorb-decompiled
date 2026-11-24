@@ -148,7 +148,7 @@ final class qg {
             qg.a(83, -23);
           }
           var6 = param3.a(-128, var5_int, param4);
-          stackIn_3_0 = wl.a(param1, var5_int, param3, var6, -121);
+          stackIn_3_0 = MidiPcmStream.a(param1, var5_int, param3, var6, -121);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

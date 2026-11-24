@@ -162,7 +162,7 @@ final class cp extends gd {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class cp extends gd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class cp extends gd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "cp.B(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "cp.B(" + param0 + ')');
         }
     }
 

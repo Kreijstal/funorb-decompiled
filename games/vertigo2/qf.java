@@ -223,7 +223,7 @@ final class qf implements jh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "qf.A(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "qf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class qf implements jh {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ')');
         }
     }
 

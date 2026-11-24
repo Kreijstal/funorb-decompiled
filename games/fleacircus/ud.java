@@ -184,7 +184,7 @@ final class ud {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class ud {
               }
             }
           }
-          gj.field_A = new rk(320, 420, gl.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
+          gj.field_A = new rk(320, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
           gj.field_A.field_t = fl.field_f;
           gj.field_A.field_y = 1;
           gj.field_A.field_z = -1;
@@ -232,18 +232,18 @@ final class ud {
           fb.field_a = new mf(3, 4715);
           cm.field_i = new mf(3, 1560);
           mf.field_e = new mf(6, 165);
-          th.field_z = new mf(3, 4715);
+          CrossfadingMidiPcmStream.field_z = new mf(3, 4715);
           for (var3Lifetime1 = 0; ca.field_L.field_d.length > var3Lifetime1; var3Lifetime1++) {
             ca.field_L.field_d[var3Lifetime1] = var3Lifetime1 * 65536;
             cm.field_i.field_d[var3Lifetime1] = var3Lifetime1 * 65536;
             fb.field_a.field_d[var3Lifetime1] = 65792 * var3Lifetime1;
-            th.field_z.field_d[var3Lifetime1] = 65792 * var3Lifetime1;
+            CrossfadingMidiPcmStream.field_z.field_d[var3Lifetime1] = 65792 * var3Lifetime1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "ud.C(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "ud.C(" + param0 + ')');
         }
     }
 

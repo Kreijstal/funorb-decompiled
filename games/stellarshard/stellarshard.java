@@ -654,8 +654,8 @@ public final class stellarshard extends rb implements cf {
             AudioMixer.configureAudio(stackIn_62_0, stackIn_62_1 != 0, 10);
             GameApplet.field_h = AudioMixer.createOutput(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
             PacketBuffer.field_m = AudioMixer.createOutput(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
-            ll.field_c = new hl();
-            nj.field_o = new hl();
+            ll.field_c = new PcmStreamMixer();
+            nj.field_o = new PcmStreamMixer();
             GameApplet.field_h.setRootStream(ll.field_c);
             PacketBuffer.field_m.setRootStream(nj.field_o);
             MouseWheelInput.field_e = param0;

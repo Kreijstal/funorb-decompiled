@@ -59,7 +59,7 @@ final class AccountNameAvailabilityValidator extends da {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class AccountNameAvailabilityValidator extends da {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class AccountNameAvailabilityValidator extends da {
           param1.addMouseMotionListener(as.field_b);
           param1.addFocusListener(as.field_b);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "hk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

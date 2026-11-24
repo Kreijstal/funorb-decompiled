@@ -22,7 +22,7 @@ class uf extends af {
           }
           super.a((byte) 117, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "uf.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "uf.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ class uf extends af {
             if (param3 == dj.field_j) {
               return;
             }
-            ua.field_I.a((byte) 97);
+            ua.field_I.stopPlayback((byte) 97);
             kj.field_P.flushAndMarkDrainCheck();
             dj.field_j = param3;
             if (null != dj.field_j) {
@@ -127,7 +127,7 @@ class uf extends af {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ class uf extends af {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

@@ -20,7 +20,7 @@ abstract class dl extends DualLinkNode {
           field_m = null;
           field_p = (byte[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "dl.D(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "dl.D(" + param0 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ abstract class dl extends DualLinkNode {
         try {
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime61 = GzipDecompressor.a(10, "submission_rack_label");
           if (var2Lifetime61 != null) {
-            ej.field_p = eg.a(125, var2Lifetime61);
+            MusicPatchPcmStream.field_p = eg.a(125, var2Lifetime61);
           }
           var2Lifetime62 = GzipDecompressor.a(10, "tuttext1");
           if (null != var2Lifetime62) {
@@ -396,7 +396,7 @@ abstract class dl extends DualLinkNode {
           } else {
             stackIn_250_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_249_0), ((StringBuilder) (Object) stackIn_249_1).append(stackIn_250_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_249_0), ((StringBuilder) (Object) stackIn_249_1).append(stackIn_250_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ abstract class dl extends DualLinkNode {
         field_q[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
           var1 = (-1 + var0) * 8;
-          field_q[var0] = aj.a(ej.a(255L, field_n[7][7 + var1]), aj.a(ej.a(field_n[6][var1 + 6], 65280L), aj.a(ej.a(16711680L, field_n[5][5 + var1]), aj.a(aj.a(ej.a(1095216660480L, field_n[3][var1 + 3]), aj.a(aj.a(ej.a(field_n[1][1 + var1], 71776119061217280L), ej.a(-72057594037927936L, field_n[0][var1])), ej.a(field_n[2][var1 + 2], 280375465082880L))), ej.a(field_n[4][var1 + 4], 4278190080L)))));
+          field_q[var0] = aj.a(MusicPatchPcmStream.a(255L, field_n[7][7 + var1]), aj.a(MusicPatchPcmStream.a(field_n[6][var1 + 6], 65280L), aj.a(MusicPatchPcmStream.a(16711680L, field_n[5][5 + var1]), aj.a(aj.a(MusicPatchPcmStream.a(1095216660480L, field_n[3][var1 + 3]), aj.a(aj.a(MusicPatchPcmStream.a(field_n[1][1 + var1], 71776119061217280L), MusicPatchPcmStream.a(-72057594037927936L, field_n[0][var1])), MusicPatchPcmStream.a(field_n[2][var1 + 2], 280375465082880L))), MusicPatchPcmStream.a(field_n[4][var1 + 4], 4278190080L)))));
         }
         field_p = new byte[50][];
         field_m = "Highscores";

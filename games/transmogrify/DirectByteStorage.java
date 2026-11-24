@@ -50,7 +50,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

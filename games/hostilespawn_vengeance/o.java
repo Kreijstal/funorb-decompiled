@@ -91,7 +91,7 @@ final class o extends ql {
         this.field_d.field_l = (this.field_i.field_e + 4) * 24;
         this.field_d.field_d = (this.field_i.field_g - 1) * 24;
         this.field_k = new v(ch.field_f, this.field_m.field_e * 24, (this.field_m.field_g + 2) * 24);
-        kd.a(14, param0 ^ 1);
+        CrossfadingMidiPcmStream.a(14, param0 ^ 1);
         nh.field_E.a(-1, param0 + 8360, -1);
     }
 

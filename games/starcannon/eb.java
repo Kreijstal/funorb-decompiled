@@ -67,7 +67,7 @@ final class eb {
             null != AccountRequestState.field_a &&
             AccountRequestState.field_a.b((byte) 110) &&
             AccountRequestState.field_a.a("benefits", -9883)) {
-            ed.field_k = vk.a("benefits", 32, "headline", g.field_a);
+            DelayedPcmStream.field_k = vk.a("benefits", 32, "headline", g.field_a);
             cf.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
             pc.field_a = vk.a("benefits", 106, "button", g.field_a);
             re.field_f = vk.a("benefits", 17, "signup_text", g.field_a);
@@ -224,8 +224,8 @@ final class eb {
           ki.a(16, 16, 608, 112, 15, jk.field_l, nh.field_i);
           ki.a(231, 144, 393, 232, 15, jk.field_l, nh.field_i);
           var1_int = -21 % ((param0 - 30) / 35);
-          if (ed.field_k != null) {
-            ed.field_k.e(0, 0);
+          if (DelayedPcmStream.field_k != null) {
+            DelayedPcmStream.field_k.e(0, 0);
           }
           if (null != cf.field_q) {
             cf.field_q.e(0, 0);
@@ -310,7 +310,7 @@ final class eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "eb.B(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "eb.B(" + param0 + ')');
         }
     }
 

@@ -123,8 +123,8 @@ final class sf {
           var1_int = -1;
           var3 = rj.field_g;
           var4 = cj.field_b ? 1 : 0;
-          if (pg.field_q > 0) {
-            pg.field_q = pg.field_q - 1;
+          if (MusicPatchPcmStream.field_q > 0) {
+            MusicPatchPcmStream.field_q = MusicPatchPcmStream.field_q - 1;
           }
           boolean decompiledFrameRemainder0 = true;
           if (bc.field_o != 1 && (bc.field_o != 3 ||
@@ -221,12 +221,12 @@ final class sf {
           if (~SecondaryNodeDequeIterator.field_d != ~var1_int) {
             bd.d(1);
             if (var1_int != -1) {
-              pg.field_q = 10;
+              MusicPatchPcmStream.field_q = 10;
             }
             SecondaryNodeDequeIterator.field_d = var1_int;
           } else {
-            if (pg.field_q == 0) {
-              pg.field_q = -1;
+            if (MusicPatchPcmStream.field_q == 0) {
+              MusicPatchPcmStream.field_q = -1;
               if (SecondaryNodeDequeIterator.field_d != -1) {
                 var5 = ImageProducerRasterBuffer.field_n[var1_int] ? 1 : 0;
                 lg.a(var5 != 0, (byte) -79, al.field_x[var1_int]);

@@ -57,7 +57,7 @@ final class hb extends bg {
           nf.field_q[8] = 0;
           new fc(this.field_t, 110, 1560, 10, -10, -5).a(param1, nf.field_q);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "hb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class hb extends bg {
         try {
           this.field_z = param1.field_y;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "hb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class hb extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var6), "hb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var6), "hb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -647,7 +647,7 @@ final class hb extends bg {
           } else {
             stackIn_179_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_178_0), ((StringBuilder) (Object) stackIn_178_1).append(stackIn_179_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_178_0), ((StringBuilder) (Object) stackIn_178_1).append(stackIn_179_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -764,7 +764,7 @@ final class hb extends bg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 

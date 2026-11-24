@@ -4924,6 +4924,14 @@
       "renamedSymbol": "M:BufferedImageRasterBuffer.paint(Ljava/awt/Graphics;IBI)V"
     },
     {
+      "symbol": "M:bm.a(Lvk;)I",
+      "originalName": "a",
+      "to": "onScheduledEvent",
+      "evidence": "Run the scheduled mixer listener callback and return the original next frame delay or negative unschedule result. Preserve the retained virtual dispatch and caller monitor. Concrete tracker callbacks first call their original state updater,conditionally return minus one,and otherwise compute ((sampleRate<<9)+(sampleRate<<7))/(tempo*scale) with original int overflow and division behavior. Original abstract declaration SHA256 43854353344761ac0623ac5f9d327958d3f64af0731b80dd403824cc9f132a52. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I"
+    },
+    {
       "symbol": "M:bo.a(Lkg;IIII)V",
       "originalName": "a",
       "to": "onButtonClicked",
@@ -7188,6 +7196,14 @@
       "renamedSymbol": "M:MidiPcmStream.noteOff(BIII)V"
     },
     {
+      "symbol": "M:ga.a(BLqq;)Z",
+      "originalName": "a",
+      "to": "isVoiceInactive",
+      "evidence": "Return false for a retained live raw stream;for a null voice stream return true while preserving release-dependent unlinking and conditional identity-checked indexed group-slot clearing,including all original guards. Complete original-body SHA256 b592db5b25974df9b65659584cefc3e73f5f414cc9d871b598053c1a5b8eea87. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z"
+    },
+    {
       "symbol": "M:ga.a(I)V",
       "originalName": "a",
       "to": "skip",
@@ -7250,6 +7266,14 @@
       "evidence": "Receives a polyphonic key pressure event and ignores it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.onPolyPressure(IIZI)V"
+    },
+    {
+      "symbol": "M:ga.a(I[IILqq;I)Z",
+      "originalName": "a",
+      "to": "updateVoice",
+      "evidence": "Update the retained voice countdown,pitch/portamento,decay/main/release envelopes and raw-stream ramp;on terminal state preserve exact fade/render-or-skip,pending-queue,reset,unlink and indexed-slot cleanup and boolean return. Keep every original global/guard threshold,counter/cursor comparison,FP operation and cast order. Complete original-body SHA256 fb9c4fc88884bffeac5890312c42cccff775de7cf3f08c8a9e4a2c27561032bd. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z"
     },
     {
       "symbol": "M:ga.a(Lbc;Lgh;IILio;)Z",
@@ -14116,6 +14140,22 @@
       "renamedSymbol": "M:MusicVoiceMixer.skip(I)V"
     },
     {
+      "symbol": "M:rc.a(ILqq;I)V",
+      "originalName": "a",
+      "to": "skipVoiceFrames",
+      "evidence": "Advance a MIDI voice without normal output,including bit-four retrigger phase,1048576-period arithmetic,ceil boundary calculation,raw-stream recreation/offset setup/loop state and residual skipping. Preserve captured-global double-factory and guard paths. Complete original-body SHA256 edef8789d14de3477f9d2cea014c42f0438a7a41a625ea6c4e6700028699bc9e. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V"
+    },
+    {
+      "symbol": "M:rc.a([IILqq;IBI)V",
+      "originalName": "a",
+      "to": "renderVoiceFrames",
+      "evidence": "Render the original MIDI voice interval,including retrigger/crossfade boundaries,old/new stream parameter evaluation,offset/ramp/loop setup,old-stream fade/remainder mix and pending mixer queue insertion. Preserve global-dependent factories,phase arithmetic and final render. Complete original-body SHA256 6e547681ad6315f42a643e8b4ff4fac982fd56b3fafbdb23c30c67f1ea74c5a1. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V"
+    },
+    {
       "symbol": "M:rc.b()Ltn;",
       "originalName": "b",
       "to": "firstChild",
@@ -16154,6 +16194,14 @@
       "evidence": "Unlinks the listener, runs its callback and recomputes the next deadline.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmStreamMixer.fireListener(LPcmMixerListener;)V"
+    },
+    {
+      "symbol": "M:vk.a(Loh;Lbm;)V",
+      "originalName": "a",
+      "to": "insertListenerByDeadline",
+      "evidence": "Walk through listeners with deadline less than or equal to the supplied listener until sentinel/first-greater,perform the original node insertion with exact argument order/guard,and reread the head deadline. Complete original-body SHA256 fc7f95f9e33959c143f18672aef23303a5a5d8e588c8072c86f7b4f2ca9f4f7d. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V"
     },
     {
       "symbol": "M:vk.a(Ltn;)V",
@@ -128058,7 +128106,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#0",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#0",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -128069,7 +128117,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#1",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#1",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128080,7 +128128,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#2",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#2",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -128091,7 +128139,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#3",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#3",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -128102,7 +128150,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#4",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#4",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -128113,7 +128161,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#5",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#5",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -128124,7 +128172,7 @@
     },
     {
       "symbol": "L:ga.a(BLqq;)Z#6",
-      "renamedSymbol": "L:MidiPcmStream.a(BLMusicVoice;)Z#6",
+      "renamedSymbol": "L:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -128795,7 +128843,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#0",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#0",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#0",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -128806,7 +128854,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#1",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#1",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#1",
       "originalName": "stackIn_69_1",
       "renamedName": "stackIn_69_1",
       "declaration": {
@@ -128817,7 +128865,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#10",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#10",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -128828,7 +128876,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#11",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#11",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -128839,7 +128887,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#12",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#12",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -128850,7 +128898,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#2",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#2",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#2",
       "originalName": "stackIn_70_2",
       "renamedName": "stackIn_70_2",
       "declaration": {
@@ -128861,7 +128909,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#3",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#3",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#3",
       "originalName": "stackIn_72_1",
       "renamedName": "stackIn_72_1",
       "declaration": {
@@ -128872,7 +128920,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#4",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#4",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#4",
       "originalName": "stackIn_73_2",
       "renamedName": "stackIn_73_2",
       "declaration": {
@@ -128883,7 +128931,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#5",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#5",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -128894,7 +128942,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#6",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#6",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#6",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -128905,7 +128953,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#7",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#7",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -128916,7 +128964,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#8",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#8",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -128927,7 +128975,7 @@
     },
     {
       "symbol": "L:ga.a(I[IILqq;I)Z#9",
-      "renamedSymbol": "L:MidiPcmStream.a(I[IILMusicVoice;I)Z#9",
+      "renamedSymbol": "L:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -254954,7 +255002,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#0",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#0",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#0",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -254965,7 +255013,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#1",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#1",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#1",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -254976,7 +255024,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#10",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#10",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -254987,7 +255035,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#11",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#11",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -254998,7 +255046,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#2",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#2",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#2",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -255009,7 +255057,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#3",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#3",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#3",
       "originalName": "stackIn_11_3",
       "renamedName": "stackIn_11_3",
       "declaration": {
@@ -255020,7 +255068,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#4",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#4",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#4",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -255031,7 +255079,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#5",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#5",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#5",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -255042,7 +255090,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#6",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#6",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#6",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -255053,7 +255101,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#7",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#7",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -255064,7 +255112,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#8",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#8",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#8",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -255075,7 +255123,7 @@
     },
     {
       "symbol": "L:rc.a(ILqq;I)V#9",
-      "renamedSymbol": "L:MusicVoiceMixer.a(ILMusicVoice;I)V#9",
+      "renamedSymbol": "L:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -255086,7 +255134,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#0",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#0",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -255097,7 +255145,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#1",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#1",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#1",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -255108,7 +255156,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#10",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#10",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#10",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -255119,7 +255167,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#11",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#11",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -255130,7 +255178,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#12",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#12",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -255141,7 +255189,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#13",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#13",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -255152,7 +255200,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#14",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#14",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -255163,7 +255211,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#15",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#15",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -255174,7 +255222,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#16",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#16",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -255185,7 +255233,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#17",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#17",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -255196,7 +255244,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#2",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#2",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#2",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -255207,7 +255255,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#3",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#3",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#3",
       "originalName": "stackIn_14_3",
       "renamedName": "stackIn_14_3",
       "declaration": {
@@ -255218,7 +255266,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#4",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#4",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#4",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -255229,7 +255277,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#5",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#5",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#5",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -255240,7 +255288,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#6",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#6",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#6",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -255251,7 +255299,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#7",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#7",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#7",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -255262,7 +255310,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#8",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#8",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#8",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -255273,7 +255321,7 @@
     },
     {
       "symbol": "L:rc.a([IILqq;IBI)V#9",
-      "renamedSymbol": "L:MusicVoiceMixer.a([IILMusicVoice;IBI)V#9",
+      "renamedSymbol": "L:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -316389,9 +316437,9 @@
     },
     {
       "symbol": "M:bm.a(Lvk;)I",
-      "renamedSymbol": "M:PcmMixerListener.a(LPcmStreamMixer;)I",
+      "renamedSymbol": "M:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onScheduledEvent",
       "declaration": {
         "file": "bm.java",
         "start": 198,
@@ -323264,9 +323312,9 @@
     },
     {
       "symbol": "M:ga.a(BLqq;)Z",
-      "renamedSymbol": "M:MidiPcmStream.a(BLMusicVoice;)Z",
+      "renamedSymbol": "M:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isVoiceInactive",
       "declaration": {
         "file": "ga.java",
         "start": 46393,
@@ -323396,9 +323444,9 @@
     },
     {
       "symbol": "M:ga.a(I[IILqq;I)Z",
-      "renamedSymbol": "M:MidiPcmStream.a(I[IILMusicVoice;I)Z",
+      "renamedSymbol": "M:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateVoice",
       "declaration": {
         "file": "ga.java",
         "start": 60979,
@@ -342965,9 +343013,9 @@
     },
     {
       "symbol": "M:rc.a(ILqq;I)V",
-      "renamedSymbol": "M:MusicVoiceMixer.a(ILMusicVoice;I)V",
+      "renamedSymbol": "M:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipVoiceFrames",
       "declaration": {
         "file": "rc.java",
         "start": 10540,
@@ -342976,9 +343024,9 @@
     },
     {
       "symbol": "M:rc.a([IILqq;IBI)V",
-      "renamedSymbol": "M:MusicVoiceMixer.a([IILMusicVoice;IBI)V",
+      "renamedSymbol": "M:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "renderVoiceFrames",
       "declaration": {
         "file": "rc.java",
         "start": 13001,
@@ -350720,9 +350768,9 @@
     },
     {
       "symbol": "M:vk.a(Loh;Lbm;)V",
-      "renamedSymbol": "M:PcmStreamMixer.a(LIntrusiveNode;LPcmMixerListener;)V",
+      "renamedSymbol": "M:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "insertListenerByDeadline",
       "declaration": {
         "file": "vk.java",
         "start": 2166,
@@ -363590,7 +363638,7 @@
     },
     {
       "symbol": "P:bm.a(Lvk;)I#0",
-      "renamedSymbol": "P:PcmMixerListener.a(LPcmStreamMixer;)I#0",
+      "renamedSymbol": "P:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -379100,7 +379148,7 @@
     },
     {
       "symbol": "P:ga.a(BLqq;)Z#0",
-      "renamedSymbol": "P:MidiPcmStream.a(BLMusicVoice;)Z#0",
+      "renamedSymbol": "P:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -379111,7 +379159,7 @@
     },
     {
       "symbol": "P:ga.a(BLqq;)Z#1",
-      "renamedSymbol": "P:MidiPcmStream.a(BLMusicVoice;)Z#1",
+      "renamedSymbol": "P:MidiPcmStream.isVoiceInactive(BLMusicVoice;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -379474,7 +379522,7 @@
     },
     {
       "symbol": "P:ga.a(I[IILqq;I)Z#0",
-      "renamedSymbol": "P:MidiPcmStream.a(I[IILMusicVoice;I)Z#0",
+      "renamedSymbol": "P:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -379485,7 +379533,7 @@
     },
     {
       "symbol": "P:ga.a(I[IILqq;I)Z#1",
-      "renamedSymbol": "P:MidiPcmStream.a(I[IILMusicVoice;I)Z#1",
+      "renamedSymbol": "P:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -379496,7 +379544,7 @@
     },
     {
       "symbol": "P:ga.a(I[IILqq;I)Z#2",
-      "renamedSymbol": "P:MidiPcmStream.a(I[IILMusicVoice;I)Z#2",
+      "renamedSymbol": "P:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -379507,7 +379555,7 @@
     },
     {
       "symbol": "P:ga.a(I[IILqq;I)Z#3",
-      "renamedSymbol": "P:MidiPcmStream.a(I[IILMusicVoice;I)Z#3",
+      "renamedSymbol": "P:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -379518,7 +379566,7 @@
     },
     {
       "symbol": "P:ga.a(I[IILqq;I)Z#4",
-      "renamedSymbol": "P:MidiPcmStream.a(I[IILMusicVoice;I)Z#4",
+      "renamedSymbol": "P:MidiPcmStream.updateVoice(I[IILMusicVoice;I)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -427148,7 +427196,7 @@
     },
     {
       "symbol": "P:rc.a(ILqq;I)V#0",
-      "renamedSymbol": "P:MusicVoiceMixer.a(ILMusicVoice;I)V#0",
+      "renamedSymbol": "P:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -427159,7 +427207,7 @@
     },
     {
       "symbol": "P:rc.a(ILqq;I)V#1",
-      "renamedSymbol": "P:MusicVoiceMixer.a(ILMusicVoice;I)V#1",
+      "renamedSymbol": "P:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -427170,7 +427218,7 @@
     },
     {
       "symbol": "P:rc.a(ILqq;I)V#2",
-      "renamedSymbol": "P:MusicVoiceMixer.a(ILMusicVoice;I)V#2",
+      "renamedSymbol": "P:MusicVoiceMixer.skipVoiceFrames(ILMusicVoice;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -427181,7 +427229,7 @@
     },
     {
       "symbol": "P:rc.a([IILqq;IBI)V#0",
-      "renamedSymbol": "P:MusicVoiceMixer.a([IILMusicVoice;IBI)V#0",
+      "renamedSymbol": "P:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -427192,7 +427240,7 @@
     },
     {
       "symbol": "P:rc.a([IILqq;IBI)V#1",
-      "renamedSymbol": "P:MusicVoiceMixer.a([IILMusicVoice;IBI)V#1",
+      "renamedSymbol": "P:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -427203,7 +427251,7 @@
     },
     {
       "symbol": "P:rc.a([IILqq;IBI)V#2",
-      "renamedSymbol": "P:MusicVoiceMixer.a([IILMusicVoice;IBI)V#2",
+      "renamedSymbol": "P:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -427214,7 +427262,7 @@
     },
     {
       "symbol": "P:rc.a([IILqq;IBI)V#3",
-      "renamedSymbol": "P:MusicVoiceMixer.a([IILMusicVoice;IBI)V#3",
+      "renamedSymbol": "P:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -427225,7 +427273,7 @@
     },
     {
       "symbol": "P:rc.a([IILqq;IBI)V#4",
-      "renamedSymbol": "P:MusicVoiceMixer.a([IILMusicVoice;IBI)V#4",
+      "renamedSymbol": "P:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -427236,7 +427284,7 @@
     },
     {
       "symbol": "P:rc.a([IILqq;IBI)V#5",
-      "renamedSymbol": "P:MusicVoiceMixer.a([IILMusicVoice;IBI)V#5",
+      "renamedSymbol": "P:MusicVoiceMixer.renderVoiceFrames([IILMusicVoice;IBI)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -446750,7 +446798,7 @@
     },
     {
       "symbol": "P:vk.a(Loh;Lbm;)V#0",
-      "renamedSymbol": "P:PcmStreamMixer.a(LIntrusiveNode;LPcmMixerListener;)V#0",
+      "renamedSymbol": "P:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446761,7 +446809,7 @@
     },
     {
       "symbol": "P:vk.a(Loh;Lbm;)V#1",
-      "renamedSymbol": "P:PcmStreamMixer.a(LIntrusiveNode;LPcmMixerListener;)V#1",
+      "renamedSymbol": "P:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -475024,7 +475072,7 @@
       "original": "bm.java",
       "renamed": "PcmMixerListener.java",
       "inputSha256": "e7084e4a0013450464204bd19c32298da6f5eb3043a14d49a88ab0778433fc9b",
-      "outputSha256": "95ed39a21964be11950cc32ae8c9298dc3b4c38115cd6105eb83a6d2a9e6190b",
+      "outputSha256": "674ee9e6a406ca5bd82770761dbf61d6b34c8e347c1369b7dc6d3984ed443ea4",
       "edits": [
         {
           "start": 53,
@@ -475046,6 +475094,13 @@
           "symbol": "M:bm.<init>()V",
           "original": "bm",
           "renamed": "PcmMixerListener"
+        },
+        {
+          "start": 198,
+          "end": 199,
+          "symbol": "M:bm.a(Lvk;)I",
+          "original": "a",
+          "renamed": "onScheduledEvent"
         },
         {
           "start": 200,
@@ -520842,7 +520897,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "3a235350e8b2945e931f7795df437e31a33c99a9ee1d6835282fb5df48b5934c",
+      "outputSha256": "24b35db2141f12e903be70b7b17330f51d917ca01415000b8fce5b605d761705",
       "edits": [
         {
           "start": 50,
@@ -523232,6 +523287,13 @@
           "renamed": "intAnd"
         },
         {
+          "start": 46393,
+          "end": 46394,
+          "symbol": "M:ga.a(BLqq;)Z",
+          "original": "a",
+          "renamed": "isVoiceInactive"
+        },
+        {
           "start": 46408,
           "end": 46410,
           "symbol": "C:qq",
@@ -523923,6 +523985,13 @@
           "symbol": "M:pf.a(BLoh;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 60979,
+          "end": 60980,
+          "symbol": "M:ga.a(I[IILqq;I)Z",
+          "original": "a",
+          "renamed": "updateVoice"
         },
         {
           "start": 61019,
@@ -636132,7 +636201,7 @@
       "original": "rc.java",
       "renamed": "MusicVoiceMixer.java",
       "inputSha256": "48be184cd7a7d4ea8aa1228653fffd874a1346ecdf42e6c8bc438172d6a40145",
-      "outputSha256": "68ce75bcdaae78e1b653e2328da6b1d29929b7c93cc03b265afad5aa075a6773",
+      "outputSha256": "c572c9ec2bf1c3e0ce9bef72f116353d5e65968a126cfd817d434ed6457fc7d3",
       "edits": [
         {
           "start": 50,
@@ -636261,6 +636330,34 @@
           "renamed": "startForward"
         },
         {
+          "start": 710,
+          "end": 711,
+          "symbol": "M:ga.a(BLqq;)Z",
+          "original": "a",
+          "renamed": "isVoiceInactive"
+        },
+        {
+          "start": 840,
+          "end": 841,
+          "symbol": "M:rc.a(ILqq;I)V",
+          "original": "a",
+          "renamed": "skipVoiceFrames"
+        },
+        {
+          "start": 974,
+          "end": 975,
+          "symbol": "M:rc.a(ILqq;I)V",
+          "original": "a",
+          "renamed": "skipVoiceFrames"
+        },
+        {
+          "start": 1083,
+          "end": 1084,
+          "symbol": "M:ga.a(I[IILqq;I)Z",
+          "original": "a",
+          "renamed": "updateVoice"
+        },
+        {
           "start": 1149,
           "end": 1151,
           "symbol": "C:qq",
@@ -636308,6 +636405,34 @@
           "symbol": "M:pf.d(I)Loh;",
           "original": "d",
           "renamed": "startForward"
+        },
+        {
+          "start": 1842,
+          "end": 1843,
+          "symbol": "M:ga.a(BLqq;)Z",
+          "original": "a",
+          "renamed": "isVoiceInactive"
+        },
+        {
+          "start": 2076,
+          "end": 2077,
+          "symbol": "M:rc.a([IILqq;IBI)V",
+          "original": "a",
+          "renamed": "renderVoiceFrames"
+        },
+        {
+          "start": 2275,
+          "end": 2276,
+          "symbol": "M:ga.a(I[IILqq;I)Z",
+          "original": "a",
+          "renamed": "updateVoice"
+        },
+        {
+          "start": 2493,
+          "end": 2494,
+          "symbol": "M:rc.a([IILqq;IBI)V",
+          "original": "a",
+          "renamed": "renderVoiceFrames"
         },
         {
           "start": 2657,
@@ -636996,6 +637121,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 10540,
+          "end": 10541,
+          "symbol": "M:rc.a(ILqq;I)V",
+          "original": "a",
+          "renamed": "skipVoiceFrames"
+        },
+        {
           "start": 10554,
           "end": 10556,
           "symbol": "C:qq",
@@ -637134,6 +637266,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 13001,
+          "end": 13002,
+          "symbol": "M:rc.a([IILqq;IBI)V",
+          "original": "a",
+          "renamed": "renderVoiceFrames"
         },
         {
           "start": 13029,
@@ -704113,7 +704252,7 @@
       "original": "vk.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "47c5a96f4fba351cd816d4be9b89d2379c2f19008894cbc5f56886fd317d05b2",
-      "outputSha256": "c5e551eb1d49a98a9cda72b78e0ec7b84d17ed26150f51d06aa36ac4f46e9372",
+      "outputSha256": "6bb33f96213fb17b814329e6e15d8543cbddd5d2ed24be76e992cbb9623f99ae",
       "edits": [
         {
           "start": 50,
@@ -704333,6 +704472,20 @@
           "renamed": "startForward"
         },
         {
+          "start": 1706,
+          "end": 1707,
+          "symbol": "M:bm.a(Lvk;)I",
+          "original": "a",
+          "renamed": "onScheduledEvent"
+        },
+        {
+          "start": 1798,
+          "end": 1799,
+          "symbol": "M:vk.a(Loh;Lbm;)V",
+          "original": "a",
+          "renamed": "insertListenerByDeadline"
+        },
+        {
           "start": 1805,
           "end": 1812,
           "symbol": "F:oh.field_f:Loh;",
@@ -704394,6 +704547,13 @@
           "symbol": "M:pf.a(B)Loh;",
           "original": "a",
           "renamed": "nextForward"
+        },
+        {
+          "start": 2166,
+          "end": 2167,
+          "symbol": "M:vk.a(Loh;Lbm;)V",
+          "original": "a",
+          "renamed": "insertListenerByDeadline"
         },
         {
           "start": 2168,
@@ -704625,6 +704785,20 @@
           "symbol": "M:pf.d(I)Loh;",
           "original": "d",
           "renamed": "startForward"
+        },
+        {
+          "start": 4070,
+          "end": 4071,
+          "symbol": "M:bm.a(Lvk;)I",
+          "original": "a",
+          "renamed": "onScheduledEvent"
+        },
+        {
+          "start": 4162,
+          "end": 4163,
+          "symbol": "M:vk.a(Loh;Lbm;)V",
+          "original": "a",
+          "renamed": "insertListenerByDeadline"
         },
         {
           "start": 4169,
@@ -712763,10 +712937,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "d3c660e623de150e98130c221b45b8284c04956f4440eea94dc682e7fa169805",
+    "rulesSha256": "ec9c86ff77468ae28611cafafc4bcbd43fa44923198a95307a4f4fb10f2ed41f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "45de1cefa4315082d9144e069001a18ce609c28aa2072d694786a7657c09d99c",
+    "outputTreeSha256": "9d39e0c5b48a3c0c9fd5194675ef877bbb81c37bc826458dacf25cbdf23a002b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

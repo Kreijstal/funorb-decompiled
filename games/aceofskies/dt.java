@@ -7,8 +7,8 @@ final class dt {
     static int[] menuLeft;
 
     final static void a(int param0) {
-        if (null != um.field_m) {
-          um.field_m.dispose();
+        if (null != MusicPatchPcmStream.field_m) {
+          MusicPatchPcmStream.field_m.dispose();
         }
         if (param0 != 0) {
           field_b = (String) null;
@@ -74,7 +74,7 @@ final class dt {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class dt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1_ref), "dt.D(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1_ref), "dt.D(" + param0 + ')');
         }
     }
 

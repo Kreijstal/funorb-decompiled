@@ -22,9 +22,9 @@ final class fb extends IntrusiveNode {
         return cd.field_t.readString(2);
     }
 
-    final static v c(boolean param0) {
+    final static PcmStreamMixer c(boolean param0) {
         if (param0) {
-          return (v) null;
+          return (PcmStreamMixer) null;
         }
         return vb.field_f;
     }
@@ -167,7 +167,7 @@ final class fb extends IntrusiveNode {
             } else {
               stackIn_39_2 = "{...}";
             }
-            throw dd.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+            throw dd.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -186,7 +186,7 @@ final class fb extends IntrusiveNode {
           var2 = nj.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "fb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

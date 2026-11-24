@@ -15,7 +15,7 @@ final class hd {
           }
           fd.a(86, false, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "hd.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "hd.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class hd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class hd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "hd.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "hd.C(" + param0 + ')');
         }
     }
 

@@ -18,7 +18,7 @@ final class sj {
           }
           eg.a("jagex-last-login-method", param1 - 447616669, this.field_b, 31536000L, param0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "sj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "sj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class sj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class sj {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class sj {
               }
               var4 = var4 + (nk.field_u + (SpriteState.field_z + (sn.field_d << 1)));
             } else {
-              var4 = var4 + vd.field_z;
+              var4 = var4 + CrossfadingMidiPcmStream.field_z;
             }
             var3_int++;
           }
@@ -113,7 +113,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "sj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "sj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class sj {
           }
           jg.a(param0, param2, param1 - 19380, false);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "sj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "sj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

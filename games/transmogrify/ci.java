@@ -140,7 +140,7 @@ final class ci {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class ci {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2_ref), "ci.J(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2_ref), "ci.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -399,7 +399,7 @@ final class ci {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw ch.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(v.a(var9, var9.length, (byte) 40)).append(" ").append(v.a(var9, var9.length - 2, (byte) 40)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_r).toString());
+            throw ch.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(v.a(var9, var9.length, (byte) 40)).append(" ").append(v.a(var9, var9.length - 2, (byte) 40)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_r).toString());
           }
           if (this.field_a) {
             this.field_h[param2] = null;
@@ -525,7 +525,7 @@ final class ci {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -586,7 +586,7 @@ final class ci {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -653,7 +653,7 @@ final class ci {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ch.a((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -700,7 +700,7 @@ final class ci {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -769,7 +769,7 @@ final class ci {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -822,7 +822,7 @@ final class ci {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -887,7 +887,7 @@ final class ci {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -902,7 +902,7 @@ final class ci {
           this.field_c = param0;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

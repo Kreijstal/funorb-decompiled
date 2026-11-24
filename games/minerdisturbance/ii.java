@@ -17,7 +17,7 @@ final class ii {
           if (param1) {
             ii.clearStaticReferences((byte) -103);
           }
-          stackIn_3_0 = mg.a(1963987425, rc.a(param0, 100, 96));
+          stackIn_3_0 = mg.a(1963987425, RawPcmStream.a(param0, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -29,7 +29,7 @@ final class ii {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class ii {
           var1.d(0, 0);
           tk.b(true);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ')');
         }
     }
 

@@ -83,7 +83,7 @@ final class vj extends ql {
               wa.field_p = wa.field_p + 1;
               if (this.field_m + wa.field_p >= 3 &&
                 15 == ha.field_t) {
-                kd.a(16, 1);
+                CrossfadingMidiPcmStream.a(16, 1);
                 nh.field_E.a(-1, 8360, -1);
                 var5 = this.field_x[var4];
                 this.field_o.field_a = 1;
@@ -124,7 +124,7 @@ final class vj extends ql {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class vj extends ql {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class vj extends ql {
           wa.field_p = wa.field_p - 1;
           this.field_t[this.field_n] = true;
           if (this.field_m == 3) {
-            kd.a(0, 1);
+            CrossfadingMidiPcmStream.a(0, 1);
             nh.field_E.a((byte) 46, this.field_f);
             var4_ref_oc = this.field_k[this.field_n];
             this.field_r.field_a = 1;
@@ -405,10 +405,10 @@ final class vj extends ql {
         wa.field_p = 0;
         this.field_n = -1;
         this.field_m = 0;
-        this.field_o = new v(kd.field_E, 0, 0, 200);
+        this.field_o = new v(CrossfadingMidiPcmStream.field_E, 0, 0, 200);
         this.field_r = new v(ea.field_b, param0, 0, 200);
         this.field_l = false;
-        kd.a(15, 1);
+        CrossfadingMidiPcmStream.a(15, 1);
         nh.field_E.a(-1, 8360, -1);
         return;
     }

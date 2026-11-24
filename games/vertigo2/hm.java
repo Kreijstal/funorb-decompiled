@@ -81,7 +81,7 @@ final class hm extends TextureOperator {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class hm extends TextureOperator {
           } else {
             stackIn_98_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class hm extends TextureOperator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class hm extends TextureOperator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -477,9 +477,9 @@ final class hm extends TextureOperator {
         var3 = var18;
         if (this.field_x.field_i) {
           var7 = this.field_D * h.field_y >> 12;
-          var26 = this.a(0, -1, param0 - 1 & fk.field_x);
+          var26 = this.a(0, -1, param0 - 1 & CrossfadingMidiPcmStream.field_x);
           var9 = this.a(0, -1, param0);
-          var25 = this.a(0, -1, param0 + 1 & fk.field_x);
+          var25 = this.a(0, -1, param0 + 1 & CrossfadingMidiPcmStream.field_x);
           for (var11 = 0; we.field_M > var11; var11++) {
             var12 = (var25[var11] - var26[var11]) * var7 >> 12;
             var13 = (var9[-1 + var11 & rm.field_z] - var9[var11 + 1 & rm.field_z]) * var7 >> 12;

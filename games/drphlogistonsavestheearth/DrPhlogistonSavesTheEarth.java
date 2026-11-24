@@ -139,8 +139,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           wj.g(0, 16, 800, 16777215);
           lb.field_C.a(117);
-          am.field_o = new nh(8, 8);
-          am.field_o.c();
+          MusicPatchPcmStream.field_o = new nh(8, 8);
+          MusicPatchPcmStream.field_o.c();
           wj.b(4, 4, 4, 65535);
           lb.field_C.a(111);
           ik.field_b = new nh(3, 3);
@@ -369,7 +369,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               dj.a(false, 5);
             }
             if (var2_int == 2) {
-              am.e(11);
+              MusicPatchPcmStream.e(11);
             }
           }
           if (vi.field_c != null &&
@@ -536,11 +536,11 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           td.clearStaticReferences(869637800);
           ck.clearStaticReferences(7268);
           IntrusiveNode.clearStaticReferences(10589);
-          ug.h(-921185753);
+          MidiPcmStream.h(-921185753);
           tg.clearStaticReferences(0);
           cc.clearStaticReferences((byte) -8);
           rl.clearStaticReferences();
-          am.f(-112);
+          MusicPatchPcmStream.f(-112);
           ml.clearStaticReferences(!param0);
           AudioOutput.clearStaticReferences();
           eb.a(5);
@@ -978,7 +978,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           if (BoundedRandomAccessFile.a((byte) 97)) {
             wj.a(0, 0, wj.field_k, wj.field_c);
-            ug.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, 37);
+            MidiPcmStream.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, 37);
           }
           if (0 != ul.field_a) {
             var3 = 256 * ue.field_b / 32;
@@ -1690,7 +1690,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
     }
 
     final void a(int param0) {
-        ug var2 = null;
+        MidiPcmStream var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
@@ -1698,7 +1698,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             field_J = (nh) null;
           }
           this.a(8, 4, false, 7320, 0, 11, 10, 9);
-          var2 = new ug();
+          var2 = new MidiPcmStream();
           var2.d(9, 128, param0 ^ 85);
           var2.a(SecondaryNodeDequeIterator.field_b, (byte) -13);
           dc.a(sb.field_d, 22050, true, var2, (byte) -92, (java.awt.Component) ((Object) n.field_g));
@@ -2303,8 +2303,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           kh.field_e = eh.a("", (byte) -116, kf.field_d, "playership");
           kh.field_e.d(3);
           ri.field_e = kh.field_e.field_k;
-          am.field_l = kh.field_e.field_d;
-          am.field_p = am.field_l / 2;
+          MusicPatchPcmStream.field_l = kh.field_e.field_d;
+          MusicPatchPcmStream.field_p = MusicPatchPcmStream.field_l / 2;
           ri.field_q = ri.field_e / 2;
           df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
           ah.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);

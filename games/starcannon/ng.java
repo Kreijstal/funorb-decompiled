@@ -57,7 +57,7 @@ final class ng extends fe implements ub {
           super.a(90, param1, param2, param3);
           this.field_K = -param1 + pe.field_d - this.field_s;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ng.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ng.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ng extends fe implements ub {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "ng.P(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "ng.P(" + param0 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class ng extends fe implements ub {
             this.a((he) null, 118);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ng.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ng.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class ng extends fe implements ub {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

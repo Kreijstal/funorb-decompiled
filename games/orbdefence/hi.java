@@ -45,7 +45,7 @@ abstract class hi extends wb implements jb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ abstract class hi extends wb implements jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "hi.J(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "hi.J(" + param0 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ abstract class hi extends wb implements jb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ abstract class hi extends wb implements jb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ abstract class hi extends wb implements jb {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,7 +195,7 @@ abstract class hi extends wb implements jb {
             field_f = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hi.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hi.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ abstract class hi extends wb implements jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "hi.O(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "hi.O(" + param0 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ abstract class hi extends wb implements jb {
             this.a(87, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hi.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hi.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

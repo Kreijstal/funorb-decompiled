@@ -321,13 +321,13 @@ final class gl extends hl {
     }
 
     final static void a(int param0, ib param1, int param2, int param3) {
-        li var4 = null;
-        jg var5 = null;
+        RawPcmStream var4 = null;
+        DelayedPcmStream var5 = null;
         if (param3 != 804) {
           return;
         }
         try {
-          var4 = li.a(param1, 100, param2);
+          var4 = RawPcmStream.a(param1, 100, param2);
           var5 = ug.a(var4, param3 - 803, param0);
           aj.field_s.addLast(new gi(var4, var5), 27362);
           AccountCreationResultPanel.field_tb.b(var5);

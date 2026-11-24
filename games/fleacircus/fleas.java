@@ -431,7 +431,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var6), "fleas.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var6), "fleas.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -446,7 +446,7 @@ public final class fleas extends NetworkGameClient {
         try {
           hh.a(param0 ^ -62);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.F(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.F(" + param0 + ')');
         }
     }
 
@@ -603,7 +603,7 @@ public final class fleas extends NetworkGameClient {
                   q.field_c = hm.a("slider_left", hm.field_g, (byte) -71, "");
                   lj.field_f = hm.a("slider_right", hm.field_g, (byte) -79, "");
                   tb.field_f = kl.a(252, hm.field_g, "", "slider_tab");
-                  gl.field_m = hm.a("checkbox_value_0", hm.field_g, (byte) -88, "");
+                  MusicPatchPcmStream.field_m = hm.a("checkbox_value_0", hm.field_g, (byte) -88, "");
                   UiComponent.field_l = hm.a("checkbox_value_1", hm.field_g, (byte) -13, "");
                   ai.field_n = of.a("countdown", "", hm.field_g, 103);
                   ji.field_f = new dd[ai.field_n.length];
@@ -749,7 +749,7 @@ public final class fleas extends NetworkGameClient {
               dk.field_C.field_n = 145;
               wd.field_a.field_n = 205;
               de.field_b.field_n = 220;
-              ol.field_f = new rk(wd.field_a.field_l, 420, gl.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
+              ol.field_f = new rk(wd.field_a.field_l, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
               ol.field_f.field_t = fl.field_f;
               var15_int = ob.field_c.length - 1;
               do {
@@ -809,7 +809,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "fleas.P(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "fleas.P(" + param0 + ')');
         }
     }
 
@@ -943,7 +943,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "fleas.D(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "fleas.D(" + param0 + ')');
         }
     }
 
@@ -955,7 +955,7 @@ public final class fleas extends NetworkGameClient {
           lc.clearStaticReferences((byte) 99);
           pg.a(-12);
           IntrusiveDeque.clearStaticReferences(-29943);
-          ei.f(-16257);
+          MidiPcmStream.f(-16257);
           cl.a(-2);
           l.clearStaticReferences(-29049);
           qi.clearStaticReferences((byte) -113);
@@ -1005,9 +1005,9 @@ public final class fleas extends NetworkGameClient {
           hc.clearStaticReferences((byte) 87);
           tk.a(param0 ^ 93);
           fd.clearStaticReferences();
-          gl.a((byte) 112);
+          MusicPatchPcmStream.a((byte) 112);
           AudioOutput.clearStaticReferences();
-          th.b(false);
+          CrossfadingMidiPcmStream.b(false);
           tj.clearStaticReferences(false);
           pl.f(param0 + 1);
           sa.a((byte) 33);
@@ -1199,7 +1199,7 @@ public final class fleas extends NetworkGameClient {
           this.field_D = null;
           this.field_n = null;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.M(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.M(" + param0 + ')');
         }
     }
 
@@ -1236,7 +1236,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.C(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.C(" + param0 + ')');
         }
     }
 
@@ -1264,7 +1264,7 @@ public final class fleas extends NetworkGameClient {
         String var4_ref_StringLifetime1;
         var10 = field_A ? 1 : 0;
         try {
-          ei.b(true);
+          MidiPcmStream.b(true);
           if (null != pb.field_a) {
             if (a.field_a.b((byte) -100) &&
               a.field_a.a("basic", -116) &&
@@ -1469,7 +1469,7 @@ public final class fleas extends NetworkGameClient {
             if (decompiledFrameCompleted0) {
               var6 = 0;
               while (var6 < 50) {
-                th.field_v[var6] = new dd(20, 20);
+                CrossfadingMidiPcmStream.field_v[var6] = new dd(20, 20);
                 ff.field_b[var6] = new dd(20, 20);
                 var6++;
                 if (var10 != 0) {
@@ -1488,7 +1488,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var3_ref), "fleas.R(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var3_ref), "fleas.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1519,7 +1519,7 @@ public final class fleas extends NetworkGameClient {
           }
           if (DirectByteStorage.field_k >= 2) {
             boolean decompiledFrameCompleted0 = true;
-            if (ei.field_H[1]) {
+            if (MidiPcmStream.field_H[1]) {
               var2_int = -1 + hj.field_a.length;
               while (var2_int >= 0) {
                 hj.field_a[var2_int] = 999;
@@ -1530,57 +1530,57 @@ public final class fleas extends NetworkGameClient {
                 }
               }
             }
-            if ((decompiledFrameCompleted0) && (ei.field_H[2] &&
+            if ((decompiledFrameCompleted0) && (MidiPcmStream.field_H[2] &&
               ab.field_b == -1)) {
               BufferedSocket.b(120);
             }
-            if (ei.field_H[86]) {
-              if (ei.field_H[16]) {
+            if (MidiPcmStream.field_H[86]) {
+              if (MidiPcmStream.field_H[16]) {
                 hg.a(-25389, 0, 255, 0);
               }
-              if (ei.field_H[17]) {
+              if (MidiPcmStream.field_H[17]) {
                 hg.a(-25389, 1, 254, 0);
               }
-              if (ei.field_H[18]) {
+              if (MidiPcmStream.field_H[18]) {
                 hg.a(-25389, 2, 253, 0);
               }
-              if (ei.field_H[19]) {
+              if (MidiPcmStream.field_H[19]) {
                 hg.a(-25389, 3, 252, 0);
               }
-              if (ei.field_H[20]) {
+              if (MidiPcmStream.field_H[20]) {
                 hg.a(param0 - 46823, 4, 251, 0);
               }
-              if (ei.field_H[21]) {
+              if (MidiPcmStream.field_H[21]) {
                 hg.a(param0 - 46823, 5, 250, 0);
               }
-              if (ei.field_H[22]) {
+              if (MidiPcmStream.field_H[22]) {
                 hg.a(-25389, 6, 249, 0);
               }
-              if (ei.field_H[23]) {
+              if (MidiPcmStream.field_H[23]) {
                 hg.a(-25389, 7, 248, 0);
               }
-              if (ei.field_H[24]) {
+              if (MidiPcmStream.field_H[24]) {
                 hg.a(-25389, 8, 247, 0);
               }
-              if (ei.field_H[25]) {
+              if (MidiPcmStream.field_H[25]) {
                 hg.a(param0 - 46823, 9, 246, 0);
               }
-              if (ei.field_H[32]) {
+              if (MidiPcmStream.field_H[32]) {
                 hg.a(-25389, 10, 245, 0);
               }
-              if (ei.field_H[33]) {
+              if (MidiPcmStream.field_H[33]) {
                 hg.a(-25389, 11, 244, 0);
               }
-              if (ei.field_H[34]) {
+              if (MidiPcmStream.field_H[34]) {
                 hg.a(-25389, 12, 243, 0);
               }
-              if (ei.field_H[35]) {
+              if (MidiPcmStream.field_H[35]) {
                 hg.a(-25389, 13, 242, 0);
               }
-              if (ei.field_H[36]) {
+              if (MidiPcmStream.field_H[36]) {
                 hg.a(param0 - 46823, 14, 241, 0);
               }
-              if (ei.field_H[37]) {
+              if (MidiPcmStream.field_H[37]) {
                 hg.a(-25389, 15, 240, 0);
               }
             }
@@ -1715,7 +1715,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "fleas.B(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "fleas.B(" + param0 + ')');
         }
     }
 
@@ -1813,7 +1813,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "fleas.N(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "fleas.N(" + param0 + ')');
         }
     }
 
@@ -1837,14 +1837,14 @@ public final class fleas extends NetworkGameClient {
           jc.field_e = q.a(8192, 6);
           de.field_h = q.a(8192, 7);
           if (0 == cg.field_y) {
-            ei.b(true);
+            MidiPcmStream.b(true);
           }
           bc.a(pf.field_b, 1, a.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "fleas.Q(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "fleas.Q(" + param0 + ')');
         }
     }
 
@@ -1855,7 +1855,7 @@ public final class fleas extends NetworkGameClient {
             fleas.h((byte) -92);
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1885,7 +1885,7 @@ public final class fleas extends NetworkGameClient {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1916,16 +1916,16 @@ public final class fleas extends NetworkGameClient {
           hf.field_g = qf.a(pb.field_a, "", "FLEA_bridgecollapse").b().a(var2);
           kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().a(var2);
           pb.field_a = null;
-          oj.field_i = ie.a(ResourceArchive.field_n, 100, 0);
+          oj.field_i = RawPcmStream.a(ResourceArchive.field_n, 100, 0);
           oj.field_i.g(-1);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.L(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.L(" + param0 + ')');
         }
     }
 
     final void a(byte param0) {
         this.a(9, 11, 22, false, 0, 8, 8, 10);
-        ei var2 = new ei();
+        MidiPcmStream var2 = new MidiPcmStream();
         var2.b(9, 128, 238);
         ByteStorage.a(220, var2, 22050, 11, 22050, fg.field_q, (java.awt.Component) ((Object) ol.field_e), true);
         fb.field_c = 0;
@@ -1937,9 +1937,9 @@ public final class fleas extends NetworkGameClient {
           return;
         }
         try {
-          ei.b(true);
+          MidiPcmStream.b(true);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.H(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.H(" + param0 + ')');
         }
     }
 
@@ -1947,7 +1947,7 @@ public final class fleas extends NetworkGameClient {
         try {
           this.a(12, 8, "fleacircus");
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "fleas.init()");
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.init()");
         }
     }
 
@@ -2056,7 +2056,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var4), "fleas.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var4), "fleas.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2127,7 +2127,7 @@ public final class fleas extends NetworkGameClient {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2316,15 +2316,15 @@ public final class fleas extends NetworkGameClient {
           de.field_b.b(true);
           var15 = mh.field_u;
           if (dk.field_C.field_g ||
-            ei.field_H[16]) {
+            MidiPcmStream.field_H[16]) {
             mh.field_u = 1;
           }
           if (wd.field_a.field_g ||
-            ei.field_H[17]) {
+            MidiPcmStream.field_H[17]) {
             mh.field_u = 2;
           }
           if (de.field_b.field_g ||
-            ei.field_H[18]) {
+            MidiPcmStream.field_H[18]) {
             mh.field_u = 3;
           }
           if (mh.field_u != var15) {
@@ -2868,7 +2868,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "fleas.O(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "fleas.O(" + param0 + ')');
         }
     }
 
@@ -2890,7 +2890,7 @@ public final class fleas extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "fleas.I(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "fleas.I(" + param0 + ')');
         }
     }
 

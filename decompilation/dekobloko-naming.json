@@ -54481,7 +54481,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.computeInteger0435([IIIII)I#0"
+      "renamedSymbol": "L:RawPcmStream.mixBackwardSegment([IIIII)I#0"
     },
     {
       "symbol": "L:ei.b()I#0",
@@ -55009,7 +55009,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.computeInteger0446([IIIII)I#0"
+      "renamedSymbol": "L:RawPcmStream.mixForwardSegment([IIIII)I#0"
     },
     {
       "symbol": "L:ei.c(II[B[IIIIIIIILei;II)I#0",
@@ -151238,10 +151238,10 @@
     {
       "symbol": "M:ei.a([IIIII)I",
       "originalName": "a",
-      "to": "computeInteger0435",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.computeInteger0435([IIIII)I"
+      "to": "mixBackwardSegment",
+      "evidence": "Mix a reverse raw-PCM segment using exact aligned-step-minus256 versus interpolated and mono/stereo kernel dispatch,with ramp boundary/countdown updates and gain-convergence loop;preserve all original signed arithmetic,output positions and returned limits. Complete original-body SHA256 c380515ea8287dfa4ecdb8864bd658c3fbc967b842586b042524d3e3d73420ba. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.mixBackwardSegment([IIIII)I"
     },
     {
       "symbol": "M:ei.b()I",
@@ -151342,10 +151342,10 @@
     {
       "symbol": "M:ei.b([IIIII)I",
       "originalName": "b",
-      "to": "computeInteger0446",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.computeInteger0446([IIIII)I"
+      "to": "mixForwardSegment",
+      "evidence": "Mix a forward raw-PCM segment using exact aligned-step256 versus interpolated and mono/stereo kernel dispatch,with ramp boundary/countdown updates and gain-convergence loop;preserve all original signed arithmetic,output positions and returned limits. Complete original-body SHA256 01ad651cf11d9d9d788b0a22d9b7a4b66b6496413b74781925b297745609e0a7. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.mixForwardSegment([IIIII)I"
     },
     {
       "symbol": "M:ei.c()Lol;",
@@ -151422,10 +151422,10 @@
     {
       "symbol": "M:ei.e()V",
       "originalName": "e",
-      "to": "performAction0454",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0454()V"
+      "to": "cancelRamp",
+      "evidence": "If the retained raw PCM ramp countdown is nonzero,translate the MIN_INT fade target to zero,clear the countdown,and invoke gain recomputation in the original order. Complete original-body SHA256 16ce0217c166dfc1d65b05371d4d2ca0538c7375c431fd5e7430f6f4031b6680. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.cancelRamp()V"
     },
     {
       "symbol": "M:ei.e(I)V",
@@ -151446,10 +151446,10 @@
     {
       "symbol": "M:ei.f()V",
       "originalName": "f",
-      "to": "performAction0457",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0457()V"
+      "to": "recomputeGains",
+      "evidence": "Copy target volume into current mono gain,then evaluate and store left and right panning gains through the two exact original static helpers in their retained order. Complete original-body SHA256 a098ff43cb6f583ecc8ec750c7fc4493687deb9f8cd508cc344188bf2aebb859. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.recomputeGains()V"
     },
     {
       "symbol": "M:ei.f(I)V",
@@ -178953,7 +178953,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#0"
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#0"
     },
     {
       "symbol": "P:ei.a([IIIII)I#1",
@@ -178961,7 +178961,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#1"
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#1"
     },
     {
       "symbol": "P:ei.a([IIIII)I#2",
@@ -178969,7 +178969,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#2"
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#2"
     },
     {
       "symbol": "P:ei.a([IIIII)I#3",
@@ -178977,7 +178977,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#3"
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#3"
     },
     {
       "symbol": "P:ei.a([IIIII)I#4",
@@ -178985,7 +178985,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#4"
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#4"
     },
     {
       "symbol": "P:ei.b(II)V#0",
@@ -179777,7 +179777,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#0"
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#0"
     },
     {
       "symbol": "P:ei.b([IIIII)I#1",
@@ -179785,7 +179785,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#1"
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#1"
     },
     {
       "symbol": "P:ei.b([IIIII)I#2",
@@ -179793,7 +179793,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#2"
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#2"
     },
     {
       "symbol": "P:ei.b([IIIII)I#3",
@@ -179801,7 +179801,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#3"
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#3"
     },
     {
       "symbol": "P:ei.b([IIIII)I#4",
@@ -179809,7 +179809,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#4"
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#4"
     },
     {
       "symbol": "P:ei.c(I)V#0",
@@ -298605,7 +298605,7 @@
     },
     {
       "symbol": "L:ei.a([IIIII)I#0",
-      "renamedSymbol": "L:RawPcmStream.computeInteger0435([IIIII)I#0",
+      "renamedSymbol": "L:RawPcmStream.mixBackwardSegment([IIIII)I#0",
       "originalName": "var6",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -299353,7 +299353,7 @@
     },
     {
       "symbol": "L:ei.b([IIIII)I#0",
-      "renamedSymbol": "L:RawPcmStream.computeInteger0446([IIIII)I#0",
+      "renamedSymbol": "L:RawPcmStream.mixForwardSegment([IIIII)I#0",
       "originalName": "var6",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -436127,9 +436127,9 @@
     },
     {
       "symbol": "M:ei.a([IIIII)I",
-      "renamedSymbol": "M:RawPcmStream.computeInteger0435([IIIII)I",
+      "renamedSymbol": "M:RawPcmStream.mixBackwardSegment([IIIII)I",
       "originalName": "a",
-      "renamedName": "computeInteger0435",
+      "renamedName": "mixBackwardSegment",
       "declaration": {
         "file": "ei.java",
         "start": 12437,
@@ -436270,9 +436270,9 @@
     },
     {
       "symbol": "M:ei.b([IIIII)I",
-      "renamedSymbol": "M:RawPcmStream.computeInteger0446([IIIII)I",
+      "renamedSymbol": "M:RawPcmStream.mixForwardSegment([IIIII)I",
       "originalName": "b",
-      "renamedName": "computeInteger0446",
+      "renamedName": "mixForwardSegment",
       "declaration": {
         "file": "ei.java",
         "start": 42399,
@@ -436380,9 +436380,9 @@
     },
     {
       "symbol": "M:ei.e()V",
-      "renamedSymbol": "M:RawPcmStream.performAction0454()V",
+      "renamedSymbol": "M:RawPcmStream.cancelRamp()V",
       "originalName": "e",
-      "renamedName": "performAction0454",
+      "renamedName": "cancelRamp",
       "declaration": {
         "file": "ei.java",
         "start": 52089,
@@ -436413,9 +436413,9 @@
     },
     {
       "symbol": "M:ei.f()V",
-      "renamedSymbol": "M:RawPcmStream.performAction0457()V",
+      "renamedSymbol": "M:RawPcmStream.recomputeGains()V",
       "originalName": "f",
-      "renamedName": "performAction0457",
+      "renamedName": "recomputeGains",
       "declaration": {
         "file": "ei.java",
         "start": 29766,
@@ -477179,7 +477179,7 @@
     },
     {
       "symbol": "P:ei.a([IIIII)I#0",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#0",
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -477190,7 +477190,7 @@
     },
     {
       "symbol": "P:ei.a([IIIII)I#1",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#1",
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -477201,7 +477201,7 @@
     },
     {
       "symbol": "P:ei.a([IIIII)I#2",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#2",
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -477212,7 +477212,7 @@
     },
     {
       "symbol": "P:ei.a([IIIII)I#3",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#3",
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -477223,7 +477223,7 @@
     },
     {
       "symbol": "P:ei.a([IIIII)I#4",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0435([IIIII)I#4",
+      "renamedSymbol": "P:RawPcmStream.mixBackwardSegment([IIIII)I#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -478312,7 +478312,7 @@
     },
     {
       "symbol": "P:ei.b([IIIII)I#0",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#0",
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -478323,7 +478323,7 @@
     },
     {
       "symbol": "P:ei.b([IIIII)I#1",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#1",
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -478334,7 +478334,7 @@
     },
     {
       "symbol": "P:ei.b([IIIII)I#2",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#2",
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -478345,7 +478345,7 @@
     },
     {
       "symbol": "P:ei.b([IIIII)I#3",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#3",
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -478356,7 +478356,7 @@
     },
     {
       "symbol": "P:ei.b([IIIII)I#4",
-      "renamedSymbol": "P:RawPcmStream.computeInteger0446([IIIII)I#4",
+      "renamedSymbol": "P:RawPcmStream.mixForwardSegment([IIIII)I#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -814083,7 +814083,7 @@
       "original": "ei.java",
       "renamed": "RawPcmStream.java",
       "inputSha256": "02ab6ff643e4dd5a40eaaae03c3be51f4980cbf0fbaeabdc2198883125663873",
-      "outputSha256": "d448b6670a4d44f575b39a0d5c8a1eac2b8c8086362532aef615058cb31cde25",
+      "outputSha256": "786181895ce311ce2135205304c078ec764683cb74c627a6b44cfbe6b2bcb652",
       "edits": [
         {
           "start": 50,
@@ -814286,7 +814286,7 @@
           "end": 713,
           "symbol": "M:ei.f()V",
           "original": "f",
-          "renamed": "performAction0457"
+          "renamed": "recomputeGains"
         },
         {
           "start": 741,
@@ -817051,7 +817051,7 @@
           "end": 6876,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 6897,
@@ -817093,7 +817093,7 @@
           "end": 7071,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 7092,
@@ -817149,7 +817149,7 @@
           "end": 7342,
           "symbol": "M:ei.b([IIIII)I",
           "original": "b",
-          "renamed": "computeInteger0446"
+          "renamed": "mixForwardSegment"
         },
         {
           "start": 7343,
@@ -817261,7 +817261,7 @@
           "end": 7645,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 7646,
@@ -817380,7 +817380,7 @@
           "end": 7954,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 7955,
@@ -817499,7 +817499,7 @@
           "end": 8257,
           "symbol": "M:ei.b([IIIII)I",
           "original": "b",
-          "renamed": "computeInteger0446"
+          "renamed": "mixForwardSegment"
         },
         {
           "start": 8258,
@@ -817618,7 +817618,7 @@
           "end": 8526,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 8527,
@@ -817765,7 +817765,7 @@
           "end": 8996,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 8997,
@@ -817968,7 +817968,7 @@
           "end": 9632,
           "symbol": "M:ei.b([IIIII)I",
           "original": "b",
-          "renamed": "computeInteger0446"
+          "renamed": "mixForwardSegment"
         },
         {
           "start": 9633,
@@ -818185,7 +818185,7 @@
           "end": 10369,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 10370,
@@ -818353,7 +818353,7 @@
           "end": 10882,
           "symbol": "M:ei.b([IIIII)I",
           "original": "b",
-          "renamed": "computeInteger0446"
+          "renamed": "mixForwardSegment"
         },
         {
           "start": 10883,
@@ -818507,7 +818507,7 @@
           "end": 11355,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 11356,
@@ -818661,7 +818661,7 @@
           "end": 11854,
           "symbol": "M:ei.b([IIIII)I",
           "original": "b",
-          "renamed": "computeInteger0446"
+          "renamed": "mixForwardSegment"
         },
         {
           "start": 11855,
@@ -818724,7 +818724,7 @@
           "end": 11976,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 11997,
@@ -818738,7 +818738,7 @@
           "end": 12080,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 12081,
@@ -818780,7 +818780,7 @@
           "end": 12212,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 12229,
@@ -818836,7 +818836,7 @@
           "end": 12438,
           "symbol": "M:ei.a([IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0435"
+          "renamed": "mixBackwardSegment"
         },
         {
           "start": 12445,
@@ -821636,7 +821636,7 @@
           "end": 18621,
           "symbol": "M:ei.f()V",
           "original": "f",
-          "renamed": "performAction0457"
+          "renamed": "recomputeGains"
         },
         {
           "start": 18678,
@@ -826102,7 +826102,7 @@
           "end": 29767,
           "symbol": "M:ei.f()V",
           "original": "f",
-          "renamed": "performAction0457"
+          "renamed": "recomputeGains"
         },
         {
           "start": 29785,
@@ -831632,7 +831632,7 @@
           "end": 42400,
           "symbol": "M:ei.b([IIIII)I",
           "original": "b",
-          "renamed": "computeInteger0446"
+          "renamed": "mixForwardSegment"
         },
         {
           "start": 42407,
@@ -835699,7 +835699,7 @@
           "end": 52090,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 52112,
@@ -835734,7 +835734,7 @@
           "end": 52259,
           "symbol": "M:ei.f()V",
           "original": "f",
-          "renamed": "performAction0457"
+          "renamed": "recomputeGains"
         },
         {
           "start": 52327,
@@ -836798,7 +836798,7 @@
           "end": 55158,
           "symbol": "M:ei.f()V",
           "original": "f",
-          "renamed": "performAction0457"
+          "renamed": "recomputeGains"
         },
         {
           "start": 55192,
@@ -836924,7 +836924,7 @@
           "end": 55505,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 55526,
@@ -836966,7 +836966,7 @@
           "end": 55700,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 55721,
@@ -837981,7 +837981,7 @@
           "end": 59551,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 59572,
@@ -838009,7 +838009,7 @@
           "end": 59729,
           "symbol": "M:ei.e()V",
           "original": "e",
-          "renamed": "performAction0454"
+          "renamed": "cancelRamp"
         },
         {
           "start": 59746,
@@ -839668,7 +839668,7 @@
           "end": 63344,
           "symbol": "M:ei.f()V",
           "original": "f",
-          "renamed": "performAction0457"
+          "renamed": "recomputeGains"
         }
       ]
     },
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "ee2effee897c61663a6f2da941e4a82eeb67527bc581db556a50b063e0695bce",
+    "rulesSha256": "541f1262a840ec72fc92c89afd08095ebc4c1061cc85d7764180137d7a4eb556",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "e9ee77c91abe1b320bfb090692cd45a256442b7032807dbb856a6d4539443d29",
+    "outputTreeSha256": "72128446b2929720f940b83a8fe202fbb2ad4269d2cf0592b8c030237c55e266",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

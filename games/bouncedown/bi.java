@@ -175,7 +175,7 @@ final class bi extends IntrusiveNode {
             } else {
               stackIn_52_2 = "{...}";
             }
-            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+            throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

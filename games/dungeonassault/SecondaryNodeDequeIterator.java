@@ -149,7 +149,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "id.A(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "id.A(" + param0 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.nextNode = this.deque.sentinel.field_n;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

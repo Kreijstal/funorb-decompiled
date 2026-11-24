@@ -72,7 +72,7 @@ final class qg extends lf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class qg extends lf {
         try {
           this.a(256, param0);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class qg extends lf {
           this.a(param1.readUnsignedByte(32270), (byte) 21);
           this.a(param1.readUnsignedByte(32270), 42);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "qg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

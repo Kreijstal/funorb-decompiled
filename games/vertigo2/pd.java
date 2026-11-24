@@ -8,7 +8,7 @@ final class pd {
 
     final static void a(int param0, int param1, int param2, boolean param3, si param4) {
         RuntimeException var5 = null;
-        fk stackIn_2_0;
+        CrossfadingMidiPcmStream stackIn_2_0;
         si stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
@@ -23,7 +23,7 @@ final class pd {
           stackIn_2_2 = param2;
           stackIn_2_3 = 1000000;
           stackIn_3_4 = !(param3);
-          ((fk) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, (byte) 75, param1);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, (byte) 75, param1);
           if (param0 == -1) {
             return;
           }
@@ -39,7 +39,7 @@ final class pd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class pd {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw wn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+            throw wn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

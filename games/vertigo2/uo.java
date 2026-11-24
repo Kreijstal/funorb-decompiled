@@ -181,7 +181,7 @@ final class uo {
               stackIn_11_1 = null;
               stackIn_11_2 = null;
               stackIn_11_3 = 0L;
-              if (db.field_S) {
+              if (MidiPcmStream.field_S) {
                 stackIn_12_1 = null;
                 stackIn_12_2 = null;
                 stackIn_12_4 = tm.field_b;
@@ -227,7 +227,7 @@ final class uo {
               stackIn_28_1 = null;
               stackIn_28_2 = null;
               stackIn_28_3 = 0L;
-              if (!db.field_S) {
+              if (!MidiPcmStream.field_S) {
                 stackIn_29_1 = null;
                 stackIn_29_2 = null;
                 stackIn_29_4 = tm.field_b;
@@ -384,7 +384,7 @@ final class uo {
               }
               var12.field_gc.field_S = Integer.toString(var12.field_tc);
               var12.field_gc.a(param6 + 101, 48, Archive.field_f, var31, 200);
-              stackIn_66_0 = (db.field_S) ? 250 : 200;
+              stackIn_66_0 = (MidiPcmStream.field_S) ? 250 : 200;
               var33_intLifetime1 = stackIn_66_0;
               var12.field_pc.a(83, -2 + (-var33_intLifetime1 + 365), Archive.field_f, var31, var33_intLifetime1);
               var34_int = Archive.field_j;
@@ -589,7 +589,7 @@ final class uo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var7), "uo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var7), "uo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -653,7 +653,7 @@ final class uo {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

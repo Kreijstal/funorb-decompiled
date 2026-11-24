@@ -94,7 +94,7 @@ final class sj extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

@@ -148,7 +148,7 @@ class mn extends aa implements ng {
               ((fo) (Object) stackIn_13_0).a(stackIn_14_1, param2 ^ -5434, -1);
             }
           } else {
-            var6.a(kl.field_n, 5177, 11);
+            var6.a(DelayedPcmStream.field_n, 5177, 11);
             var6.a(pf.field_q, 5177, 17);
           }
           if (param0 == 3) {

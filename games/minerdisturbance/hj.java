@@ -14,8 +14,8 @@ final class hj {
     private static int[] field_c;
     static char[] field_n;
     static IntrusiveDeque field_b;
-    static hg field_f;
-    static hg field_o;
+    static PcmStreamMixer field_f;
+    static PcmStreamMixer field_o;
     static ResourceArchive field_i;
 
     final static String a(byte param0) {
@@ -111,7 +111,7 @@ final class hj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

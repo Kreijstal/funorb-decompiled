@@ -58,7 +58,7 @@ final class SecondaryNodeDeque implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3), "be.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3), "be.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.field_g.field_j = param1;
           param1.field_j.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "be.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "be.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

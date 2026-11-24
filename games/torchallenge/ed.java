@@ -176,7 +176,7 @@ final class ed {
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           if (o.field_l > 0) {
-            if (pg.field_p == null) {
+            if (MusicPatchPcmStream.field_p == null) {
               IterableNodeHashTable.a((byte) -86);
             }
             o.field_l = o.field_l - 1;

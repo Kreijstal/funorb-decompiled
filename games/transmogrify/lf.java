@@ -8,7 +8,7 @@ final class lf {
     private IterableNodeHashTable field_b;
     private int field_a;
     static String field_e;
-    static jc field_d;
+    static PcmStreamMixer field_d;
 
     private final void a(byte param0, long param1) {
         dl var4 = (dl) (this.field_b.get(-1, param1));
@@ -40,7 +40,7 @@ final class lf {
           this.field_f.addLast(false, var6_ref);
           ((dl) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "lf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "lf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class lf {
         try {
           this.a(param0, 1, param1 ^ 22019, param2);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "lf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "lf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class lf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class lf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

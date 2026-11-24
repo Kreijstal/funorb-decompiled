@@ -9,7 +9,7 @@ final class da {
     private double field_d;
     static boolean field_i;
     static bi field_g;
-    static vc field_j;
+    static RawPcmStream field_j;
     static int field_h;
     private double field_k;
     static jb field_e;

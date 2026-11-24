@@ -87,7 +87,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ec.VA(" + value + ',' + obfuscationGuard + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ec.VA(" + value + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -263,7 +263,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_196_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ec.U(" + obfuscationGuard + ',' + value + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ec.U(" + obfuscationGuard + ',' + value + ')');
         }
     }
 
@@ -312,7 +312,7 @@ class PacketBuffer extends IntrusiveNode {
             this.backpatchByteLength(-37, -35);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.RA(" + value + ',' + obfuscationGuard + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.RA(" + value + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -375,7 +375,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -453,7 +453,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -496,7 +496,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var4), "ec.FB(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var4), "ec.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -522,7 +522,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ec.T(" + obfuscationGuard + ',' + endPosition + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ec.T(" + obfuscationGuard + ',' + endPosition + ')');
         }
     }
 
@@ -532,14 +532,14 @@ class PacketBuffer extends IntrusiveNode {
         q var1 = null;
         RuntimeException var1_ref = null;
         try {
-          var1 = new q(ce.field_x, tb.field_i, hg.field_t[0], fe.field_g[0], jc.field_f[param0], jn.field_k[0], ub.field_q[0], uo.field_b);
+          var1 = new q(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], fe.field_g[0], jc.field_f[param0], jn.field_k[0], ub.field_q[0], uo.field_b);
           sb.a(500);
           stackIn_1_0 = var1;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1_ref), "ec.CB(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1_ref), "ec.CB(" + param0 + ')');
         }
     }
 
@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.SA(" + obfuscationGuard + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.SA(" + obfuscationGuard + ')');
         }
     }
 
@@ -601,7 +601,7 @@ class PacketBuffer extends IntrusiveNode {
             this.readUnsignedShort(3);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.EB(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.EB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -618,7 +618,7 @@ class PacketBuffer extends IntrusiveNode {
           field_q = null;
           field_j = null;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
         }
     }
 
@@ -636,7 +636,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.BA(" + obfuscationGuard + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.BA(" + obfuscationGuard + ')');
         }
     }
 
@@ -658,7 +658,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.OA(" + obfuscationGuard + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.OA(" + obfuscationGuard + ')');
         }
     }
 
@@ -680,7 +680,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ec.KA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ec.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -719,7 +719,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.BB(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.BB(" + param0 + ')');
         }
     }
 
@@ -758,7 +758,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -1789,7 +1789,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("skeleton_sentinels", false);
                 if (var2 != null) {
-                  hg.field_p = dj.a(var2, param1);
+                  MusicPatchPcmStream.field_p = dj.a(var2, param1);
                 }
                 var2 = gm.a("corrosive_slime", false);
                 if (null != var2) {
@@ -3974,7 +3974,7 @@ class PacketBuffer extends IntrusiveNode {
                   } else {
                     stackIn_2777_2 = "{...}";
                   }
-                  throw AccountServiceResult.a((Throwable) ((Object) stackIn_2776_0), ((StringBuilder) (Object) stackIn_2776_1).append(stackIn_2777_2).append(',').append(param1).append(')').toString());
+                  throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_2776_0), ((StringBuilder) (Object) stackIn_2776_1).append(stackIn_2777_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2785_0 = (!GameAppletShell.field_j);
@@ -3993,7 +3993,7 @@ class PacketBuffer extends IntrusiveNode {
           this.payload[-param1 + (this.position - 2)] = (byte)(param1 >> 8);
           this.payload[-param1 + this.position - param0] = (byte)param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.HA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4017,7 +4017,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.EA(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.EA(" + param0 + ')');
         }
     }
 
@@ -4035,7 +4035,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.J(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.J(" + param0 + ')');
         }
     }
 
@@ -4052,7 +4052,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var7), "ec.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var7), "ec.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -4061,7 +4061,7 @@ class PacketBuffer extends IntrusiveNode {
           this.payload[-param0 + this.position - 2] = (byte)(param0 >> 8);
           this.payload[-param0 + this.position - param1] = (byte)param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.AA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.AA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4096,7 +4096,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4144,7 +4144,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -4170,7 +4170,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.W(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.W(" + param0 + ')');
         }
     }
 
@@ -4193,7 +4193,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.Q(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.Q(" + param0 + ')');
         }
     }
 
@@ -4201,7 +4201,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           this.payload[param1 - param0 + this.position] = (byte)param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.JA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.JA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4221,7 +4221,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.UA(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.UA(" + param0 + ')');
         }
     }
 
@@ -4249,7 +4249,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.IA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4315,7 +4315,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -4341,7 +4341,7 @@ class PacketBuffer extends IntrusiveNode {
             field_p = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.I(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4374,7 +4374,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.K(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.K(" + param0 + ')');
         }
     }
 
@@ -4396,7 +4396,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ec.FA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ec.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4417,7 +4417,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.DA(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.DA(" + param0 + ')');
         }
     }
 
@@ -4441,7 +4441,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.O(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.O(" + param0 + ')');
         }
     }
 
@@ -4461,7 +4461,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.M(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.M(" + param0 + ')');
         }
     }
 
@@ -4483,7 +4483,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.AB(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.AB(" + param0 + ')');
         }
     }
 
@@ -4539,7 +4539,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2_ref), "ec.LA(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2_ref), "ec.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4561,7 +4561,7 @@ class PacketBuffer extends IntrusiveNode {
             this.readSignedMedium((byte) -94);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.V(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4606,7 +4606,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.R(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.R(" + param0 + ')');
         }
     }
 
@@ -4629,7 +4629,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ec.GB(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ec.GB(" + param0 + ')');
         }
     }
 
@@ -4668,7 +4668,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -4677,7 +4677,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.payload = kn.a(param0, false);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ')');
         }
     }
 
@@ -4716,7 +4716,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -4740,7 +4740,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

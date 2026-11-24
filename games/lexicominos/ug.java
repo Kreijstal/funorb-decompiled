@@ -338,7 +338,7 @@ final class ug extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1_ref), "ug.L(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1_ref), "ug.L(" + param0 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class ug extends hf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -466,9 +466,9 @@ final class ug extends hf {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              uh.field_v.reset();
-              uh.field_v.update(var5, 0, var18.length - 2);
-              var6_int = (int)uh.field_v.getValue();
+              CrossfadingMidiPcmStream.field_v.reset();
+              CrossfadingMidiPcmStream.field_v.update(var5, 0, var18.length - 2);
+              var6_int = (int)CrossfadingMidiPcmStream.field_v.getValue();
               if (var6_int != this.field_z.field_r[param2]) {
                 throw new RuntimeException();
               }
@@ -517,9 +517,9 @@ final class ug extends hf {
         try {
           if (var5 != null &&
             var18.length > 2) {
-            uh.field_v.reset();
-            uh.field_v.update(var5, 0, -2 + var18.length);
-            var6_int = (int)uh.field_v.getValue();
+            CrossfadingMidiPcmStream.field_v.reset();
+            CrossfadingMidiPcmStream.field_v.update(var5, 0, -2 + var18.length);
+            var6_int = (int)CrossfadingMidiPcmStream.field_v.getValue();
             if (var6_int != this.field_z.field_r[param2]) {
               throw new RuntimeException();
             }
@@ -654,7 +654,7 @@ final class ug extends hf {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

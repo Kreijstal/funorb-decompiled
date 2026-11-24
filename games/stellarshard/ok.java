@@ -4,7 +4,7 @@
 final class ok {
     static AccountRequestState field_a;
     static li field_c;
-    static hl field_b;
+    static PcmStreamMixer field_b;
 
     final static void a(byte param0, nj param1) {
         int var3 = 0;

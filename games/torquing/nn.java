@@ -27,7 +27,7 @@ final class nn {
           hb.field_u[13] = am.field_o;
           hb.field_u[2] = vb.field_e;
           hb.field_u[6] = cd.field_b.toUpperCase();
-          hb.field_u[3] = kl.field_u.toUpperCase();
+          hb.field_u[3] = DelayedPcmStream.field_u.toUpperCase();
           hb.field_u[20] = ae.field_lb + " / " + qe.field_a + " / " + ai.field_m;
           hb.field_u[5] = mi.field_v.toUpperCase();
           hb.field_u[11] = tp.field_n.toUpperCase();
@@ -69,7 +69,7 @@ final class nn {
         hb.field_u[13] = am.field_o;
         hb.field_u[2] = vb.field_e;
         hb.field_u[6] = cd.field_b.toUpperCase();
-        hb.field_u[3] = kl.field_u.toUpperCase();
+        hb.field_u[3] = DelayedPcmStream.field_u.toUpperCase();
         hb.field_u[20] = ae.field_lb + " / " + qe.field_a + " / " + ai.field_m;
         hb.field_u[5] = mi.field_v.toUpperCase();
         hb.field_u[11] = tp.field_n.toUpperCase();

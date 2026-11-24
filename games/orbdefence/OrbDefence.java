@@ -17,7 +17,7 @@ public final class OrbDefence extends NetworkGameClient {
         int var4;
         int var2Lifetime1;
         var4 = field_D ? 1 : 0;
-        lj.c(false);
+        MidiPcmStream.c(false);
         if (null != PacketBuffer.field_k &&
           PacketBuffer.field_k.field_e) {
           lb.a(true);
@@ -152,7 +152,7 @@ public final class OrbDefence extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "OrbDefence.B(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "OrbDefence.B(" + param0 + ')');
         }
     }
 
@@ -350,7 +350,7 @@ public final class OrbDefence extends NetworkGameClient {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -416,13 +416,13 @@ public final class OrbDefence extends NetworkGameClient {
         dj.c((byte) 78);
         cb.a((byte) -95);
         IntrusiveNode.clearStaticReferences(40);
-        lj.d(116);
+        MidiPcmStream.d(116);
         mh.clearStaticReferences(1);
         he.c(22);
         qi.clearStaticReferences();
-        jg.d(79);
+        MusicPatchPcmStream.d(79);
         AudioOutput.clearStaticReferences();
-        t.clearStaticReferences(true);
+        CrossfadingMidiPcmStream.clearStaticReferences(true);
         am.a((byte) 29);
         ml.clearStaticReferences(true);
         pf.clearStaticReferences(param0);
@@ -732,7 +732,7 @@ public final class OrbDefence extends NetworkGameClient {
     final void c(byte param0) {
         this.a(false, (byte) 88, 10, 3, 1, 0, 2, 60);
         int var3 = 112 / ((param0 + 4) / 39);
-        lj var2 = new lj();
+        MidiPcmStream var2 = new MidiPcmStream();
         var2.a(128, 9, (byte) 125);
         gj.a(22050, var2, true, 1024, (java.awt.Component) ((Object) GameAppletShell.field_f), wc.field_c);
         he.field_C = 16777215;
@@ -1084,9 +1084,9 @@ public final class OrbDefence extends NetworkGameClient {
           DirectByteStorage.field_d = true;
         }
         if (!df.field_f) {
-          jg.field_n[25] = db.field_c;
+          MusicPatchPcmStream.field_n[25] = db.field_c;
         } else {
-          jg.field_n[25] = cc.field_m;
+          MusicPatchPcmStream.field_n[25] = cc.field_m;
         }
         if (param0) {
           return;

@@ -59,7 +59,7 @@ final class ki extends IntrusiveNode {
             return;
           }
           if (var2 != 2) {
-            di.a((Throwable) null, param0 ^ -15004, "A1: " + hj.a((byte) 116));
+            MidiPcmStream.a((Throwable) null, param0 ^ -15004, "A1: " + hj.a((byte) 116));
             si.a(-110);
             return;
           }
@@ -75,7 +75,7 @@ final class ki extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "ki.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "ki.A(" + param0 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class ki extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -129,7 +129,7 @@ final class d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2), "d.B(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2), "d.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class d {
           ma.field_o = el.field_p;
           PacketBuffer.field_i = el.field_p;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

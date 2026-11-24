@@ -28,7 +28,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "bg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             ah.field_c = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "bg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "bg.A(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "bg.A(" + param0 + ')');
         }
     }
 

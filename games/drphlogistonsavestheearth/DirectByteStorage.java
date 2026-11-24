@@ -18,7 +18,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           if (ib.field_f.a(false) &&
             !param1.equals(ib.field_f.a((byte) -58))) {
-            ib.field_f = ug.a(param1, 0);
+            ib.field_f = MidiPcmStream.a(param1, 0);
           }
           if (param0 != 45) {
             DirectByteStorage.c((byte) -81);

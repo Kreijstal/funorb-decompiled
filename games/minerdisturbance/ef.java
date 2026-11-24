@@ -29,7 +29,7 @@ final class ef {
         RuntimeException var1_ref = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          var5 = di.field_V;
+          var5 = MidiPcmStream.field_V;
           var1 = var5;
           if (param0 != -24322) {
             field_a = 8;
@@ -50,7 +50,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "ef.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "ef.A(" + param0 + ')');
         }
     }
 

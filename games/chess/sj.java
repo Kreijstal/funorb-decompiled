@@ -73,7 +73,7 @@ final class sj implements jm {
           var8.appendCrc32(var4, (byte) -124);
           var8.backpatchByteLength(-var4 + var8.position, -1);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class sj implements jm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class sj implements jm {
           wb.f(1 + var7, var8 + 1, -2 + var5, -2 + var6, 16777088);
           qn.field_P.field_xb.a(param0, 3 + var7, -qn.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class sj implements jm {
           this.field_s = param1;
           this.field_b = param6;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

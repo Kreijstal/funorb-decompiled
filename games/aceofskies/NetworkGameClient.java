@@ -64,7 +64,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   HardwareRenderSprite.field_m = null;
                 } else {
                   CipherPacketBuffer.field_o = as.field_b;
-                  um.d(param0 ^ 9);
+                  MusicPatchPcmStream.d(param0 ^ 9);
                   SoundCache.field_d = 10;
                   ks.field_b = false;
                 }
@@ -153,7 +153,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_z = -63L;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ct.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ct.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (SoundCache.field_d == 11 &&
           RenderEffect.field_a == 0) {
-          um.d(1);
+          MusicPatchPcmStream.d(1);
         }
         return var2;
     }
@@ -442,7 +442,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             0 == RenderEffect.field_a &&
             SoundCache.field_d == 11 &&
             !dg.j(27711)) {
-            um.d(1);
+            MusicPatchPcmStream.d(1);
           }
           if (RenderEffect.field_a != -1 &&
             RenderEffect.field_a != 0) {
@@ -684,7 +684,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               return;
             }
             boolean stackIn_25_0 = (12 == var2);
-            s var4 = um.a(stackIn_25_0, 1);
+            s var4 = MusicPatchPcmStream.a(stackIn_25_0, 1);
             RasterBuffer.a(0, var4);
           }
           return;

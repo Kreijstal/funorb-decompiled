@@ -9,7 +9,7 @@ final class ch {
     static Boolean field_f;
     static int field_d;
 
-    final static ContextualRuntimeException a(Throwable param0, String param1) {
+    final static ContextualRuntimeException wrapClientException(Throwable param0, String param1) {
         ContextualRuntimeException var2 = null;
         if (!(param0 instanceof ContextualRuntimeException)) {
           var2 = new ContextualRuntimeException(param0, param1);
@@ -43,7 +43,7 @@ final class ch {
           sb.c();
           kh.a(-111, true);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ch.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ch.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

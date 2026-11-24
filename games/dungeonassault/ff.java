@@ -205,7 +205,7 @@ final class ff {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = uo.field_b[nb.a(255, (int) var2[var4_int])];
         }
-        cn var4 = new cn(ce.field_x, tb.field_i, hg.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], var3);
+        cn var4 = new cn(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], var3);
         sb.a(500);
         return var4;
     }
@@ -227,7 +227,7 @@ final class ff {
           }
           this.b((byte) 77);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

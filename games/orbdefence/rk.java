@@ -4,7 +4,7 @@
 abstract class rk extends IntrusiveNode {
     int field_f;
 
-    abstract int a(v param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     private rk() throws Throwable {
         throw new Error();

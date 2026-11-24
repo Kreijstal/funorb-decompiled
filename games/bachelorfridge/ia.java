@@ -41,8 +41,8 @@ final class ia extends pv {
 
     final static void a(boolean param0, int param1) {
         pja.a(-11204, param0);
-        if (null != jja.field_m) {
-          DreamsAnimation.b(-25942, jja.field_m);
+        if (null != MusicPatchPcmStream.field_m) {
+          DreamsAnimation.b(-25942, MusicPatchPcmStream.field_m);
         }
         if (param1 > -72) {
           ia.a(false, -79);

@@ -5,7 +5,7 @@ final class gi extends IntrusiveNode {
     int field_j;
     static String field_g;
     IntrusiveNode field_i;
-    li field_h;
+    RawPcmStream field_h;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 1159353185) {
@@ -147,7 +147,7 @@ final class gi extends IntrusiveNode {
         }
     }
 
-    gi(li param0, IntrusiveNode param1) {
+    gi(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
           this.field_j = param0.g();

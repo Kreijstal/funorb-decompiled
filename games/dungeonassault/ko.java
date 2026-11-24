@@ -30,7 +30,7 @@ class ko extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ko.M(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ko.M(" + param0 + ',' + param1 + ')');
         }
     }
 

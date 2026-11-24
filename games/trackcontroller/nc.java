@@ -60,7 +60,7 @@ final class nc extends di {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(-117, param0) == ef.field_b) {
-            stackIn_2_0 = ol.field_m;
+            stackIn_2_0 = MusicPatchPcmStream.field_m;
             return stackIn_2_0;
           }
           if (param1 == 426) {

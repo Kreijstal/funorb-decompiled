@@ -41,7 +41,7 @@ final class AccountRequestState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var3), "ef.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var3), "ef.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class AccountRequestState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var3), "ef.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var3), "ef.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class AccountRequestState {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -88,7 +88,7 @@ class qn extends fb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ class qn extends fb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ class qn extends fb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ class qn extends fb {
           this.field_W = true;
           this.field_V = ud.correctedCurrentTimeMillis(2);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ class qn extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var3), "qn.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var3), "qn.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -503,7 +503,7 @@ class qn extends fb {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 
@@ -617,7 +617,7 @@ class qn extends fb {
             this.field_V = ud.correctedCurrentTimeMillis(2);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "qn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -20,7 +20,7 @@ final class ui extends IntrusiveNode {
           int var2_int = 98 / ((51 - param1) / 61);
           hb.field_H = 1000000000L / (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class ui extends IntrusiveNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class ui extends IntrusiveNode {
         try {
           field_j = null;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class ui extends IntrusiveNode {
           this.field_h = param1;
           this.field_i = param3;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

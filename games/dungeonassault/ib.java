@@ -41,7 +41,7 @@ final class ib {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class ib {
           var3.field_v = tp.a(kf.field_p, "defeat", param0, -1998);
           var3.field_l = tp.a(kf.field_p, "death", param0, -1998);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ib.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ib.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class ib {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class ib {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = uo.field_b[nb.a((int) var21[var6], 255)];
             }
-            var1[var2] = new cn(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var22);
+            var1[var2] = new cn(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var22);
           } else {
             var16 = rf.field_P[var2];
             var12 = var16;
@@ -189,7 +189,7 @@ final class ib {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = mp.a(uo.field_b[nb.a((int) var21[var7], 255)], nb.a(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (cn) ((Object) new ei(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var17));
+            var1[var2] = (cn) ((Object) new ei(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var17));
           }
         }
         sb.a(500);
@@ -227,7 +227,7 @@ final class ib {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

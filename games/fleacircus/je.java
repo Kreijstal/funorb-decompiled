@@ -19,7 +19,7 @@ final class je extends bb {
           field_M = null;
           field_P = null;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "je.CA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "je.CA(" + param0 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class je extends bb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1503,7 +1503,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_agreeterms", 0);
                 if (null != var2) {
-                  ei.field_v = ab.a(0, var2);
+                  MidiPcmStream.field_v = ab.a(0, var2);
                 }
                 var2 = ad.a("create_u13terms", 0);
                 if (null != var2) {
@@ -2777,7 +2777,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("mb_exclusive_1", 0);
                 if (null != var2) {
-                  ei.field_N = ab.a(0, var2);
+                  MidiPcmStream.field_N = ab.a(0, var2);
                 }
                 var2 = ad.a("mb_exclusive_2", 0);
                 if (var2 != null) {
@@ -3081,7 +3081,7 @@ final class je extends bb {
                   } else {
                     stackIn_2611_2 = "{...}";
                   }
-                  throw pf.a((Throwable) ((Object) stackIn_2610_0), ((StringBuilder) (Object) stackIn_2610_1).append(stackIn_2611_2).append(',').append(param1).append(')').toString());
+                  throw pf.wrapClientException((Throwable) ((Object) stackIn_2610_0), ((StringBuilder) (Object) stackIn_2610_1).append(stackIn_2611_2).append(',').append(param1).append(')').toString());
                 }
                 if (var4 != 0) {
                   stackIn_2619_0 = (!GameAppletShell.field_e);
@@ -3114,7 +3114,7 @@ final class je extends bb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3180,7 +3180,7 @@ final class je extends bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var5), "je.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var5), "je.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3202,7 +3202,7 @@ final class je extends bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "je.U(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "je.U(" + param0 + ')');
         }
     }
 
@@ -3225,7 +3225,7 @@ final class je extends bb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

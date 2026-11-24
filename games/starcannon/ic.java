@@ -18,7 +18,7 @@ final class ic {
     }
 
     final static void a(byte param0, String param1) {
-        System.out.println("Error: " + ed.a(-1, param1, "\n", "%0a"));
+        System.out.println("Error: " + DelayedPcmStream.a(-1, param1, "\n", "%0a"));
         if (param0 >= -95) {
           field_a = false;
         }

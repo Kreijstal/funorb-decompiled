@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    static oj field_a;
+    static CrossfadingMidiPcmStream field_a;
     static String[] field_b;
     static int[][] field_c;
 
@@ -41,7 +41,7 @@ final class jj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "jj.B(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "jj.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class jj {
             field_c = (int[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "jj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class ub {
         if (200 < si.field_l) {
           var5 = (-si.field_l + 250 << 8) / 50;
         }
-        oj.a(ug.field_f, 256);
+        CrossfadingMidiPcmStream.a(ug.field_f, 256);
         if (param2 != 116) {
           ub.clearStaticReferences(-11);
           ka.c();
@@ -206,7 +206,7 @@ final class ub {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

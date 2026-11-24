@@ -80,7 +80,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_94_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_93_1).append(stackIn_94_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_93_1).append(stackIn_94_2).append(')').toString());
         }
     }
 

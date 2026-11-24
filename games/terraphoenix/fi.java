@@ -75,7 +75,7 @@ final class fi extends di {
             return stackIn_3_0;
           }
           var3_int = -41 % ((26 - param1) / 56);
-          stackIn_5_0 = vd.field_p;
+          stackIn_5_0 = MusicPatchPcmStream.field_p;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

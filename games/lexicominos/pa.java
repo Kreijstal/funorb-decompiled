@@ -20,7 +20,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "pa.A(" + param0 + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "pa.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class pa {
             field_d = -126;
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "pa.C(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "pa.C(" + param0 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1_ref), "pa.B(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1_ref), "pa.B(" + param0 + ')');
         }
     }
 

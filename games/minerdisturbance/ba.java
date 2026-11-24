@@ -38,7 +38,7 @@ final class ba extends kn implements be, sh {
           this.a(-1, this.field_I);
           this.a(var5 + var3 + 55, -99, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class ba extends kn implements be, sh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class ba extends kn implements be, sh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -165,12 +165,12 @@ final class ba extends kn implements be, sh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
-        di stackIn_4_0 = null;
+        MidiPcmStream stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -200,7 +200,7 @@ final class ba extends kn implements be, sh {
           km.field_a.a(false, h.field_d, var6, 0, param2);
           stackIn_4_0 = km.field_a;
           stackIn_5_1 = !(param3);
-          ((di) (Object) stackIn_4_0).a(stackIn_5_1, df.field_b, var6, 0, param2);
+          ((MidiPcmStream) (Object) stackIn_4_0).a(stackIn_5_1, df.field_b, var6, 0, param2);
           km.field_a.a(false, eg.field_p, var6, 0, param2);
           km.field_a.a(false, hl.field_a, var6, 0, param2);
           km.field_a.a(false, DualLinkNode.field_s, var6, 0, param2);
@@ -235,7 +235,7 @@ final class ba extends kn implements be, sh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -60,7 +60,7 @@ class ou extends DualLinkNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
     }
 

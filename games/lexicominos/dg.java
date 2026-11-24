@@ -71,7 +71,7 @@ final class dg {
         try {
           pd.a(-22949);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 public final class Torquing extends tg {
     private TooltipPanel field_t;
-    static kk field_v;
+    static VolumeScaledPcmStream field_v;
     static String field_w;
     static int field_x;
     public static int field_u;
@@ -154,7 +154,7 @@ public final class Torquing extends tg {
           IntrusiveNode.b((byte) 92);
           gk.a(-64);
           AudioService.clearStaticReferences(true);
-          kk.clearStaticReferences(160);
+          VolumeScaledPcmStream.clearStaticReferences(160);
           oi.a(0);
           db.d(-98);
           to.a(param0 ^ 29826);
@@ -249,7 +249,7 @@ public final class Torquing extends tg {
           fc.clearStaticReferences();
           j.a((byte) 44);
           pm.clearStaticReferences(0);
-          kl.clearStaticReferences(-125);
+          DelayedPcmStream.clearStaticReferences(-125);
           mg.a(-62);
           oc.clearStaticReferences(false);
           oj.clearStaticReferences(param0 ^ 5);
@@ -499,7 +499,7 @@ public final class Torquing extends tg {
             this.field_t.c(0);
           }
           this.field_t.b(34, -120, 159);
-          qh.field_c.a(kk.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, 3 * (1 + dd.field_c.field_x) / 2);
+          qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, 3 * (1 + dd.field_c.field_x) / 2);
           if (param0 < 30) {
             this.b(61);
           }
@@ -823,9 +823,9 @@ public final class Torquing extends tg {
           if (rp.field_d != null) {
             IsaacPacketBuffer.a(32.0f, -66, k.field_h);
             this.b((byte) 73);
-            kk.field_o = mn.a(rp.field_d, "basic", "unachieved", 112);
+            VolumeScaledPcmStream.field_o = mn.a(rp.field_d, "basic", "unachieved", 112);
             pe.field_J = mn.a(rp.field_d, "basic", "locked", param1 + 207);
-            mo.a(kk.field_o, 4);
+            mo.a(VolumeScaledPcmStream.field_o, 4);
             dd.field_i = mn.a(rp.field_d, "basic", "orbcoin", 124);
             this.q(8);
             if (0 >= wp.field_w) {
@@ -916,7 +916,7 @@ public final class Torquing extends tg {
             jb.field_b = var8_ref_ia;
             nh.field_l = var7_ref_sm;
             bd.field_w = mn.a(rg.field_v, "", "dashboard", 106);
-            kk.field_n = mn.a(rg.field_v, "", "shieldIcon", 105);
+            VolumeScaledPcmStream.field_n = mn.a(rg.field_v, "", "shieldIcon", 105);
             ia.field_f = mn.a(rg.field_v, "", "gyroIcon", 104);
             hq.field_h = pb.a("countdown", -1, "", rg.field_v);
             hi.field_h = new sm[8];
@@ -959,7 +959,7 @@ public final class Torquing extends tg {
             qd.field_c[1] = DelegatingCanvas.a("death_time", 31094, rg.field_v, "");
             qd.field_c[0] = vo.a(-173, i.c((int) param1, 101), GameKeyHandler.field_a[2], 43);
             qd.field_c[2] = vo.a(-194, -1, GameKeyHandler.field_a[6], -34);
-            kl.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
+            DelayedPcmStream.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
             AccountRequestState.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
             be.a(new op(vp.field_D, n.field_q, rg.field_v, 6, false));
             tj.field_n = pb.a("achievements_lrg", param1 + 101, "", rg.field_v);
@@ -1249,7 +1249,7 @@ public final class Torquing extends tg {
           }
           if (null == hg.field_b) {
             lc.d(param1 ^ 1339942777);
-            kl.field_p = null;
+            DelayedPcmStream.field_p = null;
             cf.a(param1 + 6741);
             return false;
           }
@@ -1785,7 +1785,7 @@ public final class Torquing extends tg {
           }
           var4.field_e.b(34, -127, 159);
           wj.field_k.a(-(wj.field_k.field_c / 2) + 219, 414);
-          qh.field_c.a(kk.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
+          qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
           SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
@@ -1920,7 +1920,7 @@ public final class Torquing extends tg {
             }
           }
           if (param0 != -30) {
-            field_v = (kk) null;
+            field_v = (VolumeScaledPcmStream) null;
           }
           if (var2_int != 0) {
             if (pb.field_e == -1) {
@@ -2337,6 +2337,6 @@ public final class Torquing extends tg {
     }
 
     static {
-        field_v = new kk();
+        field_v = new VolumeScaledPcmStream();
     }
 }

@@ -52,7 +52,7 @@ final class lc extends ro {
                 return stackIn_19_0;
               }
             } else {
-              if (kl.field_t.indexOf(var4) == -1) {
+              if (DelayedPcmStream.field_t.indexOf(var4) == -1) {
                 stackIn_22_0 = va.field_H;
                 return stackIn_22_0;
               }
@@ -141,15 +141,15 @@ final class lc extends ro {
           SoftwareRasterizer.c(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.d(244, 198, 367, 141, 0);
           if (null == nc.field_d) {
-            if (null != kl.field_o) {
-              kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != DelayedPcmStream.field_o) {
+              DelayedPcmStream.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = nc.field_d[da.field_a];
           if (var6 == null) {
-            if (kl.field_o != null) {
-              kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (DelayedPcmStream.field_o != null) {
+              DelayedPcmStream.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.d(245, 199);
@@ -169,7 +169,7 @@ final class lc extends ro {
               }
             }
           }
-          if (null != kl.field_o) {
+          if (null != DelayedPcmStream.field_o) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -188,7 +188,7 @@ final class lc extends ro {
             if (var2 == null) {
               return;
             }
-            kl.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            DelayedPcmStream.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class lc extends ro {
           if (param0 != -1339942685) {
             field_B = (String) null;
           }
-          var30 = rh.a((byte) 114, var1, kl.field_p, "");
+          var30 = rh.a((byte) 114, var1, DelayedPcmStream.field_p, "");
           var30[0].a((byte) -15, 2);
           var31 = rh.a((byte) 116, var30, var4, hl.field_c);
           var31[0].a((byte) 101, 1);

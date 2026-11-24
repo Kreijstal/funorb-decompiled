@@ -460,7 +460,7 @@ final class we implements j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1_ref), "we.D(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "we.D(" + param0 + ')');
         }
     }
 
@@ -495,7 +495,7 @@ final class we implements j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1_ref), "we.B(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "we.B(" + param0 + ')');
         }
     }
 
@@ -565,7 +565,7 @@ final class we implements j {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -580,7 +580,7 @@ final class we implements j {
           this.field_d = param2;
           this.field_f = param7;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

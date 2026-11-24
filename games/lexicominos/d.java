@@ -108,7 +108,7 @@ final class d {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 

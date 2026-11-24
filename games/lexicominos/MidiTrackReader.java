@@ -12,7 +12,7 @@ final class MidiTrackReader {
     private int[] field_g;
     int field_e;
 
-    final boolean d() {
+    final boolean hasMidiData() {
         return this.field_d.payload != null;
     }
 

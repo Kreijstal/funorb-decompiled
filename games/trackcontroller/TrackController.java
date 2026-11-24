@@ -344,9 +344,9 @@ public final class TrackController extends GameShell {
         NodeHashTable.clearStaticReferences(param0 - 104);
         ha.d(4);
         fa.clearStaticReferences();
-        ol.clearStaticReferences(param0 ^ -109);
+        MusicPatchPcmStream.clearStaticReferences(param0 ^ -109);
         AudioOutput.clearStaticReferences();
-        qe.clearStaticReferences(1048576);
+        CrossfadingMidiPcmStream.clearStaticReferences(1048576);
         kb.a(14);
         cd.c(11352);
         na.clearStaticReferences(-4775);

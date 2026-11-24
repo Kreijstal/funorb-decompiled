@@ -33,7 +33,7 @@ final class SecondaryNodeDeque implements Iterable {
           param0.field_l.field_n = param0;
           param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "dh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "dh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class SecondaryNodeDeque implements Iterable {
           ao.field_n.d(param1 + (-ao.field_n.field_E + 200 >> 1), -(ao.field_n.field_G >> 1) - 16 + param3, 500, 0);
           rn.field_c.d((200 - rn.field_c.field_E >> 1) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> 1)), 0, 500);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

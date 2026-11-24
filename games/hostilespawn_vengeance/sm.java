@@ -85,7 +85,7 @@ abstract class sm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var3), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

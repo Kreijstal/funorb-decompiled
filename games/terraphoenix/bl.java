@@ -1602,7 +1602,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 81, "MODELNAME_FUSCAN");
                 if (var2 != null) {
-                  wl.field_y = ll.a(param0 ^ 96, var2);
+                  MidiPcmStream.field_y = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 90, "MODELNAME_FUSLAU");
                 if (null != var2) {

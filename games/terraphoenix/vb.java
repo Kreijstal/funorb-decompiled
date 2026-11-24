@@ -77,7 +77,7 @@ final class vb {
           return IntrusiveDeque.field_d;
         }
         if (ch.field_g.b((byte) -128)) {
-          return vd.field_o;
+          return MusicPatchPcmStream.field_o;
         }
         return li.field_b + " - " + ch.field_g.a((byte) 127) + "%";
     }

@@ -91,7 +91,7 @@ final class wi extends IntrusiveNode {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
         }
     }
 

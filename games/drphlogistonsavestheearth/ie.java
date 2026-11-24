@@ -4,7 +4,7 @@
 final class ie extends l {
     static int field_y;
     private int field_z;
-    static ec field_v;
+    static PcmStreamMixer field_v;
     static String field_C;
     private int field_w;
     private int field_A;

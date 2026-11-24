@@ -44,7 +44,7 @@ final class GasCloudAnimation extends EventAnimation {
               }
             }
           }
-          jja.a(256, -1, 23);
+          MusicPatchPcmStream.a(256, -1, 23);
         }
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -511,7 +511,7 @@ final class GasCloudAnimation extends EventAnimation {
               var13.field_Hb.a(rg.field_h, 31407, 78, 70, var32);
               if (var13.field_Hb.field_T &&
                 !var13.field_Hb.field_Z.equals(var33)) {
-                jja.field_m = var33;
+                MusicPatchPcmStream.field_m = var33;
               }
               var13.field_yb.field_Z = Integer.toString(var13.field_Rb);
               if (!var13.field_Fb) {
@@ -665,9 +665,9 @@ final class GasCloudAnimation extends EventAnimation {
                   }
                 }
                 if (var36 != null) {
-                  jja.field_m = kka.field_k[var35_intLifetime2] + " - " + (String) (var36);
+                  MusicPatchPcmStream.field_m = kka.field_k[var35_intLifetime2] + " - " + (String) (var36);
                 } else {
-                  jja.field_m = kka.field_k[var35_intLifetime2];
+                  MusicPatchPcmStream.field_m = kka.field_k[var35_intLifetime2];
                 }
               }
             }
@@ -677,7 +677,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 var35 = cc.field_d[var13.field_Kb];
               }
-              jja.field_m = jk.field_j + " - " + var35;
+              MusicPatchPcmStream.field_m = jk.field_j + " - " + var35;
             }
             if (var13.field_fc.field_T) {
               if (var13.field_dc) {
@@ -685,7 +685,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 stackIn_154_0 = uf.field_a;
               }
-              jja.field_m = stackIn_154_0;
+              MusicPatchPcmStream.field_m = stackIn_154_0;
             }
             if (var13.field_wb.field_T) {
               if (!var13.field_zb &&
@@ -698,7 +698,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 stackIn_163_0 = lm.field_c;
               }
-              jja.field_m = stackIn_163_0;
+              MusicPatchPcmStream.field_m = stackIn_163_0;
             }
             if (var13.field_Qb.field_T) {
               if (var13.field_Lb != 2) {
@@ -706,7 +706,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 stackIn_169_0 = StatusEffectInfo.field_h;
               }
-              jja.field_m = stackIn_169_0;
+              MusicPatchPcmStream.field_m = stackIn_169_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (0 != var13.field_R &&

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ki {
-    static nc field_d;
+    static RawPcmStream field_d;
     static hb field_b;
     static int[] field_e;
     static boolean[] field_a;

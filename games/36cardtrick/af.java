@@ -126,9 +126,9 @@ class af extends ta implements qh {
         }
     }
 
-    final static qj r(int param0) {
+    final static PcmStreamMixer r(int param0) {
         if (param0 != 77) {
-          return (qj) null;
+          return (PcmStreamMixer) null;
         }
         return gh.field_k;
     }

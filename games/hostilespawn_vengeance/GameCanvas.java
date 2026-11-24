@@ -228,7 +228,7 @@ final class GameCanvas extends java.awt.Canvas {
           } else {
             stackIn_130_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_126_0), ((StringBuilder) (Object) stackIn_129_1).append(stackIn_130_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_126_0), ((StringBuilder) (Object) stackIn_129_1).append(stackIn_130_2).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_l.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vc.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "vc.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_l.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vc.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "vc.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

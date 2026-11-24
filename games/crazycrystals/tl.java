@@ -17,7 +17,7 @@ abstract class tl {
           field_b = null;
           int var1_int = -108 % ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tl.D(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tl.D(" + param0 + ')');
         }
     }
 
@@ -1229,7 +1229,7 @@ abstract class tl {
           }
           var2Lifetime227 = we.a("stickyball_information", 1);
           if (var2Lifetime227 != null) {
-            wg.field_N = fa.a((byte) -91, var2Lifetime227);
+            MidiPcmStream.field_N = fa.a((byte) -91, var2Lifetime227);
           }
           var2Lifetime228 = we.a("teleport_name", 1);
           if (var2Lifetime228 != null) {
@@ -1470,7 +1470,7 @@ abstract class tl {
           } else {
             stackIn_1008_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_1007_0), ((StringBuilder) (Object) stackIn_1007_1).append(stackIn_1008_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_1007_0), ((StringBuilder) (Object) stackIn_1007_1).append(stackIn_1008_2).append(')').toString());
         }
         if (GameAppletShell.field_e != 0) {
           var3++;
@@ -1492,7 +1492,7 @@ abstract class tl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "tl.B(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "tl.B(" + param0 + ')');
         }
     }
 

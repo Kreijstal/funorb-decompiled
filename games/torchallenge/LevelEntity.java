@@ -896,7 +896,7 @@ final class LevelEntity {
             return;
           }
           var3 = ae.field_j;
-          var4 = pg.field_n;
+          var4 = MusicPatchPcmStream.field_n;
           if (param0 < 106) {
             this.C(92);
           }
@@ -2831,7 +2831,7 @@ final class LevelEntity {
         RuntimeException var3_ref = null;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          var3 = pg.field_n;
+          var3 = MusicPatchPcmStream.field_n;
           var6 = this.field_z;
           var7 = var6 - this.field_w;
           var8 = 16;
@@ -4484,7 +4484,7 @@ final class LevelEntity {
           var6 = var4[0] * 64 + var5;
           var7 = 64 + 64 * var4[1];
           var8 = var6 + var7 >> 1;
-          var10 = pg.field_n;
+          var10 = MusicPatchPcmStream.field_n;
           var12 = this.field_z;
           var13 = var10[0][1] * 64 + 64;
           if (param0 != -16452) {
@@ -5068,7 +5068,7 @@ final class LevelEntity {
           if (param0 != 120) {
             this.field_Z = true;
           }
-          var3 = pg.field_n[param1];
+          var3 = MusicPatchPcmStream.field_n[param1];
           var4 = var3[0] * 64;
           var5 = 16;
           var4 = var4 + var5;
@@ -5506,8 +5506,8 @@ final class LevelEntity {
               var11Lifetime1 = -var20 + (64 * param7 / 256 + (-param0 + param3 * 64));
             }
           }
-          var9_intLifetime1 = var18 * (fj.a(1870096848, wi.field_a[var16], var12Lifetime1 << 16) >> 16) + 320;
-          var10Lifetime1 = 320 + var19 * (fj.a(1870096848, wi.field_a[var17], var12Lifetime1 << 16) >> 16);
+          var9_intLifetime1 = var18 * (CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var16], var12Lifetime1 << 16) >> 16) + 320;
+          var10Lifetime1 = 320 + var19 * (CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var17], var12Lifetime1 << 16) >> 16);
           if (!vg.a(param5, param6 ^ -2658)) {
             if (this.field_I <= -var9_intLifetime1 + var10Lifetime1) {
               if (!(var10Lifetime1 - var9_intLifetime1 >= 64)) {
@@ -9936,7 +9936,7 @@ final class LevelEntity {
             stackIn_31_0 = 1;
           }
           var9 = stackIn_31_0;
-          if (fj.field_z[var2_int][var3][this.field_kb] &&
+          if (CrossfadingMidiPcmStream.field_z[var2_int][var3][this.field_kb] &&
             var9 != 0) {
             stackIn_38_0 = 1;
           } else {

@@ -129,7 +129,7 @@ final class ai extends DualLinkNode {
         }
     }
 
-    final static ec g(int param0) {
+    final static PcmStreamMixer g(int param0) {
         if (param0 != -29132) {
           ai.g(-85);
         }

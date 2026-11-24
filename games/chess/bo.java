@@ -13,7 +13,7 @@ final class bo {
         cf.field_Nb = false;
         uk.a(false, -1);
         DelegatingCanvas.field_a = ji.field_T;
-        vl.field_A = ji.field_T;
+        MidiPcmStream.field_A = ji.field_T;
         if (param0 <= 30) {
           field_a = (String) null;
         }
@@ -43,7 +43,7 @@ final class bo {
           var4 = -1L;
           vm.a(var3, 11440, param0, var4, var2);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

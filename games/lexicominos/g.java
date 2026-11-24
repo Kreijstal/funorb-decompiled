@@ -46,7 +46,7 @@ final class g extends tj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class g extends tj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class g extends tj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2_ref2), "g.A(" + param0 + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2_ref2), "g.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -169,14 +169,14 @@ final class g extends tj {
           }
           var4 = (sj) (il.field_b.beginForward(true));
           while (var4 != null) {
-            uh.a(var4, (byte) -123, param0);
+            CrossfadingMidiPcmStream.a(var4, (byte) -123, param0);
             var4 = (sj) (il.field_b.nextForward(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "g.K(" + param0 + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "g.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class g extends tj {
         try {
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

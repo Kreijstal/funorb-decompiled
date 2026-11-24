@@ -34,7 +34,7 @@ final class el extends fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "el.E(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "el.E(" + param0 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class el extends fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var3_ref), "el.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var3_ref), "el.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class el extends fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var9), "el.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var9), "el.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class el extends fe {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class el extends fe {
                   var21Lifetime2 = param4.field_r[var18];
                   oa.field_c[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
                   in.field_c[var18] = var21Lifetime2 * var16 + (var13 * var20 + var10 * var19) >> 16;
-                  dl.field_o[var18] = var20 * var14 + var19 * var11 + var17 * var21Lifetime2 >> 16;
+                  MusicPatchPcmStream.field_o[var18] = var20 * var14 + var19 * var11 + var17 * var21Lifetime2 >> 16;
                   var18++;
                 }
               }
@@ -394,7 +394,7 @@ final class el extends fe {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class el extends fe {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -507,7 +507,7 @@ final class el extends fe {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class el extends fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "el.I(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "el.I(" + param0 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class el extends fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
           decompiledCaughtException = decompiledCaughtParameter3;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "el.D(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "el.D(" + param0 + ')');
         }
     }
 
@@ -670,7 +670,7 @@ final class el extends fe {
         try {
           this.field_k = java.net.ProxySelector.getDefault();
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "el.<init>()");
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "el.<init>()");
         }
     }
 

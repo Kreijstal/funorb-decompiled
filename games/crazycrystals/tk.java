@@ -17,7 +17,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
           this.c(126);
           param0.drawImage(this.field_b, param3, param1, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_j);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tk.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tk.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
           param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
           this.a(6945);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
             this.field_g = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tk.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tk.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "tk.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tk.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

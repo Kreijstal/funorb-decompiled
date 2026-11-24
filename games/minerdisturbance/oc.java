@@ -132,8 +132,8 @@ final class oc extends hn {
               if (wj.field_j < 2) {
                 continue;
               }
-              stackIn_73_0 = !(gd.field_w);
-              gd.field_w = stackIn_73_0;
+              stackIn_73_0 = !(MusicPatchPcmStream.field_w);
+              MusicPatchPcmStream.field_w = stackIn_73_0;
             }
             if (0 <= var1_intLifetime1 &&
               var2 == 0) {
@@ -203,7 +203,7 @@ final class oc extends hn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "oc.B(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "oc.B(" + param0 + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class oc extends hn {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class oc extends hn {
           this.field_k = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class oc extends hn {
           param0.writePrefixedString(8, this.field_g);
           param0.writeBase38String((byte) 97, this.field_k);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "oc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

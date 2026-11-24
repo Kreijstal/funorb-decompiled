@@ -252,7 +252,7 @@ final class fg extends kj implements cc, sg {
         if (TorChallenge.r(-1592) ||
           !(0 >= this.field_T.field_v.length()) &&
           !(this.field_Q.field_v.length() <= 0)) {
-          kb.a(this.field_T.field_v, this.field_Q.field_v, (byte) 44);
+          MidiPcmStream.a(this.field_T.field_v, this.field_Q.field_v, (byte) 44);
         }
         var2 = 83 % ((46 - param0) / 56);
     }

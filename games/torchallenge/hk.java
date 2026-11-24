@@ -36,7 +36,7 @@ final class hk {
               }
               wh.field_d[var5] = false;
             } else {
-              var2 = fj.field_p[var5];
+              var2 = CrossfadingMidiPcmStream.field_p[var5];
               if (ea.field_g != null &&
                 var2 >= 0 &&
                 ea.field_g.length > var2) {
@@ -51,7 +51,7 @@ final class hk {
                   decompiledFrameRemainder0 = !(var4 < 0);
                   if (decompiledFrameRemainder0) {
                     var3 = cj.field_h[var4];
-                    SpriteState.field_r[var5] = nc.a(var3, 100, var1_int);
+                    SpriteState.field_r[var5] = RawPcmStream.a(var3, 100, var1_int);
                     SpriteState.field_r[var5].e(-1);
                     SpriteState.field_r[var5].e(0, var3.field_k.length);
                     IntrusiveNode.field_g[var5] = we.a(SpriteState.field_r[var5], 6222);

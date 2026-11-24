@@ -26,7 +26,7 @@ abstract class eq extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "eq.G(" + param0 + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "eq.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ abstract class eq extends IntrusiveNode {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

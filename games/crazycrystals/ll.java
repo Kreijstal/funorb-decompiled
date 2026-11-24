@@ -55,7 +55,7 @@ final class ll {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class ll {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var3), "ll.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var3), "ll.A(" + param0 + ',' + param1 + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

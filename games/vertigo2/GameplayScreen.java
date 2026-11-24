@@ -80,7 +80,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) runtimeException), "tr.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tr.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class GameplayScreen {
           uh.field_Wb.writeInt(ci.field_b, param1 ^ -24066);
           uh.field_Wb.writeInt(lj.field_k, 0);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "tr.J(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tr.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "tr.N(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "tr.N(" + param0 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "tr.P(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "tr.P(" + param0 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class GameplayScreen {
         try {
           field_e = null;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "tr.L(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tr.L(" + param0 + ')');
         }
     }
 
@@ -811,7 +811,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "tr.B(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "tr.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -837,7 +837,7 @@ final class GameplayScreen {
               var6 = 20;
               var7 = 20;
               var8 = 170;
-              rq.a(30 + var5 + 2 * var7, var4 + var6 * 2, var8 - var7, -(var4 / 2) + 320 - var6, -62, 150);
+              MusicPatchPcmStream.a(30 + var5 + 2 * var7, var4 + var6 * 2, var8 - var7, -(var4 / 2) + 320 - var6, -62, 150);
               tk.field_c.a(var3, 320 - var4 / 2, var8, var4, var5, 16777215, -1, 1, 1, 0);
               var8 = var8 + (var7 / 2 + var5);
               bi.b(320 - (var4 - 30) / 2, var8, var4 - 30, 5921370);
@@ -859,7 +859,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "tr.A(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "tr.A(" + param0 + ')');
         }
     }
 
@@ -877,7 +877,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "tr.O(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "tr.O(" + param0 + ')');
         }
     }
 
@@ -888,7 +888,7 @@ final class GameplayScreen {
             this.field_C = 108;
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "tr.D(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tr.D(" + param0 + ')');
         }
     }
 
@@ -911,7 +911,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "tr.E(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "tr.E(" + param0 + ')');
         }
     }
 
@@ -922,7 +922,7 @@ final class GameplayScreen {
         try {
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "tr.K(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tr.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -988,7 +988,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "tr.G(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "tr.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1086,7 +1086,7 @@ final class GameplayScreen {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1111,7 +1111,7 @@ final class GameplayScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1610,7 +1610,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "tr.I(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "tr.I(" + param0 + ')');
         }
     }
 
@@ -1637,7 +1637,7 @@ final class GameplayScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1665,7 +1665,7 @@ final class GameplayScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -2017,7 +2017,7 @@ final class GameplayScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3_ref), "tr.Q(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3_ref), "tr.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2169,7 +2169,7 @@ final class GameplayScreen {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

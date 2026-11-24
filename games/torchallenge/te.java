@@ -45,7 +45,7 @@ final class te {
               } else {
                 param2 = k.field_f;
               }
-              kb.field_O.a(lg.field_b, 10);
+              MidiPcmStream.field_O.a(lg.field_b, 10);
             }
             if (param1 == 10) {
               qk.d((byte) -80);
@@ -63,7 +63,7 @@ final class te {
             if (param1 != 256 &&
               param1 != 10 &&
               !eb.field_m) {
-              kb.field_O.h(~param0);
+              MidiPcmStream.field_O.h(~param0);
               return;
             }
           }

@@ -46,7 +46,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.M(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.M(" + param0 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3_ref), "re.C(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3_ref), "re.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.A(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class re extends ue {
           this.e(79);
           this.a(-1, false);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "re.B(" + param0 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3), "re.P(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3), "re.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var4), "re.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var4), "re.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3), "re.F(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3), "re.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class re extends ue {
         try {
           this.field_u = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "re.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "re.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.J(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.J(" + param0 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class re extends ue {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -457,7 +457,7 @@ final class re extends ue {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -471,7 +471,7 @@ final class re extends ue {
           field_n = null;
           int var1_int = 10 / ((param0 + 7) / 62);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "re.O(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "re.O(" + param0 + ')');
         }
     }
 
@@ -500,7 +500,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.N(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.N(" + param0 + ')');
         }
     }
 
@@ -525,7 +525,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.D(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.D(" + param0 + ')');
         }
     }
 
@@ -545,7 +545,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.G(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.G(" + param0 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "re.<init>()");
+          throw dn.wrapClientException((Throwable) ((Object) var1), "re.<init>()");
         }
     }
 
@@ -685,7 +685,7 @@ final class re extends ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "re.I(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "re.I(" + param0 + ')');
         }
     }
 

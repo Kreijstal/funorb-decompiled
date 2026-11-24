@@ -45,7 +45,7 @@ final class jh {
           ah.field_i[8] = BufferedSocket.field_b.field_s + dd.field_b - (-BufferedSocket.field_b.field_F - var3);
           si.field_F[8] = 37 + var3 * 2;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "jh.H(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jh.H(" + param0 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class jh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class jh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

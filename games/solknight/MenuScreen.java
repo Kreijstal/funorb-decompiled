@@ -104,7 +104,7 @@ final class MenuScreen {
                           DirectByteStorage.field_d = 0;
                           ImageProducerRasterBuffer.field_m = 0;
                           FullscreenFocusCanvas.field_b = 10;
-                          mf.field_A = 0;
+                          MidiPcmStream.field_A = 0;
                           ib.field_h = 0;
                           kf.field_G = new Asteroid[10];
                           fg.field_a = 0;
@@ -364,7 +364,7 @@ final class MenuScreen {
               ic.field_t = ic.field_t - (lc.field_h >>> 17) * ud.field_k;
               bi.field_i = bi.field_i - ud.field_k;
               ib.field_h = 0;
-              mf.field_A = 0;
+              MidiPcmStream.field_A = 0;
               ProxyAuthenticationRequiredException.field_a = 0;
               lk.field_b = 0;
               lk.field_e = 0;
@@ -917,7 +917,7 @@ final class MenuScreen {
                       }
                       td.field_e[var14 + hg.field_y].d(83, 248 + var13 - 103);
                       td.field_e[hg.field_y + var14].d(526, var13 + 145);
-                      BufferedSocket.field_b.a(mf.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
+                      BufferedSocket.field_b.a(MidiPcmStream.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
                       BufferedSocket.field_b.a(rf.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                       ah.field_i[this.field_d] = var13 + var10Lifetime1Lifetime1;
                     }
@@ -1054,7 +1054,7 @@ final class MenuScreen {
                 if ((var2.length() == 0)) {
                   var8Lifetime1 = 106 + var3.field_F;
                   var3.b(ne.field_a, 380, var8Lifetime1, 1134591, -1);
-                  var3.b(mf.field_K, 582, var8Lifetime1, 1134591, -1);
+                  var3.b(MidiPcmStream.field_K, 582, var8Lifetime1, 1134591, -1);
                 }
                 break regionExit1;
               }
@@ -1067,7 +1067,7 @@ final class MenuScreen {
         var4 = 105 + (106 + var3.field_F);
         var3.a(var2, 327, var4, 1134591, -1);
         if (il.b(507)) {
-          stackIn_29_0 = mf.field_n;
+          stackIn_29_0 = MidiPcmStream.field_n;
         } else {
           stackIn_29_0 = BufferedSocket.field_o;
         }
@@ -1205,7 +1205,7 @@ final class MenuScreen {
         } else {
           if (il.b(param1 ^ -509)) {
             BufferedSocket.field_b.a(GzipDecompressor.field_b, 25, -BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
-            BufferedSocket.field_b.a(mf.field_n, 25, 2 * BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+            BufferedSocket.field_b.a(MidiPcmStream.field_n, 25, 2 * BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
           } else {
             BufferedSocket.field_b.a(GzipDecompressor.field_b, 320, 296, 16776960, -1);
           }

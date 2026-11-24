@@ -55,10 +55,10 @@ final class sa {
         RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (ja) (vd.field_l.beginBackward(9272));
+          var4 = (ja) (MusicPatchPcmStream.field_l.beginBackward(9272));
           while (var4 != null) {
             eb.a(var4, 0, param1);
-            var4 = (ja) (vd.field_l.nextBackward((byte) -119));
+            var4 = (ja) (MusicPatchPcmStream.field_l.nextBackward((byte) -119));
           }
           if (param0 == -336) {
             return;

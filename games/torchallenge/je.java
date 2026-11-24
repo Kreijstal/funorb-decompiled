@@ -98,7 +98,7 @@ final class je {
         this.a(var4Lifetime1, -27615);
     }
 
-    final static void a(byte param0, nc param1) {
+    final static void a(byte param0, RawPcmStream param1) {
         try {
           GameKeyHandler.field_a.b(param1);
           if (param0 != 15) {
@@ -117,11 +117,11 @@ final class je {
         n.field_cb = null;
         bl.field_V = null;
         var2 = BufferedSocket.field_d;
-        BufferedSocket.field_d = pg.field_m;
+        BufferedSocket.field_d = MusicPatchPcmStream.field_m;
         if (param0 == 51) {
           gb.field_d.field_b = 2;
           gb.field_d.field_h = gb.field_d.field_h + 1;
-          pg.field_m = var2;
+          MusicPatchPcmStream.field_m = var2;
           if (!param1) {
             return 25;
           }
@@ -137,7 +137,7 @@ final class je {
           if (param0 != 50) {
             gb.field_d.field_b = 1;
             gb.field_d.field_h = gb.field_d.field_h + 1;
-            pg.field_m = var2;
+            MusicPatchPcmStream.field_m = var2;
             if (!param1) {
               return 25;
             }
@@ -156,7 +156,7 @@ final class je {
           }
           gb.field_d.field_b = 5;
           gb.field_d.field_h = gb.field_d.field_h + 1;
-          pg.field_m = var2;
+          MusicPatchPcmStream.field_m = var2;
           if (!param1) {
             return 25;
           }

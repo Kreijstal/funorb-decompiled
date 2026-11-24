@@ -4,7 +4,7 @@
 final class kj implements WidgetActionListener {
     static String[] field_c;
     static im field_d;
-    static vg field_b;
+    static PcmStreamMixer field_b;
     static String field_a;
     static String field_f;
     static String field_e;
@@ -73,7 +73,7 @@ final class kj implements WidgetActionListener {
           vj.a(param0 ^ -24476);
           return;
         }
-        field_b = (vg) null;
+        field_b = (PcmStreamMixer) null;
         m.field_e = null;
         fd.field_k = false;
         if (qi.field_b) {

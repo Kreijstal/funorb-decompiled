@@ -59,7 +59,7 @@ final class th extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class th extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class th extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class th extends PacketBuffer {
           int var3_int = 18 / ((param1 + 36) / 50);
           this.field_n = new pe(param0);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "th.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "th.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

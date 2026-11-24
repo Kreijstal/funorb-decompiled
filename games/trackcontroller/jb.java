@@ -28,7 +28,7 @@ final class jb {
           AudioOutput.configureAudio(param7, param1, 10);
           sb.field_b = AudioOutput.createOutput(param6, param4, 0, param3);
           SpriteState.field_x = AudioOutput.createOutput(param6, param4, 1, param5);
-          ProxySocketConnector.field_e = new k();
+          ProxySocketConnector.field_e = new PcmStreamMixer();
           Archive.field_h = param5 * 1000 / param7;
           SpriteState.field_x.setRootStream(ProxySocketConnector.field_e);
           fj.field_P = param2;

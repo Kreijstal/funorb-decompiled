@@ -13,7 +13,7 @@ final class i implements uj {
     }
 
     public final void a(boolean param0) {
-        gd.field_x = 4;
+        MusicPatchPcmStream.field_x = 4;
         tb.field_a = 1;
         if (!param0) {
           return;
@@ -80,7 +80,7 @@ final class i implements uj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

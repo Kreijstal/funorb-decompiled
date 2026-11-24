@@ -484,7 +484,7 @@ final class re {
                                       if (14 == var2) {
                                         this.field_p = 2;
                                         this.field_l = 115;
-                                        this.field_r = wl.field_y;
+                                        this.field_r = MidiPcmStream.field_y;
                                         this.field_o = 16;
                                         this.field_g[0] = 110;
                                         this.field_g[1] = 75;

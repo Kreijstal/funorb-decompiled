@@ -11,7 +11,7 @@ final class vf {
           int var3_int = -91 / ((param0 + 66) / 55);
           DelegatingCanvas.field_a = param1;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class vf {
           tj.field_y = param1;
           kf.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "vf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "vf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1_ref), "vf.B(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1_ref), "vf.B(" + param0 + ')');
         }
     }
 

@@ -22,7 +22,7 @@ final class hg extends IntrusiveNode {
     int field_o;
     g field_D;
     int field_A;
-    qi field_w;
+    RawPcmStream field_w;
     static int field_y;
     int field_m;
     static int[] field_B;
@@ -46,7 +46,7 @@ final class hg extends IntrusiveNode {
             hg.a(40, (String) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

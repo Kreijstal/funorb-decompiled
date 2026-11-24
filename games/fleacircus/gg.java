@@ -7,14 +7,14 @@ abstract class gg implements jb {
     static int field_f;
     static int field_g;
     static boolean[] field_i;
-    static ei field_h;
+    static MidiPcmStream field_h;
     private long field_c;
     static PlatformTask field_e;
     static String field_d;
 
     public final wd a(boolean param0) {
         if (param0) {
-          field_h = (ei) null;
+          field_h = (MidiPcmStream) null;
           if (this.b(true)) {
             return uk.field_b;
           }

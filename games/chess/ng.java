@@ -22,7 +22,7 @@ final class ng {
           qn.field_U.writeByte(param1 ? 1 : 0, (byte) -95);
           qn.field_U.backpatchByteLength(qn.field_U.position - var7_int, -1);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

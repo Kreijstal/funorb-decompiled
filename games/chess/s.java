@@ -72,7 +72,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class s extends ma implements wl, mj {
           super.a(param0, -14, param2, param3);
           this.field_N.field_H = this.i(0);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "s.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "s.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -683,7 +683,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_213_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_212_0), ((StringBuilder) (Object) stackIn_212_1).append(stackIn_213_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_212_0), ((StringBuilder) (Object) stackIn_212_1).append(stackIn_213_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -725,7 +725,7 @@ final class s extends ma implements wl, mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2_ref), "s.N(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "s.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -789,7 +789,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -832,7 +832,7 @@ final class s extends ma implements wl, mj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

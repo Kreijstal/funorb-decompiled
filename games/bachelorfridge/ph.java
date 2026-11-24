@@ -124,7 +124,7 @@ final class ph extends WidgetContainer implements fca, WidgetActionListener {
                   if (!this.field_F) {
                     f.a((byte) 101);
                   } else {
-                    jja.d((byte) 70);
+                    MusicPatchPcmStream.d((byte) 70);
                   }
                 } else {
                   FridgeScreen.b((byte) -67);

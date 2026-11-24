@@ -12,13 +12,13 @@ final class t extends IntrusiveNode {
         int var3;
         int var4;
         var3 = 34 / ((-75 - param0) / 51);
-        if (kh.field_U[param1] == param2) {
+        if (VolumeRampingMidiPcmStream.field_U[param1] == param2) {
           return false;
         }
-        if (!kh.field_Q[param2]) {
+        if (!VolumeRampingMidiPcmStream.field_Q[param2]) {
           return false;
         }
-        if (kh.field_U[param1] == 3 &&
+        if (VolumeRampingMidiPcmStream.field_U[param1] == 3 &&
           f.a((byte) 119)) {
           eh.field_c.a(sf.field_V[36], 100, uh.field_i);
         }
@@ -27,11 +27,11 @@ final class t extends IntrusiveNode {
         }
         var4 = -param1 + 1;
         if (param2 != 0 &&
-          kh.field_U[var4] == param2 &&
-          !kh.field_cb[param2]) {
-          kh.field_U[var4] = 0;
+          VolumeRampingMidiPcmStream.field_U[var4] == param2 &&
+          !VolumeRampingMidiPcmStream.field_cb[param2]) {
+          VolumeRampingMidiPcmStream.field_U[var4] = 0;
         }
-        kh.field_U[param1] = param2;
+        VolumeRampingMidiPcmStream.field_U[param1] = param2;
         if (uj.field_l == 1 &&
           null != sf.field_V[15 + param2]) {
           eh.field_c.a(sf.field_V[param2 + 15], 100, uh.field_i);
@@ -111,7 +111,7 @@ final class t extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "t.D(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "t.D(" + param0 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class t extends IntrusiveNode {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

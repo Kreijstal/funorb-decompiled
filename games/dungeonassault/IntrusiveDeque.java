@@ -103,7 +103,7 @@ final class IntrusiveDeque {
 
     final static void a(float param0, float param1, float param2, float param3, float param4, int param5, float param6) {
         if (null == bf.field_h) {
-          bf.field_h = new ge(wa.field_j);
+          bf.field_h = new ReverbPcmStream(wa.field_j);
           hm.field_n.setRootStream(bf.field_h);
         }
         bf.field_h.f(param4);
@@ -163,7 +163,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class IntrusiveDeque {
           param0.next.previous = param0;
           param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "md.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "md.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

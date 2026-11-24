@@ -48,7 +48,7 @@ final class dl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class dl {
             } else {
               stackIn_74_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -274,7 +274,7 @@ final class dl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -427,14 +427,14 @@ final class dl {
             dl.b(114);
           }
           for (var1_int = 0; 32 > var1_int; var1_int++) {
-            kj.field_q[var1_int] = 0L;
+            MusicPatchPcmStream.field_q[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
             f.field_i[var1_intLifetime1] = 0L;
           }
           jj.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "dl.C(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "dl.C(" + param0 + ')');
         }
     }
 
@@ -448,7 +448,7 @@ final class dl {
           this.field_f = param0;
           this.field_e = param3;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

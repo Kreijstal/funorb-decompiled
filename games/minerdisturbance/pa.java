@@ -4,7 +4,7 @@
 final class pa {
     static int field_d;
     static int field_c;
-    static rc[] field_a;
+    static RawPcmStream[] field_a;
     static int[][] field_b;
 
     final static AccountServiceResult pollAccountCreationResult(byte param0) {
@@ -38,7 +38,7 @@ final class pa {
             pa.a(false, (String) null, -0.23309962451457977f);
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "pa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "pa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -47,6 +47,6 @@ final class pa {
     }
 
     static {
-        field_a = new rc[3];
+        field_a = new RawPcmStream[3];
     }
 }

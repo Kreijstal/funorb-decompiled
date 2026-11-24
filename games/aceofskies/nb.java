@@ -27,7 +27,7 @@ final class nb extends ka {
             ho.field_a = sf.a(false, -137, var21);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class nb extends ka {
           hl discarded$3 = new hl((fq) null, 5121, 4, 0);
           nn discarded$4 = new nn();
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

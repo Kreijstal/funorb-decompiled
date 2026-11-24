@@ -17,7 +17,7 @@ abstract class kb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1), "kb.C(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1), "kb.C(" + param0 + ')');
         }
     }
 
@@ -1827,7 +1827,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "loading_soundeffects");
                 if (var2 != null) {
-                  kj.field_p = ni.a((byte) -55, var2);
+                  MusicPatchPcmStream.field_p = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "loading_music");
                 if (null != var2) {
@@ -2717,7 +2717,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_button_tryagain");
                 if (var2 != null) {
-                  hl.field_p = ni.a((byte) -55, var2);
+                  MidiPcmStream.field_p = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "graphics_ui_fs_countdown");
                 if (var2 != null) {
@@ -3056,7 +3056,7 @@ abstract class kb {
                   } else {
                     stackIn_2610_2 = "{...}";
                   }
-                  throw ld.a((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
+                  throw ld.wrapClientException((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
                 }
                 if (var4 != 0) {
                   stackIn_2618_0 = (!GameAppletShell.field_k);
@@ -3132,7 +3132,7 @@ abstract class kb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -3172,7 +3172,7 @@ abstract class kb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "kb.D(" + param0 + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var2), "kb.D(" + param0 + ',' + param1 + ')');
         }
     }
 

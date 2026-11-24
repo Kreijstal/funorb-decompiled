@@ -182,7 +182,7 @@ final class bo extends IntrusiveNode {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class bo extends IntrusiveNode {
           param1.q(param0 - 9);
           this.e(-85);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "bo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

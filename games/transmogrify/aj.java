@@ -49,7 +49,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ class aj extends UiWidget implements pb {
             field_t = (java.awt.Frame) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "aj.IB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "aj.IB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -272,12 +272,12 @@ class aj extends UiWidget implements pb {
         oh.field_h.field_k = 0;
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, lc param3, boolean param4, int param5, PlatformTaskDispatcher param6, int param7) {
+    final static void a(java.awt.Component param0, int param1, int param2, MidiPcmStream param3, boolean param4, int param5, PlatformTaskDispatcher param6, int param7) {
         try {
           AudioOutput.configureAudio(param5, param4, 10);
           re.field_h = AudioOutput.createOutput(param6, param0, 0, param1);
           u.field_a = AudioOutput.createOutput(param6, param0, 1, param7);
-          of.field_a = new jc();
+          of.field_a = new PcmStreamMixer();
           pc.field_b = param7 * 1000 / param5;
           u.field_a.setRootStream(of.field_a);
           jk.field_D = param3;
@@ -288,7 +288,7 @@ class aj extends UiWidget implements pb {
             aj.a((ci) null, (ci) null, (ci) null, -25);
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "aj.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "aj.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -350,7 +350,7 @@ class aj extends UiWidget implements pb {
           rh.field_q = (kg) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
           var17 = new Sprite(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           gk.a("commonui", param3 ^ -2392393, param2, "dropdown");
-          var5 = ej.a((byte) -43, param2, "screen_options", "commonui");
+          var5 = MusicPatchPcmStream.a((byte) -43, param2, "screen_options", "commonui");
           kf.field_h = new IndexedSprite[4];
           fj.field_a = new IndexedSprite[4];
           eh.field_b = new IndexedSprite[4];
@@ -390,7 +390,7 @@ class aj extends UiWidget implements pb {
           fi.c(true);
           mc.field_b = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "aj.QB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "aj.QB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -459,7 +459,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -522,7 +522,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -572,7 +572,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -638,7 +638,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -685,7 +685,7 @@ class aj extends UiWidget implements pb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

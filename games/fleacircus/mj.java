@@ -210,7 +210,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) runtimeException), "mj.A(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "mj.A(" + param0 + ')');
         }
     }
 
@@ -442,7 +442,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -506,7 +506,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 

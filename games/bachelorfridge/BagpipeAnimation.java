@@ -203,7 +203,7 @@ final class BagpipeAnimation extends EventAnimation {
           return true;
         }
         if (25 == this.field_l) {
-          jja.a(192, -1, 5);
+          MusicPatchPcmStream.a(192, -1, 5);
           this.e(0);
           return false;
         }

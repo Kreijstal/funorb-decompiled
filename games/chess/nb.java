@@ -34,7 +34,7 @@ final class nb extends ci {
           this.field_Kb = param1;
           this.field_Jb.a((byte) 127, param1);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "nb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class nb extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "nb.G(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "nb.G(" + param0 + ')');
         }
     }
 

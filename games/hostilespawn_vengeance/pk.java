@@ -44,7 +44,7 @@ final class pk extends ql {
         this.field_h.field_l = -24 + 24 * this.field_f.field_e;
         this.field_h.field_a = 1;
         this.field_h.field_d = 24 * this.field_f.field_g - 120;
-        kd.a(0, 1);
+        CrossfadingMidiPcmStream.a(0, 1);
         if (6 <= ln.field_a.field_v.length) {
           nh.field_E.a(ln.field_a.field_v[4], 8360, ln.field_a.field_v[5]);
         }
@@ -134,7 +134,7 @@ final class pk extends ql {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

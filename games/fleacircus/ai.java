@@ -37,7 +37,7 @@ final class ai extends r {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class ai extends r {
             ai.clearStaticReferences((byte) 109);
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ai.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ai.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ai extends r {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class ai extends r {
             }
           }
           if (gg.field_h != null) {
-            stackIn_21_0 = gg.field_h.d(31499);
+            stackIn_21_0 = gg.field_h.isMidiReady(31499);
             if (stackIn_21_0) {
               return;
             }
@@ -145,7 +145,7 @@ final class ai extends r {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1_ref), "ai.B(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1_ref), "ai.B(" + param0 + ')');
         }
     }
 

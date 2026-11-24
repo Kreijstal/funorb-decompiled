@@ -964,7 +964,7 @@ final class jl {
               ua.field_c = -3;
               field_j = 5;
               tg.field_y = 10;
-              ed.field_n = 0;
+              DelayedPcmStream.field_n = 0;
               il.field_i = il.field_i + rj.field_h;
               gf.field_b = 2;
               rj.field_h = 0;
@@ -1024,7 +1024,7 @@ final class jl {
         try {
           wj.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "jl.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "jl.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1255,7 +1255,7 @@ final class jl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

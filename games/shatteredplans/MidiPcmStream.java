@@ -1203,7 +1203,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(byte param0, MusicVoice param1) {
+    final boolean isVoiceInactive(byte param0, MusicVoice param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
@@ -1598,7 +1598,7 @@ final class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final boolean a(int param0, int[] param1, int param2, MusicVoice param3, int param4) {
+    final boolean updateVoice(int param0, int[] param1, int param2, MusicVoice param3, int param4) {
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;

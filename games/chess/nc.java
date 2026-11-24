@@ -99,7 +99,7 @@ final class nc extends fb {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class nc extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1_ref2), "nc.RA(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1_ref2), "nc.RA(" + param0 + ')');
         }
     }
 

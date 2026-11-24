@@ -140,7 +140,7 @@ abstract class ob extends GameAppletShell {
         if (null != pf.field_e) {
           ki.field_n = pf.field_e.pollRotation((byte) -124);
         }
-        if (gd.b((byte) -110)) {
+        if (MusicPatchPcmStream.b((byte) -110)) {
           var3 = pl.getTickRate((byte) -116) * 1200;
           if (this.field_z ||
             !(mk.b(24) <= var3) &&
@@ -389,7 +389,7 @@ abstract class ob extends GameAppletShell {
             this.field_x = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ob.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ob.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -454,7 +454,7 @@ abstract class ob extends GameAppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7_ref = (Exception) (Object) decompiledCaughtException;
             var11 = (String) null;
-            di.a((Throwable) ((Object) var7_ref), 1, (String) null);
+            MidiPcmStream.a((Throwable) ((Object) var7_ref), 1, (String) null);
             this.a((byte) -125, "crash");
           }
           return;
@@ -468,7 +468,7 @@ abstract class ob extends GameAppletShell {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -681,7 +681,7 @@ abstract class ob extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              di.a((Throwable) ((Object) var5), 1, "S1");
+              MidiPcmStream.a((Throwable) ((Object) var5), 1, "S1");
               stackIn_69_0 = null;
               stackIn_70_1 = !(param0);
               fm.a((String) (stackIn_69_0), stackIn_70_1);
@@ -753,7 +753,7 @@ abstract class ob extends GameAppletShell {
                                 ri.a(true);
                                 return;
                               }
-                              di.a((Throwable) null, 1, "MGS1: " + hj.a((byte) 86));
+                              MidiPcmStream.a((Throwable) null, 1, "MGS1: " + hj.a((byte) 86));
                               si.a(-106);
                               return;
                             }
@@ -779,7 +779,7 @@ abstract class ob extends GameAppletShell {
           }
           return;
         }
-        di.a((Throwable) null, 1, "MGS2: " + hj.a((byte) 57));
+        MidiPcmStream.a((Throwable) null, 1, "MGS2: " + hj.a((byte) 57));
         si.a(-74);
     }
 
@@ -816,7 +816,7 @@ abstract class ob extends GameAppletShell {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

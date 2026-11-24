@@ -80,7 +80,7 @@ final class ta {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 23 % ((param1 - 65) / 45);
-          stackIn_1_0 = wl.a(true, param0, false, 10);
+          stackIn_1_0 = MidiPcmStream.a(true, param0, false, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

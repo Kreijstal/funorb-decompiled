@@ -76,7 +76,7 @@ final class sl extends IntrusiveNode {
           if (var44.field_x != null &&
             1 < var44.field_E) {
             var60 = var44.field_x;
-            re.a(0, var60, di.field_V, 0, 0);
+            re.a(0, var60, MidiPcmStream.field_V, 0, 0);
           } else {
             wc.c((byte) -29);
           }
@@ -207,7 +207,7 @@ final class sl extends IntrusiveNode {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class sl extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

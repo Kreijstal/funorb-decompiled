@@ -97,7 +97,7 @@ abstract class em extends DualLinkNode {
               decompiledFrameRemainder0 = false;
             }
             else {
-              di.a((Throwable) null, 1, "LR1: " + hj.a((byte) 55));
+              MidiPcmStream.a((Throwable) null, 1, "LR1: " + hj.a((byte) 55));
               si.a(param0 ^ 1);
             }
           }
@@ -109,7 +109,7 @@ abstract class em extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "em.G(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "em.G(" + param0 + ')');
         }
     }
 

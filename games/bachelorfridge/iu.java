@@ -256,7 +256,7 @@ final class iu extends AnimationNode {
     }
 
     final boolean isFinished(byte param0) {
-        jja.a(this.field_j, -1, this.field_k);
+        MusicPatchPcmStream.a(this.field_j, -1, this.field_k);
         int var2 = 27 % ((71 - param0) / 47);
         return true;
     }

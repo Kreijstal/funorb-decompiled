@@ -105,7 +105,7 @@ final class PcmSampleStream extends PcmStream {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    private final int a(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixBackwardSegment(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
         do {
           if (this.field_r <= 0) {
@@ -510,7 +510,7 @@ final class PcmSampleStream extends PcmStream {
         this.a(param0, param1 << 6, param2 << 6);
     }
 
-    private final void g() {
+    private final void recomputeGains() {
         this.field_u = this.field_o;
         this.field_s = PcmSampleStream.a(this.field_o, this.field_t);
         this.field_z = PcmSampleStream.c(this.field_o, this.field_t);
@@ -537,7 +537,7 @@ final class PcmSampleStream extends PcmStream {
           this.field_s == var2 &&
           this.field_z == var3) {
           if (this.field_o != -2147483648) {
-            this.g();
+            this.recomputeGains();
             return false;
           }
           this.field_o = 0;
@@ -832,13 +832,13 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    private final void f() {
+    private final void cancelRamp() {
         if (this.field_r != 0) {
           if (this.field_o == -2147483648) {
             this.field_o = 0;
           }
           this.field_r = 0;
-          this.g();
+          this.recomputeGains();
           return;
         }
     }
@@ -874,7 +874,7 @@ final class PcmSampleStream extends PcmStream {
         param2 = param2 + param1;
         if (this.field_x < 0) {
           if (this.field_C <= 0) {
-            this.f();
+            this.cancelRamp();
             this.unlink(20);
             return;
           }
@@ -882,7 +882,7 @@ final class PcmSampleStream extends PcmStream {
         }
         if (this.field_x >= var7) {
           if (this.field_C >= 0) {
-            this.f();
+            this.cancelRamp();
             this.unlink(20);
             return;
           }
@@ -892,7 +892,7 @@ final class PcmSampleStream extends PcmStream {
           if (!this.field_y) {
             if (this.field_C >= 0) {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[this.field_B]);
+                var9 = this.mixForwardSegment(param0, var9, var6, param2, (int) var4.field_n[this.field_B]);
                 if (this.field_x < var6) {
                   return;
                 }
@@ -900,7 +900,7 @@ final class PcmSampleStream extends PcmStream {
               }
             }
             while (true) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[this.field_v - 1]);
+              var9 = this.mixBackwardSegment(param0, var9, var5, param2, (int) var4.field_n[this.field_v - 1]);
               if (this.field_x >= var5) {
                 return;
               }
@@ -908,7 +908,7 @@ final class PcmSampleStream extends PcmStream {
             }
           }
           if (this.field_C < 0) {
-            var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
+            var9 = this.mixBackwardSegment(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
             if (this.field_x >= var5) {
               return;
             }
@@ -916,13 +916,13 @@ final class PcmSampleStream extends PcmStream {
             this.field_C = -this.field_C;
           }
           while (true) {
-            var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[this.field_v - 1]);
+            var9 = this.mixForwardSegment(param0, var9, var6, param2, (int) var4.field_n[this.field_v - 1]);
             if (this.field_x < var6) {
               return;
             }
             this.field_x = var6 + var6 - 1 - this.field_x;
             this.field_C = -this.field_C;
-            var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
+            var9 = this.mixBackwardSegment(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
             if (this.field_x >= var5) {
               return;
             }
@@ -935,7 +935,7 @@ final class PcmSampleStream extends PcmStream {
           if (!this.field_y) {
             if (this.field_C < 0) {
               while (true) {
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[this.field_v - 1]);
+                var9 = this.mixBackwardSegment(param0, var9, var5, param2, (int) var4.field_n[this.field_v - 1]);
                 if (this.field_x >= var5) {
                   return;
                 }
@@ -951,7 +951,7 @@ final class PcmSampleStream extends PcmStream {
               this.field_w = 0;
             } else {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[this.field_B]);
+                var9 = this.mixForwardSegment(param0, var9, var6, param2, (int) var4.field_n[this.field_B]);
                 if (this.field_x < var6) {
                   return;
                 }
@@ -970,7 +970,7 @@ final class PcmSampleStream extends PcmStream {
           }
           else {
             if (this.field_C < 0) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
+              var9 = this.mixBackwardSegment(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
               if (this.field_x >= var5) {
                 return;
               }
@@ -982,7 +982,7 @@ final class PcmSampleStream extends PcmStream {
             }
             if (decompiledFrameRemainder0) {
               do {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[this.field_v - 1]);
+                var9 = this.mixForwardSegment(param0, var9, var6, param2, (int) var4.field_n[this.field_v - 1]);
                 if (this.field_x < var6) {
                   return;
                 }
@@ -993,7 +993,7 @@ final class PcmSampleStream extends PcmStream {
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
+                var9 = this.mixBackwardSegment(param0, var9, var5, param2, (int) var4.field_n[this.field_B]);
                 if (this.field_x >= var5) {
                   return;
                 }
@@ -1006,20 +1006,20 @@ final class PcmSampleStream extends PcmStream {
           }
         }
         if (this.field_C >= 0) {
-          discarded$4 = this.b(param0, var9, var7, param2, 0);
+          discarded$4 = this.mixForwardSegment(param0, var9, var7, param2, 0);
           if (this.field_x >= var7) {
             this.field_x = var7;
-            this.f();
+            this.cancelRamp();
             this.unlink(20);
           }
           return;
         }
-        discarded$3 = this.a(param0, var9, 0, param2, 0);
+        discarded$3 = this.mixBackwardSegment(param0, var9, 0, param2, 0);
         if (this.field_x >= 0) {
           return;
         }
         this.field_x = -1;
-        this.f();
+        this.cancelRamp();
         this.unlink(20);
         return;
     }
@@ -1225,7 +1225,7 @@ final class PcmSampleStream extends PcmStream {
               param0 = this.field_r;
             }
             this.field_r = 0;
-            this.g();
+            this.recomputeGains();
           }
         }
         var2 = (PcmSample) (this.field_l);
@@ -1238,7 +1238,7 @@ final class PcmSampleStream extends PcmStream {
         }
         if (this.field_x < 0) {
           if (this.field_C <= 0) {
-            this.f();
+            this.cancelRamp();
             this.unlink(20);
             return;
           }
@@ -1246,7 +1246,7 @@ final class PcmSampleStream extends PcmStream {
         }
         if (this.field_x >= var5) {
           if (this.field_C >= 0) {
-            this.f();
+            this.cancelRamp();
             this.unlink(20);
             return;
           }
@@ -1359,7 +1359,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_C >= 0) {
           if (this.field_x >= var5) {
             this.field_x = var5;
-            this.f();
+            this.cancelRamp();
             this.unlink(20);
           }
           return;
@@ -1368,7 +1368,7 @@ final class PcmSampleStream extends PcmStream {
           return;
         }
         this.field_x = -1;
-        this.f();
+        this.cancelRamp();
         this.unlink(20);
     }
 
@@ -1385,7 +1385,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_o = param0;
         this.field_t = param1;
         this.field_r = 0;
-        this.g();
+        this.recomputeGains();
     }
 
     final synchronized void e(int param0) {
@@ -1510,7 +1510,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    private final int b(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixForwardSegment(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
         do {
           if (this.field_r <= 0) {
@@ -1711,7 +1711,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_o = param2;
         this.field_t = 8192;
         this.field_x = 0;
-        this.g();
+        this.recomputeGains();
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
@@ -1723,6 +1723,6 @@ final class PcmSampleStream extends PcmStream {
         this.field_o = param2;
         this.field_t = param3;
         this.field_x = 0;
-        this.g();
+        this.recomputeGains();
     }
 }

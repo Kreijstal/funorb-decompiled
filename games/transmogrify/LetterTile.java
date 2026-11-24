@@ -146,7 +146,7 @@ final class LetterTile extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class LetterTile extends IntrusiveNode {
           var5.appendCrc32(var4, -1323322296);
           var5.backpatchByteLength((byte) -42, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

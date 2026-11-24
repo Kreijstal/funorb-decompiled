@@ -64,7 +64,7 @@ abstract class ByteStorage {
         }
         if (param2 != -27794) {
           var9 = (java.awt.Component) null;
-          ByteStorage.a(-21, (ei) null, 14, -111, -71, (PlatformTaskDispatcher) null, (java.awt.Component) null, false);
+          ByteStorage.a(-21, (MidiPcmStream) null, 14, -111, -71, (PlatformTaskDispatcher) null, (java.awt.Component) null, false);
         }
         var6Lifetime1 = vg.field_z - 140;
         if (var6Lifetime1 > 0) {
@@ -99,7 +99,7 @@ abstract class ByteStorage {
           var2 = ck.a(-5174, "jagex-last-login-method", param1);
           if (!param0) {
             var7 = (java.awt.Component) null;
-            ByteStorage.a(98, (ei) null, -46, 17, -94, (PlatformTaskDispatcher) null, (java.awt.Component) null, true);
+            ByteStorage.a(98, (MidiPcmStream) null, -46, 17, -94, (PlatformTaskDispatcher) null, (java.awt.Component) null, true);
           }
           if (var2 == null) {
             stackIn_6_0 = bf.field_a;
@@ -131,7 +131,7 @@ abstract class ByteStorage {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ abstract class ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1_ref), "hd.H(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1_ref), "hd.H(" + param0 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int param0);
 
-    final static void a(int param0, ei param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, java.awt.Component param6, boolean param7) {
+    final static void a(int param0, MidiPcmStream param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, java.awt.Component param6, boolean param7) {
         AudioOutput.configureAudio(param4, param7, 10);
         db.field_J = AudioOutput.createOutput(param5, param6, 0, param2);
         if (param3 < 2) {
@@ -190,14 +190,14 @@ abstract class ByteStorage {
         }
         try {
           tg.field_i = AudioOutput.createOutput(param5, param6, 1, param0);
-          qg.field_f = new ke();
+          qg.field_f = new PcmStreamMixer();
           ng.field_c = param0 * 1000 / param4;
           tg.field_i.setRootStream(qg.field_f);
           gg.field_h = param1;
-          gg.field_h.b(17, th.field_D);
+          gg.field_h.b(17, CrossfadingMidiPcmStream.field_D);
           db.field_J.setRootStream(gg.field_h);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "hd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "hd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

@@ -263,16 +263,16 @@ final class vt extends tia {
               var12.field_Bb.a(rg.field_h, param2 + 31407, 40, -40 + var12.field_sb, var19);
               if (var12.field_Ib.field_T &&
                 var22 != 0) {
-                jja.field_m = var12.field_Nb;
+                MusicPatchPcmStream.field_m = var12.field_Nb;
                 if (null != SuperSpeedAllAnimation.field_y &&
                   null != SuperSpeedAllAnimation.field_y[var12.field_Kb]) {
-                  jja.field_m = jja.field_m + " - " + SuperSpeedAllAnimation.field_y[var12.field_Kb];
+                  MusicPatchPcmStream.field_m = MusicPatchPcmStream.field_m + " - " + SuperSpeedAllAnimation.field_y[var12.field_Kb];
                 }
               } else {
                 if (var12.field_Ib.field_T &&
                   SuperSpeedAllAnimation.field_y != null &&
                   SuperSpeedAllAnimation.field_y[var12.field_Kb] != null) {
-                  jja.field_m = SuperSpeedAllAnimation.field_y[var12.field_Kb];
+                  MusicPatchPcmStream.field_m = SuperSpeedAllAnimation.field_y[var12.field_Kb];
                 }
               }
               var19 = var19 + rg.field_h;
@@ -454,7 +454,7 @@ final class vt extends tia {
                   var27 = SnowAnimation.field_w.field_Jb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + lga.a(true, new String[]{var27}, ef.field_m);
                 }
-                jja.field_m = (String) (var24Lifetime2);
+                MusicPatchPcmStream.field_m = (String) (var24Lifetime2);
               }
             }
             var12 = (ema) (var10.nextForward(0));

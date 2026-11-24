@@ -150,7 +150,7 @@ final class MidiFileReader {
         return true;
     }
 
-    final boolean f() {
+    final boolean hasMidiData() {
         return this.field_g.payload != null;
     }
 

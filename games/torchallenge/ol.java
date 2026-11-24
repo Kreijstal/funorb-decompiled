@@ -44,7 +44,7 @@ final class ol {
             var4 = (fe) null;
             ol.a(-70, (fe) null, -27);
           }
-          stackIn_3_0 = we.a(nc.a(param1, 100, param2), 6222);
+          stackIn_3_0 = we.a(RawPcmStream.a(param1, 100, param2), 6222);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

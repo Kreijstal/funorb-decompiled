@@ -1186,7 +1186,7 @@ final class je {
               var7 = a.field_a[tb.field_c];
             }
           }
-          if (di.field_K != 1) {
+          if (MidiPcmStream.field_K != 1) {
             if (var5 != 0 &&
               var10 != 0) {
               ((Sprite) (var7)).b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
@@ -1724,7 +1724,7 @@ final class je {
               for (var15 = 0; var15 <= 5; var15++) {
                 if (field_O.a(var8, var14, (byte) 61)) {
                   SoftwareRasterizer.a(var10, var11Lifetime3, var10 + 8, var11Lifetime3 + 8);
-                  if (di.field_K >= 0) {
+                  if (MidiPcmStream.field_K >= 0) {
                     param2.e(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 1);
                     var12_ref_ea.e(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 11243013);
                   } else {
@@ -1748,7 +1748,7 @@ final class je {
               } else {
                 var8_ref_ea = lb.field_x[tb.field_c];
               }
-              if (di.field_K < 0) {
+              if (MidiPcmStream.field_K < 0) {
                 var8_ref_ea.e().a(var6 - 4, var7 - 4, 9348351);
               } else {
                 var8_ref_ea.a(var6 - 4, var7 - 4, 9348351);

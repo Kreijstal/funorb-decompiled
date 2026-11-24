@@ -57,7 +57,7 @@ final class lu {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "lu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "lu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

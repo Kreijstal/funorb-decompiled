@@ -38,7 +38,7 @@ final class gb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class gb {
           this.field_c.a(var6_ref, 21693);
           ((nf) ((Object) var6_ref)).field_h = (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "gb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class gb {
               gg.field_O[1] = 5;
             }
           } else {
-            var3_int = th.a(jd.field_a, t.a(-415993727, new String[]{"<br><%0><br>"}, mc.field_f), li.field_c, vi.field_I, -105);
+            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, mc.field_f), li.field_c, vi.field_I, -105);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(li.field_c[var5])) {
@@ -271,7 +271,7 @@ final class gb {
             AccountNameAvailabilityValidator.field_t = new String[var3_int - var4 - 1];
             mk.a(li.field_c, 1 + var4, AccountNameAvailabilityValidator.field_t, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = th.a(jd.field_a, t.a(-415993727, new String[]{"<br><%0><br>"}, qk.field_c), li.field_c, vi.field_I, -108);
+            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, qk.field_c), li.field_c, vi.field_I, -108);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(li.field_c[var5])) {
                 continue;
@@ -411,7 +411,7 @@ final class gb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var3), "gb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var3), "gb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -420,7 +420,7 @@ final class gb {
           this.a(0, param0, 1, param2);
           int var5_int = -24 % ((-26 - param1) / 63);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "gb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

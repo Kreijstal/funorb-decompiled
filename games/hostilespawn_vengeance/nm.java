@@ -87,7 +87,7 @@ final class nm {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class nm {
                 var11 = var4 - 12;
                 gl.a(var10 << 4, var11 << 4, 384, 128, ni.field_c);
                 if (um.field_e > 0) {
-                  si.a(var10 << 4, var11 << 4, Math.abs(-um.field_e + 50) + 24 << 4, um.field_e, kh.field_bb);
+                  si.a(var10 << 4, var11 << 4, Math.abs(-um.field_e + 50) + 24 << 4, um.field_e, VolumeRampingMidiPcmStream.field_bb);
                 }
                 if (0 < eh.field_g) {
                   var12_ref_bd__ = ng.field_p[nh.field_H];
@@ -364,11 +364,11 @@ final class nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "nm.H(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "nm.H(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, ResourceArchive param1, int param2, wm param3) {
+    final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         if (param2 > -118) {
           return;
         }
@@ -381,7 +381,7 @@ final class nm {
           pl.a(-16183);
           tk.field_e = -tk.field_d + 0;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "nm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "nm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -410,8 +410,8 @@ final class nm {
           param0 = 6 + (int)((long)param0 * (long)this.field_e / (long)this.field_g);
         }
         if (param1 != -59) {
-          wm var4 = (wm) null;
-          nm.a(-73, (ResourceArchive) null, 7, (wm) null);
+          PcmStreamMixer var4 = (PcmStreamMixer) null;
+          nm.a(-73, (ResourceArchive) null, 7, (PcmStreamMixer) null);
         }
         return param0;
     }
@@ -439,7 +439,7 @@ final class nm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -495,7 +495,7 @@ final class nm {
             nm.a(66, -85);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "nm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "nm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class kh {
     static String field_e;
     private String field_a;
 
-    final static jc a(byte param0) {
+    final static PcmStreamMixer a(byte param0) {
         int var1 = 126 % ((24 - param0) / 47);
         return of.field_a;
     }
@@ -21,7 +21,7 @@ final class kh {
         try {
           hi.a(param1, 31536000L, "jagex-last-login-method", this.field_a, param0);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class kh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class kh {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

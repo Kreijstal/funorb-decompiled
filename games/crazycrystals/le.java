@@ -79,7 +79,7 @@ final class le extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "le.B(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "le.B(" + param0 + ')');
         }
     }
 

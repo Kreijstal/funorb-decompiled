@@ -71,7 +71,7 @@ class bh extends ck {
         try {
           this.field_R[param1] = param2;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bh.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bh.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ class bh extends ck {
         try {
           this.field_o = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ class bh extends ck {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ class bh extends ck {
                 be.field_n = qf.a(96, false, param1, param5);
               } else {
                 var10 = (String) null;
-                be.field_n = l.a(param1, false, hg.field_s, false, (String) null);
+                be.field_n = l.a(param1, false, MusicPatchPcmStream.field_s, false, (String) null);
               }
               ac.field_B.position = 0;
               ac.field_B.writeByte(6, 14);
@@ -221,7 +221,7 @@ class bh extends ck {
             }
             if (k.field_e == pd.field_A &&
               AccountNameAvailabilityValidator.d((byte) -86)) {
-              hg.field_s = ra.field_c.readLong((byte) 53);
+              MusicPatchPcmStream.field_s = ra.field_c.readLong((byte) 53);
               ResourceArchive.field_k = ra.field_c.readUnsignedByte(true);
               ra.field_c.readUnsignedByte(true);
               pb.field_G = ra.field_c.readUnsignedShort(0);
@@ -248,8 +248,8 @@ class bh extends ck {
                   ti.field_q[var8] = ra.field_c.readByte((byte) 2);
                 }
               }
-              tc.field_u = ra.field_c.readString(-98);
-              var11 = (CharSequence) ((Object) tc.field_u);
+              CrossfadingMidiPcmStream.field_u = ra.field_c.readString(-98);
+              var11 = (CharSequence) ((Object) CrossfadingMidiPcmStream.field_u);
               nn.field_k = jm.a((byte) 59, var11);
               hf.field_sb = ra.field_c.readUnsignedByte(true);
               pd.field_A = qa.field_c;
@@ -274,7 +274,7 @@ class bh extends ck {
                 }
               } else {
                 try {
-                  ee.a("zap", m.c(true), 15647, new Object[]{uj.a(hg.field_s, -1)});
+                  ee.a("zap", m.c(true), 15647, new Object[]{uj.a(MusicPatchPcmStream.field_s, -1)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -342,7 +342,7 @@ class bh extends ck {
             } else {
               stackIn_106_2 = "{...}";
             }
-            throw AccountServiceResult.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
+            throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -407,7 +407,7 @@ class bh extends ck {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

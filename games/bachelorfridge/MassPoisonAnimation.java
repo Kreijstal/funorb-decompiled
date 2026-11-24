@@ -61,7 +61,7 @@ final class MassPoisonAnimation extends EventAnimation {
         if (this.field_l != 25) {
           return false;
         }
-        jja.a(256, -1, 35);
+        MusicPatchPcmStream.a(256, -1, 35);
         this.e(1);
         return false;
     }

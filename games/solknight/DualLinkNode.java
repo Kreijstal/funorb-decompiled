@@ -129,7 +129,7 @@ class DualLinkNode extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1_ref), "ec.DA(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "ec.DA(" + param0 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

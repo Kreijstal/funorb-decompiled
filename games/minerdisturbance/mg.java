@@ -12,7 +12,7 @@ final class mg {
     static int field_f;
     static int field_a;
 
-    final static sa a(int param0, rc param1) {
+    final static sa a(int param0, RawPcmStream param1) {
         sa var2 = null;
         RuntimeException var2_ref = null;
         sa stackIn_3_0 = null;
@@ -39,7 +39,7 @@ final class mg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "mg.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "mg.A(" + param0 + ')');
         }
     }
 

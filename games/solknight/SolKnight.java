@@ -23,7 +23,7 @@ public final class SolKnight extends ab {
           }
           pk.c(false);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "SolKnight.M(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.M(" + param0 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ public final class SolKnight extends ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2), "SolKnight.Q(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2), "SolKnight.Q(" + param0 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ public final class SolKnight extends ab {
             }
           }
           if (na.field_b &&
-            !ua.field_I.d(144)) {
+            !ua.field_I.isMidiReady(144)) {
             pk.a((byte) -96, 0, true);
           }
           if (!il.b(507)) {
@@ -190,7 +190,7 @@ public final class SolKnight extends ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2), "SolKnight.K(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2), "SolKnight.K(" + param0 + ')');
         }
     }
 
@@ -238,13 +238,13 @@ public final class SolKnight extends ab {
           BufferedCacheFile.clearStaticReferences(true);
           BufferedSocket.clearStaticReferences((byte) 84);
           PcmPlayerService.clearStaticReferences();
-          mf.g(103);
-          se.clearStaticReferences(false);
+          MidiPcmStream.g(103);
+          CrossfadingMidiPcmStream.clearStaticReferences(false);
           IntrusiveNode.clearStaticReferences(12516);
           qd.clearStaticReferences(4);
           hg.a(8192);
           oi.clearStaticReferences();
-          lh.d(-94);
+          MusicPatchPcmStream.d(-94);
           rd.a(127);
           sf.a((byte) 123);
           ma.c(true);
@@ -426,7 +426,7 @@ public final class SolKnight extends ab {
           pc.clearStaticReferences((byte) -121);
           this.field_x = null;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "SolKnight.G(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.G(" + param0 + ')');
         }
     }
 
@@ -434,7 +434,7 @@ public final class SolKnight extends ab {
         try {
           this.a("solknight", 11, 8);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "SolKnight.init()");
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.init()");
         }
     }
 
@@ -714,13 +714,13 @@ public final class SolKnight extends ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var3), "SolKnight.S(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var3), "SolKnight.S(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void d(int param0) {
         this.a(0, false, 6, 9, true, 16, 10, 8);
-        mf var2 = new mf();
+        MidiPcmStream var2 = new MidiPcmStream();
         var2.d(-4474, 128, 9);
         GameApplet.a(var2, (java.awt.Component) ((Object) dc.field_q), true, (byte) -40, 22050, wh.field_c);
         hc.field_d = 16777088;
@@ -732,7 +732,7 @@ public final class SolKnight extends ab {
           pb.field_b = 16777215;
           this.a((byte) -38, true, false, false, false);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "SolKnight.H(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.H(" + param0 + ')');
         }
     }
 
@@ -875,7 +875,7 @@ public final class SolKnight extends ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2), "SolKnight.R(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2), "SolKnight.R(" + param0 + ')');
         }
     }
 
@@ -1028,7 +1028,7 @@ public final class SolKnight extends ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2_ref), "SolKnight.D(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2_ref), "SolKnight.D(" + param0 + ')');
         }
     }
 
@@ -1042,7 +1042,7 @@ public final class SolKnight extends ab {
           field_E = null;
           field_I = null;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "SolKnight.T(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.T(" + param0 + ')');
         }
     }
 
@@ -1227,7 +1227,7 @@ public final class SolKnight extends ab {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 

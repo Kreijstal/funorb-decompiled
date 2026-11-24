@@ -586,10 +586,10 @@ abstract class GameClient extends AppletShell {
                 var12 = uj.field_v.a(11951);
                 if (var12 != null) {
                   var7 = lh.a(0, -3789, var12.position, var12.payload);
-                  pk.a((byte) 5, var7);
+                  MidiPcmStream.a((byte) 5, var7);
                 } else {
                   var9 = (String) null;
-                  pk.a((byte) -125, (String) null);
+                  MidiPcmStream.a((byte) -125, (String) null);
                 }
                 uj.field_v = null;
               }
@@ -598,7 +598,7 @@ abstract class GameClient extends AppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               ti.a((Throwable) ((Object) var5), (byte) 100, "S1");
               var10 = (String) null;
-              pk.a((byte) -128, (String) null);
+              MidiPcmStream.a((byte) -128, (String) null);
               uj.field_v = null;
             }
           }
@@ -692,7 +692,7 @@ abstract class GameClient extends AppletShell {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ abstract class GameClient extends AppletShell {
         try {
           this.a(param0, 480, (byte) 52, param2, 640);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "kk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "kk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -123,7 +123,7 @@ abstract class sh extends DualLinkNode {
         if (param0 >= -121) {
           field_r = 30;
         }
-        ge var1 = new ge(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], pg.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
+        ge var1 = new ge(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
         p.a(0);
         return var1;
     }

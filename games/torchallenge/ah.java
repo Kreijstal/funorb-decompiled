@@ -26,7 +26,7 @@ final class ah {
         if (wi.field_a == null) {
           lb.d((byte) -81);
         }
-        if (fj.field_m == null) {
+        if (CrossfadingMidiPcmStream.field_m == null) {
           PacketBuffer.c(-7668);
         }
         if (null == pa.field_z) {

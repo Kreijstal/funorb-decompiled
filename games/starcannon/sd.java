@@ -20,7 +20,7 @@ final class sd {
         field_b = null;
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -35,7 +35,7 @@ final class sd {
         ee.field_a = new IntrusiveDeque();
         if (param0 != 38) {
           String var2 = (String) null;
-          sd.a((Throwable) null, (String) null);
+          sd.wrapClientException((Throwable) null, (String) null);
         }
     }
 

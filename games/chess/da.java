@@ -233,7 +233,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_121_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_112_0), ((StringBuilder) (Object) stackIn_120_1).append(stackIn_121_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_112_0), ((StringBuilder) (Object) stackIn_120_1).append(stackIn_121_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -494,7 +494,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var3_ref), "da.C(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var3_ref), "da.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -592,7 +592,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2_ref), "da.F(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "da.F(" + param0 + ')');
         }
     }
 
@@ -633,7 +633,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -683,7 +683,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2_ref), "da.B(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "da.B(" + param0 + ')');
         }
     }
 
@@ -705,7 +705,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2), "da.P(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2), "da.P(" + param0 + ')');
         }
     }
 
@@ -752,7 +752,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -999,7 +999,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw fk.a((Throwable) (var4), "da.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) (var4), "da.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1014,7 +1014,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2), "da.M(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2), "da.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1030,7 +1030,7 @@ final class da extends ArchiveProvider {
           field_A = null;
           field_C = null;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "da.O(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "da.O(" + param0 + ')');
         }
     }
 
@@ -1119,7 +1119,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1142,7 +1142,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var3_ref), "da.J(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var3_ref), "da.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1159,7 +1159,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "da.G(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "da.G(" + param0 + ')');
         }
     }
 
@@ -1366,7 +1366,7 @@ final class da extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2_ref), "da.A(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "da.A(" + param0 + ')');
         }
     }
 
@@ -1414,7 +1414,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -1494,7 +1494,7 @@ final class da extends ArchiveProvider {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

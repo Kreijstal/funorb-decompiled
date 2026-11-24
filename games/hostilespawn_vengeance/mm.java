@@ -1051,7 +1051,7 @@ final class mm extends IntrusiveNode {
                     continue scanLoop1;
                 }
                 case 58: {
-                    throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(',').append(param1).append(')').toString());
+                    throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(',').append(param1).append(')').toString());
                 }
                 case 59: {
                     return;

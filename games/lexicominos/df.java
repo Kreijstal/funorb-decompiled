@@ -64,7 +64,7 @@ final class df {
             }
             var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
           } else {
-            var22 = hl.field_o[var2];
+            var22 = MidiPcmStream.field_o[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
@@ -104,7 +104,7 @@ final class df {
             df.a(true);
           }
           var5 = param2.a(param1, -27964, var4_int);
-          stackIn_3_0 = uh.a(param2, var4_int, (byte) -108, var5);
+          stackIn_3_0 = CrossfadingMidiPcmStream.a(param2, var4_int, (byte) -108, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,7 +128,7 @@ final class df {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

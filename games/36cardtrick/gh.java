@@ -7,7 +7,7 @@ final class gh extends IntrusiveNode {
     int field_m;
     static volatile boolean field_j;
     static kc[] field_n;
-    static qj field_k;
+    static PcmStreamMixer field_k;
     static String field_i;
     int field_l;
 
@@ -39,7 +39,7 @@ final class gh extends IntrusiveNode {
         }
     }
 
-    final static void a(li param0, byte param1) {
+    final static void a(RawPcmStream param0, byte param1) {
         try {
           if (param1 > -59) {
             gh.clearStaticReferences(-108);

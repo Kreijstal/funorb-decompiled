@@ -54,7 +54,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class ca extends gj implements dc, da, pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "ca.NA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1), "ca.NA(" + param0 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class ca extends gj implements dc, da, pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "ca.AA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "ca.AA(" + param0 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class ca extends gj implements dc, da, pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "ca.IA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "ca.IA(" + param0 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class ca extends gj implements dc, da, pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "ca.FA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "ca.FA(" + param0 + ')');
         }
     }
 
@@ -392,7 +392,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -565,7 +565,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -616,7 +616,7 @@ final class ca extends gj implements dc, da, pe {
           dupTemp$1 = new mh(10000536);
           this.field_M.field_p = (ComponentLayout) ((Object) dupTemp$1);
           this.field_F.field_p = (ComponentLayout) ((Object) dupTemp$1);
-          var2 = db.a(ei.field_v, new String[]{this.k(11579568), this.f((byte) 49)}, true);
+          var2 = db.a(MidiPcmStream.field_v, new String[]{this.k(11579568), this.f((byte) 49)}, true);
           var3 = 20;
           var3 = var3 + this.a(-61, 170, ff.field_a, var3, this.field_U);
           var3 = var3 + (this.a(this.field_H, 20, var3, b.field_c, "", (byte) -86, 170) + 5);
@@ -649,7 +649,7 @@ final class ca extends gj implements dc, da, pe {
           this.a((UiComponent) (this.field_N), (byte) -77);
           this.a(0, 496, 0, var6 + (var3 + 55), 80);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ca.<init>()");
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ca.<init>()");
         }
     }
 
@@ -676,7 +676,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -724,7 +724,7 @@ final class ca extends gj implements dc, da, pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "ca.BA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "ca.BA(" + param0 + ')');
         }
     }
 
@@ -761,7 +761,7 @@ final class ca extends gj implements dc, da, pe {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -772,7 +772,7 @@ final class ca extends gj implements dc, da, pe {
             field_L = (mf) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ca.HA(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ca.HA(" + param0 + ')');
         }
     }
 

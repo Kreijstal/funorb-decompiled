@@ -40,7 +40,7 @@ abstract class wf extends cc {
           }
           ig.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "wf.T(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "wf.T(" + param0 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ abstract class wf extends cc {
         if (param0 < 2) {
           return true;
         }
-        return -vh.field_g + (di.field_X + qd.field_M * ac.field_b) == 11055064 + a.field_c ? true : false;
+        return -vh.field_g + (MidiPcmStream.field_X + qd.field_M * ac.field_b) == 11055064 + a.field_c ? true : false;
     }
 
     wf(hm param0, int param1, int param2) {

@@ -54,7 +54,7 @@ final class qa {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class qa {
           jk.field_b = param1;
           fd.a(12, 0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "qa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "qa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

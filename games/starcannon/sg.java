@@ -99,7 +99,7 @@ final class sg {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class sg {
           ki.d(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_s);
           this.field_l.a(param2, 3 + var7, 3 + (var8 + this.field_l.field_r), this.field_a, -1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class sg {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class sg {
           var20 = new w(var4, true);
           var20.a(-85, var13);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -75,7 +75,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "wg.B(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "wg.B(" + param0 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_a = null;
           this.field_b = this.field_c.sentinel.field_h;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

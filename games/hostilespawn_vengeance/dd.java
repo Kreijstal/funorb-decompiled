@@ -23,7 +23,7 @@ final class dd extends ql {
         if (9 == ha.field_t) {
           return jk.field_a;
         }
-        return dl.field_m;
+        return MusicPatchPcmStream.field_m;
     }
 
     final static void g(int param0) {
@@ -476,7 +476,7 @@ final class dd extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "dd.B(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "dd.B(" + param0 + ')');
         }
     }
 
@@ -495,7 +495,7 @@ final class dd extends ql {
         }
         int var2 = 1;
         for (var3 = 1; 8 > var3; var3++) {
-          if (!kh.field_Q[var3]) {
+          if (!VolumeRampingMidiPcmStream.field_Q[var3]) {
             var2 = 0;
             break;
           }
@@ -569,13 +569,13 @@ final class dd extends ql {
             this.field_k.a((byte) 46, wh.field_b[var4Lifetime1].field_j);
           }
         }
-        kd.a(9, param0 ^ 1);
+        CrossfadingMidiPcmStream.a(9, param0 ^ 1);
         nh.field_E.a((byte) 46, this.field_l);
         if (om.field_b) {
           mm.field_m[0].field_j.a((byte) 46, this.field_l);
-          kh.field_Q[1] = true;
-          kh.field_U[0] = 1;
-          kh.field_ib[0] = 420;
+          VolumeRampingMidiPcmStream.field_Q[1] = true;
+          VolumeRampingMidiPcmStream.field_U[0] = 1;
+          VolumeRampingMidiPcmStream.field_ib[0] = 420;
         }
     }
 
@@ -626,7 +626,7 @@ final class dd extends ql {
             this.field_g &&
             of.field_d != dn.field_i) {
             ti.a(236, (byte) 103, 19);
-            kd.a(0, 1);
+            CrossfadingMidiPcmStream.a(0, 1);
             nh.field_E.a((byte) 46, this.field_f);
             this.field_d.field_l = -1;
             this.field_p.field_l = -1;

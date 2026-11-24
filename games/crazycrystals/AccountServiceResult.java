@@ -47,7 +47,7 @@ final class AccountServiceResult {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2_ref), "si.A(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2_ref), "si.A(" + param0 + ',' + param1 + ')');
         }
     }
 

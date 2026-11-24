@@ -85,7 +85,7 @@ final class wc extends da {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class wc extends da {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class wc extends da {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class wc extends da {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class wc extends da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "wc.E(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "wc.E(" + param0 + ')');
         }
     }
 
@@ -511,7 +511,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_options_players", false);
                 if (null != var2) {
-                  rq.field_v = in.a(0, var2);
+                  MusicPatchPcmStream.field_v = in.a(0, var2);
                 }
                 var2 = tk.a("mu_options_dontmind", false);
                 if (var2 != null) {
@@ -3253,7 +3253,7 @@ final class wc extends da {
                   } else {
                     stackIn_2644_2 = "{...}";
                   }
-                  throw wn.a((Throwable) ((Object) stackIn_2643_0), ((StringBuilder) (Object) stackIn_2643_1).append(stackIn_2644_2).append(')').toString());
+                  throw wn.wrapClientException((Throwable) ((Object) stackIn_2643_0), ((StringBuilder) (Object) stackIn_2643_1).append(stackIn_2644_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameApplet.field_a;
@@ -3303,7 +3303,7 @@ final class wc extends da {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -3350,7 +3350,7 @@ final class wc extends da {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 

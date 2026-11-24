@@ -30,7 +30,7 @@ final class fe {
             fe.a((byte) 54);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "fe.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fe.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var2), "fe.E(" + param0 + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var2), "fe.E(" + param0 + ',' + param1 + ')');
         }
     }
 

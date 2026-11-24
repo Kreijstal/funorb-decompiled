@@ -92,7 +92,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "oa.F(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "oa.F(" + param0 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_o);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "oa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "oa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             this.field_k = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "oa.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
           this.a(true);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "oa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.b(true);
           param3.drawImage(this.field_g, param0, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "oa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

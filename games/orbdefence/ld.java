@@ -65,7 +65,7 @@ final class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var6), "ld.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var6), "ld.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var3), "ld.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var3), "ld.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

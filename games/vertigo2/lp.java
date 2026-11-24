@@ -119,7 +119,7 @@ final class lp extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class lp extends TextureOperator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

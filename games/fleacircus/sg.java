@@ -16,7 +16,7 @@ final class sg {
     private long field_g;
     static BufferedSocket field_h;
 
-    final static pd a(byte param0, ie param1) {
+    final static pd a(byte param0, RawPcmStream param1) {
         pd var2 = null;
         RuntimeException var2_ref = null;
         pd stackIn_2_0 = null;
@@ -45,7 +45,7 @@ final class sg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class sg {
           if (ii.a(param1 + 96, param0)) {
             return true;
           }
-          var2 = ei.field_m;
+          var2 = MidiPcmStream.field_m;
           var3 = 0;
           if (param1 != -95) {
             sg.a(false, -117);
@@ -97,7 +97,7 @@ final class sg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "sg.E(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2_ref), "sg.E(" + param0 + ',' + param1 + ')');
         }
     }
 

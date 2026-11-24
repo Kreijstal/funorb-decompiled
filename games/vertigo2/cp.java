@@ -76,7 +76,7 @@ final class cp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2_ref), "cp.B(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2_ref), "cp.B(" + param0 + ',' + param1 + ')');
         }
     }
 

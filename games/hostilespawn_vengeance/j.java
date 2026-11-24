@@ -36,7 +36,7 @@ final class j {
             return true;
           }
           if (param1 != 0) {
-            var6 = kh.field_hb;
+            var6 = VolumeRampingMidiPcmStream.field_hb;
             var2 = var6;
             for (var3 = 0; var3 < var6.length; var3++) {
               var4 = var6[var3];
@@ -49,7 +49,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "j.C(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2_ref), "j.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class j {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 

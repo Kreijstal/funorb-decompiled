@@ -11,9 +11,9 @@ abstract class di extends af implements pa {
     static uc field_l;
     static IndexedSprite[] field_f;
 
-    final static vg f(int param0) {
+    final static PcmStreamMixer f(int param0) {
         if (param0 != -25177) {
-          return (vg) null;
+          return (PcmStreamMixer) null;
         }
         return GameKeyHandler.field_a;
     }

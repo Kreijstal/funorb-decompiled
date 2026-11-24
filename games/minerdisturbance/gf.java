@@ -62,7 +62,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.H(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.H(" + param0 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.C(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.C(" + param0 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.F(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.F(" + param0 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.A(" + param0 + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.I(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.I(" + param0 + ')');
         }
     }
 
@@ -575,7 +575,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "gf.G(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "gf.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -878,7 +878,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.D(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.D(" + param0 + ')');
         }
     }
 
@@ -889,7 +889,7 @@ final class gf {
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "gf.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "gf.E(" + param0 + ')');
         }
     }
 
@@ -1174,11 +1174,11 @@ final class gf {
                       vh.field_g = vh.field_g - var5Lifetime8;
                     } else {
                       var7 = var5Lifetime8 / 3;
-                      di.field_X = di.field_X + var7;
+                      MidiPcmStream.field_X = MidiPcmStream.field_X + var7;
                       vh.field_g = vh.field_g - (var5Lifetime8 - var7);
                     }
                   } else {
-                    di.field_X = di.field_X + var5Lifetime8;
+                    MidiPcmStream.field_X = MidiPcmStream.field_X + var5Lifetime8;
                   }
                 }
               }
@@ -1353,14 +1353,14 @@ final class gf {
                     var13 = var12;
                     var14 = rg.field_sb % 3;
                     if (0 == var14) {
-                      di.field_X = di.field_X + var13;
+                      MidiPcmStream.field_X = MidiPcmStream.field_X + var13;
                     } else {
                       if (var14 == 1) {
                         vh.field_g = vh.field_g - var13;
                       } else {
                         var15 = var13 / 3;
                         vh.field_g = vh.field_g - (var13 - var15);
-                        di.field_X = di.field_X + var15;
+                        MidiPcmStream.field_X = MidiPcmStream.field_X + var15;
                       }
                     }
                     ne.a(ll.a((byte) -73, 4) + 37, 122);
@@ -1955,7 +1955,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "gf.J(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "gf.J(" + param0 + ')');
         }
     }
 
@@ -1979,7 +1979,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "gf.B(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "gf.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2010,7 +2010,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var4), "gf.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var4), "gf.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -55,7 +55,7 @@ final class ab implements td {
             this.field_k.a(param2.field_l, param2.field_s + (param1 + var13), param0 + param2.field_n + this.field_b, param2.field_m - (var13 + this.field_m), param2.field_r - (this.field_m << 1), this.field_e, this.field_c, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class ab implements td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "ab.B(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "ab.B(" + param0 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class ab implements td {
           this.field_i = param6;
           this.field_a = param7;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

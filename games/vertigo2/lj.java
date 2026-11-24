@@ -138,7 +138,7 @@ final class lj {
           }
           this.field_r.i(-10);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "lj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -342,7 +342,7 @@ final class lj {
           } else {
             stackIn_98_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(')').toString());
         }
     }
 
@@ -456,7 +456,7 @@ final class lj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

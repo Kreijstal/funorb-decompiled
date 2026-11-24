@@ -119,7 +119,7 @@ final class qo extends TextureOperator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class qo extends TextureOperator {
           var3_int = we.field_M;
           var4 = aa.field_Vb;
           eo.a(0, param1);
-          ec.a(fk.field_x, 0, rm.field_z, 0, (byte) -16);
+          ec.a(CrossfadingMidiPcmStream.field_x, 0, rm.field_z, 0, (byte) -16);
           if (this.field_z != null) {
             for (var5 = 0; this.field_z.length > var5; var5++) {
               var6 = this.field_z[var5];
@@ -187,7 +187,7 @@ final class qo extends TextureOperator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

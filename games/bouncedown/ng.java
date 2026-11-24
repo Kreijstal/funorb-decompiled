@@ -133,7 +133,7 @@ abstract class ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "ng.D(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2_ref), "ng.D(" + param0 + ',' + param1 + ')');
         }
     }
 

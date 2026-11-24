@@ -72,7 +72,7 @@ final class fm {
             hd.field_e = fk.a(me.field_g, "menu_text", -109, "benefits");
             bl.field_n = fk.a(me.field_g, "button_frame", -76, "benefits");
             field_b = fk.a(me.field_g, "arrow", param0 - 201, "benefits");
-            lj.field_m = (kc) ((Object) b.a("large_font", "benefits", -121, sf.field_q, me.field_g));
+            MidiPcmStream.field_m = (kc) ((Object) b.a("large_font", "benefits", -121, sf.field_q, me.field_g));
             rc.field_a = (kc) ((Object) b.a("small_font", "benefits", -114, sf.field_q, me.field_g));
             var28 = ul.field_b;
             var2 = ul.field_f;
@@ -87,11 +87,11 @@ final class fm {
             var12 = new hj(195, 221);
             var6 = var12.field_o / 2;
             var12.d();
-            lj.field_m.c(t.a(-415993727, new String[]{lf.field_c}, AccountServiceResult.field_a), var6, 40, 16777215, -1);
-            rc.field_a.c(t.a(param0 ^ -415993744, new String[]{lf.field_c}, ud.field_p), var6, 60, 16777215, -1);
-            lj.field_m.c(t.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
-            rc.field_a.c(t.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
-            lj.field_m.c(tg.field_d, var6, 180, 16777215, -1);
+            MidiPcmStream.field_m.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{lf.field_c}, AccountServiceResult.field_a), var6, 40, 16777215, -1);
+            rc.field_a.c(CrossfadingMidiPcmStream.a(param0 ^ -415993744, new String[]{lf.field_c}, ud.field_p), var6, 60, 16777215, -1);
+            MidiPcmStream.field_m.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
+            rc.field_a.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
+            MidiPcmStream.field_m.c(tg.field_d, var6, 180, 16777215, -1);
             rc.field_a.c(mm.field_E, var6, 200, 16777215, -1);
             ve.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
             nl.field_e.d();
@@ -117,14 +117,14 @@ final class fm {
             return;
           }
           if (pf.field_b != null &&
-            lj.field_m != null) {
+            MidiPcmStream.field_m != null) {
             var29 = ul.field_b;
             var2Lifetime1 = ul.field_f;
             var3Lifetime1 = ul.field_l;
             ul.a(rh.field_e);
-            var14 = t.a(-415993727, new String[]{li.field_b[ml.field_j]}, se.field_n);
-            var5 = lj.field_m.c(var14, vg.field_l);
-            var6Lifetime1 = lj.field_m.a(var14, vg.field_l, lj.field_m.field_H + lj.field_m.field_B);
+            var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{li.field_b[ml.field_j]}, se.field_n);
+            var5 = MidiPcmStream.field_m.c(var14, vg.field_l);
+            var6Lifetime1 = MidiPcmStream.field_m.a(var14, vg.field_l, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             var7Lifetime1 = (vg.field_l - var5) / 2 + ok.field_f;
             var5 += 6;
             var7Lifetime1 -= 3;
@@ -170,7 +170,7 @@ final class fm {
             pf.field_b.e();
             var9 = new hj(pf.field_b.field_s, pf.field_b.field_t);
             var9.d();
-            lj.field_m.a(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, lj.field_m.field_H + lj.field_m.field_B);
+            MidiPcmStream.field_m.a(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
             pf.field_b.d();
             var9.c(0, 0);
@@ -189,7 +189,7 @@ final class fm {
             var3Lifetime2 = ul.field_l;
             ul.a(rh.field_e);
             var16 = new hj(412, 43);
-            var17 = t.a(-415993727, new String[]{pj.field_k}, oc.field_U);
+            var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, oc.field_U);
             pj.field_k = null;
             var16.d();
             rc.field_a.a(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
@@ -313,7 +313,7 @@ final class fm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "fm.C(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "fm.C(" + param0 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class fm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -403,7 +403,7 @@ final class fm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

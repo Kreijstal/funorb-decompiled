@@ -12,7 +12,7 @@ final class eg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "eg.B(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "eg.B(" + param0 + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class eg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "eg.toString()");
+          throw pn.wrapClientException((Throwable) ((Object) var1), "eg.toString()");
         }
     }
 
@@ -201,7 +201,7 @@ final class eg {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param6).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -411,7 +411,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 cda.a(dw.field_f, ig.field_m, DiveBomberEvent.field_r, true);
                 break;
               case 16:
-                jja.b(-1048576);
+                MusicPatchPcmStream.b(-1048576);
                 break;
               default:
                 if (var2 != 11 &&

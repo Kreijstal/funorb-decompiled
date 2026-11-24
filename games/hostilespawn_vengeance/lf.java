@@ -3,7 +3,7 @@
  */
 class lf {
     int field_a;
-    private b field_e;
+    private RawPcmStream field_e;
     int field_d;
     int field_c;
     int field_b;
@@ -59,7 +59,7 @@ class lf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "lf.C(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1_ref), "lf.C(" + param0 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ class lf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ class lf {
           this.field_e = null;
         }
         if (param0 != 18421) {
-          this.field_e = (b) null;
+          this.field_e = (RawPcmStream) null;
         }
     }
 
@@ -132,7 +132,7 @@ class lf {
             null != ua.field_c &&
             -1 + ua.field_c.length > this.field_c &&
             null != ua.field_c[-1 + this.field_c]) {
-            this.field_e = b.a(ua.field_c[-1 + this.field_c], 100, this.field_d);
+            this.field_e = RawPcmStream.a(ua.field_c[-1 + this.field_c], 100, this.field_d);
             this.field_e.d(-1);
             eh.field_c.b(this.field_e);
           }
@@ -280,7 +280,7 @@ class lf {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 

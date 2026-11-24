@@ -72,8 +72,8 @@ abstract class nf extends DualLinkNode {
           var9 = new PacketBuffer(param0);
           var3 = var9.readUnsignedByte((byte) 90);
           var4 = var9.readInt(0);
-          if (var4 >= 0 && (0 == lj.field_E ||
-            !(var4 > lj.field_E))) {
+          if (var4 >= 0 && (0 == MidiPcmStream.field_E ||
+            !(var4 > MidiPcmStream.field_E))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
@@ -83,8 +83,8 @@ abstract class nf extends DualLinkNode {
               return stackIn_10_0;
             }
             var5 = var9.readInt(0);
-            if (0 <= var5 && (lj.field_E == 0 ||
-              !(var5 > lj.field_E))) {
+            if (0 <= var5 && (MidiPcmStream.field_E == 0 ||
+              !(var5 > MidiPcmStream.field_E))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
@@ -112,7 +112,7 @@ abstract class nf extends DualLinkNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 

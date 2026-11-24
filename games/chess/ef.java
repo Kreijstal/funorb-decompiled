@@ -21,7 +21,7 @@ final class ef extends IntrusiveNode {
           }
           int var2_int = 0 % ((-35 - param1) / 36);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

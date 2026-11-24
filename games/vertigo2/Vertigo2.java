@@ -42,7 +42,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "Vertigo2.F(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "Vertigo2.F(" + param0 + ')');
         }
     }
 
@@ -441,7 +441,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "Vertigo2.G(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "Vertigo2.G(" + param0 + ')');
         }
     }
 
@@ -468,7 +468,7 @@ public final class Vertigo2 extends GameShell {
           nn.field_y = null;
           this.d(-17);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.L(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.L(" + param0 + ')');
         }
     }
 
@@ -488,7 +488,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "Vertigo2.Q(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "Vertigo2.Q(" + param0 + ')');
         }
     }
 
@@ -569,7 +569,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "Vertigo2.N(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "Vertigo2.N(" + param0 + ')');
         }
     }
 
@@ -600,15 +600,15 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "Vertigo2.E(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "Vertigo2.E(" + param0 + ')');
         }
     }
 
     final void b(int param0) {
-        db var3 = null;
+        MidiPcmStream var3 = null;
         try {
           this.a(4, 0, 19, 1, false, -16, 2, 64);
-          var3 = new db();
+          var3 = new MidiPcmStream();
           var3.a(9, true, 128);
           nr.a(true, var3, 22050, gi.field_s, 1024, (java.awt.Component) ((Object) ne.field_F));
           t.field_c = 4473924;
@@ -631,7 +631,7 @@ public final class Vertigo2 extends GameShell {
           ok.field_d[70] = -2;
           ok.field_d[69] = 100;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.S(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.S(" + param0 + ')');
         }
     }
 
@@ -701,8 +701,8 @@ public final class Vertigo2 extends GameShell {
           IsaacCipher.field_f = tn.a("orbcoin", ml.field_y, -83, "basic");
           uh.a(false, IntrusiveDequeCursor.field_b);
           uh.a(false, IsaacCipher.field_f);
-          uq.field_a = (fe) (rq.a(rn.field_u, "menu_base", "", (byte) 98));
-          ie.field_Hb = (fe) (rq.a(rn.field_u, "game_complete", "", (byte) 98));
+          uq.field_a = (fe) (MusicPatchPcmStream.a(rn.field_u, "menu_base", "", (byte) 98));
+          ie.field_Hb = (fe) (MusicPatchPcmStream.a(rn.field_u, "game_complete", "", (byte) 98));
           la.field_a = (BitmapFont) ((Object) rl.a(rn.field_u, 12, vi.field_n, "", "title_font"));
           va.field_s = new wn(w.a(vi.field_n, rn.field_u, "interface_font", "", param0 + 96));
           cd.field_b = tn.a("options_brush_01", rn.field_u, -94, "");
@@ -711,9 +711,9 @@ public final class Vertigo2 extends GameShell {
           qr.field_h = tn.a("levelselect_arrow_normal", rn.field_u, -126, "");
           IntrusiveNode.field_m = tn.a("levelselect_arrow_pressed", rn.field_u, -121, "");
           pc.field_c = null;
-          qp.field_h = (fe) (rq.a(rn.field_u, "interface_box_mid", "", (byte) 98));
-          qe.field_W = (fe) (rq.a(rn.field_u, "interface_box_end", "", (byte) 98));
-          ln.field_f = (fe) (rq.a(rn.field_u, "interface_box_rend", "", (byte) 98));
+          qp.field_h = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_box_mid", "", (byte) 98));
+          qe.field_W = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_box_end", "", (byte) 98));
+          ln.field_f = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_box_rend", "", (byte) 98));
           var3 = tk.field_c.field_z + tk.field_c.field_M;
           GzipDecompressor.field_c = new Sprite(var3, var3);
           GzipDecompressor.field_c.d();
@@ -728,38 +728,38 @@ public final class Vertigo2 extends GameShell {
           for (var4_intLifetime1 = 0; var4_intLifetime1 < td.field_l.length; var4_intLifetime1++) {
             ea.field_d[var4_intLifetime1] = an.b(119, td.field_l[var4_intLifetime1]);
           }
-          tn.field_i = (fe) (rq.a(rn.field_u, "interface_lives", "", (byte) 98));
-          RandomAccessCacheFile.field_j = (fe) (rq.a(rn.field_u, "interface_jetpack", "", (byte) 98));
-          be.field_n = (fe) (rq.a(rn.field_u, "interface_dynamite", "", (byte) 98));
-          uo.field_e = (fe) (rq.a(rn.field_u, "interface_bucket_6", "", (byte) 98));
-          oj.field_L = (fe) (rq.a(rn.field_u, "lobby_logo", "", (byte) 98));
+          tn.field_i = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_lives", "", (byte) 98));
+          RandomAccessCacheFile.field_j = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_jetpack", "", (byte) 98));
+          be.field_n = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_dynamite", "", (byte) 98));
+          uo.field_e = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_6", "", (byte) 98));
+          oj.field_L = (fe) (MusicPatchPcmStream.a(rn.field_u, "lobby_logo", "", (byte) 98));
           im.field_c = new fe[5];
           bh.field_y = new fe[5];
           for (var4_intLifetime2 = 0; 5 > var4_intLifetime2; var4_intLifetime2++) {
-            im.field_c[var4_intLifetime2] = (fe) (rq.a(rn.field_u, "interface_bucket_" + (-var4_intLifetime2 + 5), "", (byte) 98));
+            im.field_c[var4_intLifetime2] = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_" + (-var4_intLifetime2 + 5), "", (byte) 98));
           }
           for (var4_intLifetime3 = 0; var4_intLifetime3 < 5; var4_intLifetime3++) {
-            bh.field_y[var4_intLifetime3] = (fe) (rq.a(rn.field_u, "interface_bucket_blue_" + (-var4_intLifetime3 + 5), "", (byte) 98));
+            bh.field_y[var4_intLifetime3] = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_blue_" + (-var4_intLifetime3 + 5), "", (byte) 98));
           }
-          sf.field_b = (fe) (rq.a(rn.field_u, "star", "", (byte) 98));
-          am.field_o = (fe) (rq.a(rn.field_u, "cloud", "", (byte) 98));
-          field_C = (fe) (rq.a(rn.field_u, "planet1", "", (byte) 98));
-          TextureOperator.field_p = (fe) (rq.a(rn.field_u, "planet2", "", (byte) 98));
-          jf.field_M = (fe) (rq.a(rn.field_u, "nebula", "", (byte) 98));
-          mp.field_a = (fe) (rq.a(rn.field_u, "instructions_how_to_play", "", (byte) 98));
+          sf.field_b = (fe) (MusicPatchPcmStream.a(rn.field_u, "star", "", (byte) 98));
+          am.field_o = (fe) (MusicPatchPcmStream.a(rn.field_u, "cloud", "", (byte) 98));
+          field_C = (fe) (MusicPatchPcmStream.a(rn.field_u, "planet1", "", (byte) 98));
+          TextureOperator.field_p = (fe) (MusicPatchPcmStream.a(rn.field_u, "planet2", "", (byte) 98));
+          jf.field_M = (fe) (MusicPatchPcmStream.a(rn.field_u, "nebula", "", (byte) 98));
+          mp.field_a = (fe) (MusicPatchPcmStream.a(rn.field_u, "instructions_how_to_play", "", (byte) 98));
           IntrusiveNode.field_i = new fe[aa.field_Sb.length];
           for (var4_intLifetime4 = 0; aa.field_Sb.length > var4_intLifetime4; var4_intLifetime4++) {
-            IntrusiveNode.field_i[var4_intLifetime4] = (fe) (rq.a(rn.field_u, "instructions_block_" + var4_intLifetime4, "", (byte) 98));
+            IntrusiveNode.field_i[var4_intLifetime4] = (fe) (MusicPatchPcmStream.a(rn.field_u, "instructions_block_" + var4_intLifetime4, "", (byte) 98));
           }
           vj.field_g = new fe[bg.field_e.length];
           for (var4_intLifetime5 = 0; bg.field_e.length > var4_intLifetime5; var4_intLifetime5++) {
-            vj.field_g[var4_intLifetime5] = (fe) (rq.a(rn.field_u, "instructions_item_" + var4_intLifetime5, "", (byte) 98));
+            vj.field_g[var4_intLifetime5] = (fe) (MusicPatchPcmStream.a(rn.field_u, "instructions_item_" + var4_intLifetime5, "", (byte) 98));
           }
-          eq.field_F = (fe) (rq.a(rn.field_u, "maintitle", "", (byte) 98));
-          rq.a(rn.field_u, "timeattack_complete", "", (byte) 98);
-          hh.field_a = (fe) (rq.a(rn.field_u, "timeattack_bronze", "", (byte) 98));
-          kq.field_Kb = (fe) (rq.a(rn.field_u, "timeattack_silver", "", (byte) 98));
-          MouseWheelInput.field_c = (fe) (rq.a(rn.field_u, "timeattack_gold", "", (byte) 98));
+          eq.field_F = (fe) (MusicPatchPcmStream.a(rn.field_u, "maintitle", "", (byte) 98));
+          MusicPatchPcmStream.a(rn.field_u, "timeattack_complete", "", (byte) 98);
+          hh.field_a = (fe) (MusicPatchPcmStream.a(rn.field_u, "timeattack_bronze", "", (byte) 98));
+          kq.field_Kb = (fe) (MusicPatchPcmStream.a(rn.field_u, "timeattack_silver", "", (byte) 98));
+          MouseWheelInput.field_c = (fe) (MusicPatchPcmStream.a(rn.field_u, "timeattack_gold", "", (byte) 98));
           var4 = new Sprite[][]{new Sprite[]{tn.a("coop_icon", rn.field_u, -79, ""), tn.a("versus_icon", rn.field_u, -108, "")}, gk.a(rn.field_u, "", "start_icon", true), gk.a(rn.field_u, "", "end_icon", true)};
           mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, ho.field_e, wo.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
           jl.field_g = (Sprite) ((Object) oj.field_L);
@@ -781,7 +781,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2_ref), "Vertigo2.H(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2_ref), "Vertigo2.H(" + param0 + ')');
         }
     }
 
@@ -789,7 +789,7 @@ public final class Vertigo2 extends GameShell {
         try {
           this.a(20, 0, "vertigo2");
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.init()");
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.init()");
         }
     }
 
@@ -811,7 +811,7 @@ public final class Vertigo2 extends GameShell {
           Archive.clearStaticReferences(-54);
           BitmapFont.clearStaticReferences();
           lh.b((byte) 41);
-          db.f(97);
+          MidiPcmStream.f(97);
           mh.clearStaticReferences(-1);
           vh.clearStaticReferences();
           id.clearStaticReferences((byte) 76);
@@ -865,9 +865,9 @@ public final class Vertigo2 extends GameShell {
           jl.clearStaticReferences(6);
           pe.clearStaticReferences(true);
           qd.clearStaticReferences();
-          rq.e(0);
+          MusicPatchPcmStream.e(0);
           AudioOutput.clearStaticReferences();
-          fk.e(-257);
+          CrossfadingMidiPcmStream.e(-257);
           MenuSelectionCursor.clearStaticReferences(true);
           fh.h(-90);
           mp.clearStaticReferences(-127);
@@ -1168,7 +1168,7 @@ public final class Vertigo2 extends GameShell {
           wp.b(10);
           this.field_u = null;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.J(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.J(" + param0 + ')');
         }
     }
 
@@ -1292,7 +1292,7 @@ public final class Vertigo2 extends GameShell {
           if (kg.h(param0 ^ -111)) {
             var5Lifetime1 = oi.a(-110) + 30;
             var6Lifetime1 = 30 + AccountNameAvailabilityValidator.a(true);
-            rq.a(var6Lifetime1, var5Lifetime1, -(var6Lifetime1 / 2) + 240, -(var5Lifetime1 / 2) + 320, 82, 210);
+            MusicPatchPcmStream.a(var6Lifetime1, var5Lifetime1, -(var6Lifetime1 / 2) + 240, -(var5Lifetime1 / 2) + 320, 82, 210);
             eb.b(-14732);
           } else {
             if (pq.b(0)) {
@@ -1306,7 +1306,7 @@ public final class Vertigo2 extends GameShell {
               if (rh.e((byte) 99)) {
                 var5Lifetime1 = 30 + IterableNodeHashTable.a((byte) -72);
                 var6Lifetime1 = f.b(false) + 30;
-                rq.a(var6Lifetime1, var5Lifetime1, -(var6Lifetime1 / 2) + 270, 320 - var5Lifetime1 / 2, -77, 210);
+                MusicPatchPcmStream.a(var6Lifetime1, var5Lifetime1, -(var6Lifetime1 / 2) + 270, 320 - var5Lifetime1 / 2, -77, 210);
                 bk.b((byte) -101);
               }
             }
@@ -1322,7 +1322,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "Vertigo2.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "Vertigo2.B(" + param0 + ')');
         }
     }
 
@@ -1342,7 +1342,7 @@ public final class Vertigo2 extends GameShell {
           field_C = null;
           field_H = null;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.M(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.M(" + param0 + ')');
         }
     }
 
@@ -1383,7 +1383,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "Vertigo2.R(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "Vertigo2.R(" + param0 + ')');
         }
     }
 
@@ -1411,7 +1411,7 @@ public final class Vertigo2 extends GameShell {
           ii.field_C = BufferedSocket.a(17, 124);
           hi.field_o = BufferedSocket.a(18, 123);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.O(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.O(" + param0 + ')');
         }
     }
 
@@ -1422,7 +1422,7 @@ public final class Vertigo2 extends GameShell {
           pp.field_s = null;
           this.d(-17);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "Vertigo2.P(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.P(" + param0 + ')');
         }
     }
 
@@ -1454,7 +1454,7 @@ public final class Vertigo2 extends GameShell {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1652,7 +1652,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "Vertigo2.K(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "Vertigo2.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1924,7 +1924,7 @@ public final class Vertigo2 extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "Vertigo2.A(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "Vertigo2.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2041,7 +2041,7 @@ public final class Vertigo2 extends GameShell {
             stackIn_44_0 = stackIn_39_0;
             stackIn_44_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2073,7 +2073,7 @@ public final class Vertigo2 extends GameShell {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

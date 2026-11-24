@@ -87,7 +87,7 @@ final class ds extends IntrusiveNode {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 

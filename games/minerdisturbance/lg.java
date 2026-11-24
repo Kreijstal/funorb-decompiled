@@ -13,7 +13,7 @@ final class lg {
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "lg.B(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "lg.B(" + param0 + ')');
         }
     }
 
@@ -464,7 +464,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tips");
                 if (null != var2) {
-                  gd.field_t = bh.a(var2, 8);
+                  MusicPatchPcmStream.field_t = bh.a(var2, 8);
                 }
                 var2 = lh.b(-1, "login");
                 if (var2 != null) {
@@ -1669,7 +1669,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltip3X");
                 if (var2 != null) {
-                  gd.field_z = bh.a(var2, -126);
+                  MusicPatchPcmStream.field_z = bh.a(var2, -126);
                 }
                 var2 = lh.b(-1, "tooltipCollapse");
                 if (var2 != null) {
@@ -1845,7 +1845,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "times250");
                 if (null != var2) {
-                  gd.field_A = bh.a(var2, 104);
+                  MusicPatchPcmStream.field_A = bh.a(var2, 104);
                 }
                 var2 = lh.b(-1, "times500");
                 if (var2 != null) {
@@ -1962,7 +1962,7 @@ final class lg {
                   } else {
                     stackIn_1681_2 = "{...}";
                   }
-                  throw lj.a((Throwable) ((Object) stackIn_1680_0), ((StringBuilder) (Object) stackIn_1680_1).append(stackIn_1681_2).append(',').append(param1).append(')').toString());
+                  throw lj.wrapClientException((Throwable) ((Object) stackIn_1680_0), ((StringBuilder) (Object) stackIn_1680_1).append(stackIn_1681_2).append(',').append(param1).append(')').toString());
                 }
                 if (GameAppletShell.field_h) {
                   var3++;
@@ -2005,7 +2005,7 @@ final class lg {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

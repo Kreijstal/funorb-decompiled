@@ -8,7 +8,7 @@ class WidgetContainer extends UiWidget implements sf {
     static o field_B;
     static String field_A;
     static vb field_z;
-    static vg field_E;
+    static PcmStreamMixer field_E;
     static String field_D;
 
     final boolean d(int param0) {

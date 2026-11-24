@@ -51,16 +51,16 @@ final class le {
         try {
           fb.field_b[0] = cm.field_M.nextInt();
           fb.field_b[1] = cm.field_M.nextInt();
-          am.field_n.position = 0;
+          MusicPatchPcmStream.field_n.position = 0;
           fb.field_b[2] = (int)(s.field_c >> 32);
           fb.field_b[3] = (int)s.field_c;
-          am.field_n.writeInt(fb.field_b[0], (byte) -49);
-          am.field_n.writeInt(fb.field_b[1], (byte) 119);
-          am.field_n.writeInt(fb.field_b[2], (byte) -50);
-          am.field_n.writeInt(fb.field_b[3], (byte) -44);
-          u.a(am.field_n, (byte) -102);
-          am.field_n.writeShort(param2, -17402);
-          param0.a(am.field_n, param4 ^ 103);
+          MusicPatchPcmStream.field_n.writeInt(fb.field_b[0], (byte) -49);
+          MusicPatchPcmStream.field_n.writeInt(fb.field_b[1], (byte) 119);
+          MusicPatchPcmStream.field_n.writeInt(fb.field_b[2], (byte) -50);
+          MusicPatchPcmStream.field_n.writeInt(fb.field_b[3], (byte) -44);
+          u.a(MusicPatchPcmStream.field_n, (byte) -102);
+          MusicPatchPcmStream.field_n.writeShort(param2, -17402);
+          param0.a(MusicPatchPcmStream.field_n, param4 ^ 103);
           nj.field_p.position = 0;
           if (param3) {
             nj.field_p.writeByte(18, (byte) -128);
@@ -93,7 +93,7 @@ final class le {
           if (cj.field_i != null) {
             nj.field_p.writePrefixedString(-23805, cj.field_i);
           }
-          i.a(nj.field_p, am.field_n, a.field_b, d.field_a, 0);
+          i.a(nj.field_p, MusicPatchPcmStream.field_n, a.field_b, d.field_a, 0);
           nj.field_p.backpatchShortLength(-2, nj.field_p.position - var5_int);
           if (param4 != 16) {
             return;

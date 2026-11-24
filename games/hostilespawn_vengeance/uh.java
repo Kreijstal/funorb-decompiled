@@ -9,7 +9,7 @@ class uh extends ca {
     private String field_e;
     static ResourceArchive field_m;
     static Calendar field_h;
-    static w field_l;
+    static MidiPcmStream field_l;
     static boolean field_o;
     static int field_k;
     static bd field_f;
@@ -47,7 +47,7 @@ class uh extends ca {
           this.field_n = param0;
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "uh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "uh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ class uh extends ca {
           param0.b(9201, this.field_n);
           param0.a((byte) -36, this.field_e);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "uh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "uh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

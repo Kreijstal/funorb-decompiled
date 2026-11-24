@@ -9,8 +9,8 @@ abstract class hn {
 
     final static String c(int param0) {
         String var1 = "";
-        if (di.field_D != null) {
-          var1 = di.field_D.a((byte) 117);
+        if (MidiPcmStream.field_D != null) {
+          var1 = MidiPcmStream.field_D.a((byte) 117);
         }
         if (param0 > 74) {
           if (var1.length() == 0) {

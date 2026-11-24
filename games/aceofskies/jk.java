@@ -48,7 +48,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2_ref), "jk.C(" + param0 + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2_ref), "jk.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class jk {
         try {
           hl discarded$4 = new hl(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -31,7 +31,7 @@ final class tf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "tf.B(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "tf.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class tf {
         int var7Lifetime1Lifetime1;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
-          ej.field_n = true;
+          MusicPatchPcmStream.field_n = true;
           q.field_a = param2;
           if (q.field_a == 0) {
             var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) 110);
@@ -346,7 +346,7 @@ final class tf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var3), "tf.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var3), "tf.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -409,7 +409,7 @@ final class bh {
           } else {
             stackIn_143_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_142_0), ((StringBuilder) (Object) stackIn_142_1).append(stackIn_143_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_142_0), ((StringBuilder) (Object) stackIn_142_1).append(stackIn_143_2).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ final class bh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -705,7 +705,7 @@ final class bh {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -809,7 +809,7 @@ final class bh {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -1239,7 +1239,7 @@ final class bh {
           } else {
             stackIn_280_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_276_0), ((StringBuilder) (Object) stackIn_279_1).append(stackIn_280_2).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_276_0), ((StringBuilder) (Object) stackIn_279_1).append(stackIn_280_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1359,7 +1359,7 @@ final class bh {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1467,7 +1467,7 @@ final class bh {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1714,7 +1714,7 @@ final class bh {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -2285,7 +2285,7 @@ final class bh {
           } else {
             stackIn_223_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_222_0), ((StringBuilder) (Object) stackIn_222_1).append(stackIn_223_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_222_0), ((StringBuilder) (Object) stackIn_222_1).append(stackIn_223_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2470,7 +2470,7 @@ final class bh {
           }
           if (!this.field_C) {
             qg.a(1, 250, 28, 0);
-            db.a(false, 12, (byte) 56, kc.field_b, false, 12);
+            MidiPcmStream.a(false, 12, (byte) 56, kc.field_b, false, 12);
           }
           return -2;
         }
@@ -2636,7 +2636,7 @@ final class bh {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param12).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -2685,7 +2685,7 @@ final class bh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

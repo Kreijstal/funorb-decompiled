@@ -14,7 +14,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "br.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "br.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           this.e(-115);
           this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "br.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "br.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           param5.drawImage(this.field_j, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) ((Object) this.field_i));
           param5.setClip(var9);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "br.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "br.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           param0.setColorModel(this.field_l);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "br.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "br.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

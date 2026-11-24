@@ -224,7 +224,7 @@ final class vb extends il {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param6).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param6).append(')').toString());
         }
     }
 

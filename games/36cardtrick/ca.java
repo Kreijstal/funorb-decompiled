@@ -12,8 +12,8 @@ final class ca {
           ij.field_g = param1;
           r.field_p = true;
           if (param2 != 16777215) {
-            qj var4 = (qj) null;
-            ca.a((qk) null, (qj) null, -27, -28);
+            PcmStreamMixer var4 = (PcmStreamMixer) null;
+            ca.a((qk) null, (PcmStreamMixer) null, -27, -28);
           }
           Crc32Table.field_a = new af(sd.field_c, vd.field_p, param0, DirectByteArrayStore.field_e, ij.field_g);
           sd.field_c.b(Crc32Table.field_a, (byte) -98);
@@ -22,7 +22,7 @@ final class ca {
         }
     }
 
-    final static void a(qk param0, qj param1, int param2, int param3) {
+    final static void a(qk param0, PcmStreamMixer param1, int param2, int param3) {
         try {
           vb.field_b = SecondaryNodeDeque.a(22018) * param2 / 1000;
           ch.a(-114, param0);

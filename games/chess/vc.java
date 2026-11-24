@@ -25,7 +25,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "vc.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vc.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             lk.field_e = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "vc.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vc.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -283,7 +283,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var3), "vc.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var3), "vc.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 

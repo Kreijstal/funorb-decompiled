@@ -90,7 +90,7 @@ final class uf extends ql {
         ih.field_y[0] = new oc(ln.field_a.field_v[0], ln.field_a.field_v[1]);
         ih.field_y[1] = new oc(ln.field_a.field_v[2], ln.field_a.field_v[3]);
         ih.field_y[2] = new oc(ln.field_a.field_v[4], ln.field_a.field_v[5]);
-        kd.a(6, 1);
+        CrossfadingMidiPcmStream.a(6, 1);
         nh.field_E.a((byte) 46, ih.field_y[0]);
         vg.field_e = new v[4];
         vg.field_e[0] = new v(tm.field_s, -120 + (ti.field_f.field_e * 24 + 50), 24 * (-7 + ti.field_f.field_g) - 20, 200, false);
@@ -125,7 +125,7 @@ final class uf extends ql {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class uf extends ql {
           param0.field_f.field_g = param0;
           param0.field_g.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "uf.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "uf.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class uf extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var7), "uf.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var7), "uf.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class uf extends ql {
           var3 = ih.a(var4, (byte) -105, ih.field_y[1]);
           if (2 > var3) {
             ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
-            kd.a(0, 1);
+            CrossfadingMidiPcmStream.a(0, 1);
             nh.field_E.a((byte) 46, ih.field_y[0]);
             vg.field_e[2].field_a = 1;
           }
@@ -297,14 +297,14 @@ final class uf extends ql {
         }
         var3Lifetime1 = ih.a(var4, (byte) -82, ih.field_y[0]);
         if (var3Lifetime1 < 2) {
-          kd.a(9, 1);
+          CrossfadingMidiPcmStream.a(9, 1);
           vg.field_e[1].field_a = 1;
           nh.field_E.a((byte) 46, ih.field_y[1]);
         }
         var3Lifetime2 = ih.a(var4, (byte) -105, ih.field_y[1]);
         if (2 > var3Lifetime2) {
           ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
-          kd.a(0, 1);
+          CrossfadingMidiPcmStream.a(0, 1);
           nh.field_E.a((byte) 46, ih.field_y[0]);
           vg.field_e[2].field_a = 1;
         }

@@ -83,7 +83,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.nextNode = this.deque.field_a.field_j;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class sd extends ga implements lf {
           super.a(param0, -115, param2, param3);
           this.field_P = -param3 - this.field_r + qh.field_i;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class sd extends ga implements lf {
         try {
           this.field_S = param1;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "sd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

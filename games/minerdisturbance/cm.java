@@ -22,8 +22,8 @@ final class cm extends IntrusiveNode {
           v.field_b[0] = dk.field_a.nextInt();
           v.field_b[1] = dk.field_a.nextInt();
           rf.field_c.position = 0;
-          v.field_b[2] = (int)(gd.field_s >> 32);
-          v.field_b[3] = (int)gd.field_s;
+          v.field_b[2] = (int)(MusicPatchPcmStream.field_s >> 32);
+          v.field_b[3] = (int)MusicPatchPcmStream.field_s;
           rf.field_c.writeInt((byte) 81, v.field_b[0]);
           rf.field_c.writeInt((byte) 125, v.field_b[1]);
           rf.field_c.writeInt((byte) 119, v.field_b[2]);
@@ -80,7 +80,7 @@ final class cm extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class cm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "cm.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "cm.A(" + param0 + ')');
         }
     }
 

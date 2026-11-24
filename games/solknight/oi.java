@@ -144,7 +144,7 @@ final class oi {
         return var2;
     }
 
-    final boolean d() {
+    final boolean hasMidiData() {
         return this.field_g.payload != null;
     }
 

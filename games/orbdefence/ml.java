@@ -4,7 +4,7 @@
 final class ml {
     private int field_b;
     private boolean field_g;
-    static lj field_c;
+    static MidiPcmStream field_c;
     private int field_d;
     static qd field_a;
     int field_i;
@@ -59,7 +59,7 @@ final class ml {
         if (!param0) {
           return 103 == this.field_k ? true : false;
         }
-        field_c = (lj) null;
+        field_c = (MidiPcmStream) null;
         return 103 == this.field_k ? true : false;
     }
 

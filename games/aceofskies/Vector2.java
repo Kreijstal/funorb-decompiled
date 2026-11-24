@@ -43,7 +43,7 @@ final class Vector2 {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class Vector2 {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class Vector2 {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class Vector2 {
             field_c = -5;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "kc.C(" + obfuscationGuard + ',' + (other != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "kc.C(" + obfuscationGuard + ',' + (other != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class Vector2 {
             this.setFrom((Vector2) null, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "kc.M(" + (source != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "kc.M(" + (source != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class Vector2 {
             this.length((byte) -90);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "kc.H(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "kc.H(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class Vector2 {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1_ref), "kc.E(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1_ref), "kc.E(" + param0 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class Vector2 {
         try {
           this.setFrom(source, true);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "kc.<init>(" + (source != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "kc.<init>(" + (source != null ? "{...}" : "null") + ')');
         }
     }
 

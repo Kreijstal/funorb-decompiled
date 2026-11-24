@@ -81,7 +81,7 @@ final class rc {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 

@@ -48,7 +48,7 @@ final class GameCanvas extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var3), "pg.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var3), "pg.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class GameCanvas extends java.awt.Canvas {
           sg.field_b = tl.field_e;
           lc.field_c = tl.field_e;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class GameCanvas extends java.awt.Canvas {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param5).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pg.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pg.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "pg.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pg.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

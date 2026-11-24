@@ -62,7 +62,7 @@ final class kw extends TileEffect {
             if (this.field_o) {
               this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
             }
-            jja.a(64, -1, 24);
+            MusicPatchPcmStream.a(64, -1, 24);
             return true;
           }
           this.b(-88);
@@ -74,10 +74,10 @@ final class kw extends TileEffect {
           if (this.field_o) {
             this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
           }
-          jja.a(64, -1, 24);
+          MusicPatchPcmStream.a(64, -1, 24);
           return true;
         }
-        jja.a(192, -1, 25);
+        MusicPatchPcmStream.a(192, -1, 25);
         if (param0 >= 21) {
           fieldTemp$3 = this.field_l - 1;
           this.field_l = this.field_l - 1;
@@ -87,7 +87,7 @@ final class kw extends TileEffect {
           if (this.field_o) {
             this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
           }
-          jja.a(64, -1, 24);
+          MusicPatchPcmStream.a(64, -1, 24);
           return true;
         }
         this.b(-88);
@@ -99,7 +99,7 @@ final class kw extends TileEffect {
         if (this.field_o) {
           this.field_e.field_h.setTerrain((byte) -126, 28, this.field_d, this.field_c);
         }
-        jja.a(64, -1, 24);
+        MusicPatchPcmStream.a(64, -1, 24);
         return true;
     }
 

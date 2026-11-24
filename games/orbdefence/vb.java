@@ -4,7 +4,7 @@
 final class vb extends IntrusiveNode {
     static IntrusiveDeque field_h;
     static int[] field_g;
-    static v field_f;
+    static PcmStreamMixer field_f;
     static int field_i;
 
     public static void c(int param0) {

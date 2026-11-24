@@ -63,7 +63,7 @@ abstract class cc extends kn {
         if (25 == dk.field_e) {
           dk.field_e = 0;
         }
-        gl.field_u[dk.field_e] = rc.a(re.field_a[17], 100, oc.field_f);
+        gl.field_u[dk.field_e] = RawPcmStream.a(re.field_a[17], 100, oc.field_f);
         mg.a(1963987425, gl.field_u[dk.field_e]);
         IterableNodeHashTable.field_c[dk.field_e] = param0;
         if (param1 == 136989569) {
@@ -213,7 +213,7 @@ abstract class cc extends kn {
           this.field_J = 0;
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

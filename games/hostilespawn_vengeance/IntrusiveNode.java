@@ -39,7 +39,7 @@ class IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ class IntrusiveNode {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -191,11 +191,11 @@ class IntrusiveNode {
             }
             if (var3Lifetime1 == 0) {
               ha.field_t = -1;
-              kd.a(1, 1);
+              CrossfadingMidiPcmStream.a(1, 1);
             } else {
               if (bm.field_c == 0 &&
                 rl.field_c == 2) {
-                kd.a(14, 1);
+                CrossfadingMidiPcmStream.a(14, 1);
                 for (var4_intLifetime2 = 1; var4_intLifetime2 < el.field_j; var4_intLifetime2++) {
                   var8 = mm.field_m[var4_intLifetime2];
                   if (15 == var8.field_i) {
@@ -208,7 +208,7 @@ class IntrusiveNode {
               } else {
                 stackIn_32_0 = 0;
                 stackIn_32_1 = 1;
-                kd.a(stackIn_32_0, stackIn_32_1);
+                CrossfadingMidiPcmStream.a(stackIn_32_0, stackIn_32_1);
               }
             }
           }
@@ -249,7 +249,7 @@ class IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "am.M(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "am.M(" + param0 + ',' + param1 + ')');
         }
     }
 

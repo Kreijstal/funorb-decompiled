@@ -314,7 +314,7 @@ final class eg extends tk {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw wn.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw wn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -428,7 +428,7 @@ final class eg extends tk {
         try {
           MouseWheelInput.field_g.b(param1);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -42,10 +42,10 @@ final class vg implements fc {
         ek.field_f = var8.readLong((byte) -121);
         if (2 != eg.field_o) {
           ib.field_n = 0;
-          ka.field_n = 0;
+          MusicPatchPcmStream.field_n = 0;
         } else {
           ib.field_n = var8.readUnsignedShort(-1640531527);
-          ka.field_n = var8.readUnsignedMedium((byte) -83);
+          MusicPatchPcmStream.field_n = var8.readUnsignedMedium((byte) -83);
         }
         stackIn_11_0 = (1 != var8.readUnsignedByte((byte) -76)) ? 0 : 1;
         var4 = stackIn_11_0;
@@ -115,7 +115,7 @@ final class vg implements fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "vg.C(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1_ref), "vg.C(" + param0 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class vg implements fc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class vg implements fc {
           this.field_i = param3;
           this.field_h = param5;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ class gk extends IntrusiveNode {
     static String field_v;
     static vd field_u;
     static char[] field_y;
-    vc field_n;
+    RawPcmStream field_n;
     static int field_r;
 
     final void d(int param0) {
@@ -32,7 +32,7 @@ class gk extends IntrusiveNode {
         double stackIn_10_0 = 0.0;
         double stackIn_11_1 = 0.0;
         int stackIn_13_0 = 0;
-        vc stackIn_26_0 = null;
+        RawPcmStream stackIn_26_0 = null;
         int stackIn_27_1 = 0;
         Throwable decompiledCaughtException = null;
         double var3 = 0.0;
@@ -124,7 +124,7 @@ class gk extends IntrusiveNode {
           } else {
             stackIn_27_1 = 1600;
           }
-          ((vc) (Object) stackIn_26_0).d(stackIn_27_1);
+          ((RawPcmStream) (Object) stackIn_26_0).d(stackIn_27_1);
           if (this.field_p) {
             this.field_n.b(true);
             this.field_p = false;
@@ -364,7 +364,7 @@ class gk extends IntrusiveNode {
         try {
           this.field_s = param2;
           this.field_t = param1;
-          this.field_n = vc.a(param2, 0, 0);
+          this.field_n = RawPcmStream.a(param2, 0, 0);
           this.field_n.c(param3);
           this.field_n.c(param4);
           param0.field_z.addLast((IntrusiveNode) (this), (byte) 106);

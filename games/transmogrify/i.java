@@ -64,7 +64,7 @@ final class i {
 
     final static void a(boolean param0) {
         ng.field_i = null;
-        ej.field_n = param0 ? true : false;
+        MusicPatchPcmStream.field_n = param0 ? true : false;
         ne.field_a = null;
         th.field_d = null;
         bd.field_p = null;

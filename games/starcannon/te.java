@@ -64,7 +64,7 @@ final class te {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class te {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "te.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var3), "te.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

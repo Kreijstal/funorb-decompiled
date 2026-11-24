@@ -58,9 +58,9 @@ final class tg {
           }
           pe.field_pb = pe.field_pb + 1;
           if (h.field_b == -1 &&
-            vd.field_y == -1) {
+            CrossfadingMidiPcmStream.field_y == -1) {
             h.field_b = nk.field_w;
-            vd.field_y = NodeHashTableIterator.field_e;
+            CrossfadingMidiPcmStream.field_y = NodeHashTableIterator.field_e;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
@@ -92,7 +92,7 @@ final class tg {
                 }
               }
             }
-            lj.field_q = vd.field_y;
+            lj.field_q = CrossfadingMidiPcmStream.field_y;
             ng.field_l = h.field_b;
             if (param1 != null) {
               il.field_n = false;
@@ -105,12 +105,12 @@ final class tg {
           if (!il.field_n &&
             ch.field_f > pe.field_pb &&
             k.field_i) {
-            lj.field_q = vd.field_y;
+            lj.field_q = CrossfadingMidiPcmStream.field_y;
             pe.field_pb = 0;
             ng.field_l = h.field_b;
           }
           fa.field_c = param1;
-          vd.field_y = -1;
+          CrossfadingMidiPcmStream.field_y = -1;
           h.field_b = -1;
           if (il.field_n) {
             if (oh.field_E != pe.field_pb) {
@@ -130,7 +130,7 @@ final class tg {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class tg {
           param2.field_f.field_c = param2;
           param2.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class tg {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw lj.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

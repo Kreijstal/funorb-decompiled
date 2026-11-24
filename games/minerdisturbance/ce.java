@@ -35,7 +35,7 @@ final class ce {
           if (!param3) {
             stackIn_4_0 = sj.field_d;
           } else {
-            stackIn_4_0 = di.field_x;
+            stackIn_4_0 = MidiPcmStream.field_x;
           }
           var18 = stackIn_4_0;
           var16 = var18;
@@ -114,7 +114,7 @@ final class ce {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var4), "ce.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var4), "ce.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

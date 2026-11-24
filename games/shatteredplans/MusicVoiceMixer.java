@@ -30,17 +30,17 @@ final class MusicVoiceMixer extends PcmStream {
         this.field_o.skip(param0);
         var3 = (MusicVoice) (this.field_n.startForward(0));
         while (var3 != null) {
-          if (!this.field_m.a((byte) 124, var3)) {
+          if (!this.field_m.isVoiceInactive((byte) 124, var3)) {
             var2 = param0;
             do {
               if (var3.field_p >= var2) {
-                this.a(2105376, var3, var2);
+                this.skipVoiceFrames(2105376, var3, var2);
                 var3.field_p = var3.field_p - var2;
                 break;
               }
-              this.a(2105376, var3, var3.field_p);
+              this.skipVoiceFrames(2105376, var3, var3.field_p);
               var2 = var2 - var3.field_p;
-            } while (!this.field_m.a(0, (int[]) null, 2, var3, var2));
+            } while (!this.field_m.updateVoice(0, (int[]) null, 2, var3, var2));
           }
           var3 = (MusicVoice) (this.field_n.nextForward((byte) -71));
         }
@@ -62,22 +62,22 @@ final class MusicVoiceMixer extends PcmStream {
           this.field_o.fill(param0, param1, param2);
           var6 = (MusicVoice) (this.field_n.startForward(0));
           while (var6 != null) {
-            stackIn_4_0 = this.field_m.a((byte) 122, var6);
+            stackIn_4_0 = this.field_m.isVoiceInactive((byte) 122, var6);
             boolean decompiledFrameCompleted0 = true;
             if (!stackIn_4_0) {
               var4_int = param1;
               var5 = param2;
               while (var6.field_p < var5) {
-                this.a(param0, var4_int, var6, var6.field_p, (byte) 121, var4_int + var5);
+                this.renderVoiceFrames(param0, var4_int, var6, var6.field_p, (byte) 121, var4_int + var5);
                 var5 = var5 - var6.field_p;
                 var4_int = var4_int + var6.field_p;
-                if (this.field_m.a(var4_int, param0, 2, var6, var5)) {
+                if (this.field_m.updateVoice(var4_int, param0, 2, var6, var5)) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.a(param0, var4_int, var6, var5, (byte) 121, var4_int + var5);
+                this.renderVoiceFrames(param0, var4_int, var6, var5, (byte) 121, var4_int + var5);
                 var6.field_p = var6.field_p - var5;
               }
             }
@@ -263,7 +263,7 @@ final class MusicVoiceMixer extends PcmStream {
         }
     }
 
-    private final void a(int param0, MusicVoice param1, int param2) {
+    private final void skipVoiceFrames(int param0, MusicVoice param1, int param2) {
         MidiPcmStream stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         MusicVoice stackIn_10_2 = null;
@@ -320,7 +320,7 @@ final class MusicVoiceMixer extends PcmStream {
         }
     }
 
-    private final void a(int[] param0, int param1, MusicVoice param2, int param3, byte param4, int param5) {
+    private final void renderVoiceFrames(int[] param0, int param1, MusicVoice param2, int param3, byte param4, int param5) {
         MidiPcmStream stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         MusicVoice stackIn_13_2 = null;

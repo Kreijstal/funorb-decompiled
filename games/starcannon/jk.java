@@ -24,7 +24,7 @@ final class jk {
           param1.removeFocusListener(hj.field_c);
           ah.field_c = -1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "jk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "jk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

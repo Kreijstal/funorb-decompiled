@@ -4,20 +4,20 @@
 final class AccountRequestState {
     static String field_a;
 
-    final static void a(boolean param0, tc param1, int param2, int param3, java.awt.Component param4, int param5, int param6, PlatformTaskDispatcher param7) {
+    final static void a(boolean param0, CrossfadingMidiPcmStream param1, int param2, int param3, java.awt.Component param4, int param5, int param6, PlatformTaskDispatcher param7) {
         try {
           AudioOutput.configureAudio(param2, param0, 10);
           int var8_int = 6 % ((-86 - param5) / 39);
           ub.field_n = AudioOutput.createOutput(param7, param4, 0, param3);
           hm.field_n = AudioOutput.createOutput(param7, param4, 1, param6);
-          wa.field_j = new mb();
+          wa.field_j = new PcmStreamMixer();
           kc.field_U = param6;
           hm.field_n.setRootStream(wa.field_j);
           FullscreenFocusCanvas.field_b = param1;
           FullscreenFocusCanvas.field_b.a(DelegatingCanvas.field_d, 256);
           ub.field_n.setRootStream(FullscreenFocusCanvas.field_b);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class AccountRequestState {
             wa.field_a = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
         }
     }
 

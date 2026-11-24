@@ -128,7 +128,7 @@ final class oc extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

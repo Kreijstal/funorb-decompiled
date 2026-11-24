@@ -1526,7 +1526,7 @@ final class GameScreen {
                                                                   }
                                                                 }
                                                                 if (this.field_e.a(0)) {
-                                                                  ol.e(256);
+                                                                  MusicPatchPcmStream.e(256);
                                                                 }
                                                                 if (!(!this.field_e.c((byte) 11))) {
                                                                   SpriteState.f(-96);

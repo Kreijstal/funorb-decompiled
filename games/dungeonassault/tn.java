@@ -42,7 +42,7 @@ final class tn extends bh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class tn extends bh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class tn extends bh {
           this.field_X = this.field_X + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "tn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class tn extends bh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class tn extends bh {
           this.field_T = param0;
           this.b(0, param4, param3, param2, param5);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class tn extends bh {
           jn.field_k = new int[dk.field_d];
           ub.field_q = new byte[dk.field_d][];
           gk.field_Q = new boolean[dk.field_d];
-          hg.field_t = new int[dk.field_d];
+          MusicPatchPcmStream.field_t = new int[dk.field_d];
           if (param0 <= 59) {
             return;
           }
@@ -349,7 +349,7 @@ final class tn extends bh {
           tb.field_i = var17.readUnsignedShort(0);
           var3 = 1 + (255 & var17.readUnsignedByte(true));
           for (var4 = 0; dk.field_d > var4; var4++) {
-            hg.field_t[var4] = var16.readUnsignedShort(0);
+            MusicPatchPcmStream.field_t[var4] = var16.readUnsignedShort(0);
           }
           for (var4Lifetime1 = 0; dk.field_d > var4Lifetime1; var4Lifetime1++) {
             fe.field_g[var4Lifetime1] = var17.readUnsignedShort(0);
@@ -437,7 +437,7 @@ final class tn extends bh {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 

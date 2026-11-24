@@ -115,7 +115,7 @@ final class bg extends ic {
         }
     }
 
-    final static void a(kb param0, int param1, int param2, int param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, boolean param7) {
+    final static void a(MidiPcmStream param0, int param1, int param2, int param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, boolean param7) {
         try {
           AudioOutput.configureAudio(param1, param7, 10);
           bh.field_o = AudioOutput.createOutput(param5, param4, 0, param3);

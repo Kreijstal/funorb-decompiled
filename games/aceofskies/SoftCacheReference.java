@@ -44,7 +44,7 @@ final class SoftCacheReference extends CacheReference {
         try {
           this.field_r = new java.lang.ref.SoftReference(param0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class SoftCacheReference extends CacheReference {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "mb.F(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "mb.F(" + param0 + ')');
         }
     }
 

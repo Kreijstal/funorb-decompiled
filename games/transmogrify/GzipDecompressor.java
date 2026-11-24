@@ -32,7 +32,7 @@ final class GzipDecompressor {
             }
             this.field_b.reset();
           } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "qd.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ch.wrapClientException((Throwable) ((Object) runtimeException), "qd.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -51,9 +51,9 @@ final class GzipDecompressor {
     final static void a(int param0) {
         fd.field_h[4] = new int[]{5};
         int var1 = -67 / ((param0 + 11) / 43);
-        ej.field_l[4] = new vg(4);
+        MusicPatchPcmStream.field_l[4] = new vg(4);
         tg.a(2, 43, new int[]{8, 9, 10, 5}, (byte) 98, 400, 30, 396);
-        ej.field_l[2] = new vg(2);
+        MusicPatchPcmStream.field_l[2] = new vg(2);
     }
 
     final static byte[] a(int param0, String param1) {
@@ -79,7 +79,7 @@ final class GzipDecompressor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class GzipDecompressor {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

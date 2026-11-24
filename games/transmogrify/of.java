@@ -5,7 +5,7 @@ final class of {
     static kh field_f;
     static int field_c;
     static String field_b;
-    static jc field_a;
+    static PcmStreamMixer field_a;
     static StringBuilder wordBuffer;
     static AccountRequestState field_d;
 

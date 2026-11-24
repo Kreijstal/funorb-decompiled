@@ -6,7 +6,7 @@ abstract class rj extends IntrusiveNode {
 
     abstract void a();
 
-    abstract int a(tj param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     private rj() throws Throwable {
         throw new Error();

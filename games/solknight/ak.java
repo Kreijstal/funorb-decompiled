@@ -67,7 +67,7 @@ final class ak {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -107,10 +107,10 @@ final class ak {
           return 0;
         }
         if (0 == vd.field_b) {
-          if (!lh.field_o.c((byte) -121)) {
+          if (!MusicPatchPcmStream.field_o.c((byte) -121)) {
             return 20;
           }
-          if (!lh.field_o.a(2, "commonui")) {
+          if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
             return 40;
           }
           if (!DelegatingCanvas.field_c.c((byte) -121)) {
@@ -137,10 +137,10 @@ final class ak {
               return 29;
             }
           }
-          if (!lh.field_o.c((byte) -121)) {
+          if (!MusicPatchPcmStream.field_o.c((byte) -121)) {
             return 43;
           }
-          if (!lh.field_o.a(2, "commonui")) {
+          if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
             return 57;
           }
           if (!DelegatingCanvas.field_c.c((byte) -121)) {

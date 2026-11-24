@@ -68,12 +68,12 @@ final class vl extends em {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void h(int param0) {
-        gd.field_B = false;
+        MusicPatchPcmStream.field_B = false;
         wc.field_b = false;
         oj.a(param0, 3);
         ic.field_l = mc.field_t;
@@ -85,7 +85,7 @@ final class vl extends em {
           return;
         }
         nm.field_e = param4;
-        vd.field_z = param0;
+        CrossfadingMidiPcmStream.field_z = param0;
         he.field_a = param1;
         nk.field_u = param3;
     }

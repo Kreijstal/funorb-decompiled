@@ -87,7 +87,7 @@ final class di extends TextureOperator {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class di extends TextureOperator {
           var30 = var38;
           var8 = var30;
           for (var9_int = -this.field_A + param1; var9_int <= this.field_A + param1; var9_int++) {
-            var46 = this.c(0, 3, fk.field_x & var9_int);
+            var46 = this.c(0, 3, CrossfadingMidiPcmStream.field_x & var9_int);
             var50 = new int[3][we.field_M];
             var12 = 0;
             var13 = 0;
@@ -218,7 +218,7 @@ final class di extends TextureOperator {
           }
           tf.field_n = 0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "di.A(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "di.A(" + param0 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class di extends TextureOperator {
         try {
           ie.field_Nb = param1;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class di extends TextureOperator {
           var17 = var19;
           var8 = var17;
           for (var9 = param0 - this.field_A; var9 <= this.field_A + param0; var9++) {
-            var10_ref_int__ = this.a(0, -1, var9 & fk.field_x);
+            var10_ref_int__ = this.a(0, -1, var9 & CrossfadingMidiPcmStream.field_x);
             var18 = new int[we.field_M];
             var16 = var18;
             var11_ref_int__ = var16;
@@ -349,7 +349,7 @@ final class di extends TextureOperator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

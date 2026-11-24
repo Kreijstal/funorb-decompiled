@@ -406,7 +406,7 @@ final class bl {
           }
           discarded$1 = new cn(gf.field_i, gf.field_c);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "bl.D(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bl.D(" + param0 + ')');
         }
     }
 
@@ -570,7 +570,7 @@ final class bl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1_ref), "bl.E(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1_ref), "bl.E(" + param0 + ')');
         }
     }
 
@@ -633,7 +633,7 @@ final class bl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

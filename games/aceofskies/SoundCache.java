@@ -37,7 +37,7 @@ final class SoundCache {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class SoundCache {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class SoundCache {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class SoundCache {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(groupId).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(groupId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class SoundCache {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(sampleId).append(',').append(obfuscationGuard).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(sampleId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class SoundCache {
           this.synthesizedSoundArchive = synthesizedSoundArchive;
           this.vorbisSoundArchive = vorbisSoundArchive;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (synthesizedSoundArchive != null ? "{...}" : "null") + ',' + (vorbisSoundArchive != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ob.<init>(" + (synthesizedSoundArchive != null ? "{...}" : "null") + ',' + (vorbisSoundArchive != null ? "{...}" : "null") + ')');
         }
     }
 

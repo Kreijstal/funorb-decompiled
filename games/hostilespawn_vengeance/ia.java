@@ -32,9 +32,9 @@ final class ia {
     }
 
     final void d(int param0) {
-        kf.a(this.field_c, 0, kh.field_ib, 0, kh.field_ib.length);
-        kf.a(this.field_d, 0, kh.field_U, 0, kh.field_U.length);
-        kf.a(this.field_b, 0, kh.field_Q, 0, kh.field_Q.length);
+        kf.a(this.field_c, 0, VolumeRampingMidiPcmStream.field_ib, 0, VolumeRampingMidiPcmStream.field_ib.length);
+        kf.a(this.field_d, 0, VolumeRampingMidiPcmStream.field_U, 0, VolumeRampingMidiPcmStream.field_U.length);
+        kf.a(this.field_b, 0, VolumeRampingMidiPcmStream.field_Q, 0, VolumeRampingMidiPcmStream.field_Q.length);
         if (param0 != 64) {
           field_k = (String) null;
         }
@@ -43,7 +43,7 @@ final class ia {
         uf.field_h = this.field_f;
         AccountNameAvailabilityValidator.field_s = 0;
         eh.field_g = ba.a((byte) 113);
-        w.field_r = 0;
+        MidiPcmStream.field_r = 0;
     }
 
     final static String a(String param0, int param1) {
@@ -78,7 +78,7 @@ final class ia {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -218,19 +218,19 @@ final class ia {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final void c(int param0) {
         this.field_a = bm.field_c;
         this.field_g = rl.field_c;
-        kf.a(kh.field_ib, 0, this.field_c, 0, kh.field_ib.length);
-        kf.a(kh.field_U, 0, this.field_d, 0, kh.field_U.length);
+        kf.a(VolumeRampingMidiPcmStream.field_ib, 0, this.field_c, 0, VolumeRampingMidiPcmStream.field_ib.length);
+        kf.a(VolumeRampingMidiPcmStream.field_U, 0, this.field_d, 0, VolumeRampingMidiPcmStream.field_U.length);
         if (param0 != -32238) {
           return;
         }
-        kf.a(kh.field_Q, 0, this.field_b, 0, kh.field_Q.length);
+        kf.a(VolumeRampingMidiPcmStream.field_Q, 0, this.field_b, 0, VolumeRampingMidiPcmStream.field_Q.length);
         this.field_f = uf.field_h;
         this.field_j = wa.field_p;
     }
@@ -252,9 +252,9 @@ final class ia {
     }
 
     ia() {
-        this.field_c = new int[kh.field_ib.length];
-        this.field_d = new int[kh.field_U.length];
-        this.field_b = new boolean[kh.field_Q.length];
+        this.field_c = new int[VolumeRampingMidiPcmStream.field_ib.length];
+        this.field_d = new int[VolumeRampingMidiPcmStream.field_U.length];
+        this.field_b = new boolean[VolumeRampingMidiPcmStream.field_Q.length];
         this.field_g = -1;
     }
 

@@ -24,7 +24,7 @@ final class rd {
           }
           ka.c();
           ug.field_c = new int[260];
-          nd.field_m = 11;
+          DelayedPcmStream.field_m = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
             ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
@@ -39,7 +39,7 @@ final class rd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "rd.A(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "rd.A(" + param0 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class rd {
           hi.a(-23883, param0);
           jj.a(param1, gb.field_c, 1702);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

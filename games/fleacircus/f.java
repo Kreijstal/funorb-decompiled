@@ -110,7 +110,7 @@ final class f extends dk {
           var3.field_G = true;
           var3.a((UiComponent) (this), -53);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "f.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "f.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

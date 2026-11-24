@@ -98,7 +98,7 @@ abstract class jb implements vb {
           ba.field_O = new on(param5);
           ge.field_fb = new hj(qh.field_c, ba.field_O);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ abstract class jb implements vb {
         if (!pi.field_c.b((byte) 107)) {
           return pi.field_c.a((byte) -98);
         }
-        if (vl.field_A == ci.field_ub) {
+        if (MidiPcmStream.field_A == ci.field_ub) {
           return pi.field_c.a((byte) -83);
         }
         return pi.field_a;

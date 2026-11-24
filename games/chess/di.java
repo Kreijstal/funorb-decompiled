@@ -153,7 +153,7 @@ final class di extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "di.F(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "di.F(" + param0 + ')');
         }
     }
 
@@ -440,7 +440,7 @@ final class di extends ci {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -603,7 +603,7 @@ final class di extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "di.I(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "di.I(" + param0 + ')');
         }
     }
 

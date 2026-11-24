@@ -43,7 +43,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "nf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "nf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             db.field_R = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

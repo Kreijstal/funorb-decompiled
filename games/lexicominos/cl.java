@@ -65,7 +65,7 @@ final class cl extends rl implements nd {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class cl extends rl implements nd {
           eb.field_b = new ti(param2, param1, false, true, true);
           di.field_x.b(120, eb.field_b);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "cl.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cl.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class cl extends rl implements nd {
           }
           var4 = new nj[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (hl.a(true, param0)) {
+            if (MidiPcmStream.a(true, param0)) {
               var6 = new nj();
               param0.g(24, 26527);
               param0.g(24, 26527);
@@ -140,7 +140,7 @@ final class cl extends rl implements nd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ final class cl extends rl implements nd {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -335,7 +335,7 @@ final class cl extends rl implements nd {
           }
           this.field_V = param0;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "cl.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cl.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class cl extends rl implements nd {
           super.a(param0, param1, param2, param3);
           this.field_R = -this.field_t + (bk.field_b - param3);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "cl.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cl.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

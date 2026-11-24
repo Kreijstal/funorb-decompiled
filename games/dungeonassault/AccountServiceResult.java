@@ -11,7 +11,7 @@ final class AccountServiceResult {
     static String field_b;
     boolean field_f;
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -82,7 +82,7 @@ final class AccountServiceResult {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

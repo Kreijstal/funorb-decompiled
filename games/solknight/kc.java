@@ -17,7 +17,7 @@ final class kc extends pj {
           this.field_N = this.field_N + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "kc.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kc.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class kc extends pj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class kc extends pj {
             pk.field_Y = new Sprite(var9, var10);
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
-            mf.e(param3 + 4096);
+            MidiPcmStream.e(param3 + 4096);
             pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
@@ -88,7 +88,7 @@ final class kc extends pj {
             pk.field_Y = new Sprite(var9, var10);
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
-            mf.e(param3 + 4096);
+            MidiPcmStream.e(param3 + 4096);
             pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
@@ -96,14 +96,14 @@ final class kc extends pj {
             cl.a(-97, pk.field_Y);
             SoftwareRasterizer.a();
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
-            mf.e(param3 + 4096);
+            MidiPcmStream.e(param3 + 4096);
             pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
           pk.field_Y = new Sprite(var9, var10);
           cl.a(-116, pk.field_Y);
           var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
-          mf.e(param3 + 4096);
+          MidiPcmStream.e(param3 + 4096);
           pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
           return;
         }
@@ -115,7 +115,7 @@ final class kc extends pj {
             pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
-            mf.e(param3 + 4096);
+            MidiPcmStream.e(param3 + 4096);
             pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
@@ -123,7 +123,7 @@ final class kc extends pj {
             pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
-            mf.e(param3 + 4096);
+            MidiPcmStream.e(param3 + 4096);
             pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
@@ -131,14 +131,14 @@ final class kc extends pj {
             cl.a(-97, pk.field_Y);
             SoftwareRasterizer.a();
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
-            mf.e(param3 + 4096);
+            MidiPcmStream.e(param3 + 4096);
             pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
           pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
           cl.a(-116, pk.field_Y);
           var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
-          mf.e(param3 + 4096);
+          MidiPcmStream.e(param3 + 4096);
           pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
           return;
         }
@@ -169,7 +169,7 @@ final class kc extends pj {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

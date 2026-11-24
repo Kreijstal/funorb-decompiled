@@ -1357,7 +1357,7 @@ final class GameScreen {
           var23 = 0;
           if (param15) {
             var24 = 2048 * (param5 % param3) / param3;
-            var23 = fj.a(1870096848, wi.field_a[var24], param14 << 16) >> 16;
+            var23 = CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var24], param14 << 16) >> 16;
           }
           var18Lifetime2 = param10[1] + var23;
           var17_intLifetime2 = param10[0];
@@ -2133,8 +2133,8 @@ final class GameScreen {
             GameScreen.f((byte) 117);
           }
           var1 = "";
-          if (null != kb.field_O) {
-            var1 = kb.field_O.g((byte) -39);
+          if (null != MidiPcmStream.field_O) {
+            var1 = MidiPcmStream.field_O.g((byte) -39);
           }
           if (0 == var1.length()) {
             var1 = ResourceArchive.a((byte) -116);
@@ -4479,7 +4479,7 @@ final class GameScreen {
           var22 = 0;
           if (param13) {
             var23 = param10 % param14 * 2048 / param14;
-            var22 = fj.a(1870096848, wi.field_a[var23], param9 << 16) >> 16;
+            var22 = CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var23], param9 << 16) >> 16;
           }
           var18Lifetime2 = param11[1] + var22;
           var17_intLifetime2 = param11[0];

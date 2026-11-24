@@ -3,7 +3,7 @@
  */
 final class lh {
     boolean field_h;
-    static li field_d;
+    static RawPcmStream field_d;
     private int field_g;
     private int field_b;
     private int field_e;

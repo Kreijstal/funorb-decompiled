@@ -59,7 +59,7 @@ final class pn implements Runnable {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class pn implements Runnable {
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -111,7 +111,7 @@ final class pn implements Runnable {
           }
           ac.a(param2, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class pn implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "pn.C(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "pn.C(" + param0 + ')');
         }
     }
 

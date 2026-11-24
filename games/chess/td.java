@@ -21,7 +21,7 @@ final class td extends IntrusiveNode {
           tn.field_m = param1;
           IterableNodeHashTable.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "td.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "td.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class td extends IntrusiveNode {
         try {
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

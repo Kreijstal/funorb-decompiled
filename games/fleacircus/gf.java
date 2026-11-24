@@ -86,11 +86,11 @@ final class gf {
             }
           }
         } else {
-          if (th.field_n > 0) {
-            fieldTemp$18 = th.field_n - 1;
-            th.field_n = th.field_n - 1;
+          if (CrossfadingMidiPcmStream.field_n > 0) {
+            fieldTemp$18 = CrossfadingMidiPcmStream.field_n - 1;
+            CrossfadingMidiPcmStream.field_n = CrossfadingMidiPcmStream.field_n - 1;
             var2_ref_byte__ = rd.field_a[fieldTemp$18];
-            rd.field_a[th.field_n] = null;
+            rd.field_a[CrossfadingMidiPcmStream.field_n] = null;
             return var2_ref_byte__;
           }
           if (param1 != 5000) {

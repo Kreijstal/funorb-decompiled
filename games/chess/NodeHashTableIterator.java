@@ -108,7 +108,7 @@ final class NodeHashTableIterator implements Iterator {
           this.table = param0;
           this.reset(90);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

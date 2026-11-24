@@ -23,7 +23,7 @@ final class ak {
           var3.writeByte(-11, param1.field_q);
           var3.writeByte(-11, param1.field_t);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ak.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ak.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class ak {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 

@@ -238,8 +238,8 @@ abstract class v extends b {
           return;
         }
         try {
-          kb.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
-          bg.field_K = new jf(t.field_b, kb.field_O);
+          MidiPcmStream.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
+          bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
           t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "v.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -547,8 +547,8 @@ abstract class v extends b {
           return;
         }
         try {
-          kb.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
-          bg.field_K = new jf(t.field_b, kb.field_O);
+          MidiPcmStream.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
+          bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
           t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "v.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

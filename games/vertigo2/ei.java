@@ -315,7 +315,7 @@ final class ei extends DualLinkNode {
           arrayValue$39 = vl.field_a[12];
           dupTemp$37[0] = dupTemp$38;
           arrayValue$39[1] = dupTemp$38;
-          rq.field_r = Model.a(param0, "", "character/explosion");
+          MusicPatchPcmStream.field_r = Model.a(param0, "", "character/explosion");
           var3 = Model.a(param0, "", "character/debris");
           var4 = Model.a(param0, "", "character/debris_blue");
           var5 = Model.a(param0, "", "character/debris_grey");
@@ -455,7 +455,7 @@ final class ei extends DualLinkNode {
           arrayValue$67[0] = dupTemp$65;
           arrayValue$66[1] = dupTemp$65;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ei.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ei.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

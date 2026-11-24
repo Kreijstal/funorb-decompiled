@@ -75,7 +75,7 @@ final class ba extends ln {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class ba extends ln {
           ke.a(AccountNameAvailabilityValidator.field_i, false, -13);
           int var2_int = 119 % ((param0 - 6) / 49);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,9 +97,9 @@ final class ba extends ln {
         field_h = (java.awt.Image) null;
     }
 
-    final static tj a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != -29513) {
-          return (tj) null;
+          return (PcmStreamMixer) null;
         }
         return hb.field_l;
     }
@@ -128,7 +128,7 @@ final class ba extends ln {
           cf.field_c.addLast(0, param2);
           tb.a(param0, param2, (byte) -123);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ba.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ba.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

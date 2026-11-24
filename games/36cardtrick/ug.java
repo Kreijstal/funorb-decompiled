@@ -25,10 +25,10 @@ final class ug implements ci {
         }
     }
 
-    final static jg a(PcmStream param0, int param1, int param2) {
+    final static DelayedPcmStream a(PcmStream param0, int param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
-        jg stackIn_3_0 = null;
+        DelayedPcmStream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -38,7 +38,7 @@ final class ug implements ci {
             var4 = (String) null;
             ug.a(-0.6929006576538086f, 125, (String) null);
           }
-          stackIn_3_0 = new jg(param0, AudioOutput.field_m * param2 / 1000);
+          stackIn_3_0 = new DelayedPcmStream(param0, AudioOutput.field_m * param2 / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

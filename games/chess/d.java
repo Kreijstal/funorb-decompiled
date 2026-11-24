@@ -18,12 +18,12 @@ final class d extends ci {
         return rm.field_Q == 11 ? true : false;
     }
 
-    final static void a(vl param0, int param1, vl param2, PlatformTaskDispatcher param3, java.awt.Component param4, boolean param5, byte param6) {
+    final static void a(MidiPcmStream param0, int param1, MidiPcmStream param2, PlatformTaskDispatcher param3, java.awt.Component param4, boolean param5, byte param6) {
         try {
           AudioOutput.configureAudio(param1, param5, 10);
           mh.field_d = AudioOutput.createOutput(param3, param4, 0, 22050);
           kn.field_F = AudioOutput.createOutput(param3, param4, 1, 2048);
-          h.field_s = new lb();
+          h.field_s = new PcmStreamMixer();
           kn.field_F.setRootStream(h.field_s);
           fk.field_q = param2;
           fk.field_q.a(64 * bc.field_b / 80, (byte) -100);
@@ -35,7 +35,7 @@ final class d extends ci {
           ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);
           h.field_s.a(ka.field_a);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "d.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "d.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class d extends ci {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class d extends ci {
         }
         if (param0 != 109) {
           var4 = (java.awt.Component) null;
-          d.a((vl) null, -126, (vl) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, false, (byte) 69);
+          d.a((MidiPcmStream) null, -126, (MidiPcmStream) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, false, (byte) 69);
         }
     }
 
@@ -185,7 +185,7 @@ final class d extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "d.B(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1), "d.B(" + param0 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class d extends ci {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

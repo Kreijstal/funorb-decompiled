@@ -6,7 +6,7 @@ abstract class da extends IntrusiveNode {
 
     abstract void a();
 
-    abstract int a(wm param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     private da() throws Throwable {
         throw new Error();

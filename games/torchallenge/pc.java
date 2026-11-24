@@ -16,7 +16,7 @@ final class pc {
         field_g = null;
     }
 
-    final boolean d() {
+    final boolean hasMidiData() {
         return this.field_c.payload != null;
     }
 

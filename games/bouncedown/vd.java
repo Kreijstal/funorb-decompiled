@@ -64,7 +64,7 @@ final class vd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class vd {
           ed.field_b = ed.field_b + (var2_intLifetime2 >> 1);
           qe.field_i = qe.field_i + param1.readUnsignedShort(-1640531527);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

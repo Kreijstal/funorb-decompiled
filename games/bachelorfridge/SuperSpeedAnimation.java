@@ -71,7 +71,7 @@ final class SuperSpeedAnimation extends EventAnimation {
           if (25 != this.field_l) {
             return false;
           }
-          jja.a(256, -1, 3);
+          MusicPatchPcmStream.a(256, -1, 3);
           this.b(false);
           return false;
         }

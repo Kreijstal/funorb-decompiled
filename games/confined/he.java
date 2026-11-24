@@ -4,7 +4,7 @@
 final class he {
     int field_a;
     static String[] field_b;
-    static be field_d;
+    static PcmStreamMixer field_d;
     static String field_c;
     static int field_f;
     static long field_e;

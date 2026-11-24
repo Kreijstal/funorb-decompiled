@@ -73,7 +73,7 @@ abstract class ByteStorage {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ abstract class ByteStorage {
           var6 = new tn(param2, param5, param4, param3, param1);
           in.a(var6, 640);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -320,7 +320,7 @@ abstract class ByteStorage {
             } else {
               stackIn_113_2 = "{...}";
             }
-            throw wn.a((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw wn.wrapClientException((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

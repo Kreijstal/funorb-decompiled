@@ -63,7 +63,7 @@ final class kc extends IntrusiveNode {
           param1.removeFocusListener(hi.field_e);
           cg.field_k = 0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

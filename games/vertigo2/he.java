@@ -146,7 +146,7 @@ final class he extends DualLinkNode {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class he extends DualLinkNode {
           var5.c(var4, 85);
           var5.patchByteLength((byte) 53, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class he extends DualLinkNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class he extends DualLinkNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

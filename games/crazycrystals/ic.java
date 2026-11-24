@@ -107,7 +107,7 @@ final class ic {
         this.field_b = null;
     }
 
-    final boolean d() {
+    final boolean hasMidiData() {
         return this.field_d.payload != null;
     }
 

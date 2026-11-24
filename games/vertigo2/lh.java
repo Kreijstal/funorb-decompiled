@@ -30,7 +30,7 @@ final class lh {
           param1.field_q = var5.readInt(true);
           var5.patchByteLength((byte) 20, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "lh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class lh {
           }
           ba.field_d = 0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "lh.C(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lh.C(" + param0 + ')');
         }
     }
 

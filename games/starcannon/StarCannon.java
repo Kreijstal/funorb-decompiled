@@ -1934,7 +1934,7 @@ public final class StarCannon extends ag {
         var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", jg.field_F);
         ByteStorage.a(vk.a("", 59, "mbfg", jg.field_F), -60, wc.field_g);
         ta.a(vk.a("", param1 ^ -1510, "mb_logo", jg.field_F), param1 + 1319);
-        ed.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, vk.a("", 60, "mbpb", jg.field_F));
+        DelayedPcmStream.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, vk.a("", 60, "mbpb", jg.field_F));
         te.a(126, var20);
         lf.field_eb = null;
         var4_array = new id[1];
@@ -1980,7 +1980,7 @@ public final class StarCannon extends ag {
         fi.field_e.field_k = 0;
         kh.field_y.addFirst(-71, fi.field_e);
         u.field_b = 0;
-        ed.field_n = 0;
+        DelayedPcmStream.field_n = 0;
         AccountServiceResult.field_h = 0;
         hc.field_c = 0;
         nf.field_e = 0;
@@ -2289,7 +2289,7 @@ public final class StarCannon extends ag {
         }
         vd.field_j = vd.field_j + 3;
         hc.field_c = hc.field_c + 1;
-        ed.field_n = ed.field_n + 1;
+        DelayedPcmStream.field_n = DelayedPcmStream.field_n + 1;
         if (ge.field_c[0] == 2 ||
           ge.field_c[0] == 7 ||
           ge.field_c[0] == 12 ||
@@ -2298,11 +2298,11 @@ public final class StarCannon extends ag {
           hc.field_c = hc.field_c + 3;
           if (ua.field_c < -2) {
             hc.field_c = hc.field_c + 3;
-            ed.field_n = ed.field_n + 2;
+            DelayedPcmStream.field_n = DelayedPcmStream.field_n + 2;
             vd.field_j = vd.field_j + 9;
           }
         }
-        if (ed.field_n > 1028) {
+        if (DelayedPcmStream.field_n > 1028) {
           if (ua.field_c < ue.field_c[rj.field_h]) {
             ua.field_c = ua.field_c + 1;
             if (ua.field_c == 9) {
@@ -2401,7 +2401,7 @@ public final class StarCannon extends ag {
               mj.a(255, 12, 0, 43, 100);
             }
           }
-          ed.field_n = sh.b(64, 640);
+          DelayedPcmStream.field_n = sh.b(64, 640);
           if (0 == rj.field_h ||
             rj.field_h == 3) {
             if (ua.field_c <= 0) {
@@ -3232,7 +3232,7 @@ public final class StarCannon extends ag {
         ef.a((byte) 27);
         td.clearStaticReferences(-12539);
         BufferedSocket.b(105);
-        ed.clearStaticReferences((byte) -61);
+        DelayedPcmStream.clearStaticReferences((byte) -61);
         IntrusiveNode.b(false);
         SpriteState.d((byte) -80);
         DualLinkNode.b((byte) -115);
@@ -3766,7 +3766,7 @@ public final class StarCannon extends ag {
           ie.field_x = cl.field_k;
           DualLinkNode.field_k = cl.field_k;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "StarCannon.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "StarCannon.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

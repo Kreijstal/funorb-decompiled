@@ -85,11 +85,11 @@ final class ha {
           gm.field_c[4] = pq.field_g;
           gm.field_c[3] = ve.field_b;
           im.field_j = new UiPanel(0L, (UiPanel) null);
-          hr.field_C = new UiPanel((long)param9, db.field_t, kc.field_c);
+          hr.field_C = new UiPanel((long)param9, MidiPcmStream.field_t, kc.field_c);
           rk.field_v = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
           ja.field_f = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
           im.field_j.b(hr.field_C, 118);
-          if (db.field_S) {
+          if (MidiPcmStream.field_S) {
             im.field_j.b(rk.field_v, 121);
           }
           im.field_j.b(ja.field_f, 123);
@@ -103,7 +103,7 @@ final class ha {
           DirectByteStorage.field_j = new UiPanel(0L, vc.field_b, sl.field_x.toUpperCase());
           qn.field_s = new UiPanel(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
           ja.field_b = new UiPanel(0L, dj.field_b);
-          po.field_a = new UiPanel(0L, db.field_t, pe.field_u);
+          po.field_a = new UiPanel(0L, MidiPcmStream.field_t, pe.field_u);
           mn.field_n = new UiPanel(0L, kl.field_Ib, he.field_B);
           ve.field_f = new UiPanel(0L, kl.field_Ib, MenuSelectionCursor.field_h);
           ok.field_b = new UiPanel(0L, kl.field_Ib, SecondaryNodeHashTable.field_j);
@@ -111,12 +111,12 @@ final class ha {
           MouseInputHandler.field_b = new UiPanel(0L, MouseInputHandler.field_a, fm.field_a);
           uk.field_v = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
           b.field_h = new UiPanel(0L, SpriteState.field_u, ja.field_c.toUpperCase());
-          b.field_h.field_lb = db.field_S;
+          b.field_h.field_lb = MidiPcmStream.field_S;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
           stackIn_6_3 = SpriteState.field_u;
-          if (db.field_S) {
+          if (MidiPcmStream.field_S) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
             stackIn_7_4 = vl.field_d;
@@ -132,13 +132,13 @@ final class ha {
           ja.field_b.b(po.field_a, param9 + 124);
           ja.field_b.b(mn.field_n, 120);
           ja.field_b.b(ve.field_f, param9 ^ 121);
-          if (db.field_S) {
+          if (MidiPcmStream.field_S) {
             ja.field_b.b(ok.field_b, 125);
           }
           ja.field_b.b(tp.field_Nb, 122);
           ja.field_b.b(MouseInputHandler.field_b, 120);
           ja.field_b.b(uk.field_v, 123);
-          if (db.field_S) {
+          if (MidiPcmStream.field_S) {
             ud.field_A.b(b.field_h, 118);
           }
           ud.field_A.b(la.field_f, param9 + 123);
@@ -157,12 +157,12 @@ final class ha {
           de.field_g = new UiPanel(0L, (UiPanel) null);
           nb.field_D = new UiPanel(0L, AccountRequestState.field_b);
           nb.field_D.field_O = 1;
-          uc.field_a = new UiPanel(0L, db.field_t, kc.field_c);
+          uc.field_a = new UiPanel(0L, MidiPcmStream.field_t, kc.field_c);
           eq.field_z = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
           vd.field_d = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
           de.field_g.b(nb.field_D, 118);
           de.field_g.b(uc.field_a, param9 + 125);
-          if (db.field_S) {
+          if (MidiPcmStream.field_S) {
             de.field_g.b(eq.field_z, 119);
           }
           de.field_g.b(vd.field_d, 124);
@@ -178,7 +178,7 @@ final class ha {
             mg.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
           }
           if (rc.field_a.length >= 2) {
-            IterableNodeHashTable.field_h[1] = new UiPanel(0L, fm.field_e, rq.field_v);
+            IterableNodeHashTable.field_h[1] = new UiPanel(0L, fm.field_e, MusicPatchPcmStream.field_v);
             array$0 = new nk[rc.field_a.length + 1];
             mg.field_S[1] = array$0;
             mg.field_S[1][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
@@ -336,7 +336,7 @@ final class ha {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
         }
     }
 
@@ -457,7 +457,7 @@ final class ha {
         bi.b(param2 + 4, var7 + param4, 6, 10, 8795773);
         bi.a();
         pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3, 3355443);
-        db.a(param2, param3, param0, 0, param4);
+        MidiPcmStream.a(param2, param3, param0, 0, param4);
         ro.field_g.a(-60);
         for (var10Lifetime2 = 0; this.field_e.field_F.length > var10Lifetime2; var10Lifetime2++) {
           this.field_e.field_F[var10Lifetime2] = b.a(this.field_e.field_F[var10Lifetime2], this.field_c.field_F[var10Lifetime2]);

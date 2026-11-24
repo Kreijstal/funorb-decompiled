@@ -57,7 +57,7 @@ final class md extends TextureOperator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class md extends TextureOperator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class md extends TextureOperator {
           }
           int var5_int = 4 / ((param0 + 39) / 53);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "md.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "md.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class md extends TextureOperator {
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var20 * (-var9 + var23) + (1024 + var21);
                 var25 = var23 & rm.field_z;
-                var26 = fk.field_x & var16Lifetime2;
+                var26 = CrossfadingMidiPcmStream.field_x & var16Lifetime2;
                 if (var15 != 0) {
                   var32[var26][var25] = var24;
                 } else {

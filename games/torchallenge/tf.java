@@ -92,7 +92,7 @@ final class tf {
         int var14Lifetime1Lifetime1;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
-          var18 = new PacketBuffer(pg.a(-1048576, param1));
+          var18 = new PacketBuffer(MusicPatchPcmStream.a(-1048576, param1));
           var4 = var18.readUnsignedByte(-101);
           if (5 <= var4 &&
             7 >= var4) {

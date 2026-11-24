@@ -16,7 +16,7 @@ final class cj implements fe {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, vc param3, int param4) {
+    final static void a(int param0, int param1, int param2, RawPcmStream param3, int param4) {
         synchronized (param3) {
           param3.b(eg.field_i * param0 * fa.field_S >> 11, param4);
           param3.a(param2 * AudioOutput.field_k / param1, 0, 128);

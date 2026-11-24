@@ -53,7 +53,7 @@ final class id {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class id {
 
     id(boolean param0) {
         this.field_h = mk.field_a;
-        this.field_m = vd.field_x;
+        this.field_m = CrossfadingMidiPcmStream.field_x;
         this.field_e = bf.field_c;
         this.field_k = il.field_v;
         this.field_d = ig.field_e;

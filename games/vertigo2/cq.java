@@ -54,7 +54,7 @@ final class cq {
           if (param1 != -926966430) {
             this.a(-104, -100, -78, -48, (int[][]) null, (byte) 69);
           }
-          var6 = (fc) (this.field_f.a(false, false, false, rq.field_r.b(110, 1560, 10, -10, -5)));
+          var6 = (fc) (this.field_f.a(false, false, false, MusicPatchPcmStream.field_r.b(110, 1560, 10, -10, -5)));
           var6.a(param0, this.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,7 +67,7 @@ final class cq {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class cq {
           this.field_f.a(ap.field_b[26], (byte) 78);
           this.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

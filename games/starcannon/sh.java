@@ -27,7 +27,7 @@ final class sh extends fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "sh.CA(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "sh.CA(" + param0 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class sh extends fh {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param6).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class sh extends fh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class sh extends fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "sh.AA(" + param0 + ',' + param1 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2), "sh.AA(" + param0 + ',' + param1 + ')');
         }
     }
 

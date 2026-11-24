@@ -48,7 +48,7 @@ final class nd {
           } else {
             if (rf.l(-28)) {
               if (hi.field_k == 0) {
-                t.a(param2, true, false);
+                CrossfadingMidiPcmStream.a(param2, true, false);
                 kg.a(0, (byte) -83, 0, param1);
               } else {
                 em.a(0, param1);
@@ -73,7 +73,7 @@ final class nd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

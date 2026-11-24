@@ -332,9 +332,9 @@ final class rd {
           var4.field_c = 15658734;
           this.field_t = 5592405;
           this.field_u = -1;
-          var4.a((byte) 118, 0).a(15658734, false).a(param0 ^ 13421731, qe.a(8947848, 7829367, 10066329, param0 - 13421771));
-          var4.a((byte) 118, 1).a(param0 - 13421653, qe.a(11184810, 13421772, 10066329, param0 ^ 13421773));
-          var4.a((byte) 118, 3).a(125, qe.a(8947848, 10066329, 7829367, 1)).a(255, 1).a((byte) 85, 1);
+          var4.a((byte) 118, 0).a(15658734, false).a(param0 ^ 13421731, CrossfadingMidiPcmStream.a(8947848, 7829367, 10066329, param0 - 13421771));
+          var4.a((byte) 118, 1).a(param0 - 13421653, CrossfadingMidiPcmStream.a(11184810, 13421772, 10066329, param0 ^ 13421773));
+          var4.a((byte) 118, 3).a(125, CrossfadingMidiPcmStream.a(8947848, 10066329, 7829367, 1)).a(255, 1).a((byte) 85, 1);
           var5 = new Sprite[9];
           var16 = new d(32, 32);
           var18 = var16;
@@ -356,7 +356,7 @@ final class rd {
           discarded$1 = new jd(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new gi();
           var17.a(param0 - 13441169, var8);
-          var8.a((byte) 118, 0).a(112, qe.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
+          var8.a((byte) 118, 0).a(112, CrossfadingMidiPcmStream.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
           var8.a((byte) 118, 4).a(true, 19749).a(110, var5);
           this.field_e = (t) ((Object) var8);
           var9 = new Sprite[9];

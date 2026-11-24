@@ -70,7 +70,7 @@ final class NodeHashTableIterator implements Iterator {
             return;
           }
           if (null != km.field_a) {
-            if (km.field_a.b((byte) -114)) {
+            if (km.field_a.isMidiReady((byte) -114)) {
               return;
             }
             de.field_b = null;
@@ -79,7 +79,7 @@ final class NodeHashTableIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "gb.D(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "gb.D(" + param0 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class NodeHashTableIterator implements Iterator {
         try {
           DirectByteStorage.a(false, rf.field_a, 0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "gb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "gb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class NodeHashTableIterator implements Iterator {
           this.table = param0;
           this.reset(123);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

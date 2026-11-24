@@ -520,7 +520,7 @@ final class ResourceArchive {
             var9 = ByteStorage.extractBytes((byte) -109, false, this.field_c[param3]);
           }
           try {
-            var36 = pg.a(param1 - 1048551, var9);
+            var36 = MusicPatchPcmStream.a(param1 - 1048551, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;

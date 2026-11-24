@@ -180,20 +180,20 @@ class fd extends ja {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
         String var1 = null;
-        if (gd.field_B) {
+        if (MusicPatchPcmStream.field_B) {
           if (sj.field_h != null) {
             sj.field_h.s(2121792);
           }
           var1 = hn.c(105);
-          di.field_D = new cl(var1, (String) null, param0, false, false);
+          MidiPcmStream.field_D = new cl(var1, (String) null, param0, false, false);
           mb.field_b.b(1, de.field_a);
-          de.field_a.a((byte) -127, (fe) (di.field_D));
+          de.field_a.a((byte) -127, (fe) (MidiPcmStream.field_D));
           de.field_a.o(24619);
           return;
         }
@@ -340,7 +340,7 @@ class fd extends ja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -119,7 +119,7 @@ final class qn extends IntrusiveNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 

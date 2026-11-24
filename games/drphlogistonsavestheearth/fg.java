@@ -106,7 +106,7 @@ final class fg {
 
     fg(boolean param0) {
         this.field_k = ib.field_o;
-        this.field_i = am.field_m;
+        this.field_i = MusicPatchPcmStream.field_m;
         this.field_f = td.field_f;
         this.field_a = kl.field_J;
         this.field_b = tf.field_kb;

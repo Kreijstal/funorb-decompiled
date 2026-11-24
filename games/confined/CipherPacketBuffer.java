@@ -7,7 +7,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String field_v;
     private IsaacRandom field_q;
     static String field_s;
-    static be field_r;
+    static PcmStreamMixer field_r;
     static String field_t;
 
     final void i(int param0) {
@@ -190,7 +190,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           this.position = this.position + 1;
           return this.payload[fieldTemp$0] - this.field_q.c(param0 ^ -257) & 255;
         }
-        field_r = (be) null;
+        field_r = (PcmStreamMixer) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
         return this.payload[fieldTemp$1] - this.field_q.c(param0 ^ -257) & 255;

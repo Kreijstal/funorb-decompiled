@@ -110,7 +110,7 @@ final class aq {
         try {
           int var4_int = 57 / ((param1 + 27) / 53);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "aq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "aq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

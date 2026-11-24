@@ -73,7 +73,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class rf extends ta implements ff, ai, bf {
         eg dupTemp$1 = new eg(10000536);
         this.field_J.field_j = (td) ((Object) dupTemp$1);
         this.field_D.field_j = (td) ((Object) dupTemp$1);
-        String var2 = t.a(-415993727, new String[]{this.d((byte) 105), this.e((byte) -128)}, nb.field_n);
+        String var2 = CrossfadingMidiPcmStream.a(-415993727, new String[]{this.d((byte) 105), this.e((byte) -128)}, nb.field_n);
         int var3 = 20;
         var3 = var3 + this.a(var3, this.field_O, 170, (byte) -82, ef.field_h);
         var3 = var3 + (this.a(20, var3, "", 170, a.field_u, (byte) -81, this.field_G) + 5);
@@ -184,7 +184,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -370,7 +370,7 @@ final class rf extends ta implements ff, ai, bf {
           super.a(param0, param1, param2, param3);
           this.field_K.field_F = this.k(20);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "rf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "rf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -465,7 +465,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -505,7 +505,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ final class rf extends ta implements ff, ai, bf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

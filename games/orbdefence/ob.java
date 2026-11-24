@@ -22,7 +22,7 @@ final class ob extends ta implements ff, ai {
           }
           int var6_int = -98 / ((param0 + 3) / 62);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ob.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ob.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class ob extends ta implements ff, ai {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class ob extends ta implements ff, ai {
           this.field_B = param0;
           this.field_G = new s(sk.field_C, (ag) null);
           this.field_G.field_j = (td) ((Object) new vk());
-          var7 = t.a(-415993727, new String[]{this.m(67), this.k(-804)}, lb.field_a);
+          var7 = CrossfadingMidiPcmStream.a(-415993727, new String[]{this.m(67), this.k(-804)}, lb.field_a);
           var3 = 20;
           var4 = new jc(lm.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
           this.field_A = new te(var7, var4);
@@ -108,7 +108,7 @@ final class ob extends ta implements ff, ai {
           this.a(this.field_G, (byte) 74);
           this.a(0, 0, var5 + var3 + 55, (byte) -90, 300);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ob extends ta implements ff, ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 

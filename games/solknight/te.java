@@ -39,7 +39,7 @@ final class te extends si {
         Sprite var6 = new Sprite(this.field_G.field_t, this.field_G.field_x);
         cl.a(-119, var6);
         this.field_G.a(0, param1, 0, param3);
-        mf.e(4096);
+        MidiPcmStream.e(4096);
         var6.c(param2 + this.field_m, this.field_j + param0, this.field_H);
     }
 
@@ -72,7 +72,7 @@ final class te extends si {
           this.field_H = 256;
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

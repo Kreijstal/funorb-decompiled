@@ -35,7 +35,7 @@ final class ve extends lj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class ve extends lj {
           var11 = var16.field_s << 1;
           if (null == vh.field_l) {
             vh.field_l = new Sprite(var10, var11);
-            oj.a(vh.field_l, 256);
+            CrossfadingMidiPcmStream.a(vh.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
             vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
@@ -86,7 +86,7 @@ final class ve extends lj {
           }
           if (var10 > vh.field_l.field_n) {
             vh.field_l = new Sprite(var10, var11);
-            oj.a(vh.field_l, 256);
+            CrossfadingMidiPcmStream.a(vh.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
             vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
@@ -94,13 +94,13 @@ final class ve extends lj {
           }
           if (vh.field_l.field_m < var11) {
             vh.field_l = new Sprite(var10, var11);
-            oj.a(vh.field_l, 256);
+            CrossfadingMidiPcmStream.a(vh.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
             vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
-          oj.a(vh.field_l, 256);
+          CrossfadingMidiPcmStream.a(vh.field_l, 256);
           sb.c();
           var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
@@ -113,7 +113,7 @@ final class ve extends lj {
           var11Lifetime1 = var17.field_s << 1;
           if (null == vh.field_l) {
             vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
-            oj.a(vh.field_l, 256);
+            CrossfadingMidiPcmStream.a(vh.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
             vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
@@ -121,7 +121,7 @@ final class ve extends lj {
           }
           if (var10Lifetime1 > vh.field_l.field_n) {
             vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
-            oj.a(vh.field_l, 256);
+            CrossfadingMidiPcmStream.a(vh.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
             vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
@@ -129,13 +129,13 @@ final class ve extends lj {
           }
           if (vh.field_l.field_m < var11Lifetime1) {
             vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
-            oj.a(vh.field_l, 256);
+            CrossfadingMidiPcmStream.a(vh.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
             vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
-          oj.a(vh.field_l, 256);
+          CrossfadingMidiPcmStream.a(vh.field_l, 256);
           sb.c();
           var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
@@ -188,7 +188,7 @@ final class ve extends lj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class ve extends lj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class ve extends lj {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class ve extends lj {
           this.field_C = this.field_C + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

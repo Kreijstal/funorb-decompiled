@@ -99,7 +99,7 @@ final class IntrusiveDeque {
           }
           param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ta.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ta.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class IntrusiveDeque {
           param1.field_c.field_f = param1;
           param1.field_f.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

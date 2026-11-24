@@ -727,16 +727,16 @@ public final class TorChallenge extends GameClientBase {
 
     final void initializeGame(int param0) {
         RuntimeException runtimeException = null;
-        kb var2 = null;
+        MidiPcmStream var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = field_F ? 1 : 0;
         try {
           this.a(false, 11, 2, 3, false, 0, 1, 39);
-          var2 = new kb();
+          var2 = new MidiPcmStream();
           var2.b(128, -122, 9);
-          kb.a(22050, 16239, sh.field_u, true, (java.awt.Component) ((Object) bg.field_P), var2);
+          MidiPcmStream.a(22050, 16239, sh.field_u, true, (java.awt.Component) ((Object) bg.field_P), var2);
           lg.field_f = 1;
           qa.field_f = 0;
           ai.field_d = 0;
@@ -1893,12 +1893,12 @@ public final class TorChallenge extends GameClientBase {
           BufferedCacheFile.clearStaticReferences(true);
           BufferedSocket.a(true);
           IntrusiveNode.clearStaticReferences((byte) -92);
-          kb.c(128);
+          MidiPcmStream.c(128);
           dl.clearStaticReferences(false);
           pc.clearStaticReferences();
-          pg.c(16);
+          MusicPatchPcmStream.c(16);
           AudioOutput.clearStaticReferences();
-          fj.b(false);
+          CrossfadingMidiPcmStream.b(false);
           a.clearStaticReferences((byte) 106);
           rl.clearStaticReferences((byte) -82);
           rc.b(true);

@@ -24,7 +24,7 @@ final class eh {
           vg.field_P = vg.field_P + (var2_int >> 1);
           fh.field_a = fh.field_a + param1.readUnsignedShort(40);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "eh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "eh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -60,7 +60,7 @@ final class SplitAnimation extends EventAnimation {
           return true;
         }
         if (this.field_l == 25) {
-          jja.a(256, -1, 70);
+          MusicPatchPcmStream.a(256, -1, 70);
           this.d(-18);
           return false;
         }

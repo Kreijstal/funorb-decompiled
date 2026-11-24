@@ -8,7 +8,7 @@ final class ti {
     static String field_d;
     static ff field_c;
     static String[] field_g;
-    static e field_f;
+    static PcmStreamMixer field_f;
 
     final static int a(qc param0, int param1, sd param2, int param3) {
         int var6 = 0;
@@ -71,7 +71,7 @@ final class ti {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class ti {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

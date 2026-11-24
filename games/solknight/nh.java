@@ -69,12 +69,12 @@ final class nh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
-        if (!lh.field_l) {
+        if (!MusicPatchPcmStream.field_l) {
           throw new IllegalStateException();
         }
         if (param0 == 3) {

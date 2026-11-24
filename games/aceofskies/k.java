@@ -111,7 +111,7 @@ final class k {
         return var2;
     }
 
-    final boolean c() {
+    final boolean hasMidiData() {
         return this.field_a.payload != null;
     }
 

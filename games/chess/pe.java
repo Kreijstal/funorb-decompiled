@@ -3,7 +3,7 @@
  */
 final class pe {
     static String field_b;
-    static lb field_f;
+    static PcmStreamMixer field_f;
     static String field_e;
     static String field_d;
     static String field_c;

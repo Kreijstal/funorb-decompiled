@@ -52,7 +52,7 @@ final class kj extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -75,24 +75,24 @@ final class kj extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "kj.C(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "kj.C(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(String param0, boolean param1, int param2, float param3) {
         try {
-          if (null == hg.field_r) {
-            hg.field_r = new wi(lg.field_w, ub.field_o);
-            lg.field_w.a(hg.field_r, -1);
+          if (null == MusicPatchPcmStream.field_r) {
+            MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
+            lg.field_w.a(MusicPatchPcmStream.field_r, -1);
           }
-          hg.field_r.a(param1, param0, param3, (byte) 45);
+          MusicPatchPcmStream.field_r.a(param1, param0, param3, (byte) 45);
           if (param2 != -2958) {
             kj.a(93);
           }
           gf.a();
           ByteStorage.a(true, (byte) -106);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "kj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

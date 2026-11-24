@@ -3,9 +3,9 @@
  */
 abstract class p extends IntrusiveNode {
     int field_l;
-    hl field_k;
+    PcmStreamMixer field_k;
 
-    abstract int a(hl param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     abstract void a();
 

@@ -18,7 +18,7 @@ final class hj {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "hj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "hj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -64,7 +64,7 @@ final class ac {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -100,17 +100,17 @@ final class ac {
                   var17.field_i = -1;
                   var12 = 1;
                   var13 = var17.field_h + 1;
-                  if (!kh.field_Q[var13]) {
-                    kh.field_Q[var13] = true;
+                  if (!VolumeRampingMidiPcmStream.field_Q[var13]) {
+                    VolumeRampingMidiPcmStream.field_Q[var13] = true;
                   } else {
                     var12 = 0;
                   }
                   if (var12 != 0) {
-                    if (kh.field_U[0] == 0) {
+                    if (VolumeRampingMidiPcmStream.field_U[0] == 0) {
                       stackIn_68_0 = (!t.a(param3 ^ -5181, 0, var13)) ? 0 : 1;
                       var12 = stackIn_68_0;
                     } else {
-                      if (kh.field_U[1] == 0) {
+                      if (VolumeRampingMidiPcmStream.field_U[1] == 0) {
                         stackIn_64_0 = (!t.a(67, 1, var13)) ? 0 : 1;
                         var12 = stackIn_64_0;
                       } else {
@@ -126,7 +126,7 @@ final class ac {
                 } else {
                   if (var17.field_i == 1) {
                     var17.field_i = -1;
-                    kh.field_ib[var15.field_h] = kh.field_ib[var15.field_h] + te.field_F[var15.field_h];
+                    VolumeRampingMidiPcmStream.field_ib[var15.field_h] = VolumeRampingMidiPcmStream.field_ib[var15.field_h] + te.field_F[var15.field_h];
                     if (uj.field_l == 1) {
                       eh.field_c.a(sf.field_V[40], 100, uh.field_i);
                     }
@@ -233,7 +233,7 @@ final class ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var8), "ac.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var8), "ac.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -248,7 +248,7 @@ final class ac {
           ke.field_s = new ta(im.field_e, ib.field_e);
           im.field_e.c(ke.field_s, param2 ^ -116);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ac.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ac.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "ac.B(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1_ref), "ac.B(" + param0 + ')');
         }
     }
 

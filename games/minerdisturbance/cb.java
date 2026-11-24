@@ -18,7 +18,7 @@ abstract class cb extends ok implements wg {
             field_f = (long[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "cb.N(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "cb.N(" + param0 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ abstract class cb extends ok implements wg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ abstract class cb extends ok implements wg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ abstract class cb extends ok implements wg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ abstract class cb extends ok implements wg {
               return;
             }
             if (var2 != 4) {
-              di.a((Throwable) null, 1, "F1: " + hj.a((byte) 104));
+              MidiPcmStream.a((Throwable) null, 1, "F1: " + hj.a((byte) 104));
               si.a(-26);
               if (param0) {
                 cb.a((byte) 60);
@@ -256,7 +256,7 @@ abstract class cb extends ok implements wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "cb.H(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "cb.H(" + param0 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ abstract class cb extends ok implements wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "cb.M(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "cb.M(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ abstract class cb extends ok implements wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "cb.I(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "cb.I(" + param0 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ abstract class cb extends ok implements wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "cb.F(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "cb.F(" + param0 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ abstract class cb extends ok implements wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "cb.G(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "cb.G(" + param0 + ')');
         }
     }
 

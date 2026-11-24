@@ -177,11 +177,11 @@ final class wb extends lw {
             }
             if (null != var7.field_zb &&
               var7.field_zb.field_T) {
-              jja.field_m = var7.field_Ab;
+              MusicPatchPcmStream.field_m = var7.field_Ab;
             } else {
               if (var7.field_Db.field_T &&
                 var12 != 0) {
-                jja.field_m = var7.field_xb;
+                MusicPatchPcmStream.field_m = var7.field_xb;
               }
             }
             if (var7.field_R != 0) {

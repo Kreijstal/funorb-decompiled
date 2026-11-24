@@ -159,7 +159,7 @@ final class lc {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
         }
     }
 

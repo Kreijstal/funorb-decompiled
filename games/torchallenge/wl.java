@@ -311,9 +311,9 @@ final class wl {
           null != BufferedSocket.field_p) {
           bh.field_p = true;
           al.field_z = al.field_z - 256;
-          if (pg.field_s) {
+          if (MusicPatchPcmStream.field_s) {
             BufferedSocket.field_p.field_d = BufferedSocket.field_p.field_d + 1;
-            pg.field_s = false;
+            MusicPatchPcmStream.field_s = false;
           }
           GameScreen.field_c = GameScreen.field_c + 128;
         }
@@ -323,7 +323,7 @@ final class wl {
         }
         if (this.field_f &&
           nj.field_c[22]) {
-          pg.field_s = true;
+          MusicPatchPcmStream.field_s = true;
           GameScreen.field_c = GameScreen.field_c + 512;
           pi.field_f = pi.field_f - 32;
           bh.field_p = true;
@@ -422,11 +422,11 @@ final class wl {
             } else {
               this.field_a = 0;
               this.field_g = true;
-              this.field_k = fj.a(1870096848, 1024, 6553);
-              this.field_k = fj.a(1870096848, this.field_k, this.field_h << 16);
+              this.field_k = CrossfadingMidiPcmStream.a(1870096848, 1024, 6553);
+              this.field_k = CrossfadingMidiPcmStream.a(1870096848, this.field_k, this.field_h << 16);
               this.field_e = aa.field_g;
             }
-            aa.field_g = this.field_e - (fj.a(1870096848, this.field_k, (-this.field_a + 10) * (this.field_a + 10) << 16) >> 16);
+            aa.field_g = this.field_e - (CrossfadingMidiPcmStream.a(1870096848, this.field_k, (-this.field_a + 10) * (this.field_a + 10) << 16) >> 16);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -648,7 +648,7 @@ final class wl {
         if (wi.field_a == null) {
           lb.d((byte) -79);
         }
-        if (null == fj.field_m) {
+        if (null == CrossfadingMidiPcmStream.field_m) {
           PacketBuffer.c(-7668);
         }
         if (null == pa.field_z) {

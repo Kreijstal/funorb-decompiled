@@ -7,7 +7,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     java.awt.Frame fullscreenFrame;
     volatile boolean focusLost;
     static String field_i;
-    static tc field_b;
+    static CrossfadingMidiPcmStream field_b;
     static String field_a;
     static GzipDecompressor field_f;
     static String[] field_h;
@@ -44,7 +44,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.focusLost = true;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ek.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ek.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             this.focusGained((java.awt.event.FocusEvent) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ek.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ek.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

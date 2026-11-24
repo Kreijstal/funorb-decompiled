@@ -17,7 +17,7 @@ class aa extends e {
           }
           super.a(-59, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ class aa extends e {
           var1.e(0, 0);
           ia.a(param0 - 41);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "aa.L(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "aa.L(" + param0 + ')');
         }
     }
 

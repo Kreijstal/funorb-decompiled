@@ -32,7 +32,7 @@ final class io {
           }
           int var3 = 127 % ((param0 + 37) / 51);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class io {
           this.field_b = param0;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

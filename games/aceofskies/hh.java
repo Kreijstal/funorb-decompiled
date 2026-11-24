@@ -26,7 +26,7 @@ abstract class hh {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "hh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "hh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ abstract class hh {
           param1.copyPixels(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, var6 * SoftwareRasterizer.stride, SoftwareRasterizer.stride);
           var2.a(true);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "hh.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "hh.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ abstract class hh {
           ii.field_m = new DiskCacheWorker(param5);
           om.field_c = new wq(ul.field_r, ii.field_m);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "hh.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "hh.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

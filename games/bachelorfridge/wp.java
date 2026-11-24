@@ -255,9 +255,9 @@ final class wp extends tga {
             }
             if (gd.field_n[0][2].field_E) {
               if (!ZombiesEvent.d(-117)) {
-                jja.field_m = lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, wa.field_o);
+                MusicPatchPcmStream.field_m = lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, wa.field_o);
               } else {
-                jja.field_m = qd.field_p;
+                MusicPatchPcmStream.field_m = qd.field_p;
               }
             }
             decompiledFrameRemainder1 = !(2 > qha.field_c.length);
@@ -392,7 +392,7 @@ final class wp extends tga {
                 }
                 var8 = stackIn_154_0;
                 if (var8 != null) {
-                  jja.field_m = var8;
+                  MusicPatchPcmStream.field_m = var8;
                 }
               }
               stackIn_158_0 = var29;
@@ -648,7 +648,7 @@ final class wp extends tga {
                   }
                 }
                 if (var20 != null) {
-                  jja.field_m = (String) (var20);
+                  MusicPatchPcmStream.field_m = (String) (var20);
                 }
               }
               if (!param3) {

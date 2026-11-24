@@ -51,7 +51,7 @@ final class jm {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class jm {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(')').toString());
         }
     }
 

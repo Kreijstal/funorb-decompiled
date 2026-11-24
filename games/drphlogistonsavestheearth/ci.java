@@ -101,7 +101,7 @@ final class ci extends qa {
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var6 = this.field_V.a(-12317);
         if (var6 == ai.field_A) {
-          var17 = ug.field_T;
+          var17 = MidiPcmStream.field_T;
           if (!var17.equals(this.field_p)) {
             this.field_p = var17;
             this.h(126);
@@ -151,7 +151,7 @@ final class ci extends qa {
           return;
         }
         if (nd.field_P == var6) {
-          var22 = ug.field_T;
+          var22 = MidiPcmStream.field_T;
           if (!var22.equals(this.field_p)) {
             this.field_p = var22;
             this.h(126);

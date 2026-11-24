@@ -68,7 +68,7 @@ abstract class lo {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ abstract class lo {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ abstract class lo {
     final static void a(int param0, boolean param1, vh param2, int param3, int param4) {
         RuntimeException var5 = null;
         CipherPacketBuffer var6 = null;
-        tc stackIn_2_0;
+        CrossfadingMidiPcmStream stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
@@ -155,7 +155,7 @@ abstract class lo {
           stackIn_2_4 = (vh) (param2);
           stackIn_2_5 = param4;
           stackIn_3_6 = !(param1);
-          ((tc) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6);
           if (param0 >= 65) {
             return;
           }
@@ -172,7 +172,7 @@ abstract class lo {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -196,7 +196,7 @@ final class am {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -464,7 +464,7 @@ final class am {
           } else {
             stackIn_112_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_111_0), ((StringBuilder) (Object) stackIn_111_1).append(stackIn_112_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_111_0), ((StringBuilder) (Object) stackIn_111_1).append(stackIn_112_2).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ final class am {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1169,27 +1169,27 @@ final class am {
                   if (50 >= var28) {
                     if (var28 < 50) {
                       if (0 != param8) {
-                        var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), rq.field_x}, pe.field_L, -13);
+                        var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, pe.field_L, -13);
                         ea.field_d[2].e(320 - ea.field_d[2].field_x / 2, 70);
                       } else {
-                        var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, ad.field_b, -118);
+                        var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, ad.field_b, -118);
                         ea.field_d[3].e(320 - ea.field_d[3].field_x / 2, 70);
                       }
                     } else {
-                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, DualLinkNode.field_q, 90);
+                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, DualLinkNode.field_q, 90);
                       ea.field_d[4].e(-(ea.field_d[4].field_x / 2) + 320, 70);
                     }
                   } else {
                     if (param8 != 0) {
-                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), rq.field_x}, ad.field_b, 47);
+                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, ad.field_b, 47);
                       ea.field_d[3].e(-(ea.field_d[3].field_x / 2) + 320, 70);
                     } else {
-                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, pe.field_L, -126);
+                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, pe.field_L, -126);
                       ea.field_d[2].e(320 - ea.field_d[2].field_x / 2, 70);
                     }
                   }
                 } else {
-                  var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, DualLinkNode.field_q, -128);
+                  var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, DualLinkNode.field_q, -128);
                   if (50 >= var28) {
                     if (var28 < 50) {
                       ea.field_d[10].e(-(ea.field_d[10].field_x / 2) + 320, 70);
@@ -1241,7 +1241,7 @@ final class am {
               }
               if (param4.field_w == 0 &&
                 param7 == 0) {
-                rq.a(190, 210, 282, 20, 64, 150);
+                MusicPatchPcmStream.a(190, 210, 282, 20, 64, 150);
                 tk.field_c.a(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, va.field_s.field_c + va.field_s.field_j);
                 tk.field_c.a(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, va.field_s.field_c + va.field_s.field_j);
               }
@@ -1287,7 +1287,7 @@ final class am {
           } else {
             stackIn_360_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_359_0), ((StringBuilder) (Object) stackIn_359_1).append(stackIn_360_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_359_0), ((StringBuilder) (Object) stackIn_359_1).append(stackIn_360_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -1630,7 +1630,7 @@ final class am {
           } else {
             stackIn_115_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_114_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_114_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1715,7 +1715,7 @@ final class am {
           this.field_p = 1.100000023841858f;
           this.field_f = new ha(0, 100, 0);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "am.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "am.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

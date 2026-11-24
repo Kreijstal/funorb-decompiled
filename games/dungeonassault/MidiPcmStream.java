@@ -32,16 +32,16 @@ final class MidiPcmStream extends PcmStream {
     private int field_t;
     private int field_p;
     static qk field_y;
-    private hg field_R;
+    private MusicPatchPcmStream field_R;
     private vh field_S;
     private int field_v;
     private boolean field_D;
     static String[] field_M;
 
-    final synchronized void d(int param0) {
-        this.c(true, 100);
+    final synchronized void stopPlayback(int param0) {
+        this.clearMidiPlayback(true, 100);
         if (param0 >= -78) {
-          this.b(false, -122);
+          this.releaseChannelNotes(false, -122);
         }
     }
 
@@ -106,7 +106,7 @@ final class MidiPcmStream extends PcmStream {
             MidiPcmStream.a(false, 34, (CharSequence) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ug.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ug.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -165,11 +165,11 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean b(byte param0) {
+    final synchronized boolean isMidiReady(byte param0) {
         if (param0 >= -116) {
           this.field_q = (int[]) null;
         }
-        return this.field_A.g();
+        return this.field_A.hasMidiData();
     }
 
     private final void b(byte param0, int param1, int param2) {
@@ -219,14 +219,14 @@ final class MidiPcmStream extends PcmStream {
         }
         if (!param0 ||
           var4 != 0) {
-          this.b(true, -1);
+          this.releaseChannelNotes(true, -1);
         }
         this.e(-1, 0);
         var3 = 0;
         do {
           if (16 <= var3) {
             if (param1 != 16) {
-              this.a((lp) null, 42);
+              this.isVoiceInactive((lp) null, 42);
             }
             break;
           }
@@ -364,7 +364,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(lp param0, int param1) {
+    final boolean isVoiceInactive(lp param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -396,7 +396,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void c(boolean param0, int param1) {
+    private final synchronized void clearMidiPlayback(boolean param0, int param1) {
         this.field_A.c();
         if (param1 <= 27) {
           return;
@@ -460,7 +460,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var4 = null;
         var8 = DungeonAssault.field_K;
         try {
-          if (this.field_A.g()) {
+          if (this.field_A.hasMidiData()) {
             var4_int = this.field_A.field_c * this.field_x / AudioOutput.field_t;
             while (true) {
               var5 = this.field_z + (long)param2 * (long)var4_int;
@@ -516,10 +516,10 @@ final class MidiPcmStream extends PcmStream {
               var7 = (int)(((long)var4_int + this.field_F - this.field_z - 1L) / (long)var4_int);
               this.field_z = this.field_z + (long)var4_int * (long)var7;
               this.field_R.mixInto(param0, param1, var7);
-              this.a((byte) -24);
+              this.advanceMidiEvents((byte) -24);
               param1 = param1 + var7;
               param2 = param2 - var7;
-              if (!this.field_A.g()) {
+              if (!this.field_A.hasMidiData()) {
                 break;
               }
               if (var8 == 0) {
@@ -541,7 +541,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -629,7 +629,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -654,7 +654,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         var7 = DungeonAssault.field_K;
         try {
-          this.c(param0, param1 + 16353);
+          this.clearMidiPlayback(param0, param1 + 16353);
           this.field_A.a(param2.field_i);
           this.field_z = 0L;
           if (param1 != -16257) {
@@ -687,7 +687,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -695,7 +695,7 @@ final class MidiPcmStream extends PcmStream {
         return null;
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void releaseChannelNotes(boolean param0, int param1) {
         lp var3;
         int var4;
         int stackIn_10_0 = 0;
@@ -745,7 +745,7 @@ final class MidiPcmStream extends PcmStream {
         field_w = null;
     }
 
-    private final void a(byte param0) {
+    private final void advanceMidiEvents(byte param0) {
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         int stackIn_15_0 = 0;
@@ -769,7 +769,7 @@ final class MidiPcmStream extends PcmStream {
         if (this.field_S != null &&
           this.field_v == var3) {
           this.a(this.field_D, -16257, this.field_S, this.field_T);
-          this.a((byte) -24);
+          this.advanceMidiEvents((byte) -24);
           return;
         }
         while (true) {
@@ -817,7 +817,7 @@ final class MidiPcmStream extends PcmStream {
                 if (this.field_A.f()) {
                   if (null != this.field_S) {
                     this.a(this.field_S, 20938, this.field_T);
-                    this.a((byte) -24);
+                    this.advanceMidiEvents((byte) -24);
                     return;
                   }
                   if (this.field_T &&
@@ -839,7 +839,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, lp param3, int[] param4) {
+    final boolean updateVoice(int param0, int param1, int param2, lp param3, int[] param4) {
         int stackIn_34_0 = 0;
         int stackIn_34_1 = 0;
         int stackIn_53_0 = 0;
@@ -1011,7 +1011,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -1176,7 +1176,7 @@ final class MidiPcmStream extends PcmStream {
           this.e(var4Lifetime4, 0);
         }
         if (var5Lifetime4 == 123) {
-          this.b(true, var4Lifetime4);
+          this.releaseChannelNotes(true, var4Lifetime4);
         }
         if (var5Lifetime4 == 6) {
           var7 = this.field_N[var4Lifetime4];
@@ -1292,7 +1292,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1330,7 +1330,7 @@ final class MidiPcmStream extends PcmStream {
         int var6;
         boolean decompiledFrameCompleted0 = true;
         var6 = DungeonAssault.field_K;
-        if (this.field_A.g()) {
+        if (this.field_A.hasMidiData()) {
           var2 = this.field_x * this.field_A.field_c / AudioOutput.field_t;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_z;
@@ -1344,8 +1344,8 @@ final class MidiPcmStream extends PcmStream {
             this.field_z = this.field_z + (long)var5 * (long)var2;
             this.field_R.skipFrames(var5);
             param0 = param0 - var5;
-            this.a((byte) -24);
-            if (!this.field_A.g() &&
+            this.advanceMidiEvents((byte) -24);
+            if (!this.field_A.hasMidiData() &&
               var6 == 0) {
               break;
             }
@@ -1445,7 +1445,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -1516,7 +1516,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1561,7 +1561,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1587,7 +1587,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_G = new int[16];
         this.field_o = new int[16];
         this.field_A = new vm();
-        this.field_R = new hg(this);
+        this.field_R = new MusicPatchPcmStream(this);
         this.field_W = new wa(128);
         this.a(256, -1, (byte) -84);
         this.d(true, 16);
@@ -1615,13 +1615,13 @@ final class MidiPcmStream extends PcmStream {
         this.field_G = new int[16];
         this.field_o = new int[16];
         this.field_A = new vm();
-        this.field_R = new hg(this);
+        this.field_R = new MusicPatchPcmStream(this);
         try {
           this.field_W = param0.field_W;
           this.a(256, -1, (byte) -63);
           this.d(true, 16);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

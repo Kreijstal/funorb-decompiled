@@ -21,7 +21,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "ib.D(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "ib.D(" + param0 + ')');
         }
     }
 
@@ -50,17 +50,17 @@ final class ib {
           var5 = stackIn_14_0;
           stackIn_18_0 = (param0 != 0) ? 65534 : 65532;
           var6 = stackIn_18_0;
-          ch.field_h = oa.a(new int[]{var4_int}, 3, var5, ei.field_l, ja.field_d, false, var6, var4_int + u.field_e, w.field_r + qb.field_k);
+          ch.field_h = oa.a(new int[]{var4_int}, 3, var5, ei.field_l, ja.field_d, false, var6, var4_int + u.field_e, MidiPcmStream.field_r + qb.field_k);
           ld.a(false, param0);
           param1 = 0;
-          u.field_e = u.field_e - (ja.field_d + w.field_r);
+          u.field_e = u.field_e - (ja.field_d + MidiPcmStream.field_r);
           ei.field_l = ei.field_l + 1;
-          w.field_r = 0;
+          MidiPcmStream.field_r = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class ib {
                 }
                 var2 = mk.b("menu_title_game_complete", (byte) -128);
                 if (null != var2) {
-                  dl.field_p = nm.a(123, var2);
+                  MusicPatchPcmStream.field_p = nm.a(123, var2);
                 }
                 var2 = mk.b("hardmodeunlock", (byte) -127);
                 if (null != var2) {
@@ -870,7 +870,7 @@ final class ib {
                 }
                 var2 = mk.b("tut1", (byte) -119);
                 if (null != var2) {
-                  kh.field_V = nm.a(124, var2);
+                  VolumeRampingMidiPcmStream.field_V = nm.a(124, var2);
                 }
                 var2 = mk.b("tut0", (byte) -120);
                 if (null != var2) {
@@ -1008,87 +1008,87 @@ final class ib {
                 }
                 var2 = mk.b("LEVEL_NAMES,0,0", (byte) -123);
                 if (null != var2) {
-                  kh.field_fb[0][0] = nm.a(124, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][0] = nm.a(124, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,1", (byte) -120);
                 if (null != var2) {
-                  kh.field_fb[0][1] = nm.a(127, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][1] = nm.a(127, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,2", (byte) -123);
                 if (var2 != null) {
-                  kh.field_fb[0][2] = nm.a(127, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][2] = nm.a(127, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,3", (byte) -125);
                 if (null != var2) {
-                  kh.field_fb[0][3] = nm.a(123, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][3] = nm.a(123, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,4", (byte) -124);
                 if (null != var2) {
-                  kh.field_fb[0][4] = nm.a(127, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][4] = nm.a(127, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,5", (byte) -119);
                 if (null != var2) {
-                  kh.field_fb[0][5] = nm.a(127, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][5] = nm.a(127, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,6", (byte) -125);
                 if (null != var2) {
-                  kh.field_fb[0][6] = nm.a(123, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][6] = nm.a(123, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,7", (byte) -119);
                 if (null != var2) {
-                  kh.field_fb[0][7] = nm.a(124, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][7] = nm.a(124, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,8", (byte) -119);
                 if (null != var2) {
-                  kh.field_fb[0][8] = nm.a(122, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][8] = nm.a(122, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,9", (byte) -126);
                 if (null != var2) {
-                  kh.field_fb[0][9] = nm.a(125, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][9] = nm.a(125, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,0,10", (byte) -120);
                 if (null != var2) {
-                  kh.field_fb[0][10] = nm.a(125, var2);
+                  VolumeRampingMidiPcmStream.field_fb[0][10] = nm.a(125, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,0", (byte) -126);
                 if (null != var2) {
-                  kh.field_fb[1][0] = nm.a(122, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][0] = nm.a(122, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,1", (byte) -128);
                 if (null != var2) {
-                  kh.field_fb[1][1] = nm.a(123, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][1] = nm.a(123, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,2", (byte) -123);
                 if (var2 != null) {
-                  kh.field_fb[1][2] = nm.a(125, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][2] = nm.a(125, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,3", (byte) -120);
                 if (var2 != null) {
-                  kh.field_fb[1][3] = nm.a(125, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][3] = nm.a(125, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,4", (byte) -125);
                 if (var2 != null) {
-                  kh.field_fb[1][4] = nm.a(127, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][4] = nm.a(127, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,5", (byte) -124);
                 if (var2 != null) {
-                  kh.field_fb[1][5] = nm.a(126, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][5] = nm.a(126, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,6", (byte) -122);
                 if (var2 != null) {
-                  kh.field_fb[1][6] = nm.a(126, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][6] = nm.a(126, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,7", (byte) -128);
                 if (var2 != null) {
-                  kh.field_fb[1][7] = nm.a(123, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][7] = nm.a(123, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,8", (byte) -121);
                 if (null != var2) {
-                  kh.field_fb[1][8] = nm.a(123, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][8] = nm.a(123, var2);
                 }
                 var2 = mk.b("LEVEL_NAMES,1,9", (byte) -123);
                 if (null != var2) {
-                  kh.field_fb[1][9] = nm.a(123, var2);
+                  VolumeRampingMidiPcmStream.field_fb[1][9] = nm.a(123, var2);
                 }
                 var2 = mk.b("kerrus_intro", (byte) -127);
                 if (null != var2) {
@@ -1220,7 +1220,7 @@ final class ib {
                 }
                 var2 = mk.b("oV5_reachlift", (byte) -125);
                 if (var2 != null) {
-                  dl.field_m = nm.a(122, var2);
+                  MusicPatchPcmStream.field_m = nm.a(122, var2);
                 }
                 var2 = mk.b("V6_blastdoor", (byte) -123);
                 if (var2 != null) {
@@ -1276,7 +1276,7 @@ final class ib {
                 }
                 var2 = mk.b("V7_nowplantcharges", (byte) -123);
                 if (null != var2) {
-                  kd.field_E = nm.a(127, var2);
+                  CrossfadingMidiPcmStream.field_E = nm.a(127, var2);
                 }
                 var2 = mk.b("V7_nowleave", (byte) -120);
                 if (null != var2) {
@@ -1380,7 +1380,7 @@ final class ib {
                 }
                 var2 = mk.b("desc_pistol", (byte) -125);
                 if (var2 != null) {
-                  w.field_A = nm.a(126, var2);
+                  MidiPcmStream.field_A = nm.a(126, var2);
                 }
                 var2 = mk.b("desc_grenade_launcher", (byte) -126);
                 if (null != var2) {
@@ -1629,7 +1629,7 @@ final class ib {
                   } else {
                     stackIn_1325_2 = "{...}";
                   }
-                  throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_1324_0), ((StringBuilder) (Object) stackIn_1324_1).append(stackIn_1325_2).append(',').append(param1).append(')').toString());
+                  throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_1324_0), ((StringBuilder) (Object) stackIn_1324_1).append(stackIn_1325_2).append(',').append(param1).append(')').toString());
                 }
                 if (GameAppletShell.field_f) {
                   HostileSpawn.field_I = (var3 == 0);
@@ -1654,7 +1654,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
         }
     }
 

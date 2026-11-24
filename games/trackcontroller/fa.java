@@ -193,7 +193,7 @@ final class fa {
         return var2;
     }
 
-    final boolean a() {
+    final boolean hasMidiData() {
         return this.field_g.payload != null;
     }
 

@@ -22,7 +22,7 @@ class id extends ik {
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ class id extends ik {
                 MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
               MouseWheelInput.field_g[-3 + var4] = "";
-              MouseWheelInput.field_g[var4 - 2] = hl.field_p;
+              MouseWheelInput.field_g[var4 - 2] = MidiPcmStream.field_p;
               ni.field_a[-2 + var4] = 0;
               ik.field_g[0] = 3;
               MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
@@ -284,8 +284,8 @@ class id extends ik {
               }
             }
           }
-          me.field_v = -(var3_intLifetime1 >> 1) + uh.field_D;
-          gd.field_o = -(var3_intLifetime1 >> 1) + uh.field_D + var3_intLifetime1;
+          me.field_v = -(var3_intLifetime1 >> 1) + CrossfadingMidiPcmStream.field_D;
+          gd.field_o = -(var3_intLifetime1 >> 1) + CrossfadingMidiPcmStream.field_D + var3_intLifetime1;
           ph.field_b = (oh.field_b + we.field_l << 1) * bc.field_H.field_h;
           for (var5Lifetime2 = 0; var5Lifetime2 < MouseWheelInput.field_g.length; var5Lifetime2++) {
             stackIn_112_0 = ph.field_b;
@@ -306,7 +306,7 @@ class id extends ik {
               var6Lifetime3 = var6Lifetime3 + hc.field_fb;
             } else {
               var8Lifetime2 = ii.a(MouseWheelInput.field_g[var5Lifetime3], true, 0);
-              var9 = -(var8Lifetime2 >> 1) + uh.field_D;
+              var9 = -(var8Lifetime2 >> 1) + CrossfadingMidiPcmStream.field_D;
               var6Lifetime3 = var6Lifetime3 + we.field_l;
               wd.field_a[var5Lifetime3] = new int[4];
               wd.field_a[var5Lifetime3][0] = -jh.field_e + var9;
@@ -326,7 +326,7 @@ class id extends ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var3), "id.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var3), "id.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

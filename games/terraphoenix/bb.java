@@ -96,7 +96,7 @@ final class bb {
         }
     }
 
-    final static void a(Archive param0, int param1, int param2, vg param3) {
+    final static void a(Archive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
           IntrusiveNode.field_e = uc.j((byte) -127) * param2 / 1000;
           ee.a((byte) 51, param0);
@@ -116,8 +116,8 @@ final class bb {
     final static void b(int param0) {
         jg.field_kb.field_i = 0;
         if (param0 != 3287) {
-          vg var2 = (vg) null;
-          bb.a((Archive) null, 113, -67, (vg) null);
+          PcmStreamMixer var2 = (PcmStreamMixer) null;
+          bb.a((Archive) null, 113, -67, (PcmStreamMixer) null);
         }
         jg.field_kb.field_l = 0;
     }
@@ -148,7 +148,7 @@ final class bb {
             !hb.field_o.equals(param2.getParameter("session"))) {
             var4 = hb.field_o;
           }
-          stackIn_10_0 = wl.a(param1, (String) (var4), (String) (var3), false, -1);
+          stackIn_10_0 = MidiPcmStream.a(param1, (String) (var4), (String) (var3), false, -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

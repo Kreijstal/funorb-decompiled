@@ -87,7 +87,7 @@ final class ba {
           ul.d(468, 6, 164, 24, 8947848);
           cb.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ba.A(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ba.A(" + param0 + ')');
         }
     }
 

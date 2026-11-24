@@ -23,7 +23,7 @@ final class ug implements uj {
 
     public final void a(boolean param0) {
         tb.field_a = 1;
-        gd.field_x = 5;
+        MusicPatchPcmStream.field_x = 5;
         if (param0) {
           field_b = (String) null;
         }

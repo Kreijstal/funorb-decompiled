@@ -6,7 +6,7 @@ import java.io.*;
 final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
     static int field_m;
     private BufferedSocket field_q;
-    static qe field_n;
+    static CrossfadingMidiPcmStream field_n;
     static Sprite[][] avatarSprites;
     static int field_o;
 
@@ -142,10 +142,10 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               }
               if (decompiledFrameRemainder0) {
                 hd.field_o = -1;
-                jc.field_a = qe.field_C;
+                jc.field_a = CrossfadingMidiPcmStream.field_C;
               }
             }
-            if (jc.field_a == qe.field_C &&
+            if (jc.field_a == CrossfadingMidiPcmStream.field_C &&
               ByteStorage.a(520)) {
               ClientException.field_e = ne.field_a.readLong((byte) 28);
               LevelGrid.field_j = ne.field_a.readUnsignedByte(16383);

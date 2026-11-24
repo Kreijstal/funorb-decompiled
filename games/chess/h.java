@@ -10,7 +10,7 @@ final class h extends IntrusiveNode {
     int[] field_q;
     int field_j;
     int field_k;
-    static lb field_s;
+    static PcmStreamMixer field_s;
     int field_r;
 
     final void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
@@ -26,7 +26,7 @@ final class h extends IntrusiveNode {
         try {
           this.field_p = param4;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "h.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "h.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class h extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2), "h.A(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2), "h.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class h extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 

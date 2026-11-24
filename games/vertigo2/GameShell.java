@@ -43,7 +43,7 @@ abstract class GameShell extends GameApplet {
         var5 = Vertigo2.field_L ? 1 : 0;
         if (null != t.field_m) {
           if (null == dc.field_L) {
-            var6 = fk.a((byte) 87);
+            var6 = CrossfadingMidiPcmStream.a((byte) 87);
             var4 = var6.getSize();
             t.field_m.a(~param1, var4.height, var4.width);
           }
@@ -143,7 +143,7 @@ abstract class GameShell extends GameApplet {
           if (GameplayScreen.field_f != -1 &&
             GameplayScreen.field_f != 0) {
             GameplayScreen.field_f = -1;
-            fk.f(-1);
+            CrossfadingMidiPcmStream.f(-1);
           }
         }
         if (GameplayScreen.field_f == 0 &&
@@ -262,7 +262,7 @@ abstract class GameShell extends GameApplet {
           int var4_int = 119 / ((55 - param1) / 45);
           this.a(480, param0, false, param2, 640);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "kd.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "kd.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -308,7 +308,7 @@ abstract class GameShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = sk.a(in.a((byte) 86), -1, this.field_v, lf.g(0), hr.h(-121), eb.a(-1), rq.a((byte) 74));
+            var5Lifetime1 = sk.a(in.a((byte) 86), -1, this.field_v, lf.g(0), hr.h(-121), eb.a(-1), MusicPatchPcmStream.a((byte) 74));
             if (var5Lifetime1 != -1) {
               dl.a(-14, na.field_m, nk.field_Kb, var5Lifetime1);
               na.field_m = null;
@@ -319,7 +319,7 @@ abstract class GameShell extends GameApplet {
             if (GameplayScreen.field_f != -1 &&
               GameplayScreen.field_f != 0) {
               GameplayScreen.field_f = -1;
-              fk.f(-1);
+              CrossfadingMidiPcmStream.f(-1);
             }
             if (param0) {
               br.field_R = false;
@@ -655,7 +655,7 @@ abstract class GameShell extends GameApplet {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -760,7 +760,7 @@ abstract class GameShell extends GameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1_ref), "kd.BB(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1_ref), "kd.BB(" + param0 + ')');
         }
     }
 

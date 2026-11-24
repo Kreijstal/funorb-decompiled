@@ -55,11 +55,11 @@ final class sd {
     }
 
     final static void b(int param0) {
-        if (null != pg.field_p) {
-          je.a((byte) 15, pg.field_p);
+        if (null != MusicPatchPcmStream.field_p) {
+          je.a((byte) 15, MusicPatchPcmStream.field_p);
         }
         int var1 = 50 % ((param0 - 45) / 48);
-        pg.field_p = null;
+        MusicPatchPcmStream.field_p = null;
         ok.field_a = null;
     }
 

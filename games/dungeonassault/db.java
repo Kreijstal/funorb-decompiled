@@ -36,13 +36,13 @@ final class db extends qe {
         regionExit1: {
           var11 = (int[]) null;
           if (o.a(gj.field_c, (int[]) null, var3, gm.field_d, true)) {
-            var12 = jk.a(new String[]{CombatState.a((byte) 66, gm.field_d.field_w, tc.field_u)}, DungeonAssault.field_G, 30496);
+            var12 = jk.a(new String[]{CombatState.a((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
             la.field_b.a(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             if (var10 == 0) {
               break regionExit1;
             }
           }
-          var4 = ib.a((byte) -15, 16760960, CombatState.a((byte) 66, var3, tc.field_u));
+          var4 = ib.a((byte) -15, 16760960, CombatState.a((byte) 66, var3, CrossfadingMidiPcmStream.field_u));
           var5 = jk.a(new String[]{var4}, dk.field_e, 30496);
           var6 = 127 & var3;
           if (wh.field_a > var6) {
@@ -869,7 +869,7 @@ final class db extends qe {
         var6 = stackIn_6_0;
         stackIn_9_0 = (!param3) ? 65793 : 12690143;
         var7 = stackIn_9_0;
-        var8 = u.a(field_v, (byte) 68, tc.field_u, param1, var5, eh.field_o.field_q - 25);
+        var8 = u.a(field_v, (byte) 68, CrossfadingMidiPcmStream.field_u, param1, var5, eh.field_o.field_q - 25);
         var9 = field_v.b(var8);
         var10 = field_v.field_H + la.field_b.field_E;
         var11 = new cn(var9, var10);

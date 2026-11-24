@@ -11,23 +11,23 @@ final class s {
     static int field_g;
     static CipherPacketBuffer field_b;
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, kd param4, java.awt.Component param5, boolean param6, int param7) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, CrossfadingMidiPcmStream param4, java.awt.Component param5, boolean param6, int param7) {
         try {
           AudioOutput.configureAudio(param3, param6, 10);
           uj.field_m = AudioOutput.createOutput(param1, param5, 0, param0);
           eb.field_e = AudioOutput.createOutput(param1, param5, 1, param2);
-          oa.field_b = new wm();
+          oa.field_b = new PcmStreamMixer();
           tm.field_v = param2;
           eb.field_e.setRootStream(oa.field_b);
           ha.field_w = param4;
           if (param7 >= -84) {
             java.awt.Component var9 = (java.awt.Component) null;
-            s.a(-53, (PlatformTaskDispatcher) null, 23, -48, (kd) null, (java.awt.Component) null, false, -17);
+            s.a(-53, (PlatformTaskDispatcher) null, 23, -48, (CrossfadingMidiPcmStream) null, (java.awt.Component) null, false, -17);
           }
           ha.field_w.a(ga.field_b, true);
           uj.field_m.setRootStream(ha.field_w);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "s.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "s.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class s {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var4), "s.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var4), "s.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class s {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

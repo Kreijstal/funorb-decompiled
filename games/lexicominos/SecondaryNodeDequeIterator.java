@@ -30,7 +30,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.lastReturned = null;
           this.nextNode = this.deque.sentinel.secondaryNext;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

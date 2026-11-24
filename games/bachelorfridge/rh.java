@@ -143,7 +143,7 @@ final class rh {
           }
           var9 = gr.a(2);
           if (var9 != null) {
-            jja.field_m = var9;
+            MusicPatchPcmStream.field_m = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

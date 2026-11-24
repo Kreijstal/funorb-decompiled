@@ -61,7 +61,7 @@ final class HudMessage extends IntrusiveNode {
           this.ageTicks = 0;
           this.holdTicks = 150;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "tb.<init>(" + (text != null ? "{...}" : "null") + ',' + colour + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "tb.<init>(" + (text != null ? "{...}" : "null") + ',' + colour + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class HudMessage extends IntrusiveNode {
           this.text = text;
           this.fadeOutTicks = 80;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "tb.<init>(" + (text != null ? "{...}" : "null") + ',' + colour + ',' + holdTicks + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "tb.<init>(" + (text != null ? "{...}" : "null") + ',' + colour + ',' + holdTicks + ')');
         }
     }
 

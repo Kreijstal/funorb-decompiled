@@ -311,7 +311,7 @@ final class AccountServiceResult {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "ig.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var3), "ig.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ final class AccountServiceResult {
             } else {
               stackIn_51_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param4).append(')').toString());
+            throw sd.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

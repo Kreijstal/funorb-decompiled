@@ -21,7 +21,7 @@ final class DreamsAnimation extends EventAnimation {
         if (this.field_l != 25) {
           return false;
         }
-        jja.a(256, -1, 52);
+        MusicPatchPcmStream.a(256, -1, 52);
         this.e(44);
         return false;
     }

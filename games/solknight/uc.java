@@ -67,7 +67,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var3), "uc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var3), "uc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class uc {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 

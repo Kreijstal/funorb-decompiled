@@ -80,7 +80,7 @@ final class WordLanguage {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class WordLanguage {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class WordLanguage {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
         }
     }
 

@@ -312,7 +312,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
             this.handleKey(65, 76, 'ￜ', (UiWidget) null);
           }
           if (this.field_M == param1) {
-            jja.d((byte) 70);
+            MusicPatchPcmStream.d((byte) 70);
             return;
           }
           if (param1 != this.field_L) {

@@ -31,7 +31,7 @@ final class cl {
           pf.field_A = n.c((byte) 57) * param0 / 1000;
           ti.a(param3, 28922);
           le.a(6, param3);
-          kl.a((byte) 66, param3);
+          DelayedPcmStream.a((byte) 66, param3);
           nb.g((byte) 96);
           af.a(true);
           jh.field_z = 0 - pf.field_A;

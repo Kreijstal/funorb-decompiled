@@ -80,7 +80,7 @@ class kj extends UiComponent implements gk {
           if (LocalizedStrings.field_n == ja.field_f) {
             return false;
           }
-          b.field_J = fj.field_C[ja.field_f];
+          b.field_J = CrossfadingMidiPcmStream.field_C[ja.field_f];
           di.field_m = ql.field_k[ja.field_f];
           ja.field_f = ja.field_f + 1 & 127;
           var2 = 93 % ((param0 - 48) / 46);

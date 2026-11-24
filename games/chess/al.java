@@ -169,7 +169,7 @@ final class al {
         return var4Lifetime1;
     }
 
-    final boolean e() {
+    final boolean hasMidiData() {
         return this.field_c.data != null;
     }
 

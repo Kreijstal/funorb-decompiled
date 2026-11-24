@@ -184,7 +184,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ final class BufferedCacheFile {
           }
           if (GameKeyHandler.field_a[kb.field_b] > lk.field_b && (kd.currentScreenIndex == -1 ||
             pg.field_e)) {
-            mf.field_A = mf.field_A + 1;
+            MidiPcmStream.field_A = MidiPcmStream.field_A + 1;
           }
           if (uf.field_p > 0 &&
             200 > wc.field_c) {
@@ -453,7 +453,7 @@ final class BufferedCacheFile {
           if (kd.currentScreenIndex == -1 ||
             pg.field_e ||
             !(ClientException.field_b < 0)) {
-            if (100 < mf.field_A && (!pg.field_e ||
+            if (100 < MidiPcmStream.field_A && (!pg.field_e ||
               -1 != kd.currentScreenIndex &&
               pg.field_e ||
               !(ClientException.field_b < 0))) {
@@ -487,19 +487,19 @@ final class BufferedCacheFile {
                 if (!pg.field_e) {
                   lk.field_b = lk.field_b + 1;
                 }
-                mf.field_A = mf.field_A - (25 + kb.field_b);
+                MidiPcmStream.field_A = MidiPcmStream.field_A - (25 + kb.field_b);
                 var3 = 64;
               }
               if (var2Lifetime2 == 1) {
                 var3 = 32;
-                mf.field_A = mf.field_A - (30 + 2 * kb.field_b);
+                MidiPcmStream.field_A = MidiPcmStream.field_A - (30 + 2 * kb.field_b);
                 if (!pg.field_e) {
                   lk.field_b = lk.field_b + 2;
                 }
               }
               if (var2Lifetime2 == 2) {
                 var3 = 24;
-                mf.field_A = mf.field_A - (kb.field_b * 3 + 35);
+                MidiPcmStream.field_A = MidiPcmStream.field_A - (kb.field_b * 3 + 35);
                 if (!pg.field_e) {
                   lk.field_b = lk.field_b + 3;
                 }
@@ -509,18 +509,18 @@ final class BufferedCacheFile {
                 if (!pg.field_e) {
                   lk.field_b = lk.field_b + 4;
                 }
-                mf.field_A = mf.field_A - (40 + 4 * kb.field_b);
+                MidiPcmStream.field_A = MidiPcmStream.field_A - (40 + 4 * kb.field_b);
               }
               if (4 == var2Lifetime2) {
                 var3 = 8;
                 if (!pg.field_e) {
                   lk.field_b = lk.field_b + 5;
                 }
-                mf.field_A = mf.field_A - (45 + 5 * kb.field_b);
+                MidiPcmStream.field_A = MidiPcmStream.field_A - (45 + 5 * kb.field_b);
               }
               if (var2Lifetime2 == 5) {
                 ib.field_h = ib.field_h + 1;
-                mf.field_A = mf.field_A - (kb.field_b * 5 + 50);
+                MidiPcmStream.field_A = MidiPcmStream.field_A - (kb.field_b * 5 + 50);
                 var3 = 8;
                 if (!pg.field_e) {
                   lk.field_b = lk.field_b + 6;
@@ -611,7 +611,7 @@ final class BufferedCacheFile {
             el.field_n == 80 &&
             !pg.field_e &&
             -1 == kd.currentScreenIndex &&
-            lh.field_s >= 2) {
+            MusicPatchPcmStream.field_s >= 2) {
             kh.field_d = 255;
             PacketBuffer.a(false, 5, -127);
             lc.field_p = lc.field_p + 1;
@@ -638,7 +638,7 @@ final class BufferedCacheFile {
             }
             lk.field_f = 0;
           }
-          if (2 <= lh.field_s &&
+          if (2 <= MusicPatchPcmStream.field_s &&
             fh.field_d[32]) {
             ic.field_t = ic.field_t - 1;
             fg.field_a = 500;
@@ -646,7 +646,7 @@ final class BufferedCacheFile {
             ImageProducerRasterBuffer.field_n = true;
             bi.field_h = 1;
           }
-          if (lh.field_s >= 2 &&
+          if (MusicPatchPcmStream.field_s >= 2 &&
             fh.field_d[33]) {
             bi.field_h = 2;
             ImageProducerRasterBuffer.field_n = true;
@@ -659,7 +659,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "hb.J(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "hb.J(" + param0 + ')');
         }
     }
 
@@ -773,7 +773,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -784,7 +784,7 @@ final class BufferedCacheFile {
           }
           this.b(param1, -90, 0, param1.length);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -858,7 +858,7 @@ final class BufferedCacheFile {
           this.field_g = new byte[param2];
           this.field_k = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

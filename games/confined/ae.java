@@ -6,7 +6,7 @@ import java.io.*;
 final class ae {
     static String field_c;
     private int field_a;
-    static vc field_f;
+    static RawPcmStream field_f;
     private int field_g;
     static String field_b;
     static String field_e;

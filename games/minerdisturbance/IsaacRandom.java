@@ -40,7 +40,7 @@ final class IsaacRandom {
           mn.a((byte) -63, MouseWheelInput.field_d, ul.field_a, ResourceArchive.field_c);
           cl.a(param1, 0, 0, 310);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class IsaacRandom {
           }
           this.b((byte) 90);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

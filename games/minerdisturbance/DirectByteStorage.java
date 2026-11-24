@@ -13,7 +13,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "t.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "t.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,14 +27,14 @@ final class DirectByteStorage extends ByteStorage {
     final static void a(boolean param0, String param1, int param2) {
         wc.field_b = true;
         oh.field_F = param0 ? true : false;
-        sj.field_h = new rg(mb.field_b, cn.field_g, param1, gd.field_B, oh.field_F);
+        sj.field_h = new rg(mb.field_b, cn.field_g, param1, MusicPatchPcmStream.field_B, oh.field_F);
         if (param2 != 0) {
           return;
         }
         try {
           mb.field_b.b(1, sj.field_h);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

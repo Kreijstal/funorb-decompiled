@@ -269,7 +269,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(li param0, int param1) {
+    final static void a(RawPcmStream param0, int param1) {
         try {
           if (param1 != 13427) {
             java.applet.Applet var3 = (java.applet.Applet) null;

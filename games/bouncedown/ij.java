@@ -26,7 +26,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "ij.C(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "ij.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -342,7 +342,7 @@ final class ij {
           }
           var2Lifetime59 = AccountNameAvailabilityValidator.a((byte) 48, "keys");
           if (var2Lifetime59 != null) {
-            ka.field_k = c.a(0, var2Lifetime59);
+            MusicPatchPcmStream.field_k = c.a(0, var2Lifetime59);
           }
           var2Lifetime60 = AccountNameAvailabilityValidator.a((byte) 48, "keycode_player1left");
           if (null != var2Lifetime60) {
@@ -372,7 +372,7 @@ final class ij {
           } else {
             stackIn_232_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_231_0), ((StringBuilder) (Object) stackIn_231_1).append(stackIn_232_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_231_0), ((StringBuilder) (Object) stackIn_231_1).append(stackIn_232_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "ij.B(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "ij.B(" + param0 + ')');
         }
     }
 
@@ -403,7 +403,7 @@ final class ij {
           field_b = null;
           field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ij.A(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ij.A(" + param0 + ')');
         }
     }
 
@@ -445,7 +445,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var6), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var6), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

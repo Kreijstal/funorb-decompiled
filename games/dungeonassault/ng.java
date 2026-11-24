@@ -25,7 +25,7 @@ final class ng extends ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "ng.C(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "ng.C(" + param0 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class ng extends ck {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class ng extends ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "ng.D(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "ng.D(" + param0 + ')');
         }
     }
 
@@ -3110,7 +3110,7 @@ final class ng extends ck {
                   } else {
                     stackIn_2627_2 = "{...}";
                   }
-                  throw AccountServiceResult.a((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(')').toString());
+                  throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(')').toString());
                 }
                 if (GameAppletShell.field_j) {
                   var3++;
@@ -3141,7 +3141,7 @@ final class ng extends ck {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -3302,7 +3302,7 @@ final class ng extends ck {
             } else {
               stackIn_77_2 = "{...}";
             }
-            throw AccountServiceResult.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+            throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3372,7 +3372,7 @@ final class ng extends ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var5), "ng.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var5), "ng.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3397,7 +3397,7 @@ final class ng extends ck {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -3455,7 +3455,7 @@ final class ng extends ck {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

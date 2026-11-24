@@ -51,7 +51,7 @@ final class ra {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class ra {
         int var4 = Transmogrify.field_A ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          oj.a(var1, 256);
+          CrossfadingMidiPcmStream.a(var1, 256);
           ka.c();
           sb.c();
           si.field_l = 0;
@@ -89,7 +89,7 @@ final class ra {
           var1.d(param0, 0);
           fi.c(true);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ra.B(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ra.B(" + param0 + ')');
         }
     }
 

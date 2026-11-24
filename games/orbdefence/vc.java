@@ -118,7 +118,7 @@ final class vc {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "vc.E(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "vc.E(" + param0 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) runtimeException), "vc.F(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "vc.F(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
         }
     }
 
@@ -440,7 +440,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var2), "vc.B(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var2), "vc.B(" + param0 + ')');
         }
     }
 
@@ -697,7 +697,7 @@ final class vc {
             } else {
               stackIn_168_2 = "{...}";
             }
-            throw dd.a((Throwable) ((Object) stackIn_163_0), ((StringBuilder) (Object) stackIn_167_1).append(stackIn_168_2).append(')').toString());
+            throw dd.wrapClientException((Throwable) ((Object) stackIn_163_0), ((StringBuilder) (Object) stackIn_167_1).append(stackIn_168_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -780,7 +780,7 @@ final class vc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

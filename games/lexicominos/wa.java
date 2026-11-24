@@ -74,7 +74,7 @@ final class wa extends IntrusiveNode {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw ld.a((Throwable) ((Object) var1_ref), "wa.C(" + param0 + ')');
+            throw ld.wrapClientException((Throwable) ((Object) var1_ref), "wa.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

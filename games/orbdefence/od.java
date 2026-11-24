@@ -94,7 +94,7 @@ final class od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "od.D(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1_ref), "od.D(" + param0 + ')');
         }
     }
 

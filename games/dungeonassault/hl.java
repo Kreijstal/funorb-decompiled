@@ -44,7 +44,7 @@ abstract class hl {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ abstract class hl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -101,17 +101,17 @@ abstract class hl {
     final static void a(boolean param0) {
         lg.field_w.h(1);
         if (param0) {
-          if (hg.field_r == null) {
-            hg.field_r = new wi(lg.field_w, ub.field_o);
+          if (MusicPatchPcmStream.field_r == null) {
+            MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
           }
-          lg.field_w.a(hg.field_r, -1);
+          lg.field_w.a(MusicPatchPcmStream.field_r, -1);
           return;
         }
         field_a = (lh) null;
-        if (hg.field_r == null) {
-          hg.field_r = new wi(lg.field_w, ub.field_o);
+        if (MusicPatchPcmStream.field_r == null) {
+          MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
         }
-        lg.field_w.a(hg.field_r, -1);
+        lg.field_w.a(MusicPatchPcmStream.field_r, -1);
     }
 
     static {

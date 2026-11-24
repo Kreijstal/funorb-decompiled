@@ -100,7 +100,7 @@ class IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ class IntrusiveNode {
           if (hf.a((byte) 98, param0, param1)) {
             return false;
           }
-          if (!gl.a(param1, -1, param0)) {
+          if (!MusicPatchPcmStream.a(param1, -1, param0)) {
             return true;
           }
           return false;
@@ -151,7 +151,7 @@ class IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 

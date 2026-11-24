@@ -228,7 +228,7 @@ abstract class lq extends UiWidget implements e {
             lq.releaseStatics(61);
           }
           if (null != uf.field_c) {
-            if (uf.field_c.c(28607)) {
+            if (uf.field_c.isMidiReady(28607)) {
               return;
             }
             uw.field_o = null;

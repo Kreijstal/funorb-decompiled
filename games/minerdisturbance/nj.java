@@ -3,7 +3,7 @@
  */
 final class nj {
     static String field_a;
-    static vd field_e;
+    static CrossfadingMidiPcmStream field_e;
     static String field_d;
     static String[][] field_b;
     static Sprite[] field_c;
@@ -51,7 +51,7 @@ final class nj {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+            throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
           }
           param1--;
         }
@@ -281,7 +281,7 @@ final class nj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

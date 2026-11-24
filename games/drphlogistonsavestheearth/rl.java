@@ -194,7 +194,7 @@ final class rl {
         this.field_h[param0] = this.field_h[param0] + var2;
     }
 
-    final boolean g() {
+    final boolean hasMidiData() {
         return this.field_d.payload != null;
     }
 

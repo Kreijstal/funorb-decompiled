@@ -13,14 +13,14 @@ final class ffa extends TileEffect {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         if (this.field_g == 60) {
-          jja.a(192, -1, 25);
+          MusicPatchPcmStream.a(192, -1, 25);
           if (param0 > 21) {
             fieldTemp$0 = this.field_g - 1;
             this.field_g = this.field_g - 1;
             if (fieldTemp$0 >= 0) {
               return false;
             }
-            jja.a(256, -1, 19);
+            MusicPatchPcmStream.a(256, -1, 19);
             dha.a(-120, this.field_f, this.field_e);
             return true;
           }
@@ -30,7 +30,7 @@ final class ffa extends TileEffect {
           if (fieldTemp$1 >= 0) {
             return false;
           }
-          jja.a(256, -1, 19);
+          MusicPatchPcmStream.a(256, -1, 19);
           dha.a(-120, this.field_f, this.field_e);
           return true;
         }
@@ -41,7 +41,7 @@ final class ffa extends TileEffect {
           if (fieldTemp$2 >= 0) {
             return false;
           }
-          jja.a(256, -1, 19);
+          MusicPatchPcmStream.a(256, -1, 19);
           dha.a(-120, this.field_f, this.field_e);
           return true;
         }
@@ -50,7 +50,7 @@ final class ffa extends TileEffect {
         if (fieldTemp$3 >= 0) {
           return false;
         }
-        jja.a(256, -1, 19);
+        MusicPatchPcmStream.a(256, -1, 19);
         dha.a(-120, this.field_f, this.field_e);
         return true;
     }

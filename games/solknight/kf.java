@@ -17,7 +17,7 @@ abstract class kf extends WidgetContainer {
           this.field_I = 0;
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ abstract class kf extends WidgetContainer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ abstract class kf extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
@@ -186,7 +186,7 @@ abstract class kf extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
@@ -196,7 +196,7 @@ abstract class kf extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
@@ -204,7 +204,7 @@ abstract class kf extends WidgetContainer {
         SoftwareRasterizer.a();
         this.a(param3, (byte) 94, 0);
         super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
-        mf.e(4096);
+        MidiPcmStream.e(4096);
         jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
     }
 

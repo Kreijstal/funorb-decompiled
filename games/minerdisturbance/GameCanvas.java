@@ -10,7 +10,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "dc.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "dc.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -18,7 +18,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "dc.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "dc.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "dc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "dc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

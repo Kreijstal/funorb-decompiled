@@ -111,12 +111,12 @@ final class gk {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 == 7453) {
-          am.a(param3, param0, param2, this.field_c, 14673, param1);
+          MusicPatchPcmStream.a(param3, param0, param2, this.field_c, 14673, param1);
           return;
         }
         fg var7 = (fg) null;
         gk.a((fg) null, -125);
-        am.a(param3, param0, param2, this.field_c, 14673, param1);
+        MusicPatchPcmStream.a(param3, param0, param2, this.field_c, 14673, param1);
     }
 
     final static String a(int param0) {
@@ -125,7 +125,7 @@ final class gk {
           var1 = pi.field_O.b(false);
         }
         if (param0 == var1.length()) {
-          var1 = am.h(0);
+          var1 = MusicPatchPcmStream.h(0);
         }
         if (var1.length() == 0) {
           var1 = u.field_e;

@@ -52,7 +52,7 @@ final class jn implements ca {
             this.field_g.a(param1.field_w, param1.field_q + param2 + var13, this.field_m + param1.field_v + param3, -this.field_e - var13 + param1.field_x, -(this.field_e << 1) + param1.field_s, this.field_f, this.field_j, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "jn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class jn implements ca {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class jn implements ca {
           this.field_b = param6;
           this.field_i = param7;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

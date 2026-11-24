@@ -62,7 +62,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "ab.B(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "ab.B(" + param0 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "ab.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "ab.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

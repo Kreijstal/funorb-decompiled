@@ -1034,7 +1034,7 @@ final class bi {
               var4Lifetime2++;
             }
             for (var4Lifetime2Lifetime1 = 0; this.field_c > var4Lifetime2Lifetime1; var4Lifetime2Lifetime1++) {
-              kk.field_n.d(583 + var4Lifetime2Lifetime1 * 8, 143);
+              VolumeScaledPcmStream.field_n.d(583 + var4Lifetime2Lifetime1 * 8, 143);
             }
             if (this.field_w) {
               ia.field_f.d(553, 143);

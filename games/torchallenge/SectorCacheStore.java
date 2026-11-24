@@ -8,8 +8,8 @@ final class SectorCacheStore {
     private int field_b;
     static RasterBuffer field_f;
     private BufferedCacheFile field_e;
-    static kb field_a;
-    static fj field_d;
+    static MidiPcmStream field_a;
+    static CrossfadingMidiPcmStream field_d;
     private int field_g;
 
     private final boolean a(int param0, int param1, int param2, byte[] param3, boolean param4) {
@@ -558,7 +558,7 @@ final class SectorCacheStore {
         char[] var6 = new char[param1];
         char[] var3 = var6;
         if (param0 < 75) {
-          field_a = (kb) null;
+          field_a = (MidiPcmStream) null;
         }
         for (var4 = 0; param1 > var4; var4++) {
           var6[var4] = param2;

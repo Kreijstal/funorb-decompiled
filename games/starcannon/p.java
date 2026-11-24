@@ -40,7 +40,7 @@ final class p {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "p.B(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "p.B(" + param0 + ')');
         }
     }
 

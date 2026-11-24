@@ -67,7 +67,7 @@ abstract class ri implements ma {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ abstract class ri implements ma {
           ed.field_q.writeInt(bk.field_a, -32287);
           ed.field_q.writeLong(fa.field_a, (byte) 37);
           var6 = 0;
-          if (hl.field_F) {
+          if (MidiPcmStream.field_F) {
             var6 = var6 | 1;
           }
           if (GameAppletShell.field_c) {
@@ -167,7 +167,7 @@ abstract class ri implements ma {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

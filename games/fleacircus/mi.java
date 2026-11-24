@@ -85,7 +85,7 @@ final class mi extends IntrusiveNode {
             if (param3 == AccountRequestState.field_b) {
               return;
             }
-            gg.field_h.e(-398);
+            gg.field_h.stopPlayback(-398);
             db.field_J.flushAndMarkDrainCheck();
             AccountRequestState.field_b = param3;
             if (AccountRequestState.field_b != null) {
@@ -103,7 +103,7 @@ final class mi extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

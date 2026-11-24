@@ -463,7 +463,7 @@ final class ja {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw dd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1567,7 +1567,7 @@ final class ja {
         var5 = this.c(param0 ^ -29203, param2);
         var6 = this.d(-97, param2);
         var7 = vh.field_q[this.field_a][param2];
-        var8 = jg.field_n[var7];
+        var8 = MusicPatchPcmStream.field_n[var7];
         if (var8 == null) {
           var8 = "ERROR: missing text";
         }
@@ -1690,7 +1690,7 @@ final class ja {
                     var16 = 22;
                   }
                 }
-                jd.field_c.a(t.a(-415993727, new String[]{gj.field_j[var16]}, wl.field_b), 340, 210, 160, 80, 16711680, -1, 1, 1, 18);
+                jd.field_c.a(CrossfadingMidiPcmStream.a(-415993727, new String[]{gj.field_j[var16]}, wl.field_b), 340, 210, 160, 80, 16711680, -1, 1, 1, 18);
               }
             }
           }
@@ -2086,7 +2086,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit1) {
-          var11 = jd.field_c.a(t.a(-415993727, new String[]{"          "}, oa.field_i[na.field_a]), var22, var9);
+          var11 = jd.field_c.a(CrossfadingMidiPcmStream.a(-415993727, new String[]{"          "}, oa.field_i[na.field_a]), var22, var9);
           stackIn_15_0 = 0;
         }
         var12 = stackIn_15_0;
@@ -2876,7 +2876,7 @@ final class ja {
           cc.field_t.c(param1, 320, 96, 0, -1);
           cb.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

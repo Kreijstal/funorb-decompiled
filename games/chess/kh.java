@@ -81,7 +81,7 @@ final class kh extends gm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class kh extends gm {
                 var4_ref_ln = new ln(qa.field_e);
                 ae.field_f.put(true, var4_ref_ln, (long)var3);
               }
-              vl.a(var1, var4_ref_ln, true, param0 ^ 101);
+              MidiPcmStream.a(var1, var4_ref_ln, true, param0 ^ 101);
               fh.a((byte) -119, var4_ref_ln);
               return;
             }
@@ -278,7 +278,7 @@ final class kh extends gm {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) 116);
                     var24 = ((PacketBuffer) ((Object) var1)).readString(0);
                     var25 = ((PacketBuffer) ((Object) var1)).readString(0);
-                    var7 = mi.a(param0 ^ 134217710, var3_longLifetime2);
+                    var7 = MusicPatchPcmStream.a(param0 ^ 134217710, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new r(var24, var25, var3_longLifetime2);
                       cm.field_v.put(true, var7, var3_longLifetime2);
@@ -298,7 +298,7 @@ final class kh extends gm {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -60);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 - 144);
-                    var23 = mi.a(134217727, var3_longLifetime2);
+                    var23 = MusicPatchPcmStream.a(134217727, var3_longLifetime2);
                     if (var23 == null) {
                       return;
                     }
@@ -313,7 +313,7 @@ final class kh extends gm {
                     return;
                   }
                   if (var2 == 20) {
-                    vl.a(var1, pd.field_Rb, false, param0 ^ 127);
+                    MidiPcmStream.a(var1, pd.field_Rb, false, param0 ^ 127);
                     return;
                   }
                   if (var2 == 21) {
@@ -416,7 +416,7 @@ final class kh extends gm {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
             pd.field_Rb = new ln(qa.field_e);
             pd.field_Rb.setSecondaryKey((long)var3Lifetime1, (byte) 71);
-            vl.a(var1, pd.field_Rb, false, 120);
+            MidiPcmStream.a(var1, pd.field_Rb, false, 120);
             BoundedRandomAccessFile.field_e = 0L;
           }
           if (var2 != 2 &&
@@ -444,7 +444,7 @@ final class kh extends gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1_ref), "kh.B(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "kh.B(" + param0 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class kh extends gm {
         return 0L;
     }
 
-    final static void a(byte param0, lb param1, int param2, ResourceArchive param3) {
+    final static void a(byte param0, PcmStreamMixer param1, int param2, ResourceArchive param3) {
         try {
           BoundedRandomAccessFile.field_i = param2 * qd.d(-31137) / 1000;
           fd.a((byte) -103, param3);
@@ -504,7 +504,7 @@ final class kh extends gm {
           }
           sl.field_a = 0 - BoundedRandomAccessFile.field_i;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "kh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "kh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

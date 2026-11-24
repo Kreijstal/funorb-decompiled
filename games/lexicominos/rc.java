@@ -38,7 +38,7 @@ final class rc {
             if (var5 >= 0) {
               var6 = ii.a(MouseWheelInput.field_g[var3_int], true, 0);
               var4 = var4 + we.field_l;
-              var7 = -(var6 >> 1) + uh.field_D;
+              var7 = -(var6 >> 1) + CrossfadingMidiPcmStream.field_D;
               if (sj.a(param2, (oh.field_b << 1) + fb.field_g, var4, var6 + (jh.field_e << 1), param0, true, -jh.field_e + var7)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
@@ -54,7 +54,7 @@ final class rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var3), "rc.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var3), "rc.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

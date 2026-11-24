@@ -24,7 +24,7 @@ final class lr extends d {
           this.field_Q = this.field_Q + 1;
           super.a((byte) 114, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "lr.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lr.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class lr extends d {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class lr extends d {
           ie.field_Nb = param2;
           nb.h(-14829);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "lr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -268,7 +268,7 @@ final class lr extends d {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class lr extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var10), "lr.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var10), "lr.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -376,7 +376,7 @@ final class lr extends d {
             }
             var2 = 1;
           }
-          ve.field_d.a((byte) -29, fk.b(gb.field_d, 1282642017, PacketBuffer.field_n), fk.b(no.field_e, 1282642017, sd.field_N));
+          ve.field_d.a((byte) -29, CrossfadingMidiPcmStream.b(gb.field_d, 1282642017, PacketBuffer.field_n), CrossfadingMidiPcmStream.b(no.field_e, 1282642017, sd.field_N));
           if (ve.field_d.a(84)) {
             var1_int = 1;
           }
@@ -413,7 +413,7 @@ final class lr extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "lr.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "lr.B(" + param0 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class lr extends d {
         try {
           this.field_R = param0;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "lr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

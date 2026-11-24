@@ -324,9 +324,9 @@ final class LevelSession {
             this.field_N = 0.0;
             this.field_c = 0.0;
           }
-          if (this.field_N + (double)am.field_l > 640.0) {
+          if (this.field_N + (double)MusicPatchPcmStream.field_l > 640.0) {
             this.field_c = 0.0;
-            this.field_N = (double)(-am.field_l + 640);
+            this.field_N = (double)(-MusicPatchPcmStream.field_l + 640);
           }
           this.field_j = this.field_j - this.field_j / 20.0;
           this.field_c = this.field_c - this.field_c / 20.0;
@@ -747,7 +747,7 @@ final class LevelSession {
             return;
           }
         }
-        this.a(9, ri.field_q + (int)this.field_D, -1, (int)this.field_N + am.field_p, param0 ^ -31963);
+        this.a(9, ri.field_q + (int)this.field_D, -1, (int)this.field_N + MusicPatchPcmStream.field_p, param0 ^ -31963);
         this.field_z.j(64);
         PacketBuffer.a(param0 ^ 1630761897, this.field_z);
         return;
@@ -950,7 +950,7 @@ final class LevelSession {
           break;
         }
         if (this.field_a) {
-          var2 = new gg((int)((double)am.field_p + this.field_N), (int)((double)ri.field_q + this.field_D), 15, 0.0, 6.283185307179586, 1.5707963267948966, 3, 1.9, 0.92, this.field_J >> 1);
+          var2 = new gg((int)((double)MusicPatchPcmStream.field_p + this.field_N), (int)((double)ri.field_q + this.field_D), 15, 0.0, 6.283185307179586, 1.5707963267948966, 3, 1.9, 0.92, this.field_J >> 1);
           stackIn_13_0 = var2;
           stackIn_13_1 = -1093327740;
           stackIn_13_2 = 16777215;
@@ -1027,7 +1027,7 @@ final class LevelSession {
               break scanLoop1;
             }
             if (stackIn_36_0 < stackIn_36_1) {
-              stackIn_16_0 = (int)((double)am.field_l + this.field_N) << 4;
+              stackIn_16_0 = (int)((double)MusicPatchPcmStream.field_l + this.field_N) << 4;
               stackIn_16_1 = (int)(this.field_D + (double)ri.field_q) << 4;
               stackIn_16_2 = 256;
               stackIn_16_3 = this.field_u;
@@ -1230,7 +1230,7 @@ final class LevelSession {
             this.F(-125);
             this.field_fb = this.field_fb - 1;
             if (this.field_fb > 0) {
-              this.a(11, (int)this.field_D + hi.a(ri.field_e, 4, this.field_l), -1, (int)this.field_N + hi.a(am.field_l, 4, this.field_l), 27396);
+              this.a(11, (int)this.field_D + hi.a(ri.field_e, 4, this.field_l), -1, (int)this.field_N + hi.a(MusicPatchPcmStream.field_l, 4, this.field_l), 27396);
             }
             this.field_Z = this.field_Z - 1;
             if (this.n(115)) {
@@ -1324,7 +1324,7 @@ final class LevelSession {
         }
         var2 = -((double)qe.field_a / -150.0) + 1.0;
         qe.field_a = qe.field_a + 1;
-        this.field_N = (double)(-am.field_l) + (double)(275 + am.field_l) * var2;
+        this.field_N = (double)(-MusicPatchPcmStream.field_l) + (double)(275 + MusicPatchPcmStream.field_l) * var2;
         if (ck.field_f[83]) {
           qe.field_a = qe.field_a + 10;
           return;
@@ -1537,7 +1537,7 @@ final class LevelSession {
               var3 = 0;
             }
             while (var3 < this.field_k.length) {
-              this.field_k[var3].a((int)this.field_D + hi.a(ri.field_e, 4, this.field_l), var2 / 4, 1049600, -104, 1, (int)this.field_N + hi.a(am.field_l, 4, this.field_l));
+              this.field_k[var3].a((int)this.field_D + hi.a(ri.field_e, 4, this.field_l), var2 / 4, 1049600, -104, 1, (int)this.field_N + hi.a(MusicPatchPcmStream.field_l, 4, this.field_l));
               var3++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -2352,7 +2352,7 @@ final class LevelSession {
                 decompiledSharedTail0 = (var5 != 0);
               }
               if (decompiledSharedTail0) {
-                stackIn_21_0 = (!var3_ref_gf.a(var3_ref_gf.field_d, this.field_D + (double)ri.field_q, this.field_N + (double)am.field_p, var3_ref_gf.field_F, param0)) ? 0 : 1;
+                stackIn_21_0 = (!var3_ref_gf.a(var3_ref_gf.field_d, this.field_D + (double)ri.field_q, this.field_N + (double)MusicPatchPcmStream.field_p, var3_ref_gf.field_F, param0)) ? 0 : 1;
                 var4 = stackIn_21_0;
               }
               if (var3_ref_gf.field_I == 20 &&
@@ -2400,7 +2400,7 @@ final class LevelSession {
             } else {
               var4Lifetime1 = 65793 * (this.field_u >> 4);
             }
-            this.field_h[var3].a((int)(this.field_D + (double)hi.a((int)(1.5 * (double)ri.field_e), 4, this.field_l) - (double)(ri.field_e / 3)), 15, var4Lifetime1, -5, 1, (int)(this.field_N + (double)hi.a((int)((double)am.field_l * 1.5), 4, this.field_l) - (double)(am.field_l / 3)));
+            this.field_h[var3].a((int)(this.field_D + (double)hi.a((int)(1.5 * (double)ri.field_e), 4, this.field_l) - (double)(ri.field_e / 3)), 15, var4Lifetime1, -5, 1, (int)(this.field_N + (double)hi.a((int)((double)MusicPatchPcmStream.field_l * 1.5), 4, this.field_l) - (double)(MusicPatchPcmStream.field_l / 3)));
             var3++;
             continue;
           }
@@ -2888,7 +2888,7 @@ final class LevelSession {
         boolean decompiledFrameRemainder2 = true;
         var5 = (double)ri.field_q + this.field_D;
         lh.field_m = lh.field_m | 1 << this.levelNumber;
-        var3 = this.field_N + (double)am.field_p;
+        var3 = this.field_N + (double)MusicPatchPcmStream.field_p;
         var13_int = param0;
         if (((19 != var13_int ||
           var38 != 0) && var13_int != 24 && (var13_int != 25 ||
@@ -2913,7 +2913,7 @@ final class LevelSession {
           }
           var9 = 0.0;
           var5 = var5 + 1.0;
-          var3 = -32.0 + (this.field_N + (double)am.field_l);
+          var3 = -32.0 + (this.field_N + (double)MusicPatchPcmStream.field_l);
           decompiledFrameRemainder6 = (var38 != 0);
         }
         if ((decompiledFrameRemainder6) &&
@@ -3043,7 +3043,7 @@ final class LevelSession {
                 var38 == 0) {
                 var23 = -1;
                 var26 = 150.0;
-                var18 = (int)((double)am.field_p + this.field_N);
+                var18 = (int)((double)MusicPatchPcmStream.field_p + this.field_N);
                 var20 = 0;
                 var29 = 0;
                 var28 = null;
@@ -4237,7 +4237,7 @@ final class LevelSession {
         this.field_v = new gf[800];
         this.field_H = 0;
         this.field_cb = new int[77];
-        this.field_N = (double)(-am.field_l);
+        this.field_N = (double)(-MusicPatchPcmStream.field_l);
         this.field_Q = 0;
         this.field_k = null;
         this.field_p = this.field_Q ^ this.field_P;

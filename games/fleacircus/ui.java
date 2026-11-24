@@ -33,7 +33,7 @@ final class ui extends oh {
           param0.removeFocusListener(sg.field_i);
           lk.field_J = 0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ui.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ui.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class ui extends oh {
         try {
           super.d(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ui.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ui.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

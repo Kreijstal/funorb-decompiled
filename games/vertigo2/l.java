@@ -147,7 +147,7 @@ abstract class l {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ abstract class l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1_ref), "l.C(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1_ref), "l.C(" + param0 + ')');
         }
     }
 

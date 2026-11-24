@@ -4,7 +4,7 @@
 final class ch {
     int field_k;
     int field_l;
-    static rb field_j;
+    static PcmStreamMixer field_j;
     int field_g;
     int field_d;
     byte[] field_i;

@@ -92,12 +92,12 @@ final class lg {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        th.field_D = param1;
+        CrossfadingMidiPcmStream.field_D = param1;
         if (gg.field_h != null) {
           gg.field_h.b(-114, param1);
         }

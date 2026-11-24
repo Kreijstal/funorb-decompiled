@@ -61,7 +61,7 @@ final class wj extends cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2_ref), "wj.A(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2_ref), "wj.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class wj extends cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "wj.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "wj.E(" + param0 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class wj extends cb {
           if (this.a(param1, 5) != fg.field_d) {
             return null;
           }
-          stackIn_3_0 = vd.field_r;
+          stackIn_3_0 = CrossfadingMidiPcmStream.field_r;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class wj extends cb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class wj extends cb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

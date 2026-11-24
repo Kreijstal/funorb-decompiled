@@ -37,7 +37,7 @@ final class fo extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "fo.A(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "fo.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class fo extends IntrusiveNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class fo extends IntrusiveNode {
           mb.field_b = param1;
           int var2_int = 84 / ((-64 - param0) / 41);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "fo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class fo extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "fo.C(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "fo.C(" + param0 + ')');
         }
     }
 

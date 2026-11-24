@@ -26,7 +26,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             rc.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "rl.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "rl.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             nd.field_l = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "rl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "rl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             rc.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "rl.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "rl.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             rc.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "rl.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "rl.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

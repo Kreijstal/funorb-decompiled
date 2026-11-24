@@ -60,7 +60,7 @@ final class uk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "uk.C(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "uk.C(" + param0 + ')');
         }
     }
 

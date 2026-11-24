@@ -67,7 +67,7 @@ final class SleepAnimation extends EventAnimation {
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 >= 0) {
           if (this.field_l == 25) {
-            jja.a(256, -1, 52);
+            MusicPatchPcmStream.a(256, -1, 52);
             this.d(-10649);
           }
           return false;

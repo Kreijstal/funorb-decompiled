@@ -71,12 +71,12 @@ final class bf {
         if (param0 < 91) {
           bf.a(-21);
         }
-        if (null == di.field_O) {
+        if (null == MidiPcmStream.field_O) {
           return;
         }
-        var1 = di.field_O;
+        var1 = MidiPcmStream.field_O;
         synchronized (var1) {
-          di.field_O = null;
+          MidiPcmStream.field_O = null;
         }
     }
 
@@ -108,9 +108,9 @@ final class bf {
             var4 = var2 / 32;
             var5 = var3 / 32;
             qm.field_f = true;
-            di.field_X = di.field_X + 1;
+            MidiPcmStream.field_X = MidiPcmStream.field_X + 1;
             if (tb.field_a == 1) {
-              mh.field_e[var4][var5].field_U = gd.field_x;
+              mh.field_e[var4][var5].field_U = MusicPatchPcmStream.field_x;
             }
             if (2 == tb.field_a) {
               if (0 == SecondaryNodeDequeIterator.field_a) {
@@ -200,9 +200,9 @@ final class bf {
         var4Lifetime1 = var2Lifetime1 / 32;
         var5Lifetime1 = var3Lifetime1 / 32;
         qm.field_f = true;
-        di.field_X = di.field_X + 1;
+        MidiPcmStream.field_X = MidiPcmStream.field_X + 1;
         if (tb.field_a == 1) {
-          mh.field_e[var4Lifetime1][var5Lifetime1].field_U = gd.field_x;
+          mh.field_e[var4Lifetime1][var5Lifetime1].field_U = MusicPatchPcmStream.field_x;
         }
         if (2 == tb.field_a) {
           if (0 == SecondaryNodeDequeIterator.field_a) {

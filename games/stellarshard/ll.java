@@ -6,7 +6,7 @@ final class ll implements uk {
     private int field_e;
     private BitmapFont field_a;
     static int field_b;
-    static hl field_c;
+    static PcmStreamMixer field_c;
     static int field_d;
 
     final static void c(int param0) {

@@ -54,7 +54,7 @@ abstract class bl extends DualLinkNode {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw lj.a((Throwable) ((Object) var1_ref), "bl.J(" + param0 + ')');
+            throw lj.wrapClientException((Throwable) ((Object) var1_ref), "bl.J(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -83,7 +83,7 @@ abstract class bl extends DualLinkNode {
           }
           if (sk.field_d < -30 &&
             mh.field_e[ca.field_k - 1][hf.field_t].g()) {
-            if (di.field_K == -1) {
+            if (MidiPcmStream.field_K == -1) {
               return true;
             }
             if (sk.field_d <= 30) {
@@ -92,7 +92,7 @@ abstract class bl extends DualLinkNode {
             if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
               return false;
             }
-            if (di.field_K == 1) {
+            if (MidiPcmStream.field_K == 1) {
               return true;
             }
             return false;
@@ -103,7 +103,7 @@ abstract class bl extends DualLinkNode {
           if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
             return false;
           }
-          if (di.field_K != 1) {
+          if (MidiPcmStream.field_K != 1) {
             return false;
           }
           return true;
@@ -126,19 +126,19 @@ abstract class bl extends DualLinkNode {
             qe.field_b[4]) {
             if (sk.field_d < -30 &&
               mh.field_e[ca.field_k - 1][hf.field_t].g()) {
-              if (di.field_K == -1) {
+              if (MidiPcmStream.field_K == -1) {
                 return true;
               }
               if (sk.field_d > 30 &&
                 mh.field_e[ca.field_k + 1][hf.field_t].g() &&
-                di.field_K == 1) {
+                MidiPcmStream.field_K == 1) {
                 return true;
               }
               return false;
             }
             if (sk.field_d > 30 &&
               mh.field_e[ca.field_k + 1][hf.field_t].g() &&
-              di.field_K == 1) {
+              MidiPcmStream.field_K == 1) {
               return true;
             }
           }
@@ -163,7 +163,7 @@ abstract class bl extends DualLinkNode {
           if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
             return false;
           }
-          if (di.field_K != 1) {
+          if (MidiPcmStream.field_K != 1) {
             return false;
           }
           return true;
@@ -175,12 +175,12 @@ abstract class bl extends DualLinkNode {
           if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
             return false;
           }
-          if (di.field_K != 1) {
+          if (MidiPcmStream.field_K != 1) {
             return false;
           }
           return true;
         }
-        if (di.field_K == -1) {
+        if (MidiPcmStream.field_K == -1) {
           return true;
         }
         if (sk.field_d <= 30) {
@@ -189,7 +189,7 @@ abstract class bl extends DualLinkNode {
         if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
           return false;
         }
-        if (di.field_K == 1) {
+        if (MidiPcmStream.field_K == 1) {
           return true;
         }
         return false;
@@ -222,7 +222,7 @@ abstract class bl extends DualLinkNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

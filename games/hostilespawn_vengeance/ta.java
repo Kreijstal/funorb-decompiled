@@ -18,7 +18,7 @@ final class ta extends me {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ta.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ta.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class ta extends me {
           Math.random();
           cg.field_b = 0;
           AccountNameAvailabilityValidator.field_o = false;
-          dl.field_l = false;
+          MusicPatchPcmStream.field_l = false;
           of.field_d = km.field_A;
           pm.field_d = 26;
           nl.field_d = 0;
@@ -89,18 +89,18 @@ final class ta extends me {
           wb.field_Z = stackIn_12_0;
           if (bm.field_c != 0) {
             if (hh.field_d == rl.field_c) {
-              kh.field_Q[0] = true;
-              kh.field_cb[0] = false;
-              for (var2_int = 1; var2_int < kh.field_Q.length; var2_int++) {
-                kh.field_Q[var2_int] = false;
-                kh.field_cb[var2_int] = false;
+              VolumeRampingMidiPcmStream.field_Q[0] = true;
+              VolumeRampingMidiPcmStream.field_cb[0] = false;
+              for (var2_int = 1; var2_int < VolumeRampingMidiPcmStream.field_Q.length; var2_int++) {
+                VolumeRampingMidiPcmStream.field_Q[var2_int] = false;
+                VolumeRampingMidiPcmStream.field_cb[var2_int] = false;
               }
-              pf.a(kh.field_ib, false);
-              kh.field_U[1] = 0;
-              kh.field_U[0] = 0;
+              pf.a(VolumeRampingMidiPcmStream.field_ib, false);
+              VolumeRampingMidiPcmStream.field_U[1] = 0;
+              VolumeRampingMidiPcmStream.field_U[0] = 0;
             }
-            dl.field_n = new bd(72, 72);
-            dl.field_n.a();
+            MusicPatchPcmStream.field_n = new bd(72, 72);
+            MusicPatchPcmStream.field_n.a();
             for (var2_int = 0; var2_int < 3; var2_int++) {
               for (var3 = 0; var3 < 3; var3++) {
                 pk.field_d[8 * var3 + (var2_int + 424)].c(24 * var2_int, var3 * 24);
@@ -111,21 +111,21 @@ final class ta extends me {
           } else {
             if (rl.field_c == hh.field_d ||
               3 == rl.field_c) {
-              for (var2_int = 0; var2_int < kh.field_Q.length; var2_int++) {
-                stackIn_20_0 = kh.field_Q;
+              for (var2_int = 0; var2_int < VolumeRampingMidiPcmStream.field_Q.length; var2_int++) {
+                stackIn_20_0 = VolumeRampingMidiPcmStream.field_Q;
                 stackIn_20_1 = var2_int;
                 stackIn_21_2 = !(var2_int >= 2);
                 stackIn_20_0[stackIn_20_1] = stackIn_21_2;
-                kh.field_cb[var2_int] = false;
+                VolumeRampingMidiPcmStream.field_cb[var2_int] = false;
               }
-              pf.a(kh.field_ib, false);
-              kh.field_ib[0] = 1200;
-              kh.field_U[0] = 1;
-              kh.field_U[1] = 0;
+              pf.a(VolumeRampingMidiPcmStream.field_ib, false);
+              VolumeRampingMidiPcmStream.field_ib[0] = 1200;
+              VolumeRampingMidiPcmStream.field_U[0] = 1;
+              VolumeRampingMidiPcmStream.field_U[1] = 0;
             }
             if (rl.field_c != 3) {
-              dl.field_n = new bd(72, 72);
-              dl.field_n.a();
+              MusicPatchPcmStream.field_n = new bd(72, 72);
+              MusicPatchPcmStream.field_n.a();
               for (var2_int = 0; 3 > var2_int; var2_int++) {
                 for (var3 = 0; 3 > var3; var3++) {
                   pk.field_d[var3 * 8 + var2_int + 139].c(var2_int * 24, 24 * var3);
@@ -135,7 +135,7 @@ final class ta extends me {
               o.field_n.b((byte) 127);
             } else {
               jf.field_d = 50;
-              dl.field_n = null;
+              MusicPatchPcmStream.field_n = null;
             }
           }
           tg.field_a = false;
@@ -237,47 +237,47 @@ final class ta extends me {
           if (bm.field_c == 0) {
             if (rl.field_c != 3) {
               if (rl.field_c == 4) {
-                kd.a(1, 1);
+                CrossfadingMidiPcmStream.a(1, 1);
               } else {
                 if (5 != rl.field_c) {
                   if (rl.field_c != 6) {
                     if (rl.field_c == 7) {
-                      kd.a(2, 1);
+                      CrossfadingMidiPcmStream.a(2, 1);
                       r.field_a = 2;
                     } else {
                       if (rl.field_c == 8) {
-                        kd.a(3, 1);
+                        CrossfadingMidiPcmStream.a(3, 1);
                         r.field_a = 2;
                       } else {
                         if (9 == rl.field_c) {
-                          kd.a(0, 1);
+                          CrossfadingMidiPcmStream.a(0, 1);
                           r.field_a = 0;
                         } else {
                           if (rl.field_c == 0) {
-                            kd.a(4, 1);
+                            CrossfadingMidiPcmStream.a(4, 1);
                           } else {
                             if (rl.field_c != 1) {
                               if (rl.field_c == 2) {
-                                kd.a(1, 1);
+                                CrossfadingMidiPcmStream.a(1, 1);
                               } else {
-                                kd.a(0, 1);
+                                CrossfadingMidiPcmStream.a(0, 1);
                               }
                             } else {
-                              kd.a(10, 1);
+                              CrossfadingMidiPcmStream.a(10, 1);
                             }
                           }
                         }
                       }
                     }
                   } else {
-                    kd.a(0, 1);
+                    CrossfadingMidiPcmStream.a(0, 1);
                   }
                 } else {
-                  kd.a(0, 1);
+                  CrossfadingMidiPcmStream.a(0, 1);
                 }
               }
             } else {
-              kd.a(0, 1);
+              CrossfadingMidiPcmStream.a(0, 1);
             }
           }
           uj.field_p.field_g = (int)(24.0 * (mm.field_m[0].field_l.field_a + (double)mm.field_m[0].field_j.field_g) - 240.0);
@@ -364,17 +364,17 @@ final class ta extends me {
           mb.field_s.a(500, 8000);
           wh.field_f = true;
           if (!om.field_b) {
-            if (kh.field_ab.a(bm.field_c, -28, rl.field_c)) {
-              kh.field_ab.d(64);
+            if (VolumeRampingMidiPcmStream.field_ab.a(bm.field_c, -28, rl.field_c)) {
+              VolumeRampingMidiPcmStream.field_ab.d(64);
             } else {
-              kh.field_ab.c(-32238);
+              VolumeRampingMidiPcmStream.field_ab.c(-32238);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "ta.G(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "ta.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class ta extends me {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -80,7 +80,7 @@ final class mg extends WidgetWrapper {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class mg extends WidgetWrapper {
           bi.c();
           mh.a(true, false);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class mg extends WidgetWrapper {
               stackIn_23_0 = field_S[0][var6 + 1];
               stackIn_24_1 = (var4_int != 0);
               stackIn_23_0.field_lb = stackIn_24_1;
-              if (!db.field_S &&
+              if (!MidiPcmStream.field_S &&
                 var6 == 3) {
                 field_S[0][1 + var6].field_lb = false;
               }
@@ -593,7 +593,7 @@ final class mg extends WidgetWrapper {
                   !gd.field_r) {
                   var22 = null;
                   if (ng.field_a) {
-                    var22 = "</col>" + rq.field_v + "<col=A00000>";
+                    var22 = "</col>" + MusicPatchPcmStream.field_v + "<col=A00000>";
                     var25 = var22;
                     var22 = var25;
                     var25Lifetime1 = var22;
@@ -683,7 +683,7 @@ final class mg extends WidgetWrapper {
           } else {
             stackIn_343_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_342_0), ((StringBuilder) (Object) stackIn_342_1).append(stackIn_343_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_342_0), ((StringBuilder) (Object) stackIn_342_1).append(stackIn_343_2).append(')').toString());
         }
     }
 

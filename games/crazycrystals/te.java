@@ -22,7 +22,7 @@ abstract class te {
             }
             long dupTemp$1 = lo.correctedCurrentTimeMillis((byte) -29);
             mp.field_p = dupTemp$1;
-            wg.field_y = dupTemp$1;
+            MidiPcmStream.field_y = dupTemp$1;
             if (vj.field_b.status == 1) {
               try {
                 oi.field_c = new j((java.net.Socket) (vj.field_b.result), gf.field_b);
@@ -54,7 +54,7 @@ abstract class te {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var2_ref), "te.D(" + param0 + ',' + param1 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var2_ref), "te.D(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -71,7 +71,7 @@ abstract class te {
         try {
           um.a(0, (String) null, (byte) 120);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "te.<init>()");
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "te.<init>()");
         }
     }
 
@@ -81,7 +81,7 @@ abstract class te {
             field_a = (PlatformTaskDispatcher) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "te.B(" + param0 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ abstract class te {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ abstract class te {
           int var1_int = 127 % ((param0 - 26) / 59);
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "te.A(" + param0 + ')');
         }
     }
 

@@ -77,7 +77,7 @@ final class ml {
         try {
           param1.field_l.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ml.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ml.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

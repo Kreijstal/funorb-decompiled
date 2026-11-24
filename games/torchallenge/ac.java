@@ -37,7 +37,7 @@ final class ac {
 
     final static void a(boolean param0, int param1, ej param2, boolean param3, int param4) {
         RuntimeException var5 = null;
-        fj stackIn_2_0;
+        CrossfadingMidiPcmStream stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
@@ -52,7 +52,7 @@ final class ac {
           stackIn_2_2 = 1000000;
           stackIn_2_3 = param1;
           stackIn_3_4 = !(param3);
-          ((fj) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param4, param2);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param4, param2);
           if (!param0) {
             return;
           }

@@ -198,7 +198,7 @@ final class fd {
         this.field_h = new int[var2];
     }
 
-    final boolean c() {
+    final boolean hasMidiData() {
         return this.field_c.payload != null;
     }
 

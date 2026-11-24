@@ -28,7 +28,7 @@ public final class Bounce extends GameClient {
           if (param0 != -16) {
             this.e(-122);
           }
-          pk.field_D = fa.a((byte) -76, 5);
+          MidiPcmStream.field_D = fa.a((byte) -76, 5);
           ca.field_e = fa.a((byte) -76, 3);
           ub.field_a = fa.a((byte) -76, 4);
           va.field_c = fa.a((byte) -76, 6);
@@ -36,7 +36,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "Bounce.MA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "Bounce.MA(" + param0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ public final class Bounce extends GameClient {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ public final class Bounce extends GameClient {
           gi.b(72);
           FullscreenFocusCanvas.clearStaticReferences(false);
           pb.a(-19);
-          pk.clearStaticReferences(-112);
+          MidiPcmStream.clearStaticReferences(-112);
           v.clearStaticReferences(-8217);
           vi.clearStaticReferences((byte) 74);
           jf.e(-18695);
@@ -146,7 +146,7 @@ public final class Bounce extends GameClient {
           uk.c(113);
           kl.a(0);
           oe.clearStaticReferences();
-          ka.d(0);
+          MusicPatchPcmStream.d(0);
           nl.b((byte) 94);
           hf.a((byte) 124);
           c.clearStaticReferences((byte) 56);
@@ -320,7 +320,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "Bounce.HA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "Bounce.HA(" + param0 + ')');
         }
         if (AppletShell.field_j != 0) {
           var3++;
@@ -347,7 +347,7 @@ public final class Bounce extends GameClient {
         Platform dupTemp$13 = null;
         boolean stackIn_225_0 = false;
         boolean stackIn_233_0 = false;
-        pk stackIn_241_0 = null;
+        MidiPcmStream stackIn_241_0 = null;
         be stackIn_242_1 = null;
         int stackIn_307_0 = 0;
         int stackIn_307_1 = 0;
@@ -461,7 +461,7 @@ public final class Bounce extends GameClient {
           if (1 == vk.field_b) {
             ta.field_c = ta.field_c + 0.001;
             if (he.field_n[0].field_n > 0) {
-              if (null == ka.field_o ||
+              if (null == MusicPatchPcmStream.field_o ||
                 !(0 >= fa.field_c)) {
                 qf.field_c = qf.field_c + 1;
                 fa.field_c = fa.field_c + 1;
@@ -475,7 +475,7 @@ public final class Bounce extends GameClient {
                   ec.field_cb = ec.field_cb + 1;
                 }
               }
-              if (ka.field_o == null) {
+              if (MusicPatchPcmStream.field_o == null) {
                 if (fa.field_c == 1000) {
                   dk.a(false, 0, 255);
                 }
@@ -545,9 +545,9 @@ public final class Bounce extends GameClient {
               this.field_I = this.field_I - 1;
             }
           }
-          if (null != ka.field_o &&
+          if (null != MusicPatchPcmStream.field_o &&
             rj.field_j == -1) {
-            ka.field_o = ka.field_o.a((byte) -77);
+            MusicPatchPcmStream.field_o = MusicPatchPcmStream.field_o.a((byte) -77);
           }
           if (rj.field_j != -1 &&
             rj.field_j == 0) {
@@ -575,13 +575,13 @@ public final class Bounce extends GameClient {
               ll.field_y <= var7Lifetime1 + 16 &&
               this.field_L &&
               vh.field_e == 1) {
-              ka.field_o.field_l = false;
+              MusicPatchPcmStream.field_o.field_l = false;
               if (!this.field_L) {
-                ka.field_o.field_n = 0;
+                MusicPatchPcmStream.field_o.field_n = 0;
               }
               rj.field_j = -1;
               kb.field_a = 0;
-              ka.field_o.field_e = false;
+              MusicPatchPcmStream.field_o.field_e = false;
             }
           }
           boolean decompiledNaturalLoopExit0 = false;
@@ -607,40 +607,40 @@ public final class Bounce extends GameClient {
                   } else {
                     stackIn_242_1 = wj.field_c;
                   }
-                  ((pk) (Object) stackIn_241_0).a(stackIn_242_1, true, 54);
+                  ((MidiPcmStream) (Object) stackIn_241_0).a(stackIn_242_1, true, 54);
                 }
                 jl.field_d.flushAndMarkDrainCheck();
               }
             }
-            if (ka.field_o != null &&
+            if (MusicPatchPcmStream.field_o != null &&
               rj.field_j == -1) {
               if (n.field_m == 0) {
                 if (lh.field_f == 98) {
-                  ka.field_o.a(-1, 12011);
+                  MusicPatchPcmStream.field_o.a(-1, 12011);
                 }
                 if (lh.field_f == 99) {
-                  ka.field_o.a(1, 12011);
+                  MusicPatchPcmStream.field_o.a(1, 12011);
                 }
                 if (lh.field_f == 96) {
-                  ka.field_o.a(false, -31729, -1);
+                  MusicPatchPcmStream.field_o.a(false, -31729, -1);
                 }
                 if (lh.field_f == 97) {
-                  ka.field_o.a(false, -31729, 1);
+                  MusicPatchPcmStream.field_o.a(false, -31729, 1);
                 }
                 if (lh.field_f == 102 &&
-                  !ka.field_o.field_e) {
-                  ka.field_o.a(false, -31729, -16);
+                  !MusicPatchPcmStream.field_o.field_e) {
+                  MusicPatchPcmStream.field_o.a(false, -31729, -16);
                 }
                 if (lh.field_f == 103 &&
-                  !ka.field_o.field_e) {
-                  ka.field_o.a(false, -31729, 16);
+                  !MusicPatchPcmStream.field_o.field_e) {
+                  MusicPatchPcmStream.field_o.a(false, -31729, 16);
                 }
                 if (lh.field_f == 84) {
-                  ka.field_o.a(false, -31729, 0);
+                  MusicPatchPcmStream.field_o.a(false, -31729, 0);
                 }
               }
               if (lh.field_f == 13) {
-                ka.field_o.b(-1);
+                MusicPatchPcmStream.field_o.b(-1);
               }
             }
             if (84 != lh.field_f) {
@@ -659,14 +659,14 @@ public final class Bounce extends GameClient {
               if (qf.field_b != 1) {
                 continue;
               }
-              ka.field_o.field_l = false;
+              MusicPatchPcmStream.field_o.field_l = false;
               kb.field_a = 0;
-              ka.field_o.field_e = false;
+              MusicPatchPcmStream.field_o.field_e = false;
               rj.field_j = -1;
               if (this.field_L) {
                 continue;
               }
-              ka.field_o.field_n = 0;
+              MusicPatchPcmStream.field_o.field_n = 0;
               continue;
             }
             break;
@@ -682,28 +682,28 @@ public final class Bounce extends GameClient {
             (vh.field_e != 0 ||
             ng.field_a[83] ||
             ng.field_a[84])) && (u.field_g &&
-            ka.field_o == null)) {
+            MusicPatchPcmStream.field_o == null)) {
             u.field_g = false;
-            if (null == ka.field_o) {
-              ka.field_o = new mj();
+            if (null == MusicPatchPcmStream.field_o) {
+              MusicPatchPcmStream.field_o = new mj();
               if (var10 != 0) {
-                ka.field_o.field_b = true;
+                MusicPatchPcmStream.field_o.field_b = true;
               }
             } else {
-              ka.field_o.field_b = true;
+              MusicPatchPcmStream.field_o.field_b = true;
             }
-            ka.field_o.field_n = -1 + vk.field_b;
+            MusicPatchPcmStream.field_o.field_n = -1 + vk.field_b;
             if (vk.field_b == 1) {
               he.field_n[0].field_n = 0;
               this.c(false, fa.field_c);
               if (kb.field_a <= 0) {
-                ka.field_o.field_n = 11;
-                ka.field_o.field_e = true;
+                MusicPatchPcmStream.field_o.field_n = 11;
+                MusicPatchPcmStream.field_o.field_e = true;
                 if (var10 != 0) {
-                  ka.field_o.field_l = true;
+                  MusicPatchPcmStream.field_o.field_l = true;
                 }
               } else {
-                ka.field_o.field_l = true;
+                MusicPatchPcmStream.field_o.field_l = true;
               }
               jk.field_q = -1;
             }
@@ -778,7 +778,7 @@ public final class Bounce extends GameClient {
           ua.field_c[ua.field_b - 1].field_d = 6;
           ua.field_c[-2 + ua.field_b].field_d = 6;
           ua.field_c[ua.field_b - 3].field_d = 6;
-          if (null == ka.field_o ||
+          if (null == MusicPatchPcmStream.field_o ||
             !u.field_g) {
             ca.a(false);
           }
@@ -803,7 +803,7 @@ public final class Bounce extends GameClient {
                   he.field_n[var2_int].a(il.field_a, false);
                   he.field_n[var2_int].a(il.field_a, (byte) 106);
                 } else {
-                  if (null == ka.field_o ||
+                  if (null == MusicPatchPcmStream.field_o ||
                     !u.field_g) {
                     he.field_n[var2_int].a(ua.field_c, nj.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
                   }
@@ -862,7 +862,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref2), "Bounce.OA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2_ref2), "Bounce.OA(" + param0 + ')');
         }
     }
 
@@ -917,8 +917,8 @@ public final class Bounce extends GameClient {
               kb.field_a = kb.field_a & ~bh.field_d.field_k;
               bh.field_d = null;
               if (0 < kb.field_a) {
-                ka.field_o.field_e = false;
-                ka.field_o.field_l = true;
+                MusicPatchPcmStream.field_o.field_e = false;
+                MusicPatchPcmStream.field_o.field_l = true;
               }
               ed.a((byte) -127);
               var2 = (ke) (IterableNodeHashTable.field_c.beginForward((byte) -104));
@@ -1019,7 +1019,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "Bounce.V(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2_ref), "Bounce.V(" + param0 + ')');
         }
     }
 
@@ -1131,7 +1131,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var7), "Bounce.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var7), "Bounce.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1139,7 +1139,7 @@ public final class Bounce extends GameClient {
         try {
           this.a(11, (byte) 122, "bouncedown");
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "Bounce.init()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "Bounce.init()");
         }
     }
 
@@ -1167,7 +1167,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "Bounce.CA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "Bounce.CA(" + param0 + ')');
         }
     }
 
@@ -1177,7 +1177,7 @@ public final class Bounce extends GameClient {
           field_G = null;
           int var1_int = -98 / ((-25 - param0) / 60);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "Bounce.SA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "Bounce.SA(" + param0 + ')');
         }
     }
 
@@ -1204,9 +1204,9 @@ public final class Bounce extends GameClient {
               hg.a(hg.a(nl.field_a, IntrusiveNode.field_e, 130, AppletShell.field_k), -114, 20.0f);
               return;
             }
-            if (null != pk.field_D && (!pk.field_D.c(67) ||
-              !pk.field_D.a((byte) -43))) {
-              hg.a(hg.a(ke.field_n, pk.field_D, param1 ^ 3260, vk.field_e), -120, 30.0f);
+            if (null != MidiPcmStream.field_D && (!MidiPcmStream.field_D.c(67) ||
+              !MidiPcmStream.field_D.a((byte) -43))) {
+              hg.a(hg.a(ke.field_n, MidiPcmStream.field_D, param1 ^ 3260, vk.field_e), -120, 30.0f);
               return;
             }
             if (ca.field_e != null && (!ca.field_e.c(param1 - 3027) ||
@@ -1263,15 +1263,15 @@ public final class Bounce extends GameClient {
             vc.e((byte) -44);
             return;
           }
-          if (pk.field_D != null) {
-            if (!ld.field_l.a((byte) -122, cf.field_d, pk.field_D, AccountCreationResultPanel.field_mb, 176400)) {
+          if (MidiPcmStream.field_D != null) {
+            if (!ld.field_l.a((byte) -122, cf.field_d, MidiPcmStream.field_D, AccountCreationResultPanel.field_mb, 176400)) {
               return;
             }
-            if (!ld.field_l.a((byte) -124, cf.field_d, pk.field_D, wj.field_c, 176400)) {
+            if (!ld.field_l.a((byte) -124, cf.field_d, MidiPcmStream.field_D, wj.field_c, 176400)) {
               return;
             }
             ld.field_l.e(param1 ^ 3118);
-            pk.field_D = null;
+            MidiPcmStream.field_D = null;
             cf.field_d = null;
             vc.e((byte) -44);
             return;
@@ -1311,7 +1311,7 @@ public final class Bounce extends GameClient {
             if (param1 != 3134) {
               this.field_E = true;
             }
-            ka.field_o = new mj();
+            MusicPatchPcmStream.field_o = new mj();
             var3_ref2 = jl.field_d;
             synchronized (var3_ref2) {
               ld.field_l.g(jd.field_a / 2, 100);
@@ -1398,7 +1398,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var3_ref3), "Bounce.PA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var3_ref3), "Bounce.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1407,12 +1407,12 @@ public final class Bounce extends GameClient {
         AudioOutput.configureAudio(22050, true, 10);
         f.field_a = AudioOutput.createOutput(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
         jl.field_d = AudioOutput.createOutput(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 1, 22050);
-        nj.field_l = new rb();
+        nj.field_l = new PcmStreamMixer();
         f.field_a.setRootStream(nj.field_l);
         bk.field_c = 1;
         ca.field_a = new int[1];
         eh.field_b = null;
-        ld.field_l = new pk();
+        ld.field_l = new MidiPcmStream();
         if (param0 != -6) {
           return;
         }
@@ -1423,7 +1423,7 @@ public final class Bounce extends GameClient {
           eg.field_n = 0;
           this.a(true, false, 22422, false, false);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "Bounce.EA(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "Bounce.EA(" + param0 + ')');
         }
     }
 
@@ -1448,7 +1448,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "Bounce.NA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var3), "Bounce.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1566,7 +1566,7 @@ public final class Bounce extends GameClient {
                 continue;
               }
             } else {
-              if (ka.field_o == null) {
+              if (MusicPatchPcmStream.field_o == null) {
                 break scanLoop1;
               }
               he.field_n[0].field_n = 3;
@@ -1575,8 +1575,8 @@ public final class Bounce extends GameClient {
             he.field_n[2].field_n = 3;
             break;
           }
-          if (null != ka.field_o &&
-            ka.field_o.field_d) {
+          if (null != MusicPatchPcmStream.field_o &&
+            MusicPatchPcmStream.field_o.field_d) {
             vk.field_b = 3;
           }
           regionExit2: {
@@ -1709,23 +1709,23 @@ public final class Bounce extends GameClient {
                   }
                   u.field_g = false;
                 }
-                if (null != ka.field_o) {
-                  ka.field_o.field_b = true;
+                if (null != MusicPatchPcmStream.field_o) {
+                  MusicPatchPcmStream.field_o.field_b = true;
                   if (var9 != 0) {
-                    ka.field_o = new mj();
+                    MusicPatchPcmStream.field_o = new mj();
                   }
                 } else {
-                  ka.field_o = new mj();
+                  MusicPatchPcmStream.field_o = new mj();
                 }
                 if (vk.field_b == 1) {
                   if (kb.field_a <= 0) {
-                    ka.field_o.field_n = 11;
-                    ka.field_o.field_e = true;
+                    MusicPatchPcmStream.field_o.field_n = 11;
+                    MusicPatchPcmStream.field_o.field_e = true;
                     if (var9 != 0) {
-                      ka.field_o.field_l = true;
+                      MusicPatchPcmStream.field_o.field_l = true;
                     }
                   } else {
-                    ka.field_o.field_l = true;
+                    MusicPatchPcmStream.field_o.field_l = true;
                   }
                 }
                 if (rd.field_a) {
@@ -1767,9 +1767,9 @@ public final class Bounce extends GameClient {
           }
           boolean decompiledFrameRemainder1 = true;
           if ((u.field_g) &&
-            (decompiledFrameRemainder1 = (null != ka.field_o)) &&
+            (decompiledFrameRemainder1 = (null != MusicPatchPcmStream.field_o)) &&
             (decompiledFrameRemainder1 = (rj.field_j == -1))) {
-            ka.field_o.a(23417);
+            MusicPatchPcmStream.field_o.a(23417);
             decompiledFrameRemainder1 = (var9 != 0);
           }
           if (decompiledFrameRemainder1) {
@@ -1781,9 +1781,9 @@ public final class Bounce extends GameClient {
             if (bk.field_c == 2) {
             }
             na.d();
-            if (null != ka.field_o &&
+            if (null != MusicPatchPcmStream.field_o &&
               rj.field_j == -1) {
-              ka.field_o.a(23417);
+              MusicPatchPcmStream.field_o.a(23417);
             }
           }
           if (vk.field_b == 1 ||
@@ -1910,7 +1910,7 @@ public final class Bounce extends GameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "Bounce.U(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2_ref), "Bounce.U(" + param0 + ')');
         }
     }
 

@@ -63,7 +63,7 @@ final class ob extends ql {
         var3 = HostileSpawn.field_I ? 1 : 0;
         var4 = mm.field_m[0].field_j;
         if (0 == this.field_D.field_a) {
-          if (kh.field_Q[5]) {
+          if (VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_D.field_a = 2;
           } else {
             if (ih.a(var4, (byte) -97, this.field_l) < 2) {
@@ -78,7 +78,7 @@ final class ob extends ql {
           this.field_H.field_a = 2;
         }
         if (~this.field_H.field_a == param0 &&
-          kh.field_Q[5]) {
+          VolumeRampingMidiPcmStream.field_Q[5]) {
           this.field_H.field_a = 1;
         }
         if (this.field_q.field_a == 0 &&
@@ -97,8 +97,8 @@ final class ob extends ql {
           2 > ih.a(var4, (byte) -125, this.field_u)) {
           this.field_t.field_a = 1;
           this.field_p.field_a = 1;
-          if (!kh.field_Q[5] &&
-            !kh.field_Q[7]) {
+          if (!VolumeRampingMidiPcmStream.field_Q[5] &&
+            !VolumeRampingMidiPcmStream.field_Q[7]) {
             this.field_t.field_a = 2;
           } else {
             this.field_p.field_a = 2;
@@ -193,7 +193,7 @@ final class ob extends ql {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class ob extends ql {
         this.field_i.field_l = 24 * (this.field_G.field_e + 2);
         this.field_y = new v(qa.field_a, 0, (this.field_h.field_g + 2) * 24);
         this.field_y.field_l = 48 + 24 * this.field_h.field_e;
-        if (kh.field_Q[5]) {
+        if (VolumeRampingMidiPcmStream.field_Q[5]) {
           this.field_D.field_a = 2;
           this.field_H.field_a = 2;
         }
@@ -270,7 +270,7 @@ final class ob extends ql {
           break;
         }
         this.field_d = new v(e.field_k, 0, 0);
-        kd.a(param0, param0 ^ 1);
+        CrossfadingMidiPcmStream.a(param0, param0 ^ 1);
         nh.field_E.a((byte) 46, this.field_o);
         return;
     }

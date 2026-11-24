@@ -19,7 +19,7 @@ final class ff {
     final static void b(int param0) {
         cf.field_p = null;
         ka.field_f = null;
-        qe.field_z = null;
+        CrossfadingMidiPcmStream.field_z = null;
         vb.field_a = null;
         if (param0 >= 21) {
           qk.field_M = (byte[][]) null;

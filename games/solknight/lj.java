@@ -37,7 +37,7 @@ final class lj extends WidgetContainer implements ka {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class lj extends WidgetContainer implements ka {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class lj extends WidgetContainer implements ka {
           super.a(param0, param1, param2, param3 ^ param3);
           this.field_J.a(this.field_I, param2 + this.field_m + 14, this.field_j + param0 + 10, -28 + this.field_t, this.field_x, 16777215, -1, 0, 0, this.field_J.field_F);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class lj extends WidgetContainer implements ka {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1163,7 +1163,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("playfreeversion", 4);
                 if (null != var2) {
-                  mf.field_l = Archive.a(true, var2);
+                  MidiPcmStream.field_l = Archive.a(true, var2);
                 }
                 var2 = vd.a("reloadgame", 4);
                 if (var2 != null) {
@@ -1199,7 +1199,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("goback", 4);
                 if (null != var2) {
-                  mf.field_F = Archive.a(true, var2);
+                  MidiPcmStream.field_F = Archive.a(true, var2);
                 }
                 var2 = vd.a("otheroptions", 4);
                 if (var2 != null) {
@@ -1253,7 +1253,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("invalidpass", 4);
                 if (null != var2) {
-                  se.field_x = Archive.a(true, var2);
+                  CrossfadingMidiPcmStream.field_x = Archive.a(true, var2);
                 }
                 var2 = vd.a("retry", 4);
                 if (var2 != null) {
@@ -1513,7 +1513,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_welcome", 4);
                 if (var2 != null) {
-                  se.field_z = Archive.a(true, var2);
+                  CrossfadingMidiPcmStream.field_z = Archive.a(true, var2);
                 }
                 var2 = vd.a("create_u13_welcome", 4);
                 if (var2 != null) {
@@ -2156,7 +2156,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("ok", 4);
                 if (var2 != null) {
-                  mf.field_x = Archive.a(true, var2);
+                  MidiPcmStream.field_x = Archive.a(true, var2);
                 }
                 var2 = vd.a("on", 4);
                 if (null != var2) {
@@ -2446,7 +2446,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("hs_score", 4);
                 if (var2 != null) {
-                  mf.field_K = Archive.a(true, var2);
+                  MidiPcmStream.field_K = Archive.a(true, var2);
                 }
                 var2 = vd.a("hs_end", 4);
                 if (null != var2) {
@@ -2958,7 +2958,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("createtouse", 4);
                 if (null != var2) {
-                  mf.field_n = Archive.a(true, var2);
+                  MidiPcmStream.field_n = Archive.a(true, var2);
                 }
                 var2 = vd.a("achievementsoffline", 4);
                 if (null != var2) {
@@ -3173,7 +3173,7 @@ final class lj extends WidgetContainer implements ka {
                   } else {
                     stackIn_2615_2 = "{...}";
                   }
-                  throw fc.a((Throwable) ((Object) stackIn_2614_0), ((StringBuilder) (Object) stackIn_2614_1).append(stackIn_2615_2).append(')').toString());
+                  throw fc.wrapClientException((Throwable) ((Object) stackIn_2614_0), ((StringBuilder) (Object) stackIn_2614_1).append(stackIn_2615_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2623_0 = (!GameApplet.field_l);
@@ -3214,7 +3214,7 @@ final class lj extends WidgetContainer implements ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "lj.K(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "lj.K(" + param0 + ')');
         }
     }
 
@@ -3225,7 +3225,7 @@ final class lj extends WidgetContainer implements ka {
             field_G = -117L;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "lj.E(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.E(" + param0 + ')');
         }
     }
 
@@ -3263,7 +3263,7 @@ final class lj extends WidgetContainer implements ka {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -3313,7 +3313,7 @@ final class lj extends WidgetContainer implements ka {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -3340,7 +3340,7 @@ final class lj extends WidgetContainer implements ka {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3374,7 +3374,7 @@ final class lj extends WidgetContainer implements ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + param1 + ')');
         }
     }
 

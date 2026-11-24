@@ -12,7 +12,7 @@ final class HazmatAnimation extends EventAnimation {
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 > 0) {
           if (25 == this.field_l) {
-            jja.a(256, -1, 26);
+            MusicPatchPcmStream.a(256, -1, 26);
             var2_ref_uea = new uea(this.screen, this.field_x.field_t, this.field_x.field_r, 16777215);
             ((TileEffect) ((Object) var2_ref_uea)).a(0);
             return false;

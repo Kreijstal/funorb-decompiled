@@ -1284,7 +1284,7 @@ final class mh {
                     m.field_y[var13]) {
                     pe.field_J.e(var3, var4);
                   } else {
-                    kk.field_o.e(var3, var4);
+                    VolumeScaledPcmStream.field_o.e(var3, var4);
                   }
                 }
               }
@@ -1364,9 +1364,9 @@ final class mh {
             if (wp.field_w <= 0 &&
               m.field_y[var7]) {
               pe.field_J.d(256, 30 + var14);
-              kk.field_o.d(256, 30 + var14);
+              VolumeScaledPcmStream.field_o.d(256, 30 + var14);
             } else {
-              kk.field_o.d(256, 30 + var14);
+              VolumeScaledPcmStream.field_o.d(256, 30 + var14);
             }
           }
         } else {
@@ -1374,10 +1374,10 @@ final class mh {
             m.field_y[var7]) {
             pe.field_J.d(256, 30 + var14);
             if (var19 != 0) {
-              kk.field_o.d(256, 30 + var14);
+              VolumeScaledPcmStream.field_o.d(256, 30 + var14);
             }
           } else {
-            kk.field_o.d(256, 30 + var14);
+            VolumeScaledPcmStream.field_o.d(256, 30 + var14);
           }
         }
         var14 = var14 + (i.field_N.field_x + 46);

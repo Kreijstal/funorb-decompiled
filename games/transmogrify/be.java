@@ -357,10 +357,10 @@ final class be extends ih {
           if (!wi.field_e.a((byte) 112, "commonui")) {
             return 60;
           }
-          if (!nd.field_n.a((byte) -118)) {
+          if (!DelayedPcmStream.field_n.a((byte) -118)) {
             return 70;
           }
-          if (!nd.field_n.c(param0 ^ 32088)) {
+          if (!DelayedPcmStream.field_n.c(param0 ^ 32088)) {
             return 80;
           }
         } else {
@@ -387,10 +387,10 @@ final class be extends ih {
           if (!wi.field_e.a((byte) -42, "commonui")) {
             return 80;
           }
-          if (!nd.field_n.a((byte) -118)) {
+          if (!DelayedPcmStream.field_n.a((byte) -118)) {
             return 82;
           }
-          if (!nd.field_n.c(param0 ^ 32088)) {
+          if (!DelayedPcmStream.field_n.c(param0 ^ 32088)) {
             return 86;
           }
         }
@@ -454,7 +454,7 @@ final class be extends ih {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -702,7 +702,7 @@ final class be extends ih {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

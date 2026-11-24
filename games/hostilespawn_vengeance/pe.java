@@ -82,16 +82,16 @@ final class pe extends wb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static fa[] p(int param0) {
         if (param0 == 274) {
-          return new fa[]{ub.field_b, wh.field_c, w.field_S};
+          return new fa[]{ub.field_b, wh.field_c, MidiPcmStream.field_S};
         }
         pe.b(true);
-        return new fa[]{ub.field_b, wh.field_c, w.field_S};
+        return new fa[]{ub.field_b, wh.field_c, MidiPcmStream.field_S};
     }
 
     final static void a(byte param0, int param1) {
@@ -123,7 +123,7 @@ final class pe extends wb {
           this.field_ib.field_E = true;
           this.a(51448, this.field_ib);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

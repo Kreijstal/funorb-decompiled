@@ -320,7 +320,7 @@ final class ei extends IntrusiveNode {
                         if (3 == ha.field_t &&
                           param9.field_i == 8 &&
                           0 == bm.field_c) {
-                          kd.a(0, 1);
+                          CrossfadingMidiPcmStream.a(0, 1);
                         }
                         if (param9.field_i == 23) {
                           AccountServiceResult.a(16, param9);
@@ -865,7 +865,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_487_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_474_0), ((StringBuilder) (Object) stackIn_486_1).append(stackIn_487_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_474_0), ((StringBuilder) (Object) stackIn_486_1).append(stackIn_487_2).append(')').toString());
         }
     }
 
@@ -918,7 +918,7 @@ final class ei extends IntrusiveNode {
           si.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, -(stackIn_5_5 * 5) + 250);
           var1 = -72 + mm.field_m[0].field_j.field_e * 24 - uj.field_p.field_e;
           var2 = -48 + 24 * mm.field_m[0].field_j.field_g - uj.field_p.field_g;
-          if (dl.field_n != null) {
+          if (MusicPatchPcmStream.field_n != null) {
             var3 = 0;
             var4 = 1;
             if (bm.field_c == 0) {
@@ -943,19 +943,19 @@ final class ei extends IntrusiveNode {
               }
             }
             if (var4 != 0) {
-              vj.field_e[0].a(true, 128, 192, var1 + dl.field_n.field_z / 2, dl.field_n.field_z / 2 + var2);
+              vj.field_e[0].a(true, 128, 192, var1 + MusicPatchPcmStream.field_n.field_z / 2, MusicPatchPcmStream.field_n.field_z / 2 + var2);
               if (var3 == 0) {
                 if (jf.field_d >= 40) {
-                  dl.field_n.c(-((50 - jf.field_d) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, -jf.field_d + dl.field_n.field_u + 50, 50 + dl.field_n.field_r - jf.field_d, -(25 * jf.field_d) + 1250);
+                  MusicPatchPcmStream.field_n.c(-((50 - jf.field_d) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, -jf.field_d + MusicPatchPcmStream.field_n.field_u + 50, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, -(25 * jf.field_d) + 1250);
                 } else {
-                  dl.field_n.a(var1 - (-jf.field_d + 50) / 2, var2 - (50 - jf.field_d) / 2, 50 + (dl.field_n.field_u - jf.field_d), 50 + (dl.field_n.field_r - jf.field_d));
-                  si.a(-((-jf.field_d + 50) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, dl.field_n.field_u + 50 - jf.field_d, 50 + dl.field_n.field_r - jf.field_d, 0, (10200 - 255 * jf.field_d) / 40);
+                  MusicPatchPcmStream.field_n.a(var1 - (-jf.field_d + 50) / 2, var2 - (50 - jf.field_d) / 2, 50 + (MusicPatchPcmStream.field_n.field_u - jf.field_d), 50 + (MusicPatchPcmStream.field_n.field_r - jf.field_d));
+                  si.a(-((-jf.field_d + 50) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, MusicPatchPcmStream.field_n.field_u + 50 - jf.field_d, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, 0, (10200 - 255 * jf.field_d) / 40);
                 }
               } else {
                 if (jf.field_d < 40) {
-                  dl.field_n.b(var1 + dl.field_n.field_z / 2, var2 + dl.field_n.field_z / 2, 0, jf.field_d + 78 << 5);
+                  MusicPatchPcmStream.field_n.b(var1 + MusicPatchPcmStream.field_n.field_z / 2, var2 + MusicPatchPcmStream.field_n.field_z / 2, 0, jf.field_d + 78 << 5);
                 } else {
-                  dl.field_n.c((50 - jf.field_d) / 4 + var1, var2 + (-jf.field_d + 50) / 4, -((-jf.field_d + 50) / 2) + dl.field_n.field_u, dl.field_n.field_r - (50 - jf.field_d) / 2, -(25 * jf.field_d) + 1250);
+                  MusicPatchPcmStream.field_n.c((50 - jf.field_d) / 4 + var1, var2 + (-jf.field_d + 50) / 4, -((-jf.field_d + 50) / 2) + MusicPatchPcmStream.field_n.field_u, MusicPatchPcmStream.field_n.field_r - (50 - jf.field_d) / 2, -(25 * jf.field_d) + 1250);
                 }
               }
             }
@@ -1061,7 +1061,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -1124,7 +1124,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1134,7 +1134,7 @@ final class ei extends IntrusiveNode {
           this.field_j = param0;
           this.field_s = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ei.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ei.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

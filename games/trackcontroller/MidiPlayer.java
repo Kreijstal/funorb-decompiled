@@ -29,7 +29,7 @@ final class MidiPlayer extends PcmStream {
     private int[] field_U;
     static int[] field_s;
     private long field_C;
-    private ol field_G;
+    private MusicPatchPcmStream field_G;
     private int field_p;
     private long field_H;
     private boolean field_z;
@@ -77,7 +77,7 @@ final class MidiPlayer extends PcmStream {
         }
     }
 
-    private final void e(int param0) {
+    private final void advanceMidiEvents(int param0) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         int var2;
@@ -95,7 +95,7 @@ final class MidiPlayer extends PcmStream {
         if (this.field_o != null &&
           var3 == this.field_u) {
           this.a(this.field_o, param0 + 17313, this.field_B, this.field_z);
-          this.e(-17313);
+          this.advanceMidiEvents(-17313);
           return;
         }
         while (true) {
@@ -130,7 +130,7 @@ final class MidiPlayer extends PcmStream {
             if (this.field_P.e()) {
               if (this.field_o != null) {
                 this.a(this.field_o, 14526, this.field_z);
-                this.e(-17313);
+                this.advanceMidiEvents(-17313);
                 return;
               }
               if (this.field_z &&
@@ -150,11 +150,11 @@ final class MidiPlayer extends PcmStream {
         }
     }
 
-    final synchronized boolean c(byte param0) {
+    final synchronized boolean isMidiReady(byte param0) {
         if (param0 >= -57) {
           this.nextChildStream();
         }
-        return this.field_P.a();
+        return this.field_P.hasMidiData();
     }
 
     final synchronized void a(int param0, int param1) {
@@ -169,7 +169,7 @@ final class MidiPlayer extends PcmStream {
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
         try {
-          this.a(param2, (byte) -110);
+          this.clearMidiPlayback(param2, (byte) -110);
           this.field_P.a(param0.field_j);
           this.field_C = 0L;
           this.field_z = param3 ? true : false;
@@ -187,7 +187,7 @@ final class MidiPlayer extends PcmStream {
         }
     }
 
-    final boolean a(int param0, ha param1) {
+    final boolean isVoiceInactive(int param0, ha param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -334,19 +334,19 @@ final class MidiPlayer extends PcmStream {
         this.field_w = param1;
     }
 
-    private final synchronized void a(boolean param0, byte param1) {
+    private final synchronized void clearMidiPlayback(boolean param0, byte param1) {
         if (param1 != -110) {
-          this.c((byte) -25);
+          this.isMidiReady((byte) -25);
         }
         this.field_P.b();
         this.field_o = null;
         this.a((byte) 70, param0);
     }
 
-    final synchronized void f(int param0) {
-        this.a(true, (byte) -110);
+    final synchronized void stopPlayback(int param0) {
+        this.clearMidiPlayback(true, (byte) -110);
         if (param0 != 11795) {
-          this.d(-63, -101, -103);
+          this.setChannelProgram(-63, -101, -103);
         }
     }
 
@@ -359,7 +359,7 @@ final class MidiPlayer extends PcmStream {
         }
         this.field_L[param3][param0] = null;
         if (param1 != -27205) {
-          this.e(79);
+          this.advanceMidiEvents(79);
         }
         if ((this.field_I[param3] & 2) == 0) {
           var8.field_v = 0;
@@ -389,7 +389,7 @@ final class MidiPlayer extends PcmStream {
         int var7 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          if (this.field_P.a()) {
+          if (this.field_P.hasMidiData()) {
             var4_int = this.field_m * this.field_P.field_e / AudioOutput.field_h;
             while (true) {
               var5 = this.field_C + (long)param2 * (long)var4_int;
@@ -400,10 +400,10 @@ final class MidiPlayer extends PcmStream {
               var7 = (int)((-1L + ((long)var4_int + (-this.field_C + this.field_H))) / (long)var4_int);
               this.field_C = this.field_C + (long)var4_int * (long)var7;
               this.field_G.mix(param0, param1, var7);
-              this.e(-17313);
+              this.advanceMidiEvents(-17313);
               param2 = param2 - var7;
               param1 = param1 + var7;
-              if (this.field_P.a()) {
+              if (this.field_P.hasMidiData()) {
                 continue;
               }
               this.field_G.mix(param0, param1, param2);
@@ -432,7 +432,7 @@ final class MidiPlayer extends PcmStream {
         int var5;
         int var6;
         var6 = TrackController.field_F ? 1 : 0;
-        if (this.field_P.a()) {
+        if (this.field_P.hasMidiData()) {
           var2 = this.field_m * this.field_P.field_e / AudioOutput.field_h;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_C;
@@ -444,8 +444,8 @@ final class MidiPlayer extends PcmStream {
             this.field_C = this.field_C + (long)var5 * (long)var2;
             param0 = param0 - var5;
             this.field_G.skip(var5);
-            this.e(-17313);
-            if (!this.field_P.a()) {
+            this.advanceMidiEvents(-17313);
+            if (!this.field_P.hasMidiData()) {
               break;
             }
           }
@@ -731,7 +731,7 @@ final class MidiPlayer extends PcmStream {
         return;
     }
 
-    final boolean a(int param0, int[] param1, int param2, int param3, ha param4) {
+    final boolean updateVoice(int param0, int[] param1, int param2, int param3, ha param4) {
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
@@ -870,7 +870,7 @@ final class MidiPlayer extends PcmStream {
         if (param0) {
           this.d(22, 10);
         }
-        this.d(param1, -3, param2);
+        this.setChannelProgram(param1, -3, param2);
     }
 
     private final void a(int param0, boolean param1) {
@@ -990,9 +990,9 @@ final class MidiPlayer extends PcmStream {
           var4 = qk.field_M[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = qe.field_z[RandomAccessCacheFile.a((int) var4[var6], 255)];
+            var5[var6] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var5);
+          var1[var2] = new Sprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var5);
         }
         ff.b(119);
         return var1;
@@ -1140,7 +1140,7 @@ final class MidiPlayer extends PcmStream {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void setChannelProgram(int param0, int param1, int param2) {
         this.field_y[param2] = param0;
         this.field_O[param2] = RandomAccessCacheFile.a(param0, -128);
         this.a((byte) 83, param2, param0);
@@ -1306,7 +1306,7 @@ final class MidiPlayer extends PcmStream {
         this.field_x = new int[16];
         this.field_O = new int[16];
         this.field_P = new fa();
-        this.field_G = new ol(this);
+        this.field_G = new MusicPatchPcmStream(this);
         this.field_r = new NodeHashTable(128);
         this.a(256, (byte) -119, -1);
         this.a((byte) 70, true);

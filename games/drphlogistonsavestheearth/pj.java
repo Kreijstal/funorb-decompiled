@@ -311,19 +311,19 @@ class pj extends vg implements ba {
             nj.field_p.position = 0;
             if (param0 != null) {
               var9 = 0;
-              am.field_n.position = 0;
+              MusicPatchPcmStream.field_n.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              am.field_n.writeInt(cm.field_M.nextInt(), (byte) -30);
-              am.field_n.writeInt(cm.field_M.nextInt(), (byte) 119);
-              am.field_n.writePrefixedString(-23805, var14);
-              am.field_n.writePrefixedString(param4 ^ -23805, var8);
+              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) -30);
+              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) 119);
+              MusicPatchPcmStream.field_n.writePrefixedString(-23805, var14);
+              MusicPatchPcmStream.field_n.writePrefixedString(param4 ^ -23805, var8);
               var15 = (CharSequence) ((Object) param0);
-              am.field_n.writePrefixedString(param4 ^ -23805, fg.a(var15, 90));
-              am.field_n.writeShort(param5, param4 - 17402);
-              am.field_n.writeByte(param1, (byte) -88);
-              am.field_n.writeByte(var9, (byte) -98);
+              MusicPatchPcmStream.field_n.writePrefixedString(param4 ^ -23805, fg.a(var15, 90));
+              MusicPatchPcmStream.field_n.writeShort(param5, param4 - 17402);
+              MusicPatchPcmStream.field_n.writeByte(param1, (byte) -88);
+              MusicPatchPcmStream.field_n.writeByte(var9, (byte) -98);
               nj.field_p.writeByte(18, (byte) -101);
               nj.field_p.position = nj.field_p.position + 2;
               var10 = nj.field_p.position;
@@ -332,13 +332,13 @@ class pj extends vg implements ba {
                 var11_ref_StringLifetime1 = "";
               }
               nj.field_p.writeString(var11_ref_StringLifetime1, -1);
-              i.a(nj.field_p, am.field_n, a.field_b, d.field_a, 0);
+              i.a(nj.field_p, MusicPatchPcmStream.field_n, a.field_b, d.field_a, 0);
               nj.field_p.backpatchShortLength(-2, -var10 + nj.field_p.position);
             } else {
-              am.field_n.position = 0;
-              am.field_n.writeInt(cm.field_M.nextInt(), (byte) -77);
-              am.field_n.writeInt(cm.field_M.nextInt(), (byte) 126);
-              stackIn_12_0 = am.field_n;
+              MusicPatchPcmStream.field_n.position = 0;
+              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) -77);
+              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) 126);
+              stackIn_12_0 = MusicPatchPcmStream.field_n;
               stackIn_12_1 = -23805;
               if (!param3.a((byte) -128)) {
                 stackIn_13_2 = "";
@@ -346,7 +346,7 @@ class pj extends vg implements ba {
                 stackIn_13_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_12_0).writePrefixedString(stackIn_12_1, stackIn_13_2);
-              stackIn_15_0 = am.field_n;
+              stackIn_15_0 = MusicPatchPcmStream.field_n;
               stackIn_15_1 = param4 - 23805;
               if (!param2.a((byte) -108)) {
                 stackIn_16_2 = "";
@@ -357,7 +357,7 @@ class pj extends vg implements ba {
               nj.field_p.writeByte(16, (byte) -102);
               nj.field_p.position = nj.field_p.position + 1;
               var9 = nj.field_p.position;
-              i.a(nj.field_p, am.field_n, a.field_b, d.field_a, 0);
+              i.a(nj.field_p, MusicPatchPcmStream.field_n, a.field_b, d.field_a, 0);
               nj.field_p.backpatchByteLength(nj.field_p.position - var9, (byte) 87);
             }
             qj.a(-1, param4 + 14656);

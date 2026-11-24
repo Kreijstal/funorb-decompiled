@@ -60,7 +60,7 @@ final class cl extends bc {
             }
           }
           if (SectorCacheStore.field_a != null) {
-            stackIn_17_0 = SectorCacheStore.field_a.d(0);
+            stackIn_17_0 = SectorCacheStore.field_a.isMidiReady(0);
             if (!stackIn_17_0) {
               SpriteState.field_t = null;
               return;

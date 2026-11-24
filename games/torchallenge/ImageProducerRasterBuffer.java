@@ -291,7 +291,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             if (wi.field_a == null) {
               lb.d((byte) -77);
             }
-            if (null == fj.field_m) {
+            if (null == CrossfadingMidiPcmStream.field_m) {
               PacketBuffer.c(-7668);
             }
             if (null == pa.field_z) {
@@ -341,7 +341,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               if (null == wi.field_a) {
                 lb.d((byte) -112);
               }
-              if (null == fj.field_m) {
+              if (null == CrossfadingMidiPcmStream.field_m) {
                 PacketBuffer.c(-7668);
               }
               if (pa.field_z == null) {

@@ -12,7 +12,7 @@ final class qd {
     private int[] field_g;
     private int[] field_a;
 
-    final boolean f() {
+    final boolean hasMidiData() {
         return this.field_f.payload != null;
     }
 

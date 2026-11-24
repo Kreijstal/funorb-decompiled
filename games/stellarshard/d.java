@@ -154,7 +154,7 @@ final class d extends p {
         }
     }
 
-    final int a(hl param0) {
+    final int onScheduledEvent(PcmStreamMixer param0) {
         if (this.d() &&
           !this.field_ab) {
           return -1;

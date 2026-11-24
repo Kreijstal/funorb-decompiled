@@ -33,7 +33,7 @@ final class AccountServiceResult {
             AccountServiceResult.a((ke) null, (byte) -110);
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "ch.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ch.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

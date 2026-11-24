@@ -80,21 +80,21 @@ final class nc {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         int var2 = 0;
         int var1 = -126 / ((-26 - param0) / 54);
-        if (th.field_D <= 32) {
+        if (CrossfadingMidiPcmStream.field_D <= 32) {
           lg.a(-103, 0);
         } else {
-          var2 = th.field_D % 32;
+          var2 = CrossfadingMidiPcmStream.field_D % 32;
           if (0 == var2) {
             var2 = 32;
           }
-          lg.a(-116, th.field_D - var2);
+          lg.a(-116, CrossfadingMidiPcmStream.field_D - var2);
         }
     }
 

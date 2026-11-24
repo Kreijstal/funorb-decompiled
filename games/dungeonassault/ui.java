@@ -78,10 +78,10 @@ final class ui {
           var2 = var27.readUnsignedByte(true);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(param0 - 30592);
-            var4_ref = (al) (hg.field_n.beginBackward(-24172));
+            var4_ref = (al) (MusicPatchPcmStream.field_n.beginBackward(-24172));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_k) {
-                var4_ref = (al) (hg.field_n.nextBackward(param0 ^ 30596));
+                var4_ref = (al) (MusicPatchPcmStream.field_n.nextBackward(param0 ^ 30596));
                 continue;
               }
               break;
@@ -98,7 +98,7 @@ final class ui {
             var6 = var4_ref.field_l;
             lg.field_x[0].field_d = null;
             lg.field_x[0].field_e = false;
-            lg.field_x[0].field_a = tc.field_u;
+            lg.field_x[0].field_a = CrossfadingMidiPcmStream.field_u;
             var7 = var4_ref.field_p;
             for (var8_int = 1; var5 > var8_int; var8_int++) {
               lg.field_x[var8_int].field_a = var27.readString(-122);
@@ -142,7 +142,7 @@ final class ui {
               }
               if (var21 != null &&
                 eh.a(true, var21)) {
-                var8[1][var13] = tc.field_u;
+                var8[1][var13] = CrossfadingMidiPcmStream.field_u;
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
                 var27.position = var24;
@@ -195,7 +195,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "ui.A(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "ui.A(" + param0 + ')');
         }
     }
 

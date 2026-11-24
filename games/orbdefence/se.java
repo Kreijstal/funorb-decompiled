@@ -74,7 +74,7 @@ final class se extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class se extends PacketBuffer {
           var3.writeByte(param0.field_m, -4);
           var3.writeByte(param0.field_n, -79);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "se.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "se.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class se extends PacketBuffer {
             }
             if (var3_int != 0) {
               if (IntrusiveNode.field_b) {
-                param0 = t.a(-415993727, new String[]{param0}, kg.field_g);
+                param0 = CrossfadingMidiPcmStream.a(-415993727, new String[]{param0}, kg.field_g);
               }
               if (jc.field_j) {
                 param0 = mh.field_f;
@@ -177,7 +177,7 @@ final class se extends PacketBuffer {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class se extends PacketBuffer {
             this.field_o = (re) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "se.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "se.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

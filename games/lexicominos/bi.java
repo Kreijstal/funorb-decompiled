@@ -45,7 +45,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "bi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           param1.addMouseMotionListener(hh.field_M);
           param1.addFocusListener(hh.field_M);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "bi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             vg.field_b = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "bi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

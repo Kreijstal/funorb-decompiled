@@ -186,7 +186,7 @@ final class BufferedSocket implements Runnable {
             var3 = (CharSequence) null;
             BufferedSocket.a((byte) -122, (CharSequence) null);
           }
-          var2 = new ck(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, qe.field_z, qk.field_M);
+          var2 = new ck(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, CrossfadingMidiPcmStream.field_z, qk.field_M);
           ff.b(26);
           stackIn_6_0 = var2;
           return stackIn_6_0;

@@ -58,7 +58,7 @@ final class ia extends IntrusiveNode {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw ch.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw ch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -80,7 +80,7 @@ final class ia extends IntrusiveNode {
           this.field_n = param0;
           this.field_h = param4;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,12 +165,12 @@ final class ia extends IntrusiveNode {
           nc.field_t = nc.field_t + jk.field_B;
           vh.field_n = vh.field_n + 1;
           hg.a(95);
-          if (oj.field_u.beginForward((byte) -95) != null) {
+          if (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95) != null) {
             fieldTemp$0 = da.field_C + 1;
             da.field_C = da.field_C + 1;
             if (fieldTemp$0 == 335) {
               da.field_C = 0;
-              oj.field_u.removeFirst(-94);
+              CrossfadingMidiPcmStream.field_u.removeFirst(-94);
             }
           }
           if (!mg.field_d) {
@@ -800,7 +800,7 @@ final class ia extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "ia.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "ia.C(" + param0 + ')');
         }
     }
 

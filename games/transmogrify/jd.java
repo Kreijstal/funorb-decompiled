@@ -82,7 +82,7 @@ final class jd extends IOException {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class jd extends IOException {
             field_a = -111;
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "jd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class jd extends IOException {
                 tb.a(ha.b(param2 ^ -66), true);
                 Transmogrify.field_B = nj.field_j;
                 pc.a(1);
-                ej.field_k = false;
+                MusicPatchPcmStream.field_k = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
@@ -247,7 +247,7 @@ final class jd extends IOException {
                   wh.field_F[var12] = WordLanguage.field_l.readPrefixedString(26);
                 }
                 pc.a(1);
-                ej.field_k = false;
+                MusicPatchPcmStream.field_k = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
@@ -264,25 +264,25 @@ final class jd extends IOException {
               Transmogrify.field_B = WordLanguage.field_l.readString(param2 + 12257);
             }
             pc.a(1);
-            ej.field_k = false;
+            MusicPatchPcmStream.field_k = false;
             stackIn_55_0 = ca.field_e;
             return stackIn_55_0;
           }
           if (null == nk.field_b) {
-            if (ej.field_k) {
+            if (MusicPatchPcmStream.field_k) {
               if (mc.b(true) <= 30000L) {
                 Transmogrify.field_B = bd.field_s;
               } else {
                 Transmogrify.field_B = ng.field_h;
               }
-              ej.field_k = false;
+              MusicPatchPcmStream.field_k = false;
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
             var9Lifetime3 = lf.field_c;
             lf.field_c = kf.field_p;
             kf.field_p = var9Lifetime3;
-            ej.field_k = true;
+            MusicPatchPcmStream.field_k = true;
           }
           stackIn_65_0 = -1;
           return stackIn_65_0;
@@ -308,7 +308,7 @@ final class jd extends IOException {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 

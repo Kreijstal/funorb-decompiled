@@ -94,7 +94,7 @@ final class ed {
             qj.field_H.a(db.a(jj.field_Y, new String[]{pi.field_e}, true), var6, 60, 16777215, -1);
             ql.field_k.a(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
             qj.field_H.a(db.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
-            ql.field_k.a(ei.field_N, var6, 180, 16777215, -1);
+            ql.field_k.a(MidiPcmStream.field_N, var6, 180, 16777215, -1);
             qj.field_H.a(pg.field_b, var6, 200, 16777215, -1);
             rg.a(0, var12, var12.field_w, var12.field_t, 1, -68, 3, 0);
             wh.field_b.f();
@@ -128,7 +128,7 @@ final class ed {
             var14 = db.a(hb.field_q, new String[]{ng.field_g[di.field_d]}, true);
             var5 = ql.field_k.c(var14, wa.field_m);
             var6Lifetime1 = ql.field_k.b(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
-            var7Lifetime1 = ei.field_V + (wa.field_m - var5) / 2;
+            var7Lifetime1 = MidiPcmStream.field_V + (wa.field_m - var5) / 2;
             var5 += 6;
             var8 = (-var6Lifetime1 + bh.field_l) / 2 + IterableNodeHashTable.field_i;
             var7Lifetime1 -= 3;
@@ -138,14 +138,14 @@ final class ed {
               pb.field_g.field_x = pb.field_g.field_x + var9_int * 2;
               pb.field_g.field_q = pb.field_g.field_q + var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
-              ei.field_V = ei.field_V + var9_int;
+              MidiPcmStream.field_V = MidiPcmStream.field_V + var9_int;
               var5 = var5 + var9_int * 2;
               aj.field_q = aj.field_q - var9_int;
             }
             var8 -= 3;
             if (pb.field_g.field_x < var5 + var7Lifetime1) {
               var9_intLifetime1 = -pb.field_g.field_x + var5 + var7Lifetime1;
-              ei.field_V = ei.field_V + var9_intLifetime1;
+              MidiPcmStream.field_V = MidiPcmStream.field_V + var9_intLifetime1;
               pb.field_g.field_x = pb.field_g.field_x + 2 * var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
@@ -173,7 +173,7 @@ final class ed {
             pb.field_g.a();
             var9 = new dd(pb.field_g.field_x, pb.field_g.field_r);
             var9.f();
-            ql.field_k.a(var14, ei.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
+            ql.field_k.a(var14, MidiPcmStream.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
             rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
             pb.field_g.f();
             var9.d(0, 0);
@@ -316,7 +316,7 @@ final class ed {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) runtimeException), "ed.E(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ed.E(" + param0 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class ed {
           ge.field_f.field_v = pl.field_e.field_t;
           ia.a(-100);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

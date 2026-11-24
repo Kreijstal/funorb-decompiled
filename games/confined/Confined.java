@@ -324,9 +324,9 @@ public final class Confined extends i {
           if (param0 != -3998) {
             field_F = -38;
           }
-          cb.field_a = new be();
+          cb.field_a = new PcmStreamMixer();
           ei.field_ob.setRootStream(cb.field_a);
-          he.field_d = new be();
+          he.field_d = new PcmStreamMixer();
           DirectByteStorage.field_h.setRootStream(he.field_d);
           ti.field_n = false;
           t.field_c = 10;
@@ -1224,13 +1224,13 @@ public final class Confined extends i {
           sa.a((byte) -35, 50);
           ti.a(0, 0, 640, 376);
           ti.b(ua.a(true));
-          ni.field_a = vc.b(rj.field_b, 100, 0);
+          ni.field_a = RawPcmStream.b(rj.field_b, 100, 0);
           ni.field_a.c(-1);
           cb.field_a.a(ni.field_a);
-          ae.field_f = vc.b(rj.field_b, 47, 0);
+          ae.field_f = RawPcmStream.b(rj.field_b, 47, 0);
           ae.field_f.c(-1);
           cb.field_a.a(ae.field_f);
-          da.field_j = vc.b(rj.field_b, 29, 0);
+          da.field_j = RawPcmStream.b(rj.field_b, 29, 0);
           da.field_j.c(-1);
           cb.field_a.a(da.field_j);
           qn.field_v = new hn();

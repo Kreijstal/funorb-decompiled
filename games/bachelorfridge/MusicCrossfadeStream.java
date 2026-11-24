@@ -44,7 +44,7 @@ final class MusicCrossfadeStream extends PcmStream {
             param1) {
             if (0 >= this.field_w) {
               if (null != this.field_m) {
-                this.field_o.b(true);
+                this.field_o.stopPlayback(true);
               }
               this.field_m = param0;
               if (param0 != null) {
@@ -53,7 +53,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
             } else {
               if (null != this.field_u) {
-                this.field_s.b(true);
+                this.field_s.stopPlayback(true);
               }
               this.field_u = param0;
               if (param0 != null) {
@@ -87,7 +87,7 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (var7_int == 0) {
             if (null != this.field_m) {
-              this.field_o.b(true);
+              this.field_o.stopPlayback(true);
             }
             this.field_m = param0;
             if (param0 != null) {
@@ -101,7 +101,7 @@ final class MusicCrossfadeStream extends PcmStream {
             this.field_w = -param4;
           } else {
             if (null != this.field_u) {
-              this.field_s.b(true);
+              this.field_s.stopPlayback(true);
             }
             this.field_u = param0;
             if (param0 != null) {
@@ -203,13 +203,13 @@ final class MusicCrossfadeStream extends PcmStream {
         }
         if (this.field_p) {
           if (this.field_w > 0 &&
-            !this.field_s.c(28607)) {
+            !this.field_s.isMidiReady(28607)) {
             this.field_u = null;
             this.field_p = false;
             this.field_w = -this.field_w;
           } else {
             if (0 > this.field_w &&
-              !this.field_o.c(28607)) {
+              !this.field_o.isMidiReady(28607)) {
               this.field_m = null;
               this.field_w = -this.field_w;
               this.field_p = false;
@@ -224,7 +224,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_w = 0;
               if (!this.field_n) {
                 if (this.field_m != null) {
-                  this.field_o.b(true);
+                  this.field_o.stopPlayback(true);
                 }
                 this.field_m = null;
               }
@@ -236,7 +236,7 @@ final class MusicCrossfadeStream extends PcmStream {
                 this.field_w = 0;
                 if (!this.field_n) {
                   if (null != this.field_u) {
-                    this.field_s.b(true);
+                    this.field_s.stopPlayback(true);
                   }
                   this.field_u = null;
                 }
@@ -279,13 +279,13 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (this.field_p) {
             if (this.field_w > 0 &&
-              !this.field_s.c(28607)) {
+              !this.field_s.isMidiReady(28607)) {
               this.field_u = null;
               this.field_w = -this.field_w;
               this.field_p = false;
             } else {
               if (this.field_w < 0 &&
-                !this.field_o.c(28607)) {
+                !this.field_o.isMidiReady(28607)) {
                 this.field_w = -this.field_w;
                 this.field_m = null;
                 this.field_p = false;
@@ -302,7 +302,7 @@ final class MusicCrossfadeStream extends PcmStream {
                 this.field_w = 0;
                 if (!this.field_n) {
                   if (this.field_m != null) {
-                    this.field_o.b(true);
+                    this.field_o.stopPlayback(true);
                   }
                   this.field_m = null;
                 }
@@ -314,7 +314,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_w = 0;
                   if (!this.field_n) {
                     if (this.field_u != null) {
-                      this.field_s.b(true);
+                      this.field_s.stopPlayback(true);
                     }
                     this.field_u = null;
                   }

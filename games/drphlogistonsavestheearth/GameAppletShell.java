@@ -186,7 +186,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (stackIn_79_0 < stackIn_79_1) {
                     break;
                   }
-                  ug.field_x = true;
+                  MidiPcmStream.field_x = true;
                   break;
                 }
               }
@@ -383,7 +383,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (hh.field_e == this &&
             !ai.field_B) {
             eh.field_a = true;
-            if (ug.field_x &&
+            if (MidiPcmStream.field_x &&
               -dc.field_c + la.correctedCurrentTimeMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {

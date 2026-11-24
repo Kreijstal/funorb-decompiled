@@ -25,7 +25,7 @@ class PacketBuffer extends IntrusiveNode {
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
           var7 = 1024.0;
-          fj.field_m = new int[2048];
+          CrossfadingMidiPcmStream.field_m = new int[2048];
           if (param0 != -7668) {
             field_p = (String) null;
           }
@@ -37,7 +37,7 @@ class PacketBuffer extends IntrusiveNode {
               var5 = -var5;
             }
             var5 = 65536.0 * var5;
-            fj.field_m[var9] = (int)var5;
+            CrossfadingMidiPcmStream.field_m[var9] = (int)var5;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

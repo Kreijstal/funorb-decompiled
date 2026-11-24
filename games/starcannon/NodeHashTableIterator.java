@@ -110,7 +110,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_b = param0;
           this.reset(-17399);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

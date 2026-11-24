@@ -18,11 +18,11 @@ final class qb extends vg implements wj {
           }
           this.field_Y = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "qb.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "qb.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static ud a(boolean param0, qi param1) {
+    final static ud a(boolean param0, RawPcmStream param1) {
         ud var2 = null;
         RuntimeException var2_ref = null;
         ud stackIn_3_0 = null;
@@ -49,7 +49,7 @@ final class qb extends vg implements wj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class qb extends vg implements wj {
           super.a(param0, param1, param2, param3);
           this.field_Z = -this.field_m + PacketBuffer.field_j - param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "qb.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "qb.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class qb extends vg implements wj {
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param8).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param8).append(')').toString());
         }
     }
 

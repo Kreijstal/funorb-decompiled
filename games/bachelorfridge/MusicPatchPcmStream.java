@@ -1,0 +1,312 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MusicPatchPcmStream extends PcmStream {
+    IntrusiveDeque field_k;
+    private MidiPcmStream field_l;
+    PcmStreamMixer field_j;
+    static String field_m;
+
+    final void mixInto(int[] param0, int param1, int param2) {
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        MidiNote var6 = null;
+        int var7 = 0;
+        var7 = BachelorFridge.field_y;
+        try {
+          this.field_j.mixInto(param0, param1, param2);
+          var6 = (MidiNote) (this.field_k.beginForward((byte) 90));
+          scanLoop1: while (true) {
+            if (var6 == null) {
+              return;
+            }
+            if (this.field_l.isVoiceInactive(var6, (byte) 95)) {
+              var6 = (MidiNote) (this.field_k.nextForward(0));
+              continue;
+            }
+            var4_int = param1;
+            var5 = param2;
+            do {
+              if (var6.field_r >= var5) {
+                this.renderVoiceFrames(var5, param0, var4_int, var4_int + var5, var6, (byte) 12);
+                var6.field_r = var6.field_r - var5;
+                var6 = (MidiNote) (this.field_k.nextForward(0));
+                continue scanLoop1;
+              }
+              this.renderVoiceFrames(var6.field_r, param0, var4_int, var5 + var4_int, var6, (byte) 12);
+              var5 = var5 - var6.field_r;
+              var4_int = var4_int + var6.field_r;
+            } while (!this.field_l.updateVoice(var4_int, var6, param0, var5, false));
+            var6 = (MidiNote) (this.field_k.nextForward(0));
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_13_0 = var4;
+          stackIn_13_1 = new StringBuilder().append("jja.C(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    private final void renderVoiceFrames(int param0, int[] param1, int param2, int param3, MidiNote param4, byte param5) {
+        MidiPcmStream stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        MidiNote stackIn_13_2 = null;
+        boolean stackIn_14_3;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        PcmSampleStream var11 = null;
+        int var12 = 0;
+        var12 = BachelorFridge.field_y;
+        try {
+          if ((this.field_l.field_u[param4.field_n] & 4) != 0 &&
+            param4.field_p < 0) {
+            var7_int = this.field_l.field_M[param4.field_n] / AudioOutput.field_j;
+            while (true) {
+              var8 = (-param4.field_t + (var7_int + 1048575)) / var7_int;
+              if (var8 > param0) {
+                param4.field_t = param4.field_t + var7_int * param0;
+                break;
+              }
+              param4.field_z.mixInto(param1, param2, var8);
+              param0 = param0 - var8;
+              param4.field_t = param4.field_t + (-1048576 + var8 * var7_int);
+              param2 = param2 + var8;
+              var9 = AudioOutput.field_j / 100;
+              var10 = 262144 / var7_int;
+              if (var9 > var10) {
+                var9 = var10;
+              }
+              var11 = param4.field_z;
+              if (this.field_l.field_y[param4.field_n] != 0) {
+                param4.field_z = PcmSampleStream.createAtStepQ8(param4.field_f, var11.f(), 0, var11.i());
+                stackIn_13_0 = this.field_l;
+                stackIn_13_1 = 809594182;
+                stackIn_13_2 = (MidiNote) (param4);
+                stackIn_14_3 = !(0 <= param4.field_j.field_n[param4.field_h]);
+                ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
+                param4.field_z.a(var9, var11.g());
+              } else {
+                param4.field_z = PcmSampleStream.createAtStepQ8(param4.field_f, var11.f(), var11.g(), var11.i());
+              }
+              if (param4.field_j.field_n[param4.field_h] < 0) {
+                param4.field_z.d(-1);
+              }
+              var11.fadeOutAndUnlink(var9);
+              var11.mixInto(param1, param2, param3 - param2);
+              if (!var11.e()) {
+                continue;
+              }
+              this.field_j.a(var11);
+            }
+          }
+          if (param5 != 12) {
+            return;
+          }
+          param4.field_z.mixInto(param1, param2, param0);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_28_0 = var7;
+          stackIn_28_1 = new StringBuilder().append("jja.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    final int getSchedulingCost() {
+        return 0;
+    }
+
+    final PcmStream firstChildStream() {
+        MidiNote var1 = (MidiNote) (this.field_k.beginForward((byte) 90));
+        if (var1 == null) {
+          return null;
+        }
+        if (var1.field_z != null) {
+          return (PcmStream) ((Object) var1.field_z);
+        }
+        return this.nextChildStream();
+    }
+
+    final static void d(byte param0) {
+        if (param0 < 18) {
+          return;
+        }
+        kka.field_l.e(new ReportAbusePanel(), 33);
+    }
+
+    final void skipFrames(int param0) {
+        MidiNote var3;
+        int var4;
+        int var2;
+        var4 = BachelorFridge.field_y;
+        this.field_j.skipFrames(param0);
+        var3 = (MidiNote) (this.field_k.beginForward((byte) 90));
+        scanLoop1: while (true) {
+          if (var3 == null) {
+            return;
+          }
+          if (this.field_l.isVoiceInactive(var3, (byte) 95)) {
+            var3 = (MidiNote) (this.field_k.nextForward(0));
+            continue;
+          }
+          var2 = param0;
+          do {
+            if (var2 <= var3.field_r) {
+              this.skipVoiceFrames(var2, 53, var3);
+              var3.field_r = var3.field_r - var2;
+              var3 = (MidiNote) (this.field_k.nextForward(0));
+              continue scanLoop1;
+            }
+            this.skipVoiceFrames(var3.field_r, 91, var3);
+            var2 = var2 - var3.field_r;
+          } while (!this.field_l.updateVoice(0, var3, (int[]) null, var2, false));
+          var3 = (MidiNote) (this.field_k.nextForward(0));
+        }
+    }
+
+    final static void c(int param0) {
+        lq.g(param0 - 20756);
+        if (param0 != 20757) {
+          MusicPatchPcmStream.b(81);
+        }
+    }
+
+    final static void b(int param0) {
+        cha.field_l = ig.field_m.readString(76);
+        CharSequence var2 = (CharSequence) ((Object) cha.field_l);
+        JaggrabDownloader.field_a = HomingMissileSpecial.a(param0 ^ param0, var2);
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 != -90) {
+          field_m = (String) null;
+          field_m = null;
+          return;
+        }
+        field_m = null;
+    }
+
+    final PcmStream nextChildStream() {
+        MidiNote var1;
+        int var2;
+        var2 = BachelorFridge.field_y;
+        while (true) {
+          var1 = (MidiNote) (this.field_k.nextForward(0));
+          if (var1 == null) {
+            return null;
+          }
+          if (var1.field_z != null) {
+            return (PcmStream) ((Object) var1.field_z);
+          }
+        }
+    }
+
+    final static void a(int param0, int param1, int param2) {
+        if (param1 == -1) {
+          ic.a(param0, rt.field_a[param2], -31855);
+          return;
+        }
+        field_m = (String) null;
+        ic.a(param0, rt.field_a[param2], -31855);
+    }
+
+    private final void skipVoiceFrames(int param0, int param1, MidiNote param2) {
+        MidiPcmStream stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        MidiNote stackIn_7_2 = null;
+        boolean stackIn_8_3;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        try {
+          if (0 != (this.field_l.field_u[param2.field_n] & 4) &&
+            param2.field_p < 0) {
+            var4_int = this.field_l.field_M[param2.field_n] / AudioOutput.field_j;
+            var5 = (-param2.field_t + 1048575 + var4_int) / var4_int;
+            param2.field_t = var4_int * param0 + param2.field_t & 1048575;
+            if (param0 >= var5) {
+              if (this.field_l.field_y[param2.field_n] == 0) {
+                param2.field_z = PcmSampleStream.createAtStepQ8(param2.field_f, param2.field_z.f(), param2.field_z.g(), param2.field_z.i());
+              } else {
+                param2.field_z = PcmSampleStream.createAtStepQ8(param2.field_f, param2.field_z.f(), 0, param2.field_z.i());
+                stackIn_7_0 = this.field_l;
+                stackIn_7_1 = 809594182;
+                stackIn_7_2 = (MidiNote) (param2);
+                stackIn_8_3 = !(param2.field_j.field_n[param2.field_h] >= 0);
+                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+              }
+              if (param2.field_j.field_n[param2.field_h] < 0) {
+                param2.field_z.d(-1);
+              }
+              param0 = param2.field_t / var4_int;
+            }
+          }
+          param2.field_z.skipFrames(param0);
+          if (param1 >= 18) {
+            return;
+          }
+          this.field_l = (MidiPcmStream) null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_18_0 = var4;
+          stackIn_18_1 = new StringBuilder().append("jja.N(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+        }
+    }
+
+    MusicPatchPcmStream(MidiPcmStream param0) {
+        this.field_k = new IntrusiveDeque();
+        this.field_j = new PcmStreamMixer();
+        try {
+          this.field_l = param0;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+    }
+}

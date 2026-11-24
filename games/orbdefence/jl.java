@@ -284,7 +284,7 @@ abstract class jl {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param9).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param9).append(')').toString());
         }
     }
 

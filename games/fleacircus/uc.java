@@ -27,7 +27,7 @@ abstract class uc {
             uc.clearStaticReferences((byte) 91);
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "uc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "uc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ abstract class uc {
           }
           fg.a((byte) 13);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "uc.F(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "uc.F(" + param0 + ')');
         }
     }
 

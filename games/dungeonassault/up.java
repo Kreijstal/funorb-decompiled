@@ -124,7 +124,7 @@ final class up {
           param0.field_l.field_n = param0;
           param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "up.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "up.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

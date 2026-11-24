@@ -61,7 +61,7 @@ final class RaiseAnimation extends EventAnimation {
           return false;
         }
         if (this.field_l == 100) {
-          jja.a(256, -1, 46);
+          MusicPatchPcmStream.a(256, -1, 46);
           this.b(true);
         }
         int fieldTemp$0 = this.field_l - 1;

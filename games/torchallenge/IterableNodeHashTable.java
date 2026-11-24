@@ -214,10 +214,10 @@ final class IterableNodeHashTable implements Iterable {
         int var2 = ab.field_g[9];
         var1.field_l = var1.field_k.length;
         if (param0 == -86) {
-          pg.field_p = nc.a(var1, 100, var2);
-          pg.field_p.e(-1);
-          pg.field_p.e(0, var1.field_k.length);
-          ok.field_a = we.a(pg.field_p, 6222);
+          MusicPatchPcmStream.field_p = RawPcmStream.a(var1, 100, var2);
+          MusicPatchPcmStream.field_p.e(-1);
+          MusicPatchPcmStream.field_p.e(0, var1.field_k.length);
+          ok.field_a = we.a(MusicPatchPcmStream.field_p, 6222);
           return;
         }
     }

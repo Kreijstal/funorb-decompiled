@@ -34,7 +34,7 @@ final class ld extends kf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class ld extends kf {
           var3 = new byte[var2_int];
           if (param0 < 70) {
             var4 = (String) null;
-            ld.a((Throwable) null, (String) null);
+            ld.wrapClientException((Throwable) null, (String) null);
           }
           o.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
@@ -82,7 +82,7 @@ final class ld extends kf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class ld extends kf {
           this.field_F = this.field_F + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ld.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ld.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class ld extends kf {
         try {
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class ld extends kf {
         }
     }
 
-    final static de a(Throwable param0, String param1) {
+    final static de wrapClientException(Throwable param0, String param1) {
         de var2 = null;
         if (!(param0 instanceof de)) {
           var2 = new de(param0, param1);

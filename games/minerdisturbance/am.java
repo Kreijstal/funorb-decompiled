@@ -66,7 +66,7 @@ final class am extends jc {
                     var3 = 1;
                     break scanLoop1;
                   }
-                  if (vd.field_s[var2]) {
+                  if (CrossfadingMidiPcmStream.field_s[var2]) {
                     for (var5 = 0; var5 < 2; var5++) {
                       if (~var5 != ~var4 &&
                         d.a(var2, var5, (byte) 68)) {
@@ -89,7 +89,7 @@ final class am extends jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "am.C(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "am.C(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class am extends jc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class am extends jc {
           re.field_a[60] = jd.a(param0, "", "md_ice_player_glooping_in_oil_4").a().a(var5);
           re.field_a[61] = jd.a(param0, "", "md_ice_pickup_freezium").a().a(var5);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "am.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "am.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

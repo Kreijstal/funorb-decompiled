@@ -18,7 +18,7 @@ final class mh {
           }
           ba.a(108, 12);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "mh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "mh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class mh {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class mh {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -179,11 +179,11 @@ final class mh {
         if (!wi.field_e.a((byte) 120, "commonui")) {
           return i.field_c + " - " + wi.field_e.a(0, "commonui") + "%";
         }
-        if (!nd.field_n.a((byte) -123)) {
+        if (!DelayedPcmStream.field_n.a((byte) -123)) {
           return gk.field_a;
         }
-        if (!nd.field_n.c(32031)) {
-          return fj.field_b + " - " + nd.field_n.b(-22884) + "%";
+        if (!DelayedPcmStream.field_n.c(32031)) {
+          return fj.field_b + " - " + DelayedPcmStream.field_n.b(-22884) + "%";
         }
         return field_d;
     }

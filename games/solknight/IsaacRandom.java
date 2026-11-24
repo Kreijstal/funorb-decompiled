@@ -89,7 +89,7 @@ final class IsaacRandom {
           }
           this.d(93);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class IsaacRandom {
         this.field_k = 256;
     }
 
-    final static void a(Archive param0, int param1, int param2, e param3) {
+    final static void a(Archive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
           a.field_i = param1 * l.a((byte) 96) / 1000;
           ae.a(26197, param0);
@@ -251,7 +251,7 @@ final class IsaacRandom {
           gl.a((byte) 28);
           BufferedSocket.field_h = 0 - a.field_i;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

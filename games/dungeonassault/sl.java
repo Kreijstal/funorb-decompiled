@@ -29,7 +29,7 @@ final class sl {
           nj.a(gh.field_c, uc.field_I, -6332);
           cp.a(0, param1, (byte) -36, 0, qk.field_b, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "sl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

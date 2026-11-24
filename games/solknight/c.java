@@ -68,7 +68,7 @@ final class c extends UiWidget {
         if (param1 != 16711935) {
           this.field_O = 56;
         }
-        mf.e(4096);
+        MidiPcmStream.e(4096);
         return var14;
     }
 
@@ -119,7 +119,7 @@ final class c extends UiWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class c extends UiWidget {
         if (this.field_R < 65536) {
           kf.a((byte) 97, var5 + (this.field_t * this.field_R >> 16), var6, var5 + this.field_t, this.field_x + var6);
           this.a(0, var6, this.field_S[1], var5);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
         }
     }
 
@@ -158,13 +158,13 @@ final class c extends UiWidget {
           if (param0 != 0) {
             discarded$0 = this.a((byte) 120);
           }
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           if (SoftwareRasterizer.field_b <= this.field_P.field_p + param3) {
             cl.a(param0 ^ -100, this.field_G);
             param2.d(-this.field_D, 0);
             param2.d(-this.field_D + 2 * this.field_N, 0);
             this.field_A.g(0, 0);
-            mf.e(param0 ^ 4096);
+            MidiPcmStream.e(param0 ^ 4096);
             this.field_G.d(param3, param1);
           }
           if (SoftwareRasterizer.field_k >= -this.field_P.field_p + var5_int) {
@@ -174,7 +174,7 @@ final class c extends UiWidget {
             param2.d(-var7, 0);
             param2.d(-var7 + 2 * this.field_N, 0);
             this.field_P.g(0, 0);
-            mf.e(param0 ^ 4096);
+            MidiPcmStream.e(param0 ^ 4096);
             this.field_G.d(-this.field_P.field_p + var5_int, param1);
             return;
           }
@@ -189,7 +189,7 @@ final class c extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class c extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2_ref), "c.H(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2_ref), "c.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -283,7 +283,7 @@ final class c extends UiWidget {
             SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        mf.e(4096);
+        MidiPcmStream.e(4096);
         return var3;
     }
 

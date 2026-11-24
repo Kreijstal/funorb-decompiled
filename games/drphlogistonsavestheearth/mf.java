@@ -63,7 +63,7 @@ abstract class mf extends DualLinkNode {
         if (param0 == -8372) {
           pa.field_c = -100;
           sd.field_a.a(255, 0);
-          sd.field_a.field_N = (double)(-am.field_l);
+          sd.field_a.field_N = (double)(-MusicPatchPcmStream.field_l);
           sd.field_a.field_D = 190.0;
           sd.field_a.levelNumber = sd.field_a.levelNumber + 1;
           sd.field_a.field_j = 0.0;
@@ -189,7 +189,7 @@ abstract class mf extends DualLinkNode {
           mf.h(85);
           pa.field_c = -100;
           sd.field_a.a(255, 0);
-          sd.field_a.field_N = (double)(-am.field_l);
+          sd.field_a.field_N = (double)(-MusicPatchPcmStream.field_l);
           sd.field_a.field_D = 190.0;
           sd.field_a.levelNumber = sd.field_a.levelNumber + 1;
           sd.field_a.field_j = 0.0;

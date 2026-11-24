@@ -48,7 +48,7 @@ final class bb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class bb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -114,11 +114,11 @@ final class bb {
           if (param0 != 19931) {
             field_a = (IntrusiveDeque) null;
           }
-          di.field_D = new cl(pl.field_a, (String) null, gd.field_B, param1, param3);
-          de.field_a = new rh(mb.field_b, di.field_D);
+          MidiPcmStream.field_D = new cl(pl.field_a, (String) null, MusicPatchPcmStream.field_B, param1, param3);
+          de.field_a = new rh(mb.field_b, MidiPcmStream.field_D);
           mb.field_b.b(1, de.field_a);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

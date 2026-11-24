@@ -6,7 +6,7 @@ final class qg {
     static int field_c;
     static qc field_b;
     static String[] field_d;
-    static ke field_f;
+    static PcmStreamMixer field_f;
     static oc field_e;
 
     public static void clearStaticReferences(boolean param0) {
@@ -106,7 +106,7 @@ final class qg {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

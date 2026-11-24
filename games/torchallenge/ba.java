@@ -167,7 +167,7 @@ final class ba {
           gf.field_t = new byte[vl.field_b][];
           h.field_a = new byte[vl.field_b][];
           lg.field_e = new int[vl.field_b];
-          pg.field_r = new int[vl.field_b];
+          MusicPatchPcmStream.field_r = new int[vl.field_b];
           ImageProducerRasterBuffer.field_t = new int[vl.field_b];
           var17.position = param0.length - 7 - 8 * vl.field_b;
           ij.field_B = var17.readUnsignedShort(false);
@@ -180,7 +180,7 @@ final class ba {
             ImageProducerRasterBuffer.field_t[var4Lifetime1] = var17.readUnsignedShort(false);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < vl.field_b; var4Lifetime2++) {
-            pg.field_r[var4Lifetime2] = var17.readUnsignedShort(false);
+            MusicPatchPcmStream.field_r[var4Lifetime2] = var17.readUnsignedShort(false);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < vl.field_b; var4Lifetime3++) {
             lg.field_e[var4Lifetime3] = var17.readUnsignedShort(false);
@@ -195,7 +195,7 @@ final class ba {
           }
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < vl.field_b; var4Lifetime5++) {
-            var5 = pg.field_r[var4Lifetime5];
+            var5 = MusicPatchPcmStream.field_r[var4Lifetime5];
             var6 = lg.field_e[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];

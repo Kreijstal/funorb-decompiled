@@ -155,7 +155,7 @@ final class ee extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "ee.D(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "ee.D(" + param0 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class ee extends IntrusiveNode {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class ee extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "ee.A(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "ee.A(" + param0 + ')');
         }
     }
 

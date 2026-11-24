@@ -92,7 +92,7 @@ abstract class GameClientBase extends GameApplet {
         if (hf.a(4)) {
           var3 = ol.b(-118) * 1200;
           if (this.field_t ||
-            !(pg.e(-35) <= var3) &&
+            !(MusicPatchPcmStream.e(-35) <= var3) &&
             !(ll.b(-10365) <= var3)) {
             this.field_t = false;
             ob.b(-126);

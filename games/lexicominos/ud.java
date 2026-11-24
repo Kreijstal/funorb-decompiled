@@ -25,7 +25,7 @@ final class ud {
         var5Lifetime1.field_m = param0;
         var5Lifetime1.field_o = param2;
         il.field_b.addLast(116, var5Lifetime1);
-        uh.a(var5Lifetime1, (byte) -121, param3);
+        CrossfadingMidiPcmStream.a(var5Lifetime1, (byte) -121, param3);
         return var5Lifetime1;
     }
 

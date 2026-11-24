@@ -26,18 +26,18 @@ abstract class n extends v {
         }
         if (IntrusiveNode.field_c == null) {
           var1 = GameScreen.f((byte) 48);
-          kb.field_O = new fg(var1, (String) null, true, false, false);
+          MidiPcmStream.field_O = new fg(var1, (String) null, true, false, false);
           t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
-          bg.field_K.c(0, kb.field_O);
+          bg.field_K.c(0, MidiPcmStream.field_O);
           bg.field_K.d(true);
           var2 = 9 / ((param0 + 2) / 62);
           return;
         }
         IntrusiveNode.field_c.o(77);
         var1Lifetime1 = GameScreen.f((byte) 48);
-        kb.field_O = new fg(var1Lifetime1, (String) null, true, false, false);
+        MidiPcmStream.field_O = new fg(var1Lifetime1, (String) null, true, false, false);
         t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
-        bg.field_K.c(0, kb.field_O);
+        bg.field_K.c(0, MidiPcmStream.field_O);
         bg.field_K.d(true);
         var2Lifetime1 = 9 / ((param0 + 2) / 62);
     }

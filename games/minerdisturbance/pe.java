@@ -58,16 +58,16 @@ final class pe extends fd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6, int param7) {
+    final static void a(PlatformTaskDispatcher param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, MidiPcmStream param6, int param7) {
         try {
           AudioOutput.configureAudio(param7, param4, 10);
           mj.field_o = AudioOutput.createOutput(param0, param5, 0, param1);
           im.field_b = AudioOutput.createOutput(param0, param5, 1, param2);
-          hj.field_f = new hg();
+          hj.field_f = new PcmStreamMixer();
           mj.field_p = param2 * 1000 / param7;
           im.field_b.setRootStream(hj.field_f);
           km.field_a = param6;
@@ -75,7 +75,7 @@ final class pe extends fd {
           mj.field_o.setRootStream(km.field_a);
           int var8_int = -122 % ((param3 + 69) / 50);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "pe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "pe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

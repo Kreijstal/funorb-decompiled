@@ -63,7 +63,7 @@ final class qo {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class qo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
         }
     }
 

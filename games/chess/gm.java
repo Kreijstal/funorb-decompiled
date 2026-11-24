@@ -64,7 +64,7 @@ abstract class gm {
               }
             }
             if (decompiledFrameRemainder0) {
-              var2 = vl.field_I;
+              var2 = MidiPcmStream.field_I;
               var3 = 0;
               while (true) {
                 stackIn_21_0Lifetime1 = var3;
@@ -94,7 +94,7 @@ abstract class gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2_ref), "gm.I(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "gm.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1629,7 +1629,7 @@ abstract class gm {
                 }
                 var2 = cd.a("create_email_tooltip", -101);
                 if (null != var2) {
-                  mi.field_o = ad.a(-29410, var2);
+                  MusicPatchPcmStream.field_o = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_email_confirm_tooltip", -74);
                 if (var2 != null) {
@@ -2078,7 +2078,7 @@ abstract class gm {
                 }
                 var2 = cd.a("newgame", -111);
                 if (null != var2) {
-                  mi.field_n = ad.a(-29410, var2);
+                  MusicPatchPcmStream.field_n = ad.a(-29410, var2);
                 }
                 var2 = cd.a("resumegame", -110);
                 if (var2 != null) {
@@ -3137,7 +3137,7 @@ abstract class gm {
                   } else {
                     stackIn_2593_2 = "{...}";
                   }
-                  throw fk.a((Throwable) ((Object) stackIn_2592_0), ((StringBuilder) (Object) stackIn_2592_1).append(stackIn_2593_2).append(',').append(param1).append(')').toString());
+                  throw fk.wrapClientException((Throwable) ((Object) stackIn_2592_0), ((StringBuilder) (Object) stackIn_2592_1).append(stackIn_2593_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2601_0 = (!GameAppletShell.field_b);
@@ -3157,7 +3157,7 @@ abstract class gm {
             gm.a(']', (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "gm.K(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "gm.K(" + param0 + ')');
         }
     }
 
@@ -3178,7 +3178,7 @@ abstract class gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var4), "gm.J(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var4), "gm.J(" + param0 + ',' + param1 + ')');
         }
     }
 

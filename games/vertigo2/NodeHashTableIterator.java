@@ -32,12 +32,12 @@ final class NodeHashTableIterator implements Iterator {
         }
         var1 = kb.field_a;
         synchronized (var1) {
-          if (ah.field_l == rq.field_B) {
+          if (ah.field_l == MusicPatchPcmStream.field_B) {
             return false;
           }
-          de.field_f = wm.field_j[rq.field_B];
-          TextureOperator.field_r = af.field_F[rq.field_B];
-          rq.field_B = 127 & rq.field_B + 1;
+          de.field_f = wm.field_j[MusicPatchPcmStream.field_B];
+          TextureOperator.field_r = af.field_F[MusicPatchPcmStream.field_B];
+          MusicPatchPcmStream.field_B = 127 & MusicPatchPcmStream.field_B + 1;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;
@@ -349,7 +349,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_a = param0;
           this.reset(-120);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

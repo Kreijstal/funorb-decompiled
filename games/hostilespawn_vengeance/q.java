@@ -12,7 +12,7 @@ final class q {
     static ql field_g;
     static String field_a;
     static int[][] field_e;
-    static b field_i;
+    static RawPcmStream field_i;
     static bd field_f;
     static String[] field_m;
     static int field_n;
@@ -48,13 +48,13 @@ final class q {
             }
           }
           if (uh.field_l != null) {
-            if (uh.field_l.f(323697071)) {
+            if (uh.field_l.isMidiReady(323697071)) {
               return;
             }
             id.field_t = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "q.C(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "q.C(" + param0 + ')');
         }
     }
 

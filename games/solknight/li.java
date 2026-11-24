@@ -19,7 +19,7 @@ final class li extends IntrusiveNode {
             li.a(-110);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "li.A(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "li.A(" + param0 + ')');
         }
     }
 
@@ -85,8 +85,8 @@ final class li extends IntrusiveNode {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (1 == lh.field_p) {
-                lh.field_p = 2;
+              if (1 == MusicPatchPcmStream.field_p) {
+                MusicPatchPcmStream.field_p = 2;
               }
               return;
             }
@@ -94,8 +94,8 @@ final class li extends IntrusiveNode {
               li.a(-55);
             }
             if (3 == var2) {
-              if (lh.field_p == 2) {
-                lh.field_p = 1;
+              if (MusicPatchPcmStream.field_p == 2) {
+                MusicPatchPcmStream.field_p = 1;
               }
               return;
             }
@@ -104,7 +104,7 @@ final class li extends IntrusiveNode {
               je.a(false);
               return;
             }
-            lh.field_p = 1;
+            MusicPatchPcmStream.field_p = 1;
             var3 = var1.readString(37);
             qa.field_r = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
@@ -168,7 +168,7 @@ final class li extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1_ref), "li.B(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "li.B(" + param0 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class li extends IntrusiveNode {
           this.field_l = param0;
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -80,7 +80,7 @@ final class ArchiveIndex {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw lj.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -101,14 +101,14 @@ final class ArchiveIndex {
           }
           var4 = (mj) (nh.field_a.beginForward(75));
           while (var4 != null) {
-            vd.a(param1, -3450, var4);
+            CrossfadingMidiPcmStream.a(param1, -3450, var4);
             var4 = (mj) (nh.field_a.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "g.H(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "g.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class ArchiveIndex {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -492,7 +492,7 @@ final class ArchiveIndex {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class ArchiveIndex {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "g.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "g.E(" + param0 + ')');
         }
     }
 
@@ -570,7 +570,7 @@ final class ArchiveIndex {
           }
           this.a(2, param0);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

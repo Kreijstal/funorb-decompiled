@@ -41,7 +41,7 @@ final class qc extends IntrusiveNode {
           if (10 > fj.field_i) {
             return false;
           }
-          if (!lh.field_l) {
+          if (!MusicPatchPcmStream.field_l) {
             return !wf.c((byte) -79) ? true : false;
           }
           return false;
@@ -49,7 +49,7 @@ final class qc extends IntrusiveNode {
         if (10 > fj.field_i) {
           return false;
         }
-        if (!lh.field_l) {
+        if (!MusicPatchPcmStream.field_l) {
           return !wf.c((byte) -79) ? true : false;
         }
         return false;
@@ -69,7 +69,7 @@ final class qc extends IntrusiveNode {
           this.field_m = param0;
           this.field_t = param4;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "qc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "qc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

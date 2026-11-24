@@ -44,7 +44,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "ji.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "ji.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -1000,7 +1000,7 @@ final class wl extends sl {
         }
     }
 
-    final int a(PcmStreamMixer param0) {
+    final int onScheduledEvent(PcmStreamMixer param0) {
         if (this.f() &&
           !this.field_jb) {
           return -1;

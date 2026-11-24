@@ -63,7 +63,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("error_js5io", 0);
                 if (null != var2) {
-                  ug.field_p = mj.a((byte) -107, var2);
+                  MidiPcmStream.field_p = mj.a((byte) -107, var2);
                 }
                 var2 = wg.a("error_js5connect_full", 0);
                 if (null != var2) {
@@ -1237,7 +1237,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("checking", param0 - 7);
                 if (var2 != null) {
-                  ug.field_T = mj.a((byte) -128, var2);
+                  MidiPcmStream.field_T = mj.a((byte) -128, var2);
                 }
                 var2 = wg.a("create_namealreadytaken", 0);
                 if (var2 != null) {

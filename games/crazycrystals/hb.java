@@ -3,7 +3,7 @@
  */
 final class hb extends IntrusiveNode {
     static String field_i;
-    static tj field_l;
+    static PcmStreamMixer field_l;
     static AudioOutput field_h;
     static boolean field_g;
     static ko field_k;
@@ -108,7 +108,7 @@ final class hb extends IntrusiveNode {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

@@ -55,7 +55,7 @@ abstract class ab extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ abstract class ab extends DualLinkNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ abstract class ab extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1_ref), "ab.G(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "ab.G(" + param0 + ')');
         }
     }
 

@@ -34,7 +34,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) runtimeException), "vk.NA(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "vk.NA(" + param0 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "vk.UA(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2), "vk.UA(" + param0 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) runtimeException), "vk.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "vk.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "vk.SB(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1_ref), "vk.SB(" + param0 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) runtimeException), "vk.TB(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "vk.TB(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -454,7 +454,7 @@ class vk extends UiWidget implements ch {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw sd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -574,7 +574,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 
@@ -585,7 +585,7 @@ class vk extends UiWidget implements ch {
             vk.b((java.applet.Applet) null, 53);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vk.CB(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "vk.CB(" + param0 + ')');
         }
     }
 
@@ -602,7 +602,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var6), "vk.DB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var6), "vk.DB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -671,7 +671,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -713,7 +713,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -727,7 +727,7 @@ class vk extends UiWidget implements ch {
         try {
           field_v = null;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vk.BB(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "vk.BB(" + param0 + ')');
         }
     }
 
@@ -768,7 +768,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "vk.T(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2_ref), "vk.T(" + param0 + ')');
         }
     }
 
@@ -798,7 +798,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "vk.IA(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2_ref), "vk.IA(" + param0 + ')');
         }
     }
 
@@ -849,7 +849,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -917,7 +917,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -960,7 +960,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "vk.HB(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2), "vk.HB(" + param0 + ')');
         }
     }
 
@@ -1013,7 +1013,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -1078,7 +1078,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1220,7 +1220,7 @@ class vk extends UiWidget implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "vk.GB(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1_ref), "vk.GB(" + param0 + ')');
         }
     }
 
@@ -1246,7 +1246,7 @@ class vk extends UiWidget implements ch {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

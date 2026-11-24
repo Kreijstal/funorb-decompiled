@@ -30,14 +30,14 @@ final class nk extends PacketBuffer {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.data[incrementValue$0] & mi.field_s[var4]) << param1 - var4);
+          var5 = var5 + ((this.data[incrementValue$0] & MusicPatchPcmStream.field_s[var4]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 != param1) {
-          var5 = var5 + (this.data[var3] >> var4 - param1 & mi.field_s[param1]);
+          var5 = var5 + (this.data[var3] >> var4 - param1 & MusicPatchPcmStream.field_s[param1]);
         } else {
-          var5 = var5 + (mi.field_s[var4] & this.data[var3]);
+          var5 = var5 + (MusicPatchPcmStream.field_s[var4] & this.data[var3]);
         }
         return var5;
     }
@@ -79,7 +79,7 @@ final class nk extends PacketBuffer {
             this.n(-19);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class nk extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class nk extends PacketBuffer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 

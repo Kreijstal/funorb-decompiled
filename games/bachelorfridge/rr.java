@@ -176,7 +176,7 @@ final class rr extends AnimationNode {
           return true;
         }
         if (this.field_w == -15) {
-          jja.a(192, -1, 1);
+          MusicPatchPcmStream.a(192, -1, 1);
         }
         if (this.field_w == 0) {
           this.d((byte) 95);

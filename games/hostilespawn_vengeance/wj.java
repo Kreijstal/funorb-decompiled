@@ -29,7 +29,7 @@ final class wj extends ph {
             wj.e((byte) -71);
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "wj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class wj extends ph {
         return;
     }
 
-    final static wm e(byte param0) {
+    final static PcmStreamMixer e(byte param0) {
         if (param0 >= -59) {
           wj.e((byte) 105);
         }
@@ -114,7 +114,7 @@ final class wj extends ph {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class wj extends ph {
           this.field_M = this.field_M + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wj.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "wj.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -158,11 +158,11 @@ final class wj extends ph {
         oc dupTemp$0 = null;
         oc dupTemp$1 = null;
         ql stackIn_63_0 = null;
-        kd stackIn_69_0 = null;
+        CrossfadingMidiPcmStream stackIn_69_0 = null;
         int stackIn_70_1 = 0;
         int stackIn_100_0 = 0;
         boolean stackIn_104_0 = false;
-        wm stackIn_133_0 = null;
+        PcmStreamMixer stackIn_133_0 = null;
         jb[] stackIn_133_1 = null;
         int stackIn_134_2 = 0;
         int stackIn_162_0 = 0;
@@ -279,31 +279,31 @@ final class wj extends ph {
           if (0 < te.field_K) {
             te.field_K = te.field_K - 1;
           }
-          var1_float = kd.field_v.j();
+          var1_float = CrossfadingMidiPcmStream.field_v.j();
           if (var1_float != GameCanvas.field_a) {
-            kd.field_v.d(ua.a((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
+            CrossfadingMidiPcmStream.field_v.d(ua.a((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
           }
-          var1_floatLifetime1 = kd.field_v.h();
+          var1_floatLifetime1 = CrossfadingMidiPcmStream.field_v.h();
           if (var1_floatLifetime1 != qm.field_O) {
-            kd.field_v.f(ua.a((byte) -96, qm.field_O, var1_floatLifetime1, 0.07000000029802322f));
+            CrossfadingMidiPcmStream.field_v.f(ua.a((byte) -96, qm.field_O, var1_floatLifetime1, 0.07000000029802322f));
           }
-          var1_floatLifetime2 = kd.field_v.f();
+          var1_floatLifetime2 = CrossfadingMidiPcmStream.field_v.f();
           if (var1_floatLifetime2 != ea.field_d) {
-            kd.field_v.b(ua.a((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.b(ua.a((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
           }
-          var1_floatLifetime3 = kd.field_v.g();
+          var1_floatLifetime3 = CrossfadingMidiPcmStream.field_v.g();
           if (var1_floatLifetime3 != ag.field_w) {
-            kd.field_v.e(ua.a((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
+            CrossfadingMidiPcmStream.field_v.e(ua.a((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
           }
-          var1_floatLifetime4 = kd.field_v.k();
+          var1_floatLifetime4 = CrossfadingMidiPcmStream.field_v.k();
           if (an.field_n != var1_floatLifetime4) {
-            kd.field_v.c(ua.a((byte) -112, an.field_n, var1_floatLifetime4, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.c(ua.a((byte) -112, an.field_n, var1_floatLifetime4, 0.009999999776482582f));
           }
-          var1_floatLifetime5 = kd.field_v.e();
+          var1_floatLifetime5 = CrossfadingMidiPcmStream.field_v.e();
           if (var1_floatLifetime5 != vb.field_Jb) {
-            kd.field_v.a(ua.a((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.a(ua.a((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
           }
-          eb.field_e.setRootStream(kd.field_v);
+          eb.field_e.setRootStream(CrossfadingMidiPcmStream.field_v);
           ik.field_b = false;
           var2 = ln.field_a.field_d;
           var3 = ln.field_a.field_a;
@@ -391,7 +391,7 @@ final class wj extends ph {
             }
             var13_int = var11_int + var12_int;
             if (var13_int < 10) {
-              kd.a(6, 1);
+              CrossfadingMidiPcmStream.a(6, 1);
             }
           }
           var24 = ln.field_a.field_e;
@@ -479,7 +479,7 @@ final class wj extends ph {
                   } else {
                     stackIn_134_2 = 22;
                   }
-                  ((wm) (Object) stackIn_133_0).a(stackIn_133_1[stackIn_134_2], 90, uh.field_i);
+                  ((PcmStreamMixer) (Object) stackIn_133_0).a(stackIn_133_1[stackIn_134_2], 90, uh.field_i);
                 }
               }
               return;
@@ -593,13 +593,13 @@ final class wj extends ph {
           stackIn_205_1Lifetime1 = -1;
           if (stackIn_205_0Lifetime1 == stackIn_205_1Lifetime1 ||
             !(mc.field_I < 4)) {
-            if (w.field_r > cf.field_s) {
+            if (MidiPcmStream.field_r > cf.field_s) {
               cf.field_s = cf.field_s + 1;
             }
-            if (-10 + w.field_r > cf.field_s) {
+            if (-10 + MidiPcmStream.field_r > cf.field_s) {
               cf.field_s = cf.field_s + 1;
             }
-            if (cf.field_s < (-50 + w.field_r)) {
+            if (cf.field_s < (-50 + MidiPcmStream.field_r)) {
               cf.field_s = cf.field_s + 1;
             }
             if (hg.field_e == 1) {
@@ -647,7 +647,7 @@ final class wj extends ph {
                   stackIn_255_0 = null;
                   stackIn_255_1 = null;
                   if (ta.p(3)) {
-                    if (w.field_r == 0) {
+                    if (MidiPcmStream.field_r == 0) {
                       stackIn_255_0Lifetime1 = null;
                       stackIn_255_1Lifetime1 = null;
                       stackIn_251_2 = false;
@@ -745,7 +745,7 @@ final class wj extends ph {
                 stackIn_295_0 = null;
                 stackIn_295_1 = null;
                 if (ta.p(3)) {
-                  if (w.field_r == 0) {
+                  if (MidiPcmStream.field_r == 0) {
                     stackIn_295_0Lifetime1 = null;
                     stackIn_295_1Lifetime1 = null;
                     stackIn_290_2 = false;
@@ -790,7 +790,7 @@ final class wj extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "wj.G(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "wj.G(" + param0 + ')');
         }
     }
 
@@ -798,7 +798,7 @@ final class wj extends ph {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

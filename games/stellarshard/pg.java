@@ -4,7 +4,7 @@
 final class pg extends wl {
     static ha field_fb;
     static Sprite[] field_hb;
-    static hl field_cb;
+    static PcmStreamMixer field_cb;
     static volatile int field_gb;
     static String field_eb;
     static pf field_db;

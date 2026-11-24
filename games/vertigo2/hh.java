@@ -20,7 +20,7 @@ final class hh {
           ql.field_L.b(TextureOperator.field_n, 121);
           BufferedSocket.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "hh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class hh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -90,9 +90,9 @@ final class hh {
         int var9 = 0;
         int var10 = 0;
         int var3 = nf.a((byte) -28, param1);
-        int var4 = fk.a((byte) -118, param1);
+        int var4 = CrossfadingMidiPcmStream.a((byte) -118, param1);
         int var5 = nf.a((byte) -28, param0);
-        int var6 = fk.a((byte) -118, param0);
+        int var6 = CrossfadingMidiPcmStream.a((byte) -118, param0);
         if (!param2) {
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var3 * (long)var6 >> 16);

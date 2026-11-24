@@ -56,7 +56,7 @@ final class ub implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1_ref), "ub.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1_ref), "ub.E(" + param0 + ')');
         }
     }
 

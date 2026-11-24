@@ -155,7 +155,7 @@ abstract class nk extends GameAppletShell {
         bf.b((byte) -21);
         if (!lh.b(param1 ^ 24920) &&
           ta.field_g != 11) {
-          kj.a((byte) 22);
+          MusicPatchPcmStream.a((byte) 22);
         }
         if (null != rk.field_c) {
           gd.field_l = rk.field_c.pollRotation(82);
@@ -170,7 +170,7 @@ abstract class nk extends GameAppletShell {
             ia.a((byte) 93);
             sc.a(2, (byte) -128, kk.field_i);
             l.i(57);
-            kj.field_o = true;
+            MusicPatchPcmStream.field_o = true;
             mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           }
         }
@@ -230,7 +230,7 @@ abstract class nk extends GameAppletShell {
                   sc.a(256, (byte) -114, jd.field_b);
                 }
               }
-              kj.field_o = true;
+              MusicPatchPcmStream.field_o = true;
             }
           }
         }
@@ -238,7 +238,7 @@ abstract class nk extends GameAppletShell {
           nc.field_r != 0 ||
           d.a((byte) -24)) &&
           mc.field_i <= rf.correctedCurrentTimeMillis(0)) {
-          kj.field_o = false;
+          MusicPatchPcmStream.field_o = false;
           if (nc.field_r != -1 &&
             nc.field_r != 0) {
             nc.field_r = -1;
@@ -288,7 +288,7 @@ abstract class nk extends GameAppletShell {
           mg.e(0);
           AccountCreationResultPanel.field_tb = false;
           pb.field_j = qk.field_a;
-          fk.a(hl.field_F, we.field_h, (byte) 40, ej.field_d, GzipDecompressor.field_a);
+          fk.a(MidiPcmStream.field_F, we.field_h, (byte) 40, ej.field_d, GzipDecompressor.field_a);
           if (AccountRequestState.field_e ||
             null != sc.field_c) {
             stackIn_102_0 = sc.field_c;
@@ -373,7 +373,7 @@ abstract class nk extends GameAppletShell {
             vh.a(false, 4);
           }
           if (ij.field_o[4]) {
-            hl.f(5, -2212);
+            MidiPcmStream.f(5, -2212);
           }
           if (ij.field_o[5]) {
             bd.a(6, -4584);
@@ -453,7 +453,7 @@ abstract class nk extends GameAppletShell {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ abstract class nk extends GameAppletShell {
         if (!d.a((byte) 83)) {
           return -1;
         }
-        if (kj.field_o) {
+        if (MusicPatchPcmStream.field_o) {
           return -1;
         }
         var2 = ve.a(el.b(1), (byte) -25, this.field_y, true, dg.a(false), this.field_A);
@@ -482,7 +482,7 @@ abstract class nk extends GameAppletShell {
           }
           ia.a((byte) 83);
           sc.a(var2, (byte) 99, wj.field_p);
-          kj.field_o = true;
+          MusicPatchPcmStream.field_o = true;
           mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           return var2;
         }
@@ -503,7 +503,7 @@ abstract class nk extends GameAppletShell {
             this.field_y = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "nk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "nk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -583,11 +583,11 @@ abstract class nk extends GameAppletShell {
                 }
               }
             } else {
-              kj.field_o = false;
+              MusicPatchPcmStream.field_o = false;
             }
           }
           if (4 == var4) {
-            if (hl.field_F) {
+            if (MidiPcmStream.field_F) {
               lj.a(kk.c(-14047), (byte) 125);
             } else {
               ta.field_g = 10;
@@ -689,7 +689,7 @@ abstract class nk extends GameAppletShell {
             rb.a(false);
           } else {
             if (2 == var2) {
-              hl.d(0);
+              MidiPcmStream.d(0);
             } else {
               if (var2 == 3) {
                 me.e(false);

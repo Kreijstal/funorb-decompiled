@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class e extends IntrusiveNode {
-    nc field_n;
+    RawPcmStream field_n;
     int field_l;
     static int[][] field_p;
     IntrusiveNode field_k;
@@ -79,7 +79,7 @@ final class e extends IntrusiveNode {
         }
     }
 
-    e(nc param0, IntrusiveNode param1) {
+    e(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_l = param0.f();

@@ -37,7 +37,7 @@ abstract class SessionGameApplet extends GameApplet {
               vd.a(16);
             } else {
               if (var2 == 3) {
-                lc.c(false);
+                MidiPcmStream.c(false);
               } else {
                 if (var2 == 4) {
                   jl.d(1);
@@ -189,7 +189,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           this.a(480, param2, 640, param0, -19492);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ig.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ig.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ abstract class SessionGameApplet extends GameApplet {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ abstract class SessionGameApplet extends GameApplet {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -532,7 +532,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           RasterBuffer.field_c = SocketConnector.a(true, (byte) 77, 1, ic.field_a, false);
           wi.field_e = SocketConnector.a(true, (byte) 77, 1, q.field_d, false);
-          nd.field_n = SocketConnector.a(true, (byte) 77, 1, rd.field_a, false);
+          DelayedPcmStream.field_n = SocketConnector.a(true, (byte) 77, 1, rd.field_a, false);
           AccountNameAvailabilityValidator.field_k = RasterBuffer.field_c;
           bi.field_L = 2;
           field_y = wi.field_e;
@@ -555,13 +555,13 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if (bi.field_L == 3 &&
-          ud.a(nd.field_n, true, RasterBuffer.field_c, wi.field_e) &&
-          GzipDecompressor.a(nd.field_n, (byte) -109)) {
+          ud.a(DelayedPcmStream.field_n, true, RasterBuffer.field_c, wi.field_e) &&
+          GzipDecompressor.a(DelayedPcmStream.field_n, (byte) -109)) {
           BufferedSocket.e(0);
           wl.clearStaticReferences(121);
           bg.field_n = false;
           ea.field_n = TileRack.field_a;
-          cf.a(nd.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
+          cf.a(DelayedPcmStream.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
           if (di.field_b ||
             null != lb.field_h) {
             stackIn_103_0 = 5;
@@ -577,10 +577,10 @@ abstract class SessionGameApplet extends GameApplet {
             lf.field_d = kh.a((byte) 91);
             tj.field_u = hg.b(param0 ^ 10017);
           }
-          WordDictionary.a(lf.field_d, tj.field_u, 22313, nd.field_n);
+          WordDictionary.a(lf.field_d, tj.field_u, 22313, DelayedPcmStream.field_n);
           wi.field_e = null;
           RasterBuffer.field_c = null;
-          nd.field_n = null;
+          DelayedPcmStream.field_n = null;
           gh.a((java.applet.Applet) (this), (byte) -112);
           el.b(-6491);
           bi.field_L = 10;

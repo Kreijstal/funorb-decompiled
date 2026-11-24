@@ -1,0 +1,93 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DelayedPcmStream extends PcmStream {
+    private int field_l;
+    private PcmStream field_k;
+
+    final void skipFrames(int param0) {
+        if (this.field_l > param0) {
+          this.field_l = this.field_l - param0;
+          return;
+        }
+        param0 = param0 - this.field_l;
+        this.field_k.next = this.next;
+        this.field_k.previous = this.previous;
+        this.field_l = 0;
+        this.previous.next = (IntrusiveNode) ((Object) this.field_k);
+        this.next.previous = (IntrusiveNode) ((Object) this.field_k);
+        this.previous = null;
+        this.next = null;
+        if (0 < param0) {
+          this.field_k.skipFrames(param0);
+        }
+    }
+
+    final PcmStream nextChildStream() {
+        return null;
+    }
+
+    final int getSchedulingPriority() {
+        return this.field_k.getSchedulingPriority();
+    }
+
+    final int getSchedulingCost() {
+        return 0;
+    }
+
+    final PcmStream firstChildStream() {
+        return null;
+    }
+
+    final void mixInto(int[] param0, int param1, int param2) {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_l > param2) {
+            this.field_l = this.field_l - param2;
+            return;
+          }
+          param1 = param1 + this.field_l;
+          param2 = param2 - this.field_l;
+          this.field_k.previous = this.previous;
+          this.field_k.next = this.next;
+          this.field_l = 0;
+          this.previous.next = (IntrusiveNode) ((Object) this.field_k);
+          this.next.previous = (IntrusiveNode) ((Object) this.field_k);
+          this.previous = null;
+          this.next = null;
+          if (param2 <= 0) {
+            return;
+          }
+          this.field_k.mixInto(param0, param1, param2);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("jg.D(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ma.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    DelayedPcmStream(PcmStream param0, int param1) {
+        try {
+          this.field_k = param0;
+          this.field_i = this.field_k.field_i;
+          this.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+    }
+}

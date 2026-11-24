@@ -10,7 +10,7 @@ final class fb {
     static String field_g;
     static String field_a;
 
-    final static mb b(byte param0) {
+    final static PcmStreamMixer b(byte param0) {
         if (param0 <= 119) {
           field_a = (String) null;
           return wa.field_j;

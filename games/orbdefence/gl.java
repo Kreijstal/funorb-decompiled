@@ -33,7 +33,7 @@ final class gl {
             gl.c(74);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "gl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,8 +58,8 @@ final class gl {
         kg.a(100, 540, 32, (byte) -122, new int[]{19, 20, 21, 22, 23, 24, 15, 5}, 8, 300);
         if (param0 != 10489) {
           field_h = (String) null;
-          aa.field_c = cc.field_t.a(jg.field_n[12]);
-          var1 = cc.field_t.a(jg.field_n[13]);
+          aa.field_c = cc.field_t.a(MusicPatchPcmStream.field_n[12]);
+          var1 = cc.field_t.a(MusicPatchPcmStream.field_n[13]);
           if (var1 > aa.field_c) {
             aa.field_c = var1;
             var2 = cc.field_t.field_E - (-cc.field_t.field_B - 4);
@@ -72,8 +72,8 @@ final class gl {
           IterableNodeHashTable.field_e[6] = 2 * var2Lifetime3 + 30;
           return true;
         }
-        aa.field_c = cc.field_t.a(jg.field_n[12]);
-        var1Lifetime1 = cc.field_t.a(jg.field_n[13]);
+        aa.field_c = cc.field_t.a(MusicPatchPcmStream.field_n[12]);
+        var1Lifetime1 = cc.field_t.a(MusicPatchPcmStream.field_n[13]);
         if (var1Lifetime1 <= aa.field_c) {
           var2Lifetime1 = cc.field_t.field_E - (-cc.field_t.field_B - 4);
           wd.field_o[6] = var2Lifetime1 + cc.field_t.field_B + (200 + cc.field_t.field_H);
@@ -114,7 +114,7 @@ final class gl {
           this.field_d.write(param3, param0, param2);
           this.field_g = this.field_g + (long)param2;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "gl.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gl.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class gl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class gl {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

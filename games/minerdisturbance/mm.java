@@ -14,7 +14,7 @@ final class mm implements uj {
         if (param0 < 32) {
           field_b = (PlatformTaskDispatcher) null;
         }
-        var1_ref = di.field_O;
+        var1_ref = MidiPcmStream.field_O;
         synchronized (var1_ref) {
           if (dn.field_w == ll.field_d) {
             return false;
@@ -74,7 +74,7 @@ final class mm implements uj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw lj.a((Throwable) (stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw lj.wrapClientException((Throwable) (stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

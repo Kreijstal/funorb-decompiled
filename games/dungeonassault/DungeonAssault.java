@@ -20,7 +20,7 @@ public final class DungeonAssault extends NetworkGameClient {
           field_I = null;
           field_H = null;
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "DungeonAssault.E(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "DungeonAssault.E(" + param0 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var3), "DungeonAssault.H(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "DungeonAssault.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -552,18 +552,18 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2_ref), "DungeonAssault.C(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2_ref), "DungeonAssault.C(" + param0 + ')');
         }
     }
 
     final void a(byte param0) {
-        tc var3 = null;
+        CrossfadingMidiPcmStream var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           this.a(false, 32, 8, 2, 17, 0, 5000, 1);
-          var3 = new tc();
+          var3 = new CrossfadingMidiPcmStream();
           var3.field_A.c((byte) 7, 128, 9);
           var3.field_B.c((byte) -120, 128, 9);
           AccountRequestState.a(true, var3, 22050, 22050, (java.awt.Component) ((Object) c.field_h), -126, 2048, i.field_A);
@@ -602,7 +602,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.A(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "DungeonAssault.A(" + param0 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ public final class DungeonAssault extends NetworkGameClient {
         try {
           this.a(32, "dungeonassault", 0);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "DungeonAssault.init()");
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "DungeonAssault.init()");
         }
     }
 
@@ -621,7 +621,7 @@ public final class DungeonAssault extends NetworkGameClient {
           DungeonAssault.h((byte) 114);
           a.a(23779);
           IntrusiveDeque.h(-4);
-          tc.clearStaticReferences((byte) -86);
+          CrossfadingMidiPcmStream.clearStaticReferences((byte) -86);
           rl.clearStaticReferences((byte) 75);
           vj.clearStaticReferences(24243);
           nb.a((byte) 109);
@@ -695,7 +695,7 @@ public final class DungeonAssault extends NetworkGameClient {
           wa.c(23413);
           lp.clearStaticReferences((byte) 16);
           vm.clearStaticReferences();
-          hg.d(26609);
+          MusicPatchPcmStream.d(26609);
           AudioOutput.clearStaticReferences();
           cb.clearStaticReferences(27525);
           ae.clearStaticReferences((byte) -4);
@@ -953,7 +953,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.B(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "DungeonAssault.B(" + param0 + ')');
         }
     }
 
@@ -1027,7 +1027,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.G(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "DungeonAssault.G(" + param0 + ')');
         }
     }
 
@@ -1047,7 +1047,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.F(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "DungeonAssault.F(" + param0 + ')');
         }
     }
 
@@ -1185,7 +1185,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var6_long = Runtime.getRuntime().freeMemory();
             var8 = var4_long - var6_long;
             IntrusiveNode.field_c.b((int)(var8 >> 10) + "kb", 4, IntrusiveNode.field_c.field_H * 2 + 8, 16777215, -1);
-            IntrusiveNode.field_c.b(tc.field_u, 20, 80, 16777215, 1);
+            IntrusiveNode.field_c.b(CrossfadingMidiPcmStream.field_u, 20, 80, 16777215, 1);
           }
           var4 = AccountNameAvailabilityValidator.field_m[kj.field_n / 5];
           var5 = jg.field_c[kj.field_n / 5];
@@ -1199,7 +1199,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.D(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "DungeonAssault.D(" + param0 + ')');
         }
     }
 

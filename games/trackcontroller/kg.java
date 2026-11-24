@@ -43,7 +43,7 @@ final class kg {
             if (param3 == GameShell.field_n) {
               return;
             }
-            fj.field_P.f(11795);
+            fj.field_P.stopPlayback(11795);
             sb.field_b.flushAndMarkDrainCheck();
             GameShell.field_n = param3;
             if (GameShell.field_n != null) {

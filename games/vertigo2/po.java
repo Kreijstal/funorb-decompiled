@@ -10,13 +10,13 @@ final class po {
 
     final static void b(byte param0) {
         if (param0 == -52) {
-          hr.field_C.a(110, -(!db.field_S ? 0 : 40 + (2 + re.field_k + 2)) + im.field_j.field_Fb, 18, 0, 0);
+          hr.field_C.a(110, -(!MidiPcmStream.field_S ? 0 : 40 + (2 + re.field_k + 2)) + im.field_j.field_Fb, 18, 0, 0);
           rk.field_v.a(103, 42 + re.field_k, 18, 0, -40 + (-2 + (-re.field_k + im.field_j.field_Fb)));
           ja.field_f.a(20, 2, re.field_k, im.field_j.field_db - 20, 0, im.field_j.field_Fb, 3124);
           return;
         }
         field_c = (int[]) null;
-        hr.field_C.a(110, -(!db.field_S ? 0 : 40 + (2 + re.field_k + 2)) + im.field_j.field_Fb, 18, 0, 0);
+        hr.field_C.a(110, -(!MidiPcmStream.field_S ? 0 : 40 + (2 + re.field_k + 2)) + im.field_j.field_Fb, 18, 0, 0);
         rk.field_v.a(103, 42 + re.field_k, 18, 0, -40 + (-2 + (-re.field_k + im.field_j.field_Fb)));
         ja.field_f.a(20, 2, re.field_k, im.field_j.field_db - 20, 0, im.field_j.field_Fb, 3124);
     }

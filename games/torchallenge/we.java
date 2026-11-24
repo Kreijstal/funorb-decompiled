@@ -50,7 +50,7 @@ final class we implements Runnable {
         this.field_n = null;
     }
 
-    final static e a(nc param0, int param1) {
+    final static e a(RawPcmStream param0, int param1) {
         e var2 = null;
         RuntimeException var2_ref = null;
         e stackIn_3_0 = null;

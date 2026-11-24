@@ -16,7 +16,7 @@ final class vm {
         this.field_a.position = -1;
     }
 
-    final boolean g() {
+    final boolean hasMidiData() {
         return this.field_a.payload != null;
     }
 

@@ -10,7 +10,7 @@ final class ah {
     static ci field_e;
     static String field_h;
     static int field_c;
-    static se field_a;
+    static CrossfadingMidiPcmStream field_a;
     static String field_b;
 
     final static void a(byte param0, int param1) {
@@ -50,7 +50,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2_ref), "ah.F(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2_ref), "ah.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class ah {
           }
           dc.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class ah {
           var8.appendCrc32(true, var4);
           var8.backpatchByteLength(1, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

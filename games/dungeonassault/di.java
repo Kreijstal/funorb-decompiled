@@ -102,7 +102,7 @@ final class di {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class di {
           this.field_f = param0.readUnsignedMedium(param1 ^ 125);
           this.field_h = param0.readUnsignedMedium(-117);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

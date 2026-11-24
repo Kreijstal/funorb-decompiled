@@ -203,7 +203,7 @@ final class ClientException extends RuntimeException {
               var13.field_Sb = new UiPanel(0L, IterableNodeHashTable.field_b);
               var13.b(var13.field_Sb, 125);
               var13.field_Nb = new UiPanel(0L, tm.field_b);
-              if (db.field_S) {
+              if (MidiPcmStream.field_S) {
                 var13.b(var13.field_Nb, 120);
               }
               var13.field_Nb.field_O = 2;
@@ -318,7 +318,7 @@ final class ClientException extends RuntimeException {
               }
               stackIn_93_0 = var13.field_Sb;
               stackIn_93_1 = 110;
-              if (!db.field_S) {
+              if (!MidiPcmStream.field_S) {
                 stackIn_94_2 = 0;
               } else {
                 stackIn_94_2 = 42;
@@ -540,7 +540,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_219_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_218_0), ((StringBuilder) (Object) stackIn_218_1).append(stackIn_219_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_218_0), ((StringBuilder) (Object) stackIn_218_1).append(stackIn_219_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

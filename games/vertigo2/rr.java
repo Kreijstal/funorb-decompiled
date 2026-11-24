@@ -65,7 +65,7 @@ final class rr extends TextureOperator {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class rr extends TextureOperator {
           }
         }
         tn.field_j = tn.field_j & rm.field_z;
-        bh.field_c = bh.field_c & fk.field_x;
+        bh.field_c = bh.field_c & CrossfadingMidiPcmStream.field_x;
     }
 
     public static void b(byte param0) {
@@ -163,7 +163,7 @@ final class rr extends TextureOperator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

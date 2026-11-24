@@ -17,7 +17,7 @@ final class to {
           tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
           bq.a(param1, param0, 0, 4);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "to.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "to.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

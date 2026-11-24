@@ -16,7 +16,7 @@ final class ob extends le {
           this.field_K = this.field_K + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -89,11 +89,11 @@ final class ob extends le {
           if (null != this.field_H &&
             this.field_H.field_n >= var12 &&
             var13 <= this.field_H.field_m) {
-            oj.a(this.field_H, 256);
+            CrossfadingMidiPcmStream.a(this.field_H, 256);
             sb.c();
           } else {
             this.field_H = new Sprite(var12, var13);
-            oj.a(this.field_H, 256);
+            CrossfadingMidiPcmStream.a(this.field_H, 256);
           }
           var15.a(112, 144, var15.field_r << 4, var15.field_s << 4, -this.field_K << 10, 4096);
           fi.c(true);
@@ -108,7 +108,7 @@ final class ob extends le {
           this.field_L = param0;
           this.a(62, param3, param2, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class ob extends le {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class ob extends le {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class ob extends le {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

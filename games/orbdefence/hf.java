@@ -7,7 +7,7 @@ final class hf extends IntrusiveNode {
     static int field_i;
     IntrusiveNode field_f;
     static tl field_l;
-    bb field_h;
+    RawPcmStream field_h;
     static int field_k;
 
     final static void a(boolean param0, java.awt.Component param1) {
@@ -16,7 +16,7 @@ final class hf extends IntrusiveNode {
           param1.addKeyListener(ad.field_b);
           param1.addFocusListener(ad.field_b);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,14 +27,14 @@ final class hf extends IntrusiveNode {
           hb.a(param5, (byte) -128);
           if (param10 < 5) {
             ki var16 = (ki) null;
-            hf.a((v) null, (ki) null, 124, 16);
+            hf.a((PcmStreamMixer) null, (ki) null, 124, 16);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + (param13 != null ? "{...}" : "null") + ',' + param14 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + (param13 != null ? "{...}" : "null") + ',' + param14 + ')');
         }
     }
 
-    final static void a(v param0, ki param1, int param2, int param3) {
+    final static void a(PcmStreamMixer param0, ki param1, int param2, int param3) {
         try {
           DualLinkDequeIterator.field_h = ok.a((byte) 84) * param2 / param3;
           fb.a(-2, param1);
@@ -44,7 +44,7 @@ final class hf extends IntrusiveNode {
           ta.j(0);
           ji.field_b = -DualLinkDequeIterator.field_h + 0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -56,14 +56,14 @@ final class hf extends IntrusiveNode {
         field_l = null;
     }
 
-    hf(bb param0, IntrusiveNode param1) {
+    hf(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
           this.field_j = param0.j();
           this.field_f = param1;
           this.field_h.g(ck.field_f * this.field_j + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

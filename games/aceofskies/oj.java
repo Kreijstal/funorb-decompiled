@@ -79,7 +79,7 @@ final class oj extends RenderEffect {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class oj extends RenderEffect {
             this.field_h = (HardwareCubeTexture[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "oj.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "oj.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class oj extends RenderEffect {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "oj.B(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "oj.B(" + param0 + ')');
         }
     }
 
@@ -273,7 +273,7 @@ final class oj extends RenderEffect {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class oj extends RenderEffect {
           String var2 = "tuhstatbut";
           String var3 = "rvnadlm";
           long var4 = -1L;
-          jt.a(var2, var3, var4, param1, 0);
+          CrossfadingMidiPcmStream.a(var2, var3, var4, param1, 0);
           if (param0 != 26099) {
             java.awt.Color var6 = (java.awt.Color) null;
             oj.a((String) null, (java.awt.Color) null, -128, 49, true);
@@ -340,7 +340,7 @@ final class oj extends RenderEffect {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

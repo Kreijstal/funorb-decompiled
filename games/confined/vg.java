@@ -6,7 +6,7 @@ final class vg extends pm {
     da field_W;
     static ce field_I;
     double field_O;
-    static be field_G;
+    static PcmStreamMixer field_G;
     da field_X;
     static String field_K;
     double field_T;
@@ -298,7 +298,7 @@ final class vg extends pm {
     final void a(pm param0, int param1) {
         try {
           if (param1 >= -81) {
-            field_G = (be) null;
+            field_G = (PcmStreamMixer) null;
           }
           param0.a(-1, this);
         } catch (RuntimeException runtimeException) {

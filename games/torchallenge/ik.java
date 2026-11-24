@@ -81,7 +81,7 @@ final class ik {
           if (param0 != 76) {
             field_b = 6L;
           }
-          while (65536 <= fj.a(1870096848, kk.field_i, eh.field_o)) {
+          while (65536 <= CrossfadingMidiPcmStream.a(1870096848, kk.field_i, eh.field_o)) {
             ub.field_h = ub.field_h + 1;
             kk.field_i = kk.field_i - eh.field_o;
           }
@@ -228,7 +228,7 @@ final class ik {
           if (param0 != 76) {
             field_b = 6L;
           }
-          while (65536 <= fj.a(1870096848, kk.field_i, eh.field_o)) {
+          while (65536 <= CrossfadingMidiPcmStream.a(1870096848, kk.field_i, eh.field_o)) {
             ub.field_h = ub.field_h + 1;
             kk.field_i = kk.field_i - eh.field_o;
           }

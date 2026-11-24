@@ -401,7 +401,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.lastReturned = null;
           this.nextNode = this.deque.sentinel.field_p;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class sa extends IntrusiveNode {
     int field_q;
     static ln[][] field_t;
     static volatile int field_o;
-    rc field_n;
+    RawPcmStream field_n;
     static boolean field_u;
     static int field_s;
 
@@ -58,18 +58,18 @@ final class sa extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "sa.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "sa.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    sa(rc param0, IntrusiveNode param1) {
+    sa(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_q = param0.i();
           this.field_p = param1;
           this.field_n.f(128 + this.field_q * oc.field_f >> 8);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

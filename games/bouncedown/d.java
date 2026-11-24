@@ -21,7 +21,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "d.F(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "d.F(" + param0 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "d.G(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "d.G(" + param0 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "d.C(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var3), "d.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "d.H(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "d.H(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class d extends wd {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class d extends wd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "d.B(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1_ref), "d.B(" + param0 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "d.<init>()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "d.<init>()");
         }
     }
 

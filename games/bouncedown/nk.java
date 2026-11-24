@@ -30,7 +30,7 @@ final class nk {
           od.field_f.a(param2, param3, 2 + param0, 0, -1);
           od.field_f.a(param2, param3, param0, param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class nk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class nk {
         int stackIn_83_1 = 0;
         boolean stackIn_89_0 = false;
         boolean stackIn_99_0 = false;
-        pk stackIn_103_0 = null;
+        MidiPcmStream stackIn_103_0 = null;
         be stackIn_104_1 = null;
         mj stackIn_129_0 = null;
         int stackIn_130_1 = 0;
@@ -179,7 +179,7 @@ final class nk {
                         } else {
                           stackIn_104_1 = AccountCreationResultPanel.field_mb;
                         }
-                        ((pk) (Object) stackIn_103_0).a(stackIn_104_1, true, 123);
+                        ((MidiPcmStream) (Object) stackIn_103_0).a(stackIn_104_1, true, 123);
                       }
                       jl.field_d.flushAndMarkDrainCheck();
                     }
@@ -406,7 +406,7 @@ final class nk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -1113,7 +1113,7 @@ final class nk {
           this.field_m = param0;
           this.field_j = false;
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "nk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "nk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

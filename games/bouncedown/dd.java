@@ -62,7 +62,7 @@ final class dd implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), field_z);
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1_ref), field_z);
         }
     }
 

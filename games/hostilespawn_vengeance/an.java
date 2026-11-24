@@ -119,7 +119,7 @@ final class an extends ql {
                 ln.field_a.field_c[var6 + ln.field_a.field_d] = 4;
                 ln.field_a.field_c[-ln.field_a.field_d + var6] = 4;
                 ln.field_a.field_c[var6] = 4;
-                kd.a(0, 1);
+                CrossfadingMidiPcmStream.a(0, 1);
                 nh.field_E.a((byte) 46, this.field_g);
                 this.field_i[var3Lifetime1].field_l = 24 * var12.field_j.field_e - 100;
                 this.field_i[var3Lifetime1].field_d = var12.field_j.field_g * 24 - 98;
@@ -200,7 +200,7 @@ final class an extends ql {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class an extends ql {
         for (var2Lifetime1 = 0; var2Lifetime1 < 2; var2Lifetime1++) {
           this.field_i[var2Lifetime1] = new v(ra.field_f, 0, 0, 200, false);
         }
-        kd.a(9, 1);
+        CrossfadingMidiPcmStream.a(9, 1);
         nh.field_E.a(-1, 8360, -1);
         this.field_o = false;
     }
@@ -300,7 +300,7 @@ final class an extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "an.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var3), "an.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

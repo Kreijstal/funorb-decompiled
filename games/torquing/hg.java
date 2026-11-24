@@ -411,7 +411,7 @@ final class hg {
           }
           var2Lifetime72 = da.a((byte) -87, "click_to_skip");
           if (null != var2Lifetime72) {
-            kk.field_q = SecondaryNodeDeque.a(var2Lifetime72, false);
+            VolumeScaledPcmStream.field_q = SecondaryNodeDeque.a(var2Lifetime72, false);
           }
           var2Lifetime73 = da.a((byte) -121, "world_complete");
           if (null != var2Lifetime73) {

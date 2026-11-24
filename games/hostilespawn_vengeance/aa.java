@@ -122,7 +122,7 @@ final class aa {
           }
           o.a((byte) -61, param0);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "aa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "aa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

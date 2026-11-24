@@ -674,7 +674,7 @@ final class he extends ip {
             gh.field_i[19].field_o = var5Lifetime19;
             gh.field_i[19].field_t = var4Lifetime53;
           }
-          var3_ref_StringLifetime54 = hg.field_p;
+          var3_ref_StringLifetime54 = MusicPatchPcmStream.field_p;
           var4Lifetime54 = tn.field_Y;
           var5Lifetime20 = lb.field_x;
           if (null != gh.field_i[20]) {
@@ -882,7 +882,7 @@ final class he extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1_ref), "he.A(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1_ref), "he.A(" + param0 + ')');
         }
     }
 
@@ -903,7 +903,7 @@ final class he extends ip {
           lp.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (cn[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
           ic.a(param14, -31425);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -944,7 +944,7 @@ final class he extends ip {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -978,7 +978,7 @@ final class he extends ip {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1276,7 +1276,7 @@ final class he extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var1), "he.G(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var1), "he.G(" + param0 + ')');
         }
     }
 
@@ -1336,7 +1336,7 @@ final class he extends ip {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -38,7 +38,7 @@ abstract class rl extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "rl.K(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "rl.K(" + param0 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ abstract class rl extends oh {
         if (param0 == 26) {
           je.field_j = qk.field_F;
           we.field_h = sm.field_f;
-          b.field_a = ka.field_n;
+          b.field_a = MusicPatchPcmStream.field_n;
           fp.field_a = ei.field_F;
           var3 = param2;
           mb.field_g = mb.field_g + var3;

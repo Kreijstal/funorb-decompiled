@@ -3,7 +3,7 @@
  */
 final class il extends l {
     private int field_f;
-    private kg field_g;
+    private RawPcmStream field_g;
     static dl field_e;
     static am[] field_h;
 
@@ -97,7 +97,7 @@ final class il extends l {
           }
           var6Lifetime1 = var3 / var4;
           if (this.field_g == null) {
-            this.field_g = kg.a(je.field_f, 150, var5_intLifetime1, var6Lifetime1);
+            this.field_g = RawPcmStream.a(je.field_f, 150, var5_intLifetime1, var6Lifetime1);
             this.field_g.f(-1);
             tb.field_d.b(this.field_g);
           }

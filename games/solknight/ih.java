@@ -27,7 +27,7 @@ final class ih {
           uj.a(SecondaryNodeDequeIterator.field_e, pe.field_m, ib.field_o, (byte) -77);
           uf.a((byte) 99, 0, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

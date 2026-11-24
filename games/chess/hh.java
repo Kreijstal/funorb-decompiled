@@ -20,10 +20,10 @@ final class hh extends IntrusiveNode {
 
     final static boolean d(byte param0) {
         if (param0 <= -121) {
-          return vl.field_A == ci.field_ub ? true : false;
+          return MidiPcmStream.field_A == ci.field_ub ? true : false;
         }
         field_j = (String) null;
-        return vl.field_A == ci.field_ub ? true : false;
+        return MidiPcmStream.field_A == ci.field_ub ? true : false;
     }
 
     final static ve a(int param0, String param1) {
@@ -80,7 +80,7 @@ final class hh extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

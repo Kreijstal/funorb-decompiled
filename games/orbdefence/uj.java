@@ -51,7 +51,7 @@ final class uj implements Runnable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class uj implements Runnable {
           var3 = ji.correctedCurrentTimeMillis(125);
           if (0 != hf.field_i &&
             vb.field_i < 0) {
-            var5_ref_hc = (hc) (t.field_q.beginForward((byte) 121));
+            var5_ref_hc = (hc) (CrossfadingMidiPcmStream.field_q.beginForward((byte) 121));
             if (var5_ref_hc != null &&
               var5_ref_hc.field_h < var3) {
               var5_ref_hc.unlink(57);
@@ -196,7 +196,7 @@ final class uj implements Runnable {
             for (var7 = 0; var7 < GameAppletShell.field_c; var7++) {
               var6.field_m[var7] = cd.field_t.payload[var7];
             }
-            t.field_q.addLast(-97, var6);
+            CrossfadingMidiPcmStream.field_q.addLast(-97, var6);
             vb.field_i = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,7 +209,7 @@ final class uj implements Runnable {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class uj implements Runnable {
           this.field_c = param1;
           this.field_e = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

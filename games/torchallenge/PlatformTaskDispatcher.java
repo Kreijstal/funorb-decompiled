@@ -314,7 +314,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (bj) null;
-                      var8.result = pg.a(var8.firstInt, (String) (var8.argument), -111).a((byte) 112);
+                      var8.result = MusicPatchPcmStream.a(var8.firstInt, (String) (var8.argument), -111).a((byte) 112);
                     } catch (bj decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (bj) (Object) decompiledCaughtException;

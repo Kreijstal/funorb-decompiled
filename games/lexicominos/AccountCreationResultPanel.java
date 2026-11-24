@@ -254,7 +254,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -338,7 +338,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1), "u.Q(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1), "u.Q(" + param0 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         try {
           this.field_rb = param1;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "u.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "u.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1_ref), "u.S(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1_ref), "u.S(" + param0 + ')');
         }
     }
 
@@ -414,7 +414,7 @@ final class AccountCreationResultPanel extends uc implements jk {
             this.a(123, -100, -20, 115, (kf) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "u.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

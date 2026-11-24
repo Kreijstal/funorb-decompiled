@@ -25,7 +25,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param8).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "ed.Q(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "ed.Q(" + param0 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var4), "ed.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var4), "ed.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "ed.P(" + param0 + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "ed.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "ed.N(" + param0 + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "ed.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         try {
           super.a(param0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ed.C(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ed.C(" + param0 + ')');
         }
     }
 
@@ -436,7 +436,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -450,7 +450,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "ed.M(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "ed.M(" + param0 + ')');
         }
     }
 
@@ -490,7 +490,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "ed.L(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "ed.L(" + param0 + ')');
         }
     }
 

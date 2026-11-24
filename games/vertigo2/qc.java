@@ -3,7 +3,7 @@
  */
 abstract class qc extends DualLinkNode {
     static Archive field_B;
-    static db field_v;
+    static MidiPcmStream field_v;
     static int field_A;
     int field_C;
     static String field_y;
@@ -53,7 +53,7 @@ abstract class qc extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ abstract class qc extends DualLinkNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
         }
     }
 

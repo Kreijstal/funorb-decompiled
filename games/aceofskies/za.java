@@ -46,7 +46,7 @@ abstract class za extends IntrusiveNode {
           bk.menuTop[screenId] = top;
           oo.menuRowSpacing[screenId] = rowSpacing;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "za.B(" + rowSpacing + ',' + (actions != null ? "{...}" : "null") + ',' + top + ',' + left + ',' + screenId + ',' + right + ',' + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "za.B(" + rowSpacing + ',' + (actions != null ? "{...}" : "null") + ',' + top + ',' + left + ',' + screenId + ',' + right + ',' + obfuscationGuard + ')');
         }
     }
 

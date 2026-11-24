@@ -36,7 +36,7 @@ final class sc {
           var5.appendCrc32(var4, param2 - 30533);
           var5.backpatchByteLength((byte) -81, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class sc {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
-                ei.field_H[var5] = false;
+                MidiPcmStream.field_H[var5] = false;
                 var5++;
               }
               em.field_f = sd.field_a;
@@ -66,10 +66,10 @@ final class sc {
                 var2 = qk.field_b[sd.field_a];
                 sd.field_a = 127 & 1 + sd.field_a;
                 if (0 <= var2) {
-                  ei.field_H[var2] = true;
+                  MidiPcmStream.field_H[var2] = true;
                   continue;
                 }
-                ei.field_H[~var2] = false;
+                MidiPcmStream.field_H[~var2] = false;
               }
             }
             tc.field_h = ak.field_e;
@@ -78,7 +78,7 @@ final class sc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1_ref), "sc.A(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var1_ref), "sc.A(" + param0 + ')');
         }
     }
 

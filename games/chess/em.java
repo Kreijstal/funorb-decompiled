@@ -96,7 +96,7 @@ final class em {
           }
           qf.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "em.G(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "em.G(" + param0 + ')');
         }
     }
 
@@ -377,7 +377,7 @@ final class em {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

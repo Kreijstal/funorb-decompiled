@@ -84,7 +84,7 @@ final class cd extends wj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class cd extends wj {
           ul.d(0, 0, ul.field_f, ul.field_l, 0, 256 - var5);
           oc.g((byte) -105);
           if (150 <= ji.field_b) {
-            t.field_j.a(15 + var3, var4 + 10, var5);
+            CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);
           } else {
             kf.field_a.d(var3, var4);
           }
@@ -174,7 +174,7 @@ final class cd extends wj {
         } else {
           oc.g((byte) -105);
           if (150 <= ji.field_b) {
-            t.field_j.a(15 + var3, var4 + 10, var5);
+            CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);
             var6 = ji.field_b - 125;
             if (param1) {
               field_w = (AudioOutput) null;

@@ -367,7 +367,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -419,7 +419,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return var2;
         }
-        if (!ka.field_j) {
+        if (!MusicPatchPcmStream.field_j) {
           this.a(0, "reconnect");
         }
         tn.e((byte) -127);
@@ -702,7 +702,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             field_w = (bf) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "eb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "eb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

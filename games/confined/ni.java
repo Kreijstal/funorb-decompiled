@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ni {
-    static vc field_a;
+    static RawPcmStream field_a;
     private int[] field_b;
 
     final int a(byte param0, int param1) {
@@ -11,7 +11,7 @@ final class ni {
         int var5;
         var3 = (this.field_b.length >> 1) - 1;
         if (param0 != 76) {
-          field_a = (vc) null;
+          field_a = (RawPcmStream) null;
         }
         var4 = var3 & param1;
         while (true) {

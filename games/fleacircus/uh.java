@@ -31,7 +31,7 @@ final class uh extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var5), "uh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var5), "uh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class uh extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class uh extends IntrusiveNode {
             field_n = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "uh.C(" + param0 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "uh.C(" + param0 + ')');
         }
     }
 
@@ -1196,7 +1196,7 @@ final class uh extends IntrusiveNode {
           } else {
             stackIn_778_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_777_0), ((StringBuilder) (Object) stackIn_777_1).append(stackIn_778_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_777_0), ((StringBuilder) (Object) stackIn_777_1).append(stackIn_778_2).append(')').toString());
         }
         if (GameAppletShell.field_e) {
           fleas.field_A = (var4 == 0);

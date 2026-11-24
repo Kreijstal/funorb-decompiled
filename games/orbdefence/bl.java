@@ -117,7 +117,7 @@ final class bl {
           var20 = new sj(var4, true);
           var20.a(-1, var13);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class bl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class bl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -286,45 +286,45 @@ final class bl {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        if (null != jg.field_n) {
+        if (null != MusicPatchPcmStream.field_n) {
           return;
         }
-        jg.field_n = new String[27];
-        jg.field_n[3] = vh.field_i;
-        jg.field_n[11] = qf.field_h;
-        jg.field_n[15] = ha.field_j;
-        jg.field_n[6] = jl.field_a;
-        jg.field_n[14] = nf.field_l;
-        jg.field_n[16] = bm.field_c;
-        jg.field_n[5] = jl.field_a;
-        jg.field_n[12] = l.field_j;
-        jg.field_n[0] = k.field_e;
-        jg.field_n[4] = rc.field_i;
-        jg.field_n[7] = dk.field_b;
-        jg.field_n[2] = gl.field_f;
-        jg.field_n[1] = vg.field_s;
-        jg.field_n[13] = gl.field_a;
-        jg.field_n[24] = gb.field_g[5];
-        jg.field_n[9] = eg.field_w[1];
+        MusicPatchPcmStream.field_n = new String[27];
+        MusicPatchPcmStream.field_n[3] = vh.field_i;
+        MusicPatchPcmStream.field_n[11] = qf.field_h;
+        MusicPatchPcmStream.field_n[15] = ha.field_j;
+        MusicPatchPcmStream.field_n[6] = jl.field_a;
+        MusicPatchPcmStream.field_n[14] = nf.field_l;
+        MusicPatchPcmStream.field_n[16] = bm.field_c;
+        MusicPatchPcmStream.field_n[5] = jl.field_a;
+        MusicPatchPcmStream.field_n[12] = l.field_j;
+        MusicPatchPcmStream.field_n[0] = k.field_e;
+        MusicPatchPcmStream.field_n[4] = rc.field_i;
+        MusicPatchPcmStream.field_n[7] = dk.field_b;
+        MusicPatchPcmStream.field_n[2] = gl.field_f;
+        MusicPatchPcmStream.field_n[1] = vg.field_s;
+        MusicPatchPcmStream.field_n[13] = gl.field_a;
+        MusicPatchPcmStream.field_n[24] = gb.field_g[5];
+        MusicPatchPcmStream.field_n[9] = eg.field_w[1];
         if (param0 < 14) {
           bl.clearStaticReferences(-55);
         }
-        jg.field_n[20] = gb.field_g[1];
-        jg.field_n[23] = gb.field_g[4];
-        jg.field_n[18] = AccountServiceResult.field_g;
-        jg.field_n[21] = gb.field_g[2];
-        jg.field_n[10] = eg.field_w[2];
-        jg.field_n[8] = eg.field_w[0];
-        jg.field_n[19] = gb.field_g[0];
-        jg.field_n[26] = wh.field_d;
-        jg.field_n[17] = mi.field_d;
-        jg.field_n[22] = gb.field_g[3];
-        jg.field_n[25] = cc.field_m;
+        MusicPatchPcmStream.field_n[20] = gb.field_g[1];
+        MusicPatchPcmStream.field_n[23] = gb.field_g[4];
+        MusicPatchPcmStream.field_n[18] = AccountServiceResult.field_g;
+        MusicPatchPcmStream.field_n[21] = gb.field_g[2];
+        MusicPatchPcmStream.field_n[10] = eg.field_w[2];
+        MusicPatchPcmStream.field_n[8] = eg.field_w[0];
+        MusicPatchPcmStream.field_n[19] = gb.field_g[0];
+        MusicPatchPcmStream.field_n[26] = wh.field_d;
+        MusicPatchPcmStream.field_n[17] = mi.field_d;
+        MusicPatchPcmStream.field_n[22] = gb.field_g[3];
+        MusicPatchPcmStream.field_n[25] = cc.field_m;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

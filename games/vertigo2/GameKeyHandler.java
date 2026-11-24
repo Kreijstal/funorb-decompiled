@@ -18,7 +18,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             fh.field_w = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "cg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "cg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 && 65535 != var2_int &&
               gr.a(0, (char) var2_int)) {
               var3 = 127 & ro.field_e + 1;
-              if (var3 != rq.field_B) {
+              if (var3 != MusicPatchPcmStream.field_B) {
                 wm.field_j[ro.field_e] = -1;
                 af.field_F[ro.field_e] = (char)var2_int;
                 ro.field_e = var3;
@@ -93,7 +93,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "cg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "cg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (var2_int >= 0) {
             var3 = 1 + ro.field_e & 127;
-            if (var3 != rq.field_B) {
+            if (var3 != MusicPatchPcmStream.field_B) {
               wm.field_j[ro.field_e] = var2_int;
               af.field_F[ro.field_e] = (char)0;
               ro.field_e = var3;
@@ -161,7 +161,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

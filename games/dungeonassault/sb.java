@@ -16,7 +16,7 @@ final class sb {
 
     final static void a(int param0) {
         if (param0 == 500) {
-          hg.field_t = null;
+          MusicPatchPcmStream.field_t = null;
           uo.field_b = null;
           jn.field_k = null;
           jc.field_f = null;
@@ -25,7 +25,7 @@ final class sb {
           return;
         }
         field_a = (ResourceArchive) null;
-        hg.field_t = null;
+        MusicPatchPcmStream.field_t = null;
         uo.field_b = null;
         jn.field_k = null;
         jc.field_f = null;

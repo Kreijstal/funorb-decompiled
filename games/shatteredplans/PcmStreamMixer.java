@@ -63,10 +63,10 @@ final class PcmStreamMixer extends PcmStream {
           var3 = (PcmMixerListener) (this.field_o.startForward(0));
           var4 = var3;
           synchronized (var4) {
-            var5 = var3.a(this);
+            var5 = var3.onScheduledEvent(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.next, var3);
+              this.insertListenerByDeadline(var3.next, var3);
             } else {
               var3.field_h = 0;
               this.fireListener(var3);
@@ -84,7 +84,7 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_l.nextForward((byte) -71));
     }
 
-    private final void a(IntrusiveNode param0, PcmMixerListener param1) {
+    private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_o.sentinel) {
             wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
@@ -143,10 +143,10 @@ final class PcmStreamMixer extends PcmStream {
           var5 = (PcmMixerListener) (this.field_o.startForward(0));
           var6 = var5;
           synchronized (var6) {
-            var7 = var5.a(this);
+            var7 = var5.onScheduledEvent(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.next, var5);
+              this.insertListenerByDeadline(var5.next, var5);
             } else {
               var5.field_h = 0;
               this.fireListener(var5);

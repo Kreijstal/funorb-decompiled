@@ -11,7 +11,7 @@ final class jf extends s {
           this.field_G = this.field_G + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -46,18 +46,18 @@ final class jf extends s {
           var12 = wd.field_C[0];
           var9 = var12.field_s << 1;
           var10 = var12.field_t << 1;
-          if (null != lj.field_N &&
-            var9 <= lj.field_N.field_o &&
-            lj.field_N.field_k >= var10) {
-            de.a(-128, lj.field_N);
+          if (null != MidiPcmStream.field_N &&
+            var9 <= MidiPcmStream.field_N.field_o &&
+            MidiPcmStream.field_N.field_k >= var10) {
+            de.a(-128, MidiPcmStream.field_N);
             ul.d();
           } else {
-            lj.field_N = new hj(var9, var10);
-            de.a(param2 ^ -1048454, lj.field_N);
+            MidiPcmStream.field_N = new hj(var9, var10);
+            de.a(param2 ^ -1048454, MidiPcmStream.field_N);
           }
           var12.b(112, 144, var12.field_s << 4, var12.field_t << 4, -this.field_G << 10, 4096);
           oc.g((byte) -105);
-          lj.field_N.e(-var12.field_s + var5, var6 - var12.field_t, 256);
+          MidiPcmStream.field_N.e(-var12.field_s + var5, var6 - var12.field_t, 256);
         }
     }
 
@@ -82,7 +82,7 @@ final class jf extends s {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class jf extends s {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class jf extends s {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

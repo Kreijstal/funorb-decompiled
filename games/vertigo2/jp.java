@@ -3,7 +3,7 @@
  */
 final class jp {
     static String field_u;
-    static fk field_n;
+    static CrossfadingMidiPcmStream field_n;
     short[] field_Q;
     short[] field_r;
     int field_S;

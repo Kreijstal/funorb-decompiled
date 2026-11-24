@@ -52,7 +52,7 @@ final class ge implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -141,9 +141,9 @@ final class ge implements Runnable {
               var19[0][4 * var10] = we.field_g[var11];
               var19[0][1 + 4 * var10] = l.field_D[var11];
               var19[0][2 + var10 * 4] = oc.field_a[var11];
-              var19[0][var10 * 4 + 3] = hl.field_N[var11];
+              var19[0][var10 * 4 + 3] = MidiPcmStream.field_N[var11];
               if (md.a(ph.field_a[var11], -113) &&
-                oc.field_a[var11] + (l.field_D[var11] + hl.field_N[var11]) == 0) {
+                oc.field_a[var11] + (l.field_D[var11] + MidiPcmStream.field_N[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -159,9 +159,9 @@ final class ge implements Runnable {
               var19[1][var14 * 4] = we.field_g[var11Lifetime1];
               var19[1][1 + 4 * var14] = l.field_D[var11Lifetime1];
               var19[1][2 + 4 * var14] = oc.field_a[var11Lifetime1];
-              var19[1][var14 * 4 + 3] = hl.field_N[var11Lifetime1];
+              var19[1][var14 * 4 + 3] = MidiPcmStream.field_N[var11Lifetime1];
               if (md.a(ph.field_a[var11Lifetime1], -101) &&
-                0 == hl.field_N[var11Lifetime1] + oc.field_a[var11Lifetime1] + l.field_D[var11Lifetime1]) {
+                0 == MidiPcmStream.field_N[var11Lifetime1] + oc.field_a[var11Lifetime1] + l.field_D[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -176,7 +176,7 @@ final class ge implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1), "ge.K(" + param0 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) var1), "ge.K(" + param0 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class ge implements Runnable {
             } else {
               stackIn_43_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -370,7 +370,7 @@ final class ge implements Runnable {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -542,7 +542,7 @@ final class ge implements Runnable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -618,7 +618,7 @@ final class ge implements Runnable {
           this.field_h = this.field_g.getOutputStream();
           this.field_a = param2;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -45,7 +45,7 @@ final class ob extends wm {
           }
           hk.field_M = 0;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ob.P(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ob.P(" + param0 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class ob extends wm {
             } else {
               stackIn_29_2 = "{...}";
             }
-            throw fk.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+            throw fk.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -204,7 +204,7 @@ final class ob extends wm {
         if (ci.field_ub == DelegatingCanvas.field_a) {
           return jd.field_d;
         }
-        if (ci.field_ub == vl.field_A) {
+        if (ci.field_ub == MidiPcmStream.field_A) {
           return lc.field_e;
         }
         if (param0 > -98) {

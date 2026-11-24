@@ -19,14 +19,14 @@ final class gj {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeKeyListener(di.field_O);
-          param1.removeFocusListener(di.field_O);
+          param1.removeKeyListener(MidiPcmStream.field_O);
+          param1.removeFocusListener(MidiPcmStream.field_O);
           cg.field_H = -1;
           if (param0 != 2670) {
             gj.a(83, 12);
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -41,7 +41,7 @@ final class bs extends UiPanel {
           var6 = (CharSequence) ((Object) this.field_bc);
           rc.a(var6, 320);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class bs extends UiPanel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var7), "bs.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var7), "bs.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class bs extends UiPanel {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class bs extends UiPanel {
           var1.b(0, 0);
           ln.d(-28558);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "bs.D(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bs.D(" + param0 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class bs extends UiPanel {
           IterableNodeHashTable.field_a = new UiPanel(0L, AccountRequestState.field_b);
           IterableNodeHashTable.field_a.field_O = 1;
           int var2_int = -113 % ((param1 - 32) / 50);
-          jg.field_q = new UiPanel(0L, db.field_t, kc.field_c);
+          jg.field_q = new UiPanel(0L, MidiPcmStream.field_t, kc.field_c);
           va.field_f = new UiPanel(0L, MouseInputHandler.field_a, ho.field_i);
           hb.field_k = new UiPanel(0L, ja.field_e);
           wi.field_g.b(IterableNodeHashTable.field_a, 118);
@@ -211,7 +211,7 @@ final class bs extends UiPanel {
           ao.field_O.field_Lb.field_Lb.field_ab = 1;
           var4.field_O = 1;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "bs.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bs.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class bs extends UiPanel {
           var5 = (CharSequence) ((Object) this.field_bc);
           rc.a(var5, 320);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "bs.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bs.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

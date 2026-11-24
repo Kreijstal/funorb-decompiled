@@ -24,7 +24,7 @@ final class ok implements wo {
           gh.field_z = null;
           uo.field_k = null;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class ok implements wo {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class ok implements wo {
           field_i = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ok.D(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ok.D(" + param0 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class ok implements wo {
           this.field_f = 1;
           this.field_d = 1;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ok.<init>()");
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ok.<init>()");
         }
     }
 
@@ -223,7 +223,7 @@ final class ok implements wo {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -291,7 +291,7 @@ final class ok implements wo {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 

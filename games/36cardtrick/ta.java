@@ -11,7 +11,7 @@ abstract class ta extends jc {
     private n field_W;
     private int field_bb;
     static String field_fb;
-    static qj field_hb;
+    static PcmStreamMixer field_hb;
     private lk field_db;
     static double field_Z;
     static String[] field_ib;

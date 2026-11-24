@@ -13,7 +13,7 @@ class fg extends jc {
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -73,12 +73,12 @@ class fg extends jc {
         }
     }
 
-    final static void a(int param0, int param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, boolean param5, lj param6, boolean param7) {
+    final static void a(int param0, int param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, boolean param5, MidiPcmStream param6, boolean param7) {
         try {
           AudioOutput.configureAudio(param2, param7, 10);
           cd.field_w = AudioOutput.createOutput(param4, param3, 0, param0);
           wf.field_b = AudioOutput.createOutput(param4, param3, 1, param1);
-          vb.field_f = new v();
+          vb.field_f = new PcmStreamMixer();
           h.field_H = param1 * 1000 / param2;
           wf.field_b.setRootStream(vb.field_f);
           ml.field_c = param6;
@@ -88,7 +88,7 @@ class fg extends jc {
           }
           cd.field_w.setRootStream(ml.field_c);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "fg.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -98,11 +98,11 @@ class fg extends jc {
           param1.removeFocusListener(ad.field_b);
           wg.field_p = -1;
           if (param0 != 51) {
-            lj var3 = (lj) null;
-            fg.a(127, -79, -7, (java.awt.Component) null, (PlatformTaskDispatcher) null, false, (lj) null, false);
+            MidiPcmStream var3 = (MidiPcmStream) null;
+            fg.a(127, -79, -7, (java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "fg.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,12 +193,12 @@ class fg extends jc {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, boolean param1) {
-        t.a(param1, true, true);
+        CrossfadingMidiPcmStream.a(param1, true, true);
         if (param0 < 58) {
           field_u = -67;
         }
@@ -226,7 +226,7 @@ class fg extends jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "fg.DA(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "fg.DA(" + param0 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ class fg extends jc {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
-        t.a(param1, true, true);
+        CrossfadingMidiPcmStream.a(param1, true, true);
         if (param0 < 58) {
           field_u = -67;
         }

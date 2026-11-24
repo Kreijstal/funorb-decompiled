@@ -197,7 +197,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             this.fullscreenFrame = (java.awt.Frame) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           l.field_D[pf.field_o] = param5;
           oc.field_a[pf.field_o] = param0;
-          hl.field_N[pf.field_o] = param3;
+          MidiPcmStream.field_N[pf.field_o] = param3;
           var6 = param3 + (param0 + param5);
           if (param1 == var6) {
             stackIn_23_0 = 0;
@@ -247,7 +247,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
         l.field_D[pf.field_o] = param5;
         oc.field_a[pf.field_o] = param0;
-        hl.field_N[pf.field_o] = param3;
+        MidiPcmStream.field_N[pf.field_o] = param3;
         var6Lifetime1 = param3 + (param0 + param5);
         if (param1 == var6Lifetime1) {
           stackIn_7_0 = 0;
@@ -277,7 +277,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.focusLost = true;
         } catch (RuntimeException runtimeException) {
-          throw ld.a((Throwable) ((Object) runtimeException), "ra.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ra.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

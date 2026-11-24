@@ -63,7 +63,7 @@ final class gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2_ref), "gg.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2_ref), "gg.C(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class gg {
           field_f = null;
           int var1_int = 83 % ((27 - param0) / 58);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "gg.A(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "gg.A(" + param0 + ')');
         }
     }
 
@@ -159,8 +159,8 @@ final class gg {
           var21Lifetime1 = -param1[0] + param6[0];
           var22Lifetime1 = -param1[1] + param6[1];
           var23Lifetime1 = -param1[2] + param6[2];
-          var9 = var23Lifetime1 * param1[5] + param1[3] * var21Lifetime1 + param1[4] * var22Lifetime1 >> 16 - nd.field_m;
-          var10 = var23Lifetime1 * param1[8] + var21Lifetime1 * param1[6] + var22Lifetime1 * param1[7] >> -nd.field_m + 16;
+          var9 = var23Lifetime1 * param1[5] + param1[3] * var21Lifetime1 + param1[4] * var22Lifetime1 >> 16 - DelayedPcmStream.field_m;
+          var10 = var23Lifetime1 * param1[8] + var21Lifetime1 * param1[6] + var22Lifetime1 * param1[7] >> -DelayedPcmStream.field_m + 16;
           var11 = var22Lifetime1 * param1[10] + var21Lifetime1 * param1[9] + var23Lifetime1 * param1[11] >> 16;
           var21Lifetime2 = ka.field_f;
           var22Lifetime2 = ka.field_g;
@@ -171,8 +171,8 @@ final class gg {
               var24Lifetime1 = param4.field_v[var23Lifetime2];
               var25Lifetime1 = param4.field_d[var23Lifetime2];
               var26Lifetime1 = param4.field_B[var23Lifetime2];
-              var27Lifetime1 = var9 + (var25Lifetime1 * var15 + var12 * var24Lifetime1 + var26Lifetime1 * var18 >> 16 - nd.field_m);
-              var28Lifetime1 = (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var26Lifetime1 * var19) >> -nd.field_m + 16) + var10;
+              var27Lifetime1 = var9 + (var25Lifetime1 * var15 + var12 * var24Lifetime1 + var26Lifetime1 * var18 >> 16 - DelayedPcmStream.field_m);
+              var28Lifetime1 = (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var26Lifetime1 * var19) >> -DelayedPcmStream.field_m + 16) + var10;
               var29Lifetime1 = var11 + (var20 * var26Lifetime1 + var14 * var24Lifetime1 + var17 * var25Lifetime1 >> 16);
               stackIn_62_0 = ~var29Lifetime1;
               stackIn_62_1 = -51;
@@ -186,21 +186,21 @@ final class gg {
               }
               else {
                 if (stackIn_62_0 > stackIn_62_1) {
-                  nd.field_l[var23Lifetime2] = -2147483648;
+                  DelayedPcmStream.field_l[var23Lifetime2] = -2147483648;
                 } else {
                   sg.field_a[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   d.field_a[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;
                   }
-                  nd.field_l[var23Lifetime2] = var29Lifetime1;
+                  DelayedPcmStream.field_l[var23Lifetime2] = var29Lifetime1;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
                 }
                 if (param5) {
-                  el.field_m[var23Lifetime2] = var27Lifetime1 >> nd.field_m;
-                  hi.field_h[var23Lifetime2] = var28Lifetime1 >> nd.field_m;
+                  el.field_m[var23Lifetime2] = var27Lifetime1 >> DelayedPcmStream.field_m;
+                  hi.field_h[var23Lifetime2] = var28Lifetime1 >> DelayedPcmStream.field_m;
                   rk.field_q[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -287,7 +287,7 @@ final class gg {
             stackIn_71_1 = -128;
             break;
           }
-          ej.$cfr$intArgs$a$ff69b800fca9(stackIn_71_0, stackIn_71_1, param4, param3, var7_int);
+          MusicPatchPcmStream.$cfr$intArgs$a$ff69b800fca9(stackIn_71_0, stackIn_71_1, param4, param3, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -311,7 +311,7 @@ final class gg {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class gg {
           FullscreenFocusCanvas.b(-81);
           ba.a(119, param0);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "gg.D(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "gg.D(" + param0 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "gg.<init>()");
+          throw ch.wrapClientException((Throwable) ((Object) var1), "gg.<init>()");
         }
     }
 
@@ -367,7 +367,7 @@ final class gg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -131,18 +131,18 @@ final class dh extends IntrusiveNode {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var9[var6_int] = qe.field_z[RandomAccessCacheFile.a((int) var20[var6_int], 255)];
+              var9[var6_int] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var21);
+            var1[var2] = new Sprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var21);
           } else {
             var22 = fk.field_d[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = ok.a(RandomAccessCacheFile.a(var22[var7] << 24, -16777216), qe.field_z[RandomAccessCacheFile.a(255, (int) var20[var7])]);
+              var6[var7] = ok.a(RandomAccessCacheFile.a(var22[var7] << 24, -16777216), CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new d(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
+            var1[var2] = (Sprite) ((Object) new d(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
           }
         }
         ff.b(param0 + 46);

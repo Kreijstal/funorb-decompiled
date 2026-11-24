@@ -108,7 +108,7 @@ final class fk {
         this.field_a.position = this.field_b[param0];
     }
 
-    final boolean e() {
+    final boolean hasMidiData() {
         return this.field_a.payload != null;
     }
 

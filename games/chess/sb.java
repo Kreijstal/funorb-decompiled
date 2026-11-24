@@ -35,18 +35,18 @@ final class sb extends bj {
           if (!param1) {
             field_sb = 58;
           }
-          if (ci.field_ub == vl.field_A) {
+          if (ci.field_ub == MidiPcmStream.field_A) {
             return null;
           }
-          if (vl.field_A == kn.field_D &&
+          if (MidiPcmStream.field_A == kn.field_D &&
             param0.equals(lc.field_e)) {
-            vl.field_A = ji.field_T;
+            MidiPcmStream.field_A = ji.field_T;
             stackIn_8_0 = kf.field_j;
             return stackIn_8_0;
           }
           lc.field_e = param0;
           kf.field_j = null;
-          vl.field_A = ci.field_ub;
+          MidiPcmStream.field_A = ci.field_ub;
           stackIn_10_0 = null;
           return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class sb extends bj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class sb extends bj {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class sb extends bj {
             field_sb = -34;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "sb.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sb.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -84,7 +84,7 @@ final class di {
           var64 = new int[param2.field_L];
           var62 = oa.field_c;
           var61 = in.field_c;
-          var63 = dl.field_o;
+          var63 = MusicPatchPcmStream.field_o;
           for (var13 = 0; param2.field_L > var13; var13++) {
             var14 = param1 * var61[var13] + var62[var13] * param5 + var63[var13] * param0 >> 8;
             if (var14 < 0) {
@@ -201,7 +201,7 @@ final class di {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class di {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var7), "di.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var7), "di.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

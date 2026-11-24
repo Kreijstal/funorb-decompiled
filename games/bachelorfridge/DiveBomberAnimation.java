@@ -180,7 +180,7 @@ final class DiveBomberAnimation extends EventAnimation {
 
     final boolean isFinished(byte param0) {
         if (100 == this.field_l) {
-          jja.a(256, -1, 11);
+          MusicPatchPcmStream.a(256, -1, 11);
           this.field_l = this.field_l - 1;
         }
         int var2 = -109 / ((param0 - 71) / 47);
@@ -195,7 +195,7 @@ final class DiveBomberAnimation extends EventAnimation {
             this.f((byte) 118);
           }
           if (this.field_l == 15) {
-            jja.a(128, -1, 12);
+            MusicPatchPcmStream.a(128, -1, 12);
           }
           if (15 <= this.field_l) {
             return false;

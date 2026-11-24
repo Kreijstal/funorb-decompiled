@@ -29,7 +29,7 @@ final class MidiPcmStream extends PcmStream {
     private int field_o;
     private boolean field_j;
     private int field_l;
-    private jja field_k;
+    private MusicPatchPcmStream field_k;
     private int field_G;
     private MusicTrack field_E;
     private boolean field_p;
@@ -150,7 +150,7 @@ final class MidiPcmStream extends PcmStream {
         int var6;
         boolean decompiledFrameCompleted0 = true;
         var6 = BachelorFridge.field_y;
-        if (this.field_z.f()) {
+        if (this.field_z.hasMidiData()) {
           var2 = this.field_z.field_a * this.field_L / AudioOutput.field_j;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_q;
@@ -162,8 +162,8 @@ final class MidiPcmStream extends PcmStream {
             this.field_q = this.field_q + (long)var5 * (long)var2;
             this.field_k.skipFrames(var5);
             param0 = param0 - var5;
-            this.d(-3305);
-            if (this.field_z.f()) {
+            this.advanceMidiEvents(-3305);
+            if (this.field_z.hasMidiData()) {
               continue;
             }
             this.field_k.skipFrames(param0);
@@ -202,7 +202,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(MidiNote param0, byte param1) {
+    final boolean isVoiceInactive(MidiNote param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -250,7 +250,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var4 = null;
         var8 = BachelorFridge.field_y;
         try {
-          if (this.field_z.f()) {
+          if (this.field_z.hasMidiData()) {
             var4_int = this.field_L * this.field_z.field_a / AudioOutput.field_j;
             while (true) {
               var5 = (long)param2 * (long)var4_int + this.field_q;
@@ -263,8 +263,8 @@ final class MidiPcmStream extends PcmStream {
               this.field_k.mixInto(param0, param1, var7);
               param1 = param1 + var7;
               param2 = param2 - var7;
-              this.d(-3305);
-              if (this.field_z.f()) {
+              this.advanceMidiEvents(-3305);
+              if (this.field_z.hasMidiData()) {
                 continue;
               }
               this.field_k.mixInto(param0, param1, param2);
@@ -294,7 +294,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void d(int param0) {
+    private final void advanceMidiEvents(int param0) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         int var2;
@@ -312,7 +312,7 @@ final class MidiPcmStream extends PcmStream {
         if (this.field_E != null &&
           this.field_G == var3) {
           this.a(this.field_j, this.field_p, this.field_E, param0 ^ -20546);
-          this.d(-3305);
+          this.advanceMidiEvents(-3305);
           return;
         }
         while (true) {
@@ -347,7 +347,7 @@ final class MidiPcmStream extends PcmStream {
             if (this.field_z.isDone()) {
               if (this.field_E != null) {
                 this.a(this.field_E, (byte) -110, this.field_j);
-                this.d(-3305);
+                this.advanceMidiEvents(-3305);
                 return;
               }
               if (this.field_j &&
@@ -481,7 +481,7 @@ final class MidiPcmStream extends PcmStream {
         this.a((byte) -76, param2, param0);
     }
 
-    final boolean a(int param0, MidiNote param1, int[] param2, int param3, boolean param4) {
+    final boolean updateVoice(int param0, MidiNote param1, int[] param2, int param3, boolean param4) {
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         String stackIn_67_2 = null;
@@ -678,7 +678,7 @@ final class MidiPcmStream extends PcmStream {
         var5 = BachelorFridge.field_y;
         if (param2 != -107) {
           var6 = (MidiNote) null;
-          this.a((MidiNote) null, (byte) -27);
+          this.isVoiceInactive((MidiNote) null, (byte) -27);
         }
         if (param0 < 0) {
           for (var4 = 0; var4 < 16; var4++) {
@@ -974,7 +974,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(boolean param0, boolean param1) {
+    private final synchronized void clearMidiPlayback(boolean param0, boolean param1) {
         this.field_z.release();
         if (!param1) {
           this.a(-48, 13, 7, 105);
@@ -1000,7 +1000,7 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         int var7 = BachelorFridge.field_y;
         try {
-          this.a(param1, true);
+          this.clearMidiPlayback(param1, true);
           this.field_z.a(param2.field_g);
           this.field_q = 0L;
           this.field_j = param0 ? true : false;
@@ -1139,8 +1139,8 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_k);
     }
 
-    final synchronized void b(boolean param0) {
-        this.a(param0, true);
+    final synchronized void stopPlayback(boolean param0) {
+        this.clearMidiPlayback(param0, true);
     }
 
     private final void a(int param0, int param1, int param2, byte param3) {
@@ -1274,11 +1274,11 @@ final class MidiPcmStream extends PcmStream {
         this.b(param2, (byte) -50, param0);
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean isMidiReady(int param0) {
         if (param0 != 28607) {
           return false;
         }
-        return this.field_z.f();
+        return this.field_z.hasMidiData();
     }
 
     final synchronized int getSchedulingCost() {
@@ -1320,7 +1320,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_M = new int[16];
         this.field_B = new MidiNote[16][128];
         this.field_z = new MidiFileReader();
-        this.field_k = new jja(this);
+        this.field_k = new MusicPatchPcmStream(this);
         this.field_m = new IntrusiveNodeHashTable(128);
         this.a(-1, 256, (byte) -107);
         this.a(true, 106);

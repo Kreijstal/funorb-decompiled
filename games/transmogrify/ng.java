@@ -34,7 +34,7 @@ final class ng extends IntrusiveNode {
           ch.a(58, ea.field_n, g.field_A, DelegatingCanvas.field_a);
           DelegatingCanvas.a(0, 0, (byte) 90, param1);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

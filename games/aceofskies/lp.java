@@ -45,7 +45,7 @@ final class lp extends Exception {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
         }
     }
 

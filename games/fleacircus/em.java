@@ -109,7 +109,7 @@ final class em extends IOException {
           param0.field_t = var3;
           param0.field_v = param0.field_v & -4;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "em.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "em.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

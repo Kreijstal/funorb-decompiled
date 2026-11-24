@@ -220,7 +220,7 @@ abstract class wl extends DualLinkNode {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ abstract class wl extends DualLinkNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ abstract class wl extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "wl.L(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "wl.L(" + param0 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ abstract class wl extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "wl.N(" + param0 + ',' + param1 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "wl.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -312,7 +312,7 @@ abstract class wl extends DualLinkNode {
             wl.a((byte) 90);
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ')');
         }
     }
 
@@ -363,7 +363,7 @@ abstract class wl extends DualLinkNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class bl extends IntrusiveNode {
-    be field_n;
+    PcmStreamMixer field_n;
     int field_m;
 
     abstract void b();
 
-    abstract int a(be param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     abstract void a();
 

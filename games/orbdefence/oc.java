@@ -15,7 +15,7 @@ final class oc extends vi implements ib {
         try {
           this.field_S = param0;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "oc.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "oc.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class oc extends vi implements ib {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class oc extends vi implements ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var2_ref), "oc.KA(" + param0 + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var2_ref), "oc.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class oc extends vi implements ib {
           super.a(param0, param1, param2, param3);
           this.field_T = ua.field_a - (this.field_s + param2);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "oc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "oc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -399,7 +399,7 @@ final class oc extends vi implements ib {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

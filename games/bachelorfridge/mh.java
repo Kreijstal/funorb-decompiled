@@ -307,7 +307,7 @@ final class mh extends EventEffect {
                       var14_ref_String = lga.a(true, new String[]{(String) (var11_ref)}, qk.field_p);
                     }
                   }
-                  jja.field_m = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
+                  MusicPatchPcmStream.field_m = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
               if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (DelegatingCanvas.field_b != null ||
@@ -422,11 +422,11 @@ final class mh extends EventEffect {
                   if (PlaceCreatureEffect.field_j.field_E) {
                     boolean decompiledSharedTail0 = (0 != BitPacketBuffer.field_n.field_a.field_yb);
                     if (!decompiledSharedTail0) {
-                      jja.field_m = bma.field_t;
+                      MusicPatchPcmStream.field_m = bma.field_t;
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      jja.field_m = lga.a(true, new String[]{WidgetWrapper.field_B}, n.field_c);
+                      MusicPatchPcmStream.field_m = lga.a(true, new String[]{WidgetWrapper.field_B}, n.field_c);
                     }
                   }
                 }

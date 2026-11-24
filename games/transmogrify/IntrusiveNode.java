@@ -182,7 +182,7 @@ class IntrusiveNode {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          ci.field_f.a(be.field_x, lc.field_R, true, 4);
+          ci.field_f.a(be.field_x, MidiPcmStream.field_R, true, 4);
           if (param0 != -1) {
             field_d = (mi) null;
           }
@@ -234,7 +234,7 @@ class IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "wf.VB(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "wf.VB(" + param0 + ')');
         }
     }
 

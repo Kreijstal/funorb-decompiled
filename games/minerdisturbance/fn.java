@@ -52,7 +52,7 @@ final class fn extends IntrusiveNode {
               var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
               var2.writeByte(15, 25564);
-              var2.writeInt((byte) 120, gd.field_y);
+              var2.writeInt((byte) 120, MusicPatchPcmStream.field_y);
               mb.field_c.a((byte) 104, var2.payload, 13, 0);
               tl.field_m = tl.field_m + 1;
               sk.field_a = 30000L + sf.correctedCurrentTimeMillis((byte) -54);
@@ -250,13 +250,13 @@ final class fn extends IntrusiveNode {
             var4.unlink(34);
             return;
           }
-          di.a((Throwable) null, 1, "HS1: " + hj.a((byte) 68));
+          MidiPcmStream.a((Throwable) null, 1, "HS1: " + hj.a((byte) 68));
           si.a(-108);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "fn.B(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "fn.B(" + param0 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class fn extends IntrusiveNode {
         }
         if (null == sj.field_d) {
           sj.field_d = hk.b(param2 ^ 3);
-          di.field_x = hk.b(0);
+          MidiPcmStream.field_x = hk.b(0);
         }
         if (nm.a(param0, sj.field_d, -827843803)) {
           return;
@@ -296,7 +296,7 @@ final class fn extends IntrusiveNode {
         var3 = var6;
         var4Lifetime1 = param0;
         var3[var4Lifetime1 >> 5] = SpriteState.a(var6[var4Lifetime1 >> 5], 1 << c.a(31, var4Lifetime1));
-        var7 = di.field_x;
+        var7 = MidiPcmStream.field_x;
         var3Lifetime1 = var7;
         var4Lifetime2 = param0;
         var3Lifetime1[var4Lifetime2 >> 5] = SpriteState.a(var7[var4Lifetime2 >> 5], 1 << c.a(var4Lifetime2, 31));
@@ -324,7 +324,7 @@ final class fn extends IntrusiveNode {
         if (25 == sj.field_f) {
           sj.field_f = 0;
         }
-        dn.field_t[sj.field_f] = rc.a(re.field_a[18], param1, oc.field_f);
+        dn.field_t[sj.field_f] = RawPcmStream.a(re.field_a[18], param1, oc.field_f);
         mg.a(1963987425, dn.field_t[sj.field_f]);
         rb.field_l[sj.field_f] = param0;
     }
@@ -351,7 +351,7 @@ final class fn extends IntrusiveNode {
         try {
           aa.field_j = new th(var2);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "fn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -369,7 +369,7 @@ final class fn extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

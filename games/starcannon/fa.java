@@ -21,29 +21,29 @@ final class fa extends UiWidget {
     private int field_F;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        oh.field_c[ed.field_p] = param1;
-        jk.field_c[ed.field_p] = ed.field_p;
-        tk.field_f[ed.field_p] = param2;
+        oh.field_c[DelayedPcmStream.field_p] = param1;
+        jk.field_c[DelayedPcmStream.field_p] = DelayedPcmStream.field_p;
+        tk.field_f[DelayedPcmStream.field_p] = param2;
         if (param2 > lh.field_s) {
           mh.field_j = param2;
         }
         if (param2 < og.field_b) {
           t.field_u = param2;
         }
-        nf.field_b[ed.field_p] = param4;
-        MouseWheelSource.field_f[ed.field_p] = param0;
-        ab.field_G[ed.field_p] = param3;
+        nf.field_b[DelayedPcmStream.field_p] = param4;
+        MouseWheelSource.field_f[DelayedPcmStream.field_p] = param0;
+        ab.field_G[DelayedPcmStream.field_p] = param3;
         int var6 = 27 % ((-39 - param5) / 50);
         int var7 = param3 + (param4 + param0);
         int var8 = var7 != 0 ? param4 * 1000 / var7 : 0;
-        fg.field_b[ed.field_p] = var8;
+        fg.field_b[DelayedPcmStream.field_p] = var8;
         if (!(var8 >= t.field_u)) {
           t.field_u = var8;
         }
         if (mh.field_j < var8) {
           mh.field_j = var8;
         }
-        ed.field_p = ed.field_p + 1;
+        DelayedPcmStream.field_p = DelayedPcmStream.field_p + 1;
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -201,7 +201,7 @@ final class fa extends UiWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class fa extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

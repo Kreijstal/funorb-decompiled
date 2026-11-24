@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -602,7 +602,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                     la.a(256, KeyboardInput.field_g, (byte) 84);
                   }
                 } else {
-                  la.a(256, kd.field_A, (byte) 48);
+                  la.a(256, CrossfadingMidiPcmStream.field_A, (byte) 48);
                 }
               } else {
                 la.a(256, oh.field_b, (byte) 110);
@@ -667,7 +667,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             GameCanvas.field_d.a(-15879)) {
             if (GameCanvas.field_d.a("", (byte) 124)) {
               if (GameCanvas.field_d.a(param1 ^ -14784, "")) {
-                dl.a(param1 - 9839, GameCanvas.field_d);
+                MusicPatchPcmStream.a(param1 - 9839, GameCanvas.field_d);
                 GameCanvas.field_d = null;
                 ql.f(param1 ^ 14668);
               }
@@ -761,7 +761,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         try {
           this.a(param2, param0, 640, param1, (byte) -55);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

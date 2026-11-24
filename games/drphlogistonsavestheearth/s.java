@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static ug field_a;
+    static MidiPcmStream field_a;
     static int field_g;
     static long field_c;
     static long field_b;

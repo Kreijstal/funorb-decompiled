@@ -80,7 +80,7 @@ final class qi {
         this.field_h = null;
     }
 
-    final boolean b() {
+    final boolean hasMidiData() {
         return this.field_e.payload != null;
     }
 

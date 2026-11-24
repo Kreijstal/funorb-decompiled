@@ -17,7 +17,7 @@ final class ie {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 1 / ((param0 + 10) / 62);
-          stackIn_1_0 = wl.a(true, param2, false, param1);
+          stackIn_1_0 = MidiPcmStream.a(true, param2, false, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

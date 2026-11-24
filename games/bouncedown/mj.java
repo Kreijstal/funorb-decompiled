@@ -59,7 +59,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "mj.C(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "mj.C(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "mj.E(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "mj.E(" + param0 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var4), "mj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var4), "mj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "mj.G(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2), "mj.G(" + param0 + ')');
         }
     }
 
@@ -557,7 +557,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "mj.B(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var2_ref), "mj.B(" + param0 + ')');
         }
     }
 
@@ -575,7 +575,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "mj.A(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "mj.A(" + param0 + ')');
         }
     }
 
@@ -658,7 +658,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "mj.D(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var3), "mj.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -712,7 +712,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mj.<init>()");
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "mj.<init>()");
         }
     }
 

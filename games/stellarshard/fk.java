@@ -36,9 +36,9 @@ final class fk extends IntrusiveNode {
         field_q = null;
     }
 
-    final static hl d(int param0) {
+    final static PcmStreamMixer d(int param0) {
         if (param0 < 70) {
-          return (hl) null;
+          return (PcmStreamMixer) null;
         }
         return ok.field_b;
     }

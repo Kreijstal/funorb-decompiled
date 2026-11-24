@@ -213,7 +213,7 @@ abstract class SpriteState extends DualLinkNode {
             } else {
               stackIn_71_2 = "{...}";
             }
-            throw fc.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(')').toString());
+            throw fc.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -305,7 +305,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "db.B(" + param0 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var1), "db.B(" + param0 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var2), "db.H(" + param0 + ',' + param1 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) var2), "db.H(" + param0 + ',' + param1 + ')');
         }
     }
 

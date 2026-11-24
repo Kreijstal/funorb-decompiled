@@ -12,7 +12,7 @@ final class lj extends IntrusiveNode {
     String field_n;
     static int field_q;
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -37,7 +37,7 @@ final class lj extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,32 +70,32 @@ final class lj extends IntrusiveNode {
           var4 = ql.a(param0, (byte) 100) ? 1 : 0;
           var5 = new pb();
           var5.field_y = (short)param0.c((byte) -71, 16);
-          var5.field_n = gd.a(param0, 16, -125, var5.field_n);
-          var5.field_M = gd.a(param0, 16, -87, var5.field_M);
-          var5.field_Q = gd.a(param0, 16, -126, var5.field_Q);
+          var5.field_n = MusicPatchPcmStream.a(param0, 16, -125, var5.field_n);
+          var5.field_M = MusicPatchPcmStream.a(param0, 16, -87, var5.field_M);
+          var5.field_Q = MusicPatchPcmStream.a(param0, 16, -126, var5.field_Q);
           var5.field_I = (short)param0.c((byte) -81, 16);
-          var5.field_e = gd.a(param0, 16, -95, var5.field_e);
-          var5.field_O = gd.a(param0, 16, -74, var5.field_O);
-          var5.field_F = gd.a(param0, 16, -78, var5.field_F);
+          var5.field_e = MusicPatchPcmStream.a(param0, 16, -95, var5.field_e);
+          var5.field_O = MusicPatchPcmStream.a(param0, 16, -74, var5.field_O);
+          var5.field_F = MusicPatchPcmStream.a(param0, 16, -78, var5.field_F);
           if (var3 != 0) {
             var5.field_g = (short)param0.c((byte) -105, 16);
-            var5.field_C = gd.a(param0, 16, -100, var5.field_C);
-            var5.field_q = gd.a(param0, 16, -83, var5.field_q);
-            var5.field_B = gd.a(param0, 16, -128, var5.field_B);
-            var5.field_f = gd.a(param0, 16, -57, var5.field_f);
-            var5.field_w = gd.a(param0, 16, -118, var5.field_w);
-            var5.field_d = gd.a(param0, 16, -55, var5.field_d);
+            var5.field_C = MusicPatchPcmStream.a(param0, 16, -100, var5.field_C);
+            var5.field_q = MusicPatchPcmStream.a(param0, 16, -83, var5.field_q);
+            var5.field_B = MusicPatchPcmStream.a(param0, 16, -128, var5.field_B);
+            var5.field_f = MusicPatchPcmStream.a(param0, 16, -57, var5.field_f);
+            var5.field_w = MusicPatchPcmStream.a(param0, 16, -118, var5.field_w);
+            var5.field_d = MusicPatchPcmStream.a(param0, 16, -55, var5.field_d);
           }
           if (var4 != 0) {
             param0.c((byte) -67, 16);
-            var5.field_s = gd.a(param0, 16, -66, var5.field_s);
-            var5.field_u = gd.a(param0, 16, -62, var5.field_u);
-            var5.field_i = gd.a(param0, 16, -84, var5.field_i);
-            var5.field_a = gd.a(param0, 16, -70, var5.field_a);
-            var5.field_P = gd.a(param0, 16, -69, var5.field_P);
+            var5.field_s = MusicPatchPcmStream.a(param0, 16, -66, var5.field_s);
+            var5.field_u = MusicPatchPcmStream.a(param0, 16, -62, var5.field_u);
+            var5.field_i = MusicPatchPcmStream.a(param0, 16, -84, var5.field_i);
+            var5.field_a = MusicPatchPcmStream.a(param0, 16, -70, var5.field_a);
+            var5.field_P = MusicPatchPcmStream.a(param0, 16, -69, var5.field_P);
           }
           if (ql.a(param0, (byte) 100)) {
-            var5.field_G = gd.a(param0, 16, -70, var5.field_G);
+            var5.field_G = MusicPatchPcmStream.a(param0, 16, -70, var5.field_G);
           }
           if (ql.a(param0, (byte) 100)) {
             var5.field_x = sn.a(var5.field_x, param0, 16, -110);
@@ -123,7 +123,7 @@ final class lj extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 

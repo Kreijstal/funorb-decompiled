@@ -43,7 +43,7 @@ final class ei {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class ei {
             }
           }
           if (og.field_b > h.field_A) {
-            var8 = dm.field_b[lj.field_u];
+            var8 = dm.field_b[MidiPcmStream.field_u];
             if (var8 != null) {
               var2_int = h.field_A * (var8.field_s + 60) / og.field_b;
               var3 = -30 + var2_int;
@@ -120,7 +120,7 @@ final class ei {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "ei.B(" + param0 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) var1), "ei.B(" + param0 + ')');
         }
     }
 

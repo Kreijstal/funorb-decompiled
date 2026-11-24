@@ -175,7 +175,7 @@ final class sr {
                       }
                     }
                   }
-                  jja.field_m = "<col=A00000>" + iha.field_k + "<br>" + BoardChange.field_l + (String) (var9);
+                  MusicPatchPcmStream.field_m = "<col=A00000>" + iha.field_k + "<br>" + BoardChange.field_l + (String) (var9);
                 }
               }
             } else {

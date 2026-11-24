@@ -4,7 +4,7 @@
 final class AccountCreationResultPanel extends af implements qh {
     private boolean field_sb;
     static int field_rb;
-    static qj field_tb;
+    static PcmStreamMixer field_tb;
     private kl field_vb;
     private boolean field_ub;
 
@@ -92,7 +92,7 @@ final class AccountCreationResultPanel extends af implements qh {
           }
           var5 = new ui((af) (this), vd.field_p, var4);
           if (param2 != 117) {
-            field_tb = (qj) null;
+            field_tb = (PcmStreamMixer) null;
           }
           if (param0.success) {
             if (param0.field_e) {

@@ -294,31 +294,31 @@ final class ue {
           }
           var2Lifetime45 = hj.a((byte) -2, "nextweapon,0");
           if (var2Lifetime45 != null) {
-            mf.field_y[0] = Archive.a(true, var2Lifetime45);
+            MidiPcmStream.field_y[0] = Archive.a(true, var2Lifetime45);
           }
           var2Lifetime46 = hj.a((byte) -2, "nextweapon,1");
           if (var2Lifetime46 != null) {
-            mf.field_y[1] = Archive.a(true, var2Lifetime46);
+            MidiPcmStream.field_y[1] = Archive.a(true, var2Lifetime46);
           }
           var2Lifetime47 = hj.a((byte) -2, "nextweapon,2");
           if (var2Lifetime47 != null) {
-            mf.field_y[2] = Archive.a(true, var2Lifetime47);
+            MidiPcmStream.field_y[2] = Archive.a(true, var2Lifetime47);
           }
           var2Lifetime48 = hj.a((byte) -2, "nextweapon,3");
           if (null != var2Lifetime48) {
-            mf.field_y[3] = Archive.a(true, var2Lifetime48);
+            MidiPcmStream.field_y[3] = Archive.a(true, var2Lifetime48);
           }
           var2Lifetime49 = hj.a((byte) -2, "nextweapon,4");
           if (null != var2Lifetime49) {
-            mf.field_y[4] = Archive.a(true, var2Lifetime49);
+            MidiPcmStream.field_y[4] = Archive.a(true, var2Lifetime49);
           }
           var2Lifetime50 = hj.a((byte) -2, "nextweapon,5");
           if (null != var2Lifetime50) {
-            mf.field_y[5] = Archive.a(true, var2Lifetime50);
+            MidiPcmStream.field_y[5] = Archive.a(true, var2Lifetime50);
           }
           var2Lifetime51 = hj.a((byte) -2, "nextweapon,6");
           if (null != var2Lifetime51) {
-            mf.field_y[6] = Archive.a(true, var2Lifetime51);
+            MidiPcmStream.field_y[6] = Archive.a(true, var2Lifetime51);
           }
           var2Lifetime52 = hj.a((byte) -2, "nextweapondesc,0");
           if (null != var2Lifetime52) {
@@ -518,7 +518,7 @@ final class ue {
           } else {
             stackIn_356_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_355_0), ((StringBuilder) (Object) stackIn_355_1).append(stackIn_356_2).append(',').append(param1).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_355_0), ((StringBuilder) (Object) stackIn_355_1).append(stackIn_356_2).append(',').append(param1).append(')').toString());
         }
         if (GameApplet.field_l) {
           SolKnight.field_L = (var3 == 0);
@@ -675,7 +675,7 @@ final class ue {
           } else {
             stackIn_196_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param5).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param5).append(')').toString());
         }
     }
 

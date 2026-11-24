@@ -45,7 +45,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements HardwareIndexBuffe
         try {
           this.field_s = param1;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements HardwareIndexBuffe
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 

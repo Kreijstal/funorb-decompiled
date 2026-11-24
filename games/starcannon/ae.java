@@ -38,7 +38,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "ae.B(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1_ref), "ae.B(" + param0 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class ae {
           t.field_h = new lc(ti.field_b, wi.field_c);
           ti.field_b.a((byte) 102, (UiWidget) (t.field_h));
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ae.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ae.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

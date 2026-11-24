@@ -55,7 +55,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw dn.a((Throwable) ((Object) var1), "ug.B(" + param0 + ')');
+            throw dn.wrapClientException((Throwable) ((Object) var1), "ug.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -153,7 +153,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           param2.field_b.field_d = param2;
           param2.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "ug.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ug.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

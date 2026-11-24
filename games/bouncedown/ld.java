@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld extends IntrusiveNode {
-    static pk field_l;
+    static MidiPcmStream field_l;
     boolean field_g;
     int field_k;
     static tg[] field_h;
@@ -72,7 +72,7 @@ final class ld extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "ld.C(" + param0 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) var1), "ld.C(" + param0 + ')');
         }
     }
 

@@ -27,28 +27,28 @@ final class tka extends TileEffect {
               return false;
             }
             this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
-            jja.a(64, -1, 24);
+            MusicPatchPcmStream.a(64, -1, 24);
             return true;
           }
-          jja.a(192, -1, 25);
+          MusicPatchPcmStream.a(192, -1, 25);
           fieldTemp$1 = this.field_f - 1;
           this.field_f = this.field_f - 1;
           if (fieldTemp$1 >= 0) {
             return false;
           }
           this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
-          jja.a(64, -1, 24);
+          MusicPatchPcmStream.a(64, -1, 24);
           return true;
         }
         if (this.field_f == 60) {
-          jja.a(192, -1, 25);
+          MusicPatchPcmStream.a(192, -1, 25);
           fieldTemp$2 = this.field_f - 1;
           this.field_f = this.field_f - 1;
           if (fieldTemp$2 >= 0) {
             return false;
           }
           this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
-          jja.a(64, -1, 24);
+          MusicPatchPcmStream.a(64, -1, 24);
           return true;
         }
         int fieldTemp$3 = this.field_f - 1;
@@ -57,7 +57,7 @@ final class tka extends TileEffect {
           return false;
         }
         this.field_e.field_h.setTerrain((byte) 68, 36, this.field_d, this.field_c);
-        jja.a(64, -1, 24);
+        MusicPatchPcmStream.a(64, -1, 24);
         return true;
     }
 

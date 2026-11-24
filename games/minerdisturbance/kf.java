@@ -51,18 +51,18 @@ final class kf {
           var2 = var12;
           nb.field_i[10] = new ml(10, var2, 10, 326, 310, 320, 140 / var12.length, true, 1);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "kf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "kf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(rc param0, byte param1) {
+    final static void a(RawPcmStream param0, byte param1) {
         try {
           hj.field_f.a(param0);
           if (param1 >= -36) {
             kf.clearStaticReferences(96);
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "kf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "kf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

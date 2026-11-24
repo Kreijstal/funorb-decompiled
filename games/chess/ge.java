@@ -34,7 +34,7 @@ final class ge extends k implements mj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ge extends k implements mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var2), "ge.A(" + param0 + ',' + param1 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var2), "ge.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ge extends k implements mj {
         try {
           field_eb = null;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ge.H(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ge.H(" + param0 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class ge extends k implements mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref2 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var4_ref2), "ge.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var4_ref2), "ge.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class ge extends k implements mj {
             stackIn_10_0 = stackIn_5_0;
             stackIn_10_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class ge extends k implements mj {
             ge.a(false, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ge.J(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ge.J(" + param0 + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class ge extends k implements mj {
             stackIn_20_0 = stackIn_15_0;
             stackIn_20_2 = "{...}";
           }
-          throw fk.a((Throwable) (stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) (stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class ge extends k implements mj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

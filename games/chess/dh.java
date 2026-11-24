@@ -59,7 +59,7 @@ final class dh {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -98,7 +98,7 @@ final class dh {
           }
           if (ci.f(-52)) {
             var9 = ug.a((byte) -86, this.field_j);
-            var4 = mi.a(134217727, this.field_j);
+            var4 = MusicPatchPcmStream.a(134217727, this.field_j);
             var5 = this.a(28);
             if (var4 != null) {
               if (pd.field_Rb.field_Vb &&
@@ -146,7 +146,7 @@ final class dh {
         }
         var8 = ug.a((byte) -86, this.field_j);
         var7 = var8;
-        var4Lifetime1 = mi.a(134217727, this.field_j);
+        var4Lifetime1 = MusicPatchPcmStream.a(134217727, this.field_j);
         var5 = this.a(28);
         if (var4Lifetime1 != null) {
           if (pd.field_Rb.field_Vb &&
@@ -187,7 +187,7 @@ final class dh {
           param1.field_s = new char[]{(char)63};
           param1.field_t = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class dh {
             this.field_b.a((byte) -12, in.field_e, 13);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class dh {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ final class dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1_ref), "dh.N(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "dh.N(" + param0 + ')');
         }
     }
 
@@ -490,7 +490,7 @@ final class dh {
         try {
           param4.writeByte(param3, (byte) 109);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "dh.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "dh.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -705,7 +705,7 @@ final class dh {
           this.field_i = param2;
           this.field_d = param4;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

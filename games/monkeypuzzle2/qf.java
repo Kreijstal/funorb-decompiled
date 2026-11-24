@@ -973,7 +973,7 @@ final class qf extends og {
         this.e();
     }
 
-    final int a(PcmStreamMixer param0) {
+    final int onScheduledEvent(PcmStreamMixer param0) {
         if (this.d() &&
           !this.field_P) {
           return -1;

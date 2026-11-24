@@ -4,7 +4,7 @@
 final class ec {
     static bd field_c;
     static int field_a;
-    static b field_b;
+    static RawPcmStream field_b;
     static byte[] field_d;
 
     final static int a(int[] param0, byte param1) {
@@ -38,7 +38,7 @@ final class ec {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ec {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class ec {
 
     final static void b(int param0) {
         if (param0 != -21931) {
-          field_b = (b) null;
+          field_b = (RawPcmStream) null;
         }
     }
 

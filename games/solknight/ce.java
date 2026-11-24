@@ -7,7 +7,7 @@ final class ce {
     static String field_a;
     static java.awt.Font field_f;
     private boolean field_g;
-    static e field_c;
+    static PcmStreamMixer field_c;
     static boolean field_b;
 
     final boolean a(boolean param0) {
@@ -47,7 +47,7 @@ final class ce {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

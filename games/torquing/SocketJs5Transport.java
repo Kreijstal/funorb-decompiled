@@ -1539,7 +1539,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "reloadgame");
                 if (var2 != null) {
-                  kl.field_n = SecondaryNodeDeque.a(var2, false);
+                  DelayedPcmStream.field_n = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "toserverlist");
                 if (null != var2) {
@@ -2410,7 +2410,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "highscores");
                 if (var2 != null) {
-                  kl.field_u = SecondaryNodeDeque.a(var2, false);
+                  DelayedPcmStream.field_u = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "rankings");
                 if (null != var2) {

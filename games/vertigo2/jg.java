@@ -29,7 +29,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "jg.M(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "jg.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "jg.U(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "jg.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ class jg extends bg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "jg.N(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "jg.N(" + param0 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var5), "jg.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var5), "jg.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ class jg extends bg {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param4).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ class jg extends bg {
             field_j = (int[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "jg.V(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "jg.V(" + param0 + ')');
         }
     }
 
@@ -336,7 +336,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var3), "jg.CA(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var3), "jg.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -452,7 +452,7 @@ class jg extends bg {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -516,7 +516,7 @@ class jg extends bg {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -533,7 +533,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -555,7 +555,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "jg.AA(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "jg.AA(" + param0 + ')');
         }
     }
 
@@ -596,7 +596,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "jg.E(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "jg.E(" + param0 + ')');
         }
     }
 
@@ -618,7 +618,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) runtimeException), "jg.BA(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "jg.BA(" + param0 + ')');
         }
     }
 
@@ -635,7 +635,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "jg.R(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "jg.R(" + param0 + ')');
         }
     }
 
@@ -660,7 +660,7 @@ class jg extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -686,7 +686,7 @@ class jg extends bg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

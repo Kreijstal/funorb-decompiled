@@ -238,7 +238,7 @@ public final class BachelorFridge extends NetworkGameClient {
             kaa.field_m = OhNoEvent.field_s;
             pha.field_a = true;
           }
-          jja.c(20757);
+          MusicPatchPcmStream.c(20757);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -760,7 +760,7 @@ public final class BachelorFridge extends NetworkGameClient {
         PizzaArenaTheme.releaseStatics(35);
         MidiNote.c((byte) 73);
         MidiFileReader.releaseStatics();
-        jja.releaseStatics((byte) -90);
+        MusicPatchPcmStream.releaseStatics((byte) -90);
         kc.releaseStatics((byte) 94);
         rm.releaseStatics(-101);
         ti.releaseStatics(3);

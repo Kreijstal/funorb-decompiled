@@ -85,7 +85,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ol.a(8, 6);
           }
           if (CombatState.field_w[6]) {
-            tc.a(7, (byte) -112);
+            CrossfadingMidiPcmStream.a(7, (byte) -112);
           }
           if (CombatState.field_w[8]) {
             hj.g(-59);
@@ -334,7 +334,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var5), "in.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var5), "in.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5_intLifetime2 = bh.a(this.field_u, em.e(7142), 106, this.field_q, false, vl.c(-29455));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
-                  IntrusiveNode.field_g = hg.field_s;
+                  IntrusiveNode.field_g = MusicPatchPcmStream.field_s;
                   bl.b((byte) -97);
                   AccountNameAvailabilityValidator.field_n = 10;
                   tl.field_l = false;
@@ -594,7 +594,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         try {
           this.a(param1, 640, true, param0, 480);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "in.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "in.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

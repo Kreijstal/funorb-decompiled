@@ -19,7 +19,7 @@ final class AccountCreationResultPanel extends dg implements qk {
           this.g((byte) -5);
           int var6_int = 22 % ((param4 + 63) / 52);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "wg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class AccountCreationResultPanel extends dg implements qk {
         vg.field_a = jd.a(var5 * var2, var2 * var4, (byte) -79);
     }
 
-    final static kc a(Throwable param0, String param1) {
+    final static kc wrapClientException(Throwable param0, String param1) {
         kc var2 = null;
         if (param0 instanceof kc) {
           var2 = (kc) ((Object) param0);
@@ -137,7 +137,7 @@ final class AccountCreationResultPanel extends dg implements qk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class AccountCreationResultPanel extends dg implements qk {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class AccountCreationResultPanel extends dg implements qk {
         try {
           this.field_xb = param1;
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

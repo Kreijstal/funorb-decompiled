@@ -199,7 +199,7 @@ final class nl {
         field_i = null;
     }
 
-    final boolean e() {
+    final boolean hasMidiData() {
         return this.field_h.payload != null;
     }
 

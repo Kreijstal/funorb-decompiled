@@ -40,7 +40,7 @@ final class oc extends kl {
         }
         mf.field_d[lc.field_d] = param2;
         wa.field_m[lc.field_d] = param3;
-        tc.field_w[lc.field_d] = param4;
+        CrossfadingMidiPcmStream.field_w[lc.field_d] = param4;
         int var6 = param4 + param2 + param3;
         int var7 = var6 == 0 ? 0 : 1000 * param2 / var6;
         ci.field_n[lc.field_d] = var7;
@@ -262,7 +262,7 @@ final class oc extends kl {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

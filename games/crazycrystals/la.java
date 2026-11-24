@@ -68,9 +68,9 @@ final class la {
           if (null != oj.field_H &&
             oj.field_H.a((byte) 102) &&
             oj.field_H.a(-20402, "benefits") &&
-            ka.field_m != null &&
-            ka.field_m.a((byte) 102) &&
-            ka.field_m.a(-20402, "benefits")) {
+            MusicPatchPcmStream.field_m != null &&
+            MusicPatchPcmStream.field_m.a((byte) 102) &&
+            MusicPatchPcmStream.field_m.a(-20402, "benefits")) {
             so.field_d = wl.a("headline", oj.field_H, 10, "benefits");
             uh.field_q = wl.a("blurbpane", oj.field_H, 10, "benefits");
             ad.field_h = wl.a("button", oj.field_H, 10, "benefits");
@@ -78,8 +78,8 @@ final class la {
             el.field_g = wl.a("menu_text", oj.field_H, 10, "benefits");
             fl.field_a = wl.a("button_frame", oj.field_H, 10, "benefits");
             qk.field_H = wl.a("arrow", oj.field_H, 10, "benefits");
-            ra.field_c = (vc) ((Object) hp.a(ka.field_m, 0, "large_font", oj.field_H, "benefits"));
-            rn.field_k = (vc) ((Object) hp.a(ka.field_m, 0, "small_font", oj.field_H, "benefits"));
+            ra.field_c = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", oj.field_H, "benefits"));
+            rn.field_k = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", oj.field_H, "benefits"));
             var28 = kh.field_i;
             var2 = kh.field_l;
             var3 = kh.field_d;
@@ -320,7 +320,7 @@ final class la {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "la.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "la.A(" + param0 + ')');
         }
     }
 

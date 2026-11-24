@@ -4,7 +4,7 @@
 abstract class PcmScheduledEvent extends IntrusiveNode {
     int time;
 
-    abstract int a(PcmStreamMixer param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     abstract void a();
 

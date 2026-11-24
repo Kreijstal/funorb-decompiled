@@ -52,7 +52,7 @@ final class hn extends IntrusiveNode {
           param3[7] = (int)(var21[1] / var17Lifetime2 * DelegatingCanvas.field_f);
           param3[8] = (int)(var21[2] / var17Lifetime2 * DelegatingCanvas.field_f);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 

@@ -31,7 +31,7 @@ final class hl extends l {
           RuntimeException var2_ref2 = null;
           var7 = CrazyCrystals.field_B;
           try {
-            if (wg.field_P) {
+            if (MidiPcmStream.field_P) {
               return true;
             }
             try {
@@ -64,7 +64,7 @@ final class hl extends l {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw dn.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+            throw dn.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -173,7 +173,7 @@ final class hl extends l {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

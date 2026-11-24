@@ -53,7 +53,7 @@ final class ao {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1_ref), "ao.C(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1_ref), "ao.C(" + param0 + ')');
         }
     }
 

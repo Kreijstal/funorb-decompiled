@@ -74,7 +74,7 @@ final class lt extends to {
           var3.field_z = true;
           var3.a((ea) (this), (byte) -42);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "lt.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "lt.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

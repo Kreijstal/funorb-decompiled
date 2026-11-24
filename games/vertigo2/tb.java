@@ -243,7 +243,7 @@ class tb implements ka {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 

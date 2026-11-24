@@ -33,7 +33,7 @@ abstract class ArchiveProvider {
             ArchiveProvider.a(-15);
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "vb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -10,5 +10,5 @@ abstract class ak extends IntrusiveNode {
 
     abstract void a();
 
-    abstract int a(ec param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 }

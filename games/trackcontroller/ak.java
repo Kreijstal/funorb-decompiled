@@ -49,7 +49,7 @@ final class ak {
         try {
           wj.field_a = ib.a(10, "commonui", param1, "frame_top");
           kf.field_d = ib.a(10, "commonui", param1, "frame_bottom");
-          ol.field_n = ab.a("commonui", -15383, "jagex_logo_grey", param1);
+          MusicPatchPcmStream.field_n = ab.a("commonui", -15383, "jagex_logo_grey", param1);
           BufferedCacheFile.field_l = ib.a(10, "commonui", param1, "button");
           TrackController.field_D = uj.a("validation", param1, (byte) -109, "commonui");
           fk.field_a = (BitmapFont) ((Object) kh.a(param2, "arezzo12", param1, "commonui", 1));

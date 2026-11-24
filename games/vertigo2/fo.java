@@ -61,7 +61,7 @@ final class fo {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) (stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw wn.wrapClientException((Throwable) (stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class fo {
           this.c((byte) 109);
         }
         String var2 = !ag.b(49) ? GameplayScreen.field_O : vg.field_b;
-        rq.a(36, 32 + va.field_s.a(param0 - 11058, var2), 425, -(va.field_s.a(param0 - 11058, var2) / 2) - 16 + 320, 73, 100);
+        MusicPatchPcmStream.a(36, 32 + va.field_s.a(param0 - 11058, var2), 425, -(va.field_s.a(param0 - 11058, var2) / 2) - 16 + 320, 73, 100);
         va.field_s.a(var2, 16777215, -1, 320, 450, 2);
         if (param0 != 11059) {
           this.field_b = -90;
@@ -427,8 +427,8 @@ final class fo {
           var3 -= 20;
         }
         var6 = 0;
-        rq.a(100, 600, 100, 20, 63, 150);
-        rq.a(200, 600, 210, 20, 69, 150);
+        MusicPatchPcmStream.a(100, 600, 100, 20, 63, 150);
+        MusicPatchPcmStream.a(200, 600, 210, 20, 69, 150);
         for (var7 = 0; var7 < hi.field_i.length; var7++) {
           regionExit1: {
             if (0 == (var5 & 1 << var7)) {
@@ -551,7 +551,7 @@ final class fo {
           var17 = param0 + "%";
           tk.field_c.c(var17, pn.field_K[4], param1, param7, -1);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "fo.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fo.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -570,7 +570,7 @@ final class fo {
           var5 = 190;
           var6 = 180;
           var7 = var6;
-          va.field_s.a(16777215, (byte) 64, -1, var4, fk.field_G, var6);
+          va.field_s.a(16777215, (byte) 64, -1, var4, CrossfadingMidiPcmStream.field_G, var6);
           va.field_s.a(var4 + var5, -43, 16777215, var6, -1, Integer.toString(1 + param1.field_e));
           var6 += 20;
           va.field_s.a(16777215, (byte) 62, -1, var4, le.field_a, var6);
@@ -594,9 +594,9 @@ final class fo {
             va.field_s.a(var5 + var4, param0 ^ -72, 16777215, var6, -1, Vertigo2.a(new String[]{gl.a(-37, false, false, param1.field_q)}, tn.field_g, -117));
             var6 += 20;
           }
-          rq.a(-var7 + var6 + (va.field_s.field_c + va.field_s.field_j), 220, var7 - (va.field_s.field_j + va.field_s.field_c + var3_int), var4 - var3_int * 2, -110, 200);
+          MusicPatchPcmStream.a(-var7 + var6 + (va.field_s.field_c + va.field_s.field_j), 220, var7 - (va.field_s.field_j + va.field_s.field_c + var3_int), var4 - var3_int * 2, -110, 200);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "fo.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fo.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1349,7 +1349,7 @@ final class fo {
                   if (!(!this.field_a.a(84))) {
                     if (ag.b(49)) {
                       var8 = 0;
-                      rq.a(true, (byte) 127, var8, param2, ke.field_g);
+                      MusicPatchPcmStream.a(true, (byte) 127, var8, param2, ke.field_g);
                     } else {
                       var8 = param2 ? 1 : 0;
                       gj.a((byte) 70, var8 != 0, am.field_n, -4);
@@ -1755,7 +1755,7 @@ final class fo {
           if (this.field_b == 0) {
             uq.field_a.e(-70, 480 - (uq.field_a.field_t + 20));
             eq.field_F.e(50, 10);
-            rq.a(this.a(this.field_a.itemCount - 1, (byte) -80) + (this.c(-1 + this.field_a.itemCount, (byte) -116) - (this.a(0, (byte) -80) - 2 * IntrusiveNode.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * IntrusiveNode.field_f), this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, param0 ^ -17) - IntrusiveNode.field_f, -101, 150);
+            MusicPatchPcmStream.a(this.a(this.field_a.itemCount - 1, (byte) -80) + (this.c(-1 + this.field_a.itemCount, (byte) -116) - (this.a(0, (byte) -80) - 2 * IntrusiveNode.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * IntrusiveNode.field_f), this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, param0 ^ -17) - IntrusiveNode.field_f, -101, 150);
           } else {
             if (this.field_b != 17 &&
               this.field_b != 18 &&
@@ -1772,7 +1772,7 @@ final class fo {
                     tf.field_l.a(0, param0 + 223, lb.field_d);
                   }
                   oo.b();
-                  rq.a(320, 280, 100, 30, 86, 150);
+                  MusicPatchPcmStream.a(320, 280, 100, 30, 86, 150);
                   FullscreenFocusCanvas.field_d.b(param0 + 116);
                 } else {
                   if (19 == this.field_b) {
@@ -1782,9 +1782,9 @@ final class fo {
                       tf.field_l.a(false, 0, lq.field_b, (byte) 119);
                     }
                     oo.b();
-                    rq.a(320, 280, 100, 30, 75, 150);
+                    MusicPatchPcmStream.a(320, 280, 100, 30, 75, 150);
                     ap.field_d.b(2);
-                    rq.a(160, 148, 100, 330, 91, 150);
+                    MusicPatchPcmStream.a(160, 148, 100, 330, 91, 150);
                     if (SocketConnector.field_c != null) {
                       var2 = SocketConnector.field_c[ap.field_d.field_t];
                       if (null != SocketConnector.field_c &&
@@ -1843,7 +1843,7 @@ final class fo {
                       }
                     } else {
                       var2 = this.a(0, (byte) -80) - 95;
-                      rq.a(280, 490, var2, 75, param0 ^ -10, 150);
+                      MusicPatchPcmStream.a(280, 490, var2, 75, param0 ^ -10, 150);
                       var2 += 40;
                       va.field_s.a(jl.field_f, 16777215, -1, 320, var2, 2);
                       var2 += 40;
@@ -1864,11 +1864,11 @@ final class fo {
                   }
                 }
               } else {
-                rq.a(this.a(-1 + this.field_a.itemCount, (byte) -80) + this.c(this.field_a.itemCount - 1, (byte) -116) - this.a(0, (byte) -80) + IntrusiveNode.field_f * 2, this.a(0, 127) - this.b(0, 89) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 25) - IntrusiveNode.field_f, -72, 150);
+                MusicPatchPcmStream.a(this.a(-1 + this.field_a.itemCount, (byte) -80) + this.c(this.field_a.itemCount - 1, (byte) -116) - this.a(0, (byte) -80) + IntrusiveNode.field_f * 2, this.a(0, 127) - this.b(0, 89) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 25) - IntrusiveNode.field_f, -72, 150);
               }
               break regionExit1;
             }
-            rq.a(this.a(-2 + this.field_a.itemCount, (byte) -80) - (-this.c(this.field_a.itemCount - 2, (byte) -116) + this.a(0, (byte) -80)) + 2 * IntrusiveNode.field_f, this.a(0, param0 + 239) - this.b(0, 119) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 17) - IntrusiveNode.field_f, param0 + 51, 150);
+            MusicPatchPcmStream.a(this.a(-2 + this.field_a.itemCount, (byte) -80) - (-this.c(this.field_a.itemCount - 2, (byte) -116) + this.a(0, (byte) -80)) + 2 * IntrusiveNode.field_f, this.a(0, param0 + 239) - this.b(0, 119) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 17) - IntrusiveNode.field_f, param0 + 51, 150);
           }
         }
         if (0 <= this.field_b &&

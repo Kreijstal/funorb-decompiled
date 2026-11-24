@@ -7,7 +7,7 @@ final class jk extends aj implements df {
     static hi field_y;
     private lj field_C;
     private lj field_w;
-    static lc field_D;
+    static MidiPcmStream field_D;
     static mg field_x;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, String param6, int param7, int param8, byte param9) {
@@ -22,7 +22,7 @@ final class jk extends aj implements df {
           field_x.a(var13, -5 + param4, 3, 10 + param1, -5 + param7, var11);
           IntrusiveNode.field_d.c(param6, (param1 >> 1) + param7, (-IntrusiveNode.field_d.field_t - IntrusiveNode.field_d.field_y + var10_int) / 2 + (IntrusiveNode.field_d.field_y + param4), 0, -1);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class jk extends aj implements df {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class jk extends aj implements df {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -459,7 +459,7 @@ final class jk extends aj implements df {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

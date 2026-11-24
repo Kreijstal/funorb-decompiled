@@ -284,7 +284,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2), "si.E(" + param0 + ',' + param1 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var2), "si.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var3), "si.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) var3), "si.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

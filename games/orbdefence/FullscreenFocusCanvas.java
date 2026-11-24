@@ -25,7 +25,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           tj.a(param0, this.field_c, -23144);
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 8) {
-            stackIn_4_0 = ik.a(bb.a(param1, 100, param2), -129);
+            stackIn_4_0 = ik.a(RawPcmStream.a(param1, 100, param2), -129);
             return stackIn_4_0;
           }
           stackIn_2_0 = (hf) null;
@@ -57,7 +57,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_e = true;
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "ea.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ea.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,9 +9,9 @@ final class qc extends aa {
     static int field_bb;
     static int field_Z;
 
-    final static kl a(int param0, byte param1, PcmStream param2) {
+    final static DelayedPcmStream a(int param0, byte param1, PcmStream param2) {
         RuntimeException var3 = null;
-        kl stackIn_3_0 = null;
+        DelayedPcmStream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -20,7 +20,7 @@ final class qc extends aa {
           if (param1 != -112) {
             qc.n(52);
           }
-          stackIn_3_0 = new kl(param2, AudioOutput.field_c * param0 / 1000);
+          stackIn_3_0 = new DelayedPcmStream(param2, AudioOutput.field_c * param0 / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

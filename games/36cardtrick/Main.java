@@ -1606,11 +1606,11 @@ public final class Main extends c {
                         jd.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
                         var3 = uj.a(sh.field_g, "", "score-count").a();
                         var3.field_k = var3.field_h.length;
-                        ve.field_c = li.a(var3, 100, 30);
+                        ve.field_c = RawPcmStream.a(var3, 100, 30);
                         ve.field_c.e(-1);
                         var4_ref_ib = new ib(jd.field_c[15].field_l, jd.field_c[15].field_h.length + 1000);
                         og.a(jd.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, jd.field_c[15].field_h.length);
-                        lh.field_d = li.a(var4_ref_ib, 100, 96);
+                        lh.field_d = RawPcmStream.a(var4_ref_ib, 100, 96);
                         lh.field_d.c(0, var4_ref_ib.field_h.length);
                         lh.field_d.e(0);
                         var5 = 0;

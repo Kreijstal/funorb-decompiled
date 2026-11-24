@@ -8,9 +8,9 @@ abstract class fk extends DualLinkNode {
     int field_u;
     int field_w;
     int field_s;
-    static vl field_q;
+    static MidiPcmStream field_q;
 
-    final static ae a(Throwable param0, String param1) {
+    final static ae wrapClientException(Throwable param0, String param1) {
         ae var2 = null;
         if (param0 instanceof ae) {
           var2 = (ae) ((Object) param0);
@@ -60,7 +60,7 @@ abstract class fk extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ abstract class fk extends DualLinkNode {
         FullscreenFocusCanvas.field_d = false;
         id.a(240, 320, 2, gh.field_b, param0, (byte) -105, v.field_j, 8, gh.field_b, 8, -4 + (v.field_j.field_t + v.field_j.field_H), v.field_j.field_H);
         if (param1 != 15) {
-          field_q = (vl) null;
+          field_q = (MidiPcmStream) null;
         }
     }
 

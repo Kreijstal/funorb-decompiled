@@ -26,7 +26,7 @@ final class m {
         var9 = fleas.field_A ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = ei.a(-78, var10, param0);
+          var3_int = MidiPcmStream.a(-78, var10, param0);
           var4 = new String[var3_int + 1];
           var5 = 0;
           if (param1 < 113) {
@@ -55,7 +55,7 @@ final class m {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class m {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -29,7 +29,7 @@ final class bq extends TextureOperator {
             bq.clearStaticReferences(-18);
           }
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "bq.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bq.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,9 +72,9 @@ final class bq extends TextureOperator {
         int[][] var22 = var23;
         int[][] var3 = var22;
         if (this.field_v.field_c) {
-          var40 = this.a(0, -1, -1 + param1 & fk.field_x);
+          var40 = this.a(0, -1, -1 + param1 & CrossfadingMidiPcmStream.field_x);
           var5 = this.a(0, -1, param1);
-          var41 = this.a(0, -1, 1 + param1 & fk.field_x);
+          var41 = this.a(0, -1, 1 + param1 & CrossfadingMidiPcmStream.field_x);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];
@@ -172,7 +172,7 @@ final class bq extends TextureOperator {
           var6Lifetime1 = hm.field_F << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = nf.a((byte) -28, var6Lifetime1) >> 8;
-          var9Lifetime1 = fk.a((byte) -118, var6Lifetime1) >> 8;
+          var9Lifetime1 = CrossfadingMidiPcmStream.a((byte) -118, var6Lifetime1) >> 8;
           if (PacketBuffer.field_n != -1 &&
             -1 != gb.field_d) {
             var9Lifetime1 = -128;
@@ -213,7 +213,7 @@ final class bq extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "bq.A(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "bq.A(" + param0 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class bq extends TextureOperator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

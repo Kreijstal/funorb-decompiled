@@ -158,12 +158,12 @@ final class mr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var5), "mr.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var5), "mr.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(boolean param0) {
-        fk.a(ob.e((byte) 99), 11514);
+        CrossfadingMidiPcmStream.a(ob.e((byte) 99), 11514);
         if (param0) {
           field_a = (Boolean) null;
         }

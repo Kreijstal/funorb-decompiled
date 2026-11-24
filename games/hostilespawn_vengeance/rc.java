@@ -5,7 +5,7 @@ final class rc {
     static int field_d;
     private int[] field_f;
     static int field_e;
-    static b field_c;
+    static RawPcmStream field_c;
     static ub field_a;
     static int field_b;
 
@@ -225,7 +225,7 @@ final class rc {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "rc.B(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1), "rc.B(" + param0 + ')');
         }
     }
 

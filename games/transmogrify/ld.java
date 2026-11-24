@@ -102,10 +102,10 @@ final class ld {
           var8 = var6;
           array$0 = new Object[var7.length + this.field_h];
           var5Lifetime1 = array$0;
-          this.field_d[(int)ej.a((long)(this.field_b - 1), param2)] = array$0;
+          this.field_d[(int)MusicPatchPcmStream.a((long)(this.field_b - 1), param2)] = array$0;
           array$1 = new long[var8.length + this.field_h];
           var6Lifetime1 = array$1;
-          this.field_c[(int)ej.a(param2, (long)(-1 + this.field_b))] = array$1;
+          this.field_c[(int)MusicPatchPcmStream.a(param2, (long)(-1 + this.field_b))] = array$1;
           ji.a(var7, 0, var5Lifetime1, 0, var7.length);
           ji.a(var8, 0, var6Lifetime1, 0, var8.length);
           var5Lifetime1[var7.length] = param0;
@@ -121,7 +121,7 @@ final class ld {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

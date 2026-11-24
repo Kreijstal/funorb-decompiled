@@ -127,7 +127,7 @@ final class nm extends gk {
         double stackIn_19_0 = 0.0;
         double stackIn_19_1 = 0.0;
         double stackIn_20_2 = 0.0;
-        vc stackIn_34_0 = null;
+        RawPcmStream stackIn_34_0 = null;
         int stackIn_35_1 = 0;
         double var3;
         double var5;
@@ -250,7 +250,7 @@ final class nm extends gk {
         } else {
           stackIn_35_1 = 1600;
         }
-        ((vc) (Object) stackIn_34_0).d(stackIn_35_1);
+        ((RawPcmStream) (Object) stackIn_34_0).d(stackIn_35_1);
         if (this.field_x) {
           cb.field_a.a(this.field_n);
           this.field_x = false;

@@ -72,7 +72,7 @@ final class AccountNameAvailabilityValidator extends qf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class AccountNameAvailabilityValidator extends qf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class AccountNameAvailabilityValidator extends qf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "nd.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var3), "nd.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class AccountNameAvailabilityValidator extends qf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "nd.N(" + param0 + ',' + param1 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var2_ref), "nd.N(" + param0 + ',' + param1 + ')');
         }
     }
 

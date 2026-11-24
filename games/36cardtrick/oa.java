@@ -83,13 +83,13 @@ final class oa {
         AudioOutput.configureAudio(param1, param4, 10);
         wd.field_e = AudioOutput.createOutput(param3, param0, 0, 22050);
         cb.field_g = AudioOutput.createOutput(param3, param0, 1, 1024);
-        AccountCreationResultPanel.field_tb = new qj();
+        AccountCreationResultPanel.field_tb = new PcmStreamMixer();
         if (param2 <= 66) {
           return;
         }
         try {
           cb.field_g.setRootStream(AccountCreationResultPanel.field_tb);
-          sh.field_e = new qj();
+          sh.field_e = new PcmStreamMixer();
           wd.field_e.setRootStream(sh.field_e);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "oa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

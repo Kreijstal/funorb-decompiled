@@ -72,7 +72,7 @@ final class rc {
           }
           sg.field_d = null;
           oh.field_j = 0;
-          oj.field_u.clear(-1);
+          CrossfadingMidiPcmStream.field_u.clear(-1);
           hc.field_u = 0;
           da.field_C = 0;
           vh.field_n = vh.field_n + (eh.totalScore << 6);
@@ -124,7 +124,7 @@ final class rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2_ref), "rc.C(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2_ref), "rc.C(" + param0 + ',' + param1 + ')');
         }
     }
 

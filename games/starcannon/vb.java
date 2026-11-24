@@ -53,7 +53,7 @@ final class vb extends qf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class vb extends qf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -628,7 +628,7 @@ final class vb extends qf {
           } else {
             stackIn_374_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_373_0), ((StringBuilder) (Object) stackIn_373_1).append(stackIn_374_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_373_0), ((StringBuilder) (Object) stackIn_373_1).append(stackIn_374_2).append(',').append(param1).append(')').toString());
         }
         if (GameApplet.field_i) {
           var3++;
@@ -650,7 +650,7 @@ final class vb extends qf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "vb.M(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) var1), "vb.M(" + param0 + ')');
         }
     }
 
@@ -691,7 +691,7 @@ final class vb extends qf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

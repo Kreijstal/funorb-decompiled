@@ -85,13 +85,13 @@ final class te extends TileEffect {
 
     final boolean b(int param0) {
         if (this.field_g == 60) {
-          jja.a(192, -1, 25);
+          MusicPatchPcmStream.a(192, -1, 25);
         }
         int fieldTemp$0 = this.field_g - 1;
         this.field_g = this.field_g - 1;
         if (fieldTemp$0 < 0) {
           this.field_e.field_h.setTerrain((byte) 106, 35, this.field_d, this.field_c);
-          jja.a(128, -1, 24);
+          MusicPatchPcmStream.a(128, -1, 24);
           return true;
         }
         if (param0 > 21) {

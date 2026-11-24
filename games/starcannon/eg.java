@@ -60,24 +60,24 @@ final class eg implements de {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final static ed a(int param0, int param1, PcmStream param2) {
+    final static DelayedPcmStream a(int param0, int param1, PcmStream param2) {
         RuntimeException var3 = null;
-        ed stackIn_2_0 = null;
-        ed stackIn_4_0 = null;
+        DelayedPcmStream stackIn_2_0 = null;
+        DelayedPcmStream stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 29723) {
-            stackIn_4_0 = new ed(param2, param1 * AudioOutput.field_n / 1000);
+            stackIn_4_0 = new DelayedPcmStream(param2, param1 * AudioOutput.field_n / 1000);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ed) null;
+          stackIn_2_0 = (DelayedPcmStream) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class eg implements de {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class eg implements de {
             this.field_k.a(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << 1), this.field_c, this.field_m, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "eg.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "eg.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class eg implements de {
           this.field_c = param3;
           this.field_b = param7;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

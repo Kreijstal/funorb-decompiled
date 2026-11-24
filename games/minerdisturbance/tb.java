@@ -14,11 +14,11 @@ final class tb implements uj {
     public final void a(boolean param0) {
         if (param0) {
           field_d = (hn) null;
-          gd.field_x = 2;
+          MusicPatchPcmStream.field_x = 2;
           field_a = 1;
           return;
         }
-        gd.field_x = 2;
+        MusicPatchPcmStream.field_x = 2;
         field_a = 1;
     }
 
@@ -53,9 +53,9 @@ final class tb implements uj {
         var4 = stackIn_9_0;
         lm.field_L = var8.readString(false);
         if (var4 == 0) {
-          vd.field_x = lm.field_L;
+          CrossfadingMidiPcmStream.field_x = lm.field_L;
         } else {
-          vd.field_x = var8.readString(false);
+          CrossfadingMidiPcmStream.field_x = var8.readString(false);
         }
         if (~pf.field_i == param1) {
           var8.readUnsignedShort(-76);
@@ -75,7 +75,7 @@ final class tb implements uj {
         try {
           var9 = lf.field_b.a(param1 ^ -25461, var5);
           bf.field_c = var9.f(1);
-          if (vd.field_x.equals(ti.field_J)) {
+          if (CrossfadingMidiPcmStream.field_x.equals(ti.field_J)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_y;
@@ -84,7 +84,7 @@ final class tb implements uj {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          di.a((Throwable) ((Object) var6), 1, "CC1");
+          MidiPcmStream.a((Throwable) ((Object) var6), 1, "CC1");
           bf.field_c = null;
           IntrusiveNode.field_l = null;
           return new id(param0);
@@ -151,7 +151,7 @@ final class tb implements uj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 

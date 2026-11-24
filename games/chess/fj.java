@@ -62,7 +62,7 @@ final class fj {
           BoundedRandomAccessFile.field_f.field_M = BoundedRandomAccessFile.field_f.field_M - uc.field_c.field_M;
           uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

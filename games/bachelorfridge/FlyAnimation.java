@@ -59,7 +59,7 @@ final class FlyAnimation extends EventAnimation {
           return false;
         }
         this.d(58);
-        jja.a(192, -1, 3);
+        MusicPatchPcmStream.a(192, -1, 3);
         var3Lifetime1 = this.field_G + this.field_F * this.field_v;
         var4Lifetime1 = this.field_x + this.field_B * this.field_F;
         this.screen.field_s.c(18, -var4Lifetime1 + 240, -var3Lifetime1 + 320);

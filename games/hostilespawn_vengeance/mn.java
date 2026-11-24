@@ -22,7 +22,7 @@ final class mn {
           field_b = (bd) null;
           if (DirectByteStorage.field_k) {
             ka.field_r = true;
-            w.b(true, -23960);
+            MidiPcmStream.b(true, -23960);
             fa.field_c = 0;
             return;
           }
@@ -30,7 +30,7 @@ final class mn {
         }
         if (DirectByteStorage.field_k) {
           ka.field_r = true;
-          w.b(true, -23960);
+          MidiPcmStream.b(true, -23960);
           fa.field_c = 0;
           return;
         }

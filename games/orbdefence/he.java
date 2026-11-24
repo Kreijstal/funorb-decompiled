@@ -7,7 +7,7 @@ final class he extends IntrusiveNode {
     static int[] field_p;
     int field_m;
     int field_k;
-    bb field_l;
+    RawPcmStream field_l;
     static hj[] field_y;
     ik field_g;
     int field_t;

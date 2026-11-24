@@ -5,7 +5,7 @@ final class qb extends IntrusiveNode {
     IntrusiveNode field_j;
     static int field_k;
     int field_l;
-    b field_h;
+    RawPcmStream field_h;
     static String field_m;
     static int field_i;
 

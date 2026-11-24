@@ -20,7 +20,7 @@ final class p extends uc {
             p.b(105);
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "p.E(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "p.E(" + param0 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class p extends uc {
           this.field_e.a(157, gj.field_n, 26, (byte) 76, 325);
           discarded$0 = this.c((byte) 69);
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "p.C(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "p.C(" + param0 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class p extends uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var5), "p.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var5), "p.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class p extends uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "p.B(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "p.B(" + param0 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class p extends uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "p.F(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "p.F(" + param0 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class p extends uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "p.<init>(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "p.<init>(" + param0 + ')');
         }
     }
 
@@ -343,7 +343,7 @@ final class p extends uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var2), "p.D(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var2), "p.D(" + param0 + ')');
         }
     }
 

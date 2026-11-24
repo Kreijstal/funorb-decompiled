@@ -29,7 +29,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           od.field_f.a(param1, param0, -1 + param2, 0, 0);
           od.field_f.a(param1, param0, param2, param3, -1);
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         lg.field_b = new gh();
         if (param0 != 8) {
           String var2 = (String) null;
-          CipherPacketBuffer.a((Throwable) null, (String) null);
+          CipherPacketBuffer.wrapClientException((Throwable) null, (String) null);
           ed.field_c.a(10768, lg.field_b);
           return;
         }
@@ -70,7 +70,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             this.f(60, 33);
           }
         } catch (RuntimeException runtimeException) {
-          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -134,7 +134,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

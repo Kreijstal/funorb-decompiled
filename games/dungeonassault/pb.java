@@ -17,7 +17,7 @@ final class pb extends wf {
             field_H = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "pb.C(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "pb.C(" + param0 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class pb extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "pb.B(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "pb.B(" + param0 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class pb extends wf {
                   var26Lifetime1 = param4.field_T[var23Lifetime2];
                   fg.field_d[var23Lifetime2] = var9 + (var12 * var24Lifetime1 - (-(var15 * var25Lifetime1) - var18 * var26Lifetime1) >> 16);
                   lm.field_m[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var19 * var26Lifetime1 >> 16);
-                  tc.field_m[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var17 * var25Lifetime1) >> 16) + var11;
+                  CrossfadingMidiPcmStream.field_m[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var17 * var25Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param4.field_u[var23Lifetime2];
                   var25Lifetime1 = param4.field_K[var23Lifetime2];
                   var26Lifetime1 = param4.field_l[var23Lifetime2];
@@ -241,7 +241,7 @@ final class pb extends wf {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class pb extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AccountServiceResult.a((Throwable) ((Object) var2), "pb.D(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var2), "pb.D(" + param0 + ')');
         }
     }
 
@@ -284,7 +284,7 @@ final class pb extends wf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

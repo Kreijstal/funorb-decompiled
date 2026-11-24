@@ -88,10 +88,10 @@ final class ri extends na {
     final static void f(int param0) {
         int var2 = 0;
         int var2Lifetime1;
-        if (pg.field_p != null) {
-          je.a((byte) 15, pg.field_p);
+        if (MusicPatchPcmStream.field_p != null) {
+          je.a((byte) 15, MusicPatchPcmStream.field_p);
         }
-        pg.field_p = null;
+        MusicPatchPcmStream.field_p = null;
         ok.field_a = null;
         fe var1 = cj.field_h[10];
         if (param0 >= 122) {

@@ -65,7 +65,7 @@ abstract class me extends wb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ abstract class me extends wb {
           param0.addKeyListener(ByteStorage.field_c);
           param0.addFocusListener(ByteStorage.field_c);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "me.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "me.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ abstract class me extends wb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ abstract class me extends wb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -456,11 +456,11 @@ abstract class me extends wb {
               var10 = od.field_F.newInstance(new Object[]{new Integer(var5.field_z), new Integer(var5.field_A), new Integer(le.field_eb)});
               var8 = var10;
               aa.field_e.invoke(var8, new Object[]{new Integer(0), new Integer(0), new Integer(var5.field_z), new Integer(var5.field_A), var6, new Integer(0), new Integer(var5.field_z)});
-              var7_ref = (java.awt.Cursor) (kh.field_eb.invoke((Object) (((java.awt.Canvas) (var4)).getToolkit()), new Object[]{var10, new java.awt.Point(var2_int, var3), "FunOrb Custom Cursor"}));
+              var7_ref = (java.awt.Cursor) (VolumeRampingMidiPcmStream.field_eb.invoke((Object) (((java.awt.Canvas) (var4)).getToolkit()), new Object[]{var10, new java.awt.Point(var2_int, var3), "FunOrb Custom Cursor"}));
             } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = (IllegalAccessException) (Object) decompiledCaughtException;
-              kh.field_eb = null;
+              VolumeRampingMidiPcmStream.field_eb = null;
             } catch (java.lang.InstantiationException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var8_ref2 = (InstantiationException) (Object) decompiledCaughtException;
@@ -475,7 +475,7 @@ abstract class me extends wb {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "me.Q(" + param0 + ',' + param1 + ')');
+            throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var2), "me.Q(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -493,7 +493,7 @@ abstract class me extends wb {
           this.field_hb = param3;
           this.a(param1, -9797);
         } catch (RuntimeException runtimeException) {
-          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -9,7 +9,7 @@ final class we {
     final static void a(int param0) {
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          um.field_m.serviceOutput();
+          MusicPatchPcmStream.field_m.serviceOutput();
           RendererBitmapFont.field_a.serviceOutput();
           ad.field_U = ad.field_U - 1;
           if (0 == ad.field_U) {
@@ -35,7 +35,7 @@ final class we {
             field_c = -8;
           }
           if (null != mg.field_d) {
-            if (mg.field_d.f(32119)) {
+            if (mg.field_d.isMidiReady(32119)) {
               return;
             }
             dt.field_c = null;
@@ -44,7 +44,7 @@ final class we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1_ref), "we.C(" + param0 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1_ref), "we.C(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class we {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class we {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 

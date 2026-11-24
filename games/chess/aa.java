@@ -467,7 +467,7 @@ final class aa {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw fk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -560,7 +560,7 @@ final class aa {
           if (var7 != 14) {
             stackIn_38_0 = hg.field_b;
           } else {
-            stackIn_38_0 = mi.field_q;
+            stackIn_38_0 = MusicPatchPcmStream.field_q;
           }
           var13_ref_wg = stackIn_38_0;
           var13_ref_wg.field_i = var11;
@@ -807,7 +807,7 @@ final class aa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1290,22 +1290,22 @@ final class aa {
                     an.a(80, (byte) 84);
                   }
                   if (this.field_e.b(false)) {
-                    mi.field_q.c((byte) 57);
-                    if (!mi.field_q.field_d) {
-                      if (mi.field_q.field_i > hn.field_k) {
+                    MusicPatchPcmStream.field_q.c((byte) 57);
+                    if (!MusicPatchPcmStream.field_q.field_d) {
+                      if (MusicPatchPcmStream.field_q.field_i > hn.field_k) {
                         an.a(0, (byte) 87);
                         if (var11 != 0) {
                           an.a(80, (byte) 99);
-                          an.a(mi.field_q.field_x, (byte) 95);
+                          an.a(MusicPatchPcmStream.field_q.field_x, (byte) 95);
                         }
                       } else {
                         an.a(80, (byte) 99);
                         if (var11 != 0) {
-                          an.a(mi.field_q.field_x, (byte) 95);
+                          an.a(MusicPatchPcmStream.field_q.field_x, (byte) 95);
                         }
                       }
                     } else {
-                      an.a(mi.field_q.field_x, (byte) 95);
+                      an.a(MusicPatchPcmStream.field_q.field_x, (byte) 95);
                     }
                   }
                   if (this.field_e.a(-97)) {
@@ -1317,7 +1317,7 @@ final class aa {
                   if (lf.field_S == var5) {
                     break regionExit2;
                   }
-                  mi.field_q.field_x = lf.field_S;
+                  MusicPatchPcmStream.field_q.field_x = lf.field_S;
                   wf.a(ResourceArchive.field_l[0], 18);
                   if (var11 == 0) {
                     break regionExit2;
@@ -2023,7 +2023,7 @@ final class aa {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

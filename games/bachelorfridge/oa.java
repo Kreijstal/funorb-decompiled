@@ -162,7 +162,7 @@ final class oa extends UiComponent {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10, int param11, boolean param12, boolean param13) {
-        jja.field_m = null;
+        MusicPatchPcmStream.field_m = null;
         FlirtAnimation.e(9941);
         param1 = ot.a(param8, param11, param1, param3, param2, param6, (byte) 92);
         lr.a(param7, param5, param0, param9, param2, 1, param4, param13, param10, param1);

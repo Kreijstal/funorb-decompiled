@@ -217,7 +217,7 @@ final class j implements Runnable {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class j implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          di.a((Throwable) ((Object) exception), 1, (String) null);
+          MidiPcmStream.a((Throwable) ((Object) exception), 1, (String) null);
         } finally {
           this.field_i = false;
         }

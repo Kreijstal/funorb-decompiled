@@ -54,7 +54,7 @@ final class sb {
             bl.field_b = param6;
             ig.field_b = param7;
             mg.field_y = param2;
-            hl.field_F = param13;
+            MidiPcmStream.field_F = param13;
             nj.field_a = param9;
             if (vl.field_a.field_w != null) {
               try {
@@ -85,7 +85,7 @@ final class sb {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -111,7 +111,7 @@ abstract class vf extends DualLinkNode {
           ce.field_v = tp.a(kf.field_p, "victory", "dragon", -1998);
           kf.field_j = tp.a(kf.field_p, "defeat", "dragon", -1998);
         } catch (RuntimeException runtimeException) {
-          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "vf.P(" + param0 + ')');
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "vf.P(" + param0 + ')');
         }
     }
 

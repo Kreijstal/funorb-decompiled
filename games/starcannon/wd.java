@@ -1063,7 +1063,7 @@ final class wd extends oa {
         }
     }
 
-    final int a(PcmStreamMixer param0) {
+    final int onScheduledEvent(PcmStreamMixer param0) {
         if (this.e() &&
           !this.field_W) {
           return -1;

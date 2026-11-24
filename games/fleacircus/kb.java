@@ -13,7 +13,7 @@ final class kb extends IntrusiveNode {
     static String field_m;
     static int field_p;
 
-    final static void a(int param0, ke param1, ResourceArchive param2, int param3) {
+    final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
         SecondaryNodeDeque.field_c = bm.f((byte) 73) * param3 / 1000;
         fl.a((byte) 101, param2);
         if (param0 != -1) {
@@ -26,7 +26,7 @@ final class kb extends IntrusiveNode {
           aa.c((byte) -65);
           vg.field_z = -SecondaryNodeDeque.field_c + 0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "kb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "kb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class kb extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class kb extends IntrusiveNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw pf.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

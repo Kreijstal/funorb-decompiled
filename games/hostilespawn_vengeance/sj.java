@@ -100,7 +100,7 @@ final class sj {
             if (ce.field_e != 4) {
               return -1;
             }
-            ig.field_N.a(kd.field_q, (byte) 75, be.field_g);
+            ig.field_N.a(CrossfadingMidiPcmStream.field_q, (byte) 75, be.field_g);
             ce.field_e = 0;
             db.field_o = null;
             be.field_g = null;
@@ -124,7 +124,7 @@ final class sj {
         ji var2 = null;
         int var4 = 0;
         ql stackIn_9_0 = null;
-        kd stackIn_11_0 = null;
+        CrossfadingMidiPcmStream stackIn_11_0 = null;
         int stackIn_12_1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -160,13 +160,13 @@ final class sj {
           ha.field_w.field_l = true;
           mb.field_s.a(256);
           for (var3 = 0; var3 < 16; var3++) {
-            mb.field_s.field_n.a(0, var3, (byte) -95);
+            mb.field_s.field_n.setChannelVolumeScale(0, var3, (byte) -95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "sj.D(" + param0 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var1_ref), "sj.D(" + param0 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class sj {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

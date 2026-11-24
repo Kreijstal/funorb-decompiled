@@ -113,7 +113,7 @@ final class fc extends IntrusiveNode {
             if (dk.field_h == AccountRequestState.field_e &&
               qd.b((byte) 127)) {
               kc.field_P = te.field_N.readLong(10526);
-              lh.field_s = te.field_N.readUnsignedByte(255);
+              MusicPatchPcmStream.field_s = te.field_N.readUnsignedByte(255);
               te.field_N.readUnsignedByte(param5 + 255);
               ob.field_l = te.field_N.readUnsignedShort(param5 - 103);
               var12 = te.field_N.readNullableString(87);
@@ -201,7 +201,7 @@ final class fc extends IntrusiveNode {
             }
             if (param5 != 0) {
               var10 = (String) null;
-              fc.a((Throwable) null, (String) null);
+              fc.wrapClientException((Throwable) null, (String) null);
             }
             if (null == MouseWheelInput.field_d) {
               if (je.field_c) {
@@ -237,7 +237,7 @@ final class fc extends IntrusiveNode {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw fc.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(')').toString());
+            throw fc.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -258,7 +258,7 @@ final class fc extends IntrusiveNode {
         field_l = null;
         if (param0 != 124) {
           String var2 = (String) null;
-          fc.a((Throwable) null, (String) null);
+          fc.wrapClientException((Throwable) null, (String) null);
         }
     }
 
@@ -334,11 +334,11 @@ final class fc extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -861,7 +861,7 @@ final class fc extends IntrusiveNode {
           } else {
             stackIn_207_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_206_0), ((StringBuilder) (Object) stackIn_206_1).append(stackIn_207_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_206_0), ((StringBuilder) (Object) stackIn_206_1).append(stackIn_207_2).append(')').toString());
         }
     }
 

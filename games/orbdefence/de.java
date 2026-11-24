@@ -3,7 +3,7 @@
  */
 final class de {
     static String field_b;
-    static v field_a;
+    static PcmStreamMixer field_a;
     static String field_c;
 
     final static u a(ki param0, int param1, boolean param2, int param3, ki param4) {
@@ -42,7 +42,7 @@ final class de {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class de {
             de.clearStaticReferences(-128);
           }
         } catch (RuntimeException runtimeException) {
-          throw dd.a((Throwable) ((Object) runtimeException), "de.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.wrapClientException((Throwable) ((Object) runtimeException), "de.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

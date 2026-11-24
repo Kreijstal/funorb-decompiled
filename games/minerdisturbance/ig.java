@@ -11,18 +11,18 @@ final class ig {
     final static boolean a(int param0) {
         if (param0 != -20144) {
           field_d = (String) null;
-          if (di.field_x == null) {
+          if (MidiPcmStream.field_x == null) {
             return false;
           }
-          if (mh.a(di.field_x, -1)) {
+          if (mh.a(MidiPcmStream.field_x, -1)) {
             return true;
           }
           return false;
         }
-        if (di.field_x == null) {
+        if (MidiPcmStream.field_x == null) {
           return false;
         }
-        if (mh.a(di.field_x, -1)) {
+        if (mh.a(MidiPcmStream.field_x, -1)) {
           return true;
         }
         return false;
@@ -46,7 +46,7 @@ final class ig {
           var3.appendCrc32(-128, var4);
           var3.backpatchByteLength(-1, var3.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

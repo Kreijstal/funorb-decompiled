@@ -31,7 +31,7 @@ final class qe extends UiWidget {
         int var9 = Transmogrify.field_A ? 1 : 0;
         int var2 = this.field_h >> 1;
         Sprite var3 = new Sprite(var2, this.field_h);
-        oj.a(var3, 256);
+        CrossfadingMidiPcmStream.a(var3, 256);
         for (var4 = 0; var4 < this.field_h; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
@@ -81,7 +81,7 @@ final class qe extends UiWidget {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        oj.a(var14, param0 + 166);
+        CrossfadingMidiPcmStream.a(var14, param0 + 166);
         int var5 = this.field_h >> 1;
         if (param0 != 90) {
           discarded$0 = this.h(50);
@@ -132,7 +132,7 @@ final class qe extends UiWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class qe extends UiWidget {
           }
           fi.c(true);
           if (param3 + this.field_y.field_n >= sb.field_d) {
-            oj.a(this.field_K, 256);
+            CrossfadingMidiPcmStream.a(this.field_K, 256);
             param1.c(-this.field_G, 0);
             param1.c(this.field_t * 2 - this.field_G, 0);
             this.field_C.b(0, 0);
@@ -179,7 +179,7 @@ final class qe extends UiWidget {
             this.field_K.c(param3, param2);
           }
           if (var5_int - this.field_y.field_n <= sb.field_b) {
-            oj.a(this.field_K, 256);
+            CrossfadingMidiPcmStream.a(this.field_K, 256);
             for (var7 = this.field_G + this.field_l - this.field_y.field_n; 2 * this.field_t < var7; var7 = var7 - 2 * this.field_t) {
             }
             param1.c(-var7, 0);
@@ -200,7 +200,7 @@ final class qe extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

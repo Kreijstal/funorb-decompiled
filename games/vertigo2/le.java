@@ -101,7 +101,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "le.B(" + param0 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var1), "le.B(" + param0 + ')');
         }
     }
 

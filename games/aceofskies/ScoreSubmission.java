@@ -145,7 +145,7 @@ final class ScoreSubmission extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "ga.A(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var1), "ga.A(" + obfuscationGuard + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ScoreSubmission extends IntrusiveNode {
           this.firstContextValue = firstContextValue;
           this.fourthContextValue = fourthContextValue;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ga.<init>(" + firstShortValue + ',' + secondShortValue + ',' + firstContextValue + ',' + secondContextValue + ',' + thirdContextValue + ',' + fourthContextValue + ',' + (scores != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ga.<init>(" + firstShortValue + ',' + secondShortValue + ',' + firstContextValue + ',' + secondContextValue + ',' + thirdContextValue + ',' + fourthContextValue + ',' + (scores != null ? "{...}" : "null") + ')');
         }
     }
 

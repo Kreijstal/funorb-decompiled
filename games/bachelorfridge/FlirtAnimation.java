@@ -34,7 +34,7 @@ final class FlirtAnimation extends EventAnimation {
           if (75 != this.field_l) {
             return false;
           }
-          jja.a(256, -1, 18);
+          MusicPatchPcmStream.a(256, -1, 18);
           this.g(-1);
           return false;
         }

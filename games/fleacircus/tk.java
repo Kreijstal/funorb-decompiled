@@ -9,7 +9,7 @@ final class tk extends IntrusiveNode {
     int field_C;
     wc field_D;
     int field_B;
-    ie field_k;
+    RawPcmStream field_k;
     int field_F;
     int field_w;
     sf field_z;
@@ -55,7 +55,7 @@ final class tk extends IntrusiveNode {
           }
           ia.field_r[param5] = param0;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

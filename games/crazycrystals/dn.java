@@ -18,7 +18,7 @@ final class dn {
         field_c = null;
     }
 
-    final static ub a(Throwable param0, String param1) {
+    final static ub wrapClientException(Throwable param0, String param1) {
         ub var2 = null;
         if (!(param0 instanceof ub)) {
           var2 = new ub(param0, param1);

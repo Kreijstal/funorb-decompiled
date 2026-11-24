@@ -48,7 +48,7 @@ final class wc extends IntrusiveNode {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_f == ~hi.field_j[var3].field_f) {
               var4 = hi.field_j[var3].a((byte) -72);
-              if (kl.field_r < oc.field_b[var4]) {
+              if (DelayedPcmStream.field_r < oc.field_b[var4]) {
                 oc.field_b[var4] = oc.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

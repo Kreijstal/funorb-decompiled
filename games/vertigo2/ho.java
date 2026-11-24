@@ -99,7 +99,7 @@ final class ho {
           nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, Archive.field_f, 0, 0);
           stackIn_6_0 = uc.field_a;
           stackIn_6_1 = param0 + 83;
-          if (db.field_S) {
+          if (MidiPcmStream.field_S) {
             stackIn_7_2 = 40 + re.field_k + 4;
           } else {
             stackIn_7_2 = 0;
@@ -218,7 +218,7 @@ final class ho {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var2), "ho.C(" + param0 + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) var2), "ho.C(" + param0 + ',' + param1 + ')');
         }
     }
 

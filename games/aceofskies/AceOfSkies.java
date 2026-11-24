@@ -11,7 +11,7 @@ public final class AceOfSkies extends NetworkGameClient {
         try {
           this.a((byte) -60, "aceofskies", 13);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.init()");
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "AceOfSkies.init()");
         }
     }
 
@@ -199,7 +199,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "AceOfSkies.J(" + obfuscationGuard + ',' + initializeAfterDownload + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var3), "AceOfSkies.J(" + obfuscationGuard + ',' + initializeAfterDownload + ')');
         }
     }
 
@@ -269,7 +269,7 @@ public final class AceOfSkies extends NetworkGameClient {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -370,7 +370,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.G(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "AceOfSkies.G(" + obfuscationGuard + ')');
         }
     }
 
@@ -381,7 +381,7 @@ public final class AceOfSkies extends NetworkGameClient {
           MidiPcmStream var3 = new MidiPcmStream();
           var2.a(128, false, 9);
           var3.a(128, false, 9);
-          wu.a(22050, true, (java.awt.Component) ((Object) ci.field_f), pt.field_b, 32767, new jt(var2, var3));
+          wu.a(22050, true, (java.awt.Component) ((Object) ci.field_f), pt.field_b, 32767, new CrossfadingMidiPcmStream(var2, var3));
           if (obfuscationGuard != 28060) {
             AceOfSkies.a(-33, true, (fn) null, true, 99);
           }
@@ -393,7 +393,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.I(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "AceOfSkies.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -455,7 +455,7 @@ public final class AceOfSkies extends NetworkGameClient {
           IntrusiveNodeHashTable.clearStaticReferences(82);
           MidiNote.a((byte) 101);
           k.clearStaticReferences();
-          um.clearStaticReferences((byte) 113);
+          MusicPatchPcmStream.clearStaticReferences((byte) 113);
           AudioOutput.clearStaticReferences();
           rn.clearStaticReferences(false);
           MenuInputState.clearStaticReferences(-126);
@@ -739,7 +739,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + obfuscationGuard + ')');
         }
         if (GameAppletShell.field_a != 0) {
           obfuscationControl = ((!(var3)));
@@ -769,7 +769,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.F(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "AceOfSkies.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -847,7 +847,7 @@ public final class AceOfSkies extends NetworkGameClient {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -992,7 +992,7 @@ public final class AceOfSkies extends NetworkGameClient {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.A(" + obfuscationGuard + ')');
+            throw pn.wrapClientException((Throwable) ((Object) var2_ref), "AceOfSkies.A(" + obfuscationGuard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1133,7 +1133,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.H(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2_ref), "AceOfSkies.H(" + obfuscationGuard + ')');
         }
     }
 
@@ -1154,7 +1154,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.E(" + obfuscationGuard + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "AceOfSkies.E(" + obfuscationGuard + ')');
         }
     }
 

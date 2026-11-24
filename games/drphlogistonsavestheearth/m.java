@@ -85,7 +85,7 @@ abstract class m {
     final static sa a(int param0, byte param1) {
         int var3 = 0;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        sa[] var5 = ug.c((byte) -23);
+        sa[] var5 = MidiPcmStream.c((byte) -23);
         sa[] var2 = var5;
         for (var3 = 0; var5.length > var3; var3++) {
           if (param0 == var5[var3].field_d) {

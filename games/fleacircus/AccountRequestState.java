@@ -15,7 +15,7 @@ final class AccountRequestState {
         try {
           wc.field_p = param1;
         } catch (RuntimeException runtimeException) {
-          throw pf.a((Throwable) ((Object) runtimeException), "ae.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ae.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

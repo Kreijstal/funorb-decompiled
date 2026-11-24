@@ -29,7 +29,7 @@ final class kj extends IntrusiveNode {
     }
 
     final static IndexedSprite a(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], qk.field_M[0], qe.field_z);
+        IndexedSprite var1 = new IndexedSprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], qk.field_M[0], CrossfadingMidiPcmStream.field_z);
         if (param0 < 51) {
           return (IndexedSprite) null;
         }

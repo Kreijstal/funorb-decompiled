@@ -33,7 +33,7 @@ final class tm extends IntrusiveNode {
             field_I = 32;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "tm.F(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "tm.F(" + param0 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class tm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "tm.A(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "tm.A(" + param0 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class tm extends IntrusiveNode {
             this.field_A = -66;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "tm.E(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "tm.E(" + param0 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class tm extends IntrusiveNode {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class tm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "tm.C(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "tm.C(" + param0 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class tm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var3), "tm.B(" + param0 + ',' + param1 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var3), "tm.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class tm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var2), "tm.G(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var2), "tm.G(" + param0 + ')');
         }
     }
 
@@ -768,7 +768,7 @@ final class tm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var5), "tm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var5), "tm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

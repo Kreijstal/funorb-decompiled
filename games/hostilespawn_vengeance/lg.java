@@ -264,7 +264,7 @@ final class lg extends in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw AccountCreationResultPanel.a((Throwable) ((Object) var4), "lg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var4), "lg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

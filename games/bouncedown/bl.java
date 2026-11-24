@@ -51,7 +51,7 @@ final class bl {
 
     bl(boolean param0) {
         this.field_i = jg.field_D;
-        this.field_k = ka.field_n;
+        this.field_k = MusicPatchPcmStream.field_n;
         this.field_j = DirectByteStorage.field_c;
         this.field_c = g.field_i;
         this.field_g = ek.field_f;

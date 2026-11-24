@@ -104,7 +104,7 @@ final class ba {
         if (param0 != 0) {
           return false;
         }
-        stackIn_8_0 = (this == ca.field_b) || (qe.field_C == this) || (ka.field_b == this);
+        stackIn_8_0 = (this == ca.field_b) || (CrossfadingMidiPcmStream.field_C == this) || (ka.field_b == this);
         return stackIn_8_0;
     }
 

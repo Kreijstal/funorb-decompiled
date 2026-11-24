@@ -89,7 +89,7 @@ final class StickyAnimation extends EventAnimation {
           return true;
         }
         if (this.field_l == 75) {
-          jja.a(256, -1, 57);
+          MusicPatchPcmStream.a(256, -1, 57);
           this.d(17);
         }
         return false;

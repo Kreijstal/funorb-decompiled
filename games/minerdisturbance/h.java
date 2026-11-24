@@ -54,7 +54,7 @@ final class h {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class h {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -342,14 +342,14 @@ final class h {
               var4_ref_hf.unlink(34);
               return;
             }
-            di.a((Throwable) null, 1, "A1: " + hj.a((byte) 118));
+            MidiPcmStream.a((Throwable) null, 1, "A1: " + hj.a((byte) 118));
             si.a(-56);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) ((Object) var1), "h.D(" + param0 + ')');
+          throw lj.wrapClientException((Throwable) ((Object) var1), "h.D(" + param0 + ')');
         }
     }
 

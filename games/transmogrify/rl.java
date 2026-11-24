@@ -39,7 +39,7 @@ final class rl {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_b[var2] = aj.a(ej.a(255L, (long)this.field_j[7 + var3]), aj.a(aj.a(ej.a((long)this.field_j[5 + var3], 255L) << 16, aj.a(ej.a(4278190080L, (long)this.field_j[var3 + 4] << 24), aj.a(aj.a(ej.a(280375465082880L, (long)this.field_j[var3 + 2] << 40), aj.a((long)this.field_j[var3] << 56, ej.a((long)this.field_j[1 + var3] << 48, 71776119061217280L))), ej.a(255L, (long)this.field_j[var3 + 3]) << 32))), ej.a((long)this.field_j[6 + var3] << 8, 65280L)));
+          this.field_b[var2] = aj.a(MusicPatchPcmStream.a(255L, (long)this.field_j[7 + var3]), aj.a(aj.a(MusicPatchPcmStream.a((long)this.field_j[5 + var3], 255L) << 16, aj.a(MusicPatchPcmStream.a(4278190080L, (long)this.field_j[var3 + 4] << 24), aj.a(aj.a(MusicPatchPcmStream.a(280375465082880L, (long)this.field_j[var3 + 2] << 40), aj.a((long)this.field_j[var3] << 56, MusicPatchPcmStream.a((long)this.field_j[1 + var3] << 48, 71776119061217280L))), MusicPatchPcmStream.a(255L, (long)this.field_j[var3 + 3]) << 32))), MusicPatchPcmStream.a((long)this.field_j[6 + var3] << 8, 65280L)));
           var3 += 8;
           var2++;
         }
@@ -125,7 +125,7 @@ final class rl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class rl {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class rl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

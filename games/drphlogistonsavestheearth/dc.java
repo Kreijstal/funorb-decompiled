@@ -10,7 +10,7 @@ abstract class dc implements qi {
     static nh field_a;
     static String field_g;
 
-    final static void a(PlatformTaskDispatcher param0, int param1, boolean param2, ug param3, byte param4, java.awt.Component param5) {
+    final static void a(PlatformTaskDispatcher param0, int param1, boolean param2, MidiPcmStream param3, byte param4, java.awt.Component param5) {
         try {
           if (param4 > -91) {
             field_b = (String) null;
@@ -18,7 +18,7 @@ abstract class dc implements qi {
           AudioOutput.configureAudio(param1, param2, 10);
           el.field_sb = AudioOutput.createOutput(param0, param5, 0, 22050);
           k.field_J = AudioOutput.createOutput(param0, param5, 1, 1024);
-          ej.field_a = new ec();
+          ej.field_a = new PcmStreamMixer();
           k.field_J.setRootStream(ej.field_a);
           s.field_a = param3;
           param3.a(SecondaryNodeDequeIterator.field_b * 128 / 80, (byte) -13);

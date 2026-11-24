@@ -125,14 +125,14 @@ final class dl extends si {
           }
         }
         if (!param0) {
-          am.field_m = gm.a((byte) -96, var9, 80);
+          MusicPatchPcmStream.field_m = gm.a((byte) -96, var9, 80);
           mf.field_x = null;
           return new fg(param0);
         }
         var6 = var9.readUnsignedShort(-788751192);
         try {
           var10 = nc.field_O.a(var6, (byte) -74);
-          am.field_m = var10.i(121);
+          MusicPatchPcmStream.field_m = var10.i(121);
           if (tf.field_kb.equals(SecondaryNodeDequeIterator.field_d)) {
             stackIn_22_0 = null;
           } else {
@@ -144,7 +144,7 @@ final class dl extends si {
           var7 = (Exception) (Object) decompiledCaughtException;
           gb.a((Throwable) ((Object) var7), "CC1", 10);
           mf.field_x = null;
-          am.field_m = null;
+          MusicPatchPcmStream.field_m = null;
           return new fg(param0);
         }
         return new fg(param0);

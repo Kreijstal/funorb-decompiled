@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_g;
-    static k field_e;
+    static PcmStreamMixer field_e;
     static String field_f;
 
     public static void a(boolean param0) {

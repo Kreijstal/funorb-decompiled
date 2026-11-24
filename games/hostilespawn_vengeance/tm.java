@@ -14,7 +14,7 @@ final class tm extends IntrusiveNode {
     int field_n;
     nf field_p;
     int field_F;
-    b field_A;
+    RawPcmStream field_A;
     int field_t;
     int field_h;
     pl field_x;
@@ -68,7 +68,7 @@ final class tm extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -63,7 +63,7 @@ final class vh implements uj {
             field_i = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw lj.a((Throwable) ((Object) runtimeException), "vh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

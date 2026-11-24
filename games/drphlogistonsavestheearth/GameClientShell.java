@@ -59,7 +59,7 @@ abstract class GameClientShell extends GameAppletShell {
             !(var3 >= qg.m(12484))) {
             this.field_r = false;
             eg.a((byte) 126);
-            am.e(11);
+            MusicPatchPcmStream.e(11);
             dl.a(ni.field_u, 2, 120);
             fj.e(115);
             dd.field_j = true;
@@ -104,10 +104,10 @@ abstract class GameClientShell extends GameAppletShell {
             }
           } else {
             if (10 <= af.field_b) {
-              am.e(11);
+              MusicPatchPcmStream.e(11);
               if (mh.field_d != 3) {
                 if (4 == mh.field_d) {
-                  dl.a(ug.field_p, 256, 102);
+                  dl.a(MidiPcmStream.field_p, 256, 102);
                 } else {
                   if (mh.field_d != 2) {
                     if (mh.field_d != 5) {
@@ -306,7 +306,7 @@ abstract class GameClientShell extends GameAppletShell {
           if (!oh.field_a) {
             this.a(-51, "reconnect");
           }
-          am.e(11);
+          MusicPatchPcmStream.e(11);
           dl.a(cc.field_p, var2, 105);
           dd.field_j = true;
           ab.field_a = 15000L + la.correctedCurrentTimeMillis(param0);
@@ -418,7 +418,7 @@ abstract class GameClientShell extends GameAppletShell {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            am.g(11);
+                            MusicPatchPcmStream.g(11);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -670,7 +670,7 @@ abstract class GameClientShell extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), ug.f(109), IntrusiveDeque.f(-51), fa.a(true));
+            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), MidiPcmStream.f(109), IntrusiveDeque.f(-51), fa.a(true));
             if (var5_intLifetime1 != -1) {
               wh.a(var5_intLifetime1, cc.field_p, (byte) 117, td.field_m);
               cc.field_p = null;

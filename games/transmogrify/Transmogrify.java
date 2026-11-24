@@ -23,7 +23,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "Transmogrify.K(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "Transmogrify.K(" + param0 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ public final class Transmogrify extends SessionGameApplet {
             Transmogrify.d(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "Transmogrify.L(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "Transmogrify.L(" + param0 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ public final class Transmogrify extends SessionGameApplet {
                     ByteStorage.a(true, true);
                   }
                   if (!ll.c(true)) {
-                    ej.field_l[be.field_q].a(true, 256);
+                    MusicPatchPcmStream.field_l[be.field_q].a(true, 256);
                   }
                 }
               }
@@ -189,7 +189,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "Transmogrify.D(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "Transmogrify.D(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "Transmogrify.M(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "Transmogrify.M(" + param0 + ')');
         }
     }
 
@@ -228,14 +228,14 @@ public final class Transmogrify extends SessionGameApplet {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            lc.a((byte) 65, var1);
+            MidiPcmStream.a((byte) 65, var1);
             ff.field_D.backpatchByteLength((byte) -42, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1_ref), "Transmogrify.I(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1_ref), "Transmogrify.I(" + param0 + ')');
         }
     }
 
@@ -309,14 +309,14 @@ public final class Transmogrify extends SessionGameApplet {
                 lb.field_i = 3;
                 qf.field_d = be.field_q;
               } else {
-                lc.field_q = lc.field_q - 1;
-                if (lc.field_q == 0) {
+                MidiPcmStream.field_q = MidiPcmStream.field_q - 1;
+                if (MidiPcmStream.field_q == 0) {
                   lb.field_i = 0;
                 }
               }
             } else {
-              lc.field_q = lc.field_q + 1;
-              if (lc.field_q == 16) {
+              MidiPcmStream.field_q = MidiPcmStream.field_q + 1;
+              if (MidiPcmStream.field_q == 16) {
                 if (ll.c(true)) {
                   ImageProducerRasterBuffer.d((byte) 91);
                 } else {
@@ -334,7 +334,7 @@ public final class Transmogrify extends SessionGameApplet {
                   g.field_z = 0;
                 }
               } else {
-                ej.field_l[be.field_q].c((byte) 122);
+                MusicPatchPcmStream.field_l[be.field_q].c((byte) 122);
                 if (oh.field_j > 2 &&
                   n.submittedWordCount < 10) {
                   wk.field_c = wk.field_c + 1;
@@ -342,15 +342,15 @@ public final class Transmogrify extends SessionGameApplet {
                 }
               }
             } else {
-              fieldTemp$0 = lc.field_q + 1;
-              lc.field_q = lc.field_q + 1;
+              fieldTemp$0 = MidiPcmStream.field_q + 1;
+              MidiPcmStream.field_q = MidiPcmStream.field_q + 1;
               if (16 != fieldTemp$0) {
-                if (lc.field_q == 1 &&
+                if (MidiPcmStream.field_q == 1 &&
                   qf.field_d >= 0) {
                   if (-1 != be.field_q) {
-                    ej.field_l[qf.field_d].a(ej.field_l[be.field_q].field_j.field_f, param0 ^ 10923);
+                    MusicPatchPcmStream.field_l[qf.field_d].a(MusicPatchPcmStream.field_l[be.field_q].field_j.field_f, param0 ^ 10923);
                   } else {
-                    ej.field_l[qf.field_d].a(false, 256);
+                    MusicPatchPcmStream.field_l[qf.field_d].a(false, 256);
                   }
                   if (qf.field_d == 5) {
                     var2_int = 130;
@@ -443,7 +443,7 @@ public final class Transmogrify extends SessionGameApplet {
                   mc.field_c.clear(-1);
                   SecondaryNodeDeque.field_g = 0;
                 }
-                lc.field_q = 0;
+                MidiPcmStream.field_q = 0;
                 be.field_q = qf.field_d;
                 if (be.field_q == 0) {
                   wd.a(17099, true, bd.field_u[6]);
@@ -464,7 +464,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "Transmogrify.H(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "Transmogrify.H(" + param0 + ')');
         }
     }
 
@@ -520,16 +520,16 @@ public final class Transmogrify extends SessionGameApplet {
             if (qf.field_d == -1) {
               kd.a(param0 ^ 15706, 0);
             } else {
-              ej.field_l[qf.field_d].d(param0 ^ 29608, 0);
+              MusicPatchPcmStream.field_l[qf.field_d].d(param0 ^ 29608, 0);
             }
             if (be.field_q != -1) {
-              ej.field_l[be.field_q].d(param0 ^ 29608, (lc.field_q << 1) - (lc.field_q << 5));
+              MusicPatchPcmStream.field_l[be.field_q].d(param0 ^ 29608, (MidiPcmStream.field_q << 1) - (MidiPcmStream.field_q << 5));
             } else {
-              kd.a(98, (lc.field_q << 1) - (lc.field_q << 5));
+              kd.a(98, (MidiPcmStream.field_q << 1) - (MidiPcmStream.field_q << 5));
             }
           } else {
             if (be.field_q != -1) {
-              ej.field_l[be.field_q].d(param0 + 4456, 0);
+              MusicPatchPcmStream.field_l[be.field_q].d(param0 + 4456, 0);
               if (tl.field_d < 169) {
                 if (tl.field_d < 151) {
                   jh.field_h.f(0, 0);
@@ -613,7 +613,7 @@ public final class Transmogrify extends SessionGameApplet {
             og.b(false);
           }
           if (0 != lb.field_i) {
-            var3Lifetime1 = 256 * lc.field_q / 16;
+            var3Lifetime1 = 256 * MidiPcmStream.field_q / 16;
             if (var3Lifetime1 > 0) {
               sb.c(0, 0, sb.field_c, sb.field_g, 0, var3Lifetime1);
             }
@@ -632,7 +632,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2_ref), "Transmogrify.B(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2_ref), "Transmogrify.B(" + param0 + ')');
         }
     }
 
@@ -809,7 +809,7 @@ public final class Transmogrify extends SessionGameApplet {
             null == IntrusiveNode.field_d) {
             vf.a((byte) -125, 92.0f, ha.field_b);
             this.renderFrame(param0 ^ -15744);
-            gb.field_a = ej.a((byte) -43, AccountNameAvailabilityValidator.field_k, "", "arialish20");
+            gb.field_a = MusicPatchPcmStream.a((byte) -43, AccountNameAvailabilityValidator.field_k, "", "arialish20");
             el.b(-6491);
             return false;
           }
@@ -839,7 +839,7 @@ public final class Transmogrify extends SessionGameApplet {
             mk.field_B = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "dialog_frame");
             SecondaryNodeDeque.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "button_frame");
             eh.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "button_frame_hi");
-            jk.field_x = new mg(ej.a((byte) -43, oi.field_g, "var_button", ""));
+            jk.field_x = new mg(MusicPatchPcmStream.a((byte) -43, oi.field_g, "var_button", ""));
             var5_int = IntrusiveNode.field_d.a(mc.countdownLabels[0]);
             var6_int = IntrusiveNode.field_d.a(mc.countdownLabels[1]);
             if (var5_int < var6_int) {
@@ -969,14 +969,14 @@ public final class Transmogrify extends SessionGameApplet {
               dh.field_B = pc.a("halloween", "background", oi.field_g, 19);
             }
             hk.a(IntrusiveNode.field_d, param0 + 98, 400, IntrusiveNode.field_d);
-            ej.a(16, (byte) 108, 8, 2, new pg(SecondaryNodeDeque.field_h), new pg(eh.field_c));
+            MusicPatchPcmStream.a(16, (byte) 108, 8, 2, new pg(SecondaryNodeDeque.field_h), new pg(eh.field_c));
             vf.a(new pg(mk.field_B), 10, 10, param0 + 211);
             el.b(-6491);
             return false;
           }
           if (l.field_a == null) {
             for (var3_intLifetime2 = 0; var3_intLifetime2 < 8; var3_intLifetime2++) {
-              ej.field_l[var3_intLifetime2] = new vg(var3_intLifetime2);
+              MusicPatchPcmStream.field_l[var3_intLifetime2] = new vg(var3_intLifetime2);
             }
             be.field_q = 0;
             ek.a(118);
@@ -1036,13 +1036,13 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var3), "Transmogrify.E(" + param0 + ',' + param1 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var3), "Transmogrify.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void initializeGame(int param0) {
         this.a(8, param0 ^ -10, 13, 9, 11, 0, false, 10);
-        lc var2 = new lc();
+        MidiPcmStream var2 = new MidiPcmStream();
         if (param0 != -9) {
           return;
         }
@@ -1056,7 +1056,7 @@ public final class Transmogrify extends SessionGameApplet {
           this.a(true, false, false, false, (byte) 9);
           ue.field_c = new IndexedSprite[3];
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "Transmogrify.F(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "Transmogrify.F(" + param0 + ')');
         }
     }
 
@@ -1076,7 +1076,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "Transmogrify.A(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "Transmogrify.A(" + param0 + ')');
         }
     }
 
@@ -1092,7 +1092,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var1), "Transmogrify.C(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var1), "Transmogrify.C(" + param0 + ')');
         }
     }
 
@@ -1100,7 +1100,7 @@ public final class Transmogrify extends SessionGameApplet {
         try {
           this.a("transmogrify", false, 12);
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "Transmogrify.init()");
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "Transmogrify.init()");
         }
     }
 
@@ -1128,7 +1128,7 @@ public final class Transmogrify extends SessionGameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) ((Object) var2), "Transmogrify.G(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) var2), "Transmogrify.G(" + param0 + ')');
         }
     }
 
@@ -1179,11 +1179,11 @@ public final class Transmogrify extends SessionGameApplet {
           WordLanguage.a((byte) -41);
           gk.clearStaticReferences(9);
           IntrusiveNode.a(false);
-          lc.e(-122);
+          MidiPcmStream.e(-122);
           ul.clearStaticReferences();
-          ej.b(false);
+          MusicPatchPcmStream.b(false);
           AudioOutput.clearStaticReferences();
-          oj.clearStaticReferences(param0 ^ 111);
+          CrossfadingMidiPcmStream.clearStaticReferences(param0 ^ 111);
           ga.a(true);
           al.clearStaticReferences(-84);
           pg.clearStaticReferences((byte) -119);
@@ -1233,7 +1233,7 @@ public final class Transmogrify extends SessionGameApplet {
           ug.clearStaticReferences((byte) 118);
           mc.clearStaticReferences(true);
           ef.a(-106);
-          nd.e(0);
+          DelayedPcmStream.e(0);
           tj.d((byte) 107);
           bk.clearStaticReferences(-123);
           pj.g(124);
@@ -1368,7 +1368,7 @@ public final class Transmogrify extends SessionGameApplet {
           q.a(4);
           this.field_q = null;
         } catch (RuntimeException runtimeException) {
-          throw ch.a((Throwable) ((Object) runtimeException), "Transmogrify.J(" + param0 + ')');
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "Transmogrify.J(" + param0 + ')');
         }
     }
 

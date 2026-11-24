@@ -185,7 +185,7 @@ final class gh {
           var7 = param0.field_db;
           var36.field_n.c(var7, var5, -1220, var4, var6);
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "gh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "gh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class gh {
               if (param0 == fo.field_e) {
                 return;
               }
-              qc.field_v.a(true);
+              qc.field_v.stopPlayback(true);
               ri.field_r.flushAndMarkDrainCheck();
               fo.field_e = param0;
               if (null != fo.field_e) {
@@ -229,7 +229,7 @@ final class gh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -366,7 +366,7 @@ final class wo {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -786,7 +786,7 @@ final class wo {
           this.field_Q = param0.field_Q;
           this.field_D = param0.field_D;
         } catch (RuntimeException runtimeException) {
-          throw wn.a((Throwable) ((Object) runtimeException), "wo.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "wo.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -999,7 +999,7 @@ final class wo {
               if (this.field_i) {
                 break;
               }
-              db.a(false, 12, (byte) 36, nq.field_D, false, 12);
+              MidiPcmStream.a(false, 12, (byte) 36, nq.field_D, false, 12);
               break;
             }
             if (this.field_t == 0) {

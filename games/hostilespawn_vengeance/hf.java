@@ -5,7 +5,7 @@ final class hf {
     static jf field_g;
     static bd field_b;
     static int field_i;
-    static wm field_c;
+    static PcmStreamMixer field_c;
     static int field_a;
     static bd field_j;
     static String[] field_d;
@@ -37,7 +37,7 @@ final class hf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

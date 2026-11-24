@@ -4,7 +4,7 @@
 abstract class vl extends IntrusiveNode {
     int field_i;
 
-    abstract int a(ke param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     abstract void a();
 

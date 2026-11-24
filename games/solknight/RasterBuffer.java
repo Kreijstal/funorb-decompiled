@@ -121,7 +121,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 

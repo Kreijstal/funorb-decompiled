@@ -24,7 +24,7 @@ final class Bullet extends FlightBody {
           this.turn(turnOffset, (byte) 25);
           this.moveForward(24.0, 128);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "eu.M(" + sideOffset + ',' + headingOffset + ',' + turnOffset + ',' + (sourceAircraft != null ? "{...}" : "null") + ')');
+          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "eu.M(" + sideOffset + ',' + headingOffset + ',' + turnOffset + ',' + (sourceAircraft != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class Bullet extends FlightBody {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class Bullet extends FlightBody {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "eu.J(" + param0 + ',' + param1 + ')');
+          throw pn.wrapClientException((Throwable) ((Object) var2), "eu.J(" + param0 + ',' + param1 + ')');
         }
     }
 

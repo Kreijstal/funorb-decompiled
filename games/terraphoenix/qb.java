@@ -118,10 +118,10 @@ final class qb {
           var13 = LevelEditor.field_j;
           var15 = var13;
           var2 = var15.readUnsignedByte(param0 ^ -16384);
-          var3 = (ja) (vd.field_l.beginBackward(9272));
+          var3 = (ja) (MusicPatchPcmStream.field_l.beginBackward(9272));
           while (var3 != null) {
             if (var3.field_o != var2) {
-              var3 = (ja) (vd.field_l.nextBackward((byte) -119));
+              var3 = (ja) (MusicPatchPcmStream.field_l.nextBackward((byte) -119));
               continue;
             }
             break;

@@ -46,7 +46,7 @@ final class va extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "va.A(" + param0 + ')');
+          throw dn.wrapClientException((Throwable) ((Object) var1), "va.A(" + param0 + ')');
         }
     }
 

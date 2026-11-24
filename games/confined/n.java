@@ -10,7 +10,7 @@ abstract class n {
     static bi field_a;
     int field_c;
 
-    final static be a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 21146) {
           n.a(124);
           return CipherPacketBuffer.field_r;

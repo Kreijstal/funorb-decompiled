@@ -127,7 +127,7 @@ final class IncomingAnimation extends EventAnimation {
         if (lw.field_g == this.field_w) {
           this.field_x.c(-26450);
           this.field_w = SplitAnimation.field_w;
-          jja.a(256, -1, 29);
+          MusicPatchPcmStream.a(256, -1, 29);
         }
         if (ov.field_e.length <= this.field_A) {
           this.d(-73);

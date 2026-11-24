@@ -7,7 +7,7 @@ abstract class sl extends IntrusiveNode {
 
     abstract void b();
 
-    abstract int a(PcmStreamMixer param0);
+    abstract int onScheduledEvent(PcmStreamMixer param0);
 
     abstract void a();
 

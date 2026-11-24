@@ -106,7 +106,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 

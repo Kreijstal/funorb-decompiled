@@ -52,7 +52,7 @@ final class jh {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "jh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "jh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

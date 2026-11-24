@@ -282,7 +282,7 @@ final class kj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          am.a(param1.field_m + param3, param1.field_k, param1.field_w, this.field_c, 14673, param4 + param1.field_o);
+          MusicPatchPcmStream.a(param1.field_m + param3, param1.field_k, param1.field_w, this.field_c, 14673, param4 + param1.field_o);
           if (null != this.field_e) {
             var6_int = param1.field_o + param4 + this.field_i;
             var7 = param3 + (param1.field_m + this.field_l);

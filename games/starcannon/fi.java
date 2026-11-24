@@ -37,7 +37,7 @@ abstract class fi {
           var1.a(0, 0);
           wf.a(-71);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "fi.K(" + param0 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "fi.K(" + param0 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ abstract class fi {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 

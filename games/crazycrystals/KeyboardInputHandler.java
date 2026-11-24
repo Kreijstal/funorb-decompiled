@@ -27,7 +27,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "vf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "vf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             bo.field_n = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw dn.a((Throwable) ((Object) runtimeException), "vf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "vf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

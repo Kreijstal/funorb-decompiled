@@ -113,7 +113,7 @@ final class gf {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw ld.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw ld.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -362,7 +362,7 @@ final class gf {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -409,7 +409,7 @@ final class gf {
           var17.position = param1.length - 2;
           th.field_t = var17.readUnsignedShort(-1698573656);
           mg.field_x = new int[th.field_t];
-          hl.field_o = new byte[th.field_t][];
+          MidiPcmStream.field_o = new byte[th.field_t][];
           me.field_w = new boolean[th.field_t];
           rg.field_c = new int[th.field_t];
           pb.field_h = new int[th.field_t];
@@ -454,7 +454,7 @@ final class gf {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            hl.field_o[var4Lifetime5] = var21;
+            MidiPcmStream.field_o[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(true);
             if ((var11 & 1) == 0) {
@@ -511,7 +511,7 @@ final class gf {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -588,7 +588,7 @@ final class gf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ld.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ld.wrapClientException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

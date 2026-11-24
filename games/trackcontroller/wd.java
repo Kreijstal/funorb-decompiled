@@ -102,7 +102,7 @@ abstract class wd extends hl {
         this.field_N = param1;
     }
 
-    final static k q(int param0) {
+    final static PcmStreamMixer q(int param0) {
         if (param0 != 11782) {
           field_O = (String[]) null;
         }
@@ -233,7 +233,7 @@ abstract class wd extends hl {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ol.field_n.e(param0 + this.field_x - 90, param2 + 10);
+        MusicPatchPcmStream.field_n.e(param0 + this.field_x - 90, param2 + 10);
         hc.a(param0 + 5, param2 + 35, this.field_x - 10, wj.field_a, -22081);
         hc.a(param0, param2 + (this.field_u - 22), this.field_x, kf.field_d, param1 ^ -22101);
         var6Lifetime2 = 127;

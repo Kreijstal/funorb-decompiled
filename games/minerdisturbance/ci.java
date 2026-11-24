@@ -22,7 +22,7 @@ abstract class ci {
         RuntimeException decompiledCaughtException = null;
         try {
           gj.a(param1 ^ 2670, (java.awt.Component) ((Object) param0));
-          vd.a((byte) -106, (java.awt.Component) ((Object) param0));
+          CrossfadingMidiPcmStream.a((byte) -106, (java.awt.Component) ((Object) param0));
           if (null != pf.field_e) {
             pf.field_e.detach(1000, (java.awt.Component) ((Object) param0));
           }
@@ -41,7 +41,7 @@ abstract class ci {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -52,7 +52,7 @@ abstract class ci {
             return false;
           }
           if (!SecondaryNodeDeque.field_b) {
-            return !gd.b((byte) -97) ? true : false;
+            return !MusicPatchPcmStream.b((byte) -97) ? true : false;
           }
           return false;
         }
@@ -60,7 +60,7 @@ abstract class ci {
           return false;
         }
         if (!SecondaryNodeDeque.field_b) {
-          return !gd.b((byte) -97) ? true : false;
+          return !MusicPatchPcmStream.b((byte) -97) ? true : false;
         }
         return false;
     }
@@ -130,7 +130,7 @@ abstract class ci {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ abstract class ci {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

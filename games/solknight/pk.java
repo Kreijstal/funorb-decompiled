@@ -40,7 +40,7 @@ final class pk extends kj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class pk extends kj {
             }
           }
           var21.b(112, 144, var21.field_q << 4, var21.field_r << 4, -this.field_Z << 10, 4096);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           this.field_W.a(-(var21.field_q >> 1) + var9, var10 - var21.field_r, 256);
           return;
         }
@@ -220,7 +220,7 @@ final class pk extends kj {
             }
           }
           var26.b(112, 144, var26.field_q << 4, var26.field_r << 4, -this.field_Z << 10, 4096);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           this.field_W.a(-(var26.field_q >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_r, 256);
           return;
         }
@@ -271,7 +271,7 @@ final class pk extends kj {
             }
           }
           var31.b(112, 144, var31.field_q << 4, var31.field_r << 4, -this.field_Z << 10, 4096);
-          mf.e(4096);
+          MidiPcmStream.e(4096);
           this.field_W.a(-(var31.field_q >> 1) + var9Lifetime2, var10Lifetime2 - var31.field_r, 256);
           return;
         }
@@ -320,7 +320,7 @@ final class pk extends kj {
           }
         }
         var36.b(112, 144, var36.field_q << 4, var36.field_r << 4, -this.field_Z << 10, 4096);
-        mf.e(4096);
+        MidiPcmStream.e(4096);
         this.field_W.a(-(var36.field_q >> 1) + var9Lifetime3, var10Lifetime3 - var36.field_r, 256);
         return;
     }
@@ -418,7 +418,7 @@ final class pk extends kj {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class pk extends kj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -512,7 +512,7 @@ final class pk extends kj {
         try {
           super.a(param0, param1 + 0, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "pk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -523,17 +523,17 @@ final class pk extends kj {
           this.field_U = param0;
           this.b(param5, param4, param2, 0, param3);
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static void a(byte param0, int param1) {
         vk.field_g = (param1 & 57) >> 4;
-        lh.field_q = (15 & param1) >> 2;
+        MusicPatchPcmStream.field_q = (15 & param1) >> 2;
         if (vk.field_g > 2) {
           vk.field_g = 2;
-          if (2 < lh.field_q) {
-            lh.field_q = 2;
+          if (2 < MusicPatchPcmStream.field_q) {
+            MusicPatchPcmStream.field_q = 2;
           }
           if (param0 == -48) {
             bi.field_d = 3 & param1;
@@ -544,8 +544,8 @@ final class pk extends kj {
           }
           pk.d(true);
         } else {
-          if (2 < lh.field_q) {
-            lh.field_q = 2;
+          if (2 < MusicPatchPcmStream.field_q) {
+            MusicPatchPcmStream.field_q = 2;
           }
           if (param0 != -48) {
             pk.d(true);

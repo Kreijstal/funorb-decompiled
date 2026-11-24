@@ -48,7 +48,7 @@ final class ie {
           var1.c(0, 0);
           fd.a(28773);
         } catch (RuntimeException runtimeException) {
-          throw fk.a((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class ie {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var3), "ie.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fk.wrapClientException((Throwable) ((Object) var3), "ie.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ie {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw fk.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 

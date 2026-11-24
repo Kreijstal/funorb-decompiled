@@ -17,7 +17,7 @@ final class da {
         return (java.awt.Container) ((Object) bm.c(-74));
     }
 
-    final static hg a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 858) {
           field_d = -63;
         }
@@ -38,13 +38,13 @@ final class da {
           if (null != sj.field_h &&
             sj.field_h.field_K) {
             if (param2 == 8) {
-              if (gd.field_B) {
+              if (MusicPatchPcmStream.field_B) {
                 param1 = pj.field_d;
               } else {
                 param1 = j.field_a;
               }
               param2 = 2;
-              di.field_D.a(pl.field_a, 69);
+              MidiPcmStream.field_D.a(pl.field_a, 69);
             }
             var3_int = 1;
             if (10 == param2) {
@@ -62,8 +62,8 @@ final class da {
             }
             if (256 != param2 &&
               param2 != 10 &&
-              !gd.field_B) {
-              di.field_D.n(-6);
+              !MusicPatchPcmStream.field_B) {
+              MidiPcmStream.field_D.n(-6);
             }
           }
           if (!param0) {
@@ -81,7 +81,7 @@ final class da {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class da {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

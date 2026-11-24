@@ -116,7 +116,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 
@@ -629,7 +629,7 @@ final class bf extends IntrusiveNode {
                     }
                 }
                 case 20: {
-                    throw sd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+                    throw sd.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -954,7 +954,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_115_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
         }
     }
 
@@ -984,7 +984,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -994,7 +994,7 @@ final class bf extends IntrusiveNode {
           int var2_int = -81 / ((-14 - param0) / 60);
           sc.a(false, (byte) 106, bl.field_c);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bf.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "bf.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1026,7 +1026,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -1362,7 +1362,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_183_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_176_0), ((StringBuilder) (Object) stackIn_182_1).append(stackIn_183_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_176_0), ((StringBuilder) (Object) stackIn_182_1).append(stackIn_183_2).append(')').toString());
         }
     }
 
@@ -1373,7 +1373,7 @@ final class bf extends IntrusiveNode {
             this.field_t = -2;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "bf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -1446,7 +1446,7 @@ final class bf extends IntrusiveNode {
                 var11_ref_String = "";
               }
               d.field_b.writeString(false, var11_ref_String);
-              fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
+              fc.a(ck.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
               d.field_b.backpatchShortLength((byte) 88, -var10 + d.field_b.position);
             } else {
               ck.field_g.position = 0;
@@ -1471,7 +1471,7 @@ final class bf extends IntrusiveNode {
               d.field_b.writeByte(16, param3 ^ -64);
               d.field_b.position = d.field_b.position + 1;
               var9 = d.field_b.position;
-              fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
+              fc.a(ck.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
               d.field_b.backpatchByteLength(d.field_b.position - var9, 31700);
             }
             nf.a(-1, (byte) 95);
@@ -1580,7 +1580,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param6).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -1664,7 +1664,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -2212,7 +2212,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_381_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_374_0), ((StringBuilder) (Object) stackIn_380_1).append(stackIn_381_2).append(')').toString());
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_374_0), ((StringBuilder) (Object) stackIn_380_1).append(stackIn_381_2).append(')').toString());
         }
     }
 
