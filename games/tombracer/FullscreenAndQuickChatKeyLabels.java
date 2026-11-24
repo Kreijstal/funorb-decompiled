@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s {
+final class FullscreenAndQuickChatKeyLabels {
     static String[] field_b;
     static String field_a;
     private static String field_z;
@@ -10,7 +10,7 @@ final class s {
         field_b = null;
         field_a = null;
         if (!param0) {
-          s.releaseStatics(false);
+          FullscreenAndQuickChatKeyLabels.releaseStatics(false);
         }
     }
 

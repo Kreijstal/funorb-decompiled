@@ -105,7 +105,7 @@ final class LoadLevelCommand extends ConsoleMethod {
             TextureOperator.field_l.f(true);
             return;
           }
-          var1 = lsa.field_a;
+          var1 = TextureCoordinateGenerationState.field_a;
           if (0 < var1) {
             if (var1 != 1) {
               SnakePitBehaviour.field_o = LegacyOpenGlFlowingWaterEffect.formatText(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
@@ -123,7 +123,7 @@ final class LoadLevelCommand extends ConsoleMethod {
         if (LoadProfileCommand.field_r) {
           TextureOperator.field_l.f(true);
         } else {
-          var1 = lsa.field_a;
+          var1 = TextureCoordinateGenerationState.field_a;
           if (0 < var1) {
             if (var1 != 1) {
               SnakePitBehaviour.field_o = LegacyOpenGlFlowingWaterEffect.formatText(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});

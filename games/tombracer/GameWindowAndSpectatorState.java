@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb {
+final class GameWindowAndSpectatorState {
     static java.awt.Frame field_d;
     static GpuPrimitiveType field_b;
     static long field_c;

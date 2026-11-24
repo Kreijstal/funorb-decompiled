@@ -142,7 +142,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var5.setWeightThreshold(-5, 2);
           var5.setCollapseDelay(1, (byte) 71);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 81));
           var7.setStyle(4, (byte) 23);
           var4.addModel(var5, (byte) 124, var7);
@@ -340,7 +340,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var5 = new PlatformBehaviour(param0, param1);
           var5.setWeightThreshold(-5, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 87));
           var7.setStyle(4, (byte) 23);
           var4.addModel(var5, (byte) 124, var7);

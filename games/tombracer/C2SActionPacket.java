@@ -16,7 +16,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         int var2 = TombRacer.field_G ? 1 : 0;
         int var1_intLifetime1;
         try {
-          cq.field_a.resetTiming(108);
+          GameClockAndLogoResources.field_a.resetTiming(108);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             EffectSwitchBehaviour.field_r[var1_int] = 0L;
           }
@@ -128,10 +128,10 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         if (param1 != -16838) {
           return;
         }
-        era.field_e.drawFullScreen(param1 ^ -16792, param0);
+        LobbyOverlayAndDateValidationState.field_e.drawFullScreen(param1 ^ -16792, param0);
         DateOfBirthPanel var2 = NineSliceFrame.field_c;
         if (var2 != null) {
-          var2.renderWithTooltip(-31, era.field_e.field_A, era.field_e.field_q);
+          var2.renderWithTooltip(-31, LobbyOverlayAndDateValidationState.field_e.field_A, LobbyOverlayAndDateValidationState.field_e.field_q);
         }
     }
 

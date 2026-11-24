@@ -172,7 +172,7 @@ final class MirrorComponent extends PrefabComponent {
           var7 = new MirrorBehaviour(param2, param0);
           var6.addBehaviour((byte) 83, (Behaviour) (var7));
           var11.addChild(-98, var6);
-          var8 = rm.field_a;
+          var8 = ModelCodecAndSocialPanelState.field_a;
           if (this.typeId != 19) {
             var13 = (TrapBaseModel) (var8.createModel(16, param1 ^ 105));
             var13.setVariant(8022, 4);

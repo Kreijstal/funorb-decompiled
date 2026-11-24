@@ -210,7 +210,7 @@ final class TeleportLocomotor extends Locomotor {
           if (1 == param1) {
             LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
           } else {
-            pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
+            ClippedRectangleBorderRenderer.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
           }
           if (!param5) {
             TeleportLocomotor.drawRectangleBorder(69, -19, 4, 24, 126, false, -104);
@@ -219,21 +219,21 @@ final class TeleportLocomotor extends Locomotor {
         }
         if (DiskCacheWorker.field_c < param0) {
           if (1 != param1) {
-            pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
+            ClippedRectangleBorderRenderer.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
           } else {
             LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
           }
         } else {
           if (param4 < HardwareModelBillboardState.field_d) {
             if (1 != param1) {
-              pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
+              ClippedRectangleBorderRenderer.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
             } else {
               LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
             }
           } else {
             if (LineShape.field_h < param2) {
               if (1 != param1) {
-                pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
+                ClippedRectangleBorderRenderer.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
               } else {
                 LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
               }

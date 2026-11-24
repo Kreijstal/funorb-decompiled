@@ -87,7 +87,7 @@ final class WallCrusherComponent extends PrefabComponent {
           var11.setUses(0, 55);
           var11.getLinks(param1 - 2).setTargets(9, new Switchable[]{(Switchable) ((Object) var6), (Switchable) ((Object) var7)});
           var14.addBehaviour((byte) 83, (Behaviour) (this.field_G));
-          var12 = rm.field_a;
+          var12 = ModelCodecAndSocialPanelState.field_a;
           var13 = (WallModel) (var12.createModel(15, 93));
           var14.addModel((TrapPart) null, (byte) 124, var13);
           stackIn_7_0 = var14;

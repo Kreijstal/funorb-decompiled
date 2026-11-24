@@ -67,21 +67,21 @@ final class DialogStack extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (null == era.field_d) {
+        if (null == LobbyOverlayAndDateValidationState.field_d) {
           if (!param1) {
             field_z = (int[]) null;
             return;
           }
           return;
         }
-        if (!era.field_d.a(param0, 94)) {
+        if (!LobbyOverlayAndDateValidationState.field_d.a(param0, 94)) {
           if (!param1) {
             field_z = (int[]) null;
             return;
           }
           return;
         }
-        era.field_d = null;
+        LobbyOverlayAndDateValidationState.field_d = null;
         if (!param1) {
           field_z = (int[]) null;
           return;

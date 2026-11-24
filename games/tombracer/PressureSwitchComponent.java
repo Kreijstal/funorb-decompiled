@@ -28,12 +28,12 @@ final class PressureSwitchComponent extends SwitchComponent {
             return;
           }
           rg.a((byte) -53);
-          era.field_e.layoutFullScreen(37, param0);
+          LobbyOverlayAndDateValidationState.field_e.layoutFullScreen(37, param0);
           if (null != NineSliceFrame.field_c) {
             if (!DropdownButtonPainter.field_g) {
               NineSliceFrame.field_c = null;
             } else {
-              NineSliceFrame.field_c.processPointerFrame(era.field_e.field_A, param0, era.field_e.field_q, -90);
+              NineSliceFrame.field_c.processPointerFrame(LobbyOverlayAndDateValidationState.field_e.field_A, param0, LobbyOverlayAndDateValidationState.field_e.field_q, -90);
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
@@ -183,7 +183,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           var5.setRequiredWeight(this.field_L, true);
           this.bindSwitchState(var5, (byte) -94);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (SwitchModel) (var6.createModel(9, param1 ^ 113));
           if (param1 != 3) {
             this.field_K = 33;

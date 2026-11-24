@@ -1015,7 +1015,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             var8Lifetime1 = param2.readBits((byte) 44, 3);
             for (var9 = 0; var9 < var8Lifetime1; var9++) {
               var10 = param2.readBits((byte) 44, 5) - 1;
-              var11 = rm.field_a.readModel(param0, param2, false);
+              var11 = ModelCodecAndSocialPanelState.field_a.readModel(param0, param2, false);
               this.addModel(this.getPartAt(3, var10), (byte) 124, var11);
             }
           } else {
@@ -1338,7 +1338,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             var8 = (TrapModel) (this.models.first(-80));
             while (var8 != null) {
               param0.writeBits((byte) -127, 1 + this.indexOfPart(13464, var8.getPart(-93)), 5);
-              rm.field_a.writeModel(15682, param0, var8);
+              ModelCodecAndSocialPanelState.field_a.writeModel(15682, param0, var8);
               var8 = (TrapModel) (this.models.next(109));
             }
           }
@@ -1448,7 +1448,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.clearModels(-1332);
         Behaviour var3 = (Behaviour) (this.behaviours.first(param0 ^ -437453416));
         while (var3 != null) {
-          this.addModel(var3, (byte) 124, rm.field_a.createTrapModel(var3, (WorldBody) (this), -126));
+          this.addModel(var3, (byte) 124, ModelCodecAndSocialPanelState.field_a.createTrapModel(var3, (WorldBody) (this), -126));
           var3 = (Behaviour) (this.behaviours.next(107));
         }
         if (param1) {

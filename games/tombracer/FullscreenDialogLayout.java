@@ -217,7 +217,7 @@ final class FullscreenDialogLayout {
             CoinItemComponent.field_H[3] = 1;
             SpriteTileOperator.field_w[1] = 2;
             DefaultTileRenderable.field_g[5] = "";
-            DefaultTileRenderable.field_g[2] = cq.field_c;
+            DefaultTileRenderable.field_g[2] = GameClockAndLogoResources.field_c;
             SpriteTileOperator.field_w[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_68_0 = DefaultTileRenderable.field_g;

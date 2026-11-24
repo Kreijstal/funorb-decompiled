@@ -22,7 +22,7 @@ final class CoinBagItemComponent extends ItemComponent {
           var5 = new MiscItemBehaviour(param2, param0);
           var5.setItemType(2, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (ItemModel) (var6.createModel(12, 125));
           var7.setVariant((byte) 123, 1);
           var4.addModel(var5, (byte) 124, var7);
@@ -131,11 +131,11 @@ final class CoinBagItemComponent extends ItemComponent {
                 HiscoresScreen.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
                 HiscoresScreen.field_z.field_X = false;
                 if (var19 != 0) {
-                  HiscoresScreen.field_z.field_r = eu.field_b.toUpperCase();
+                  HiscoresScreen.field_z.field_r = InvitationAndMedalResources.field_b.toUpperCase();
                   HiscoresScreen.field_z.field_X = true;
                 }
               } else {
-                HiscoresScreen.field_z.field_r = eu.field_b.toUpperCase();
+                HiscoresScreen.field_z.field_r = InvitationAndMedalResources.field_b.toUpperCase();
                 HiscoresScreen.field_z.field_X = true;
               }
               HiscoresScreen.field_z.field_w = HardwareModelVertexStream.field_g.field_w;
@@ -423,7 +423,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 if (var16 != 0) {
                   GamePacketSender.field_a.field_X = false;
                   if (GamePacketSender.field_a.field_pb) {
-                    if (rm.field_e.field_a.field_wb != 0) {
+                    if (ModelCodecAndSocialPanelState.field_e.field_a.field_wb != 0) {
                       ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.formatText(126, GridWidgetContainer.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
                         ArchiveNetworkClient.field_b = BitPacketBuffer.field_o;
@@ -470,7 +470,7 @@ final class CoinBagItemComponent extends ItemComponent {
           stackIn_178_1 = 36;
           stackIn_179_2 = (param4) && (!param0) && (OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_178_0).layoutFullScreen(stackIn_178_1, stackIn_179_2);
-          rm.field_e.field_a.processTabPresses((byte) -98);
+          ModelCodecAndSocialPanelState.field_e.field_a.processTabPresses((byte) -98);
           if (param1 != -1) {
             return;
           }

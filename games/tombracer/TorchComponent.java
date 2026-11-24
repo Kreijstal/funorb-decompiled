@@ -23,7 +23,7 @@ final class TorchComponent extends PrefabComponent {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
           var4.setWeight((byte) -3, 5);
-          var5 = rm.field_a;
+          var5 = ModelCodecAndSocialPanelState.field_a;
           var6 = (FurnitureModel) (var5.createModel(4, 80));
           var6.setVariant(1, (byte) 77);
           var4.addModel((TrapPart) null, (byte) 124, var6);

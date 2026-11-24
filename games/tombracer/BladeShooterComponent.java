@@ -68,7 +68,7 @@ final class BladeShooterComponent extends ShooterComponent {
           var5.setWeapon(var6, (byte) 61);
           this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (BlockModel) (var7.createModel(7, param1 ^ 122));
           var8.setVariant(106, 13);
           var9.addModel(var5, (byte) 124, var8);

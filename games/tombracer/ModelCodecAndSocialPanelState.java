@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm {
+final class ModelCodecAndSocialPanelState {
     static ModelCodec field_a;
     static SocialTabbedPanelLayout field_e;
     static ToolkitSprite field_c;

@@ -130,7 +130,7 @@ final class ck {
           RotateLocomotor.field_o = new UiComponent(0L, AccountRequestUsernameSelector.field_a, ArchiveConnectionFailureHandler.field_a);
           MidiPcmStream.field_K = new UiComponent(0L, AccountRequestUsernameSelector.field_a, EllipseShape.field_i);
           MirrorComponent.field_I = new UiComponent(0L, AccountRequestUsernameSelector.field_a, MatchState.field_N);
-          cq.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
+          GameClockAndLogoResources.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           SoftwareModelBillboardState.field_i = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           TileRenderable.field_c = new UiComponent(0L, HardwareModelVertexStream.field_g, GpuPrimitiveType.field_b.toUpperCase());
           TileRenderable.field_c.field_X = UnlockOverlay.field_p;
@@ -158,7 +158,7 @@ final class ck {
             Obstacle.field_s.addChild(-128, MidiPcmStream.field_K);
           }
           Obstacle.field_s.addChild(-123, MirrorComponent.field_I);
-          Obstacle.field_s.addChild(-128, cq.field_e);
+          Obstacle.field_s.addChild(-128, GameClockAndLogoResources.field_e);
           Obstacle.field_s.addChild(-122, SoftwareModelBillboardState.field_i);
           if (UnlockOverlay.field_p) {
             OpenGlToolkit.field_fd.addChild(-124, TileRenderable.field_c);
@@ -224,7 +224,7 @@ final class ck {
                 }
               }
             }
-            SimpleConditionBehaviour.field_p[2] = new UiComponent(0L, GpuDataType.field_j, nb.field_a);
+            SimpleConditionBehaviour.field_p[2] = new UiComponent(0L, GpuDataType.field_j, GameWindowAndSpectatorState.field_a);
             SoftwareRenderTarget.field_b[2] = new ContextMenuRow[]{new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
             break;
           }
@@ -352,7 +352,7 @@ final class ck {
           MouseWheelFactory.field_b.addChild(-128, HiscoresScreen.field_z);
           MouseWheelFactory.field_b.addChild(-125, GamePacketSender.field_a);
           MouseWheelFactory.field_b.addChild(-123, MessageOverlay.field_t);
-          S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
+          S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, InvitationAndMedalResources.field_b.toUpperCase());
           Trap.field_q = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, DisplayNameValidator.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

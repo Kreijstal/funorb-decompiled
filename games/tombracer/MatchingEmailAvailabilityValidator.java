@@ -65,7 +65,7 @@ final class MatchingEmailAvailabilityValidator extends TextFieldValidator {
           if (!param1.equals(this.field_m)) {
             var3 = CharacterChoice.requestAvailabilityCheck((byte) -115, param1);
             if (!var3.isComplete(47)) {
-              stackIn_8_0 = tea.field_b;
+              stackIn_8_0 = TutorialAndValidationState.field_b;
               return stackIn_8_0;
             }
             this.field_m = param1;

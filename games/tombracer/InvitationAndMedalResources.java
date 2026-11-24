@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eu {
+final class InvitationAndMedalResources {
     static String field_b;
     static ToolkitSprite field_a;
     private static String field_z;

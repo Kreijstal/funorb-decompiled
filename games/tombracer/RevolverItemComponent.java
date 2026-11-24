@@ -36,7 +36,7 @@ final class RevolverItemComponent extends ItemComponent {
           var5.setWeapon(TextureOperator.createFullWeapon(4, -1), 5);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var4.setStatCategory(param1, 146366800);
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (ItemModel) (var6.createModel(12, 104));
           var7.setVariant((byte) 74, 4);
           var4.addModel(var5, (byte) 124, var7);

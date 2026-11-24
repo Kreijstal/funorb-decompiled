@@ -122,7 +122,7 @@ final class FacePointLocomotor extends Locomotor {
     final static void a(boolean param0, byte param1) {
         if (ProjectionMode.field_a > 0 &&
           LegacyOpenGlBloomEffect.field_o) {
-          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, LobbyOverlayAndDateValidationState.field_e.field_A);
           VboVertexArray.field_k.drawFullScreen(108, param0);
         }
         if (param1 <= 6) {
@@ -131,7 +131,7 @@ final class FacePointLocomotor extends Locomotor {
         }
         if ((GameKeyHandler.field_a > 0 || TextureCombineSource.field_e > 0) &&
           OpenGlDisplayLists.field_e) {
-          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, LobbyOverlayAndDateValidationState.field_e.field_A);
           PlayerModel.field_a.drawFullScreen(85, param0);
         }
     }

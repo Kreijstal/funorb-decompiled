@@ -156,7 +156,7 @@ final class SeededGradientNoise3D extends NoiseSliceGenerator {
         }
         ValidationMessageWidget.field_K = param0;
         CourseLayout.field_d = new ChatMessage[param0 * 15];
-        baa.field_b = new int[3];
+        GraphicsSelectionState.field_b = new int[3];
     }
 
     static {

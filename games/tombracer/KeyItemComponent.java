@@ -30,7 +30,7 @@ final class KeyItemComponent extends ItemComponent {
           var5 = new MiscItemBehaviour(param2, param0);
           var5.setItemType(0, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (ItemModel) (var6.createModel(12, param1 + 94));
           var7.setVariant((byte) 123, param1);
           var4.addModel(var5, (byte) 124, var7);

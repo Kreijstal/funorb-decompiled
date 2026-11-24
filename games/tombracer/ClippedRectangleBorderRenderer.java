@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pua extends hq {
+final class ClippedRectangleBorderRenderer extends CourseMapYCoordinates {
     static NineSliceFrame field_c;
     private static String[] field_d;
 
@@ -46,7 +46,7 @@ final class pua extends hq {
           var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4 + param1);
           var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param4 + param6);
           if (param0 >= -11) {
-            pua.releaseStatics((byte) -34);
+            ClippedRectangleBorderRenderer.releaseStatics((byte) -34);
           }
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = PackedBitSetSupport.field_a[var15Lifetime2];

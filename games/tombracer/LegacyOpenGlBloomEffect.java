@@ -456,11 +456,11 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         ToolkitInstance var1 = null;
         ToolkitInstance var1Lifetime1;
         if (!param0) {
-          var1 = baa.field_d.field_i;
+          var1 = GraphicsSelectionState.field_d.field_i;
           return var1 == null ? null : (RendererOption) (var1.field_b);
         }
         LegacyOpenGlBloomEffect.d(-89);
-        var1Lifetime1 = baa.field_d.field_i;
+        var1Lifetime1 = GraphicsSelectionState.field_d.field_i;
         return var1Lifetime1 == null ? null : (RendererOption) (var1Lifetime1.field_b);
     }
 

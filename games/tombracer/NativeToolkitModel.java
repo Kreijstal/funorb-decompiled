@@ -8,7 +8,7 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
     rga[] field_d;
     ava[] field_e;
 
-    final void draw(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, ModelDrawMarker param1, int param2) {
         if (param1 == null) {
           this.field_f.contextForThread().drawModel((ToolkitModel) (this), param0, (int[]) null, param2);
         } else {
@@ -86,7 +86,7 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
 
     final native void translate(int param0, int param1, int param2);
 
-    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, ModelDrawMarker param1, int param2, int param3) {
         if (param1 == null) {
           this.field_f.contextForThread().drawModelAtDepth((ToolkitModel) (this), param0, (int[]) null, param2, param3);
         } else {

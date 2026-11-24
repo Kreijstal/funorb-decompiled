@@ -68,7 +68,7 @@ final class CoinItemComponent extends ItemComponent {
           var5 = new MiscItemBehaviour(param2, param0);
           var5.setItemType(1, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (ItemModel) (var6.createModel(12, 93));
           var7.setVariant((byte) 112, 0);
           var4.addModel(var5, (byte) 124, var7);

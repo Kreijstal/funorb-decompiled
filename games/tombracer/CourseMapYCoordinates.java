@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hq extends BillboardSpriteData {
+class CourseMapYCoordinates extends BillboardSpriteData {
     static int[] field_b;
     private static String field_z;
 
-    hq() {
+    CourseMapYCoordinates() {
     }
 
     public static void releaseStatics(int param0) {

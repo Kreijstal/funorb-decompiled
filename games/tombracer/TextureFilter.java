@@ -39,9 +39,9 @@ final class TextureFilter {
 
     final static void a(boolean param0, byte param1) {
         int var2 = 109 / ((-1 - param1) / 54);
-        if (era.field_d != null) {
+        if (LobbyOverlayAndDateValidationState.field_d != null) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, -SoftwareRasterizer.clipTop + SoftwareRasterizer.clipBottom);
-          era.field_d.drawFullScreen(64, param0);
+          LobbyOverlayAndDateValidationState.field_d.drawFullScreen(64, param0);
         }
     }
 

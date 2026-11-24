@@ -164,7 +164,7 @@ final class ara extends UiComponent {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; PlayerProfile.field_q.length > var12; var12++) {
-            var13 = new UiComponent(0L, param3, s.field_b[var12]);
+            var13 = new UiComponent(0L, param3, FullscreenAndQuickChatKeyLabels.field_b[var12]);
             var14 = new UiComponent(0L, param3, PlayerProfile.field_q[var12]);
             var15 = param3.field_H.stringWidth(PlayerProfile.field_q[var12]);
             if (var11 < var15) {

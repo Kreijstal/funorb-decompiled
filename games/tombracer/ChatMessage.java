@@ -109,7 +109,7 @@ final class ChatMessage {
         this.field_g = RoomSelectionProfile.field_c;
         this.field_c = gb.field_a;
         this.field_n = GreyscaleOperator.field_m;
-        this.field_e = era.field_a;
+        this.field_e = LobbyOverlayAndDateValidationState.field_a;
         if (!param0) {
           this.field_h = null;
         } else {

@@ -97,7 +97,7 @@ final class TripBeamComponent extends SwitchComponent {
           var5.setMaxBeamLength(0, 636);
           this.bindSwitchState(var5, (byte) -107);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (BlockModel) (var6.createModel(7, 82));
           var7.setVariant(119, 16);
           var4.addModel(var5, (byte) 124, var7);

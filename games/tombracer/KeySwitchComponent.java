@@ -71,7 +71,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var6 = var5.getSwitchState((byte) -98);
           var6.setUses(1, 106);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (SwitchModel) (var7.createModel(9, param1 + 103));
           var8.setVariant(3, (byte) -112);
           var9.addModel(var5, (byte) 124, var8);
@@ -160,7 +160,7 @@ final class KeySwitchComponent extends SwitchComponent {
             File var6 = (File) null;
             KeySwitchComponent.registerFontFile((String) null, (File) null, -60);
           }
-          cq.field_d = DialogStack.loadBinaryFont((byte) 112, "newfont_old", param3, "", param2);
+          GameClockAndLogoResources.field_d = DialogStack.loadBinaryFont((byte) 112, "newfont_old", param3, "", param2);
           incrementValue$1 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$1, (byte) 47, param1);

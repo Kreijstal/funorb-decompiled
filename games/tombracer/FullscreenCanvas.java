@@ -119,9 +119,9 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           var11.translate(param4 >> 14, -param3 >> 14, -param5 >> 14);
           try {
             if (TextureCombineOperation.field_a) {
-              param0.draw(var11, (el) null, 0);
+              param0.draw(var11, (ModelDrawMarker) null, 0);
             } else {
-              param0.drawAtFixedDepth(var11, (el) null, 2048, 0);
+              param0.drawAtFixedDepth(var11, (ModelDrawMarker) null, 2048, 0);
             }
             if (param6 >= 44) {
               return;

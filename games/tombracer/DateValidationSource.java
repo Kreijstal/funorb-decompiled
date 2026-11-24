@@ -28,7 +28,7 @@ final class DateValidationSource extends DebouncedValidationSource implements Te
               return (String) (stackIn_7_0);
             }
           } else {
-            stackIn_4_0 = LegacyOpenGlFlowingWaterEffect.formatText(91, era.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = LegacyOpenGlFlowingWaterEffect.formatText(91, LobbyOverlayAndDateValidationState.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

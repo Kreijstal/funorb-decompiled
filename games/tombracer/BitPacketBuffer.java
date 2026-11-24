@@ -290,28 +290,28 @@ final class BitPacketBuffer extends PacketBuffer {
           GameFontMetrics.field_f = param2;
           Room.field_k = param1;
           if (WeaponShooterBehaviour.field_r == Room.field_k) {
-            if (GameFontMetrics.field_f == baa.field_e) {
-              baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
+            if (GameFontMetrics.field_f == GraphicsSelectionState.field_e) {
+              GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
             } else {
               if (tia.field_d == GameFontMetrics.field_f) {
-                baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
+                GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
               } else {
                 if (GameFontMetrics.field_f == PitModel.field_s) {
-                  baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
+                  GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
                 }
               }
             }
           } else {
-            if (GameFontMetrics.field_f != baa.field_e) {
+            if (GameFontMetrics.field_f != GraphicsSelectionState.field_e) {
               if (GameFontMetrics.field_f == tia.field_d) {
-                baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) vea.field_c)});
+                GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HighscoresAndRendererState.field_c)});
               } else {
                 if (GameFontMetrics.field_f == PitModel.field_s) {
-                  baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
+                  GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
                 }
               }
             } else {
-              baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
+              GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
             }
           }
           if (null != LegacyOpenGlNormalMapGenerator.field_e) {

@@ -52,7 +52,7 @@ final class TrackMountComponent extends PrefabComponent {
           ((TrackPlayerLocomotor) (Object) stackIn_5_0).c(stackIn_5_1, stackIn_6_2);
           var5.setSpeed(false, this.field_F);
           var9.addLocomotor(var5, param1 ^ param1);
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (TrapBaseModel) (var7.createModel(16, param1 + 119));
           var8.setVariant(param1 ^ 8021, 0);
           var9.addModel(var5, (byte) 124, var8);

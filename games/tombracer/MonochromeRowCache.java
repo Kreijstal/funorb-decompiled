@@ -26,7 +26,7 @@ final class MonochromeRowCache {
         if (this.capacity == this.height) {
           stackIn_4_1 = (this.field_f[param1] == null);
           this.rowMissed = stackIn_4_1;
-          this.field_f[param1] = nea.field_a;
+          this.field_f[param1] = MonochromeCacheSentinelState.field_a;
           return this.rows[param1];
         }
         if (1 == this.capacity) {
@@ -79,7 +79,7 @@ final class MonochromeRowCache {
           throw new RuntimeException("Can only retrieve a full image cache");
         }
         for (var2 = param0; var2 < this.capacity; var2++) {
-          this.field_f[var2] = nea.field_a;
+          this.field_f[var2] = MonochromeCacheSentinelState.field_a;
         }
         return this.rows;
     }

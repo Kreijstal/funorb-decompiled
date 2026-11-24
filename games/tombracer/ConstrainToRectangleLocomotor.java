@@ -216,11 +216,11 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             SoftwareTransform3D.field_p = false;
             GameClock.field_b = false;
           }
-          if (era.field_c) {
+          if (LobbyOverlayAndDateValidationState.field_c) {
             SwitchModel.closeLobbyOverlays((byte) -119);
             LobbyStateCleanup.clearLobbyState(-125);
             ObjectList.clearLobbyLists(0);
-            era.field_c = false;
+            LobbyOverlayAndDateValidationState.field_c = false;
           }
           if (SpriteTileOperator.field_t instanceof MenuScreen &&
             PlayerViewportLayout.field_a instanceof MenuScreen &&
@@ -286,7 +286,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           CacheEntry.field_l = new byte[fa.field_b][];
           NetworkArchiveRequest.field_n = new boolean[fa.field_b];
           var17.position = -7 + param1.length - fa.field_b * 8;
-          ika.field_a = var17.readUnsignedShort(126);
+          SpriteDecodeAndBytePoolState.field_a = var17.readUnsignedShort(126);
           OpenGlRenderbuffer.field_s = var17.readUnsignedShort(param0 ^ 126);
           var3 = 1 + (var17.readUnsignedByte(255) & 255);
           for (var4 = 0; fa.field_b > var4; var4++) {

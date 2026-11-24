@@ -83,7 +83,7 @@ final class SoftwareCheckboxPainter implements WidgetPainter {
 
     final static void resetHoverTooltip(byte param0) {
         HardwareOpenGlToolkit.field_pd = false;
-        fr.field_c = 0;
+        ControlHelpAndTooltipState.field_c = 0;
         ConsoleToken.field_f = -1;
         if (param0 <= -91) {
           RenderLayer.field_f = -1;

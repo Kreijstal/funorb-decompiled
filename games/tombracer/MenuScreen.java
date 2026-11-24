@@ -611,7 +611,7 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 36) {
-                Trap.setGraphicsQuality(0, baa.field_e);
+                Trap.setGraphicsQuality(0, GraphicsSelectionState.field_e);
                 return true;
               }
               if (37 == var7) {
@@ -807,7 +807,7 @@ abstract class MenuScreen extends GameScreen {
           }
           if (RasterizerOperator.d(20125) &&
             39 == param0) {
-            CoinItemComponent.createMenuScreens(cq.field_d, (byte) -128);
+            CoinItemComponent.createMenuScreens(GameClockAndLogoResources.field_d, (byte) -128);
           }
           this.activateItem(false, false, this.field_k.selectedIndex);
           return true;

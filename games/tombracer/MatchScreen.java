@@ -399,7 +399,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           MonsterRemains.field_h = -2073743619;
           PlayTrackCommand.field_o = 17825;
           ClientMemoryVertexArray.field_f = 2023746978L;
-          nb.field_c = 22238L;
+          GameWindowAndSpectatorState.field_c = 22238L;
           OpenGlToolkit.field_Z = 22238;
           if (!this.field_D &&
             3 != param8 &&
@@ -800,7 +800,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var8 = var6;
         var10_int = MeshMaterialColour.cosmeticRandom.nextBounded(5, 0);
         MidiVoiceMixer.field_j = MidiVoiceMixer.field_j + var8 * (long)var10_int;
-        nb.field_c = nb.field_c + (long)var10_int;
+        GameWindowAndSpectatorState.field_c = GameWindowAndSpectatorState.field_c + (long)var10_int;
         if (param0 == var5) {
           return;
         }
@@ -817,9 +817,9 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var10 = var6;
         if (~var8Lifetime1 != ~var10) {
           if (0 != MeshMaterialColour.cosmeticRandom.nextBounded(2, param1 ^ 5)) {
-            ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + nb.field_c * (var8Lifetime1 - var10);
+            ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + GameWindowAndSpectatorState.field_c * (var8Lifetime1 - var10);
           } else {
-            CommonChooseReward.field_b = CommonChooseReward.field_b - nb.field_c * (-var10 + var8Lifetime1);
+            CommonChooseReward.field_b = CommonChooseReward.field_b - GameWindowAndSpectatorState.field_c * (-var10 + var8Lifetime1);
           }
         }
         this.field_i = param0;

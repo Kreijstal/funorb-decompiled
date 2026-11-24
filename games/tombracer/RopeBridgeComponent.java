@@ -115,7 +115,7 @@ final class RopeBridgeComponent extends PrefabComponent {
           var7.addBehaviour((byte) 83, (Behaviour) (var9));
           var13.addChild(-107, var6);
           var13.addChild(param1 ^ -61, var7);
-          var10 = rm.field_a;
+          var10 = ModelCodecAndSocialPanelState.field_a;
           var11 = (BridgeModel) (var10.createModel(19, param1 ^ 106));
           var11.setStyle((byte) 80, 0);
           var13.addModel(var5, (byte) 124, var11);

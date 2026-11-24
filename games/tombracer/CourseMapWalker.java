@@ -539,7 +539,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_title", (byte) 119);
                 if (var2 != null) {
-                  tea.field_a = BitPackedColour.decodeText((byte) 25, var2);
+                  TutorialAndValidationState.field_a = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_firetocontinue", (byte) 100);
                 if (var2 != null) {
@@ -583,7 +583,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCoins", (byte) 112);
                 if (var2 != null) {
-                  ct.field_c = BitPackedColour.decodeText((byte) 83, var2);
+                  CoinAndEmailLabels.field_c = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCoins", (byte) 123);
                 if (null != var2) {
@@ -615,7 +615,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleSnakePits", (byte) 119);
                 if (null != var2) {
-                  baa.field_a = BitPackedColour.decodeText((byte) 93, var2);
+                  GraphicsSelectionState.field_a = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextSnakePits", (byte) 111);
                 if (null != var2) {
@@ -759,7 +759,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleDiscOfDeathVendingMachines", (byte) 123);
                 if (null != var2) {
-                  nea.field_b = BitPackedColour.decodeText((byte) 124, var2);
+                  MonochromeCacheSentinelState.field_b = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextDiscOfDeathVendingMachines", (byte) 116);
                 if (var2 != null) {
@@ -819,7 +819,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Title2", (byte) 116);
                 if (var2 != null) {
-                  fr.field_a = BitPackedColour.decodeText((byte) 101, var2);
+                  ControlHelpAndTooltipState.field_a = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Title3", (byte) 127);
                 if (var2 != null) {
@@ -2166,7 +2166,7 @@ final class CourseMapWalker {
           return;
         }
         try {
-          this.queueWaypoint(-28562, hq.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
+          this.queueWaypoint(-28562, CourseMapYCoordinates.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
         }
@@ -2268,7 +2268,7 @@ final class CourseMapWalker {
           if (param0 != 79) {
             this.field_c = (ModelAnimator) null;
           }
-          stackIn_10_0 = (~(LoginForm.field_z[param1] << 16) == ~this.field_j) && (this.field_e == hq.field_b[param1] << 16);
+          stackIn_10_0 = (~(LoginForm.field_z[param1] << 16) == ~this.field_j) && (this.field_e == CourseMapYCoordinates.field_b[param1] << 16);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2296,7 +2296,7 @@ final class CourseMapWalker {
             this.isAtCourse((byte) -74, -14);
           }
           this.field_j = LoginForm.field_z[param0] << 16;
-          this.field_e = hq.field_b[param0] << 16;
+          this.field_e = CourseMapYCoordinates.field_b[param0] << 16;
           this.field_f.clear(8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2336,7 +2336,7 @@ final class CourseMapWalker {
           this.field_c = new ModelAnimator(0, this.field_d, 1);
           this.field_c.play(this.field_d, false, 0, 0, true);
           this.field_j = LoginForm.field_z[param1] << 16;
-          this.field_e = hq.field_b[param1] << 16;
+          this.field_e = CourseMapYCoordinates.field_b[param1] << 16;
           this.field_g = false;
           this.field_f = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {

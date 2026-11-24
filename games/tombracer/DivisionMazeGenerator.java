@@ -37,26 +37,26 @@ final class DivisionMazeGenerator extends MazeGenerator {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            baa.field_b[var2_int] = 0;
+            GraphicsSelectionState.field_b[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < ara.field_xb; var2_intLifetime1++) {
             if (CourseLayout.field_d[var2_intLifetime1].field_d == param1.field_d) {
               dupTemp$3 = CourseLayout.field_d[var2_intLifetime1].a(false);
-              baa.field_b[dupTemp$3] = baa.field_b[dupTemp$3] + 1;
+              GraphicsSelectionState.field_b[dupTemp$3] = GraphicsSelectionState.field_b[dupTemp$3] + 1;
             }
           }
           if (param0 != 16599) {
             field_b = (String) null;
           }
           dupTemp$0 = param1.a(false);
-          baa.field_b[dupTemp$0] = baa.field_b[dupTemp$0] + 1;
+          GraphicsSelectionState.field_b[dupTemp$0] = GraphicsSelectionState.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < ara.field_xb; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_d == CourseLayout.field_d[var3].field_d) {
               var4 = CourseLayout.field_d[var3].a(false);
-              if (ValidationMessageWidget.field_K < baa.field_b[var4]) {
-                baa.field_b[var4] = baa.field_b[var4] - 1;
+              if (ValidationMessageWidget.field_K < GraphicsSelectionState.field_b[var4]) {
+                GraphicsSelectionState.field_b[var4] = GraphicsSelectionState.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

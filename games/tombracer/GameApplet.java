@@ -175,7 +175,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             CurveShape.field_l.setSize(TripBeamVisual.field_a, FloatPacketBuffer.field_i);
             CurveShape.field_l.setVisible(true);
             boolean decompiledSharedTail0 = (null != DropdownList.field_x &&
-              null == nb.field_d);
+              null == GameWindowAndSpectatorState.field_d);
             if (!decompiledSharedTail0) {
               CurveShape.field_l.setLocation(BillboardDefinition.field_g, FallbackShaderEffect.field_f);
               decompiledSharedTail0 = (TombRacer.field_G);
@@ -241,7 +241,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !OpenGlDisplayLists.field_b) {
             BlockModel.field_t = AdjustedWallClock.currentTimeMillis((byte) -107);
             TrapSpawner.sleepMillis(0, 5000L);
-            nea.field_c = null;
+            MonochromeCacheSentinelState.field_c = null;
             this.shutdown((byte) 109, false);
             return;
           }
@@ -528,7 +528,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.recreateCanvas((byte) 68);
                 FadingDialog.field_C = LegacyOpenGlTurbulentTextureEffect.createRasterBuffer(117, TripBeamVisual.field_a, (java.awt.Component) ((Object) CurveShape.field_l), FloatPacketBuffer.field_i);
                 this.initializeGame(-71);
-                cq.field_a = VariantMask.createClock(0);
+                GameClockAndLogoResources.field_a = VariantMask.createClock(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (BlockModel.field_t != 0L) {
@@ -540,7 +540,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ScoringObserverFactory.field_a = cq.field_a.waitAndAdvance((byte) 12, QueuedHint.nanosPerFrame);
+                    ScoringObserverFactory.field_a = GameClockAndLogoResources.field_a.waitAndAdvance((byte) 12, QueuedHint.nanosPerFrame);
                     stackIn_99_0 = 0;
                   }
                   var3 = stackIn_99_0;
@@ -766,7 +766,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               GameScreen.field_e = ToolkitSelector.getApplet(49);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param6, param3, true);
               ComponentTypeNames.field_c = dupTemp$0;
-              nea.field_c = dupTemp$0;
+              MonochromeCacheSentinelState.field_c = dupTemp$0;
               var8 = ComponentTypeNames.field_c.startThread((Runnable) (this), 425, 1);
               while (true) {
                 if (var8.status == 0) {
@@ -838,30 +838,30 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             CurveShape.field_l.getParent().setBackground(java.awt.Color.black);
             CurveShape.field_l.getParent().remove((java.awt.Component) ((Object) CurveShape.field_l));
           }
-          if (null == nb.field_d) {
+          if (null == GameWindowAndSpectatorState.field_d) {
             if (DropdownList.field_x == null) {
               if (null != EllipseShapeDecoder.field_a) {
                 var2 = EllipseShapeDecoder.field_a;
                 if (var4 != 0) {
                   var2 = Corpse.field_j;
                   var2 = DropdownList.field_x;
-                  var2 = nb.field_d;
+                  var2 = GameWindowAndSpectatorState.field_d;
                 }
               } else {
                 var2 = Corpse.field_j;
                 if (var4 != 0) {
                   var2 = DropdownList.field_x;
-                  var2 = nb.field_d;
+                  var2 = GameWindowAndSpectatorState.field_d;
                 }
               }
             } else {
               var2 = DropdownList.field_x;
               if (var4 != 0) {
-                var2 = nb.field_d;
+                var2 = GameWindowAndSpectatorState.field_d;
               }
             }
           } else {
-            var2 = nb.field_d;
+            var2 = GameWindowAndSpectatorState.field_d;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           CurveShape.field_l = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));

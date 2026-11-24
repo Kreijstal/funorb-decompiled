@@ -132,7 +132,7 @@ final class PlatformComponent extends PrefabComponent {
           var5 = new PlatformBehaviour(param2, false);
           var5.setWeightThreshold(-5, this.field_G);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           if (param1 != 3) {
             this.getRenderLayer(49);
           }

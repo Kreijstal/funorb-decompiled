@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class baa {
+final class GraphicsSelectionState {
     static String field_f;
     static GraphicsQuality field_e;
     static ToolkitSelector field_d;

@@ -41,7 +41,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (IdolItemComponent.field_H == param0) {
           var3 = 65536;
         } else {
-          if (lsa.field_c == param0) {
+          if (TextureCoordinateGenerationState.field_c == param0) {
             var3 = 131072;
           } else {
             if (FunOrbConsole.field_u == param0) {
@@ -79,7 +79,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (ProgressDialog.field_T == param1) {
           return 6;
         }
-        if (nb.field_b != param1) {
+        if (GameWindowAndSpectatorState.field_b != param1) {
           throw new IllegalArgumentException("");
         }
         return 5;

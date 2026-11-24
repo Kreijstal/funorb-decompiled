@@ -156,7 +156,7 @@ final class MaskBlendOperator extends TextureOperator {
     }
 
     final static void initToolkitResources(int param0) {
-        CurrentGraphicsToolkit.toolkit = baa.field_d.field_i.field_d;
+        CurrentGraphicsToolkit.toolkit = GraphicsSelectionState.field_d.field_i.field_d;
         CurrentGraphicsToolkit.toolkit.setModelBufferSize(8192);
         ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.getClipStack((byte) 65, CurrentGraphicsToolkit.toolkit);
         EditableTextField.releaseToolkitResources((byte) 94);

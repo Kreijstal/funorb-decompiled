@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class era {
+final class LobbyOverlayAndDateValidationState {
     static int field_a;
     static UiComponent field_e;
     static BitmapFont field_g;

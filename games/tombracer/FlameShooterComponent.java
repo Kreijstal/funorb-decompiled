@@ -149,7 +149,7 @@ final class FlameShooterComponent extends ShooterComponent {
           var5.setWeapon(var6, (byte) 73);
           this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));
           var8.setVariant(param1 + 111, 11);
           var9.addModel(var5, (byte) 124, var8);

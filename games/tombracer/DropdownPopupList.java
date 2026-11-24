@@ -94,7 +94,7 @@ final class DropdownPopupList extends FocusProxyWidget {
         if (param0 != 69) {
           return (Sprite) null;
         }
-        Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], TermsLinksPanel.field_C[0], LegacyOpenGlNormalMapGenerator.field_b[0], ImageProducerCanvasImageBuffer.field_m[0], var3);
+        Sprite var4 = new Sprite(SpriteDecodeAndBytePoolState.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], TermsLinksPanel.field_C[0], LegacyOpenGlNormalMapGenerator.field_b[0], ImageProducerCanvasImageBuffer.field_m[0], var3);
         MazeGenerator.releaseStatics((byte) 113);
         return var4;
     }

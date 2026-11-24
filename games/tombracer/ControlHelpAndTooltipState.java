@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fr {
+final class ControlHelpAndTooltipState {
     static byte[] field_b;
     static String field_a;
     static int field_c;

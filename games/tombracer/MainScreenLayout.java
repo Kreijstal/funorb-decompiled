@@ -32,7 +32,7 @@ final class MainScreenLayout {
           MidiPcmStream.field_K.setBounds(48, 30, -23776, 5, 205);
           var2 = UnlockOverlay.field_p ? 250 : 200;
           MirrorComponent.field_I.setBounds(-var2 + 363, 30, -23776, 5, 5 + var2);
-          cq.field_e.setBounds(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);
+          GameClockAndLogoResources.field_e.setBounds(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);
           SoftwareModelBillboardState.field_i.setPaneBounds(-5 + (Obstacle.field_s.field_G - 5), 2, (byte) 127, 5, io.field_a, -42 + Obstacle.field_s.field_t, 37);
           var3 = (2 + OpenGlToolkit.field_fd.field_G) / 2;
           TileRenderable.field_c.setBounds(var3 - 2, 40, param0 + 5264, -40 + OpenGlToolkit.field_fd.field_t, 0);

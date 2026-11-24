@@ -77,7 +77,7 @@ final class DoorwayComponent extends PrefabComponent {
           } else {
             var5 = 0;
           }
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           if (var5 != 0) {
             var7_ref_fsa = new Trap(param2, param0);
             var7_ref_fsa.setSize((byte) -11, this.height / 3, this.width / 2);

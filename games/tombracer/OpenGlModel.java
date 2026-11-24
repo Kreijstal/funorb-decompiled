@@ -1291,7 +1291,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, ModelDrawMarker param1, int param2, int param3) {
         OpenGlTransform3D var5 = null;
         OpenGlTransform3D var6 = null;
         float var7 = 0.0f;
@@ -1564,7 +1564,7 @@ final class OpenGlModel extends ToolkitModel {
             FullscreenCanvas.field_e = param3 + FullscreenCanvas.field_e / var10;
             ParticleEffects.field_b = ParticleEffects.field_b / var10 + param4;
             CharacterPreview.field_i = param2 + CharacterPreview.field_i / var10;
-            vea.field_b = true;
+            HighscoresAndRendererState.field_b = true;
             return;
           }
           if (param0 == 1) {
@@ -1651,7 +1651,7 @@ final class OpenGlModel extends ToolkitModel {
               var13 = param7[12] << 4;
               var14_int = param7[13] << 4;
               var15 = param7[14] << 4;
-              if (vea.field_b) {
+              if (HighscoresAndRendererState.field_b) {
                 var16 = 8192 + (param7[0] * CharacterPreview.field_i + param7[3] * FullscreenCanvas.field_e + ParticleEffects.field_b * param7[6]) >> 14;
                 var17 = 8192 + (FullscreenCanvas.field_e * param7[4] + (param7[1] * CharacterPreview.field_i + param7[7] * ParticleEffects.field_b)) >> 14;
                 var18 = 8192 + (FullscreenCanvas.field_e * param7[5] + CharacterPreview.field_i * param7[2]) + ParticleEffects.field_b * param7[8] >> 14;
@@ -1660,7 +1660,7 @@ final class OpenGlModel extends ToolkitModel {
                 FullscreenCanvas.field_e = var17;
                 CharacterPreview.field_i = var16;
                 var18 = var18 + var15;
-                vea.field_b = false;
+                HighscoresAndRendererState.field_b = false;
                 ParticleEffects.field_b = var18;
               }
               var16 = param2 << 15 >> 7;
@@ -2142,7 +2142,7 @@ final class OpenGlModel extends ToolkitModel {
           var13 = param7[12] << 4;
           var14_int = param7[13] << 4;
           var15 = param7[14] << 4;
-          if (vea.field_b) {
+          if (HighscoresAndRendererState.field_b) {
             var16 = 8192 + (ParticleEffects.field_b * param7[6] + FullscreenCanvas.field_e * param7[3] + param7[0] * CharacterPreview.field_i) >> 14;
             var17 = ParticleEffects.field_b * param7[7] + (param7[4] * FullscreenCanvas.field_e + CharacterPreview.field_i * param7[1] + 8192) >> 14;
             var18 = param7[2] * CharacterPreview.field_i + (param7[5] * FullscreenCanvas.field_e + ParticleEffects.field_b * param7[8] + 8192) >> 14;
@@ -2151,7 +2151,7 @@ final class OpenGlModel extends ToolkitModel {
             FullscreenCanvas.field_e = var17;
             var18 = var18 + var15;
             CharacterPreview.field_i = var16;
-            vea.field_b = false;
+            HighscoresAndRendererState.field_b = false;
             ParticleEffects.field_b = var18;
           }
           var16_ref_int__ = new int[9];
@@ -2407,7 +2407,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void draw(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, ModelDrawMarker param1, int param2) {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;

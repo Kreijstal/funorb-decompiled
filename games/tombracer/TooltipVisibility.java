@@ -30,14 +30,14 @@ class TooltipVisibility {
           }
           return null;
         }
-        if (WhiteNoiseOperator.field_m > fr.field_c) {
+        if (WhiteNoiseOperator.field_m > ControlHelpAndTooltipState.field_c) {
           if (param0 != 1) {
             TooltipVisibility.getVisibleTooltipText(97);
             return null;
           }
           return null;
         }
-        if (fr.field_c < WhiteNoiseOperator.field_m + LightSourceModel.field_p) {
+        if (ControlHelpAndTooltipState.field_c < WhiteNoiseOperator.field_m + LightSourceModel.field_p) {
           return MazeComponent.field_F;
         }
         if (param0 != 1) {

@@ -194,12 +194,12 @@ final class RenderScene {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           ProgressDialog.field_P = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = cq.field_b.length;
+          var1_int = GameClockAndLogoResources.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_an = cq.field_b[var3];
+            var4_ref_an = GameClockAndLogoResources.field_b[var3];
             var4_ref_an.computeBounds((byte) -117);
             MembersUpsellMenu.b((byte) 17, var3);
             var5 = var4_ref_an.field_i + var4_ref_an.field_z >> 1;
@@ -240,15 +240,15 @@ final class RenderScene {
           var14 = (int)((double)var14 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; cq.field_b.length > var15; var15++) {
+          for (var15 = 0; GameClockAndLogoResources.field_b.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < cq.field_b.length; var17_int++) {
+            for (var17_int = 1; var17_int < GameClockAndLogoResources.field_b.length; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = cq.field_b[var16];
+            var17 = GameClockAndLogoResources.field_b[var16];
             MembersUpsellMenu.b((byte) 86, var16);
             for (var18 = 0; var18 < 3; var18++) {
               nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];

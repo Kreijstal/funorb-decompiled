@@ -89,7 +89,7 @@ final class MembersUpsellMenu extends MenuScreen {
             if (mca.isCourseAvailable((byte) 6, var5) &&
               BrickOperator.isCourseAccessible(100, var5)) {
               var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.width() >> 1));
-              var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.height() >> 1));
+              var7 = this.field_r - (-CourseMapYCoordinates.field_b[var5] - (ConsoleWindow.field_d.height() >> 1));
               var8 = 20;
               if (AgeValidator.field_j > var6 - var8 &&
                 var8 + var6 > AgeValidator.field_j &&
@@ -166,13 +166,13 @@ final class MembersUpsellMenu extends MenuScreen {
                   var5_ref_nh = DropdownPopupList.field_E;
                 }
                 if (LegacyOpenGlNormalMapGenerator.field_e.worldMedals[var4] == 2) {
-                  var5_ref_nh = eu.field_a;
+                  var5_ref_nh = InvitationAndMedalResources.field_a;
                 }
                 if (LegacyOpenGlNormalMapGenerator.field_e.worldMedals[var4] == 1) {
                   var5_ref_nh = CharacterChoiceFactory.field_a;
                 }
               }
-              var5_ref_nh.draw(LoginForm.field_z[var4] + this.field_t, this.field_r + hq.field_b[var4]);
+              var5_ref_nh.draw(LoginForm.field_z[var4] + this.field_t, this.field_r + CourseMapYCoordinates.field_b[var4]);
             }
           }
         }

@@ -82,10 +82,10 @@ abstract class SceneLight extends IntrusiveNode {
           QuickChatParamType.createToolkitSprite(MatchStatistics.field_g, param0, (byte) 126);
           GraphicsHeap.field_g = QuickChatParamType.createToolkitSprite(TextResourceLoader.field_b, param0, (byte) -50);
           VariantMask.field_d = QuickChatParamType.createToolkitSprite(sla.field_a, param0, (byte) -38);
-          rm.field_c = QuickChatParamType.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
+          ModelCodecAndSocialPanelState.field_c = QuickChatParamType.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
           CharacterSelectPhase.field_r = QuickChatParamType.createToolkitSprite(aa.field_a, param0, (byte) 125);
           DropdownPopupList.field_E = QuickChatParamType.createToolkitSprite(LobbyPlayerEntry.field_Bb, param0, (byte) -119);
-          eu.field_a = QuickChatParamType.createToolkitSprite(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
+          InvitationAndMedalResources.field_a = QuickChatParamType.createToolkitSprite(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
           CharacterChoiceFactory.field_a = QuickChatParamType.createToolkitSprite(MatchScreen.field_q, param0, (byte) 28);
           ConsoleWindow.field_d = QuickChatParamType.createToolkitSprite(TimeSwitchBehaviour.field_n, param0, (byte) 127);
           OpenGlFramebuffer.field_i = LoadLevelCommand.createToolkitSprites(param0, WallCrusherComponent.field_F, -67);
@@ -110,7 +110,7 @@ abstract class SceneLight extends IntrusiveNode {
           QuickChatCategoryLoader.field_e = QuickChatParamType.createToolkitSprite(UnlockEntryDecoder.field_c, param0, (byte) -15);
           LegacyOpenGlEffectManager.field_a = QuickChatParamType.createToolkitSprite(LegacyOpenGlSpriteTexture.field_u, param0, (byte) 125);
           QuickChatParamType.createToolkitSprite(MidiChannelVolumeTargets.field_d, param0, (byte) 126);
-          QuickChatParamType.createToolkitSprite(baa.field_g, param0, (byte) -43);
+          QuickChatParamType.createToolkitSprite(GraphicsSelectionState.field_g, param0, (byte) -43);
           ConstantEffectBehaviour.field_q = QuickChatParamType.createToolkitSprite(FullscreenConfirmationDialog.field_O, param0, (byte) 126);
           MessageDialog.field_X = QuickChatParamType.createToolkitSprite(WaveformOperator.field_q, param0, (byte) 125);
           QuickChatParamType.createToolkitSprite(field_n, param0, (byte) 125);

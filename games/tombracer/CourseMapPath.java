@@ -15,13 +15,13 @@ final class CourseMapPath extends IntrusiveNode {
           return;
         }
         int var4 = param1 + (this.hasBend(true) ? this.field_j : LoginForm.field_z[this.field_g]);
-        int var5 = (!this.hasBend(true) ? hq.field_b[this.field_g] : this.field_k) + param2;
-        this.drawDots(this.field_h, param2 + hq.field_b[this.field_i], var4, var5, LoginForm.field_z[this.field_i] + param1, (byte) 35);
+        int var5 = (!this.hasBend(true) ? CourseMapYCoordinates.field_b[this.field_g] : this.field_k) + param2;
+        this.drawDots(this.field_h, param2 + CourseMapYCoordinates.field_b[this.field_i], var4, var5, LoginForm.field_z[this.field_i] + param1, (byte) 35);
         if (param0 != 99) {
           field_l = (String) null;
         }
         if (this.hasBend(true)) {
-          this.drawDots(this.field_f, var5, param1 + LoginForm.field_z[this.field_g], hq.field_b[this.field_g] + param2, var4, (byte) 35);
+          this.drawDots(this.field_f, var5, param1 + LoginForm.field_z[this.field_g], CourseMapYCoordinates.field_b[this.field_g] + param2, var4, (byte) 35);
           CharacterSelectPhase.field_r.draw(this.field_j + param1 + CharacterSelectPhase.field_r.width(), param2 + (this.field_k + CharacterSelectPhase.field_r.height()));
         }
     }
@@ -84,7 +84,7 @@ final class CourseMapPath extends IntrusiveNode {
             var6 = this.field_j;
           } else {
             if (var4_int == LoginForm.field_z[this.field_i]) {
-              stackIn_11_0 = (hq.field_b[this.field_i] == var5) ? 1 : 0;
+              stackIn_11_0 = (CourseMapYCoordinates.field_b[this.field_i] == var5) ? 1 : 0;
             } else {
               stackIn_11_0 = 0;
             }
@@ -96,7 +96,7 @@ final class CourseMapPath extends IntrusiveNode {
               stackIn_14_1 = this.field_g;
             }
             var6 = stackIn_13_0[stackIn_14_1];
-            stackIn_16_0 = hq.field_b;
+            stackIn_16_0 = CourseMapYCoordinates.field_b;
             if (var8 != 0) {
               stackIn_17_1 = this.field_g;
             } else {
@@ -212,8 +212,8 @@ final class CourseMapPath extends IntrusiveNode {
           var3_int = param1.field_j >> 16;
           var4 = param1.field_e >> 16;
           if ((var3_int != LoginForm.field_z[this.field_i] ||
-            hq.field_b[this.field_i] != var4) && (LoginForm.field_z[this.field_g] != var3_int ||
-            var4 != hq.field_b[this.field_g])) {
+            CourseMapYCoordinates.field_b[this.field_i] != var4) && (LoginForm.field_z[this.field_g] != var3_int ||
+            var4 != CourseMapYCoordinates.field_b[this.field_g])) {
             stackIn_11_0 = false;
             decompiledFrameRemainder0 = false;
           }

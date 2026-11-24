@@ -55,7 +55,7 @@ final class ClipStack {
             if (GameScreen.field_e == null) {
               return;
             }
-            stackIn_16_0 = nea.field_c;
+            stackIn_16_0 = MonochromeCacheSentinelState.field_c;
             stackIn_16_1 = null;
             stackIn_16_2 = null;
             stackIn_16_3 = GameScreen.field_e.getCodeBase();

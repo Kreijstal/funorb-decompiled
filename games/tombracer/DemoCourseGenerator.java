@@ -105,8 +105,8 @@ final class DemoCourseGenerator extends CourseGenerator {
           C2SActionPacket.a(param1, -16838);
           return;
         }
-        SoftwareRasterizer.darkenRectangle(rm.field_e.field_a.field_qb, rm.field_e.field_a.field_T, rm.field_e.field_a.field_G, rm.field_e.field_a.field_t);
-        rm.field_e.field_a.drawFullScreen(121, param1);
+        SoftwareRasterizer.darkenRectangle(ModelCodecAndSocialPanelState.field_e.field_a.field_qb, ModelCodecAndSocialPanelState.field_e.field_a.field_T, ModelCodecAndSocialPanelState.field_e.field_a.field_G, ModelCodecAndSocialPanelState.field_e.field_a.field_t);
+        ModelCodecAndSocialPanelState.field_e.field_a.drawFullScreen(121, param1);
         C2SActionPacket.a(param1, -16838);
     }
 

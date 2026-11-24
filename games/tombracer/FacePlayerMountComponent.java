@@ -61,7 +61,7 @@ final class FacePlayerMountComponent extends PrefabComponent {
           var5 = new FacePlayerLocomotor(param2, param0);
           var5.a(8 * this.field_G, (byte) 127);
           var8.addLocomotor(var5, 0);
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, param1 ^ 82));
           var7.setVariant(8022, 2);
           var8.addModel(var5, (byte) 124, var7);

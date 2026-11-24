@@ -165,7 +165,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var5.setEffect(new HazardEffect(6, 10), true);
           this.applyTimingPattern((byte) 43, var5, param2);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (BlockModel) (var6.createModel(7, param1 ^ 77));
           var7.setVariant(113, 15);
           var4.addModel(var5, (byte) 124, var7);

@@ -103,7 +103,7 @@ final class SkeletonComponent extends SkeletonComponentBase {
           var9.set(param1, -17075, true);
           var9.set(2, param1 ^ -17074, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var8));
-          var10 = rm.field_a;
+          var10 = ModelCodecAndSocialPanelState.field_a;
           var11 = (MonsterModel) (var10.createModel(18, 98));
           var11.setVariant(param1 + 87, 0);
           var12.addModel((TrapPart) null, (byte) 124, var11);

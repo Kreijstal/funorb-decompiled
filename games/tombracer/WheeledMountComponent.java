@@ -90,7 +90,7 @@ final class WheeledMountComponent extends PathMoverComponent {
             WheeledMountComponent.releaseStatics(8);
           }
           if (param2 == WeaponShooterBehaviour.field_r) {
-            if (param0 == baa.field_e) {
+            if (param0 == GraphicsSelectionState.field_e) {
               stackIn_6_0 = HuffmanCodec.field_a.field_c;
               return stackIn_6_0;
             }
@@ -101,7 +101,7 @@ final class WheeledMountComponent extends PathMoverComponent {
             stackIn_9_0 = DateInputWidget.field_z.field_c;
             return stackIn_9_0;
           }
-          if (param0 == baa.field_e) {
+          if (param0 == GraphicsSelectionState.field_e) {
             stackIn_15_0 = ControllerLocomotor.field_t.field_c;
             return stackIn_15_0;
           }
@@ -109,7 +109,7 @@ final class WheeledMountComponent extends PathMoverComponent {
             stackIn_20_0 = CharacterSelection.field_d.field_c;
             return stackIn_20_0;
           }
-          stackIn_18_0 = vea.field_c.field_c;
+          stackIn_18_0 = HighscoresAndRendererState.field_c.field_c;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,7 +184,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           var5.setStopsWhileTurning(4, true);
           var5.setTurnSpeed(this.field_Q * 8, -60);
           var8.addLocomotor(var5, 0);
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, param1 + 71));
           var7.setVariant(8022, 0);
           var8.addModel((TrapPart) null, (byte) 124, var7);

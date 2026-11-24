@@ -12,7 +12,7 @@ final class GraphicsAndAudioMenu extends MenuScreen {
         if (5 > param0) {
           return 100;
         }
-        return cq.field_d.field_k + cq.field_d.field_w;
+        return GameClockAndLogoResources.field_d.field_k + GameClockAndLogoResources.field_d.field_w;
     }
 
     GraphicsAndAudioMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -32,19 +32,19 @@ final class GraphicsAndAudioMenu extends MenuScreen {
 
     final int getItemY(int param0, int param1) {
         if (param0 < 3) {
-          return -cq.field_d.field_w + this.firstItemY;
+          return -GameClockAndLogoResources.field_d.field_w + this.firstItemY;
         }
         if (param1 != 30) {
           field_r = (int[]) null;
           if (param0 < 5) {
-            return this.firstItemY + this.getItemHeight(0, 125) - cq.field_d.field_w;
+            return this.firstItemY + this.getItemHeight(0, 125) - GameClockAndLogoResources.field_d.field_w;
           }
-          return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
+          return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - GameClockAndLogoResources.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
         }
         if (param0 < 5) {
-          return this.firstItemY + this.getItemHeight(0, 125) - cq.field_d.field_w;
+          return this.firstItemY + this.getItemHeight(0, 125) - GameClockAndLogoResources.field_d.field_w;
         }
-        return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
+        return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - GameClockAndLogoResources.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
     }
 
     final static void handleLoginResponseCode(int param0, byte param1, String param2) {

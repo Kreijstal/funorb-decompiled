@@ -136,7 +136,7 @@ final class SoftCacheEntry extends CacheEntry {
         if (!param0) {
           return true;
         }
-        if (era.field_d != null) {
+        if (LobbyOverlayAndDateValidationState.field_d != null) {
           stackIn_7_0 = true;
         } else {
           if (OpenGlBufferObject.field_b) {

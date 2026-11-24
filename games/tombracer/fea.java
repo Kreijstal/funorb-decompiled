@@ -736,7 +736,7 @@ final class fea {
             TileGrid.field_g = GridWidgetContainer.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
-          fr.field_c = fr.field_c + 1;
+          ControlHelpAndTooltipState.field_c = ControlHelpAndTooltipState.field_c + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(MazeComponent.field_F));
           } else {
@@ -744,8 +744,8 @@ final class fea {
           }
           if (decompiledFrameRemainder0) {
             if (!HardwareOpenGlToolkit.field_pd) {
-              if (fr.field_c >= WhiteNoiseOperator.field_m) {
-                stackIn_17_0 = (fr.field_c < WhiteNoiseOperator.field_m + LightSourceModel.field_p) ? 1 : 0;
+              if (ControlHelpAndTooltipState.field_c >= WhiteNoiseOperator.field_m) {
+                stackIn_17_0 = (ControlHelpAndTooltipState.field_c < WhiteNoiseOperator.field_m + LightSourceModel.field_p) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -756,11 +756,11 @@ final class fea {
             var2_int = stackIn_17_0;
             if (param1 != null && (HardwareOpenGlToolkit.field_pd ||
               var2_int != 0)) {
-              fr.field_c = WhiteNoiseOperator.field_m;
+              ControlHelpAndTooltipState.field_c = WhiteNoiseOperator.field_m;
               decompiledFrameRemainder1 = false;
             }
             else {
-              fr.field_c = 0;
+              ControlHelpAndTooltipState.field_c = 0;
             }
             if (param1 == null) {
               if (var2_int != 0) {
@@ -773,11 +773,11 @@ final class fea {
             RenderLayer.field_f = SimpleBlockBehaviour.field_r;
           }
           if (!HardwareOpenGlToolkit.field_pd &&
-            WhiteNoiseOperator.field_m > fr.field_c &&
+            WhiteNoiseOperator.field_m > ControlHelpAndTooltipState.field_c &&
             ProceduralTextureProvider.field_c) {
             RenderLayer.field_f = SimpleBlockBehaviour.field_r;
             ConsoleToken.field_f = TileGrid.field_g;
-            fr.field_c = 0;
+            ControlHelpAndTooltipState.field_c = 0;
           }
           MazeComponent.field_F = param1;
           TileGrid.field_g = -1;
@@ -786,11 +786,11 @@ final class fea {
           }
           SimpleBlockBehaviour.field_r = -1;
           if (HardwareOpenGlToolkit.field_pd) {
-            if (DemoCourseGenerator.field_f != fr.field_c) {
+            if (DemoCourseGenerator.field_f != ControlHelpAndTooltipState.field_c) {
               return;
             }
             HardwareOpenGlToolkit.field_pd = false;
-            fr.field_c = 0;
+            ControlHelpAndTooltipState.field_c = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

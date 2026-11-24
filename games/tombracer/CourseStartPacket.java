@@ -531,7 +531,7 @@ final class CourseStartPacket implements GamePacket {
                     if (var11 != 0) {
                       var22_int = C2SRoomResultPacket.field_g[var7][var9] - FleeLocomotor.field_z;
                       if (var22_int == 1) {
-                        var21 = rm.field_b;
+                        var21 = ModelCodecAndSocialPanelState.field_b;
                       } else {
                         var21 = LegacyOpenGlFlowingWaterEffect.formatText(112, MessageDialogs.field_c, new String[]{Integer.toString(var22_int)});
                       }

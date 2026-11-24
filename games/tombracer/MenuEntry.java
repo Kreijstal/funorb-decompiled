@@ -282,7 +282,7 @@ final class MenuEntry {
           var28 = ArchiveSource.field_a;
           TextInputWidget.paintNineSliceFrame(1, var28, (byte) -109, var21_intLifetime1, var29, 16, 1, 16, var22_intLifetime1, 0);
           if (this.field_g == 36) {
-            var20_ref_kea = baa.field_e;
+            var20_ref_kea = GraphicsSelectionState.field_e;
           } else {
             if (37 != this.field_g) {
               var20_ref_kea = PitModel.field_s;

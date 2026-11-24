@@ -37,7 +37,7 @@ final class NameFieldValidator extends TextFieldValidator {
               this.field_j = param1;
               this.field_k = var3.field_e;
             } else {
-              stackIn_10_0 = tea.field_b;
+              stackIn_10_0 = TutorialAndValidationState.field_b;
               return stackIn_10_0;
             }
           }

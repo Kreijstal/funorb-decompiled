@@ -90,7 +90,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var9 = new SimpleBlockBehaviour(param2, param0);
           var8.addBehaviour((byte) 83, (Behaviour) (var9));
           var12.addChild(-128, var8);
-          var10 = rm.field_a;
+          var10 = ModelCodecAndSocialPanelState.field_a;
           var11 = (HazardModel) (var10.createModel(8, param1 + 119));
           var11.setVariant(false, 1);
           var12.addModel(var6, (byte) 124, var11);

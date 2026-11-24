@@ -58,7 +58,7 @@ final class ConsoleToken extends IntrusiveNode {
             var8 = -(var7 >> 1) + Transform3D.field_a;
             if (var4 >= 0) {
               if (BillboardDefinition.field_h.selectedIndex == var4) {
-                stackIn_17_0 = pua.field_c;
+                stackIn_17_0 = ClippedRectangleBorderRenderer.field_c;
               } else {
                 stackIn_17_0 = QuickChatPhraseDefinition.field_o;
               }

@@ -218,7 +218,7 @@ abstract class MazeComponent extends PrefabComponent {
             var6 = var10;
             var9.addBehaviour((byte) 83, (Behaviour) (var10));
           }
-          var12 = rm.field_a;
+          var12 = ModelCodecAndSocialPanelState.field_a;
           var8 = var12.createTrapModel(var6, var9, -102);
           var9.addModel(var6, (byte) 124, var8);
           stackIn_9_0 = var9;
@@ -291,7 +291,7 @@ abstract class MazeComponent extends PrefabComponent {
             stackIn_4_0 = TextureCombineSource.field_e;
           }
           dga.layoutBottomPanels(stackIn_4_0, 199);
-          rm.field_e.layoutPanels(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
+          ModelCodecAndSocialPanelState.field_e.layoutPanels(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
           PlayerCountDisplay.widget.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = ChatMessageColours.field_b;
           stackIn_6_1 = RoomRegion.field_l.field_G;

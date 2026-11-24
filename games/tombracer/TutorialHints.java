@@ -124,7 +124,7 @@ final class TutorialHints {
             this.reset((byte) 111);
           }
           var5 = new MessageOverlay(this.field_l, param1);
-          var5.setMessages(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
+          var5.setMessages(TutorialAndValidationState.field_a, param0, ColouriseOperator.field_n, (byte) 21);
           this.field_c.addLast((byte) -125, new QueuedHint(var5, param2));
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

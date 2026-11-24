@@ -24,7 +24,7 @@ final class HardwareVertexNormalAccumulator {
         RendererMode var2Lifetime4;
         RendererMode var2Lifetime5;
         if (param0 == 0) {
-          var3 = baa.field_e;
+          var3 = GraphicsSelectionState.field_e;
           var2 = WeaponShooterBehaviour.field_r;
           BitPacketBuffer.setGraphicsSettings(param1, var2, var3);
           return;
@@ -43,7 +43,7 @@ final class HardwareVertexNormalAccumulator {
         }
         if (2 == param0) {
           var2Lifetime3 = CourseLayoutFactory.field_d;
-          var3Lifetime3 = baa.field_e;
+          var3Lifetime3 = GraphicsSelectionState.field_e;
           BitPacketBuffer.setGraphicsSettings(param1, var2Lifetime3, var3Lifetime3);
           return;
         }

@@ -141,11 +141,11 @@ final class fba {
           }
           return new byte[param0];
         }
-        if (ika.field_b > 0) {
-          fieldTemp$21 = ika.field_b - 1;
-          ika.field_b = ika.field_b - 1;
+        if (SpriteDecodeAndBytePoolState.field_b > 0) {
+          fieldTemp$21 = SpriteDecodeAndBytePoolState.field_b - 1;
+          SpriteDecodeAndBytePoolState.field_b = SpriteDecodeAndBytePoolState.field_b - 1;
           var2_ref_byte__Lifetime1 = PlatformTile.field_i[fieldTemp$21];
-          PlatformTile.field_i[ika.field_b] = null;
+          PlatformTile.field_i[SpriteDecodeAndBytePoolState.field_b] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param1 != 0) {

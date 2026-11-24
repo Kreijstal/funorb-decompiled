@@ -237,7 +237,7 @@ final class AnimationSequence {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == lsa.field_c) {
+          if (param0 == TextureCoordinateGenerationState.field_c) {
             stackIn_8_0 = 9216;
             return stackIn_8_0;
           }

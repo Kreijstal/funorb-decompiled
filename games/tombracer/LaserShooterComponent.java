@@ -25,7 +25,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var5.setEffect(var6, true);
           this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));
           var8.setVariant(114, 16);
           var9.addModel(var5, (byte) 124, var8);
@@ -202,17 +202,17 @@ final class LaserShooterComponent extends ShooterComponent {
         if (param0 != 17229) {
           return;
         }
-        if (null == baa.field_d) {
+        if (null == GraphicsSelectionState.field_d) {
           return;
         }
-        if (baa.field_d.ensureToolkitForActiveCanvas(100663296)) {
+        if (GraphicsSelectionState.field_d.ensureToolkitForActiveCanvas(100663296)) {
           MaskBlendOperator.initToolkitResources(-25405);
           return;
         }
         if (CurrentGraphicsToolkit.toolkit != null) {
           return;
         }
-        if (null == baa.field_d.field_i) {
+        if (null == GraphicsSelectionState.field_d.field_i) {
           return;
         }
         MaskBlendOperator.initToolkitResources(-25405);

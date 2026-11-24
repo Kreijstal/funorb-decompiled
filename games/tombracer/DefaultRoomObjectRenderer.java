@@ -747,11 +747,11 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var7 = var5[1];
           var8 = (float)param2.getAge(param0 + 14066) / (float)param2.getLifetime(true);
           var9 = (int)(255.0f - 255.0f * var8);
-          if (era.field_g != null) {
+          if (LobbyOverlayAndDateValidationState.field_g != null) {
             var10 = param2.getText(false);
             var11 = var4_int >> 16;
-            var12 = 8 + era.field_g.getWrappedWidth(var10, var11);
-            var13 = 8 + era.field_g.measureWrappedHeight(var10, var11, 0);
+            var12 = 8 + LobbyOverlayAndDateValidationState.field_g.getWrappedWidth(var10, var11);
+            var13 = 8 + LobbyOverlayAndDateValidationState.field_g.measureWrappedHeight(var10, var11, 0);
             SecondaryNodeDequeIterator.fillAlphaRect(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
             DisplayModeInfo.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ika {
+final class SpriteDecodeAndBytePoolState {
     static int field_b;
     static int field_a;
 

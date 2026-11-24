@@ -151,7 +151,7 @@ final class BrazierComponent extends PrefabComponent {
           var9.setFloating((byte) 17, false);
           var9.setCollisionLevel(1, (byte) -12, false);
           var9.setObstructionLevel(3, param1 - 3);
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 91));
           var7.setVariant(0, (byte) 77);
           var9.addModel((TrapPart) null, (byte) 124, var7);

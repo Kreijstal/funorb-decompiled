@@ -372,7 +372,7 @@ final class ColourGradientOperator extends TextureOperator {
           if (!QuickChatPhraseDefinition.c((byte) 49)) {
             return true;
           }
-          if (lsa.field_a <= 0) {
+          if (TextureCoordinateGenerationState.field_a <= 0) {
             return false;
           }
           if (!TrapModel.b(-1)) {
@@ -386,7 +386,7 @@ final class ColourGradientOperator extends TextureOperator {
         if (!QuickChatPhraseDefinition.c((byte) 49)) {
           return true;
         }
-        if (lsa.field_a <= 0) {
+        if (TextureCoordinateGenerationState.field_a <= 0) {
           return false;
         }
         if (!TrapModel.b(-1)) {

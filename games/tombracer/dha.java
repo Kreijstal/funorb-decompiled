@@ -12,7 +12,7 @@ final class dha {
         int stackIn_97_0 = 0;
         int stackIn_129_0 = 0;
         if (param2 == -107) {
-          if (era.field_d == null) {
+          if (LobbyOverlayAndDateValidationState.field_d == null) {
             if (!DynamicGeometryBuffer.field_c) {
               if (OpenGlBufferObject.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
@@ -42,7 +42,7 @@ final class dha {
             var4 = stackIn_129_0;
           } else {
             if (13 == MenuEntry.field_h) {
-              era.field_d = null;
+              LobbyOverlayAndDateValidationState.field_d = null;
               return true;
             }
             if (!DynamicGeometryBuffer.field_c) {
@@ -75,9 +75,9 @@ final class dha {
           }
         } else {
           dha.a(38, -115, (byte) 27, 44);
-          if (era.field_d != null) {
+          if (LobbyOverlayAndDateValidationState.field_d != null) {
             if (13 == MenuEntry.field_h) {
-              era.field_d = null;
+              LobbyOverlayAndDateValidationState.field_d = null;
               return true;
             }
             if (!DynamicGeometryBuffer.field_c) {

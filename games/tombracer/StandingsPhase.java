@@ -249,7 +249,7 @@ final class StandingsPhase extends MatchPhase {
               }
               if (C2SActionPacket.field_j == 1) {
                 var13_ref_String = MovingPlatformComponent.field_P;
-                var12_ref = rm.field_c;
+                var12_ref = ModelCodecAndSocialPanelState.field_c;
               }
               if (var12_ref != null) {
                 ((ToolkitSprite) (var12_ref)).draw(var3 - (120 + ((ToolkitSprite) (var12_ref)).paddedWidth() / 2), var4 - 10);

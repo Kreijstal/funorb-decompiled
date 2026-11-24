@@ -167,7 +167,7 @@ final class PitComponent extends PrefabComponent {
             this.isSwitchable(48);
           }
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (PitModel) (var6.createModel(10, 111));
           var8 = this.field_F;
           if (0 == var8) {

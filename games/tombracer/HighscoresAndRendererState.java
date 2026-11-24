@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vea {
+final class HighscoresAndRendererState {
     static boolean field_b;
     static String field_a;
     static RendererOption field_c;

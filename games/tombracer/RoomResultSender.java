@@ -24,7 +24,7 @@ final class RoomResultSender {
           var5.setRoomId(param3, -71);
           var5.setCourseId(40, param0);
           var5.setIntCounters(PlayerViewport.field_b, PlayTrackCommand.field_o, MonsterRemains.field_h, OpenGlToolkit.field_Z, -113);
-          var5.setLongCounters(MidiVoiceMixer.field_j, nb.field_c, false, ClientMemoryVertexArray.field_f, CommonChooseReward.field_b);
+          var5.setLongCounters(MidiVoiceMixer.field_j, GameWindowAndSpectatorState.field_c, false, ClientMemoryVertexArray.field_f, CommonChooseReward.field_b);
           GamePacketSender.sendGamePacket((byte) -111, 1, 74, var5);
           return;
         }
@@ -33,7 +33,7 @@ final class RoomResultSender {
         var5.setRoomId(param3, -71);
         var5.setCourseId(40, param0);
         var5.setIntCounters(PlayerViewport.field_b, PlayTrackCommand.field_o, MonsterRemains.field_h, OpenGlToolkit.field_Z, -113);
-        var5.setLongCounters(MidiVoiceMixer.field_j, nb.field_c, false, ClientMemoryVertexArray.field_f, CommonChooseReward.field_b);
+        var5.setLongCounters(MidiVoiceMixer.field_j, GameWindowAndSpectatorState.field_c, false, ClientMemoryVertexArray.field_f, CommonChooseReward.field_b);
         GamePacketSender.sendGamePacket((byte) -111, 1, 74, var5);
     }
 

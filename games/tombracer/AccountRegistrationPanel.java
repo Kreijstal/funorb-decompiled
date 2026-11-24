@@ -198,7 +198,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         String var2 = LegacyOpenGlFlowingWaterEffect.formatText(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.linkEnd(127)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
-        var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
+        var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", CoinAndEmailLabels.field_d) + 5);
         var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, MidiVoice.field_j);
         var3 = var3 + (this.addHelpField(WaypointPath.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.addHelpField(CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_G, -3, 170, var3) + 5);

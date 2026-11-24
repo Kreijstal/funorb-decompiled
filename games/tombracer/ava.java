@@ -454,7 +454,7 @@ final class ava {
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var34 + "<br>" + baa.field_f + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + GraphicsSelectionState.field_f + (String) (var25);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + LegacyOpenGlFlowingWaterEffect.formatText(125, FlameShooterComponent.field_K, new String[]{(String) (var25)});
                   }

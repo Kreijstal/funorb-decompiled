@@ -26,7 +26,7 @@ final class IdolItemComponent extends ItemComponent {
           var5 = new MiscItemBehaviour(param2, param0);
           var5.setItemType(3, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (ItemModel) (var6.createModel(12, param1 ^ 117));
           var7.setVariant((byte) 98, 2);
           var4.addModel(var5, (byte) 124, var7);

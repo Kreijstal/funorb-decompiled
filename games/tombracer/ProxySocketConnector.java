@@ -39,7 +39,7 @@ final class ProxySocketConnector extends SocketConnector {
             field_e = (SpriteData[]) null;
           }
           if (param2 == 6) {
-            stackIn_7_0 = era.field_f;
+            stackIn_7_0 = LobbyOverlayAndDateValidationState.field_f;
             return stackIn_7_0;
           }
           if (param2 == 7) {
@@ -92,25 +92,25 @@ final class ProxySocketConnector extends SocketConnector {
         if (HuffmanCodec.field_a != var1) {
           if (var1 != DateInputWidget.field_z) {
             if (ControllerLocomotor.field_t == var1) {
-              baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) vea.field_c)});
+              GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HighscoresAndRendererState.field_c)});
             } else {
-              if (vea.field_c == var1) {
-                baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
+              if (HighscoresAndRendererState.field_c == var1) {
+                GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
               } else {
                 if (UsernameSuggestionsPanel.field_x != var1) {
                   if (var1 == CharacterSelection.field_d) {
-                    baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
+                    GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
                   }
                 } else {
-                  baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
+                  GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
                 }
               }
             }
           } else {
-            baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
+            GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
           }
         } else {
-          baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
+          GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
         }
         System.gc();
         if (!LegacyOpenGlBloomEffect.getCurrentRendererOption(false).field_c) {

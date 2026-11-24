@@ -86,7 +86,7 @@ final class StaticCrusherComponent extends PrefabComponent {
           var5.setTimings(50, 8, param1 ^ 2, 25, 6);
           var5.b((byte) 72, true);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (CrusherModel) (var6.createModel(11, 114));
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;

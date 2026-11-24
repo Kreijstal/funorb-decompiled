@@ -517,7 +517,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    final void draw(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, ModelDrawMarker param1, int param2) {
         this.render(param0, param1, -1, param2);
     }
 
@@ -2961,7 +2961,7 @@ final class Model extends ToolkitModel {
         return true;
     }
 
-    private final void render(Transform3D param0, el param1, int param2, int param3) {
+    private final void render(Transform3D param0, ModelDrawMarker param1, int param2, int param3) {
         try {
           float stackIn_17_0 = 0.0f;
           float stackIn_27_0 = 0.0f;
@@ -3747,7 +3747,7 @@ final class Model extends ToolkitModel {
         return;
     }
 
-    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, ModelDrawMarker param1, int param2, int param3) {
         this.render(param0, param1, param2, param3);
     }
 

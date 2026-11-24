@@ -172,7 +172,7 @@ final class BoulderComponent extends PathMoverComponent {
           var11.addBehaviour((byte) 83, (Behaviour) (var7));
           var8 = this.createPathMove((byte) -30, param2, param0);
           var11.addLocomotor(var8, 0);
-          var9 = rm.field_a;
+          var9 = ModelCodecAndSocialPanelState.field_a;
           var10 = (HazardModel) (var9.createModel(8, param1 ^ 76));
           var10.setVariant(false, 0);
           var11.addModel(var5, (byte) 124, var10);

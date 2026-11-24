@@ -92,7 +92,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
           if (param0 != 5) {
             field_L = true;
           }
-          var8 = rm.field_a;
+          var8 = ModelCodecAndSocialPanelState.field_a;
           var9 = (BlockModel) (var8.createModel(7, 75));
           var9.setVariant(124, 0);
           var10.addModel((TrapPart) null, (byte) 124, var9);

@@ -58,7 +58,7 @@ final class BlockComponent extends PrefabComponent {
           var11.setAll(false, 67);
           var11.set(0, -17075, true);
           var15.addBehaviour((byte) 83, (Behaviour) (var10));
-          var12 = rm.field_a;
+          var12 = ModelCodecAndSocialPanelState.field_a;
           var13 = (BlockModel) (var12.createModel(7, 92));
           var13.setVariant(107, var7);
           var15.addModel((TrapPart) null, (byte) 124, var13);

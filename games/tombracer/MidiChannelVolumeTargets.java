@@ -209,9 +209,9 @@ final class MidiChannelVolumeTargets {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          era.field_e = new UiComponent(0L, param0);
+          LobbyOverlayAndDateValidationState.field_e = new UiComponent(0L, param0);
           MatchProtocol.field_i = new UiComponent(0L, param9);
-          era.field_e.addChild(-128, MatchProtocol.field_i);
+          LobbyOverlayAndDateValidationState.field_e.addChild(-128, MatchProtocol.field_i);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_J = new IntrusiveDeque();
           VertexStreamLayout.field_d = new ScrollPanel(0L, var17, param3, param4);
@@ -264,7 +264,7 @@ final class MidiChannelVolumeTargets {
                 OpenGlSceneLight.field_p[var18].addChild(param6 - 125, MembersUpsellMenu.field_y[var18]);
                 OpenGlSceneLight.field_p[var18].addChild(-125, PitModel.field_p[var18]);
                 OpenGlSceneLight.field_p[var18].invalidateLayoutRecursive(-10966);
-                era.field_e.addChild(-127, OpenGlSceneLight.field_p[var18]);
+                LobbyOverlayAndDateValidationState.field_e.addChild(-127, OpenGlSceneLight.field_p[var18]);
                 ConsoleHistoryEntry.field_g = ConsoleHistoryEntry.field_g + 1;
               }
               var18++;
@@ -275,7 +275,7 @@ final class MidiChannelVolumeTargets {
           if (decompiledNaturalLoopExit0) {
             ara.field_ub = new UiComponent(0L, param8);
             ara.field_ub.field_r = ShooterComponent.field_G;
-            era.field_e.addChild(-128, ara.field_ub);
+            LobbyOverlayAndDateValidationState.field_e.addChild(-128, ara.field_ub);
             stackIn_31_0 = HeapIndexArray.e(540800) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&

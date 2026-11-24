@@ -87,7 +87,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
           var7 = 25;
           var6.setDelays(var7, 0, 0, 0, param1 ^ 6, 0);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
-          var8 = rm.field_a;
+          var8 = ModelCodecAndSocialPanelState.field_a;
           var9 = (SwitchModel) (var8.createModel(9, 97));
           var9.setVariant(1, (byte) -112);
           var10.addModel(var5, (byte) 124, var9);

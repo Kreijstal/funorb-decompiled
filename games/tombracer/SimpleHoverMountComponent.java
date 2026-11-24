@@ -214,7 +214,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = this.createPathMove((byte) -60, param2, param0);
           var4.addLocomotor(var5, 0);
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, 78));
           var7.setVariant(8022, 3);
           var4.addModel((TrapPart) null, (byte) 124, var7);

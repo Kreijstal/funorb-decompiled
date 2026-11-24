@@ -59,7 +59,7 @@ final class PushableMountComponent extends PrefabComponent {
           var4.setCollisionLevel(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (BlockModel) (var6.createModel(7, 103));
           var7.setVariant(125, 0);
           var4.addModel((TrapPart) null, (byte) 124, var7);

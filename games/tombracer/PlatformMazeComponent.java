@@ -137,7 +137,7 @@ final class PlatformMazeComponent extends MazeComponent {
           var5 = new PlatformBehaviour(param0, param1);
           var5.setWeightThreshold(-5, this.field_K);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var6 = rm.field_a;
+          var6 = ModelCodecAndSocialPanelState.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 102));
           var7.setStyle(0, (byte) 23);
           var4.addModel(var5, (byte) 124, var7);

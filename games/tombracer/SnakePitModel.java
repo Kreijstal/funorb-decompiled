@@ -376,7 +376,7 @@ final class SnakePitModel extends TrapModel {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           var6_int = 8 + param3 + 8 + (param2 + 487);
-          MatchProtocol.field_i.setBounds(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
+          MatchProtocol.field_i.setBounds(var6_int - 6, -6 + LobbyOverlayAndDateValidationState.field_e.field_t, -23776, 3, 3);
           var7 = -5 + MatchProtocol.field_i.field_t;
           if (param1 != -104) {
             SnakePitModel.unscaleFromBits(-101, -90, 0, -88);
@@ -389,16 +389,16 @@ final class SnakePitModel extends TrapModel {
           if (NineSliceFrame.field_c != null) {
             NineSliceFrame.field_c.setBounds((byte) -31, VertexStreamLayout.field_d.field_G, VertexStreamLayout.field_d.field_t, VertexStreamLayout.field_d.field_qb, VertexStreamLayout.field_d.field_T);
           }
-          var8 = era.field_e.field_G - (param2 + var6_int);
+          var8 = LobbyOverlayAndDateValidationState.field_e.field_G - (param2 + var6_int);
           var9 = var8 / 2;
           var10 = var9 + (param0 + param2);
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != OpenGlSceneLight.field_p[var12]) {
-              var13 = 3 + var11 * (era.field_e.field_t - 6 + 2) / (ConsoleHistoryEntry.field_g + 1);
+              var13 = 3 + var11 * (LobbyOverlayAndDateValidationState.field_e.field_t - 6 + 2) / (ConsoleHistoryEntry.field_g + 1);
               var11++;
-              var7Lifetime1 = -2 + (3 + var11 * (era.field_e.field_t - 6 + 2) / (1 + ConsoleHistoryEntry.field_g)) - var13;
+              var7Lifetime1 = -2 + (3 + var11 * (LobbyOverlayAndDateValidationState.field_e.field_t - 6 + 2) / (1 + ConsoleHistoryEntry.field_g)) - var13;
               if (var12 >= 5) {
                 ara.field_ub.setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
               } else {

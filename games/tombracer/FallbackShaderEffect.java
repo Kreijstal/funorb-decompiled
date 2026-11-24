@@ -231,7 +231,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           stackIn_77_1 = -113;
           stackIn_78_2 = (param1) && (!param2) && (OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_77_0).layoutFullScreen(stackIn_77_1, stackIn_78_2);
-          rm.field_e.field_a.processTabPresses((byte) -99);
+          ModelCodecAndSocialPanelState.field_e.field_a.processTabPresses((byte) -99);
           if (param0 != 1) {
             FallbackShaderEffect.releaseStatics(-121);
           }

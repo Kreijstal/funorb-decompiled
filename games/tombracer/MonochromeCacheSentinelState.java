@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nea {
+final class MonochromeCacheSentinelState {
     static MonochromeRowCacheEntry field_a;
     static PlatformTaskDispatcher field_c;
     static String field_b;

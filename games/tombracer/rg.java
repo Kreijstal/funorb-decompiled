@@ -30,7 +30,7 @@ final class rg extends SingleChildWidget {
         int var2 = var1 - HiscoresScreen.field_r * HiscoresScreen.field_r;
         int var4 = -80 % ((param0 + 19) / 32);
         int var3 = var2 * (ValidationStatusIcon.field_E - VertexArrayPointer.field_b) / var1 + VertexArrayPointer.field_b;
-        era.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
+        LobbyOverlayAndDateValidationState.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
         HardwareGraphicsHeap.a(640, 5, mna.field_d, 25, pda.field_c, ValidationStatusIcon.field_E - 24, 0);
     }
 
@@ -44,8 +44,8 @@ final class rg extends SingleChildWidget {
         OpenGlSceneLight.field_q[14] = MazeSearchNode.field_i;
         OpenGlSceneLight.field_q[4] = ChatChannelType.field_b;
         OpenGlSceneLight.field_q[22] = SinglePlayerCourseGenerator.field_k;
-        OpenGlSceneLight.field_q[8] = vea.field_a;
-        OpenGlSceneLight.field_q[7] = s.field_a;
+        OpenGlSceneLight.field_q[8] = HighscoresAndRendererState.field_a;
+        OpenGlSceneLight.field_q[7] = FullscreenAndQuickChatKeyLabels.field_a;
         OpenGlSceneLight.field_q[17] = LevelSelectOverlay.field_a;
         OpenGlSceneLight.field_q[15] = GameAssetLoader.field_i;
         OpenGlSceneLight.field_q[13] = WidgetContainer.field_v;
@@ -161,11 +161,11 @@ final class rg extends SingleChildWidget {
           MusicVolumeControl.field_a[15] = SingleChildWidget.sawDeathMessages;
           MusicVolumeControl.field_a[7] = AccountRequestState.snakeDeathMessages;
           MusicVolumeControl.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
-          IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, AccountRegistrationLauncher.field_a};
+          IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, ControlHelpAndTooltipState.field_a, null, null, null, null, AccountRegistrationLauncher.field_a};
           HazardEffect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, SmootherStepTable.field_c, LegacyTextureCache.field_c};
-          IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, MouseWheelFactory.field_c};
+          IntrusiveDeque.field_d[1] = new String[]{CoinAndEmailLabels.field_c, HardwareTurbulentWaterNoise.field_o, MouseWheelFactory.field_c};
           HazardEffect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
-          IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
+          IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, GraphicsSelectionState.field_a, AnimationSequence.field_a};
           HazardEffect.field_h[2] = new String[]{BottomlessPitHintText.text, ArchiveConnectionFailureHandler.field_f, ClippedChildWidget.field_C};
           IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, AccountCreationDialog.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
@@ -178,7 +178,7 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
           IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, OpenGlTexture3D.field_m, LegacyOpenGlCubeTexture.field_n};
           HazardEffect.field_h[7] = new String[]{ProceduralTexture.field_n, GpuCubeTextureSource.field_d};
-          IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, nea.field_b, FullscreenFailureDialog.field_L};
+          IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, MonochromeCacheSentinelState.field_b, FullscreenFailureDialog.field_L};
           HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           HazardEffect.field_h[9] = new String[]{FullscreenDialogLayout.field_a, MenuScreen.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{PointListEditorWidget.field_z, qba.field_d, GridWidgetContainer.field_H};
@@ -213,11 +213,11 @@ final class rg extends SingleChildWidget {
         MusicVolumeControl.field_a[15] = SingleChildWidget.sawDeathMessages;
         MusicVolumeControl.field_a[7] = AccountRequestState.snakeDeathMessages;
         MusicVolumeControl.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
-        IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, AccountRegistrationLauncher.field_a};
+        IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, ControlHelpAndTooltipState.field_a, null, null, null, null, AccountRegistrationLauncher.field_a};
         HazardEffect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, SmootherStepTable.field_c, LegacyTextureCache.field_c};
-        IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, MouseWheelFactory.field_c};
+        IntrusiveDeque.field_d[1] = new String[]{CoinAndEmailLabels.field_c, HardwareTurbulentWaterNoise.field_o, MouseWheelFactory.field_c};
         HazardEffect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
-        IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
+        IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, GraphicsSelectionState.field_a, AnimationSequence.field_a};
         HazardEffect.field_h[2] = new String[]{BottomlessPitHintText.text, ArchiveConnectionFailureHandler.field_f, ClippedChildWidget.field_C};
         IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, AccountCreationDialog.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
@@ -230,7 +230,7 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
         IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, OpenGlTexture3D.field_m, LegacyOpenGlCubeTexture.field_n};
         HazardEffect.field_h[7] = new String[]{ProceduralTexture.field_n, GpuCubeTextureSource.field_d};
-        IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, nea.field_b, FullscreenFailureDialog.field_L};
+        IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, MonochromeCacheSentinelState.field_b, FullscreenFailureDialog.field_L};
         HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         HazardEffect.field_h[9] = new String[]{FullscreenDialogLayout.field_a, MenuScreen.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{PointListEditorWidget.field_z, qba.field_d, GridWidgetContainer.field_H};

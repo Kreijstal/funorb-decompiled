@@ -283,30 +283,30 @@ final class PitSnake extends IntrusiveNode {
     }
 
     final static int getCurrentGraphicsMode(int param0) {
-        if (null == baa.field_d.field_i) {
+        if (null == GraphicsSelectionState.field_d.field_i) {
           BitPacketBuffer.setGraphicsSettings(true, WeaponShooterBehaviour.field_r, PitModel.field_s);
           return 4;
         }
-        if (HuffmanCodec.field_a == baa.field_d.field_i.field_b) {
+        if (HuffmanCodec.field_a == GraphicsSelectionState.field_d.field_i.field_b) {
           return 0;
         }
-        if (ControllerLocomotor.field_t == baa.field_d.field_i.field_b) {
+        if (ControllerLocomotor.field_t == GraphicsSelectionState.field_d.field_i.field_b) {
           return 2;
         }
-        if (baa.field_d.field_i.field_b == DateInputWidget.field_z) {
+        if (GraphicsSelectionState.field_d.field_i.field_b == DateInputWidget.field_z) {
           return 1;
         }
-        if (baa.field_d.field_i.field_b == vea.field_c) {
+        if (GraphicsSelectionState.field_d.field_i.field_b == HighscoresAndRendererState.field_c) {
           return 3;
         }
-        if (baa.field_d.field_i.field_b == UsernameSuggestionsPanel.field_x) {
+        if (GraphicsSelectionState.field_d.field_i.field_b == UsernameSuggestionsPanel.field_x) {
           return 4;
         }
         if (param0 != 5) {
           byte[] var2 = (byte[]) null;
           PitSnake.computeCrc32((byte[]) null, 116, 108, 51);
         }
-        if (CharacterSelection.field_d != baa.field_d.field_i.field_b) {
+        if (CharacterSelection.field_d != GraphicsSelectionState.field_d.field_i.field_b) {
           return -1;
         }
         return 5;

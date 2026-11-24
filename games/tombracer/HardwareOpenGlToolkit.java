@@ -94,7 +94,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             } else {
               if (ArchiveManager.field_f != param4) {
                 if (param4 != ProgressDialog.field_T) {
-                  if (param4 == nb.field_b) {
+                  if (param4 == GameWindowAndSpectatorState.field_b) {
                     var9 = param6 + 2;
                     var8_int = 5;
                   } else {
@@ -690,7 +690,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                   var5_int = 6;
                   var6 = param0 + 2;
                 } else {
-                  if (nb.field_b == param1) {
+                  if (GameWindowAndSpectatorState.field_b == param1) {
                     var6 = param0 + 2;
                     var5_int = 5;
                   } else {

@@ -305,7 +305,7 @@ final class ChatOverlay {
               MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
               var11 = (CharSequence) ((Object) MenuEntry.field_k);
               tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var11);
-              lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
+              TextureCoordinateGenerationState.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (OpenGlModelBillboardState.field_d.getChannelType((byte) 113) == BlockModel.field_s) {
                 ShaderEffect.field_a.saveAsLastLoginMethod(ToolkitSelector.getApplet(120), param2 ^ 55);
@@ -473,10 +473,10 @@ final class ChatOverlay {
         }
         if (HardwareModel.field_x != 1 &&
           HardwareModel.field_x != 4) {
-          era.field_a = 0;
+          LobbyOverlayAndDateValidationState.field_a = 0;
           dga.field_a = null;
         } else {
-          era.field_a = var8.readUnsignedShort(122);
+          LobbyOverlayAndDateValidationState.field_a = var8.readUnsignedShort(122);
           dga.field_a = var8.readString((byte) -76);
         }
         if (!param1) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ct {
+final class CoinAndEmailLabels {
     static String field_c;
     static float field_b;
     static int field_a;

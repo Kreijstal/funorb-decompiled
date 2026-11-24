@@ -80,7 +80,7 @@ abstract class ShooterComponent extends PrefabComponent {
         ModelCodec var5 = null;
         LightSourceModel var6 = null;
         try {
-          var5 = rm.field_a;
+          var5 = ModelCodecAndSocialPanelState.field_a;
           var6 = (LightSourceModel) (var5.createModel(5, 87));
           var6.setLightColour(true, param3);
           var6.b(1, 96);

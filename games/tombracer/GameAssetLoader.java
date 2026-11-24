@@ -201,13 +201,13 @@ final class GameAssetLoader implements LoadingStage {
           this.field_b = null;
           return;
         }
-        if (baa.field_d == null) {
+        if (GraphicsSelectionState.field_d == null) {
           this.drawLoadingProgress(95, (byte) 47, DateValidationSource.loadingQuipsShort[9]);
           FleeLocomotor.createRendererOptions((byte) -33);
-          baa.field_d = new ToolkitSelector(MatchPhase.field_l, LobbyPlayerMenuActions.field_a);
+          GraphicsSelectionState.field_d = new ToolkitSelector(MatchPhase.field_l, LobbyPlayerMenuActions.field_a);
         }
         LaserShooterComponent.ensureToolkitResources(17229);
-        if (null == baa.field_d.field_i) {
+        if (null == GraphicsSelectionState.field_d.field_i) {
           return;
         }
         this.field_c = true;
@@ -335,7 +335,7 @@ final class GameAssetLoader implements LoadingStage {
     }
 
     public final void finishLoading(byte param0) {
-        CoinItemComponent.createMenuScreens(cq.field_d, (byte) 52);
+        CoinItemComponent.createMenuScreens(GameClockAndLogoResources.field_d, (byte) 52);
         UsernameQueryRequests.setFrameRate(50, param0 ^ -78);
         PlayerViewportLayout.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) LoginMethod.getMenuScreen(0, (byte) 50));
@@ -374,8 +374,8 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (!SkeletonComponentBase.field_G) {
           DropAnimation.field_c = false;
-          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, FullscreenCanvas.field_c, CubeTextureSourceBase.field_b, LoadProfileCommand.field_t, QueuedHint.field_f, var2);
-          cq.field_d = PenaltyNotice.field_f;
+          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, ControlHelpAndTooltipState.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, FullscreenCanvas.field_c, CubeTextureSourceBase.field_b, LoadProfileCommand.field_t, QueuedHint.field_f, var2);
+          GameClockAndLogoResources.field_d = PenaltyNotice.field_f;
           SeededGradientNoise3D.initializeChatHistory(200, (byte) -71);
           fta.field_b = MatchState.field_p;
         }

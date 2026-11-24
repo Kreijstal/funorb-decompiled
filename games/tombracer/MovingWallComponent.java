@@ -29,7 +29,7 @@ final class MovingWallComponent extends PathMoverComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = this.createPathMove((byte) 124, param2, param0);
           var9.addLocomotor(var6, param1 ^ 3);
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (WallModel) (var7.createModel(15, 111));
           var9.addModel((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;

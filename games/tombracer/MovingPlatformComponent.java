@@ -98,7 +98,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = this.createPathMove((byte) -104, param2, param0);
           var4.addLocomotor(var6, 0);
-          var7 = rm.field_a;
+          var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (PlatformModel) (var7.createModel(17, 88));
           var8.setStyle(2, (byte) 23);
           var4.addModel(var5, (byte) 124, var8);

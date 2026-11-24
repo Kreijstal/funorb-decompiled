@@ -197,7 +197,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 119, "mu_game_is_full");
                 if (var2 != null) {
-                  era.field_f = BitPackedColour.decodeText((byte) 117, var2);
+                  LobbyOverlayAndDateValidationState.field_f = BitPackedColour.decodeText((byte) 117, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "mu_game_has_started");
                 if (var2 != null) {
@@ -305,7 +305,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -93, "mu_options_allow_spectate");
                 if (null != var2) {
-                  nb.field_a = BitPackedColour.decodeText((byte) 56, var2);
+                  GameWindowAndSpectatorState.field_a = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 113, "mu_options_ratedgametype");
                 if (null != var2) {
@@ -321,7 +321,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mu_invite_players");
                 if (null != var2) {
-                  eu.field_b = BitPackedColour.decodeText((byte) 108, var2);
+                  InvitationAndMedalResources.field_b = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "close");
                 if (null != var2) {
@@ -773,7 +773,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_1moreratedgame");
                 if (null != var2) {
-                  rm.field_b = BitPackedColour.decodeText((byte) 42, var2);
+                  ModelCodecAndSocialPanelState.field_b = BitPackedColour.decodeText((byte) 42, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_moreratedgames");
                 if (var2 != null) {
@@ -855,7 +855,7 @@ final class TextResourceLoader extends BillboardSpriteData {
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = TextureCoordinateGeneration.loadFile((byte) 113, "gameopt_needchanging2");
                 if (var2 != null) {
-                  baa.field_f = BitPackedColour.decodeText((byte) 27, var2);
+                  GraphicsSelectionState.field_f = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 104, "gameopt_mightchange");
                 if (var2 != null) {
@@ -1407,7 +1407,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -77, "create_email_confirm");
                 if (var2 != null) {
-                  ct.field_d = BitPackedColour.decodeText((byte) 106, var2);
+                  CoinAndEmailLabels.field_d = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_age");
                 if (null != var2) {
@@ -1639,7 +1639,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 106, "create_alert_yearrange");
                 if (null != var2) {
-                  era.field_b = BitPackedColour.decodeText((byte) 70, var2);
+                  LobbyOverlayAndDateValidationState.field_b = BitPackedColour.decodeText((byte) 70, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -113, "create_alert_mismatch");
                 if (var2 != null) {
@@ -1893,7 +1893,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "fullscreen");
                 if (var2 != null) {
-                  s.field_a = BitPackedColour.decodeText((byte) 38, var2);
+                  FullscreenAndQuickChatKeyLabels.field_a = BitPackedColour.decodeText((byte) 38, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 127, "screensize");
                 if (null != var2) {
@@ -1901,7 +1901,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "highscores");
                 if (null != var2) {
-                  vea.field_a = BitPackedColour.decodeText((byte) 52, var2);
+                  HighscoresAndRendererState.field_a = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -24, "rankings");
                 if (null != var2) {
@@ -2489,27 +2489,27 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 107, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  s.field_b[0] = BitPackedColour.decodeText((byte) 26, var2);
+                  FullscreenAndQuickChatKeyLabels.field_b[0] = BitPackedColour.decodeText((byte) 26, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  s.field_b[1] = BitPackedColour.decodeText((byte) 38, var2);
+                  FullscreenAndQuickChatKeyLabels.field_b[1] = BitPackedColour.decodeText((byte) 38, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -120, "quickchat_shortcut_keys,2");
                 if (null != var2) {
-                  s.field_b[2] = BitPackedColour.decodeText((byte) 55, var2);
+                  FullscreenAndQuickChatKeyLabels.field_b[2] = BitPackedColour.decodeText((byte) 55, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -37, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  s.field_b[3] = BitPackedColour.decodeText((byte) 70, var2);
+                  FullscreenAndQuickChatKeyLabels.field_b[3] = BitPackedColour.decodeText((byte) 70, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 117, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
-                  s.field_b[4] = BitPackedColour.decodeText((byte) 124, var2);
+                  FullscreenAndQuickChatKeyLabels.field_b[4] = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -118, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  s.field_b[5] = BitPackedColour.decodeText((byte) 83, var2);
+                  FullscreenAndQuickChatKeyLabels.field_b[5] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -112, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
@@ -2647,7 +2647,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 112, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  cq.field_c = BitPackedColour.decodeText((byte) 97, var2);
+                  GameClockAndLogoResources.field_c = BitPackedColour.decodeText((byte) 97, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 121, "fs_button_cancel");
                 if (var2 != null) {

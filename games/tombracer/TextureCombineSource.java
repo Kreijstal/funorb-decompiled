@@ -155,7 +155,7 @@ final class TextureCombineSource {
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$5, (byte) 47, param0);
         LegacyOpenGlCubeTexture.field_l = SpriteData.loadSprite(param2, "", "silhoutte");
-        baa.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
+        GraphicsSelectionState.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
         FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
         WaveformOperator.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
         SceneLight.field_n = SpriteData.loadSprite(param2, "", "slab_small4");
@@ -255,7 +255,7 @@ final class TextureCombineSource {
             var4 = CoinItemComponent.field_H[var3];
             if (var4 >= 0) {
               if (FacePointLocomotor.field_r.selectedIndex == var4) {
-                var5 = ct.field_a;
+                var5 = CoinAndEmailLabels.field_a;
               } else {
                 var5 = MandelbrotOperator.field_m;
               }

@@ -85,13 +85,13 @@ abstract class ToolkitModel {
         }
     }
 
-    abstract void draw(Transform3D param0, el param1, int param2);
+    abstract void draw(Transform3D param0, ModelDrawMarker param1, int param2);
 
     abstract ToolkitModel copy(byte param0, int param1, boolean param2);
 
     abstract void lockForUpdate();
 
-    abstract void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3);
+    abstract void drawAtFixedDepth(Transform3D param0, ModelDrawMarker param1, int param2, int param3);
 
     private final void applyFrameTransform(int[] param0, int param1, int param2, int[] param3, boolean param4, int param5, int param6, int param7, int param8, byte param9) {
         RuntimeException stackIn_35_0 = null;
@@ -103,7 +103,7 @@ abstract class ToolkitModel {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        el var13 = null;
+        ModelDrawMarker var13 = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
@@ -168,8 +168,8 @@ abstract class ToolkitModel {
             }
           }
           if (param9 <= 81) {
-            var13 = (el) null;
-            this.draw((Transform3D) null, (el) null, -114);
+            var13 = (ModelDrawMarker) null;
+            this.draw((Transform3D) null, (ModelDrawMarker) null, -114);
           }
           if (param5 != 65535) {
             this.applyMaskedTransform(param2, param0, param7, param8, param6, param4, param5, param3);

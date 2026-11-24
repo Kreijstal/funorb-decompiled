@@ -94,7 +94,7 @@ final class ValidationStatusIcon extends FocusableWidget {
           ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
           return;
         }
-        if (tea.field_b == var8) {
+        if (TutorialAndValidationState.field_b == var8) {
           var16 = CharacterChoiceFactory.field_b[0];
           var9Lifetime1 = var16.field_n << 1;
           var10Lifetime1 = var16.field_k << 1;

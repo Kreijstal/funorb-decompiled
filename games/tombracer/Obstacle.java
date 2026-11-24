@@ -400,7 +400,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
             param1.writeBits((byte) -36, this.models.size((byte) -16), 2);
             var5 = (TrapModel) (this.models.first(-80));
             while (var5 != null) {
-              rm.field_a.writeModel(15682, param1, var5);
+              ModelCodecAndSocialPanelState.field_a.writeModel(15682, param1, var5);
               var5 = (TrapModel) (this.models.next(127));
             }
           }
@@ -420,7 +420,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 != -8195) {
           return;
         }
-        this.addModel(rm.field_a.createTrapModel((TrapPart) null, (WorldBody) (this), -116), true);
+        this.addModel(ModelCodecAndSocialPanelState.field_a.createTrapModel((TrapPart) null, (WorldBody) (this), -116), true);
     }
 
     public final int getRenderZ(byte param0) {
@@ -736,7 +736,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (8 < param0.formatVersion) {
             var3_int = param1.readBits((byte) 44, 2);
             for (var4 = 0; var4 < var3_int; var4++) {
-              var5 = rm.field_a.readModel(param0, param1, false);
+              var5 = ModelCodecAndSocialPanelState.field_a.readModel(param0, param1, false);
               this.addModel(var5, true);
             }
           } else {
