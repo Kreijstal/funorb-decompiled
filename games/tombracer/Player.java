@@ -1772,7 +1772,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!param0.a((byte) -60, this)) {
+          if (!param0.canSkipTimedTracking((byte) -60, this)) {
             this.statusEffects.addLast((byte) -123, param0);
             while (!(3 >= this.statusEffects.size((byte) -16))) {
               this.statusEffects.removeFirst(param1 ^ -106);
@@ -3411,7 +3411,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final boolean s(int param0) {
+    final boolean usesHeldItemHudPreview(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;

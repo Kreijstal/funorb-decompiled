@@ -171,16 +171,16 @@ final class InstructionsScreen extends DropInMenuScreen {
           var11Lifetime1 = stackIn_51_0;
           stackIn_54_0 = (var9Lifetime1 != 0) ? 1 : 7;
           var12Lifetime1 = stackIn_54_0;
-          UnlockEntry.a((byte) -112, var8Lifetime1, var10Lifetime1, 80);
+          UnlockEntry.drawInstructionControlIcon((byte) -112, var8Lifetime1, var10Lifetime1, 80);
           stackIn_57_0 = (var9Lifetime1 == 0) ? 5 : 3;
           var13Lifetime1 = stackIn_57_0;
-          UnlockEntry.a((byte) -107, var8Lifetime1, var12Lifetime1, 96);
-          UnlockEntry.a((byte) -126, var8Lifetime1, var11Lifetime1, 112);
-          UnlockEntry.a((byte) -108, var8Lifetime1, var13Lifetime1, 127);
-          UnlockEntry.a((byte) -107, 25 + var8Lifetime1, 9, 115);
-          UnlockEntry.a((byte) -123, var8Lifetime1 + 50, 8, 118);
-          UnlockEntry.a((byte) -108, var8Lifetime1 + 75, 10, 115);
-          UnlockEntry.a((byte) -109, var8Lifetime1 + 100, 11, 106);
+          UnlockEntry.drawInstructionControlIcon((byte) -107, var8Lifetime1, var12Lifetime1, 96);
+          UnlockEntry.drawInstructionControlIcon((byte) -126, var8Lifetime1, var11Lifetime1, 112);
+          UnlockEntry.drawInstructionControlIcon((byte) -108, var8Lifetime1, var13Lifetime1, 127);
+          UnlockEntry.drawInstructionControlIcon((byte) -107, 25 + var8Lifetime1, 9, 115);
+          UnlockEntry.drawInstructionControlIcon((byte) -123, var8Lifetime1 + 50, 8, 118);
+          UnlockEntry.drawInstructionControlIcon((byte) -108, var8Lifetime1 + 75, 10, 115);
+          UnlockEntry.drawInstructionControlIcon((byte) -109, var8Lifetime1 + 100, 11, 106);
         }
     }
 

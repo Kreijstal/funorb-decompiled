@@ -103,7 +103,7 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 1) {
             var5 = RasterBuffer.pollLogin(IntIntHashTable.createCredentials(-1), RotaterMountComponent.createUsernameLoginTextValue(49), 2);
             if (-1 != var5) {
-              WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, Cp1252ByteEncoder.field_b, (byte) 100);
+              WaveformOperator.completeUsernameQuery(PressureSwitchBehaviour.field_s, var5, Cp1252ByteEncoder.field_b, (byte) 100);
               Cp1252ByteEncoder.field_b = null;
               PressureSwitchBehaviour.field_s = null;
             }
@@ -133,7 +133,7 @@ abstract class AppletGameShell extends GameApplet {
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   StatReportingObserverFactory.field_b = QuickChatPhraseSource.field_g;
-                  LoadLevelCommand.g(0);
+                  LoadLevelCommand.finishLoginProgress(0);
                   Transform3D.field_c = 10;
                   HorizontalGradientOperator.field_m = false;
                 } else {
@@ -327,7 +327,7 @@ abstract class AppletGameShell extends GameApplet {
           if (0 != Trap.field_m) {
             return var2;
           }
-          LoadLevelCommand.g(param0 + 46);
+          LoadLevelCommand.finishLoginProgress(param0 + 46);
         } else {
           if (var2 != 1) {
             if (!AccountRequestState.field_c) {
@@ -341,7 +341,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (Transform3D.field_c == 11 &&
             0 == Trap.field_m) {
-            LoadLevelCommand.g(param0 + 46);
+            LoadLevelCommand.finishLoginProgress(param0 + 46);
           }
         }
         return var2;
@@ -594,7 +594,7 @@ abstract class AppletGameShell extends GameApplet {
             Trap.field_m == 0 &&
             Transform3D.field_c == 11 &&
             !SignedBitReader.shouldAttemptReconnect(-1)) {
-            LoadLevelCommand.g(0);
+            LoadLevelCommand.finishLoginProgress(0);
           }
           if (Trap.field_m != -1 &&
             Trap.field_m != 0) {

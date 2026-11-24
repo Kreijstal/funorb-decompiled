@@ -118,7 +118,7 @@ final class HardwareSprite extends ToolkitSprite {
         this.field_c.setAlphaCombineSource(1, false, PlayerContextMenu.field_j);
     }
 
-    final static void a(BitPacketBuffer param0, byte param1) {
+    final static void readRoomSelectionFlags(BitPacketBuffer param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -144,7 +144,7 @@ final class HardwareSprite extends ToolkitSprite {
           param0.endBitAccess((byte) 98);
           if (param1 >= -41) {
             var5 = (BitPacketBuffer) null;
-            HardwareSprite.a((BitPacketBuffer) null, (byte) 109);
+            HardwareSprite.readRoomSelectionFlags((BitPacketBuffer) null, (byte) 109);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

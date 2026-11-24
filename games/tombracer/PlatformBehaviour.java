@@ -61,7 +61,7 @@ final class PlatformBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          param1.b((byte) 91, 3);
+          param1.onBehaviourAttached((byte) 91, 3);
           param1.setProvidesSurface(true, (byte) -119, 1);
           param1.setReactsToSupport((byte) -112, true, 2);
           param1.setFloating((byte) 17, param0);

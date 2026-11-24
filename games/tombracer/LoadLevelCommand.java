@@ -94,7 +94,7 @@ final class LoadLevelCommand extends ConsoleMethod {
         super(param0, param1, param2);
     }
 
-    final static void g(int param0) {
+    final static void finishLoginProgress(int param0) {
         int var1;
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;

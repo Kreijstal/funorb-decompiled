@@ -1313,7 +1313,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
               return true;
             }
             if (87 == param0) {
-              HardwareSprite.a(param1, (byte) -79);
+              HardwareSprite.readRoomSelectionFlags(param1, (byte) -79);
               return true;
             }
             if (88 == param0) {

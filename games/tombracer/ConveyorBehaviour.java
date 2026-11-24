@@ -158,7 +158,7 @@ final class ConveyorBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          param1.b((byte) 60, 3);
+          param1.onBehaviourAttached((byte) 60, 3);
           this.updateBeltVelocity(0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

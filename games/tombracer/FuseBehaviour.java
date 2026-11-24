@@ -141,7 +141,7 @@ final class FuseBehaviour extends Behaviour {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           super.attachToTrap(param0, param1);
-          param1.b((byte) -112, 4);
+          param1.onBehaviourAttached((byte) -112, 4);
           if (!param0) {
             this.field_x = (FlagSet) null;
           }

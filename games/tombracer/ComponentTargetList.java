@@ -182,7 +182,7 @@ final class ComponentTargetList {
         return (Switchable[]) (stackIn_27_0);
     }
 
-    final static String a(int param0, boolean param1, int param2, long param3, int param4) {
+    final static String formatFixedPointNumber(int param0, boolean param1, int param2, long param3, int param4) {
         StringBuilder discarded$103 = null;
         StringBuilder discarded$104 = null;
         StringBuilder discarded$105 = null;

@@ -158,7 +158,7 @@ final class MatchHud {
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
               var22 = var12.getWeapon(-163585215);
-              var23 = var12.s(0) ? 1 : 0;
+              var23 = var12.usesHeldItemHudPreview(0) ? 1 : 0;
               if (var22 != null) {
                 LegacyOpenGlEffectManager.field_a.draw(var17Lifetime1 + 20, var18Lifetime1 + 5);
               } else {

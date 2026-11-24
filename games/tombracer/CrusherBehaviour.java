@@ -46,7 +46,7 @@ final class CrusherBehaviour extends Behaviour {
           if (4 > this.getRoom(true).formatVersion) {
             param1.setObstructionLevel(3, 0);
           }
-          param1.b((byte) -62, 8);
+          param1.onBehaviourAttached((byte) -62, 8);
           if (0 == this.field_q) {
             param1.setFloating((byte) 17, true);
             this.field_q = param1.getWeight(73);

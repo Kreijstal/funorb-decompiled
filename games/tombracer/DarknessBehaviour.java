@@ -81,7 +81,7 @@ final class DarknessBehaviour extends Behaviour {
           this.createMask(0);
           param1.setHandlesEffectType(26492, true, 1);
           param1.setAlwaysBlocksBeams(param0, 35);
-          param1.b((byte) 112, 8);
+          param1.onBehaviourAttached((byte) 112, 8);
           param1.setProvidesSurface(true, (byte) 109, 2);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ana.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -263,7 +263,7 @@ final class DarknessBehaviour extends Behaviour {
         try {
           if (param2.type == 1) {
             var7_int = MidiVoiceMixer.min(param0, param1, -48) / 2;
-            this.a(param3, (byte) 90, param2.size, var7_int, param5);
+            this.onDarknessAreaEffect(param3, (byte) 90, param2.size, var7_int, param5);
           }
           var7_intLifetime1 = -5 / ((param4 - 62) / 52);
           stackIn_3_0 = 0;
@@ -320,7 +320,7 @@ final class DarknessBehaviour extends Behaviour {
         }
         if (this.field_n > 0) {
           var3 = this.getPlayer((byte) 19);
-          this.a(var3.getX(3), (byte) 86, 10, this.field_n, var3.getY(param0 ^ 12442));
+          this.onDarknessAreaEffect(var3.getX(3), (byte) 86, 10, this.field_n, var3.getY(param0 ^ 12442));
         }
     }
 
@@ -443,7 +443,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3, int param4) {
+    private final void onDarknessAreaEffect(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = -106 % ((-24 - param1) / 60);
         if (null == this.mask) {
           return;

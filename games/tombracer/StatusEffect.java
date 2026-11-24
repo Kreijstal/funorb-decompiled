@@ -73,7 +73,7 @@ final class StatusEffect extends IntrusiveNode {
           return new StatusEffect(this.kind, this.duration);
         }
         Player var3 = (Player) null;
-        this.a((byte) -15, (Player) null);
+        this.canSkipTimedTracking((byte) -15, (Player) null);
         return new StatusEffect(this.kind, this.duration);
     }
 
@@ -84,7 +84,7 @@ final class StatusEffect extends IntrusiveNode {
         this.restart(100);
     }
 
-    final boolean a(byte param0, Player param1) {
+    final boolean canSkipTimedTracking(byte param0, Player param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;

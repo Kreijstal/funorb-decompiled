@@ -25,7 +25,7 @@ final class UnlockEntry extends IntrusiveNode {
         return this.field_h;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void drawInstructionControlIcon(byte param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -63,7 +63,7 @@ final class UnlockEntry extends IntrusiveNode {
             }
           }
           if (param0 >= -106) {
-            UnlockEntry.a((byte) -56, 127, 63, -18);
+            UnlockEntry.drawInstructionControlIcon((byte) -56, 127, 63, -18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

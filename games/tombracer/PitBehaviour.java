@@ -196,7 +196,7 @@ final class PitBehaviour extends Behaviour {
         int var4 = 0;
         try {
           super.attachToTrap(param0, param1);
-          this.trap.b((byte) -102, 4);
+          this.trap.onBehaviourAttached((byte) -102, 4);
           this.trap.setProvidesSurface(true, (byte) -25, 0);
           this.trap.setReactsToSupport((byte) -114, true, 1);
           this.trap.setFloating((byte) 17, param0);

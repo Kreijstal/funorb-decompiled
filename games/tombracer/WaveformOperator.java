@@ -205,7 +205,7 @@ final class WaveformOperator extends TextureOperator {
         return var13;
     }
 
-    final static void a(String[] args, int param1, String param2, byte param3) {
+    final static void completeUsernameQuery(String[] args, int param1, String param2, byte param3) {
         int var5 = 0;
         String[] var6 = null;
         int stackIn_4_0 = 0;

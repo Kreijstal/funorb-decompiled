@@ -136,7 +136,7 @@ final class PortalBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          param1.b((byte) -126, 3);
+          param1.onBehaviourAttached((byte) -126, 3);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "im.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

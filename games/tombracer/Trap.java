@@ -149,7 +149,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             var7 = (Locomotor) (this.locomotors.next(116));
           }
           if (!param0) {
-            this.b((byte) -99, -59);
+            this.onBehaviourAttached((byte) -99, -59);
           }
           var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {
@@ -1561,7 +1561,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    private final boolean a(TrapModel param0, int param1) {
+    private final boolean canAttachModel(TrapModel param0, int param1) {
         TrapPart var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -1915,7 +1915,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
         var2_ref = (TrapModel) (this.models.first(-80));
         while (var2_ref != null) {
-          if (this.a(var2_ref, param0 ^ -113)) {
+          if (this.canAttachModel(var2_ref, param0 ^ -113)) {
             var2_ref.attach(var2_ref.getPart(-118), (WorldBody) (this), (byte) 36);
           } else {
             var2_ref.unlink(91);
@@ -2561,7 +2561,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    final void b(byte param0, int param1) {
+    final void onBehaviourAttached(byte param0, int param1) {
         int var3 = -10 / ((-12 - param0) / 42);
     }
 

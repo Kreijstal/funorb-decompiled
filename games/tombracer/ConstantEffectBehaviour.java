@@ -74,7 +74,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           this.field_r.setSource(this.getRoot(6), 2348);
-          param1.b((byte) -103, 8);
+          param1.onBehaviourAttached((byte) -103, 8);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

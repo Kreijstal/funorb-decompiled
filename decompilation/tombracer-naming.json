@@ -145,7 +145,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#0"
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#0"
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#1",
@@ -153,7 +153,7 @@
       "to": "scanLoop2",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#1"
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#1"
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#2",
@@ -161,7 +161,7 @@
       "to": "scanLoop3",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#2"
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#2"
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#3",
@@ -169,7 +169,7 @@
       "to": "scanLoop4",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#3"
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#3"
     },
     {
       "symbol": "B:f.b(B)V#0",
@@ -17692,6 +17692,14 @@
       "renamedSymbol": "M:LoadLevelCommand.releaseStatics(I)V"
     },
     {
+      "symbol": "M:ak.g(I)V",
+      "originalName": "g",
+      "to": "finishLoginProgress",
+      "evidence": "Finish login-progress UI after ordinary login success or reconnect/network completion. Preserve TileOperator flag clear first;wrong-int!=0own Object nulling before message reset;connection-restored branch and early return;positive count singular/plural message selection plus exact br concatenation;then dismiss and show progress. Keep both formatting calls bound to the unchanged full-int formatter with100,all global reads/repeated branches,nullable strings,allocation/call/exception order and every guard value. Complete original-body SHA256 696be2b36bced637f7c86c26dfa95e2822bcbeeaa191f2f8fa66be3728845ab9. Naming only.5complete selected bodies,17compiler-bound callers,48field declarations/32owned,5supporting classes,14purpose witnesses and two complete unchanged full-int helper bodies reviewed. Preserve descriptors,all integer/byte/long domains,unused guards,modifiers/visibility,fields/parameters/locals,literals,integer overflow and division,casts,aliases/partial writes,allocation/call/exception order and diagnostics. Retain2Iformatter calls and1Isuccess-reply call without narrowing;both byte companions remain unchanged. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LoadLevelCommand.finishLoginProgress(I)V"
+    },
+    {
       "symbol": "M:aka.a(BI)V",
       "originalName": "a",
       "to": "onRemoved",
@@ -18002,6 +18010,14 @@
       "evidence": "Sets every mask pixel to a level, halved when the room has an active variant.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DarknessBehaviour.fillMask(BI)V"
+    },
+    {
+      "symbol": "M:ana.a(IBIII)V",
+      "originalName": "a",
+      "to": "onDarknessAreaEffect",
+      "evidence": "Darkness area-effect hook called by the type1 hazard-effect handler with position,size,strength and by the darkness tick with player coordinates. Existing body only evaluates -106%((-24-byte)/60),then reads nullable mask and returns or falls through without updates. Preserve guard arithmetic before mask access,all unused coordinate/size/strength arguments,null behavior and exceptions;do not implement illumination or modify mask pixels. Complete original-body SHA256 c33a55c984db417b72a461c56f2c4f090a2080ac2fa7a48ea13994d73a5a3144. Naming only.5complete original bodies,all15compiler-bound callers,134field declarations/134owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DarknessBehaviour.onDarknessAreaEffect(IBIII)V"
     },
     {
       "symbol": "M:ana.a(ICILjava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
@@ -32388,6 +32404,14 @@
       "renamedSymbol": "M:ComponentTargetList.pruneTargets(I)V"
     },
     {
+      "symbol": "M:f.a(IZIJI)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "formatFixedPointNumber",
+      "evidence": "Format a scaled long with requested fractional digits and optional three-digit grouping. Style0 uses decimal period/group comma;style2 uses non-breaking-space grouping;other styles retain default comma/period. Preserve full signed style/precision/guard domains,long negation overflow at MIN_VALUE,int casts of digit/quotient and int arithmetic before char casts,negative sign placement,StringBuilder26allocation and discarded append locals,all loop/label branches including captured TombRacer flag,precision<=0behavior and wrong-guard2843dialog query timing. Do not substitute locale/BigDecimal formatting,round or clamp the inputs. Complete original-body SHA256 8f25693e171768583dcc8a8a5cb525c3469428569d0566e63c0365c49efd12a9. Naming only.5complete selected bodies,17compiler-bound callers,48field declarations/32owned,5supporting classes,14purpose witnesses and two complete unchanged full-int helper bodies reviewed. Preserve descriptors,all integer/byte/long domains,unused guards,modifiers/visibility,fields/parameters/locals,literals,integer overflow and division,casts,aliases/partial writes,allocation/call/exception order and diagnostics. Retain2Iformatter calls and1Isuccess-reply call without narrowing;both byte companions remain unchanged. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:f.a(Lcsa;Z)V",
       "originalName": "a",
       "to": "resolveTargets",
@@ -35124,6 +35148,14 @@
       "renamedSymbol": "M:Trap.setVariantMask(LVariantMask;B)V"
     },
     {
+      "symbol": "M:fsa.a(Ldg;I)Z",
+      "originalName": "a",
+      "to": "canAttachModel",
+      "evidence": "Check whether an existing model may be attached to this trap during initializeAfterLoad. Caller attaches on true and unlinks on false. A model allowing missing parts passes to final guard arithmetic;otherwise require non-null part belonging to this trap and not stopped. Preserve short-circuit evaluation,mutable decompiled frame flag,inverted stopped test,early false before89/((int+65)/41),integer overflow/division,null-model failures and diagnostic wrapping. Do not inline the part-option query or alter ownership/lifetime policy. Complete original-body SHA256 3d29242b297719544ab8b879bb161e44505249da59bdfc4771c79ada348ec7df. Naming only.5complete original bodies,all15compiler-bound callers,134field declarations/134owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Trap.canAttachModel(LTrapModel;I)Z"
+    },
+    {
       "symbol": "M:fsa.a(Lffa;Z)Z",
       "originalName": "a",
       "to": "ignoresCollidable",
@@ -35290,6 +35322,14 @@
       "evidence": "Player returns x, Projectile returns x and Room returns width / 2. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Trap.getRenderX(B)I"
+    },
+    {
+      "symbol": "M:fsa.b(BI)V",
+      "originalName": "b",
+      "to": "onBehaviourAttached",
+      "evidence": "Trap callback used while attaching eight behaviour types to traps;one additional call is in a noncanonical switch-ID guard path. The body only evaluates -10/((-12-byte)/42). Preserve all byte values,division/truncation/divide-by-zero,unused local and unused full-int second argument. Do not invent a stored layer or set behaviour flags in this empty hook. Complete original-body SHA256 b381167f1f78caaab9fece229b102bd42274e871945d41d257f20d9c7afcf958. Naming only.5complete original bodies,all15compiler-bound callers,134field declarations/134owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Trap.onBehaviourAttached(BI)V"
     },
     {
       "symbol": "M:fsa.b(BII)V",
@@ -36954,6 +36994,14 @@
       "evidence": "Draws the sprite scaled. Body matches several games SoftwareIndexedSprite.drawScaled. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HardwareSprite.drawScaled(IIIIIIII)V"
+    },
+    {
+      "symbol": "M:gh.a(Lkh;B)V",
+      "originalName": "a",
+      "to": "readRoomSelectionFlags",
+      "evidence": "Read room-selection flag bits from packet87 into the BitSet used by LevelSelectOverlay and RoomSelectionProfile. Local-profile-loaded flag causes early return before consuming any packet bytes. Otherwise read unsigned count,publish new BitSet before beginBitAccess,read/set each flag,then endBitAccess. Preserve partial table publication on failures,late byte>=-41recursive call with null packet and109,all re-read guards,unused locals and wrapped diagnostics;do not treat these as a different feature/achievement bitset. Complete original-body SHA256 288e5da3d3f32009ea7403b87f84381703cdfac04f6bff1213ef06b05e29b0dd. Naming only.5complete selected bodies,17compiler-bound callers,48field declarations/32owned,5supporting classes,14purpose witnesses and two complete unchanged full-int helper bodies reviewed. Preserve descriptors,all integer/byte/long domains,unused guards,modifiers/visibility,fields/parameters/locals,literals,integer overflow and division,casts,aliases/partial writes,allocation/call/exception order and diagnostics. Retain2Iformatter calls and1Isuccess-reply call without narrowing;both byte companions remain unchanged. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V"
     },
     {
       "symbol": "M:gh.b()I",
@@ -39876,6 +39924,14 @@
       "renamedSymbol": "M:Player.isSkipAllowed(B)Z"
     },
     {
+      "symbol": "M:hca.s(I)Z",
+      "originalName": "s",
+      "to": "usesHeldItemHudPreview",
+      "evidence": "Query the held-item HUD-preview mode. Sole bound caller in MatchHud uses the result to render its ModelAnimator(3,4) preview when no weapon icon is selected. Predicate is exactly heldItemKind==1,distinct from isHoldingItem which tests!=-1;no physical item/art identity is inferred. Preserve full-int!=0 isExpired(45) call before reading kind,all other kind values,unused expiry result and wrapped hca.IE diagnostics;do not add weapon/HUD state checks to the predicate. Complete original-body SHA256 184643ed6fa96ccfd8b055d42471bc9d8960d7454c8768c45d909564c274eccd. Naming only.5complete original bodies,all15compiler-bound callers,134field declarations/134owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Player.usesHeldItemHudPreview(I)Z"
+    },
+    {
       "symbol": "M:hca.t(B)V",
       "originalName": "t",
       "to": "resetMatchProgress",
@@ -42082,6 +42138,14 @@
       "evidence": "Subtract the three supplied origin coordinates,apply the supplied3x3float transform,compute vector length and atan2/asin spherical UVs,add the vertical offset and apply the original orientation-dependent quarter-turn/sign transforms. Preserve subtraction overflow,exact expression/FP order,zero-length NaN behavior,early byte-guard return after coordinate subtraction,output index1 before0 writes and aliasing between input matrix/output arrays. Complete original-body SHA256 129aa91dc60f079d46c85967713cba7ec0bca1b67d4cc66e231b0a837ea9389f. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V"
+    },
+    {
+      "symbol": "M:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V",
+      "originalName": "a",
+      "to": "completeUsernameQuery",
+      "evidence": "Complete the username-query result consumed by requestOrReuseUsernameQuery. Publish complete state before selecting reply. Codes100..105store suggestions before constructing suggestion result;255builds success with age<13flag then clears suggestions;other codes construct failure from message and full status. Preserve array aliases,factory/assignment order,trailing -13%((byte+59)/56)after result publication and wrapped diagnostics. Keep the existing success factory binding to the full-int helper with first argument97;do not narrow its descriptor or merge registration completion. Complete original-body SHA256 fdb02e740f67b9c4eae453e5e34946ba337ecdea46c2a293281514832a86c69f. Naming only.5complete selected bodies,17compiler-bound callers,48field declarations/32owned,5supporting classes,14purpose witnesses and two complete unchanged full-int helper bodies reviewed. Preserve descriptors,all integer/byte/long domains,unused guards,modifiers/visibility,fields/parameters/locals,literals,integer overflow and division,casts,aliases/partial writes,allocation/call/exception order and diagnostics. Retain2Iformatter calls and1Isuccess-reply call without narrowing;both byte companions remain unchanged. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V"
     },
     {
       "symbol": "M:ifa.b(B)V",
@@ -71940,6 +72004,14 @@
       "renamedSymbol": "M:UnlockEntry.releaseStatics(B)V"
     },
     {
+      "symbol": "M:taa.a(BIII)V",
+      "originalName": "a",
+      "to": "drawInstructionControlIcon",
+      "evidence": "Draw a control icon or composite control-icon group on InstructionsScreen. Eight caller sites display alternating single glyphs and multi-glyph controls. Preserve exact0..7/8/9/10/11dispatch,fragment8..16indices,all width/height calls,half-width shifts,draw order,partial draws/null/bounds failures,unsupported-code no-draw behavior,and byte>=-106late recursive call(byte-56,127,63,-18). Do not infer particular key labels or recenter composite art. Complete original-body SHA256 aa5f703238b009a8cd6fbe9af1ca87bfb04d9c685e2f5cfc7f59ec0eff21f23e. Naming only.5complete selected bodies,17compiler-bound callers,48field declarations/32owned,5supporting classes,14purpose witnesses and two complete unchanged full-int helper bodies reviewed. Preserve descriptors,all integer/byte/long domains,unused guards,modifiers/visibility,fields/parameters/locals,literals,integer overflow and division,casts,aliases/partial writes,allocation/call/exception order and diagnostics. Retain2Iformatter calls and1Isuccess-reply call without narrowing;both byte companions remain unchanged. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnlockEntry.drawInstructionControlIcon(BIII)V"
+    },
+    {
       "symbol": "M:taa.a(I)I",
       "originalName": "a",
       "to": "getIndex",
@@ -80156,6 +80228,14 @@
       "renamedSymbol": "M:StatusEffect.getKind(B)I"
     },
     {
+      "symbol": "M:wf.a(BLhca;)Z",
+      "originalName": "a",
+      "to": "canSkipTimedTracking",
+      "evidence": "Determine whether a status effect can skip the timed-tracking queue. Player.addStatusEffect appends only when this returns false;the existing needsTimedTracking predicate tests kind<6. Preserve immediate false for timed kinds before byte arithmetic,otherwise kind read and empty kind6block,-41%((byte-43)/44),then true. Player argument is unused normally and only formatted in exception diagnostics. Preserve all kinds/byte/Player domains,early returns,copy wrong-guard caller and wrapped exceptions;do not apply or activate an effect here. Complete original-body SHA256 d02467e7c8667bae8630f729bc7f8210d236ef9bc0f8c6ff0915db442180cd27. Naming only.5complete original bodies,all15compiler-bound callers,134field declarations/134owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatusEffect.canSkipTimedTracking(BLPlayer;)Z"
+    },
+    {
       "symbol": "M:wf.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -82618,7 +82698,7 @@
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#0",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#0",
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#0",
       "originalName": "L31",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -82629,7 +82709,7 @@
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#1",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#1",
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#1",
       "originalName": "L36",
       "renamedName": "scanLoop2",
       "declaration": {
@@ -82640,7 +82720,7 @@
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#2",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#2",
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#2",
       "originalName": "L5",
       "renamedName": "scanLoop3",
       "declaration": {
@@ -82651,7 +82731,7 @@
     },
     {
       "symbol": "B:f.a(IZIJI)Ljava/lang/String;#3",
-      "renamedSymbol": "B:ComponentTargetList.a(IZIJI)Ljava/lang/String;#3",
+      "renamedSymbol": "B:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#3",
       "originalName": "L10",
       "renamedName": "scanLoop4",
       "declaration": {
@@ -179462,7 +179542,7 @@
     },
     {
       "symbol": "L:ak.g(I)V#0",
-      "renamedSymbol": "L:LoadLevelCommand.g(I)V#0",
+      "renamedSymbol": "L:LoadLevelCommand.finishLoginProgress(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -179473,7 +179553,7 @@
     },
     {
       "symbol": "L:ak.g(I)V#1",
-      "renamedSymbol": "L:LoadLevelCommand.g(I)V#1",
+      "renamedSymbol": "L:LoadLevelCommand.finishLoginProgress(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -181640,7 +181720,7 @@
     },
     {
       "symbol": "L:ana.a(IBIII)V#0",
-      "renamedSymbol": "L:DarknessBehaviour.a(IBIII)V#0",
+      "renamedSymbol": "L:DarknessBehaviour.onDarknessAreaEffect(IBIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -257617,7 +257697,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#0",
       "originalName": "discarded$103",
       "renamedName": "discarded$103",
       "declaration": {
@@ -257628,7 +257708,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#1",
       "originalName": "discarded$104",
       "renamedName": "discarded$104",
       "declaration": {
@@ -257639,7 +257719,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#10",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#10",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#10",
       "originalName": "discarded$89",
       "renamedName": "discarded$89",
       "declaration": {
@@ -257650,7 +257730,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#11",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#11",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#11",
       "originalName": "discarded$90",
       "renamedName": "discarded$90",
       "declaration": {
@@ -257661,7 +257741,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#12",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#12",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#12",
       "originalName": "discarded$91",
       "renamedName": "discarded$91",
       "declaration": {
@@ -257672,7 +257752,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#13",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#13",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#13",
       "originalName": "discarded$92",
       "renamedName": "discarded$92",
       "declaration": {
@@ -257683,7 +257763,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#14",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#14",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#14",
       "originalName": "discarded$99",
       "renamedName": "discarded$99",
       "declaration": {
@@ -257694,7 +257774,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#15",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#15",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#15",
       "originalName": "discarded$100",
       "renamedName": "discarded$100",
       "declaration": {
@@ -257705,7 +257785,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#16",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#16",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#16",
       "originalName": "discarded$101",
       "renamedName": "discarded$101",
       "declaration": {
@@ -257716,7 +257796,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#17",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#17",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#17",
       "originalName": "discarded$102",
       "renamedName": "discarded$102",
       "declaration": {
@@ -257727,7 +257807,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#18",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#18",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#18",
       "originalName": "discarded$96",
       "renamedName": "discarded$96",
       "declaration": {
@@ -257738,7 +257818,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#19",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#19",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#19",
       "originalName": "discarded$97",
       "renamedName": "discarded$97",
       "declaration": {
@@ -257749,7 +257829,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#2",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#2",
       "originalName": "discarded$105",
       "renamedName": "discarded$105",
       "declaration": {
@@ -257760,7 +257840,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#20",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#20",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#20",
       "originalName": "discarded$98",
       "renamedName": "discarded$98",
       "declaration": {
@@ -257771,7 +257851,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#21",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#21",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#21",
       "originalName": "discarded$93",
       "renamedName": "discarded$93",
       "declaration": {
@@ -257782,7 +257862,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#22",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#22",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#22",
       "originalName": "discarded$94",
       "renamedName": "discarded$94",
       "declaration": {
@@ -257793,7 +257873,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#23",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#23",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#23",
       "originalName": "discarded$95",
       "renamedName": "discarded$95",
       "declaration": {
@@ -257804,7 +257884,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#24",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#24",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#24",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -257815,7 +257895,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#25",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#25",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#25",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -257826,7 +257906,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#26",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#26",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#26",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -257837,7 +257917,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#27",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#27",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#27",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -257848,7 +257928,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#28",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#28",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#28",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -257859,7 +257939,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#29",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#29",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#29",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -257870,7 +257950,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#3",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#3",
       "originalName": "discarded$106",
       "renamedName": "discarded$106",
       "declaration": {
@@ -257881,7 +257961,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#30",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#30",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#30",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -257892,7 +257972,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#4",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#4",
       "originalName": "discarded$107",
       "renamedName": "discarded$107",
       "declaration": {
@@ -257903,7 +257983,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#5",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#5",
       "originalName": "discarded$108",
       "renamedName": "discarded$108",
       "declaration": {
@@ -257914,7 +257994,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#6",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#6",
       "originalName": "discarded$85",
       "renamedName": "discarded$85",
       "declaration": {
@@ -257925,7 +258005,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#7",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#7",
       "originalName": "discarded$86",
       "renamedName": "discarded$86",
       "declaration": {
@@ -257936,7 +258016,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#8",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#8",
       "originalName": "discarded$87",
       "renamedName": "discarded$87",
       "declaration": {
@@ -257947,7 +258027,7 @@
     },
     {
       "symbol": "L:f.a(IZIJI)Ljava/lang/String;#9",
-      "renamedSymbol": "L:ComponentTargetList.a(IZIJI)Ljava/lang/String;#9",
+      "renamedSymbol": "L:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#9",
       "originalName": "discarded$88",
       "renamedName": "discarded$88",
       "declaration": {
@@ -274634,7 +274714,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#0",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#0",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -274645,7 +274725,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#1",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#1",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -274656,7 +274736,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#2",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#2",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#2",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -274667,7 +274747,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#3",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#3",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -274678,7 +274758,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#4",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#4",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -274689,7 +274769,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#5",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#5",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -274700,7 +274780,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#6",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#6",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274711,7 +274791,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#7",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#7",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#7",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -274722,7 +274802,7 @@
     },
     {
       "symbol": "L:fsa.a(Ldg;I)Z#8",
-      "renamedSymbol": "L:Trap.a(LTrapModel;I)Z#8",
+      "renamedSymbol": "L:Trap.canAttachModel(LTrapModel;I)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -276603,7 +276683,7 @@
     },
     {
       "symbol": "L:fsa.b(BI)V#0",
-      "renamedSymbol": "L:Trap.b(BI)V#0",
+      "renamedSymbol": "L:Trap.onBehaviourAttached(BI)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -283544,7 +283624,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#0",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#0",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -283555,7 +283635,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#1",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#1",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -283566,7 +283646,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#2",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#2",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -283577,7 +283657,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#3",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#3",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -283588,7 +283668,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#4",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#4",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -283599,7 +283679,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#5",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#5",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -283610,7 +283690,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#6",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#6",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -283621,7 +283701,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#7",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#7",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -283632,7 +283712,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#8",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#8",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -283643,7 +283723,7 @@
     },
     {
       "symbol": "L:gh.a(Lkh;B)V#9",
-      "renamedSymbol": "L:HardwareSprite.a(LBitPacketBuffer;B)V#9",
+      "renamedSymbol": "L:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -307865,7 +307945,7 @@
     },
     {
       "symbol": "L:hca.s(I)Z#0",
-      "renamedSymbol": "L:Player.s(I)Z#0",
+      "renamedSymbol": "L:Player.usesHeldItemHudPreview(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -307876,7 +307956,7 @@
     },
     {
       "symbol": "L:hca.s(I)Z#1",
-      "renamedSymbol": "L:Player.s(I)Z#1",
+      "renamedSymbol": "L:Player.usesHeldItemHudPreview(I)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -307887,7 +307967,7 @@
     },
     {
       "symbol": "L:hca.s(I)Z#2",
-      "renamedSymbol": "L:Player.s(I)Z#2",
+      "renamedSymbol": "L:Player.usesHeldItemHudPreview(I)Z#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -307898,7 +307978,7 @@
     },
     {
       "symbol": "L:hca.s(I)Z#3",
-      "renamedSymbol": "L:Player.s(I)Z#3",
+      "renamedSymbol": "L:Player.usesHeldItemHudPreview(I)Z#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -322044,7 +322124,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#0",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#0",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -322055,7 +322135,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#1",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#1",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -322066,7 +322146,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#10",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#10",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -322077,7 +322157,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#11",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#11",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#11",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -322088,7 +322168,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#12",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#12",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#12",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -322099,7 +322179,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#13",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#13",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -322110,7 +322190,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#2",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#2",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -322121,7 +322201,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#3",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#3",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#3",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -322132,7 +322212,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#4",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#4",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -322143,7 +322223,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#5",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#5",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#5",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -322154,7 +322234,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#6",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#6",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#6",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -322165,7 +322245,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#7",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#7",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#7",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -322176,7 +322256,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#8",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#8",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#8",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -322187,7 +322267,7 @@
     },
     {
       "symbol": "L:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#9",
-      "renamedSymbol": "L:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#9",
+      "renamedSymbol": "L:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -516304,7 +516384,7 @@
     },
     {
       "symbol": "L:taa.a(BIII)V#0",
-      "renamedSymbol": "L:UnlockEntry.a(BIII)V#0",
+      "renamedSymbol": "L:UnlockEntry.drawInstructionControlIcon(BIII)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -516315,7 +516395,7 @@
     },
     {
       "symbol": "L:taa.a(BIII)V#1",
-      "renamedSymbol": "L:UnlockEntry.a(BIII)V#1",
+      "renamedSymbol": "L:UnlockEntry.drawInstructionControlIcon(BIII)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -516326,7 +516406,7 @@
     },
     {
       "symbol": "L:taa.a(BIII)V#2",
-      "renamedSymbol": "L:UnlockEntry.a(BIII)V#2",
+      "renamedSymbol": "L:UnlockEntry.drawInstructionControlIcon(BIII)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -516337,7 +516417,7 @@
     },
     {
       "symbol": "L:taa.a(BIII)V#3",
-      "renamedSymbol": "L:UnlockEntry.a(BIII)V#3",
+      "renamedSymbol": "L:UnlockEntry.drawInstructionControlIcon(BIII)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -516348,7 +516428,7 @@
     },
     {
       "symbol": "L:taa.a(BIII)V#4",
-      "renamedSymbol": "L:UnlockEntry.a(BIII)V#4",
+      "renamedSymbol": "L:UnlockEntry.drawInstructionControlIcon(BIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -516359,7 +516439,7 @@
     },
     {
       "symbol": "L:taa.a(BIII)V#5",
-      "renamedSymbol": "L:UnlockEntry.a(BIII)V#5",
+      "renamedSymbol": "L:UnlockEntry.drawInstructionControlIcon(BIII)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -572195,7 +572275,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#0",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#0",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -572206,7 +572286,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#1",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#1",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -572217,7 +572297,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#2",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#2",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -572228,7 +572308,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#3",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#3",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#3",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -572239,7 +572319,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#4",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#4",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#4",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -572250,7 +572330,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#5",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#5",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -572261,7 +572341,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#6",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#6",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#6",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -572272,7 +572352,7 @@
     },
     {
       "symbol": "L:wf.a(BLhca;)Z#7",
-      "renamedSymbol": "L:StatusEffect.a(BLPlayer;)Z#7",
+      "renamedSymbol": "L:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -593084,9 +593164,9 @@
     },
     {
       "symbol": "M:ak.g(I)V",
-      "renamedSymbol": "M:LoadLevelCommand.g(I)V",
+      "renamedSymbol": "M:LoadLevelCommand.finishLoginProgress(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "finishLoginProgress",
       "declaration": {
         "file": "ak.java",
         "start": 3360,
@@ -593634,9 +593714,9 @@
     },
     {
       "symbol": "M:ana.a(IBIII)V",
-      "renamedSymbol": "M:DarknessBehaviour.a(IBIII)V",
+      "renamedSymbol": "M:DarknessBehaviour.onDarknessAreaEffect(IBIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onDarknessAreaEffect",
       "declaration": {
         "file": "ana.java",
         "start": 14975,
@@ -615623,9 +615703,9 @@
     },
     {
       "symbol": "M:f.a(IZIJI)Ljava/lang/String;",
-      "renamedSymbol": "M:ComponentTargetList.a(IZIJI)Ljava/lang/String;",
+      "renamedSymbol": "M:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "formatFixedPointNumber",
       "declaration": {
         "file": "f.java",
         "start": 5352,
@@ -619825,9 +619905,9 @@
     },
     {
       "symbol": "M:fsa.a(Ldg;I)Z",
-      "renamedSymbol": "M:Trap.a(LTrapModel;I)Z",
+      "renamedSymbol": "M:Trap.canAttachModel(LTrapModel;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "canAttachModel",
       "declaration": {
         "file": "fsa.java",
         "start": 49039,
@@ -620067,9 +620147,9 @@
     },
     {
       "symbol": "M:fsa.b(BI)V",
-      "renamedSymbol": "M:Trap.b(BI)V",
+      "renamedSymbol": "M:Trap.onBehaviourAttached(BI)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "onBehaviourAttached",
       "declaration": {
         "file": "fsa.java",
         "start": 81037,
@@ -622696,9 +622776,9 @@
     },
     {
       "symbol": "M:gh.a(Lkh;B)V",
-      "renamedSymbol": "M:HardwareSprite.a(LBitPacketBuffer;B)V",
+      "renamedSymbol": "M:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readRoomSelectionFlags",
       "declaration": {
         "file": "gh.java",
         "start": 4270,
@@ -627206,9 +627286,9 @@
     },
     {
       "symbol": "M:hca.s(I)Z",
-      "renamedSymbol": "M:Player.s(I)Z",
+      "renamedSymbol": "M:Player.usesHeldItemHudPreview(I)Z",
       "originalName": "s",
-      "renamedName": "s",
+      "renamedName": "usesHeldItemHudPreview",
       "declaration": {
         "file": "hca.java",
         "start": 121246,
@@ -630968,9 +631048,9 @@
     },
     {
       "symbol": "M:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V",
-      "renamedSymbol": "M:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V",
+      "renamedSymbol": "M:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "completeUsernameQuery",
       "declaration": {
         "file": "ifa.java",
         "start": 7285,
@@ -682459,9 +682539,9 @@
     },
     {
       "symbol": "M:taa.a(BIII)V",
-      "renamedSymbol": "M:UnlockEntry.a(BIII)V",
+      "renamedSymbol": "M:UnlockEntry.drawInstructionControlIcon(BIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawInstructionControlIcon",
       "declaration": {
         "file": "taa.java",
         "start": 700,
@@ -695538,9 +695618,9 @@
     },
     {
       "symbol": "M:wf.a(BLhca;)Z",
-      "renamedSymbol": "M:StatusEffect.a(BLPlayer;)Z",
+      "renamedSymbol": "M:StatusEffect.canSkipTimedTracking(BLPlayer;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "canSkipTimedTracking",
       "declaration": {
         "file": "wf.java",
         "start": 2122,
@@ -704052,7 +704132,7 @@
     },
     {
       "symbol": "P:ak.g(I)V#0",
-      "renamedSymbol": "P:LoadLevelCommand.g(I)V#0",
+      "renamedSymbol": "P:LoadLevelCommand.finishLoginProgress(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -705229,7 +705309,7 @@
     },
     {
       "symbol": "P:ana.a(IBIII)V#0",
-      "renamedSymbol": "P:DarknessBehaviour.a(IBIII)V#0",
+      "renamedSymbol": "P:DarknessBehaviour.onDarknessAreaEffect(IBIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -705240,7 +705320,7 @@
     },
     {
       "symbol": "P:ana.a(IBIII)V#1",
-      "renamedSymbol": "P:DarknessBehaviour.a(IBIII)V#1",
+      "renamedSymbol": "P:DarknessBehaviour.onDarknessAreaEffect(IBIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -705251,7 +705331,7 @@
     },
     {
       "symbol": "P:ana.a(IBIII)V#2",
-      "renamedSymbol": "P:DarknessBehaviour.a(IBIII)V#2",
+      "renamedSymbol": "P:DarknessBehaviour.onDarknessAreaEffect(IBIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -705262,7 +705342,7 @@
     },
     {
       "symbol": "P:ana.a(IBIII)V#3",
-      "renamedSymbol": "P:DarknessBehaviour.a(IBIII)V#3",
+      "renamedSymbol": "P:DarknessBehaviour.onDarknessAreaEffect(IBIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -705273,7 +705353,7 @@
     },
     {
       "symbol": "P:ana.a(IBIII)V#4",
-      "renamedSymbol": "P:DarknessBehaviour.a(IBIII)V#4",
+      "renamedSymbol": "P:DarknessBehaviour.onDarknessAreaEffect(IBIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -752683,7 +752763,7 @@
     },
     {
       "symbol": "P:f.a(IZIJI)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ComponentTargetList.a(IZIJI)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -752694,7 +752774,7 @@
     },
     {
       "symbol": "P:f.a(IZIJI)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ComponentTargetList.a(IZIJI)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -752705,7 +752785,7 @@
     },
     {
       "symbol": "P:f.a(IZIJI)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ComponentTargetList.a(IZIJI)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -752716,7 +752796,7 @@
     },
     {
       "symbol": "P:f.a(IZIJI)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ComponentTargetList.a(IZIJI)Ljava/lang/String;#3",
+      "renamedSymbol": "P:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -752727,7 +752807,7 @@
     },
     {
       "symbol": "P:f.a(IZIJI)Ljava/lang/String;#4",
-      "renamedSymbol": "P:ComponentTargetList.a(IZIJI)Ljava/lang/String;#4",
+      "renamedSymbol": "P:ComponentTargetList.formatFixedPointNumber(IZIJI)Ljava/lang/String;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -761439,7 +761519,7 @@
     },
     {
       "symbol": "P:fsa.a(Ldg;I)Z#0",
-      "renamedSymbol": "P:Trap.a(LTrapModel;I)Z#0",
+      "renamedSymbol": "P:Trap.canAttachModel(LTrapModel;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -761450,7 +761530,7 @@
     },
     {
       "symbol": "P:fsa.a(Ldg;I)Z#1",
-      "renamedSymbol": "P:Trap.a(LTrapModel;I)Z#1",
+      "renamedSymbol": "P:Trap.canAttachModel(LTrapModel;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -762066,7 +762146,7 @@
     },
     {
       "symbol": "P:fsa.b(BI)V#0",
-      "renamedSymbol": "P:Trap.b(BI)V#0",
+      "renamedSymbol": "P:Trap.onBehaviourAttached(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -762077,7 +762157,7 @@
     },
     {
       "symbol": "P:fsa.b(BI)V#1",
-      "renamedSymbol": "P:Trap.b(BI)V#1",
+      "renamedSymbol": "P:Trap.onBehaviourAttached(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -767247,7 +767327,7 @@
     },
     {
       "symbol": "P:gh.a(Lkh;B)V#0",
-      "renamedSymbol": "P:HardwareSprite.a(LBitPacketBuffer;B)V#0",
+      "renamedSymbol": "P:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -767258,7 +767338,7 @@
     },
     {
       "symbol": "P:gh.a(Lkh;B)V#1",
-      "renamedSymbol": "P:HardwareSprite.a(LBitPacketBuffer;B)V#1",
+      "renamedSymbol": "P:HardwareSprite.readRoomSelectionFlags(LBitPacketBuffer;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -777246,7 +777326,7 @@
     },
     {
       "symbol": "P:hca.s(I)Z#0",
-      "renamedSymbol": "P:Player.s(I)Z#0",
+      "renamedSymbol": "P:Player.usesHeldItemHudPreview(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -786442,7 +786522,7 @@
     },
     {
       "symbol": "P:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#0",
-      "renamedSymbol": "P:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#0",
+      "renamedSymbol": "P:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#0",
       "originalName": "args",
       "renamedName": "args",
       "declaration": {
@@ -786453,7 +786533,7 @@
     },
     {
       "symbol": "P:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#1",
-      "renamedSymbol": "P:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#1",
+      "renamedSymbol": "P:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -786464,7 +786544,7 @@
     },
     {
       "symbol": "P:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#2",
-      "renamedSymbol": "P:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#2",
+      "renamedSymbol": "P:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -786475,7 +786555,7 @@
     },
     {
       "symbol": "P:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V#3",
-      "renamedSymbol": "P:WaveformOperator.a([Ljava/lang/String;ILjava/lang/String;B)V#3",
+      "renamedSymbol": "P:WaveformOperator.completeUsernameQuery([Ljava/lang/String;ILjava/lang/String;B)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -910379,7 +910459,7 @@
     },
     {
       "symbol": "P:taa.a(BIII)V#0",
-      "renamedSymbol": "P:UnlockEntry.a(BIII)V#0",
+      "renamedSymbol": "P:UnlockEntry.drawInstructionControlIcon(BIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910390,7 +910470,7 @@
     },
     {
       "symbol": "P:taa.a(BIII)V#1",
-      "renamedSymbol": "P:UnlockEntry.a(BIII)V#1",
+      "renamedSymbol": "P:UnlockEntry.drawInstructionControlIcon(BIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -910401,7 +910481,7 @@
     },
     {
       "symbol": "P:taa.a(BIII)V#2",
-      "renamedSymbol": "P:UnlockEntry.a(BIII)V#2",
+      "renamedSymbol": "P:UnlockEntry.drawInstructionControlIcon(BIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -910412,7 +910492,7 @@
     },
     {
       "symbol": "P:taa.a(BIII)V#3",
-      "renamedSymbol": "P:UnlockEntry.a(BIII)V#3",
+      "renamedSymbol": "P:UnlockEntry.drawInstructionControlIcon(BIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -937483,7 +937563,7 @@
     },
     {
       "symbol": "P:wf.a(BLhca;)Z#0",
-      "renamedSymbol": "P:StatusEffect.a(BLPlayer;)Z#0",
+      "renamedSymbol": "P:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937494,7 +937574,7 @@
     },
     {
       "symbol": "P:wf.a(BLhca;)Z#1",
-      "renamedSymbol": "P:StatusEffect.a(BLPlayer;)Z#1",
+      "renamedSymbol": "P:StatusEffect.canSkipTimedTracking(BLPlayer;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -944131,7 +944211,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "7d1e1dabcad4d4daed97f3b6636c4855fc0ce22659e14a486eb26009e89b7d7f",
+      "outputSha256": "ced9298cd7ccd59719cd0994c5dd69de07c4b26938f47d0cf80e21ad0d13d36b",
       "edits": [
         {
           "start": 96,
@@ -958183,6 +958263,13 @@
           "renamed": "HardwareSprite"
         },
         {
+          "start": 34892,
+          "end": 34893,
+          "symbol": "M:gh.a(Lkh;B)V",
+          "original": "a",
+          "renamed": "readRoomSelectionFlags"
+        },
+        {
           "start": 35002,
           "end": 35005,
           "symbol": "C:dea",
@@ -971865,7 +971952,7 @@
       "original": "ak.java",
       "renamed": "LoadLevelCommand.java",
       "inputSha256": "f24c5f49ce6801470c987db00b28b37a1cbbba8f85467a4a7bece2673f49100e",
-      "outputSha256": "b5ea6d039580f4c5b255a851eda781da9f4f9f19a080dbea299f23043b4cabe3",
+      "outputSha256": "46ca55ea2735768f66c8a457ecb0a7f30825f7c97ac252eae80c704051905f43",
       "edits": [
         {
           "start": 50,
@@ -972048,6 +972135,13 @@
           "symbol": "M:ak.<init>(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)V",
           "original": "ak",
           "renamed": "LoadLevelCommand"
+        },
+        {
+          "start": 3360,
+          "end": 3361,
+          "symbol": "M:ak.g(I)V",
+          "original": "g",
+          "renamed": "finishLoginProgress"
         },
         {
           "start": 3462,
@@ -976359,7 +976453,7 @@
       "original": "ana.java",
       "renamed": "DarknessBehaviour.java",
       "inputSha256": "2d277f3048619374a2317bb7b26652985216c889d8d85d84167f5fa8cd80d135",
-      "outputSha256": "019c88a095b34d8aeeec8df08f9acd340e1a080ff7dd06adcd173b2859a21860",
+      "outputSha256": "605d30253a5390680b228a3021b81c5f70ad7d823d2f16492b4be7dca47325f1",
       "edits": [
         {
           "start": 50,
@@ -976570,6 +976664,13 @@
           "symbol": "M:fsa.a(ZI)V",
           "original": "a",
           "renamed": "setAlwaysBlocksBeams"
+        },
+        {
+          "start": 2536,
+          "end": 2537,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 2571,
@@ -977013,6 +977114,13 @@
           "renamed": "min"
         },
         {
+          "start": 9042,
+          "end": 9043,
+          "symbol": "M:ana.a(IBIII)V",
+          "original": "a",
+          "renamed": "onDarknessAreaEffect"
+        },
+        {
           "start": 9070,
           "end": 9077,
           "symbol": "F:up.field_b:I",
@@ -977109,6 +977217,13 @@
           "symbol": "M:nv.m(B)Lhca;",
           "original": "m",
           "renamed": "getPlayer"
+        },
+        {
+          "start": 11035,
+          "end": 11036,
+          "symbol": "M:ana.a(IBIII)V",
+          "original": "a",
+          "renamed": "onDarknessAreaEffect"
         },
         {
           "start": 11042,
@@ -977536,6 +977651,13 @@
           "symbol": "C:caa",
           "original": "caa",
           "renamed": "UrlDownloadRequest"
+        },
+        {
+          "start": 14975,
+          "end": 14976,
+          "symbol": "M:ana.a(IBIII)V",
+          "original": "a",
+          "renamed": "onDarknessAreaEffect"
         },
         {
           "start": 15114,
@@ -1082903,7 +1083025,7 @@
       "original": "dta.java",
       "renamed": "MatchHud.java",
       "inputSha256": "80e4b18b2bbaccb57c2dadc4701d3d7b4d6cdc1a9ce73b703409644231e7f31d",
-      "outputSha256": "71aec1a7f81eb78cb860f6c687d3367a69e4be146bb021ea7b340d280b6735ab",
+      "outputSha256": "c02b180737e6234f5c687e73213ca8ab082e133b8496009253238b5671202a57",
       "edits": [
         {
           "start": 50,
@@ -1083485,6 +1083607,13 @@
           "symbol": "M:hca.K(I)Lroa;",
           "original": "K",
           "renamed": "getWeapon"
+        },
+        {
+          "start": 5684,
+          "end": 5685,
+          "symbol": "M:hca.s(I)Z",
+          "original": "s",
+          "renamed": "usesHeldItemHudPreview"
         },
         {
           "start": 5749,
@@ -1116972,7 +1117101,7 @@
       "original": "f.java",
       "renamed": "ComponentTargetList.java",
       "inputSha256": "4ab0ac011e015e8932ebb10f4f2bb6c1592be49b9cc06cb1b799f60b158f1ea3",
-      "outputSha256": "dc9602ee11c45cd89da1f07da8c982b018567a8603b8d2f41288ec33e4e4b0dc",
+      "outputSha256": "95410e36f630ad37a62394d037b244a57fba4a9dc82fc5e5c6fed1721a561ae6",
       "edits": [
         {
           "start": 71,
@@ -1117393,6 +1117522,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "Switchable"
+        },
+        {
+          "start": 5352,
+          "end": 5353,
+          "symbol": "M:f.a(IZIJI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatFixedPointNumber"
         },
         {
           "start": 7086,
@@ -1149385,7 +1149521,7 @@
       "original": "fra.java",
       "renamed": "ConstantEffectBehaviour.java",
       "inputSha256": "acfed07549a83851456f3bc5a4d293b79b9903fc11725e2172b9ee87607796dc",
-      "outputSha256": "5308760f5cfd413e4f2b4d1bb87960f326cd0ade93a434e92e5c3df9d6a9064d",
+      "outputSha256": "df6fd261aa6cb86d41e12ae5ba1245e7ceba5d1aecfce194365591daabedc9b6",
       "edits": [
         {
           "start": 50,
@@ -1149715,6 +1149851,13 @@
           "symbol": "M:nv.e(I)Lfsa;",
           "original": "e",
           "renamed": "getRoot"
+        },
+        {
+          "start": 2399,
+          "end": 2400,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 2488,
@@ -1150150,7 +1150293,7 @@
       "original": "fsa.java",
       "renamed": "Trap.java",
       "inputSha256": "1034078d241b213e09e0736d236bee026ca2bd6e138efd3b5b3295df3a02c180",
-      "outputSha256": "81724587668ec0a7e40cd24f7f242bead1dfbc8ea73cac603ba0d6f8b7cb16a4",
+      "outputSha256": "42d251403b88f0c0ea4c9135e7f265e6f8e5cc0efa9cee5b4294a8a3bfad7a77",
       "edits": [
         {
           "start": 50,
@@ -1151012,6 +1151155,13 @@
           "symbol": "M:vna.e(I)Lvg;",
           "original": "e",
           "renamed": "next"
+        },
+        {
+          "start": 4735,
+          "end": 4736,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 4785,
@@ -1157181,6 +1157331,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 49039,
+          "end": 49040,
+          "symbol": "M:fsa.a(Ldg;I)Z",
+          "original": "a",
+          "renamed": "canAttachModel"
+        },
+        {
           "start": 49041,
           "end": 49043,
           "symbol": "C:dg",
@@ -1158607,6 +1158764,13 @@
           "symbol": "M:vna.f(I)Lvg;",
           "original": "f",
           "renamed": "first"
+        },
+        {
+          "start": 60114,
+          "end": 60115,
+          "symbol": "M:fsa.a(Ldg;I)Z",
+          "original": "a",
+          "renamed": "canAttachModel"
         },
         {
           "start": 60165,
@@ -1161561,6 +1161725,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 81037,
+          "end": 81038,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 81131,
@@ -1175045,7 +1175216,7 @@
       "original": "gh.java",
       "renamed": "HardwareSprite.java",
       "inputSha256": "81c2b213c67d8a678785b44e019a4b53ea6e6f02888f0d712e2c8e0e373a758b",
-      "outputSha256": "54756c635a25075c3cba9d1eb19d60592979c763d0f8084d34e1c3eb236cc0e8",
+      "outputSha256": "e02271b54a1c629acd0b1cbbb14698a7545506afba05ab1a9cfc6ddb2ce53029",
       "edits": [
         {
           "start": 71,
@@ -1175545,6 +1175716,13 @@
           "renamed": "PlayerContextMenu"
         },
         {
+          "start": 4270,
+          "end": 4271,
+          "symbol": "M:gh.a(Lkh;B)V",
+          "original": "a",
+          "renamed": "readRoomSelectionFlags"
+        },
+        {
           "start": 4272,
           "end": 4274,
           "symbol": "C:kh",
@@ -1175627,6 +1175805,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "HardwareSprite"
+        },
+        {
+          "start": 5102,
+          "end": 5103,
+          "symbol": "M:gh.a(Lkh;B)V",
+          "original": "a",
+          "renamed": "readRoomSelectionFlags"
         },
         {
           "start": 5105,
@@ -1196569,7 +1196754,7 @@
       "original": "hca.java",
       "renamed": "Player.java",
       "inputSha256": "c9618dae84112a3a45470373b6b1e97cc89c5043279566ce57e3cbf95f966f50",
-      "outputSha256": "a5f5ba66b3fdeb3a037e3fa8bdc782ab66ec2de377ba7dc7d3ace1bacaaec432",
+      "outputSha256": "16448f6a1d56c34b1f737137afefa3519e167612d60e4bf6e65cfbcba8e50d33",
       "edits": [
         {
           "start": 50,
@@ -1202590,6 +1202775,13 @@
           "renamed": "StatusEffect"
         },
         {
+          "start": 63275,
+          "end": 63276,
+          "symbol": "M:wf.a(BLhca;)Z",
+          "original": "a",
+          "renamed": "canSkipTimedTracking"
+        },
+        {
           "start": 63315,
           "end": 63323,
           "symbol": "F:hca.field_fb:Lvna;",
@@ -1206522,6 +1206714,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 121246,
+          "end": 121247,
+          "symbol": "M:hca.s(I)Z",
+          "original": "s",
+          "renamed": "usesHeldItemHudPreview"
         },
         {
           "start": 121456,
@@ -1213173,7 +1213372,7 @@
       "original": "hi.java",
       "renamed": "ConveyorBehaviour.java",
       "inputSha256": "ea24487ffb5a31169c343e35a5e08ecd6d7dd7cc44b719142888040e16dd8524",
-      "outputSha256": "24a06853f6bfa203f9570e9d643eaa3485199d2fe4111df70011e011a979abd7",
+      "outputSha256": "0803a366bf502d9eae2e1a3c160fb38ef67999f19cca2e2761f5607d4b67ec87",
       "edits": [
         {
           "start": 50,
@@ -1213916,6 +1214115,13 @@
           "symbol": "M:nv.a(ZLfsa;)V",
           "original": "a",
           "renamed": "attachToTrap"
+        },
+        {
+          "start": 6046,
+          "end": 6047,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 6078,
@@ -1231860,7 +1232066,7 @@
       "original": "ifa.java",
       "renamed": "WaveformOperator.java",
       "inputSha256": "0a76a993a0ffb7ac31ceaefae8c83b32f212df8213c38766d9825c7c0c82deff",
-      "outputSha256": "62d975017c2fa33152eb9a987f8ce8ef2e9f2c5c3104ef7229c93e73871f11e4",
+      "outputSha256": "0975a7ba1dc3347499aa7123837a02c9e18ac6fdf3857fc0c8533a1045ac39fa",
       "edits": [
         {
           "start": 50,
@@ -1232092,6 +1232298,13 @@
           "symbol": "C:ou",
           "original": "ou",
           "renamed": "CourseGenerator"
+        },
+        {
+          "start": 7285,
+          "end": 7286,
+          "symbol": "M:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V",
+          "original": "a",
+          "renamed": "completeUsernameQuery"
         },
         {
           "start": 7889,
@@ -1240282,7 +1240495,7 @@
       "original": "im.java",
       "renamed": "PortalBehaviour.java",
       "inputSha256": "960a8f3e6b854d0c8cd2f44d2158d725f044a2fe45aea030667e391ed86a2c8b",
-      "outputSha256": "38ea9abe79aef738196fb3bfb14dac991d8b8a27ddc1eaeec4bb62c491cebf22",
+      "outputSha256": "42d11ba57fb930f9b8a781697ee96f506a36ae6341de2af8f509c39f5295a8dc",
       "edits": [
         {
           "start": 50,
@@ -1240647,6 +1240860,13 @@
           "symbol": "M:nv.a(ZLfsa;)V",
           "original": "a",
           "renamed": "attachToTrap"
+        },
+        {
+          "start": 5075,
+          "end": 5076,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 5164,
@@ -1291446,7 +1291666,7 @@
       "original": "jn.java",
       "renamed": "InstructionsScreen.java",
       "inputSha256": "a07795b4f7b8f2a6fd4cb93c83760588ba194946dfeda00f8be1bfab42212176",
-      "outputSha256": "4fa7bca20aa2088196fb8f819d0e7b398b8954e2616c069200ac0fc0dde54775",
+      "outputSha256": "fe70d67bd5494ed36ad42651c0baebd395c09619e39fb6418e21cd4dc7e78778",
       "edits": [
         {
           "start": 50,
@@ -1292541,11 +1292761,25 @@
           "renamed": "UnlockEntry"
         },
         {
+          "start": 6588,
+          "end": 6589,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
+        },
+        {
           "start": 6745,
           "end": 6748,
           "symbol": "C:taa",
           "original": "taa",
           "renamed": "UnlockEntry"
+        },
+        {
+          "start": 6749,
+          "end": 6750,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
         },
         {
           "start": 6810,
@@ -1292555,11 +1292789,25 @@
           "renamed": "UnlockEntry"
         },
         {
+          "start": 6814,
+          "end": 6815,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
+        },
+        {
           "start": 6876,
           "end": 6879,
           "symbol": "C:taa",
           "original": "taa",
           "renamed": "UnlockEntry"
+        },
+        {
+          "start": 6880,
+          "end": 6881,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
         },
         {
           "start": 6942,
@@ -1292569,11 +1292817,25 @@
           "renamed": "UnlockEntry"
         },
         {
+          "start": 6946,
+          "end": 6947,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
+        },
+        {
           "start": 7000,
           "end": 7003,
           "symbol": "C:taa",
           "original": "taa",
           "renamed": "UnlockEntry"
+        },
+        {
+          "start": 7004,
+          "end": 7005,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
         },
         {
           "start": 7058,
@@ -1292583,11 +1292845,25 @@
           "renamed": "UnlockEntry"
         },
         {
+          "start": 7062,
+          "end": 7063,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
+        },
+        {
           "start": 7117,
           "end": 7120,
           "symbol": "C:taa",
           "original": "taa",
           "renamed": "UnlockEntry"
+        },
+        {
+          "start": 7121,
+          "end": 7122,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
         },
         {
           "start": 7198,
@@ -1361058,7 +1361334,7 @@
       "original": "lpa.java",
       "renamed": "PlatformBehaviour.java",
       "inputSha256": "e7144c46735bcbf14cf15f36d709b826e03ae2dba4e15555926248d8739760ce",
-      "outputSha256": "5803e3e004ba7b5e02dabe4e1c30173475bcdd1a6427c2fcaefac00b1f8ad36b",
+      "outputSha256": "65c21ebadb1d070431edfd5bb3fefd39d06bc67ff1cf2e3c4953a7996816937a",
       "edits": [
         {
           "start": 71,
@@ -1361402,6 +1361678,13 @@
           "symbol": "M:nv.a(ZLfsa;)V",
           "original": "a",
           "renamed": "attachToTrap"
+        },
+        {
+          "start": 1916,
+          "end": 1917,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 1950,
@@ -1380820,7 +1381103,7 @@
       "original": "mo.java",
       "renamed": "PitBehaviour.java",
       "inputSha256": "edd8fd86635947187dcb1a74ce61250ee4e84e274308d2ea172daacd0ac258b6",
-      "outputSha256": "edf13c9bbc09414efd2bfc51f438d5e7f7c14cd467ee5090e24c1be7162f4741",
+      "outputSha256": "cf6ee0280ee111e479698bd92f1297eb8814ab97a9ed6f4adfff8f4decdb1b12",
       "edits": [
         {
           "start": 50,
@@ -1381276,6 +1381559,13 @@
           "symbol": "F:nv.field_g:Lfsa;",
           "original": "field_g",
           "renamed": "trap"
+        },
+        {
+          "start": 6611,
+          "end": 6612,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 6645,
@@ -1471774,7 +1472064,7 @@
       "original": "pk.java",
       "renamed": "HiscoresScreen.java",
       "inputSha256": "0a7812ef23c3ee01767a30fb5111f1ab4d4cbd3450277fd6e75298747c2bae22",
-      "outputSha256": "4ec631e77b609e9215e6313d26aaa9846fe1f1515a338bdbdbefd93f111cdf4d",
+      "outputSha256": "1a64b4312c02dfc23d4a961a14fae23bc2aa0779f5842d77566ca77e4e687fa0",
       "edits": [
         {
           "start": 50,
@@ -1472034,6 +1472324,13 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 3303,
+          "end": 3304,
+          "symbol": "M:f.a(IZIJI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatFixedPointNumber"
         },
         {
           "start": 3317,
@@ -1524321,7 +1524618,7 @@
       "original": "rea.java",
       "renamed": "CrusherBehaviour.java",
       "inputSha256": "2772d3b1c30cad8d0eda229ca37b75bf0e109512f708db26e387d1383493447c",
-      "outputSha256": "c629f14b86fe3ae21cb3e4d7e1fb51306398615677c25d16ad83d728c878a9ba",
+      "outputSha256": "4e9740bd870ebf6d47dac6e386badeca1f1f970370bfd0c4c370bf879362fc25",
       "edits": [
         {
           "start": 50,
@@ -1524511,6 +1524808,13 @@
           "symbol": "M:fsa.h(II)V",
           "original": "h",
           "renamed": "setObstructionLevel"
+        },
+        {
+          "start": 1321,
+          "end": 1322,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 1393,
@@ -1579416,7 +1579720,7 @@
       "original": "taa.java",
       "renamed": "UnlockEntry.java",
       "inputSha256": "0f116fae1179d11e9123a98bb14c9183f13f5f08e559080e77ca2a5391f78cef",
-      "outputSha256": "8113f9e288005e2078a69dbaec3591d5e65f0fe4830b7328d3d21afca2c32b51",
+      "outputSha256": "37095f17ded4ae388316d32056875b97f77f21dabf8ea610530ff6909998eda1",
       "edits": [
         {
           "start": 50,
@@ -1579501,6 +1579805,13 @@
           "symbol": "M:taa.c(I)I",
           "original": "c",
           "renamed": "getKind"
+        },
+        {
+          "start": 700,
+          "end": 701,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
         },
         {
           "start": 1037,
@@ -1579802,6 +1580113,13 @@
           "symbol": "C:taa",
           "original": "taa",
           "renamed": "UnlockEntry"
+        },
+        {
+          "start": 2447,
+          "end": 2448,
+          "symbol": "M:taa.a(BIII)V",
+          "original": "a",
+          "renamed": "drawInstructionControlIcon"
         },
         {
           "start": 2706,
@@ -1605209,7 +1605527,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "c8e1592f358f9a15ed8bd042d94cd92577950e4db128a069dcde5cf75be91f5e",
+      "outputSha256": "01b869d5041e23778e98463c56fe9bb9508b101401aa2bbce334efad38249e7a",
       "edits": [
         {
           "start": 53,
@@ -1605674,6 +1605992,13 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 2765,
+          "end": 2766,
+          "symbol": "M:ifa.a([Ljava/lang/String;ILjava/lang/String;B)V",
+          "original": "a",
+          "renamed": "completeUsernameQuery"
+        },
+        {
           "start": 2767,
           "end": 2770,
           "symbol": "C:dja",
@@ -1605952,6 +1606277,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "LoadLevelCommand"
+        },
+        {
+          "start": 3897,
+          "end": 3898,
+          "symbol": "M:ak.g(I)V",
+          "original": "g",
+          "renamed": "finishLoginProgress"
         },
         {
           "start": 3921,
@@ -1606864,6 +1607196,13 @@
           "renamed": "LoadLevelCommand"
         },
         {
+          "start": 10064,
+          "end": 10065,
+          "symbol": "M:ak.g(I)V",
+          "original": "g",
+          "renamed": "finishLoginProgress"
+        },
+        {
           "start": 10141,
           "end": 10144,
           "symbol": "C:fpa",
@@ -1606960,6 +1607299,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "LoadLevelCommand"
+        },
+        {
+          "start": 10493,
+          "end": 10494,
+          "symbol": "M:ak.g(I)V",
+          "original": "g",
+          "renamed": "finishLoginProgress"
         },
         {
           "start": 10573,
@@ -1608017,6 +1608363,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "LoadLevelCommand"
+        },
+        {
+          "start": 18860,
+          "end": 18861,
+          "symbol": "M:ak.g(I)V",
+          "original": "g",
+          "renamed": "finishLoginProgress"
         },
         {
           "start": 18892,
@@ -1622783,7 +1623136,7 @@
       "original": "ula.java",
       "renamed": "FuseBehaviour.java",
       "inputSha256": "323a4b917346f5ac4b7e9385285683f95e7d527a9b0cd162eba348458845a8e3",
-      "outputSha256": "814cfcd261690ddbf381919d33ed961a4bae523263a2356366d325e63e72d5cc",
+      "outputSha256": "d44c1e709766e7e82a4e4ade67f2f3c35bbb01812aa6362f7708830dca446ee6",
       "edits": [
         {
           "start": 50,
@@ -1623155,6 +1623508,13 @@
           "symbol": "M:nv.a(ZLfsa;)V",
           "original": "a",
           "renamed": "attachToTrap"
+        },
+        {
+          "start": 4971,
+          "end": 4972,
+          "symbol": "M:fsa.b(BI)V",
+          "original": "b",
+          "renamed": "onBehaviourAttached"
         },
         {
           "start": 5043,
@@ -1668507,7 +1668867,7 @@
       "original": "wf.java",
       "renamed": "StatusEffect.java",
       "inputSha256": "3a7b6f46e34d6d6e1b589462a8a7a1570f4175c958e19c9571f2d4467d340334",
-      "outputSha256": "ce1dbbf60fe86197be519db4eceff484c242a3a87431502e833450f23ba32a86",
+      "outputSha256": "588d33756bdc8333205b75d8bdf2b27412a1d951aae31b23b1b1a04b2d3aa037",
       "edits": [
         {
           "start": 50,
@@ -1668804,6 +1669164,13 @@
           "renamed": "Player"
         },
         {
+          "start": 1860,
+          "end": 1861,
+          "symbol": "M:wf.a(BLhca;)Z",
+          "original": "a",
+          "renamed": "canSkipTimedTracking"
+        },
+        {
           "start": 1875,
           "end": 1878,
           "symbol": "C:hca",
@@ -1668865,6 +1669232,13 @@
           "symbol": "M:wf.d(I)V",
           "original": "d",
           "renamed": "restart"
+        },
+        {
+          "start": 2122,
+          "end": 2123,
+          "symbol": "M:wf.a(BLhca;)Z",
+          "original": "a",
+          "renamed": "canSkipTimedTracking"
         },
         {
           "start": 2137,
@@ -1693970,10 +1694344,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "46aa272ef375f20da4126b37c3165170699f51076d4c59d50945451bb9f1cf5f",
+    "rulesSha256": "f51aad2ac2d9c58a9e601ea5fce24f5fdd4608e12fe2ee2e8990602e09c5f72a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "3fc6580d8947edea4c3b8c9e6fe5b719d1ed29b4b64310ff0614af86727f131a",
+    "outputTreeSha256": "e53aa4d1d8139a6fb4c2a78d345d822c0c69b3d15860369752efb17401cfa356",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
