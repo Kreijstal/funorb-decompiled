@@ -211,7 +211,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               var12[var8] = 0;
               var8++;
             }
-            uma.field_c = false;
+            SignedBitReader.field_c = false;
             AccountContentTransitionDialog.field_X = false;
             SoftwareTransform3D.field_p = false;
             GameClock.field_b = false;

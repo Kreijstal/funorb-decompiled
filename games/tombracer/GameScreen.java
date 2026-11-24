@@ -4,7 +4,7 @@
 abstract class GameScreen {
     static java.applet.Applet field_e;
     static String field_a;
-    static gb field_b;
+    static HardwareBlendMode field_b;
     int field_d;
     int field_c;
 
@@ -216,7 +216,7 @@ abstract class GameScreen {
     public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != -104) {
-          field_b = (gb) null;
+          field_b = (HardwareBlendMode) null;
           field_e = null;
           field_a = null;
           return;
@@ -309,6 +309,6 @@ abstract class GameScreen {
 
     static {
         field_a = "Bruce";
-        field_b = new gb();
+        field_b = new HardwareBlendMode();
     }
 }

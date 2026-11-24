@@ -49,7 +49,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private float[] field_Eb;
     SceneLight[] field_ib;
     boolean field_qc;
-    gb field_lb;
+    HardwareBlendMode field_lb;
     int field_i;
     ProjectionMode field_r;
     private int field_ac;
@@ -127,22 +127,22 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     HardwareModel field_n;
     HardwareModel field_ec;
     private VertexStreamBuffer field_cb;
-    mna field_Db;
+    ChatMessageLayout field_Db;
     HardwareModel field_E;
     HardwareModel field_gc;
-    private mna field_ub;
+    private ChatMessageLayout field_ub;
     private VertexBuffer field_z;
     HardwareModel field_O;
-    mna field_nc;
-    mna field_ob;
+    ChatMessageLayout field_nc;
+    ChatMessageLayout field_ob;
     private VertexStreamBuffer field_hb;
-    private mna field_mb;
+    private ChatMessageLayout field_mb;
     HardwareModel field_fb;
     HardwareModel field_cc;
     HardwareModel field_tc;
     HardwareModel field_tb;
     private VertexStreamBuffer field_xb;
-    private mna field_Z;
+    private ChatMessageLayout field_Z;
     boolean field_Wb;
 
     final void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5) {
@@ -231,7 +231,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void setBlendMode(int param0, int param1) {
-        gb var3;
+        HardwareBlendMode var3;
         int var4;
         int var5;
         int var6;
@@ -997,7 +997,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void fogChanged(int param0) {
         if (param0 != -7840) {
-          this.field_mb = (mna) null;
+          this.field_mb = (ChatMessageLayout) null;
         }
         if (this.field_pb != null) {
           this.field_pb.onFogChanged(true);
@@ -1730,7 +1730,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_rb = 2;
         }
         if (param0 < 104) {
-          this.field_ob = (mna) null;
+          this.field_ob = (ChatMessageLayout) null;
         }
     }
 
@@ -1897,7 +1897,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void setModelBufferSize(int param0) {
     }
 
-    abstract void bindVertexLayout(mna param0, int param1);
+    abstract void bindVertexLayout(ChatMessageLayout param0, int param1);
 
     final AffineTransform3D getModelViewTransform(byte param0) {
         if (!this.field_p) {
@@ -2119,7 +2119,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract mna createVertexLayout(VertexStreamLayout[] param0, int param1);
+    abstract ChatMessageLayout createVertexLayout(VertexStreamLayout[] param0, int param1);
 
     private final void buildPerspectiveProjection(int param0) {
         float[] var2;
@@ -2489,7 +2489,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final int underwaterFogDivisor(boolean param0) {
         if (param0) {
-          this.field_nc = (mna) null;
+          this.field_nc = (ChatMessageLayout) null;
         }
         return this.field_u;
     }

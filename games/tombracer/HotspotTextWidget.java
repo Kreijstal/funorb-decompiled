@@ -311,7 +311,7 @@ class HotspotTextWidget extends FocusableWidget {
           var7 = var5.getTextOriginX((UiWidget) (this), param0, (byte) 119);
           var8 = var5.textTop(param1, (UiWidget) (this), (byte) -49);
           do {
-            nn.a(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i + 2, 2 + var6.field_j, false);
+            DottedRectangleRenderer.drawDottedRectangle(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i + 2, 2 + var6.field_j, false);
             var6 = var6.field_k;
           } while (var6 != null);
           return;

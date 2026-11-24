@@ -79,7 +79,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
           var5 = param0 + 100;
           MembersUpsellMenu.drawCentredTextWithShadow(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + HardwareModelIndexData.field_f.height() / 2 + var5, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
           var6 = TooltipRenderer.field_p;
-          var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
+          var7 = DateOfBirthRequests.field_a.field_h + (DateOfBirthRequests.field_a.field_g + 4);
           var8 = 3 * var7;
           var9 = LegacyOpenGlWaterTextures.field_e;
           SocketConnector.drawWrappedText(var9, 1, var6, 2431750, var7, var8, 1, HardwareModelIndexData.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);

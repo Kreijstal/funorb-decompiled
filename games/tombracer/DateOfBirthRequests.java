@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kv {
+final class DateOfBirthRequests {
     static GameFontMetrics field_a;
     static UiComponent field_b;
     static String[] achievementDescriptions;

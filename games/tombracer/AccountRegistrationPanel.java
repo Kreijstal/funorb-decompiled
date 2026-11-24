@@ -168,14 +168,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_I = new ValidatedTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_D = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
-        this.field_F = new FocusableWidget(sla.field_c, (WidgetListener) null);
+        this.field_F = new FocusableWidget(ContentTransitionPhase.field_c, (WidgetListener) null);
         this.field_B = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
         this.field_G.field_q = LoginAttemptStarter.field_a;
         this.field_z.field_q = DropdownArrowPainter.field_a;
         this.field_J.field_q = EmailConfirmationHintText.text;
         this.field_E.field_q = MatchOverlay.field_f;
         this.field_C.field_q = RevolverItemComponent.field_G;
-        this.field_I.field_q = dta.field_e;
+        this.field_I.field_q = MatchHud.field_e;
         this.field_D.field_q = RenderLayer.field_e;
         this.field_G.setValidationSource(-13861, new NameFieldValidator(this.field_G));
         this.field_z.setValidationSource(-13861, new EmailSyntaxValidator(this.field_z));

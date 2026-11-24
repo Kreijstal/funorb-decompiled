@@ -8,7 +8,7 @@ final class OpenGlIndexArray extends OpenGlBufferObject implements IndexArray {
     static String field_j;
 
     final static void setRasterTarget(Sprite param0, byte param1) {
-        gb.pushRasterState(-29711);
+        HardwareBlendMode.pushRasterState(-29711);
         if (param1 < 88) {
           return;
         }

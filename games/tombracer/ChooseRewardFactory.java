@@ -70,7 +70,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
             TreasureValuesOverlay.addChatMessage(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
             var15 = (String) null;
             var14 = (String) null;
-            TreasureValuesOverlay.addChatMessage(0, true, (String) null, mm.field_f, (String) null, 2);
+            TreasureValuesOverlay.addChatMessage(0, true, (String) null, PendingAcknowledgementNode.field_f, (String) null, 2);
             PlayerProfile.clearChatInput(true);
             return true;
           }

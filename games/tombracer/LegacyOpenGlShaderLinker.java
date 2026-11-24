@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dga {
+final class LegacyOpenGlShaderLinker {
     static String field_a;
     static String field_b;
 
-    final static void a(PacketBuffer param0, int param1) {
-        kc.field_b = param0.readUnsignedShort(123) << 5;
+    final static void readPackedRankingStats(PacketBuffer param0, int param1) {
+        SelectionMenuInput.field_b = param0.readUnsignedShort(123) << 5;
         int var2_int = param0.readUnsignedByte(255);
-        kc.field_b = kc.field_b + (var2_int >> 3);
+        SelectionMenuInput.field_b = SelectionMenuInput.field_b + (var2_int >> 3);
         RandomMazeBehaviour.field_p = var2_int << 18 & 1835008;
         RandomMazeBehaviour.field_p = RandomMazeBehaviour.field_p + (param0.readUnsignedShort(125) << 2);
         if (param1 != 0) {

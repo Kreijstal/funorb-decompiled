@@ -31,8 +31,8 @@ final class ClippedFilledRectangleRenderer {
         try {
           var12 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param6);
           var13 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param5);
-          var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
-          var15 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4);
+          var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param0);
+          var15 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param4);
           var8_int = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param6 + param2);
           var9 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param5 - param2);
           for (var16 = var12; var8_int > var16; var16++) {
@@ -41,8 +41,8 @@ final class ClippedFilledRectangleRenderer {
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, PackedBitSetSupport.field_a[var16Lifetime1], var14);
           }
-          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param2 + param0);
-          var11 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param2 + param4);
+          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param2 + param0);
+          var11 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, -param2 + param4);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = PackedBitSetSupport.field_a[var16Lifetime2];
             C2SRoomResultPacket.fillRange((byte) -55, param1, var10, var22, var14);

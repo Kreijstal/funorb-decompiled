@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NotLoggedInMenu extends MenuScreen {
-    static gb field_q;
+    static HardwareBlendMode field_q;
     static boolean field_r;
     private DropAnimation field_s;
 
@@ -61,10 +61,10 @@ final class NotLoggedInMenu extends MenuScreen {
         int var8Lifetime1;
         MembersUpsellMenu.drawCentredTextWithShadow(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, HardwareModelIndexData.field_f.height() / 2 + var5 - 30, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
         GameFont var6 = TooltipRenderer.field_p;
-        int var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
+        int var7 = DateOfBirthRequests.field_a.field_h + (DateOfBirthRequests.field_a.field_g + 4);
         if (param0 < -116) {
           var8 = var7 * 3;
-          var13 = PitSnake.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(GameClock.field_b, uma.field_c, 21297, SoftwareTransform3D.field_p);
+          var13 = PitSnake.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(GameClock.field_b, SignedBitReader.field_c, 21297, SoftwareTransform3D.field_p);
           var10 = GameScreen.replaceCharacter('#', "<br>", var13, 0);
           var9 = var10;
           var9Lifetime3 = LegacyOpenGlFlowingWaterEffect.formatText(85, var10, new String[]{OpenGlSceneLight.field_q[32]});
@@ -73,7 +73,7 @@ final class NotLoggedInMenu extends MenuScreen {
         }
         this.h(-40, -77);
         var8Lifetime1 = var7 * 3;
-        String var12 = PitSnake.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(GameClock.field_b, uma.field_c, 21297, SoftwareTransform3D.field_p);
+        String var12 = PitSnake.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(GameClock.field_b, SignedBitReader.field_c, 21297, SoftwareTransform3D.field_p);
         var10Lifetime1 = GameScreen.replaceCharacter('#', "<br>", var12, 0);
         var9Lifetime1 = var10Lifetime1;
         var9Lifetime2 = LegacyOpenGlFlowingWaterEffect.formatText(85, var10Lifetime1, new String[]{OpenGlSceneLight.field_q[32]});
@@ -101,6 +101,6 @@ final class NotLoggedInMenu extends MenuScreen {
     }
 
     static {
-        field_q = new gb();
+        field_q = new HardwareBlendMode();
     }
 }

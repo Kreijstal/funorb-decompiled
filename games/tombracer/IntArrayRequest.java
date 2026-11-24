@@ -35,9 +35,9 @@ final class IntArrayRequest extends IntrusiveNode {
         }
         var13 = (var8 << 12) / var6;
         var14 = -(var13 * param1 >> 12) + param5;
-        if (param1 < pka.field_b) {
-          var11 = var14 + (var13 * pka.field_b >> 12);
-          var9 = pka.field_b;
+        if (param1 < DialogOverlayDrawing.field_b) {
+          var11 = var14 + (var13 * DialogOverlayDrawing.field_b >> 12);
+          var9 = DialogOverlayDrawing.field_b;
         } else {
           if (param1 <= DiskCacheWorker.field_c) {
             var9 = param1;
@@ -47,9 +47,9 @@ final class IntArrayRequest extends IntrusiveNode {
             var9 = DiskCacheWorker.field_c;
           }
         }
-        if (param0 < pka.field_b) {
-          var12 = var14 + (var13 * pka.field_b >> 12);
-          var10 = pka.field_b;
+        if (param0 < DialogOverlayDrawing.field_b) {
+          var12 = var14 + (var13 * DialogOverlayDrawing.field_b >> 12);
+          var10 = DialogOverlayDrawing.field_b;
         } else {
           if (DiskCacheWorker.field_c < param0) {
             var12 = (DiskCacheWorker.field_c * var13 >> 12) + var14;

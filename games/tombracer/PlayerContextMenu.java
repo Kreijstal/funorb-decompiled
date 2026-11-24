@@ -89,7 +89,7 @@ final class PlayerContextMenu {
           this.field_f.addItem((byte) -104, 3, LegacyOpenGlFlowingWaterEffect.formatText(123, NativeGraphicsHeap.field_i, new String[]{var3}));
         } else {
           if (var5.field_Bb) {
-            this.field_f.addItem((byte) -76, 2, LegacyOpenGlFlowingWaterEffect.formatText(106, mna.field_b, new String[]{var3}));
+            this.field_f.addItem((byte) -76, 2, LegacyOpenGlFlowingWaterEffect.formatText(106, ChatMessageLayout.field_b, new String[]{var3}));
           } else {
             if (!var5.field_Sb &&
               var5.field_Yb) {
@@ -156,7 +156,7 @@ final class PlayerContextMenu {
             if (7 != param0) {
               return false;
             }
-            var4_refLifetime1 = kc.a(this.field_i, param2, false, this.field_d);
+            var4_refLifetime1 = SelectionMenuInput.requestRemoveIgnoredUser(this.field_i, param2, false, this.field_d);
           }
         }
         if (var4_refLifetime1 != null) {

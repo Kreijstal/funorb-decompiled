@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fha {
+final class CommonUiSpriteLoader {
     static String[] field_a;
 
     public static void releaseStatics(byte param0) {
@@ -65,7 +65,7 @@ final class fha {
             }
           }
           var9Lifetime1 = var17.field_q;
-          gb.pushRasterState(-29711);
+          HardwareBlendMode.pushRasterState(-29711);
           var17.makeRasterTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);

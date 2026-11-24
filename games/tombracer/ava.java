@@ -156,7 +156,7 @@ final class ava {
               var12.invalidateLayoutRecursive(-10966);
               var12.field_Kb = new UiComponent(0L, ModelAnimator.field_g);
               var12.addChild(param4 ^ -121, var12.field_Kb);
-              var12.field_Cb = new UiComponent(0L, kv.field_b);
+              var12.field_Cb = new UiComponent(0L, DateOfBirthRequests.field_b);
               var12.addChild(-128, var12.field_Cb);
               var13 = 1;
             }
@@ -249,7 +249,7 @@ final class ava {
                 ComponentMount.isLocalPlayerHost(8192) &&
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
-                  var26 = var12.field_Kb.measureNaturalWidth((byte) 69) + mna.field_d * 2;
+                  var26 = var12.field_Kb.measureNaturalWidth((byte) 69) + ChatMessageLayout.field_d * 2;
                   var12.field_Kb.setBounds(var26, ToolkitSelector.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
@@ -257,7 +257,7 @@ final class ava {
                   if (param0 == MidiPatch.field_n) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Cb.measureNaturalWidth((byte) 69) + 2 * mna.field_d;
+                    var26Lifetime2 = var12.field_Cb.measureNaturalWidth((byte) 69) + 2 * ChatMessageLayout.field_d;
                   }
                   var12.field_Cb.setBounds(var26Lifetime2, ToolkitSelector.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
@@ -294,10 +294,10 @@ final class ava {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Gb.field_H.countWrappedLines(var23, -mna.field_d - mna.field_d + var12.field_G);
+              var24_intLifetime1 = var12.field_Gb.field_H.countWrappedLines(var23, -ChatMessageLayout.field_d - ChatMessageLayout.field_d + var12.field_G);
               var12.field_Gb.field_r = var23;
               var12.field_Gb.field_s = var12.field_xb * 256 / LobbyRemovalTiming.durationTicks;
-              var12.field_Gb.setBounds(var12.field_G - 2 * mna.field_d, ToolkitSelector.field_a * var24_intLifetime1, -23776, var19, mna.field_d);
+              var12.field_Gb.setBounds(var12.field_G - 2 * ChatMessageLayout.field_d, ToolkitSelector.field_a * var24_intLifetime1, -23776, var19, ChatMessageLayout.field_d);
               var19 = var19 + ToolkitSelector.field_a * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {

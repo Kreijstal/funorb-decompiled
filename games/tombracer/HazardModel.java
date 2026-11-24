@@ -127,7 +127,7 @@ final class HazardModel extends TrapModel {
                   var5 = Bzip2State.a(-3, var4, param1);
                 }
                 if (3 == ResourceArchive.field_k) {
-                  var5 = kc.a(var4, param1, false, var4);
+                  var5 = SelectionMenuInput.requestRemoveIgnoredUser(var4, param1, false, var4);
                 }
                 if (var5 != null) {
                   var6 = (String) null;

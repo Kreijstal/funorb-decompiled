@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qba {
+final class ModelBillboardCopyFlags {
     static int field_a;
     static String field_d;
     static int field_c;

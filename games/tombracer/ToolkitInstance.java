@@ -34,7 +34,7 @@ final class ToolkitInstance {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (pka.field_b > -param4 + param3) {
+        if (DialogOverlayDrawing.field_b > -param4 + param3) {
           TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
         } else {
           if (param3 + param4 > DiskCacheWorker.field_c) {

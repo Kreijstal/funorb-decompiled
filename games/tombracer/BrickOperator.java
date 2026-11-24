@@ -8,7 +8,7 @@ final class BrickOperator extends TextureOperator {
     private int field_r;
     private int field_A;
     private int field_q;
-    static gb field_w;
+    static HardwareBlendMode field_w;
     private int field_x;
     private int field_n;
     static UiComponent field_v;
@@ -161,7 +161,7 @@ final class BrickOperator extends TextureOperator {
         int var2;
         boolean stackIn_7_0 = false;
         var2 = 76 / ((-20 - param0) / 40);
-        stackIn_7_0 = (param1 == 0) || (param1 == ChatChannelType.getSelectedCourseIndex((byte) 64)) || (dta.field_g[param1]) || !(MultiplayerLoginMenu.b(false));
+        stackIn_7_0 = (param1 == 0) || (param1 == ChatChannelType.getSelectedCourseIndex((byte) 64)) || (MatchHud.field_g[param1]) || !(MultiplayerLoginMenu.b(false));
         return stackIn_7_0;
     }
 
@@ -326,7 +326,7 @@ final class BrickOperator extends TextureOperator {
     }
 
     static {
-        field_w = new gb();
+        field_w = new HardwareBlendMode();
         field_t = new int[5];
         field_p = new int[8192];
     }

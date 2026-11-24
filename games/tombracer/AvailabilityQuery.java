@@ -5,7 +5,7 @@ final class AvailabilityQuery {
     private boolean field_d;
     private String field_a;
     private boolean field_b;
-    static sla field_e;
+    static ContentTransitionPhase field_e;
     static String field_c;
 
     final boolean getResult(int param0) {
@@ -166,7 +166,7 @@ final class AvailabilityQuery {
 
     final String getName(byte param0) {
         if (param0 < 78) {
-          field_e = (sla) null;
+          field_e = (ContentTransitionPhase) null;
         }
         return this.field_a;
     }
@@ -355,7 +355,7 @@ final class AvailabilityQuery {
     }
 
     static {
-        field_e = new sla();
+        field_e = new ContentTransitionPhase();
         field_c = "Please select your treasure";
     }
 }

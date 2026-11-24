@@ -4,7 +4,7 @@
 final class StripesOperator extends TextureOperator {
     private int field_q;
     private int[] field_o;
-    static sla field_p;
+    static ContentTransitionPhase field_p;
     private int field_r;
     private int[] field_m;
     private int field_n;
@@ -185,7 +185,7 @@ final class StripesOperator extends TextureOperator {
 
     static {
         int var0 = 0;
-        field_p = new sla();
+        field_p = new ContentTransitionPhase();
         field_s = new HiscorePlayerEntry[255];
         for (var0 = 0; var0 < field_s.length; var0++) {
           field_s[var0] = new HiscorePlayerEntry();

@@ -31,7 +31,7 @@ final class OpacityWidget extends SingleChildWidget {
         int var4 = -80 % ((param0 + 19) / 32);
         int var3 = var2 * (ValidationStatusIcon.field_E - VertexArrayPointer.field_b) / var1 + VertexArrayPointer.field_b;
         LobbyOverlayAndDateValidationState.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
-        HardwareGraphicsHeap.a(640, 5, mna.field_d, 25, EmbossNormalizationTable.field_c, ValidationStatusIcon.field_E - 24, 0);
+        HardwareGraphicsHeap.a(640, 5, ChatMessageLayout.field_d, 25, EmbossNormalizationTable.field_c, ValidationStatusIcon.field_E - 24, 0);
     }
 
     final static void initializeMenuActionLabels(int param0) {
@@ -70,7 +70,7 @@ final class OpacityWidget extends SingleChildWidget {
         OpenGlSceneLight.field_q[30] = MidiPatchEnvelope.field_a;
         OpenGlSceneLight.field_q[36] = PlayerInputQueue.field_b;
         TripBeamBehaviour.field_w = new String[4][2];
-        OpenGlSceneLight.field_q[32] = pka.field_a;
+        OpenGlSceneLight.field_q[32] = DialogOverlayDrawing.field_a;
         OpenGlSceneLight.field_q[27] = StatReportingScoringObserver.field_m[1];
         OpenGlSceneLight.field_q[34] = PrefabComponent.field_E;
         OpenGlSceneLight.field_q[35] = RopeBridgeComponent.field_I;
@@ -100,20 +100,20 @@ final class OpacityWidget extends SingleChildWidget {
         MidiPatchEnvelope.field_k[6] = ItemModel.field_q;
         MidiPatchEnvelope.field_k[8] = ContextMenuRow.field_ub;
         MidiPatchEnvelope.field_k[1] = MonsterModel.field_A;
-        dta.field_b = new String[4];
-        dta.field_b[1] = S2CNewRoomPacket.field_g;
-        dta.field_b[2] = WhirlpoolDigest.field_b;
-        sla.field_b = new String[7];
-        dta.field_b[3] = SeededGradientNoise3D.field_b;
-        dta.field_b[0] = ArchiveManager.field_d;
-        sla.field_b[1] = ContactListEntry.field_wb;
-        sla.field_b[5] = MatchStatistics.field_k;
-        sla.field_b[0] = SnakePitBehaviour.field_p;
+        MatchHud.field_b = new String[4];
+        MatchHud.field_b[1] = S2CNewRoomPacket.field_g;
+        MatchHud.field_b[2] = WhirlpoolDigest.field_b;
+        ContentTransitionPhase.field_b = new String[7];
+        MatchHud.field_b[3] = SeededGradientNoise3D.field_b;
+        MatchHud.field_b[0] = ArchiveManager.field_d;
+        ContentTransitionPhase.field_b[1] = ContactListEntry.field_wb;
+        ContentTransitionPhase.field_b[5] = MatchStatistics.field_k;
+        ContentTransitionPhase.field_b[0] = SnakePitBehaviour.field_p;
         Room.field_m = new String[13];
-        sla.field_b[6] = FleeLocomotor.field_x;
-        sla.field_b[4] = QueuedPayloadRequest.field_h;
-        sla.field_b[2] = ValidatedTextInputWidget.field_J;
-        sla.field_b[3] = HardCacheEntry.field_p;
+        ContentTransitionPhase.field_b[6] = FleeLocomotor.field_x;
+        ContentTransitionPhase.field_b[4] = QueuedPayloadRequest.field_h;
+        ContentTransitionPhase.field_b[2] = ValidatedTextInputWidget.field_J;
+        ContentTransitionPhase.field_b[3] = HardCacheEntry.field_p;
         Room.field_m[1] = HardwareSprite.field_e;
         Room.field_m[10] = LobbyPlayerEntry.field_Ib;
         Room.field_m[9] = DelayedPacket.field_h;
@@ -150,8 +150,8 @@ final class OpacityWidget extends SingleChildWidget {
           MusicVolumeControl.field_a[10] = HardwareModelVertexStream.bladeDeathMessages;
           MusicVolumeControl.field_a[3] = MonsterRemains.crushDeathMessages;
           MusicVolumeControl.field_a[11] = SoftwareCheckboxPainter.gunshotDeathMessages;
-          MusicVolumeControl.field_a[2] = dta.skipRoomMessages;
-          MusicVolumeControl.field_a[0] = kla.unknownDeathMessages;
+          MusicVolumeControl.field_a[2] = MatchHud.skipRoomMessages;
+          MusicVolumeControl.field_a[0] = AwtEventAndLoginUi.unknownDeathMessages;
           MusicVolumeControl.field_a[9] = ClippedChildWidget.dartDeathMessages;
           MusicVolumeControl.field_a[6] = HazardEffect.lavaDeathMessages;
           MusicVolumeControl.field_a[1] = BlockComponent.restartMessages;
@@ -181,7 +181,7 @@ final class OpacityWidget extends SingleChildWidget {
           IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, MonochromeCacheSentinelState.field_b, FullscreenFailureDialog.field_L};
           HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           HazardEffect.field_h[9] = new String[]{FullscreenDialogLayout.field_a, MenuScreen.field_h, PrefabComponent.field_D};
-          IntrusiveDeque.field_d[10] = new String[]{PointListEditorWidget.field_z, qba.field_d, GridWidgetContainer.field_H};
+          IntrusiveDeque.field_d[10] = new String[]{PointListEditorWidget.field_z, ModelBillboardCopyFlags.field_d, GridWidgetContainer.field_H};
           HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
           return;
         }
@@ -202,8 +202,8 @@ final class OpacityWidget extends SingleChildWidget {
         MusicVolumeControl.field_a[10] = HardwareModelVertexStream.bladeDeathMessages;
         MusicVolumeControl.field_a[3] = MonsterRemains.crushDeathMessages;
         MusicVolumeControl.field_a[11] = SoftwareCheckboxPainter.gunshotDeathMessages;
-        MusicVolumeControl.field_a[2] = dta.skipRoomMessages;
-        MusicVolumeControl.field_a[0] = kla.unknownDeathMessages;
+        MusicVolumeControl.field_a[2] = MatchHud.skipRoomMessages;
+        MusicVolumeControl.field_a[0] = AwtEventAndLoginUi.unknownDeathMessages;
         MusicVolumeControl.field_a[9] = ClippedChildWidget.dartDeathMessages;
         MusicVolumeControl.field_a[6] = HazardEffect.lavaDeathMessages;
         MusicVolumeControl.field_a[1] = BlockComponent.restartMessages;
@@ -233,7 +233,7 @@ final class OpacityWidget extends SingleChildWidget {
         IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, MonochromeCacheSentinelState.field_b, FullscreenFailureDialog.field_L};
         HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         HazardEffect.field_h[9] = new String[]{FullscreenDialogLayout.field_a, MenuScreen.field_h, PrefabComponent.field_D};
-        IntrusiveDeque.field_d[10] = new String[]{PointListEditorWidget.field_z, qba.field_d, GridWidgetContainer.field_H};
+        IntrusiveDeque.field_d[10] = new String[]{PointListEditorWidget.field_z, ModelBillboardCopyFlags.field_d, GridWidgetContainer.field_H};
         HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
     }
 

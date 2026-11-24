@@ -320,7 +320,7 @@ final class DialogStack extends SingleChildWidget {
     }
 
     public DialogStack() {
-        super(0, 0, HiscoreTable.field_m, qba.field_a, (WidgetPainter) null, (WidgetListener) null);
+        super(0, 0, HiscoreTable.field_m, ModelBillboardCopyFlags.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_y = new IntrusiveDeque();
     }
 

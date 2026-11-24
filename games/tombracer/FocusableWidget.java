@@ -196,7 +196,7 @@ class FocusableWidget extends UiWidget {
         Object var5 = null;
         int var6 = 0;
         ResourceArchive var7 = null;
-        mm var10 = null;
+        PendingAcknowledgementNode var10 = null;
         BitPacketBuffer var11 = null;
         byte[] var15 = null;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -208,7 +208,7 @@ class FocusableWidget extends UiWidget {
           var11 = WeaveOperator.field_q;
           var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
-            var10 = (mm) (SpawnerBehaviour.field_n.first(-80));
+            var10 = (PendingAcknowledgementNode) (SpawnerBehaviour.field_n.first(-80));
             if (var10 == null) {
               DropAnimation.closeGameSocket(60);
               return;

@@ -80,7 +80,7 @@ final class BillboardDefinition {
                 continue;
               }
               if (44 == var4) {
-                var2.addLast((byte) -107, new ConsoleToken(qba.field_c, var3.position - 1));
+                var2.addLast((byte) -107, new ConsoleToken(ModelBillboardCopyFlags.field_c, var3.position - 1));
                 continue;
               }
               var2.addLast((byte) -75, WeaponShooterBehaviour.readLiteralToken(param0 - 93, var3));

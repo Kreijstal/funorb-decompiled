@@ -157,7 +157,7 @@ final class ConsoleExpressionParser {
                 stackIn_26_0 = var4;
                 return stackIn_26_0;
               }
-              if (var6.kind != qba.field_c) {
+              if (var6.kind != ModelBillboardCopyFlags.field_c) {
                 throw new ConsoleParseException(var6.field_h);
               }
             }

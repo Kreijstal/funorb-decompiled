@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kla {
+final class AwtEventAndLoginUi {
     static String[] unknownDeathMessages;
 
     final static void postDummyEvent(PlatformTaskDispatcher param0, byte param1, Object param2) {
@@ -30,7 +30,7 @@ final class kla {
           }
           if (param1 <= 45) {
             var5 = (Object) null;
-            kla.postDummyEvent((PlatformTaskDispatcher) null, (byte) 44, (Object) null);
+            AwtEventAndLoginUi.postDummyEvent((PlatformTaskDispatcher) null, (byte) 44, (Object) null);
           }
           try {
             if (param2 == null) {
@@ -81,7 +81,7 @@ final class kla {
           return;
         }
         Object var2 = (Object) null;
-        kla.postDummyEvent((PlatformTaskDispatcher) null, (byte) -10, (Object) null);
+        AwtEventAndLoginUi.postDummyEvent((PlatformTaskDispatcher) null, (byte) -10, (Object) null);
         if (null != TextureOperator.field_l) {
           TextureOperator.field_l.dismiss((byte) -108);
         }
@@ -92,7 +92,7 @@ final class kla {
         UiComponentNodeBase.field_l.finishTransition(true);
     }
 
-    final static void b(int param0) {
+    final static void notifyPageResizing(int param0) {
         if (OpenGlSceneLight.field_o != null) {
           OpenGlSceneLight.field_o.field_h = false;
           C2SChooseRewardPacket.notifyPageResizing(12475, param0);

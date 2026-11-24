@@ -40,8 +40,8 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     final static void drawClippedHorizontalLine(int param0, int param1, byte param2, int param3, int param4) {
         if (param4 >= HardwareModelBillboardState.field_d &&
           LineShape.field_h >= param4) {
-          param1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
-          param0 = CharacterPreview.clamp(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
+          param1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param1);
+          param0 = CharacterPreview.clamp(DiskCacheWorker.field_c, param2 ^ 16224, DialogOverlayDrawing.field_b, param0);
           BrazierComponent.drawHorizontalSpan(param0, param3, param4, param1, false);
         }
         if (param2 != -2) {

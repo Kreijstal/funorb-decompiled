@@ -764,7 +764,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         ResourceArchive var7;
-        if (param5 < pka.field_b) {
+        if (param5 < DialogOverlayDrawing.field_b) {
           GameKeyHandler.fillClippedRectangle(param1, param5, param3, param2, 10, param0);
         } else {
           if (DiskCacheWorker.field_c < param1) {

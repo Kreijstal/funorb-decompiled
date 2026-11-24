@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb {
+final class HardwareBlendMode {
     static int field_a;
 
     final static void pushRasterState(int param0) {
@@ -17,7 +17,7 @@ final class gb {
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
-        gb.createModel((ModelData) null, -85, (GraphicsToolkit) null);
+        HardwareBlendMode.createModel((ModelData) null, -85, (GraphicsToolkit) null);
         var1Lifetime1 = (RasterStateFrame) (RasterStateFramePool.freeFrames.pollLast((byte) 22));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new RasterStateFrame();

@@ -327,7 +327,7 @@ final class CrusherModel extends TrapModel {
           field_o = -102;
         }
         LegacyOpenGlReflectionEffect.field_g = -2147483648;
-        kc.field_a = 2147483647;
+        SelectionMenuInput.field_a = 2147483647;
         C2SChooseCharacterPacket.field_d = -2147483648;
         ContextMenu.field_Eb = 0;
     }

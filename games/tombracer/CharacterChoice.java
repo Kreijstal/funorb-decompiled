@@ -291,7 +291,7 @@ final class CharacterChoice implements BitDecodableMarker {
 
     public final void decode(BitPacketBuffer param0, boolean param1) {
         try {
-          this.characterId = uma.readSignedBits(5, param0, -26803);
+          this.characterId = SignedBitReader.readSignedBits(5, param0, -26803);
           if (param1) {
             this.player = (Player) null;
           }

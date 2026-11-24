@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uma {
+final class SignedBitReader {
     static String field_a;
     static boolean field_c;
     static IntrusiveDeque field_b;
@@ -41,7 +41,7 @@ final class uma {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean shouldAttemptReconnect(int param0) {
         if (param0 != -1) {
           return false;
         }

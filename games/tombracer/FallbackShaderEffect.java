@@ -81,7 +81,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
+          LegacyOpenGlShaderLinker.layoutBottomPanels(GameKeyHandler.field_a, 199);
           if (null != WaveformOperator.field_n) {
             HiscoresScreen.field_z.field_t = 0;
             var15 = HiscoresScreen.field_z;
@@ -152,7 +152,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                   MonochromeRowCacheEntry.field_m = new byte[ColourRowCache.field_b];
                   QueuedPayloadRequest.field_f = new boolean[ColourRowCache.field_b];
                 }
-                mm.field_g = false;
+                PendingAcknowledgementNode.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (ColourRowCache.field_b > var13) {
@@ -169,7 +169,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 GamePacketSender.field_a.field_X = false;
                 if (GamePacketSender.field_a.field_pb) {
                   var9 = null;
-                  if (mm.field_g) {
+                  if (PendingAcknowledgementNode.field_g) {
                     var9 = "<col=A00000>" + ConsoleToken.field_j + "</col>";
                     var11 = var9;
                     var9 = var11;

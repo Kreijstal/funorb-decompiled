@@ -896,7 +896,7 @@ final class OpenGlModel extends ToolkitModel {
             param5.field_H = this.field_H;
           }
           if (!FixedAngleTrigonometry.b(this.field_u, -23403, param1)) {
-            if (!mm.hasFlag2048(-123, param1, this.field_u)) {
+            if (!PendingAcknowledgementNode.hasFlag2048(-123, param1, this.field_u)) {
               param5.field_w = null;
               if (var13 != 0) {
                 param5.field_w = this.field_w;
@@ -957,7 +957,7 @@ final class OpenGlModel extends ToolkitModel {
               }
             }
             if ((decompiledFrameCompleted2) &&
-              (!qba.hasAnyMask50560(this.field_u, 480, param1))) {
+              (!ModelBillboardCopyFlags.hasAnyMask50560(this.field_u, 480, param1))) {
               param5.field_f = this.field_f;
               if (var13 == 0) {
                 break regionExit5;
@@ -4419,7 +4419,7 @@ final class OpenGlModel extends ToolkitModel {
           if (DropInMenuScreen.hasFlag2048(param2, param5, 2048)) {
             this.field_kb = new VertexArrayPointer((LegacyVertexArray) null, 5121, 4, 0);
           }
-          if (mm.hasFlag2048(-122, param2, param5)) {
+          if (PendingAcknowledgementNode.hasFlag2048(-122, param2, param5)) {
             this.field_w = new OpenGlIndexBufferReference();
           }
           var7 = param0.field_c;

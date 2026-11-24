@@ -12,9 +12,9 @@ final class LobbyStateCleanup {
           return;
         }
         try {
-          if (null != uma.field_b) {
-            uma.field_b.clear(8);
-            uma.field_b = null;
+          if (null != SignedBitReader.field_b) {
+            SignedBitReader.field_b.clear(8);
+            SignedBitReader.field_b = null;
           }
           DropdownButtonPainter.field_a = null;
           if (AffineTransform3D.field_j != null) {

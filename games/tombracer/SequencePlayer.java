@@ -93,7 +93,7 @@ final class SequencePlayer {
           }
           DefaultRoomObjectRenderer.field_b = AvailabilityQueryFactory.createAvailabilityQuery((byte) 121, "");
           DefaultRoomObjectRenderer.field_b.complete(-71, false);
-          fha.loadCommonUiSprites(true, param1, param0, param4);
+          CommonUiSpriteLoader.loadCommonUiSprites(true, param1, param0, param4);
           CharacterChoiceFactory.initializeDialogStack(117);
           LegacyOpenGlTexture.registrationRequestState = GameSocketState.accountRequestIdle;
           ProgressDialogLauncher.usernameQueryState = GameSocketState.accountRequestIdle;

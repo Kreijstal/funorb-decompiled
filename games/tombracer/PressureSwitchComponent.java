@@ -50,7 +50,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (0 != QuickChatHelpPanel.field_ub.field_y) {
             RoomViewRenderer.field_c = new ReportAbuseDialog(QuickChatHelpPanel.field_ub.field_q, QuickChatHelpPanel.field_ub.field_A, QuickChatHelpPanel.field_ub.field_G, QuickChatHelpPanel.field_ub.field_t, param2, WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
           }
-          var9 = mna.a((byte) 73, param3, ToolkitSelector.field_a, mna.field_d);
+          var9 = ChatMessageLayout.layoutChatMessages((byte) 73, param3, ToolkitSelector.field_a, ChatMessageLayout.field_d);
           if (var9 != null) {
             SoftwareScanlineMask.openChatMessageContextMenu(-2, var9);
           }

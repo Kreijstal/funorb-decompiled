@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public class dxVertexLayout extends mna {
+public class dxVertexLayout extends ChatMessageLayout {
     jagdx.IDirect3DVertexDeclaration field_e;
 
     dxVertexLayout(Direct3DToolkit param0, VertexStreamLayout[] param1) {

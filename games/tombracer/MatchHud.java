@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dta {
+final class MatchHud {
     static String field_e;
     private ModelAnimator field_c;
     static boolean[] field_g;
@@ -400,7 +400,7 @@ final class dta {
         }
     }
 
-    dta() {
+    MatchHud() {
         this.field_a = new int[3];
         this.field_f = new int[3];
         this.field_h = new String[3];

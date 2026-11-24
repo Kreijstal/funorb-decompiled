@@ -25,25 +25,25 @@ final class SoundEvent extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
-        if (param2 < pka.field_b) {
+        if (param2 < DialogOverlayDrawing.field_b) {
           PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
         } else {
           if (DiskCacheWorker.field_c < param2) {
             PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
           } else {
-            if (param1 < pka.field_b) {
+            if (param1 < DialogOverlayDrawing.field_b) {
               PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
             } else {
               if (DiskCacheWorker.field_c < param1) {
                 PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
               } else {
-                if (pka.field_b > param7) {
+                if (DialogOverlayDrawing.field_b > param7) {
                   PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                 } else {
                   if (param7 > DiskCacheWorker.field_c) {
                     PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                   } else {
-                    if (pka.field_b > param0) {
+                    if (DialogOverlayDrawing.field_b > param0) {
                       PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                     } else {
                       if (DiskCacheWorker.field_c < param0) {

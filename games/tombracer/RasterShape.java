@@ -185,7 +185,7 @@ abstract class RasterShape {
           GridLineWalker.a(param5, param2, param6, param0, param7, param1, -91);
           return;
         }
-        if (pka.field_b > param0 - param5) {
+        if (DialogOverlayDrawing.field_b > param0 - param5) {
           OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }

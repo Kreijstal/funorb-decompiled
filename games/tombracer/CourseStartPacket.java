@@ -445,7 +445,7 @@ final class CourseStartPacket implements GamePacket {
                 var9 >= 0 &&
                 PlatformModel.field_A != null && (!param3 ||
                 !PlayerViewport.field_o)) {
-                mm.field_g = false;
+                PendingAcknowledgementNode.field_g = false;
                 if (null == MonochromeRowCacheEntry.field_m) {
                   MonochromeRowCacheEntry.field_m = new byte[ColourRowCache.field_b];
                   QueuedPayloadRequest.field_f = new boolean[ColourRowCache.field_b];
@@ -570,7 +570,7 @@ final class CourseStartPacket implements GamePacket {
                   !TouchSwitchBehaviour.field_s) {
                   var22 = null;
                   var23 = 0;
-                  if (mm.field_g) {
+                  if (PendingAcknowledgementNode.field_g) {
                     var22 = "</col>" + ConsoleToken.field_j + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;

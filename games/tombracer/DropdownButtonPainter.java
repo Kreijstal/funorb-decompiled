@@ -54,7 +54,7 @@ final class DropdownButtonPainter implements WidgetPainter {
           var7 = param0.field_n + param3;
           GameSocketTraffic.drawGradientBar(param0.field_m, var7, param0.field_p, var6_int, 1);
           if (param0.hasKeyboardFocus((byte) -34)) {
-            nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
+            DottedRectangleRenderer.drawDottedRectangle(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
           }
           SoftwareRasterizer.setClip(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
           var8 = this.field_d.field_z.getSelectedItem(124);

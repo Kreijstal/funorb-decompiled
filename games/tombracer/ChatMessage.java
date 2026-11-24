@@ -107,7 +107,7 @@ final class ChatMessage {
         this.field_o = IntegerTextValidator.field_b;
         this.field_f = ConveyorBehaviour.field_p;
         this.field_g = RoomSelectionProfile.field_c;
-        this.field_c = gb.field_a;
+        this.field_c = HardwareBlendMode.field_a;
         this.field_n = GreyscaleOperator.field_m;
         this.field_e = LobbyOverlayAndDateValidationState.field_a;
         if (!param0) {
@@ -115,7 +115,7 @@ final class ChatMessage {
         } else {
           this.field_h = MatchPhase.field_e;
         }
-        this.field_b = dga.field_a;
+        this.field_b = LegacyOpenGlShaderLinker.field_a;
         this.field_j = TextureSampleOperator.field_q;
     }
 

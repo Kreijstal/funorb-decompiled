@@ -28,7 +28,7 @@ final class CheckboxPainter implements WidgetPainter {
           if (!param0.hasKeyboardFocus((byte) -34)) {
             return;
           }
-          nn.a(2 + var6_int, 2 + var7, param0.field_p - 4, -4 + param0.field_m, false);
+          DottedRectangleRenderer.drawDottedRectangle(2 + var6_int, 2 + var7, param0.field_p - 4, -4 + param0.field_m, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

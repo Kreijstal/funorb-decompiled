@@ -81,7 +81,7 @@ abstract class SceneLight extends IntrusiveNode {
           PerlinNoise2D.field_m = LoadLevelCommand.createToolkitSprites(param0, WidgetStyleLayer.field_f, -77);
           QuickChatParamType.createToolkitSprite(MatchStatistics.field_g, param0, (byte) 126);
           GraphicsHeap.field_g = QuickChatParamType.createToolkitSprite(TextResourceLoader.field_b, param0, (byte) -50);
-          VariantMask.field_d = QuickChatParamType.createToolkitSprite(sla.field_a, param0, (byte) -38);
+          VariantMask.field_d = QuickChatParamType.createToolkitSprite(ContentTransitionPhase.field_a, param0, (byte) -38);
           ModelCodecAndSocialPanelState.field_c = QuickChatParamType.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
           CharacterSelectPhase.field_r = QuickChatParamType.createToolkitSprite(aa.field_a, param0, (byte) 125);
           DropdownPopupList.field_E = QuickChatParamType.createToolkitSprite(LobbyPlayerEntry.field_Bb, param0, (byte) -119);
@@ -125,7 +125,7 @@ abstract class SceneLight extends IntrusiveNode {
           Projectile.field_n = QuickChatParamType.createToolkitSprite(RenderableNode.field_j, param0, (byte) -37);
           TripBeamBehaviour.field_y = QuickChatParamType.createToolkitSprite(ResourceArchive.field_h, param0, (byte) 127);
           FocusProxyWidget.field_z = QuickChatParamType.createToolkitSprite(MainScreenLayout.field_a, param0, (byte) 126);
-          MainRoomCatalog.field_a = LoadLevelCommand.createToolkitSprites(param0, mna.field_c, -55);
+          MainRoomCatalog.field_a = LoadLevelCommand.createToolkitSprites(param0, ChatMessageLayout.field_c, -55);
           MirrorBehaviour.field_r = QuickChatParamType.createToolkitSprite(SoundEvent.field_h, param0, (byte) 127);
           OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -105, FocusProxyWidget.field_A.field_f);
           Room.field_j = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -104, ArchiveConnectionFailureHandler.field_c.field_f);

@@ -25,7 +25,7 @@ final class PendingReply extends IntrusiveNode {
         LobbyPlayerEntry var1Lifetime1;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          var1 = (LobbyPlayerEntry) (uma.field_b.first(-80));
+          var1 = (LobbyPlayerEntry) (SignedBitReader.field_b.first(-80));
           while (var1 != null) {
             if (var1.field_xb > 0) {
               var1.field_xb = var1.field_xb - 1;
@@ -36,7 +36,7 @@ final class PendingReply extends IntrusiveNode {
                 }
               }
             }
-            var1 = (LobbyPlayerEntry) (uma.field_b.next(122));
+            var1 = (LobbyPlayerEntry) (SignedBitReader.field_b.next(122));
           }
           if (param0 != 10) {
             return;

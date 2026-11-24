@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dha {
+final class SwitchTargetReference {
     int field_a;
     boolean field_b;
 
-    final static boolean a(int param0, int param1, byte param2, int param3) {
+    final static boolean processChatKey(int param0, int param1, byte param2, int param3) {
         int var4;
         int stackIn_23_0 = 0;
         int stackIn_61_0 = 0;
@@ -74,7 +74,7 @@ final class dha {
             var4 = stackIn_97_0;
           }
         } else {
-          dha.a(38, -115, (byte) 27, 44);
+          SwitchTargetReference.processChatKey(38, -115, (byte) 27, 44);
           if (LobbyOverlayAndDateValidationState.field_d != null) {
             if (13 == MenuEntry.field_h) {
               LobbyOverlayAndDateValidationState.field_d = null;
@@ -154,7 +154,7 @@ final class dha {
         return var4 != 0;
     }
 
-    dha(boolean param0, int param1) {
+    SwitchTargetReference(boolean param0, int param1) {
         this.field_b = param0 ? true : false;
         this.field_a = param1;
     }

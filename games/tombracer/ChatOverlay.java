@@ -373,8 +373,8 @@ final class ChatOverlay {
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
-              var6_intLifetime2 = nn.field_b;
-              nn.field_b = TileRenderable.field_a;
+              var6_intLifetime2 = DottedRectangleRenderer.field_b;
+              DottedRectangleRenderer.field_b = TileRenderable.field_a;
               TileRenderable.field_a = var6_intLifetime2;
               PushableBlockMazeComponent.field_L = true;
             }
@@ -413,7 +413,7 @@ final class ChatOverlay {
           return false;
         }
         int var4 = 0;
-        var4 = dha.a(13, 12, (byte) -107, 15) ? 1 : 0;
+        var4 = SwitchTargetReference.processChatKey(13, 12, (byte) -107, 15) ? 1 : 0;
         return var4 != 0;
     }
 
@@ -457,10 +457,10 @@ final class ChatOverlay {
         GreyscaleOperator.field_m = var8.readUnsignedByte(255);
         ScrollContainer.field_z = var8.readLong(param0 ^ -290628099);
         if (HardwareModel.field_x == 2) {
-          gb.field_a = var8.readUnsignedShort(127);
+          HardwareBlendMode.field_a = var8.readUnsignedShort(127);
           IntegerTextValidator.field_b = var8.readUnsignedMedium(-32768);
         } else {
-          gb.field_a = 0;
+          HardwareBlendMode.field_a = 0;
           IntegerTextValidator.field_b = 0;
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 + 19042) != 1) ? 0 : 1;
@@ -474,10 +474,10 @@ final class ChatOverlay {
         if (HardwareModel.field_x != 1 &&
           HardwareModel.field_x != 4) {
           LobbyOverlayAndDateValidationState.field_a = 0;
-          dga.field_a = null;
+          LegacyOpenGlShaderLinker.field_a = null;
         } else {
           LobbyOverlayAndDateValidationState.field_a = var8.readUnsignedShort(122);
-          dga.field_a = var8.readString((byte) -76);
+          LegacyOpenGlShaderLinker.field_a = var8.readString((byte) -76);
         }
         if (!param1) {
           ConveyorBehaviour.field_p = MessageOverlay.readHuffmanString(var8, 80, -117);

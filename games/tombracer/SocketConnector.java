@@ -55,7 +55,7 @@ abstract class SocketConnector {
           ToolkitInstance.a(30237, param5, param1, param0, param4);
           return;
         }
-        if (-param4 + param0 < pka.field_b) {
+        if (-param4 + param0 < DialogOverlayDrawing.field_b) {
           GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
         } else {
           if (param0 + param4 > DiskCacheWorker.field_c) {

@@ -589,7 +589,7 @@ abstract class MenuScreen extends GameScreen {
                     PasswordValidator.field_n = this.field_c;
                   } else {
                     if (!GameClock.field_b) {
-                      if (uma.field_c) {
+                      if (SignedBitReader.field_c) {
                         PasswordValidator.field_n = 3;
                       } else {
                         PasswordValidator.field_n = 9;

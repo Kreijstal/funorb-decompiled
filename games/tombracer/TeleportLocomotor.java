@@ -206,7 +206,7 @@ final class TeleportLocomotor extends Locomotor {
     final static void drawRectangleBorder(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (pka.field_b > param3) {
+        if (DialogOverlayDrawing.field_b > param3) {
           if (1 == param1) {
             LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
           } else {

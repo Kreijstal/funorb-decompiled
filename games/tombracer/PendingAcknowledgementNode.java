@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm extends IntrusiveNode {
+final class PendingAcknowledgementNode extends IntrusiveNode {
     static boolean field_g;
     static String field_f;
 
@@ -12,14 +12,14 @@ final class mm extends IntrusiveNode {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -44) {
-          mm.hasFlag2048(-1, -14, 26);
+          PendingAcknowledgementNode.hasFlag2048(-1, -14, 26);
           field_f = null;
           return;
         }
         field_f = null;
     }
 
-    private mm() throws Throwable {
+    private PendingAcknowledgementNode() throws Throwable {
         throw new Error();
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sla {
+final class ContentTransitionPhase {
     static SpriteData field_a;
     static String[] field_b;
     static String field_c;
@@ -26,7 +26,7 @@ final class sla {
         field_b = null;
     }
 
-    final static void b(int param0) {
+    final static void restorePreviousUiContext(int param0) {
         CourseDeathCountPacket.field_b = null;
         if (RenderableNode.field_i != null) {
           ComponentMount.field_b = LoginAttemptStarter.field_b;
@@ -39,7 +39,7 @@ final class sla {
           DisplayModeInfo.field_e = null;
           ClientMemoryVertexArray.field_e = null;
           if (param0 != 29585) {
-            sla.b(-98);
+            ContentTransitionPhase.restorePreviousUiContext(-98);
             SimpleMoveLocomotor.field_s = null;
             DynamicGeometryBuffer.field_c = true;
             return;
@@ -56,7 +56,7 @@ final class sla {
           DynamicGeometryBuffer.field_c = true;
           return;
         }
-        sla.b(-98);
+        ContentTransitionPhase.restorePreviousUiContext(-98);
         SimpleMoveLocomotor.field_s = null;
         DynamicGeometryBuffer.field_c = true;
     }

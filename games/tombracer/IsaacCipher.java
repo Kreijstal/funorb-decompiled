@@ -270,7 +270,7 @@ final class IsaacCipher {
             CollisionGridEntry.field_r = param9;
             SocketConnector.field_c = param0;
             RoomComponent.field_g = param11;
-            nn.field_b = param3;
+            DottedRectangleRenderer.field_b = param3;
             ArchiveConnectionFailureHandler.field_h = param13;
             WhirlpoolDigest.field_g = param12;
             ClientException.field_c = param1;

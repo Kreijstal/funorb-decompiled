@@ -97,7 +97,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param0 >= -32) {
           field_q = (long[]) null;
-          if (param1 < pka.field_b) {
+          if (param1 < DialogOverlayDrawing.field_b) {
             ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
@@ -116,7 +116,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
-        if (param1 < pka.field_b) {
+        if (param1 < DialogOverlayDrawing.field_b) {
           ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }

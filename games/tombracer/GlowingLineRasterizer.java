@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iha {
+final class GlowingLineRasterizer {
     private static int field_f;
     private static int field_g;
     private static int field_d;
@@ -111,7 +111,7 @@ final class iha {
         field_g = (var11 - param0) * var7;
         field_c = (var11 - param0) * var8;
         field_b = param6;
-        iha.rasterizeGlowingLine(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.pixels, var12 * SoftwareRasterizer.width + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.width - (var13 - var11));
+        GlowingLineRasterizer.rasterizeGlowingLine(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.pixels, var12 * SoftwareRasterizer.width + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.width - (var13 - var11));
     }
 
     public static void releaseStatics() {

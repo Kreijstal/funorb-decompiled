@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiChannelVolumeTargets {
-    static gb field_a;
+    static HardwareBlendMode field_a;
     int[] field_c;
     static SpriteData field_d;
     static String field_b;
@@ -375,7 +375,7 @@ final class MidiChannelVolumeTargets {
     }
 
     static {
-        field_a = new gb();
+        field_a = new HardwareBlendMode();
         field_b = "Add <%0> to ignore list";
     }
 }

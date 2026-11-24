@@ -61,8 +61,8 @@ final class LoginMethod {
             if (HardwareModelBillboardState.field_d > param3) {
               return;
             }
-            if (param1 < pka.field_b) {
-              param1 = pka.field_b;
+            if (param1 < DialogOverlayDrawing.field_b) {
+              param1 = DialogOverlayDrawing.field_b;
               var6_int = 0;
             } else {
               if (param1 <= DiskCacheWorker.field_c) {
@@ -72,8 +72,8 @@ final class LoginMethod {
                 param1 = DiskCacheWorker.field_c;
               }
             }
-            if (pka.field_b > param4) {
-              param4 = pka.field_b;
+            if (DialogOverlayDrawing.field_b > param4) {
+              param4 = DialogOverlayDrawing.field_b;
               var7 = 0;
             } else {
               if (DiskCacheWorker.field_c >= param4) {

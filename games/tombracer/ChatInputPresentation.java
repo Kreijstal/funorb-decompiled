@@ -46,7 +46,7 @@ final class ChatInputPresentation {
           var2 = null;
           if (OpenGlUnderwaterEffect.field_q == 0 &&
             null != WaveformOperator.field_n) {
-            var2 = sla.field_e;
+            var2 = ContentTransitionPhase.field_e;
           }
           if (OpenGlUnderwaterEffect.field_q == 2 &&
             !DisplaySettingsDialog.isQuickChatTargetReachable(24316)) {

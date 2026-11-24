@@ -26,7 +26,7 @@ final class CoinItemComponent extends ItemComponent {
           int var3 = -120 % ((param1 + 61) / 53);
           CourseDeathCountPacket.createMenuScreen(205, LegacyOpenGlReflectionEffect.field_f, 7, 35, 440, 125, 200);
           CourseDeathCountPacket.createMenuScreen(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
-          CourseDeathCountPacket.createMenuScreen(335, mna.field_a, 9, 40, 440, 126, 200);
+          CourseDeathCountPacket.createMenuScreen(335, ChatMessageLayout.field_a, 9, 40, 440, 126, 200);
           CourseDeathCountPacket.createMenuScreen(400, HardwareModelBillboardState.field_f, 10, 40, 440, 124, 200);
           CourseDeathCountPacket.createMenuScreen(400, UsernameQueryRequests.field_b, 11, 40, 440, 125, 200);
           param0.stringWidth(FloatPacketBuffer.field_l);

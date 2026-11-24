@@ -158,7 +158,7 @@ final class ResourceArchive {
     }
 
     final static void e(int param0) {
-        sla.b(29585);
+        ContentTransitionPhase.restorePreviousUiContext(29585);
         if (param0 != 19470) {
           ResourceArchive.e(46);
         }

@@ -107,7 +107,7 @@ final class ConsoleToken extends IntrusiveNode {
         if (ConsoleCloseParenthesisKind.kind == this.kind) {
           return "ArgEnd";
         }
-        if (this.kind == qba.field_c) {
+        if (this.kind == ModelBillboardCopyFlags.field_c) {
           return "ArgComma";
         }
         return "Unknown";

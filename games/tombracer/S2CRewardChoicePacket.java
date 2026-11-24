@@ -5,7 +5,7 @@ final class S2CRewardChoicePacket implements GamePacket {
     private int field_b;
     static ProjectionMode field_d;
     private int field_c;
-    static sla field_a;
+    static ContentTransitionPhase field_a;
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         RuntimeException var3 = null;
@@ -85,6 +85,6 @@ final class S2CRewardChoicePacket implements GamePacket {
 
     static {
         field_d = new ProjectionMode();
-        field_a = new sla();
+        field_a = new ContentTransitionPhase();
     }
 }

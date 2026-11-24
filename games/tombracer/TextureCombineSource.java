@@ -182,10 +182,10 @@ final class TextureCombineSource {
         LoadingStepList.field_c = SpriteData.loadSheet(param2, "", "multipliers");
         LoadingStep.field_a = SpriteData.loadSprite(param2, "", "room_total");
         FleeLocomotor.field_C = SpriteData.loadSprite(param2, "", "tombname_frame");
-        mna.field_c = SpriteData.loadSheet(param2, "", "blackframe");
+        ChatMessageLayout.field_c = SpriteData.loadSheet(param2, "", "blackframe");
         SoundEvent.field_h = SpriteData.loadSprite(param2, "", "sandblock");
         TextResourceLoader.field_b = SpriteData.loadSprite(param2, "", "medal_gold");
-        sla.field_a = SpriteData.loadSprite(param2, "", "medal_silver");
+        ContentTransitionPhase.field_a = SpriteData.loadSprite(param2, "", "medal_silver");
         if (param3 != 17) {
           return;
         }

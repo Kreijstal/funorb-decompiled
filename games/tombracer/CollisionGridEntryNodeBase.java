@@ -79,16 +79,16 @@ class CollisionGridEntryNodeBase extends DualLinkNode {
         try {
           var3 = -66 / ((param0 - 45) / 59);
           param1.unlink(118);
-          var2 = (LobbyPlayerEntry) (uma.field_b.first(-80));
+          var2 = (LobbyPlayerEntry) (SignedBitReader.field_b.first(-80));
           while (var2 != null) {
             if (var2.sortsBefore((byte) 123, param1)) {
-              var2 = (LobbyPlayerEntry) (uma.field_b.next(121));
+              var2 = (LobbyPlayerEntry) (SignedBitReader.field_b.next(121));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            uma.field_b.addLast((byte) -108, param1);
+            SignedBitReader.field_b.addLast((byte) -108, param1);
             return;
           }
           PlatformComponent.insertBefore(var2, param1, (byte) 24);

@@ -210,7 +210,7 @@ final class RewardChoicePhase extends MatchPhase {
               }
             } else {
               var12 = 16777215;
-              var11 = sla.field_b[var13];
+              var11 = ContentTransitionPhase.field_b[var13];
             }
           }
           SocketConnector.drawWrappedText(var11.toUpperCase(), 1, TooltipRenderer.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
@@ -304,7 +304,7 @@ final class RewardChoicePhase extends MatchPhase {
             var4 = this.rewardChoice.getReward(-108, param2);
             this.rewardChoice.takeReward(param2, (byte) 119);
             this.selectColumn(0);
-            var5 = RewardChoicePhase.createTextMessage(-58, LegacyOpenGlFlowingWaterEffect.formatText(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
+            var5 = RewardChoicePhase.createTextMessage(-58, LegacyOpenGlFlowingWaterEffect.formatText(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), ContentTransitionPhase.field_b[var4]}));
             ToolkitInstance.field_c.addMessageNow(0, var5);
           }
         }

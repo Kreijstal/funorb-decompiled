@@ -310,7 +310,7 @@ abstract class AppletGameShell extends GameApplet {
         if (this.field_b) {
           return -1;
         }
-        if (!uma.b(-1)) {
+        if (!SignedBitReader.shouldAttemptReconnect(-1)) {
           return -1;
         }
         if (TrackingCrusherComponent.field_G) {
@@ -593,7 +593,7 @@ abstract class AppletGameShell extends GameApplet {
           if (var3Lifetime1 != 0 &&
             Trap.field_m == 0 &&
             Transform3D.field_c == 11 &&
-            !uma.b(-1)) {
+            !SignedBitReader.shouldAttemptReconnect(-1)) {
             LoadLevelCommand.g(0);
           }
           if (Trap.field_m != -1 &&
@@ -647,7 +647,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if ((Trap.field_m != -1 &&
           Trap.field_m != 0 ||
-          uma.b(-1)) &&
+          SignedBitReader.shouldAttemptReconnect(-1)) &&
           LegacyOpenGlPostProcessEffect.field_f <= AdjustedWallClock.currentTimeMillis((byte) -107)) {
           TrackingCrusherComponent.field_G = false;
           if (-1 != Trap.field_m &&
@@ -657,7 +657,7 @@ abstract class AppletGameShell extends GameApplet {
           }
         }
         if (Trap.field_m == 0 &&
-          !uma.b(-1)) {
+          !SignedBitReader.shouldAttemptReconnect(-1)) {
           UnlockOverlay.field_l = false;
         }
         if (QueuedFixedRequest.field_f == 0 &&

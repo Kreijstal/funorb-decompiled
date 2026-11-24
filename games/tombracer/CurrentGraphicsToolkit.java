@@ -5,7 +5,7 @@ final class CurrentGraphicsToolkit {
     static GraphicsToolkit toolkit;
 
     final static void intersectClip(int param0, int param1, int param2, int param3, int param4) {
-        gb.pushRasterState(-29711);
+        HardwareBlendMode.pushRasterState(-29711);
         if (param0 != -21953) {
           return;
         }

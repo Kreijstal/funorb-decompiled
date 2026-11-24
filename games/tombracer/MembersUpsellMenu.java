@@ -155,7 +155,7 @@ final class MembersUpsellMenu extends MenuScreen {
         for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
           if (HardwareLightingArrays.isCourseAvailable((byte) 6, var4)) {
             if (MultiplayerLoginMenu.b(false) &&
-              !dta.field_g[var4]) {
+              !MatchHud.field_g[var4]) {
               var3 = 1;
               FloatPacketBuffer.field_k[var4].draw(LobbyPlayerEntry.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {

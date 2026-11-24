@@ -324,10 +324,10 @@ final class CrossedSineBandsOperator extends TextureOperator {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort(125);
             var4_long = var28.readLong(290646880);
-            var6_ref_kb = (ScoreSubmission) (nn.field_a.first(-80));
+            var6_ref_kb = (ScoreSubmission) (DottedRectangleRenderer.field_a.first(-80));
             while (var6_ref_kb != null) {
               if (var6_ref_kb.submissionId != var3Lifetime1) {
-                var6_ref_kb = (ScoreSubmission) (nn.field_a.next(122));
+                var6_ref_kb = (ScoreSubmission) (DottedRectangleRenderer.field_a.next(122));
                 continue;
               }
               break;

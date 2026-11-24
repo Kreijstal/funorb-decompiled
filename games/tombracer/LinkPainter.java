@@ -100,7 +100,7 @@ final class LinkPainter implements WidgetPainter {
               var10 = var10 + (param0.field_p - var8 >> 1);
             }
           }
-          nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
+          DottedRectangleRenderer.drawDottedRectangle(var9 - 2, 2 + var10, var8, var7 + 4, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

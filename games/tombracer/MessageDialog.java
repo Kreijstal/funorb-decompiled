@@ -229,7 +229,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         int var2 = -25 / ((-69 - param0) / 37);
         this.field_B = false;
         if (this.field_V) {
-          kla.showLoginForm((byte) -72);
+          AwtEventAndLoginUi.showLoginForm((byte) -72);
           return;
         }
         if (this.field_bb) {

@@ -279,7 +279,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     final void applyPostProcessing() {
     }
 
-    final void bindVertexLayout(mna param0, int param1) {
+    final void bindVertexLayout(ChatMessageLayout param0, int param1) {
         if (param1 != -32) {
           this.field_Wc = (jagdx.D3DLIGHT) null;
         }
@@ -966,11 +966,11 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return (Texture3D) ((Object) new DirectXTexture3D(this, param1, param4, param3, param5, param0));
     }
 
-    final mna createVertexLayout(VertexStreamLayout[] param0, int param1) {
+    final ChatMessageLayout createVertexLayout(VertexStreamLayout[] param0, int param1) {
         if (param1 != 0) {
           this.field_dd = (jagdx.IDirect3D) null;
         }
-        return (mna) ((Object) new dxVertexLayout(this, param0));
+        return (ChatMessageLayout) ((Object) new dxVertexLayout(this, param0));
     }
 
     final CubeTexture createCubeTexture(byte param0, int[][] param1, boolean param2, int param3) {

@@ -164,7 +164,7 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$1 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$1, (byte) 47, param1);
-          kv.field_a = GzipInflater.loadFontMetrics("b12", param2, "", (byte) 76);
+          DateOfBirthRequests.field_a = GzipInflater.loadFontMetrics("b12", param2, "", (byte) 76);
           incrementValue$2 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$2, (byte) 47, param1);

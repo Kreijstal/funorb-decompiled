@@ -293,8 +293,8 @@ final class TileOperator extends TextureOperator {
           var6 = param1;
           var7 = -param1;
           var8 = -1;
-          var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + param1);
-          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - param1);
+          var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param3 + param1);
+          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param3 - param1);
           C2SRoomResultPacket.fillRange((byte) -55, param2, var9, PackedBitSetSupport.field_a[param4], var10);
           while (var6 > var5_int) {
             var8 += 2;
@@ -306,8 +306,8 @@ final class TileOperator extends TextureOperator {
               var12 = var6 + param4;
               if (var12 >= HardwareModelBillboardState.field_d &&
                 var11 <= LineShape.field_h) {
-                var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
-                var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var5_int);
+                var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, DialogOverlayDrawing.field_b, var5_int + param3);
+                var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param3 - var5_int);
                 if (var12 <= LineShape.field_h) {
                   C2SRoomResultPacket.fillRange((byte) -55, param2, var13, PackedBitSetSupport.field_a[var12], var14);
                 }
@@ -325,8 +325,8 @@ final class TileOperator extends TextureOperator {
             if (var11Lifetime1 > LineShape.field_h) {
               continue;
             }
-            var13Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
-            var14Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 - 16226, pka.field_b, param3 - var6);
+            var13Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, DialogOverlayDrawing.field_b, param3 + var6);
+            var14Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 - 16226, DialogOverlayDrawing.field_b, param3 - var6);
             if (LineShape.field_h >= var12Lifetime1) {
               C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, PackedBitSetSupport.field_a[var12Lifetime1], var14Lifetime1);
             }

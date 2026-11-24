@@ -249,7 +249,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         this.getAchievementIcon(var6, 0).draw(var4 + var3, var3 + var5);
         var7Lifetime1 = var5 + 20 + 180;
         var8 = ShowLevelSetCommand.achievementNames[var6].toUpperCase();
-        var12 = kv.achievementDescriptions[var6];
+        var12 = DateOfBirthRequests.achievementDescriptions[var6];
         var10 = this.drawWrappedText(var8, MatchStatistics.field_n, -6671872, 180, var4, HardwareVertexNormalAccumulator.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.isAchievementEarned(false, var6)) {
@@ -258,7 +258,7 @@ final class AchievementsScreen extends DropInMenuScreen {
           TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
-        discarded$0 = this.drawWrappedText(var12 + "<br><br>" + InstructionsScreen.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, TooltipRenderer.field_p, param1 ^ -150, var7Lifetime1, 15);
+        discarded$0 = this.drawWrappedText(var12 + "<br><br>" + InstructionsScreen.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, DateOfBirthRequests.field_a, -14671840, 180, var4, TooltipRenderer.field_p, param1 ^ -150, var7Lifetime1, 15);
         return;
     }
 

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mna {
+abstract class ChatMessageLayout {
     static SpriteData[] field_c;
     static String field_b;
     static int[] field_a;
     static int field_d;
 
-    final static ChatMessage a(byte param0, int param1, int param2, int param3) {
+    final static ChatMessage layoutChatMessages(byte param0, int param1, int param2, int param3) {
         boolean stackIn_44_0 = false;
         Object var4;
         int var5;
@@ -129,7 +129,7 @@ abstract class mna {
         field_b = null;
         field_a = null;
         if (param0) {
-          mna.releaseStatics(false);
+          ChatMessageLayout.releaseStatics(false);
         }
     }
 

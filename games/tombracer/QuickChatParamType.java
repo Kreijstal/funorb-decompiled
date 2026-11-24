@@ -11,7 +11,7 @@ final class QuickChatParamType {
 
     final static void queueScoreSubmission(ScoreSubmission param0, byte param1, int param2) {
         try {
-          nn.field_a.addLast((byte) -99, param0);
+          DottedRectangleRenderer.field_a.addLast((byte) -99, param0);
           HardwareLightingArrays.writeScoreSubmission(param0, param1 ^ -108, param2);
           if (param1 != -108) {
             ScoreSubmission var4 = (ScoreSubmission) null;

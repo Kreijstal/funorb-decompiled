@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ContentTransitionDialog extends ResizingDialog {
-    private sla field_M;
+    private ContentTransitionPhase field_M;
     static int[] field_N;
     private int field_R;
     private int field_O;

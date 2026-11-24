@@ -6,7 +6,7 @@ final class SwitchLinkList {
     static String field_d;
     private int field_e;
     private Switchable[] targets;
-    private dha[] pendingTargetIds;
+    private SwitchTargetReference[] pendingTargetIds;
     static String field_c;
 
     final static int getCanvasHeight(int param0) {
@@ -82,7 +82,7 @@ final class SwitchLinkList {
             }
           }
           if (param0 != 30489) {
-            this.pendingTargetIds = (dha[]) null;
+            this.pendingTargetIds = (SwitchTargetReference[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "koa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -91,7 +91,7 @@ final class SwitchLinkList {
 
     final void resolveTargets(SwitchableScope param0, int param1) {
         int var3_int = 0;
-        dha var4 = null;
+        SwitchTargetReference var4 = null;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -145,12 +145,12 @@ final class SwitchLinkList {
     SwitchLinkList(int param0, int param1, int param2, BitPacketBuffer param3) {
         int var6 = 0;
         int var5_int = 0;
-        dha[] stackIn_6_0;
+        SwitchTargetReference[] stackIn_6_0;
         int stackIn_6_1;
-        dha stackIn_6_2;
-        dha stackIn_6_3;
-        dha stackIn_7_2;
-        dha stackIn_7_3;
+        SwitchTargetReference stackIn_6_2;
+        SwitchTargetReference stackIn_6_3;
+        SwitchTargetReference stackIn_7_2;
+        SwitchTargetReference stackIn_7_3;
         boolean stackIn_7_4;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -161,10 +161,10 @@ final class SwitchLinkList {
           this.field_e = param0;
           var5_int = param3.readBits((byte) 44, RandomBrickOperator.bitLength(param0, 22972));
           this.targets = new Switchable[var5_int];
-          this.pendingTargetIds = new dha[var5_int];
+          this.pendingTargetIds = new SwitchTargetReference[var5_int];
           for (var6 = 0; var6 < var5_int; var6++) {
             if (param2 <= 9) {
-              this.pendingTargetIds[var6] = new dha(false, param3.readBits((byte) 44, 8));
+              this.pendingTargetIds[var6] = new SwitchTargetReference(false, param3.readBits((byte) 44, 8));
             } else {
               stackIn_6_0 = this.pendingTargetIds;
               stackIn_6_1 = var6;
@@ -179,7 +179,7 @@ final class SwitchLinkList {
                 stackIn_7_3 = null;
                 stackIn_7_4 = true;
               }
-              stackIn_6_0[stackIn_6_1] = new dha(stackIn_7_4, param3.readBits((byte) 44, 8));
+              stackIn_6_0[stackIn_6_1] = new SwitchTargetReference(stackIn_7_4, param3.readBits((byte) 44, 8));
             }
           }
           return;

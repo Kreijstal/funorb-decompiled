@@ -245,7 +245,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 118, "mu_lobby_name_rm");
                 if (null != var2) {
-                  uma.field_a = BitPackedColour.decodeText((byte) 41, var2);
+                  SignedBitReader.field_a = BitPackedColour.decodeText((byte) 41, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "mu_lobby_location");
                 if (null != var2) {
@@ -365,7 +365,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -49, "join_xs_game");
                 if (null != var2) {
-                  mna.field_b = BitPackedColour.decodeText((byte) 115, var2);
+                  ChatMessageLayout.field_b = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -116, "join_request_xs_game");
                 if (var2 != null) {
@@ -405,7 +405,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "unable_to_send_message_password_b");
                 if (var2 != null) {
-                  mm.field_f = BitPackedColour.decodeText((byte) 90, var2);
+                  PendingAcknowledgementNode.field_f = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -88, "mu_chat_lobby_show_all");
                 if (var2 != null) {
@@ -737,7 +737,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
-                  sla.field_e = BitPackedColour.decodeText((byte) 96, var2);
+                  ContentTransitionPhase.field_e = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 119, "privatechat_friend_offline");
                 if (var2 != null) {
@@ -955,7 +955,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "rule_pillar_1");
                 if (null != var2) {
-                  qba.field_b = BitPackedColour.decodeText((byte) 56, var2);
+                  ModelBillboardCopyFlags.field_b = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -58, "rule_1_0");
                 if (var2 != null) {
@@ -1283,7 +1283,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 126, "create");
                 if (null != var2) {
-                  sla.field_c = BitPackedColour.decodeText((byte) 95, var2);
+                  ContentTransitionPhase.field_c = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -90, "create_pleasechooseapassword");
                 if (null != var2) {
@@ -1539,7 +1539,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "create_age_tooltip");
                 if (null != var2) {
-                  dta.field_e = BitPackedColour.decodeText((byte) 102, var2);
+                  MatchHud.field_e = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -44, "create_optin_news_tooltip");
                 if (var2 != null) {
@@ -1675,7 +1675,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -14, "unable_to_delete_friend");
                 if (var2 != null) {
-                  dga.field_b = BitPackedColour.decodeText((byte) 39, var2);
+                  LegacyOpenGlShaderLinker.field_b = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -11, "unable_to_delete_ignore");
                 if (var2 != null) {
@@ -2895,7 +2895,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -40, "discard");
                 if (null != var2) {
-                  pka.field_a = BitPackedColour.decodeText((byte) 120, var2);
+                  DialogOverlayDrawing.field_a = BitPackedColour.decodeText((byte) 120, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mustlogin4,1");
                 if (null != var2) {
@@ -2959,55 +2959,55 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -85, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  fha.field_a[0] = BitPackedColour.decodeText((byte) 29, var2);
+                  CommonUiSpriteLoader.field_a[0] = BitPackedColour.decodeText((byte) 29, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 104, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  fha.field_a[1] = BitPackedColour.decodeText((byte) 37, var2);
+                  CommonUiSpriteLoader.field_a[1] = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -40, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  fha.field_a[2] = BitPackedColour.decodeText((byte) 43, var2);
+                  CommonUiSpriteLoader.field_a[2] = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -73, "subscription_cost_monthly,3");
                 if (null != var2) {
-                  fha.field_a[3] = BitPackedColour.decodeText((byte) 29, var2);
+                  CommonUiSpriteLoader.field_a[3] = BitPackedColour.decodeText((byte) 29, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -122, "subscription_cost_monthly,4");
                 if (null != var2) {
-                  fha.field_a[4] = BitPackedColour.decodeText((byte) 68, var2);
+                  CommonUiSpriteLoader.field_a[4] = BitPackedColour.decodeText((byte) 68, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -69, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  fha.field_a[5] = BitPackedColour.decodeText((byte) 107, var2);
+                  CommonUiSpriteLoader.field_a[5] = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -60, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  fha.field_a[6] = BitPackedColour.decodeText((byte) 49, var2);
+                  CommonUiSpriteLoader.field_a[6] = BitPackedColour.decodeText((byte) 49, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 109, "subscription_cost_monthly,7");
                 if (var2 != null) {
-                  fha.field_a[7] = BitPackedColour.decodeText((byte) 93, var2);
+                  CommonUiSpriteLoader.field_a[7] = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 117, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  fha.field_a[8] = BitPackedColour.decodeText((byte) 46, var2);
+                  CommonUiSpriteLoader.field_a[8] = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 120, "subscription_cost_monthly,9");
                 if (null != var2) {
-                  fha.field_a[9] = BitPackedColour.decodeText((byte) 105, var2);
+                  CommonUiSpriteLoader.field_a[9] = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 107, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  fha.field_a[10] = BitPackedColour.decodeText((byte) 121, var2);
+                  CommonUiSpriteLoader.field_a[10] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -59, "subscription_cost_monthly,11");
                 if (var2 != null) {
-                  fha.field_a[11] = BitPackedColour.decodeText((byte) 86, var2);
+                  CommonUiSpriteLoader.field_a[11] = BitPackedColour.decodeText((byte) 86, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -28, "subscription_cost_monthly,12");
                 if (var2 != null) {
-                  fha.field_a[12] = BitPackedColour.decodeText((byte) 52, var2);
+                  CommonUiSpriteLoader.field_a[12] = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 106, "sentence_separator");
                 if (var2 != null) {

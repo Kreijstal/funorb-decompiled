@@ -24,9 +24,9 @@ final class LegacyOpenGlFontMask extends aa {
                 StringCursor.a(-30600, false);
               }
             }
-            ObjectList.field_c = nn.field_c;
+            ObjectList.field_c = DottedRectangleRenderer.field_c;
           } else {
-            if (ObjectList.field_c == nn.field_c) {
+            if (ObjectList.field_c == DottedRectangleRenderer.field_c) {
               fieldTemp$6 = PlatformBehaviour.field_o;
               PlatformBehaviour.field_o = PlatformBehaviour.field_o - 1;
               if (fieldTemp$6 <= 0) {

@@ -210,172 +210,172 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,0", (byte) 105);
                 if (var2 != null) {
-                  kv.achievementDescriptions[0] = BitPackedColour.decodeText((byte) 61, var2);
+                  DateOfBirthRequests.achievementDescriptions[0] = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,1", (byte) 114);
                 if (var2 != null) {
-                  kv.achievementDescriptions[1] = BitPackedColour.decodeText((byte) 60, var2);
+                  DateOfBirthRequests.achievementDescriptions[1] = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,2", (byte) 110);
                 if (null != var2) {
-                  kv.achievementDescriptions[2] = BitPackedColour.decodeText((byte) 111, var2);
+                  DateOfBirthRequests.achievementDescriptions[2] = BitPackedColour.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,3", (byte) 104);
                 if (var2 != null) {
-                  kv.achievementDescriptions[3] = BitPackedColour.decodeText((byte) 69, var2);
+                  DateOfBirthRequests.achievementDescriptions[3] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,4", (byte) 127);
                 if (null != var2) {
-                  kv.achievementDescriptions[4] = BitPackedColour.decodeText((byte) 54, var2);
+                  DateOfBirthRequests.achievementDescriptions[4] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,5", (byte) 111);
                 if (null != var2) {
-                  kv.achievementDescriptions[5] = BitPackedColour.decodeText((byte) 83, var2);
+                  DateOfBirthRequests.achievementDescriptions[5] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,6", (byte) 113);
                 if (var2 != null) {
-                  kv.achievementDescriptions[6] = BitPackedColour.decodeText((byte) 44, var2);
+                  DateOfBirthRequests.achievementDescriptions[6] = BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,7", (byte) 127);
                 if (null != var2) {
-                  kv.achievementDescriptions[7] = BitPackedColour.decodeText((byte) 80, var2);
+                  DateOfBirthRequests.achievementDescriptions[7] = BitPackedColour.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,8", (byte) 113);
                 if (var2 != null) {
-                  kv.achievementDescriptions[8] = BitPackedColour.decodeText((byte) 98, var2);
+                  DateOfBirthRequests.achievementDescriptions[8] = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,9", (byte) 110);
                 if (null != var2) {
-                  kv.achievementDescriptions[9] = BitPackedColour.decodeText((byte) 45, var2);
+                  DateOfBirthRequests.achievementDescriptions[9] = BitPackedColour.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,10", (byte) 104);
                 if (var2 != null) {
-                  kv.achievementDescriptions[10] = BitPackedColour.decodeText((byte) 44, var2);
+                  DateOfBirthRequests.achievementDescriptions[10] = BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,11", (byte) 117);
                 if (null != var2) {
-                  kv.achievementDescriptions[11] = BitPackedColour.decodeText((byte) 90, var2);
+                  DateOfBirthRequests.achievementDescriptions[11] = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,12", (byte) 104);
                 if (null != var2) {
-                  kv.achievementDescriptions[12] = BitPackedColour.decodeText((byte) 47, var2);
+                  DateOfBirthRequests.achievementDescriptions[12] = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,13", (byte) 120);
                 if (var2 != null) {
-                  kv.achievementDescriptions[13] = BitPackedColour.decodeText((byte) 88, var2);
+                  DateOfBirthRequests.achievementDescriptions[13] = BitPackedColour.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,14", (byte) 123);
                 if (null != var2) {
-                  kv.achievementDescriptions[14] = BitPackedColour.decodeText((byte) 54, var2);
+                  DateOfBirthRequests.achievementDescriptions[14] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,15", (byte) 110);
                 if (var2 != null) {
-                  kv.achievementDescriptions[15] = BitPackedColour.decodeText((byte) 43, var2);
+                  DateOfBirthRequests.achievementDescriptions[15] = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,16", (byte) 105);
                 if (null != var2) {
-                  kv.achievementDescriptions[16] = BitPackedColour.decodeText((byte) 81, var2);
+                  DateOfBirthRequests.achievementDescriptions[16] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,17", (byte) 123);
                 if (var2 != null) {
-                  kv.achievementDescriptions[17] = BitPackedColour.decodeText((byte) 115, var2);
+                  DateOfBirthRequests.achievementDescriptions[17] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,18", (byte) 123);
                 if (null != var2) {
-                  kv.achievementDescriptions[18] = BitPackedColour.decodeText((byte) 49, var2);
+                  DateOfBirthRequests.achievementDescriptions[18] = BitPackedColour.decodeText((byte) 49, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,19", (byte) 120);
                 if (var2 != null) {
-                  kv.achievementDescriptions[19] = BitPackedColour.decodeText((byte) 113, var2);
+                  DateOfBirthRequests.achievementDescriptions[19] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,20", (byte) 110);
                 if (var2 != null) {
-                  kv.achievementDescriptions[20] = BitPackedColour.decodeText((byte) 48, var2);
+                  DateOfBirthRequests.achievementDescriptions[20] = BitPackedColour.decodeText((byte) 48, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,21", (byte) 117);
                 if (null != var2) {
-                  kv.achievementDescriptions[21] = BitPackedColour.decodeText((byte) 86, var2);
+                  DateOfBirthRequests.achievementDescriptions[21] = BitPackedColour.decodeText((byte) 86, var2);
                 }
                 var3 = -99 % ((param1 - 40) / 63);
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,22", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[22] = BitPackedColour.decodeText((byte) 108, var2);
+                  DateOfBirthRequests.achievementDescriptions[22] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,23", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[23] = BitPackedColour.decodeText((byte) 115, var2);
+                  DateOfBirthRequests.achievementDescriptions[23] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,24", (byte) 103);
                 if (null != var2) {
-                  kv.achievementDescriptions[24] = BitPackedColour.decodeText((byte) 72, var2);
+                  DateOfBirthRequests.achievementDescriptions[24] = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,25", (byte) 125);
                 if (var2 != null) {
-                  kv.achievementDescriptions[25] = BitPackedColour.decodeText((byte) 114, var2);
+                  DateOfBirthRequests.achievementDescriptions[25] = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,26", (byte) 112);
                 if (null != var2) {
-                  kv.achievementDescriptions[26] = BitPackedColour.decodeText((byte) 56, var2);
+                  DateOfBirthRequests.achievementDescriptions[26] = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,27", (byte) 127);
                 if (null != var2) {
-                  kv.achievementDescriptions[27] = BitPackedColour.decodeText((byte) 61, var2);
+                  DateOfBirthRequests.achievementDescriptions[27] = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,28", (byte) 126);
                 if (null != var2) {
-                  kv.achievementDescriptions[28] = BitPackedColour.decodeText((byte) 107, var2);
+                  DateOfBirthRequests.achievementDescriptions[28] = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,29", (byte) 116);
                 if (var2 != null) {
-                  kv.achievementDescriptions[29] = BitPackedColour.decodeText((byte) 69, var2);
+                  DateOfBirthRequests.achievementDescriptions[29] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,30", (byte) 107);
                 if (var2 != null) {
-                  kv.achievementDescriptions[30] = BitPackedColour.decodeText((byte) 121, var2);
+                  DateOfBirthRequests.achievementDescriptions[30] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,31", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[31] = BitPackedColour.decodeText((byte) 89, var2);
+                  DateOfBirthRequests.achievementDescriptions[31] = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,32", (byte) 108);
                 if (var2 != null) {
-                  kv.achievementDescriptions[32] = BitPackedColour.decodeText((byte) 83, var2);
+                  DateOfBirthRequests.achievementDescriptions[32] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,33", (byte) 105);
                 if (var2 != null) {
-                  kv.achievementDescriptions[33] = BitPackedColour.decodeText((byte) 34, var2);
+                  DateOfBirthRequests.achievementDescriptions[33] = BitPackedColour.decodeText((byte) 34, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,34", (byte) 124);
                 if (var2 != null) {
-                  kv.achievementDescriptions[34] = BitPackedColour.decodeText((byte) 127, var2);
+                  DateOfBirthRequests.achievementDescriptions[34] = BitPackedColour.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,35", (byte) 123);
                 if (null != var2) {
-                  kv.achievementDescriptions[35] = BitPackedColour.decodeText((byte) 71, var2);
+                  DateOfBirthRequests.achievementDescriptions[35] = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,36", (byte) 122);
                 if (null != var2) {
-                  kv.achievementDescriptions[36] = BitPackedColour.decodeText((byte) 63, var2);
+                  DateOfBirthRequests.achievementDescriptions[36] = BitPackedColour.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,37", (byte) 122);
                 if (var2 != null) {
-                  kv.achievementDescriptions[37] = BitPackedColour.decodeText((byte) 108, var2);
+                  DateOfBirthRequests.achievementDescriptions[37] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,38", (byte) 116);
                 if (null != var2) {
-                  kv.achievementDescriptions[38] = BitPackedColour.decodeText((byte) 83, var2);
+                  DateOfBirthRequests.achievementDescriptions[38] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,39", (byte) 121);
                 if (var2 != null) {
-                  kv.achievementDescriptions[39] = BitPackedColour.decodeText((byte) 43, var2);
+                  DateOfBirthRequests.achievementDescriptions[39] = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,40", (byte) 117);
                 if (var2 != null) {
-                  kv.achievementDescriptions[40] = BitPackedColour.decodeText((byte) 73, var2);
+                  DateOfBirthRequests.achievementDescriptions[40] = BitPackedColour.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,41", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[41] = BitPackedColour.decodeText((byte) 31, var2);
+                  DateOfBirthRequests.achievementDescriptions[41] = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("no_textures", (byte) 108);
                 if (var2 != null) {
@@ -631,7 +631,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCrushers", (byte) 114);
                 if (var2 != null) {
-                  qba.field_d = BitPackedColour.decodeText((byte) 82, var2);
+                  ModelBillboardCopyFlags.field_d = BitPackedColour.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCrushers", (byte) 116);
                 if (var2 != null) {
@@ -1481,15 +1481,15 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,0", (byte) 102);
                 if (var2 != null) {
-                  kla.unknownDeathMessages[0] = BitPackedColour.decodeText((byte) 59, var2);
+                  AwtEventAndLoginUi.unknownDeathMessages[0] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,1", (byte) 104);
                 if (var2 != null) {
-                  kla.unknownDeathMessages[1] = BitPackedColour.decodeText((byte) 116, var2);
+                  AwtEventAndLoginUi.unknownDeathMessages[1] = BitPackedColour.decodeText((byte) 116, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,2", (byte) 118);
                 if (var2 != null) {
-                  kla.unknownDeathMessages[2] = BitPackedColour.decodeText((byte) 121, var2);
+                  AwtEventAndLoginUi.unknownDeathMessages[2] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,0", (byte) 100);
                 if (var2 != null) {
@@ -1911,23 +1911,23 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,0", (byte) 117);
                 if (var2 != null) {
-                  dta.skipRoomMessages[0] = BitPackedColour.decodeText((byte) 111, var2);
+                  MatchHud.skipRoomMessages[0] = BitPackedColour.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,1", (byte) 107);
                 if (var2 != null) {
-                  dta.skipRoomMessages[1] = BitPackedColour.decodeText((byte) 59, var2);
+                  MatchHud.skipRoomMessages[1] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,2", (byte) 112);
                 if (var2 != null) {
-                  dta.skipRoomMessages[2] = BitPackedColour.decodeText((byte) 105, var2);
+                  MatchHud.skipRoomMessages[2] = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,3", (byte) 101);
                 if (var2 != null) {
-                  dta.skipRoomMessages[3] = BitPackedColour.decodeText((byte) 28, var2);
+                  MatchHud.skipRoomMessages[3] = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,4", (byte) 100);
                 if (null != var2) {
-                  dta.skipRoomMessages[4] = BitPackedColour.decodeText((byte) 58, var2);
+                  MatchHud.skipRoomMessages[4] = BitPackedColour.decodeText((byte) 58, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_gas,0", (byte) 115);
                 if (var2 != null) {

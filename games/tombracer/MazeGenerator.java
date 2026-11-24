@@ -193,7 +193,7 @@ abstract class MazeGenerator {
           return;
         }
         HardwareModelBillboardState.field_d = param2;
-        pka.field_b = param3;
+        DialogOverlayDrawing.field_b = param3;
     }
 
     MazeGenerator(IsaacCipher param0) {

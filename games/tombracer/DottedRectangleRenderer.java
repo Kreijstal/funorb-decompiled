@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn {
+final class DottedRectangleRenderer {
     static int field_b;
     static IntrusiveDeque field_a;
     static int field_c;
@@ -15,7 +15,7 @@ final class nn {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

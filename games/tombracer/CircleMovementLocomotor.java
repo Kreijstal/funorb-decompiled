@@ -230,8 +230,8 @@ final class CircleMovementLocomotor extends Locomotor {
           if (null == param8.field_J) {
             param8.field_J = new IntrusiveDeque();
           }
-          uma.field_b = param8.field_J;
-          uma.field_b.clear(param2 ^ -59);
+          SignedBitReader.field_b = param8.field_J;
+          SignedBitReader.field_b.clear(param2 ^ -59);
           DropdownButtonPainter.field_a = new SecondaryNodeHashTable(param4);
           RasterizerOperator.field_o = 0;
           ValidatedTextInputWidget.field_K = 0;

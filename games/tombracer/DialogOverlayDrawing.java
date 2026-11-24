@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pka {
+final class DialogOverlayDrawing {
     static int field_b;
     static String field_a;
 
     public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          pka.releaseStatics(-110);
+          DialogOverlayDrawing.releaseStatics(-110);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean drawDialogOverlays(boolean param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         int var1 = param0 ? 1 : 0;

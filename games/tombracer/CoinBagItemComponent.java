@@ -110,7 +110,7 @@ final class CoinBagItemComponent extends ItemComponent {
         var18 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
+          LegacyOpenGlShaderLinker.layoutBottomPanels(TextureCombineSource.field_e, 199);
           if (null != C2SChooseRewardPacket.field_a) {
             NameEntryKeyboardSupport.field_b.field_X = true;
             var22 = HiscoresScreen.field_z;

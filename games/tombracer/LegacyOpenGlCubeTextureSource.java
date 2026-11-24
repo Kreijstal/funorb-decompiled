@@ -12,7 +12,7 @@ abstract class LegacyOpenGlCubeTextureSource extends CubeTextureSourceBase {
         try {
           var3 = var2.field_m;
           var4 = var2.field_q;
-          gb.pushRasterState(param1 - 29731);
+          HardwareBlendMode.pushRasterState(param1 - 29731);
           FullscreenMembershipDialog.field_O = new Sprite(var3, var4 * 3 / 4);
           FullscreenMembershipDialog.field_O.makeRasterTarget();
           var2.drawOpaque(0, 0);

@@ -83,8 +83,8 @@ abstract class GraphicsHeap extends IntrusiveNode {
           var21 = var15 * (var7 - 1);
           if (HardwareModelBillboardState.field_d <= param5 &&
             LineShape.field_h >= param5) {
-            var22 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + param2);
-            var23 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 - param2);
+            var22 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param0 + param2);
+            var23 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param0 - param2);
             C2SRoomResultPacket.fillRange((byte) -55, param3, var22, PackedBitSetSupport.field_a[param5], var23);
           }
           while (true) {
@@ -120,8 +120,8 @@ abstract class GraphicsHeap extends IntrusiveNode {
             if (LineShape.field_h < var22Lifetime1) {
               continue;
             }
-            var24 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + var6_int);
-            var25 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var6_int + param0);
+            var24 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param0 + var6_int);
+            var25 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, -var6_int + param0);
             if (var22Lifetime1 >= HardwareModelBillboardState.field_d) {
               C2SRoomResultPacket.fillRange((byte) -55, param3, var24, PackedBitSetSupport.field_a[var22Lifetime1], var25);
             }

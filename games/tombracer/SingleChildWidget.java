@@ -205,7 +205,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           LegacyTextureCache.field_a = 11;
           ToolkitSelector.field_a = 15;
           StatReportingScoringObserver.field_i = 2;
-          mna.field_d = 4;
+          ChatMessageLayout.field_d = 4;
           var7 = DialogStack.loadBinaryFont((byte) 123, "largefont", param4, "lobby", param3);
           PenaltyNotice.field_f = DialogStack.loadBinaryFont((byte) 118, "generalfont", param4, "lobby", param3);
           LegacyOpenGlRidgedWaterEffect.field_e = DialogStack.loadBinaryFont((byte) 127, "chatfont", param4, "lobby", param3);
@@ -314,7 +314,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           MidiNoteUsageNode.field_g.field_ob = 1;
           MidiNoteUsageNode.field_g.field_z = 1;
           ModelAnimator.field_g = new UiComponent(0L, MidiNoteUsageNode.field_g);
-          kv.field_b = new UiComponent(0L, MidiNoteUsageNode.field_g);
+          DateOfBirthRequests.field_b = new UiComponent(0L, MidiNoteUsageNode.field_g);
           ClipStack.field_g = new UiComponent(0L, HardwareModelVertexStream.field_g);
           HardwareSceneLight.field_o = new UiComponent(0L, MidiNoteUsageNode.field_g);
           TextureCoordinateGeneration.field_a = new UiComponent(0L, MidiNoteUsageNode.field_g);
@@ -335,9 +335,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           ModelAnimator.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton"), 124);
           ModelAnimator.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseover"), 116);
           ModelAnimator.field_g.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
-          kv.field_b.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton"), 113);
-          kv.field_b.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseover"), 123);
-          kv.field_b.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseheld"), 116);
+          DateOfBirthRequests.field_b.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton"), 113);
+          DateOfBirthRequests.field_b.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseover"), 123);
+          DateOfBirthRequests.field_b.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseheld"), 116);
           ClipStack.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton"), 125);
           ClipStack.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseover"), 117);
           ClipStack.field_g.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseheld"), 123);

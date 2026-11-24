@@ -27,7 +27,7 @@ final class DateOfBirthPanel extends ArrayWidgetGroup implements ButtonListener 
           return;
         }
         try {
-          kv.submitDateOfBirth(this.field_x.getYear(22829), this.field_x.year(109), 95, this.field_x.getDay((byte) 110));
+          DateOfBirthRequests.submitDateOfBirth(this.field_x.getYear(22829), this.field_x.year(109), 95, this.field_x.getDay((byte) 110));
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

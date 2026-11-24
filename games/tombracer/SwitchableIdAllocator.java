@@ -349,7 +349,7 @@ final class SwitchableIdAllocator {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -116 / ((param1 + 4) / 43);
-        if (pka.field_b <= param3 &&
+        if (DialogOverlayDrawing.field_b <= param3 &&
           !(param3 > DiskCacheWorker.field_c)) {
           param0 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param0);
           param4 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param4);

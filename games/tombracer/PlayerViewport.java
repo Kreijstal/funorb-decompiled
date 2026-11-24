@@ -15,7 +15,7 @@ final class PlayerViewport {
     static int field_b;
     private int moveDivisor;
     private int bottom;
-    private dta field_d;
+    private MatchHud field_d;
     private int right;
     private int targetBottom;
     private MatchScreen field_a;
@@ -335,7 +335,7 @@ final class PlayerViewport {
           this.field_a = param0;
           this.field_e = param1;
           this.field_n = new RoomViewRenderer();
-          this.field_d = new dta();
+          this.field_d = new MatchHud();
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

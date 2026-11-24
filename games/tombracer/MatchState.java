@@ -286,13 +286,13 @@ final class MatchState implements BitDecodableMarker {
         RuntimeException var3 = null;
         try {
           this.matchOver = CircleMovementLocomotor.readBitFlag(5907, param0);
-          this.declaredWinner = uma.readSignedBits(32, param0, -26803);
+          this.declaredWinner = SignedBitReader.readSignedBits(32, param0, -26803);
           this.roundIndex = param0.readBits((byte) 44, 32);
           this.roundSeed = param0.readBits((byte) 44, 32);
           this.characterChoices = (CharacterChoice[]) (DecodableArrayReader.readDecodableArray(this.characterChoices, 1, 8, -16499, TileOperator.field_q, param0));
           this.courseLayouts = (CourseLayout[]) (DecodableArrayReader.readDecodableArray(this.courseLayouts, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
           this.roundWins = ChatInputPresentation.readBitValues(0, param0, 8, this.roundWins);
-          this.roundWinner = uma.readSignedBits(32, param0, -26803);
+          this.roundWinner = SignedBitReader.readSignedBits(32, param0, -26803);
           this.finishedRound = PooledObject.readBitFlags(8, this.finishedRound, (byte) 93, param0);
           this.playersRemaining = param0.readBits((byte) 44, 32);
           this.awaitingFirstTick = CircleMovementLocomotor.readBitFlag(5907, param0);
@@ -304,7 +304,7 @@ final class MatchState implements BitDecodableMarker {
             }
             this.rewardChoice.decode(param0, false);
           }
-          this.field_E = uma.readSignedBits(32, param0, -26803);
+          this.field_E = SignedBitReader.readSignedBits(32, param0, -26803);
           this.field_I = PooledObject.readBitFlags(8, this.field_I, (byte) -41, param0);
           if (param1) {
             return;

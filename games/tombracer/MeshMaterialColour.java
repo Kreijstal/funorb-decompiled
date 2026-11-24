@@ -33,7 +33,7 @@ final class MeshMaterialColour {
             return stackIn_3_0;
           }
           if (UiWidget.field_g != 2) {
-            stackIn_6_0 = dga.field_b;
+            stackIn_6_0 = LegacyOpenGlShaderLinker.field_b;
             return stackIn_6_0;
           }
           var8 = FriendLookupAndContextMenus.findFriendByName(94, param0);

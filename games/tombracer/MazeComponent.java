@@ -290,7 +290,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_4_0 = TextureCombineSource.field_e;
           }
-          dga.layoutBottomPanels(stackIn_4_0, 199);
+          LegacyOpenGlShaderLinker.layoutBottomPanels(stackIn_4_0, 199);
           ModelCodecAndSocialPanelState.field_e.layoutPanels(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
           PlayerCountDisplay.widget.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = ChatMessageColours.field_b;

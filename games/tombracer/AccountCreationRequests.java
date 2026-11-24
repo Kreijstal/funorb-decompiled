@@ -20,7 +20,7 @@ final class AccountCreationRequests {
           LegacyOpenGlReflectionEffect.field_g = param4;
         }
         if (!(CubeTextureSourceBase.field_c <= param4)) {
-          kc.field_a = param4;
+          SelectionMenuInput.field_a = param4;
         }
         DamageableBehaviour.field_o[ContextMenu.field_Eb] = param0;
         MidiPatchEnvelope.field_h[ContextMenu.field_Eb] = param1;
@@ -32,8 +32,8 @@ final class AccountCreationRequests {
         if (LegacyOpenGlReflectionEffect.field_g < var7) {
           LegacyOpenGlReflectionEffect.field_g = var7;
         }
-        if (var7 < kc.field_a) {
-          kc.field_a = var7;
+        if (var7 < SelectionMenuInput.field_a) {
+          SelectionMenuInput.field_a = var7;
         }
         if (param5 > -9) {
           AccountCreationRequests.a(-106);
@@ -166,11 +166,11 @@ final class AccountCreationRequests {
               return;
             }
             if (var2 == 7) {
-              var32 = (LobbyPlayerEntry) (uma.field_b.first(-80));
+              var32 = (LobbyPlayerEntry) (SignedBitReader.field_b.first(-80));
               while (var32 != null) {
                 var32.unlink(70);
                 var32.unlinkSecondary(-7975);
-                var32 = (LobbyPlayerEntry) (uma.field_b.next(118));
+                var32 = (LobbyPlayerEntry) (SignedBitReader.field_b.next(118));
               }
               ValidatedTextInputWidget.field_K = 0;
               return;

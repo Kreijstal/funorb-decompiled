@@ -633,7 +633,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         boolean decompiledFrameRemainder0 = true;
         if (this.field_W == this.field_S) {
           HardwareOpenGlVertexBuffer.exitFullscreen(param0 + 1);
-          kla.b(0);
+          AwtEventAndLoginUi.notifyPageResizing(0);
         } else {
           if (this.field_S == this.field_N) {
             HardwareOpenGlVertexBuffer.exitFullscreen(0);

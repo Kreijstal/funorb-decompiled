@@ -207,10 +207,10 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           if (TextWidgetPainter.a(80)) {
             GameClock.field_b = OpenGlShaderProgram.hasNonZeroEntry((byte) 13, CharacterChoiceFactory.field_e);
             stackIn_8_0 = !(this.getTrackedScore((byte) 19) <= 0);
-            uma.field_c = stackIn_8_0;
+            SignedBitReader.field_c = stackIn_8_0;
             SoftwareTransform3D.field_p = stackIn_8_0;
             if (this.matchState.gameMode != 3 && (GameClock.field_b ||
-              uma.field_c ||
+              SignedBitReader.field_c ||
               SoftwareTransform3D.field_p)) {
               ConstrainToRectangleLocomotor.showMenuScreen(param0, 10, (byte) 106);
               decompiledFrameRemainder0 = false;

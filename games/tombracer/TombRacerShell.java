@@ -37,7 +37,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         if (!PendingRequestFactory.field_a) {
           this.c(true);
         } else {
-          pka.a(false);
+          DialogOverlayDrawing.drawDialogOverlays(false);
           LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, var2);
         }
     }
@@ -132,7 +132,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                 if (MessagePage.a(119)) {
                   LegacyOpenGlFontMask.b(false);
                 } else {
-                  var3 = kc.pollKeyEvents(true);
+                  var3 = SelectionMenuInput.pollKeyEvents(true);
                   if (var3 == 1) {
                     RoomEffectTraps.a((byte) -63, TextureTransformMode.field_a, true);
                   }
@@ -319,7 +319,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         }
         ReflectionCheckResponseSender.sendReflectionCheckResponses(param0);
         BridgeModel.flushGamePackets((byte) 120, 0);
-        if (uma.b(-1)) {
+        if (SignedBitReader.shouldAttemptReconnect(-1)) {
           var2 = this.updateConnection(8);
           if (0 == var2 ||
             var2 == 1) {
@@ -332,7 +332,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           if (this.isConnectionBusy((byte) 84)) {
             var3 = 1;
           }
-          if (!uma.b(-1)) {
+          if (!SignedBitReader.shouldAttemptReconnect(-1)) {
             var3 = 0;
           }
           if (var3 != 0) {

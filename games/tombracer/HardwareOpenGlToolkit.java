@@ -186,7 +186,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return (VertexStreamBuffer) ((Object) new HardwareOpenGlVertexBuffer(this, param1));
     }
 
-    final mna createVertexLayout(VertexStreamLayout[] param0, int param1) {
+    final ChatMessageLayout createVertexLayout(VertexStreamLayout[] param0, int param1) {
         RuntimeException var3 = null;
         OpenGlVertexLayout stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -198,7 +198,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             this.queueTextureDeletion(-57, 53, 67);
           }
           stackIn_3_0 = new OpenGlVertexLayout(param0);
-          return (mna) ((Object) stackIn_3_0);
+          return (ChatMessageLayout) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1068,7 +1068,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void bindVertexLayout(mna param0, int param1) {
+    final void bindVertexLayout(ChatMessageLayout param0, int param1) {
         int var15 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

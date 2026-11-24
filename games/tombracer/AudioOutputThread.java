@@ -31,7 +31,7 @@ final class AudioOutputThread implements Runnable {
               }
               TrapSpawner.sleepMillis(0, 10L);
               var5 = (Object) null;
-              kla.postDummyEvent(this.field_d, (byte) 50, (Object) null);
+              AwtEventAndLoginUi.postDummyEvent(this.field_d, (byte) 50, (Object) null);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

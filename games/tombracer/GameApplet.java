@@ -159,14 +159,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 270) {
             return;
           }
-          var4 = EffectSwitchBehaviour.field_r[sla.field_d];
-          EffectSwitchBehaviour.field_r[sla.field_d] = var2_long;
+          var4 = EffectSwitchBehaviour.field_r[ContentTransitionPhase.field_d];
+          EffectSwitchBehaviour.field_r[ContentTransitionPhase.field_d] = var2_long;
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(-var4 + var2_long);
             RenderableNode.field_f = (32000 + (var6_int >> 1)) / var6_int;
           }
-          sla.field_d = 31 & 1 + sla.field_d;
+          ContentTransitionPhase.field_d = 31 & 1 + ContentTransitionPhase.field_d;
           fieldTemp$1 = SoftwareModelBillboardState.field_d;
           SoftwareModelBillboardState.field_d = SoftwareModelBillboardState.field_d + 1;
           if (fieldTemp$1 > 50) {
@@ -547,7 +547,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(ScoringObserverFactory.field_a > var3)) {
                       this.runDrawPass(270);
-                      kla.postDummyEvent(ComponentTypeNames.field_c, (byte) 86, CurveShape.field_l);
+                      AwtEventAndLoginUi.postDummyEvent(ComponentTypeNames.field_c, (byte) 86, CurveShape.field_l);
                       break;
                     }
                     this.runUpdateTick(-6);

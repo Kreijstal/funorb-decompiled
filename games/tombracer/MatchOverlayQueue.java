@@ -77,7 +77,7 @@ final class MatchOverlayQueue {
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13_int = var19[var12];
                     if (var13_int == -1) {
-                      mm.field_g = true;
+                      PendingAcknowledgementNode.field_g = true;
                     } else {
                       if (var13_int < param5) {
                         QueuedPayloadRequest.field_f[var13_int] = true;

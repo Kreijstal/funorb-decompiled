@@ -211,10 +211,10 @@ final class PlantModel extends TrapModel {
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (ScoreSubmission) (nn.field_a.first(-80));
+          var4 = (ScoreSubmission) (DottedRectangleRenderer.field_a.first(-80));
           while (var4 != null) {
             HardwareLightingArrays.writeScoreSubmission(var4, 0, param1);
-            var4 = (ScoreSubmission) (nn.field_a.next(111));
+            var4 = (ScoreSubmission) (DottedRectangleRenderer.field_a.next(111));
           }
           if (param0) {
             PlantModel.resendPendingSubmissions(true, -117);

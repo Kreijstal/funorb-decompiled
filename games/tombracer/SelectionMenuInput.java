@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc {
+final class SelectionMenuInput {
     static int field_b;
     static int field_a;
 
@@ -48,7 +48,7 @@ final class kc {
         }
     }
 
-    final static String a(String param0, int param1, boolean param2, String param3) {
+    final static String requestRemoveIgnoredUser(String param0, int param1, boolean param2, String param3) {
         RuntimeException var4 = null;
         BitPacketBuffer var5 = null;
         int var6 = 0;

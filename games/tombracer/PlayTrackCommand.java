@@ -465,21 +465,21 @@ final class PlayTrackCommand extends ConsoleMethod {
               }
               if (var12.field_gc) {
                 var12.field_hc.field_r = LegacyOpenGlFlowingWaterEffect.formatText(123, LoadProfileCommand.field_o, new String[]{var32});
-                var12.field_hc.setBounds(var12.field_G - 2 * mna.field_d, ToolkitSelector.field_a, -23776, var31, mna.field_d);
+                var12.field_hc.setBounds(var12.field_G - 2 * ChatMessageLayout.field_d, ToolkitSelector.field_a, -23776, var31, ChatMessageLayout.field_d);
                 var31 = var31 + ToolkitSelector.field_a;
               }
               if (var12.field_Sb) {
                 var12.field_dc.field_r = LegacyOpenGlFlowingWaterEffect.formatText(121, SweeperMountComponent.field_I, new String[]{var32});
-                var12.field_dc.setBounds(-(mna.field_d * 2) + var12.field_G, ToolkitSelector.field_a, -23776, var31, mna.field_d);
+                var12.field_dc.setBounds(-(ChatMessageLayout.field_d * 2) + var12.field_G, ToolkitSelector.field_a, -23776, var31, ChatMessageLayout.field_d);
                 var31 = var31 + ToolkitSelector.field_a;
               }
             }
             var33 = ProxySocketConnector.formatLobbyPlayerStatus(var32, param1 + 8793, var12.field_Ib);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Rb.field_H.countWrappedLines(var33, var12.field_G - mna.field_d - mna.field_d);
+              var34_intLifetime1 = var12.field_Rb.field_H.countWrappedLines(var33, var12.field_G - ChatMessageLayout.field_d - ChatMessageLayout.field_d);
               var12.field_Rb.field_r = var33;
               var12.field_Rb.field_s = var12.field_zb * 256 / LobbyRemovalTiming.durationTicks;
-              var12.field_Rb.setBounds(-(mna.field_d * 2) + var12.field_G, ToolkitSelector.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);
+              var12.field_Rb.setBounds(-(ChatMessageLayout.field_d * 2) + var12.field_G, ToolkitSelector.field_a * var34_intLifetime1, param1 - 23776, var31, ChatMessageLayout.field_d);
               var31 = var31 + ToolkitSelector.field_a * var34_intLifetime1;
             }
             if (var7_int == 0) {

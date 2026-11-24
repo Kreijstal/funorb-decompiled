@@ -31,7 +31,7 @@ class IdChatTarget extends ChatTarget {
             field_f = (String) null;
           }
           for (var4 = 0; var6.length > var4; var4++) {
-            var6[var4] = gb.createModel(param0[var4], param1 + 8957, param2);
+            var6[var4] = HardwareBlendMode.createModel(param0[var4], param1 + 8957, param2);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;

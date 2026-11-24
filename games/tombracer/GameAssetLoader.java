@@ -285,7 +285,7 @@ final class GameAssetLoader implements LoadingStage {
             var12 = new RoomSelectionProfile();
             var7 = -101 % ((-14 - param1) / 49);
             var6 = var11.readUnsignedByte(255);
-            dga.a(var11, 0);
+            LegacyOpenGlShaderLinker.readPackedRankingStats(var11, 0);
             var12.decode(var11, var6, (byte) 39);
             LegacyOpenGlNormalMapGenerator.field_e = var12.getProfile(79);
             ComponentTargetList.field_e = var12.getFlagBits((byte) -78);

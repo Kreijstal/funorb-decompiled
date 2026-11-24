@@ -252,10 +252,10 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
           if (param2 >= HardwareModelBillboardState.field_d &&
             param2 <= LineShape.field_h) {
             var39 = PackedBitSetSupport.field_a[param2];
-            var16 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - param1);
-            var17 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + param1);
-            var18 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - var8);
-            var19 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var8);
+            var16 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 - param1);
+            var17 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 + param1);
+            var18 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 - var8);
+            var19 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 + var8);
             C2SRoomResultPacket.fillRange((byte) -55, param4, var18, var39, var16);
             C2SRoomResultPacket.fillRange((byte) -55, param5, var19, var39, var18);
             C2SRoomResultPacket.fillRange((byte) -55, param4, var17, var39, var19);
@@ -284,8 +284,8 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
               if (var16Lifetime1 >= HardwareModelBillboardState.field_d &&
                 LineShape.field_h >= var15) {
                 if (var8 <= var9) {
-                  var17Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
-                  var18Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
+                  var17Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 + var7_int);
+                  var18Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, -var7_int + param6);
                   if (var16Lifetime1 <= LineShape.field_h) {
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1, PackedBitSetSupport.field_a[var16Lifetime1], var18Lifetime1);
                   }
@@ -294,10 +294,10 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
                   }
                 } else {
                   var17Lifetime1 = GasVentModel.field_m[var9];
-                  var18Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
-                  var19Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
-                  var20 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1 + param6);
-                  var21 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var17Lifetime1 + param6);
+                  var18Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 + var7_int);
+                  var19Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, -var7_int + param6);
+                  var20 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, var17Lifetime1 + param6);
+                  var21 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, -var17Lifetime1 + param6);
                   if (var16Lifetime1 <= LineShape.field_h) {
                     var40 = PackedBitSetSupport.field_a[var16Lifetime1];
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var40, var19Lifetime1);
@@ -323,14 +323,14 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
             }
             var17Lifetime1Lifetime1 = var9 + param6;
             var18Lifetime1Lifetime1 = param6 - var9;
-            if (var17Lifetime1Lifetime1 < pka.field_b) {
+            if (var17Lifetime1Lifetime1 < DialogOverlayDrawing.field_b) {
               continue;
             }
             if (var18Lifetime1Lifetime1 > DiskCacheWorker.field_c) {
               continue;
             }
-            var17Lifetime1Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1Lifetime1);
-            var18Lifetime1Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var18Lifetime1Lifetime1);
+            var17Lifetime1Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, var17Lifetime1Lifetime1);
+            var18Lifetime1Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (LineShape.field_h >= var16Lifetime1Lifetime1) {
                 C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, PackedBitSetSupport.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
@@ -347,8 +347,8 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
               stackIn_41_0 = var11;
             }
             var19Lifetime1Lifetime1 = stackIn_41_0;
-            var20Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var19Lifetime1Lifetime1);
-            var21Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var19Lifetime1Lifetime1 + param6);
+            var20Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, param6 + var19Lifetime1Lifetime1);
+            var21Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, DialogOverlayDrawing.field_b, -var19Lifetime1Lifetime1 + param6);
             if (var16Lifetime1Lifetime1 <= LineShape.field_h) {
               var42 = PackedBitSetSupport.field_a[var16Lifetime1Lifetime1];
               C2SRoomResultPacket.fillRange((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);

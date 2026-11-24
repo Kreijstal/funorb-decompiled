@@ -329,7 +329,7 @@ final class GridLineWalker {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (-param0 + param3 < pka.field_b) {
+        if (-param0 + param3 < DialogOverlayDrawing.field_b) {
           BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
         } else {
           if (DiskCacheWorker.field_c < param0 + param3) {

@@ -29,7 +29,7 @@ abstract class NoiseSliceGenerator {
           if (VertexStreamLayout.containsTextOrReverse(true, param2, param1)) {
             return false;
           }
-          if (kv.containsNameOrReverse((byte) 36, param2, param1)) {
+          if (DateOfBirthRequests.containsNameOrReverse((byte) 36, param2, param1)) {
             return false;
           }
           if (UiComponent.containsForwardOrReversed(true, param2, param1)) {

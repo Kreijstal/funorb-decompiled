@@ -219,7 +219,7 @@ final class ReportAbuseDialog extends UiComponent {
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_H.stringWidth(qba.field_b);
+            var17Lifetime2 = param6.field_H.stringWidth(ModelBillboardCopyFlags.field_b);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -252,7 +252,7 @@ final class ReportAbuseDialog extends UiComponent {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.appendReasonHeading(param6, qba.field_b, var16Lifetime2, var18Lifetime4, 8421504, var28[1]);
+            var18Lifetime4 = this.appendReasonHeading(param6, ModelBillboardCopyFlags.field_b, var16Lifetime2, var18Lifetime4, 8421504, var28[1]);
             var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[16]);
             var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[17]);
             var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[18]);

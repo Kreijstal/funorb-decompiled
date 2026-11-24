@@ -7,7 +7,7 @@ final class ArrowShooterComponent extends ShooterComponent {
 
     final static void createFonts(GraphicsToolkit param0, int param1) {
         try {
-          TooltipRenderer.field_p = param0.createFont(kv.field_a, LobbyPlayerMenuActions.field_b, true);
+          TooltipRenderer.field_p = param0.createFont(DateOfBirthRequests.field_a, LobbyPlayerMenuActions.field_b, true);
           HardwareVertexNormalAccumulator.field_f = param0.createFont(MatchStatistics.field_n, MatchState.field_j, true);
           if (param1 > -66) {
             field_K = (String) null;

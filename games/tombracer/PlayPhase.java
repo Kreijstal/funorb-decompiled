@@ -219,7 +219,7 @@ final class PlayPhase extends MatchPhase {
                   var7 = LegacyVertexBufferSetup.findCourseRoom(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
                 } else {
                   if (var5.isConnectorRoom(0)) {
-                    var7 = mna.findRoomDefinitionFrom(0, var6Lifetime1Lifetime2);
+                    var7 = ChatMessageLayout.findRoomDefinitionFrom(0, var6Lifetime1Lifetime2);
                   } else {
                     var7 = PlayerInputQueue.findRoomDefinition(-111, var6Lifetime1Lifetime2);
                   }
@@ -633,8 +633,8 @@ final class PlayPhase extends MatchPhase {
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
-            var9Lifetime3 = nn.field_b;
-            nn.field_b = TileRenderable.field_a;
+            var9Lifetime3 = DottedRectangleRenderer.field_b;
+            DottedRectangleRenderer.field_b = TileRenderable.field_a;
             TileRenderable.field_a = var9Lifetime3;
             PushableBlockMazeComponent.field_L = true;
           }
