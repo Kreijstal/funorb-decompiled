@@ -31,7 +31,7 @@ final class OpacityWidget extends SingleChildWidget {
         int var4 = -80 % ((param0 + 19) / 32);
         int var3 = var2 * (ValidationStatusIcon.field_E - VertexArrayPointer.field_b) / var1 + VertexArrayPointer.field_b;
         LobbyOverlayAndDateValidationState.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
-        HardwareGraphicsHeap.a(640, 5, mna.field_d, 25, pda.field_c, ValidationStatusIcon.field_E - 24, 0);
+        HardwareGraphicsHeap.a(640, 5, mna.field_d, 25, EmbossNormalizationTable.field_c, ValidationStatusIcon.field_E - 24, 0);
     }
 
     final static void initializeMenuActionLabels(int param0) {
@@ -39,7 +39,7 @@ final class OpacityWidget extends SingleChildWidget {
         OpenGlSceneLight.field_q[5] = FloatPacketBuffer.field_l;
         OpenGlSceneLight.field_q[12] = NamedChatTarget.field_d;
         OpenGlSceneLight.field_q[16] = ResourceArchive.field_e;
-        OpenGlSceneLight.field_q[3] = ol.field_a;
+        OpenGlSceneLight.field_q[3] = ContactListOrdering.field_a;
         OpenGlSceneLight.field_q[6] = DamageableBehaviour.field_x;
         OpenGlSceneLight.field_q[14] = MazeSearchNode.field_i;
         OpenGlSceneLight.field_q[4] = ChatChannelType.field_b;
@@ -65,7 +65,7 @@ final class OpacityWidget extends SingleChildWidget {
         OpenGlSceneLight.field_q[23] = SoftwareRasterBlitter.field_b[0];
         OpenGlSceneLight.field_q[28] = LoginTextValue.field_c;
         OpenGlSceneLight.field_q[24] = SoftwareRasterBlitter.field_b[1];
-        OpenGlSceneLight.field_q[37] = um.field_k;
+        OpenGlSceneLight.field_q[37] = UiComponentNodeBase.field_k;
         OpenGlSceneLight.field_q[31] = IntPoint.field_b;
         OpenGlSceneLight.field_q[30] = MidiPatchEnvelope.field_a;
         OpenGlSceneLight.field_q[36] = PlayerInputQueue.field_b;
@@ -156,7 +156,7 @@ final class OpacityWidget extends SingleChildWidget {
           MusicVolumeControl.field_a[6] = HazardEffect.lavaDeathMessages;
           MusicVolumeControl.field_a[1] = BlockComponent.restartMessages;
           MusicVolumeControl.field_a[12] = SwitchComponent.fireDeathMessages;
-          MusicVolumeControl.field_a[5] = tia.fallDeathMessages;
+          MusicVolumeControl.field_a[5] = FixedAngleTrigonometry.fallDeathMessages;
           MusicVolumeControl.field_a[13] = SinglePlayerCourseGenerator.laserDeathMessages;
           MusicVolumeControl.field_a[15] = SingleChildWidget.sawDeathMessages;
           MusicVolumeControl.field_a[7] = AccountRequestState.snakeDeathMessages;
@@ -208,7 +208,7 @@ final class OpacityWidget extends SingleChildWidget {
         MusicVolumeControl.field_a[6] = HazardEffect.lavaDeathMessages;
         MusicVolumeControl.field_a[1] = BlockComponent.restartMessages;
         MusicVolumeControl.field_a[12] = SwitchComponent.fireDeathMessages;
-        MusicVolumeControl.field_a[5] = tia.fallDeathMessages;
+        MusicVolumeControl.field_a[5] = FixedAngleTrigonometry.fallDeathMessages;
         MusicVolumeControl.field_a[13] = SinglePlayerCourseGenerator.laserDeathMessages;
         MusicVolumeControl.field_a[15] = SingleChildWidget.sawDeathMessages;
         MusicVolumeControl.field_a[7] = AccountRequestState.snakeDeathMessages;

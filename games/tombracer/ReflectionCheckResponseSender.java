@@ -25,14 +25,14 @@ final class ReflectionCheckResponseSender {
           if (!param0) {
             musicTrackNames = (String[]) null;
           }
-          var1 = ql.field_k;
+          var1 = CollisionGridEntryNodeBase.field_k;
           while (SnakePitBehaviour.isFirstReflectionCheckReady(10371)) {
             var1.writeCipheredOpcode(8, -2988);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             HardwareWaterTextures.writeReflectionCheckResponse(true, var1);
-            ql.field_k.backpatchByteLength(var1.position - var2, (byte) -17);
+            CollisionGridEntryNodeBase.field_k.backpatchByteLength(var1.position - var2, (byte) -17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

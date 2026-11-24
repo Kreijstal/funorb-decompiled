@@ -86,7 +86,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
     WeaponItemBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_t = jl.decodeWeapon(param0, true, param1);
+          this.field_t = PitchYawRotationBuilder.decodeWeapon(param0, true, param1);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

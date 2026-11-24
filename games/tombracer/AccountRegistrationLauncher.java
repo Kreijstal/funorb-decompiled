@@ -23,11 +23,11 @@ final class AccountRegistrationLauncher {
     final static void openAccountRegistration(byte param0) {
         TeleportState.field_b = new AccountRegistrationPanel();
         if (param0 == 6) {
-          um.field_l.transitionToContent(103, TeleportState.field_b);
+          UiComponentNodeBase.field_l.transitionToContent(103, TeleportState.field_b);
           return;
         }
         AccountRegistrationLauncher.openAccountRegistration((byte) -122);
-        um.field_l.transitionToContent(103, TeleportState.field_b);
+        UiComponentNodeBase.field_l.transitionToContent(103, TeleportState.field_b);
     }
 
     final static void applyMusicVolume(int param0, int param1) {

@@ -40,7 +40,7 @@ final class RoomHeader {
             return null;
           }
           var2_int = -71 / ((5 - param1) / 35);
-          var3 = new BinaryBitmapFont(param0, LoadLevelCommand.field_p, TermsLinksPanel.field_C, LegacyOpenGlNormalMapGenerator.field_b, ImageProducerCanvasImageBuffer.field_m, ck.field_c);
+          var3 = new BinaryBitmapFont(param0, LoadLevelCommand.field_p, TermsLinksPanel.field_C, LegacyOpenGlNormalMapGenerator.field_b, ImageProducerCanvasImageBuffer.field_m, ClientResourceBootstrap.field_c);
           MazeGenerator.releaseStatics((byte) 123);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -63,13 +63,13 @@ final class RoomHeader {
         MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
         if (param0 == -68) {
           var4 = (CharSequence) ((Object) MenuEntry.field_k);
-          tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var4);
+          FixedAngleTrigonometry.field_b = OpenGlTexture3D.normalizeDisplayName(1, var4);
           return;
         }
         byte[] var2 = (byte[]) null;
         RoomHeader.decodeBinaryFont((byte[]) null, (byte) 68);
         CharSequence var3 = (CharSequence) ((Object) MenuEntry.field_k);
-        tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var3);
+        FixedAngleTrigonometry.field_b = OpenGlTexture3D.normalizeDisplayName(1, var3);
     }
 
     final void encode(BitPacketBuffer param0, int param1) {

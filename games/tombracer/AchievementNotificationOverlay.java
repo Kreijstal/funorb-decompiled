@@ -239,7 +239,7 @@ final class AchievementNotificationOverlay extends MatchOverlay {
     final static void beginPrivateMessage(String param0, long param1, byte param2) {
         CharSequence var5 = null;
         try {
-          wp.field_a = param0;
+          FriendLookupAndContextMenus.field_a = param0;
           OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param0);
           MatchingEmailAvailabilityValidator.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);

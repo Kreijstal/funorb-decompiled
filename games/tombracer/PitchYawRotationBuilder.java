@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl {
+final class PitchYawRotationBuilder {
     static String field_a;
     private static String[] field_b;
 
@@ -33,19 +33,19 @@ final class jl {
         field_b = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawNameEntryPopup(byte param0, boolean param1) {
         if (param0 > -46) {
-          jl.createPitchYawRotation(-79, 78, -90);
-          if (bl.field_a != null) {
-            bl.field_a.drawFullScreen(40, param1);
+          PitchYawRotationBuilder.createPitchYawRotation(-79, 78, -90);
+          if (GameSocketTraffic.field_a != null) {
+            GameSocketTraffic.field_a.drawFullScreen(40, param1);
             return;
           }
           return;
         }
-        if (bl.field_a == null) {
+        if (GameSocketTraffic.field_a == null) {
           return;
         }
-        bl.field_a.drawFullScreen(40, param1);
+        GameSocketTraffic.field_a.drawFullScreen(40, param1);
     }
 
     final static Weapon decodeWeapon(Room param0, boolean param1, BitPacketBuffer param2) {
@@ -62,7 +62,7 @@ final class jl {
         try {
           if (!param1) {
             var4 = (BitPacketBuffer) null;
-            jl.decodeWeapon((Room) null, false, (BitPacketBuffer) null);
+            PitchYawRotationBuilder.decodeWeapon((Room) null, false, (BitPacketBuffer) null);
           }
           var3_int = param2.readBits((byte) 44, 5);
           stackIn_3_0 = TextureOperator.createFullWeapon(var3_int, -1);

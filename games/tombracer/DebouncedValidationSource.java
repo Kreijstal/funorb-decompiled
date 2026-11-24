@@ -60,7 +60,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
             PowerDownItemBehaviour.sendAbuseReport(var4, param2, (byte) 87, var5 != 0, RoomViewRenderer.field_c.field_Db, RoomViewRenderer.field_c.getEnteredText(80));
           }
           RoomViewRenderer.field_c = null;
-          wp.closeContextMenu(-1);
+          FriendLookupAndContextMenus.closeContextMenu(-1);
           return;
         }
     }

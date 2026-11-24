@@ -82,7 +82,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
           if (Transform3D.getChatSetting(var5, -20011) == 2) {
             MazeGenerator.setChatSetting(var5, param2, (byte) 108, 1);
           }
-          ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
+          ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, var4_ref_String, param0, 32371, FriendLookupAndContextMenus.field_a, -1);
           PlayerProfile.clearChatInput(true);
           return true;
         }
@@ -158,7 +158,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
           var69 = var7 + var64 + ": ";
           var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var69);
         } else {
-          var73 = (CharSequence) ((Object) wp.field_a);
+          var73 = (CharSequence) ((Object) FriendLookupAndContextMenus.field_a);
           var61 = LegacyOpenGlFlowingWaterEffect.formatText(115, TrackMountComponent.field_G, new String[]{ProgressDialogLauncher.normalizeBase37Name(30433, var73)});
           var62 = LegacyOpenGlFlowingWaterEffect.formatText(102, RoomMusicController.field_a, new String[]{var16});
           var9 = PlatformBehaviour.field_s.stringWidth(var61);

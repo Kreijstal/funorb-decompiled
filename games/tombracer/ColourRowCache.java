@@ -89,7 +89,7 @@ final class ColourRowCache {
           if (param1 != -113) {
             field_j = (String) null;
           }
-          var4 = wp.field_b;
+          var4 = FriendLookupAndContextMenus.field_b;
           while (PendingRequestFactory.field_b.length > var3_int) {
             var5 = ComponentTargetList.field_c[var3_int];
             if (var5 >= 0) {

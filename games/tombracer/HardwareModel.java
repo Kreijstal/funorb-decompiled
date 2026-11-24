@@ -862,8 +862,8 @@ final class HardwareModel extends ToolkitModel {
               this.field_m = FullscreenConfirmationDialog.copyOf(this.field_m, 114, this.field_fb);
               this.field_p = FullscreenConfirmationDialog.copyOf(this.field_p, 123, this.field_fb);
               this.field_w = LinkPainter.copyByteRange(0, this.field_w, this.field_fb);
-              this.field_eb = fba.copyFloats(1, this.field_eb, this.field_fb);
-              this.field_t = fba.copyFloats(1, this.field_t, this.field_fb);
+              this.field_eb = PerlinRowsAndByteArrayPool.copyFloats(1, this.field_eb, this.field_fb);
+              this.field_t = PerlinRowsAndByteArrayPool.copyFloats(1, this.field_t, this.field_fb);
               if (null != param1.field_l &&
                 SingleChildWidget.hasFlag32(param2, this.field_h, 32)) {
                 this.field_D = param1.groupVerticesByLabel(false, (byte) 64);
@@ -1168,9 +1168,9 @@ final class HardwareModel extends ToolkitModel {
             return;
           }
           HardwareUnlitEffect.field_e = var6.field_q * var5.field_l + var6.field_l * var5.field_g + var6.field_o * var5.field_f;
-          fba.field_a = var5.field_e + (var6.field_i * var5.field_f + (var6.field_n * var5.field_l + var5.field_g * var6.field_e));
-          var11 = fba.field_a + HardwareUnlitEffect.field_e * (float)this.field_o;
-          var12 = (float)this.field_n * HardwareUnlitEffect.field_e + fba.field_a;
+          PerlinRowsAndByteArrayPool.field_a = var5.field_e + (var6.field_i * var5.field_f + (var6.field_n * var5.field_l + var5.field_g * var6.field_e));
+          var11 = PerlinRowsAndByteArrayPool.field_a + HardwareUnlitEffect.field_e * (float)this.field_o;
+          var12 = (float)this.field_n * HardwareUnlitEffect.field_e + PerlinRowsAndByteArrayPool.field_a;
           if (!(var11 > var12)) {
             var14 = (var12 + (float)this.field_H) * (float)this.field_S.field_Ic;
             var13 = (var11 - (float)this.field_H) * (float)this.field_S.field_Ic;
@@ -2157,7 +2157,7 @@ final class HardwareModel extends ToolkitModel {
                   var7 = 0.3333333134651184f * (float)(this.field_Z[var5.field_i] + (this.field_Z[var5.field_c] + this.field_Z[var5.field_k]));
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
-                  var10 = var9 * JavaKeyCodeMapPatches.field_b + (HardwareUnlitEffect.field_e * var8 + GraphicsSelectionState.field_c * var7) + fba.field_a;
+                  var10 = var9 * JavaKeyCodeMapPatches.field_b + (HardwareUnlitEffect.field_e * var8 + GraphicsSelectionState.field_c * var7) + PerlinRowsAndByteArrayPool.field_a;
                   var11 = var9 * CoinAndEmailLabels.field_b + (ScoreSubmission.field_p * var8 + var7 * ProgressDialog.field_O) + MatchScoringObserver.field_g;
                   var12 = VertexAttribute.field_h + (var9 * TextureFilter.field_c + (var7 * ChatChannelType.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
@@ -4754,10 +4754,10 @@ final class HardwareModel extends ToolkitModel {
           if (var9 <= (float)this.field_S.field_D) {
             return;
           }
-          fba.field_a = var5.field_n * var4.field_l + var4.field_g * var5.field_e + var5.field_i * var4.field_f + var4.field_e;
+          PerlinRowsAndByteArrayPool.field_a = var5.field_n * var4.field_l + var4.field_g * var5.field_e + var5.field_i * var4.field_f + var4.field_e;
           HardwareUnlitEffect.field_e = var4.field_f * var5.field_o + (var5.field_l * var4.field_g + var4.field_l * var5.field_q);
-          var10 = (float)this.field_o * HardwareUnlitEffect.field_e + fba.field_a;
-          var11 = (float)this.field_n * HardwareUnlitEffect.field_e + fba.field_a;
+          var10 = (float)this.field_o * HardwareUnlitEffect.field_e + PerlinRowsAndByteArrayPool.field_a;
+          var11 = (float)this.field_n * HardwareUnlitEffect.field_e + PerlinRowsAndByteArrayPool.field_a;
           if (var11 < var10) {
             var13 = (var10 + (float)this.field_H) * (float)this.field_S.field_Ic;
             var12 = (float)this.field_S.field_Ic * ((float)(-this.field_H) + var11);

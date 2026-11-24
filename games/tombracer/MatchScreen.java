@@ -453,7 +453,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         if (param0 != 1) {
           this.setTrackedScore(-31, 0);
         }
-        ql.field_k.writeCipheredOpcode(66, param0 ^ -2987);
+        CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(66, param0 ^ -2987);
     }
 
     final void startMenuBackgroundDemo(byte param0) {

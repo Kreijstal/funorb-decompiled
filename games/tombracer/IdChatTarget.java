@@ -88,7 +88,7 @@ class IdChatTarget extends ChatTarget {
         if (param1 != 0) {
           field_d = (SecondaryNodeHashTable) null;
         }
-        jl.a((byte) -128, param0);
+        PitchYawRotationBuilder.drawNameEntryPopup((byte) -128, param0);
         if (null != RoomViewRenderer.field_c) {
           RoomViewRenderer.field_c.drawFullScreen(param1 + 74, param0);
         }

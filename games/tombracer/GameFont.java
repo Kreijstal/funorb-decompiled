@@ -43,9 +43,9 @@ abstract class GameFont {
     }
 
     final static void a(boolean param0) {
-        LightSource.field_h.setBounds(RasterShape.field_e.field_G - (!UnlockOverlay.field_p ? 0 : 40 + (2 + io.field_a + 2)), 18, -23776, 0, 0);
-        ShaderEffect.field_b.setBounds(io.field_a + 42, 18, -23776, 0, -2 + (RasterShape.field_e.field_G - (io.field_a + 40)));
-        RadialSelectionPainter.field_j.setPaneBounds(RasterShape.field_e.field_G, 2, (byte) 127, 0, io.field_a, -20 + RasterShape.field_e.field_t, 20);
+        LightSource.field_h.setBounds(RasterShape.field_e.field_G - (!UnlockOverlay.field_p ? 0 : 40 + (2 + Cp1252ByteEncoder.field_a + 2)), 18, -23776, 0, 0);
+        ShaderEffect.field_b.setBounds(Cp1252ByteEncoder.field_a + 42, 18, -23776, 0, -2 + (RasterShape.field_e.field_G - (Cp1252ByteEncoder.field_a + 40)));
+        RadialSelectionPainter.field_j.setPaneBounds(RasterShape.field_e.field_G, 2, (byte) 127, 0, Cp1252ByteEncoder.field_a, -20 + RasterShape.field_e.field_t, 20);
         if (param0) {
           GameFont.a(false);
         }
@@ -369,7 +369,7 @@ abstract class GameFont {
           var12 = param6.length();
           for (var13 = 0; var12 > var13; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(io.charToCp1252(-377, param6.charAt(var13)) & 255);
+            var14 = (char)(Cp1252ByteEncoder.charToCp1252(-377, param6.charAt(var13)) & 255);
             if (var14 == 60) {
               var10_int = var13;
             } else {

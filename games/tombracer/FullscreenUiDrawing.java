@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh {
+final class FullscreenUiDrawing {
     static ToolkitModel[] field_b;
     private static String[] field_a;
     static int[] field_c;
@@ -13,7 +13,7 @@ final class hh {
         return false;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawFullscreenPanel(int param0, boolean param1) {
         if (param0 != 40) {
           field_a = (String[]) null;
           SimpleMoveLocomotor.field_s.drawFullScreen(108, param1);
@@ -26,7 +26,7 @@ final class hh {
         field_c = null;
         field_a = null;
         if (param0) {
-          hh.a(54, false);
+          FullscreenUiDrawing.drawFullscreenPanel(54, false);
           field_b = null;
           return;
         }

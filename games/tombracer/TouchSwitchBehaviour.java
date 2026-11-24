@@ -55,14 +55,14 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
         if (param1 <= -98) {
-          var2 = ql.field_k;
+          var2 = CollisionGridEntryNodeBase.field_k;
           var2.writeCipheredOpcode(param0, -2988);
           var2.writeByte(1, 0);
           var2.writeByte(2, 0);
           return;
         }
         field_r = (String) null;
-        var2Lifetime1 = ql.field_k;
+        var2Lifetime1 = CollisionGridEntryNodeBase.field_k;
         var2Lifetime1.writeCipheredOpcode(param0, -2988);
         var2Lifetime1.writeByte(1, 0);
         var2Lifetime1.writeByte(2, 0);

@@ -184,7 +184,7 @@ abstract class CubeTextureSourceBase {
           if (param1 != 13) {
             CubeTextureSourceBase.rasterizeEllipse(-17, -67, 51, -71, -111, -94, -55, 8);
           }
-          var4 = wp.findFriendByName(126, param2);
+          var4 = FriendLookupAndContextMenus.findFriendByName(126, param2);
           if (var4 != null &&
             null != var4.field_Cb) {
             return true;

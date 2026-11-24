@@ -69,11 +69,11 @@ abstract class SceneLight extends IntrusiveNode {
           ColourFillOperator.field_m = QuickChatParamType.createToolkitSprite(OpenGlDisplayLists.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = QuickChatParamType.createToolkitSprite(CharacterChoice.field_c, param0, (byte) 25);
           ByteArrayCopies.field_b = QuickChatParamType.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
-          ClippedChildWidget.field_A = QuickChatParamType.createToolkitSprite(wj.field_a, param0, (byte) 126);
+          ClippedChildWidget.field_A = QuickChatParamType.createToolkitSprite(QueuedFixedRequestWriter.field_a, param0, (byte) 126);
           TextureCoordinateGeneration.field_d = LoadLevelCommand.createToolkitSprites(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = LoadLevelCommand.createToolkitSprites(param0, FullscreenCanvas.field_a, param1 ^ -17261);
           TextHotspot.field_f = LoadLevelCommand.createToolkitSprites(param0, Transform3D.field_d, -112);
-          ega.field_e = QuickChatParamType.createToolkitSprite(OpenGlIndexArray.field_i, param0, (byte) 126);
+          IntegerTextValidator.field_e = QuickChatParamType.createToolkitSprite(OpenGlIndexArray.field_i, param0, (byte) 126);
           ContextMenuRow.field_wb = QuickChatParamType.createToolkitSprite(LoadingStep.field_a, param0, (byte) 127);
           GridWidgetContainer.field_y = LoadLevelCommand.createToolkitSprites(param0, LoadingStepList.field_c, -104);
           PlayerInputQueue.field_a = QuickChatParamType.createToolkitSprite(FleeLocomotor.field_C, param0, (byte) 127);
@@ -106,7 +106,7 @@ abstract class SceneLight extends IntrusiveNode {
             FloatPacketBuffer.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].height(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].width(), OpenGlFramebuffer.field_i[var2_intLifetime2].width(), 0);
           }
           RadialSelectionPainter.field_i = QuickChatParamType.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
-          fa.field_a = LoadLevelCommand.createToolkitSprites(param0, AnimationFrameBase.field_k, -99);
+          ChatInputPresentation.field_a = LoadLevelCommand.createToolkitSprites(param0, AnimationFrameBase.field_k, -99);
           QuickChatCategoryLoader.field_e = QuickChatParamType.createToolkitSprite(UnlockEntryDecoder.field_c, param0, (byte) -15);
           LegacyOpenGlEffectManager.field_a = QuickChatParamType.createToolkitSprite(LegacyOpenGlSpriteTexture.field_u, param0, (byte) 125);
           QuickChatParamType.createToolkitSprite(MidiChannelVolumeTargets.field_d, param0, (byte) 126);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa {
+final class ChatInputPresentation {
     static ToolkitSprite[] field_a;
     static int field_b;
 
@@ -22,7 +22,7 @@ final class fa {
         }
     }
 
-    final static String a(byte param0) {
+    final static String updateChatInputPresentation(byte param0) {
         String stackIn_67_0 = null;
         Object stackIn_102_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -40,7 +40,7 @@ final class fa {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 > -110) {
-            fa.readBitValues(119, (BitPacketBuffer) null, -102, (int[]) null);
+            ChatInputPresentation.readBitValues(119, (BitPacketBuffer) null, -102, (int[]) null);
           }
           var1 = null;
           var2 = null;
@@ -51,12 +51,12 @@ final class fa {
           if (OpenGlUnderwaterEffect.field_q == 2 &&
             !DisplaySettingsDialog.isQuickChatTargetReachable(24316)) {
             if (QueuedPlayerEvent.isFriend(false, MatchingEmailAvailabilityValidator.field_n)) {
-              var2 = LegacyOpenGlFlowingWaterEffect.formatText(87, ConsoleToken.field_n, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.formatText(87, ConsoleToken.field_n, new String[]{FriendLookupAndContextMenus.field_a});
               if (var10 != 0) {
-                var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{wp.field_a});
+                var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{FriendLookupAndContextMenus.field_a});
               }
             } else {
-              var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{FriendLookupAndContextMenus.field_a});
             }
             if (OpenGlBufferObject.field_b) {
               TreasureValuesOverlay.addChatMessage(0, true, (String) null, (String) (var2), (String) null, 2);
@@ -81,7 +81,7 @@ final class fa {
             var6 = OpenGlUnderwaterEffect.field_q;
             var7 = 0;
             if (var6 == 2) {
-              var4 = LegacyOpenGlFlowingWaterEffect.formatText(88, TrackMountComponent.field_G, new String[]{wp.field_a});
+              var4 = LegacyOpenGlFlowingWaterEffect.formatText(88, TrackMountComponent.field_G, new String[]{FriendLookupAndContextMenus.field_a});
               var8 = LegacyOpenGlFlowingWaterEffect.formatText(111, RoomMusicController.field_a, new String[]{var3});
               var7 = ComponentMount.field_b.field_G + (CharacterChoiceFactory.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
@@ -150,7 +150,7 @@ final class fa {
               ComponentMount.field_b.field_o = false;
             }
             if (ComponentMount.field_b.field_o) {
-              var1 = LegacyOpenGlFlowingWaterEffect.formatText(126, RenderLayer.field_c, new String[]{var3, wp.field_a});
+              var1 = LegacyOpenGlFlowingWaterEffect.formatText(126, RenderLayer.field_c, new String[]{var3, FriendLookupAndContextMenus.field_a});
             }
           }
           stackIn_102_0 = var1;
@@ -167,7 +167,7 @@ final class fa {
         RuntimeException var1 = null;
         try {
           if (param0 != -23172) {
-            fa.isValidDate(67, -121, true, -29);
+            ChatInputPresentation.isValidDate(67, -121, true, -29);
           }
           field_a = null;
           return;
@@ -268,7 +268,7 @@ final class fa {
               return false;
             }
             if (param1 >= 1 &&
-              param1 <= um.daysInMonth(param3, -2, param0)) {
+              param1 <= UiComponentNodeBase.daysInMonth(param3, -2, param0)) {
               return true;
             }
             return false;

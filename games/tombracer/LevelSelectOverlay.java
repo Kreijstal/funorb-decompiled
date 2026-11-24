@@ -17,7 +17,7 @@ final class LevelSelectOverlay implements ShellListener {
           if (param0 != 32415) {
             this.field_d = (int[]) null;
           }
-          ql.field_k.writeCipheredOpcode(76, param0 ^ -30005);
+          CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(76, param0 ^ -30005);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,9 +123,9 @@ final class LevelSelectOverlay implements ShellListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          ql.field_k.writeCipheredOpcode(77, -2988);
-          ql.field_k.writeByte(param2, 0);
-          stackIn_3_0 = ql.field_k;
+          CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(77, -2988);
+          CollisionGridEntryNodeBase.field_k.writeByte(param2, 0);
+          stackIn_3_0 = CollisionGridEntryNodeBase.field_k;
           if (!param1) {
             stackIn_4_1 = 0;
           } else {

@@ -8,7 +8,7 @@ final class FullscreenDialogWidthSupport {
         if (param0 < 9) {
           return 95;
         }
-        return -FurnitureModel.field_o + tia.field_a;
+        return -FurnitureModel.field_o + FixedAngleTrigonometry.field_a;
     }
 
     public static void releaseStatics(int param0) {

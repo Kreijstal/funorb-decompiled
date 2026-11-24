@@ -337,7 +337,7 @@ final class MidiVoiceMixer extends PcmStream {
     }
 
     final static void a(int param0, int param1, int param2) {
-        BitPacketBuffer var3 = ql.field_k;
+        BitPacketBuffer var3 = CollisionGridEntryNodeBase.field_k;
         var3.writeCipheredOpcode(param0, -2988);
         var3.writeByte(3, 0);
         var3.writeByte(9, param1 ^ param1);

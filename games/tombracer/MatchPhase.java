@@ -44,8 +44,8 @@ abstract class MatchPhase {
           return;
         }
         try {
-          ql.field_k.writeCipheredOpcode(96, -2988);
-          ql.field_k.writeShort(-1477662136, param0.getId((byte) -82));
+          CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(96, -2988);
+          CollisionGridEntryNodeBase.field_k.writeShort(-1477662136, param0.getId((byte) -82));
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qra.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

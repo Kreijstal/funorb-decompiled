@@ -64,7 +64,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param0 < 105) {
           field_fd = (int[]) null;
         }
-        if (io.field_c == param1) {
+        if (Cp1252ByteEncoder.field_c == param1) {
           return 2;
         }
         if (param1 == ToolkitSelector.field_d) {
@@ -261,7 +261,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (GpuPrimitiveType.field_c == param0) {
           return 4;
         }
-        if (r.field_m == param0) {
+        if (NativeResourceNodeBase.field_m == param0) {
           return 26;
         }
         if (param0 == NormalMapOperator.field_m) {

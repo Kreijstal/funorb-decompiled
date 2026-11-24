@@ -305,13 +305,13 @@ final class PortalBehaviour extends Behaviour {
               var19 = var19 + 5 * var21 / 100;
               var20 = 9 * var20 / 10;
               var21 = var21 * 9 / 10;
-              if (io.centredBoxesOverlap(var6, var19, (byte) -93, var7, var18, var5, var21, var20, var4)) {
+              if (Cp1252ByteEncoder.centredBoxesOverlap(var6, var19, (byte) -93, var7, var18, var5, var21, var20, var4)) {
                 var22 = var28.getTeleportState(false);
                 var22.markTouching((byte) -44);
-                if (ck.containsCentredBox(var18, var21, var4, var6, var7, var19, (byte) 66, var5, var20)) {
+                if (ClientResourceBootstrap.containsCentredBox(var18, var21, var4, var6, var7, var19, (byte) 66, var5, var20)) {
                   var23 = -var4 + var18 + var8;
                   var24 = var19 + (var9 - var5);
-                  if (ck.containsCentredBox(var23, var21, var8, var10, var11, var24, (byte) 99, var9, var20) &&
+                  if (ClientResourceBootstrap.containsCentredBox(var23, var21, var8, var10, var11, var24, (byte) 99, var9, var20) &&
                     !var22.isLocked(-59)) {
                     if (var16 instanceof WorldBody) {
                       var29 = (WorldBody) ((Object) var16);

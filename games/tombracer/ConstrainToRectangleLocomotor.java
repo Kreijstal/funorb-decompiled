@@ -277,31 +277,31 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          fa.field_b = var17.readUnsignedShort(123);
-          TermsLinksPanel.field_C = new int[fa.field_b];
-          ck.field_c = new byte[fa.field_b][];
-          LoadLevelCommand.field_p = new int[fa.field_b];
-          ImageProducerCanvasImageBuffer.field_m = new int[fa.field_b];
-          LegacyOpenGlNormalMapGenerator.field_b = new int[fa.field_b];
-          CacheEntry.field_l = new byte[fa.field_b][];
-          NetworkArchiveRequest.field_n = new boolean[fa.field_b];
-          var17.position = -7 + param1.length - fa.field_b * 8;
+          ChatInputPresentation.field_b = var17.readUnsignedShort(123);
+          TermsLinksPanel.field_C = new int[ChatInputPresentation.field_b];
+          ClientResourceBootstrap.field_c = new byte[ChatInputPresentation.field_b][];
+          LoadLevelCommand.field_p = new int[ChatInputPresentation.field_b];
+          ImageProducerCanvasImageBuffer.field_m = new int[ChatInputPresentation.field_b];
+          LegacyOpenGlNormalMapGenerator.field_b = new int[ChatInputPresentation.field_b];
+          CacheEntry.field_l = new byte[ChatInputPresentation.field_b][];
+          NetworkArchiveRequest.field_n = new boolean[ChatInputPresentation.field_b];
+          var17.position = -7 + param1.length - ChatInputPresentation.field_b * 8;
           SpriteDecodeAndBytePoolState.field_a = var17.readUnsignedShort(126);
           OpenGlRenderbuffer.field_s = var17.readUnsignedShort(param0 ^ 126);
           var3 = 1 + (var17.readUnsignedByte(255) & 255);
-          for (var4 = 0; fa.field_b > var4; var4++) {
+          for (var4 = 0; ChatInputPresentation.field_b > var4; var4++) {
             LoadLevelCommand.field_p[var4] = var16.readUnsignedShort(121);
           }
-          for (var4Lifetime1 = param0; var4Lifetime1 < fa.field_b; var4Lifetime1++) {
+          for (var4Lifetime1 = param0; var4Lifetime1 < ChatInputPresentation.field_b; var4Lifetime1++) {
             TermsLinksPanel.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
           }
-          for (var4Lifetime2 = 0; fa.field_b > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; ChatInputPresentation.field_b > var4Lifetime2; var4Lifetime2++) {
             LegacyOpenGlNormalMapGenerator.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLineLayout.bitwiseXor(param0, 122));
           }
-          for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
+          for (var4Lifetime3 = 0; ChatInputPresentation.field_b > var4Lifetime3; var4Lifetime3++) {
             ImageProducerCanvasImageBuffer.field_m[var4Lifetime3] = var17.readUnsignedShort(122);
           }
-          var17.position = -(var3 * 3) + 3 + (-(8 * fa.field_b) + (-7 + param1.length));
+          var17.position = -(var3 * 3) + 3 + (-(8 * ChatInputPresentation.field_b) + (-7 + param1.length));
           QueuedHint.field_g = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             QueuedHint.field_g[var4Lifetime4] = var17.readUnsignedMedium(-32768);
@@ -310,14 +310,14 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             }
           }
           var17.position = 0;
-          for (var4Lifetime5 = 0; fa.field_b > var4Lifetime5; var4Lifetime5++) {
+          for (var4Lifetime5 = 0; ChatInputPresentation.field_b > var4Lifetime5; var4Lifetime5++) {
             var5 = LegacyOpenGlNormalMapGenerator.field_b[var4Lifetime5];
             var6 = ImageProducerCanvasImageBuffer.field_m[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            ck.field_c[var4Lifetime5] = var20;
+            ClientResourceBootstrap.field_c[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

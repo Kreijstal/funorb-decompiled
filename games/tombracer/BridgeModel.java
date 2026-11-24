@@ -625,17 +625,17 @@ final class BridgeModel extends TrapModel {
                 var4 = 0;
               }
             }
-            if (ql.field_k.position > 0) {
-              var14 = new byte[ql.field_k.position];
+            if (CollisionGridEntryNodeBase.field_k.position > 0) {
+              var14 = new byte[CollisionGridEntryNodeBase.field_k.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var14.length > var6; var6++) {
-                var8[var6] = ql.field_k.payload[var6];
+                var8[var6] = CollisionGridEntryNodeBase.field_k.payload[var6];
               }
-              var6_ref_rha = new DelayedPacket(var2_long + (long)var4, ql.field_k.position, var17);
+              var6_ref_rha = new DelayedPacket(var2_long + (long)var4, CollisionGridEntryNodeBase.field_k.position, var17);
               CheckboxWidget.field_z.addLast((byte) -71, var6_ref_rha);
-              ql.field_k.position = 0;
+              CollisionGridEntryNodeBase.field_k.position = 0;
             }
             var9 = (DelayedPacket) (CheckboxWidget.field_z.first(-80));
             var13 = var9;
@@ -645,13 +645,13 @@ final class BridgeModel extends TrapModel {
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_i > var10) {
-                ql.field_k.payload[var10] = var9.payload[var10];
+                CollisionGridEntryNodeBase.field_k.payload[var10] = var9.payload[var10];
                 var10++;
               }
-              ql.field_k.position = var13.field_i;
+              CollisionGridEntryNodeBase.field_k.position = var13.field_i;
             }
           }
-          bl.flushPacketBuffer(param1, -1);
+          GameSocketTraffic.flushPacketBuffer(param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

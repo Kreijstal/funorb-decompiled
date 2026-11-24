@@ -95,7 +95,7 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = ql.field_k;
+          var6 = CollisionGridEntryNodeBase.field_k;
           BitPacketBuffer var3 = var6;
           var6.writeCipheredOpcode(param0, -2988);
           var6.position = var6.position + 1;

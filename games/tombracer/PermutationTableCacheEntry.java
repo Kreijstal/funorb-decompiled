@@ -11,7 +11,7 @@ final class PermutationTableCacheEntry extends DualLinkNode {
             PermutationTableCacheEntry.releaseStatics(-60);
           }
           OpenGlVertexNormalData.field_a.addLast((byte) -86, param1);
-          wj.writeQueuedRequest(param1, param0, -118);
+          QueuedFixedRequestWriter.writeQueuedRequest(param1, param0, -118);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "woa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

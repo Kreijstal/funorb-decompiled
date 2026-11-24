@@ -208,9 +208,9 @@ final class RenderScene {
             var8 = ProgressDialog.field_P[9] >> 2;
             var9 = ProgressDialog.field_P[10] >> 2;
             var10_int = ProgressDialog.field_P[11] >> 2;
-            var11 = nba.field_a[5] * var10_int + (nba.field_a[4] * var9 + var8 * nba.field_a[3]) >> 14;
-            var12 = nba.field_a[8] * var10_int + (var8 * nba.field_a[6] + nba.field_a[7] * var9) >> 14;
-            var13 = var10_int * nba.field_a[11] + var8 * nba.field_a[9] + var9 * nba.field_a[10] >> 14;
+            var11 = AudioOutputSetup.field_a[5] * var10_int + (AudioOutputSetup.field_a[4] * var9 + var8 * AudioOutputSetup.field_a[3]) >> 14;
+            var12 = AudioOutputSetup.field_a[8] * var10_int + (var8 * AudioOutputSetup.field_a[6] + AudioOutputSetup.field_a[7] * var9) >> 14;
+            var13 = var10_int * AudioOutputSetup.field_a[11] + var8 * AudioOutputSetup.field_a[9] + var9 * AudioOutputSetup.field_a[10] >> 14;
             var2[var3] = var5 * var11 - (-(var6 * var12) - var7 * var13) >> 16;
           }
           var3Lifetime1 = ProgressDialog.field_P[9] >> 8;
@@ -251,9 +251,9 @@ final class RenderScene {
             var17 = GameClockAndLogoResources.field_b[var16];
             MembersUpsellMenu.b((byte) 86, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];
+              AudioOutputSetup.field_a[var18] = AudioOutputSetup.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }
-            TextureFormat.projectMeshAndQueueFaces(var17, 1251086882, nba.field_a, ProgressDialog.field_P, true, false, false);
+            TextureFormat.projectMeshAndQueueFaces(var17, 1251086882, AudioOutputSetup.field_a, ProgressDialog.field_P, true, false, false);
             DisplayModeInfo.drawMeshFaces(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);
           }
           return;

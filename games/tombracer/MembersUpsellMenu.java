@@ -487,7 +487,7 @@ final class MembersUpsellMenu extends MenuScreen {
           var4 = 1;
           var5 = 1;
         }
-        nba.field_a = jl.createPitchYawRotation(var5 * var2, var2 * var4, 0);
+        AudioOutputSetup.field_a = PitchYawRotationBuilder.createPitchYawRotation(var5 * var2, var2 * var4, 0);
     }
 
     static {

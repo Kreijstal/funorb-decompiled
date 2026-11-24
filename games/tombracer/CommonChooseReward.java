@@ -239,7 +239,7 @@ final class CommonChooseReward implements BitDecodableMarker {
 
     public final void decode(BitPacketBuffer param0, boolean param1) {
         try {
-          this.reward = fa.readBitValues(0, param0, 8, this.reward);
+          this.reward = ChatInputPresentation.readBitValues(0, param0, 8, this.reward);
           this.currentPos = param0.readBits((byte) 44, 3);
           this.currentPlayerId = uma.readSignedBits(4, param0, -26803);
           this.currentPlayerTicks = param0.readBits((byte) 44, 16);

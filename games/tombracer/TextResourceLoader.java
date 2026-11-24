@@ -385,7 +385,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -106, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
-                  sb.field_c = BitPackedColour.decodeText((byte) 27, var2);
+                  AudioArchiveSetup.field_c = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -16, "mu_gameopt_reject_x_from_game");
                 if (null != var2) {
@@ -425,11 +425,11 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -32, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  pda.field_a = BitPackedColour.decodeText((byte) 85, var2);
+                  EmbossNormalizationTable.field_a = BitPackedColour.decodeText((byte) 85, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -120, "mu_chat_game_friends_only");
                 if (var2 != null) {
-                  jl.field_a = BitPackedColour.decodeText((byte) 114, var2);
+                  PitchYawRotationBuilder.field_a = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -27, "mu_chat_game_friends");
                 if (var2 != null) {
@@ -489,7 +489,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 113, "find_opponent_singular");
                 if (null != var2) {
-                  rf.field_b = BitPackedColour.decodeText((byte) 43, var2);
+                  FriendRequests.field_b = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 127, "find_opponents_plural");
                 if (null != var2) {
@@ -573,7 +573,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "accept");
                 if (var2 != null) {
-                  r.field_l = BitPackedColour.decodeText((byte) 47, var2);
+                  NativeResourceNodeBase.field_l = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "reject");
                 if (var2 != null) {
@@ -641,7 +641,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 109, "you_can_not_spectate");
                 if (null != var2) {
-                  ega.field_d = BitPackedColour.decodeText((byte) 112, var2);
+                  IntegerTextValidator.field_d = BitPackedColour.decodeText((byte) 112, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -126, "spectate_xs_game");
                 if (null != var2) {
@@ -887,7 +887,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -28, "gameopt_inviteplayers_or_trychanging1");
                 if (var2 != null) {
-                  bl.field_b = BitPackedColour.decodeText((byte) 69, var2);
+                  GameSocketTraffic.field_b = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -29, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
@@ -1011,7 +1011,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 119, "pleaselogin_member");
                 if (null != var2) {
-                  ck.field_b = BitPackedColour.decodeText((byte) 74, var2);
+                  ClientResourceBootstrap.field_b = BitPackedColour.decodeText((byte) 74, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -53, "invaliduserorpass");
                 if (var2 != null) {
@@ -2113,7 +2113,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 121, "graphics_opengl");
                 if (null != var2) {
-                  um.field_k = BitPackedColour.decodeText((byte) 27, var2);
+                  UiComponentNodeBase.field_k = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "graphics_java");
                 if (null != var2) {

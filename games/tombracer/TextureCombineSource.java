@@ -120,7 +120,7 @@ final class TextureCombineSource {
         OpenGlDisplayLists.field_g = SpriteData.loadSprite(param2, "", "hud_room");
         CharacterChoice.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
         LegacyOpenGlTexture3D.field_l = SpriteData.loadSprite(param2, "", "hud_timer_head");
-        wj.field_a = SpriteData.loadSprite(param2, "", "hud_timer_jaw");
+        QueuedFixedRequestWriter.field_a = SpriteData.loadSprite(param2, "", "hud_timer_jaw");
         ProxySocketConnector.field_e = SpriteData.loadSheet(param2, "", "hud_sand");
         FullscreenCanvas.field_a = new SpriteData[3];
         FullscreenCanvas.field_a[2] = SpriteData.loadSprite(param2, "", "hud_idolhead");
@@ -303,7 +303,7 @@ final class TextureCombineSource {
             stackIn_39_1 = var6;
             stackIn_40_2 = !(var4 < 0);
             var7Lifetime1 = PathMoveLocomotor.measureStringWidthWithIntGuard(stackIn_39_0, stackIn_39_1, stackIn_40_2);
-            var8Lifetime1 = ega.field_c - (var7Lifetime1 >> 1);
+            var8Lifetime1 = IntegerTextValidator.field_c - (var7Lifetime1 >> 1);
             if (0 <= var4) {
               if (var4 == FacePointLocomotor.field_r.selectedIndex) {
                 stackIn_45_0 = AccountContentTransitionDialog.field_V;
@@ -318,7 +318,7 @@ final class TextureCombineSource {
               var1_int = var1_int + GasVentModel.field_p;
             }
             if (var4 >= 0) {
-              qt.field_a.drawText(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
+              AccountCreationRequests.field_a.drawText(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
               var1_int = var1_int + (FullscreenFailureReason.field_d + GasVentModel.field_p + ValidationStatusIcon.field_C);
             } else {
               ConsoleValue.field_c.drawText(var6, var8Lifetime1, var1_int + ActionPacketQueue.field_a, var5, -1);

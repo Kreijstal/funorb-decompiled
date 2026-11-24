@@ -21,7 +21,7 @@ abstract class SpriteState extends DualLinkNode {
 
     final static void installDefaultFactories(int param0) {
         ModelCodecAndSocialPanelState.field_a = (ModelCodec) ((Object) new ModelFactory());
-        vha.field_c = (RoomComponentCodec) ((Object) new RoomComponentFactory());
+        QuickChatMenuLayout.field_c = (RoomComponentCodec) ((Object) new RoomComponentFactory());
         if (param0 == -18035) {
           DropAnimation.roomObjectRenderer = (RoomObjectRenderer) ((Object) new DefaultRoomObjectRenderer());
           return;

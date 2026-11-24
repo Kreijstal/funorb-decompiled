@@ -301,7 +301,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   } else {
                     var13_ref_String = LegacyOpenGlTexture3D.field_m;
                     if (var12 == 0) {
-                      var14_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(102, bl.field_b, new String[]{(String) (var11_ref)});
+                      var14_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(102, GameSocketTraffic.field_b, new String[]{(String) (var11_ref)});
                       if (var19 != 0) {
                         var14_ref_String = CharacterSelectPhase.field_w + (String) (var11_ref);
                       }

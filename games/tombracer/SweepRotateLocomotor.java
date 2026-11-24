@@ -128,7 +128,7 @@ final class SweepRotateLocomotor extends Locomotor {
             }
             UiWidget.field_g = 1;
             var3 = var1.readString((byte) -76);
-            ol.field_b = ((String) (var3)).intern();
+            ContactListOrdering.field_b = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
             WaveformOperator.unpackSettings(var4, 3);
             return;
@@ -143,9 +143,9 @@ final class SweepRotateLocomotor extends Locomotor {
           }
           var4_ref_StringLifetime1 = var1.readString((byte) -76);
           var5Lifetime1 = var1.readString((byte) -76);
-          var6Lifetime1 = wp.findFriendByName(121, var4_ref_StringLifetime1);
+          var6Lifetime1 = FriendLookupAndContextMenus.findFriendByName(121, var4_ref_StringLifetime1);
           if (null == var6Lifetime1) {
-            var6Lifetime1 = wp.findFriendByName(param0 ^ 14095, var5Lifetime1);
+            var6Lifetime1 = FriendLookupAndContextMenus.findFriendByName(param0 ^ 14095, var5Lifetime1);
             if (var6Lifetime1 != null) {
               TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
@@ -172,7 +172,7 @@ final class SweepRotateLocomotor extends Locomotor {
               if (var9 != 0) {
                 break scanLoop1;
               }
-              if (ol.comesBefore(stackIn_55_0, true, var6Lifetime1)) {
+              if (ContactListOrdering.comesBefore(stackIn_55_0, true, var6Lifetime1)) {
                 var7 = (ContactListEntry) (PlayingSound.field_f.next(param0 - 14058));
                 continue;
               }

@@ -266,7 +266,7 @@ final class IsaacCipher {
           RuntimeException var15_ref = null;
           try {
             WeaveOperator.field_q = new BitPacketBuffer(param6);
-            ql.field_k = new BitPacketBuffer(param7);
+            CollisionGridEntryNodeBase.field_k = new BitPacketBuffer(param7);
             CollisionGridEntry.field_r = param9;
             SocketConnector.field_c = param0;
             RoomComponent.field_g = param11;

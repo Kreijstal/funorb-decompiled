@@ -132,7 +132,7 @@ final class ProgressBarWidget extends UiWidget {
           ToolkitInstance.a(-109, param3, param5, param1);
           if (UnlockEntryDecoder.field_b != null &&
             UnlockEntryDecoder.field_b.handleMenuAction(param1, param6, param0, param2 ^ -107, param3)) {
-            wp.closeContextMenu(-1);
+            FriendLookupAndContextMenus.closeContextMenu(-1);
             param1 = false;
           }
           HazardModel.a(-83, param3, param1);
@@ -239,7 +239,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 <= 83) {
           return;
         }
-        wj.a(param3, ToolkitSelector.field_a, StatReportingScoringObserver.field_i, 2, mna.field_d, param2, param1);
+        QueuedFixedRequestWriter.a(param3, ToolkitSelector.field_a, StatReportingScoringObserver.field_i, 2, mna.field_d, param2, param1);
     }
 
     private ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

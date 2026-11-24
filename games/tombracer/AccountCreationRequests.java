@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qt {
+final class AccountCreationRequests {
     static BitmapFont field_a;
 
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -25809) {
           AccountRegistrationPanel var2 = (AccountRegistrationPanel) null;
-          qt.startAccountCreation((String) null, true, 14, (String) null, (String) null, (AccountRegistrationPanel) null, true);
+          AccountCreationRequests.startAccountCreation((String) null, true, 14, (String) null, (String) null, (AccountRegistrationPanel) null, true);
         }
     }
 
@@ -36,7 +36,7 @@ final class qt {
           kc.field_a = var7;
         }
         if (param5 > -9) {
-          qt.a(-106);
+          AccountCreationRequests.a(-106);
         }
     }
 
@@ -142,7 +142,7 @@ final class qt {
               var8_ref_pha.field_zb = var10 >> 1;
               var8_ref_pha.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               var8_ref_pha.field_Eb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              ql.insertLobbyPlayerSorted(110, var8_ref_pha);
+              CollisionGridEntryNodeBase.insertLobbyPlayerSorted(110, var8_ref_pha);
               return;
             }
             if (var2 == 6) {
@@ -316,7 +316,7 @@ final class qt {
                     var29.field_Fb = false;
                   }
                 }
-                ql.insertLobbyPlayerSorted(-42, var29);
+                CollisionGridEntryNodeBase.insertLobbyPlayerSorted(-42, var29);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
@@ -332,7 +332,7 @@ final class qt {
                   var30.field_Fb = true;
                 }
               }
-              ql.insertLobbyPlayerSorted(112, var30);
+              CollisionGridEntryNodeBase.insertLobbyPlayerSorted(112, var30);
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(123);
@@ -364,7 +364,7 @@ final class qt {
                 ValidatedTextInputWidget.field_K = ValidatedTextInputWidget.field_K - 1;
                 var3_ref_phaLifetime1.field_Fb = false;
               }
-              ql.insertLobbyPlayerSorted(114, var3_ref_phaLifetime1);
+              CollisionGridEntryNodeBase.insertLobbyPlayerSorted(114, var3_ref_phaLifetime1);
             }
             var3_ref_phaLifetime1 = (LobbyPlayerEntry) (DropdownButtonPainter.field_a.nextInTraversal((byte) -112));
           }
@@ -476,7 +476,7 @@ final class qt {
         }
     }
 
-    private qt() throws Throwable {
+    private AccountCreationRequests() throws Throwable {
         throw new Error();
     }
 

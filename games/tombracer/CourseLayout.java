@@ -14,7 +14,7 @@ final class CourseLayout implements BitDecodableMarker {
           return;
         }
         try {
-          this.roomIds = fa.readBitValues(0, param0, 8, this.roomIds);
+          this.roomIds = ChatInputPresentation.readBitValues(0, param0, 8, this.roomIds);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -44,7 +44,7 @@ final class CourseLayout implements BitDecodableMarker {
 
     final static void initAudioOutputs(int param0, int param1, MusicPlayer param2, boolean param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
         try {
-          nba.initAudioOutputs(param5, param2, param1, param0, param0, param4, -45, param3);
+          AudioOutputSetup.initAudioOutputs(param5, param2, param1, param0, param0, param4, -45, param3);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wea.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

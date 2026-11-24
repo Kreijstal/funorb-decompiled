@@ -549,8 +549,8 @@ abstract class OpenGlTexture implements GpuTexture {
           this.field_i = param1;
           this.field_h = param4;
           this.field_f = param2;
-          jaggl.OpenGL.glGenTextures(1, pra.field_a, 0);
-          this.field_c = pra.field_a[0];
+          jaggl.OpenGL.glGenTextures(1, ClippedFilledRectangleRenderer.field_a, 0);
+          this.field_c = ClippedFilledRectangleRenderer.field_a[0];
           this.applyFilter((byte) -97);
           this.updateMemoryUsage((byte) -128, 0);
         } catch (RuntimeException runtimeException) {

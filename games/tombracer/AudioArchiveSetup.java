@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb {
+final class AudioArchiveSetup {
     static boolean field_b;
     static int field_d;
     static RatingTable field_a;
@@ -12,7 +12,7 @@ final class sb {
         field_c = null;
         if (param0 != 0) {
           int[] var2 = (int[]) null;
-          sb.listSetBits(121, (int[]) null);
+          AudioArchiveSetup.listSetBits(121, (int[]) null);
         }
     }
 

@@ -272,7 +272,7 @@ abstract class RoomComponent extends IntrusiveNode implements GameStateMarker, R
         if (param0 != 110) {
           this.field_s = (SwitchableId) null;
         }
-        return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -62, param3, this.getX(3), param1, this.height, this.width, param2);
+        return Cp1252ByteEncoder.centredBoxesOverlap(param4, this.getY(9648), (byte) -62, param3, this.getX(3), param1, this.height, this.width, param2);
     }
 
     void mirror(Room param0, int param1) {
@@ -462,7 +462,7 @@ abstract class RoomComponent extends IntrusiveNode implements GameStateMarker, R
           this.field_v = stackIn_20_1;
           for (var5_int = 0; this.mounts.length > var5_int; var5_int++) {
             if (1 == param2.readBits((byte) 44, 1)) {
-              var6 = vha.field_c.readComponent(param2, param0, (byte) -7, this);
+              var6 = QuickChatMenuLayout.field_c.readComponent(param2, param0, (byte) -7, this);
               var6.setPosition(1434528720, this.mounts[var5_int].getOffset((byte) 126).y << 16, this.mounts[var5_int].getOffset((byte) 111).x << 16);
               this.mounts[var5_int].attach(var6, 126);
             }
@@ -827,7 +827,7 @@ abstract class RoomComponent extends IntrusiveNode implements GameStateMarker, R
             var4 = this.mounts[var3_int].getChild(86);
             if (var4 != null) {
               param1.writeBits((byte) -42, 1, 1);
-              vha.field_c.writeComponent(var4, -16097, param1);
+              QuickChatMenuLayout.field_c.writeComponent(var4, -16097, param1);
             } else {
               param1.writeBits((byte) -127, 0, 1);
             }

@@ -274,8 +274,8 @@ final class FullscreenDialogLayout {
             }
           }
           HardwareModelVertexStream.field_f = FacePointLocomotor.field_r.itemCount * (ValidationStatusIcon.field_C + GasVentModel.field_p << 1);
-          FurnitureModel.field_o = ega.field_c - (var3_intLifetime1 >> 1);
-          tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
+          FurnitureModel.field_o = IntegerTextValidator.field_c - (var3_intLifetime1 >> 1);
+          FixedAngleTrigonometry.field_a = var3_intLifetime1 + (IntegerTextValidator.field_c - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < DefaultTileRenderable.field_g.length; var4Lifetime2++) {
             stackIn_110_0 = HardwareModelVertexStream.field_f;
             if (CoinItemComponent.field_H[var4Lifetime2] >= 0) {
@@ -297,7 +297,7 @@ final class FullscreenDialogLayout {
             if (0 <= var6Lifetime1) {
               var7Lifetime2 = PathMoveLocomotor.measureStringWidthWithIntGuard(-116, DefaultTileRenderable.field_g[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + ValidationStatusIcon.field_C;
-              var8Lifetime1 = ega.field_c - (var7Lifetime2 >> 1);
+              var8Lifetime1 = IntegerTextValidator.field_c - (var7Lifetime2 >> 1);
               TripBeamComponent.field_K[var4Lifetime3] = new int[4];
               TripBeamComponent.field_K[var4Lifetime3][0] = -InvisibleTouchSwitchComponent.field_L + var8Lifetime1;
               TripBeamComponent.field_K[var4Lifetime3][1] = var5Lifetime3;

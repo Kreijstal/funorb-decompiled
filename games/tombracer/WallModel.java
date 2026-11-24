@@ -343,7 +343,7 @@ final class WallModel extends TrapModel {
         for (var2 = 0; this.field_q > var2; var2++) {
           for (var3 = 0; this.field_w > var3; var3++) {
             var4 = this.tiles[var2][var3];
-            var5 = bl.field_c[var4.field_a];
+            var5 = GameSocketTraffic.field_c[var4.field_a];
             var4.field_o = GameScreen.positiveModulo(-var4.field_o + var5, 2048, -73);
             var4.field_l = -var4.field_l;
             var4.field_i = EditableTextField.mirrorDirection(var4.field_i, 6);
@@ -801,7 +801,7 @@ final class WallModel extends TrapModel {
                 }
               }
             }
-            var14.field_o = GameScreen.positiveModulo(var26 + bl.field_c[var14.field_a], 2048, 120);
+            var14.field_o = GameScreen.positiveModulo(var26 + GameSocketTraffic.field_c[var14.field_a], 2048, 120);
             var14.field_i = var27;
             var14.field_f = var10 - var9;
             var14.field_l = var12 - var8;
@@ -1027,7 +1027,7 @@ final class WallModel extends TrapModel {
                     }
                   } else {
                     if (var14 < 5) {
-                      var12.field_o = var9 + bl.field_c[var12.field_a];
+                      var12.field_o = var9 + GameSocketTraffic.field_c[var12.field_a];
                       var12.field_d = 0;
                       var12.field_p = 0;
                       decompiledFrameRemainder1 = false;
@@ -1085,7 +1085,7 @@ final class WallModel extends TrapModel {
                 }
               }
               if (decompiledFrameRemainder1) {
-                var12.field_o = var9 + bl.field_c[var12.field_a];
+                var12.field_o = var9 + GameSocketTraffic.field_c[var12.field_a];
                 var12.field_d = 0;
                 var12.field_p = 0;
               }

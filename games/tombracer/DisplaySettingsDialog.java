@@ -34,7 +34,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
               return;
             }
             MotionTrackingModel.field_p = MotionTrackingModel.field_p + 1;
-            vha.field_b = FullscreenFailureReason.field_a;
+            QuickChatMenuLayout.field_b = FullscreenFailureReason.field_a;
             if (0 > SoftwareDepthBuffer.field_f) {
               var5 = 0;
               var2 = var5;

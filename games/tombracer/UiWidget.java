@@ -472,7 +472,7 @@ class UiWidget extends IntrusiveNode {
         if (ClippedChildWidget.requiresColorPointerCopy(param0, param1, 13650)) {
           return true;
         }
-        if (!tia.b(param1, param2 - 29503, param0)) {
+        if (!FixedAngleTrigonometry.b(param1, param2 - 29503, param0)) {
           return false;
         }
         return true;
@@ -507,7 +507,7 @@ class UiWidget extends IntrusiveNode {
             this.clearKeyboardFocus((byte) 119);
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+          GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -537,7 +537,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 TextFieldValidator.field_f = RangeOperator.field_p;
-                fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+                GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
                 if (param3 > -86) {
                   this.refreshLayout((byte) -121);
                 }
@@ -567,14 +567,14 @@ class UiWidget extends IntrusiveNode {
               this.clearKeyboardFocus((byte) 119);
             }
             TextFieldValidator.field_f = RangeOperator.field_p;
-            fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+            GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+          GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -603,7 +603,7 @@ class UiWidget extends IntrusiveNode {
                 }
               }
               TextFieldValidator.field_f = RangeOperator.field_p;
-              fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+              GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
               if (param3 > -86) {
                 this.refreshLayout((byte) -121);
               }
@@ -627,14 +627,14 @@ class UiWidget extends IntrusiveNode {
               this.clearKeyboardFocus((byte) 119);
             }
             TextFieldValidator.field_f = RangeOperator.field_p;
-            fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+            GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+          GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -654,7 +654,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (RangeOperator.field_p != 0) {
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+          GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -663,7 +663,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (TextFieldValidator.field_f == 0) {
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+          GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -684,7 +684,7 @@ class UiWidget extends IntrusiveNode {
           this.clearKeyboardFocus((byte) 119);
         }
         TextFieldValidator.field_f = RangeOperator.field_p;
-        fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
+        GameSoundEffectLoader.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
         if (param3 <= -86) {
           return param1;
         }

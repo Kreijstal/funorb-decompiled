@@ -2594,7 +2594,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           SwitchableIdAllocator var7 = (SwitchableIdAllocator) null;
           this.assignSwitchableIds(false, false, (SwitchableIdAllocator) null, (SwitchableIdAllocator) null);
         }
-        return io.centredBoxesOverlap(this.getWidth(-72), param1, (byte) -89, this.getHeight((byte) 55), param2, this.getY(9648), param3, param4, this.getX(3));
+        return Cp1252ByteEncoder.centredBoxesOverlap(this.getWidth(-72), param1, (byte) -89, this.getHeight((byte) 55), param2, this.getY(9648), param3, param4, this.getX(3));
     }
 
     final int getLeft(byte param0) {

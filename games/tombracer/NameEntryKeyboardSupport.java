@@ -10,10 +10,10 @@ final class NameEntryKeyboardSupport {
         if (!param0) {
           return false;
         }
-        if (bl.field_a == null) {
+        if (GameSocketTraffic.field_a == null) {
           return false;
         }
-        if (!bl.field_a.handleKeyInput(false)) {
+        if (!GameSocketTraffic.field_a.handleKeyInput(false)) {
           return false;
         }
         return true;

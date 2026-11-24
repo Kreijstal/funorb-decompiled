@@ -206,7 +206,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
         while (var9 != null) {
           if (~var9.getKind(-70) == ~param2) {
             var10 = var9.getSize(param0 ^ 30096);
-            if (io.centredBoxesOverlap(var6, var9.getY(9648), (byte) -78, var6, var9.getX(3), param3, var10, var10, param4)) {
+            if (Cp1252ByteEncoder.centredBoxesOverlap(var6, var9.getY(9648), (byte) -78, var6, var9.getX(3), param3, var10, var10, param4)) {
               var9.restartGrowth((byte) -1);
               return true;
             }
@@ -361,9 +361,9 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
           field_p = (ToolkitSprite[][]) null;
         }
         if (!param5) {
-          return io.centredBoxesOverlap(this.width, param4, (byte) -123, this.height, param0, this.height / 2, param3, param2, this.width / 2);
+          return Cp1252ByteEncoder.centredBoxesOverlap(this.width, param4, (byte) -123, this.height, param0, this.height / 2, param3, param2, this.width / 2);
         }
-        return ck.containsCentredBox(param0, param3, this.width / 2, this.width, this.height, param4, (byte) 125, this.height / 2, param2);
+        return ClientResourceBootstrap.containsCentredBox(param0, param3, this.width / 2, this.width, this.height, param4, (byte) 125, this.height / 2, param2);
     }
 
     final void restart(byte param0) {
@@ -1097,7 +1097,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
         if (this.formatVersion >= 11) {
           var6Lifetime1 = var3.readBits((byte) 44, 8);
           for (var7 = 0; var6Lifetime1 > var7; var7++) {
-            var8 = vha.field_c.readComponent(var3, 55, this);
+            var8 = QuickChatMenuLayout.field_c.readComponent(var3, 55, this);
             if (var8 != null) {
               this.addComponent(var8, 33554432);
             }
@@ -1735,7 +1735,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
           param0.writeBits((byte) 120, this.components.size((byte) -16), 8);
           var7 = (RoomComponent) (this.components.first(-80));
           while (var7 != null) {
-            vha.field_c.writeComponent(var7, -16097, param0);
+            QuickChatMenuLayout.field_c.writeComponent(var7, -16097, param0);
             var7 = (RoomComponent) (this.components.next(107));
           }
           param0.writeBits((byte) 102, this.field_A, 2);

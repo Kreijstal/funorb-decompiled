@@ -148,7 +148,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
                 DropAnimation.closeGameSocket(60);
                 return false;
               }
-              if (rf.millisSinceLastReceive((byte) -121) <= 30000L) {
+              if (FriendRequests.millisSinceLastReceive((byte) -121) <= 30000L) {
                 return false;
               }
               DropAnimation.closeGameSocket(60);

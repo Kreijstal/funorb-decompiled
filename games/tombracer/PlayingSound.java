@@ -97,7 +97,7 @@ final class PlayingSound extends IntrusiveNode {
     }
 
     final void updateVolumeAndPan(int param0, int param1, int param2, int param3, int param4) {
-        this.field_h = ol.computeDistanceVolume(param0, this.field_l, (byte) -91, param3, param4, param1);
+        this.field_h = ContactListOrdering.computeDistanceVolume(param0, this.field_l, (byte) -91, param3, param4, param1);
         if (param2 <= -127) {
           this.field_m = AgeValidator.computePan(param3, true, param0);
           this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);

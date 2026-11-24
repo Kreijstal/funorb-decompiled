@@ -89,7 +89,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
               System.load(((File) (var4)).getPath());
-              SwitchModel.field_m.put(param1, qt.class);
+              SwitchModel.field_m.put(param1, AccountCreationRequests.class);
               return true;
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

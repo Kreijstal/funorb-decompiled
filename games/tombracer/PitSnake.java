@@ -401,7 +401,7 @@ final class PitSnake extends IntrusiveNode {
           if (param0 != -196609) {
             this.offsetY = 31;
           }
-          stackIn_3_0 = io.centredBoxesOverlap(param1.getWidth(-28) / 2, this.offsetY + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.offsetX + param3, param1.getY(9648), this.size / 2, this.size / 2, param1.getX(3));
+          stackIn_3_0 = Cp1252ByteEncoder.centredBoxesOverlap(param1.getWidth(-28) / 2, this.offsetY + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.offsetX + param3, param1.getY(9648), this.size / 2, this.size / 2, param1.getX(3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -210,7 +210,7 @@ final class CircleMovementLocomotor extends Locomotor {
         int var12 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          um.field_m = param6;
+          UiComponentNodeBase.field_m = param6;
           SoftwareScanlineMask.field_g = param5;
           SimpleConditionBehaviour.field_r = -1L;
           ColourRowCache.field_b = param6.length;
@@ -222,8 +222,8 @@ final class CircleMovementLocomotor extends Locomotor {
             return;
           }
           var10_int = 0;
-          for (var11 = 0; var11 < um.field_m.length; var11++) {
-            var10_int = var10_int + (um.field_m[var11] & 255);
+          for (var11 = 0; var11 < UiComponentNodeBase.field_m.length; var11++) {
+            var10_int = var10_int + (UiComponentNodeBase.field_m[var11] & 255);
           }
           var10_int = (var10_int + 7) / 8;
           TileGrid.field_e = new byte[var10_int];

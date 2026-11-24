@@ -291,7 +291,7 @@ final class MatchState implements BitDecodableMarker {
           this.roundSeed = param0.readBits((byte) 44, 32);
           this.characterChoices = (CharacterChoice[]) (DecodableArrayReader.readDecodableArray(this.characterChoices, 1, 8, -16499, TileOperator.field_q, param0));
           this.courseLayouts = (CourseLayout[]) (DecodableArrayReader.readDecodableArray(this.courseLayouts, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
-          this.roundWins = fa.readBitValues(0, param0, 8, this.roundWins);
+          this.roundWins = ChatInputPresentation.readBitValues(0, param0, 8, this.roundWins);
           this.roundWinner = uma.readSignedBits(32, param0, -26803);
           this.finishedRound = PooledObject.readBitFlags(8, this.finishedRound, (byte) 93, param0);
           this.playersRemaining = param0.readBits((byte) 44, 32);

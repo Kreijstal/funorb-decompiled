@@ -47,7 +47,7 @@ final class ScoreSubmission extends IntrusiveNode {
           return SwitchLinkList.field_b[param0];
         }
         if (var5 == 8) {
-          return hh.field_b[param0];
+          return FullscreenUiDrawing.field_b[param0];
         }
         throw new IllegalArgumentException("Model category not recognised");
     }

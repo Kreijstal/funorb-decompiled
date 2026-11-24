@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ql extends DualLinkNode {
+class CollisionGridEntryNodeBase extends DualLinkNode {
     static BitPacketBuffer field_k;
     static String[] field_m;
     static float field_l;
@@ -32,7 +32,7 @@ class ql extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeQueuedByteShortRequests(int param0, int param1) {
         int var3 = 0;
         QueuedByteShortRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -42,10 +42,10 @@ class ql extends DualLinkNode {
           if (param1 != -28521) {
             return;
           }
-          var4 = (QueuedByteShortRequest) (io.field_d.first(-80));
+          var4 = (QueuedByteShortRequest) (Cp1252ByteEncoder.field_d.first(-80));
           while (var4 != null) {
             UiComponent.writeQueuedByteShortRequest(param0, 1325, var4);
-            var4 = (QueuedByteShortRequest) (io.field_d.next(113));
+            var4 = (QueuedByteShortRequest) (Cp1252ByteEncoder.field_d.next(113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -55,7 +55,7 @@ class ql extends DualLinkNode {
         }
     }
 
-    protected ql() {
+    protected CollisionGridEntryNodeBase() {
     }
 
     public static void releaseStatics(boolean param0) {

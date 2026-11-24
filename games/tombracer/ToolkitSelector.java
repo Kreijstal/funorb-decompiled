@@ -310,7 +310,7 @@ final class ToolkitSelector {
                   }
                 }
                 try {
-                  var12 = VoronoiNoiseOperator.createToolkit(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
+                  var12 = VoronoiNoiseOperator.createToolkit(var7.field_a, -29355, this.field_c, var7.field_b, ClientResourceBootstrap.field_a, param0);
                   if (var12 != null) {
                     var9 = new ToolkitInstance(var12, var7, param0);
                     if (var7.accepts(var9, (byte) -126)) {
@@ -410,7 +410,7 @@ final class ToolkitSelector {
         this.field_e = false;
         try {
           this.field_c = param2;
-          ck.field_a = param1;
+          ClientResourceBootstrap.field_a = param1;
           HotspotTextWidget.field_B = param0;
           BridgeModel.initNativeLibraries(param0, param3, -55);
           this.setCandidates(0, param4);

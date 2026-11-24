@@ -220,7 +220,7 @@ final class WeaponShooterBehaviour extends Behaviour implements TimedShooter {
         this.field_o = true;
         try {
           this.field_n = new TimingPattern(param0.formatVersion, param1);
-          this.field_u = jl.decodeWeapon(param0, true, param1);
+          this.field_u = PitchYawRotationBuilder.decodeWeapon(param0, true, param1);
           this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_u.refillAmmo(90, this.field_o);
           if (param0.formatVersion >= 8) {

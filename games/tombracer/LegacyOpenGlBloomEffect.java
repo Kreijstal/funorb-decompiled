@@ -95,7 +95,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
                 var8 = this.field_v.field_c;
                 jaggl.OpenGL.glUseProgramObjectARB(var8);
                 jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "sceneTex"), 0);
-                jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "params"), ql.field_l, 0.0f, 0.0f);
+                jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "params"), CollisionGridEntryNodeBase.field_l, 0.0f, 0.0f);
                 jaggl.OpenGL.glBegin(7);
                 jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                 jaggl.OpenGL.glVertex2i(0, 0);
@@ -118,7 +118,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
             var5_long = this.field_m.field_c;
             jaggl.OpenGL.glUseProgramObjectARB(var5_long);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "sceneTex"), 0);
-            jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "params"), ql.field_l, 0.0f, 0.0f);
+            jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "params"), CollisionGridEntryNodeBase.field_l, 0.0f, 0.0f);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
             jaggl.OpenGL.glVertex2i(0, 0);
@@ -428,7 +428,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
     }
 
     final static void d(int param0) {
-        ql.field_k.writeCipheredOpcode(9, -2988);
+        CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(9, -2988);
         LegacyOpenGlEnvironmentWaterEffect.field_d = true;
         if (param0 != 30785) {
           LegacyOpenGlBloomEffect.releaseStatics(9);

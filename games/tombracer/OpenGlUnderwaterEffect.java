@@ -34,7 +34,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.field_k = param1 ? true : false;
         this.owner.setActiveTextureUnit(1, false);
         this.owner.bindTexture(true, this.field_p);
-        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NativeResourceNodeBase.field_m);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 0, -30);
         this.owner.setColorCombineSource(DisplayNameValidator.field_c, 2, -6219, true, false);
         this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);

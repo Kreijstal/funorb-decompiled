@@ -21,9 +21,9 @@ abstract class MazeGenerator {
         if (param0 == 0) {
           if (DropTargetWidget.field_A == param3) {
             if (param0 == 1 &&
-              param3 != nba.field_b) {
+              param3 != AudioOutputSetup.field_b) {
               PlatformModel.field_B = true;
-              nba.field_b = param3;
+              AudioOutputSetup.field_b = param3;
               S2CSimulationSignalPacket.sendChatSettings(true, param1);
             }
             if (param0 == 2 &&
@@ -41,7 +41,7 @@ abstract class MazeGenerator {
           S2CSimulationSignalPacket.sendChatSettings(true, param1);
         }
         if (param0 == 1) {
-          if (param3 == nba.field_b) {
+          if (param3 == AudioOutputSetup.field_b) {
             if (param0 != 2) {
               if (param2 != 108) {
               }
@@ -60,7 +60,7 @@ abstract class MazeGenerator {
             return;
           }
           PlatformModel.field_B = true;
-          nba.field_b = param3;
+          AudioOutputSetup.field_b = param3;
           S2CSimulationSignalPacket.sendChatSettings(true, param1);
         }
         if (param0 == 2 &&
@@ -182,7 +182,7 @@ abstract class MazeGenerator {
         LoadLevelCommand.field_p = null;
         ImageProducerCanvasImageBuffer.field_m = null;
         int var1 = 85 % ((57 - param0) / 49);
-        ck.field_c = (byte[][]) null;
+        ClientResourceBootstrap.field_c = (byte[][]) null;
         TermsLinksPanel.field_C = null;
     }
 

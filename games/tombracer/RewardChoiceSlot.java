@@ -14,7 +14,7 @@ final class RewardChoiceSlot {
     static String field_b;
 
     final static void a(byte param0, int param1, long param2) {
-        BitPacketBuffer var4 = ql.field_k;
+        BitPacketBuffer var4 = CollisionGridEntryNodeBase.field_k;
         var4.writeCipheredOpcode(param1, -2988);
         var4.position = var4.position + 1;
         int var5 = var4.position;

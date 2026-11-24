@@ -206,7 +206,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           var10 = HardwareGraphicsHeap.field_n[var3_int];
           if (var8 == 0) {
             var9 = AgeValidator.computePan(this.listenerX, true, param0.getX(param1 - 52));
-            var10 = ol.computeDistanceVolume(param0.getX(-118), var3_int, (byte) -91, this.listenerX, param0.getY(-121), this.listenerY);
+            var10 = ContactListOrdering.computeDistanceVolume(param0.getX(-118), var3_int, (byte) -91, this.listenerX, param0.getY(-121), this.listenerY);
           }
           var11 = MatchProtocol.playSoundEffect(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {

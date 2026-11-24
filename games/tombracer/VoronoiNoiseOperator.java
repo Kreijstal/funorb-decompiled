@@ -90,7 +90,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var20 = ColouriseOperator.field_m[0];
             var29Lifetime1 = var20;
             var29Lifetime1Lifetime1 = var20;
-            var21 = pda.field_a;
+            var21 = EmbossNormalizationTable.field_a;
             var19.field_f.addIconItem(var20, 11, var21, false);
             var22 = UnlockEntryDecoder.field_b;
             var23 = ColouriseOperator.field_m[1];

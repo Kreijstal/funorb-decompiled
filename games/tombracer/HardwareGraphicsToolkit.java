@@ -328,7 +328,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param1 != 1) {
           if (param1 != 0) {
             if (param1 == 2) {
-              this.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
+              this.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NativeResourceNodeBase.field_m);
             } else {
               if (param1 != 3) {
                 if (param1 == 4) {
@@ -1437,7 +1437,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.applyProjectionMatrix((byte) -46);
         }
         this.bindVertexLayout(this.field_mb, -32);
-        this.drawPrimitives(1, io.field_c, 0, param0 + 70);
+        this.drawPrimitives(1, Cp1252ByteEncoder.field_c, 0, param0 + 70);
     }
 
     final void projectPoint(int param0, int param1, int param2, int[] param3) {

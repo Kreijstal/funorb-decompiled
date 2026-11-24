@@ -2614,7 +2614,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void setBloomParameters(float param0, float param1, float param2) {
-        ql.field_l = param0;
+        CollisionGridEntryNodeBase.field_l = param0;
         ConstantEffectBehaviour.field_p = param1;
         AchievementsScreen.field_v = param2;
     }

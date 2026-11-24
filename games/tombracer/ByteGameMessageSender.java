@@ -9,7 +9,7 @@ final class ByteGameMessageSender {
 
     final static void sendByteGameMessage(int param0, byte param1) {
         int var2 = -101 % ((param1 - 40) / 34);
-        if (null == ql.field_k) {
+        if (null == CollisionGridEntryNodeBase.field_k) {
           return;
         }
         CourseStartPacket var3 = new CourseStartPacket();

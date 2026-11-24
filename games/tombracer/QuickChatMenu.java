@@ -225,8 +225,8 @@ final class QuickChatMenu extends UiComponent {
                 MazeGenerator.setChatSetting(var6, param0, (byte) 108, 1);
               }
               var8 = (String) null;
-              ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
-              QuickChatMessageQueue.queueQuickChatMessage(TextureCombineOperation.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
+              ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, FriendLookupAndContextMenus.field_a, var5);
+              QuickChatMessageQueue.queueQuickChatMessage(TextureCombineOperation.field_b, var5, 4, FriendLookupAndContextMenus.field_a, OpenGlUnderwaterEffect.field_q);
               ComponentTargetList.closeQuickChatMenu(param3 - 48);
               HardwareSceneLight.resetChatRateLimit((byte) -25);
             } else {

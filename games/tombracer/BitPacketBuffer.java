@@ -293,7 +293,7 @@ final class BitPacketBuffer extends PacketBuffer {
             if (GameFontMetrics.field_f == GraphicsSelectionState.field_e) {
               GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
             } else {
-              if (tia.field_d == GameFontMetrics.field_f) {
+              if (FixedAngleTrigonometry.field_d == GameFontMetrics.field_f) {
                 GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
               } else {
                 if (GameFontMetrics.field_f == PitModel.field_s) {
@@ -303,7 +303,7 @@ final class BitPacketBuffer extends PacketBuffer {
             }
           } else {
             if (GameFontMetrics.field_f != GraphicsSelectionState.field_e) {
-              if (GameFontMetrics.field_f == tia.field_d) {
+              if (GameFontMetrics.field_f == FixedAngleTrigonometry.field_d) {
                 GraphicsSelectionState.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HighscoresAndRendererState.field_c)});
               } else {
                 if (GameFontMetrics.field_f == PitModel.field_s) {

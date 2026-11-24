@@ -291,7 +291,7 @@ final class SnakePitBehaviour extends Behaviour {
             var10_ref_aia = this.snakes[var9];
             var11 = var10_ref_aia.getOffsetX((byte) 91) + var7_int;
             var12 = var8 + var10_ref_aia.getOffsetY(0);
-            if (io.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.getSize(0), var10_ref_aia.getSize(0), param3)) {
+            if (Cp1252ByteEncoder.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.getSize(0), var10_ref_aia.getSize(0), param3)) {
               this.applyEffectToSnake(-this.trap.getY(9648) + param5, -this.trap.getX(3) + param3, var10_ref_aia, (byte) -115, param2);
             }
           }

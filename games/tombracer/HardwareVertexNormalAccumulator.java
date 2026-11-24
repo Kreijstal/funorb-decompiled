@@ -30,7 +30,7 @@ final class HardwareVertexNormalAccumulator {
           return;
         }
         if (param0 == 1) {
-          var3Lifetime1 = tia.field_d;
+          var3Lifetime1 = FixedAngleTrigonometry.field_d;
           var2Lifetime1 = WeaponShooterBehaviour.field_r;
           BitPacketBuffer.setGraphicsSettings(param1, var2Lifetime1, var3Lifetime1);
           return;
@@ -54,7 +54,7 @@ final class HardwareVertexNormalAccumulator {
           return;
         }
         var2Lifetime5 = CourseLayoutFactory.field_d;
-        var3Lifetime5 = tia.field_d;
+        var3Lifetime5 = FixedAngleTrigonometry.field_d;
         BitPacketBuffer.setGraphicsSettings(param1, var2Lifetime5, var3Lifetime5);
     }
 

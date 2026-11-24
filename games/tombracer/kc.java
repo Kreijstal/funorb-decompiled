@@ -84,7 +84,7 @@ final class kc {
           var7.unlink(105);
           var7.unlinkSecondary(-7975);
           MonochromeRowCacheEntry.field_k = MonochromeRowCacheEntry.field_k - 1;
-          var5 = ql.field_k;
+          var5 = CollisionGridEntryNodeBase.field_k;
           var5.writeCipheredOpcode(param1, -2988);
           var5.position = var5.position + 1;
           var6 = var5.position;

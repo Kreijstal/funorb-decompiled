@@ -558,7 +558,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 != 110) {
           return false;
         }
-        return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.height, this.width, param2);
+        return Cp1252ByteEncoder.centredBoxesOverlap(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.height, this.width, param2);
     }
 
     final void tickModels(int param0) {

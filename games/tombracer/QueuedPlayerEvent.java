@@ -39,7 +39,7 @@ final class QueuedPlayerEvent extends IntrusiveNode {
           if (param0) {
             field_f = (int[]) null;
           }
-          stackIn_5_0 = (wp.findFriendByName(119, param1) != null);
+          stackIn_5_0 = (FriendLookupAndContextMenus.findFriendByName(119, param1) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

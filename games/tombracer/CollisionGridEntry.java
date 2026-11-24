@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CollisionGridEntry extends ql {
+final class CollisionGridEntry extends CollisionGridEntryNodeBase {
     static boolean field_r;
     private int field_p;
     private int field_q;
@@ -9,7 +9,7 @@ final class CollisionGridEntry extends ql {
     private Collidable field_n;
 
     final static void a(byte param0, int param1, int param2) {
-        BitPacketBuffer var3 = ql.field_k;
+        BitPacketBuffer var3 = CollisionGridEntryNodeBase.field_k;
         var3.writeCipheredOpcode(param1, -2988);
         var3.writeByte(3, 0);
         var3.writeByte(8, 0);

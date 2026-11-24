@@ -265,9 +265,9 @@ final class WaveformOperator extends TextureOperator {
         if (DropTargetWidget.field_A > 2) {
           DropTargetWidget.field_A = 2;
         }
-        nba.field_b = 3 & param0 >> 2;
-        if (2 < nba.field_b) {
-          nba.field_b = 2;
+        AudioOutputSetup.field_b = 3 & param0 >> 2;
+        if (2 < AudioOutputSetup.field_b) {
+          AudioOutputSetup.field_b = 2;
         }
         UrlDownloadRequest.field_i = 3 & param0;
         if (UrlDownloadRequest.field_i > 2) {

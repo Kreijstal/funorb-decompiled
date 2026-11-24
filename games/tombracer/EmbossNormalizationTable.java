@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pda {
+final class EmbossNormalizationTable {
     static byte[] field_b;
     static Sprite[][] field_d;
     static int field_c;
@@ -20,7 +20,7 @@ final class pda {
         return false;
     }
 
-    pda(boolean param0) {
+    EmbossNormalizationTable(boolean param0) {
         RasterStateFramePool discarded$0 = new RasterStateFramePool();
     }
 

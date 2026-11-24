@@ -10,7 +10,7 @@ final class StatReportingScoringObserver extends MatchScoringObserver {
 
     final void onPenalty(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         try {
-          nba.sendRoomDeathStat(this.field_f, param3, (byte) 108);
+          AudioOutputSetup.sendRoomDeathStat(this.field_f, param3, (byte) 108);
           if (param0 != 15) {
             Room var8 = (Room) null;
             this.onRoomCompleted((Player) null, (Room) null, true);
@@ -119,7 +119,7 @@ final class StatReportingScoringObserver extends MatchScoringObserver {
             if (var5 >= 0) {
               var6 = PathMoveLocomotor.measureStringWidthWithIntGuard(-116, DefaultTileRenderable.field_g[var3_int], true);
               var4 = var4 + ValidationStatusIcon.field_C;
-              var7 = -(var6 >> 1) + ega.field_c;
+              var7 = -(var6 >> 1) + IntegerTextValidator.field_c;
               if (CrusherBehaviour.rectContainsPoint(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (GasVentModel.field_p << 1) + FullscreenFailureReason.field_d, false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;

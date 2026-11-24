@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends r implements NativeResource {
+final class ba extends NativeResourceNodeBase implements NativeResource {
     long field_nativeid;
 
     ba(NativeSoftwareGraphicsToolkit param0) {

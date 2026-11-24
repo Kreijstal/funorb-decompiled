@@ -73,7 +73,7 @@ final class ChatMessage {
     }
 
     final static void showFreeAccountPrompt(byte param0) {
-        um.field_l.transitionToContent(75, new FreeAccountPromptPanel());
+        UiComponentNodeBase.field_l.transitionToContent(75, new FreeAccountPromptPanel());
         if (param0 < 0) {
           field_k = (String) null;
         }
@@ -103,8 +103,8 @@ final class ChatMessage {
     ChatMessage(boolean param0) {
         this.field_i = ScrollContainer.field_z;
         this.field_d = HardwareModel.field_x;
-        this.field_m = sb.field_b;
-        this.field_o = ega.field_b;
+        this.field_m = AudioArchiveSetup.field_b;
+        this.field_o = IntegerTextValidator.field_b;
         this.field_f = ConveyorBehaviour.field_p;
         this.field_g = RoomSelectionProfile.field_c;
         this.field_c = gb.field_a;

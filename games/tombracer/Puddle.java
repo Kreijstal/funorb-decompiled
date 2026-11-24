@@ -519,10 +519,10 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
 
     public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 == 110) {
-          return io.centredBoxesOverlap(param4, this.y, (byte) -70, param3, this.x, param1, this.size, this.size, param2);
+          return Cp1252ByteEncoder.centredBoxesOverlap(param4, this.y, (byte) -70, param3, this.x, param1, this.size, this.size, param2);
         }
         this.updateAnimation(-11);
-        return io.centredBoxesOverlap(param4, this.y, (byte) -70, param3, this.x, param1, this.size, this.size, param2);
+        return Cp1252ByteEncoder.centredBoxesOverlap(param4, this.y, (byte) -70, param3, this.x, param1, this.size, this.size, param2);
     }
 
     public final int getPreviousX(int param0) {

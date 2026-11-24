@@ -25,7 +25,7 @@ final class PlayerQuickChatMenuLauncher {
           if (param1 == 1) {
             param1 = 0;
           }
-          wp.field_a = param4;
+          FriendLookupAndContextMenus.field_a = param4;
           OpenGlUnderwaterEffect.field_q = param1;
           var8 = (CharSequence) ((Object) param4);
           MatchingEmailAvailabilityValidator.field_n = OpenGlTexture3D.normalizeDisplayName(1, var8);

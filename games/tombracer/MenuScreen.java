@@ -479,7 +479,7 @@ abstract class MenuScreen extends GameScreen {
                 null != SecondaryNodeDequeIterator.field_a.matchState &&
                 SecondaryNodeDequeIterator.field_a.field_D &&
                 !SecondaryNodeDequeIterator.field_a.isSpectating((byte) 90)) {
-                ql.field_k.writeCipheredOpcode(65, -2988);
+                CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(65, -2988);
                 ConstrainToRectangleLocomotor.showMenuScreen(param1, -1, (byte) 105);
                 return true;
               }
@@ -488,7 +488,7 @@ abstract class MenuScreen extends GameScreen {
             if (var7 == 33) {
               if (null != SecondaryNodeDequeIterator.field_a) {
                 SecondaryNodeDequeIterator.field_a.endMatch(param1, true, 0);
-                r.a(0, SecondaryNodeDequeIterator.field_a.isSpectating((byte) 86));
+                NativeResourceNodeBase.a(0, SecondaryNodeDequeIterator.field_a.isSpectating((byte) 86));
               }
               return true;
             }
@@ -615,7 +615,7 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (37 == var7) {
-                Trap.setGraphicsQuality(0, tia.field_d);
+                Trap.setGraphicsQuality(0, FixedAngleTrigonometry.field_d);
                 return true;
               }
               if (var7 == 38) {

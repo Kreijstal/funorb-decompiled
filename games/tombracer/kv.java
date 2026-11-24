@@ -69,12 +69,12 @@ final class kv {
           NoiseSliceGenerator.field_a.writeByte(param0, 0);
           NoiseSliceGenerator.field_a.writeShort(-1477662136, param3);
           NoiseSliceGenerator.field_a.rsaEncryptContents(126, PooledObject.field_f, ClientRsaModulus.modulus);
-          ql.field_k.writeCipheredOpcode(18, param2 - 3083);
-          fieldTemp$0 = ql.field_k.position + 1;
-          ql.field_k.position = ql.field_k.position + 1;
+          CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(18, param2 - 3083);
+          fieldTemp$0 = CollisionGridEntryNodeBase.field_k.position + 1;
+          CollisionGridEntryNodeBase.field_k.position = CollisionGridEntryNodeBase.field_k.position + 1;
           var4 = fieldTemp$0;
-          ql.field_k.writeBytes(0, NoiseSliceGenerator.field_a.payload, NoiseSliceGenerator.field_a.position, param2 - 42);
-          ql.field_k.backpatchByteLength(ql.field_k.position - var4, (byte) -19);
+          CollisionGridEntryNodeBase.field_k.writeBytes(0, NoiseSliceGenerator.field_a.payload, NoiseSliceGenerator.field_a.position, param2 - 42);
+          CollisionGridEntryNodeBase.field_k.backpatchByteLength(CollisionGridEntryNodeBase.field_k.position - var4, (byte) -19);
           return;
         }
     }

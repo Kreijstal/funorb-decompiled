@@ -17,12 +17,12 @@ final class S2CSimulationSignalPacket implements GamePacket {
     }
 
     final static void sendChatSettings(boolean param0, int param1) {
-        BitPacketBuffer var2 = ql.field_k;
+        BitPacketBuffer var2 = CollisionGridEntryNodeBase.field_k;
         if (param0) {
           var2.writeCipheredOpcode(param1, -2988);
           var2.writeByte(2, 0);
           var2.writeByte(4, 0);
-          var2.writeByte(r.packSettings(11), 0);
+          var2.writeByte(NativeResourceNodeBase.packSettings(11), 0);
           return;
         }
     }

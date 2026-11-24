@@ -47,7 +47,7 @@ abstract class ItemBehaviour extends Behaviour {
     }
 
     final static void b(int param0) {
-        AccountNameResolver.field_e = fba.generatePerlinRow(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
+        AccountNameResolver.field_e = PerlinRowsAndByteArrayPool.generatePerlinRow(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
         int var1 = 56 % ((param0 - 57) / 45);
     }
 
@@ -314,14 +314,14 @@ abstract class ItemBehaviour extends Behaviour {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
         if (param0 == 34) {
-          var2 = ql.field_k;
+          var2 = CollisionGridEntryNodeBase.field_k;
           var2.writeCipheredOpcode(param1, param0 - 3022);
           var2.writeByte(1, 0);
           var2.writeByte(3, 0);
           return;
         }
         field_p = (int[]) null;
-        var2Lifetime1 = ql.field_k;
+        var2Lifetime1 = CollisionGridEntryNodeBase.field_k;
         var2Lifetime1.writeCipheredOpcode(param1, param0 - 3022);
         var2Lifetime1.writeByte(1, 0);
         var2Lifetime1.writeByte(3, 0);

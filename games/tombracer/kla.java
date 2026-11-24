@@ -75,9 +75,9 @@ final class kla {
           }
           var1 = AccountNameResolver.getAccountNameOrFallback((byte) -107);
           MessageDialogs.field_b = new LoginForm(var1, (String) null, true, false, false);
-          DisplayNameValidator.field_a.pushDialog(um.field_l, 84);
-          um.field_l.transitionToContent(68, MessageDialogs.field_b);
-          um.field_l.finishTransition(true);
+          DisplayNameValidator.field_a.pushDialog(UiComponentNodeBase.field_l, 84);
+          UiComponentNodeBase.field_l.transitionToContent(68, MessageDialogs.field_b);
+          UiComponentNodeBase.field_l.finishTransition(true);
           return;
         }
         Object var2 = (Object) null;
@@ -87,9 +87,9 @@ final class kla {
         }
         var1Lifetime1 = AccountNameResolver.getAccountNameOrFallback((byte) -107);
         MessageDialogs.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);
-        DisplayNameValidator.field_a.pushDialog(um.field_l, 84);
-        um.field_l.transitionToContent(68, MessageDialogs.field_b);
-        um.field_l.finishTransition(true);
+        DisplayNameValidator.field_a.pushDialog(UiComponentNodeBase.field_l, 84);
+        UiComponentNodeBase.field_l.transitionToContent(68, MessageDialogs.field_b);
+        UiComponentNodeBase.field_l.finishTransition(true);
     }
 
     final static void b(int param0) {

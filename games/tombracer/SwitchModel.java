@@ -697,7 +697,7 @@ final class SwitchModel extends TrapModel {
     }
 
     final static void closeLobbyOverlays(byte param0) {
-        wp.closeContextMenu(-1);
+        FriendLookupAndContextMenus.closeContextMenu(-1);
         RasterizerOperator.clearStatics((byte) -128);
         RoomViewRenderer.field_c = null;
         int var1 = 43 / ((param0 + 55) / 48);

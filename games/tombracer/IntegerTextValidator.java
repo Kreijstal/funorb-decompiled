@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ega {
+final class IntegerTextValidator {
     static int field_c;
     static String field_d;
     static int field_b;
@@ -35,7 +35,7 @@ final class ega {
             var8 = 0;
             if (!param2) {
               var12 = (CharSequence) null;
-              ega.isNumber(-127, (CharSequence) null, true, false);
+              IntegerTextValidator.isNumber(-127, (CharSequence) null, true, false);
             }
             while (var8 < var7) {
               boolean decompiledFrameRemainder0 = true;

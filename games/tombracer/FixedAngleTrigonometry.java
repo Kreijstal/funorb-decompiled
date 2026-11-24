@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tia {
+final class FixedAngleTrigonometry {
     static GraphicsQuality field_d;
     static int field_a;
     static String[] fallDeathMessages;

@@ -27,7 +27,7 @@ abstract class Transform3D {
           Transform3D.getChatSetting(-61, -111);
         }
         if (param0 == 1) {
-          var2 = nba.field_b;
+          var2 = AudioOutputSetup.field_b;
         }
         if (param0 == 2) {
           var2 = UrlDownloadRequest.field_i;

@@ -104,21 +104,21 @@ final class HazardModel extends TrapModel {
         String var6 = null;
         CharSequence var7 = null;
         try {
-          if (null != bl.field_a) {
-            var3_int = bl.field_a.a(param2, 1513);
+          if (null != GameSocketTraffic.field_a) {
+            var3_int = GameSocketTraffic.field_a.a(param2, 1513);
             if (var3_int != 0) {
               if (var3_int == 2 &&
-                bl.field_a.field_r != null &&
-                !bl.field_a.field_r.equals("")) {
-                if (bl.field_a.field_r.charAt(0) != 91) {
-                  var7 = (CharSequence) ((Object) bl.field_a.field_r);
+                GameSocketTraffic.field_a.field_r != null &&
+                !GameSocketTraffic.field_a.field_r.equals("")) {
+                if (GameSocketTraffic.field_a.field_r.charAt(0) != 91) {
+                  var7 = (CharSequence) ((Object) GameSocketTraffic.field_a.field_r);
                   var4 = OpenGlTexture3D.normalizeDisplayName(1, var7);
                 } else {
-                  var4 = bl.field_a.field_r;
+                  var4 = GameSocketTraffic.field_a.field_r;
                 }
                 var5 = null;
                 if (ResourceArchive.field_k == 0) {
-                  var5 = rf.requestAddFriend(true, var4, param1);
+                  var5 = FriendRequests.requestAddFriend(true, var4, param1);
                 }
                 if (1 == ResourceArchive.field_k) {
                   var5 = MeshMaterialColour.requestRemoveFriend(var4, (byte) 102, param1);
@@ -134,7 +134,7 @@ final class HazardModel extends TrapModel {
                   TreasureValuesOverlay.addChatMessage(0, true, var4, (String) (var5), (String) null, 2);
                 }
               }
-              bl.field_a = null;
+              GameSocketTraffic.field_a = null;
               ResourceArchive.field_k = -1;
             }
           }

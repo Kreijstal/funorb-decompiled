@@ -26,9 +26,9 @@ final class UrlDownloadRequest implements Runnable {
           return;
         }
         try {
-          ql.field_k.writeCipheredOpcode(97, -2988);
-          ql.field_k.writeShort(-1477662136, param1.getId((byte) -82));
-          ql.field_k.writeShort(-1477662136, param1.getTicksSinceReset((byte) 107));
+          CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(97, -2988);
+          CollisionGridEntryNodeBase.field_k.writeShort(-1477662136, param1.getId((byte) -82));
+          CollisionGridEntryNodeBase.field_k.writeShort(-1477662136, param1.getTicksSinceReset((byte) 107));
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "caa.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

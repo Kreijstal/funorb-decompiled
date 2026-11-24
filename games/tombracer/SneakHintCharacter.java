@@ -108,7 +108,7 @@ final class SneakHintCharacter {
         }
         this.field_f = this.field_f + var3;
         this.field_e = this.field_e + var2;
-        this.field_h = -512 + (tia.atan2(var3 << 8, var2 << 8, -29543) >> 2);
+        this.field_h = -512 + (FixedAngleTrigonometry.atan2(var3 << 8, var2 << 8, -29543) >> 2);
         this.field_d.tick(param0 ^ param0);
     }
 

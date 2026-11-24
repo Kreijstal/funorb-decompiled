@@ -179,7 +179,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                   this.updateScreen(true, false);
                 } else {
                   if (var3 == 4) {
-                    RoomEffectTraps.a((byte) -63, ck.field_b, false);
+                    RoomEffectTraps.a((byte) -63, ClientResourceBootstrap.field_b, false);
                     FlagSet.field_c = true;
                     this.updateScreen(true, false);
                   } else {

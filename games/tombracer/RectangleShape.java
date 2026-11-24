@@ -43,7 +43,7 @@ final class RectangleShape extends RasterShape {
         if (param0 > -16) {
           return (String) null;
         }
-        String[] var2 = rf.field_c;
+        String[] var2 = FriendRequests.field_c;
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
           var1 = var1 + var4 + "\n";

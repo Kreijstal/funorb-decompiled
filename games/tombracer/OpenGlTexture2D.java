@@ -149,11 +149,11 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         Room.field_p = (ToolkitSprite[][]) null;
         TextureCoordinateGeneration.field_d = null;
         WidgetStyleLayer.field_k = null;
-        ega.field_e = null;
+        IntegerTextValidator.field_e = null;
         ClippedChildWidget.field_A = null;
         ArchiveSource.field_a = null;
         MessageDialog.field_X = null;
-        fa.field_a = null;
+        ChatInputPresentation.field_a = null;
         PlayerProfile.field_r = null;
         PerlinNoise2D.field_m = null;
         WhiteLightShooterComponent.field_K = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp {
+final class FriendLookupAndContextMenus {
     static String field_a;
     static int field_b;
     static int[] field_c;
@@ -87,7 +87,7 @@ final class wp {
             ChatTarget.field_b = null;
             if (param0 != -1) {
               var2 = (String) null;
-              wp.findFriendByName(-23, (String) null);
+              FriendLookupAndContextMenus.findFriendByName(-23, (String) null);
               UnlockEntryDecoder.field_b = null;
               return;
             }
@@ -102,7 +102,7 @@ final class wp {
           return;
         }
         var2Lifetime1 = (String) null;
-        wp.findFriendByName(-23, (String) null);
+        FriendLookupAndContextMenus.findFriendByName(-23, (String) null);
         UnlockEntryDecoder.field_b = null;
     }
 

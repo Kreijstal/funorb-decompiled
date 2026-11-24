@@ -361,7 +361,7 @@ final class RoomEffectTraps {
         var3 = this.room.getWidth((byte) -86);
         var4 = this.room.getHeight(125);
         this.skeletonTraps = new Trap[param1];
-        var5 = vha.field_c.createSkeletonComponent(this.room, (byte) 118);
+        var5 = QuickChatMenuLayout.field_c.createSkeletonComponent(this.room, (byte) 118);
         var6 = var5.getWidth(-41);
         var7 = var5.getHeight((byte) 55);
         var8 = 0;

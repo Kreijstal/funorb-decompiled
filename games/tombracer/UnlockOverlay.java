@@ -114,7 +114,7 @@ final class UnlockOverlay extends MatchOverlay {
           }
           if (this.field_m.getKind(16) == 1) {
             var4 = this.field_m.getIndex(-13939);
-            MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(NativeResourceNodeBase.field_k.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
             OpenGlFramebuffer.field_i[var4].draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - OpenGlFramebuffer.field_i[var4].width() / 2, (SwitchLinkList.getCanvasHeight(0) >> 1) - OpenGlFramebuffer.field_i[var4].height() / 2 - 20);
             PlayerInputQueue.field_a.draw(var2, var3 + 60);
             MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, 92 + var3, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
@@ -137,7 +137,7 @@ final class UnlockOverlay extends MatchOverlay {
         }
         if (this.field_m.getKind(16) == 1) {
           var4Lifetime1 = this.field_m.getIndex(-13939);
-          MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(NativeResourceNodeBase.field_k.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
           OpenGlFramebuffer.field_i[var4Lifetime1].draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].width() / 2, (SwitchLinkList.getCanvasHeight(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].height() / 2 - 20);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 60);
           MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, 92 + var3Lifetime1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);

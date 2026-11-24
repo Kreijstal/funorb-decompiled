@@ -37,7 +37,7 @@ final class CharacterPreview extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        pra.b(-1);
+        ClippedFilledRectangleRenderer.b(-1);
         if (param0 != 8824) {
           return;
         }

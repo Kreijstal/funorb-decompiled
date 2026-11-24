@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pra {
+final class ClippedFilledRectangleRenderer {
     static int[] field_a;
 
     public static void releaseStatics(int param0) {
         if (param0 > -113) {
-          pra.a(103, 84, 45, -30, 12, 72, 89, 38);
+          ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(103, 84, 45, -30, 12, 72, 89, 38);
         }
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawClippedBorderedRectangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -50,7 +50,7 @@ final class pra {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, var22, var11);
           }
           if (param3 < 88) {
-            pra.b(-52);
+            ClippedFilledRectangleRenderer.b(-52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

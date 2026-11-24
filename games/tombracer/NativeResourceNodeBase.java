@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class r extends DualLinkNode {
+abstract class NativeResourceNodeBase extends DualLinkNode {
     static TextureCombineOperation field_m;
     static String field_l;
     static String field_k;
@@ -51,7 +51,7 @@ abstract class r extends DualLinkNode {
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           if (param2 != 19293) {
-            r.packSettings(32);
+            NativeResourceNodeBase.packSettings(32);
           }
           var7.setBounds(0, 0, param4, param0);
           var7.addFocusListener(var7);
@@ -75,7 +75,7 @@ abstract class r extends DualLinkNode {
     public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 11) {
-          r.releaseStatics(-85);
+          NativeResourceNodeBase.releaseStatics(-85);
           field_l = null;
           field_m = null;
           return;
@@ -86,13 +86,13 @@ abstract class r extends DualLinkNode {
 
     final static int packSettings(int param0) {
         if (param0 == 11) {
-          return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (nba.field_b << 2);
+          return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (AudioOutputSetup.field_b << 2);
         }
-        r.a(87, false);
-        return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (nba.field_b << 2);
+        NativeResourceNodeBase.a(87, false);
+        return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (AudioOutputSetup.field_b << 2);
     }
 
-    protected r() {
+    protected NativeResourceNodeBase() {
     }
 
     static {

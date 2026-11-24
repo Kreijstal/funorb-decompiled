@@ -1250,7 +1250,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          if (!io.centredBoxesOverlap(param1, this.y, (byte) -90, param5, this.x, param4, this.size, this.size, param2)) {
+          if (!Cp1252ByteEncoder.centredBoxesOverlap(param1, this.y, (byte) -90, param5, this.x, param4, this.size, this.size, param2)) {
             stackIn_6_0 = 0;
             return stackIn_6_0;
           }

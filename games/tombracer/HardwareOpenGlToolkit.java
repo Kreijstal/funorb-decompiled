@@ -84,7 +84,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         int var12 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          if (io.field_c == param4) {
+          if (Cp1252ByteEncoder.field_c == param4) {
             var9 = param6 * 2;
             var8_int = 1;
           } else {
@@ -680,7 +680,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException var5 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (io.field_c == param1) {
+          if (Cp1252ByteEncoder.field_c == param1) {
             var6 = param0 * 2;
             var5_int = 1;
           } else {

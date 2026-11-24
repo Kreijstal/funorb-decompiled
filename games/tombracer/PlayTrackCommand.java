@@ -364,12 +364,12 @@ final class PlayTrackCommand extends ConsoleMethod {
               stackIn_71_0 = (UnlockOverlay.field_p) ? 250 : 200;
               var33_intLifetime1 = stackIn_71_0;
               var12.field_Eb.setBounds(-2 + (-var33_intLifetime1 + 365), ToolkitSelector.field_a, -23776, var31, var33_intLifetime1);
-              var34_int = pda.field_c;
+              var34_int = EmbossNormalizationTable.field_c;
               if (0 != (var14Lifetime1 & 1 << PowerUpItemBehaviour.field_w)) {
                 var50_ref = SoundEventPlayer.field_f[var12.field_cc];
                 var12.field_xb.field_R = var50_ref;
                 var12.field_xb.setBounds(var50_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
-                var34_int = var34_int + (var50_ref.field_n + pda.field_c);
+                var34_int = var34_int + (var50_ref.field_n + EmbossNormalizationTable.field_c);
               }
               if ((1 << GpuDataType.field_c & var14Lifetime1) != 0) {
                 if (!var12.field_Bb) {
@@ -387,13 +387,13 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_vb.field_R = var51_ref;
                 var12.field_vb.setBounds(var51_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
-                var34_int = var34_int + (var51_ref.field_n + pda.field_c);
+                var34_int = var34_int + (var51_ref.field_n + EmbossNormalizationTable.field_c);
               }
               if ((1 << TrackingCrusherComponent.field_F & var14Lifetime1) != 0) {
                 var52_ref = TileGridCell.field_k[-1 + var12.field_yb];
                 var12.field_Zb.field_R = var52_ref;
                 var12.field_Zb.setBounds(var52_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
-                var34_int = var34_int + (pda.field_c + var52_ref.field_n);
+                var34_int = var34_int + (EmbossNormalizationTable.field_c + var52_ref.field_n);
               }
               if ((var14Lifetime1 & 1 << RoomEffectTraps.field_b) != 0) {
                 stackIn_90_0 = ProgressDialogLauncher.field_c;
@@ -405,17 +405,17 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var53_ref = stackIn_90_0[stackIn_91_1];
                 var12.field_fc.field_R = var53_ref;
                 var12.field_fc.setBounds(var53_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
-                var34_int = var34_int + (pda.field_c + var53_ref.field_n);
+                var34_int = var34_int + (EmbossNormalizationTable.field_c + var53_ref.field_n);
               }
-              if (pda.field_d != null) {
+              if (EmbossNormalizationTable.field_d != null) {
                 for (var36Lifetime1 = 0; ColourRowCache.field_b > var36Lifetime1; var36Lifetime1++) {
-                  if (null != pda.field_d[var36Lifetime1] &&
+                  if (null != EmbossNormalizationTable.field_d[var36Lifetime1] &&
                     0 != (1 << var36Lifetime1 + SoundEvent.field_m & var14Lifetime1)) {
-                    var42 = pda.field_d[var36Lifetime1][var12.field_ac[var36Lifetime1] & 255];
+                    var42 = EmbossNormalizationTable.field_d[var36Lifetime1][var12.field_ac[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Ub[var36Lifetime1].field_R = var42;
                     var12.field_Ub[var36Lifetime1].setBounds(var54.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
-                    var34_int = var34_int + (var54.field_n + pda.field_c);
+                    var34_int = var34_int + (var54.field_n + EmbossNormalizationTable.field_c);
                   }
                 }
               }
@@ -537,7 +537,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             }
             if (var12.field_Zb.field_o) {
               if (2 != var12.field_yb) {
-                stackIn_165_0 = ega.field_d;
+                stackIn_165_0 = IntegerTextValidator.field_d;
               } else {
                 stackIn_165_0 = FleeLocomotor.field_y;
               }

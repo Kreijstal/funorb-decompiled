@@ -298,11 +298,11 @@ abstract class MazeComponent extends PrefabComponent {
           if (!UnlockOverlay.field_p) {
             stackIn_7_2 = 0;
           } else {
-            stackIn_7_2 = 2 + (io.field_a + 40) + 2;
+            stackIn_7_2 = 2 + (Cp1252ByteEncoder.field_a + 40) + 2;
           }
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + ToolkitSelector.field_a, 0);
-          RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + ToolkitSelector.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
-          MidiPatch.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
+          RopeBridgeComponent.field_F.setBounds(42 + Cp1252ByteEncoder.field_a, 18, param1 - 23778, 2 + ToolkitSelector.field_a, -Cp1252ByteEncoder.field_a + RoomRegion.field_l.field_G - 42);
+          MidiPatch.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, Cp1252ByteEncoder.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
           NameEntryKeyboardSupport.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
           StatusEffect.field_g.setBounds(MouseWheelFactory.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.setBounds(MouseWheelFactory.field_b.field_G, MouseWheelFactory.field_b.field_t - 72, -23776, 30, 0);
@@ -383,7 +383,7 @@ abstract class MazeComponent extends PrefabComponent {
                   SimpleConditionBehaviour.field_p[var6].setBounds(103, var3, -23776, var5, 5);
                   var8 = 110;
                   if (param0) {
-                    SoftwareRenderTarget.field_b[var6][0].setRowBounds(38, var8, pda.field_c, var3, 0, 2, var5);
+                    SoftwareRenderTarget.field_b[var6][0].setRowBounds(38, var8, EmbossNormalizationTable.field_c, var3, 0, 2, var5);
                     var8 += 40;
                   } else {
                     if (SoftwareRenderTarget.field_b[var6][0] != null) {
@@ -396,7 +396,7 @@ abstract class MazeComponent extends PrefabComponent {
                   var10 = SoftwareRenderTarget.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9 / var10;
-                    SoftwareRenderTarget.field_b[var6][var11 + 1].setRowBounds(var9 * (1 + var11) / var10 - 2 - var12, var8 + var12, pda.field_c, var3, param1 ^ 2, 2, var5);
+                    SoftwareRenderTarget.field_b[var6][var11 + 1].setRowBounds(var9 * (1 + var11) / var10 - 2 - var12, var8 + var12, EmbossNormalizationTable.field_c, var3, param1 ^ 2, 2, var5);
                   }
                   var5 = var5 + (2 + var3);
                 }

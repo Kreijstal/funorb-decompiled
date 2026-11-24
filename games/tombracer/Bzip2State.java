@@ -77,7 +77,7 @@ final class Bzip2State {
             stackIn_20_0 = LegacyOpenGlFlowingWaterEffect.formatText(94, FleeLocomotor.field_o, new String[]{param1});
             return stackIn_20_0;
           }
-          var5 = ql.field_k;
+          var5 = CollisionGridEntryNodeBase.field_k;
           var5.writeCipheredOpcode(param2, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;

@@ -214,7 +214,7 @@ final class PlayerInputQueue {
     }
 
     final static void sendDeathCountMessage(int param0, int param1, byte param2) {
-        if (ql.field_k == null) {
+        if (CollisionGridEntryNodeBase.field_k == null) {
           return;
         }
         if (param2 < 106) {

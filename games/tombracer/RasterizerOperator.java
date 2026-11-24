@@ -131,7 +131,7 @@ final class RasterizerOperator extends TextureOperator {
         if (param0 != -128) {
           RasterizerOperator.d(63);
         }
-        bl.field_a = null;
+        GameSocketTraffic.field_a = null;
     }
 
     final static void closeNetworkAndCacheResources(int param0) {

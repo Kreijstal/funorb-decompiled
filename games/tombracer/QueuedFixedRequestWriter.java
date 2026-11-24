@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj {
+final class QueuedFixedRequestWriter {
     static SpriteData field_a;
     static String field_b;
 
@@ -10,9 +10,9 @@ final class wj {
         int var4 = 0;
         try {
           if (param2 > -116) {
-            wj.releaseStatics((byte) 1);
+            QueuedFixedRequestWriter.releaseStatics((byte) 1);
           }
-          var5 = ql.field_k;
+          var5 = CollisionGridEntryNodeBase.field_k;
           var5.writeCipheredOpcode(param1, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;

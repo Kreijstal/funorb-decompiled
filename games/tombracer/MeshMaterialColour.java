@@ -36,7 +36,7 @@ final class MeshMaterialColour {
             stackIn_6_0 = dga.field_b;
             return stackIn_6_0;
           }
-          var8 = wp.findFriendByName(94, param0);
+          var8 = FriendLookupAndContextMenus.findFriendByName(94, param0);
           if (var8 == null) {
             stackIn_10_0 = LegacyOpenGlFlowingWaterEffect.formatText(88, LegacyOpenGlCubeTexture.field_m, new String[]{param0});
             return stackIn_10_0;
@@ -56,7 +56,7 @@ final class MeshMaterialColour {
           var8.unlink(19);
           var8.unlinkSecondary(-7975);
           FriendListCounter.count = FriendListCounter.count - 1;
-          var9 = ql.field_k;
+          var9 = CollisionGridEntryNodeBase.field_k;
           var9.writeCipheredOpcode(param2, param1 - 3090);
           var9.position = var9.position + 1;
           var5 = var9.position;
@@ -89,7 +89,7 @@ final class MeshMaterialColour {
         BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
-          var5 = ql.field_k;
+          var5 = CollisionGridEntryNodeBase.field_k;
           var5.writeCipheredOpcode(param0, -2988);
           var5.position = var5.position + 1;
           if (param2 != 93) {

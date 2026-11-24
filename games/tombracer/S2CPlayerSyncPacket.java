@@ -146,9 +146,9 @@ final class S2CPlayerSyncPacket implements GamePacket {
     final static IndexedSprite[] createDecodedIndexedSprites(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[fa.field_b];
-        for (var2 = param0; fa.field_b > var2; var2++) {
-          var1[var2] = new IndexedSprite(SpriteDecodeAndBytePoolState.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], TermsLinksPanel.field_C[var2], LegacyOpenGlNormalMapGenerator.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], ck.field_c[var2], QueuedHint.field_g);
+        IndexedSprite[] var1 = new IndexedSprite[ChatInputPresentation.field_b];
+        for (var2 = param0; ChatInputPresentation.field_b > var2; var2++) {
+          var1[var2] = new IndexedSprite(SpriteDecodeAndBytePoolState.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], TermsLinksPanel.field_C[var2], LegacyOpenGlNormalMapGenerator.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], ClientResourceBootstrap.field_c[var2], QueuedHint.field_g);
         }
         MazeGenerator.releaseStatics((byte) 106);
         return var1;

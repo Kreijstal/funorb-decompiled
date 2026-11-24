@@ -239,7 +239,7 @@ final class TeleportLocomotor extends Locomotor {
               }
             } else {
               if (1 == param1) {
-                tia.drawSinglePixelRectangleBorder(param2, param4, param0, param6, param3, false);
+                FixedAngleTrigonometry.drawSinglePixelRectangleBorder(param2, param4, param0, param6, param3, false);
               } else {
                 CharacterChoice.drawThickRectangleBorder(param1, param0, param6, param4, param3, (byte) 27, param2);
               }

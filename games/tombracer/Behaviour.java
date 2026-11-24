@@ -16,11 +16,11 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         Player var2Lifetime1;
         if (param0 == 8031) {
           var2 = this.getPlayer((byte) 19);
-          return io.centredBoxesOverlap(var2.getWidth(-47), this.trap.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.trap.getX(3), var2.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2.getX(3));
+          return Cp1252ByteEncoder.centredBoxesOverlap(var2.getWidth(-47), this.trap.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.trap.getX(3), var2.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2.getX(3));
         }
         this.room = (Room) null;
         var2Lifetime1 = this.getPlayer((byte) 19);
-        return io.centredBoxesOverlap(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
+        return Cp1252ByteEncoder.centredBoxesOverlap(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
 
     int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {

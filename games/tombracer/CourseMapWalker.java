@@ -1325,7 +1325,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("treasure_values", (byte) 102);
                 if (null != var2) {
-                  wj.field_b = BitPackedColour.decodeText((byte) 56, var2);
+                  QueuedFixedRequestWriter.field_b = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("treasure_total", (byte) 126);
                 if (null != var2) {
@@ -1353,7 +1353,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("penalty_reset", (byte) 117);
                 if (null != var2) {
-                  rf.field_a = BitPackedColour.decodeText((byte) 92, var2);
+                  FriendRequests.field_a = BitPackedColour.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("final_score_colon", (byte) 107);
                 if (var2 != null) {
@@ -1425,7 +1425,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unlock_tier", (byte) 109);
                 if (var2 != null) {
-                  r.field_k = BitPackedColour.decodeText((byte) 94, var2);
+                  NativeResourceNodeBase.field_k = BitPackedColour.decodeText((byte) 94, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_ace", (byte) 124);
                 if (null != var2) {
@@ -1589,35 +1589,35 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,0", (byte) 121);
                 if (var2 != null) {
-                  tia.fallDeathMessages[0] = BitPackedColour.decodeText((byte) 113, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[0] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,1", (byte) 101);
                 if (null != var2) {
-                  tia.fallDeathMessages[1] = BitPackedColour.decodeText((byte) 59, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[1] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,2", (byte) 103);
                 if (null != var2) {
-                  tia.fallDeathMessages[2] = BitPackedColour.decodeText((byte) 65, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[2] = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,3", (byte) 117);
                 if (null != var2) {
-                  tia.fallDeathMessages[3] = BitPackedColour.decodeText((byte) 101, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[3] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,4", (byte) 122);
                 if (null != var2) {
-                  tia.fallDeathMessages[4] = BitPackedColour.decodeText((byte) 26, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[4] = BitPackedColour.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,5", (byte) 122);
                 if (null != var2) {
-                  tia.fallDeathMessages[5] = BitPackedColour.decodeText((byte) 75, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[5] = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,6", (byte) 118);
                 if (null != var2) {
-                  tia.fallDeathMessages[6] = BitPackedColour.decodeText((byte) 114, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[6] = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,7", (byte) 112);
                 if (null != var2) {
-                  tia.fallDeathMessages[7] = BitPackedColour.decodeText((byte) 38, var2);
+                  FixedAngleTrigonometry.fallDeathMessages[7] = BitPackedColour.decodeText((byte) 38, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,0", (byte) 100);
                 if (var2 != null) {
@@ -2043,7 +2043,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("multiplayer_lobby", (byte) 125);
                 if (null != var2) {
-                  ol.field_a = BitPackedColour.decodeText((byte) 58, var2);
+                  ContactListOrdering.field_a = BitPackedColour.decodeText((byte) 58, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("options", (byte) 100);
                 if (var2 != null) {

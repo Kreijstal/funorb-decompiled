@@ -59,7 +59,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
               stackIn_8_0 = "Learn to spell";
               return stackIn_8_0;
             }
-            if (!rf.field_c[var2_int].equalsIgnoreCase(param0)) {
+            if (!FriendRequests.field_c[var2_int].equalsIgnoreCase(param0)) {
               var2_int++;
               continue;
             }

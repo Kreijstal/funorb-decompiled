@@ -233,7 +233,7 @@ final class ava {
                 } else {
                   if (var12.field_Fb) {
                     var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(105, ChatMessageColours.field_c, new String[]{var20});
-                    var12.field_Kb.field_r = r.field_l;
+                    var12.field_Kb.field_r = NativeResourceNodeBase.field_l;
                     var12.field_Cb.field_r = MainMenuScreen.field_q;
                   } else {
                     var12.field_Kb.field_r = FallbackShaderEffect.field_e;
@@ -275,15 +275,15 @@ final class ava {
               if (var12.field_Nb.field_o &&
                 var22 != 0) {
                 ArchiveNetworkClient.field_b = var12.field_wb;
-                if (null != ql.field_m &&
-                  null != ql.field_m[var12.field_Ab]) {
-                  ArchiveNetworkClient.field_b = ArchiveNetworkClient.field_b + " - " + ql.field_m[var12.field_Ab];
+                if (null != CollisionGridEntryNodeBase.field_m &&
+                  null != CollisionGridEntryNodeBase.field_m[var12.field_Ab]) {
+                  ArchiveNetworkClient.field_b = ArchiveNetworkClient.field_b + " - " + CollisionGridEntryNodeBase.field_m[var12.field_Ab];
                 }
               } else {
                 if (var12.field_Nb.field_o &&
-                  null != ql.field_m &&
-                  null != ql.field_m[var12.field_Ab]) {
-                  ArchiveNetworkClient.field_b = ql.field_m[var12.field_Ab];
+                  null != CollisionGridEntryNodeBase.field_m &&
+                  null != CollisionGridEntryNodeBase.field_m[var12.field_Ab]) {
+                  ArchiveNetworkClient.field_b = CollisionGridEntryNodeBase.field_m[var12.field_Ab];
                 }
               }
               var19 = var19 + ToolkitSelector.field_a;

@@ -571,23 +571,23 @@ final class MatchProtocol {
         }
         PcmSample var6 = CauldronComponent.field_J[param3];
         if (var6 == null) {
-          fea.loadSoundEffect(false, param3);
+          GameSoundEffectLoader.loadSoundEffect(false, param3);
           var6 = CauldronComponent.field_J[param3];
         }
         if (param4 > 0) {
-          return um.playSampleDelayed(param2, param4, var6, -6455, param5);
+          return UiComponentNodeBase.playSampleDelayed(param2, param4, var6, -6455, param5);
         }
-        return ql.playSample(param0, var6, (byte) 108, param5, param2);
+        return CollisionGridEntryNodeBase.playSample(param0, var6, (byte) 108, param5, param2);
     }
 
     final void sendResultsFinished(int param0) {
-        if (null == ql.field_k) {
+        if (null == CollisionGridEntryNodeBase.field_k) {
           return;
         }
         if (param0 != 6418) {
           MatchProtocol.playSoundEffect(125, (byte) 41, 101, 81, 77, 14);
         }
-        ql.field_k.writeCipheredOpcode(81, -2988);
+        CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(81, -2988);
     }
 
     private final void handleCharacterChoicePacket(MatchScreen param0, BitPacketBuffer param1, int param2) {

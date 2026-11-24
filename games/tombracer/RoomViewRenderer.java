@@ -231,13 +231,13 @@ final class RoomViewRenderer {
         int[] var5 = null;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
-        Sprite[] var1 = new Sprite[fa.field_b];
+        Sprite[] var1 = new Sprite[ChatInputPresentation.field_b];
         if (param0 != 1500) {
           field_c = (ReportAbuseDialog) null;
         }
-        for (var2 = 0; fa.field_b > var2; var2++) {
+        for (var2 = 0; ChatInputPresentation.field_b > var2; var2++) {
           var3 = ImageProducerCanvasImageBuffer.field_m[var2] * LegacyOpenGlNormalMapGenerator.field_b[var2];
-          var4 = ck.field_c[var2];
+          var4 = ClientResourceBootstrap.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = QueuedHint.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var4[var6])];

@@ -154,7 +154,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
           SocketConnector.drawWrappedText(var10.toUpperCase(), 1, FloatPacketBuffer.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
           return;
         }
-        fa.field_a[this.field_f].draw(this.field_k, this.field_g);
+        ChatInputPresentation.field_a[this.field_f].draw(this.field_k, this.field_g);
         CurrentGraphicsToolkit.toolkit.resetClip();
         var3Lifetime1 = 2431750;
         if (param1) {

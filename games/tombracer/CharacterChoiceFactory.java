@@ -29,7 +29,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         int var7 = 0;
         int var8 = 0;
         try {
-          var10 = ql.field_k;
+          var10 = CollisionGridEntryNodeBase.field_k;
           var10.writeCipheredOpcode(param5, -2988);
           var10.position = var10.position + 1;
           var7 = var10.position;
@@ -68,7 +68,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         RuntimeException decompiledCaughtException = null;
         try {
           PlantModel.detachKeyboardHandler(-18520, (java.awt.Component) ((Object) param0));
-          tia.detachMouseHandler(0, (java.awt.Component) ((Object) param0));
+          FixedAngleTrigonometry.detachMouseHandler(0, (java.awt.Component) ((Object) param0));
           if (param1) {
             return;
           }

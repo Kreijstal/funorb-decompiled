@@ -191,18 +191,18 @@ abstract class GameScreen {
         BeamSegment.releaseMouseHandler(5);
         if (param0 == 62) {
           RasterizerOperator.closeNetworkAndCacheResources(0);
-          if (bl.isGameSocketActive(param0 - 62)) {
-            ql.field_k.writeCipheredOpcode(1, -2988);
-            bl.flushPacketBuffer(0, -1);
+          if (GameSocketTraffic.isGameSocketActive(param0 - 62)) {
+            CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(1, -2988);
+            GameSocketTraffic.flushPacketBuffer(0, -1);
           }
           DropAnimation.closeGameSocket(60);
           return;
         }
         GameScreen.a(-50, false, 79);
         RasterizerOperator.closeNetworkAndCacheResources(0);
-        if (bl.isGameSocketActive(param0 - 62)) {
-          ql.field_k.writeCipheredOpcode(1, -2988);
-          bl.flushPacketBuffer(0, -1);
+        if (GameSocketTraffic.isGameSocketActive(param0 - 62)) {
+          CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(1, -2988);
+          GameSocketTraffic.flushPacketBuffer(0, -1);
         }
         DropAnimation.closeGameSocket(60);
     }

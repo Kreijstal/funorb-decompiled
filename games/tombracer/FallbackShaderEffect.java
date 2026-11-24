@@ -132,7 +132,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               if (var8 != 0) {
                 stackIn_35_1 = PacketDiagnostics.field_a;
               } else {
-                stackIn_35_1 = rf.field_b;
+                stackIn_35_1 = FriendRequests.field_b;
               }
               stackIn_34_0.field_r = ((String) (Object) stackIn_35_1).toUpperCase();
               stackIn_37_0 = HazardModel.field_t;

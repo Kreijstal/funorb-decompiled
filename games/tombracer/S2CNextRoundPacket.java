@@ -195,7 +195,7 @@ final class S2CNextRoundPacket implements GamePacket {
         try {
           var4 = (QueuedFixedRequest) (OpenGlVertexNormalData.field_a.first(-80));
           while (var4 != null) {
-            wj.writeQueuedRequest(var4, param0, -121);
+            QueuedFixedRequestWriter.writeQueuedRequest(var4, param0, -121);
             var4 = (QueuedFixedRequest) (OpenGlVertexNormalData.field_a.next(114));
           }
           if (param1 != 2) {

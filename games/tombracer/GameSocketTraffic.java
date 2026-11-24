@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class bl {
+final class GameSocketTraffic {
     static String field_b;
     static NameEntryPopup field_a;
     static int[] field_c;
 
     final static boolean isGameSocketActive(int param0) {
         if (param0 != 0) {
-          bl.flushPacketBuffer(-92, 118);
+          GameSocketTraffic.flushPacketBuffer(-92, 118);
           if (null == OpenGlTransform3D.field_e) {
             return false;
           }
@@ -81,24 +81,24 @@ final class bl {
           Throwable decompiledCaughtException = null;
           if (OpenGlTransform3D.field_e != null && (param0 < 0 ||
             LegacyOpenGlTexture1D.field_n == ProceduralTexture.field_p)) {
-            if (param1 == ~ql.field_k.position &&
+            if (param1 == ~CollisionGridEntryNodeBase.field_k.position &&
               ValidationStatusIcon.field_D + 10000L < AdjustedWallClock.currentTimeMillis((byte) -107)) {
-              ql.field_k.writeCipheredOpcode(param0, -2988);
+              CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(param0, -2988);
             }
-            if (ql.field_k.position > 0) {
+            if (CollisionGridEntryNodeBase.field_k.position > 0) {
               try {
-                OpenGlTransform3D.field_e.write(ql.field_k.payload, 0, ql.field_k.position, param1 + 119);
+                OpenGlTransform3D.field_e.write(CollisionGridEntryNodeBase.field_k.payload, 0, CollisionGridEntryNodeBase.field_k.position, param1 + 119);
                 ValidationStatusIcon.field_D = AdjustedWallClock.currentTimeMillis((byte) -107);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 DropAnimation.closeGameSocket(60);
               }
-              ql.field_k.position = 0;
+              CollisionGridEntryNodeBase.field_k.position = 0;
             }
             return;
           }
-          ql.field_k.position = 0;
+          CollisionGridEntryNodeBase.field_k.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -35,7 +35,7 @@ final class CurveOperator extends TextureOperator {
     final static void openPrivateQuickChat(byte param0, long param1, String param2) {
         CharSequence var5 = null;
         try {
-          wp.field_a = param2;
+          FriendLookupAndContextMenus.field_a = param2;
           int var4_int = 93 / ((param0 + 33) / 53);
           OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param2);

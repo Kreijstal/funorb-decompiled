@@ -66,12 +66,12 @@ final class NanoTickClock extends GameClock {
         }
         var1 = TileOperator.field_n;
         synchronized (var1) {
-          if (vha.field_b == FullscreenFailureReason.field_a) {
+          if (QuickChatMenuLayout.field_b == FullscreenFailureReason.field_a) {
             return false;
           }
-          MenuEntry.field_h = MessageOverlay.field_o[vha.field_b];
-          HardwareOpenGlToolkit.field_td = MovingSawComponent.field_O[vha.field_b];
-          vha.field_b = 1 + vha.field_b & 127;
+          MenuEntry.field_h = MessageOverlay.field_o[QuickChatMenuLayout.field_b];
+          HardwareOpenGlToolkit.field_td = MovingSawComponent.field_O[QuickChatMenuLayout.field_b];
+          QuickChatMenuLayout.field_b = 1 + QuickChatMenuLayout.field_b & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

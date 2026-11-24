@@ -508,7 +508,7 @@ final class PlayPhase extends MatchPhase {
             return stackIn_8_0;
           }
           if (ProceduralTexture.field_p == RotaterMountComponent.field_G) {
-            ql.field_k.position = 0;
+            CollisionGridEntryNodeBase.field_k.position = 0;
             RendererMode.field_b = null;
             if (param1 != null) {
               var9 = 0;
@@ -525,16 +525,16 @@ final class PlayPhase extends MatchPhase {
               NoiseSliceGenerator.field_a.writeShort(-1477662136, param6);
               NoiseSliceGenerator.field_a.writeByte(param3, 0);
               NoiseSliceGenerator.field_a.writeByte(var9, 0);
-              ql.field_k.writeByte(18, 0);
-              ql.field_k.position = ql.field_k.position + 2;
-              var10 = ql.field_k.position;
+              CollisionGridEntryNodeBase.field_k.writeByte(18, 0);
+              CollisionGridEntryNodeBase.field_k.position = CollisionGridEntryNodeBase.field_k.position + 2;
+              var10 = CollisionGridEntryNodeBase.field_k.position;
               var11_ref_StringLifetime4 = GameFontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ql.field_k.writeString(var11_ref_StringLifetime4, false);
-              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, NoiseSliceGenerator.field_a);
-              ql.field_k.backpatchShortLength(ql.field_k.position - var10, (byte) -35);
+              CollisionGridEntryNodeBase.field_k.writeString(var11_ref_StringLifetime4, false);
+              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, CollisionGridEntryNodeBase.field_k, NoiseSliceGenerator.field_a);
+              CollisionGridEntryNodeBase.field_k.backpatchShortLength(CollisionGridEntryNodeBase.field_k.position - var10, (byte) -35);
             } else {
               NoiseSliceGenerator.field_a.position = 0;
               NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -106);
@@ -553,13 +553,13 @@ final class PlayPhase extends MatchPhase {
                 stackIn_18_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_17_0).writeVersionedString(stackIn_18_1, (byte) 0);
-              ql.field_k.writeByte(16, 0);
-              ql.field_k.position = ql.field_k.position + 1;
-              var9 = ql.field_k.position;
-              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, NoiseSliceGenerator.field_a);
-              ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
+              CollisionGridEntryNodeBase.field_k.writeByte(16, 0);
+              CollisionGridEntryNodeBase.field_k.position = CollisionGridEntryNodeBase.field_k.position + 1;
+              var9 = CollisionGridEntryNodeBase.field_k.position;
+              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, CollisionGridEntryNodeBase.field_k, NoiseSliceGenerator.field_a);
+              CollisionGridEntryNodeBase.field_k.backpatchByteLength(CollisionGridEntryNodeBase.field_k.position - var9, (byte) -115);
             }
-            bl.flushPacketBuffer(-1, -1);
+            GameSocketTraffic.flushPacketBuffer(-1, -1);
             ProceduralTexture.field_p = Player.field_p;
           }
           if (Player.field_p == ProceduralTexture.field_p &&
@@ -573,7 +573,7 @@ final class PlayPhase extends MatchPhase {
             } else {
               if (var9Lifetime1 == 248) {
                 EmptyWidgetPainter.clearStatusCookie(ToolkitSelector.getApplet(21), 255);
-                io.field_b = ArchiveNetworkClient.field_f;
+                Cp1252ByteEncoder.field_b = ArchiveNetworkClient.field_f;
                 DropAnimation.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_33_0 = var9Lifetime1;
@@ -615,7 +615,7 @@ final class PlayPhase extends MatchPhase {
                 MidiChannelVolumeTargets.writeSettingsCookie(var9_ref_String, ToolkitSelector.getApplet(82), -21407);
               }
             } else {
-              io.field_b = WeaveOperator.field_q.readString((byte) -76);
+              Cp1252ByteEncoder.field_b = WeaveOperator.field_q.readString((byte) -76);
             }
             DropAnimation.closeGameSocket(60);
             PushableBlockMazeComponent.field_L = false;
@@ -624,10 +624,10 @@ final class PlayPhase extends MatchPhase {
           }
           if (null == OpenGlTransform3D.field_e) {
             if (PushableBlockMazeComponent.field_L) {
-              if (rf.millisSinceLastReceive((byte) -121) > 30000L) {
-                io.field_b = SpriteTileOperator.field_u;
+              if (FriendRequests.millisSinceLastReceive((byte) -121) > 30000L) {
+                Cp1252ByteEncoder.field_b = SpriteTileOperator.field_u;
               } else {
-                io.field_b = MusicPlayer.field_x;
+                Cp1252ByteEncoder.field_b = MusicPlayer.field_x;
               }
               PushableBlockMazeComponent.field_L = false;
               stackIn_65_0 = 249;

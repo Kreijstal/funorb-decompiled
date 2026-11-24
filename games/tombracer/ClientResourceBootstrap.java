@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck {
+final class ClientResourceBootstrap {
     static byte[][] field_c;
     static String field_b;
     static ResourceArchive field_a;
@@ -11,7 +11,7 @@ final class ck {
         RuntimeException var9 = null;
         try {
           if (param6 <= 65) {
-            ck.storeSharedResources(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
+            ClientResourceBootstrap.storeSharedResources(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
           }
           if ((-(param8 / 2) + param0) >= (-(param3 / 2) + param2) &&
             param0 + (param8 + 1) / 2 <= (param3 + 1) / 2 + param2 &&
@@ -87,7 +87,7 @@ final class ck {
         try {
           DoorwayComponent.field_L = param7;
           HardwareVertexNormalAccumulator.field_e = param9;
-          pda.field_d = param3;
+          EmbossNormalizationTable.field_d = param3;
           SnakePitModel.field_n = param12;
           QueuedByteShortRequest.field_i = param6;
           MirrorMoverLocomotor.field_r = param2;
@@ -495,11 +495,11 @@ final class ck {
               }
               if (!stackIn_10_0 ||
                 var17 * var14 - var15 * var16 < 0) {
-                var12Lifetime1 = wp.field_c[var9];
+                var12Lifetime1 = FriendLookupAndContextMenus.field_c[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = wp.field_c[var10];
+                  var13Lifetime1 = FriendLookupAndContextMenus.field_c[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = wp.field_c[var11];
+                    var14 = FriendLookupAndContextMenus.field_c[var11];
                     if (var14 != -2147483648) {
                       var15 = var14 + (var13Lifetime1 + var12Lifetime1 - var6);
                       if (var7 >= 0) {
@@ -561,7 +561,7 @@ final class ck {
             }
           }
           if (param3 != -8234) {
-            ck.containsCentredBox(-21, -102, 54, 120, -98, -42, (byte) -6, -39, 90);
+            ClientResourceBootstrap.containsCentredBox(-21, -102, 54, 120, -98, -42, (byte) -6, -39, 90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -51,7 +51,7 @@ final class EmbossOperator extends TextureOperator {
             if (var15 > 255) {
               var15 = 255;
             }
-            var16 = 255 & pda.field_b[var14 + (var15 * (1 + var15) >> 1)];
+            var16 = 255 & EmbossNormalizationTable.field_b[var14 + (var15 * (1 + var15) >> 1)];
             var5 = var12 * var16 >> 8;
             var4 = var16 * var13 >> 8;
             var6 = var16 * 4096 >> 8;

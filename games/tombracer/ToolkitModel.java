@@ -492,7 +492,7 @@ abstract class ToolkitModel {
           TextureOperator.field_l.dismiss((byte) -7);
         }
         PushableMountComponent.field_F = new DisplayNameForm();
-        um.field_l.transitionToContent(100, PushableMountComponent.field_F);
+        UiComponentNodeBase.field_l.transitionToContent(100, PushableMountComponent.field_F);
     }
 
     abstract void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);

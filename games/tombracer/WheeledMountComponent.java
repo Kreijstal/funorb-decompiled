@@ -94,7 +94,7 @@ final class WheeledMountComponent extends PathMoverComponent {
               stackIn_6_0 = HuffmanCodec.field_a.field_c;
               return stackIn_6_0;
             }
-            if (tia.field_d != param0) {
+            if (FixedAngleTrigonometry.field_d != param0) {
               stackIn_11_0 = UsernameSuggestionsPanel.field_x.field_c;
               return stackIn_11_0;
             }
@@ -105,7 +105,7 @@ final class WheeledMountComponent extends PathMoverComponent {
             stackIn_15_0 = ControllerLocomotor.field_t.field_c;
             return stackIn_15_0;
           }
-          if (tia.field_d != param0) {
+          if (FixedAngleTrigonometry.field_d != param0) {
             stackIn_20_0 = CharacterSelection.field_d.field_c;
             return stackIn_20_0;
           }

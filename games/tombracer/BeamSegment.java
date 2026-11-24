@@ -62,7 +62,7 @@ final class BeamSegment {
     final static void sendHiscoreTableRequest(boolean param0, int param1, HiscoreTable param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = ql.field_k;
+          var3 = CollisionGridEntryNodeBase.field_k;
           if (param0) {
             field_g = (String) null;
           }

@@ -23,7 +23,7 @@ final class DateValidationSource extends DebouncedValidationSource implements Te
           var5 = ResourceArchive.currentYear((byte) 60);
           if (var4 >= param0 &&
             -3 + var5 >= var4) {
-            if (fa.isValidDate(var3, var2_int, true, var4)) {
+            if (ChatInputPresentation.isValidDate(var3, var2_int, true, var4)) {
               stackIn_7_0 = null;
               return (String) (stackIn_7_0);
             }
@@ -89,7 +89,7 @@ final class DateValidationSource extends DebouncedValidationSource implements Te
             stackIn_6_0 = TextureCombineSource.field_c;
             return stackIn_6_0;
           }
-          if (!fa.isValidDate(var3, var2_int, true, var4)) {
+          if (!ChatInputPresentation.isValidDate(var3, var2_int, true, var4)) {
             stackIn_10_0 = TextureCombineSource.field_c;
             return stackIn_10_0;
           }

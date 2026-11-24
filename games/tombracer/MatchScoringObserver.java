@@ -64,7 +64,7 @@ class MatchScoringObserver extends SimulationObserver {
             var9_ref = LegacyOpenGlFlowingWaterEffect.formatText(104, ConsoleWindow.field_n, new String[]{String.valueOf(var8)});
           } else {
             var8 = -5;
-            var9_ref = LegacyOpenGlFlowingWaterEffect.formatText(107, rf.field_a, new String[]{String.valueOf(var8)});
+            var9_ref = LegacyOpenGlFlowingWaterEffect.formatText(107, FriendRequests.field_a, new String[]{String.valueOf(var8)});
           }
           param1.addScore(param0 - 15, var8);
           this.field_f.statistics.recordPenalty(param5, param1.getPlayerIndex(0), param0 - 19);

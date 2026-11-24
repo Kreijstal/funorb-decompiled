@@ -36,7 +36,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
         var8 = var7 + 40;
         SecondaryNodeDequeIterator.fillAlphaRect(192, var6, 3145728, this.field_n, (byte) 47, var7 - 16, this.field_m - this.field_n / 2);
         WhiteLightShooterComponent.drawThickRectOutline(-(this.field_n / 2) + this.field_m, (byte) -85, var7 - 16, 5242880, 2, var6, this.field_n);
-        MembersUpsellMenu.drawCentredTextWithShadow(wj.field_b, 16777215, TooltipRenderer.field_p, -1, var7 + 4, this.field_m, 0);
+        MembersUpsellMenu.drawCentredTextWithShadow(QueuedFixedRequestWriter.field_b, 16777215, TooltipRenderer.field_p, -1, var7 + 4, this.field_m, 0);
         for (var9 = 0; var9 < this.field_g.players.length; var9++) {
           var10 = this.field_g.scoreStandings.order[var9];
           if (var10 != -1) {

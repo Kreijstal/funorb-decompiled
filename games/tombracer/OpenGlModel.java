@@ -793,7 +793,7 @@ final class OpenGlModel extends ToolkitModel {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted4 = true;
           regionExit3: {
-            if (!hh.a(param1, (byte) 5, this.field_u)) {
+            if (!FullscreenUiDrawing.a(param1, (byte) 5, this.field_u)) {
               param5.field_n = this.field_n;
               param5.field_y = this.field_y;
               if (var13 == 0) {
@@ -895,7 +895,7 @@ final class OpenGlModel extends ToolkitModel {
             param5.field_z = this.field_z;
             param5.field_H = this.field_H;
           }
-          if (!tia.b(this.field_u, -23403, param1)) {
+          if (!FixedAngleTrigonometry.b(this.field_u, -23403, param1)) {
             if (!mm.hasFlag2048(-123, param1, this.field_u)) {
               param5.field_w = null;
               if (var13 != 0) {
@@ -2316,7 +2316,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           var1_int = NormalMapOperator.getSelectionMenuWidth(-77);
           var2 = GraphicsHeap.getSelectionMenuHeight(18998);
-          S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, ProgressDialogLauncher.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
+          S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + FriendLookupAndContextMenus.field_b, ProgressDialogLauncher.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.drawSelectionMenuItems(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

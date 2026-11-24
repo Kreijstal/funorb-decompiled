@@ -15,7 +15,7 @@ final class RoomResultSender {
     }
 
     final static void sendRoomResult(int param0, long param1, byte param2, int param3) {
-        if (null == ql.field_k) {
+        if (null == CollisionGridEntryNodeBase.field_k) {
           return;
         }
         C2SRoomResultPacket var5 = new C2SRoomResultPacket();

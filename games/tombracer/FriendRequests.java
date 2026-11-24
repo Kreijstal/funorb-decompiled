@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf {
+final class FriendRequests {
     static String field_b;
     static String field_a;
     static String[] field_c;
@@ -72,7 +72,7 @@ final class rf {
             stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
             return stackIn_28_0;
           }
-          var5 = ql.field_k;
+          var5 = CollisionGridEntryNodeBase.field_k;
           var5.writeCipheredOpcode(param2, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;

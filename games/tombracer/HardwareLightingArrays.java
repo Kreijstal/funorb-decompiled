@@ -36,7 +36,7 @@ final class HardwareLightingArrays {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var7 = ql.field_k;
+          var7 = CollisionGridEntryNodeBase.field_k;
           var8 = var7;
           var8.writeCipheredOpcode(param2, -2988);
           var8.position = var8.position + 1;

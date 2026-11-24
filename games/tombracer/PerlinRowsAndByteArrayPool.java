@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fba {
+final class PerlinRowsAndByteArrayPool {
     static float field_a;
 
     final static int[] generatePerlinRow(int param0, float param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
@@ -33,7 +33,7 @@ final class fba {
         try {
           if (param0 != 1) {
             var4 = (float[]) null;
-            fba.copyFloats(60, (float[]) null, -59);
+            PerlinRowsAndByteArrayPool.copyFloats(60, (float[]) null, -59);
           }
           var5 = new float[param2];
           var3 = var5;

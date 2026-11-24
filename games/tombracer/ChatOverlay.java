@@ -126,7 +126,7 @@ final class ChatOverlay {
           stackIn_52_0 = 108;
           stackIn_52_1 = param1;
           ProgressBarWidget.b(stackIn_52_0, stackIn_52_1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, SwitchLinkList.getCanvasHeight(0) >> 1);
-          fa.a((byte) -127);
+          ChatInputPresentation.updateChatInputPresentation((byte) -127);
         }
     }
 
@@ -216,10 +216,10 @@ final class ChatOverlay {
                 var10 = (String) null;
                 OpenGlModelBillboardState.field_d = WidgetContainer.createChatTarget(param1, 0, (String) null, false, QuickChatPhraseSource.field_g);
               }
-              ql.field_k.position = 0;
-              ql.field_k.writeByte(14, 0);
-              ql.field_k.writeByte(OpenGlModelBillboardState.field_d.getChannelType((byte) 113).field_d, 0);
-              bl.flushPacketBuffer(-1, -1);
+              CollisionGridEntryNodeBase.field_k.position = 0;
+              CollisionGridEntryNodeBase.field_k.writeByte(14, 0);
+              CollisionGridEntryNodeBase.field_k.writeByte(OpenGlModelBillboardState.field_d.getChannelType((byte) 113).field_d, 0);
+              GameSocketTraffic.flushPacketBuffer(-1, -1);
               ProceduralTexture.field_p = AdjustedWallClock.field_b;
             }
             if (ProceduralTexture.field_p == AdjustedWallClock.field_b &&
@@ -304,7 +304,7 @@ final class ChatOverlay {
               }
               MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
               var11 = (CharSequence) ((Object) MenuEntry.field_k);
-              tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var11);
+              FixedAngleTrigonometry.field_b = OpenGlTexture3D.normalizeDisplayName(1, var11);
               TextureCoordinateGenerationState.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (OpenGlModelBillboardState.field_d.getChannelType((byte) 113) == BlockModel.field_s) {
@@ -337,7 +337,7 @@ final class ChatOverlay {
               if (0 < ReportAbuseDialog.field_ub) {
                 TextureFormat.field_a = true;
               }
-              ql.field_k.initializeCipher(-26185, AllPlatformsMazeComponent.field_K);
+              CollisionGridEntryNodeBase.field_k.initializeCipher(-26185, AllPlatformsMazeComponent.field_K);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 AllPlatformsMazeComponent.field_K[var8Lifetime1] = AllPlatformsMazeComponent.field_K[var8Lifetime1] + 50;
               }
@@ -357,17 +357,17 @@ final class ChatOverlay {
               if (7 == MembersUpsellMenu.field_z) {
                 MembersUpsellMenu.field_z = 3;
               }
-              io.field_b = WeaveOperator.field_q.readString((byte) -76);
+              Cp1252ByteEncoder.field_b = WeaveOperator.field_q.readString((byte) -76);
               PushableBlockMazeComponent.field_L = false;
               stackIn_93_0 = MembersUpsellMenu.field_z;
               return stackIn_93_0;
             }
             if (null == OpenGlTransform3D.field_e) {
               if (PushableBlockMazeComponent.field_L) {
-                if (rf.millisSinceLastReceive((byte) -121) > 30000L) {
-                  io.field_b = SpriteTileOperator.field_u;
+                if (FriendRequests.millisSinceLastReceive((byte) -121) > 30000L) {
+                  Cp1252ByteEncoder.field_b = SpriteTileOperator.field_u;
                 } else {
-                  io.field_b = MusicPlayer.field_x;
+                  Cp1252ByteEncoder.field_b = MusicPlayer.field_x;
                 }
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_102_0 = 3;
@@ -453,15 +453,15 @@ final class ChatOverlay {
         var3 = var8.readUnsignedByte(param0 + 19042);
         HardwareModel.field_x = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
-        sb.field_b = stackIn_3_0;
+        AudioArchiveSetup.field_b = stackIn_3_0;
         GreyscaleOperator.field_m = var8.readUnsignedByte(255);
         ScrollContainer.field_z = var8.readLong(param0 ^ -290628099);
         if (HardwareModel.field_x == 2) {
           gb.field_a = var8.readUnsignedShort(127);
-          ega.field_b = var8.readUnsignedMedium(-32768);
+          IntegerTextValidator.field_b = var8.readUnsignedMedium(-32768);
         } else {
           gb.field_a = 0;
-          ega.field_b = 0;
+          IntegerTextValidator.field_b = 0;
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 + 19042) != 1) ? 0 : 1;
         var4 = stackIn_9_0;

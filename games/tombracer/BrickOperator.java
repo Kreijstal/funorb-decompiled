@@ -25,7 +25,7 @@ final class BrickOperator extends TextureOperator {
     static int[] field_p;
 
     final static void d(byte param0) {
-        QueuedByteShortRequest var1 = (QueuedByteShortRequest) (io.field_d.first(-80));
+        QueuedByteShortRequest var1 = (QueuedByteShortRequest) (Cp1252ByteEncoder.field_d.first(-80));
         if (var1 == null) {
           DropAnimation.closeGameSocket(60);
           return;

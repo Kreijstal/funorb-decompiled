@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vha {
+final class QuickChatMenuLayout {
     static int field_b;
     static RoomComponentCodec field_c;
     static Sprite field_a;
 
-    final static void a(int param0, byte param1, boolean param2, int param3) {
+    final static void layoutQuickChatMenu(int param0, byte param1, boolean param2, int param3) {
         int var4;
         int var5;
         int var5Lifetime1;
@@ -69,7 +69,7 @@ final class vha {
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, int param10, boolean param11) {
         MenuEntry.a(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, param0, param1, param8, param6, param10, param2);
         if (param5 < 12) {
-          vha.a(true, -67, 8, false, -52, 39, true, -85, -41, false, -10, true);
+          QuickChatMenuLayout.a(true, -67, 8, false, -52, 39, true, -85, -41, false, -10, true);
         }
     }
 
@@ -77,7 +77,7 @@ final class vha {
         field_c = null;
         field_a = null;
         if (param0 != 640) {
-          vha.a(6, (byte) -89, false, 63);
+          QuickChatMenuLayout.layoutQuickChatMenu(6, (byte) -89, false, 63);
         }
     }
 

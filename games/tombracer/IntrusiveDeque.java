@@ -179,7 +179,7 @@ final class IntrusiveDeque {
           }
           if (decompiledFrameRemainder1) {
             OpenGlVertexLayout.field_e.field_X = true;
-            NameEntryPopup.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, DateValidationSource.field_h, new String[]{ol.field_b});
+            NameEntryPopup.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, DateValidationSource.field_h, new String[]{ContactListOrdering.field_b});
             TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
             var7 = (ContactListEntry) (var4.first(-80));
@@ -202,7 +202,7 @@ final class IntrusiveDeque {
                   var7.field_G = TextureCoordinateGeneration.field_b.field_tb.field_G;
                   var9 = 0;
                   if (var7.field_Cb != null) {
-                    if (var7.field_Cb != ol.field_b) {
+                    if (var7.field_Cb != ContactListOrdering.field_b) {
                       var10 = 13421568;
                       var11 = 16777062;
                     } else {
@@ -292,7 +292,7 @@ final class IntrusiveDeque {
               } else {
                 decompiledFrameRemainder0 = (TextureCoordinateGeneration.field_b.field_yb.field_y != 0);
                 if (decompiledFrameRemainder0) {
-                  bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
+                  GameSocketTraffic.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -301,7 +301,7 @@ final class IntrusiveDeque {
               if (0 == TextureCoordinateGeneration.field_b.field_wb.field_y) {
                 break;
               }
-              bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
+              GameSocketTraffic.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
               ResourceArchive.field_k = 1;
               break;
             }

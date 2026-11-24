@@ -100,16 +100,16 @@ final class RoomCompletedScreen extends MatchOverlay {
           DynamicGeometryBuffer.writeMachineId(NoiseSliceGenerator.field_a, (byte) 77);
           NoiseSliceGenerator.field_a.writeShort(-1477662136, param2);
           param3.write(NoiseSliceGenerator.field_a, false);
-          ql.field_k.position = 0;
+          CollisionGridEntryNodeBase.field_k.position = 0;
           if (!param1) {
-            ql.field_k.writeByte(16, 0);
+            CollisionGridEntryNodeBase.field_k.writeByte(16, 0);
           } else {
-            ql.field_k.writeByte(18, 0);
+            CollisionGridEntryNodeBase.field_k.writeByte(18, 0);
           }
-          ql.field_k.position = ql.field_k.position + 2;
-          var5_int = ql.field_k.position;
-          ql.field_k.writeInt(ClientException.field_c, (byte) 125);
-          ql.field_k.writeLong(1736565456, ArchiveConnectionFailureHandler.field_h);
+          CollisionGridEntryNodeBase.field_k.position = CollisionGridEntryNodeBase.field_k.position + 2;
+          var5_int = CollisionGridEntryNodeBase.field_k.position;
+          CollisionGridEntryNodeBase.field_k.writeInt(ClientException.field_c, (byte) 125);
+          CollisionGridEntryNodeBase.field_k.writeLong(1736565456, ArchiveConnectionFailureHandler.field_h);
           var6 = 0;
           if (TextureFormat.field_a) {
             var6 = var6 | 1;
@@ -123,18 +123,18 @@ final class RoomCompletedScreen extends MatchOverlay {
           if (NodeHashTable.field_d != null) {
             var6 = var6 | 16;
           }
-          ql.field_k.writeByte(var6, 0);
+          CollisionGridEntryNodeBase.field_k.writeByte(var6, 0);
           var7 = GameFontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(46));
           if (var7 == null) {
             var7 = "";
           }
-          ql.field_k.writeString(var7, false);
+          CollisionGridEntryNodeBase.field_k.writeString(var7, false);
           if (null != NodeHashTable.field_d) {
-            ql.field_k.writeVersionedString(NodeHashTable.field_d, (byte) 0);
+            CollisionGridEntryNodeBase.field_k.writeVersionedString(NodeHashTable.field_d, (byte) 0);
           }
-          PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, NoiseSliceGenerator.field_a);
-          ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);
-          bl.flushPacketBuffer(-1, -1);
+          PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, CollisionGridEntryNodeBase.field_k, NoiseSliceGenerator.field_a);
+          CollisionGridEntryNodeBase.field_k.backpatchShortLength(CollisionGridEntryNodeBase.field_k.position - var5_int, (byte) 114);
+          GameSocketTraffic.flushPacketBuffer(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -201,7 +201,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
               }
             }
           }
-          pda.field_c = 2;
+          EmbossNormalizationTable.field_c = 2;
           LegacyTextureCache.field_a = 11;
           ToolkitSelector.field_a = 15;
           StatReportingScoringObserver.field_i = 2;
@@ -279,7 +279,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           S2CStartRoundPacket.field_a = new UiComponent(0L, GpuDataType.field_j);
           S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_mouseover");
-          SimpleBlockBehaviour.field_n = new ContextMenu(SneakHintCharacter.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, ToolkitSelector.field_a);
+          SimpleBlockBehaviour.field_n = new ContextMenu(SneakHintCharacter.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, EmbossNormalizationTable.field_c, 3, ToolkitSelector.field_a);
           AllPlatformsMazeComponent.field_M = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           AllPlatformsMazeComponent.field_M.field_fb = 1;
           AllPlatformsMazeComponent.field_M.field_ob = 1;

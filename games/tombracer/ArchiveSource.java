@@ -5,7 +5,7 @@ abstract class ArchiveSource {
     static ToolkitSprite[] field_a;
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = ql.field_k;
+        BitPacketBuffer var2 = CollisionGridEntryNodeBase.field_k;
         var2.writeCipheredOpcode(param0, -2988);
         var2.writeByte(1, 0);
         var2.writeByte(0, 0);

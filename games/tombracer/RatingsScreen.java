@@ -171,7 +171,7 @@ final class RatingsScreen extends DropInMenuScreen {
         var15 = this.field_t[param1];
         var4 = var15;
         var5 = this.field_u[param1];
-        var6 = sb.field_a;
+        var6 = AudioArchiveSetup.field_a;
         var7 = 0;
         stackIn_3_0 = (var6 != null) ? 0 : 1;
         var8 = stackIn_3_0;
@@ -301,9 +301,9 @@ final class RatingsScreen extends DropInMenuScreen {
             this.field_w = 1;
             return;
           }
-          var9 = sb.field_a;
+          var9 = AudioArchiveSetup.field_a;
           if (var9 == null) {
-            sb.field_a = FacePlayerLocomotor.getOrRequestRatingTable(22578, 7, 10, 0);
+            AudioArchiveSetup.field_a = FacePlayerLocomotor.getOrRequestRatingTable(22578, 7, 10, 0);
             this.field_w = 0;
           } else {
             if (!var9.field_i) {
@@ -329,10 +329,10 @@ final class RatingsScreen extends DropInMenuScreen {
           this.field_w = 1;
           return;
         }
-        var8 = sb.field_a;
+        var8 = AudioArchiveSetup.field_a;
         var7 = var8;
         if (var8 == null) {
-          sb.field_a = FacePlayerLocomotor.getOrRequestRatingTable(22578, 7, 10, 0);
+          AudioArchiveSetup.field_a = FacePlayerLocomotor.getOrRequestRatingTable(22578, 7, 10, 0);
           this.field_w = 0;
         } else {
           if (!var8.field_i) {

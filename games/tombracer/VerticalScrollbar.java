@@ -274,7 +274,7 @@ final class VerticalScrollbar extends UiComponent {
             stackIn_8_0 = 8448;
             return stackIn_8_0;
           }
-          if (r.field_m == param1) {
+          if (NativeResourceNodeBase.field_m == param1) {
             stackIn_11_0 = 34165;
             return stackIn_11_0;
           }

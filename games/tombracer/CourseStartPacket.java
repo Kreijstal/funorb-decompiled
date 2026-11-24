@@ -641,7 +641,7 @@ final class CourseStartPacket implements GamePacket {
               stackIn_337_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_336_0.field_X = stackIn_337_1;
             }
-            var6Lifetime4 = var6Lifetime4 + (255 & um.field_m[var7]);
+            var6Lifetime4 = var6Lifetime4 + (255 & UiComponentNodeBase.field_m[var7]);
           }
           if (var5 != 0) {
             if (param3) {

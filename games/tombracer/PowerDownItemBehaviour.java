@@ -6,18 +6,18 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
     private EffectEvent field_t;
 
     final static void sendAbuseReport(int param0, int param1, byte param2, boolean param3, long param4, String param5) {
-        ql.field_k.writeCipheredOpcode(param1, -2988);
-        ql.field_k.position = ql.field_k.position + 1;
-        int var7_int = ql.field_k.position;
-        ql.field_k.writeLong(1736565456, param4);
-        ql.field_k.writeString(param5, false);
+        CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(param1, -2988);
+        CollisionGridEntryNodeBase.field_k.position = CollisionGridEntryNodeBase.field_k.position + 1;
+        int var7_int = CollisionGridEntryNodeBase.field_k.position;
+        CollisionGridEntryNodeBase.field_k.writeLong(1736565456, param4);
+        CollisionGridEntryNodeBase.field_k.writeString(param5, false);
         if (param2 <= 70) {
           return;
         }
         try {
-          ql.field_k.writeByte(param0, 0);
-          ql.field_k.writeByte(param3 ? 1 : 0, 0);
-          ql.field_k.backpatchByteLength(-var7_int + ql.field_k.position, (byte) 35);
+          CollisionGridEntryNodeBase.field_k.writeByte(param0, 0);
+          CollisionGridEntryNodeBase.field_k.writeByte(param3 ? 1 : 0, 0);
+          CollisionGridEntryNodeBase.field_k.backpatchByteLength(-var7_int + CollisionGridEntryNodeBase.field_k.position, (byte) 35);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ok.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

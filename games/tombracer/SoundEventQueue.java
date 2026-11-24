@@ -14,7 +14,7 @@ abstract class SoundEventQueue {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -3) {
-            stackIn_4_0 = ega.isNumber(10, param0, true, true);
+            stackIn_4_0 = IntegerTextValidator.isNumber(10, param0, true, true);
             return stackIn_4_0;
           }
           return false;

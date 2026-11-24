@@ -66,10 +66,10 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         if (param0 < 71) {
           return (Sprite[]) null;
         }
-        var1 = new Sprite[fa.field_b];
-        for (var2 = 0; var2 < fa.field_b; var2++) {
+        var1 = new Sprite[ChatInputPresentation.field_b];
+        for (var2 = 0; var2 < ChatInputPresentation.field_b; var2++) {
           var3 = LegacyOpenGlNormalMapGenerator.field_b[var2] * ImageProducerCanvasImageBuffer.field_m[var2];
-          var21 = ck.field_c[var2];
+          var21 = ClientResourceBootstrap.field_c[var2];
           if (!NetworkArchiveRequest.field_n[var2]) {
             var10 = new int[var3];
             var22 = var10;
@@ -99,7 +99,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         if (param0 != 9807) {
           HardwareTurbulentWaterNoise.h(127);
         }
-        return bl.field_a != null ? true : false;
+        return GameSocketTraffic.field_a != null ? true : false;
     }
 
     static {

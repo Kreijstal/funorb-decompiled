@@ -54,7 +54,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (var9 != null) {
             SoftwareScanlineMask.openChatMessageContextMenu(-2, var9);
           }
-          var8 = fa.a((byte) -126);
+          var8 = ChatInputPresentation.updateChatInputPresentation((byte) -126);
           if (param1 >= -75) {
             return;
           }

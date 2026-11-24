@@ -86,7 +86,7 @@ final class DropdownPopupList extends FocusProxyWidget {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         int var1 = LegacyOpenGlNormalMapGenerator.field_b[0] * ImageProducerCanvasImageBuffer.field_m[0];
-        byte[] var2 = ck.field_c[0];
+        byte[] var2 = ClientResourceBootstrap.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = QueuedHint.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var2[var4_int])];

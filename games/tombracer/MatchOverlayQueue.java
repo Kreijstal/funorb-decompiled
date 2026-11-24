@@ -146,7 +146,7 @@ final class MatchOverlayQueue {
                   var9 = 0;
                   break;
                 }
-                param3 = param3 + (um.field_m[param5] & 255);
+                param3 = param3 + (UiComponentNodeBase.field_m[param5] & 255);
               }
             }
             var10Lifetime1 = 0;

@@ -8,13 +8,13 @@ class TooltipVisibility {
         if (param0) {
           return (ResourceArchive) null;
         }
-        if (ck.field_a != null) {
-          return ck.field_a;
+        if (ClientResourceBootstrap.field_a != null) {
+          return ClientResourceBootstrap.field_a;
         }
         if (param1 != -1) {
           return FullscreenFailureReason.openArchive(param1, 1, 5200, false, true, true);
         }
-        return ck.field_a;
+        return ClientResourceBootstrap.field_a;
     }
 
     public static void releaseStatics(int param0) {

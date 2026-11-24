@@ -43,7 +43,7 @@ final class ObjectList {
         int var2 = TombRacer.field_G ? 1 : 0;
         DualLinkNode var1Lifetime1;
         try {
-          ol.field_b = null;
+          ContactListOrdering.field_b = null;
           FriendListCounter.count = 0;
           MonochromeRowCacheEntry.field_k = param0;
           PlayingSound.field_f.clear(8);

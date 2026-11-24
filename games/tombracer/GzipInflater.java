@@ -143,7 +143,7 @@ final class GzipInflater {
           } else {
             try {
               OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.result), RaceStandings.field_a);
-              ql.field_k.position = 0;
+              CollisionGridEntryNodeBase.field_k.position = 0;
               var4 = WeaveOperator.field_q;
               ProceduralTexture.field_p = RotaterMountComponent.field_G;
               var4.position = 0;
@@ -151,8 +151,8 @@ final class GzipInflater {
               ClippedChildWidget.field_B = stackIn_10_0;
               TitledScrollPanel.field_xb = stackIn_10_0;
               PlayerProfile.field_c = stackIn_10_0;
-              C2SActionPacket.writeSessionHeader((byte) -125, RoomComponent.field_g, ql.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
-              bl.flushPacketBuffer(-1, -1);
+              C2SActionPacket.writeSessionHeader((byte) -125, RoomComponent.field_g, CollisionGridEntryNodeBase.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
+              GameSocketTraffic.flushPacketBuffer(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;

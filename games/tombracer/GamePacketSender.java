@@ -29,7 +29,7 @@ final class GamePacketSender {
           if (TextWidgetPainter.a(38)) {
             return;
           }
-          var9 = ql.field_k;
+          var9 = CollisionGridEntryNodeBase.field_k;
           var9.writeCipheredOpcode(param2, -2988);
           if (param0 != -111) {
             return;

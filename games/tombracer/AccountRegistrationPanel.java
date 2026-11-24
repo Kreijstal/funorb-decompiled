@@ -107,7 +107,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           var2 = Integer.parseInt(this.field_I.field_o);
         } catch (NumberFormatException numberFormatException) {
         }
-        return qt.startAccountCreation(this.field_G.field_o, true, var2, this.field_z.field_o, this.field_E.field_o, this, this.field_D.field_w);
+        return AccountCreationRequests.startAccountCreation(this.field_G.field_o, true, var2, this.field_z.field_o, this.field_E.field_o, this, this.field_D.field_w);
     }
 
     final static int dominantAxis(float param0, float param1, boolean param2, float param3) {

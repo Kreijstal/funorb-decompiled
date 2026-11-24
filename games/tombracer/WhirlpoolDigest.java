@@ -231,13 +231,13 @@ final class WhirlpoolDigest {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               dga.a(var14, 0);
               if (var6_intLifetime1 != 0) {
-                qt.appendRankingRecord(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -90);
+                AccountCreationRequests.appendRankingRecord(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -90);
               } else {
                 var3.field_g = IntPoint.field_a;
                 var3.field_f = kc.field_b;
                 var3.field_l = DivisionMazeGenerator.field_f;
                 var3.field_j = RandomMazeBehaviour.field_p;
-                qt.appendRankingRecord(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -97);
+                AccountCreationRequests.appendRankingRecord(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -97);
               }
             }
             SweepRotateLocomotor.sortRankedListIndices(var5, (byte) 29);

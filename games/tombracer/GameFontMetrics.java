@@ -354,7 +354,7 @@ final class GameFontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (-1 == var4_int)) {
-                  var6 = var6 + (this.field_e[io.charToCp1252(-377, (char) var9) & 255] & 255);
+                  var6 = var6 + (this.field_e[Cp1252ByteEncoder.charToCp1252(-377, (char) var9) & 255] & 255);
                   if (this.field_c != null &&
                     var5 != -1) {
                     var6 = var6 + this.field_c[var5][var9];
@@ -469,7 +469,7 @@ final class GameFontMetrics {
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var14))) {
-            var16 = 255 & io.charToCp1252(-377, param0.charAt(var15));
+            var16 = 255 & Cp1252ByteEncoder.charToCp1252(-377, param0.charAt(var15));
             var17 = 0;
             stackIn_164_0 = 60;
             stackIn_164_1 = var16;
@@ -846,7 +846,7 @@ final class GameFontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var5_int == -1)) {
-                  var7 = var7 + (this.field_e[io.charToCp1252(-377, (char) var11) & 255] & 255);
+                  var7 = var7 + (this.field_e[Cp1252ByteEncoder.charToCp1252(-377, (char) var11) & 255] & 255);
                   if (null != this.field_c &&
                     -1 != var6) {
                     var7 = var7 + this.field_c[var6][var11];

@@ -28,7 +28,7 @@ final class MenuEntry {
           if (param1 != -23814) {
             field_j = (MusicTrack[]) null;
           }
-          var3 = ql.field_k;
+          var3 = CollisionGridEntryNodeBase.field_k;
           var3.writeCipheredOpcode(param0, -2988);
           var3.writeByte(2, 0);
           var3.writeByte(0, 0);
@@ -287,7 +287,7 @@ final class MenuEntry {
             if (37 != this.field_g) {
               var20_ref_kea = PitModel.field_s;
             } else {
-              var20_ref_kea = tia.field_d;
+              var20_ref_kea = FixedAngleTrigonometry.field_d;
             }
           }
           if (param3) {

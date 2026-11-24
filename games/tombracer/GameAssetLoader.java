@@ -187,9 +187,9 @@ final class GameAssetLoader implements LoadingStage {
           this.field_l != null &&
           this.field_b != null &&
           this.field_o != null) {
-          sb.initAudioArchives(-70, this.field_k, this.field_o, this.field_l, this.field_b);
+          AudioArchiveSetup.initAudioArchives(-70, this.field_k, this.field_o, this.field_l, this.field_b);
           for (var3 = 0; 237 > var3; var3++) {
-            fea.loadSoundEffect(false, var3);
+            GameSoundEffectLoader.loadSoundEffect(false, var3);
           }
           for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
             DateInputWidget.loadMusicTrack(false, var3Lifetime1);

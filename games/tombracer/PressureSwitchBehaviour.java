@@ -151,11 +151,11 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
             return false;
           }
           if (!this.field_q) {
-            if (!io.centredBoxesOverlap(this.trap.getWidth(-73), param0.getY(9648), (byte) -89, this.trap.getHeight((byte) 55), param0.getX(3), this.trap.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.trap.getX(3))) {
+            if (!Cp1252ByteEncoder.centredBoxesOverlap(this.trap.getWidth(-73), param0.getY(9648), (byte) -89, this.trap.getHeight((byte) 55), param0.getX(3), this.trap.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.trap.getX(3))) {
               return false;
             }
           } else {
-            if (!ck.containsCentredBox(param0.getX(3), param0.getHeight((byte) 55), this.trap.getX(3), this.trap.getWidth(-113), this.trap.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.trap.getY(9648), param0.getWidth(-51))) {
+            if (!ClientResourceBootstrap.containsCentredBox(param0.getX(3), param0.getHeight((byte) 55), this.trap.getX(3), this.trap.getWidth(-113), this.trap.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.trap.getY(9648), param0.getWidth(-51))) {
               return false;
             }
           }
@@ -206,13 +206,13 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     final static boolean dispatchCancelKey(int param0, int param1, byte param2, int param3) {
         if (UnlockEntryDecoder.field_b != null &&
           UnlockEntryDecoder.field_b.handleEscape(13)) {
-          wp.closeContextMenu(param2 ^ 105);
+          FriendLookupAndContextMenus.closeContextMenu(param2 ^ 105);
           return true;
         }
         if (null != RoomViewRenderer.field_c &&
           RoomViewRenderer.field_c.handleCancelKey(true)) {
           RoomViewRenderer.field_c = null;
-          wp.closeContextMenu(-1);
+          FriendLookupAndContextMenus.closeContextMenu(-1);
           return true;
         }
         if (param2 != -106) {

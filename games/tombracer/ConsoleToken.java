@@ -35,8 +35,8 @@ final class ConsoleToken extends IntrusiveNode {
           var1_int = ByteGameMessageSender.field_d - ProgressDialogLauncher.field_a;
           ProgressDialogLauncher.field_a = -(var1_int >> 1) + Transform3D.field_a;
           ByteGameMessageSender.field_d = ProgressDialogLauncher.field_a + var1_int;
-          wp.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
-          var2 = wp.field_b;
+          FriendLookupAndContextMenus.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
+          var2 = FriendLookupAndContextMenus.field_b;
           if (param0 <= 79) {
             return;
           }
@@ -70,7 +70,7 @@ final class ConsoleToken extends IntrusiveNode {
               var2 = var2 + RenderLayer.field_d;
             }
             if (0 > var4) {
-              LegacyOpenGlTexture.field_b.drawText(var6, var8, sb.field_d + var2, var5, -1);
+              LegacyOpenGlTexture.field_b.drawText(var6, var8, AudioArchiveSetup.field_d + var2, var5, -1);
               var2 = var2 + CharacterSelectPhase.field_x;
             } else {
               OpenGlUnderwaterEffect.field_d.drawText(var6, var8, var2 + OpenGlBufferObject.field_f, var5, -1);

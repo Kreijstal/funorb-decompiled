@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class um extends DualLinkNode {
+class UiComponentNodeBase extends DualLinkNode {
     static String field_k;
     static byte[] field_m;
     static AccountContentTransitionDialog field_l;
@@ -41,7 +41,7 @@ class um extends DualLinkNode {
         }
     }
 
-    um() {
+    UiComponentNodeBase() {
     }
 
     final static int daysInMonth(int param0, int param1, int param2) {

@@ -177,7 +177,7 @@ final class FacePointLocomotor extends Locomotor {
           var6 = this.field_q - var3 >> 10;
           var4 = this.field_p - var2 >> 10;
         }
-        var7 = tia.atan2(var6, var4, -29543) - tia.atan2(-256, 0, -29543);
+        var7 = FixedAngleTrigonometry.atan2(var6, var4, -29543) - FixedAngleTrigonometry.atan2(-256, 0, -29543);
         for (var7 = var7 * -1; var7 < 0; var7 += 8192) {
         }
         regionExit1: {

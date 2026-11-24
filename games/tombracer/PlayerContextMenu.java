@@ -133,7 +133,7 @@ final class PlayerContextMenu {
         String var5Lifetime1;
         var4 = null;
         if (4 == param0) {
-          var4_ref = rf.requestAddFriend(true, this.field_i, param2);
+          var4_ref = FriendRequests.requestAddFriend(true, this.field_i, param2);
           if (var4_ref == null) {
             if (param1 != -121) {
               return false;
@@ -272,7 +272,7 @@ final class PlayerContextMenu {
             }
             var7 = this.getDisplayName(-13);
             var4 = var7;
-            var5 = wp.findFriendByName(127, this.field_i);
+            var5 = FriendLookupAndContextMenus.findFriendByName(127, this.field_i);
             var6 = MouseWheelInput.isIgnored(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
@@ -338,8 +338,8 @@ final class PlayerContextMenu {
             this.field_f.addItem((byte) -86, 13, LruNodeCache.field_f);
           }
           if (1 == param0.field_d) {
-            if (0 == nba.field_b) {
-              this.field_f.addItem((byte) -77, 12, jl.field_a);
+            if (0 == AudioOutputSetup.field_b) {
+              this.field_f.addItem((byte) -77, 12, PitchYawRotationBuilder.field_a);
             }
             this.field_f.addItem((byte) -82, 13, HardwareRidgedWaterNoise.field_w);
           }
@@ -408,7 +408,7 @@ final class PlayerContextMenu {
                 }
                 if (param1 &&
                   var14.field_Fb) {
-                  this.field_f.addItem((byte) -123, 0, LegacyOpenGlFlowingWaterEffect.formatText(127, sb.field_c, new String[]{var5}));
+                  this.field_f.addItem((byte) -123, 0, LegacyOpenGlFlowingWaterEffect.formatText(127, AudioArchiveSetup.field_c, new String[]{var5}));
                   this.field_f.addItem((byte) -98, 1, LegacyOpenGlFlowingWaterEffect.formatText(116, CoinBagItemComponent.field_G, new String[]{var5}));
                   return;
                 }
@@ -453,7 +453,7 @@ final class PlayerContextMenu {
           }
           if (param1 &&
             var13.field_Fb) {
-            this.field_f.addItem((byte) -123, 0, LegacyOpenGlFlowingWaterEffect.formatText(127, sb.field_c, new String[]{var5}));
+            this.field_f.addItem((byte) -123, 0, LegacyOpenGlFlowingWaterEffect.formatText(127, AudioArchiveSetup.field_c, new String[]{var5}));
             this.field_f.addItem((byte) -98, 1, LegacyOpenGlFlowingWaterEffect.formatText(116, CoinBagItemComponent.field_G, new String[]{var5}));
             return;
           }

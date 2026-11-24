@@ -25,7 +25,7 @@ final class HardwareSceneLight extends SceneLight {
     }
 
     final static void a(int param0, byte param1) {
-        BitPacketBuffer var2 = ql.field_k;
+        BitPacketBuffer var2 = CollisionGridEntryNodeBase.field_k;
         var2.writeCipheredOpcode(param0, -2988);
         var2.position = var2.position + 1;
         int var3 = var2.position;

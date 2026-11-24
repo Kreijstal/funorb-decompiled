@@ -24,7 +24,7 @@ abstract class AppletGameShell extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (UsernameQueryRequests.field_a[1]) {
-            ql.a(2, -28521);
+            CollisionGridEntryNodeBase.writeQueuedByteShortRequests(2, -28521);
           }
           if (UsernameQueryRequests.field_a[2]) {
             PlantModel.resendPendingSubmissions(false, 3);
@@ -103,8 +103,8 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 1) {
             var5 = RasterBuffer.a(IntIntHashTable.createCredentials(-1), RotaterMountComponent.A(49), 2);
             if (-1 != var5) {
-              WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, io.field_b, (byte) 100);
-              io.field_b = null;
+              WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, Cp1252ByteEncoder.field_b, (byte) 100);
+              Cp1252ByteEncoder.field_b = null;
               PressureSwitchBehaviour.field_s = null;
             }
             var12 = VoronoiNoiseOperator.e((byte) 78);
@@ -115,9 +115,9 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 2) {
             var5Lifetime1 = OpenGlRectangleTexture.a(CourseLayoutFactory.b(69), QueuedKeyedRequest.getPendingRegistrationAge(false), ArchiveRequest.a(false), this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
-              TextureTransformMode.completeAccountRegistrationResponse(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
+              TextureTransformMode.completeAccountRegistrationResponse(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, Cp1252ByteEncoder.field_b);
               PressureSwitchBehaviour.field_s = null;
-              io.field_b = null;
+              Cp1252ByteEncoder.field_b = null;
             }
           }
           if (var4 == 3) {
@@ -137,8 +137,8 @@ abstract class AppletGameShell extends GameApplet {
                   Transform3D.field_c = 10;
                   HorizontalGradientOperator.field_m = false;
                 } else {
-                  GraphicsAndAudioMenu.handleLoginResponseCode(var5Lifetime2, (byte) -84, io.field_b);
-                  io.field_b = null;
+                  GraphicsAndAudioMenu.handleLoginResponseCode(var5Lifetime2, (byte) -84, Cp1252ByteEncoder.field_b);
+                  Cp1252ByteEncoder.field_b = null;
                 }
               }
             }
@@ -168,7 +168,7 @@ abstract class AppletGameShell extends GameApplet {
             IsaacCipher.openSupportPage(ToolkitSelector.getApplet(104), -87);
           }
           if (var4 == 10) {
-            ql.field_k.writeCipheredOpcode(17, -2988);
+            CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(17, -2988);
           }
           if (11 == var4) {
             FullscreenFailureReason.reloadPage(ToolkitSelector.getApplet(41), -1978);
@@ -334,7 +334,7 @@ abstract class AppletGameShell extends GameApplet {
               this.reportError(-6738, "reconnect");
             }
             TextureMetadata.b(param0);
-            GraphicsAndAudioMenu.handleLoginResponseCode(var2, (byte) -84, io.field_b);
+            GraphicsAndAudioMenu.handleLoginResponseCode(var2, (byte) -84, Cp1252ByteEncoder.field_b);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = AdjustedWallClock.currentTimeMillis((byte) -107) + 15000L;
             return var2;

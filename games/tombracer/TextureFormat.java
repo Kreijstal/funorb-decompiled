@@ -140,7 +140,7 @@ final class TextureFormat {
               stackIn_69_1 = -51;
               if (var30 == 0) {
                 if (stackIn_69_0 > stackIn_69_1) {
-                  wp.field_c[var23Lifetime2] = -2147483648;
+                  FriendLookupAndContextMenus.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   MatchStatistics.field_f[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   TimingPattern.field_e[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
@@ -150,7 +150,7 @@ final class TextureFormat {
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
-                  wp.field_c[var23Lifetime2] = var29Lifetime1;
+                  FriendLookupAndContextMenus.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param6) {
                   BrickOperator.field_p[var23Lifetime2] = var27Lifetime1 >> SecondaryNodeDeque.field_a;
@@ -230,7 +230,7 @@ final class TextureFormat {
             }
             break;
           }
-          ck.sortMeshFaces(stackIn_69_0, stackIn_69_1 != 0, param0, param1 ^ -1251095052, var8);
+          ClientResourceBootstrap.sortMeshFaces(stackIn_69_0, stackIn_69_1 != 0, param0, param1 ^ -1251095052, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

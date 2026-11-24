@@ -77,7 +77,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         this.owner.bindTexture(true, var3);
         this.owner.applyTexCoordGeneration(FunOrbConsole.field_u, (byte) 0);
         this.owner.setActiveTextureUnit(1, false);
-        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NativeResourceNodeBase.field_m);
         this.owner.setColorCombineSource(PlayerContextMenu.field_j, 2, -6219, true, false);
         this.owner.setAlphaCombineSource(0, false, OpenGlDisplayLists.field_c);
         AffineTransform3D var4_ref_asa = this.owner.getActiveTextureTransform(0);

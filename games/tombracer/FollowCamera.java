@@ -35,8 +35,8 @@ final class FollowCamera implements Camera {
           LegacyOpenGlPostProcessEffect.a(param2);
           DisplayNameValidator.field_a.hideAllDialogs(true);
           MessageDialogs.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, LoadProfileCommand.field_r, param1, param0);
-          um.field_l = new AccountContentTransitionDialog(DisplayNameValidator.field_a, MessageDialogs.field_b);
-          DisplayNameValidator.field_a.pushDialog(um.field_l, 114);
+          UiComponentNodeBase.field_l = new AccountContentTransitionDialog(DisplayNameValidator.field_a, MessageDialogs.field_b);
+          DisplayNameValidator.field_a.pushDialog(UiComponentNodeBase.field_l, 114);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

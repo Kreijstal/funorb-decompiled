@@ -98,41 +98,41 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param0 >= -32) {
           field_q = (long[]) null;
           if (param1 < pka.field_b) {
-            pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+            ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
           if (DiskCacheWorker.field_c < param3) {
-            pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+            ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
           if (HardwareModelBillboardState.field_d > param2) {
-            pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+            ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
           if (param4 <= LineShape.field_h) {
             rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
             return;
           }
-          pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+          ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
         if (param1 < pka.field_b) {
-          pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+          ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
         if (DiskCacheWorker.field_c < param3) {
-          pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+          ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
         if (HardwareModelBillboardState.field_d > param2) {
-          pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+          ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
         if (param4 <= LineShape.field_h) {
           rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
           return;
         }
-        pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+        ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
     }
 
     public final int getMaxLevel(int param0) {

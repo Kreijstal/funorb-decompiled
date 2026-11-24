@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class UiComponent extends um {
+class UiComponent extends UiComponentNodeBase {
     int field_t;
     int field_ab;
     Sprite field_R;
@@ -335,7 +335,7 @@ class UiComponent extends um {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = ql.field_k;
+          var3 = CollisionGridEntryNodeBase.field_k;
           var3.writeCipheredOpcode(param0, param1 ^ -3719);
           var3.writeByte(param2.field_f, 0);
           var3.writeShort(param1 ^ -1477660827, param2.field_j);

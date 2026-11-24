@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol {
+final class ContactListOrdering {
     static String field_b;
     static String field_a;
 
@@ -10,7 +10,7 @@ final class ol {
         field_b = null;
         if (param0 != 0) {
           ContactListEntry var2 = (ContactListEntry) null;
-          ol.comesBefore((ContactListEntry) null, false, (ContactListEntry) null);
+          ContactListOrdering.comesBefore((ContactListEntry) null, false, (ContactListEntry) null);
         }
     }
 

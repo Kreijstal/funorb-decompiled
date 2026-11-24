@@ -85,7 +85,7 @@ final class FullscreenFailureDialog extends ResizingDialog implements ButtonList
         if (TimeSwitchBehaviour.field_r > 200) {
           var5 = (250 - TimeSwitchBehaviour.field_r << 8) / 50;
         }
-        OpenGlIndexArray.setRasterTarget(vha.field_a, (byte) 108);
+        OpenGlIndexArray.setRasterTarget(QuickChatMenuLayout.field_a, (byte) 108);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         RenderScene.a(false);
@@ -96,7 +96,7 @@ final class FullscreenFailureDialog extends ResizingDialog implements ButtonList
         if (TimeSwitchBehaviour.field_r >= 150) {
           FullscreenMembershipDialog.field_O.drawAlpha(var3 + 15, var4 + 10, var5);
         } else {
-          vha.field_a.drawHalfSize(var3, var4);
+          QuickChatMenuLayout.field_a.drawHalfSize(var3, var4);
         }
         var6 = -125 + TimeSwitchBehaviour.field_r;
         if (var6 > 0 &&

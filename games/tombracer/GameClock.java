@@ -25,7 +25,7 @@ abstract class GameClock {
     final static void sendRatingTableRequest(RatingTable param0, int param1, int param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = ql.field_k;
+          var3 = CollisionGridEntryNodeBase.field_k;
           var3.writeCipheredOpcode(param1, -2988);
           var3.writeByte(param0.field_n, 0);
           if (param2 != 2147) {

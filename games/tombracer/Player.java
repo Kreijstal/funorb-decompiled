@@ -1159,7 +1159,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 110) {
-            stackIn_4_0 = io.centredBoxesOverlap(param4, this.y, (byte) -118, param3, this.x, param1, this.size, this.size, param2);
+            stackIn_4_0 = Cp1252ByteEncoder.centredBoxesOverlap(param4, this.y, (byte) -118, param3, this.x, param1, this.size, this.size, param2);
             return stackIn_4_0;
           }
           return false;

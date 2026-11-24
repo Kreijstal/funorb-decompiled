@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class io {
+final class Cp1252ByteEncoder {
     static String field_b;
     static int field_a;
     static GpuPrimitiveType field_c;
@@ -365,7 +365,7 @@ final class io {
 
     final static boolean centredBoxesOverlap(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param2 < -51) {
-          return pda.rectanglesOverlap(-(param0 / 2) + param8, (1 + param3) / 2 + param5, -(param7 / 2) + param4, 256, (param0 + 1) / 2 + param8, param1 + (1 + param6) / 2, -(param3 / 2) + param5, param4 + (param7 + 1) / 2, param1 - param6 / 2);
+          return EmbossNormalizationTable.rectanglesOverlap(-(param0 / 2) + param8, (1 + param3) / 2 + param5, -(param7 / 2) + param4, 256, (param0 + 1) / 2 + param8, param1 + (1 + param6) / 2, -(param3 / 2) + param5, param4 + (param7 + 1) / 2, param1 - param6 / 2);
         }
         return true;
     }

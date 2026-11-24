@@ -14,7 +14,7 @@ final class ResultsPhase extends MatchPhase {
         BitPacketBuffer var8 = null;
         int var7 = 0;
         try {
-          var8 = ql.field_k;
+          var8 = CollisionGridEntryNodeBase.field_k;
           var8.writeCipheredOpcode(param2, param3 - 35359);
           var8.position = var8.position + 1;
           if (param3 != 32371) {

@@ -22,7 +22,7 @@ final class ProjectionMode {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 < -83) {
-          var6 = ql.field_k;
+          var6 = CollisionGridEntryNodeBase.field_k;
           var6.writeCipheredOpcode(param0, -2988);
           var6.position = var6.position + 1;
           var3 = var6.position;
@@ -35,7 +35,7 @@ final class ProjectionMode {
           return;
         }
         ProjectionMode.sendLobbyGameOptions(-5, 33);
-        BitPacketBuffer var5 = ql.field_k;
+        BitPacketBuffer var5 = CollisionGridEntryNodeBase.field_k;
         var5.writeCipheredOpcode(param0, -2988);
         var5.position = var5.position + 1;
         var3Lifetime1 = var5.position;

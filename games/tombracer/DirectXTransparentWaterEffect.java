@@ -129,7 +129,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean param0, int param1) {
-        this.owner.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, r.field_m);
+        this.owner.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, NativeResourceNodeBase.field_m);
         if (param1 != 5744) {
           GpuTexture var4 = (GpuTexture) null;
           this.bindTexture(-56, (GpuTexture) null, 109);

@@ -24,15 +24,15 @@ final class SpawnerBehaviour extends Behaviour {
     }
 
     final static void sendSettings(int param0, int param1, int param2, int param3) {
-        if (ql.field_k == null) {
+        if (CollisionGridEntryNodeBase.field_k == null) {
           return;
         }
         C2SSubmitSettingsPacket var4 = new C2SSubmitSettingsPacket();
         var4.setGraphicsMode(param2, (byte) -60);
         var4.setSoundEffectsVolume(param0, (byte) 123);
         var4.setMusicVolume(param3, 2097152);
-        ql.field_k.writeCipheredOpcode(80, param1 ^ -2984);
-        var4.encode(200, ql.field_k);
+        CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(80, param1 ^ -2984);
+        var4.encode(200, CollisionGridEntryNodeBase.field_k);
         if (param1 == 12) {
           return;
         }
@@ -165,14 +165,14 @@ final class SpawnerBehaviour extends Behaviour {
 
     final static void a(boolean param0, int param1) {
         if (param1 == 0) {
-          hh.a(40, param0);
+          FullscreenUiDrawing.drawFullscreenPanel(40, param0);
           if (null != ArchiveNetworkClient.field_b) {
             TrackPlayerLocomotor.drawTooltip(-65, ArchiveNetworkClient.field_b);
           }
           return;
         }
         SpawnerBehaviour.a(false, 4);
-        hh.a(40, param0);
+        FullscreenUiDrawing.drawFullscreenPanel(40, param0);
         if (null != ArchiveNetworkClient.field_b) {
           TrackPlayerLocomotor.drawTooltip(-65, ArchiveNetworkClient.field_b);
         }

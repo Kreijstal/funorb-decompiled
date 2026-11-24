@@ -123,6 +123,6 @@ final class IntIntHashTable {
 
     static {
         field_b = "Please check if address is correct";
-        pda discarded$0 = new pda(false);
+        EmbossNormalizationTable discarded$0 = new EmbossNormalizationTable(false);
     }
 }
