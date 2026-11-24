@@ -763,7 +763,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         var7_ref_int__[0] = -1;
     }
 
-    private final void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void drawDepthTestedCircle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -1103,13 +1103,13 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.field_v = param6;
             this.field_R = var11;
           }
-          ((SoftwareToolkitSprite) (this.field_R)).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+          ((SoftwareToolkitSprite) (this.field_R)).drawScaledWithDepthAndAlphaAccumulation(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
         } else {
-          this.e(param0, param1, param2, param3, param7, param9);
+          this.drawDepthTestedCircle(param0, param1, param2, param3, param7, param9);
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void drawBillboardWithoutAlphaAccumulation(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         ToolkitSprite var11;
         int[] var12;
         int var13;
@@ -1147,9 +1147,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.field_v = param6;
             this.field_R = var11;
           }
-          ((SoftwareToolkitSprite) (this.field_R)).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+          ((SoftwareToolkitSprite) (this.field_R)).drawScaledWithDepth(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
         } else {
-          this.e(param0, param1, param2, param3, param7, param9);
+          this.drawDepthTestedCircle(param0, param1, param2, param3, param7, param9);
         }
     }
 

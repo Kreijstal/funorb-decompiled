@@ -3850,7 +3850,7 @@ final class Model extends ToolkitModel {
                 if (!var11.field_d) {
                   this.rasterizeFace(param0);
                 }
-                this.field_d.c(var12.field_e, var12.field_h, var12.field_n, var12.field_l, var12.field_c, var12.field_j, var11.field_h & 65535, var12.field_k, (int) var11.field_c, (int) var11.field_g);
+                this.field_d.drawBillboardWithoutAlphaAccumulation(var12.field_e, var12.field_h, var12.field_n, var12.field_l, var12.field_c, var12.field_j, var11.field_h & 65535, var12.field_k, (int) var11.field_c, (int) var11.field_g);
               }
             } else {
               var10Lifetime1 = this.field_jb[param0];

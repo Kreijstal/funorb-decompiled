@@ -39,7 +39,7 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
 
     abstract void blitAffine(int param0, int param1);
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
+    abstract void drawScaledWithDepthAndAlphaAccumulation(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
     final int height() {
         return this.height;
@@ -49,7 +49,7 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         return this.insetLeft + this.width + this.insetRight;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
+    abstract void drawScaledWithDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
     abstract void draw(int param0, int param1, int param2, int param3, int param4);
 

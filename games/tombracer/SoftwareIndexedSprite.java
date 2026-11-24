@@ -1981,7 +1981,7 @@ final class SoftwareIndexedSprite extends SoftwareToolkitSprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void drawScaledWithDepthAndAlphaAccumulation(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_47_0 = 0;
         int stackIn_102_0 = 0;
         int stackIn_149_0 = 0;
@@ -3184,7 +3184,7 @@ final class SoftwareIndexedSprite extends SoftwareToolkitSprite {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void drawScaledWithDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_47_0 = 0;
         int stackIn_102_0 = 0;
         int stackIn_149_0 = 0;
