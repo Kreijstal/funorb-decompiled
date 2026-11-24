@@ -101,7 +101,7 @@ abstract class AppletGameShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = RasterBuffer.a(IntIntHashTable.createCredentials(-1), RotaterMountComponent.A(49), 2);
+            var5 = RasterBuffer.pollLogin(IntIntHashTable.createCredentials(-1), RotaterMountComponent.A(49), 2);
             if (-1 != var5) {
               WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, Cp1252ByteEncoder.field_b, (byte) 100);
               Cp1252ByteEncoder.field_b = null;
@@ -113,7 +113,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = OpenGlRectangleTexture.a(CourseLayoutFactory.b(69), QueuedKeyedRequest.getPendingRegistrationAge(false), ArchiveRequest.a(false), this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
+            var5Lifetime1 = OpenGlRectangleTexture.pollRegistration(CourseLayoutFactory.b(69), QueuedKeyedRequest.getPendingRegistrationAge(false), ArchiveRequest.a(false), this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
               TextureTransformMode.completeAccountRegistrationResponse(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, Cp1252ByteEncoder.field_b);
               PressureSwitchBehaviour.field_s = null;

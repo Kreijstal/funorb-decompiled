@@ -4227,25 +4227,25 @@ final class Model extends ToolkitModel {
                     var47 = ((float)var40 * var76[3] + (float)var41 * var76[4] + (float)var42 * var76[5]) / var44;
                     var48 = ((float)var40 * var76[6] + (float)var41 * var76[7] + (float)var42 * var76[8]) / var45;
                     var21Lifetime1 = AccountRegistrationPanel.dominantAxis(var48, var47, false, var46);
-                    LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var23], var26, var33, var28, var32, this.field_xb[var23], var21Lifetime1, this.field_T[var23], -94, var31, var30, var76);
+                    LegacyOpenGlShoreWaveWaterEffect.projectBoxTextureCoordinates(var27, var75, this.field_rb[var23], var26, var33, var28, var32, this.field_xb[var23], var21Lifetime1, this.field_T[var23], -94, var31, var30, var76);
                     var19[0] = var75[0];
                     var20[0] = var75[1];
-                    LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var24], var26, var33, var28, var32, this.field_xb[var24], var21Lifetime1, this.field_T[var24], -125, var31, var30, var76);
+                    LegacyOpenGlShoreWaveWaterEffect.projectBoxTextureCoordinates(var27, var75, this.field_rb[var24], var26, var33, var28, var32, this.field_xb[var24], var21Lifetime1, this.field_T[var24], -125, var31, var30, var76);
                     var19[1] = var75[0];
                     var20[1] = var75[1];
-                    LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var25], var26, var33, var28, var32, this.field_xb[var25], var21Lifetime1, this.field_T[var25], 73, var31, var30, var76);
+                    LegacyOpenGlShoreWaveWaterEffect.projectBoxTextureCoordinates(var27, var75, this.field_rb[var25], var26, var33, var28, var32, this.field_xb[var25], var21Lifetime1, this.field_T[var25], 73, var31, var30, var76);
                     var19[2] = var75[0];
                     var20[2] = var75[1];
                   }
                 } else {
                   var32 = (float)param1.field_x[var17Lifetime1] / 1024.0f;
-                  MazeGenerator.a(var30, var75, var32, this.field_T[var23], this.field_rb[var23], 65, var76, var31, var27, var28, this.field_xb[var23], var26);
+                  MazeGenerator.projectCylindricalTextureCoordinates(var30, var75, var32, this.field_T[var23], this.field_rb[var23], 65, var76, var31, var27, var28, this.field_xb[var23], var26);
                   var19[0] = var75[0];
                   var20[0] = var75[1];
-                  MazeGenerator.a(var30, var75, var32, this.field_T[var24], this.field_rb[var24], 64, var76, var31, var27, var28, this.field_xb[var24], var26);
+                  MazeGenerator.projectCylindricalTextureCoordinates(var30, var75, var32, this.field_T[var24], this.field_rb[var24], 64, var76, var31, var27, var28, this.field_xb[var24], var26);
                   var19[1] = var75[0];
                   var20[1] = var75[1];
-                  MazeGenerator.a(var30, var75, var32, this.field_T[var25], this.field_rb[var25], 76, var76, var31, var27, var28, this.field_xb[var25], var26);
+                  MazeGenerator.projectCylindricalTextureCoordinates(var30, var75, var32, this.field_T[var25], this.field_rb[var25], 76, var76, var31, var27, var28, this.field_xb[var25], var26);
                   var19[2] = var75[0];
                   var20[2] = var75[1];
                   var33 = var32 / 2.0f;

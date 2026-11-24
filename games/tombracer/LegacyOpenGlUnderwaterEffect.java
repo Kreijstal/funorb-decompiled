@@ -203,7 +203,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         } else {
           jaggl.OpenGL.glBindProgramARB(34336, this.toolkit.field_N == 2147483647 ? this.field_h.field_a : this.field_g.field_a);
         }
-        var2.a(ContentTransitionPhase.field_f, 0.0f, (float)this.toolkit.field_N, 0.0f, -9479, -1.0f);
+        var2.transformPlane(ContentTransitionPhase.field_f, 0.0f, (float)this.toolkit.field_N, 0.0f, -9479, -1.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, ContentTransitionPhase.field_f[0], ContentTransitionPhase.field_f[1], ContentTransitionPhase.field_f[2], ContentTransitionPhase.field_f[3]);
         jaggl.OpenGL.glEnable(34336);
         this.field_i = true;

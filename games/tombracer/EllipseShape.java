@@ -22,7 +22,7 @@ final class EllipseShape extends RasterShape {
         int var6 = param2 * this.field_j >> 12;
         if (param0 <= -117) {
           var7 = param2 * this.field_f >> 12;
-          RasterShape.a(var4, this.fillColour, var6, var7, 0, var5, this.outlineColour, this.outlineWidth);
+          RasterShape.rasterizeEllipseWithOutline(var4, this.fillColour, var6, var7, 0, var5, this.outlineColour, this.outlineWidth);
           return;
         }
     }
@@ -33,7 +33,7 @@ final class EllipseShape extends RasterShape {
         int var5 = param2 * this.field_g >> 12;
         int var6 = this.field_j * param0 >> 12;
         int var8 = this.field_f * param0 >> 12;
-        SocketConnector.a(var4, this.fillColour, (byte) 71, var8, var5, var6);
+        SocketConnector.fillEllipse(var4, this.fillColour, (byte) 71, var8, var5, var6);
     }
 
     EllipseShape(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

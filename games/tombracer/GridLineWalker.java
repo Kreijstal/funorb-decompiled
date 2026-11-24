@@ -328,20 +328,20 @@ final class GridLineWalker {
         return this.field_n;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void rasterizeCircleWithOutline(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (-param0 + param3 < DialogOverlayDrawing.field_b) {
-          BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
+          BeamShooterBehaviour.rasterizeCircleWithOutlineClipped(param4, param0, param1, false, param2, param5, param3);
         } else {
           if (DiskCacheWorker.field_c < param0 + param3) {
-            BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
+            BeamShooterBehaviour.rasterizeCircleWithOutlineClipped(param4, param0, param1, false, param2, param5, param3);
           } else {
             if (HardwareModelBillboardState.field_d > -param0 + param1) {
-              BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
+              BeamShooterBehaviour.rasterizeCircleWithOutlineClipped(param4, param0, param1, false, param2, param5, param3);
             } else {
               if (param1 + param0 <= LineShape.field_h) {
-                BridgeModel.a(param1, param0, 0, param5, param2, param4, param3);
+                BridgeModel.rasterizeCircleWithOutlineUnclipped(param1, param0, 0, param5, param2, param4, param3);
               } else {
-                BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
+                BeamShooterBehaviour.rasterizeCircleWithOutlineClipped(param4, param0, param1, false, param2, param5, param3);
               }
             }
           }
@@ -356,7 +356,7 @@ final class GridLineWalker {
         field_p = null;
         field_j = null;
         if (param0 != -25802) {
-          GridLineWalker.a(-39, -25, -55, -64, -108, -100, 117);
+          GridLineWalker.rasterizeCircleWithOutline(-39, -25, -55, -64, -108, -100, 117);
         }
     }
 

@@ -70,7 +70,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5, byte param6) {
+    final static int pollRegistration(boolean param0, int param1, String param2, int param3, String param4, String param5, byte param6) {
         LoginTextValue var7 = null;
         RuntimeException var7_ref = null;
         LoginTextValue var8 = null;
@@ -89,7 +89,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
           if (param6 != 53) {
             field_m = (GameSocketState) null;
           }
-          stackIn_3_0 = PlayPhase.a(var8, param5, param0, param1, var7, param6 + 48, param3);
+          stackIn_3_0 = PlayPhase.pollLoginOrRegistration(var8, param5, param0, param1, var7, param6 + 48, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

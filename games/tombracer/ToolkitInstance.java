@@ -33,7 +33,7 @@ final class ToolkitInstance {
         int var4 = -97 / ((param0 - 63) / 38);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         if (DialogOverlayDrawing.field_b > -param4 + param3) {
           TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
         } else {
@@ -54,7 +54,7 @@ final class ToolkitInstance {
         if (param0 == 30237) {
           return;
         }
-        ToolkitInstance.a(114, -54, -16, -30, -116);
+        ToolkitInstance.fillCircle(114, -54, -16, -30, -116);
     }
 
     ToolkitInstance(GraphicsToolkit param0, ToolkitCandidate param1, java.awt.Canvas param2) {

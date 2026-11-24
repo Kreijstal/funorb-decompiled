@@ -50,22 +50,22 @@ abstract class SocketConnector {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void fillEllipse(int param0, int param1, byte param2, int param3, int param4, int param5) {
         if (param3 == param4) {
-          ToolkitInstance.a(30237, param5, param1, param0, param4);
+          ToolkitInstance.fillCircle(30237, param5, param1, param0, param4);
           return;
         }
         if (-param4 + param0 < DialogOverlayDrawing.field_b) {
-          GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
+          GraphicsHeap.fillEllipseClipped(param0, param3, param4, param1, (byte) 115, param5);
         } else {
           if (param0 + param4 > DiskCacheWorker.field_c) {
-            GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
+            GraphicsHeap.fillEllipseClipped(param0, param3, param4, param1, (byte) 115, param5);
           } else {
             if (param5 - param3 < HardwareModelBillboardState.field_d) {
-              GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
+              GraphicsHeap.fillEllipseClipped(param0, param3, param4, param1, (byte) 115, param5);
             } else {
               if (param3 + param5 > LineShape.field_h) {
-                GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
+                GraphicsHeap.fillEllipseClipped(param0, param3, param4, param1, (byte) 115, param5);
               } else {
                 ClipFrame.fillEllipse(param0, param4, param1, param5, 110, param3);
               }
@@ -75,7 +75,7 @@ abstract class SocketConnector {
         if (param2 == 71) {
           return;
         }
-        SocketConnector.a(59, -46, (byte) 78, 62, -53, 58);
+        SocketConnector.fillEllipse(59, -46, (byte) 78, 62, -53, 58);
     }
 
     static {

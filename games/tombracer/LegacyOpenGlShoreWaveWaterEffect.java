@@ -84,7 +84,7 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(int param0, float[] param1, int param2, int param3, float param4, int param5, float param6, int param7, int param8, int param9, int param10, float param11, int param12, float[] param13) {
+    final static void projectBoxTextureCoordinates(int param0, float[] param1, int param2, int param3, float param4, int param5, float param6, int param7, int param8, int param9, int param10, float param11, int param12, float[] param13) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;

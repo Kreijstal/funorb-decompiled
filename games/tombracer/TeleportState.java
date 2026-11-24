@@ -88,7 +88,7 @@ final class TeleportState {
         }
     }
 
-    final static String a(CharSequence param0, byte param1, boolean param2) {
+    final static String getPlayerNameValidationError(CharSequence param0, byte param1, boolean param2) {
         int var4 = 0;
         String var3 = null;
         int var5 = 0;

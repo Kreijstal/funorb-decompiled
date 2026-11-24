@@ -204,7 +204,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final int[] a(int param0, ResourceArchive param1, boolean param2, double param3, TextureProvider param4, byte param5, int param6, boolean param7) {
+    final int[] generateBinaryAlphaPixels(int param0, ResourceArchive param1, boolean param2, double param3, TextureProvider param4, byte param5, int param6, boolean param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_6_0 = null;
@@ -437,7 +437,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final int[] a(int param0, boolean param1, int param2, double param3, ResourceArchive param4, TextureProvider param5, boolean param6) {
+    final int[] generateAlphaPixels(int param0, boolean param1, int param2, double param3, ResourceArchive param4, TextureProvider param5, boolean param6) {
         int var9_int = 0;
         int var16 = 0;
         int incrementValue$0 = 0;

@@ -33,7 +33,7 @@ abstract class RasterBuffer {
         SoftwareRasterizer.setTarget(this.field_g, this.field_f, this.field_e);
     }
 
-    final static int a(LoginTextValue param0, LoginTextValue param1, int param2) {
+    final static int pollLogin(LoginTextValue param0, LoginTextValue param1, int param2) {
         RuntimeException var3 = null;
         LoginTextValue var4 = null;
         String var5 = null;
@@ -47,10 +47,10 @@ abstract class RasterBuffer {
         try {
           if (param2 != 2) {
             var4 = (LoginTextValue) null;
-            RasterBuffer.a((LoginTextValue) null, (LoginTextValue) null, -60);
+            RasterBuffer.pollLogin((LoginTextValue) null, (LoginTextValue) null, -60);
           }
           var5 = (String) null;
-          stackIn_3_0 = PlayPhase.a(param0, (String) null, false, 0, param1, 94, 0);
+          stackIn_3_0 = PlayPhase.pollLoginOrRegistration(param0, (String) null, false, 0, param1, 94, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ abstract class RasterBuffer {
         }
     }
 
-    final static void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void fillRoundedRectangle(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           param2.setClip(param0, param4, param0 + param3, param3 + param4);
           param2.fillCircle(param0 + param3, param3 + param4, param3, param6, param7);

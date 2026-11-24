@@ -21,7 +21,7 @@ final class ModelTextureProjectionData {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2_int = BrickOperator.d(GpuCubeTextureSource.field_e, -1368, PrimMazeGenerator.field_e);
+          var2_int = BrickOperator.getRightsIconTier(GpuCubeTextureSource.field_e, -1368, PrimMazeGenerator.field_e);
           if (1 == var2_int) {
             param0 = "<img=0>" + param0;
           }

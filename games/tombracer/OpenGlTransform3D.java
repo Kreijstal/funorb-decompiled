@@ -81,7 +81,7 @@ final class OpenGlTransform3D extends Transform3D {
         }
     }
 
-    final void a(float[] param0, float param1, float param2, float param3, int param4, float param5) {
+    final void transformPlane(float[] param0, float param1, float param2, float param3, int param4, float param5) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -156,7 +156,7 @@ final class OpenGlTransform3D extends Transform3D {
         this.field_o = this.field_o + (float)param2;
     }
 
-    final void a(int param0, float param1, float param2, int param3, byte param4, int param5, float param6) {
+    final void setBillboardTransform(int param0, float param1, float param2, int param3, byte param4, int param5, float param6) {
         float var8 = 0.0f;
         float var9 = 0.0f;
         if (0 != param0) {

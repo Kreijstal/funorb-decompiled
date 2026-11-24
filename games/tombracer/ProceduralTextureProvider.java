@@ -58,7 +58,7 @@ class ProceduralTextureProvider implements TextureProvider {
         if (param0 != 14907) {
           this.field_d = (ResourceArchive) null;
         }
-        return this.getProceduralTexture(param1, 0).a(param5, this.field_d, param2, (double)param4, (TextureProvider) (this), (byte) 104, param3, this.metadata[param1].field_e);
+        return this.getProceduralTexture(param1, 0).generateBinaryAlphaPixels(param5, this.field_d, param2, (double)param4, (TextureProvider) (this), (byte) 104, param3, this.metadata[param1].field_e);
     }
 
     private final ProceduralTexture getProceduralTexture(int param0, int param1) {
@@ -283,7 +283,7 @@ class ProceduralTextureProvider implements TextureProvider {
         if (param0 != 40) {
           ProceduralTextureProvider.roundToInt((byte) 28, 0.7337705479498259);
         }
-        return this.getProceduralTexture(param3, 0).a(param1, this.metadata[param3].field_e, param5, (double)param2, this.field_d, (TextureProvider) (this), false);
+        return this.getProceduralTexture(param3, 0).generateAlphaPixels(param1, this.metadata[param3].field_e, param5, (double)param2, this.field_d, (TextureProvider) (this), false);
     }
 
     final static int roundToInt(byte param0, double param1) {

@@ -246,7 +246,7 @@ final class LevelSelectOverlay implements ShellListener {
             var5Lifetime1 = 0;
             while (true) {
               if (var5Lifetime1 >= var2_int) {
-                var5Lifetime1 = GpuDataType.a(ComponentTargetList.field_e, 20297);
+                var5Lifetime1 = GpuDataType.getConnectorRoomLimit(ComponentTargetList.field_e, 20297);
                 stackIn_61_0 = 0;
                 break;
               }

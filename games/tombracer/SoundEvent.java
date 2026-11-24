@@ -24,7 +24,7 @@ final class SoundEvent extends IntrusiveNode {
         return this.x;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
+    final static void drawBezierCurve(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
         if (param2 < DialogOverlayDrawing.field_b) {
           PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
         } else {
@@ -73,7 +73,7 @@ final class SoundEvent extends IntrusiveNode {
                                       if (param6 > LineShape.field_h) {
                                         PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                       } else {
-                                        RoomDefinition.a(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);
+                                        RoomDefinition.drawBezierCurveFixedStep(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);
                                       }
                                     }
                                   }

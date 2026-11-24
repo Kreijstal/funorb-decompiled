@@ -79,12 +79,12 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         }
     }
 
-    final static void a(int param0, GraphicsToolkit param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillRoundedRectangle(int param0, GraphicsToolkit param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           if (param3 < 34) {
             LegacyOpenGlSpriteTexture.getTooltipStyle(-73);
           }
-          RasterBuffer.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
+          RasterBuffer.fillRoundedRectangle(param7, 2, param1, param6, param2, param5, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qk.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }

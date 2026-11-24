@@ -451,7 +451,7 @@ final class PlayPhase extends MatchPhase {
         CurrentGraphicsToolkit.toolkit.fillCircle(param0, param5, param4, NoiseSliceGenerator.withAlpha(param3, (byte) -115, param1), 2);
     }
 
-    final static int a(LoginTextValue param0, String param1, boolean param2, int param3, LoginTextValue param4, int param5, int param6) {
+    final static int pollLoginOrRegistration(LoginTextValue param0, String param1, boolean param2, int param3, LoginTextValue param4, int param5, int param6) {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;

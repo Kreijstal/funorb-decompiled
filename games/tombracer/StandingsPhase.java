@@ -189,7 +189,7 @@ final class StandingsPhase extends MatchPhase {
               GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].draw(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].width() >> 1) + var11 - 1, var10 - 12);
             }
             var12 = 150;
-            RasterBuffer.a(-60 + var11, 2, CurrentGraphicsToolkit.toolkit, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
+            RasterBuffer.fillRoundedRectangle(-60 + var11, 2, CurrentGraphicsToolkit.toolkit, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
             MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var22, false).toUpperCase(), S2CSimulationSignalPacket.field_a[var22], TooltipRenderer.field_p, -1, var10 - 230, var11, 0);
             try {
               CurrentGraphicsToolkit.toolkit.fillShadedTriangle(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);

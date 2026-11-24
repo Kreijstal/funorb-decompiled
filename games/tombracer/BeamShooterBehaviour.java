@@ -197,7 +197,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
         return 4;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static void rasterizeCircleWithOutlineClipped(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         int stackIn_41_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;

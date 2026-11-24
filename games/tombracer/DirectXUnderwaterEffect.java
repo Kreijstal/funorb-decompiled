@@ -250,7 +250,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             var2 = var4 == 2147483647 ? this.field_o : this.field_k;
           }
           if (var2 == this.field_j) {
-            var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
+            var5.transformPlane(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
             var6.setVertexShaderConstantF(12, field_h);
             return;
           }
@@ -262,7 +262,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           this.onViewMatrixChanged((byte) 107);
           this.onModelMatrixChanged(true);
           this.onFogChanged(true);
-          var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
+          var5.transformPlane(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
           var6.setVertexShaderConstantF(12, field_h);
           return;
         }
@@ -275,7 +275,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var2Lifetime1 = var4Lifetime1 == 2147483647 ? this.field_o : this.field_k;
         }
         if (var2Lifetime1 == this.field_j) {
-          var5Lifetime1.a(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
+          var5Lifetime1.transformPlane(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
           var7.setVertexShaderConstantF(12, field_h);
           return;
         }
@@ -287,7 +287,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.onViewMatrixChanged((byte) 107);
         this.onModelMatrixChanged(true);
         this.onFogChanged(true);
-        var5Lifetime1.a(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
+        var5Lifetime1.transformPlane(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
         var7.setVertexShaderConstantF(12, field_h);
     }
 

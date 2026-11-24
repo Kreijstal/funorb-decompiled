@@ -12,7 +12,7 @@ final class RoomDefinition {
     String field_b;
     RoomHeader field_e;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void drawBezierCurveFixedStep(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var24 = 0;
         int var10_int = 0;
         int var11 = 0;

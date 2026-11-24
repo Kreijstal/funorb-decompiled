@@ -37,7 +37,7 @@ final class LoadingStepList {
           dupTemp$1.scale(224, 224, 224);
           if (param1 != 0) {
             CharSequence var3 = (CharSequence) null;
-            LoadingStepList.a((byte) -94, (CharSequence) null);
+            LoadingStepList.getStrictPlayerNameValidationError((byte) -94, (CharSequence) null);
           }
           dupTemp$2 = RevolverItemComponent.field_J[77].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[77] = dupTemp$2;
@@ -136,7 +136,7 @@ final class LoadingStepList {
         field_c = null;
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String getStrictPlayerNameValidationError(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -147,7 +147,7 @@ final class LoadingStepList {
           if (param0 != -16) {
             LoadingStepList.releaseStatics(46);
           }
-          stackIn_3_0 = TeleportState.a(param1, (byte) -91, false);
+          stackIn_3_0 = TeleportState.getPlayerNameValidationError(param1, (byte) -91, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

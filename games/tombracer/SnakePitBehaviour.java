@@ -230,7 +230,7 @@ final class SnakePitBehaviour extends Behaviour {
         RuntimeException var6 = null;
         try {
           if (param3 > -34) {
-            SnakePitBehaviour.a(0.6912761926651001f, -0.5952900052070618f, -96, -20, 0.25126492977142334f, -40, 39, 3);
+            SnakePitBehaviour.buildTextureProjectionMatrix(0.6912761926651001f, -0.5952900052070618f, -96, -20, 0.25126492977142334f, -40, 39, 3);
           }
           if (param4.type == 3) {
             param2.scareFrom(param1, param4.size, param0, true);
@@ -312,7 +312,7 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final static float[] a(float param0, float param1, int param2, int param3, float param4, int param5, int param6, int param7) {
+    final static float[] buildTextureProjectionMatrix(float param0, float param1, int param2, int param3, float param4, int param5, int param6, int param7) {
         float[] var8;
         float[] var9;
         float var10;
@@ -339,7 +339,7 @@ final class SnakePitBehaviour extends Behaviour {
         var9 = var18;
         var10 = (float)Math.cos((double)((float)param5 * 0.02454369328916073f));
         if (param2 != 16486) {
-          SnakePitBehaviour.a(1.2596310377120972f, 1.2713145017623901f, -99, -49, -0.6455500721931458f, 23, -23, -74);
+          SnakePitBehaviour.buildTextureProjectionMatrix(1.2596310377120972f, 1.2713145017623901f, -99, -49, -0.6455500721931458f, 23, -23, -74);
         }
         var11 = (float)Math.sin((double)((float)param5 * 0.02454369328916073f));
         var17[3] = 0.0f;

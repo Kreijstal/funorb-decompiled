@@ -101,7 +101,7 @@ final class BrickOperator extends TextureOperator {
         }
     }
 
-    final static int d(int param0, int param1, int param2) {
+    final static int getRightsIconTier(int param0, int param1, int param2) {
         if (param1 != -1368) {
           return 73;
         }
@@ -167,7 +167,7 @@ final class BrickOperator extends TextureOperator {
 
     public static void releaseStatics(int param0) {
         if (param0 != -21771) {
-          BrickOperator.d(5, -48, 96);
+          BrickOperator.getRightsIconTier(5, -48, 96);
         }
         field_p = null;
         field_w = null;
@@ -223,7 +223,7 @@ final class BrickOperator extends TextureOperator {
             return stackIn_7_0;
           }
           if (!param1) {
-            BrickOperator.d(-82, 71, 72);
+            BrickOperator.getRightsIconTier(-82, 71, 72);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -288,7 +288,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
         jaggl.OpenGL.glEnable(34336);
         this.field_g = true;
-        var3.a(32560, 0.0f, 0.0f, this.field_h, (float)var2, -1.0f);
+        var3.transformPlane(32560, 0.0f, 0.0f, this.field_h, (float)var2, -1.0f);
         if (param0 > -123) {
           return;
         }

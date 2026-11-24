@@ -73,7 +73,7 @@ abstract class MazeGenerator {
         }
     }
 
-    final static void a(int param0, float[] param1, float param2, int param3, int param4, int param5, float[] param6, float param7, int param8, int param9, int param10, int param11) {
+    final static void projectCylindricalTextureCoordinates(int param0, float[] param1, float param2, int param3, int param4, int param5, float[] param6, float param7, int param8, int param9, int param10, int param11) {
         float var12_float = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;

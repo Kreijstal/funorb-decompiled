@@ -37,7 +37,7 @@ final class ObjectPool implements Renderable {
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
           CharSequence var3 = (CharSequence) null;
-          ObjectPool.a((CharSequence) null, -61);
+          ObjectPool.isValidPlayerName((CharSequence) null, -61);
           return 0;
         }
         return 0;
@@ -224,7 +224,7 @@ final class ObjectPool implements Renderable {
         }
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isValidPlayerName(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

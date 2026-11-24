@@ -37,7 +37,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
     protected GraphicsHeap() {
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void fillEllipseClipped(int param0, int param1, int param2, int param3, byte param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;

@@ -32,7 +32,7 @@ final class SneakHintPanel implements MessagePanel {
         } else {
           stackIn_8_0 = (!VerticalScrollbar.field_tb[ValidationOutcome.field_b]) ? 1627324416 : 805371648;
         }
-        LegacyOpenGlSpriteTexture.a(stackIn_8_0, CurrentGraphicsToolkit.toolkit, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
+        LegacyOpenGlSpriteTexture.fillRoundedRectangle(stackIn_8_0, CurrentGraphicsToolkit.toolkit, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
         if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b] &&
           this.field_b.field_b) {
           SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, TermsLinksPanel.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);

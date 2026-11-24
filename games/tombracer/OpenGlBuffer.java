@@ -115,7 +115,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+    final static void rasterizeEllipseWithOutlineClipped(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
@@ -178,7 +178,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           var16 = var12 * var12;
           var17 = var14 << 1;
           if (!param4) {
-            OpenGlBuffer.a(-80, 16, -30, 69, false, -29, -88, -33);
+            OpenGlBuffer.rasterizeEllipseWithOutlineClipped(-80, 16, -30, 69, false, -29, -88, -33);
           }
           var18 = var13 << 1;
           var19 = var16 << 1;

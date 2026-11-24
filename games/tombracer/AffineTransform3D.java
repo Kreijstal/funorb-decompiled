@@ -596,7 +596,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(float param0, int param1, int param2, int param3, int param4, float param5, float param6) {
+    final void setCentredBillboardTransform(float param0, int param1, int param2, int param3, int param4, float param5, float param6) {
         float var8 = 0.0f;
         float var9 = 0.0f;
         if (param3 == 0) {
@@ -670,7 +670,7 @@ final class AffineTransform3D extends Transform3D {
         return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
     }
 
-    final void a(int param0, float param1, float param2, float[] param3, float param4, float param5) {
+    final void transformPlane(int param0, float param1, float param2, float[] param3, float param4, float param5) {
         float var7_float = 0.0f;
         float var8 = 0.0f;
         float var9 = 0.0f;

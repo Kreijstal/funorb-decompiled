@@ -31,7 +31,7 @@ final class GpuDataType {
         this.field_e = param0;
     }
 
-    final static int a(BitSet param0, int param1) {
+    final static int getConnectorRoomLimit(BitSet param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -84,7 +84,7 @@ final class GpuDataType {
           return;
         }
         BitSet var2 = (BitSet) null;
-        GpuDataType.a((BitSet) null, -34);
+        GpuDataType.getConnectorRoomLimit((BitSet) null, -34);
         field_a = null;
         field_g = null;
         field_f = null;
