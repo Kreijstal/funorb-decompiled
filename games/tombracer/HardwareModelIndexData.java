@@ -21,7 +21,7 @@ final class HardwareModelIndexData {
         this.field_d = (VertexBuffer) null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean canDiscardCpuIndices(boolean param0) {
         if (param0) {
           HardwareModelIndexData.releaseStatics((byte) 69);
           if (!this.field_a) {

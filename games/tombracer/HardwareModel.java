@@ -1686,7 +1686,7 @@ final class HardwareModel extends ToolkitModel {
           if (null != this.field_M &&
             !PointListEditorWidget.requiresCpuTriangleIndices(-58, this.field_Y, this.field_h)) {
             if (this.field_g != null &&
-              !this.field_g.a(false) ||
+              !this.field_g.canDiscardCpuIndices(false) ||
               null != this.field_E &&
               !this.field_E.canDiscardCpuData(16440)) {
               this.field_N = true;

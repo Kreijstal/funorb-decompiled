@@ -94,7 +94,7 @@ final class PlantComponent extends PrefabComponent {
 
     final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          PlantComponent.A(-113);
+          PlantComponent.getTopDialogY(-113);
           return false;
         }
         return false;
@@ -225,9 +225,9 @@ final class PlantComponent extends PrefabComponent {
         return 7;
     }
 
-    final static int A(int param0) {
+    final static int getTopDialogY(int param0) {
         if (param0 != -1) {
-          PlantComponent.A(33);
+          PlantComponent.getTopDialogY(33);
         }
         if (SnakePitTile.hasVisibleDialog(false) &&
           ModelFactory.field_a.getTopVisibleDialog((byte) 70) != null) {
@@ -260,7 +260,7 @@ final class PlantComponent extends PrefabComponent {
           var3 = 22 / ((param0 + 35) / 63);
           var2 = SpawnerBehaviour.field_n.first(-80);
           while (var2 != null) {
-            ArchiveSource.a(param1, -75);
+            ArchiveSource.writeRatedMatchmakingRequest(param1, -75);
             var2 = SpawnerBehaviour.field_n.next(116);
           }
           return;

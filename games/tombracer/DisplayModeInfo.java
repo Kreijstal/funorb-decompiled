@@ -74,7 +74,7 @@ final class DisplayModeInfo {
             var60 = var44.field_q;
             C2SChooseRewardPacket.scatterFacesByPriority(0, 2507, var60, 0, DrawOfferMenu.field_q);
           } else {
-            VertexStreamLayout.a((byte) -124);
+            VertexStreamLayout.compactFaceOrderBuckets((byte) -124);
           }
           var54 = new int[param3.field_A];
           var49 = var54;

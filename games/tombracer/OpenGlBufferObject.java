@@ -11,7 +11,7 @@ abstract class OpenGlBufferObject {
     private boolean field_c;
     static int field_f;
 
-    final static UiComponent e(int param0) {
+    final static UiComponent getLobbyGameListContents(int param0) {
         if (param0 != 35040) {
           return (UiComponent) null;
         }

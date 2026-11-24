@@ -33,7 +33,7 @@ final class TextSpewerBehaviour extends Behaviour {
           var7 = param1[0].field_c;
           DropAnimation var2 = var7;
           if (param0 != -91) {
-            TextSpewerBehaviour.b(-52);
+            TextSpewerBehaviour.getPlayerListContents(-52);
           }
           var3 = param1;
           for (var4 = 0; var3.length > var4; var4++) {
@@ -71,7 +71,7 @@ final class TextSpewerBehaviour extends Behaviour {
         return param0;
     }
 
-    final static UiComponent b(int param0) {
+    final static UiComponent getPlayerListContents(int param0) {
         if (param0 != 19845) {
           return (UiComponent) null;
         }

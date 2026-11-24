@@ -14,7 +14,7 @@ abstract class ChatTarget {
         int var1 = 69 / ((param0 + 67) / 32);
     }
 
-    final static void a(int param0, double param1, int param2, int param3, double param4) {
+    final static void configureNetworkLatency(int param0, double param1, int param2, int param3, double param4) {
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
         if (~WallCrusherComponent.field_H != param2) {

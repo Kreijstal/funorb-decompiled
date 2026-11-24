@@ -40,7 +40,7 @@ final class HeapIndexArray extends ClientMemoryBuffer implements IndexArray {
         return (540800 & param2) != 0 ? true : false;
     }
 
-    final static boolean e(int param0) {
+    final static boolean isLoggedIn(int param0) {
         if (param0 != 540800) {
           return false;
         }

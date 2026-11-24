@@ -308,7 +308,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.releaseSurface(this.field_oc.get(var2), false, var2);
           }
-          LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
+          LegacyOpenGlEnvironmentWaterEffect.releaseSharedColourPalettes(true, false, true);
           this.field_P.release();
           this.field_Fc = true;
         }
@@ -596,7 +596,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var10[13] = 0.0f;
             var10[7] = 0.0f;
           }
-          this.L(param0 - 73);
+          this.updateFarClipLimit(param0 - 73);
           this.field_ab = true;
         }
         if (param0 != 83) {
@@ -605,7 +605,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void L(int param0) {
+    private final void updateFarClipLimit(int param0) {
         this.field_Cb = (float)this.field_k;
         if (param0 != 10) {
           int[] var3 = (int[]) null;

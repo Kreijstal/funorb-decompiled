@@ -42,7 +42,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         if (param1 <= 119) {
           PlayerModel.isNameSeparator(2, 'ﾇ');
         }
-        LegacyOpenGlEnvironmentWaterEffect.a(3, true, param2, 192, S2CSimulationSignalPacket.field_a[this.field_i], param0);
+        LegacyOpenGlEnvironmentWaterEffect.fillCircleWithAlpha(3, true, param2, 192, S2CSimulationSignalPacket.field_a[this.field_i], param0);
         OpenGlVertexNormal.drawAlphaCircle(3, param0, S2CSimulationSignalPacket.field_a[this.field_i], param2, false);
     }
 

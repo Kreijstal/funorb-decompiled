@@ -26,7 +26,7 @@ final class OpenGlSprite extends ToolkitSprite {
         field_k = null;
     }
 
-    private final void a(int param0) {
+    private final void resetSpriteAuxiliaryTexture(int param0) {
         this.field_c.setActiveTextureUnit(1, true);
         this.field_c.bindTexture(true, (LegacyOpenGlTexture) null);
         this.field_c.setTextureCombineOperations(8448, 8960, 8448);
@@ -39,7 +39,7 @@ final class OpenGlSprite extends ToolkitSprite {
     private final void uploadPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
         try {
           if (param2 != 0) {
-            this.b(-64, -35);
+            this.configureSpriteAuxiliaryTexture(-64, -35);
           }
           this.field_a.uploadInts(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
         } catch (RuntimeException runtimeException) {
@@ -106,7 +106,7 @@ final class OpenGlSprite extends ToolkitSprite {
           var13 = var11 + var9 * (float)this.field_a.field_t;
           var14 = (float)this.field_a.field_s * var10 + var12;
           if (this.field_f != null) {
-            this.b(param4, 117);
+            this.configureSpriteAuxiliaryTexture(param4, 117);
             this.field_f.setLinearFiltering(true, 3);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
@@ -122,7 +122,7 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
             jaggl.OpenGL.glVertex2f(var13, var12);
             jaggl.OpenGL.glEnd();
-            this.a(0);
+            this.resetSpriteAuxiliaryTexture(0);
           } else {
             this.field_c.bindTexture(true, this.field_a);
             this.field_c.setTextureCombineMode(1, param4);
@@ -152,7 +152,7 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glVertex2i(param0 + param2, param1);
             jaggl.OpenGL.glEnd();
           } else {
-            this.b(param4, -48);
+            this.configureSpriteAuxiliaryTexture(param4, -48);
             this.field_f.setLinearFiltering(true, 3);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
@@ -168,7 +168,7 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
             jaggl.OpenGL.glVertex2i(param2 + param0, param1);
             jaggl.OpenGL.glEnd();
-            this.a(0);
+            this.resetSpriteAuxiliaryTexture(0);
           }
         }
     }
@@ -263,7 +263,7 @@ final class OpenGlSprite extends ToolkitSprite {
           jaggl.OpenGL.glVertex2i(param0 + this.field_a.field_t, param1);
           jaggl.OpenGL.glEnd();
         } else {
-          this.b(param2, -66);
+          this.configureSpriteAuxiliaryTexture(param2, -66);
           this.field_f.setLinearFiltering(false, 3);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
@@ -279,7 +279,7 @@ final class OpenGlSprite extends ToolkitSprite {
           jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
           jaggl.OpenGL.glVertex2i(this.field_a.field_t + param0, param1);
           jaggl.OpenGL.glEnd();
-          this.a(0);
+          this.resetSpriteAuxiliaryTexture(0);
         }
     }
 
@@ -287,7 +287,7 @@ final class OpenGlSprite extends ToolkitSprite {
         return this.field_a.field_t;
     }
 
-    private final void b(int param0, int param1) {
+    private final void configureSpriteAuxiliaryTexture(int param0, int param1) {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;

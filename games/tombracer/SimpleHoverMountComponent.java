@@ -69,14 +69,14 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
         if (0 != TileRenderable.field_c.field_y) {
           if (DropAnimation.field_c) {
-            WallTile.b(param3, -22243);
+            WallTile.writeRatedMatchmakingRequest(param3, -22243);
           } else {
             if (ReportAbuseDialog.field_ub > 0) {
-              WallTile.b(param3, -22243);
+              WallTile.writeRatedMatchmakingRequest(param3, -22243);
             } else {
               if (2 <= GpuCubeTextureSource.field_e) {
                 if (VerticalScrollbar.field_tb[12]) {
-                  WallTile.b(param3, -22243);
+                  WallTile.writeRatedMatchmakingRequest(param3, -22243);
                 } else {
                   RatingsScreen.field_s = true;
                 }

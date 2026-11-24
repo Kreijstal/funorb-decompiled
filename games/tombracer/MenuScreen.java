@@ -183,10 +183,10 @@ abstract class MenuScreen extends GameScreen {
               }
             }
             if (this.field_k.isLeftPressed(96)) {
-              TabbedPanel.d((byte) -55);
+              TabbedPanel.decreaseSoundVolume((byte) -55);
             }
             if (this.field_k.isRightPressed(97)) {
-              ChatOverlay.a(true);
+              ChatOverlay.increaseSoundVolume(true);
             }
             return;
           }
@@ -455,7 +455,7 @@ abstract class MenuScreen extends GameScreen {
             if (3 == var7 &&
               var8 == 0) {
               if (!TextWidgetPainter.isGuestMode(27)) {
-                LegacyOpenGlBloomEffect.d(30785);
+                LegacyOpenGlBloomEffect.requestLobbyEntry(30785);
               } else {
                 ConstrainToRectangleLocomotor.showMenuScreen(param1, 11, (byte) 106);
                 PasswordValidator.field_n = -2;

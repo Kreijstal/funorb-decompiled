@@ -38,7 +38,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
     final static boolean requiresNormalStream(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param2 != 2048) {
-          HardwareUnlitEffect.c((byte) -99);
+          HardwareUnlitEffect.readChatRestrictionUpdate((byte) -99);
         }
         stackIn_6_0 = ((param1 & 2048) != 0) && ((param0 & 55) != 0);
         return stackIn_6_0;
@@ -110,7 +110,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         return true;
     }
 
-    final static void c(byte param0) {
+    final static void readChatRestrictionUpdate(byte param0) {
         DropdownButtonPainter.field_g = false;
         if (param0 < 52) {
           field_f = (String) null;

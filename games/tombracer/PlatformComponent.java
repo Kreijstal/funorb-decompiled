@@ -9,7 +9,7 @@ final class PlatformComponent extends PrefabComponent {
     public static void releaseStatics(int param0) {
         field_F = null;
         if (param0 != 15) {
-          PlatformComponent.A(112);
+          PlatformComponent.finishProgressAndPruneDialogs(112);
         }
     }
 
@@ -44,8 +44,8 @@ final class PlatformComponent extends PrefabComponent {
         }
     }
 
-    final static void A(int param0) {
-        MessageDialog.j((byte) -116);
+    final static void finishProgressAndPruneDialogs(int param0) {
+        MessageDialog.finishProgressAndPruneDialogs((byte) -116);
         int var1 = -6 / ((-10 - param0) / 45);
     }
 
@@ -54,7 +54,7 @@ final class PlatformComponent extends PrefabComponent {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param1 != 23688) {
-          PlatformComponent.A(-122);
+          PlatformComponent.finishProgressAndPruneDialogs(-122);
         }
         var2 = param0;
         if (var2 == 0) {

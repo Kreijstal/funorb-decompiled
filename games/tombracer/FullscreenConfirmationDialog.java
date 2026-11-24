@@ -144,13 +144,13 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
         }
     }
 
-    private final void i(byte param0) {
+    private final void dismiss(byte param0) {
         if (!this.field_B) {
           return;
         }
         this.field_B = false;
         if (param0 != 109) {
-          this.i((byte) 120);
+          this.dismiss((byte) 120);
         }
     }
 
@@ -165,14 +165,14 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
             return;
           }
           if (param2 == this.field_N) {
-            this.i((byte) 109);
+            this.dismiss((byte) 109);
             return;
           }
           if (param2 != this.field_M) {
             return;
           }
           HardwareOpenGlVertexBuffer.exitFullscreen(0);
-          this.i((byte) 109);
+          this.dismiss((byte) 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,19 +320,19 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (0 >= var7) {
             HardwareOpenGlVertexBuffer.exitFullscreen(0);
-            this.i((byte) 109);
+            this.dismiss((byte) 109);
             this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, TileRenderable.field_b), 120);
           } else {
             this.field_L.field_o = "" + var7;
           }
           if (this.field_B &&
             null == ColourRowCacheEntry.field_f) {
-            this.i((byte) 109);
+            this.dismiss((byte) 109);
             this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, TurbulenceNoise3D.field_j), 102);
           }
           if (null != ColourRowCacheEntry.field_f &&
             ColourRowCacheEntry.field_f.field_b) {
-            this.i((byte) 109);
+            this.dismiss((byte) 109);
             this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, TurbulenceNoise3D.field_j), 85);
             return;
           }

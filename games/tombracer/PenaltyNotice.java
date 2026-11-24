@@ -10,13 +10,13 @@ final class PenaltyNotice extends IntrusiveNode {
 
     final Player getPlayer(int param0) {
         if (param0 != -14065) {
-          PenaltyNotice.a(-124);
+          PenaltyNotice.increaseSoundVolume(-124);
           return this.player;
         }
         return this.player;
     }
 
-    final static void a(int param0) {
+    final static void increaseSoundVolume(int param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 == 256) {

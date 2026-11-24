@@ -109,7 +109,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void releaseSharedColourPalettes(boolean param0, boolean param1, boolean param2) {
         if (!param1) {
           if (!param2) {
             return;
@@ -176,7 +176,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         this.field_k = false;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static void fillCircleWithAlpha(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param1) {
           CurrentGraphicsToolkit.toolkit.fillCircleAlpha(param2, (byte) -104, param0, NoiseSliceGenerator.withAlpha(param3, (byte) -79, param4), param5);
           return;

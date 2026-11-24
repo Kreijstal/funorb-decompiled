@@ -46,7 +46,7 @@ abstract class ItemBehaviour extends Behaviour {
         }
     }
 
-    final static void b(int param0) {
+    final static void initializeLightNoiseTable(int param0) {
         AccountNameResolver.field_e = PerlinRowsAndByteArrayPool.generatePerlinRow(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
         int var1 = 56 % ((param0 - 57) / 45);
     }

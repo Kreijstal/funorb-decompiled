@@ -223,7 +223,7 @@ final class DoorwayComponent extends PrefabComponent {
         return false;
     }
 
-    final static UiComponent r(byte param0) {
+    final static UiComponent getPlayerListContents(byte param0) {
         if (param0 != 107) {
           return (UiComponent) null;
         }

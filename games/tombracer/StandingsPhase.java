@@ -169,7 +169,7 @@ final class StandingsPhase extends MatchPhase {
         String var23 = null;
         String var24 = null;
         var21 = TombRacer.field_G ? 1 : 0;
-        TextureTransformMode.a(-10985);
+        TextureTransformMode.prepareModelPreviewScene(-10985);
         Room.field_j.draw(0, 0);
         if (this.screen.field_D) {
           var3 = LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1;

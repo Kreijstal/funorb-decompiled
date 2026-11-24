@@ -274,7 +274,7 @@ abstract class AppletGameShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                HardwareUnlitEffect.c((byte) 101);
+                                HardwareUnlitEffect.readChatRestrictionUpdate((byte) 101);
                                 return;
                               }
                               ClipStack.reportClientError("MGS1: " + PacketDiagnostics.formatPacketDump(32), (byte) 123, (Throwable) null);
@@ -571,7 +571,7 @@ abstract class AppletGameShell extends GameApplet {
         if (null != HardCacheEntry.field_q) {
           TermsLinksPanel.field_y = HardCacheEntry.field_q.pollWheelRotation(65);
         }
-        if (HeapIndexArray.e(540800)) {
+        if (HeapIndexArray.isLoggedIn(540800)) {
           var3 = ByteGameMessageSender.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
             !(OpacityWidget.getKeyboardIdleTicks((byte) 118) <= var3) &&

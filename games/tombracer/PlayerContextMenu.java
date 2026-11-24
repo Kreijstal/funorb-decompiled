@@ -173,10 +173,10 @@ final class PlayerContextMenu {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1 == 0) {
-          RewardChoiceSlot.a((byte) -38, param2, this.field_g);
+          RewardChoiceSlot.writeInviteOrAcceptPlayer((byte) -38, param2, this.field_g);
         } else {
           if (param1 == 1) {
-            HardwareAnimatedWaterEffect.a(param2, this.field_g, -120);
+            HardwareAnimatedWaterEffect.writeKickOrWithdrawInvitation(param2, this.field_g, -120);
           } else {
             if (param1 == 2) {
               CollisionGridEntry.a((byte) -123, param2, this.field_k);
@@ -185,7 +185,7 @@ final class PlayerContextMenu {
                 MidiVoiceMixer.a(param2, 30, this.field_k);
               } else {
                 if (param1 == 10) {
-                  LegacyOpenGlRidgedWaterEffect.a(param2, false, this.field_k);
+                  LegacyOpenGlRidgedWaterEffect.writeSpectateGameRequest(param2, false, this.field_k);
                 } else {
                   if (param1 == 15) {
                     LegacyOpenGlShaderProgram.selectLobbyGame(this.field_k, param0 + 21, param2);

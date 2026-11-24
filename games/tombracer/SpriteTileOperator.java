@@ -101,14 +101,14 @@ final class SpriteTileOperator extends SpriteSampleOperator {
         int[][] var3 = var11;
         if (!this.colourCache.field_f) {
           if (param1 != -1) {
-            SpriteTileOperator.d(113);
+            SpriteTileOperator.useDetailedBoundaryGeometry(113);
             return var3;
           }
           return var3;
         }
         if (!this.ensureSpriteLoaded(false)) {
           if (param1 != -1) {
-            SpriteTileOperator.d(113);
+            SpriteTileOperator.useDetailedBoundaryGeometry(113);
             return var3;
           }
           return var3;
@@ -127,11 +127,11 @@ final class SpriteTileOperator extends SpriteSampleOperator {
         if (param1 == -1) {
           return var3;
         }
-        SpriteTileOperator.d(113);
+        SpriteTileOperator.useDetailedBoundaryGeometry(113);
         return var3;
     }
 
-    final static boolean d(int param0) {
+    final static boolean useDetailedBoundaryGeometry(int param0) {
         RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (var1 != null) {
           int var2 = 74 % ((-14 - param0) / 45);

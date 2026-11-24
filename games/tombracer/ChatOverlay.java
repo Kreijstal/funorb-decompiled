@@ -407,7 +407,7 @@ final class ChatOverlay {
 
     final boolean handleKey(int param0, int param1, char param2) {
         if (param1 != -1) {
-          ChatOverlay.a(false);
+          ChatOverlay.increaseSoundVolume(false);
         }
         if (!this.panelOpen) {
           return false;
@@ -428,12 +428,12 @@ final class ChatOverlay {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void increaseSoundVolume(boolean param0) {
         if (!param0) {
           String var2 = (String) null;
           ChatOverlay.a(false, (String) null, 15, -14, (String) null, true);
         }
-        PenaltyNotice.a(256);
+        PenaltyNotice.increaseSoundVolume(256);
     }
 
     final static ChatMessage readChatMessage(int param0, boolean param1) {
@@ -502,7 +502,7 @@ final class ChatOverlay {
           }
         }
         if (param0 != -18787) {
-          ChatOverlay.a(true);
+          ChatOverlay.increaseSoundVolume(true);
         }
         return new ChatMessage(param1);
     }

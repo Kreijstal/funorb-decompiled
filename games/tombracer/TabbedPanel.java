@@ -11,7 +11,7 @@ final class TabbedPanel extends UiComponent {
     final void setBoundsAndLayoutTabs(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_t = param5;
         if (param4 != -25436) {
-          TabbedPanel.d((byte) 19);
+          TabbedPanel.decreaseSoundVolume((byte) 19);
         }
         this.field_T = param3;
         this.field_G = param2;
@@ -19,8 +19,8 @@ final class TabbedPanel extends UiComponent {
         this.layoutTabs(param1, 32, param0);
     }
 
-    final static void d(byte param0) {
-        TextInputWidget.g((byte) -113);
+    final static void decreaseSoundVolume(byte param0) {
+        TextInputWidget.decreaseSoundVolume((byte) -113);
         int var1 = -34 % ((10 - param0) / 47);
     }
 

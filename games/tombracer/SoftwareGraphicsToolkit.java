@@ -539,7 +539,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     final void dispose() {
         if (this.field_E) {
-          LegacyOpenGlEnvironmentWaterEffect.a(false, true, true);
+          LegacyOpenGlEnvironmentWaterEffect.releaseSharedColourPalettes(false, true, true);
           this.field_E = false;
         }
         this.field_T = null;

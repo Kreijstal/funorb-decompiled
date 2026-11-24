@@ -12,7 +12,7 @@ final class ProgressDialog extends ResizingDialog {
     private String field_S;
     static int[] field_P;
 
-    final void f(int param0) {
+    final void stopProgressAnimation(int param0) {
         this.field_L.field_D = false;
         if (param0 != 12936) {
           ProgressDialog.releaseStatics((byte) 50);

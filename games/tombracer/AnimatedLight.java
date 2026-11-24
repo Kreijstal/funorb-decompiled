@@ -242,7 +242,7 @@ final class AnimatedLight {
         int var10 = 0;
         try {
           if (AccountNameResolver.field_e == null) {
-            ItemBehaviour.b(2);
+            ItemBehaviour.initializeLightNoiseTable(2);
           }
           this.createLight(param4, param3, param0, param6, 512, param2, param5);
           var9_int = (-SweepRotateLocomotor.field_q + 2 * param6 >> ResourceArchive.field_b) + 1;

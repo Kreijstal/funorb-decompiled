@@ -149,7 +149,7 @@ final class RewardChoicePhase extends MatchPhase {
         var5 = 160;
         var6 = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
         var7 = SwitchLinkList.getCanvasHeight(0) / 2;
-        TextureTransformMode.a(-10985);
+        TextureTransformMode.prepareModelPreviewScene(-10985);
         var5Lifetime1 = 128;
         if (var4 >= 0) {
           var8 = (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - (HardwareModelIndexData.field_f.width() >> 1);

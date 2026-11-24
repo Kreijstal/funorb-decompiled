@@ -45,27 +45,27 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           }
           if (8 == param2) {
             DualLinkNode.field_i = 0;
-            TileGridCell.a(DualLinkNode.field_i, param0 - 26037, 0);
+            TileGridCell.setSymmetricNetworkLatency(DualLinkNode.field_i, param0 - 26037, 0);
             return true;
           }
           if (param2 == 9) {
             DualLinkNode.field_i = 50;
-            TileGridCell.a(DualLinkNode.field_i, param0 ^ 26043, 0);
+            TileGridCell.setSymmetricNetworkLatency(DualLinkNode.field_i, param0 ^ 26043, 0);
             return true;
           }
           if (param2 == 10) {
             DualLinkNode.field_i = 80;
-            TileGridCell.a(DualLinkNode.field_i, param0 - 26037, 5);
+            TileGridCell.setSymmetricNetworkLatency(DualLinkNode.field_i, param0 - 26037, 5);
             return true;
           }
           if (11 == param2) {
             DualLinkNode.field_i = 150;
-            TileGridCell.a(DualLinkNode.field_i, param0 ^ 26043, 0);
+            TileGridCell.setSymmetricNetworkLatency(DualLinkNode.field_i, param0 ^ 26043, 0);
             return true;
           }
           if (param2 == 12) {
             DualLinkNode.field_i = 200;
-            TileGridCell.a(DualLinkNode.field_i, param0 - 26037, 0);
+            TileGridCell.setSymmetricNetworkLatency(DualLinkNode.field_i, param0 - 26037, 0);
             return true;
           }
           if (param2 == 52 &&
@@ -189,7 +189,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
             } else {
               CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
               var5 = ComponentTargetList.getTopDialogId(false);
-              var6 = PlantComponent.A(-1);
+              var6 = PlantComponent.getTopDialogY(-1);
               var7 = PillarComponent.getTopDialogWidth(param2 - 7128);
               var8 = ConsoleCloseParenthesisKind.getTopDialogHeight((byte) 124);
               var9 = IntrusiveDequeCursor.getClipStack((byte) 65, CurrentGraphicsToolkit.toolkit);
@@ -1034,7 +1034,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         if (2147483647 == PasswordValidator.field_n) {
         } else {
           if (PasswordValidator.field_n == -2) {
-            LegacyOpenGlBloomEffect.d(30785);
+            LegacyOpenGlBloomEffect.requestLobbyEntry(30785);
           } else {
             ConstrainToRectangleLocomotor.showMenuScreen(false, PasswordValidator.field_n, (byte) -46);
           }
@@ -1212,8 +1212,8 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
             return true;
           }
           if (param0 == 14) {
-            CircleMovementLocomotor.initializeLobbyCollections(DoorwayComponent.r((byte) 107), SocialTabbedPanelLayout.nextPowerOfTwo(false, 4), (byte) -51, OpenGlBufferObject.e(35040), SocialTabbedPanelLayout.nextPowerOfTwo(false, 2000), MirrorMoverLocomotor.field_o.length, LoadProfileCommand.field_t, 1024, TextSpewerBehaviour.b(19845), 150);
-            AvailabilityQuery.initializeLobbyListContainers(-8250, PitBehaviour.b(-80), ChatInputPresentation.b((byte) 123));
+            CircleMovementLocomotor.initializeLobbyCollections(DoorwayComponent.getPlayerListContents((byte) 107), SocialTabbedPanelLayout.nextPowerOfTwo(false, 4), (byte) -51, OpenGlBufferObject.getLobbyGameListContents(35040), SocialTabbedPanelLayout.nextPowerOfTwo(false, 2000), MirrorMoverLocomotor.field_o.length, LoadProfileCommand.field_t, 1024, TextSpewerBehaviour.getPlayerListContents(19845), 150);
+            AvailabilityQuery.initializeLobbyListContainers(-8250, PitBehaviour.getFriendsListContents(-80), ChatInputPresentation.getIgnoredPlayerListContents((byte) 123));
             RandomMazeBehaviour.field_n = true;
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
             ConstrainToRectangleLocomotor.showMenuScreen(false, -2, (byte) 90);

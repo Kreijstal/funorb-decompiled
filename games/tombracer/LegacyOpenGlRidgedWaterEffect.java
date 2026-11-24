@@ -56,7 +56,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         if (param0 == -97) {
           return null != ColourRowCacheEntry.field_f ? (java.awt.Canvas) ((Object) ColourRowCacheEntry.field_f) : CurveShape.field_l;
         }
-        LegacyOpenGlRidgedWaterEffect.a(76, true, 70);
+        LegacyOpenGlRidgedWaterEffect.writeSpectateGameRequest(76, true, 70);
         return null != ColourRowCacheEntry.field_f ? (java.awt.Canvas) ((Object) ColourRowCacheEntry.field_f) : CurveShape.field_l;
     }
 
@@ -112,7 +112,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void writeSpectateGameRequest(int param0, boolean param1, int param2) {
         BitPacketBuffer var3 = CollisionGridEntryNodeBase.field_k;
         var3.writeCipheredOpcode(param0, -2988);
         var3.writeByte(3, 0);
@@ -213,7 +213,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     final void refreshState(boolean param0, int param1) {
         this.toolkit.setTextureCombineOperations(260, 8960, 8448);
         if (param1 < 77) {
-          LegacyOpenGlRidgedWaterEffect.a(34, false, -44);
+          LegacyOpenGlRidgedWaterEffect.writeSpectateGameRequest(34, false, -44);
         }
     }
 

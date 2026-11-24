@@ -95,7 +95,7 @@ final class InstructionsScreen extends DropInMenuScreen {
         var16 = IntrusiveDeque.field_d[DialogButtonPainter.field_r];
         var4 = var16;
         var5 = HazardEffect.field_h[DialogButtonPainter.field_r];
-        TextureTransformMode.a(-10985);
+        TextureTransformMode.prepareModelPreviewScene(-10985);
         var6 = Math.max(var5.length, var16.length);
         var7 = 80 + param1;
         for (var8 = 0; var8 < var6; var8++) {

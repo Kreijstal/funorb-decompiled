@@ -49,7 +49,7 @@ final class SignedBitReader {
           return false;
         }
         if (!HorizontalGradientOperator.field_m) {
-          return !HeapIndexArray.e(param0 + 540801) ? true : false;
+          return !HeapIndexArray.isLoggedIn(param0 + 540801) ? true : false;
         }
         return false;
     }

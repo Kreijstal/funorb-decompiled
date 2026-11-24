@@ -208,14 +208,14 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         jaggl.OpenGL.glEnable(34336);
         this.field_i = true;
         if (param0 == -120) {
-          this.c(param0 ^ 19);
+          this.updateUnderwaterDepthAndColour(param0 ^ 19);
           return;
         }
-        this.c(-94);
-        this.c(param0 ^ 19);
+        this.updateUnderwaterDepthAndColour(-94);
+        this.updateUnderwaterDepthAndColour(param0 ^ 19);
     }
 
-    private final void c(int param0) {
+    private final void updateUnderwaterDepthAndColour(int param0) {
         int var2 = 0;
         int var3 = 0;
         float var4 = 0.0f;

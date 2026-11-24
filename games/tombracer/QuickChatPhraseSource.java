@@ -43,7 +43,7 @@ final class QuickChatPhraseSource {
           var3Lifetime1.decode(new PacketBuffer(var4), (byte) 113);
         }
         if (32768 <= param1) {
-          var3Lifetime1.a(100);
+          var3Lifetime1.markGlobalResponseIds(100);
         }
         this.field_b.put(29166, var3Lifetime1, (long)param1);
         return var3Lifetime1;

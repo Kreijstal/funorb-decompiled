@@ -4,7 +4,7 @@
 abstract class ArchiveSource {
     static ToolkitSprite[] field_a;
 
-    final static void a(int param0, int param1) {
+    final static void writeRatedMatchmakingRequest(int param0, int param1) {
         BitPacketBuffer var2 = CollisionGridEntryNodeBase.field_k;
         var2.writeCipheredOpcode(param0, -2988);
         var2.writeByte(1, 0);
@@ -24,7 +24,7 @@ abstract class ArchiveSource {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 <= 85) {
-          ArchiveSource.a(102, -17);
+          ArchiveSource.writeRatedMatchmakingRequest(102, -17);
         }
     }
 

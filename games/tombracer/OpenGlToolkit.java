@@ -2432,7 +2432,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_l = null;
         }
         if (this.field_Ob) {
-          LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
+          LegacyOpenGlEnvironmentWaterEffect.releaseSharedColourPalettes(true, false, true);
           this.field_Ob = false;
         }
     }

@@ -5,7 +5,7 @@ final class ChatInputPresentation {
     static ToolkitSprite[] field_a;
     static int field_b;
 
-    final static UiComponent b(byte param0) {
+    final static UiComponent getIgnoredPlayerListContents(byte param0) {
         RuntimeException var1 = null;
         UiComponent stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;

@@ -93,7 +93,7 @@ final class VertexStreamLayout {
         field_f = (int[][]) null;
     }
 
-    final static void a(byte param0) {
+    final static void compactFaceOrderBuckets(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

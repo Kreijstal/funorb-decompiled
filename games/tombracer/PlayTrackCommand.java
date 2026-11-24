@@ -552,7 +552,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 if (var12.field_ec && (!var12.field_Yb ||
                   !var12.field_Bb &&
                   !var12.field_gc)) {
-                  LegacyOpenGlRidgedWaterEffect.a(param5, false, var12.getGameId(0));
+                  LegacyOpenGlRidgedWaterEffect.writeSpectateGameRequest(param5, false, var12.getGameId(0));
                   decompiledFrameRemainder0 = false;
                 }
                 else {

@@ -105,7 +105,7 @@ final class UnlockOverlay extends MatchOverlay {
             var6 = SocketArchiveNetworkClient.field_v;
             var7 = Room.field_m[this.field_m.getIndex(-13939)];
             MembersUpsellMenu.drawCentredTextWithShadow(var6.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
-            TextureTransformMode.a(-10985);
+            TextureTransformMode.prepareModelPreviewScene(-10985);
             ModelPreviewRenderer.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
             RemovedFromGameMenu.resetDepthRange((byte) -6);
             PlayerInputQueue.field_a.draw(var2, var3 + 85);
@@ -128,7 +128,7 @@ final class UnlockOverlay extends MatchOverlay {
           var8 = SocketArchiveNetworkClient.field_v;
           var9 = Room.field_m[this.field_m.getIndex(-13939)];
           MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
-          TextureTransformMode.a(-10985);
+          TextureTransformMode.prepareModelPreviewScene(-10985);
           ModelPreviewRenderer.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
           RemovedFromGameMenu.resetDepthRange((byte) -6);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 85);

@@ -163,7 +163,7 @@ final class MatchHud {
                 LegacyOpenGlEffectManager.field_a.draw(var17Lifetime1 + 20, var18Lifetime1 + 5);
               } else {
                 if (var23 != 0) {
-                  TextureTransformMode.a(-10985);
+                  TextureTransformMode.prepareModelPreviewScene(-10985);
                   ModelPreviewRenderer.drawModelPreview(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
                   RemovedFromGameMenu.resetDepthRange((byte) -6);
                 }

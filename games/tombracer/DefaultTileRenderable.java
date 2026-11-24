@@ -198,12 +198,12 @@ final class DefaultTileRenderable extends TileRenderable {
             if (-1 != this.field_m) {
               ChatMessage.drawModelAt(0, -83584144, var9, var8, HardwareModelBillboardState.field_g[this.field_m], 0);
             }
-            if (SpriteTileOperator.d(43) &&
+            if (SpriteTileOperator.useDetailedBoundaryGeometry(43) &&
               this.field_i != -1) {
               ChatMessage.drawModelAt(this.field_n, -83584144, var9, var8, HardwareModelBillboardState.field_g[this.field_i], 0);
             }
           }
-          if (!SpriteTileOperator.d(-81)) {
+          if (!SpriteTileOperator.useDetailedBoundaryGeometry(-81)) {
             return;
           }
           if (var4 == var6 + 1 &&

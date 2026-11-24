@@ -34,7 +34,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         if (param0 == 11683) {
           return;
         }
-        ConstrainToFacingArcLocomotor.a(true, false, -42, false);
+        ConstrainToFacingArcLocomotor.selectGuestSaveWarning(true, false, -42, false);
     }
 
     final void applyConstraint(int param0) {
@@ -81,7 +81,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         }
     }
 
-    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
+    final static String selectGuestSaveWarning(boolean param0, boolean param1, int param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param0) {
@@ -91,7 +91,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           var4 += 2;
         }
         if (param2 != 21297) {
-          ConstrainToFacingArcLocomotor.a(false, true, 65, true);
+          ConstrainToFacingArcLocomotor.selectGuestSaveWarning(false, true, 65, true);
         }
         if (!param3) {
           return LegacyOpenGlShaderProgram.field_b[var4];

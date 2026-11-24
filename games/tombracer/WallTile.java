@@ -20,7 +20,7 @@ final class WallTile implements Renderable {
     WallModel field_g;
     private boolean field_q;
 
-    final static void b(int param0, int param1) {
+    final static void writeRatedMatchmakingRequest(int param0, int param1) {
         BitPacketBuffer var2 = CollisionGridEntryNodeBase.field_k;
         var2.writeCipheredOpcode(param0, -2988);
         var2.writeByte(1, param1 + 22243);
@@ -50,7 +50,7 @@ final class WallTile implements Renderable {
           var4 = this.getRenderY((byte) 115);
           var5 = this.getRenderZ((byte) -108);
           ChatMessage.drawModelAt(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.getTileModel(this, (byte) 76), var5);
-          if (!AnimationFrameBase.c(-115)) {
+          if (!AnimationFrameBase.shouldRenderWallShadows(-115)) {
             return;
           }
           if (param0 < 103) {
@@ -598,7 +598,7 @@ final class WallTile implements Renderable {
             }
           }
           if (param2 != 0) {
-            WallTile.b(107, 37);
+            WallTile.writeRatedMatchmakingRequest(107, 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

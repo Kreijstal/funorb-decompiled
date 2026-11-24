@@ -176,7 +176,7 @@ final class MembersUpsellMenu extends MenuScreen {
             }
           }
         }
-        TextureTransformMode.a(-10985);
+        TextureTransformMode.prepareModelPreviewScene(-10985);
         this.field_x.draw(this.field_r, 11327, this.field_t);
         RemovedFromGameMenu.resetDepthRange((byte) -6);
         var6 = LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1;

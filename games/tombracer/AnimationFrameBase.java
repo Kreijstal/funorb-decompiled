@@ -10,7 +10,7 @@ final class AnimationFrameBase extends IntrusiveNode {
     int field_l;
     int[][] field_f;
 
-    final static boolean c(int param0) {
+    final static boolean shouldRenderWallShadows(int param0) {
         RendererOption var1;
         boolean stackIn_9_0 = false;
         if (param0 > -26) {

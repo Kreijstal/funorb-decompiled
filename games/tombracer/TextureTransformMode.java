@@ -94,7 +94,7 @@ final class TextureTransformMode {
         }
     }
 
-    final static void a(int param0) {
+    final static void prepareModelPreviewScene(int param0) {
         float var1 = 0.0f;
         int var7 = 0;
         int var5 = 0;

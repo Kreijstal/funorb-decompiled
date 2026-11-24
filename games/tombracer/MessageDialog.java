@@ -74,7 +74,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         }
     }
 
-    final void f(boolean param0) {
+    final void showConnectionRestoredMessage(boolean param0) {
         MessagePage var2 = null;
         MessagePage var2Lifetime1;
         this.field_cb.setColors(param0, 4210752, 2121792);
@@ -90,11 +90,11 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         this.transitionToContent(101, var2Lifetime1);
     }
 
-    final static void j(byte param0) {
+    final static void finishProgressAndPruneDialogs(byte param0) {
         if (DisplayNameValidator.field_a != null) {
           DisplayNameValidator.field_a.pruneHiddenDialogs(-1);
           if (null != AnimationFrameSet.field_p) {
-            AnimationFrameSet.field_p.f(12936);
+            AnimationFrameSet.field_p.stopProgressAnimation(12936);
           }
           if (param0 < -97) {
             SoftwareCheckboxPainter.resetHoverTooltip((byte) -106);
@@ -103,7 +103,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           return;
         }
         if (null != AnimationFrameSet.field_p) {
-          AnimationFrameSet.field_p.f(12936);
+          AnimationFrameSet.field_p.stopProgressAnimation(12936);
         }
         if (param0 < -97) {
           SoftwareCheckboxPainter.resetHoverTooltip((byte) -106);

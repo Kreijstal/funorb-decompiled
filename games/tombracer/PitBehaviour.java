@@ -11,9 +11,9 @@ final class PitBehaviour extends Behaviour {
     private boolean field_r;
     private boolean field_p;
 
-    final static UiComponent b(int param0) {
+    final static UiComponent getFriendsListContents(int param0) {
         if (param0 > -31) {
-          PitBehaviour.b(47);
+          PitBehaviour.getFriendsListContents(47);
         }
         return TextureCoordinateGeneration.field_b.field_tb;
     }

@@ -534,7 +534,7 @@ class TextInputWidget extends FocusableWidget {
         int var3 = 0;
         try {
           if (param0 != 0) {
-            TextInputWidget.g((byte) 76);
+            TextInputWidget.decreaseSoundVolume((byte) 76);
           }
           if (this.selectionAnchor != this.caret) {
             if (this.caret <= this.selectionAnchor) {
@@ -884,7 +884,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    final static void g(byte param0) {
+    final static void decreaseSoundVolume(byte param0) {
         int var1_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

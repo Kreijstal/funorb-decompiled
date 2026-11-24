@@ -242,7 +242,7 @@ final class ResultsPhase extends MatchPhase {
         if (param0 >= -50) {
           this.field_s = false;
         }
-        TextureTransformMode.a(-10985);
+        TextureTransformMode.prepareModelPreviewScene(-10985);
         Room.field_j.draw(0, 0);
         IntArrayRequest.field_h.draw(0, 0);
         WidgetStyleLayer.field_b[1].draw(50, -10);

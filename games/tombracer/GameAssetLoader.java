@@ -313,7 +313,7 @@ final class GameAssetLoader implements LoadingStage {
 
     public final boolean loadStep(int param0) {
         OpacityWidget.initializeMenuActionLabels(-2339);
-        PlatformComponent.A(67);
+        PlatformComponent.finishProgressAndPruneDialogs(67);
         if (!this.field_c) {
           this.loadNextAsset(124);
           return false;

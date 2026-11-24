@@ -19,7 +19,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         return stackIn_6_0;
     }
 
-    final void a(int param0) {
+    final void markGlobalResponseIds(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 37) {

@@ -434,7 +434,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 == this.field_Z) {
-            this.h(-8266);
+            this.dismiss(-8266);
           } else {
             if (this.field_L != param2) {
               if (param2 == this.field_W) {
@@ -485,7 +485,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         }
     }
 
-    private final void h(int param0) {
+    private final void dismiss(int param0) {
         FocusableWidget discarded$0 = null;
         if (!this.field_B) {
           return;
@@ -718,7 +718,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
           }
           if (!this.field_Y &&
             !TextWidgetPainter.isGuestMode(127)) {
-            this.h(-8266);
+            this.dismiss(-8266);
             this.field_z.pushDialog(new DisplaySettingsDialog(this.field_z), 109);
           }
           if (this.field_ab != null) {

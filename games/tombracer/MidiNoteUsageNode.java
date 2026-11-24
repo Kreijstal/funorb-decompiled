@@ -100,7 +100,7 @@ final class MidiNoteUsageNode extends IntrusiveNode {
           MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(69, (BitSet) null, true);
         }
         int var2 = param0;
-        ChatTarget.a(var2, IntNode.field_h, -1, var2, RotaterMountComponent.field_J);
+        ChatTarget.configureNetworkLatency(var2, IntNode.field_h, -1, var2, RotaterMountComponent.field_J);
     }
 
     MidiNoteUsageNode(byte[] param0) {

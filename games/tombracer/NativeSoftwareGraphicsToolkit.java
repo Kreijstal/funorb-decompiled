@@ -405,7 +405,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_o.clear(8);
         this.FA();
         if (this.field_h) {
-          LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
+          LegacyOpenGlEnvironmentWaterEffect.releaseSharedColourPalettes(true, false, true);
           this.field_h = false;
         }
         this.collectGarbage();

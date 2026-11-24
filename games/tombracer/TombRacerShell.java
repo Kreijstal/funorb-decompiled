@@ -299,7 +299,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
               if (OpenGlCubeTexture.field_l.isReadyToStart(-127)) {
                 MazeSolver.field_e = true;
                 this.onLoadingComplete(24230);
-                PlatformComponent.A(116);
+                PlatformComponent.finishProgressAndPruneDialogs(116);
               }
             } else {
               this.tickScreen(true);

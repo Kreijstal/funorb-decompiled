@@ -86,7 +86,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (param0 >= -50) {
           this.update(33, true);
         }
-        TextureTransformMode.a(-10985);
+        TextureTransformMode.prepareModelPreviewScene(-10985);
         var6 = this.field_t.length;
         var11 = 0;
         var7Lifetime1 = var11;

@@ -40,7 +40,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
         int var3 = -29 % ((param0 - 41) / 62);
         this.owner.setActiveTextureUnit(0, false);
-        this.d(-124);
+        this.bindUnderwaterVertexProgram(-124);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -260,7 +260,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         return this.field_m;
     }
 
-    private final void d(int param0) {
+    private final void bindUnderwaterVertexProgram(int param0) {
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_7_0 = 0;

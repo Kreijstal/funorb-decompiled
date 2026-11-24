@@ -350,8 +350,8 @@ final class TileGridCell {
         return this.centerY;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        ChatTarget.a(param0, (double)param2, param1 + 26108, param0, (double)param2);
+    final static void setSymmetricNetworkLatency(int param0, int param1, int param2) {
+        ChatTarget.configureNetworkLatency(param0, (double)param2, param1 + 26108, param0, (double)param2);
         if (param1 != -26109) {
           TileGridCell.releaseStatics(99);
         }

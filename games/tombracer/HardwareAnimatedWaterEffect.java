@@ -6,7 +6,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     private float field_e;
     private HardwareWaterTextures field_d;
 
-    final static void a(int param0, long param1, int param2) {
+    final static void writeKickOrWithdrawInvitation(int param0, long param1, int param2) {
         BitPacketBuffer var4 = CollisionGridEntryNodeBase.field_k;
         var4.writeCipheredOpcode(param0, -2988);
         var4.position = var4.position + 1;

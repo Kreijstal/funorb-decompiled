@@ -309,12 +309,12 @@ final class ava {
             if (var12.field_y != 0 &&
               !var12.f(162)) {
               if (var12.field_Kb.field_y != 0) {
-                RewardChoiceSlot.a((byte) 92, param1, var12.field_yb);
+                RewardChoiceSlot.writeInviteOrAcceptPlayer((byte) 92, param1, var12.field_yb);
               } else {
                 if (0 == var12.field_Cb.field_y) {
                   LobbyPlayerMenuActions.openLobbyPlayerContextMenu(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
                 } else {
-                  HardwareAnimatedWaterEffect.a(param1, var12.field_yb, -118);
+                  HardwareAnimatedWaterEffect.writeKickOrWithdrawInvitation(param1, var12.field_yb, -118);
                 }
               }
             }

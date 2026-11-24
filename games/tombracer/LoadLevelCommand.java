@@ -102,7 +102,7 @@ final class LoadLevelCommand extends ConsoleMethod {
         if (param0 == 0) {
           SnakePitBehaviour.field_o = null;
           if (LoadProfileCommand.field_r) {
-            TextureOperator.field_l.f(true);
+            TextureOperator.field_l.showConnectionRestoredMessage(true);
             return;
           }
           var1 = TextureCoordinateGenerationState.field_a;
@@ -121,7 +121,7 @@ final class LoadLevelCommand extends ConsoleMethod {
         field_o = (Object) null;
         SnakePitBehaviour.field_o = null;
         if (LoadProfileCommand.field_r) {
-          TextureOperator.field_l.f(true);
+          TextureOperator.field_l.showConnectionRestoredMessage(true);
         } else {
           var1 = TextureCoordinateGenerationState.field_a;
           if (0 < var1) {

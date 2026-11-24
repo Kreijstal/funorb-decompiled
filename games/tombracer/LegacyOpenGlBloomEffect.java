@@ -155,7 +155,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           jaggl.OpenGL.glTexCoord2f(1.0f, 0.0f);
           jaggl.OpenGL.glVertex2i(1, 0);
           if (param2 > -82) {
-            LegacyOpenGlBloomEffect.d(-13);
+            LegacyOpenGlBloomEffect.requestLobbyEntry(-13);
           }
           jaggl.OpenGL.glTexCoord2f(1.0f, 1.0f);
           jaggl.OpenGL.glVertex2i(1, 1);
@@ -427,7 +427,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         field_k = null;
     }
 
-    final static void d(int param0) {
+    final static void requestLobbyEntry(int param0) {
         CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(9, -2988);
         LegacyOpenGlEnvironmentWaterEffect.field_d = true;
         if (param0 != 30785) {
@@ -459,7 +459,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           var1 = GraphicsSelectionState.field_d.field_i;
           return var1 == null ? null : (RendererOption) (var1.field_b);
         }
-        LegacyOpenGlBloomEffect.d(-89);
+        LegacyOpenGlBloomEffect.requestLobbyEntry(-89);
         var1Lifetime1 = GraphicsSelectionState.field_d.field_i;
         return var1Lifetime1 == null ? null : (RendererOption) (var1Lifetime1.field_b);
     }
