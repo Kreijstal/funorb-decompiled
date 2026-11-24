@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hda extends IdChatTarget {
+final class ChannelOverrideChatTarget extends IdChatTarget {
     static String field_h;
 
     final ChatChannelType getChannelType(byte param0) {
         if (param0 != 113) {
-          hda.releaseStatics((byte) -6);
+          ChannelOverrideChatTarget.releaseStatics((byte) -6);
           return RoomHeader.field_c;
         }
         return RoomHeader.field_c;
@@ -19,7 +19,7 @@ final class hda extends IdChatTarget {
         }
     }
 
-    hda(long param0, String param1) {
+    ChannelOverrideChatTarget(long param0, String param1) {
         super(param0, param1);
     }
 
@@ -32,7 +32,7 @@ final class hda extends IdChatTarget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1303) {
-            hda.releaseStatics((byte) 32);
+            ChannelOverrideChatTarget.releaseStatics((byte) 32);
           }
           stackIn_3_0 = new DelayedPcmStream(param2, param0 * AudioOutput.field_d / 1000);
           return stackIn_3_0;

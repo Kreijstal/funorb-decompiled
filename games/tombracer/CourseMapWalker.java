@@ -14,7 +14,7 @@ final class CourseMapWalker {
     static boolean[][] field_b;
 
     final static void loadLocalizedText(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+        class TombTextLoadState {
             RuntimeException stackIn_1831_0;
             StringBuilder stackIn_1831_1;
             String stackIn_1832_2;
@@ -26,7 +26,7 @@ final class CourseMapWalker {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            TombTextLoadState(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1831_0 = null;
@@ -38,7 +38,7 @@ final class CourseMapWalker {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementAndInstructionText() throws java.lang.RuntimeException {
                 CurveOperator.textArchive = param0;
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,0", (byte) 108);
                 if (null != var2) {
@@ -834,7 +834,7 @@ final class CourseMapWalker {
                   LegacySwitchModel.field_o = BitPackedColour.decodeText((byte) 93, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadLoadingGameplayAndDeathText() throws java.lang.RuntimeException {
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text3", (byte) 113);
                 if (var2 != null) {
                   AccountRegistrationPanel.field_H = BitPackedColour.decodeText((byte) 36, var2);
@@ -1061,7 +1061,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_drop", (byte) 112);
                 if (null != var2) {
-                  hda.field_h = BitPackedColour.decodeText((byte) 52, var2);
+                  ChannelOverrideChatTarget.field_h = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_sneak", (byte) 112);
                 if (null != var2) {
@@ -1673,7 +1673,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,0", (byte) 117);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadDeathCourseAndGameOptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   HardwareModelBillboardState.skeletonDeathMessages[0] = BitPackedColour.decodeText((byte) 69, var2);
                 }
@@ -2134,11 +2134,11 @@ final class CourseMapWalker {
             void run() {
                 var4 = TombRacer.field_G ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadAchievementAndInstructionText();
                   if (finished) return;
-                  runChunk1();
+                  loadLoadingGameplayAndDeathText();
                   if (finished) return;
-                  runChunk2();
+                  loadDeathCourseAndGameOptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -2157,7 +2157,7 @@ final class CourseMapWalker {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        TombTextLoadState decompiledBody = new TombTextLoadState(param0, param1);
         decompiledBody.run();
     }
 

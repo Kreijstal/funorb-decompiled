@@ -3404,6 +3404,14 @@
       "renamedSymbol": "C:UsernameQueryRequests"
     },
     {
+      "symbol": "C:hda",
+      "originalName": "hda",
+      "to": "ChannelOverrideChatTarget",
+      "evidence": "IdChatTarget subclass overriding channel selection with fixed RoomHeader channel-code0 singleton while retaining inherited ID/name serialization and constructor. Preserve byteguard label cleanup. This precise behavioral role does not assert a private/public/room business meaning for the channel. Original constructor SHA256 8ae5ffdcdae0e9710c311e00a0552675075b85930416ad0b55fcc97f55439a67. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ChannelOverrideChatTarget"
+    },
+    {
       "symbol": "C:he",
       "originalName": "he",
       "to": "DelegatingCanvas",
@@ -4202,6 +4210,14 @@
       "evidence": "Static loader resolving keys such as playtutorial into string fields.",
       "confidence": "reviewed",
       "renamedSymbol": "C:TextResourceLoader"
+    },
+    {
+      "symbol": "C:jga$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "SharedTextLoadState",
+      "evidence": "Local state object retaining shared translation archive,byteguard and catch temporaries while run executes four translation partitions in original order. Preserve shared byte-array state,finished checks,exception contexts and debug flag behavior. Original constructor SHA256 0269de2be6198f84557f9da7cc357869a986bce4d0bd3b7ae3b75499e36ecea7. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:TextResourceLoader$1SharedTextLoadState"
     },
     {
       "symbol": "C:jh",
@@ -6378,6 +6394,14 @@
       "evidence": "Has walkToCourse, queueWaypoint, isAtCourse and placeAtCourse; CourseMapPath tests its position against path endpoints.",
       "confidence": "reviewed",
       "renamedSymbol": "C:CourseMapWalker"
+    },
+    {
+      "symbol": "C:pfa$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "TombTextLoadState",
+      "evidence": "Local state object retaining Tomb translation archive,full-int guard and catch temporaries across three partitions. Preserve arithmetic guard after earlier stores and byte-array carry from death_skeleton0 read at end of gameplay partition to assignment at start of final partition. Original constructor SHA256 ba16b2987f861c15787cde59f62e2b03157cab123f2af401b7179358baf6adb0. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:CourseMapWalker$1TombTextLoadState"
     },
     {
       "symbol": "C:pg",
@@ -39169,7 +39193,7 @@
       "to": "getChannelType",
       "evidence": "Returns the channel type whose code ChatOverlay writes for this target. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:hda.getChannelType(B)LChatChannelType;"
+      "renamedSymbol": "M:ChannelOverrideChatTarget.getChannelType(B)LChatChannelType;"
     },
     {
       "symbol": "M:hda.a(IILcg;)Lsc;",
@@ -39177,7 +39201,7 @@
       "to": "delayStreamByMillis",
       "evidence": "Wraps the PcmStream in a delay of the given milliseconds converted to samples.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;"
+      "renamedSymbol": "M:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;"
     },
     {
       "symbol": "M:hda.b(B)V",
@@ -39185,7 +39209,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:hda.releaseStatics(B)V"
+      "renamedSymbol": "M:ChannelOverrideChatTarget.releaseStatics(B)V"
     },
     {
       "symbol": "M:he.a(I)V",
@@ -44162,6 +44186,38 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NoiseSliceGenerator.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:jga$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginLobbyAndGameOptionsText",
+      "evidence": "Load the shared login,lobby and game-option translation entries in their original order. Retain the archive-global store first,the supplied byteguard used by the message_team archive read,all null/default branches and discarded string-decoder calls. Complete original-body SHA256 38b145b3887d8b99e51007a6dc0debb9ce57921c07a45b74fb9fa03206723e74. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadLoginLobbyAndGameOptionsText()V"
+    },
+    {
+      "symbol": "M:jga$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountRulesAndContactText",
+      "evidence": "Load the game-option/rules,account creation/login,date and friend/ignore-list translation entries. Retain exact archive keys,byteguards,field/array destinations,missing-entry defaults and all read/decode/write order. Complete original-body SHA256 a3984bb9e46258e49a21a8559bc18b3aeb993d59fba97638d12ce4ac8f5701f0. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadAccountRulesAndContactText()V"
+    },
+    {
+      "symbol": "M:jga$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMenuChatAndLoadingText",
+      "evidence": "Load contact/menu/chat,loading/graphics,achievement and reconnect translation entries. Retain the first-byte key-character conversion without a new length check,all discarded decodes,partial writes and unchanged defaults for null resources. Complete original-body SHA256 30bdb04ebd9d818fd9e92102620c9fd3a071e18d7a119bf6fe5eb20e9598741c. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadMenuChatAndLoadingText()V"
+    },
+    {
+      "symbol": "M:jga$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadFullscreenMembershipAndSubscriptionText",
+      "evidence": "Load remaining reconnect/fullscreen,membership/rating/graphics and subscription translation entries,including original indexed price labels. Clear the shared archive global only at the original normal end;retain every prior partial write and exception. Complete original-body SHA256 35868f9af3c9d25a9a57e393b934fa08efd6c905964913741c077101b6519788. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadFullscreenMembershipAndSubscriptionText()V"
     },
     {
       "symbol": "M:jga.a(B)V",
@@ -60058,6 +60114,30 @@
       "evidence": "Width plus the left and right insets. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoftwareToolkitSprite.paddedWidth()I"
+    },
+    {
+      "symbol": "M:pfa$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadAchievementAndInstructionText",
+      "evidence": "Store the Tomb archive then load achievement,controls/tutorial and instruction translations. Preserve the full-int arithmetic guard after earlier achievement stores,and nine unsigned first-byte key-code reads without added length checks. Retain byte/FP/integer casts and all array destinations. Complete original-body SHA256 da257a196023843c06526df6aeb06228df726e356d541f33e2824e5e38397fe7. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.loadAchievementAndInstructionText()V"
+    },
+    {
+      "symbol": "M:pfa$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadLoadingGameplayAndDeathText",
+      "evidence": "Load remaining instructions,loading/waiting/unpacking,gameplay/reward/character and death translations. The final archive read for death_skeleton,0 deliberately leaves bytes in the state object;the following partition performs its null test and assignment. Preserve this boundary,call order and intermediate state. Complete original-body SHA256 541023a16360c97bd7b5e310d5353d8dd9c266567d036028d63b3490bfb09b44. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.loadLoadingGameplayAndDeathText()V"
+    },
+    {
+      "symbol": "M:pfa$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadDeathCourseAndGameOptionText",
+      "evidence": "Consume retained death_skeleton,0 bytes before the first new archive read,then load remaining death,course,game-option and phase-end translations. Preserve two-dimensional string-array destinations and all null/default behavior;clear the Tomb archive global only at the original normal end. Complete original-body SHA256 c0db97715de82e784538520f0503b340a2d44ab3a7d49eb5d4d93c163f95955a. Naming only. Three class roles,3explicit constructor bodies,7translation partitions and4coordinator/outer-entry bodies reviewed with703field declarations,34published context spans and7incoming partition calls. Exhaustive statement inventory covers1265archive keys and5079statements. Preserve all original bodies,descriptors,ownership,field/parameter/local names,literals,visibility/modifiers,full argument domains,casts/overflow,aliases/partial writes,allocation/call/exception order,native/override bindings and meaningful aliases. Preserve cross-partition bytes,finished checks,debug flags,normal-end archive clears and guard failures. Native/class-name-literal intentional edit allowlists empty;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.loadDeathCourseAndGameOptionText()V"
     },
     {
       "symbol": "M:pfa.a(BI)Z",
@@ -84300,9 +84380,9 @@
     },
     {
       "symbol": "C:hda",
-      "renamedSymbol": "C:hda",
+      "renamedSymbol": "C:ChannelOverrideChatTarget",
       "originalName": "hda",
-      "renamedName": "hda",
+      "renamedName": "ChannelOverrideChatTarget",
       "declaration": {
         "file": "hda.java",
         "start": 50,
@@ -85807,9 +85887,9 @@
     },
     {
       "symbol": "C:jga$1$CfrPartitionedBody",
-      "renamedSymbol": "C:TextResourceLoader$1$CfrPartitionedBody",
+      "renamedSymbol": "C:TextResourceLoader$1SharedTextLoadState",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "SharedTextLoadState",
       "declaration": {
         "file": "jga.java",
         "start": 157,
@@ -88821,9 +88901,9 @@
     },
     {
       "symbol": "C:pfa$1$CfrPartitionedBody",
-      "renamedSymbol": "C:CourseMapWalker$1$CfrPartitionedBody",
+      "renamedSymbol": "C:CourseMapWalker$1TombTextLoadState",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "TombTextLoadState",
       "declaration": {
         "file": "pfa.java",
         "start": 358,
@@ -120039,7 +120119,7 @@
     },
     {
       "symbol": "F:hda.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:hda.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:ChannelOverrideChatTarget.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -127343,7 +127423,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -127354,7 +127434,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -127365,7 +127445,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.param0:B",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.param0:B",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.param0:B",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -127376,7 +127456,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.param1:Lcn;",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.param1:LResourceArchive;",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.param1:LResourceArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -127387,7 +127467,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.stackIn_2620_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.stackIn_2620_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.stackIn_2620_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2620_0",
       "renamedName": "stackIn_2620_0",
       "declaration": {
@@ -127398,7 +127478,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.stackIn_2620_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.stackIn_2620_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.stackIn_2620_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2620_1",
       "renamedName": "stackIn_2620_1",
       "declaration": {
@@ -127409,7 +127489,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.stackIn_2621_2:Ljava/lang/String;",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.stackIn_2621_2:Ljava/lang/String;",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.stackIn_2621_2:Ljava/lang/String;",
       "originalName": "stackIn_2621_2",
       "renamedName": "stackIn_2621_2",
       "declaration": {
@@ -127420,7 +127500,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.stackIn_2629_0:Z",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.stackIn_2629_0:Z",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.stackIn_2629_0:Z",
       "originalName": "stackIn_2629_0",
       "renamedName": "stackIn_2629_0",
       "declaration": {
@@ -127431,7 +127511,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -127442,7 +127522,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -127453,7 +127533,7 @@
     },
     {
       "symbol": "F:jga$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:TextResourceLoader$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:TextResourceLoader$1SharedTextLoadState.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -146098,7 +146178,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -146109,7 +146189,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -146120,7 +146200,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.param0:Lcn;",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.param0:LResourceArchive;",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.param0:LResourceArchive;",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -146131,7 +146211,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.param1:I",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.param1:I",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.param1:I",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -146142,7 +146222,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.stackIn_1831_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.stackIn_1831_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.stackIn_1831_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_1831_0",
       "renamedName": "stackIn_1831_0",
       "declaration": {
@@ -146153,7 +146233,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.stackIn_1831_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.stackIn_1831_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.stackIn_1831_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_1831_1",
       "renamedName": "stackIn_1831_1",
       "declaration": {
@@ -146164,7 +146244,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.stackIn_1832_2:Ljava/lang/String;",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.stackIn_1832_2:Ljava/lang/String;",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.stackIn_1832_2:Ljava/lang/String;",
       "originalName": "stackIn_1832_2",
       "renamedName": "stackIn_1832_2",
       "declaration": {
@@ -146175,7 +146255,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -146186,7 +146266,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -146197,7 +146277,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -146208,7 +146288,7 @@
     },
     {
       "symbol": "F:pfa$1$CfrPartitionedBody.var4:I",
-      "renamedSymbol": "F:CourseMapWalker$1$CfrPartitionedBody.var4:I",
+      "renamedSymbol": "F:CourseMapWalker$1TombTextLoadState.var4:I",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -305642,7 +305722,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#0",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#0",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -305653,7 +305733,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#1",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#1",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -305664,7 +305744,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#2",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#2",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -305675,7 +305755,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#3",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#3",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -305686,7 +305766,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#4",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#4",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -305697,7 +305777,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#5",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#5",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -305708,7 +305788,7 @@
     },
     {
       "symbol": "L:hda.a(IILcg;)Lsc;#6",
-      "renamedSymbol": "L:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#6",
+      "renamedSymbol": "L:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -338653,7 +338733,7 @@
     },
     {
       "symbol": "L:jga$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:TextResourceLoader$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:TextResourceLoader$1SharedTextLoadState.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -441503,7 +441583,7 @@
     },
     {
       "symbol": "L:pfa$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:CourseMapWalker$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:CourseMapWalker$1TombTextLoadState.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -624499,9 +624579,9 @@
     },
     {
       "symbol": "M:hda.<init>(JLjava/lang/String;)V",
-      "renamedSymbol": "M:hda.<init>(JLjava/lang/String;)V",
+      "renamedSymbol": "M:ChannelOverrideChatTarget.<init>(JLjava/lang/String;)V",
       "originalName": "hda",
-      "renamedName": "hda",
+      "renamedName": "ChannelOverrideChatTarget",
       "declaration": {
         "file": "hda.java",
         "start": 404,
@@ -624510,7 +624590,7 @@
     },
     {
       "symbol": "M:hda.a(B)Lpl;",
-      "renamedSymbol": "M:hda.getChannelType(B)LChatChannelType;",
+      "renamedSymbol": "M:ChannelOverrideChatTarget.getChannelType(B)LChatChannelType;",
       "originalName": "a",
       "renamedName": "getChannelType",
       "declaration": {
@@ -624521,7 +624601,7 @@
     },
     {
       "symbol": "M:hda.a(IILcg;)Lsc;",
-      "renamedSymbol": "M:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;",
+      "renamedSymbol": "M:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;",
       "originalName": "a",
       "renamedName": "delayStreamByMillis",
       "declaration": {
@@ -624532,7 +624612,7 @@
     },
     {
       "symbol": "M:hda.b(B)V",
-      "renamedSymbol": "M:hda.releaseStatics(B)V",
+      "renamedSymbol": "M:ChannelOverrideChatTarget.releaseStatics(B)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -636940,9 +637020,9 @@
     },
     {
       "symbol": "M:jga$1$CfrPartitionedBody.<init>(BLcn;)V",
-      "renamedSymbol": "M:TextResourceLoader$1$CfrPartitionedBody.<init>(BLResourceArchive;)V",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.<init>(BLResourceArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "SharedTextLoadState",
       "declaration": {
         "file": "jga.java",
         "start": 569,
@@ -636951,7 +637031,7 @@
     },
     {
       "symbol": "M:jga$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:TextResourceLoader$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -636962,9 +637042,9 @@
     },
     {
       "symbol": "M:jga$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:TextResourceLoader$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadLoginLobbyAndGameOptionsText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginLobbyAndGameOptionsText",
       "declaration": {
         "file": "jga.java",
         "start": 1085,
@@ -636973,9 +637053,9 @@
     },
     {
       "symbol": "M:jga$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:TextResourceLoader$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadAccountRulesAndContactText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountRulesAndContactText",
       "declaration": {
         "file": "jga.java",
         "start": 36633,
@@ -636984,9 +637064,9 @@
     },
     {
       "symbol": "M:jga$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:TextResourceLoader$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadMenuChatAndLoadingText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMenuChatAndLoadingText",
       "declaration": {
         "file": "jga.java",
         "start": 72598,
@@ -636995,9 +637075,9 @@
     },
     {
       "symbol": "M:jga$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:TextResourceLoader$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:TextResourceLoader$1SharedTextLoadState.loadFullscreenMembershipAndSubscriptionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadFullscreenMembershipAndSubscriptionText",
       "declaration": {
         "file": "jga.java",
         "start": 109211,
@@ -663373,9 +663453,9 @@
     },
     {
       "symbol": "M:pfa$1$CfrPartitionedBody.<init>(Lcn;I)V",
-      "renamedSymbol": "M:CourseMapWalker$1$CfrPartitionedBody.<init>(LResourceArchive;I)V",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.<init>(LResourceArchive;I)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "TombTextLoadState",
       "declaration": {
         "file": "pfa.java",
         "start": 755,
@@ -663384,7 +663464,7 @@
     },
     {
       "symbol": "M:pfa$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:CourseMapWalker$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -663395,9 +663475,9 @@
     },
     {
       "symbol": "M:pfa$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:CourseMapWalker$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.loadAchievementAndInstructionText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadAchievementAndInstructionText",
       "declaration": {
         "file": "pfa.java",
         "start": 1256,
@@ -663406,9 +663486,9 @@
     },
     {
       "symbol": "M:pfa$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:CourseMapWalker$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.loadLoadingGameplayAndDeathText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadLoadingGameplayAndDeathText",
       "declaration": {
         "file": "pfa.java",
         "start": 36404,
@@ -663417,9 +663497,9 @@
     },
     {
       "symbol": "M:pfa$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:CourseMapWalker$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:CourseMapWalker$1TombTextLoadState.loadDeathCourseAndGameOptionText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadDeathCourseAndGameOptionText",
       "declaration": {
         "file": "pfa.java",
         "start": 72170,
@@ -774550,7 +774630,7 @@
     },
     {
       "symbol": "P:hda.<init>(JLjava/lang/String;)V#0",
-      "renamedSymbol": "P:hda.<init>(JLjava/lang/String;)V#0",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.<init>(JLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -774561,7 +774641,7 @@
     },
     {
       "symbol": "P:hda.<init>(JLjava/lang/String;)V#1",
-      "renamedSymbol": "P:hda.<init>(JLjava/lang/String;)V#1",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.<init>(JLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -774572,7 +774652,7 @@
     },
     {
       "symbol": "P:hda.a(B)Lpl;#0",
-      "renamedSymbol": "P:hda.getChannelType(B)LChatChannelType;#0",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.getChannelType(B)LChatChannelType;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -774583,7 +774663,7 @@
     },
     {
       "symbol": "P:hda.a(IILcg;)Lsc;#0",
-      "renamedSymbol": "P:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#0",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -774594,7 +774674,7 @@
     },
     {
       "symbol": "P:hda.a(IILcg;)Lsc;#1",
-      "renamedSymbol": "P:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#1",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -774605,7 +774685,7 @@
     },
     {
       "symbol": "P:hda.a(IILcg;)Lsc;#2",
-      "renamedSymbol": "P:hda.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#2",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.delayStreamByMillis(IILPcmStream;)LDelayedPcmStream;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -774616,7 +774696,7 @@
     },
     {
       "symbol": "P:hda.b(B)V#0",
-      "renamedSymbol": "P:hda.releaseStatics(B)V#0",
+      "renamedSymbol": "P:ChannelOverrideChatTarget.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -809387,7 +809467,7 @@
     },
     {
       "symbol": "P:jga$1$CfrPartitionedBody.<init>(BLcn;)V#0",
-      "renamedSymbol": "P:TextResourceLoader$1$CfrPartitionedBody.<init>(BLResourceArchive;)V#0",
+      "renamedSymbol": "P:TextResourceLoader$1SharedTextLoadState.<init>(BLResourceArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -809398,7 +809478,7 @@
     },
     {
       "symbol": "P:jga$1$CfrPartitionedBody.<init>(BLcn;)V#1",
-      "renamedSymbol": "P:TextResourceLoader$1$CfrPartitionedBody.<init>(BLResourceArchive;)V#1",
+      "renamedSymbol": "P:TextResourceLoader$1SharedTextLoadState.<init>(BLResourceArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -869062,7 +869142,7 @@
     },
     {
       "symbol": "P:pfa$1$CfrPartitionedBody.<init>(Lcn;I)V#0",
-      "renamedSymbol": "P:CourseMapWalker$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#0",
+      "renamedSymbol": "P:CourseMapWalker$1TombTextLoadState.<init>(LResourceArchive;I)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -869073,7 +869153,7 @@
     },
     {
       "symbol": "P:pfa$1$CfrPartitionedBody.<init>(Lcn;I)V#1",
-      "renamedSymbol": "P:CourseMapWalker$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#1",
+      "renamedSymbol": "P:CourseMapWalker$1TombTextLoadState.<init>(LResourceArchive;I)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -941259,7 +941339,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "648f8e1e7c11b44a53b201dbfe6cee1e735838d7d1596bf3e1dff907379d0012",
+      "outputSha256": "b50165fae6a2a58456c8e84080a5d14648b99bd7e33be6ee850f5a63822b09e0",
       "edits": [
         {
           "start": 96,
@@ -952334,6 +952414,13 @@
           "symbol": "M:tc.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 23341,
+          "end": 23344,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 23345,
@@ -983368,7 +983455,7 @@
       "original": "b.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "0abfda562b9df2d2ea9700ddf7e6b5674e90ba71577eb915ebd47b7c4ceb6e67",
-      "outputSha256": "7c297a4dd90dbc04178cbfcaff3ffac56554bafe76d313a4343a2003c92f384c",
+      "outputSha256": "698865e0b37427a5c3a889990d1b5c2c472a65cb9f4adb306d6b692eb38829c5",
       "edits": [
         {
           "start": 65,
@@ -984064,6 +984151,13 @@
           "renamed": "createChatTarget"
         },
         {
+          "start": 7825,
+          "end": 7828,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
+        },
+        {
           "start": 7857,
           "end": 7859,
           "symbol": "C:wc",
@@ -984090,6 +984184,13 @@
           "symbol": "C:lu",
           "original": "lu",
           "renamed": "ChatTarget"
+        },
+        {
+          "start": 8423,
+          "end": 8426,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 8464,
@@ -1078407,7 +1078508,7 @@
       "original": "dta.java",
       "renamed": "MatchHud.java",
       "inputSha256": "80e4b18b2bbaccb57c2dadc4701d3d7b4d6cdc1a9ce73b703409644231e7f31d",
-      "outputSha256": "263b237dda9c62da51421baa68c5ae7c5624698aa6a867097bcb0fb429f1adc0",
+      "outputSha256": "361fc8d9b3e4987ffb9eb0467cd12bca51d3be2dee4cf397e546b06d4589f433",
       "edits": [
         {
           "start": 50,
@@ -1080004,6 +1080105,13 @@
           "symbol": "M:fm.a(ZI)I",
           "original": "a",
           "renamed": "withFullAlpha"
+        },
+        {
+          "start": 14902,
+          "end": 14905,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 14933,
@@ -1202578,10 +1202686,17 @@
     },
     {
       "original": "hda.java",
-      "renamed": "hda.java",
+      "renamed": "ChannelOverrideChatTarget.java",
       "inputSha256": "bb71a906306adad5885fd8a5749754e1bd5124940e91eca6f552fea663c6e79e",
-      "outputSha256": "b99b255a846a300e3e69971eb29f3ee825c2dcb879777dfd2a8d94742804217e",
+      "outputSha256": "4ebe229514763d0deef690b094ecbf4756b2420c6518173e7f3ef23363b25752",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
+        },
         {
           "start": 62,
           "end": 64,
@@ -1202602,6 +1202717,13 @@
           "symbol": "M:hda.a(B)Lpl;",
           "original": "a",
           "renamed": "getChannelType"
+        },
+        {
+          "start": 164,
+          "end": 167,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 168,
@@ -1202632,6 +1202754,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 404,
+          "end": 407,
+          "symbol": "M:hda.<init>(JLjava/lang/String;)V",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
+        },
+        {
           "start": 493,
           "end": 495,
           "symbol": "C:sc",
@@ -1202658,6 +1202787,13 @@
           "symbol": "C:sc",
           "original": "sc",
           "renamed": "DelayedPcmStream"
+        },
+        {
+          "start": 843,
+          "end": 846,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 847,
@@ -1253641,7 +1253777,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "7412c226696c4a11c71b5dfc2379c93ff5797bf3a719e3363d1dbcc85a5d9c97",
+      "outputSha256": "56cb0381c26122eda876dd1a6def1ddbd2f12eb0fa4f0b907bc4ef18403751ee",
       "edits": [
         {
           "start": 50,
@@ -1253679,6 +1253815,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 157,
+          "end": 176,
+          "symbol": "C:jga$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SharedTextLoadState"
+        },
+        {
           "start": 516,
           "end": 518,
           "symbol": "C:cn",
@@ -1253686,11 +1253829,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 569,
+          "end": 588,
+          "symbol": "M:jga$1$CfrPartitionedBody.<init>(BLcn;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SharedTextLoadState"
+        },
+        {
           "start": 609,
           "end": 611,
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1085,
+          "end": 1094,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndGameOptionsText"
         },
         {
           "start": 1149,
@@ -1260805,6 +1260962,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 36633,
+          "end": 36642,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountRulesAndContactText"
+        },
+        {
           "start": 36704,
           "end": 36706,
           "symbol": "C:dn",
@@ -1267847,6 +1268011,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 72598,
+          "end": 72607,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuChatAndLoadingText"
+        },
+        {
           "start": 72669,
           "end": 72671,
           "symbol": "C:dn",
@@ -1274756,6 +1274927,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 109211,
+          "end": 109220,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadFullscreenMembershipAndSubscriptionText"
+        },
+        {
           "start": 109282,
           "end": 109284,
           "symbol": "C:dn",
@@ -1278179,6 +1278357,34 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 126915,
+          "end": 126924,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndGameOptionsText"
+        },
+        {
+          "start": 126986,
+          "end": 126995,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountRulesAndContactText"
+        },
+        {
+          "start": 127057,
+          "end": 127066,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuChatAndLoadingText"
+        },
+        {
+          "start": 127128,
+          "end": 127137,
+          "symbol": "M:jga$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadFullscreenMembershipAndSubscriptionText"
+        },
+        {
           "start": 127761,
           "end": 127764,
           "symbol": "C:tba",
@@ -1278205,6 +1278411,20 @@
           "symbol": "C:jna",
           "original": "jna",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 128096,
+          "end": 128115,
+          "symbol": "C:jga$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SharedTextLoadState"
+        },
+        {
+          "start": 128137,
+          "end": 128156,
+          "symbol": "C:jga$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SharedTextLoadState"
         },
         {
           "start": 128273,
@@ -1439003,7 +1439223,7 @@
       "original": "pfa.java",
       "renamed": "CourseMapWalker.java",
       "inputSha256": "9267e31959f65fd2b8f88443bb1f5171d847e78786da1c5e3fe54ecee88c8a0e",
-      "outputSha256": "1281273c5ffa149538fe85143626b16c90eb4d536f0eb46d2a437324b3668e91",
+      "outputSha256": "42b46ce5d609297d15273d9867ca4c854ed8d276399cc4f5fe42c60278d9e5b6",
       "edits": [
         {
           "start": 50,
@@ -1439048,6 +1439268,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 358,
+          "end": 377,
+          "symbol": "C:pfa$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TombTextLoadState"
+        },
+        {
           "start": 678,
           "end": 680,
           "symbol": "C:cn",
@@ -1439055,11 +1439282,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 755,
+          "end": 774,
+          "symbol": "M:pfa$1$CfrPartitionedBody.<init>(Lcn;I)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TombTextLoadState"
+        },
+        {
           "start": 775,
           "end": 777,
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1256,
+          "end": 1265,
+          "symbol": "M:pfa$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadAchievementAndInstructionText"
         },
         {
           "start": 1320,
@@ -1446461,6 +1446702,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 36404,
+          "end": 36413,
+          "symbol": "M:pfa$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadLoadingGameplayAndDeathText"
+        },
+        {
           "start": 36475,
           "end": 36477,
           "symbol": "C:mt",
@@ -1448776,6 +1449024,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 46334,
+          "end": 46337,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 46348,
@@ -1454399,6 +1454654,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 72170,
+          "end": 72179,
+          "symbol": "M:pfa$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadDeathCourseAndGameOptionText"
+        },
+        {
           "start": 72272,
           "end": 72275,
           "symbol": "C:gca",
@@ -1458879,6 +1459141,27 @@
           "renamed": "textArchive"
         },
         {
+          "start": 91797,
+          "end": 91806,
+          "symbol": "M:pfa$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadAchievementAndInstructionText"
+        },
+        {
+          "start": 91868,
+          "end": 91877,
+          "symbol": "M:pfa$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadLoadingGameplayAndDeathText"
+        },
+        {
+          "start": 91939,
+          "end": 91948,
+          "symbol": "M:pfa$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadDeathCourseAndGameOptionText"
+        },
+        {
           "start": 92545,
           "end": 92548,
           "symbol": "C:tba",
@@ -1458898,6 +1459181,20 @@
           "symbol": "C:jna",
           "original": "jna",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 92861,
+          "end": 92880,
+          "symbol": "C:pfa$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TombTextLoadState"
+        },
+        {
+          "start": 92902,
+          "end": 92921,
+          "symbol": "C:pfa$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TombTextLoadState"
         },
         {
           "start": 92991,
@@ -1612366,7 +1612663,7 @@
       "original": "um.java",
       "renamed": "UiComponentNodeBase.java",
       "inputSha256": "0ddcbed32b5472639bb661459279aebe6ba15f113ea8e751c5f357773f139924",
-      "outputSha256": "fa753633c008f7e0d76a72c8e874db91b2620a58e64ab7e6bba6d8417aa8b52e",
+      "outputSha256": "86a5370d41a7308049c8be4565426032c202a6b564b794496368a4c1e5726d5d",
       "edits": [
         {
           "start": 44,
@@ -1612451,6 +1612748,13 @@
           "symbol": "M:qia.b(Lu;III)Lqia;",
           "original": "b",
           "renamed": "createAtRateAndPan"
+        },
+        {
+          "start": 714,
+          "end": 717,
+          "symbol": "C:hda",
+          "original": "hda",
+          "renamed": "ChannelOverrideChatTarget"
         },
         {
           "start": 718,
@@ -1681543,10 +1681847,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "547b340027912daa4a02bfb9b2c260976c6ee73f5c53eaa36d115ac25b403642",
+    "rulesSha256": "0000cde825f30879113e1101af794da516f2c60eeac05671e1c1b1cfed86f23b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "bcc5498890f93d4d89fc3e6a6ed11ca67dc2f9b1e5f6cf6281a2c62e322813a3",
+    "outputTreeSha256": "782a76133e557367d4a93378ad468f16016c0e292da8e584c21981d6e93cf213",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

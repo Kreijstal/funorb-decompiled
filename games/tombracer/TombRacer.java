@@ -914,7 +914,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         QueuedHint.releaseStatics(param0 ^ -35493);
         LoginMethod.releaseStatics((byte) -117);
         IdChatTarget.releaseStatics(17129);
-        hda.releaseStatics((byte) -128);
+        ChannelOverrideChatTarget.releaseStatics((byte) -128);
         NamedChatTarget.releaseStatics((byte) -78);
         StringListNode.releaseStatics(true);
         CourseLayoutFactory.releaseStatics(param0 ^ -3666);

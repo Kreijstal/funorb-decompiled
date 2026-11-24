@@ -5,7 +5,7 @@ final class TextResourceLoader extends BillboardSpriteData {
     static SpriteData field_b;
 
     final static void loadStrings(byte param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+        class SharedTextLoadState {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
             String stackIn_2621_2;
@@ -17,7 +17,7 @@ final class TextResourceLoader extends BillboardSpriteData {
             byte param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
+            SharedTextLoadState(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -29,7 +29,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndGameOptionsText() throws java.lang.RuntimeException {
                 RevolverItemComponent.field_H = param1;
                 var2 = TextureCoordinateGeneration.loadFile((byte) 120, "loginm3");
                 if (var2 != null) {
@@ -852,7 +852,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                   FlameShooterComponent.field_K = BitPackedColour.decodeText((byte) 115, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountRulesAndContactText() throws java.lang.RuntimeException {
                 var2 = TextureCoordinateGeneration.loadFile((byte) 113, "gameopt_needchanging2");
                 if (var2 != null) {
                   GraphicsSelectionState.field_f = BitPackedColour.decodeText((byte) 27, var2);
@@ -1706,7 +1706,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                   ConstrainToCircleLocomotor.field_A = BitPackedColour.decodeText((byte) 30, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuChatAndLoadingText() throws java.lang.RuntimeException {
                 var2 = TextureCoordinateGeneration.loadFile((byte) -11, "removeignorefirst");
                 if (var2 != null) {
                   S2CCharacterChoicePacket.field_c = BitPackedColour.decodeText((byte) 86, var2);
@@ -2604,7 +2604,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                   BitPackedColour.decodeText((byte) 107, var2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadFullscreenMembershipAndSubscriptionText() throws java.lang.RuntimeException {
                 var2 = TextureCoordinateGeneration.loadFile((byte) 114, "reconnect_retry");
                 if (var2 != null) {
                   BitPackedColour.decodeText((byte) 51, var2);
@@ -3018,13 +3018,13 @@ final class TextResourceLoader extends BillboardSpriteData {
             void run() {
                 var3 = TombRacer.field_G ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndGameOptionsText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountRulesAndContactText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuChatAndLoadingText();
                   if (finished) return;
-                  runChunk3();
+                  loadFullscreenMembershipAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3044,7 +3044,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        SharedTextLoadState decompiledBody = new SharedTextLoadState(param0, param1);
         decompiledBody.run();
     }
 

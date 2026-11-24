@@ -21,7 +21,7 @@ class UiComponentNodeBase extends DualLinkNode {
             field_k = (String) null;
           }
           var5 = PcmSampleStream.createAtRateAndPan(param2, 100, param4, param0);
-          var6 = hda.delayStreamByMillis(param1, 1303, var5);
+          var6 = ChannelOverrideChatTarget.delayStreamByMillis(param1, 1303, var5);
           var7 = new PcmSamplePlayback(var5, var6);
           DivisionMazeGenerator.field_e.addLast((byte) -57, var7);
           PitModel.field_n.prependStream(var6);

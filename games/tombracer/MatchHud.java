@@ -339,7 +339,7 @@ final class MatchHud {
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), hda.field_h, (byte) 72, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
+                  var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), ChannelOverrideChatTarget.field_h, (byte) 72, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {

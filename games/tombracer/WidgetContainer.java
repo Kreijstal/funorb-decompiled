@@ -215,7 +215,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
 
     final static ChatTarget createChatTarget(String param0, int param1, String param2, boolean param3, long param4) {
         RuntimeException var6 = null;
-        hda stackIn_6_0 = null;
+        ChannelOverrideChatTarget stackIn_6_0 = null;
         NamedChatTarget stackIn_8_0 = null;
         IdChatTarget stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -231,7 +231,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
             return (ChatTarget) ((Object) stackIn_8_0);
           }
           if (param3) {
-            stackIn_6_0 = new hda(param4, param0);
+            stackIn_6_0 = new ChannelOverrideChatTarget(param4, param0);
             return (ChatTarget) ((Object) stackIn_6_0);
           }
           stackIn_10_0 = new IdChatTarget(param4, param0);
