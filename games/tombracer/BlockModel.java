@@ -223,7 +223,7 @@ final class BlockModel extends TrapModel {
           var8_ref_nv = (Behaviour) (var13.first(true));
           while (var8_ref_nv != null) {
             if (var8_ref_nv instanceof WeaponShooterBehaviour) {
-              var7_int = var7_int != 0 | ((WeaponShooterBehaviour) (var8_ref_nv)).g((byte) -68) ? 1 : 0;
+              var7_int = var7_int != 0 | ((WeaponShooterBehaviour) (var8_ref_nv)).isFiringPhaseActive((byte) -68) ? 1 : 0;
             }
             var8_ref_nv = (Behaviour) (var13.next(-1));
           }

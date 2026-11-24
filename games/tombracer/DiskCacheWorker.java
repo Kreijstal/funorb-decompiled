@@ -196,7 +196,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean usesSoftwareDirectionalLighting(int param0) {
         RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (param0 < 122) {
           DiskCacheWorker.hasFlag2048((byte) -30, -8, 82);

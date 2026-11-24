@@ -79,7 +79,7 @@ final class AchievementsScreen extends DropInMenuScreen {
     }
 
     private final ToolkitSprite getAchievementIcon(int param0, int param1) {
-        if ((!SimpleBlockBehaviour.c(param1) ||
+        if ((!SimpleBlockBehaviour.hasLoggedInDeveloperPrivileges(param1) ||
           !VerticalScrollbar.field_tb[82]) &&
           !this.isAchievementEarned(false, param0)) {
           return PerlinNoise2D.field_m[42 + this.field_w[param0]];

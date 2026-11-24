@@ -162,7 +162,7 @@ final class FloatingMessage extends IntrusiveNode {
 
     final int getWidth(byte param0) {
         if (param0 != -96) {
-          this.c(-105);
+          this.occupiesLayoutSpace(-105);
           return this.field_g;
         }
         return this.field_g;
@@ -209,7 +209,7 @@ final class FloatingMessage extends IntrusiveNode {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean occupiesLayoutSpace(int param0) {
         if (param0 != -1) {
           this.getText(-122);
           if (this.field_o != 0) {

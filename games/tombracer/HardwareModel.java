@@ -870,7 +870,7 @@ final class HardwareModel extends ToolkitModel {
               }
               if (null != param1.field_m &&
                 ObjectList.hasFlag1024(this.field_h, param2, (byte) -122)) {
-                this.field_mb = param1.b((byte) -124);
+                this.field_mb = param1.groupBillboardsByLabel((byte) -124);
               }
               stackIn_351_0 = (ModelData) (param1);
             }

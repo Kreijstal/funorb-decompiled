@@ -161,7 +161,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_29_1 = 4;
           }
           ((Room) (Object) stackIn_28_0).castBeamSegment(stackIn_29_1, this.trap, -44, this.field_u, this.getRoot(6), this.field_z);
-          var4 = this.a(this.field_u, (byte) 72);
+          var4 = this.getBeamPathLength(this.field_u, (byte) 72);
           this.updateBeamSegment((byte) 92);
           var11.castBeamSegment(1, this.trap, -91, this.field_u, this.getRoot(6), this.field_z);
           var11.getParticleEffects(false).spawnBeamParticles((byte) 119, this.field_u, this.field_z);
@@ -170,7 +170,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             var7_ref_pc = var7_ref_pc.nextSegment;
           }
           var11.getParticleEffects(false).spawnBeamHitParticles(var7_ref_pc, this.trap, (byte) -119);
-          var5 = this.a(this.field_u, (byte) -65);
+          var5 = this.getBeamPathLength(this.field_u, (byte) -65);
         } else {
           this.updateBeamSegment((byte) 92);
           stackIn_24_0 = var11;
@@ -180,10 +180,10 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_25_1 = 3;
           }
           ((Room) (Object) stackIn_24_0).traceBeamSegment(stackIn_25_1, this.field_u, this.getRoot(6), (byte) -123);
-          var4 = this.a(this.field_u, (byte) -68);
+          var4 = this.getBeamPathLength(this.field_u, (byte) -68);
           this.updateBeamSegment((byte) 92);
           var11.traceBeamSegment(1, this.field_u, this.getRoot(6), (byte) 75);
-          var5 = this.a(this.field_u, (byte) 57);
+          var5 = this.getBeamPathLength(this.field_u, (byte) 57);
         }
         if (param0 != 5418) {
           this.getTypeId(false);
@@ -344,7 +344,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         return 16711782;
     }
 
-    private final int a(BeamSegment param0, byte param1) {
+    private final int getBeamPathLength(BeamSegment param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -362,7 +362,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           if (param0.nextSegment == null) {
             stackIn_3_2 = 0;
           } else {
-            stackIn_3_2 = this.a(param0.nextSegment, (byte) -81);
+            stackIn_3_2 = this.getBeamPathLength(param0.nextSegment, (byte) -81);
           }
           stackIn_4_0 = stackIn_2_0 - (stackIn_2_1 - stackIn_3_2);
           return stackIn_4_0;
@@ -433,7 +433,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         int discarded$0 = 0;
         if (param0 != 120) {
           BeamSegment var3 = (BeamSegment) null;
-          discarded$0 = this.a((BeamSegment) null, (byte) 1);
+          discarded$0 = this.getBeamPathLength((BeamSegment) null, (byte) 1);
           return false;
         }
         return false;

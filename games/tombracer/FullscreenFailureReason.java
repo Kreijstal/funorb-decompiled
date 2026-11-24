@@ -41,7 +41,7 @@ final class FullscreenFailureReason {
             }
             var8 = IntrusiveDequeCursor.field_a.getArchiveSource((SectorCacheStore) (var7), param0, (SectorCacheStore) (var6), param4, param2 ^ 5167);
             if (param3) {
-              var8.a((byte) 115);
+              var8.prefetchAllGroups((byte) 115);
             }
             stackIn_14_0 = new ResourceArchive(var8, param5, param1);
             return stackIn_14_0;

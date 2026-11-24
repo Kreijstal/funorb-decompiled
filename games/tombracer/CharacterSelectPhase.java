@@ -308,7 +308,7 @@ final class CharacterSelectPhase extends MatchPhase {
           boolean decompiledFrameRemainder0 = true;
           if (!ToolkitSelector.field_g[param0] && (!ToolkitSelector.field_f[param0] &&
             ReportAbuseDialog.field_ub <= 0 ||
-            !LegacyOpenGlNormalMapGenerator.field_e.isCharacterUnlocked((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
+            !LegacyOpenGlNormalMapGenerator.field_e.isCharacterUnlocked((byte) 4, param0)) && !SimpleBlockBehaviour.hasLoggedInDeveloperPrivileges(0)) {
             stackIn_16_0 = false;
             decompiledFrameRemainder0 = false;
           }

@@ -138,13 +138,13 @@ final class LightSource extends IntrusiveNode {
         this.animatedLight.light.setColour(255, param1);
     }
 
-    final static boolean a(byte param0) {
+    final static boolean areDynamicLightsEnabled(byte param0) {
         RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (var1 == null) {
           return false;
         }
         if (param0 != -7) {
-          LightSource.a((byte) -8);
+          LightSource.areDynamicLightsEnabled((byte) -8);
           if (ConstrainToLatticeLocomotor.field_s) {
             return false;
           }
@@ -187,7 +187,7 @@ final class LightSource extends IntrusiveNode {
           this.animatedLight.updateIntensity(false, param1 + this.field_n, -1814184927);
           return;
         }
-        LightSource.a((byte) 98);
+        LightSource.areDynamicLightsEnabled((byte) 98);
         var3Lifetime1 = this.animatedLight.light.getRadius((byte) 107);
         this.field_p = var3Lifetime1 * (var3Lifetime1 * 2);
         this.animatedLight.updateIntensity(false, param1 + this.field_n, -1814184927);

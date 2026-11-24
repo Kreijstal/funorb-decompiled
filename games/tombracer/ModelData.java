@@ -103,7 +103,7 @@ final class ModelData {
         }
     }
 
-    final int[][] b(byte param0) {
+    final int[][] groupBillboardsByLabel(byte param0) {
         int var4_int = 0;
         int[] array$2 = null;
         int dupTemp$0 = 0;

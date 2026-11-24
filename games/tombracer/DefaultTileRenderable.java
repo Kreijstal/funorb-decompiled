@@ -342,11 +342,11 @@ final class DefaultTileRenderable extends TileRenderable {
         this.field_i = 19;
     }
 
-    final static boolean e(int param0) {
+    final static boolean isBloomRequested(int param0) {
         RendererOption var1 = null;
         RendererOption var1Lifetime1;
         if (param0 != -22766) {
-          DefaultTileRenderable.e(85);
+          DefaultTileRenderable.isBloomRequested(85);
           var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
           if (var1 == null) {
             return false;

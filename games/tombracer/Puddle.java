@@ -345,7 +345,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           return NineSliceFrame.field_c.dispatchKeyInput((byte) -121, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
         }
         if (OpenGlBufferObject.field_b) {
-          return KeySwitchComponent.c(param1 + 2097196, param0, param3);
+          return KeySwitchComponent.handleQuickChatKeyInput(param1 + 2097196, param0, param3);
         }
         if (GameScreen.a(param0, false, param3)) {
           return true;

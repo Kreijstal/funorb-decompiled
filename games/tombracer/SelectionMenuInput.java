@@ -27,7 +27,7 @@ final class SelectionMenuInput {
             stackIn_8_0 = -17;
             return stackIn_8_0;
           }
-          BillboardDefinition.field_h.updatePointer(ColourRowCache.a(PasswordValidator.field_m, (byte) -113, RidgedNoise3D.field_p), 35, ColourRowCache.a(AgeValidator.field_j, (byte) -113, GridWidgetContainer.field_B));
+          BillboardDefinition.field_h.updatePointer(ColourRowCache.hitTestSelectionMenuItems(PasswordValidator.field_m, (byte) -113, RidgedNoise3D.field_p), 35, ColourRowCache.hitTestSelectionMenuItems(AgeValidator.field_j, (byte) -113, GridWidgetContainer.field_B));
           if (BillboardDefinition.field_h.isActivated(false)) {
             var1_int = 1;
           }

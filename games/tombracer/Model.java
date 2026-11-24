@@ -4348,7 +4348,7 @@ final class Model extends ToolkitModel {
         }
         if (param1.field_m != null &&
           (this.field_P & 1024) != 0) {
-          this.field_j = param1.b((byte) -119);
+          this.field_j = param1.groupBillboardsByLabel((byte) -119);
         }
         if (param1.field_r != null) {
           this.field_X = new short[this.field_g];

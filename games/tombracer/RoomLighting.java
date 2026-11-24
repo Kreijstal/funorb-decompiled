@@ -35,7 +35,7 @@ final class RoomLighting implements RenderListener {
         int var10Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          if (DiskCacheWorker.a(param1 ^ -15574)) {
+          if (DiskCacheWorker.usesSoftwareDirectionalLighting(param1 ^ -15574)) {
             var9 = 0;
             var7 = 0;
             var6 = 16777215;
@@ -69,7 +69,7 @@ final class RoomLighting implements RenderListener {
           CurrentGraphicsToolkit.toolkit.setFogParameters(var10Lifetime1, var11, 0);
           CurrentGraphicsToolkit.toolkit.setAmbientLightIntensity(var5);
           CurrentGraphicsToolkit.toolkit.setDirectionalLighting(var6, var3_float, var4, (float)var7, (float)var8, (float)var9);
-          if (LightSource.a((byte) -7)) {
+          if (LightSource.areDynamicLightsEnabled((byte) -7)) {
             var12 = (LightSource) (this.lightSources.first(-80));
             while (var12 != null) {
               if (!var12.isRemoved(param1 - 1459836712)) {
@@ -107,7 +107,7 @@ final class RoomLighting implements RenderListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (LightSource.a((byte) -7)) {
+          if (LightSource.areDynamicLightsEnabled((byte) -7)) {
             CurrentGraphicsToolkit.toolkit.setLights(0, (SceneLight[]) null);
           }
           if (param0 != -16188) {
@@ -192,7 +192,7 @@ final class RoomLighting implements RenderListener {
             var13 = (Camera) null;
             this.afterRenderable(true, (Renderable) null, (Camera) null);
           }
-          if (LightSource.a((byte) -7)) {
+          if (LightSource.areDynamicLightsEnabled((byte) -7)) {
             var4_int = param1 instanceof Particle ? 1 : 0;
             var5 = 0;
             var6 = MidiVoiceMixer.min(this.activeLights.length, CurrentGraphicsToolkit.toolkit.getMaxLights(), -97);

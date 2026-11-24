@@ -72,7 +72,7 @@ final class ColourRowCache {
         return this.field_a[var4.field_g];
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int hitTestSelectionMenuItems(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

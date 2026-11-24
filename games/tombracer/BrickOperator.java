@@ -24,7 +24,7 @@ final class BrickOperator extends TextureOperator {
     private int field_E;
     static int[] field_p;
 
-    final static void d(byte param0) {
+    final static void readQueuedByteShortReply(byte param0) {
         QueuedByteShortRequest var1 = (QueuedByteShortRequest) (Cp1252ByteEncoder.field_d.first(-80));
         if (var1 == null) {
           DropAnimation.closeGameSocket(60);
@@ -84,7 +84,7 @@ final class BrickOperator extends TextureOperator {
             this.field_o = param1.readUnsignedByte(255);
           }
           if (param0 != 107) {
-            BrickOperator.d((byte) -52);
+            BrickOperator.readQueuedByteShortReply((byte) -52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

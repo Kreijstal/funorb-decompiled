@@ -44,14 +44,14 @@ final class RotaterMountComponent extends PrefabComponent {
           var1 = HardwareRidgedWaterNoise.field_v % 32;
           MidiChannelVolumeTargets.setMusicVolume(2, -var1 + (HardwareRidgedWaterNoise.field_v + 32));
           if (param0 != 63) {
-            RotaterMountComponent.A(63);
+            RotaterMountComponent.createUsernameLoginTextValue(63);
             return;
           }
           return;
         }
         MidiChannelVolumeTargets.setMusicVolume(2, 256);
         if (param0 != 63) {
-          RotaterMountComponent.A(63);
+          RotaterMountComponent.createUsernameLoginTextValue(63);
           return;
         }
     }
@@ -158,7 +158,7 @@ final class RotaterMountComponent extends PrefabComponent {
           var3 = var9.readUnsignedByte(255);
           var4 = var9.readInt(124);
           if (param1 > -99) {
-            RotaterMountComponent.A(-108);
+            RotaterMountComponent.createUsernameLoginTextValue(-108);
           }
           if (var4 >= 0 && (0 == PitComponent.field_H ||
             !(PitComponent.field_H < var4))) {
@@ -232,7 +232,7 @@ final class RotaterMountComponent extends PrefabComponent {
         return true;
     }
 
-    final static LoginTextValue A(int param0) {
+    final static LoginTextValue createUsernameLoginTextValue(int param0) {
         String var1 = AccountRequestUsernameSelector.getAccountRequestUsername((byte) -112);
         if (param0 < 46) {
           return (LoginTextValue) null;

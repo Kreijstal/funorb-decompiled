@@ -185,7 +185,7 @@ final class PitBehaviour extends Behaviour {
         this.field_r = false;
         try {
           this.field_u = PasswordValidator.field_l;
-          this.c(0);
+          this.normalizePitGridSettings(0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -282,9 +282,9 @@ final class PitBehaviour extends Behaviour {
           if (param0.formatVersion >= 11) {
             stackIn_12_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_s = stackIn_12_1;
-            this.c(0);
+            this.normalizePitGridSettings(0);
           } else {
-            this.c(0);
+            this.normalizePitGridSettings(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -326,7 +326,7 @@ final class PitBehaviour extends Behaviour {
         }
     }
 
-    private final void c(int param0) {
+    private final void normalizePitGridSettings(int param0) {
         if (param0 != 0) {
           this.field_t = (MazeGrid) null;
         }

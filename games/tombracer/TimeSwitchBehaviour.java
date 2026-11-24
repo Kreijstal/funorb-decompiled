@@ -28,7 +28,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
               if (param3 == 1535993377) {
                 return;
               }
-              TimeSwitchBehaviour.a((byte) 72, -101, -90, -85, 66, 71, -106, -32);
+              TimeSwitchBehaviour.fillBorderedRectangle((byte) 72, -101, -90, -85, 66, 71, -106, -32);
               return;
             }
             var9 = param4;
@@ -94,7 +94,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedRectangle(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param0 >= -32) {
           field_q = (long[]) null;
           if (param1 < DialogOverlayDrawing.field_b) {

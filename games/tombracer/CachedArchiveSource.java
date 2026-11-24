@@ -254,7 +254,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    final void a(byte param0) {
+    final void prefetchAllGroups(byte param0) {
         if (null == this.field_h) {
           return;
         }
@@ -286,7 +286,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.field_q = (ArchiveRequest) ((Object) this.field_u.queueRequest(this.field_j, true, 255, -21, (byte) 0));
         }
         if (!param0) {
-          this.a((byte) -56);
+          this.prefetchAllGroups((byte) -56);
         }
         if (this.field_q.field_m) {
           return null;

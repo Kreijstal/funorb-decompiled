@@ -150,7 +150,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                         var3 = -1;
                       }
                     } else {
-                      if (TeleportState.a((byte) 15, MenuEntry.field_h)) {
+                      if (TeleportState.isTextEntryKey((byte) 15, MenuEntry.field_h)) {
                         var3 = MenuEntry.field_h;
                         continue;
                       }

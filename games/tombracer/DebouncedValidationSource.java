@@ -47,7 +47,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
 
     abstract ValidationState computeState(int param0);
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void processAbuseReportDialog(boolean param0, int param1, int param2) {
         int var5 = 0;
         int var3 = 32 % ((43 - param1) / 57);
         if (null == RoomViewRenderer.field_c) {

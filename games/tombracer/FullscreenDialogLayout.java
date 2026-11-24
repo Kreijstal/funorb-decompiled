@@ -312,7 +312,7 @@ final class FullscreenDialogLayout {
           if (2 == LegacyOpenGlNormalMapGenerator.field_a) {
             FacePointLocomotor.field_r.initializeSelection(param1, 29954, -1, -1);
           } else {
-            FacePointLocomotor.field_r.initializeSelection(param1, param0 + 29953, 0, StatReportingScoringObserver.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
+            FacePointLocomotor.field_r.initializeSelection(param1, param0 + 29953, 0, StatReportingScoringObserver.hitTestFullscreenDialogButtons(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

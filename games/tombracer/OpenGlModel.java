@@ -5070,7 +5070,7 @@ final class OpenGlModel extends ToolkitModel {
                 }
                 if (null != param1.field_m &&
                   HardwareGraphicsToolkit.hasFlag1024(this.field_u, (byte) 83, param2)) {
-                  this.field_C = param1.b((byte) -91);
+                  this.field_C = param1.groupBillboardsByLabel((byte) -91);
                 }
                 stackIn_353_0 = (ModelData) (param1);
               }

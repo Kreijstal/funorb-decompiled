@@ -156,7 +156,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean hasLoggedInDeveloperPrivileges(int param0) {
         if (TextWidgetPainter.isGuestMode(79)) {
           return false;
         }

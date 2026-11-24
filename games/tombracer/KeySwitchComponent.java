@@ -198,7 +198,7 @@ final class KeySwitchComponent extends SwitchComponent {
         }
     }
 
-    final static boolean c(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKeyInput(int param0, int param1, int param2) {
         if (param0 != 2097152) {
           field_M = (String) null;
           if (MenuEntry.field_h == 13) {

@@ -15,16 +15,16 @@ final class SwitchTargetReference {
           if (LobbyOverlayAndDateValidationState.field_d == null) {
             if (!DynamicGeometryBuffer.field_c) {
               if (OpenGlBufferObject.field_b) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 10) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 11) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h != 80) {
                 return false;
@@ -47,16 +47,16 @@ final class SwitchTargetReference {
             }
             if (!DynamicGeometryBuffer.field_c) {
               if (OpenGlBufferObject.field_b) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 10) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 11) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h != 80) {
                 return false;
@@ -82,16 +82,16 @@ final class SwitchTargetReference {
             }
             if (!DynamicGeometryBuffer.field_c) {
               if (OpenGlBufferObject.field_b) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 10) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 11) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h != 80) {
                 return false;
@@ -110,16 +110,16 @@ final class SwitchTargetReference {
           } else {
             if (!DynamicGeometryBuffer.field_c) {
               if (OpenGlBufferObject.field_b) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 10) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 11) {
-                return KeySwitchComponent.c(2097152, param0, param3);
+                return KeySwitchComponent.handleQuickChatKeyInput(2097152, param0, param3);
               }
               if (MenuEntry.field_h != 80) {
                 return false;

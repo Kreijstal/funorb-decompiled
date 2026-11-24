@@ -174,7 +174,7 @@ final class WeaponShooterBehaviour extends Behaviour implements TimedShooter {
         return RasterShape.atanFixed16(false, (param1 << 16) / param2);
     }
 
-    final boolean g(byte param0) {
+    final boolean isFiringPhaseActive(byte param0) {
         if (param0 != -68) {
           this.field_n = (TimingPattern) null;
           if (!this.field_s) {

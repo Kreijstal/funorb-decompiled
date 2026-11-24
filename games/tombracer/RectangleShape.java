@@ -59,7 +59,7 @@ final class RectangleShape extends RasterShape {
         }
         int var6 = this.field_h * param2 >> 12;
         int var7 = this.field_g * param2 >> 12;
-        TimeSwitchBehaviour.a((byte) -71, var4, var6, var5, var7, this.outlineWidth, this.fillColour, this.outlineColour);
+        TimeSwitchBehaviour.fillBorderedRectangle((byte) -71, var4, var6, var5, var7, this.outlineWidth, this.fillColour, this.outlineColour);
     }
 
     static {

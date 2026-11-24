@@ -113,7 +113,7 @@ final class ChatOverlay {
           while (var7_refLifetime1 != null) {
             var7_refLifetime1.setPosition(var6Lifetime1, 4, LegacyOpenGlWaterTextures.getCanvasWidth(false) - var7_refLifetime1.getWidth((byte) -96));
             var7_refLifetime1.tick(-43);
-            if (var7_refLifetime1.c(-1)) {
+            if (var7_refLifetime1.occupiesLayoutSpace(-1)) {
               var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.getHeight(true);
             }
             if (var7_refLifetime1.isExpired((byte) -39)) {

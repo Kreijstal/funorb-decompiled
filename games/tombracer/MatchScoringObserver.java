@@ -11,7 +11,7 @@ class MatchScoringObserver extends SimulationObserver {
     MatchState field_f;
     static String field_d;
 
-    private final boolean a(Room param0, byte param1, int param2) {
+    private final boolean isRoomRestrictedForPlayer(Room param0, byte param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -331,7 +331,7 @@ class MatchScoringObserver extends SimulationObserver {
           if (!this.field_f.isMenuBackgroundDemo(-25319) &&
             !this.field_f.isSinglePlayer(-1878) &&
             this.field_f.field_x != null &&
-            !this.a(param1, (byte) 74, var8)) {
+            !this.isRoomRestrictedForPlayer(param1, (byte) 74, var8)) {
             var9 = HardwareModelBillboard.findMainRoomKey(param1.getId((byte) -82), 0);
             if (var9 >= 0) {
               this.field_f.field_x[var8].set(var9);

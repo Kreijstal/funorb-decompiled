@@ -132,7 +132,7 @@ final class TeleportState {
         }
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isTextEntryKey(byte param0, int param1) {
         boolean stackIn_26_0 = false;
         if (param0 != 15) {
           TeleportState.releaseStatics(119);

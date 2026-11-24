@@ -206,7 +206,7 @@ final class MembersUpsellMenu extends MenuScreen {
           }
           SocketConnector.drawWrappedText(var8, 1, TooltipRenderer.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
-        if (SimpleBlockBehaviour.c(0)) {
+        if (SimpleBlockBehaviour.hasLoggedInDeveloperPrivileges(0)) {
           MembersUpsellMenu.drawCentredTextWithShadow("Unlock: Key 2-9", 16777215, TooltipRenderer.field_p, -1, this.field_r + SwitchLinkList.getCanvasHeight(param0 + 28) - 100, -100 + LegacyOpenGlWaterTextures.getCanvasWidth(false), -1);
           MembersUpsellMenu.drawCentredTextWithShadow("Play All: Insert", 16777215, TooltipRenderer.field_p, -1, -80 + (this.field_r + SwitchLinkList.getCanvasHeight(0)), LegacyOpenGlWaterTextures.getCanvasWidth(false) - 100, -1);
         }

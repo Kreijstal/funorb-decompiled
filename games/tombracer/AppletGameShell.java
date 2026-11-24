@@ -101,7 +101,7 @@ abstract class AppletGameShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = RasterBuffer.pollLogin(IntIntHashTable.createCredentials(-1), RotaterMountComponent.A(49), 2);
+            var5 = RasterBuffer.pollLogin(IntIntHashTable.createCredentials(-1), RotaterMountComponent.createUsernameLoginTextValue(49), 2);
             if (-1 != var5) {
               WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, Cp1252ByteEncoder.field_b, (byte) 100);
               Cp1252ByteEncoder.field_b = null;
@@ -243,7 +243,7 @@ abstract class AppletGameShell extends GameApplet {
             return;
           }
           if (var2 == 1) {
-            BrickOperator.d((byte) 82);
+            BrickOperator.readQueuedByteShortReply((byte) 82);
           } else {
             if (var2 == 2) {
               CrossedSineBandsOperator.handleHighscoreResponse(-95);

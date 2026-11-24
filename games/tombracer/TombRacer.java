@@ -994,7 +994,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
     private final void beginFrame(int param0) {
         int var2 = LegacyOpenGlWaterTextures.getCanvasWidth(false);
         int var3 = SwitchLinkList.getCanvasHeight(0);
-        if (DefaultTileRenderable.e(-22766)) {
+        if (DefaultTileRenderable.isBloomRequested(-22766)) {
           CurrentGraphicsToolkit.toolkit.enableBloom();
           CurrentGraphicsToolkit.toolkit.setBloomParameters(0.8999999761581421f, 1.0f, 1.0f);
           if (CurrentGraphicsToolkit.toolkit.isBloomEnabled()) {
@@ -1418,7 +1418,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         try {
           DeviceLostException qva = null;
           Throwable decompiledCaughtException = null;
-          if (DefaultTileRenderable.e(-22766) &&
+          if (DefaultTileRenderable.isBloomRequested(-22766) &&
             CurrentGraphicsToolkit.toolkit.isBloomEnabled()) {
             CurrentGraphicsToolkit.toolkit.applyPostProcessing();
           }
