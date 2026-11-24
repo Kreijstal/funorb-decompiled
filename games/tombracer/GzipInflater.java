@@ -148,7 +148,7 @@ final class GzipInflater {
               ProceduralTexture.field_p = RotaterMountComponent.field_G;
               var4.position = 0;
               stackIn_10_0 = (!param0) ? -1 : -2;
-              vua.field_B = stackIn_10_0;
+              ClippedChildWidget.field_B = stackIn_10_0;
               TitledScrollPanel.field_xb = stackIn_10_0;
               PlayerProfile.field_c = stackIn_10_0;
               C2SActionPacket.writeSessionHeader((byte) -125, RoomComponent.field_g, ql.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
@@ -203,7 +203,7 @@ final class GzipInflater {
               stackIn_15_0 = "Learn to spell";
               return stackIn_15_0;
             }
-            if (!dra.musicTrackNames[var3_int].equalsIgnoreCase(param2)) {
+            if (!ReflectionCheckResponseSender.musicTrackNames[var3_int].equalsIgnoreCase(param2)) {
               var3_int++;
               continue;
             }

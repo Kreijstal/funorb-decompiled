@@ -243,18 +243,18 @@ final class RatingsScreen extends DropInMenuScreen {
         }
         SingleChildWidget.field_v.drawLeft(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + StatReportingScoringObserver.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
-        eda.field_f.drawCentred(-1, -1, NanoTickClock.field_h[0], -14671840, var4, OpenGlBuffer.field_a);
-        eda.field_f.drawLeft(var4, false, ObjectPool.field_g.toUpperCase(), NanoTickClock.field_h[1], -14671840, -1);
-        eda.field_f.drawLeft(var4, false, ControllerLocomotor.field_o.toUpperCase(), NanoTickClock.field_h[2], -14671840, -1);
-        eda.field_f.drawLeft(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), NanoTickClock.field_h[3], -14671840, -1);
-        eda.field_f.drawLeft(var4, false, PlayerProfile.field_u.toUpperCase(), NanoTickClock.field_h[4], -14671840, -1);
-        eda.field_f.drawLeft(var4, false, CookieDateFormatter.field_a.toUpperCase(), NanoTickClock.field_h[5], -14671840, -1);
+        HardwareVertexNormalAccumulator.field_f.drawCentred(-1, -1, NanoTickClock.field_h[0], -14671840, var4, OpenGlBuffer.field_a);
+        HardwareVertexNormalAccumulator.field_f.drawLeft(var4, false, ObjectPool.field_g.toUpperCase(), NanoTickClock.field_h[1], -14671840, -1);
+        HardwareVertexNormalAccumulator.field_f.drawLeft(var4, false, ControllerLocomotor.field_o.toUpperCase(), NanoTickClock.field_h[2], -14671840, -1);
+        HardwareVertexNormalAccumulator.field_f.drawLeft(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), NanoTickClock.field_h[3], -14671840, -1);
+        HardwareVertexNormalAccumulator.field_f.drawLeft(var4, false, PlayerProfile.field_u.toUpperCase(), NanoTickClock.field_h[4], -14671840, -1);
+        HardwareVertexNormalAccumulator.field_f.drawLeft(var4, false, CookieDateFormatter.field_a.toUpperCase(), NanoTickClock.field_h[5], -14671840, -1);
         var5 = null;
         var6 = this.field_w;
         if (0 == var6) {
           var7 = PlayerSimulation.field_n;
           if (var7 != null) {
-            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
             return;
           }
           discarded$3 = this.drawTable((byte) 106, this.field_x, param1);
@@ -262,7 +262,7 @@ final class RatingsScreen extends DropInMenuScreen {
         }
         if (var6 != 1) {
           if (var5 != null) {
-            MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5)).toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
             return;
           }
           discarded$5 = this.drawTable((byte) 106, this.field_x, param1);
@@ -270,7 +270,7 @@ final class RatingsScreen extends DropInMenuScreen {
         }
         var8 = FacePlayerMountComponent.field_H;
         if (var8 != null) {
-          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
           return;
         }
         discarded$4 = this.drawTable((byte) 106, this.field_x, param1);

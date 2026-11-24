@@ -7,7 +7,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
     private FocusableWidget field_Z;
     private FocusableWidget[] field_U;
     private FocusableWidget field_N;
-    private dh[] field_P;
+    private DisplayModeInfo[] field_P;
     private FocusableWidget field_W;
     static String field_Q;
     static String field_R;
@@ -34,7 +34,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
               return;
             }
             MotionTrackingModel.field_p = MotionTrackingModel.field_p + 1;
-            vha.field_b = nt.field_a;
+            vha.field_b = FullscreenFailureReason.field_a;
             if (0 > SoftwareDepthBuffer.field_f) {
               var5 = 0;
               var2 = var5;
@@ -54,7 +54,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
                 VerticalScrollbar.field_tb[var2] = true;
               }
             }
-            nt.field_a = UnlockOverlay.field_n;
+            FullscreenFailureReason.field_a = UnlockOverlay.field_n;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +89,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        dh[] var3_ref_dh__ = null;
+        DisplayModeInfo[] var3_ref_dh__ = null;
         int var4 = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -97,7 +97,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         String var6 = null;
         FocusableWidget var6_ref = null;
         UiWidget var7 = null;
-        dh var8 = null;
+        DisplayModeInfo var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
         GridWidgetContainer stackIn_51_1Lifetime1;
@@ -135,7 +135,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
               }
             }
             var3_ref_dh__ = this.field_P;
-            this.field_P = new dh[var2_int];
+            this.field_P = new DisplayModeInfo[var2_int];
             var4 = 0;
             for (var5 = 0; var3_ref_dh__.length > var5; var5++) {
               if (var3_ref_dh__[var5] != null) {
@@ -453,10 +453,10 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
                       if (ReportAbuseDialog.field_ub > 0) {
                         this.selectButton(20306, param2);
                       } else {
-                        this.field_z.pushDialog(new bra(this.field_z), 84);
+                        this.field_z.pushDialog(new FullscreenMembershipDialog(this.field_z), 84);
                       }
                     } else {
-                      this.field_z.pushDialog(new gga(this.field_z, VertexAttribute.field_o), 95);
+                      this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, VertexAttribute.field_o), 95);
                     }
                   }
                 } else {
@@ -501,7 +501,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         FocusableWidget discarded$1 = null;
         FocusableWidget var3 = null;
         int var4 = 0;
-        dh var5 = null;
+        DisplayModeInfo var5 = null;
         WidgetListener var6 = null;
         FocusableWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
@@ -559,7 +559,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         if (param0 != 24316) {
           field_Q = (String) null;
         }
-        return ota.isPlayerReachable(TextureCombineOperation.field_b, (byte) 13, mn.field_n);
+        return CubeTextureSourceBase.isPlayerReachable(TextureCombineOperation.field_b, (byte) 13, MatchingEmailAvailabilityValidator.field_n);
     }
 
     private final FocusableWidget addButton(WidgetListener param0, String param1, int param2) {
@@ -760,7 +760,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new FocusableWidget(param2, param3);
-          var5.field_r = (WidgetPainter) ((Object) new tka(param1));
+          var5.field_r = (WidgetPainter) ((Object) new IndexedSpriteButtonPainter(param1));
           if (param0 >= -81) {
             this.field_L = (FocusableWidget) null;
           }

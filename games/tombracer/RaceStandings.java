@@ -77,7 +77,7 @@ final class RaceStandings {
     }
 
     final static void releaseAllSounds(int param0) {
-        vb var1 = null;
+        PcmSamplePlayback var1 = null;
         PlayingSound var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -87,11 +87,11 @@ final class RaceStandings {
           if (param0 != 18916) {
             field_a = (PlatformTaskDispatcher) null;
           }
-          var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
+          var1 = (PcmSamplePlayback) (DivisionMazeGenerator.field_e.first(-80));
           while (var1 != null) {
             var2 = new PlayingSound(var1, var1.field_f.getTargetVolume(), var1.field_f.getTargetPan());
             ConsoleCloseParenthesisKind.queueSoundRelease(var2, -58);
-            var1 = (vb) (DivisionMazeGenerator.field_e.next(119));
+            var1 = (PcmSamplePlayback) (DivisionMazeGenerator.field_e.next(119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,7 +9,7 @@ final class DisplacementOperator extends TextureOperator {
         if (param0 != 116) {
           this.field_n = -128;
         }
-        tka.buildSinCosTables((byte) 48);
+        IndexedSpriteButtonPainter.buildSinCosTables((byte) 48);
     }
 
     final int[][] getColourRow(int param0, int param1) {
@@ -46,7 +46,7 @@ final class DisplacementOperator extends TextureOperator {
             var12 = ColourFillOperator.field_r[var10] * var11 >> 12;
             var13 = CourseGenerator.field_e[var10] * var11 >> 12;
             var14 = (var12 >> 12) + var9 & GpuDataType.textureWidthMask;
-            var15 = hba.textureHeightMask & (var13 >> 12) + param0;
+            var15 = RoomResultSender.textureHeightMask & (var13 >> 12) + param0;
             var32 = this.getInputColourRow(var15, 0, -1);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];
@@ -88,7 +88,7 @@ final class DisplacementOperator extends TextureOperator {
             var9 = ColourFillOperator.field_r[var7] * var8 >> 12;
             var10 = CourseGenerator.field_e[var7] * var8 >> 12;
             var11 = var6 + (var9 >> 12) & GpuDataType.textureWidthMask;
-            var12 = hba.textureHeightMask & (var10 >> 12) + param1;
+            var12 = RoomResultSender.textureHeightMask & (var10 >> 12) + param1;
             var28 = this.getInputMonochromeRow(0, -27, var12);
             var16[var6] = var28[var11];
           }

@@ -30,10 +30,10 @@ final class EmbossOperator extends TextureOperator {
         int[] var18 = this.monochromeCache.getRow((byte) 113, param1);
         int[] var3 = var18;
         if (this.monochromeCache.rowMissed) {
-          var7 = this.field_o * ooa.field_g >> 12;
-          var26 = this.getInputMonochromeRow(0, -126, hba.textureHeightMask & -1 + param1);
+          var7 = this.field_o * AccountNameResolver.field_g >> 12;
+          var26 = this.getInputMonochromeRow(0, -126, RoomResultSender.textureHeightMask & -1 + param1);
           var9 = this.getInputMonochromeRow(0, param0 ^ -36, param1);
-          var25 = this.getInputMonochromeRow(0, -116, param1 + 1 & hba.textureHeightMask);
+          var25 = this.getInputMonochromeRow(0, -116, param1 + 1 & RoomResultSender.textureHeightMask);
           for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
             var12 = (var25[var11] - var26[var11]) * var7 >> 12;
             var13 = var7 * (var9[-1 + var11 & GpuDataType.textureWidthMask] - var9[GpuDataType.textureWidthMask & var11 + 1]) >> 12;

@@ -26,18 +26,18 @@ abstract class GameFont {
     abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 
     private final void setColours(int param0, int param1, int param2) {
-        nt.field_b = -1;
+        FullscreenFailureReason.field_b = -1;
         if (param2 < 106) {
           this.field_a = (GameFontMetrics) null;
         }
         OpenGlToolkit.field_ab = 0;
         ClientMemoryVertexArray.field_g = param0;
         MatchProtocol.field_k = param0;
-        moa.field_a = 0;
+        ChatPrefixFormatter.field_a = 0;
         if (param1 == -1) {
           param1 = 0;
         }
-        moa.field_b = -1;
+        ChatPrefixFormatter.field_b = -1;
         KeyItemComponent.field_G = param1;
         GasTrapComponent.field_G = param1;
     }
@@ -81,17 +81,17 @@ abstract class GameFont {
               } else {
                 if (!param0.startsWith("str=")) {
                   if (param0.equals("str")) {
-                    nt.field_b = 8388608 | -16777216 & MatchProtocol.field_k;
+                    FullscreenFailureReason.field_b = 8388608 | -16777216 & MatchProtocol.field_k;
                   } else {
                     if (param0.equals("/str")) {
-                      nt.field_b = -1;
+                      FullscreenFailureReason.field_b = -1;
                     } else {
                       if (param0.startsWith("u=")) {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        moa.field_b = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var9, -65, 16);
+                        ChatPrefixFormatter.field_b = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var9, -65, 16);
                       } else {
                         if (param0.equals("u")) {
-                          moa.field_b = -16777216 & MatchProtocol.field_k;
+                          ChatPrefixFormatter.field_b = -16777216 & MatchProtocol.field_k;
                         } else {
                           if (!param0.equals("/u")) {
                             if (!param0.equalsIgnoreCase("shad=-1")) {
@@ -115,7 +115,7 @@ abstract class GameFont {
                               GasTrapComponent.field_G = 0;
                             }
                           } else {
-                            moa.field_b = -1;
+                            ChatPrefixFormatter.field_b = -1;
                           }
                         }
                       }
@@ -123,7 +123,7 @@ abstract class GameFont {
                   }
                 } else {
                   var7 = (CharSequence) ((Object) param0.substring(4));
-                  nt.field_b = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var7, -45, 16);
+                  FullscreenFailureReason.field_b = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var7, -45, 16);
                 }
               }
             } else {
@@ -444,9 +444,9 @@ abstract class GameFont {
                 }
                 if (32 == var14) {
                   if (OpenGlToolkit.field_ab > 0) {
-                    moa.field_a = moa.field_a + OpenGlToolkit.field_ab;
-                    param1 = param1 + (moa.field_a >> 8);
-                    moa.field_a = moa.field_a & 255;
+                    ChatPrefixFormatter.field_a = ChatPrefixFormatter.field_a + OpenGlToolkit.field_ab;
+                    param1 = param1 + (ChatPrefixFormatter.field_a >> 8);
+                    ChatPrefixFormatter.field_a = ChatPrefixFormatter.field_a & 255;
                   }
                 } else {
                   if (param2 == null) {
@@ -462,11 +462,11 @@ abstract class GameFont {
                   }
                 }
                 var15 = this.field_a.characterWidth(255, var14);
-                if (nt.field_b != -1) {
-                  this.field_b.drawHorizontalLineAt(1, var15, (int)((double)this.field_a.field_a * 0.7) + param8, param1, nt.field_b);
+                if (FullscreenFailureReason.field_b != -1) {
+                  this.field_b.drawHorizontalLineAt(1, var15, (int)((double)this.field_a.field_a * 0.7) + param8, param1, FullscreenFailureReason.field_b);
                 }
-                if (moa.field_b != -1) {
-                  this.field_b.drawHorizontalLineAt(1, var15, param8 + this.field_a.field_a + 1, param1, moa.field_b);
+                if (ChatPrefixFormatter.field_b != -1) {
+                  this.field_b.drawHorizontalLineAt(1, var15, param8 + this.field_a.field_a + 1, param1, ChatPrefixFormatter.field_b);
                 }
                 param1 = param1 + var15;
                 var11 = var14;

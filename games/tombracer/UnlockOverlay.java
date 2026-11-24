@@ -104,20 +104,20 @@ final class UnlockOverlay extends MatchOverlay {
           if (this.field_m.getKind(16) == 0) {
             var6 = SocketArchiveNetworkClient.field_v;
             var7 = Room.field_m[this.field_m.getIndex(-13939)];
-            MembersUpsellMenu.drawCentredTextWithShadow(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(var6.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
             TextureTransformMode.a(-10985);
-            hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
+            ModelPreviewRenderer.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
             RemovedFromGameMenu.resetDepthRange((byte) -6);
             PlayerInputQueue.field_a.draw(var2, var3 + 85);
-            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.getCanvasHeight(0) >> 1) + 92, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, (SwitchLinkList.getCanvasHeight(0) >> 1) + 92, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
             return;
           }
           if (this.field_m.getKind(16) == 1) {
             var4 = this.field_m.getIndex(-13939);
-            MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
             OpenGlFramebuffer.field_i[var4].draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - OpenGlFramebuffer.field_i[var4].width() / 2, (SwitchLinkList.getCanvasHeight(0) >> 1) - OpenGlFramebuffer.field_i[var4].height() / 2 - 20);
             PlayerInputQueue.field_a.draw(var2, var3 + 60);
-            MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, 92 + var3, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
             return;
           }
           return;
@@ -127,20 +127,20 @@ final class UnlockOverlay extends MatchOverlay {
         if (this.field_m.getKind(16) == 0) {
           var8 = SocketArchiveNetworkClient.field_v;
           var9 = Room.field_m[this.field_m.getIndex(-13939)];
-          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
           TextureTransformMode.a(-10985);
-          hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
+          ModelPreviewRenderer.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
           RemovedFromGameMenu.resetDepthRange((byte) -6);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 85);
-          MembersUpsellMenu.drawCentredTextWithShadow(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.getCanvasHeight(0) >> 1) + 92, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(var9.toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, (SwitchLinkList.getCanvasHeight(0) >> 1) + 92, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
           return;
         }
         if (this.field_m.getKind(16) == 1) {
           var4Lifetime1 = this.field_m.getIndex(-13939);
-          MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 100, 320, -1);
           OpenGlFramebuffer.field_i[var4Lifetime1].draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].width() / 2, (SwitchLinkList.getCanvasHeight(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].height() / 2 - 20);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 60);
-          MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, 92 + var3Lifetime1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
           return;
         }
     }

@@ -37,7 +37,7 @@ final class RewardChoiceSlot {
         TextInputWidget.paintNineSliceFrame(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
         if (var2 != -1) {
           var3 = OpenGlUnderwaterEffect.field_n[var2];
-          var4 = eca.field_c[var3];
+          var4 = PlayerQuickChatMenuLauncher.field_c[var3];
           var4.draw((this.field_j >> 1) + this.field_g - (var4.width() >> 1), (this.field_i >> 1) + (this.field_c - (var4.height() >> 1)));
         }
         if (0 <= var2) {

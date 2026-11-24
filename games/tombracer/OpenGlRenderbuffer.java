@@ -81,7 +81,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
         if (param0 != -1) {
           return 119;
         }
-        return cm.field_a.length;
+        return CourseStartPacket.field_a.length;
     }
 
     OpenGlRenderbuffer(OpenGlToolkit param0, int param1, int param2, int param3) {

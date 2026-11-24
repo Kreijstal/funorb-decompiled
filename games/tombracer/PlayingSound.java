@@ -8,7 +8,7 @@ final class PlayingSound extends IntrusiveNode {
     private int field_k;
     private int field_n;
     private int field_g;
-    vb field_i;
+    PcmSamplePlayback field_i;
     int field_h;
     static IntrusiveDeque field_f;
 
@@ -122,7 +122,7 @@ final class PlayingSound extends IntrusiveNode {
         }
     }
 
-    PlayingSound(vb param0, int param1, boolean param2, int param3, int param4, int param5) {
+    PlayingSound(PcmSamplePlayback param0, int param1, boolean param2, int param3, int param4, int param5) {
         this(param0, param4, param5);
         try {
           this.field_l = param1;
@@ -131,7 +131,7 @@ final class PlayingSound extends IntrusiveNode {
         }
     }
 
-    PlayingSound(vb param0, int param1, int param2) {
+    PlayingSound(PcmSamplePlayback param0, int param1, int param2) {
         try {
           this.field_i = param0;
           this.field_h = param1;

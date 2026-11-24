@@ -1,0 +1,221 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class CubeTextureSourceBase {
+    static ResourceArchive field_b;
+    static String[] field_a;
+    static int field_c;
+
+    final static void rasterizeEllipse(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int var8_int = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var21 = 0;
+        int var22 = 0;
+        int var23 = 0;
+        int var24 = 0;
+        int var25 = 0;
+        int var26 = 0;
+        int var27 = 0;
+        int var28 = 0;
+        int var29 = 0;
+        int var30 = 0;
+        int var31 = 0;
+        int var32 = 0;
+        int var33 = 0;
+        int var34 = 0;
+        int var35 = 0;
+        int var36 = 0;
+        int var37 = 0;
+        int var38 = 0;
+        int[] var39 = null;
+        int var40 = 0;
+        int var41 = 0;
+        int var42 = 0;
+        int var43 = 0;
+        int var44 = 0;
+        int var47 = 0;
+        int[] var48 = null;
+        int[] var49 = null;
+        int stackIn_8_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var8 = null;
+        int var45 = 0;
+        int var46 = 0;
+        var47 = TombRacer.field_G ? 1 : 0;
+        try {
+          var8_int = 0;
+          var9 = param1;
+          var10 = 0;
+          var11 = -param0 + param2;
+          var12 = param1 - param0;
+          var13 = param2 * param2;
+          var14 = param1 * param1;
+          if (param5 != -1923382751) {
+            field_b = (ResourceArchive) null;
+          }
+          var15 = var11 * var11;
+          var16 = var12 * var12;
+          var17 = var14 << 1;
+          var18 = var13 << 1;
+          var19 = var16 << 1;
+          var20 = var15 << 1;
+          var21 = param1 << 1;
+          var22 = var12 << 1;
+          var23 = var17 + (-var21 + 1) * var13;
+          var24 = -((var21 - 1) * var18) + var14;
+          var25 = (-var22 + 1) * var15 + var19;
+          var26 = var16 - var20 * (-1 + var22);
+          var27 = var13 << 2;
+          var28 = var14 << 2;
+          var29 = var15 << 2;
+          var30 = var16 << 2;
+          var31 = var17 * 3;
+          var32 = (var21 - 3) * var18;
+          var33 = 3 * var19;
+          var34 = (-3 + var22) * var20;
+          var35 = var28;
+          var36 = var27 * (-1 + param1);
+          var37 = var30;
+          var38 = (-1 + var12) * var29;
+          var49 = PackedBitSetSupport.field_a[param7];
+          var48 = var49;
+          var39 = var48;
+          C2SRoomResultPacket.fillRange((byte) -55, param3, param4 - var11, var39, -param2 + param4);
+          C2SRoomResultPacket.fillRange((byte) -55, param6, param4 + var11, var39, param4 - var11);
+          C2SRoomResultPacket.fillRange((byte) -55, param3, param2 + param4, var49, param4 + var11);
+          while (true) {
+            if (var9 <= 0) {
+              return;
+            }
+            stackIn_8_0 = (var12 < var9) ? 0 : 1;
+            var40 = stackIn_8_0;
+            if (0 > var23) {
+              while (0 > var23) {
+                var24 = var24 + var35;
+                var23 = var23 + var31;
+                var35 = var35 + var28;
+                var8_int++;
+                var31 = var31 + var28;
+              }
+            }
+            if (var40 != 0) {
+              if (var25 < 0) {
+                while (var25 < 0) {
+                  var26 = var26 + var37;
+                  var25 = var25 + var33;
+                  var33 = var33 + var30;
+                  var37 = var37 + var30;
+                  var10++;
+                }
+              }
+              if (var26 < 0) {
+                var26 = var26 + var37;
+                var25 = var25 + var33;
+                var10++;
+                var37 = var37 + var30;
+                var33 = var33 + var30;
+              }
+              var25 = var25 - var38;
+              var26 = var26 - var34;
+              var38 = var38 - var29;
+              var34 = var34 - var29;
+            }
+            if (var24 < 0) {
+              var23 = var23 + var31;
+              var24 = var24 + var35;
+              var31 = var31 + var28;
+              var35 = var35 + var28;
+              var8_int++;
+            }
+            var24 = var24 - var32;
+            var23 = var23 - var36;
+            var9--;
+            var32 = var32 - var27;
+            var36 = var36 - var27;
+            var41 = -var9 + param7;
+            var42 = var9 + param7;
+            var43 = param4 + var8_int;
+            var44 = -var8_int + param4;
+            if (var40 == 0) {
+              C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var41], var44);
+              C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var42], var44);
+              continue;
+            }
+            var45 = param4 + var10;
+            var46 = param4 - var10;
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var46, PackedBitSetSupport.field_a[var41], var44);
+            C2SRoomResultPacket.fillRange((byte) -55, param6, var45, PackedBitSetSupport.field_a[var41], var46);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var41], var45);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var46, PackedBitSetSupport.field_a[var42], var44);
+            C2SRoomResultPacket.fillRange((byte) -55, param6, var45, PackedBitSetSupport.field_a[var42], var46);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var43, PackedBitSetSupport.field_a[var42], var45);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var8), "ota.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+        }
+    }
+
+    protected CubeTextureSourceBase() throws Throwable {
+        throw new Error();
+    }
+
+    final static boolean isPlayerReachable(long param0, byte param1, String param2) {
+        ContactListEntry var4 = null;
+        RuntimeException var4_ref = null;
+        boolean stackIn_11_0 = false;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 13) {
+            CubeTextureSourceBase.rasterizeEllipse(-17, -67, 51, -71, -111, -94, -55, 8);
+          }
+          var4 = wp.findFriendByName(126, param2);
+          if (var4 != null &&
+            null != var4.field_Cb) {
+            return true;
+          }
+          stackIn_11_0 = (null != C2SChooseRewardPacket.field_a) && (null != AchievementsScreen.findLobbyPlayer((byte) -40, param0));
+          return stackIn_11_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_14_0 = var4_ref;
+          stackIn_14_1 = new StringBuilder().append("ota.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_b = null;
+        if (param0 != 0) {
+          CubeTextureSourceBase.releaseStatics(1);
+          field_a = null;
+          return;
+        }
+        field_a = null;
+    }
+
+    static {
+        field_a = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
+    }
+}

@@ -236,13 +236,13 @@ final class RoomViewRenderer {
           field_c = (ReportAbuseDialog) null;
         }
         for (var2 = 0; fa.field_b > var2; var2++) {
-          var3 = ImageProducerCanvasImageBuffer.field_m[var2] * mq.field_b[var2];
+          var3 = ImageProducerCanvasImageBuffer.field_m[var2] * LegacyOpenGlNormalMapGenerator.field_b[var2];
           var4 = ck.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = QueuedHint.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], TermsLinksPanel.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var5);
+          var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], TermsLinksPanel.field_C[var2], LegacyOpenGlNormalMapGenerator.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var5);
         }
         MazeGenerator.releaseStatics((byte) -50);
         return var1;

@@ -314,8 +314,8 @@ final class BitPacketBuffer extends PacketBuffer {
               baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
             }
           }
-          if (null != mq.field_e) {
-            mq.field_e.field_g = PitSnake.getCurrentGraphicsMode(5);
+          if (null != LegacyOpenGlNormalMapGenerator.field_e) {
+            LegacyOpenGlNormalMapGenerator.field_e.field_g = PitSnake.getCurrentGraphicsMode(5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

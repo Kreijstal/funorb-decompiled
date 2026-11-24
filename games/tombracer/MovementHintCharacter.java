@@ -28,7 +28,7 @@ final class MovementHintCharacter {
 
     final void draw(int param0, int param1, int param2) {
         TextureTransformMode.a(-10985);
-        hp.drawModelPreview(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
+        ModelPreviewRenderer.drawModelPreview(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
         RemovedFromGameMenu.resetDepthRange((byte) -6);
         int var4 = -43 / ((param2 - 6) / 58);
     }

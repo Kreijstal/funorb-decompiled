@@ -31,14 +31,14 @@ final class ArbAssemblyProgram {
         try {
           TriangleRasterizer.useRasterClip();
           SecondaryNodeDeque.field_a = 11;
-          gta.field_g = new int[260];
+          HardwareFaceNormal.field_g = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2_double = 15.0;
-            gta.field_g[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2_double) * 255.0);
+            HardwareFaceNormal.field_g[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2_double) * 255.0);
           }
           var1_intLifetime1 = -125 % ((param0 + 11) / 55);
-          for (var2 = 256; var2 < gta.field_g.length; var2++) {
-            gta.field_g[var2] = 255;
+          for (var2 = 256; var2 < HardwareFaceNormal.field_g.length; var2++) {
+            HardwareFaceNormal.field_g[var2] = 255;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

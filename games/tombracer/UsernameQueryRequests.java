@@ -22,21 +22,21 @@ final class UsernameQueryRequests {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (PlayerResultRow.accountRequestPending == wt.usernameQueryState) {
+          if (PlayerResultRow.accountRequestPending == ProgressDialogLauncher.usernameQueryState) {
             return null;
           }
           if (param0 <= 114) {
             field_b = (int[]) null;
           }
-          if (mua.accountRequestComplete == wt.usernameQueryState &&
-            param1.equals(uaa.field_a)) {
-            wt.usernameQueryState = fta.accountRequestIdle;
+          if (EmptyRoomFactory.accountRequestComplete == ProgressDialogLauncher.usernameQueryState &&
+            param1.equals(ChatMessageColours.field_a)) {
+            ProgressDialogLauncher.usernameQueryState = fta.accountRequestIdle;
             stackIn_11_0 = SnakePitModel.field_t;
             return stackIn_11_0;
           }
           SnakePitModel.field_t = null;
-          wt.usernameQueryState = PlayerResultRow.accountRequestPending;
-          uaa.field_a = param1;
+          ProgressDialogLauncher.usernameQueryState = PlayerResultRow.accountRequestPending;
+          ChatMessageColours.field_a = param1;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

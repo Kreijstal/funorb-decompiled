@@ -4,14 +4,14 @@
 class um extends DualLinkNode {
     static String field_k;
     static byte[] field_m;
-    static mpa field_l;
+    static AccountContentTransitionDialog field_l;
 
-    final static vb playSampleDelayed(int param0, int param1, PcmSample param2, int param3, int param4) {
+    final static PcmSamplePlayback playSampleDelayed(int param0, int param1, PcmSample param2, int param3, int param4) {
         PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
         DelayedPcmStream var6 = null;
-        vb var7 = null;
-        vb stackIn_3_0 = null;
+        PcmSamplePlayback var7 = null;
+        PcmSamplePlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,7 +22,7 @@ class um extends DualLinkNode {
           }
           var5 = PcmSampleStream.createAtRateAndPan(param2, 100, param4, param0);
           var6 = hda.delayStreamByMillis(param1, 1303, var5);
-          var7 = new vb(var5, var6);
+          var7 = new PcmSamplePlayback(var5, var6);
           DivisionMazeGenerator.field_e.addLast((byte) -57, var7);
           PitModel.field_n.prependStream(var6);
           stackIn_3_0 = var7;

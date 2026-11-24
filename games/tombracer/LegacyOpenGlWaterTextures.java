@@ -34,7 +34,7 @@ final class LegacyOpenGlWaterTextures {
         int var2_int = 0;
         RuntimeException var2 = null;
         LegacyOpenGlTexture3D var4 = null;
-        mq var10 = null;
+        LegacyOpenGlNormalMapGenerator var10 = null;
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
@@ -71,7 +71,7 @@ final class LegacyOpenGlWaterTextures {
             var22 = IntPoint.unwrapByteStorage(LegacyOpenGlTexture1D.field_m, 13588, false);
             this.field_c = new LegacyOpenGlTexture3D(param0, 6408, 128, 128, 16);
             var4 = new LegacyOpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);
-            if (var10.a(-112, 2.0f, var4, this.field_c)) {
+            if (var10.generateNormalTexture(-112, 2.0f, var4, this.field_c)) {
               this.field_c.generateMipmaps(9729);
               var4.close(0);
               return;

@@ -62,7 +62,7 @@ final class MenuInputState {
           this.selectedIndex = param0;
           this.pointerButton = PlayerModel.field_b;
           this.pointerSelecting = true;
-          this.field_a = gp.field_m;
+          this.field_a = RoomPropertyLabels.field_m;
           if (this.pointerButton != 0 &&
             RangeOperator.field_p != 0) {
             if (0 >= this.field_a) {

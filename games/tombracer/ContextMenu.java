@@ -175,7 +175,7 @@ final class ContextMenu extends UiComponent {
 
     final static void setCharacterAnimations(int param0, AnimationFrameSet param1) {
         try {
-          hba.field_c = param1;
+          RoomResultSender.field_c = param1;
           if (param0 != 13) {
             field_Eb = -36;
           }

@@ -157,7 +157,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               TripBeamComponent.playMusicTrack(1, 0);
               RaceStandings.releaseAllSounds(18916);
               if ((!(JavaKeyCodeMapPatches.field_d) ||
-                cs.field_c == null)) {
+                AccountRequestUsernameSelector.field_c == null)) {
                 TextureCombineSource.startMenuBackgroundDemo(48);
               }
               decompiledFrameRemainder0 = false;
@@ -167,12 +167,12 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
                 TripBeamComponent.playMusicTrack(1, 0);
                 RaceStandings.releaseAllSounds(18916);
                 JavaKeyCodeMapPatches.field_d = false;
-                cs.field_c = null;
+                AccountRequestUsernameSelector.field_c = null;
               }
             }
           } else {
             TripBeamComponent.playMusicTrack(1, 1);
-            cs.field_c = null;
+            AccountRequestUsernameSelector.field_c = null;
             JavaKeyCodeMapPatches.field_d = false;
           }
           PlayerViewportLayout.field_a = SpriteTileOperator.field_t;
@@ -181,9 +181,9 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             if (PlayerViewportLayout.field_a.field_c == 1) {
               TextureCombineSource.startMenuBackgroundDemo(108);
             }
-            if (null != mq.field_e && (PlayerViewportLayout.field_a.field_c == 12 ||
+            if (null != LegacyOpenGlNormalMapGenerator.field_e && (PlayerViewportLayout.field_a.field_c == 12 ||
               PlayerViewportLayout.field_a.field_c == 4)) {
-              SpawnerBehaviour.sendSettings(MusicVolumeControl.getMusicVolume(-22636), 12, mq.field_e.field_g, jg.getSoundVolume((byte) -80));
+              SpawnerBehaviour.sendSettings(MusicVolumeControl.getMusicVolume(-22636), 12, LegacyOpenGlNormalMapGenerator.field_e.field_g, NoiseSliceGenerator.getSoundVolume((byte) -80));
             }
           }
           SpriteTileOperator.field_t = BlendModeOperator.getScreenById(param1, 121);
@@ -191,7 +191,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             ((MenuScreen) (SpriteTileOperator.field_t)).onShow(0, 0, param0);
           }
           SpriteTileOperator.field_t.onActivated((byte) 114);
-          if (mpa.field_X) {
+          if (AccountContentTransitionDialog.field_X) {
             MandelbrotOperator.field_o = null;
             RotaterMountComponent.field_H = new IntrusiveDeque();
             var11 = SimpleConditionBehaviour.field_o;
@@ -212,13 +212,13 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               var8++;
             }
             uma.field_c = false;
-            mpa.field_X = false;
+            AccountContentTransitionDialog.field_X = false;
             SoftwareTransform3D.field_p = false;
             GameClock.field_b = false;
           }
           if (era.field_c) {
             SwitchModel.closeLobbyOverlays((byte) -119);
-            ig.clearLobbyState(-125);
+            LobbyStateCleanup.clearLobbyState(-125);
             ObjectList.clearLobbyLists(0);
             era.field_c = false;
           }
@@ -282,7 +282,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           ck.field_c = new byte[fa.field_b][];
           LoadLevelCommand.field_p = new int[fa.field_b];
           ImageProducerCanvasImageBuffer.field_m = new int[fa.field_b];
-          mq.field_b = new int[fa.field_b];
+          LegacyOpenGlNormalMapGenerator.field_b = new int[fa.field_b];
           CacheEntry.field_l = new byte[fa.field_b][];
           NetworkArchiveRequest.field_n = new boolean[fa.field_b];
           var17.position = -7 + param1.length - fa.field_b * 8;
@@ -296,7 +296,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             TermsLinksPanel.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
           }
           for (var4Lifetime2 = 0; fa.field_b > var4Lifetime2; var4Lifetime2++) {
-            mq.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLineLayout.bitwiseXor(param0, 122));
+            LegacyOpenGlNormalMapGenerator.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLineLayout.bitwiseXor(param0, 122));
           }
           for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
             ImageProducerCanvasImageBuffer.field_m[var4Lifetime3] = var17.readUnsignedShort(122);
@@ -311,7 +311,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           var17.position = 0;
           for (var4Lifetime5 = 0; fa.field_b > var4Lifetime5; var4Lifetime5++) {
-            var5 = mq.field_b[var4Lifetime5];
+            var5 = LegacyOpenGlNormalMapGenerator.field_b[var4Lifetime5];
             var6 = ImageProducerCanvasImageBuffer.field_m[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];

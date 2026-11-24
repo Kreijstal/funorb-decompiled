@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class RoomRegion extends IntrusiveNode implements RoomObjectMarker, Renderable, noa {
+final class RoomRegion extends IntrusiveNode implements RoomObjectMarker, Renderable, GameStateMarker {
     private int height;
     private int y;
     private VariantMask variantMask;

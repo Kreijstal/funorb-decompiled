@@ -132,8 +132,8 @@ abstract class LegacyOpenGlTexture implements FramebufferAttachment {
           this.internalFormat = param2;
           this.target = param1;
           this.texelCount = param3;
-          jaggl.OpenGL.glGenTextures(1, pu.field_a, 0);
-          this.textureId = pu.field_a[0];
+          jaggl.OpenGL.glGenTextures(1, EmptyWidgetPainter.field_a, 0);
+          this.textureId = EmptyWidgetPainter.field_a[0];
           this.updateMemoryAccounting((byte) 109, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

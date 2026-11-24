@@ -12,7 +12,7 @@ final class tia {
           param1.removeMouseListener(ColourGradientOperator.field_n);
           param1.removeMouseMotionListener(ColourGradientOperator.field_n);
           param1.removeFocusListener(ColourGradientOperator.field_n);
-          tka.field_n = param0;
+          IndexedSpriteButtonPainter.field_n = param0;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tia.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

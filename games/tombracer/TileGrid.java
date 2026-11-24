@@ -33,7 +33,7 @@ final class TileGrid implements Renderable {
 
     final static void a(boolean param0, byte param1) {
         int var2 = -75 / ((param1 + 12) / 44);
-        ej.field_a.renderWithTooltip(-42, 0, 0);
+        DisplayNameValidator.field_a.renderWithTooltip(-42, 0, 0);
     }
 
     private final void resize(int param0, Room param1, int param2, int param3, int param4) {

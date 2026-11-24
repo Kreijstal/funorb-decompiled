@@ -225,7 +225,7 @@ final class TooltipRenderer {
         StatefulWidgetPainter var6 = null;
         StatefulWidgetPainter var7 = null;
         RadialSelectionPainter discarded$0 = null;
-        cj discarded$1 = null;
+        PointListEditorPainter discarded$1 = null;
         StatefulWidgetPainter var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
@@ -272,11 +272,11 @@ final class TooltipRenderer {
           var6.field_l = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.field_l = 0;
-          var7.setAllLayerSprites(-18379, eca.createSolidNineSlice(4, 8947848));
-          var7.createStateLayer(1, (byte) 85).setSprites(2, eca.createSolidNineSlice(4, 11184810)).withTextColour(2236962, -2147483648);
-          this.field_d = (WidgetPainter) ((Object) new jr(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          var7.setAllLayerSprites(-18379, PlayerQuickChatMenuLauncher.createSolidNineSlice(4, 8947848));
+          var7.createStateLayer(1, (byte) 85).setSprites(2, PlayerQuickChatMenuLauncher.createSolidNineSlice(4, 11184810)).withTextColour(2236962, -2147483648);
+          this.field_d = (WidgetPainter) ((Object) new SoftwareCheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new RadialSelectionPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          discarded$1 = new PointListEditorPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyTo(var8, -107);
           var8.createStateLayer(0, (byte) 65).setSprites(2, FadingDialog.createFrameSprites(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).withShadowColour((byte) 7, -1);

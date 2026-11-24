@@ -27,7 +27,7 @@ final class fha {
         int var13 = TombRacer.field_G ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
-        uca.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_top");
+        MeshMaterialColour.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_top");
         if (!param0) {
           return;
         }

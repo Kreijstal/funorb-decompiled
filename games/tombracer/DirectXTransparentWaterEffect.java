@@ -9,7 +9,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void disable(int param0) {
         this.field_e.bindVertexShader((jagdx.IDirect3DVertexShader) null, -1);
-        this.owner.setColorCombineSource(ej.field_c, 0, -54);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -54);
         this.owner.setColorCombineSource(OpenGlDisplayLists.field_c, 1, -56);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -116);
         if (param0 <= -4) {
@@ -191,7 +191,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void enable(int param0, boolean param1) {
-        this.owner.setColorCombineSource(ej.field_c, 0, -100);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -100);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 1, -21);
         this.owner.setColorCombineSource(OpenGlDisplayLists.field_c, 2, -6219, false, true);
         this.owner.setFogAllowed((byte) 77, false);

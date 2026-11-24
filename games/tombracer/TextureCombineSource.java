@@ -67,7 +67,7 @@ final class TextureCombineSource {
         int incrementValue$1 = param1;
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$1, (byte) 47, param0);
-        dna.field_F = SpriteData.loadSprite(param2, "", "bg_slab");
+        SkeletonComponentBase.field_F = SpriteData.loadSprite(param2, "", "bg_slab");
         RoundWinnerPhase.field_p = SpriteData.loadSheet(param2, "", "inset_frame");
         MonochromeRowCacheEntry.field_f = SpriteData.loadSheet(param2, "", "keys");
         SpriteState.field_l = new int[MonochromeRowCacheEntry.field_f.length];
@@ -159,7 +159,7 @@ final class TextureCombineSource {
         FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
         WaveformOperator.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
         SceneLight.field_n = SpriteData.loadSprite(param2, "", "slab_small4");
-        vua.field_y = SpriteData.loadSprite(param2, "", "slab_medium");
+        ClippedChildWidget.field_y = SpriteData.loadSprite(param2, "", "slab_medium");
         int incrementValue$6 = param1;
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$6, (byte) 47, param0);
@@ -178,7 +178,7 @@ final class TextureCombineSource {
         LobbyGameWidget.field_Db = SpriteData.loadSprite(param2, "", "options_bar_empty");
         RenderableNode.field_j = SpriteData.loadSprite(param2, "", "options_bar_full");
         ResourceArchive.field_h = SpriteData.loadSprite(param2, "", "button_music");
-        re.field_a = SpriteData.loadSprite(param2, "", "button_sound");
+        MainScreenLayout.field_a = SpriteData.loadSprite(param2, "", "button_sound");
         LoadingStepList.field_c = SpriteData.loadSheet(param2, "", "multipliers");
         LoadingStep.field_a = SpriteData.loadSprite(param2, "", "room_total");
         FleeLocomotor.field_C = SpriteData.loadSprite(param2, "", "tombname_frame");
@@ -194,7 +194,7 @@ final class TextureCombineSource {
           var11 = SpriteData.loadSheet(param2, "", "mugshots");
           var12 = SpriteData.loadSheet(param2, "", "hud_icons");
           LegacyOpenGlSpriteTexture.field_u = var12[1];
-          mp.field_d = var12[1];
+          MidiChannelVolumeTargets.field_d = var12[1];
           AnimationFrameBase.field_k = new SpriteData[13];
           var13 = 0;
           for (var14 = 0; var14 < 13; var14++) {
@@ -244,7 +244,7 @@ final class TextureCombineSource {
             TextureCombineSource.drawFullscreenDialogContents((byte) -23);
           }
           var2 = 0;
-          if (mq.field_a == 2) {
+          if (LegacyOpenGlNormalMapGenerator.field_a == 2) {
             var3_long = AdjustedWallClock.currentTimeMillis((byte) -107) - PlatformComponent.field_H;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -260,10 +260,10 @@ final class TextureCombineSource {
                 var5 = MandelbrotOperator.field_m;
               }
             } else {
-              var5 = mn.field_k;
+              var5 = MatchingEmailAvailabilityValidator.field_k;
             }
             var6 = DefaultTileRenderable.field_g[var3];
-            if (2 == mq.field_a &&
+            if (2 == LegacyOpenGlNormalMapGenerator.field_a &&
               var2 == 1) {
               if (MovementHintCharacter.field_a.length < OpenGlModelBillboard.field_d.length) {
                 stackIn_19_0 = OpenGlModelBillboard.field_d.length;
@@ -306,20 +306,20 @@ final class TextureCombineSource {
             var8Lifetime1 = ega.field_c - (var7Lifetime1 >> 1);
             if (0 <= var4) {
               if (var4 == FacePointLocomotor.field_r.selectedIndex) {
-                stackIn_45_0 = mpa.field_V;
+                stackIn_45_0 = AccountContentTransitionDialog.field_V;
               } else {
                 stackIn_45_0 = BitPackedColour.field_b;
               }
               var9 = stackIn_45_0;
               var1_int = var1_int + ValidationStatusIcon.field_C;
               if (var9 != null) {
-                var9.drawFrame((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (GasVentModel.field_p << 1));
+                var9.drawFrame((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, FullscreenFailureReason.field_d + (GasVentModel.field_p << 1));
               }
               var1_int = var1_int + GasVentModel.field_p;
             }
             if (var4 >= 0) {
               qt.field_a.drawText(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
-              var1_int = var1_int + (nt.field_d + GasVentModel.field_p + ValidationStatusIcon.field_C);
+              var1_int = var1_int + (FullscreenFailureReason.field_d + GasVentModel.field_p + ValidationStatusIcon.field_C);
             } else {
               ConsoleValue.field_c.drawText(var6, var8Lifetime1, var1_int + ActionPacketQueue.field_a, var5, -1);
               var1_int = var1_int + ComponentTargetList.field_b;
@@ -334,18 +334,18 @@ final class TextureCombineSource {
     }
 
     final static void startMenuBackgroundDemo(int param0) {
-        if (dna.field_G) {
+        if (SkeletonComponentBase.field_G) {
           return;
         }
         int var1 = 71 % ((-30 - param0) / 44);
-        if (null != cs.field_c &&
-          !cs.field_c.isEnded(126)) {
+        if (null != AccountRequestUsernameSelector.field_c &&
+          !AccountRequestUsernameSelector.field_c.isEnded(126)) {
           return;
         }
         int var2 = MainRoomCatalog.getMainRoomCount(-5640);
         int var3 = BufferedSocket.randomBelow(2147483647, new Random(), 45);
-        cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new DemoCourseGenerator(var3));
-        cs.field_c.startMenuBackgroundDemo((byte) -25);
+        AccountRequestUsernameSelector.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new DemoCourseGenerator(var3));
+        AccountRequestUsernameSelector.field_c.startMenuBackgroundDemo((byte) -25);
         JavaKeyCodeMapPatches.field_d = true;
     }
 

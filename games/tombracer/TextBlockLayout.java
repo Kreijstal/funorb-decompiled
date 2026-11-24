@@ -144,11 +144,11 @@ abstract class TextBlockLayout {
         try {
           var4 = (GameAssetLoader) (OpenGlCubeTexture.field_l);
           var4.drawLoadingProgress(param2, (byte) 47, param3);
-          haa.field_A = new SpriteData();
-          haa.field_A.field_f = param1.getFileByName("", (byte) 127, "map.png");
+          FocusProxyWidget.field_A = new SpriteData();
+          FocusProxyWidget.field_A.field_f = param1.getFileByName("", (byte) 127, "map.png");
           var4.drawLoadingProgress(param2 + 5, (byte) 47, param3);
-          du.field_c = new SpriteData();
-          du.field_c.field_f = param1.getFileByName("", (byte) 117, "wall_bg.jpg");
+          ArchiveConnectionFailureHandler.field_c = new SpriteData();
+          ArchiveConnectionFailureHandler.field_c.field_f = param1.getFileByName("", (byte) 117, "wall_bg.jpg");
           if (param0 > -100) {
             var5 = (String) null;
             TextBlockLayout.loadMenuBackgrounds((byte) -1, (ResourceArchive) null, 32, (String) null);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RoomComponent extends IntrusiveNode implements noa, RoomObjectMarker, Renderable, WorldBody, Switchable, SwitchableScope {
+abstract class RoomComponent extends IntrusiveNode implements GameStateMarker, RoomObjectMarker, Renderable, WorldBody, Switchable, SwitchableScope {
     int typeId;
     private int parentSlot;
     int height;
@@ -88,11 +88,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, RoomObjectMar
           field_n = -21;
         }
         HardwareWaterTextures.field_e.addChild(-127, RasterShape.field_e);
-        ClientRsaModulus.field_b = new lla(PbufferEntry.field_o, HardwareWaterTextures.field_e);
+        ClientRsaModulus.field_b = new SocialTabbedPanelLayout(PbufferEntry.field_o, HardwareWaterTextures.field_e);
         C2SRoomResultPacket.field_a = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_a.addChild(-122, ClientRsaModulus.field_b.field_a);
         C2SRoomResultPacket.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
-        re.layoutMainScreen(-29040);
+        MainScreenLayout.layoutMainScreen(-29040);
     }
 
     public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {

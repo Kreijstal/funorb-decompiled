@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Spawner implements noa {
+abstract class Spawner implements GameStateMarker {
     Room field_a;
 
     abstract void assignSwitchableIds(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3);

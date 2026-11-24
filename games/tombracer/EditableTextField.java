@@ -294,7 +294,7 @@ final class EditableTextField extends UiComponent {
             if (ColourRowCacheEntry.field_f != null &&
               ColourRowCacheEntry.field_f.field_b) {
               HardwareOpenGlVertexBuffer.exitFullscreen(0);
-              ModelFactory.field_a.pushDialog(new gga(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
+              ModelFactory.field_a.pushDialog(new FullscreenFailureDialog(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
             }
             return;
           }

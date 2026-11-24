@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Room implements SwitchableScope, Renderable, noa {
+final class Room implements SwitchableScope, Renderable, GameStateMarker {
     int formatVersion;
     static AsyncRequest field_R;
     private int id;
@@ -228,7 +228,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.isTimeFrozen((byte) 119);
         }
         Particle var5 = (Particle) (this.particlePool.spawn(-2698, param1, param3, this.scene, param0));
-        var5.setSeed(true, uca.cosmeticRandom.nextBounded(100, 0));
+        var5.setSeed(true, MeshMaterialColour.cosmeticRandom.nextBounded(100, 0));
         return var5;
     }
 
@@ -1543,7 +1543,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (this.scene != null) {
           this.scene.updateAnimations(0);
           if (this.simulation.isEffectActive(8, param1 + 10915)) {
-            this.scene.getRenderTarget(0).nudge(uca.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + uca.cosmeticRandom.nextBounded(9, 0), 26768);
+            this.scene.getRenderTarget(0).nudge(MeshMaterialColour.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + MeshMaterialColour.cosmeticRandom.nextBounded(9, 0), 26768);
           }
         }
         if (null != this.soundQueue) {
@@ -1626,7 +1626,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           field_p = (ToolkitSprite[][]) null;
         }
         if (var7.isDusty(0) ||
-          uca.cosmeticRandom.nextBounded(5, 0) == 0) {
+          MeshMaterialColour.cosmeticRandom.nextBounded(5, 0) == 0) {
           this.particleEffects.spawnDust(param0, param3, param5, param1, 0, param4);
         }
     }
@@ -1769,7 +1769,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           return;
         }
         if (var7.isDusty(0) &&
-          0 == uca.cosmeticRandom.nextBounded(5, 0)) {
+          0 == MeshMaterialColour.cosmeticRandom.nextBounded(5, 0)) {
           this.particleEffects.spawnDust(param4, param1, param3, param2, 0, param5);
         }
         if (param0) {

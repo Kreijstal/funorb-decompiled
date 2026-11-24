@@ -40,7 +40,7 @@ final class ParticleEffects {
         if (param0 != -33) {
           return 65;
         }
-        return uca.cosmeticRandom.nextBounded(param1, 0);
+        return MeshMaterialColour.cosmeticRandom.nextBounded(param1, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -186,12 +186,12 @@ final class ParticleEffects {
         Particle var9 = null;
         int var10 = TombRacer.field_G ? 1 : 0;
         int var5 = 262144;
-        for (var6 = 0; var6 < 4 + uca.cosmeticRandom.nextBounded(4, param2 ^ 46); var6++) {
+        for (var6 = 0; var6 < 4 + MeshMaterialColour.cosmeticRandom.nextBounded(4, param2 ^ 46); var6++) {
           var7 = -(var5 / 2) + this.randomBelow((byte) -33, var5);
           var8 = this.randomBelow((byte) -33, var5) - var5 / 2;
           var9 = this.room.spawnParticle(param3, param0, (byte) 100, param1);
-          var9.configure(false, 16, 14, 16, 25 + uca.cosmeticRandom.nextBounded(25, param2 ^ 46));
-          var9.setMotion(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.cosmeticRandom.nextBounded(131072, 0), -8192, (byte) -20);
+          var9.configure(false, 16, 14, 16, 25 + MeshMaterialColour.cosmeticRandom.nextBounded(25, param2 ^ 46));
+          var9.setMotion(var8, -var8 / 64, var7, -var7 / 64, 131072 + MeshMaterialColour.cosmeticRandom.nextBounded(131072, 0), -8192, (byte) -20);
           var9.setRotation(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -110);
         }
         if (param2 != 46) {

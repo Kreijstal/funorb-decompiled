@@ -117,8 +117,8 @@ final class CoinBagItemComponent extends ItemComponent {
             var26 = var22;
             HiscoresScreen.field_z.field_t = 0;
             var26.field_G = 0;
-            var6 = hw.field_a;
-            hw.field_a.field_t = 0;
+            var6 = GamePacketSender.field_a;
+            GamePacketSender.field_a.field_t = 0;
             var6.field_G = 0;
             var7 = MessageOverlay.field_t;
             MessageOverlay.field_t.field_t = 0;
@@ -142,11 +142,11 @@ final class CoinBagItemComponent extends ItemComponent {
               if (ValidatedTextInputWidget.field_K > 0) {
                 boolean decompiledSharedTail0 = (1 != ValidatedTextInputWidget.field_K);
                 if (!decompiledSharedTail0) {
-                  var10_ref_String = sj.field_a;
+                  var10_ref_String = FractalNoiseSliceAccumulator.field_a;
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(84, ld.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
+                  var10_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(84, GpuCubeTextureSource.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
                 }
                 if ((ByteArrayCopies.field_a & 16) == 0 &&
                   !OpenGlDisplayLists.field_e) {
@@ -154,17 +154,17 @@ final class CoinBagItemComponent extends ItemComponent {
                 }
                 HiscoresScreen.field_z.field_r = HiscoresScreen.field_z.field_r + "<br>" + var10_ref_String;
               }
-              hw.field_a.setBounds(MouseWheelFactory.field_b.field_G - var9, 40, -23776, MouseWheelFactory.field_b.field_t - 40, var9);
-              hw.field_a.field_r = PlantModel.field_p.toUpperCase();
-              var8 = hw.field_a;
-              stackIn_20_0 = hw.field_a;
+              GamePacketSender.field_a.setBounds(MouseWheelFactory.field_b.field_G - var9, 40, -23776, MouseWheelFactory.field_b.field_t - 40, var9);
+              GamePacketSender.field_a.field_r = PlantModel.field_p.toUpperCase();
+              var8 = GamePacketSender.field_a;
+              stackIn_20_0 = GamePacketSender.field_a;
               stackIn_21_1 = (param3) && (TileRenderable.field_d == 0L);
               stackIn_20_0.field_X = stackIn_21_1;
               var10 = 2;
               if (null != PlatformModel.field_A) {
                 if (MonochromeRowCacheEntry.field_m == null) {
                   MonochromeRowCacheEntry.field_m = new byte[ColourRowCache.field_b];
-                  sda.field_f = new boolean[ColourRowCache.field_b];
+                  QueuedPayloadRequest.field_f = new boolean[ColourRowCache.field_b];
                 }
                 var11 = 0;
                 do {
@@ -172,7 +172,7 @@ final class CoinBagItemComponent extends ItemComponent {
                     var10 = 0;
                     break;
                   }
-                  sda.field_f[var11] = false;
+                  QueuedPayloadRequest.field_f[var11] = false;
                   var11++;
                 } while (var19 == 0);
                 scanLoop1: while (true) {
@@ -235,7 +235,7 @@ final class CoinBagItemComponent extends ItemComponent {
                             }
                             var15 += 2;
                           }
-                          sda.field_f[var14] = true;
+                          QueuedPayloadRequest.field_f[var14] = true;
                           break;
                         }
                         var12++;
@@ -252,22 +252,22 @@ final class CoinBagItemComponent extends ItemComponent {
                   stackIn_66_0 = 2;
                   break;
                 }
-                if (!(stackIn_66_0 > ld.field_e) &&
+                if (!(stackIn_66_0 > GpuCubeTextureSource.field_e) &&
                   VerticalScrollbar.field_tb[12]) {
                   var10 = 2;
                 }
               }
               boolean decompiledFrameRemainder0 = true;
               if (var10 < 2) {
-                hw.field_a.field_X = false;
-                decompiledFrameRemainder0 = !(!hw.field_a.field_pb);
+                GamePacketSender.field_a.field_X = false;
+                decompiledFrameRemainder0 = !(!GamePacketSender.field_a.field_pb);
                 if (decompiledFrameRemainder0) {
                   var11_ref = null;
                   var12 = 0;
                   var13 = 0;
                   while (true) {
                     if (var13 < ColourRowCache.field_b) {
-                      stackOut_73_0 = sda.field_f[var13];
+                      stackOut_73_0 = QueuedPayloadRequest.field_f[var13];
                       stackIn_80_0 = stackOut_73_0 ? 1 : 0;
                       stackIn_74_0 = stackOut_73_0;
                       if (var19 == 0) {
@@ -313,7 +313,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 }
               }
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != PowerUpItemBehaviour.field_u ||
-                null != hp.field_a ||
+                null != ModelPreviewRenderer.field_a ||
                 C2SRoomResultPacket.field_g != null ||
                 null != HotspotTextWidget.field_z)) {
                 var11 = 0;
@@ -331,9 +331,9 @@ final class CoinBagItemComponent extends ItemComponent {
                       PowerUpItemBehaviour.field_u[var16][var17_int]) {
                       var11 = 1;
                     }
-                    if (null != hp.field_a &&
-                      hp.field_a[var16] != null) {
-                      var18_int = hp.field_a[var16][var17_int];
+                    if (null != ModelPreviewRenderer.field_a &&
+                      ModelPreviewRenderer.field_a[var16] != null) {
+                      var18_int = ModelPreviewRenderer.field_a[var16][var17_int];
                       if (0 != var18_int &&
                         !DropAnimation.field_c) {
                         var11 = 1;
@@ -416,13 +416,13 @@ final class CoinBagItemComponent extends ItemComponent {
                   stackIn_145_0 = -3;
                   break;
                 }
-                if (stackIn_145_0 >= ~ld.field_e &&
+                if (stackIn_145_0 >= ~GpuCubeTextureSource.field_e &&
                   VerticalScrollbar.field_tb[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  hw.field_a.field_X = false;
-                  if (hw.field_a.field_pb) {
+                  GamePacketSender.field_a.field_X = false;
+                  if (GamePacketSender.field_a.field_pb) {
                     if (rm.field_e.field_a.field_wb != 0) {
                       ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.formatText(126, GridWidgetContainer.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
@@ -478,7 +478,7 @@ final class CoinBagItemComponent extends ItemComponent {
             if (0 != NameEntryKeyboardSupport.field_b.field_y) {
               MidiVoiceMixer.a(param2, 30, C2SChooseRewardPacket.field_a.getGameId(0));
             }
-            if (hw.field_a.field_y != 0) {
+            if (GamePacketSender.field_a.field_y != 0) {
               LegacyOpenGlCubeTexture.field_p = true;
             }
             if (HiscoresScreen.field_z.field_y != 0) {
@@ -487,7 +487,7 @@ final class CoinBagItemComponent extends ItemComponent {
             if (Trap.field_q.field_y != 0) {
               OpenGlDisplayLists.field_e = false;
             }
-            cm.updateLobbyGameOptionControls(param2, C2SChooseRewardPacket.field_a, param1 ^ 21289, false);
+            CourseStartPacket.updateLobbyGameOptionControls(param2, C2SChooseRewardPacket.field_a, param1 ^ 21289, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

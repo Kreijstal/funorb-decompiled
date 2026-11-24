@@ -212,7 +212,7 @@ abstract class ConsoleWindow implements ShellListener {
     private final UiComponent createSelectionStyle(int param0, int param1) {
         int var4 = -128 / ((-18 - param0) / 61);
         UiComponent var3 = new UiComponent(0L, (UiComponent) null);
-        var3.field_w = eca.createSolidNineSlice(4, param1);
+        var3.field_w = PlayerQuickChatMenuLauncher.createSolidNineSlice(4, param1);
         return var3;
     }
 
@@ -274,7 +274,7 @@ abstract class ConsoleWindow implements ShellListener {
           for (var3_int = 0; var3_int < param2; var3_int++) {
             LobbyGameWidget.textureColumnCoords[var3_int] = (var3_int << 12) / param2;
           }
-          ooa.field_g = 32 * param2;
+          AccountNameResolver.field_g = 32 * param2;
           GpuDataType.textureWidthMask = -1 + param2;
           LegacyOpenGlTurbulentTextureEffect.textureWidth = param2;
         }
@@ -284,14 +284,14 @@ abstract class ConsoleWindow implements ShellListener {
         try {
           if (param1 != ArchiveNetworkClient.textureHeight) {
             if (param1 == LegacyOpenGlTurbulentTextureEffect.textureWidth) {
-              sj.textureRowCoords = LobbyGameWidget.textureColumnCoords;
+              FractalNoiseSliceAccumulator.textureRowCoords = LobbyGameWidget.textureColumnCoords;
             } else {
-              sj.textureRowCoords = new int[param1];
+              FractalNoiseSliceAccumulator.textureRowCoords = new int[param1];
               for (var3_int = 0; param1 > var3_int; var3_int++) {
-                sj.textureRowCoords[var3_int] = (var3_int << 12) / param1;
+                FractalNoiseSliceAccumulator.textureRowCoords[var3_int] = (var3_int << 12) / param1;
               }
             }
-            hba.textureHeightMask = -1 + param1;
+            RoomResultSender.textureHeightMask = -1 + param1;
             ArchiveNetworkClient.textureHeight = param1;
           }
         } catch (RuntimeException runtimeException) {

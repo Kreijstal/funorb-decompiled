@@ -71,7 +71,7 @@ final class ComponentMount {
     }
 
     final static void fadeInMusicForViewedPlayer(int param0, int param1) {
-        if (~param1 != ~msa.field_a) {
+        if (~param1 != ~TypeableCharacterPredicate.field_a) {
           return;
         }
         if (null == SecondaryNodeDequeIterator.field_a) {
@@ -130,7 +130,7 @@ final class ComponentMount {
         this.rotatedOffset.y = param0 * this.offset.x + param1 * this.offset.y;
     }
 
-    final static boolean compareDisplayModes(dh param0, int param1, dh param2) {
+    final static boolean compareDisplayModes(DisplayModeInfo param0, int param1, DisplayModeInfo param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

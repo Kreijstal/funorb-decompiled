@@ -19,7 +19,7 @@ final class ScoreSubmission extends IntrusiveNode {
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         if (param3 != 2) {
-          ScoreSubmission.a(-126, -35, (byte) 96);
+          ScoreSubmission.requiresNormalPointer(-126, -35, (byte) 96);
         }
         var5 = param4;
         if (0 == var5) {
@@ -52,7 +52,7 @@ final class ScoreSubmission extends IntrusiveNode {
         throw new IllegalArgumentException("Model category not recognised");
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean requiresNormalPointer(int param0, int param1, byte param2) {
         if (param2 != 17) {
           field_m = (String[]) null;
           if ((param1 & 2048) == 0) {

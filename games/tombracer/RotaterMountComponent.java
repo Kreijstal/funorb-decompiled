@@ -42,14 +42,14 @@ final class RotaterMountComponent extends PrefabComponent {
         int var1 = 0;
         if (HardwareRidgedWaterNoise.field_v < 224) {
           var1 = HardwareRidgedWaterNoise.field_v % 32;
-          mp.setMusicVolume(2, -var1 + (HardwareRidgedWaterNoise.field_v + 32));
+          MidiChannelVolumeTargets.setMusicVolume(2, -var1 + (HardwareRidgedWaterNoise.field_v + 32));
           if (param0 != 63) {
             RotaterMountComponent.A(63);
             return;
           }
           return;
         }
-        mp.setMusicVolume(2, 256);
+        MidiChannelVolumeTargets.setMusicVolume(2, 256);
         if (param0 != 63) {
           RotaterMountComponent.A(63);
           return;
@@ -233,18 +233,18 @@ final class RotaterMountComponent extends PrefabComponent {
     }
 
     final static goa A(int param0) {
-        String var1 = cs.a((byte) -112);
+        String var1 = AccountRequestUsernameSelector.getAccountRequestUsername((byte) -112);
         if (param0 < 46) {
           return (goa) null;
         }
         if (var1 == null) {
-          return new goa(cs.a((byte) 94), CollisionGrid.a(32));
+          return new goa(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new goa(cs.a((byte) 94), CollisionGrid.a(32));
+          return new goa(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
         }
-        return new goa(cs.a((byte) 94), CollisionGrid.a(32));
+        return new goa(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
     }
 
     static {

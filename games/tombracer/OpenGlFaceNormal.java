@@ -77,7 +77,7 @@ final class OpenGlFaceNormal {
             }
           }
           CourseDefinition.field_a = new RoomDefinition[var2];
-          sja.field_i = new RoomDefinition[var3];
+          SelectiveProceduralTextureProvider.field_i = new RoomDefinition[var3];
           if (param0 > -54) {
             return;
           }
@@ -93,7 +93,7 @@ final class OpenGlFaceNormal {
             } else {
               incrementValue$1 = var5Lifetime1;
               var5Lifetime1++;
-              sja.field_i[incrementValue$1] = var14;
+              SelectiveProceduralTextureProvider.field_i[incrementValue$1] = var14;
             }
           }
           return;

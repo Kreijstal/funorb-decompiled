@@ -106,7 +106,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         MatchOverlay var6;
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
-        msa.field_a = this.getViewedPlayerIndex(95);
+        TypeableCharacterPredicate.field_a = this.getViewedPlayerIndex(95);
         if (this.isSpectating((byte) 65) &&
           this.matchState.hasResigned((byte) -90, this.getViewedPlayerIndex(94))) {
           this.cycleViewedPlayer(1, 17219);
@@ -152,17 +152,17 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         if (!this.field_D) {
           this.setTrackedScore(this.matchState.players[0].getScore(param2 - 15179), param2 + 7821);
           this.setTrackedRoomResult(this.matchState.field_g[0], 5, this.matchState.field_F[0]);
-          var4 = uca.cosmeticRandom.nextBounded(7, param2 - 15283);
+          var4 = MeshMaterialColour.cosmeticRandom.nextBounded(7, param2 - 15283);
           PlayerViewport.field_b = PlayerViewport.field_b + var4;
           MonsterRemains.field_h = MonsterRemains.field_h + var4;
-          var4Lifetime1 = uca.cosmeticRandom.nextBounded(7, 0);
+          var4Lifetime1 = MeshMaterialColour.cosmeticRandom.nextBounded(7, 0);
           CommonChooseReward.field_b = CommonChooseReward.field_b + (long)var4Lifetime1;
           ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + (long)var4Lifetime1;
         }
         if (this.protocol == null) {
           if (3 != this.matchState.gameMode) {
             if (this.matchState.field_I[this.localPlayerIndex]) {
-              hba.sendRoomResult(this.field_E, this.field_m, (byte) 64, this.field_i);
+              RoomResultSender.sendRoomResult(this.field_E, this.field_m, (byte) 64, this.field_i);
               this.matchState.field_I[this.localPlayerIndex] = false;
             }
             if (this.matchState.getSimulation(this.localPlayerIndex, 0).isFinished(0)) {
@@ -385,10 +385,10 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           } else {
             this.viewedPlayerIndex = 0;
           }
-          msa.field_a = this.getViewedPlayerIndex(92);
+          TypeableCharacterPredicate.field_a = this.getViewedPlayerIndex(92);
           C2SActionPacket.field_j = -1;
           this.field_p = false;
-          uca.field_a = -1;
+          MeshMaterialColour.field_a = -1;
           ListTracksCommand.field_o = 617;
           Transform3D.field_b = 9170;
           HiscorePlayerEntry.field_b = 8768;
@@ -794,11 +794,11 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var5 = this.field_i;
         var6 = this.field_m;
         var8_int = var5;
-        var9 = uca.cosmeticRandom.nextBounded(param1, 0);
+        var9 = MeshMaterialColour.cosmeticRandom.nextBounded(param1, 0);
         PlayTrackCommand.field_o = PlayTrackCommand.field_o + var8_int * var9;
         OpenGlToolkit.field_Z = OpenGlToolkit.field_Z + var9;
         var8 = var6;
-        var10_int = uca.cosmeticRandom.nextBounded(5, 0);
+        var10_int = MeshMaterialColour.cosmeticRandom.nextBounded(5, 0);
         MidiVoiceMixer.field_j = MidiVoiceMixer.field_j + var8 * (long)var10_int;
         nb.field_c = nb.field_c + (long)var10_int;
         if (param0 == var5) {
@@ -807,7 +807,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var8_intLifetime1 = param0;
         var9Lifetime1 = var5;
         if (var8_intLifetime1 != var9Lifetime1) {
-          if (uca.cosmeticRandom.nextBounded(2, 0) == 0) {
+          if (MeshMaterialColour.cosmeticRandom.nextBounded(2, 0) == 0) {
             MonsterRemains.field_h = MonsterRemains.field_h - OpenGlToolkit.field_Z * (-var9Lifetime1 + var8_intLifetime1);
           } else {
             PlayerViewport.field_b = PlayerViewport.field_b + OpenGlToolkit.field_Z * (var8_intLifetime1 - var9Lifetime1);
@@ -816,7 +816,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var8Lifetime1 = param2;
         var10 = var6;
         if (~var8Lifetime1 != ~var10) {
-          if (0 != uca.cosmeticRandom.nextBounded(2, param1 ^ 5)) {
+          if (0 != MeshMaterialColour.cosmeticRandom.nextBounded(2, param1 ^ 5)) {
             ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + nb.field_c * (var8Lifetime1 - var10);
           } else {
             CommonChooseReward.field_b = CommonChooseReward.field_b - nb.field_c * (-var10 + var8Lifetime1);
@@ -1212,7 +1212,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
             SecondaryNodeDequeIterator.field_a == SpriteTileOperator.field_t) {
-            var5 = uca.cosmeticRandom.nextBounded(8, 0);
+            var5 = MeshMaterialColour.cosmeticRandom.nextBounded(8, 0);
             if (0 != var5) {
               if (1 != var5) {
                 if (var5 != 2) {
@@ -1304,7 +1304,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             this.viewedPlayerIndex = -6;
           }
           var5 = param0.getPlayerIndex(0);
-          var6 = var4[uca.cosmeticRandom.nextBounded(var8.length, param1 + 9)];
+          var6 = var4[MeshMaterialColour.cosmeticRandom.nextBounded(var8.length, param1 + 9)];
           var7 = this.getPlayerName(var5, false);
           dupTemp$1 = "<col=" + PasswordValidator.field_k[var5] + ">" + var6 + "</col>";
           var9 = dupTemp$1;
@@ -1490,7 +1490,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             !SecondaryNodeDequeIterator.field_a.field_D &&
             !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
             SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
-            var4 = uca.cosmeticRandom.nextBounded(3, 0);
+            var4 = MeshMaterialColour.cosmeticRandom.nextBounded(3, 0);
             if (0 != var4) {
               if (var4 == 1) {
                 ListTracksCommand.field_o = ListTracksCommand.field_o - var3;
@@ -1511,7 +1511,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
             SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
-            var4 = uca.cosmeticRandom.nextBounded(8, 0);
+            var4 = MeshMaterialColour.cosmeticRandom.nextBounded(8, 0);
             if (0 != var4) {
               if (var4 != 1) {
                 if (var4 != 2) {

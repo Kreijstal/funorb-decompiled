@@ -124,7 +124,7 @@ final class SoftwarePaletteFont extends GameFont {
         int var27 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        hpa var16_ref;
+        SoftwareScanlineMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -138,7 +138,7 @@ final class SoftwarePaletteFont extends GameFont {
         int[] var29;
         int var26Lifetime1;
         var16 = null;
-        var16_ref = (hpa) (param12);
+        var16_ref = (SoftwareScanlineMask) (param12);
         var29 = var16_ref.field_e;
         var28 = var29;
         var17 = var28;
@@ -265,7 +265,7 @@ final class SoftwarePaletteFont extends GameFont {
         int incrementValue$2 = 0;
         int stackIn_5_0 = 0;
         Object var17;
-        hpa var17_ref;
+        SoftwareScanlineMask var17_ref;
         int[] var18;
         int[] var19;
         int var20;
@@ -281,7 +281,7 @@ final class SoftwarePaletteFont extends GameFont {
         int var23Lifetime1;
         int var28Lifetime1;
         var17 = null;
-        var17_ref = (hpa) (param13);
+        var17_ref = (SoftwareScanlineMask) (param13);
         var31 = var17_ref.field_e;
         var30 = var31;
         var18 = var30;

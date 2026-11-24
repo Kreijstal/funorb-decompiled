@@ -32,9 +32,9 @@ final class ConsoleToken extends IntrusiveNode {
         int var10 = 0;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var1_int = ByteGameMessageSender.field_d - wt.field_a;
-          wt.field_a = -(var1_int >> 1) + Transform3D.field_a;
-          ByteGameMessageSender.field_d = wt.field_a + var1_int;
+          var1_int = ByteGameMessageSender.field_d - ProgressDialogLauncher.field_a;
+          ProgressDialogLauncher.field_a = -(var1_int >> 1) + Transform3D.field_a;
+          ByteGameMessageSender.field_d = ProgressDialogLauncher.field_a + var1_int;
           wp.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
           var2 = wp.field_b;
           if (param0 <= 79) {

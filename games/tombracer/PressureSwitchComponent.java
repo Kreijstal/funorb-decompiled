@@ -48,11 +48,11 @@ final class PressureSwitchComponent extends SwitchComponent {
             }
           }
           if (0 != ara.field_ub.field_y) {
-            RoomViewRenderer.field_c = new ReportAbuseDialog(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
+            RoomViewRenderer.field_c = new ReportAbuseDialog(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
           }
           var9 = mna.a((byte) 73, param3, ToolkitSelector.field_a, mna.field_d);
           if (var9 != null) {
-            hpa.openChatMessageContextMenu(-2, var9);
+            SoftwareScanlineMask.openChatMessageContextMenu(-2, var9);
           }
           var8 = fa.a((byte) -126);
           if (param1 >= -75) {

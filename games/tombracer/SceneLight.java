@@ -63,13 +63,13 @@ abstract class SceneLight extends IntrusiveNode {
             HardwareSpecularEffect.field_h[var2_intLifetime1] = QuickChatParamType.createToolkitSprite(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) 125);
             ColourFillOperator.field_p[var2_intLifetime1].flipHorizontally();
           }
-          IntArrayRequest.field_h = QuickChatParamType.createToolkitSprite(dna.field_F, param0, (byte) 127);
+          IntArrayRequest.field_h = QuickChatParamType.createToolkitSprite(SkeletonComponentBase.field_F, param0, (byte) 127);
           ArchiveSource.field_a = LoadLevelCommand.createToolkitSprites(param0, RoundWinnerPhase.field_p, -79);
           RasterStateFrame.field_i = QuickChatParamType.createToolkitSprite(ara.field_vb, param0, (byte) -20);
           ColourFillOperator.field_m = QuickChatParamType.createToolkitSprite(OpenGlDisplayLists.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = QuickChatParamType.createToolkitSprite(CharacterChoice.field_c, param0, (byte) 25);
           ByteArrayCopies.field_b = QuickChatParamType.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
-          vua.field_A = QuickChatParamType.createToolkitSprite(wj.field_a, param0, (byte) 126);
+          ClippedChildWidget.field_A = QuickChatParamType.createToolkitSprite(wj.field_a, param0, (byte) 126);
           TextureCoordinateGeneration.field_d = LoadLevelCommand.createToolkitSprites(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = LoadLevelCommand.createToolkitSprites(param0, FullscreenCanvas.field_a, param1 ^ -17261);
           TextHotspot.field_f = LoadLevelCommand.createToolkitSprites(param0, Transform3D.field_d, -112);
@@ -109,26 +109,26 @@ abstract class SceneLight extends IntrusiveNode {
           fa.field_a = LoadLevelCommand.createToolkitSprites(param0, AnimationFrameBase.field_k, -99);
           QuickChatCategoryLoader.field_e = QuickChatParamType.createToolkitSprite(UnlockEntryDecoder.field_c, param0, (byte) -15);
           LegacyOpenGlEffectManager.field_a = QuickChatParamType.createToolkitSprite(LegacyOpenGlSpriteTexture.field_u, param0, (byte) 125);
-          QuickChatParamType.createToolkitSprite(mp.field_d, param0, (byte) 126);
+          QuickChatParamType.createToolkitSprite(MidiChannelVolumeTargets.field_d, param0, (byte) 126);
           QuickChatParamType.createToolkitSprite(baa.field_g, param0, (byte) -43);
           ConstantEffectBehaviour.field_q = QuickChatParamType.createToolkitSprite(FullscreenConfirmationDialog.field_O, param0, (byte) 126);
           MessageDialog.field_X = QuickChatParamType.createToolkitSprite(WaveformOperator.field_q, param0, (byte) 125);
           QuickChatParamType.createToolkitSprite(field_n, param0, (byte) 125);
-          HardwareModelIndexData.field_f = QuickChatParamType.createToolkitSprite(vua.field_y, param0, (byte) 127);
-          eca.field_c = LoadLevelCommand.createToolkitSprites(param0, HazardEffect.field_e, -64);
+          HardwareModelIndexData.field_f = QuickChatParamType.createToolkitSprite(ClippedChildWidget.field_y, param0, (byte) 127);
+          PlayerQuickChatMenuLauncher.field_c = LoadLevelCommand.createToolkitSprites(param0, HazardEffect.field_e, -64);
           OpenGlIndexArray.field_l = QuickChatParamType.createToolkitSprite(AnimationFrameSet.field_l, param0, (byte) 127);
           QuickChatParamType.createToolkitSprite(MirrorComponent.field_F, param0, (byte) -2);
           HardwareModelBillboardState.field_a = QuickChatParamType.createToolkitSprite(CharacterPreview.field_f, param0, (byte) 126);
           WidgetStyleLayer.field_b = LoadLevelCommand.createToolkitSprites(param0, StandingsPhase.field_o, param1 - 17309);
           IntrusiveDeque.field_c = QuickChatParamType.createToolkitSprite(MenuInputState.field_j, param0, (byte) -95);
-          tka.field_p = QuickChatParamType.createToolkitSprite(LobbyGameWidget.field_Db, param0, (byte) 27);
+          IndexedSpriteButtonPainter.field_p = QuickChatParamType.createToolkitSprite(LobbyGameWidget.field_Db, param0, (byte) 27);
           Projectile.field_n = QuickChatParamType.createToolkitSprite(RenderableNode.field_j, param0, (byte) -37);
           TripBeamBehaviour.field_y = QuickChatParamType.createToolkitSprite(ResourceArchive.field_h, param0, (byte) 127);
-          haa.field_z = QuickChatParamType.createToolkitSprite(re.field_a, param0, (byte) 126);
+          FocusProxyWidget.field_z = QuickChatParamType.createToolkitSprite(MainScreenLayout.field_a, param0, (byte) 126);
           MainRoomCatalog.field_a = LoadLevelCommand.createToolkitSprites(param0, mna.field_c, -55);
           MirrorBehaviour.field_r = QuickChatParamType.createToolkitSprite(SoundEvent.field_h, param0, (byte) 127);
-          OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -105, haa.field_A.field_f);
-          Room.field_j = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -104, du.field_c.field_f);
+          OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -105, FocusProxyWidget.field_A.field_f);
+          Room.field_j = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -104, ArchiveConnectionFailureHandler.field_c.field_f);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

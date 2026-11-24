@@ -22,10 +22,10 @@ final class mca {
         if (TextWidgetPainter.a(114)) {
           return false;
         }
-        if (mq.field_e == null) {
+        if (LegacyOpenGlNormalMapGenerator.field_e == null) {
           return false;
         }
-        stackIn_12_0 = (mq.field_e.isCourseUnlocked((byte) -102, param1));
+        stackIn_12_0 = (LegacyOpenGlNormalMapGenerator.field_e.isCourseUnlocked((byte) -102, param1));
         return stackIn_12_0;
     }
 

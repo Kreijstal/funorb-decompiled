@@ -75,7 +75,7 @@ final class PortalBehaviour extends Behaviour {
           } else {
             if (2 == param0) {
               param1 = "<col=ff0000>" + param1 + "</col>";
-              param4 = "[" + dna.field_H.toUpperCase() + "] " + param4;
+              param4 = "[" + SkeletonComponentBase.field_H.toUpperCase() + "] " + param4;
             } else {
               if (param3 >= 0) {
                 param4 = "<col=" + PasswordValidator.field_k[param3] + ">" + param4 + "</col>";

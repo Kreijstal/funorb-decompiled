@@ -291,7 +291,7 @@ final class HardwareFont extends GameFont {
         this.field_g.drawPrimitives(2, ProgressDialog.field_T, param0 * 4, 0);
         if (this.field_e ||
           param4) {
-          this.field_g.setColorCombineSource(ej.field_c, 0, -32);
+          this.field_g.setColorCombineSource(DisplayNameValidator.field_c, 0, -32);
         }
     }
 }

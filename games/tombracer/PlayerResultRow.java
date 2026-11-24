@@ -200,9 +200,9 @@ final class PlayerResultRow {
           this.field_c = param1[2];
           this.field_d = false;
           this.field_m = 0;
-          this.field_n = gp.field_i[1] * this.field_r;
-          this.field_a = gp.field_i[2] * this.field_c;
-          this.field_v = this.field_p * gp.field_i[0];
+          this.field_n = RoomPropertyLabels.field_i[1] * this.field_r;
+          this.field_a = RoomPropertyLabels.field_i[2] * this.field_c;
+          this.field_v = this.field_p * RoomPropertyLabels.field_i[0];
           var3_int = param0.getChosenReward(-96);
           if (var3_int != -1) {
             if (OpenGlUnderwaterEffect.field_n[var3_int] == 0) {

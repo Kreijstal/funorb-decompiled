@@ -144,7 +144,7 @@ final class MenuEntry {
         var24 = TombRacer.field_G ? 1 : 0;
         stackIn_3_0 = (!param0) ? 2431750 : 10827264;
         var5 = stackIn_3_0;
-        var6 = eda.field_f;
+        var6 = HardwareVertexNormalAccumulator.field_f;
         var7 = this.getWidth(-163) / 2;
         var8 = this.getHeight(param2 + 11918) / 2;
         var9 = this.field_i + this.field_c.getPosition(param2 ^ -103);
@@ -260,7 +260,7 @@ final class MenuEntry {
               MembersUpsellMenu.drawCentredTextWithShadow("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
             }
             var21 = this.field_e;
-            if (!WheeledMountComponent.isGraphicsSettingAvailable(dna.getGraphicsQuality(param2 + 124), true, var27)) {
+            if (!WheeledMountComponent.isGraphicsSettingAvailable(SkeletonComponentBase.getGraphicsQuality(param2 + 124), true, var27)) {
               var5 = 2431750;
               var21 = "<str=010101>" + this.field_e + "</str>";
               var15 = -1;
@@ -274,7 +274,7 @@ final class MenuEntry {
           var19Lifetime2 = 120;
           if (this.field_g == 36) {
             WidgetStyleLayer.field_k[5].drawScaled(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
-            MembersUpsellMenu.drawCentredTextWithShadow(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
+            MembersUpsellMenu.drawCentredTextWithShadow(SkeletonComponentBase.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
           }
           var29 = CurrentGraphicsToolkit.toolkit;
           var21_intLifetime1 = this.field_b - 8;
@@ -294,7 +294,7 @@ final class MenuEntry {
             var15 = 2236962;
             var5 = 10309393;
           }
-          var21_ref = dna.getGraphicsQuality(36);
+          var21_ref = SkeletonComponentBase.getGraphicsQuality(36);
           if (var20_ref_kea == var21_ref) {
             var15 = 2236962;
             var5 = 10827264;
@@ -318,17 +318,17 @@ final class MenuEntry {
         }
         MembersUpsellMenu.drawCentredTextWithShadow(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
         if (this.field_g != 5) {
-          stackIn_78_0 = jg.getSoundVolume((byte) -103);
+          stackIn_78_0 = NoiseSliceGenerator.getSoundVolume((byte) -103);
         } else {
           stackIn_78_0 = MusicVolumeControl.getMusicVolume(param2 ^ -22635);
         }
         var20 = stackIn_78_0;
         if (!param3) {
-          tka.field_p.draw(-34 + this.field_b, var9 - 16, 0, -4144960, 1);
+          IndexedSpriteButtonPainter.field_p.draw(-34 + this.field_b, var9 - 16, 0, -4144960, 1);
         }
         if (param3 ||
           var24 != 0) {
-          tka.field_p.draw(this.field_b - 34, -16 + var9);
+          IndexedSpriteButtonPainter.field_p.draw(this.field_b - 34, -16 + var9);
         }
         CurrentGraphicsToolkit.toolkit.setClip(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
         if (!param3) {
@@ -340,7 +340,7 @@ final class MenuEntry {
         }
         CurrentGraphicsToolkit.toolkit.resetClip();
         if (this.field_g != 6) {
-          stackIn_89_0 = haa.field_z;
+          stackIn_89_0 = FocusProxyWidget.field_z;
         } else {
           stackIn_89_0 = TripBeamBehaviour.field_y;
         }

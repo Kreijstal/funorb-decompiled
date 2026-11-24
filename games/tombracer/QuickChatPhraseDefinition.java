@@ -15,7 +15,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (param0 != 49) {
           QuickChatPhraseDefinition.releaseStatics((byte) 74);
         }
-        stackIn_6_0 = (Transform3D.field_c >= 10) && (cga.field_f >= 13);
+        stackIn_6_0 = (Transform3D.field_c >= 10) && (QueuedFixedRequest.field_f >= 13);
         return stackIn_6_0;
     }
 
@@ -96,7 +96,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               this.field_k = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
                 var6 = param0.readUnsignedShort(122);
-                var7 = li.forId(var6, (byte) 126);
+                var7 = RoomMusicController.forId(var6, (byte) 126);
                 if (var7 != null) {
                   this.field_k[var5] = var6;
                   array$0 = new int[var7.field_b];

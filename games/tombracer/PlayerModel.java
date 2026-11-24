@@ -362,7 +362,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           return;
         }
         ToolkitModel var6 = this.field_c.getModel((byte) 74);
-        hp.drawModelPreview(param2, param3, 0, var6, -1918106173, param4, param1);
+        ModelPreviewRenderer.drawModelPreview(param2, param3, 0, var6, -1918106173, param4, param1);
     }
 
     public final void setCharacter(int param0, int param1) {

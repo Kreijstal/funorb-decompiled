@@ -159,7 +159,7 @@ final class AnimatedLight {
           var6 = this.field_f;
           if (var6 != 1) {
             if (var6 == 3) {
-              var4 = ooa.field_e[var5] >> 1;
+              var4 = AccountNameResolver.field_e[var5] >> 1;
             } else {
               if (4 != var6) {
                 if (var6 == 2) {
@@ -214,7 +214,7 @@ final class AnimatedLight {
         if (param0) {
           return (RoomDefinition) null;
         }
-        var9 = cm.field_a;
+        var9 = CourseStartPacket.field_a;
         var2 = var9;
         for (var3 = 0; var9.length > var3; var3++) {
           var4 = var9[var3];
@@ -241,7 +241,7 @@ final class AnimatedLight {
         int var9_int = 0;
         int var10 = 0;
         try {
-          if (ooa.field_e == null) {
+          if (AccountNameResolver.field_e == null) {
             ItemBehaviour.b(2);
           }
           this.createLight(param4, param3, param0, param6, 512, param2, param5);

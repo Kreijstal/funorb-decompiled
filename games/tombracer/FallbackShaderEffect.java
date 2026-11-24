@@ -87,8 +87,8 @@ final class FallbackShaderEffect extends ShaderEffect {
             var15 = HiscoresScreen.field_z;
             var17 = var15;
             var17.field_G = 0;
-            hw.field_a.field_t = 0;
-            var5 = hw.field_a;
+            GamePacketSender.field_a.field_t = 0;
+            var5 = GamePacketSender.field_a;
             var5.field_G = 0;
             var6 = MessageOverlay.field_t;
             MessageOverlay.field_t.field_t = 0;
@@ -96,7 +96,7 @@ final class FallbackShaderEffect extends ShaderEffect {
             StatusEffect.field_g.field_r = MouseWheelFactory.field_a.toUpperCase();
             var7 = (MouseWheelFactory.field_b.field_G + 2) / 2;
             MessageOverlay.field_t.setBounds(-2 + var7, 40, -23776, -40 + MouseWheelFactory.field_b.field_t, 0);
-            hw.field_a.setBounds(MouseWheelFactory.field_b.field_G - var7, 40, param0 - 23777, -40 + MouseWheelFactory.field_b.field_t, var7);
+            GamePacketSender.field_a.setBounds(MouseWheelFactory.field_b.field_G - var7, 40, param0 - 23777, -40 + MouseWheelFactory.field_b.field_t, var7);
             if (SafeZoneBehaviour.field_u.length == 1 &&
               SafeZoneBehaviour.field_u[0] == 2) {
               var8 = 0;
@@ -126,9 +126,9 @@ final class FallbackShaderEffect extends ShaderEffect {
                 break;
               }
             }
-            hw.field_a.field_X = true;
+            GamePacketSender.field_a.field_X = true;
             if (!PlayerViewport.field_o) {
-              stackIn_34_0 = hw.field_a;
+              stackIn_34_0 = GamePacketSender.field_a;
               if (var8 != 0) {
                 stackIn_35_1 = PacketDiagnostics.field_a;
               } else {
@@ -142,7 +142,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               } else {
                 stackIn_38_2 = TombRacer.field_F;
               }
-              stackIn_37_0.field_r = LegacyOpenGlFlowingWaterEffect.formatText(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
+              stackIn_37_0.field_r = LegacyOpenGlFlowingWaterEffect.formatText(stackIn_37_1, stackIn_38_2, new String[]{GamePacketSender.field_a.field_r});
               MessageOverlay.field_t.field_r = RenderLayer.field_h;
               NameEntryKeyboardSupport.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;
@@ -150,24 +150,24 @@ final class FallbackShaderEffect extends ShaderEffect {
                 TouchSwitchBehaviour.field_s = false;
                 if (null == MonochromeRowCacheEntry.field_m) {
                   MonochromeRowCacheEntry.field_m = new byte[ColourRowCache.field_b];
-                  sda.field_f = new boolean[ColourRowCache.field_b];
+                  QueuedPayloadRequest.field_f = new boolean[ColourRowCache.field_b];
                 }
                 mm.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (ColourRowCache.field_b > var13) {
-                  sda.field_f[var13] = false;
+                  QueuedPayloadRequest.field_f[var13] = false;
                   var13++;
                 }
                 MatchOverlayQueue.findValidSettingCombination(param0 + 108, ColourRowCache.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
-                if (!(ld.field_e < 2) &&
+                if (!(GpuCubeTextureSource.field_e < 2) &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;
                 }
               }
               if (!TouchSwitchBehaviour.field_s) {
-                hw.field_a.field_X = false;
-                if (hw.field_a.field_pb) {
+                GamePacketSender.field_a.field_X = false;
+                if (GamePacketSender.field_a.field_pb) {
                   var9 = null;
                   if (mm.field_g) {
                     var9 = "<col=A00000>" + ConsoleToken.field_j + "</col>";
@@ -177,7 +177,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                     var9 = var11Lifetime1;
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < ColourRowCache.field_b; var10Lifetime1++) {
-                    if (sda.field_f[var10Lifetime1]) {
+                    if (QueuedPayloadRequest.field_f[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + DebouncedValidationSource.field_e[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
@@ -216,7 +216,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 var9 = (String) (var9) + "...";
               }
               MessageOverlay.field_t.field_r = (String) (var9);
-              hw.field_a.field_r = mq.field_d.toUpperCase();
+              GamePacketSender.field_a.field_r = LegacyOpenGlNormalMapGenerator.field_d.toUpperCase();
             }
           }
           stackIn_67_0 = C2SRoomResultPacket.field_c;
@@ -239,14 +239,14 @@ final class FallbackShaderEffect extends ShaderEffect {
             if (NameEntryKeyboardSupport.field_b.field_y != 0) {
               ReturnToLobbyPacketWriter.sendReturnToLobby(param3, (byte) 28);
             }
-            if (hw.field_a.field_y != 0) {
+            if (GamePacketSender.field_a.field_y != 0) {
               if (PlayerViewport.field_o) {
                 ItemBehaviour.a((byte) 34, param3);
               } else {
                 HardwareSceneLight.a(param3, (byte) -128);
               }
             }
-            cm.updateLobbyGameOptionControls(param3, WaveformOperator.field_n, -21290, true);
+            CourseStartPacket.updateLobbyGameOptionControls(param3, WaveformOperator.field_n, -21290, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

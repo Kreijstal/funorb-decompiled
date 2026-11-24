@@ -114,7 +114,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean usesNormalizedCoordinates(int param0) {
         if (param0 != -14634) {
           return true;
         }
@@ -150,7 +150,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         TextureCoordinateGeneration.field_d = null;
         WidgetStyleLayer.field_k = null;
         ega.field_e = null;
-        vua.field_A = null;
+        ClippedChildWidget.field_A = null;
         ArchiveSource.field_a = null;
         MessageDialog.field_X = null;
         fa.field_a = null;
@@ -159,13 +159,13 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         WhiteLightShooterComponent.field_K = null;
         MainRoomCatalog.field_a = null;
         DropdownPopupList.field_E = null;
-        haa.field_z = null;
-        eca.field_c = null;
+        FocusProxyWidget.field_z = null;
+        PlayerQuickChatMenuLauncher.field_c = null;
         ConstantEffectBehaviour.field_q = null;
         ByteArrayCopies.field_b = null;
         PlayerInputQueue.field_a = null;
         eu.field_a = null;
-        tka.field_p = null;
+        IndexedSpriteButtonPainter.field_p = null;
         HardwareModelBillboardState.field_a = null;
         RadialSelectionPainter.field_i = null;
         QuickChatCategoryLoader.field_e = null;

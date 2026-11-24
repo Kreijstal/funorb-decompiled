@@ -13,14 +13,14 @@ final class RenderableNode extends IntrusiveNode {
         if ((0 != (65536 & param0) ? true : false) | SequencePlayer.hasMask24OrAll544(param1, -31, param0)) {
           return true;
         }
-        if (ooa.a(param1, param0, -68)) {
+        if (AccountNameResolver.requiresNormalPointerCopy(param1, param0, -68)) {
           return true;
         }
         int var3 = -66 % ((param2 - 4) / 48);
         if (0 != (55 & param1)) {
           return false;
         }
-        if (vua.e(param0, param1, 13650)) {
+        if (ClippedChildWidget.requiresColorPointerCopy(param0, param1, 13650)) {
           return true;
         }
         return false;
@@ -31,22 +31,22 @@ final class RenderableNode extends IntrusiveNode {
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 > param3) {
           if (param4 > param0) {
-            vb.rasterizeTriangle(-922437200, param7, param6, param3, param2, param5, param0, param4, SoftwareRasterizer.pixels);
+            PcmSamplePlayback.rasterizeTriangle(-922437200, param7, param6, param3, param2, param5, param0, param4, SoftwareRasterizer.pixels);
           } else {
             if (param3 >= param4) {
-              vb.rasterizeTriangle(-922437200, param5, param6, param4, param7, param2, param3, param0, SoftwareRasterizer.pixels);
+              PcmSamplePlayback.rasterizeTriangle(-922437200, param5, param6, param4, param7, param2, param3, param0, SoftwareRasterizer.pixels);
             } else {
-              vb.rasterizeTriangle(-922437200, param2, param6, param3, param7, param5, param4, param0, SoftwareRasterizer.pixels);
+              PcmSamplePlayback.rasterizeTriangle(-922437200, param2, param6, param3, param7, param5, param4, param0, SoftwareRasterizer.pixels);
             }
           }
         } else {
           if (param3 < param4) {
-            vb.rasterizeTriangle(-922437200, param5, param6, param0, param2, param7, param3, param4, SoftwareRasterizer.pixels);
+            PcmSamplePlayback.rasterizeTriangle(-922437200, param5, param6, param0, param2, param7, param3, param4, SoftwareRasterizer.pixels);
           } else {
             if (param4 > param0) {
-              vb.rasterizeTriangle(-922437200, param2, param6, param0, param5, param7, param4, param3, SoftwareRasterizer.pixels);
+              PcmSamplePlayback.rasterizeTriangle(-922437200, param2, param6, param0, param5, param7, param4, param3, SoftwareRasterizer.pixels);
             } else {
-              vb.rasterizeTriangle(-922437200, param7, param6, param4, param5, param2, param0, param3, SoftwareRasterizer.pixels);
+              PcmSamplePlayback.rasterizeTriangle(-922437200, param7, param6, param4, param5, param2, param0, param3, SoftwareRasterizer.pixels);
             }
           }
         }

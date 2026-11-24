@@ -109,9 +109,9 @@ final class DisplayNameForm extends WidgetContainer implements SuggestionsHost, 
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_z = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(BlendModeOperator.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(cj.field_e, var1, (WidgetListener) null);
+        UiWidget var2 = new UiWidget(PointListEditorPainter.field_e, var1, (WidgetListener) null);
         this.field_A = new FocusableWidget(GridLineWalker.field_j, (WidgetListener) null);
-        this.field_B = new FocusableWidget(mq.field_d, (WidgetListener) null);
+        this.field_B = new FocusableWidget(LegacyOpenGlNormalMapGenerator.field_d, (WidgetListener) null);
         this.field_z.field_q = LoginAttemptStarter.field_a;
         this.field_z.setValidationSource(-13861, new NameFieldValidator(this.field_z));
         this.field_A.field_y = false;
@@ -201,13 +201,13 @@ final class DisplayNameForm extends WidgetContainer implements SuggestionsHost, 
         if (param0 < 10) {
           this.onMoreSuggestionsRequested(74);
           if (this.isFormValid(false)) {
-            rka.a(this.field_z.field_o, false);
+            RasterSprite.submitDisplayName(this.field_z.field_o, false);
             return;
           }
           return;
         }
         if (this.isFormValid(false)) {
-          rka.a(this.field_z.field_o, false);
+          RasterSprite.submitDisplayName(this.field_z.field_o, false);
           return;
         }
     }

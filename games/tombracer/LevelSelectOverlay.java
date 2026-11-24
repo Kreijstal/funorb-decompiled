@@ -62,7 +62,7 @@ final class LevelSelectOverlay implements ShellListener {
           if (!param0) {
             return;
           }
-          if (ld.field_e < 2) {
+          if (GpuCubeTextureSource.field_e < 2) {
             return;
           }
           if (PlayerModel.field_b == 1) {
@@ -315,7 +315,7 @@ final class LevelSelectOverlay implements ShellListener {
           if (param0 != 76) {
             return;
           }
-          if (!toa.field_j) {
+          if (!QueuedKeyedRequest.field_j) {
             ComponentTargetList.field_e = null;
           }
           this.field_c = true;

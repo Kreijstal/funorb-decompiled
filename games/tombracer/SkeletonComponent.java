@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SkeletonComponent extends dna {
+final class SkeletonComponent extends SkeletonComponentBase {
     final static boolean isValidPlayerName(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -12,7 +12,7 @@ final class SkeletonComponent extends dna {
         RuntimeException decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!ej.isValidDisplayName(false, param0, param1)) {
+          if (!DisplayNameValidator.isValidDisplayName(false, param0, param1)) {
             return false;
           }
           var3_int = 0;

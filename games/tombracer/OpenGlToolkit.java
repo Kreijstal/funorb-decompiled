@@ -29,7 +29,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private OpenGlTransform3D field_fc;
     OpenGlTransform3D field_mc;
     private boolean field_Ob;
-    mq field_zc;
+    LegacyOpenGlNormalMapGenerator field_zc;
     jaclib.memory.heap.NativeHeap field_md;
     int field_Oc;
     private IntrusiveDeque field_qb;
@@ -158,7 +158,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     OpenGlModel field_D;
     private int field_e;
     boolean field_Kc;
-    private jp field_Sc;
+    private LegacyOpenGlCubeTextureSource field_Sc;
     private SceneLight[] field_Dc;
     boolean field_Eb;
     OpenGlModel field_E;
@@ -810,14 +810,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void setTextureConstantArgb(int param0, int param1) {
-        gp.field_d[0] = (float)SnakePitBehaviour.bitwiseAnd(param1, 16711680) / 16711680.0f;
-        gp.field_d[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, param1) / 65280.0f;
-        gp.field_d[2] = (float)SnakePitBehaviour.bitwiseAnd(255, param1) / 255.0f;
-        gp.field_d[3] = (float)(param1 >>> 24) / 255.0f;
+        RoomPropertyLabels.field_d[0] = (float)SnakePitBehaviour.bitwiseAnd(param1, 16711680) / 16711680.0f;
+        RoomPropertyLabels.field_d[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, param1) / 65280.0f;
+        RoomPropertyLabels.field_d[2] = (float)SnakePitBehaviour.bitwiseAnd(255, param1) / 255.0f;
+        RoomPropertyLabels.field_d[3] = (float)(param1 >>> 24) / 255.0f;
         if (param0 != 1104971864) {
           return;
         }
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, gp.field_d, 0);
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, RoomPropertyLabels.field_d, 0);
     }
 
     final void useHeap(GraphicsHeap param0) {
@@ -1039,14 +1039,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void setTextureConstantRgba(float param0, float param1, float param2, byte param3, float param4) {
-        gp.field_d[0] = param1;
-        gp.field_d[1] = param0;
-        gp.field_d[2] = param2;
+        RoomPropertyLabels.field_d[0] = param1;
+        RoomPropertyLabels.field_d[1] = param0;
+        RoomPropertyLabels.field_d[2] = param2;
         if (param3 != -76) {
           this.field_f = 81;
         }
-        gp.field_d[3] = param4;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, gp.field_d, 0);
+        RoomPropertyLabels.field_d[3] = param4;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, RoomPropertyLabels.field_d, 0);
     }
 
     private final void resetTextureMatrix(byte param0) {
@@ -1901,7 +1901,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_Ob = true;
             this.field_hd = new LegacyTextureCache(this, this.field_c);
             this.initializeDeviceResources((byte) 124);
-            this.field_zc = new mq(this);
+            this.field_zc = new LegacyOpenGlNormalMapGenerator(this);
             this.field_L = new LegacyPostProcessChain(this);
             if (this.field_L.hasFramebuffer((byte) -43)) {
               this.field_T = new LegacyOpenGlBloomEffect(this);
@@ -2253,27 +2253,27 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_hc = this.field_l.a("GL_EXT_framebuffer_blit");
         this.field_ed = this.field_l.a("GL_EXT_framebuffer_multisample");
         this.field_Eb = VerticalScrollbar.field_vb.startsWith("mac");
-        jaggl.OpenGL.glGetFloatv(2834, gp.field_d, 0);
-        this.field_Cb = gp.field_d[1];
-        this.field_Qc = gp.field_d[0];
+        jaggl.OpenGL.glGetFloatv(2834, RoomPropertyLabels.field_d, 0);
+        this.field_Cb = RoomPropertyLabels.field_d[1];
+        this.field_Qc = RoomPropertyLabels.field_d[0];
         stackIn_27_0 = (0 == var2) ? 0 : var2;
         return stackIn_27_0;
     }
 
     private final void applyDirectionalLightColors(byte param0) {
-        gp.field_d[3] = 1.0f;
-        gp.field_d[1] = this.field_cd * this.field_Fb;
-        gp.field_d[0] = this.field_cd * this.field_wc;
-        gp.field_d[2] = this.field_cd * this.field_bc;
-        jaggl.OpenGL.glLightfv(16384, 4609, gp.field_d, 0);
+        RoomPropertyLabels.field_d[3] = 1.0f;
+        RoomPropertyLabels.field_d[1] = this.field_cd * this.field_Fb;
+        RoomPropertyLabels.field_d[0] = this.field_cd * this.field_wc;
+        RoomPropertyLabels.field_d[2] = this.field_cd * this.field_bc;
+        jaggl.OpenGL.glLightfv(16384, 4609, RoomPropertyLabels.field_d, 0);
         if (param0 != -30) {
           this.field_S = true;
         }
-        gp.field_d[2] = -this.field_Sb * this.field_bc;
-        gp.field_d[1] = -this.field_Sb * this.field_Fb;
-        gp.field_d[0] = this.field_wc * -this.field_Sb;
-        gp.field_d[3] = 1.0f;
-        jaggl.OpenGL.glLightfv(16385, 4609, gp.field_d, 0);
+        RoomPropertyLabels.field_d[2] = -this.field_Sb * this.field_bc;
+        RoomPropertyLabels.field_d[1] = -this.field_Sb * this.field_Fb;
+        RoomPropertyLabels.field_d[0] = this.field_wc * -this.field_Sb;
+        RoomPropertyLabels.field_d[3] = 1.0f;
+        jaggl.OpenGL.glLightfv(16385, 4609, RoomPropertyLabels.field_d, 0);
     }
 
     final void popMatrix(byte param0) {
@@ -2290,14 +2290,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     private final void applyAmbientLightColor(int param0) {
-        gp.field_d[3] = 1.0f;
-        gp.field_d[2] = this.field_bc * this.field_tc;
+        RoomPropertyLabels.field_d[3] = 1.0f;
+        RoomPropertyLabels.field_d[2] = this.field_bc * this.field_tc;
         if (param0 != 16) {
           return;
         }
-        gp.field_d[0] = this.field_tc * this.field_wc;
-        gp.field_d[1] = this.field_tc * this.field_Fb;
-        jaggl.OpenGL.glLightModelfv(2899, gp.field_d, 0);
+        RoomPropertyLabels.field_d[0] = this.field_tc * this.field_wc;
+        RoomPropertyLabels.field_d[1] = this.field_tc * this.field_Fb;
+        jaggl.OpenGL.glLightModelfv(2899, RoomPropertyLabels.field_d, 0);
     }
 
     final void projectPointAtDepth(int param0, int param1, int param2, int param3, int[] param4) {
@@ -2914,10 +2914,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_Uc);
         jaggl.OpenGL.glFogf(param0, this.field_xb);
-        gp.field_d[0] = (float)SnakePitBehaviour.bitwiseAnd(this.field_gc, 16711680) / 16711680.0f;
-        gp.field_d[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_gc) / 65280.0f;
-        gp.field_d[2] = (float)SnakePitBehaviour.bitwiseAnd(255, this.field_gc) / 255.0f;
-        jaggl.OpenGL.glFogfv(2918, gp.field_d, 0);
+        RoomPropertyLabels.field_d[0] = (float)SnakePitBehaviour.bitwiseAnd(this.field_gc, 16711680) / 16711680.0f;
+        RoomPropertyLabels.field_d[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_gc) / 65280.0f;
+        RoomPropertyLabels.field_d[2] = (float)SnakePitBehaviour.bitwiseAnd(255, this.field_gc) / 255.0f;
+        jaggl.OpenGL.glFogfv(2918, RoomPropertyLabels.field_d, 0);
     }
 
     final void setProjectionParameters(int param0, int param1, int param2, int param3) {

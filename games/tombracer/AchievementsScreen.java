@@ -17,7 +17,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         this.field_r = new int[42];
         try {
           for (var7_int = 0; var7_int < this.field_w.length; var7_int++) {
-            this.field_w[var7_int] = uca.cosmeticRandom.nextBounded(3, 0);
+            this.field_w[var7_int] = MeshMaterialColour.cosmeticRandom.nextBounded(3, 0);
           }
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
@@ -250,7 +250,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         var7Lifetime1 = var5 + 20 + 180;
         var8 = ShowLevelSetCommand.achievementNames[var6].toUpperCase();
         var12 = kv.achievementDescriptions[var6];
-        var10 = this.drawWrappedText(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
+        var10 = this.drawWrappedText(var8, MatchStatistics.field_n, -6671872, 180, var4, HardwareVertexNormalAccumulator.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.isAchievementEarned(false, var6)) {
           TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, TermsLinksPanel.field_x, var4, -6671872, -1);
@@ -341,7 +341,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         this.drawAchievementGrid(-119, param1);
         this.drawAchievementDetails(param1, (byte) -22);
         if (TextWidgetPainter.a(7)) {
-          TooltipRenderer.field_p.drawCentred(-1, -1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -14345466, 405 + param1, ooa.field_h);
+          TooltipRenderer.field_p.drawCentred(-1, -1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -14345466, 405 + param1, AccountNameResolver.field_h);
         }
         if (param2 >= -9) {
           this.field_r = (int[]) null;

@@ -107,7 +107,7 @@ final class MidiPatch extends IntrusiveNode {
         if (param0 != -10918) {
           MidiPatch.loadingMessage(120);
         }
-        if (cga.field_f < 2) {
+        if (QueuedFixedRequest.field_f < 2) {
           return ObjectList.field_b;
         }
         if (InvisibleTouchSwitchComponent.field_J != null) {
@@ -129,7 +129,7 @@ final class MidiPatch extends IntrusiveNode {
           return TrapSpawner.field_b + " - " + OpenGlTexture2D.field_n.getGroupProgressByName("commonui", true) + "%";
         }
         if (!WeaveOperator.field_p.ensureIndex(param0 + 10827)) {
-          return wt.field_b;
+          return ProgressDialogLauncher.field_b;
         }
         if (!WeaveOperator.field_p.areAllGroupsAvailable(0)) {
           return WindZoneBehaviour.field_u + " - " + WeaveOperator.field_p.getOverallProgress(true) + "%";

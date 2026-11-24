@@ -7,7 +7,7 @@ final class HardwareSceneLight extends SceneLight {
     final static void resetChatRateLimit(byte param0) {
         int var1 = -20 % ((64 - param0) / 44);
         PackedBitSetSupport.field_b = AdjustedWallClock.currentTimeMillis((byte) -107);
-        gp.field_h = 0;
+        RoomPropertyLabels.field_h = 0;
     }
 
     final void setIntensity(byte param0, float param1) {
@@ -33,7 +33,7 @@ final class HardwareSceneLight extends SceneLight {
         var2.writeBytes(0, CourseLayoutFactory.field_b, CourseLayoutFactory.field_b.length, 71);
         int var4 = -104 % ((param1 - 22) / 36);
         var2.writeByte(CoinBagItemComponent.field_H, 0);
-        var2.writeByte(mua.field_b, 0);
+        var2.writeByte(EmptyRoomFactory.field_b, 0);
         var2.writeBytes(0, TileGrid.field_e, TileGrid.field_e.length, 119);
         var2.backpatchByteLength(var2.position - var3, (byte) -102);
     }
@@ -61,7 +61,7 @@ final class HardwareSceneLight extends SceneLight {
               stackIn_10_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param3, param5, param7, param6, param0, param1);
               return stackIn_10_0;
             }
-            stackIn_8_0 = new LegacyOpenGlSpriteTexture(param4, param3, param5, param7, lla.nextPowerOfTwo(false, param5), lla.nextPowerOfTwo(false, param7), param0, param1);
+            stackIn_8_0 = new LegacyOpenGlSpriteTexture(param4, param3, param5, param7, SocialTabbedPanelLayout.nextPowerOfTwo(false, param5), SocialTabbedPanelLayout.nextPowerOfTwo(false, param7), param0, param1);
             return stackIn_8_0;
           }
           stackIn_12_0 = new LegacyOpenGlSpriteTexture(param4, 3553, param3, param5, param7, param6, param0, param1);

@@ -167,8 +167,8 @@ final class CharacterChoiceTile extends IntrusiveNode {
 
     CharacterChoiceTile(int param0, int param1) {
         this.field_f = -1;
-        this.field_k = -2 + param0 + uca.cosmeticRandom.nextBounded(4, 0);
-        this.field_g = -5 + (uca.cosmeticRandom.nextBounded(10, 0) + param1);
+        this.field_k = -2 + param0 + MeshMaterialColour.cosmeticRandom.nextBounded(4, 0);
+        this.field_g = -5 + (MeshMaterialColour.cosmeticRandom.nextBounded(10, 0) + param1);
     }
 
     static {

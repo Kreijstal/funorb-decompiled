@@ -229,19 +229,19 @@ final class StandingsPhase extends MatchPhase {
           } else {
             var10_ref_String = SecondaryLinkQueue.worldNames[var9].toUpperCase();
           }
-          SocketConnector.drawWrappedText(var10_ref_String, 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
-          MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), S2CSimulationSignalPacket.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
+          SocketConnector.drawWrappedText(var10_ref_String, 1, HardwareVertexNormalAccumulator.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
+          MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), S2CSimulationSignalPacket.field_a[this.screen.localPlayerIndex], HardwareVertexNormalAccumulator.field_f, -1, -15 + var4, var3, -1);
           if (this.matchState.declaredWinner < 0) {
-            MembersUpsellMenu.drawCentredTextWithShadow(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(ArrowShooterComponent.field_K.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, var4 - 40, var3, -1);
             MembersUpsellMenu.drawCentredTextWithShadow(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, TooltipRenderer.field_p, -1, 45 + var4, var3, -1);
           } else {
-            MembersUpsellMenu.drawCentredTextWithShadow(CompletedStatusText.text.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
-            if (var9 == uca.field_a) {
+            MembersUpsellMenu.drawCentredTextWithShadow(CompletedStatusText.text.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, -40 + var4, var3, -1);
+            if (var9 == MeshMaterialColour.field_a) {
               var12_ref = null;
               var13_ref_String = SpriteTileOperator.field_v;
               if (C2SActionPacket.field_j == 3) {
                 var12_ref = GraphicsHeap.field_g;
-                var13_ref_String = uaa.field_d;
+                var13_ref_String = ChatMessageColours.field_d;
               }
               if (C2SActionPacket.field_j == 2) {
                 var13_ref_String = FullscreenDialogLayout.field_c;
@@ -260,9 +260,9 @@ final class StandingsPhase extends MatchPhase {
           if (var11 != 0) {
             var24 = DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.drawCentredTextWithShadow(CourseMapPath.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, TooltipRenderer.field_p, -1, 20 + var4, -120 + var3, -1);
-            MembersUpsellMenu.drawCentredTextWithShadow(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(ContentTransitionDialog.field_L.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, var4, 120 + var3, -1);
             var13 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(74);
-            MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var13), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
             var23 = DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.drawCentredTextWithShadow(CourseMapPath.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, TooltipRenderer.field_p, -1, 48 + var4, var3 - 120, -1);
@@ -271,9 +271,9 @@ final class StandingsPhase extends MatchPhase {
             RoomEffectTraps.drawLeftTextWithShadow(-1, -36, var4 + 79, DropAnimation.formatTime(var13, (byte) -8), -200 + (var3 + GraphicsHeap.field_g.paddedWidth()) + 5, TooltipRenderer.field_p, 2431750);
             VariantMask.field_d.draw(var3 - 110, 60 + var4);
             RoomEffectTraps.drawLeftTextWithShadow(-1, -92, 79 + var4, DropAnimation.formatTime(var13 + var13 / 2, (byte) -8), VariantMask.field_d.paddedWidth() + (var3 - 110) + 5, TooltipRenderer.field_p, 2431750);
-            MembersUpsellMenu.drawCentredTextWithShadow(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(ContentTransitionDialog.field_L.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(110);
-            MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var14), 2431750, HardwareVertexNormalAccumulator.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&
               FacePlayerLocomotor.field_p.field_p != null &&
               FacePlayerLocomotor.field_p.field_h) {

@@ -192,7 +192,7 @@ class FocusableWidget extends UiWidget {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        sda var4_ref_sda = null;
+        QueuedPayloadRequest var4_ref_sda = null;
         Object var5 = null;
         int var6 = 0;
         ResourceArchive var7 = null;
@@ -234,10 +234,10 @@ class FocusableWidget extends UiWidget {
             return;
           }
           var3 = var11.readInt(-34);
-          var4_ref_sda = (sda) (FullscreenDialogWidthSupport.field_a.first(param0 - 84));
+          var4_ref_sda = (QueuedPayloadRequest) (FullscreenDialogWidthSupport.field_a.first(param0 - 84));
           while (var4_ref_sda != null) {
             if (var4_ref_sda.field_l != var3) {
-              var4_ref_sda = (sda) (FullscreenDialogWidthSupport.field_a.next(117));
+              var4_ref_sda = (QueuedPayloadRequest) (FullscreenDialogWidthSupport.field_a.next(117));
               continue;
             }
             break;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BitPackedColour implements noa {
+final class BitPackedColour implements GameStateMarker {
     private int red;
     private int channelBits;
     private int blue;

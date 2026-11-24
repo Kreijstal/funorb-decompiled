@@ -99,9 +99,9 @@ final class SoundEvent extends IntrusiveNode {
     final static int withFullAlpha(boolean param0, int param1) {
         if (param0) {
           field_h = (SpriteData) null;
-          return jg.withAlpha(255, (byte) -96, param1);
+          return NoiseSliceGenerator.withAlpha(255, (byte) -96, param1);
         }
-        return jg.withAlpha(255, (byte) -96, param1);
+        return NoiseSliceGenerator.withAlpha(255, (byte) -96, param1);
     }
 
     final int getSoundId(int param0) {

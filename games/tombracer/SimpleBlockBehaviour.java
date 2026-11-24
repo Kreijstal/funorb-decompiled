@@ -161,10 +161,10 @@ final class SimpleBlockBehaviour extends Behaviour {
           return false;
         }
         if (param0 == 0) {
-          return ld.field_e >= 2 ? true : false;
+          return GpuCubeTextureSource.field_e >= 2 ? true : false;
         }
         field_n = (ContextMenu) null;
-        return ld.field_e >= 2 ? true : false;
+        return GpuCubeTextureSource.field_e >= 2 ? true : false;
     }
 
     SimpleBlockBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {

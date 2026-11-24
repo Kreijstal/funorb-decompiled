@@ -86,10 +86,10 @@ abstract class r extends DualLinkNode {
 
     final static int packSettings(int param0) {
         if (param0 == 11) {
-          return UrlDownloadRequest.field_i + (k.field_A << 4) + (nba.field_b << 2);
+          return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (nba.field_b << 2);
         }
         r.a(87, false);
-        return UrlDownloadRequest.field_i + (k.field_A << 4) + (nba.field_b << 2);
+        return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (nba.field_b << 2);
     }
 
     protected r() {

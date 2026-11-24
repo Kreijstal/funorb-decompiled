@@ -19,7 +19,7 @@ abstract class MazeGenerator {
 
     final static void setChatSetting(int param0, int param1, byte param2, int param3) {
         if (param0 == 0) {
-          if (k.field_A == param3) {
+          if (DropTargetWidget.field_A == param3) {
             if (param0 == 1 &&
               param3 != nba.field_b) {
               PlatformModel.field_B = true;
@@ -36,7 +36,7 @@ abstract class MazeGenerator {
             }
             return;
           }
-          k.field_A = param3;
+          DropTargetWidget.field_A = param3;
           PlatformModel.field_B = true;
           S2CSimulationSignalPacket.sendChatSettings(true, param1);
         }
@@ -178,7 +178,7 @@ abstract class MazeGenerator {
 
     final static void releaseStatics(byte param0) {
         QueuedHint.field_g = null;
-        mq.field_b = null;
+        LegacyOpenGlNormalMapGenerator.field_b = null;
         LoadLevelCommand.field_p = null;
         ImageProducerCanvasImageBuffer.field_m = null;
         int var1 = 85 % ((57 - param0) / 49);

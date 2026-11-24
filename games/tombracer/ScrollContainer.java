@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ScrollContainer extends ArrayWidgetGroup {
-    vua field_A;
+    ClippedChildWidget field_A;
     ScrollControlWidget field_x;
     private boolean field_y;
     private ScrollControlWidget field_D;
@@ -817,10 +817,10 @@ final class ScrollContainer extends ArrayWidgetGroup {
 
     ScrollContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5, WidgetPainter param6) {
         super(param0, param1, param2, param3, param4);
-        vua dupTemp$0 = null;
+        ClippedChildWidget dupTemp$0 = null;
         try {
           this.children = new UiWidget[3];
-          dupTemp$0 = new vua(param0, param1, param2, param3, param6, param5);
+          dupTemp$0 = new ClippedChildWidget(param0, param1, param2, param3, param6, param5);
           this.field_A = dupTemp$0;
           this.children[2] = (UiWidget) ((Object) dupTemp$0);
           this.layoutChildren((byte) 88);

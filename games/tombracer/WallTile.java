@@ -576,7 +576,7 @@ final class WallTile implements Renderable {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (cga.field_f < 10) {
+          if (QueuedFixedRequest.field_f < 10) {
             var3_int = 0;
             if (RadialSelectionPainter.field_k) {
               RadialSelectionPainter.field_k = false;
@@ -586,7 +586,7 @@ final class WallTile implements Renderable {
           } else {
             if (!LegacyOpenGlSpriteTexture.i(250)) {
               SoftwareRasterizer.clear();
-              gga.drawLoadingAnimation(320, 240, (byte) 113);
+              FullscreenFailureDialog.drawLoadingAnimation(320, 240, (byte) 113);
               LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param1);
             } else {
               if (0 != Transform3D.field_c) {

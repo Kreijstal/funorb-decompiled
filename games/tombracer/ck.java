@@ -86,19 +86,19 @@ final class ck {
         var21 = TombRacer.field_G ? 1 : 0;
         try {
           DoorwayComponent.field_L = param7;
-          eda.field_e = param9;
+          HardwareVertexNormalAccumulator.field_e = param9;
           pda.field_d = param3;
           SnakePitModel.field_n = param12;
-          aca.field_i = param6;
+          QueuedByteShortRequest.field_i = param6;
           MirrorMoverLocomotor.field_r = param2;
           DebouncedValidationSource.field_e = param4;
           no.field_o = param8;
-          eca.field_b = param1;
+          PlayerQuickChatMenuLauncher.field_b = param1;
           DisplayNameForm.field_w = param13;
           SafeZoneBehaviour.field_u = param14;
           RasterizerOperator.field_m = param5;
           SoundEventPlayer.field_f = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "gameprivacy");
-          wt.field_c = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "ratedgame");
+          ProgressDialogLauncher.field_c = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "ratedgame");
           InvisibleTouchSwitchComponent.field_K = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "opentome");
           TileGridCell.field_k = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "allowspectators");
           SocketArchiveNetworkClient.field_w = new String[5];
@@ -108,7 +108,7 @@ final class ck {
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
           SocketArchiveNetworkClient.field_w[1] = RasterBuffer.field_b;
           RasterShape.field_e = new UiComponent(0L, (UiComponent) null);
-          LightSource.field_h = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
+          LightSource.field_h = new UiComponent(0L, AccountNameResolver.field_f, CanvasImageBuffer.field_i);
           ShaderEffect.field_b = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           RadialSelectionPainter.field_j = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.addChild(-126, LightSource.field_h);
@@ -125,11 +125,11 @@ final class ck {
           ImageProducerRasterBuffer.field_j = new UiComponent(0L, ClipStack.field_g, S2CActionPacket.field_g.toUpperCase());
           C2SChooseCharacterPacket.field_a = new UiComponent(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
           Obstacle.field_s = new UiComponent(0L, CommonChooseReward.field_c);
-          gta.field_b = new UiComponent(0L, ooa.field_f, SnakePitModel.field_m);
-          RandomBrickOperator.field_r = new UiComponent(0L, cs.field_a, TestModel.field_r);
-          RotateLocomotor.field_o = new UiComponent(0L, cs.field_a, du.field_a);
-          MidiPcmStream.field_K = new UiComponent(0L, cs.field_a, EllipseShape.field_i);
-          MirrorComponent.field_I = new UiComponent(0L, cs.field_a, MatchState.field_N);
+          HardwareFaceNormal.field_b = new UiComponent(0L, AccountNameResolver.field_f, SnakePitModel.field_m);
+          RandomBrickOperator.field_r = new UiComponent(0L, AccountRequestUsernameSelector.field_a, TestModel.field_r);
+          RotateLocomotor.field_o = new UiComponent(0L, AccountRequestUsernameSelector.field_a, ArchiveConnectionFailureHandler.field_a);
+          MidiPcmStream.field_K = new UiComponent(0L, AccountRequestUsernameSelector.field_a, EllipseShape.field_i);
+          MirrorComponent.field_I = new UiComponent(0L, AccountRequestUsernameSelector.field_a, MatchState.field_N);
           cq.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           SoftwareModelBillboardState.field_i = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           TileRenderable.field_c = new UiComponent(0L, HardwareModelVertexStream.field_g, GpuPrimitiveType.field_b.toUpperCase());
@@ -151,7 +151,7 @@ final class ck {
           OpenGlToolkit.field_fd = new UiComponent(0L, (UiComponent) null);
           OpenGlToolkit.field_fd.addChild(-126, C2SChooseCharacterPacket.field_a);
           OpenGlToolkit.field_fd.addChild(param11 ^ -25371, Obstacle.field_s);
-          Obstacle.field_s.addChild(-124, gta.field_b);
+          Obstacle.field_s.addChild(-124, HardwareFaceNormal.field_b);
           Obstacle.field_s.addChild(-126, RandomBrickOperator.field_r);
           Obstacle.field_s.addChild(-127, RotateLocomotor.field_o);
           if (UnlockOverlay.field_p) {
@@ -179,11 +179,11 @@ final class ck {
           RoomRegion.field_l = new UiComponent(0L, (UiComponent) null);
           PlayerCountDisplay.widget = new UiComponent(0L, Corpse.field_i);
           PlayerCountDisplay.widget.field_z = 1;
-          uaa.field_b = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
+          ChatMessageColours.field_b = new UiComponent(0L, AccountNameResolver.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           MidiPatch.field_n = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RoomRegion.field_l.addChild(param11 ^ -25371, PlayerCountDisplay.widget);
-          RoomRegion.field_l.addChild(-124, uaa.field_b);
+          RoomRegion.field_l.addChild(-124, ChatMessageColours.field_b);
           if (UnlockOverlay.field_p) {
             RoomRegion.field_l.addChild(-122, RopeBridgeComponent.field_F);
           }
@@ -230,7 +230,7 @@ final class ck {
           }
           boolean decompiledFrameCompleted0 = true;
           if (MirrorMoverLocomotor.field_r > 1) {
-            SimpleConditionBehaviour.field_p[3] = new UiComponent(0L, GpuDataType.field_j, k.field_z);
+            SimpleConditionBehaviour.field_p[3] = new UiComponent(0L, GpuDataType.field_j, DropTargetWidget.field_z);
             array$1 = new ContextMenuRow[1 + MirrorMoverLocomotor.field_r];
             SoftwareRenderTarget.field_b[3] = array$1;
             SoftwareRenderTarget.field_b[3][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
@@ -315,8 +315,8 @@ final class ck {
               var17_int++;
             }
             HiscoresScreen.field_z = new UiComponent(0L, HardwareModelVertexStream.field_g);
-            hw.field_a = new UiComponent(0L, HardwareModelVertexStream.field_g);
-            MessageOverlay.field_t = new UiComponent(0L, tka.field_q);
+            GamePacketSender.field_a = new UiComponent(0L, HardwareModelVertexStream.field_g);
+            MessageOverlay.field_t = new UiComponent(0L, IndexedSpriteButtonPainter.field_q);
             MessageOverlay.field_t.applyStyle(false, Corpse.field_i);
             MessageOverlay.field_t.field_bb = 1;
             break;
@@ -350,10 +350,10 @@ final class ck {
             var18Lifetime1++;
           }
           MouseWheelFactory.field_b.addChild(-128, HiscoresScreen.field_z);
-          MouseWheelFactory.field_b.addChild(-125, hw.field_a);
+          MouseWheelFactory.field_b.addChild(-125, GamePacketSender.field_a);
           MouseWheelFactory.field_b.addChild(-123, MessageOverlay.field_t);
           S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
-          Trap.field_q = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, ej.field_b.toUpperCase());
+          Trap.field_q = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, DisplayNameValidator.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

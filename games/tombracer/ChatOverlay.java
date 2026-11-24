@@ -230,7 +230,7 @@ final class ChatOverlay {
               } else {
                 ProceduralTexture.field_p = SoftwareRasterBlitter.field_a;
                 MembersUpsellMenu.field_z = var6_int;
-                uca.field_d = -1;
+                MeshMaterialColour.field_d = -1;
               }
               WeaveOperator.field_q.position = 0;
             }
@@ -252,7 +252,7 @@ final class ChatOverlay {
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
                   ProceduralTexture.field_p = SoftwareRasterBlitter.field_a;
-                  uca.field_d = -1;
+                  MeshMaterialColour.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -264,14 +264,14 @@ final class ChatOverlay {
               }
               if (decompiledFrameRemainder0) {
                 ProceduralTexture.field_p = HardwareGraphicsToolkit.field_w;
-                uca.field_d = -1;
+                MeshMaterialColour.field_d = -1;
               }
             }
             if (HardwareGraphicsToolkit.field_w == ProceduralTexture.field_p &&
               PbufferEntry.ensurePacketPayload(0)) {
               QuickChatPhraseSource.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
               VertexAttribute.field_q = param1;
-              ld.field_e = WeaveOperator.field_q.readUnsignedByte(param2 ^ 205);
+              GpuCubeTextureSource.field_e = WeaveOperator.field_q.readUnsignedByte(param2 ^ 205);
               PrimMazeGenerator.field_e = WeaveOperator.field_q.readUnsignedByte(255);
               ReportAbuseDialog.field_ub = WeaveOperator.field_q.readUnsignedShort(124);
               var6 = WeaveOperator.field_q.readNullableString(param2 - 28740);
@@ -316,7 +316,7 @@ final class ChatOverlay {
               }
               PushableBlockMazeComponent.field_L = false;
               if (var6 != null) {
-                mp.writeSettingsCookie(var6, ToolkitSelector.getApplet(41), -21407);
+                MidiChannelVolumeTargets.writeSettingsCookie(var6, ToolkitSelector.getApplet(41), -21407);
               }
               if (0 >= ReportAbuseDialog.field_ub &&
                 !AvailabilityQueryFactory.field_a) {

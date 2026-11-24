@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class HazardEffect implements noa {
+final class HazardEffect implements GameStateMarker {
     static UiComponent field_a;
     int type;
     private int preset;

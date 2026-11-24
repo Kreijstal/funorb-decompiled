@@ -149,10 +149,10 @@ final class rga {
           String var3 = (String) null;
           rga.splitPreservingEmptyParts(121, (String) null, 'J');
         }
-        if (cm.field_a == null) {
+        if (CourseStartPacket.field_a == null) {
           return 0;
         }
-        RoomDefinition[] var4 = cm.field_a[param1].field_c;
+        RoomDefinition[] var4 = CourseStartPacket.field_a[param1].field_c;
         RoomDefinition[] var2 = var4;
         return var4.length;
     }

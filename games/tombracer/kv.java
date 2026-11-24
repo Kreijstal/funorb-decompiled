@@ -61,19 +61,19 @@ final class kv {
         int fieldTemp$0 = 0;
         int var4 = 0;
         if (param2 == 95) {
-          jg.field_a.position = 0;
-          jg.field_a.writeByte(12, 0);
-          jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -108);
-          jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 111);
-          jg.field_a.writeByte(param1, 0);
-          jg.field_a.writeByte(param0, 0);
-          jg.field_a.writeShort(-1477662136, param3);
-          jg.field_a.rsaEncryptContents(126, PooledObject.field_f, ClientRsaModulus.modulus);
+          NoiseSliceGenerator.field_a.position = 0;
+          NoiseSliceGenerator.field_a.writeByte(12, 0);
+          NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -108);
+          NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 111);
+          NoiseSliceGenerator.field_a.writeByte(param1, 0);
+          NoiseSliceGenerator.field_a.writeByte(param0, 0);
+          NoiseSliceGenerator.field_a.writeShort(-1477662136, param3);
+          NoiseSliceGenerator.field_a.rsaEncryptContents(126, PooledObject.field_f, ClientRsaModulus.modulus);
           ql.field_k.writeCipheredOpcode(18, param2 - 3083);
           fieldTemp$0 = ql.field_k.position + 1;
           ql.field_k.position = ql.field_k.position + 1;
           var4 = fieldTemp$0;
-          ql.field_k.writeBytes(0, jg.field_a.payload, jg.field_a.position, param2 - 42);
+          ql.field_k.writeBytes(0, NoiseSliceGenerator.field_a.payload, NoiseSliceGenerator.field_a.position, param2 - 42);
           ql.field_k.backpatchByteLength(ql.field_k.position - var4, (byte) -19);
           return;
         }

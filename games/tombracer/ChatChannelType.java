@@ -20,17 +20,17 @@ final class ChatChannelType {
           if (param0 != 64) {
             ChatChannelType.releaseStatics(-48);
           }
-          if (cm.field_a == null) {
+          if (CourseStartPacket.field_a == null) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
           var1_int = 0;
           while (true) {
-            if (cm.field_a.length <= var1_int) {
+            if (CourseStartPacket.field_a.length <= var1_int) {
               stackIn_14_0 = -1;
               return stackIn_14_0;
             }
-            if (!cm.field_a[var1_int].a((byte) -47)) {
+            if (!CourseStartPacket.field_a[var1_int].a((byte) -47)) {
               var1_int++;
               continue;
             }

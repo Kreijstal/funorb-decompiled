@@ -1,0 +1,43 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountRegistrationLauncher {
+    static String field_a;
+
+    final static void closeSelectionMenu(int param0) {
+        BoxBlurOperator.field_o = false;
+        if (param0 >= -75) {
+          field_a = (String) null;
+        }
+    }
+
+    public static void releaseStatics(boolean param0) {
+        if (!param0) {
+          field_a = (String) null;
+          field_a = null;
+          return;
+        }
+        field_a = null;
+    }
+
+    final static void openAccountRegistration(byte param0) {
+        TeleportState.field_b = new AccountRegistrationPanel();
+        if (param0 == 6) {
+          um.field_l.transitionToContent(103, TeleportState.field_b);
+          return;
+        }
+        AccountRegistrationLauncher.openAccountRegistration((byte) -122);
+        um.field_l.transitionToContent(103, TeleportState.field_b);
+    }
+
+    final static void applyMusicVolume(int param0, int param1) {
+        MidiChannelVolumeTargets.setMusicVolume(param1 - 20813, param0);
+        if (param1 != 20815) {
+          AccountRegistrationLauncher.applyMusicVolume(61, 98);
+        }
+    }
+
+    static {
+        field_a = "Next: Learn more about the temples' items and traps!";
+    }
+}

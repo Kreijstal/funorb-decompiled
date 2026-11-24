@@ -301,7 +301,7 @@ final class ItemModel extends TrapModel {
         byte[] var19 = null;
         LegacyTurbulentWaterNoise var9 = null;
         byte[] var20 = null;
-        mq var11 = null;
+        LegacyOpenGlNormalMapGenerator var11 = null;
         byte[] var21 = null;
         try {
           if (SoftwareModelBillboard.field_e == null) {
@@ -322,7 +322,7 @@ final class ItemModel extends TrapModel {
             if (LegacyOpenGlTexture1D.field_m != null) {
               return;
             }
-            var21 = LightSourceModel.generateNoiseTexture(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
+            var21 = LightSourceModel.generateNoiseTexture(4.0f, 16.0f, 128, new SeededGradientNoise3D(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
             LegacyOpenGlTexture1D.field_m = ByteStorageFactory.wrapByteStorage(270, var21, false);
           }
         } catch (RuntimeException runtimeException) {

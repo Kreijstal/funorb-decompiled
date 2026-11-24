@@ -204,7 +204,7 @@ final class no extends MatchOverlay {
             var2 = var2 + var4;
           }
           PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, MainRoomCatalog.field_a, var7);
-          SocketConnector.drawWrappedText(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
+          SocketConnector.drawWrappedText(var18, 1, HardwareVertexNormalAccumulator.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
           PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
           return;
         }
@@ -222,7 +222,7 @@ final class no extends MatchOverlay {
           var2 = var2 + var4;
         }
         PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, MainRoomCatalog.field_a, var7);
-        SocketConnector.drawWrappedText(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
+        SocketConnector.drawWrappedText(var17, 1, HardwareVertexNormalAccumulator.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
         PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
     }
 
@@ -242,7 +242,7 @@ final class no extends MatchOverlay {
           wp.field_a = param0;
           OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param0);
-          mn.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);
+          MatchingEmailAvailabilityValidator.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);
           TextureCombineOperation.field_b = param1;
           DynamicGeometryBuffer.field_c = true;
           if (param2 <= 108) {

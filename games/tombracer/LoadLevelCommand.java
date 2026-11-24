@@ -115,7 +115,7 @@ final class LoadLevelCommand extends ConsoleMethod {
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.joinAll((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.field_j)});
           }
           TextureOperator.field_l.dismiss((byte) 101);
-          wt.showProgressDialog((byte) -117);
+          ProgressDialogLauncher.showProgressDialog((byte) -117);
           return;
         }
         field_o = (Object) null;
@@ -133,7 +133,7 @@ final class LoadLevelCommand extends ConsoleMethod {
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.joinAll((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.field_j)});
           }
           TextureOperator.field_l.dismiss((byte) 101);
-          wt.showProgressDialog((byte) -117);
+          ProgressDialogLauncher.showProgressDialog((byte) -117);
         }
     }
 

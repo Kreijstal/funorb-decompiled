@@ -74,7 +74,7 @@ final class HardwareModel extends ToolkitModel {
         short dupTemp$1 = 0;
         short dupTemp$2 = 0;
         short dupTemp$3 = 0;
-        gta dupTemp$4 = null;
+        HardwareFaceNormal dupTemp$4 = null;
         int dupTemp$6 = 0;
         int[] arrayValue$7 = null;
         int[] array$5 = null;
@@ -112,15 +112,15 @@ final class HardwareModel extends ToolkitModel {
         TextureMetadata var10_ref_dw = null;
         int var10 = 0;
         int var11_int = 0;
-        eda[] var11 = null;
+        HardwareVertexNormalAccumulator[] var11 = null;
         int var12 = 0;
         Object var13_ref = null;
         int var13 = 0;
         int var14_int = 0;
         BillboardDefinition var14 = null;
-        ima var14_ref = null;
+        ModelTextureProjectionData var14_ref = null;
         int var15_int = 0;
-        gta[] var15 = null;
+        HardwareFaceNormal[] var15 = null;
         int var16 = 0;
         int var17_int = 0;
         int[] var17 = null;
@@ -146,19 +146,19 @@ final class HardwareModel extends ToolkitModel {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        gta var31_ref_gta = null;
-        eda var31_ref_eda = null;
+        HardwareFaceNormal var31_ref_gta = null;
+        HardwareVertexNormalAccumulator var31_ref_eda = null;
         int var31 = 0;
         int var32_int = 0;
         long var32_long = 0L;
-        gta var32 = null;
+        HardwareFaceNormal var32 = null;
         int var33_int = 0;
         long var33 = 0L;
         int var34 = 0;
         int var35 = 0;
         int var36 = 0;
         int var37_int = 0;
-        eda var37 = null;
+        HardwareVertexNormalAccumulator var37 = null;
         float var38_float = 0.0f;
         float[] var38 = null;
         float var39_float = 0.0f;
@@ -331,7 +331,7 @@ final class HardwareModel extends ToolkitModel {
             this.field_Z = param1.field_b;
           }
           boolean decompiledFrameCompleted0 = true;
-          var11 = new eda[this.field_W];
+          var11 = new HardwareVertexNormalAccumulator[this.field_W];
           this.field_s = param1.field_e;
           this.field_X = param1.field_B;
           if (null != param1.field_m) {
@@ -412,12 +412,12 @@ final class HardwareModel extends ToolkitModel {
             }
             var15_int = this.field_J[var14_int];
             this.field_J[var14_int] = var13;
-            var11[var14_int] = new eda();
+            var11[var14_int] = new HardwareVertexNormalAccumulator();
             var13 = var13 + var15_int;
             var14_int++;
           } while (var63 == 0);
           var14_ref = NetworkArchiveRequest.a(var8, param1, this.field_I, (byte) -6);
-          var15 = new gta[param1.field_o];
+          var15 = new HardwareFaceNormal[param1.field_o];
           var16 = 0;
           scanLoop1: while (true) {
             if (var16 < param1.field_o) {
@@ -471,7 +471,7 @@ final class HardwareModel extends ToolkitModel {
               var30 = stackIn_165_0;
               if (var30 != 0) {
                 if (var30 == 1) {
-                  dupTemp$4 = new gta();
+                  dupTemp$4 = new HardwareFaceNormal();
                   var15[var16] = dupTemp$4;
                   var31_ref_gta = dupTemp$4;
                   var31_ref_gta.field_c = var26_int;
@@ -1266,7 +1266,7 @@ final class HardwareModel extends ToolkitModel {
           var2 = new BitPacketBuffer(param0.getFileByName("logo.fo3d", (byte) 126, ""));
           var3 = var2.readUnsignedByte(255);
           var2.beginBitAccess((byte) 119);
-          ej.field_d = BrazierComponent.readLogoMaterials(var2, (byte) 8);
+          DisplayNameValidator.field_d = BrazierComponent.readLogoMaterials(var2, (byte) 8);
           OpenGlTexture.field_e = new int[var3][];
           cq.field_b = new TriangleMesh[var3];
           var4 = 0;
@@ -1684,7 +1684,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (null != this.field_M &&
-            !kd.c(-58, this.field_Y, this.field_h)) {
+            !PointListEditorWidget.requiresCpuTriangleIndices(-58, this.field_Y, this.field_h)) {
             if (this.field_g != null &&
               !this.field_g.a(false) ||
               null != this.field_E &&
@@ -2338,7 +2338,7 @@ final class HardwareModel extends ToolkitModel {
           param0.field_T = this.field_T;
           param0.field_v = this.field_v;
           var7_int = IntPoint.hasAnyMask33(param4, this.field_h, (byte) -100) ? 1 : 0;
-          var8 = cga.hasAnyMask34(param4, -62, this.field_h) ? 1 : 0;
+          var8 = QueuedFixedRequest.hasAnyMask34(param4, -62, this.field_h) ? 1 : 0;
           var9 = TripBeamComponent.hasAnyMask52(param4, this.field_h, 52) ? 1 : 0;
           var10 = var8 | var7_int | var9;
           if (var10 == 0) {
@@ -2779,7 +2779,7 @@ final class HardwareModel extends ToolkitModel {
             param0.field_V = this.field_V;
             param0.field_M = this.field_M;
           }
-          if (!C2SChooseRewardPacket.a(param4, this.field_h, (byte) -116)) {
+          if (!C2SChooseRewardPacket.hasFlags16And2048(param4, this.field_h, (byte) -116)) {
             if (!FollowCamera.hasFlag2048(-1, param4, this.field_h)) {
               param0.field_g = null;
               if (var13 != 0) {
@@ -4893,7 +4893,7 @@ final class HardwareModel extends ToolkitModel {
             !FollowCamera.hasFlag2048(-1, this.field_Y, this.field_h)) {
             return;
           }
-          this.field_g = new HardwareModelIndexData(C2SChooseRewardPacket.a(this.field_Y, this.field_h, (byte) -111));
+          this.field_g = new HardwareModelIndexData(C2SChooseRewardPacket.hasFlags16And2048(this.field_Y, this.field_h, (byte) -111));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

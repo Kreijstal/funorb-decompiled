@@ -33,10 +33,10 @@ final class FollowCamera implements Camera {
     final static void openLoginForm(boolean param0, boolean param1, boolean param2, String param3) {
         try {
           LegacyOpenGlPostProcessEffect.a(param2);
-          ej.field_a.hideAllDialogs(true);
+          DisplayNameValidator.field_a.hideAllDialogs(true);
           MessageDialogs.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, LoadProfileCommand.field_r, param1, param0);
-          um.field_l = new mpa(ej.field_a, MessageDialogs.field_b);
-          ej.field_a.pushDialog(um.field_l, 114);
+          um.field_l = new AccountContentTransitionDialog(DisplayNameValidator.field_a, MessageDialogs.field_b);
+          DisplayNameValidator.field_a.pushDialog(um.field_l, 114);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -247,11 +247,11 @@ final class FollowCamera implements Camera {
         return var7;
     }
 
-    final static void sortDisplayModes(int param0, dh[] param1) {
+    final static void sortDisplayModes(int param0, DisplayModeInfo[] param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        dh var4 = null;
+        DisplayModeInfo var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;

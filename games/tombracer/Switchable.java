@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface Switchable extends noa {
+interface Switchable extends GameStateMarker {
     public abstract void toggle(int param0);
 
     public abstract SwitchableId getGlobalId(int param0);

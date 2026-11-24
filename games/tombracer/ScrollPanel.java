@@ -16,7 +16,7 @@ final class ScrollPanel extends UiComponent {
         IntArrayRequest var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        toa var5_ref_toa = null;
+        QueuedKeyedRequest var5_ref_toa = null;
         int[] var6 = null;
         int var8 = 0;
         BitPacketBuffer var10 = null;
@@ -33,7 +33,7 @@ final class ScrollPanel extends UiComponent {
               DropAnimation.closeGameSocket(60);
               return;
             }
-            var5 = -var10.position + uca.field_d;
+            var5 = -var10.position + MeshMaterialColour.field_d;
             var12 = var4.field_i;
             var11 = var12;
             var6 = var11;
@@ -48,11 +48,11 @@ final class ScrollPanel extends UiComponent {
           }
           if (var2 == 1) {
             var4_int = var10.readSignedSmart((byte) -128);
-            var5_ref_toa = (toa) (BridgeModel.field_m.first(-80));
+            var5_ref_toa = (QueuedKeyedRequest) (BridgeModel.field_m.first(-80));
             while (var5_ref_toa != null) {
               if (var5_ref_toa.field_i != var3 ||
                 var4_int != var5_ref_toa.field_k) {
-                var5_ref_toa = (toa) (BridgeModel.field_m.next(param0 + 123));
+                var5_ref_toa = (QueuedKeyedRequest) (BridgeModel.field_m.next(param0 + 123));
                 continue;
               }
               break;

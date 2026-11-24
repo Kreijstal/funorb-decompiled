@@ -121,7 +121,7 @@ final class HazardModel extends TrapModel {
                   var5 = rf.requestAddFriend(true, var4, param1);
                 }
                 if (1 == ResourceArchive.field_k) {
-                  var5 = uca.requestRemoveFriend(var4, (byte) 102, param1);
+                  var5 = MeshMaterialColour.requestRemoveFriend(var4, (byte) 102, param1);
                 }
                 if (ResourceArchive.field_k == 2) {
                   var5 = Bzip2State.a(-3, var4, param1);

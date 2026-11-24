@@ -38,8 +38,8 @@ final class MazeSolver {
         }
         int var9_int = 495;
         int var10 = 5;
-        dh.field_e.setBounds(var9_int - 10, param7, -23776, var10, 5);
-        CharacterChoiceFactory.field_g.setBounds(dh.field_e.field_G - ComponentMount.field_b.field_G, param7, -23776, 0, 0);
+        DisplayModeInfo.field_e.setBounds(var9_int - 10, param7, -23776, var10, 5);
+        CharacterChoiceFactory.field_g.setBounds(DisplayModeInfo.field_e.field_G - ComponentMount.field_b.field_G, param7, -23776, 0, 0);
         if (param3 != -5327) {
           return;
         }
@@ -64,13 +64,13 @@ final class MazeSolver {
         try {
           CourseLayout.field_a = param4;
           int var9_int = -25 / ((44 - param2) / 33);
-          pu.field_b = param0;
+          EmptyWidgetPainter.field_b = param0;
           MapWaypoint.field_n = param5;
           TileGridCell.field_a = param3;
-          oi.field_a = param1;
+          QuickChatMessageQueue.field_a = param1;
           GzipInflater.field_a = param7;
           MenuInputState.field_d = param8;
-          du.field_d = param6;
+          ArchiveConnectionFailureHandler.field_d = param6;
           StatReportingScoringObserver.field_l = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           Projectile.field_k = new DiskCacheWorker(param1);
           IntrusiveDequeCursor.field_a = new ArchiveManager(StatReportingScoringObserver.field_l, Projectile.field_k);

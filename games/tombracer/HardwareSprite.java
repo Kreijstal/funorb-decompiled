@@ -130,7 +130,7 @@ final class HardwareSprite extends ToolkitSprite {
         RuntimeException var2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (toa.field_j) {
+          if (QueuedKeyedRequest.field_j) {
             return;
           }
           var2_int = param0.readUnsignedByte(255);
@@ -257,10 +257,10 @@ final class HardwareSprite extends ToolkitSprite {
           stackIn_7_1 = (param2 != this.field_d.getHeight((byte) -76));
           this.field_h = stackIn_7_1;
           if (!this.field_a) {
-            this.field_d.a(-14634);
+            this.field_d.usesNormalizedCoordinates(-14634);
           }
           if (!this.field_h) {
-            this.field_d.a(-14634);
+            this.field_d.usesNormalizedCoordinates(-14634);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

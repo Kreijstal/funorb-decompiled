@@ -626,7 +626,7 @@ final class OpenGlModel extends ToolkitModel {
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameRemainder2 = true;
-          if (!mpa.hasAnyMask1048832(false, this.field_u, param1)) {
+          if (!AccountContentTransitionDialog.hasAnyMask1048832(false, this.field_u, param1)) {
             param5.field_o = this.field_o;
             decompiledFrameRemainder2 = (var13 != 0);
           }
@@ -653,7 +653,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if ((decompiledFrameCompleted7) &&
-            (vua.e(param1, this.field_u, 13650))) {
+            (ClippedChildWidget.requiresColorPointerCopy(param1, this.field_u, 13650))) {
             if (param2) {
               param5.field_Z = (byte)(param5.field_Z | 2);
             }
@@ -759,8 +759,8 @@ final class OpenGlModel extends ToolkitModel {
               param5.field_O = this.field_O;
             }
           }
-          if (!ooa.a(this.field_u, param1, -100)) {
-            if (ScoreSubmission.a(this.field_u, param1, (byte) 17)) {
+          if (!AccountNameResolver.requiresNormalPointerCopy(this.field_u, param1, -100)) {
+            if (ScoreSubmission.requiresNormalPointer(this.field_u, param1, (byte) 17)) {
               param5.field_F = this.field_F;
               if (var13 != 0) {
                 param5.field_F = null;
@@ -928,7 +928,7 @@ final class OpenGlModel extends ToolkitModel {
           regionExit5: {
             boolean decompiledFrameCompleted2 = true;
             regionExit6: {
-              if (!aca.hasFlag32768(param1, 32768, this.field_u)) {
+              if (!QueuedByteShortRequest.hasFlag32768(param1, 32768, this.field_u)) {
                 param5.field_I = this.field_I;
                 if (var13 == 0) {
                   break regionExit6;
@@ -2316,7 +2316,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           var1_int = NormalMapOperator.getSelectionMenuWidth(-77);
           var2 = GraphicsHeap.getSelectionMenuHeight(18998);
-          S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
+          S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, ProgressDialogLauncher.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.drawSelectionMenuItems(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4316,7 +4316,7 @@ final class OpenGlModel extends ToolkitModel {
         int var13 = 0;
         int var14_int = 0;
         BillboardDefinition var14 = null;
-        ima var14_ref = null;
+        ModelTextureProjectionData var14_ref = null;
         int var15_int = 0;
         OpenGlFaceNormal[] var15 = null;
         int var16 = 0;
@@ -4413,7 +4413,7 @@ final class OpenGlModel extends ToolkitModel {
           if (ModelFactory.hasFlag2048(-17, param5, param2)) {
             this.field_ab = new VertexArrayPointer((LegacyVertexArray) null, 5126, 2, 0);
           }
-          if (ScoreSubmission.a(param5, param2, (byte) 17)) {
+          if (ScoreSubmission.requiresNormalPointer(param5, param2, (byte) 17)) {
             this.field_F = new VertexArrayPointer((LegacyVertexArray) null, 5126, 3, 0);
           }
           if (DropInMenuScreen.hasFlag2048(param2, param5, 2048)) {

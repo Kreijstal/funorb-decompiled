@@ -59,7 +59,7 @@ abstract class MatchPhase {
         if (param0 != 96) {
           return 112;
         }
-        return ej.field_a.maxVisibleDialogHeight(param0 ^ -2147483552);
+        return DisplayNameValidator.field_a.maxVisibleDialogHeight(param0 ^ -2147483552);
     }
 
     private final void createMenuButton(byte param0) {

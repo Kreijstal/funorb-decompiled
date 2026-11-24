@@ -381,7 +381,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           this.field_jd.SetRenderState(19, 5);
           this.field_jd.SetRenderState(20, 6);
         } else {
-          if (mp.field_a != this.field_lb) {
+          if (MidiChannelVolumeTargets.field_a != this.field_lb) {
             if (BrickOperator.field_w == this.field_lb) {
               this.field_jd.SetRenderState(19, 9);
               this.field_jd.SetRenderState(20, 2);
@@ -1174,7 +1174,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param1 < 112) {
           return 109;
         }
-        if (ej.field_c == param0) {
+        if (DisplayNameValidator.field_c == param0) {
           return 2;
         }
         if (OpenGlDisplayLists.field_c == param0) {

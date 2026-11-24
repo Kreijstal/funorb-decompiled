@@ -6,7 +6,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
     private int[] octaveWeightsQ12;
     static String[] fallingObjectDeathMessages;
     private int outputIndex;
-    static nt field_j;
+    static FullscreenFailureReason field_j;
     private int accumulatedQ12;
 
     final void accumulateOctave(int param0, byte param1, int param2) {
@@ -92,6 +92,6 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
 
     static {
         fallingObjectDeathMessages = new String[]{"<%0> was pancaked", "<%0> forgot to bring the hard hat", "<%0> entered the land of Moin", "<%0> is quite a bit shorter now", "<%0> should have looked up", "<%0> could not shoulder the burden", "<%0> became pate"};
-        field_j = new nt();
+        field_j = new FullscreenFailureReason();
     }
 }

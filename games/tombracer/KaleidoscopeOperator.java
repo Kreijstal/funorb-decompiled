@@ -89,7 +89,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           field_m = -128;
         }
         var4 = LobbyGameWidget.textureColumnCoords[param0];
-        var5 = sj.textureRowCoords[param1];
+        var5 = FractalNoiseSliceAccumulator.textureRowCoords[param1];
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - 2048));
         if ((double)var6 >= -3.141592653589793 &&
           -2.356194490192345 >= (double)var6) {
@@ -126,7 +126,7 @@ final class KaleidoscopeOperator extends TextureOperator {
             BlockModel.field_o = -param0 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
           }
         }
-        RewardChoiceSlot.field_e = RewardChoiceSlot.field_e & hba.textureHeightMask;
+        RewardChoiceSlot.field_e = RewardChoiceSlot.field_e & RoomResultSender.textureHeightMask;
         BlockModel.field_o = BlockModel.field_o & GpuDataType.textureWidthMask;
     }
 

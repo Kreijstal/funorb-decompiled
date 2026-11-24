@@ -236,7 +236,7 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (ld.isPasswordLengthInvalid(false, var5)) {
+          if (GpuCubeTextureSource.isPasswordLengthInvalid(false, var5)) {
             stackIn_5_0 = PasswordLengthErrorText.text;
             return stackIn_5_0;
           }
@@ -323,7 +323,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = TextureCombineSource.field_c;
             return stackIn_6_0;
           }
-          if (!jg.isPasswordAcceptable(-102, var3, var4)) {
+          if (!NoiseSliceGenerator.isPasswordAcceptable(-102, var3, var4)) {
             stackIn_10_0 = TextureCombineSource.field_c;
             return stackIn_10_0;
           }

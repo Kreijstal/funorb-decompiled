@@ -119,7 +119,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static void a(int param0, int param1) {
-        if (msa.field_a == param0 &&
+        if (TypeableCharacterPredicate.field_a == param0 &&
           SecondaryNodeDequeIterator.field_a != null) {
           if (MenuEntry.field_j == null) {
             return;
@@ -449,7 +449,7 @@ final class ProxySocketConnector extends SocketConnector {
             param3 = param3 >> var10Lifetime1;
             param2 = param2 >> var10Lifetime1;
           }
-          return nla.segmentIntersectionParameter(2749, param2, param1, param3, param6, param8, param0, param5);
+          return FixedPointSegmentIntersection.segmentIntersectionParameter(2749, param2, param1, param3, param6, param8, param0, param5);
         }
         return -1;
     }

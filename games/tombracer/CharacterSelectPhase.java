@@ -71,10 +71,10 @@ final class CharacterSelectPhase extends MatchPhase {
         stackIn_3_0 = (this.canChoose(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         IntArrayRequest.field_h.draw(0, 0);
-        SocketConnector.drawWrappedText(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
+        SocketConnector.drawWrappedText(HardwareFaceNormal.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          SocketConnector.drawWrappedText(FormFieldRow.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.getCanvasHeight(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.drawWrappedText(FormFieldRow.field_F, 1, HardwareVertexNormalAccumulator.field_f, 2431750, 0, 48, 1, SwitchLinkList.getCanvasHeight(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (CharacterChoiceTile) (this.field_n.first(-80));
         while (var6_ref_ad != null) {
@@ -110,7 +110,7 @@ final class CharacterSelectPhase extends MatchPhase {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (!this.field_y) {
-          li.updateRoomMusic(this.screen.getViewedPlayerIndex(param0 + 41), (byte) 107);
+          RoomMusicController.updateRoomMusic(this.screen.getViewedPlayerIndex(param0 + 41), (byte) 107);
           this.field_y = true;
         }
         for (var3 = 0; this.field_t.length > var3; var3++) {
@@ -304,11 +304,11 @@ final class CharacterSelectPhase extends MatchPhase {
           field_s = (UiComponent) null;
         }
         if (!TextWidgetPainter.a(119) &&
-          mq.field_e != null) {
+          LegacyOpenGlNormalMapGenerator.field_e != null) {
           boolean decompiledFrameRemainder0 = true;
           if (!ToolkitSelector.field_g[param0] && (!ToolkitSelector.field_f[param0] &&
             ReportAbuseDialog.field_ub <= 0 ||
-            !mq.field_e.isCharacterUnlocked((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
+            !LegacyOpenGlNormalMapGenerator.field_e.isCharacterUnlocked((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
             stackIn_16_0 = false;
             decompiledFrameRemainder0 = false;
           }

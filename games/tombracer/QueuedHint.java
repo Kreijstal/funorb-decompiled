@@ -43,7 +43,7 @@ final class QueuedHint extends IntrusiveNode {
               stackIn_11_0 = new LegacyOpenGlSpriteTexture(param7, 34037, param1, param0, param6, param2, param3, param5);
               return stackIn_11_0;
             }
-            stackIn_9_0 = new LegacyOpenGlSpriteTexture(param7, param1, param0, lla.nextPowerOfTwo(false, param1), lla.nextPowerOfTwo(false, param0), param2);
+            stackIn_9_0 = new LegacyOpenGlSpriteTexture(param7, param1, param0, SocialTabbedPanelLayout.nextPowerOfTwo(false, param1), SocialTabbedPanelLayout.nextPowerOfTwo(false, param0), param2);
             return stackIn_9_0;
           }
           stackIn_13_0 = new LegacyOpenGlSpriteTexture(param7, 3553, param1, param0, param6, param2, param3, param5);

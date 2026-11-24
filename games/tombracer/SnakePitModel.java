@@ -461,8 +461,8 @@ final class SnakePitModel extends TrapModel {
         if (0 < this.field_u) {
           this.field_u = this.field_u - 1;
         } else {
-          this.field_u = uca.cosmeticRandom.nextBounded(100, 0) + 50;
-          var3_int = uca.cosmeticRandom.nextBounded(this.field_s.length, ~param0);
+          this.field_u = MeshMaterialColour.cosmeticRandom.nextBounded(100, 0) + 50;
+          var3_int = MeshMaterialColour.cosmeticRandom.nextBounded(this.field_s.length, ~param0);
           if (this.field_s[var3_int].snake.isScared(0)) {
             var2.play(new SoundEvent(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {

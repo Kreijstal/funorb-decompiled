@@ -21,7 +21,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           SingleChildWidget.a(95);
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | cga.hasAnyMask34(param2, -83, param1)) || (C2SChooseRewardPacket.a(true, param2, param1));
+        stackIn_10_0 = !(!stackIn_5_0 | QueuedFixedRequest.hasAnyMask34(param2, -83, param1)) || (C2SChooseRewardPacket.a(true, param2, param1));
         return stackIn_10_0;
     }
 
@@ -239,17 +239,17 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var14 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_active"), 113);
           OpenGlTransform3D.field_f = new UiComponent(0L, var8);
           OpenGlTransform3D.field_f.field_w = var14;
-          cga.field_g = new UiComponent(0L, (UiComponent) null);
-          cga.field_g.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "closebutton", 125);
-          cga.field_g.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "closebutton_mouseover", -112);
+          QueuedFixedRequest.field_g = new UiComponent(0L, (UiComponent) null);
+          QueuedFixedRequest.field_g.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "closebutton", 125);
+          QueuedFixedRequest.field_g.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "closebutton_mouseover", -112);
           KeyLockBehaviour.field_r = new UiComponent(0L, var8);
           KeyLockBehaviour.field_r.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-67, true, 40, 3815994, 2039583, true);
-          ooa.field_f = new UiComponent(0L, var10);
-          ooa.field_f.field_x = 2;
-          ooa.field_f.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-75, false, 30, 3815994, 2039583, true);
-          cs.field_a = new UiComponent(0L, var10);
-          cs.field_a.field_x = 2;
-          cs.field_a.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-116, false, 30, 3815994, 2039583, false);
+          AccountNameResolver.field_f = new UiComponent(0L, var10);
+          AccountNameResolver.field_f.field_x = 2;
+          AccountNameResolver.field_f.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-75, false, 30, 3815994, 2039583, true);
+          AccountRequestUsernameSelector.field_a = new UiComponent(0L, var10);
+          AccountRequestUsernameSelector.field_a.field_x = 2;
+          AccountRequestUsernameSelector.field_a.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-116, false, 30, 3815994, 2039583, false);
           SecondaryNodeDeque.field_b = new UiComponent(0L, var10);
           SecondaryNodeDeque.field_b.field_x = 2;
           SecondaryNodeDeque.field_b.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-104, true, 30, 3815994, 2039583, false);
@@ -268,13 +268,13 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var15.field_ib = 16777215;
           var15.field_H = (BitmapFont) ((Object) var7);
           var15.field_P = ToolkitSelector.field_a;
-          tka.field_q = new UiComponent(0L, Corpse.field_i);
-          tka.field_q.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-103, param0, 16, 2236962, 2236962, false);
-          tka.field_q.field_x = 2;
+          IndexedSpriteButtonPainter.field_q = new UiComponent(0L, Corpse.field_i);
+          IndexedSpriteButtonPainter.field_q.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-103, param0, 16, 2236962, 2236962, false);
+          IndexedSpriteButtonPainter.field_q.field_x = 2;
           GpuDataType.field_j = new UiComponent(0L, Corpse.field_i);
           GpuDataType.field_j.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-73, false, 16, 1513239, 1513239, false);
           GpuDataType.field_j.field_x = 2;
-          ClipFrame.field_g = new UiComponent(0L, tka.field_q);
+          ClipFrame.field_g = new UiComponent(0L, IndexedSpriteButtonPainter.field_q);
           ClipFrame.field_g.applyStyle(false, PressureSwitchBehaviour.field_p);
           S2CStartRoundPacket.field_a = new UiComponent(0L, GpuDataType.field_j);
           S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);

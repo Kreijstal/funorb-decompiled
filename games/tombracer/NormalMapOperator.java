@@ -8,7 +8,7 @@ final class NormalMapOperator extends TextureOperator {
 
     final static int getSelectionMenuWidth(int param0) {
         int var1 = 50 / ((32 - param0) / 60);
-        return ByteGameMessageSender.field_d - wt.field_a;
+        return ByteGameMessageSender.field_d - ProgressDialogLauncher.field_a;
     }
 
     public NormalMapOperator() {
@@ -46,9 +46,9 @@ final class NormalMapOperator extends TextureOperator {
         var22 = var23;
         var3 = var22;
         if (this.colourCache.field_f) {
-          var41 = this.getInputMonochromeRow(0, param1 - 118, hba.textureHeightMask & -1 + param0);
+          var41 = this.getInputMonochromeRow(0, param1 - 118, RoomResultSender.textureHeightMask & -1 + param0);
           var5 = this.getInputMonochromeRow(0, -32, param0);
-          var40 = this.getInputMonochromeRow(0, -111, param0 + 1 & hba.textureHeightMask);
+          var40 = this.getInputMonochromeRow(0, -111, param0 + 1 & RoomResultSender.textureHeightMask);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];

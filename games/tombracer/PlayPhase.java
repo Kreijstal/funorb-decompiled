@@ -170,7 +170,7 @@ final class PlayPhase extends MatchPhase {
             var7_intLifetime1 = 64;
             PlayerViewport.drawTiledFrame(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, MainRoomCatalog.field_a, var5_intLifetime1);
             SocketConnector.drawWrappedText(PitTile.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
-            SocketConnector.drawWrappedText(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
+            SocketConnector.drawWrappedText(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, HardwareVertexNormalAccumulator.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, MainRoomCatalog.field_a, var5_intLifetime1);
@@ -194,13 +194,13 @@ final class PlayPhase extends MatchPhase {
             PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, MainRoomCatalog.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.gameMode) {
-                MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, HardwareVertexNormalAccumulator.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
               } else {
-                MembersUpsellMenu.drawCentredTextWithShadow(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.roundIndex), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
-                MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.roundIndex), 16777215, HardwareVertexNormalAccumulator.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, HardwareVertexNormalAccumulator.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
               }
             } else {
-              MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
+              MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, HardwareVertexNormalAccumulator.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
             }
           }
           if (this.field_p) {
@@ -448,7 +448,7 @@ final class PlayPhase extends MatchPhase {
         if (param2 < 122) {
           return;
         }
-        CurrentGraphicsToolkit.toolkit.fillCircle(param0, param5, param4, jg.withAlpha(param3, (byte) -115, param1), 2);
+        CurrentGraphicsToolkit.toolkit.fillCircle(param0, param5, param4, NoiseSliceGenerator.withAlpha(param3, (byte) -115, param1), 2);
     }
 
     final static int a(goa param0, String param1, boolean param2, int param3, goa param4, int param5, int param6) {
@@ -512,19 +512,19 @@ final class PlayPhase extends MatchPhase {
             RendererMode.field_b = null;
             if (param1 != null) {
               var9 = 0;
-              jg.field_a.position = 0;
+              NoiseSliceGenerator.field_a.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
-              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 91);
-              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
-              jg.field_a.writeVersionedString(var14, (byte) 0);
-              jg.field_a.writeVersionedString(var8, (byte) 0);
+              NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 91);
+              NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
+              NoiseSliceGenerator.field_a.writeVersionedString(var14, (byte) 0);
+              NoiseSliceGenerator.field_a.writeVersionedString(var8, (byte) 0);
               var15 = (CharSequence) ((Object) param1);
-              jg.field_a.writeVersionedString(KaleidoscopeOperator.normalizeName((byte) 126, var15), (byte) 0);
-              jg.field_a.writeShort(-1477662136, param6);
-              jg.field_a.writeByte(param3, 0);
-              jg.field_a.writeByte(var9, 0);
+              NoiseSliceGenerator.field_a.writeVersionedString(KaleidoscopeOperator.normalizeName((byte) 126, var15), (byte) 0);
+              NoiseSliceGenerator.field_a.writeShort(-1477662136, param6);
+              NoiseSliceGenerator.field_a.writeByte(param3, 0);
+              NoiseSliceGenerator.field_a.writeByte(var9, 0);
               ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
@@ -533,20 +533,20 @@ final class PlayPhase extends MatchPhase {
                 var11_ref_StringLifetime4 = "";
               }
               ql.field_k.writeString(var11_ref_StringLifetime4, false);
-              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, jg.field_a);
+              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, NoiseSliceGenerator.field_a);
               ql.field_k.backpatchShortLength(ql.field_k.position - var10, (byte) -35);
             } else {
-              jg.field_a.position = 0;
-              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -106);
-              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
-              stackIn_14_0 = jg.field_a;
+              NoiseSliceGenerator.field_a.position = 0;
+              NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -106);
+              NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
+              stackIn_14_0 = NoiseSliceGenerator.field_a;
               if (!param4.a((byte) 29)) {
                 stackIn_15_1 = "";
               } else {
                 stackIn_15_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_14_0).writeVersionedString(stackIn_15_1, (byte) 0);
-              stackIn_17_0 = jg.field_a;
+              stackIn_17_0 = NoiseSliceGenerator.field_a;
               if (param0.a((byte) 29)) {
                 stackIn_18_1 = var8;
               } else {
@@ -556,7 +556,7 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.writeByte(16, 0);
               ql.field_k.position = ql.field_k.position + 1;
               var9 = ql.field_k.position;
-              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, jg.field_a);
+              PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, NoiseSliceGenerator.field_a);
               ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
             }
             bl.flushPacketBuffer(-1, -1);
@@ -572,7 +572,7 @@ final class PlayPhase extends MatchPhase {
               PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                pu.clearStatusCookie(ToolkitSelector.getApplet(21), 255);
+                EmptyWidgetPainter.clearStatusCookie(ToolkitSelector.getApplet(21), 255);
                 io.field_b = ArchiveNetworkClient.field_f;
                 DropAnimation.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
@@ -585,8 +585,8 @@ final class PlayPhase extends MatchPhase {
                 WeaveOperator.field_q.position = 0;
               } else {
                 MembersUpsellMenu.field_z = var9Lifetime1;
-                ProceduralTexture.field_p = pe.field_m;
-                uca.field_d = -1;
+                ProceduralTexture.field_p = OpenGlRectangleTexture.field_m;
+                MeshMaterialColour.field_d = -1;
               }
             }
           }
@@ -607,12 +607,12 @@ final class PlayPhase extends MatchPhase {
               }
             }
           }
-          if (pe.field_m == ProceduralTexture.field_p &&
+          if (OpenGlRectangleTexture.field_m == ProceduralTexture.field_p &&
             PbufferEntry.ensurePacketPayload(0)) {
             if (MembersUpsellMenu.field_z == 255) {
               var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
-                mp.writeSettingsCookie(var9_ref_String, ToolkitSelector.getApplet(82), -21407);
+                MidiChannelVolumeTargets.writeSettingsCookie(var9_ref_String, ToolkitSelector.getApplet(82), -21407);
               }
             } else {
               io.field_b = WeaveOperator.field_q.readString((byte) -76);

@@ -254,7 +254,7 @@ final class RenderScene {
               nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }
             TextureFormat.projectMeshAndQueueFaces(var17, 1251086882, nba.field_a, ProgressDialog.field_P, true, false, false);
-            dh.drawMeshFaces(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);
+            DisplayModeInfo.drawMeshFaces(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -18,7 +18,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (null != ColourGradientOperator.field_n) {
-            tka.field_n = 0;
+            IndexedSpriteButtonPainter.field_n = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hua.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -163,10 +163,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             AdjustedWallClock.currentTimeMillis((byte) -107);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DisplaySettingsDialog.field_X = 1;
-              tka.field_n = 1;
+              IndexedSpriteButtonPainter.field_n = 1;
             } else {
               DisplaySettingsDialog.field_X = 2;
-              tka.field_n = 2;
+              IndexedSpriteButtonPainter.field_n = 2;
             }
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
@@ -206,7 +206,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ColourGradientOperator.field_n) {
             MatchScoringObserver.field_h = 0;
-            tka.field_n = 0;
+            IndexedSpriteButtonPainter.field_n = 0;
             PlayerContextMenu.field_c = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {

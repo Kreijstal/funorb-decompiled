@@ -114,15 +114,15 @@ final class VerticalScrollbar extends UiComponent {
         var3 = -PackedBitSetSupport.field_b + var1;
         if (var3 > 30000L) {
           PackedBitSetSupport.field_b = var1;
-          gp.field_h = 0;
+          RoomPropertyLabels.field_h = 0;
           return true;
         }
         var5 = 3000;
-        if (gp.field_h >= 7) {
+        if (RoomPropertyLabels.field_h >= 7) {
           var5 = 12000;
         } else {
-          if (gp.field_h < 5) {
-            if (gp.field_h >= 3) {
+          if (RoomPropertyLabels.field_h < 5) {
+            if (RoomPropertyLabels.field_h >= 3) {
               var5 = 6000;
             }
           } else {
@@ -132,7 +132,7 @@ final class VerticalScrollbar extends UiComponent {
         if ((long)var5 >= var3) {
           return false;
         }
-        gp.field_h = gp.field_h + 1;
+        RoomPropertyLabels.field_h = RoomPropertyLabels.field_h + 1;
         PackedBitSetSupport.field_b = var1;
         return true;
     }

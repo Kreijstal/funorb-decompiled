@@ -114,7 +114,7 @@ final class RoomEffectTraps {
           return;
         }
         try {
-          ObjectList.field_c = nla.field_a;
+          ObjectList.field_c = FixedPointSegmentIntersection.field_a;
           SoftReferenceCache.field_a = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ts.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

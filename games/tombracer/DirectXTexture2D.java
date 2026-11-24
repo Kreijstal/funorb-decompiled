@@ -40,8 +40,8 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
           this.field_i = param2;
           this.field_h = param1;
         } else {
-          this.field_h = lla.nextPowerOfTwo(false, param1);
-          this.field_i = lla.nextPowerOfTwo(false, param2);
+          this.field_h = SocialTabbedPanelLayout.nextPowerOfTwo(false, param1);
+          this.field_i = SocialTabbedPanelLayout.nextPowerOfTwo(false, param2);
         }
         if (param3) {
           this.field_f = this.field_d.field_jd.createTexture(this.field_h, this.field_i, 0, 1024, 21, 1);
@@ -81,7 +81,7 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
         return param0 / (float)this.field_h;
     }
 
-    public final boolean a(int param0) {
+    public final boolean usesNormalizedCoordinates(int param0) {
         if (param0 != -14634) {
           this.getWidth(22);
           return true;
@@ -103,8 +103,8 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
     DirectXTexture2D(Direct3DToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, param1, param2, false, param4 * param3);
         if (!this.field_d.field_Tc) {
-          this.field_h = lla.nextPowerOfTwo(false, param3);
-          this.field_i = lla.nextPowerOfTwo(false, param4);
+          this.field_h = SocialTabbedPanelLayout.nextPowerOfTwo(false, param3);
+          this.field_i = SocialTabbedPanelLayout.nextPowerOfTwo(false, param4);
         } else {
           this.field_h = param3;
           this.field_i = param4;
@@ -141,8 +141,8 @@ final class DirectXTexture2D extends DirectXTexture implements GpuTexture2D {
           stackIn_4_4Lifetime1 = 0;
         }
         if (!this.field_d.field_Tc) {
-          this.field_h = lla.nextPowerOfTwo(false, param2);
-          this.field_i = lla.nextPowerOfTwo(false, param3);
+          this.field_h = SocialTabbedPanelLayout.nextPowerOfTwo(false, param2);
+          this.field_i = SocialTabbedPanelLayout.nextPowerOfTwo(false, param3);
         } else {
           this.field_i = param3;
           this.field_h = param2;

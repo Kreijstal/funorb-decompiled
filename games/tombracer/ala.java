@@ -135,9 +135,9 @@ final class ala extends GameScreen {
               ql.field_k.writeCipheredOpcode(64, -2988);
               LegacyOpenGlCubeTexture.field_p = false;
             }
-            if (du.field_g) {
+            if (ArchiveConnectionFailureHandler.field_g) {
               ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
-              du.field_g = false;
+              ArchiveConnectionFailureHandler.field_g = false;
             }
             if (RatingsScreen.field_s) {
               ClampOperator.showCentredMessage(MidiNoteUsageNode.field_i, 15165);
@@ -175,9 +175,9 @@ final class ala extends GameScreen {
           ql.field_k.writeCipheredOpcode(64, -2988);
           LegacyOpenGlCubeTexture.field_p = false;
         }
-        if (du.field_g) {
+        if (ArchiveConnectionFailureHandler.field_g) {
           ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
-          du.field_g = false;
+          ArchiveConnectionFailureHandler.field_g = false;
         }
         if (RatingsScreen.field_s) {
           ClampOperator.showCentredMessage(MidiNoteUsageNode.field_i, 15165);
@@ -275,8 +275,8 @@ final class ala extends GameScreen {
 
     final static void showProgress(byte param0, String param1, boolean param2, float param3) {
         if (null == AnimationFrameSet.field_p) {
-          AnimationFrameSet.field_p = new ProgressDialog(ej.field_a, SnakePitBehaviour.field_o);
-          ej.field_a.pushDialog(AnimationFrameSet.field_p, 89);
+          AnimationFrameSet.field_p = new ProgressDialog(DisplayNameValidator.field_a, SnakePitBehaviour.field_o);
+          DisplayNameValidator.field_a.pushDialog(AnimationFrameSet.field_p, 89);
         }
         AnimationFrameSet.field_p.setProgress(param3, param1, param2, (byte) 110);
         SoftwareRasterizer.clear();

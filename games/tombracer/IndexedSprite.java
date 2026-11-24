@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IndexedSprite extends rka {
+final class IndexedSprite extends RasterSprite {
     byte[] field_h;
     int[] field_g;
 

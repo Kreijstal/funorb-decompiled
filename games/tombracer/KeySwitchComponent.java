@@ -184,7 +184,7 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$6 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$6, (byte) 47, param1);
-          gga.field_O = SpriteData.loadSheet(param3, "", "font_small");
+          FullscreenFailureDialog.field_O = SpriteData.loadSheet(param3, "", "font_small");
           incrementValue$7 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$7, (byte) 47, param1);

@@ -618,14 +618,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        iba.initCacheDirectory(field_d, -70, field_u);
+        CacheFileResolver.initCacheDirectory(field_d, -70, field_u);
         if (this.privilegedTasksEnabled) {
-          this.field_x = new RandomAccessFileHandle(iba.resolveCacheFile((String) null, "random.dat", 0, field_d), "rw", 25L);
-          this.field_n = new RandomAccessFileHandle(iba.resolveDefaultCacheFile("main_file_cache.dat2", (byte) -71), "rw", 314572800L);
-          this.field_q = new RandomAccessFileHandle(iba.resolveDefaultCacheFile("main_file_cache.idx255", (byte) -123), "rw", 1048576L);
+          this.field_x = new RandomAccessFileHandle(CacheFileResolver.resolveCacheFile((String) null, "random.dat", 0, field_d), "rw", 25L);
+          this.field_n = new RandomAccessFileHandle(CacheFileResolver.resolveDefaultCacheFile("main_file_cache.dat2", (byte) -71), "rw", 314572800L);
+          this.field_q = new RandomAccessFileHandle(CacheFileResolver.resolveDefaultCacheFile("main_file_cache.idx255", (byte) -123), "rw", 1048576L);
           this.field_h = new RandomAccessFileHandle[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_h[var5_int] = new RandomAccessFileHandle(iba.resolveDefaultCacheFile("main_file_cache.idx" + var5_int, (byte) -108), "rw", 1048576L);
+            this.field_h[var5_int] = new RandomAccessFileHandle(CacheFileResolver.resolveDefaultCacheFile("main_file_cache.idx" + var5_int, (byte) -108), "rw", 1048576L);
           }
           if (this.microsoftJvm) {
             try {

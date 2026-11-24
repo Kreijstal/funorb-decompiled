@@ -59,7 +59,7 @@ abstract class AppletGameShell extends GameApplet {
     private final void readServerTextMessage(byte param0) {
         int var2 = WeaveOperator.field_q.readUnsignedByte(255);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = uca.field_d - 1;
+        int var4 = MeshMaterialColour.field_d - 1;
         if (param0 != -15) {
           AppletGameShell.resetConnectionStatics(39);
         }
@@ -113,7 +113,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = pe.a(CourseLayoutFactory.b(69), toa.a(false), ArchiveRequest.a(false), this.field_u, cs.a((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
+            var5Lifetime1 = OpenGlRectangleTexture.a(CourseLayoutFactory.b(69), QueuedKeyedRequest.getPendingRegistrationAge(false), ArchiveRequest.a(false), this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
               TextureTransformMode.completeAccountRegistrationResponse(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
               PressureSwitchBehaviour.field_s = null;
@@ -129,7 +129,7 @@ abstract class AppletGameShell extends GameApplet {
             if (param1) {
               TrackingCrusherComponent.field_G = false;
             } else {
-              var5Lifetime2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, cs.a((byte) 81), false);
+              var5Lifetime2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 81), false);
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   StatReportingObserverFactory.field_b = QuickChatPhraseSource.field_g;
@@ -171,11 +171,11 @@ abstract class AppletGameShell extends GameApplet {
             ql.field_k.writeCipheredOpcode(17, -2988);
           }
           if (11 == var4) {
-            nt.reloadPage(ToolkitSelector.getApplet(41), -1978);
+            FullscreenFailureReason.reloadPage(ToolkitSelector.getApplet(41), -1978);
           }
           var5Lifetime3 = 70 / ((param0 + 35) / 35);
           if (var4 == 12) {
-            SimpleHoverMountComponent.openRelativeUrl(mn.getPendingUrl(-128), ToolkitSelector.getApplet(28), (byte) -74);
+            SimpleHoverMountComponent.openRelativeUrl(MatchingEmailAvailabilityValidator.getPendingUrl(-128), ToolkitSelector.getApplet(28), (byte) -74);
           }
           if (13 == var4) {
             try {
@@ -260,7 +260,7 @@ abstract class AppletGameShell extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          PlayerInputQueue.readReflectionCheckRequest(uca.field_d, ComponentTypeNames.field_c, (byte) 72, WeaveOperator.field_q);
+                          PlayerInputQueue.readReflectionCheckRequest(MeshMaterialColour.field_d, ComponentTypeNames.field_c, (byte) 72, WeaveOperator.field_q);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -284,7 +284,7 @@ abstract class AppletGameShell extends GameApplet {
                             stackIn_24_0 = -18787;
                             stackIn_25_1 = (var2 == 12);
                             var3 = ChatOverlay.readChatMessage(stackIn_24_0, stackIn_25_1);
-                            k.handleIncomingChatMessage((byte) 113, var3);
+                            DropTargetWidget.handleIncomingChatMessage((byte) 113, var3);
                           } else {
                             RoomHeader.readLocalPlayerName((byte) -68);
                           }
@@ -316,7 +316,7 @@ abstract class AppletGameShell extends GameApplet {
         if (TrackingCrusherComponent.field_G) {
           return -1;
         }
-        int var2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, cs.a((byte) -118), true);
+        int var2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) -118), true);
         if (var2 == -1) {
           return -1;
         }
@@ -526,7 +526,7 @@ abstract class AppletGameShell extends GameApplet {
         if (QuickChatPhraseDefinition.c((byte) 49)) {
           discarded$1 = this.pollLoginResponse((byte) -72, false, null != ColourRowCacheEntry.field_f ? true : false);
         } else {
-          if (cga.field_f < 10) {
+          if (QueuedFixedRequest.field_f < 10) {
           } else {
             if (!LegacyOpenGlSpriteTexture.i(250)) {
               PressureSwitchComponent.C(-5);
@@ -603,7 +603,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (-1 != Trap.field_m &&
           Trap.field_m != 0) {
-          if (cga.field_f < 10) {
+          if (QueuedFixedRequest.field_f < 10) {
             if (Trap.field_m != 3) {
               if (Trap.field_m == 4) {
                 this.reportError(-6738, "js5io");
@@ -660,22 +660,22 @@ abstract class AppletGameShell extends GameApplet {
           !uma.b(-1)) {
           UnlockOverlay.field_l = false;
         }
-        if (cga.field_f == 0 &&
+        if (QueuedFixedRequest.field_f == 0 &&
           FuseBehaviour.loadMasterIndex((byte) -117)) {
-          cga.field_f = 1;
+          QueuedFixedRequest.field_f = 1;
         }
-        if (cga.field_f == 1) {
+        if (QueuedFixedRequest.field_f == 1) {
           if (0 != ApproachPlayerLocomotor.field_t) {
             InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(MonochromeFillOperator.field_p, 1);
           }
           MusicVolumeControl.field_b = FacePointLocomotor.openArchive(true, RoomHeader.field_g, false, 1, (byte) -95);
           OpenGlTexture2D.field_n = FacePointLocomotor.openArchive(true, SoftwareRasterBlitter.field_c, false, 1, (byte) -109);
           WeaveOperator.field_p = FacePointLocomotor.openArchive(true, SoundEvent.field_j, false, 1, (byte) -79);
-          cga.field_f = 2;
+          QueuedFixedRequest.field_f = 2;
           PitComponent.field_G = MusicVolumeControl.field_b;
-          ota.field_b = OpenGlTexture2D.field_n;
+          CubeTextureSourceBase.field_b = OpenGlTexture2D.field_n;
         }
-        if (cga.field_f == 2) {
+        if (QueuedFixedRequest.field_f == 2) {
           if (null != InvisibleTouchSwitchComponent.field_J &&
             InvisibleTouchSwitchComponent.field_J.ensureIndex(-79)) {
             if (InvisibleTouchSwitchComponent.field_J.hasGroupName("", 108)) {
@@ -689,10 +689,10 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (null == InvisibleTouchSwitchComponent.field_J) {
-            cga.field_f = 3;
+            QueuedFixedRequest.field_f = 3;
           }
         }
-        if (cga.field_f == 3 &&
+        if (QueuedFixedRequest.field_f == 3 &&
           RoomSelectionProfile.areCommonUiArchivesReady(WeaveOperator.field_p, MusicVolumeControl.field_b, -128, OpenGlTexture2D.field_n) &&
           S2CActionPacket.isArchiveComplete(WeaveOperator.field_p, (byte) -53)) {
           CheckboxPainter.releaseStatics(-1);
@@ -719,40 +719,40 @@ abstract class AppletGameShell extends GameApplet {
           WeaveOperator.field_p = null;
           StatefulWidgetPainter.checkAppletUsername((java.applet.Applet) (this), (byte) -128);
           C2SActionPacket.resetFrameTiming(-33);
-          cga.field_f = 10;
+          QueuedFixedRequest.field_f = 10;
         }
-        if (10 == cga.field_f) {
+        if (10 == QueuedFixedRequest.field_f) {
           if (ApproachPlayerLocomotor.field_t != 0) {
             ConstrainToFacingArcLocomotor.field_v = SoftReferenceCache.openArchive(VertexArrayPointer.field_c, 1);
           }
-          cga.field_f = 11;
+          QueuedFixedRequest.field_f = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         var3Lifetime2 = 69 % ((param0 + 63) / 62);
-        if (cga.field_f == 11) {
+        if (QueuedFixedRequest.field_f == 11) {
           if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.ensureIndex(-100) ||
             !ConstrainToFacingArcLocomotor.field_v.areAllGroupsAvailable(0))) {
-            ima.setLoadingProgress(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, ValidationOutcome.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
+            ModelTextureProjectionData.setLoadingProgress(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, ValidationOutcome.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {
             PlatformBehaviour.field_w = true;
-            cga.field_f = 12;
+            QueuedFixedRequest.field_f = 12;
           }
         }
-        if (12 == cga.field_f &&
+        if (12 == QueuedFixedRequest.field_f &&
           !PlatformBehaviour.field_w) {
-          cga.field_f = 13;
+          QueuedFixedRequest.field_f = 13;
         }
-        if (cga.field_f == 13) {
+        if (QueuedFixedRequest.field_f == 13) {
           var4 = 1;
           if (null != RidgedNoise3D.field_r) {
             stackIn_133_0 = (!RidgedNoise3D.field_r.pollLoaded((byte) 37)) ? 0 : 1;
             var4 = stackIn_133_0;
-            ima.setLoadingProgress(RidgedNoise3D.field_r.field_i, RidgedNoise3D.field_r.field_b, -65);
+            ModelTextureProjectionData.setLoadingProgress(RidgedNoise3D.field_r.field_i, RidgedNoise3D.field_r.field_b, -65);
           }
           if (var4 != 0) {
-            cga.field_f = 20;
+            QueuedFixedRequest.field_f = 20;
           }
         }
         if (!param1 &&
@@ -762,7 +762,7 @@ abstract class AppletGameShell extends GameApplet {
           AccountRequestState.attachCanvasInput(CurveShape.field_l, (byte) 75);
         }
         if (UsernameQueryRequests.field_a[8]) {
-          dra.sendReflectionCheckResponses(true);
+          ReflectionCheckResponseSender.sendReflectionCheckResponses(true);
         }
     }
 

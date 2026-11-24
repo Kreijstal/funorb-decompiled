@@ -6,10 +6,10 @@ class ql extends DualLinkNode {
     static String[] field_m;
     static float field_l;
 
-    final static vb playSample(int param0, PcmSample param1, byte param2, int param3, int param4) {
+    final static PcmSamplePlayback playSample(int param0, PcmSample param1, byte param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        vb stackIn_1_0 = null;
+        PcmSamplePlayback stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -34,7 +34,7 @@ class ql extends DualLinkNode {
 
     final static void a(int param0, int param1) {
         int var3 = 0;
-        aca var4 = null;
+        QueuedByteShortRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -42,10 +42,10 @@ class ql extends DualLinkNode {
           if (param1 != -28521) {
             return;
           }
-          var4 = (aca) (io.field_d.first(-80));
+          var4 = (QueuedByteShortRequest) (io.field_d.first(-80));
           while (var4 != null) {
-            UiComponent.a(param0, 1325, var4);
-            var4 = (aca) (io.field_d.next(113));
+            UiComponent.writeQueuedByteShortRequest(param0, 1325, var4);
+            var4 = (QueuedByteShortRequest) (io.field_d.next(113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

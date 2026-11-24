@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Obstacle extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, RoomObjectMarker {
+final class Obstacle extends IntrusiveNode implements Renderable, Collidable, WorldBody, GameStateMarker, RoomObjectMarker {
     private int field_n;
     private Room room;
     private int x;
     static IntrusiveDeque field_f;
-    static mp field_h;
+    static MidiChannelVolumeTargets field_h;
     static String field_j;
     static int field_l;
     private int y;
@@ -167,7 +167,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param0 <= 68) {
-          field_h = (mp) null;
+          field_h = (MidiChannelVolumeTargets) null;
           return false;
         }
         return false;
@@ -575,7 +575,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          field_h = (mp) null;
+          field_h = (MidiChannelVolumeTargets) null;
           return false;
         }
         return false;
@@ -771,6 +771,6 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         field_f = null;
         field_j = "Unable to add friend - system busy";
         field_l = 5;
-        field_h = new mp();
+        field_h = new MidiChannelVolumeTargets();
     }
 }

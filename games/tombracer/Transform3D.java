@@ -21,7 +21,7 @@ abstract class Transform3D {
     final static int getChatSetting(int param0, int param1) {
         int var2 = 0;
         if (param0 == 0) {
-          var2 = k.field_A;
+          var2 = DropTargetWidget.field_A;
         }
         if (param1 != -20011) {
           Transform3D.getChatSetting(-61, -111);
@@ -50,7 +50,7 @@ abstract class Transform3D {
         int var9 = TombRacer.field_G ? 1 : 0;
         try {
           InputFieldPainter.parseRoomData(true, param0.getFileByName("", (byte) 124, "roomdata.csv"));
-          var10 = cm.field_a;
+          var10 = CourseStartPacket.field_a;
           for (var3 = 0; var3 < var10.length; var3++) {
             var4 = var10[var3];
             var5 = var4.field_c;
@@ -68,7 +68,7 @@ abstract class Transform3D {
           if (param1 != 17572) {
             field_a = 31;
           }
-          du.field_e = true;
+          ArchiveConnectionFailureHandler.field_e = true;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -80,9 +80,9 @@ abstract class Transform3D {
         boolean stackIn_3_1 = false;
         boolean stackIn_8_0 = false;
         var3 = -120 % ((param0 - 65) / 42);
-        stackIn_2_0 = mpa.hasAnyMask1048832(false, param1, param2);
+        stackIn_2_0 = AccountContentTransitionDialog.hasAnyMask1048832(false, param1, param2);
         stackIn_3_1 = ((param2 & 262144) == 0) ? false : true;
-        stackIn_8_0 = !(stackIn_2_0 | !stackIn_3_1) || (vua.e(param2, param1, 13650));
+        stackIn_8_0 = !(stackIn_2_0 | !stackIn_3_1) || (ClippedChildWidget.requiresColorPointerCopy(param2, param1, 13650));
         return stackIn_8_0;
     }
 

@@ -94,7 +94,7 @@ final class ScoreStandings {
           var4 = var13;
           var5 = null;
           try {
-            var11 = iba.resolveDefaultCacheFile(var10, (byte) -94);
+            var11 = CacheFileResolver.resolveDefaultCacheFile(var10, (byte) -94);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref_RuntimeException = (RuntimeException) (Object) decompiledCaughtException;

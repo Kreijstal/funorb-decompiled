@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable, noa, TrapPart {
+abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable, GameStateMarker, TrapPart {
     boolean enabled;
     static String field_h;
     Trap trap;

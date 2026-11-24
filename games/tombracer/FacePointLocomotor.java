@@ -22,7 +22,7 @@ final class FacePointLocomotor extends Locomotor {
         if (param4 > -75) {
           return (ResourceArchive) null;
         }
-        return nt.openArchive(param1, param3, 5200, param2, false, param0);
+        return FullscreenFailureReason.openArchive(param1, param3, 5200, param2, false, param0);
     }
 
     final static QuickChatMenu buildQuickChatPhraseMenu(UiComponent param0, UiComponent param1, UiComponent param2, int[] param3, boolean param4) {

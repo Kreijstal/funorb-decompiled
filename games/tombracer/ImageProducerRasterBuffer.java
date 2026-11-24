@@ -126,7 +126,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           DateInputWidget.openPlayerContextMenu(SoftwareModelBillboardState.field_i, param1.getGameId(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||
-            !(ld.field_e < 2))) {
+            !(GpuCubeTextureSource.field_e < 2))) {
             var10 = UnlockEntryDecoder.field_b;
             var11 = LegacyOpenGlFlowingWaterEffect.formatText(109, ColourFillOperator.field_o, new String[]{param3});
             var10.field_f.addItem((byte) -125, 10, var11);

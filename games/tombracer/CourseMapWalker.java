@@ -619,7 +619,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextSnakePits", (byte) 111);
                 if (null != var2) {
-                  du.field_f = BitPackedColour.decodeText((byte) 88, var2);
+                  ArchiveConnectionFailureHandler.field_f = BitPackedColour.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLagoonsOfLava", (byte) 119);
                 if (null != var2) {
@@ -627,7 +627,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLagoonsOfLava", (byte) 101);
                 if (null != var2) {
-                  vua.field_C = BitPackedColour.decodeText((byte) 36, var2);
+                  ClippedChildWidget.field_C = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCrushers", (byte) 114);
                 if (var2 != null) {
@@ -751,7 +751,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleRollingJonesboulders", (byte) 115);
                 if (var2 != null) {
-                  kd.field_z = BitPackedColour.decodeText((byte) 57, var2);
+                  PointListEditorWidget.field_z = BitPackedColour.decodeText((byte) 57, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextRollingJonesboulders", (byte) 127);
                 if (null != var2) {
@@ -767,7 +767,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePerpetuallySpinningDiscs", (byte) 111);
                 if (var2 != null) {
-                  gga.field_L = BitPackedColour.decodeText((byte) 36, var2);
+                  FullscreenFailureDialog.field_L = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPerpetuallySpinningDiscs", (byte) 120);
                 if (var2 != null) {
@@ -779,7 +779,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextWhiteLightBeams", (byte) 111);
                 if (var2 != null) {
-                  ld.field_d = BitPackedColour.decodeText((byte) 37, var2);
+                  GpuCubeTextureSource.field_d = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleWanderingWalls", (byte) 103);
                 if (var2 != null) {
@@ -787,7 +787,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextWanderingWalls", (byte) 117);
                 if (var2 != null) {
-                  du.field_b = BitPackedColour.decodeText((byte) 28, var2);
+                  ArchiveConnectionFailureHandler.field_b = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMazes", (byte) 118);
                 if (null != var2) {
@@ -823,7 +823,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Title3", (byte) 127);
                 if (var2 != null) {
-                  qfa.field_a = BitPackedColour.decodeText((byte) 51, var2);
+                  AccountRegistrationLauncher.field_a = BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text1", (byte) 108);
                 if (var2 != null) {
@@ -1065,7 +1065,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_sneak", (byte) 112);
                 if (null != var2) {
-                  aca.field_g = BitPackedColour.decodeText((byte) 65, var2);
+                  QueuedByteShortRequest.field_g = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_fire", (byte) 108);
                 if (null != var2) {
@@ -1153,7 +1153,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_4th", (byte) 105);
                 if (null != var2) {
-                  tda.field_b = BitPackedColour.decodeText((byte) 59, var2);
+                  SeededGradientNoise3D.field_b = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_resigned", (byte) 116);
                 if (null != var2) {
@@ -1165,7 +1165,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_dnf", (byte) 117);
                 if (var2 != null) {
-                  re.field_b = BitPackedColour.decodeText((byte) 25, var2);
+                  MainScreenLayout.field_b = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("resigned", (byte) 106);
                 if (null != var2) {
@@ -1189,7 +1189,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsmode", (byte) 101);
                 if (null != var2) {
-                  dna.field_I = BitPackedColour.decodeText((byte) 45, var2);
+                  SkeletonComponentBase.field_I = BitPackedColour.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsquality", (byte) 110);
                 if (var2 != null) {
@@ -1273,7 +1273,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_character", (byte) 110);
                 if (var2 != null) {
-                  gta.field_a = BitPackedColour.decodeText((byte) 107, var2);
+                  HardwareFaceNormal.field_a = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_reward", (byte) 106);
                 if (null != var2) {
@@ -1385,7 +1385,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_bagx2", (byte) 124);
                 if (null != var2) {
-                  sda.field_h = BitPackedColour.decodeText((byte) 115, var2);
+                  QueuedPayloadRequest.field_h = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_idol1", (byte) 101);
                 if (var2 != null) {
@@ -1409,11 +1409,11 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_dnf", (byte) 123);
                 if (null != var2) {
-                  cs.field_b = BitPackedColour.decodeText((byte) 104, var2);
+                  AccountRequestUsernameSelector.field_b = BitPackedColour.decodeText((byte) 104, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_timeout", (byte) 121);
                 if (var2 != null) {
-                  cga.field_l = BitPackedColour.decodeText((byte) 67, var2);
+                  QueuedFixedRequest.field_l = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_choosing", (byte) 113);
                 if (var2 != null) {
@@ -1461,7 +1461,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_jamille", (byte) 113);
                 if (var2 != null) {
-                  sda.field_k = BitPackedColour.decodeText((byte) 71, var2);
+                  QueuedPayloadRequest.field_k = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_johnsson", (byte) 113);
                 if (null != var2) {
@@ -1473,7 +1473,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_scarlett", (byte) 117);
                 if (null != var2) {
-                  msa.field_b = BitPackedColour.decodeText((byte) 126, var2);
+                  TypeableCharacterPredicate.field_b = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_wilbur", (byte) 119);
                 if (null != var2) {
@@ -1711,23 +1711,23 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,0", (byte) 100);
                 if (null != var2) {
-                  vua.dartDeathMessages[0] = BitPackedColour.decodeText((byte) 54, var2);
+                  ClippedChildWidget.dartDeathMessages[0] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,1", (byte) 102);
                 if (var2 != null) {
-                  vua.dartDeathMessages[1] = BitPackedColour.decodeText((byte) 124, var2);
+                  ClippedChildWidget.dartDeathMessages[1] = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,2", (byte) 117);
                 if (var2 != null) {
-                  vua.dartDeathMessages[2] = BitPackedColour.decodeText((byte) 96, var2);
+                  ClippedChildWidget.dartDeathMessages[2] = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,3", (byte) 112);
                 if (var2 != null) {
-                  vua.dartDeathMessages[3] = BitPackedColour.decodeText((byte) 100, var2);
+                  ClippedChildWidget.dartDeathMessages[3] = BitPackedColour.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,4", (byte) 116);
                 if (var2 != null) {
-                  vua.dartDeathMessages[4] = BitPackedColour.decodeText((byte) 63, var2);
+                  ClippedChildWidget.dartDeathMessages[4] = BitPackedColour.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,0", (byte) 127);
                 if (null != var2) {
@@ -1755,19 +1755,19 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,0", (byte) 109);
                 if (var2 != null) {
-                  jr.gunshotDeathMessages[0] = BitPackedColour.decodeText((byte) 106, var2);
+                  SoftwareCheckboxPainter.gunshotDeathMessages[0] = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,1", (byte) 101);
                 if (var2 != null) {
-                  jr.gunshotDeathMessages[1] = BitPackedColour.decodeText((byte) 36, var2);
+                  SoftwareCheckboxPainter.gunshotDeathMessages[1] = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,2", (byte) 107);
                 if (null != var2) {
-                  jr.gunshotDeathMessages[2] = BitPackedColour.decodeText((byte) 108, var2);
+                  SoftwareCheckboxPainter.gunshotDeathMessages[2] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,3", (byte) 127);
                 if (null != var2) {
-                  jr.gunshotDeathMessages[3] = BitPackedColour.decodeText((byte) 74, var2);
+                  SoftwareCheckboxPainter.gunshotDeathMessages[3] = BitPackedColour.decodeText((byte) 74, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,0", (byte) 112);
                 if (var2 != null) {
@@ -2063,7 +2063,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gold_medal", (byte) 101);
                 if (null != var2) {
-                  uaa.field_d = BitPackedColour.decodeText((byte) 39, var2);
+                  ChatMessageColours.field_d = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("silver_medal", (byte) 117);
                 if (null != var2) {
@@ -2279,7 +2279,7 @@ final class CourseMapWalker {
 
     final void draw(int param0, int param1, int param2) {
         try {
-          hp.drawModelPreview(2048, this.field_h, 1900, this.field_c.getModel((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
+          ModelPreviewRenderer.drawModelPreview(2048, this.field_h, 1900, this.field_c.getModel((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
           if (param1 != 11327) {
             this.placeAtCourse(73, (byte) 91);
           }

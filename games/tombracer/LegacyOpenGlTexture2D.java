@@ -375,7 +375,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
           this.field_o = param4;
           this.field_l = param3;
           this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, param3, param4, 0, sja.toBaseInternalFormat(this.internalFormat, 20934), 5121, (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, param3, param4, 0, SelectiveProceduralTextureProvider.toBaseInternalFormat(this.internalFormat, 20934), 5121, (byte[]) null, 0);
           this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

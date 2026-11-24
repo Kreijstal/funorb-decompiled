@@ -469,7 +469,7 @@ class UiWidget extends IntrusiveNode {
         if (RatingsScreen.hasFlag16(param0, (byte) 101, param1) | (0 != (393216 & param0) ? true : false)) {
           return true;
         }
-        if (vua.e(param0, param1, 13650)) {
+        if (ClippedChildWidget.requiresColorPointerCopy(param0, param1, 13650)) {
           return true;
         }
         if (!tia.b(param1, param2 - 29503, param0)) {
@@ -526,7 +526,7 @@ class UiWidget extends IntrusiveNode {
                     if (!(var8.field_h instanceof DragReleaseListener)) {
                       ava.field_f = null;
                     } else {
-                      ((DragReleaseListener) (var8.field_h)).onDragReleased(var8, (byte) 59, (k) null);
+                      ((DragReleaseListener) (var8.field_h)).onDragReleased(var8, (byte) 59, (DropTargetWidget) null);
                       ava.field_f = null;
                     }
                   }
@@ -557,7 +557,7 @@ class UiWidget extends IntrusiveNode {
             var9 = ava.field_f;
             if (var9 != null) {
               if (var9.field_h instanceof DragReleaseListener) {
-                ((DragReleaseListener) (var9.field_h)).onDragReleased(var9, (byte) 59, (k) null);
+                ((DragReleaseListener) (var9.field_h)).onDragReleased(var9, (byte) 59, (DropTargetWidget) null);
               }
               ava.field_f = null;
             }
@@ -592,7 +592,7 @@ class UiWidget extends IntrusiveNode {
                   if (!(var10.field_h instanceof DragReleaseListener)) {
                     ava.field_f = null;
                   } else {
-                    ((DragReleaseListener) (var10.field_h)).onDragReleased(var10, (byte) 59, (k) null);
+                    ((DragReleaseListener) (var10.field_h)).onDragReleased(var10, (byte) 59, (DropTargetWidget) null);
                     ava.field_f = null;
                   }
                 }
@@ -617,7 +617,7 @@ class UiWidget extends IntrusiveNode {
             var11 = ava.field_f;
             if (var11 != null) {
               if (var11.field_h instanceof DragReleaseListener) {
-                ((DragReleaseListener) (var11.field_h)).onDragReleased(var11, (byte) 59, (k) null);
+                ((DragReleaseListener) (var11.field_h)).onDragReleased(var11, (byte) 59, (DropTargetWidget) null);
               }
               ava.field_f = null;
             }
@@ -674,7 +674,7 @@ class UiWidget extends IntrusiveNode {
         var13 = ava.field_f;
         if (var13 != null) {
           if (var13.field_h instanceof DragReleaseListener) {
-            ((DragReleaseListener) (var13.field_h)).onDragReleased(var13, (byte) 59, (k) null);
+            ((DragReleaseListener) (var13.field_h)).onDragReleased(var13, (byte) 59, (DropTargetWidget) null);
           }
           ava.field_f = null;
         }

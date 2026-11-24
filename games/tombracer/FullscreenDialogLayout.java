@@ -61,8 +61,8 @@ final class FullscreenDialogLayout {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           SoundEffectArchive.field_a = true;
-          mq.field_a = param2;
-          if (mq.field_a == 0) {
+          LegacyOpenGlNormalMapGenerator.field_a = param2;
+          if (LegacyOpenGlNormalMapGenerator.field_a == 0) {
             var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = 3 + var3_int;
             CoinItemComponent.field_H = new int[var4];
@@ -81,7 +81,7 @@ final class FullscreenDialogLayout {
             DefaultTileRenderable.field_g[var4 - 1] = BitPacketBuffer.field_j;
             CoinItemComponent.field_H[-1 + var4] = 1;
             SpriteTileOperator.field_w[1] = 5;
-          } else if (mq.field_a == 1) {
+          } else if (LegacyOpenGlNormalMapGenerator.field_a == 1) {
             var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = var3_int + 2;
             CoinItemComponent.field_H = new int[var4];
@@ -97,8 +97,8 @@ final class FullscreenDialogLayout {
             DefaultTileRenderable.field_g[-1 + var4] = BitPacketBuffer.field_j;
             CoinItemComponent.field_H[-1 + var4] = 0;
             SpriteTileOperator.field_w[0] = 5;
-          } else if (mq.field_a != 2) {
-            if (mq.field_a == 3) {
+          } else if (LegacyOpenGlNormalMapGenerator.field_a != 2) {
+            if (LegacyOpenGlNormalMapGenerator.field_a == 3) {
               if (ComponentTypeNames.field_c.privilegedTasksEnabled) {
                 var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, IdolItemComponent.field_G, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               } else {
@@ -118,7 +118,7 @@ final class FullscreenDialogLayout {
               DefaultTileRenderable.field_g[var4 - 1] = BitPacketBuffer.field_j;
               CoinItemComponent.field_H[-1 + var4] = 0;
               SpriteTileOperator.field_w[0] = 5;
-            } else if (4 == mq.field_a) {
+            } else if (4 == LegacyOpenGlNormalMapGenerator.field_a) {
               var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, S2CEventPacket.field_b, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               var4 = var3_int + 2;
               DefaultTileRenderable.field_g = new String[var4];
@@ -135,7 +135,7 @@ final class FullscreenDialogLayout {
               CoinItemComponent.field_H[-1 + var4] = 0;
               SpriteTileOperator.field_w[0] = 5;
             } else {
-              if (mq.field_a != 5) {
+              if (LegacyOpenGlNormalMapGenerator.field_a != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, WindZoneBehaviour.field_s, rg.field_z, 1, ClientMemoryVertexArray.field_c);
@@ -254,7 +254,7 @@ final class FullscreenDialogLayout {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (mq.field_a == 2) {
+          if (LegacyOpenGlNormalMapGenerator.field_a == 2) {
             var10 = MovementHintCharacter.field_a;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -279,7 +279,7 @@ final class FullscreenDialogLayout {
           for (var4Lifetime2 = 0; var4Lifetime2 < DefaultTileRenderable.field_g.length; var4Lifetime2++) {
             stackIn_110_0 = HardwareModelVertexStream.field_f;
             if (CoinItemComponent.field_H[var4Lifetime2] >= 0) {
-              stackIn_111_1 = nt.field_d;
+              stackIn_111_1 = FullscreenFailureReason.field_d;
             } else {
               stackIn_111_1 = ComponentTargetList.field_b;
             }
@@ -302,14 +302,14 @@ final class FullscreenDialogLayout {
               TripBeamComponent.field_K[var4Lifetime3][0] = -InvisibleTouchSwitchComponent.field_L + var8Lifetime1;
               TripBeamComponent.field_K[var4Lifetime3][1] = var5Lifetime3;
               TripBeamComponent.field_K[var4Lifetime3][2] = (InvisibleTouchSwitchComponent.field_L << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((GasVentModel.field_p << 1) + ValidationStatusIcon.field_C));
-              TripBeamComponent.field_K[var4Lifetime3][3] = nt.field_d + (GasVentModel.field_p << 1);
+              var5Lifetime3 = var5Lifetime3 + (FullscreenFailureReason.field_d + ((GasVentModel.field_p << 1) + ValidationStatusIcon.field_C));
+              TripBeamComponent.field_K[var4Lifetime3][3] = FullscreenFailureReason.field_d + (GasVentModel.field_p << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + ComponentTargetList.field_b;
             }
             var4Lifetime3++;
           }
-          if (2 == mq.field_a) {
+          if (2 == LegacyOpenGlNormalMapGenerator.field_a) {
             FacePointLocomotor.field_r.initializeSelection(param1, 29954, -1, -1);
           } else {
             FacePointLocomotor.field_r.initializeSelection(param1, param0 + 29953, 0, StatReportingScoringObserver.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));

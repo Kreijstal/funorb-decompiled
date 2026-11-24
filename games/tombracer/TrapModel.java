@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
+abstract class TrapModel extends IntrusiveNode implements Renderable, GameStateMarker {
     private int category;
     TrapPart part;
     private int sceneLayer;

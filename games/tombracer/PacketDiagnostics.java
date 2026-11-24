@@ -22,16 +22,16 @@ final class PacketDiagnostics {
         String var8;
         String var1Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
-        var6 = "(" + vua.field_B + " " + TitledScrollPanel.field_xb + " " + PlayerProfile.field_c + ") " + MembersUpsellMenu.field_z;
+        var6 = "(" + ClippedChildWidget.field_B + " " + TitledScrollPanel.field_xb + " " + PlayerProfile.field_c + ") " + MembersUpsellMenu.field_z;
         var1 = var6;
-        if (uca.field_d <= 0) {
+        if (MeshMaterialColour.field_d <= 0) {
           if (param0 != 32) {
             return (String) null;
           }
           return var1;
         }
         var1Lifetime1 = var6 + ":";
-        for (var2 = 0; uca.field_d > var2; var2++) {
+        for (var2 = 0; MeshMaterialColour.field_d > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
           var3 = WeaveOperator.field_q.payload[var2] & 255;

@@ -65,7 +65,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           SimpleHoverMountComponent.a(true, true, false, 75);
         }
         if (0 != ImageProducerRasterBuffer.field_j.field_y) {
-          du.field_g = true;
+          ArchiveConnectionFailureHandler.field_g = true;
         }
         if (0 != TileRenderable.field_c.field_y) {
           if (DropAnimation.field_c) {
@@ -74,7 +74,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
             if (ReportAbuseDialog.field_ub > 0) {
               WallTile.b(param3, -22243);
             } else {
-              if (2 <= ld.field_e) {
+              if (2 <= GpuCubeTextureSource.field_e) {
                 if (VerticalScrollbar.field_tb[12]) {
                   WallTile.b(param3, -22243);
                 } else {
@@ -88,10 +88,10 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
         if (CharacterChoiceFactory.field_c.field_y != 0) {
           if (1 == SafeZoneBehaviour.field_u.length &&
-            SafeZoneBehaviour.field_u[0] != eda.field_e) {
-            eda.field_e = SafeZoneBehaviour.field_u[0];
+            SafeZoneBehaviour.field_u[0] != HardwareVertexNormalAccumulator.field_e) {
+            HardwareVertexNormalAccumulator.field_e = SafeZoneBehaviour.field_u[0];
           }
-          CharacterChoiceFactory.a(aca.field_i, true, 0, 17, eda.field_e, param3);
+          CharacterChoiceFactory.a(QueuedByteShortRequest.field_i, true, 0, 17, HardwareVertexNormalAccumulator.field_e, param3);
         }
         if (0 != BrickOperator.field_v.field_y) {
           LegacyOpenGlBloomEffect.field_o = false;
@@ -257,7 +257,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = sda.appendSessionParameters(param1, -1, var3);
+              var3 = QueuedPayloadRequest.appendSessionParameters(param1, -1, var3);
               SimpleBlockBehaviour.openUrl(1, param1, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

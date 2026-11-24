@@ -88,7 +88,7 @@ final class RasterizerOperator extends TextureOperator {
           }
           var4 = ArchiveNetworkClient.textureHeight;
           TileOperator.setTargetRows(param1, param0 ^ -8901);
-          MazeGenerator.setFillClip(GpuDataType.textureWidthMask, false, 0, 0, hba.textureHeightMask);
+          MazeGenerator.setFillClip(GpuDataType.textureWidthMask, false, 0, 0, RoomResultSender.textureHeightMask);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];
@@ -239,7 +239,7 @@ final class RasterizerOperator extends TextureOperator {
         if (param0 != 20125) {
           return true;
         }
-        return ld.field_e >= 2 ? true : false;
+        return GpuCubeTextureSource.field_e >= 2 ? true : false;
     }
 
     static {

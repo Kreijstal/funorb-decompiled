@@ -39,7 +39,7 @@ final class CurveOperator extends TextureOperator {
           int var4_int = 93 / ((param0 + 33) / 53);
           OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param2);
-          mn.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);
+          MatchingEmailAvailabilityValidator.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);
           TextureCombineOperation.field_b = param1;
           HiscoreTable.openQuickChatMenu(-21844);
         } catch (RuntimeException runtimeException) {
@@ -204,7 +204,7 @@ final class CurveOperator extends TextureOperator {
         if (this.field_r == 2) {
           this.computeVirtualEndpoints(false);
         }
-        tka.buildSinCosTables((byte) 59);
+        IndexedSpriteButtonPainter.buildSinCosTables((byte) 59);
         this.buildCurveTable((byte) 119);
     }
 
@@ -254,7 +254,7 @@ final class CurveOperator extends TextureOperator {
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!ej.isValidDisplayName(false, param0, param1)) {
+          if (!DisplayNameValidator.isValidDisplayName(false, param0, param1)) {
             return false;
           }
           var2_int = 0;

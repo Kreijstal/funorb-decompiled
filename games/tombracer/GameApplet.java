@@ -593,7 +593,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (var2.width < ConsoleEvaluationException.field_a) {
                   return;
                 }
-                if (var2.height < eca.field_a) {
+                if (var2.height < PlayerQuickChatMenuLauncher.field_a) {
                   return;
                 }
               }
@@ -754,7 +754,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               Corpse.field_j = this;
               FloatPacketBuffer.field_i = param1;
-              eca.field_a = param1;
+              PlayerQuickChatMenuLauncher.field_a = param1;
               FallbackShaderEffect.field_f = 0;
               TripBeamVisual.field_a = param2;
               ConsoleEvaluationException.field_a = param2;

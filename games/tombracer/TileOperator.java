@@ -27,7 +27,7 @@ final class TileOperator extends TextureOperator {
         try {
           var11 = (GameAssetLoader) (OpenGlCubeTexture.field_l);
           var11.drawLoadingProgress(param3, (byte) 47, param1);
-          woa.setAnimationArchives(-122, param4, param0, 0);
+          PermutationTableCacheEntry.setAnimationArchives(-122, param4, param0, 0);
           HiscoreTable.field_f = new AnimationFrameSet(0);
           while (!HiscoreTable.field_f.ensureLoaded((byte) 107)) {
           }

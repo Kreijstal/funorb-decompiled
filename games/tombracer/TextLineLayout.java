@@ -62,12 +62,12 @@ final class TextLineLayout {
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dh[] var6 = null;
+        DisplayModeInfo[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        dh[] var10 = null;
+        DisplayModeInfo[] var10 = null;
         AsyncRequest var11 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {

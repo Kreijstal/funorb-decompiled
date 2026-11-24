@@ -79,7 +79,7 @@ final class FlipOperator extends TextureOperator {
           stackIn_5_1 = 0;
           stackIn_5_2 = param0 ^ -17;
           if (this.field_n) {
-            stackIn_6_3 = hba.textureHeightMask - param1;
+            stackIn_6_3 = RoomResultSender.textureHeightMask - param1;
           } else {
             stackIn_6_3 = param1;
           }
@@ -129,7 +129,7 @@ final class FlipOperator extends TextureOperator {
           if (!this.field_n) {
             stackIn_6_1 = param0;
           } else {
-            stackIn_6_1 = -param0 + hba.textureHeightMask;
+            stackIn_6_1 = -param0 + RoomResultSender.textureHeightMask;
           }
           var26 = this.getInputColourRow(stackIn_6_1, 0, param1 ^ 0);
           var22 = var26[0];

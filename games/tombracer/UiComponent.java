@@ -326,9 +326,9 @@ class UiComponent extends um {
         }
     }
 
-    final static void a(int param0, int param1, aca param2) {
+    final static void writeQueuedByteShortRequest(int param0, int param1, QueuedByteShortRequest param2) {
         BitPacketBuffer var3 = null;
-        aca var4 = null;
+        QueuedByteShortRequest var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -340,8 +340,8 @@ class UiComponent extends um {
           var3.writeByte(param2.field_f, 0);
           var3.writeShort(param1 ^ -1477660827, param2.field_j);
           if (param1 != 1325) {
-            var4 = (aca) null;
-            UiComponent.a(-121, 50, (aca) null);
+            var4 = (QueuedByteShortRequest) null;
+            UiComponent.writeQueuedByteShortRequest(-121, 50, (QueuedByteShortRequest) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -47,7 +47,7 @@ abstract class ItemBehaviour extends Behaviour {
     }
 
     final static void b(int param0) {
-        ooa.field_e = fba.generatePerlinRow(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
+        AccountNameResolver.field_e = fba.generatePerlinRow(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
         int var1 = 56 % ((param0 - 57) / 45);
     }
 
@@ -346,7 +346,7 @@ abstract class ItemBehaviour extends Behaviour {
             ItemBehaviour.countSetBits((int[]) null, 49);
           }
           for (var3 = 0; param0.length > var3; var3++) {
-            var2_int = var2_int + tda.bitCount(param1 - 1922, param0[var3]);
+            var2_int = var2_int + SeededGradientNoise3D.bitCount(param1 - 1922, param0[var3]);
           }
           stackIn_7_0 = var2_int;
           return stackIn_7_0;

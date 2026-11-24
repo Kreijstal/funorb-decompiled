@@ -36,7 +36,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.owner.bindTexture(true, this.field_p);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 0, -30);
-        this.owner.setColorCombineSource(ej.field_c, 2, -6219, true, false);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 2, -6219, true, false);
         this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
         int var3 = -29 % ((param0 - 41) / 62);
         this.owner.setActiveTextureUnit(0, false);
@@ -172,13 +172,13 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         if (param0 < -4) {
           this.owner.bindTexture(true, (GpuTexture) null);
           this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-          this.owner.setColorCombineSource(ej.field_c, 0, -49);
+          this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -49);
           this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -53);
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           this.owner.setActiveTextureUnit(0, false);
           if (this.field_j) {
-            this.owner.setColorCombineSource(ej.field_c, 0, -107);
-            this.owner.setAlphaCombineSource(0, false, ej.field_c);
+            this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -107);
+            this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
             this.field_j = false;
           }
           if (this.field_g) {
@@ -192,13 +192,13 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.disable(73);
         this.owner.bindTexture(true, (GpuTexture) null);
         this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-        this.owner.setColorCombineSource(ej.field_c, 0, -49);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -49);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -53);
-        this.owner.setAlphaCombineSource(0, false, ej.field_c);
+        this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
         this.owner.setActiveTextureUnit(0, false);
         if (this.field_j) {
-          this.owner.setColorCombineSource(ej.field_c, 0, -107);
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -107);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           this.field_j = false;
         }
         if (this.field_g) {
@@ -221,8 +221,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           if (param1 != null) {
             if (this.field_j) {
-              this.owner.setColorCombineSource(ej.field_c, 0, param2 ^ -24583);
-              this.owner.setAlphaCombineSource(0, false, ej.field_c);
+              this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, param2 ^ -24583);
+              this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
               this.field_j = false;
             }
             this.owner.bindTexture(true, param1);

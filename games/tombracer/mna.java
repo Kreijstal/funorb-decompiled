@@ -53,9 +53,9 @@ abstract class mna {
             } else {
               if (var15.field_l == null) {
               }
-              var11 = moa.formatChatPrefix(var15, 94);
+              var11 = ChatPrefixFormatter.formatChatPrefix(var15, 94);
               var12 = var11 + BitmapFont.escapeMarkup(var15.field_f);
-              var13 = uaa.getChatMessageColour((byte) -116, var15);
+              var13 = ChatMessageColours.getChatMessageColour((byte) -116, var15);
               var15.field_l = new UiComponent(0L, VortexBehaviour.field_t, var12);
               var6 = var6 + param2;
               var15.field_l.field_ab = ((VortexBehaviour.field_t.field_ab & 16711422) >> 1) + var13 - (8355711 & var13 >> 1);
@@ -113,7 +113,7 @@ abstract class mna {
         int var5;
         RoomDefinition[] var6;
         var5 = TombRacer.field_G ? 1 : 0;
-        var6 = sja.field_i;
+        var6 = SelectiveProceduralTextureProvider.field_i;
         var2 = var6;
         for (var3 = param0; var6.length > var3; var3++) {
           var4 = var6[var3];

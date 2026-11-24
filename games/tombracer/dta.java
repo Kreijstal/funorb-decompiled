@@ -127,15 +127,15 @@ final class dta {
                 CurrentGraphicsToolkit.toolkit.setClip(param0, param5, param1, param6);
                 Room.field_j.draw(0, 0);
                 SocketConnector.drawWrappedText(CharacterChoiceTile.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
-                SocketConnector.drawWrappedText(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
+                SocketConnector.drawWrappedText(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, HardwareVertexNormalAccumulator.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 CurrentGraphicsToolkit.toolkit.resetClip();
                 return;
               }
               if (var15 < 0) {
-                RoomEffectTraps.drawLeftTextWithShadow(0, -34, param6 - 26, IntArrayRequest.field_j, param0 + var8_int, eda.field_f, 16777215);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -34, param6 - 26, IntArrayRequest.field_j, param0 + var8_int, HardwareVertexNormalAccumulator.field_f, 16777215);
               } else {
                 RoomEffectTraps.drawLeftTextWithShadow(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[param2]);
-                RoomEffectTraps.drawLeftTextWithShadow(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, S2CSimulationSignalPacket.field_a[param2]);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), HardwareVertexNormalAccumulator.field_f, S2CSimulationSignalPacket.field_a[param2]);
               }
             }
             if (param4.isSpectating((byte) 118)) {
@@ -147,14 +147,14 @@ final class dta {
               var18 = 0;
               var19 = DropAnimation.formatTime(var14, (byte) -8);
               RoomEffectTraps.drawLeftTextWithShadow(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
-              RoomEffectTraps.drawLeftTextWithShadow(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), HardwareVertexNormalAccumulator.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
               var21 = var12.getSimulation(-1).getRoomArrayLength(122);
               if (var12.getSimulation(-1).hasConnectorRooms(28091)) {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }
-              MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(102, TimingPattern.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
+              MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(102, TimingPattern.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, HardwareVertexNormalAccumulator.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
               var22 = var12.getWeapon(-163585215);
@@ -164,7 +164,7 @@ final class dta {
               } else {
                 if (var23 != 0) {
                   TextureTransformMode.a(-10985);
-                  hp.drawModelPreview(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
+                  ModelPreviewRenderer.drawModelPreview(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
                   RemovedFromGameMenu.resetDepthRange((byte) -6);
                 }
               }
@@ -202,12 +202,12 @@ final class dta {
                 }
                 FloatPacketBuffer.field_j.drawWrapped((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, RasterStateFrame.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
                 var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
-                vua.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
+                ClippedChildWidget.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-ClippedChildWidget.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
                 ByteArrayCopies.field_b.draw(-ByteArrayCopies.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - ByteArrayCopies.field_b.height() - CachedTextLayout.field_l.height());
                 CurrentGraphicsToolkit.toolkit.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
-                  TextureCoordinateGeneration.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
+                  TextureCoordinateGeneration.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + ClippedChildWidget.field_A.height())));
                 }
                 CurrentGraphicsToolkit.toolkit.resetClip();
                 CurrentGraphicsToolkit.toolkit.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
@@ -232,7 +232,7 @@ final class dta {
                 var26Lifetime1 -= 20;
               }
               var27 = "";
-              var28 = eda.field_f;
+              var28 = HardwareVertexNormalAccumulator.field_f;
               var41 = Integer.toString(var12.getRoomTreasureScore(-7991));
               var27Lifetime1 = var41;
               var27Lifetime2 = var41;
@@ -241,15 +241,15 @@ final class dta {
               var17Lifetime4 = param1 - var8_int - 140;
               RasterStateFrame.field_i.draw(var17Lifetime4, var18Lifetime4);
               var27Lifetime3 = "";
-              var28Lifetime1 = eda.field_f;
+              var28Lifetime1 = HardwareVertexNormalAccumulator.field_f;
               if (!param4.field_D &&
                 !param4.c(false)) {
                 var27Lifetime4 = Integer.toString(var12.getScore(77));
               } else {
                 var29Lifetime1 = 0;
-                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 0) * gp.field_i[0];
-                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 1) * gp.field_i[1];
-                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 2) * gp.field_i[2];
+                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 0) * RoomPropertyLabels.field_i[0];
+                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 1) * RoomPropertyLabels.field_i[1];
+                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 2) * RoomPropertyLabels.field_i[2];
                 var27Lifetime4 = Integer.toString(var29Lifetime1);
               }
               S2CNextRoundPacket.drawRightTextWithShadow(4, var28Lifetime1, var27Lifetime4.toUpperCase(), var17Lifetime4 + 130, 0, 26 + var18Lifetime4, 11903361);
@@ -320,7 +320,7 @@ final class dta {
                 if (var12.getWeapon(-163585215) != null) {
                   var33 = 1;
                 }
-                var36 = eda.field_f;
+                var36 = HardwareVertexNormalAccumulator.field_f;
                 var37Lifetime1 = 16;
                 var38 = 1;
                 if (1 >= var9.playerCount) {
@@ -335,7 +335,7 @@ final class dta {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), aca.field_g, (byte) 124, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
+                  var39 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), QueuedByteShortRequest.field_g, (byte) 124, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
@@ -377,7 +377,7 @@ final class dta {
           var9_int = (-param0 + param1 >> 1) + param0;
           var10Lifetime1 = param5 + (param6 - param5 >> 1);
           PlayerViewport.drawTiledFrame(50, 200, (byte) 94, var9_int - 100, MainRoomCatalog.field_a, -34 + var10Lifetime1);
-          MembersUpsellMenu.drawCentredTextWithShadow(FloatTrigTables.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow(FloatTrigTables.field_d, 11903361, HardwareVertexNormalAccumulator.field_f, -1, var10Lifetime1, var9_int, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

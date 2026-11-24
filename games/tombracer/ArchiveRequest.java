@@ -15,7 +15,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (!DefaultRoomObjectRenderer.field_b.isComplete(88)) {
             return DefaultRoomObjectRenderer.field_b.getName((byte) 119);
           }
-          if (PlayerResultRow.accountRequestPending != wt.usernameQueryState) {
+          if (PlayerResultRow.accountRequestPending != ProgressDialogLauncher.usernameQueryState) {
             return ScrollControlWidget.field_E;
           }
           return DefaultRoomObjectRenderer.field_b.getName((byte) 100);
@@ -26,7 +26,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (!DefaultRoomObjectRenderer.field_b.isComplete(88)) {
           return DefaultRoomObjectRenderer.field_b.getName((byte) 119);
         }
-        if (PlayerResultRow.accountRequestPending != wt.usernameQueryState) {
+        if (PlayerResultRow.accountRequestPending != ProgressDialogLauncher.usernameQueryState) {
           return ScrollControlWidget.field_E;
         }
         return DefaultRoomObjectRenderer.field_b.getName((byte) 100);
@@ -47,7 +47,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              param0.getAppletContext().showDocument(sda.appendSessionParameters(param0, -1, var2), "_top");
+              param0.getAppletContext().showDocument(QueuedPayloadRequest.appendSessionParameters(param0, -1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

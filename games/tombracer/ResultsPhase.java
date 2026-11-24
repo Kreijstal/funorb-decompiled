@@ -276,10 +276,10 @@ final class ResultsPhase extends MatchPhase {
           var10 = stackIn_12_0 + (stackIn_12_1 + stackIn_13_2);
           var11 = -50 + var10;
           var12 = var10 - 25;
-          eca.field_c[2].drawScaled(3 + var9Lifetime1, var11, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
+          PlayerQuickChatMenuLauncher.field_c[2].drawScaled(3 + var9Lifetime1, var11, PlayerQuickChatMenuLauncher.field_c[2].width() >> 2, PlayerQuickChatMenuLauncher.field_c[2].height() >> 2);
           var13 = var10;
-          eca.field_c[1].drawScaled(var9Lifetime1, var12, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
-          eca.field_c[0].drawScaled(2 + var9Lifetime1, var13, eca.field_c[0].width() / 3, eca.field_c[0].height() / 3);
+          PlayerQuickChatMenuLauncher.field_c[1].drawScaled(var9Lifetime1, var12, PlayerQuickChatMenuLauncher.field_c[1].width() >> 2, PlayerQuickChatMenuLauncher.field_c[1].height() >> 2);
+          PlayerQuickChatMenuLauncher.field_c[0].drawScaled(2 + var9Lifetime1, var13, PlayerQuickChatMenuLauncher.field_c[0].width() / 3, PlayerQuickChatMenuLauncher.field_c[0].height() / 3);
           var14_ref_gsa = this.field_r[var8Lifetime2];
           if (!var14_ref_gsa.field_l) {
             stackIn_16_0 = 0;
@@ -296,7 +296,7 @@ final class ResultsPhase extends MatchPhase {
             var20_ref_StringLifetime2 = var16_ref_String;
             var20_ref_StringLifetime2Lifetime1 = var16_ref_String;
           }
-          RoomEffectTraps.drawLeftTextWithShadow(-1, -73, 20 + var11, var16_ref_String.toUpperCase(), 24 + var9Lifetime1, eda.field_f, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -73, 20 + var11, var16_ref_String.toUpperCase(), 24 + var9Lifetime1, HardwareVertexNormalAccumulator.field_f, 2431750);
           if (var14_ref_gsa.field_d) {
             stackIn_22_0 = var14_ref_gsa.field_r;
           } else {
@@ -312,7 +312,7 @@ final class ResultsPhase extends MatchPhase {
             var20_ref_StringLifetime5 = var18_ref_String;
             var20_ref_StringLifetime5Lifetime1 = var18_ref_String;
           }
-          RoomEffectTraps.drawLeftTextWithShadow(-1, -28, var12 + 17, var18_ref_String.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -28, var12 + 17, var18_ref_String.toUpperCase(), var9Lifetime1 + 24, HardwareVertexNormalAccumulator.field_f, 2431750);
           if (var14_ref_gsa.field_k) {
             stackIn_28_0 = var14_ref_gsa.field_p;
           } else {
@@ -326,7 +326,7 @@ final class ResultsPhase extends MatchPhase {
           if (var19 < 10) {
             var20_ref_StringLifetime8 = "0" + var30;
           }
-          RoomEffectTraps.drawLeftTextWithShadow(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, HardwareVertexNormalAccumulator.field_f, 2431750);
           var21_int = this.matchState.players[var8Lifetime2].getChosenReward(-104);
           var22 = 0;
           if (var21_int >= 0 &&
@@ -398,7 +398,7 @@ final class ResultsPhase extends MatchPhase {
               }
             }
             if (var10Lifetime1 != 0) {
-              MembersUpsellMenu.drawCentredTextWithShadow(CharacterSelectPhase.field_o.toUpperCase(), 2431750, eda.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
+              MembersUpsellMenu.drawCentredTextWithShadow(CharacterSelectPhase.field_o.toUpperCase(), 2431750, HardwareVertexNormalAccumulator.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
             }
           }
           CurrentGraphicsToolkit.toolkit.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
@@ -442,7 +442,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var17Lifetime1 = stackIn_167_0 + (stackIn_167_1 - stackIn_168_2);
             var18 = var9Lifetime2 - 70;
-            eca.field_c[0].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[0].width() >> 1, eca.field_c[0].height() >> 1);
+            PlayerQuickChatMenuLauncher.field_c[0].drawScaled(var17Lifetime1, -5 + var18, PlayerQuickChatMenuLauncher.field_c[0].width() >> 1, PlayerQuickChatMenuLauncher.field_c[0].height() >> 1);
             RoomEffectTraps.drawLeftTextWithShadow(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
             RoomEffectTraps.drawLeftTextWithShadow(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
             RoomEffectTraps.drawLeftTextWithShadow(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
@@ -493,7 +493,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var17Lifetime1 = stackIn_142_0 - stackIn_143_1;
             var18 = var9Lifetime2 - 70;
-            eca.field_c[1].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
+            PlayerQuickChatMenuLauncher.field_c[1].drawScaled(var17Lifetime1, -5 + var18, PlayerQuickChatMenuLauncher.field_c[1].width() >> 2, PlayerQuickChatMenuLauncher.field_c[1].height() >> 2);
             RoomEffectTraps.drawLeftTextWithShadow(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
             RoomEffectTraps.drawLeftTextWithShadow(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
             RoomEffectTraps.drawLeftTextWithShadow(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
@@ -541,7 +541,7 @@ final class ResultsPhase extends MatchPhase {
               }
               var17Lifetime1 = stackIn_117_0 + (stackIn_117_1 - stackIn_118_2);
               var18 = -70 + var9Lifetime2;
-              eca.field_c[2].drawScaled(var17Lifetime1, var18 - 5, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
+              PlayerQuickChatMenuLauncher.field_c[2].drawScaled(var17Lifetime1, var18 - 5, PlayerQuickChatMenuLauncher.field_c[2].width() >> 2, PlayerQuickChatMenuLauncher.field_c[2].height() >> 2);
               RoomEffectTraps.drawLeftTextWithShadow(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
               RoomEffectTraps.drawLeftTextWithShadow(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
               RoomEffectTraps.drawLeftTextWithShadow(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);

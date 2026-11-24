@@ -9,9 +9,9 @@ final class ValidationState {
         throw new IllegalStateException();
     }
 
-    final static vb playMenuSound(int param0, int param1) {
+    final static PcmSamplePlayback playMenuSound(int param0, int param1) {
         if (param0 != 255) {
-          return (vb) null;
+          return (PcmSamplePlayback) null;
         }
         return MatchProtocol.playSoundEffect(100, (byte) -76, 128, param1, 0, 255);
     }

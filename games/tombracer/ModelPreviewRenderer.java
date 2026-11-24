@@ -1,0 +1,49 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ModelPreviewRenderer {
+    static int[][] field_a;
+
+    public static void releaseStatics(int param0) {
+        field_a = (int[][]) null;
+        if (param0 != 32) {
+          ModelPreviewRenderer.dotWithRow(-1.4429486989974976f, -0.21872800588607788f, (byte) 122, 0.9918611645698547f, 90);
+        }
+    }
+
+    final static float dotWithRow(float param0, float param1, byte param2, float param3, int param4) {
+        float[] var6 = GameEvent.field_f[param4];
+        float[] var5 = var6;
+        if (param2 == 26) {
+          return var6[0] * param3 + var6[1] * param1 + var6[2] * param0;
+        }
+        return -1.8763647079467773f;
+    }
+
+    final static void drawModelPreview(int param0, int param1, int param2, ToolkitModel param3, int param4, int param5, int param6) {
+        Transform3D var7 = null;
+        if (param4 != -1918106173) {
+          field_a = (int[][]) null;
+        }
+        if (param3 == null) {
+          param3 = AllPlatformsMazeComponent.field_O;
+        }
+        if (param3 == null) {
+          return;
+        }
+        try {
+          CurrentGraphicsToolkit.toolkit.clearDepthBuffer();
+          CurrentGraphicsToolkit.toolkit.setProjectionParameters(param6, param5, 32, 32);
+          var7 = CurrentGraphicsToolkit.toolkit.getTransform();
+          var7.setIdentity();
+          var7.rotateY(param1 << 3);
+          var7.rotateX(-param2 << 3);
+          param3.drawAtFixedDepth(var7, (el) null, param0 * 128 / 2048, 0);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    static {
+    }
+}

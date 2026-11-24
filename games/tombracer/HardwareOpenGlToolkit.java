@@ -144,7 +144,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException var8 = null;
         OpenGlTexture2D var9 = null;
         OpenGlTexture2D stackIn_6_0 = null;
-        pe stackIn_8_0 = null;
+        OpenGlRectangleTexture stackIn_8_0 = null;
         OpenGlTexture2D stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -155,10 +155,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Wc && (!PbufferEntry.isPowerOfTwoOrZero(9181, param3) ||
             !PbufferEntry.isPowerOfTwoOrZero(9181, param5))) {
             if (this.field_sd) {
-              stackIn_8_0 = new pe(this, param3, param5, param0, param1, param4);
+              stackIn_8_0 = new OpenGlRectangleTexture(this, param3, param5, param0, param1, param4);
               return (GpuTexture2D) ((Object) stackIn_8_0);
             }
-            var9 = new OpenGlTexture2D(this, SwitchableId.field_a, GpuDataType.field_g, lla.nextPowerOfTwo(false, param3), lla.nextPowerOfTwo(false, param5));
+            var9 = new OpenGlTexture2D(this, SwitchableId.field_a, GpuDataType.field_g, SocialTabbedPanelLayout.nextPowerOfTwo(false, param3), SocialTabbedPanelLayout.nextPowerOfTwo(false, param5));
             var9.uploadIntRegion(param1, param5, param4, 113, 0, param0, param3, 0);
             stackIn_6_0 = var9;
             return (GpuTexture2D) ((Object) stackIn_6_0);
@@ -420,7 +420,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
 
     final GpuTexture2D createTexture2D(int param0, int param1, TextureFormat param2, byte param3, GpuDataType param4) {
         RuntimeException var6 = null;
-        pe stackIn_8_0 = null;
+        OpenGlRectangleTexture stackIn_8_0 = null;
         OpenGlTexture2D stackIn_10_0 = null;
         OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -436,10 +436,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Wc && (!PbufferEntry.isPowerOfTwoOrZero(9181, param0) ||
             !PbufferEntry.isPowerOfTwoOrZero(9181, param1))) {
             if (!this.field_sd) {
-              stackIn_10_0 = new OpenGlTexture2D(this, param2, param4, lla.nextPowerOfTwo(false, param0), lla.nextPowerOfTwo(false, param1));
+              stackIn_10_0 = new OpenGlTexture2D(this, param2, param4, SocialTabbedPanelLayout.nextPowerOfTwo(false, param0), SocialTabbedPanelLayout.nextPowerOfTwo(false, param1));
               return (GpuTexture2D) ((Object) stackIn_10_0);
             }
-            stackIn_8_0 = new pe(this, param2, param4, param0, param1);
+            stackIn_8_0 = new OpenGlRectangleTexture(this, param2, param4, param0, param1);
             return (GpuTexture2D) ((Object) stackIn_8_0);
           }
           stackIn_12_0 = new OpenGlTexture2D(this, param2, param4, param0, param1);
@@ -525,7 +525,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         OpenGlTexture2D stackIn_7_0 = null;
-        pe stackIn_10_0 = null;
+        OpenGlRectangleTexture stackIn_10_0 = null;
         OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -540,10 +540,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Wc && (!PbufferEntry.isPowerOfTwoOrZero(9181, param7) ||
             !PbufferEntry.isPowerOfTwoOrZero(9181, param3))) {
             if (this.field_sd) {
-              stackIn_10_0 = new pe(this, param6, param7, param3, param1, param2, param5);
+              stackIn_10_0 = new OpenGlRectangleTexture(this, param6, param7, param3, param1, param2, param5);
               return (GpuTexture2D) ((Object) stackIn_10_0);
             }
-            var10 = new OpenGlTexture2D(this, param6, GpuDataType.field_g, lla.nextPowerOfTwo(false, param7), lla.nextPowerOfTwo(false, param3));
+            var10 = new OpenGlTexture2D(this, param6, GpuDataType.field_g, SocialTabbedPanelLayout.nextPowerOfTwo(false, param7), SocialTabbedPanelLayout.nextPowerOfTwo(false, param3));
             var10.uploadByteRegion(0, (byte) -124, param3, param1, param5, param2, param6, param7, 0);
             stackIn_12_0 = var10;
             return (GpuTexture2D) ((Object) stackIn_12_0);
@@ -1022,7 +1022,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         OpenGlTexture2D var10 = null;
         GpuTexture2D stackIn_2_0 = null;
         OpenGlTexture2D stackIn_9_0 = null;
-        pe stackIn_11_0 = null;
+        OpenGlRectangleTexture stackIn_11_0 = null;
         OpenGlTexture2D stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -1038,10 +1038,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Wc && (!PbufferEntry.isPowerOfTwoOrZero(9181, param4) ||
             !PbufferEntry.isPowerOfTwoOrZero(9181, param7))) {
             if (this.field_sd) {
-              stackIn_11_0 = new pe(this, param0, param4, param7, param6, param5, param1);
+              stackIn_11_0 = new OpenGlRectangleTexture(this, param0, param4, param7, param6, param5, param1);
               return (GpuTexture2D) ((Object) stackIn_11_0);
             }
-            var10 = new OpenGlTexture2D(this, param0, GpuDataType.field_h, lla.nextPowerOfTwo(false, param4), lla.nextPowerOfTwo(false, param7));
+            var10 = new OpenGlTexture2D(this, param0, GpuDataType.field_h, SocialTabbedPanelLayout.nextPowerOfTwo(false, param4), SocialTabbedPanelLayout.nextPowerOfTwo(false, param7));
             var10.uploadFloatRegion(0, param6, 0, param4, param7, param5, param1, param0, true);
             stackIn_9_0 = var10;
             return (GpuTexture2D) ((Object) stackIn_9_0);
@@ -1243,7 +1243,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           this.field_Vc = true;
         }
         if (this.field_lb != GameScreen.field_b) {
-          if (this.field_lb == mp.field_a) {
+          if (this.field_lb == MidiChannelVolumeTargets.field_a) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
             if (BrickOperator.field_w == this.field_lb) {

@@ -50,7 +50,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           this.field_p = 94;
         }
         if (this.monochromeCache.rowMissed) {
-          var4 = sj.textureRowCoords[param1] - 2048;
+          var4 = FractalNoiseSliceAccumulator.textureRowCoords[param1] - 2048;
           for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var6 = -2048 + LobbyGameWidget.textureColumnCoords[var5];
             var7 = this.field_p + var6;
@@ -359,7 +359,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
     }
 
     final void onDecoded(byte param0) {
-        tka.buildSinCosTables((byte) 105);
+        IndexedSpriteButtonPainter.buildSinCosTables((byte) 105);
         if (param0 != 116) {
           this.field_p = 92;
         }
@@ -375,7 +375,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
             MazeComponent.c(false, 2);
           } else {
             if (null == WaveformOperator.field_n) {
-              re.layoutMainScreen(-29040);
+              MainScreenLayout.layoutMainScreen(-29040);
             } else {
               MazeComponent.c(true, 2);
             }
@@ -390,7 +390,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (ProjectionMode.field_a > 0) {
           SimpleHoverMountComponent.a(param5, true, param1, param6);
         }
-        MessageOverlay.field_t.field_x = tka.field_q.field_x;
+        MessageOverlay.field_t.field_x = IndexedSpriteButtonPainter.field_q.field_x;
         MessageOverlay.field_t.field_z = 1;
         if (0 < GameKeyHandler.field_a) {
           FallbackShaderEffect.updateOpponentSearchControls((byte) 1, param5, param1, param6);

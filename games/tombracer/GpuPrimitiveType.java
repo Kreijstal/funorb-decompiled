@@ -24,7 +24,7 @@ final class GpuPrimitiveType {
     }
 
     final static void a(byte param0, boolean param1) {
-        rm.field_e = !param1 ? new lla(BitPacketBuffer.field_p, RoomRegion.field_l) : new lla(WheeledMountComponent.field_O, HazardModel.field_t);
+        rm.field_e = !param1 ? new SocialTabbedPanelLayout(BitPacketBuffer.field_p, RoomRegion.field_l) : new SocialTabbedPanelLayout(WheeledMountComponent.field_O, HazardModel.field_t);
         C2SRoomResultPacket.field_c = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_c.addChild(param0 ^ 65, rm.field_e.field_a);
         C2SRoomResultPacket.field_c.addChild(param0 ^ 68, NameEntryKeyboardSupport.field_b);

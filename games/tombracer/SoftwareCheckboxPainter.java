@@ -1,0 +1,120 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoftwareCheckboxPainter implements WidgetPainter {
+    private BitmapFont field_k;
+    static String[] gunshotDeathMessages;
+    private int field_d;
+    private int field_g;
+    private int field_i;
+    private int field_e;
+    private int field_f;
+    private int field_c;
+    private int field_a;
+    private int field_h;
+    private int field_l;
+    private int field_b;
+    private int field_m;
+
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_5_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        CheckboxWidget var11 = null;
+        try {
+          if (param2 != 16777215) {
+            this.field_d = -62;
+          }
+          if (!(param0 instanceof CheckboxWidget)) {
+            stackIn_5_0 = null;
+          } else {
+            stackIn_5_0 = (UiWidget) (param0);
+          }
+          var11 = (CheckboxWidget) (stackIn_5_0);
+          if (var11 != null) {
+            param4 = param4 & var11.field_y;
+          }
+          var7 = 5592405;
+          SoftwareRasterizer.fillRectangle(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_b);
+          if (param4) {
+            var7 = 16777215;
+          }
+          var8 = param1 + param0.field_i + this.field_l;
+          var9 = this.field_d + (param0.field_n + param3);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_e, this.field_c, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_e, this.field_c, var7);
+          if (var11.field_w) {
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_e, this.field_c + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_e + var8, var9, var8, this.field_c + var9, 1);
+          }
+          if (null == this.field_k) {
+            return;
+          }
+          var10 = this.field_l + this.field_e + this.field_m;
+          this.field_k.drawParagraph(param0.field_o, param0.field_i + (param1 + var10), param3 + (param0.field_n + this.field_a), param0.field_m - (this.field_m + var10), param0.field_p - (this.field_m << 1), this.field_f, this.field_i, this.field_g, this.field_h, 0);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_19_0 = var6;
+          stackIn_19_1 = new StringBuilder().append("jr.B(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        gunshotDeathMessages = null;
+        if (param0 != -87) {
+          SoftwareCheckboxPainter.releaseStatics((byte) -24);
+        }
+    }
+
+    final static void resetHoverTooltip(byte param0) {
+        HardwareOpenGlToolkit.field_pd = false;
+        fr.field_c = 0;
+        ConsoleToken.field_f = -1;
+        if (param0 <= -91) {
+          RenderLayer.field_f = -1;
+          MazeComponent.field_F = null;
+          return;
+        }
+        SoftwareCheckboxPainter.resetHoverTooltip((byte) 79);
+        RenderLayer.field_f = -1;
+        MazeComponent.field_F = null;
+    }
+
+    SoftwareCheckboxPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        this.field_g = 1;
+        this.field_h = 1;
+        try {
+          this.field_c = param7;
+          this.field_l = param5;
+          this.field_a = param2;
+          this.field_e = param8;
+          this.field_f = param3;
+          this.field_k = param0;
+          this.field_m = param1;
+          this.field_d = param6;
+          this.field_i = param4;
+          this.field_b = param9;
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+        }
+    }
+
+    static {
+        gunshotDeathMessages = new String[]{"<%0> ate lead", "<%0> managed to commit suicide", "<%0> found a tannhauser gate", "<%0> suffered a mysterious gunshot wound"};
+    }
+}

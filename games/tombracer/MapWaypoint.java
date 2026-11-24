@@ -54,7 +54,7 @@ final class MapWaypoint extends IntrusiveNode {
           SwitchableId.field_b = param1 * ByteGameMessageSender.getFrameRate(1188664449) / 1000;
           VertexStreamLayout.loadJagexLogoSound(param3, -101);
           HardwareModel.loadLogoMeshes(param3, 0);
-          jp.loadFinalFrame(param3, (byte) 20);
+          LegacyOpenGlCubeTextureSource.loadFinalFrame(param3, (byte) 20);
           if (param2 != 11861) {
             ResourceArchive var5 = (ResourceArchive) null;
             MapWaypoint.initLogoAssets((PcmStreamMixer) null, 0, -42, (ResourceArchive) null);

@@ -50,7 +50,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.owner.bindTexture(true, this.field_g);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 0, -55);
-        this.owner.setColorCombineSource(ej.field_c, 2, -6219, true, false);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 2, -6219, true, false);
         this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
         this.owner.setActiveTextureUnit(0, false);
         this.bindVertexShader(122);
@@ -65,8 +65,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
     final void bindTexture(int param0, GpuTexture param1, int param2) {
         if (param1 != null) {
           if (this.field_e) {
-            this.owner.setColorCombineSource(ej.field_c, 0, -90);
-            this.owner.setAlphaCombineSource(0, false, ej.field_c);
+            this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -90);
+            this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
             this.field_e = false;
           }
           this.owner.bindTexture(true, param1);
@@ -166,13 +166,13 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.owner.setActiveTextureUnit(1, false);
         this.owner.bindTexture(true, (GpuTexture) null);
         this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-        this.owner.setColorCombineSource(ej.field_c, 0, -58);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -58);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -122);
-        this.owner.setAlphaCombineSource(0, false, ej.field_c);
+        this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
         this.owner.setActiveTextureUnit(0, false);
         if (this.field_e) {
-          this.owner.setColorCombineSource(ej.field_c, 0, -48);
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -48);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           this.field_e = false;
         }
         if (param0 < -4) {

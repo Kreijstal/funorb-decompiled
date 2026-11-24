@@ -60,35 +60,35 @@ final class PbufferEntry extends DualLinkNode {
     }
 
     final static boolean ensurePacketPayload(int param0) {
-        if (-1 == uca.field_d) {
+        if (-1 == MeshMaterialColour.field_d) {
           if (!LegacyRidgedWaterNoise.ensureGamePacketBytes(1, -1)) {
             return false;
           }
-          uca.field_d = WeaveOperator.field_q.readUnsignedByte(255);
+          MeshMaterialColour.field_d = WeaveOperator.field_q.readUnsignedByte(255);
           WeaveOperator.field_q.position = 0;
         }
         if (param0 != 0) {
           return true;
         }
-        if (-2 != uca.field_d) {
-          return LegacyRidgedWaterNoise.ensureGamePacketBytes(uca.field_d, -1);
+        if (-2 != MeshMaterialColour.field_d) {
+          return LegacyRidgedWaterNoise.ensureGamePacketBytes(MeshMaterialColour.field_d, -1);
         }
         if (!LegacyRidgedWaterNoise.ensureGamePacketBytes(2, -1)) {
           return false;
         }
-        uca.field_d = WeaveOperator.field_q.readUnsignedShort(125);
+        MeshMaterialColour.field_d = WeaveOperator.field_q.readUnsignedShort(125);
         WeaveOperator.field_q.position = 0;
-        return LegacyRidgedWaterNoise.ensureGamePacketBytes(uca.field_d, -1);
+        return LegacyRidgedWaterNoise.ensureGamePacketBytes(MeshMaterialColour.field_d, -1);
     }
 
     final static void initConsole(int param0) {
         TripBeamComponent.playMusicTrack(1, param0);
         SoftwareRasterizer.clear();
         TextureCombineSource.startMenuBackgroundDemo(122);
-        if (!(ld.field_e < 2)) {
+        if (!(GpuCubeTextureSource.field_e < 2)) {
           HelloCommand.field_o = new FunOrbConsole(MidiNoteUsageNode.createConsoleMethods((byte) 122), HeapIndexArray.field_d, ComponentTypeNames.field_c);
-          aca.addShellListenerFirst(HelloCommand.field_o, 19711);
-          aca.addShellListenerFirst(ShellListenerProvider.getSharedShellListener((byte) 124), 19711);
+          QueuedByteShortRequest.addShellListenerFirst(HelloCommand.field_o, 19711);
+          QueuedByteShortRequest.addShellListenerFirst(ShellListenerProvider.getSharedShellListener((byte) 124), 19711);
         }
         if (TextWidgetPainter.a(83)) {
           UrlDownloadRequest.startTutorial((byte) -59);

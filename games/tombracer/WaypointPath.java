@@ -74,7 +74,7 @@ final class WaypointPath {
           var12 = (BitmapFont) null;
           MembersUpsellMenu.field_w = DrawOfferMenu.createStyledComponent(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
           BoulderComponent.field_M = DrawOfferMenu.createStyledComponent(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
-          tg.field_c = DrawOfferMenu.createStyledComponent(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
+          HslToHsvConverter.field_c = DrawOfferMenu.createStyledComponent(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;
@@ -84,7 +84,7 @@ final class WaypointPath {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          MovementHintCharacter.field_g = GameFontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
+          MovementHintCharacter.field_g = GameFontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, HslToHsvConverter.field_c);
           AccountCreationDialog.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

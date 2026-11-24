@@ -307,9 +307,9 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                   if (this.elevation <= -17825792) {
                     if (this.field_T == 6) {
                       var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
-                      var3_ref.configure(false, 32, 4, 16, 5 + uca.cosmeticRandom.nextBounded(5, 0));
+                      var3_ref.configure(false, 32, 4, 16, 5 + MeshMaterialColour.cosmeticRandom.nextBounded(5, 0));
                       var3_ref.setPlanarVelocity(param0 + 99, 0, 0);
-                      var3_ref.setRotation(uca.cosmeticRandom.nextBounded(8192, param0 ^ 5), -32 + uca.cosmeticRandom.nextBounded(64, param0 - 5), -125);
+                      var3_ref.setRotation(MeshMaterialColour.cosmeticRandom.nextBounded(8192, param0 ^ 5), -32 + MeshMaterialColour.cosmeticRandom.nextBounded(64, param0 - 5), -125);
                     }
                     this.elevation = -17825793;
                   }
@@ -2452,12 +2452,12 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 0;
-          var2_int = var2_int + this.getRoomTreasure(param0 ^ -401207, 0) * gp.field_i[0];
-          var2_int = var2_int + this.getRoomTreasure(393216, 1) * gp.field_i[1];
+          var2_int = var2_int + this.getRoomTreasure(param0 ^ -401207, 0) * RoomPropertyLabels.field_i[0];
+          var2_int = var2_int + this.getRoomTreasure(393216, 1) * RoomPropertyLabels.field_i[1];
           if (param0 != -7991) {
             this.animator = (PlayerAnimator) null;
           }
-          var2_int = var2_int + this.getRoomTreasure(393216, 2) * gp.field_i[2];
+          var2_int = var2_int + this.getRoomTreasure(393216, 2) * RoomPropertyLabels.field_i[2];
           stackIn_4_0 = var2_int;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

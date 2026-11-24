@@ -47,7 +47,7 @@ abstract class ArchiveNetworkClient {
 
     final static void resendQueuedListRequests(int param0, int param1) {
         int var3 = 0;
-        toa var4 = null;
+        QueuedKeyedRequest var4 = null;
         IntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -56,10 +56,10 @@ abstract class ArchiveNetworkClient {
           if (param1 != -21) {
             return;
           }
-          var4 = (toa) (BridgeModel.field_m.first(-80));
+          var4 = (QueuedKeyedRequest) (BridgeModel.field_m.first(-80));
           while (var4 != null) {
-            uca.writeQueuedListRequest(param0, var4, (byte) 93);
-            var4 = (toa) (BridgeModel.field_m.next(113));
+            MeshMaterialColour.writeQueuedListRequest(param0, var4, (byte) 93);
+            var4 = (QueuedKeyedRequest) (BridgeModel.field_m.next(113));
           }
           var5 = (IntArrayRequest) (Player.field_I.first(param1 ^ 91));
           while (var5 != null) {
@@ -99,12 +99,12 @@ abstract class ArchiveNetworkClient {
           }
           try {
             if (ColourKeyOperator.field_m == 0) {
-              S2CProfileUpdatePacket.field_c = oi.field_a.requestSocket(-24818, TileGridCell.field_a, du.field_d);
+              S2CProfileUpdatePacket.field_c = QuickChatMessageQueue.field_a.requestSocket(-24818, TileGridCell.field_a, ArchiveConnectionFailureHandler.field_d);
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
             }
             if (ColourKeyOperator.field_m == 1) {
               if (2 == S2CProfileUpdatePacket.field_c.status) {
-                stackIn_16_0 = du.recordArchiveConnectionFailure(-1, (byte) 122);
+                stackIn_16_0 = ArchiveConnectionFailureHandler.recordArchiveConnectionFailure(-1, (byte) 122);
                 return stackIn_16_0;
               }
               if (S2CProfileUpdatePacket.field_c.status == 1) {
@@ -112,9 +112,9 @@ abstract class ArchiveNetworkClient {
               }
             }
             if (ColourKeyOperator.field_m == 2) {
-              SneakHintPanel.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.result), oi.field_a);
+              SneakHintPanel.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.result), QuickChatMessageQueue.field_a);
               var2 = new PacketBuffer(13);
-              C2SActionPacket.writeSessionHeader((byte) 107, pu.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
+              C2SActionPacket.writeSessionHeader((byte) 107, EmptyWidgetPainter.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
               var2.writeByte(15, 0);
               var2.writeInt(CourseLayout.field_a, (byte) 117);
               SneakHintPanel.field_a.write(var2.payload, 0, 13, 106);
@@ -124,13 +124,13 @@ abstract class ArchiveNetworkClient {
             if (ColourKeyOperator.field_m == 3) {
               if (SneakHintPanel.field_a.available(0) <= 0) {
                 if (AdjustedWallClock.currentTimeMillis((byte) -107) > OpenGlModelBillboard.field_n) {
-                  stackIn_31_0 = du.recordArchiveConnectionFailure(-2, (byte) 17);
+                  stackIn_31_0 = ArchiveConnectionFailureHandler.recordArchiveConnectionFailure(-2, (byte) 17);
                   return stackIn_31_0;
                 }
               } else {
                 var1_int = SneakHintPanel.field_a.readSingleByte(-2147483648);
                 if (var1_int != 0) {
-                  stackIn_26_0 = du.recordArchiveConnectionFailure(var1_int, (byte) -26);
+                  stackIn_26_0 = ArchiveConnectionFailureHandler.recordArchiveConnectionFailure(var1_int, (byte) -26);
                   return stackIn_26_0;
                 }
                 ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
@@ -149,7 +149,7 @@ abstract class ArchiveNetworkClient {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return du.recordArchiveConnectionFailure(-3, (byte) -93);
+            return ArchiveConnectionFailureHandler.recordArchiveConnectionFailure(-3, (byte) -93);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

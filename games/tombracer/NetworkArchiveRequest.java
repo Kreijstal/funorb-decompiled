@@ -93,12 +93,12 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static ima a(int[] param0, ModelData param1, int param2, byte param3) {
-        ima stackIn_3_0 = null;
+    final static ModelTextureProjectionData a(int[] param0, ModelData param1, int param2, byte param3) {
+        ModelTextureProjectionData stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_43_0 = 0;
-        ima stackIn_58_0 = null;
+        ModelTextureProjectionData stackIn_58_0 = null;
         Object stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
         String stackIn_62_2 = null;
@@ -138,7 +138,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var6 = null;
           var7 = null;
           if (param3 != -6) {
-            stackIn_3_0 = (ima) null;
+            stackIn_3_0 = (ModelTextureProjectionData) null;
             return stackIn_3_0;
           }
           if (param1.field_g != null) {
@@ -284,7 +284,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               break scanLoop1;
             }
           }
-          stackIn_58_0 = new ima((int[]) (var4), (int[]) (var5), (int[]) (var6), (float[][]) (var7));
+          stackIn_58_0 = new ModelTextureProjectionData((int[]) (var4), (int[]) (var5), (int[]) (var6), (float[][]) (var7));
           return stackIn_58_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

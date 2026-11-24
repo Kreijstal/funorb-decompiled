@@ -6,7 +6,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
     private int[] field_Q;
     private boolean field_P;
     private int[] field_T;
-    private mp field_R;
+    private MidiChannelVolumeTargets field_R;
 
     final synchronized void rampChannelVolume(int param0, int param1, byte param2, int param3) {
         int var5 = param3 * AudioOutput.field_d / 1000;
@@ -104,7 +104,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
     final synchronized void rampChannelVolumeSamples(int param0, int param1, int param2, int param3) {
         this.field_P = false;
         if (this.field_R == null) {
-          this.field_R = new mp();
+          this.field_R = new MidiChannelVolumeTargets();
         }
         this.field_R.field_c[param3] = param1;
         int var5 = this.field_T[param3];

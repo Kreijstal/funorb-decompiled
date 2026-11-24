@@ -40,7 +40,7 @@ final class RoundWinnerPhase extends MatchPhase {
         SecondaryNodeDequeIterator.fillAlphaRect(192, var5, 3145728, 340, (byte) 39, var4, 150);
         WhiteLightShooterComponent.drawThickRectOutline(150, (byte) -85, var4, 5242880, 2, var5, 340);
         var8 = var4 + 20 + 8;
-        MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(113, RoundWinnerText.text, new String[]{this.screen.getPlayerName(this.matchState.getRoundWinner(2), false)}).toUpperCase(), 16777215, eda.field_f, -1, var8, 320, 0);
+        MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(113, RoundWinnerText.text, new String[]{this.screen.getPlayerName(this.matchState.getRoundWinner(2), false)}).toUpperCase(), 16777215, HardwareVertexNormalAccumulator.field_f, -1, var8, 320, 0);
         var8 += 40;
         MembersUpsellMenu.drawCentredTextWithShadow(SoftwareModelBillboardState.field_f + ":", 16777215, TooltipRenderer.field_p, -1, var8, 320, 0);
         var8 += 20;

@@ -96,9 +96,9 @@ final class HorizontalGradientOperator extends TextureOperator {
           if (var1 == 0) {
             var1 = 32;
           }
-          mp.setMusicVolume(2, HardwareRidgedWaterNoise.field_v - var1);
+          MidiChannelVolumeTargets.setMusicVolume(2, HardwareRidgedWaterNoise.field_v - var1);
         } else {
-          mp.setMusicVolume(2, 0);
+          MidiChannelVolumeTargets.setMusicVolume(2, 0);
         }
         if (param0 != -10794) {
           field_m = false;

@@ -26,7 +26,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           this.field_r = param2;
           this.field_q = param3;
           this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
-          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, sja.toBaseInternalFormat(this.internalFormat, 20934), 5121, (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, SelectiveProceduralTextureProvider.toBaseInternalFormat(this.internalFormat, 20934), 5121, (byte[]) null, 0);
           this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

@@ -1135,7 +1135,7 @@ final class Model extends ToolkitModel {
             for (var9Lifetime5Lifetime1 = 0; var9Lifetime5Lifetime1 < this.field_m; var9Lifetime5Lifetime1++) {
               var27 = this.field_e[var9Lifetime5Lifetime1];
               var26 = this.field_db[var9Lifetime5Lifetime1];
-              var26.field_k = var26.field_k & -16777216 | PitSnakeModel.field_h[tg.hslToHsv((byte) -123, this.field_ob[var27.field_j] & 65535) & 65535] & 16777215;
+              var26.field_k = var26.field_k & -16777216 | PitSnakeModel.field_h[HslToHsvConverter.hslToHsv((byte) -123, this.field_ob[var27.field_j] & 65535) & 65535] & 16777215;
             }
             return;
           }
@@ -1396,7 +1396,7 @@ final class Model extends ToolkitModel {
           while (var10 < this.field_m) {
             var6 = this.field_e[var10];
             var7 = this.field_db[var10];
-            var7.field_k = var7.field_k & -16777216 | PitSnakeModel.field_h[tg.hslToHsv((byte) -120, this.field_ob[var6.field_j] & 65535)] & 16777215;
+            var7.field_k = var7.field_k & -16777216 | PitSnakeModel.field_h[HslToHsvConverter.hslToHsv((byte) -120, this.field_ob[var6.field_j] & 65535)] & 16777215;
             var10++;
           }
         }
@@ -2412,7 +2412,7 @@ final class Model extends ToolkitModel {
             for (var10Lifetime5Lifetime1 = 0; var10Lifetime5Lifetime1 < this.field_m; var10Lifetime5Lifetime1++) {
               var62 = this.field_e[var10Lifetime5Lifetime1];
               var61 = this.field_db[var10Lifetime5Lifetime1];
-              var61.field_k = var61.field_k & -16777216 | PitSnakeModel.field_h[tg.hslToHsv((byte) -114, this.field_ob[var62.field_j] & 65535) & 65535] & 16777215;
+              var61.field_k = var61.field_k & -16777216 | PitSnakeModel.field_h[HslToHsvConverter.hslToHsv((byte) -114, this.field_ob[var62.field_j] & 65535) & 65535] & 16777215;
             }
             return;
           }
@@ -2498,7 +2498,7 @@ final class Model extends ToolkitModel {
           if (var4 == -1) {
             var1 = this.field_ob[var5] & 65535;
             var2 = (var1 & 127) * this.field_Db >> 7;
-            var1 = tg.hslToHsv((byte) -117, var1 & -128 | var2);
+            var1 = HslToHsvConverter.hslToHsv((byte) -117, var1 & -128 | var2);
             if (this.field_Fb[var5] != -1) {
               if (this.field_Fb[var5] != -2) {
                 var3 = this.field_t[var5] & -131072;
@@ -3675,7 +3675,7 @@ final class Model extends ToolkitModel {
                 case 0:
                   var12 = this.field_ob[var8] & 65535;
                   var13_int = (var12 & 127) * this.field_Db >> 7;
-                  var14 = tg.hslToHsv((byte) -128, var12 & -128 | var13_int);
+                  var14 = HslToHsvConverter.hslToHsv((byte) -128, var12 & -128 | var13_int);
                   if (this.field_D != null &&
                     this.field_D[this.field_M[var8]] != null) {
                     var15_ref_oha = this.field_D[this.field_M[var8]];
@@ -3713,7 +3713,7 @@ final class Model extends ToolkitModel {
                 case 1:
                   var12 = this.field_ob[var8] & 65535;
                   var13_int = (var12 & 127) * this.field_Db >> 7;
-                  var14 = tg.hslToHsv((byte) -105, var12 & -128 | var13_int);
+                  var14 = HslToHsvConverter.hslToHsv((byte) -105, var12 & -128 | var13_int);
                   var19 = this.field_I[var8];
                   var16 = var2 * var19.x + var3 * var19.y + var4 * var19.z >> 16;
                   stackIn_55_0 = (var16 <= 256) ? var7 : var6;
@@ -3892,7 +3892,7 @@ final class Model extends ToolkitModel {
         long[] var9;
         int var10;
         int var11_int;
-        ima var11;
+        ModelTextureProjectionData var11;
         int var12;
         Object var13;
         int var14;

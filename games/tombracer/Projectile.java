@@ -1052,11 +1052,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                 this.field_i != -1) {
                 var8 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
                 var5 = 131072;
-                var6 = -(var5 / 2) + uca.cosmeticRandom.nextBounded(var5, 0);
-                var7 = uca.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
-                var8.configure(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
+                var6 = -(var5 / 2) + MeshMaterialColour.cosmeticRandom.nextBounded(var5, 0);
+                var7 = MeshMaterialColour.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
+                var8.configure(false, 24, this.field_i, 4, 10 + MeshMaterialColour.cosmeticRandom.nextBounded(10, 0));
                 var8.setPlanarVelocity(121, var7, var6);
-                var8.setRotation(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
+                var8.setRotation(MeshMaterialColour.cosmeticRandom.nextBounded(8192, 0), -128 + MeshMaterialColour.cosmeticRandom.nextBounded(256, 0), param0 - 84);
               }
             } else {
               if (this.highCollision) {
@@ -1074,11 +1074,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                   this.field_i != -1) {
                   var10 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
-                  var6 = -(var5 / 2) + uca.cosmeticRandom.nextBounded(var5, 0);
-                  var7 = uca.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
-                  var10.configure(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
+                  var6 = -(var5 / 2) + MeshMaterialColour.cosmeticRandom.nextBounded(var5, 0);
+                  var7 = MeshMaterialColour.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
+                  var10.configure(false, 24, this.field_i, 4, 10 + MeshMaterialColour.cosmeticRandom.nextBounded(10, 0));
                   var10.setPlanarVelocity(121, var7, var6);
-                  var10.setRotation(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
+                  var10.setRotation(MeshMaterialColour.cosmeticRandom.nextBounded(8192, 0), -128 + MeshMaterialColour.cosmeticRandom.nextBounded(256, 0), param0 - 84);
                 }
               } else {
                 this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -66);
@@ -1092,11 +1092,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                   this.field_i != -1) {
                   var12 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
-                  var6 = -(var5 / 2) + uca.cosmeticRandom.nextBounded(var5, 0);
-                  var7 = uca.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
-                  var12.configure(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
+                  var6 = -(var5 / 2) + MeshMaterialColour.cosmeticRandom.nextBounded(var5, 0);
+                  var7 = MeshMaterialColour.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
+                  var12.configure(false, 24, this.field_i, 4, 10 + MeshMaterialColour.cosmeticRandom.nextBounded(10, 0));
                   var12.setPlanarVelocity(121, var7, var6);
-                  var12.setRotation(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
+                  var12.setRotation(MeshMaterialColour.cosmeticRandom.nextBounded(8192, 0), -128 + MeshMaterialColour.cosmeticRandom.nextBounded(256, 0), param0 - 84);
                 }
               }
             }
@@ -1172,11 +1172,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           else {
             var13 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
             var5Lifetime1 = 131072;
-            var6Lifetime1 = -(var5Lifetime1 / 2) + uca.cosmeticRandom.nextBounded(var5Lifetime1, 0);
-            var7Lifetime1 = uca.cosmeticRandom.nextBounded(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
-            var13.configure(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
+            var6Lifetime1 = -(var5Lifetime1 / 2) + MeshMaterialColour.cosmeticRandom.nextBounded(var5Lifetime1, 0);
+            var7Lifetime1 = MeshMaterialColour.cosmeticRandom.nextBounded(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
+            var13.configure(false, 24, this.field_i, 4, 10 + MeshMaterialColour.cosmeticRandom.nextBounded(10, 0));
             var13.setPlanarVelocity(121, var7Lifetime1, var6Lifetime1);
-            var13.setRotation(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
+            var13.setRotation(MeshMaterialColour.cosmeticRandom.nextBounded(8192, 0), -128 + MeshMaterialColour.cosmeticRandom.nextBounded(256, 0), param0 - 84);
           }
         }
         if (decompiledFrameRemainder0) {

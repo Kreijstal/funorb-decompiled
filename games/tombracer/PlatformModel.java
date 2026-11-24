@@ -286,7 +286,7 @@ final class PlatformModel extends TrapModel {
                           } else {
                             if (var11 == 0) {
                               if (var13 != 0) {
-                                var9.field_a = GameScreen.positiveModulo(var15 + mpa.field_W[var9.field_h], 2048, -70);
+                                var9.field_a = GameScreen.positiveModulo(var15 + AccountContentTransitionDialog.field_W[var9.field_h], 2048, -70);
                                 var9.platform = this;
                                 var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
@@ -319,7 +319,7 @@ final class PlatformModel extends TrapModel {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  var9.field_a = GameScreen.positiveModulo(var15 + mpa.field_W[var9.field_h], 2048, -70);
+                  var9.field_a = GameScreen.positiveModulo(var15 + AccountContentTransitionDialog.field_W[var9.field_h], 2048, -70);
                 }
               } else {
                 var9.field_a = 512;
@@ -425,8 +425,8 @@ final class PlatformModel extends TrapModel {
           var3 = 0;
           if (this.field_m != null &&
             this.field_m.isCollapsing(false)) {
-            this.offsetX = -131072 + uca.cosmeticRandom.nextBounded(262144, ~param0);
-            this.offsetY = uca.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
+            this.offsetX = -131072 + MeshMaterialColour.cosmeticRandom.nextBounded(262144, ~param0);
+            this.offsetY = MeshMaterialColour.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
             var2_int = 1;
             if (this.field_m.isCollapsed((byte) 120)) {
               var2_int = 0;
@@ -573,7 +573,7 @@ final class PlatformModel extends TrapModel {
           for (var2_int = 0; this.columns > var2_int; var2_int++) {
             for (var3 = 0; this.rows > var3; var3++) {
               var4 = this.tiles[var2_int][var3];
-              var5 = mpa.field_W[var4.field_h];
+              var5 = AccountContentTransitionDialog.field_W[var4.field_h];
               var4.field_a = GameScreen.positiveModulo(-var4.field_a + var5, 2048, 65);
               var4.field_d = -var4.field_d;
             }

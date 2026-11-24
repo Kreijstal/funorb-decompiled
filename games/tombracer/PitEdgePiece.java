@@ -59,8 +59,8 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
           return;
         }
         if (param0 < 103) {
-          sda var8 = (sda) null;
-          PitEdgePiece.a(9, (sda) null, 48);
+          QueuedPayloadRequest var8 = (QueuedPayloadRequest) null;
+          PitEdgePiece.writeQueuedPayloadRequest(9, (QueuedPayloadRequest) null, 48);
         }
         ToolkitModel var4 = this.pit.getEdgeModel((byte) 9, this);
         if (var4 == null) {
@@ -91,7 +91,7 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
         return true;
     }
 
-    final static void a(int param0, sda param1, int param2) {
+    final static void writeQueuedPayloadRequest(int param0, QueuedPayloadRequest param1, int param2) {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {

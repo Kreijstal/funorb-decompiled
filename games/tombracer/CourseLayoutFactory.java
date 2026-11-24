@@ -60,12 +60,12 @@ final class CourseLayoutFactory implements BitDecodableFactory {
             }
           } else {
             if (var2 != 0 &&
-              2 != mq.field_a) {
+              2 != LegacyOpenGlNormalMapGenerator.field_a) {
               AppletGameShell.resetConnectionStatics(-18);
             }
           }
           if (var3 == 0 &&
-            2 == mq.field_a) {
+            2 == LegacyOpenGlNormalMapGenerator.field_a) {
             var4 = AdjustedWallClock.currentTimeMillis((byte) -107) - PlatformComponent.field_H;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {

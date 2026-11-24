@@ -41,7 +41,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     float field_j;
     int field_J;
     int field_Ic;
-    private ld field_eb;
+    private GpuCubeTextureSource field_eb;
     private boolean field_V;
     int field_Sb;
     private ShaderEffect field_pb;
@@ -248,7 +248,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             if (2 == param0) {
               var4 = 1;
               var5 = 0;
-              var3 = mp.field_a;
+              var3 = MidiChannelVolumeTargets.field_a;
             } else {
               if (param0 != 128) {
                 var4 = 0;
@@ -742,7 +742,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         var8 = TombRacer.field_G ? 1 : 0;
         param4 = param4 & this.p(-112);
         if (param5 != -25) {
-          this.field_eb = (ld) null;
+          this.field_eb = (GpuCubeTextureSource) null;
         }
         if (!param4 && (param0 == 4 ||
           8 == param0 ||
@@ -1071,8 +1071,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.drawUnitQuad(2);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -119);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -119);
     }
 
     private final void createLineBuffer(boolean param0) {
@@ -1169,8 +1169,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.bindVertexLayout(this.field_Z, -32);
         this.drawPrimitives(256, ToolkitSelector.field_d, 1, 0);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -104);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -104);
     }
 
     final void bindMaterialTexture(byte param0, boolean param1, boolean param2, int param3) {
@@ -1335,8 +1335,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.drawLineBuffer((byte) -70);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -77);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -77);
     }
 
     final int underwaterFogIntensity(int param0) {
@@ -1688,8 +1688,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.drawGeometryBuffer(ToolkitSelector.field_d, (byte) -32, 4);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -31);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -31);
     }
 
     final AffineTransform3D textureTransform(byte param0) {
@@ -1715,8 +1715,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.bindVertexLayout(this.field_Z, -32);
         this.drawPrimitives(256, ProgressDialog.field_T, 0, 0);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -93);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -93);
     }
 
     final void prepareSpriteRendering(byte param0) {
@@ -2105,8 +2105,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.drawLineBuffer((byte) -70);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -14);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -14);
     }
 
     final void setActiveTextureUnit(int param0, boolean param1) {
@@ -2420,8 +2420,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.drawLineBuffer((byte) -70);
         this.setMultisampling(1, true);
-        this.setAlphaCombineSource(0, false, ej.field_c);
-        this.setColorCombineSource(ej.field_c, 0, -85);
+        this.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
+        this.setColorCombineSource(DisplayNameValidator.field_c, 0, -85);
     }
 
     final void setTextureCombineOperations(TextureCombineOperation param0, byte param1, TextureCombineOperation param2) {

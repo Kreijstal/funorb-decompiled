@@ -147,7 +147,7 @@ final class MembersUpsellMenu extends MenuScreen {
           var10.draw(99, this.field_t, this.field_r);
           var10 = (CourseMapPath) (this.field_q.next(121));
         }
-        if (mq.field_e == null &&
+        if (LegacyOpenGlNormalMapGenerator.field_e == null &&
           !TextWidgetPainter.a(param0 + 119)) {
           return;
         }
@@ -161,14 +161,14 @@ final class MembersUpsellMenu extends MenuScreen {
             } else {
               OpenGlFramebuffer.field_i[var4].draw(LobbyPlayerEntry.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = ConsoleWindow.field_d;
-              if (null != mq.field_e) {
-                if (mq.field_e.worldMedals[var4] == 3) {
+              if (null != LegacyOpenGlNormalMapGenerator.field_e) {
+                if (LegacyOpenGlNormalMapGenerator.field_e.worldMedals[var4] == 3) {
                   var5_ref_nh = DropdownPopupList.field_E;
                 }
-                if (mq.field_e.worldMedals[var4] == 2) {
+                if (LegacyOpenGlNormalMapGenerator.field_e.worldMedals[var4] == 2) {
                   var5_ref_nh = eu.field_a;
                 }
-                if (mq.field_e.worldMedals[var4] == 1) {
+                if (LegacyOpenGlNormalMapGenerator.field_e.worldMedals[var4] == 1) {
                   var5_ref_nh = CharacterChoiceFactory.field_a;
                 }
               }
@@ -184,9 +184,9 @@ final class MembersUpsellMenu extends MenuScreen {
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.getCanvasHeight(param0 + 28));
         PlayerInputQueue.field_a.draw(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
-        SocketConnector.drawWrappedText(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
+        SocketConnector.drawWrappedText(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, HardwareVertexNormalAccumulator.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
-          mq.field_e.field_a ||
+          LegacyOpenGlNormalMapGenerator.field_e.field_a ||
           var3 != 0)) {
           var7Lifetime1 = SwitchLinkList.getCanvasHeight(0) / 2 + this.field_r;
           var4Lifetime2 = 350;

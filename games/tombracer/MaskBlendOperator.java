@@ -165,7 +165,7 @@ final class MaskBlendOperator extends TextureOperator {
           String var2 = (String) null;
           MaskBlendOperator.loadSpriteByName((ResourceArchive) null, (String) null, (String) null, 78);
         }
-        rka.releaseCachedFonts(false);
+        RasterSprite.releaseCachedFonts(false);
         LoadingStepList.createGameModels(CurrentGraphicsToolkit.toolkit, 0);
         SceneLight.createGameToolkitSprites(CurrentGraphicsToolkit.toolkit, 17186);
         ArrowShooterComponent.createFonts(CurrentGraphicsToolkit.toolkit, -90);

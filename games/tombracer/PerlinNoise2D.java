@@ -131,7 +131,7 @@ final class PerlinNoise2D extends TextureOperator {
         PacketBuffer var20 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = sj.textureRowCoords[param2] * this.field_w;
+          var5 = FractalNoiseSliceAccumulator.textureRowCoords[param2] * this.field_w;
           if (this.field_n == 1) {
             var8 = this.field_r[0] << 12;
             var9 = this.field_q[0];

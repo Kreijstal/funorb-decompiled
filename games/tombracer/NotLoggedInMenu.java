@@ -39,7 +39,7 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final static void drawCentredTextAlpha(int param0, byte param1, int param2, int param3, GameFont param4, String param5, int param6, int param7, int param8) {
         try {
-          param4.drawCentred(jg.withAlpha(param2, (byte) -76, param3), -1, param8, jg.withAlpha(param0, (byte) -121, param7), param6, param5);
+          param4.drawCentred(NoiseSliceGenerator.withAlpha(param2, (byte) -76, param3), -1, param8, NoiseSliceGenerator.withAlpha(param0, (byte) -121, param7), param6, param5);
           int var9_int = -7 % ((66 - param1) / 47);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vv.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');

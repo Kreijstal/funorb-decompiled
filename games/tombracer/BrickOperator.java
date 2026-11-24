@@ -25,7 +25,7 @@ final class BrickOperator extends TextureOperator {
     static int[] field_p;
 
     final static void d(byte param0) {
-        aca var1 = (aca) (io.field_d.first(-80));
+        QueuedByteShortRequest var1 = (QueuedByteShortRequest) (io.field_d.first(-80));
         if (var1 == null) {
           DropAnimation.closeGameSocket(60);
           return;
@@ -206,7 +206,7 @@ final class BrickOperator extends TextureOperator {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ej.field_c == param0) {
+          if (DisplayNameValidator.field_c == param0) {
             stackIn_11_0 = 5890;
             return stackIn_11_0;
           }
@@ -269,7 +269,7 @@ final class BrickOperator extends TextureOperator {
         var3 = var18;
         if (this.monochromeCache.rowMissed) {
           var7 = 0;
-          for (var9 = sj.textureRowCoords[param1] + this.field_A; var9 < 0; var9 += 4096) {
+          for (var9 = FractalNoiseSliceAccumulator.textureRowCoords[param1] + this.field_A; var9 < 0; var9 += 4096) {
           }
           while (var9 > 4096) {
             var9 -= 4096;

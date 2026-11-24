@@ -7,8 +7,8 @@ final class ComponentTypeNames {
     static PlatformTaskDispatcher field_c;
     static String[] componentTypeNames;
 
-    final static vb createRandomClickSound(int param0) {
-        int var1 = uca.cosmeticRandom.nextBounded(6, 0);
+    final static PcmSamplePlayback createRandomClickSound(int param0) {
+        int var1 = MeshMaterialColour.cosmeticRandom.nextBounded(6, 0);
         if (param0 > -11) {
           field_b = 76;
           return ValidationState.playMenuSound(255, var1);

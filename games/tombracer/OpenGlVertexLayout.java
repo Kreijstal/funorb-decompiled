@@ -9,7 +9,7 @@ final class OpenGlVertexLayout extends mna {
         if (LegacyOpenGlTexture.registrationRequestState == fta.accountRequestIdle) {
           throw new IllegalStateException();
         }
-        if (mua.accountRequestComplete == LegacyOpenGlTexture.registrationRequestState) {
+        if (EmptyRoomFactory.accountRequestComplete == LegacyOpenGlTexture.registrationRequestState) {
           LegacyOpenGlTexture.registrationRequestState = fta.accountRequestIdle;
           return PlantModel.field_n;
         }
@@ -62,7 +62,7 @@ final class OpenGlVertexLayout extends mna {
 
     final static void createTextureProvider(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         try {
-          MatchPhase.field_l = (TextureProvider) ((Object) new sja(param1, param0, param3));
+          MatchPhase.field_l = (TextureProvider) ((Object) new SelectiveProceduralTextureProvider(param1, param0, param3));
           if (param2 != 55) {
             field_e = (UiComponent) null;
           }

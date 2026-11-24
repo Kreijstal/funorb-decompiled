@@ -241,7 +241,7 @@ class MatchScoringObserver extends SimulationObserver {
               !this.field_f.isSinglePlayer(param0 - 1876)) {
               ProxySocketConnector.a(var4_int, 5);
             } else {
-              li.updateRoomMusic(var4_int, (byte) 116);
+              RoomMusicController.updateRoomMusic(var4_int, (byte) 116);
             }
             MatchState.d(param0 ^ -2, var4_int);
             var5 = param2.getAllTraps(16);
@@ -358,7 +358,7 @@ class MatchScoringObserver extends SimulationObserver {
             var13 = 0;
             var9Lifetime1 = var13;
             while (var13 < 3) {
-              this.field_f.statistics.addTreasureScore(param0.getPlayerIndex(0), 65408, gp.field_i[var13] * param0.getRoomTreasure(393216, var13));
+              this.field_f.statistics.addTreasureScore(param0.getPlayerIndex(0), 65408, RoomPropertyLabels.field_i[var13] * param0.getRoomTreasure(393216, var13));
               var13++;
             }
             return;

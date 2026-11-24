@@ -366,7 +366,7 @@ final class ColourGradientOperator extends TextureOperator {
     final static boolean isLoginFlowIncomplete(int param0) {
         if (param0 > -111) {
           ColourGradientOperator.releaseStatics((byte) -62);
-          if (cga.field_f < 20) {
+          if (QueuedFixedRequest.field_f < 20) {
             return true;
           }
           if (!QuickChatPhraseDefinition.c((byte) 49)) {
@@ -380,7 +380,7 @@ final class ColourGradientOperator extends TextureOperator {
           }
           return false;
         }
-        if (cga.field_f < 20) {
+        if (QueuedFixedRequest.field_f < 20) {
           return true;
         }
         if (!QuickChatPhraseDefinition.c((byte) 49)) {

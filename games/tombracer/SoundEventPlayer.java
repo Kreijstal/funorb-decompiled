@@ -155,7 +155,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        vb var11 = null;
+        PcmSamplePlayback var11 = null;
         PlayingSound var12 = null;
         try {
           var3_int = param0.getSoundId(9800);
@@ -188,7 +188,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           }
           var5 = HardwareGraphicsHeap.field_i[var3_int];
           if (0 < var5) {
-            var4 = var4 + uca.cosmeticRandom.nextBounded(var5, 0);
+            var4 = var4 + MeshMaterialColour.cosmeticRandom.nextBounded(var5, 0);
           }
           var6 = 0;
           if (var3_int == 28) {

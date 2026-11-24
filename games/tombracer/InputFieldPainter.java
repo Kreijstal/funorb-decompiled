@@ -137,7 +137,7 @@ class InputFieldPainter extends TextWidgetPainter {
               var12++;
             }
           }
-          cm.field_a = new CourseDefinition[var12];
+          CourseStartPacket.field_a = new CourseDefinition[var12];
           RasterizerOperator.field_n = new int[var12];
           if (!param0) {
             return;
@@ -194,7 +194,7 @@ class InputFieldPainter extends TextWidgetPainter {
                 var31[var18][var7].equalsIgnoreCase("Corridor");
               }
             }
-            cm.field_a[var13Lifetime1] = new CourseDefinition(var15, var16Lifetime1 != 0);
+            CourseStartPacket.field_a[var13Lifetime1] = new CourseDefinition(var15, var16Lifetime1 != 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

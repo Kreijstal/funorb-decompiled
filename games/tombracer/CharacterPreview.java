@@ -28,7 +28,7 @@ final class CharacterPreview extends IntrusiveNode {
         if (param3 != 73) {
           return;
         }
-        hp.drawModelPreview(param1, 0, 0, this.field_j.getModel((byte) 74), -1918106173, param2, param0);
+        ModelPreviewRenderer.drawModelPreview(param1, 0, 0, this.field_j.getModel((byte) 74), -1918106173, param2, param0);
     }
 
     CharacterPreview(int param0) {

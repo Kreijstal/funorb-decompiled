@@ -1009,7 +1009,7 @@ final class GameFontMetrics {
           if (0 == param4) {
             param4 = this.field_a;
           }
-          var6_int = this.wrapLines(param0, -124, dra.field_a, param2, new int[]{param1});
+          var6_int = this.wrapLines(param0, -124, ReflectionCheckResponseSender.field_a, param2, new int[]{param1});
           var7 = (var6_int - 1) * param4;
           var8 = 72 / ((-41 - param3) / 54);
           stackIn_3_0 = this.field_h + var7 + this.field_g;
@@ -1167,7 +1167,7 @@ final class GameFontMetrics {
                     stackIn_50_1 = var10Lifetime2;
                     if (stackIn_50_0 != stackIn_50_1 && (160 != var10Lifetime2 ||
                       var12 != 0)) {
-                      this.field_c[var9Lifetime2][var10Lifetime2] = (byte)pu.computeKerning(var9Lifetime2, var10Lifetime2, true, var7, var5, this.field_e, var8, var6);
+                      this.field_c[var9Lifetime2][var10Lifetime2] = (byte)EmptyWidgetPainter.computeKerning(var9Lifetime2, var10Lifetime2, true, var7, var5, this.field_e, var8, var6);
                     }
                     var10Lifetime2++;
                   }

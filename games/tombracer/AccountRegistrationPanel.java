@@ -179,7 +179,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_D.field_q = RenderLayer.field_e;
         this.field_G.setValidationSource(-13861, new NameFieldValidator(this.field_G));
         this.field_z.setValidationSource(-13861, new EmailSyntaxValidator(this.field_z));
-        this.field_J.setValidationSource(-13861, new mn(this.field_J, this.field_z));
+        this.field_J.setValidationSource(-13861, new MatchingEmailAvailabilityValidator(this.field_J, this.field_z));
         this.field_E.setValidationSource(-13861, new PasswordValidator(this.field_E, this.field_G, this.field_z));
         this.field_C.setValidationSource(-13861, new MatchingTextValidator(this.field_C, this.field_E));
         this.field_I.setValidationSource(-13861, new AgeValidator(this.field_I));

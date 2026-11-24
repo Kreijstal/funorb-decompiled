@@ -25,7 +25,7 @@ final class LoadingStepList {
           RevolverItemComponent.field_J = IdChatTarget.createModels(C2SActionPacket.field_l, param1 - 8829, param0);
           LabelledRow.field_ub = IdChatTarget.createModels(CourseLayoutFactory.field_e, -8829, param0);
           PowerUpItemBehaviour.field_t = IdChatTarget.createModels(ColourRowCacheEntry.field_h, -8829, param0);
-          GameApplet.field_j = IdChatTarget.createModels(gta.field_f, param1 ^ -8829, param0);
+          GameApplet.field_j = IdChatTarget.createModels(HardwareFaceNormal.field_f, param1 ^ -8829, param0);
           HardwareModelBillboardState.field_g = IdChatTarget.createModels(EllipseShapeDecoder.field_b, param1 ^ -8829, param0);
           DoorwayComponent.field_F = IdChatTarget.createModels(TriangleMesh.field_g, -8829, param0);
           SwitchLinkList.field_b = IdChatTarget.createModels(ControllerLocomotor.field_p, -8829, param0);

@@ -91,7 +91,7 @@ final class ava {
           var7 = 0;
           var8 = 0;
           if (C2SChooseRewardPacket.field_a != null && (PowerUpItemBehaviour.field_u != null ||
-            hp.field_a != null ||
+            ModelPreviewRenderer.field_a != null ||
             C2SRoomResultPacket.field_g != null ||
             HotspotTextWidget.field_z != null)) {
             for (var9 = 0; ColourRowCache.field_b > var9; var9++) {
@@ -101,9 +101,9 @@ final class ava {
                 PowerUpItemBehaviour.field_u[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (null != hp.field_a &&
-                hp.field_a[var9] != null) {
-                var11_int = hp.field_a[var9][var10_int];
+              if (null != ModelPreviewRenderer.field_a &&
+                ModelPreviewRenderer.field_a[var9] != null) {
+                var11_int = ModelPreviewRenderer.field_a[var9][var10_int];
                 if (var11_int != 0 &&
                   !DropAnimation.field_c) {
                   var5_int = 1;
@@ -229,10 +229,10 @@ final class ava {
               if (param0 != MidiPatch.field_n) {
                 if (var12.field_Hb) {
                   var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(90, TextureFilter.field_b, new String[]{var20});
-                  var12.field_Cb.field_r = mq.field_d;
+                  var12.field_Cb.field_r = LegacyOpenGlNormalMapGenerator.field_d;
                 } else {
                   if (var12.field_Fb) {
-                    var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(105, uaa.field_c, new String[]{var20});
+                    var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(105, ChatMessageColours.field_c, new String[]{var20});
                     var12.field_Kb.field_r = r.field_l;
                     var12.field_Cb.field_r = MainMenuScreen.field_q;
                   } else {
@@ -401,9 +401,9 @@ final class ava {
                     !var12.field_tb) {
                     var29 = 1;
                   }
-                  if (hp.field_a != null &&
-                    null != hp.field_a[var27_int]) {
-                    var30_int = hp.field_a[var27_int][var28];
+                  if (ModelPreviewRenderer.field_a != null &&
+                    null != ModelPreviewRenderer.field_a[var27_int]) {
+                    var30_int = ModelPreviewRenderer.field_a[var27_int][var28];
                     if (var30_int != 0 &&
                       !DropAnimation.field_c &&
                       !var12.field_tb) {

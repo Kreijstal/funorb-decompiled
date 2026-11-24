@@ -321,19 +321,19 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
           if (0 >= var7) {
             HardwareOpenGlVertexBuffer.exitFullscreen(0);
             this.i((byte) 109);
-            this.field_z.pushDialog(new gga(this.field_z, TileRenderable.field_b), 120);
+            this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, TileRenderable.field_b), 120);
           } else {
             this.field_L.field_o = "" + var7;
           }
           if (this.field_B &&
             null == ColourRowCacheEntry.field_f) {
             this.i((byte) 109);
-            this.field_z.pushDialog(new gga(this.field_z, TurbulenceNoise3D.field_j), 102);
+            this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, TurbulenceNoise3D.field_j), 102);
           }
           if (null != ColourRowCacheEntry.field_f &&
             ColourRowCacheEntry.field_f.field_b) {
             this.i((byte) 109);
-            this.field_z.pushDialog(new gga(this.field_z, TurbulenceNoise3D.field_j), 85);
+            this.field_z.pushDialog(new FullscreenFailureDialog(this.field_z, TurbulenceNoise3D.field_j), 85);
             return;
           }
           return;

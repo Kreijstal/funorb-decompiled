@@ -239,7 +239,7 @@ final class ArchiveIndex {
     }
 
     final static int getLoadingPercent(int param0) {
-        if (cga.field_f < 2) {
+        if (QueuedFixedRequest.field_f < 2) {
           return 0;
         }
         if (ApproachPlayerLocomotor.field_t == 0) {

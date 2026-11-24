@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SwitchState implements noa {
+final class SwitchState implements GameStateMarker {
     private int releaseDelay;
     private int pressDelay;
     static ToolkitModel[] field_a;

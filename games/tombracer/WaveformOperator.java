@@ -15,7 +15,7 @@ final class WaveformOperator extends TextureOperator {
         if (param0 != 116) {
           return;
         }
-        tka.buildSinCosTables((byte) 122);
+        IndexedSpriteButtonPainter.buildSinCosTables((byte) 122);
     }
 
     public WaveformOperator() {
@@ -172,7 +172,7 @@ final class WaveformOperator extends TextureOperator {
           WaveformOperator.a(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
         }
         if (this.monochromeCache.rowMissed) {
-          var4 = sj.textureRowCoords[param1];
+          var4 = FractalNoiseSliceAccumulator.textureRowCoords[param1];
           var5 = var4 - 2048 >> 1;
           for (var6 = 0; var6 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var6++) {
             var8 = LobbyGameWidget.textureColumnCoords[var6];
@@ -221,7 +221,7 @@ final class WaveformOperator extends TextureOperator {
         RuntimeException var4_ref = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          wt.usernameQueryState = mua.accountRequestComplete;
+          ProgressDialogLauncher.usernameQueryState = EmptyRoomFactory.accountRequestComplete;
           if (255 != param1) {
             if (param1 >= 100 &&
               param1 <= 105) {
@@ -261,9 +261,9 @@ final class WaveformOperator extends TextureOperator {
     }
 
     final static void unpackSettings(int param0, int param1) {
-        k.field_A = param0 >> 4 & param1;
-        if (k.field_A > 2) {
-          k.field_A = 2;
+        DropTargetWidget.field_A = param0 >> 4 & param1;
+        if (DropTargetWidget.field_A > 2) {
+          DropTargetWidget.field_A = 2;
         }
         nba.field_b = 3 & param0 >> 2;
         if (2 < nba.field_b) {

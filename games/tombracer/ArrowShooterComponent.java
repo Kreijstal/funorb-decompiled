@@ -8,12 +8,12 @@ final class ArrowShooterComponent extends ShooterComponent {
     final static void createFonts(GraphicsToolkit param0, int param1) {
         try {
           TooltipRenderer.field_p = param0.createFont(kv.field_a, LobbyPlayerMenuActions.field_b, true);
-          eda.field_f = param0.createFont(MatchStatistics.field_n, MatchState.field_j, true);
+          HardwareVertexNormalAccumulator.field_f = param0.createFont(MatchStatistics.field_n, MatchState.field_j, true);
           if (param1 > -66) {
             field_K = (String) null;
           }
           SingleChildWidget.field_v = param0.createFont(LargeFontMetrics.metrics, MovingPlatformComponent.field_O, true);
-          FloatPacketBuffer.field_j = param0.createFont(RatingsScreen.field_r, gga.field_O, true);
+          FloatPacketBuffer.field_j = param0.createFont(RatingsScreen.field_r, FullscreenFailureDialog.field_O, true);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

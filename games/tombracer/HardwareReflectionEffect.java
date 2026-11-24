@@ -38,13 +38,13 @@ final class HardwareReflectionEffect extends ShaderEffect {
           return;
         }
         if (!this.field_f) {
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
         } else {
           this.owner.setActiveTextureUnit(1, false);
           this.owner.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
           this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
           this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -21);
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           this.owner.resetTextureTransform((byte) -87);
           this.owner.bindTexture(true, (GpuTexture) null);
           this.owner.setActiveTextureUnit(0, false);

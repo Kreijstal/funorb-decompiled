@@ -36,7 +36,7 @@ final class sla {
           RenderableNode.field_i = null;
           CharacterChoiceFactory.field_g.field_ab = -1;
           ClientMemoryVertexArray.field_d = null;
-          dh.field_e = null;
+          DisplayModeInfo.field_e = null;
           ClientMemoryVertexArray.field_e = null;
           if (param0 != 29585) {
             sla.b(-98);
@@ -49,7 +49,7 @@ final class sla {
           return;
         }
         ClientMemoryVertexArray.field_d = null;
-        dh.field_e = null;
+        DisplayModeInfo.field_e = null;
         ClientMemoryVertexArray.field_e = null;
         if (param0 == 29585) {
           SimpleMoveLocomotor.field_s = null;

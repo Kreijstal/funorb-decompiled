@@ -47,7 +47,7 @@ abstract class GameScreen {
                 }
                 return false;
               }
-              if (ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+              if (CubeTextureSourceBase.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
                 if (2 != VerticalGradientOperator.field_n &&
                   var3 != 0) {
                   return false;
@@ -66,7 +66,7 @@ abstract class GameScreen {
             }
             if (LegacyOpenGlTurbulentTextureEffect.field_f) {
               if (VerticalGradientOperator.field_n == 2 &&
-                !ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+                !CubeTextureSourceBase.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
                 return false;
               }
               if (2 != VerticalGradientOperator.field_n &&
@@ -85,7 +85,7 @@ abstract class GameScreen {
             var3 != 0) {
             return false;
           }
-          return eca.openQuickChatForPlayer((byte) -121, DateValidationSource.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
+          return PlayerQuickChatMenuLauncher.openQuickChatForPlayer((byte) -121, DateValidationSource.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
         }
         if (MenuEntry.field_h == 10) {
           if (var3 != 0) {
@@ -101,7 +101,7 @@ abstract class GameScreen {
               return false;
             }
             if (VerticalGradientOperator.field_n == 2 &&
-              !ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+              !CubeTextureSourceBase.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
               return false;
             }
             if (2 != VerticalGradientOperator.field_n &&
@@ -121,7 +121,7 @@ abstract class GameScreen {
             return false;
           }
           if (VerticalGradientOperator.field_n == 2 &&
-            !ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+            !CubeTextureSourceBase.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
             return false;
           }
           if (2 != VerticalGradientOperator.field_n &&

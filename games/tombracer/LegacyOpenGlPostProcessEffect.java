@@ -13,7 +13,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
         LoadProfileCommand.field_r = false;
         FormFieldRow.a(false, -1);
         LegacyOpenGlTexture.registrationRequestState = fta.accountRequestIdle;
-        wt.usernameQueryState = fta.accountRequestIdle;
+        ProgressDialogLauncher.usernameQueryState = fta.accountRequestIdle;
     }
 
     final boolean isEnabled(byte param0) {

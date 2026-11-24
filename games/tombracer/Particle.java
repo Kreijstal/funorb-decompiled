@@ -119,7 +119,7 @@ final class Particle extends PooledObject implements Renderable {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jg var6 = null;
+        NoiseSliceGenerator var6 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -131,8 +131,8 @@ final class Particle extends PooledObject implements Renderable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -25) {
-            var6 = (jg) null;
-            Particle.a(0.712020754814148f, -6, 74, 40, -86, (byte[]) null, 1.6334935426712036f, 88, -0.9209427833557129f, (jg) null, 0.7779105305671692f, -124, 0.9752581119537354f);
+            var6 = (NoiseSliceGenerator) null;
+            Particle.accumulateFractalNoiseVolume(0.712020754814148f, -6, 74, 40, -86, (byte[]) null, 1.6334935426712036f, 88, -0.9209427833557129f, (NoiseSliceGenerator) null, 0.7779105305671692f, -124, 0.9752581119537354f);
           }
           var4_int = param1.getGroupId(param2, -7768);
           var5 = param1.getFileId(true, param0, var4_int);
@@ -281,7 +281,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.lifetime;
     }
 
-    final static void a(float param0, int param1, int param2, int param3, int param4, byte[] param5, float param6, int param7, float param8, jg param9, float param10, int param11, float param12) {
+    final static void accumulateFractalNoiseVolume(float param0, int param1, int param2, int param3, int param4, byte[] param5, float param6, int param7, float param8, NoiseSliceGenerator param9, float param10, int param11, float param12) {
         int var13_int = 0;
         int var14 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -294,7 +294,7 @@ final class Particle extends PooledObject implements Renderable {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           for (var13_int = param3; param11 > var13_int; var13_int++) {
-            sj.a((byte) 79, param11, param1, param7, param8, param0, param5, param12, param10, param9, param4, param6, param2, var13_int);
+            FractalNoiseSliceAccumulator.accumulateFractalNoiseSlice((byte) 79, param11, param1, param7, param8, param0, param5, param12, param10, param9, param4, param6, param2, var13_int);
             param2 = param2 + param7 * param1;
           }
           return;

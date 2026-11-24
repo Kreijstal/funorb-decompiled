@@ -65,7 +65,7 @@ final class FinishOrderOverlay extends MatchOverlay {
                 MembersUpsellMenu.drawCentredTextWithShadow((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, FloatPacketBuffer.field_j, -1, var11 * var7 + var10, var2, 0);
                 return;
               }
-              MembersUpsellMenu.drawCentredTextWithShadow((re.field_b + "  " + this.field_i.getPlayerName(var12, false)).toUpperCase(), var13, FloatPacketBuffer.field_j, -1, var10 + var11 * var7, var2, 0);
+              MembersUpsellMenu.drawCentredTextWithShadow((MainScreenLayout.field_b + "  " + this.field_i.getPlayerName(var12, false)).toUpperCase(), var13, FloatPacketBuffer.field_j, -1, var10 + var11 * var7, var2, 0);
             }
           }
         }

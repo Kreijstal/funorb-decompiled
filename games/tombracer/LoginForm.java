@@ -92,7 +92,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if (!this.field_w) {
               this.field_y.field_r = (WidgetPainter) ((Object) new LinkPainter());
             } else {
-              this.field_y.field_q = tg.field_a;
+              this.field_y.field_q = HslToHsvConverter.field_a;
               this.field_y.field_r = (WidgetPainter) ((Object) new LinkPainter());
             }
           } else {
@@ -206,7 +206,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                 }
               }
             } else {
-              qfa.openAccountRegistration((byte) 6);
+              AccountRegistrationLauncher.openAccountRegistration((byte) 6);
             }
           } else {
             this.submitLogin((byte) 85);

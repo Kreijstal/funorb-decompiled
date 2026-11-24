@@ -76,7 +76,7 @@ final class StringListNode extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5_ref = (Exception) (Object) decompiledCaughtException;
             var5_ref.printStackTrace();
-            stackIn_5_0 = mua.createEmptyRoom(param4, param3 - 21678);
+            stackIn_5_0 = EmptyRoomFactory.createEmptyRoom(param4, param3 - 21678);
             return stackIn_5_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -116,7 +116,7 @@ final class StringListNode extends IntrusiveNode {
         if (param1 == -1) {
           return HotspotTextWidget.field_B;
         }
-        return nt.openArchive(param1, 1, 5200, false, true, true);
+        return FullscreenFailureReason.openArchive(param1, 1, 5200, false, true, true);
     }
 
     StringListNode(String[] param0) {

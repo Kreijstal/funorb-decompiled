@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, RoomObjectMarker, Teleportable {
+final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, GameStateMarker, RoomObjectMarker, Teleportable {
     private IntrusiveDeque children;
     static UiComponent field_q;
     static int field_m;

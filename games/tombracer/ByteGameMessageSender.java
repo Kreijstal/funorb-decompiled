@@ -12,9 +12,9 @@ final class ByteGameMessageSender {
         if (null == ql.field_k) {
           return;
         }
-        cm var3 = new cm();
+        CourseStartPacket var3 = new CourseStartPacket();
         var3.setValue(param0, 0);
-        hw.sendGamePacket((byte) -111, 1, 78, var3);
+        GamePacketSender.sendGamePacket((byte) -111, 1, 78, var3);
     }
 
     public static void releaseStatics(byte param0) {

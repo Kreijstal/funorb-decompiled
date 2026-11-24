@@ -317,7 +317,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                   }
                   else {
                     if (var12.field_yb == 2) {
-                      var12.field_Nb.field_r = vua.field_z;
+                      var12.field_Nb.field_r = ClippedChildWidget.field_z;
                     } else {
                       var12.field_Vb.field_r = FlipOperator.field_q;
                     }
@@ -396,7 +396,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var34_int = var34_int + (pda.field_c + var52_ref.field_n);
               }
               if ((var14Lifetime1 & 1 << RoomEffectTraps.field_b) != 0) {
-                stackIn_90_0 = wt.field_c;
+                stackIn_90_0 = ProgressDialogLauncher.field_c;
                 if (var12.field_Ob) {
                   stackIn_91_1 = 1;
                 } else {
@@ -490,9 +490,9 @@ final class PlayTrackCommand extends ConsoleMethod {
             }
             for (var34_intLifetime2 = 0; ColourRowCache.field_b > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_o) {
-                if (null != eca.field_b) {
-                  if (eca.field_b[var34_intLifetime2] != null) {
-                    var35 = eca.field_b[var34_intLifetime2][var12.field_ac[var34_intLifetime2] & 255];
+                if (null != PlayerQuickChatMenuLauncher.field_b) {
+                  if (PlayerQuickChatMenuLauncher.field_b[var34_intLifetime2] != null) {
+                    var35 = PlayerQuickChatMenuLauncher.field_b[var34_intLifetime2][var12.field_ac[var34_intLifetime2] & 255];
                   } else {
                     var35 = null;
                   }
@@ -518,7 +518,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               if (var12.field_Ob) {
                 stackIn_151_0 = MouseWheelFactory.field_a;
               } else {
-                stackIn_151_0 = sda.field_i;
+                stackIn_151_0 = QueuedPayloadRequest.field_i;
               }
               ArchiveNetworkClient.field_b = stackIn_151_0;
             }

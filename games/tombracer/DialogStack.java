@@ -231,7 +231,7 @@ final class DialogStack extends SingleChildWidget {
           if (param0 < 110) {
             field_z = (int[]) null;
           }
-          stackIn_3_0 = aca.loadBinaryFont(param4, var5_int, param2, (byte) -110, var6);
+          stackIn_3_0 = QueuedByteShortRequest.loadBinaryFont(param4, var5_int, param2, (byte) -110, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

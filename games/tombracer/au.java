@@ -12,13 +12,13 @@ final class au extends aa {
         if (param0) {
           return;
         }
-        if (nla.field_a != ObjectList.field_c) {
-          if (vb.field_i == ObjectList.field_c) {
+        if (FixedPointSegmentIntersection.field_a != ObjectList.field_c) {
+          if (PcmSamplePlayback.field_i == ObjectList.field_c) {
             if (!TextWidgetPainter.a(23)) {
               if (MandelbrotOperator.field_o != null) {
                 QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
               }
-              qfa.closeSelectionMenu(-116);
+              AccountRegistrationLauncher.closeSelectionMenu(-116);
               if (FlagSet.field_c) {
                 FlagSet.field_c = false;
                 StringCursor.a(-30600, false);
@@ -43,7 +43,7 @@ final class au extends aa {
             } else {
               TermsLinksPanel.b(param0);
             }
-            ObjectList.field_c = vb.field_i;
+            ObjectList.field_c = PcmSamplePlayback.field_i;
           }
         }
     }
@@ -65,7 +65,7 @@ final class au extends aa {
         int[] var10 = null;
         int[] var11 = null;
         PendingReply var12 = null;
-        cga var13 = null;
+        QueuedFixedRequest var13 = null;
         BitPacketBuffer var14 = null;
         PendingReply var15 = null;
         var8 = TombRacer.field_G ? 1 : 0;
@@ -92,7 +92,7 @@ final class au extends aa {
             var12.unlink(83);
           } else {
             if (var2 == 1) {
-              var13 = (cga) (OpenGlVertexNormalData.field_a.first(-80));
+              var13 = (QueuedFixedRequest) (OpenGlVertexNormalData.field_a.first(-80));
               if (var13 == null) {
                 DropAnimation.closeGameSocket(60);
                 return;

@@ -39,7 +39,7 @@ final class RadialSelectionWidget extends FocusableWidget {
           var8_int = param6 - this.field_i - param1 - this.field_E;
           var9 = -param2 - (this.field_n - (-this.field_C + param3));
           if (this.field_F * this.field_F > var8_int * var8_int + var9 * var9) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - uca.field_b;
+            var10 = Math.atan2((double)var9, (double)var8_int) - MeshMaterialColour.field_b;
             if (0.0 > var10) {
               var10 = var10 - 3.141592653589793 / (double)this.field_B;
             } else {

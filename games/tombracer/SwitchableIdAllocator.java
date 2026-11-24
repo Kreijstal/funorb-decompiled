@@ -252,12 +252,12 @@ final class SwitchableIdAllocator {
           incrementValue$15 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$15, (byte) 47, param1);
-          gta.field_f = new ModelData[5];
-          gta.field_f[1] = DecodableArrayReader.loadModelData("", "objects/plants/plant_01_green", 58, param0);
-          gta.field_f[0] = DecodableArrayReader.loadModelData("", "objects/plants/plant_01_red", 51, param0);
-          gta.field_f[2] = DecodableArrayReader.loadModelData("", "objects/plants/plant_02", 15, param0);
-          gta.field_f[3] = DecodableArrayReader.loadModelData("", "objects/plants/flower", 86, param0);
-          gta.field_f[4] = DecodableArrayReader.loadModelData("", "objects/plants/hangingmoss1", -118, param0);
+          HardwareFaceNormal.field_f = new ModelData[5];
+          HardwareFaceNormal.field_f[1] = DecodableArrayReader.loadModelData("", "objects/plants/plant_01_green", 58, param0);
+          HardwareFaceNormal.field_f[0] = DecodableArrayReader.loadModelData("", "objects/plants/plant_01_red", 51, param0);
+          HardwareFaceNormal.field_f[2] = DecodableArrayReader.loadModelData("", "objects/plants/plant_02", 15, param0);
+          HardwareFaceNormal.field_f[3] = DecodableArrayReader.loadModelData("", "objects/plants/flower", 86, param0);
+          HardwareFaceNormal.field_f[4] = DecodableArrayReader.loadModelData("", "objects/plants/hangingmoss1", -118, param0);
           incrementValue$16 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$16, (byte) 47, param1);

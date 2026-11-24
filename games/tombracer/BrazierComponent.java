@@ -34,10 +34,10 @@ final class BrazierComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static uca[] readLogoMaterials(BitPacketBuffer param0, byte param1) {
+    final static MeshMaterialColour[] readLogoMaterials(BitPacketBuffer param0, byte param1) {
         int var5 = 0;
         Object stackIn_3_0 = null;
-        uca[] stackIn_12_0 = null;
+        MeshMaterialColour[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -45,9 +45,9 @@ final class BrazierComponent extends PrefabComponent {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        uca[] var4 = null;
+        MeshMaterialColour[] var4 = null;
         int var6 = 0;
-        uca var6_ref_uca = null;
+        MeshMaterialColour var6_ref_uca = null;
         int var7 = 0;
         int var6Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -55,16 +55,16 @@ final class BrazierComponent extends PrefabComponent {
           var2_int = param0.readBits((byte) 44, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
-            return (uca[]) (stackIn_3_0);
+            return (MeshMaterialColour[]) (stackIn_3_0);
           }
           var3 = param0.readBits((byte) 44, 12);
-          var4 = new uca[var3];
+          var4 = new MeshMaterialColour[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!CircleMovementLocomotor.readBitFlag(5907, param0)) {
               var6 = param0.readBits((byte) 44, CurveShape.signedBitLength(false, var5 - 1));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_uca = new uca();
+              var6_ref_uca = new MeshMaterialColour();
               param0.readBits((byte) 44, 24);
               param0.readBits((byte) 44, 24);
               var6_ref_uca.field_e = param0.readBits((byte) 44, 24);

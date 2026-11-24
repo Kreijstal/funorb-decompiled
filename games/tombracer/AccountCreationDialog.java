@@ -108,7 +108,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
               var4 = param2.field_b;
               if (param2.field_f == 248) {
                 if (!param1) {
-                  jp.clearStatusCookie(false);
+                  LegacyOpenGlCubeTextureSource.clearStatusCookie(false);
                 }
                 this.field_ib = true;
                 var4 = RatingsScreen.field_v;

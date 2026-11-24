@@ -96,7 +96,7 @@ final class SequencePlayer {
           fha.loadCommonUiSprites(true, param1, param0, param4);
           CharacterChoiceFactory.initializeDialogStack(117);
           LegacyOpenGlTexture.registrationRequestState = fta.accountRequestIdle;
-          wt.usernameQueryState = fta.accountRequestIdle;
+          ProgressDialogLauncher.usernameQueryState = fta.accountRequestIdle;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -171,9 +171,9 @@ final class SequencePlayer {
         try {
           var3_int = -103 / ((param0 + 36) / 51);
           if (!this.sequence.field_i) {
-            param1.animate(-121, hba.field_c, -1, this.field_g, 0, (AnimationFrameSet) null, 0, this.sequence.field_h, 0);
+            param1.animate(-121, RoomResultSender.field_c, -1, this.field_g, 0, (AnimationFrameSet) null, 0, this.sequence.field_h, 0);
           } else {
-            param1.animate(-124, hba.field_c, this.field_c, this.field_g, this.field_i - this.field_d, hba.field_c, this.field_i, this.sequence.field_h, 0);
+            param1.animate(-124, RoomResultSender.field_c, this.field_c, this.field_g, this.field_i - this.field_d, RoomResultSender.field_c, this.field_i, this.sequence.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

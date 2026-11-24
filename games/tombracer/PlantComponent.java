@@ -247,15 +247,15 @@ final class PlantComponent extends PrefabComponent {
         IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
-        sda var5 = null;
+        QueuedPayloadRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = (sda) (FullscreenDialogWidthSupport.field_a.first(-80));
+          var5 = (QueuedPayloadRequest) (FullscreenDialogWidthSupport.field_a.first(-80));
           while (var5 != null) {
-            PitEdgePiece.a(param1, var5, 127);
-            var5 = (sda) (FullscreenDialogWidthSupport.field_a.next(111));
+            PitEdgePiece.writeQueuedPayloadRequest(param1, var5, 127);
+            var5 = (QueuedPayloadRequest) (FullscreenDialogWidthSupport.field_a.next(111));
           }
           var3 = 22 / ((param0 + 35) / 63);
           var2 = SpawnerBehaviour.field_n.first(-80);

@@ -27,7 +27,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           var3 = 160;
           SecondaryNodeDequeIterator.fillAlphaRect(192, 160, 3145728, 240, (byte) 22, var3, 200);
           WhiteLightShooterComponent.drawThickRectOutline(200, (byte) -85, var3, 5242880, 2, 160, 240);
-          MembersUpsellMenu.drawCentredTextWithShadow("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("Room Completed", var2, HardwareVertexNormalAccumulator.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
@@ -87,19 +87,19 @@ final class RoomCompletedScreen extends MatchOverlay {
         try {
           AllPlatformsMazeComponent.field_K[0] = PlatformBehaviour.field_p.nextInt();
           AllPlatformsMazeComponent.field_K[1] = PlatformBehaviour.field_p.nextInt();
-          jg.field_a.position = 0;
+          NoiseSliceGenerator.field_a.position = 0;
           AllPlatformsMazeComponent.field_K[3] = (int)PathMoverComponent.field_L;
           AllPlatformsMazeComponent.field_K[2] = (int)(PathMoverComponent.field_L >> 32);
-          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[0], (byte) 80);
-          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[1], (byte) 124);
-          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[2], (byte) -28);
+          NoiseSliceGenerator.field_a.writeInt(AllPlatformsMazeComponent.field_K[0], (byte) 80);
+          NoiseSliceGenerator.field_a.writeInt(AllPlatformsMazeComponent.field_K[1], (byte) 124);
+          NoiseSliceGenerator.field_a.writeInt(AllPlatformsMazeComponent.field_K[2], (byte) -28);
           if (param0 < 19) {
             return;
           }
-          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[3], (byte) 104);
-          DynamicGeometryBuffer.writeMachineId(jg.field_a, (byte) 77);
-          jg.field_a.writeShort(-1477662136, param2);
-          param3.write(jg.field_a, false);
+          NoiseSliceGenerator.field_a.writeInt(AllPlatformsMazeComponent.field_K[3], (byte) 104);
+          DynamicGeometryBuffer.writeMachineId(NoiseSliceGenerator.field_a, (byte) 77);
+          NoiseSliceGenerator.field_a.writeShort(-1477662136, param2);
+          param3.write(NoiseSliceGenerator.field_a, false);
           ql.field_k.position = 0;
           if (!param1) {
             ql.field_k.writeByte(16, 0);
@@ -109,7 +109,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           ql.field_k.position = ql.field_k.position + 2;
           var5_int = ql.field_k.position;
           ql.field_k.writeInt(ClientException.field_c, (byte) 125);
-          ql.field_k.writeLong(1736565456, du.field_h);
+          ql.field_k.writeLong(1736565456, ArchiveConnectionFailureHandler.field_h);
           var6 = 0;
           if (TextureFormat.field_a) {
             var6 = var6 | 1;
@@ -132,7 +132,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           if (null != NodeHashTable.field_d) {
             ql.field_k.writeVersionedString(NodeHashTable.field_d, (byte) 0);
           }
-          PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, jg.field_a);
+          PendingReply.writeEncryptedBlock(ClientRsaModulus.modulus, false, PooledObject.field_f, ql.field_k, NoiseSliceGenerator.field_a);
           ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);
           bl.flushPacketBuffer(-1, -1);
           return;

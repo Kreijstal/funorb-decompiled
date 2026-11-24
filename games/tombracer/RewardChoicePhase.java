@@ -156,14 +156,14 @@ final class RewardChoicePhase extends MatchPhase {
           var9 = (SwitchLinkList.getCanvasHeight(0) >> 1) - (HardwareModelIndexData.field_f.height() >> 1);
           HardwareModelIndexData.field_f.draw(var8, var9);
           if (var3 == 0) {
-            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, EllipseShapeDecoder.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, EllipseShapeDecoder.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, HardwareVertexNormalAccumulator.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
           } else {
-            SocketConnector.drawWrappedText(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
+            SocketConnector.drawWrappedText(AvailabilityQuery.field_c.toUpperCase(), 1, HardwareVertexNormalAccumulator.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
             var10 = (-this.rewardChoice.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
-            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, HardwareVertexNormalAccumulator.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
           }
           for (var10 = 0; this.field_q > var10; var10++) {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {
@@ -189,7 +189,7 @@ final class RewardChoicePhase extends MatchPhase {
           var10 = -200 + var7;
           SocketConnector.drawWrappedText(this.screen.getPlayerName(var17, false).toUpperCase(), 1, TooltipRenderer.field_p, S2CSimulationSignalPacket.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.matchState.hasFinishedCourse((byte) 90, var17)) {
-            var11 = cs.field_b;
+            var11 = AccountRequestUsernameSelector.field_b;
             var12 = 8947848;
           } else {
             var13 = this.matchState.players[var17].getChosenReward(115);
@@ -205,7 +205,7 @@ final class RewardChoicePhase extends MatchPhase {
                   var11 = RoundWinnerPhase.field_o;
                 }
               } else {
-                var11 = cga.field_l;
+                var11 = QueuedFixedRequest.field_l;
                 var12 = 8947848;
               }
             } else {
@@ -235,9 +235,9 @@ final class RewardChoicePhase extends MatchPhase {
             return false;
           }
           if (OpenGlUnderwaterEffect.field_q == 2 &&
-            null != mn.field_n) {
+            null != MatchingEmailAvailabilityValidator.field_n) {
             var3 = (CharSequence) ((Object) param0);
-            if (mn.field_n.equals(OpenGlTexture3D.normalizeDisplayName(1, var3))) {
+            if (MatchingEmailAvailabilityValidator.field_n.equals(OpenGlTexture3D.normalizeDisplayName(1, var3))) {
               return true;
             }
           }

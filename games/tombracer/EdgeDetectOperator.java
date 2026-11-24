@@ -53,9 +53,9 @@ final class EdgeDetectOperator extends TextureOperator {
         var17 = this.monochromeCache.getRow((byte) 80, param1);
         var3 = var17;
         if (this.monochromeCache.rowMissed) {
-          var24 = this.getInputMonochromeRow(0, -73, -1 + param1 & hba.textureHeightMask);
+          var24 = this.getInputMonochromeRow(0, -73, -1 + param1 & RoomResultSender.textureHeightMask);
           var5 = this.getInputMonochromeRow(0, -112, param1);
-          var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & hba.textureHeightMask);
+          var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & RoomResultSender.textureHeightMask);
           for (var7 = 0; var7 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var7++) {
             var8 = (-var24[var7] + var25[var7]) * this.field_n;
             var9 = this.field_n * (-var5[GpuDataType.textureWidthMask & var7 - 1] + var5[1 + var7 & GpuDataType.textureWidthMask]);

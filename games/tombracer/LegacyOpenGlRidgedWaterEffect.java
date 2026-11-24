@@ -13,11 +13,11 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         if ((param0 & 1) != 1) {
           if (this.field_c.field_g) {
             this.toolkit.bindTexture(true, this.field_c.field_h);
-            hba.field_a[3] = 0.0f;
-            hba.field_a[2] = 0.0f;
-            hba.field_a[0] = 0.0f;
-            hba.field_a[1] = 0.0f;
-            jaggl.OpenGL.glTexGenfv(8194, 9473, hba.field_a, 0);
+            RoomResultSender.field_a[3] = 0.0f;
+            RoomResultSender.field_a[2] = 0.0f;
+            RoomResultSender.field_a[0] = 0.0f;
+            RoomResultSender.field_a[1] = 0.0f;
+            jaggl.OpenGL.glTexGenfv(8194, 9473, RoomResultSender.field_a, 0);
             if (param2 <= 117) {
               this.isSupported(-10);
               return;
@@ -33,11 +33,11 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         }
         if (this.field_c.field_g) {
           this.toolkit.bindTexture(true, this.field_c.field_h);
-          hba.field_a[1] = 0.0f;
-          hba.field_a[0] = 0.0f;
-          hba.field_a[2] = 0.0f;
-          hba.field_a[3] = (float)(this.toolkit.field_Oc % 4000) / 4000.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, hba.field_a, 0);
+          RoomResultSender.field_a[1] = 0.0f;
+          RoomResultSender.field_a[0] = 0.0f;
+          RoomResultSender.field_a[2] = 0.0f;
+          RoomResultSender.field_a[3] = (float)(this.toolkit.field_Oc % 4000) / 4000.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, RoomResultSender.field_a, 0);
           if (param2 > 117) {
             return;
           }
@@ -147,13 +147,13 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         if (this.toolkit.field_Kb > 0) {
           var4 = -0.5f / (float)this.toolkit.field_Kb;
           this.toolkit.setActiveTextureUnit(1, true);
-          hba.field_a[2] = var4;
-          hba.field_a[0] = 0.0f;
-          hba.field_a[3] = 0.25f + var4 * this.toolkit.field_Uc;
-          hba.field_a[1] = 0.0f;
+          RoomResultSender.field_a[2] = var4;
+          RoomResultSender.field_a[0] = 0.0f;
+          RoomResultSender.field_a[3] = 0.25f + var4 * this.toolkit.field_Uc;
+          RoomResultSender.field_a[1] = 0.0f;
           jaggl.OpenGL.glPushMatrix();
           jaggl.OpenGL.glLoadIdentity();
-          jaggl.OpenGL.glTexGenfv(8192, 9474, hba.field_a, 0);
+          jaggl.OpenGL.glTexGenfv(8192, 9474, RoomResultSender.field_a, 0);
           jaggl.OpenGL.glPopMatrix();
           this.toolkit.setFogDepthAdjustment((float)this.toolkit.field_Kb, true, 0.5f);
           this.toolkit.bindTexture(true, this.field_d);

@@ -10,9 +10,9 @@ final class MessageDialogs {
         try {
           S2CProfileUpdatePacket.field_d = param2;
           TileOperator.field_p = true;
-          TextureOperator.field_l = new MessageDialog(ej.field_a, TextureFormat.field_c, param1, LoadProfileCommand.field_r, S2CProfileUpdatePacket.field_d);
+          TextureOperator.field_l = new MessageDialog(DisplayNameValidator.field_a, TextureFormat.field_c, param1, LoadProfileCommand.field_r, S2CProfileUpdatePacket.field_d);
           int var3_int = -94 / ((43 - param0) / 34);
-          ej.field_a.pushDialog(TextureOperator.field_l, 104);
+          DisplayNameValidator.field_a.pushDialog(TextureOperator.field_l, 104);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

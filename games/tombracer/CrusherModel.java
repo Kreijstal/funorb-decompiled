@@ -322,7 +322,7 @@ final class CrusherModel extends TrapModel {
             }
           }
         }
-        ota.field_c = 2147483647;
+        CubeTextureSourceBase.field_c = 2147483647;
         if (param2 != 47) {
           field_o = -102;
         }
@@ -371,9 +371,9 @@ final class CrusherModel extends TrapModel {
         this.field_m = 0;
         var3 = 1;
         if (this.field_v.isWaiting(76)) {
-          this.field_t = -2 + uca.cosmeticRandom.nextBounded(5, 0);
+          this.field_t = -2 + MeshMaterialColour.cosmeticRandom.nextBounded(5, 0);
           var3 = 0;
-          this.field_m = uca.cosmeticRandom.nextBounded(5, ~param0) - 2;
+          this.field_m = MeshMaterialColour.cosmeticRandom.nextBounded(5, ~param0) - 2;
         } else {
           if (this.field_v.isWindingUp(-98)) {
             var3 = 0;

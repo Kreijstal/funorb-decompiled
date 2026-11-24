@@ -151,7 +151,7 @@ final class ClipFrame {
             var6 = (ContactListEntry) (var4.next(126));
           }
           if (OpenGlSprite.field_j.field_yb.field_y != 0) {
-            bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, pe.field_k, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
+            bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, OpenGlRectangleTexture.field_k, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
             ResourceArchive.field_k = 2;
           }
           if (0 == OpenGlSprite.field_j.field_wb.field_y) {
@@ -169,7 +169,7 @@ final class ClipFrame {
 
     final static void loadLobbyInterface(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         try {
-          mp.buildChatPanelComponents(GzipInflater.field_d, tka.field_q, param0, GpuDataType.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, TextureCoordinateGeneration.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
+          MidiChannelVolumeTargets.buildChatPanelComponents(GzipInflater.field_d, IndexedSpriteButtonPainter.field_q, param0, GpuDataType.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, TextureCoordinateGeneration.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
           ColouriseOperator.field_m = BoulderComponent.loadSpritesByName(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;

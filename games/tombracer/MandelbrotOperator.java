@@ -35,7 +35,7 @@ final class MandelbrotOperator extends TextureOperator {
         if (this.monochromeCache.rowMissed) {
           for (var4 = 0; var4 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var4++) {
             var5 = (LobbyGameWidget.textureColumnCoords[var4] << 12) / this.field_q + this.field_n;
-            var6 = (sj.textureRowCoords[param1] << 12) / this.field_q + this.field_p;
+            var6 = (FractalNoiseSliceAccumulator.textureRowCoords[param1] << 12) / this.field_q + this.field_p;
             var7 = var5;
             var8 = var6;
             var9 = var5;

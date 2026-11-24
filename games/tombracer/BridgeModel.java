@@ -371,8 +371,8 @@ final class BridgeModel extends TrapModel {
         super.tick(param0);
         if (this.field_o != null &&
           this.field_o.isCollapsing(false)) {
-          this.field_n = uca.cosmeticRandom.nextBounded(262144, 0) - 131072;
-          this.field_s = -131072 + uca.cosmeticRandom.nextBounded(262144, 0);
+          this.field_n = MeshMaterialColour.cosmeticRandom.nextBounded(262144, 0) - 131072;
+          this.field_s = -131072 + MeshMaterialColour.cosmeticRandom.nextBounded(262144, 0);
         }
         Trap var2 = (Trap) (this.body);
         if (var2 == null) {

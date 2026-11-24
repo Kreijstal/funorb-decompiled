@@ -23,7 +23,7 @@ final class LineNoiseOperator extends TextureOperator {
           PacketBuffer var3 = (PacketBuffer) null;
           this.decodeParameter((byte) 61, (PacketBuffer) null, -62);
         }
-        tka.buildSinCosTables((byte) 115);
+        IndexedSpriteButtonPainter.buildSinCosTables((byte) 115);
     }
 
     public LineNoiseOperator() {
@@ -182,7 +182,7 @@ final class LineNoiseOperator extends TextureOperator {
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var21 + 1024 + (var23 - var9) * var20;
                 var25 = var23 & GpuDataType.textureWidthMask;
-                var26 = var16Lifetime2 & hba.textureHeightMask;
+                var26 = var16Lifetime2 & RoomResultSender.textureHeightMask;
                 if (var15 != 0) {
                   var31[var26][var25] = var24;
                 } else {

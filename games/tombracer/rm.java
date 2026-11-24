@@ -3,7 +3,7 @@
  */
 final class rm {
     static ModelCodec field_a;
-    static lla field_e;
+    static SocialTabbedPanelLayout field_e;
     static ToolkitSprite field_c;
     static ArchiveId field_d;
     static String field_b;

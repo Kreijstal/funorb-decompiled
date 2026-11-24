@@ -173,7 +173,7 @@ final class SoftReferenceCache {
             if ((long)param1 < fieldTemp$0) {
               var4 = new SoftCacheEntry(var3.getValue(29243), var3.field_m);
               this.field_c.put(var4, (byte) 124, var3.key);
-              ig.insertSecondaryAfter(31, var4, var3);
+              LobbyStateCleanup.insertSecondaryAfter(31, var4, var3);
               var3.unlink(126);
               var3.unlinkSecondary(-7975);
             }
@@ -204,10 +204,10 @@ final class SoftReferenceCache {
 
     final static ResourceArchive openArchive(int param0, int param1) {
         if (param1 == 1) {
-          return nt.openArchive(param0, 1, 5200, false, false, true);
+          return FullscreenFailureReason.openArchive(param0, 1, 5200, false, false, true);
         }
         SoftReferenceCache.releaseStatics(10);
-        return nt.openArchive(param0, 1, 5200, false, false, true);
+        return FullscreenFailureReason.openArchive(param0, 1, 5200, false, false, true);
     }
 
     public static void releaseStatics(int param0) {

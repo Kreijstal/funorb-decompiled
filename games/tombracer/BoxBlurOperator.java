@@ -48,7 +48,7 @@ final class BoxBlurOperator extends TextureOperator {
           var17 = var19;
           var8 = var17;
           for (var9 = param1 - this.field_m; var9 <= this.field_m + param1; var9++) {
-            var10_ref_int__ = this.getInputMonochromeRow(0, -98, hba.textureHeightMask & var9);
+            var10_ref_int__ = this.getInputMonochromeRow(0, -98, RoomResultSender.textureHeightMask & var9);
             var18 = new int[LegacyOpenGlTurbulentTextureEffect.textureWidth];
             var16 = var18;
             var11_ref_int__ = var16;
@@ -127,7 +127,7 @@ final class BoxBlurOperator extends TextureOperator {
           var30 = var38;
           var8 = var30;
           for (var9_int = param0 - this.field_m; this.field_m + param0 >= var9_int; var9_int++) {
-            var46 = this.getInputColourRow(hba.textureHeightMask & var9_int, 0, -1);
+            var46 = this.getInputColourRow(RoomResultSender.textureHeightMask & var9_int, 0, -1);
             var50 = new int[3][LegacyOpenGlTurbulentTextureEffect.textureWidth];
             var12 = 0;
             var13 = 0;

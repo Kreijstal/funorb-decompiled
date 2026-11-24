@@ -23,7 +23,7 @@ final class DrawOfferMenu extends MenuScreen {
             if (!SecondaryNodeDequeIterator.field_a.isSpectating((byte) 100)) {
               this.setItems(22174, ConsoleToken.field_l);
             } else {
-              this.setItems(22174, sja.field_h);
+              this.setItems(22174, SelectiveProceduralTextureProvider.field_h);
             }
           }
         } else {

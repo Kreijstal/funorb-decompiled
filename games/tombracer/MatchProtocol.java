@@ -46,7 +46,7 @@ final class MatchProtocol {
     final void sendCharacterChoice(int param0, int param1) {
         C2SChooseCharacterPacket var3 = new C2SChooseCharacterPacket();
         var3.setCharacter(param0, (byte) -119);
-        hw.sendGamePacket((byte) -111, 1, param1, var3);
+        GamePacketSender.sendGamePacket((byte) -111, 1, param1, var3);
     }
 
     final void reset(boolean param0) {
@@ -161,7 +161,7 @@ final class MatchProtocol {
     final void sendRewardChoice(int param0, int param1) {
         C2SChooseRewardPacket var3 = new C2SChooseRewardPacket();
         var3.setChoice(param1 + 44, param0);
-        hw.sendGamePacket((byte) -111, param1, 72, var3);
+        GamePacketSender.sendGamePacket((byte) -111, param1, 72, var3);
     }
 
     final void pumpActions(MatchScreen param0, int param1) {
@@ -496,7 +496,7 @@ final class MatchProtocol {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = sda.appendSessionParameters(param1, param0 ^ -65, var4).getFile();
+              var3 = QueuedPayloadRequest.appendSessionParameters(param1, param0 ^ -65, var4).getFile();
               JavaScriptBridge.callWithArguments(-104, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
               if (param0 != 64) {
                 field_i = (UiComponent) null;
@@ -562,7 +562,7 @@ final class MatchProtocol {
         field_j = null;
     }
 
-    final static vb playSoundEffect(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static PcmSamplePlayback playSoundEffect(int param0, byte param1, int param2, int param3, int param4, int param5) {
         if (null == CauldronComponent.field_J) {
           return null;
         }
@@ -642,7 +642,7 @@ final class MatchProtocol {
         var6.setRoom(8469, param3);
         var6.setRound(param1, (byte) -113);
         this.unacknowledged.addLast((byte) -104, var6);
-        hw.sendGamePacket((byte) -111, 0, 71, var6);
+        GamePacketSender.sendGamePacket((byte) -111, 0, 71, var6);
     }
 
     final void disablePlayerInputReplay(byte param0) {

@@ -24,7 +24,7 @@ final class IsaacCipher {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(sda.appendSessionParameters(param0, -1, var2), "_top");
+              param0.getAppletContext().showDocument(QueuedPayloadRequest.appendSessionParameters(param0, -1, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -271,7 +271,7 @@ final class IsaacCipher {
             SocketConnector.field_c = param0;
             RoomComponent.field_g = param11;
             nn.field_b = param3;
-            du.field_h = param13;
+            ArchiveConnectionFailureHandler.field_h = param13;
             WhirlpoolDigest.field_g = param12;
             ClientException.field_c = param1;
             RaceStandings.field_a = param2;

@@ -155,7 +155,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_Bb.field_ib = 11184810;
             this.field_Bb.field_z = 1;
             this.field_wb.addChild(-122, this.field_Bb);
-            this.field_tb = new UiComponent(0L, param8, nla.field_b);
+            this.field_tb = new UiComponent(0L, param8, FixedPointSegmentIntersection.field_b);
             this.field_tb.field_ib = 11184810;
             this.field_tb.field_z = 1;
             this.field_wb.addChild(-122, this.field_tb);
@@ -164,7 +164,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_wb.addChild(-125, this.field_xb);
             this.field_xb.field_sb = "|";
             if (!(PrimMazeGenerator.field_e < 5) ||
-              !(ld.field_e < 2)) {
+              !(GpuCubeTextureSource.field_e < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
@@ -175,7 +175,7 @@ final class ReportAbuseDialog extends UiComponent {
                   stackIn_7_0Lifetime1 = this;
                   stackIn_7_1Lifetime1 = null;
                   stackIn_7_2Lifetime1 = null;
-                  if (ld.field_e < 2) {
+                  if (GpuCubeTextureSource.field_e < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
@@ -201,8 +201,8 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_wb.addChild(-127, var28[2]);
             this.field_yb = new UiComponent[TouchSwitchBehaviour.field_n];
             for (var16 = 0; TouchSwitchBehaviour.field_n > var16; var16++) {
-              if (null != aca.field_h[var16]) {
-                this.field_yb[var16] = new UiComponent(0L, param10, aca.field_h[var16]);
+              if (null != QueuedByteShortRequest.field_h[var16]) {
+                this.field_yb[var16] = new UiComponent(0L, param10, QueuedByteShortRequest.field_h[var16]);
                 this.field_yb[var16].field_z = 0;
                 stackIn_14_0 = this.field_yb[var16];
                 stackIn_15_1 = (param11 != null);

@@ -50,7 +50,7 @@ final class fa {
           }
           if (OpenGlUnderwaterEffect.field_q == 2 &&
             !DisplaySettingsDialog.isQuickChatTargetReachable(24316)) {
-            if (QueuedPlayerEvent.isFriend(false, mn.field_n)) {
+            if (QueuedPlayerEvent.isFriend(false, MatchingEmailAvailabilityValidator.field_n)) {
               var2 = LegacyOpenGlFlowingWaterEffect.formatText(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
                 var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, SmootherStepTable.field_a, new String[]{wp.field_a});
@@ -75,14 +75,14 @@ final class fa {
           }
           if (decompiledFrameRemainder0) {
             var3 = MenuEntry.field_k;
-            var3 = ima.prefixRightsIcon(var3, (byte) 8);
+            var3 = ModelTextureProjectionData.prefixRightsIcon(var3, (byte) 8);
             var4 = "";
             var5 = "|";
             var6 = OpenGlUnderwaterEffect.field_q;
             var7 = 0;
             if (var6 == 2) {
               var4 = LegacyOpenGlFlowingWaterEffect.formatText(88, TrackMountComponent.field_G, new String[]{wp.field_a});
-              var8 = LegacyOpenGlFlowingWaterEffect.formatText(111, li.field_a, new String[]{var3});
+              var8 = LegacyOpenGlFlowingWaterEffect.formatText(111, RoomMusicController.field_a, new String[]{var3});
               var7 = ComponentMount.field_b.field_G + (CharacterChoiceFactory.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
                 var7 = 0;

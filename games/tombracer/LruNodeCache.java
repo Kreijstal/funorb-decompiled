@@ -33,16 +33,16 @@ final class LruNodeCache {
         return var4;
     }
 
-    final static vb playSampleStream(PcmSampleStream param0, int param1) {
-        vb var2 = null;
+    final static PcmSamplePlayback playSampleStream(PcmSampleStream param0, int param1) {
+        PcmSamplePlayback var2 = null;
         RuntimeException var2_ref = null;
-        vb stackIn_3_0 = null;
+        PcmSamplePlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new vb(param0, param0);
+          var2 = new PcmSamplePlayback(param0, param0);
           DivisionMazeGenerator.field_e.addLast((byte) -68, var2);
           if (param1 != 1) {
             LruNodeCache.releaseStatics((byte) -106);

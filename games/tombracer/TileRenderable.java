@@ -6,7 +6,7 @@ abstract class TileRenderable implements Renderable {
     static String field_f;
     static int field_a;
     TileGridCell cell;
-    static nt field_b;
+    static FullscreenFailureReason field_b;
     static UiComponent field_c;
 
     final void setCell(int param0, TileGridCell param1) {
@@ -44,6 +44,6 @@ abstract class TileRenderable implements Renderable {
 
     static {
         field_f = "Show all lobby chat";
-        field_b = new nt();
+        field_b = new FullscreenFailureReason();
     }
 }

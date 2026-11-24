@@ -1,0 +1,54 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountNameResolver extends JavaKeyCodeMapPatches {
+    static String field_h;
+    static int[] field_e;
+    static int field_g;
+    static UiComponent field_f;
+
+    final static String getAccountNameOrFallback(byte param0) {
+        String var1 = "";
+        if (param0 < -46) {
+          if (null != MessageDialogs.field_b) {
+            var1 = MessageDialogs.field_b.getUsername(39);
+          }
+          if (var1.length() == 0) {
+            var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);
+          }
+          if (var1.length() == 0) {
+            var1 = RenderScene.field_a;
+          }
+          return var1;
+        }
+        AccountNameResolver.getAccountNameOrFallback((byte) -83);
+        if (null != MessageDialogs.field_b) {
+          var1 = MessageDialogs.field_b.getUsername(39);
+        }
+        if (var1.length() == 0) {
+          var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);
+        }
+        if (var1.length() == 0) {
+          var1 = RenderScene.field_a;
+        }
+        return var1;
+    }
+
+    public static void releaseStatics(int param0) {
+        field_f = null;
+        field_h = null;
+        field_e = null;
+        int var1 = -88 % ((70 - param0) / 47);
+    }
+
+    final static boolean requiresNormalPointerCopy(int param0, int param1, int param2) {
+        if (param2 <= -42) {
+          return (((param1 & 8192) != 0 ? true : false) | SequencePlayer.hasMask24OrAll544(param0, -57, param1) | MovementHintPanel.hasFlag65536(param0, param1, 8000)) & ScoreSubmission.requiresNormalPointer(param0, param1, (byte) 17);
+        }
+        return true;
+    }
+
+    static {
+        field_h = "Create a free account to start using this feature";
+    }
+}

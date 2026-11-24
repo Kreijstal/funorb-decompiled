@@ -61,23 +61,23 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         if (param0 <= -4) {
           this.owner.setActiveTextureUnit(1, false);
           this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-          this.owner.setColorCombineSource(ej.field_c, 0, -55);
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -55);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           this.owner.setTextureCoordinateIndex(1, (byte) 58);
           this.owner.bindTexture(true, (GpuTexture) null);
           this.owner.setActiveTextureUnit(0, false);
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           return;
         }
         field_f = (int[]) null;
         this.owner.setActiveTextureUnit(1, false);
         this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-        this.owner.setColorCombineSource(ej.field_c, 0, -55);
-        this.owner.setAlphaCombineSource(0, false, ej.field_c);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -55);
+        this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
         this.owner.setTextureCoordinateIndex(1, (byte) 58);
         this.owner.bindTexture(true, (GpuTexture) null);
         this.owner.setActiveTextureUnit(0, false);
-        this.owner.setAlphaCombineSource(0, false, ej.field_c);
+        this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
     }
 
     final void onTextureMatrixChanged(boolean param0) {
@@ -135,7 +135,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     final void enable(int param0, boolean param1) {
         this.owner.setActiveTextureUnit(1, false);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
-        this.owner.setColorCombineSource(ej.field_c, 0, -6219, true, false);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -6219, true, false);
         this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
         this.owner.setTextureCoordinateIndex(0, (byte) 77);
         this.owner.setActiveTextureUnit(0, false);

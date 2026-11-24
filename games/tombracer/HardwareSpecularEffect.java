@@ -11,7 +11,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
     final void disable(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (!this.field_g) {
-          this.owner.setAlphaCombineSource(0, false, ej.field_c);
+          this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
         } else {
           this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, (GpuTexture) null);
@@ -19,17 +19,17 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.owner.resetTextureTransform((byte) 127);
           if (!this.field_d) {
             this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-            this.owner.setColorCombineSource(ej.field_c, 0, -90);
+            this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -90);
             this.owner.setActiveTextureUnit(2, false);
             this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-            this.owner.setColorCombineSource(ej.field_c, 0, -108);
+            this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -108);
             this.owner.setColorCombineSource(PlayerContextMenu.field_j, 1, -15);
-            this.owner.setAlphaCombineSource(0, false, ej.field_c);
+            this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
             this.owner.bindTexture(true, (GpuTexture) null);
           } else {
             this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
-            this.owner.setColorCombineSource(ej.field_c, 0, -94);
-            this.owner.setAlphaCombineSource(0, false, ej.field_c);
+            this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -94);
+            this.owner.setAlphaCombineSource(0, false, DisplayNameValidator.field_c);
           }
           this.owner.setActiveTextureUnit(0, false);
           this.field_g = false;
@@ -184,7 +184,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
             this.owner.bindTexture(true, this.owner.field_Jb);
           } else {
             this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
-            this.owner.setColorCombineSource(ej.field_c, 0, -6219, true, false);
+            this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -6219, true, false);
             this.owner.setAlphaCombineSource(0, false, OpenGlDisplayLists.field_c);
           }
           this.owner.setActiveTextureUnit(0, false);

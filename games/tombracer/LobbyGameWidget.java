@@ -206,7 +206,7 @@ final class LobbyGameWidget extends UiComponent {
           field_Db = (SpriteData) null;
         }
         int var3 = 0;
-        RoomDefinition[] var4 = cm.field_a[param0].field_c;
+        RoomDefinition[] var4 = CourseStartPacket.field_a[param0].field_c;
         for (var5 = 0; var5 < var4.length; var5++) {
           var6 = var4[var5];
           incrementValue$0 = var3;

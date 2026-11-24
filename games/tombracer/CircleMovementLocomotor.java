@@ -211,13 +211,13 @@ final class CircleMovementLocomotor extends Locomotor {
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           um.field_m = param6;
-          hpa.field_g = param5;
+          SoftwareScanlineMask.field_g = param5;
           SimpleConditionBehaviour.field_r = -1L;
           ColourRowCache.field_b = param6.length;
           C2SChooseRewardPacket.field_a = null;
           WaveformOperator.field_n = null;
           PlayerViewport.field_o = false;
-          CourseLayoutFactory.field_b = new byte[(7 + hpa.field_g) / 8];
+          CourseLayoutFactory.field_b = new byte[(7 + SoftwareScanlineMask.field_g) / 8];
           if (param2 != -51) {
             return;
           }

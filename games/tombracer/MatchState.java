@@ -326,7 +326,7 @@ final class MatchState implements BitDecodableMarker {
     }
 
     final static void d(int param0, int param1) {
-        if (msa.field_a == param1) {
+        if (TypeableCharacterPredicate.field_a == param1) {
           if (null == SecondaryNodeDequeIterator.field_a) {
             return;
           }
@@ -383,7 +383,7 @@ final class MatchState implements BitDecodableMarker {
         if (param0 != 1) {
           field_w = 88;
         }
-        return du.field_e;
+        return ArchiveConnectionFailureHandler.field_e;
     }
 
     final void beginNextRound(byte param0) {
@@ -526,7 +526,7 @@ final class MatchState implements BitDecodableMarker {
         if (param0 != 0) {
           this.field_a = 20;
         }
-        return dna.lowByte(this.simulations[param1].getRoomStateHash(true), 255);
+        return SkeletonComponentBase.lowByte(this.simulations[param1].getRoomStateHash(true), 255);
     }
 
     final PlayerSimulation getSimulation(int param0, int param1) {

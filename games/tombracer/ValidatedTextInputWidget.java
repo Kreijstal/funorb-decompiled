@@ -40,12 +40,12 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
     }
 
     final static void pumpAudio(int param0) {
-        vb var1 = null;
+        PcmSamplePlayback var1 = null;
         int var2 = 0;
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        vb var1Lifetime1;
+        PcmSamplePlayback var1Lifetime1;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           WheeledMountComponent.field_P.serviceOutput();
@@ -56,20 +56,20 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           S2CProfileUpdatePacket.field_b = S2CProfileUpdatePacket.field_b - 1;
           if (0 == S2CProfileUpdatePacket.field_b) {
             S2CProfileUpdatePacket.field_b = 200;
-            var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
+            var1 = (PcmSamplePlayback) (DivisionMazeGenerator.field_e.first(-80));
             while (var1 != null) {
               if (!var1.field_h.isLinked((byte) -101)) {
                 var1.unlink(21);
               }
-              var1 = (vb) (DivisionMazeGenerator.field_e.next(110));
+              var1 = (PcmSamplePlayback) (DivisionMazeGenerator.field_e.next(110));
             }
             if (Obstacle.field_f != null) {
-              var1Lifetime1 = (vb) (Obstacle.field_f.first(param0 ^ 16378));
+              var1Lifetime1 = (PcmSamplePlayback) (Obstacle.field_f.first(param0 ^ 16378));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_h.isLinked((byte) -91)) {
                   var1Lifetime1.unlink(param0 + 16389);
                 }
-                var1Lifetime1 = (vb) (Obstacle.field_f.next(118));
+                var1Lifetime1 = (PcmSamplePlayback) (Obstacle.field_f.next(118));
               }
             }
           }

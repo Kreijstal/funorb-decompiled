@@ -22,8 +22,8 @@ final class VariantMask {
 
     final static GameClock createClock(int param0) {
         if (param0 != 0) {
-          vb var2 = (vb) null;
-          VariantMask.removeSoundStream((vb) null, (byte) 31);
+          PcmSamplePlayback var2 = (PcmSamplePlayback) null;
+          VariantMask.removeSoundStream((PcmSamplePlayback) null, (byte) 31);
           return (GameClock) ((Object) new NanoTickClock());
         }
         return (GameClock) ((Object) new NanoTickClock());
@@ -55,7 +55,7 @@ final class VariantMask {
         }
     }
 
-    final static void removeSoundStream(vb param0, byte param1) {
+    final static void removeSoundStream(PcmSamplePlayback param0, byte param1) {
         try {
           PitModel.field_n.removeSubstream(param0.field_f);
           if (param1 != -42) {

@@ -1,0 +1,73 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RoomMusicController {
+    static String field_a;
+
+    final static void updateRoomMusic(int param0, byte param1) {
+        if (param0 != TypeableCharacterPredicate.field_a) {
+          return;
+        }
+        if (null == SecondaryNodeDequeIterator.field_a) {
+          return;
+        }
+        if (MenuEntry.field_j == null) {
+          return;
+        }
+        S2CPlayerProfilePacket.fadeMusicChannelOut(77, 1);
+        if (param1 <= 105) {
+          return;
+        }
+        S2CPlayerProfilePacket.fadeMusicChannelOut(91, 2);
+        if (DoorwayComponent.field_I == 0) {
+          MatchProtocol.fadeMusicChannelIn(2, 0);
+          DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
+          ProxySocketConnector.a(param0, 5);
+          MatchProtocol.fadeMusicChannelIn(MeshMaterialColour.cosmeticRandom.nextBounded(6, 0) + 3, 0);
+          return;
+        }
+        MatchProtocol.fadeMusicChannelIn(1, 0);
+        DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
+        ProxySocketConnector.a(param0, 5);
+        MatchProtocol.fadeMusicChannelIn(MeshMaterialColour.cosmeticRandom.nextBounded(6, 0) + 3, 0);
+    }
+
+    final static QuickChatParamType forId(int param0, byte param1) {
+        QuickChatParamType[] var2;
+        int var3;
+        int var4;
+        QuickChatParamType[] var5;
+        int var3Lifetime1;
+        var4 = TombRacer.field_G ? 1 : 0;
+        var5 = ColourKeyOperator.values(126);
+        var2 = var5;
+        if (param1 > 125) {
+          for (var3 = 0; var5.length > var3; var3++) {
+            if (var5[var3].field_a == param0) {
+              return var5[var3];
+            }
+          }
+          return null;
+        }
+        RoomMusicController.updateRoomMusic(-46, (byte) -102);
+        for (var3Lifetime1 = 0; var5.length > var3Lifetime1; var3Lifetime1++) {
+          if (var5[var3Lifetime1].field_a == param0) {
+            return var5[var3Lifetime1];
+          }
+        }
+        return null;
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 3) {
+          field_a = (String) null;
+          field_a = null;
+          return;
+        }
+        field_a = null;
+    }
+
+    static {
+        field_a = "From <%0>: ";
+    }
+}

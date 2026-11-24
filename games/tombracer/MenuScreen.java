@@ -102,13 +102,13 @@ abstract class MenuScreen extends GameScreen {
               var6 = 0;
               if (this.field_k.isHomePressed(0) &&
                 MusicVolumeControl.getMusicVolume(-22636) > 0) {
-                qfa.applyMusicVolume(0, 20815);
+                AccountRegistrationLauncher.applyMusicVolume(0, 20815);
                 var6 = 1;
               }
               if (this.field_k.isEndPressed(75) &&
                 MusicVolumeControl.getMusicVolume(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 71)) {
                 var6 = 1;
-                qfa.applyMusicVolume(CircleMovementLocomotor.getMaxVolume((byte) 126), 20815);
+                AccountRegistrationLauncher.applyMusicVolume(CircleMovementLocomotor.getMaxVolume((byte) 126), 20815);
               }
               if (this.field_k.isPointerHeld((byte) -128)) {
                 var8 = -24 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1);
@@ -126,7 +126,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 stackIn_44_0 = (~MusicVolumeControl.getMusicVolume(-22636) == ~var10) ? 0 : 1;
                 var6 = stackIn_44_0;
-                qfa.applyMusicVolume(var10, 20815);
+                AccountRegistrationLauncher.applyMusicVolume(var10, 20815);
               }
               if (this.field_k.isLeftPressed(96) &&
                 0 < MusicVolumeControl.getMusicVolume(-22636)) {
@@ -606,7 +606,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var7 == 32 &&
                 var8 == 0) {
-                mpa.field_X = true;
+                AccountContentTransitionDialog.field_X = true;
                 ConstrainToRectangleLocomotor.showMenuScreen(param1, 0, (byte) -107);
                 return true;
               }

@@ -141,7 +141,7 @@ abstract class ResizingDialog extends FadingDialog {
           return;
         }
         ApproachPlayerLocomotor.field_s.drawTransparent(-90 + param2 + this.field_m, 10 + param0);
-        FollowCamera.drawHorizontalThreeSlice(35 + param0, uca.field_f, -59, param2 + 5, -10 + this.field_m);
+        FollowCamera.drawHorizontalThreeSlice(35 + param0, MeshMaterialColour.field_f, -59, param2 + 5, -10 + this.field_m);
         FollowCamera.drawHorizontalThreeSlice(param0 + (this.field_p - 22), DropdownButtonPainter.field_f, param1 - 29, param2, this.field_m);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

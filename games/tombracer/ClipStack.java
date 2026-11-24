@@ -60,10 +60,10 @@ final class ClipStack {
             stackIn_16_2 = null;
             stackIn_16_3 = GameScreen.field_e.getCodeBase();
             stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(RotaterMountComponent.field_L).append("&u=");
-            if (toa.field_f != null) {
+            if (QueuedKeyedRequest.field_f != null) {
               stackIn_17_1 = null;
               stackIn_17_2 = null;
-              stackIn_17_5 = toa.field_f;
+              stackIn_17_5 = QueuedKeyedRequest.field_f;
             } else {
               stackIn_17_1 = null;
               stackIn_17_2 = null;

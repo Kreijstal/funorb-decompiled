@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapPart {
+abstract class Locomotor extends IntrusiveNode implements Switchable, GameStateMarker, TrapPart {
     private Room room;
     boolean enabled;
     private SwitchableId field_g;

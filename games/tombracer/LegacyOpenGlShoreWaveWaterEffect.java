@@ -19,7 +19,7 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var2_int = 0;
-          var3 = cm.field_a[param0].field_c;
+          var3 = CourseStartPacket.field_a[param0].field_c;
           for (var4 = param1; var4 < var3.length; var4++) {
             var5 = var3[var4];
             var2_int = var2_int + var5.field_h;

@@ -89,7 +89,7 @@ final class SwitchableId {
           RuntimeException var2_ref2 = null;
           var8 = TombRacer.field_G ? 1 : 0;
           try {
-            if (hpa.field_f) {
+            if (SoftwareScanlineMask.field_f) {
               return true;
             }
             try {

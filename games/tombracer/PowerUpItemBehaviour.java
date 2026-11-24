@@ -70,10 +70,10 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         RuntimeException decompiledCaughtException = null;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          ej.field_a.processPointerFrame(SocketArchiveNetworkClient.field_u, true, oi.field_b, -116);
-          ej.field_a.pruneFadedDialogs((byte) -127);
+          DisplayNameValidator.field_a.processPointerFrame(SocketArchiveNetworkClient.field_u, true, QuickChatMessageQueue.field_b, -116);
+          DisplayNameValidator.field_a.pruneFadedDialogs((byte) -127);
           while (NanoTickClock.pollKeyEvent(true)) {
-            ej.field_a.dispatchKeyInput((byte) 116, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
+            DisplayNameValidator.field_a.dispatchKeyInput((byte) 116, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
           }
           if (SoftwareRenderTarget.field_a != -1) {
             var1_int = SoftwareRenderTarget.field_a;
@@ -85,7 +85,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (PlayerResultRow.accountRequestPending == wt.usernameQueryState) {
+          if (PlayerResultRow.accountRequestPending == ProgressDialogLauncher.usernameQueryState) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }

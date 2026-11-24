@@ -85,7 +85,7 @@ final class RandomAccessFileHandle {
         if (param0 < 37) {
           return -3;
         }
-        return sja.field_i.length;
+        return SelectiveProceduralTextureProvider.field_i.length;
     }
 
     public static void releaseStatics(byte param0) {

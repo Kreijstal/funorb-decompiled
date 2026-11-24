@@ -226,9 +226,9 @@ final class HiscoresScreen extends DropInMenuScreen {
           ((ToolkitSprite) (var5Lifetime2)).drawScaled(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
         }
         var4Lifetime1 = 120 + param1 + 50;
-        eda.field_f.drawCentred(-1, -1, RewardChoicePhase.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
-        eda.field_f.drawLeft(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), RewardChoicePhase.field_t[1], -14671840, -1);
-        eda.field_f.drawRight(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, RewardChoicePhase.field_t[2]);
+        HardwareVertexNormalAccumulator.field_f.drawCentred(-1, -1, RewardChoicePhase.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
+        HardwareVertexNormalAccumulator.field_f.drawLeft(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), RewardChoicePhase.field_t[1], -14671840, -1);
+        HardwareVertexNormalAccumulator.field_f.drawRight(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, RewardChoicePhase.field_t[2]);
         var5Lifetime1 = null;
         var6Lifetime1 = this.field_E;
         if (var6Lifetime1 == 0) {
@@ -243,7 +243,7 @@ final class HiscoresScreen extends DropInMenuScreen {
           }
         }
         if (var5Lifetime1 != null) {
-          MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5Lifetime1)).toUpperCase(), 65793, HardwareVertexNormalAccumulator.field_f, -1, 240 + param1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
         } else {
           discarded$0 = this.drawTable(this.field_x, (byte) -91, 50 + param1);
         }

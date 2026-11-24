@@ -19,7 +19,7 @@ final class qt {
         if (C2SChooseCharacterPacket.field_d < param4) {
           LegacyOpenGlReflectionEffect.field_g = param4;
         }
-        if (!(ota.field_c <= param4)) {
+        if (!(CubeTextureSourceBase.field_c <= param4)) {
           kc.field_a = param4;
         }
         DamageableBehaviour.field_o[ContextMenu.field_Eb] = param0;
@@ -398,7 +398,7 @@ final class qt {
             CourseLayoutFactory.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) 48);
           }
           CoinBagItemComponent.field_H = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-          mua.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+          EmptyRoomFactory.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           for (var3Lifetime3 = 0; var3Lifetime3 < TileGrid.field_e.length; var3Lifetime3++) {
             TileGrid.field_e[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 108);
           }
@@ -430,8 +430,8 @@ final class qt {
           if (!param1) {
             field_a = (BitmapFont) null;
           }
-          var8 = new AccountCreationDialog(ej.field_a, param5);
-          ej.field_a.pushDialog(var8, 88);
+          var8 = new AccountCreationDialog(DisplayNameValidator.field_a, param5);
+          DisplayNameValidator.field_a.pushDialog(var8, 88);
           if (rg.hasTuhstatbutCookie(7)) {
             var8.h(param1);
             return true;

@@ -91,13 +91,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
     }
 
     final static void j(byte param0) {
-        if (ej.field_a != null) {
-          ej.field_a.pruneHiddenDialogs(-1);
+        if (DisplayNameValidator.field_a != null) {
+          DisplayNameValidator.field_a.pruneHiddenDialogs(-1);
           if (null != AnimationFrameSet.field_p) {
             AnimationFrameSet.field_p.f(12936);
           }
           if (param0 < -97) {
-            jr.resetHoverTooltip((byte) -106);
+            SoftwareCheckboxPainter.resetHoverTooltip((byte) -106);
             return;
           }
           return;
@@ -106,7 +106,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           AnimationFrameSet.field_p.f(12936);
         }
         if (param0 < -97) {
-          jr.resetHoverTooltip((byte) -106);
+          SoftwareCheckboxPainter.resetHoverTooltip((byte) -106);
           return;
         }
     }

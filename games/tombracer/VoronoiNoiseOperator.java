@@ -201,7 +201,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         }
         var3 = this.monochromeCache.getRow((byte) -109, param1);
         if (this.monochromeCache.rowMissed) {
-          var4 = sj.textureRowCoords[param1] * this.field_m + 2048;
+          var4 = FractalNoiseSliceAccumulator.textureRowCoords[param1] * this.field_m + 2048;
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; var14 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var14++) {

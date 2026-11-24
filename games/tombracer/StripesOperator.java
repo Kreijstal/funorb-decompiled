@@ -43,7 +43,7 @@ final class StripesOperator extends TextureOperator {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.monochromeCache.rowMissed) {
-          var4 = sj.textureRowCoords[param1];
+          var4 = FractalNoiseSliceAccumulator.textureRowCoords[param1];
           if (this.field_q == 0) {
             var13Lifetime1 = var12;
             var5 = 0;

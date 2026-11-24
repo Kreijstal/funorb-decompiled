@@ -187,7 +187,7 @@ final class OpenGlTexture3D extends OpenGlTexture implements Texture3D {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var1 = "";
-        var2 = dra.musicTrackNames;
+        var2 = ReflectionCheckResponseSender.musicTrackNames;
         if (param0) {
           return (String) null;
         }

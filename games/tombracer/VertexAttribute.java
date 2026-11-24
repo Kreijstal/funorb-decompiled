@@ -16,7 +16,7 @@ final class VertexAttribute {
     static VertexAttribute field_k;
     static VertexAttribute field_j;
     static int field_f;
-    static nt field_o;
+    static FullscreenFailureReason field_o;
     static boolean field_r;
     static String field_q;
     static float field_h;
@@ -48,7 +48,7 @@ final class VertexAttribute {
           OpenGlVertexLayout.field_e = new UiComponent(0L, (UiComponent) null);
           NameEntryPopup.field_yb = new UiComponent(0L, Corpse.field_i);
           NameEntryPopup.field_yb.field_z = 1;
-          MatchScreen.field_F = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
+          MatchScreen.field_F = new UiComponent(0L, AccountNameResolver.field_f, CanvasImageBuffer.field_i);
           Puddle.field_v = new UiComponent(0L, SecondaryNodeDeque.field_b, C2SChooseCharacterPacket.field_c);
           SoftwareDepthBuffer.field_c = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           OpenGlVertexLayout.field_e.addChild(-122, NameEntryPopup.field_yb);
@@ -174,7 +174,7 @@ final class VertexAttribute {
         field_k = new VertexAttribute(5, 3, GpuDataType.field_h);
         field_j = new VertexAttribute(6, 4, GpuDataType.field_h);
         field_f = CauldronComponent.bitLength((byte) 93, 16);
-        field_o = new nt();
+        field_o = new FullscreenFailureReason();
         field_d = new Hashtable();
         field_a = "ESC - cancel private message";
     }

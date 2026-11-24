@@ -122,13 +122,13 @@ final class SneakHintCharacter {
     final void draw(byte param0, int param1, int param2) {
         if (param0 > 11) {
           TextureTransformMode.a(-10985);
-          hp.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
+          ModelPreviewRenderer.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
           RemovedFromGameMenu.resetDepthRange((byte) -6);
           return;
         }
         this.field_b = false;
         TextureTransformMode.a(-10985);
-        hp.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
+        ModelPreviewRenderer.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
         RemovedFromGameMenu.resetDepthRange((byte) -6);
     }
 

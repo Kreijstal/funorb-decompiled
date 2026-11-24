@@ -48,7 +48,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
             var12 = this.field_g.players[var10].getTotal(false);
             var13 = this.field_g.players[var10].getRoundScore(false);
             var14 = var13 + var12;
-            MembersUpsellMenu.drawCentredTextWithShadow(rka.toOrdinal(1 + var9, 114) + "  " + this.field_i.getPlayerName(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, TooltipRenderer.field_p, -1, var8 + var9 * var5, this.field_m, 0);
+            MembersUpsellMenu.drawCentredTextWithShadow(RasterSprite.toOrdinal(1 + var9, 114) + "  " + this.field_i.getPlayerName(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, TooltipRenderer.field_p, -1, var8 + var9 * var5, this.field_m, 0);
           }
         }
     }

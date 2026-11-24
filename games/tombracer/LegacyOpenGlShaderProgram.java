@@ -89,7 +89,7 @@ final class LegacyOpenGlShaderProgram {
           return;
         }
         try {
-          nt.reloadPage(param1, -1978);
+          FullscreenFailureReason.reloadPage(param1, -1978);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cua.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

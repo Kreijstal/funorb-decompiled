@@ -1,0 +1,34 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class HardwareFaceNormal {
+    static String field_e;
+    static UiComponent field_b;
+    static ModelData[] field_f;
+    static String field_a;
+    int field_c;
+    static int[] field_g;
+    int field_d;
+    int field_h;
+    private static String field_z;
+
+    public static void releaseStatics(boolean param0) {
+        field_e = null;
+        field_g = null;
+        field_b = null;
+        if (!param0) {
+          field_f = null;
+          field_a = null;
+          return;
+        }
+        HardwareFaceNormal.releaseStatics(true);
+        field_f = null;
+        field_a = null;
+    }
+
+    static {
+        field_z = "gta.A(";
+        field_e = "Names cannot start or end with space or underscore";
+        field_a = "Character Select";
+    }
+}

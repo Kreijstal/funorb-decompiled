@@ -3,7 +3,7 @@
  */
 final class ClientRsaModulus {
     static java.math.BigInteger modulus;
-    static lla field_b;
+    static SocialTabbedPanelLayout field_b;
     private static String field_z;
 
     public static void releaseStatics(boolean param0) {

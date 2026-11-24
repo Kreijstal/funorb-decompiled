@@ -39,7 +39,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void disable(int param0) {
-        this.owner.setColorCombineSource(ej.field_c, 0, -123);
+        this.owner.setColorCombineSource(DisplayNameValidator.field_c, 0, -123);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         if (param0 <= -4) {

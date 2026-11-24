@@ -6,7 +6,7 @@ interface GpuTexture2D extends GpuTexture {
 
     public abstract int getWidth(int param0);
 
-    public abstract boolean a(int param0);
+    public abstract boolean usesNormalizedCoordinates(int param0);
 
     public abstract float textureV(float param0, byte param1);
 

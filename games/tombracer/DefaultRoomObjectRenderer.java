@@ -753,7 +753,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             var12 = 8 + era.field_g.getWrappedWidth(var10, var11);
             var13 = 8 + era.field_g.measureWrappedHeight(var10, var11, 0);
             SecondaryNodeDequeIterator.fillAlphaRect(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
-            dh.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
+            DisplayModeInfo.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -157,7 +157,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         this.field_z.field_h = (WidgetListener) (this);
         this.field_z.field_q = InputFieldPainter.field_n;
         this.field_x.field_h = (WidgetListener) (this);
-        this.field_x.field_q = tg.field_a;
+        this.field_x.field_q = HslToHsvConverter.field_a;
         this.addChild(this.field_w, -1);
         this.addChild(this.field_z, -1);
         this.addChild(this.field_x, -1);
@@ -187,7 +187,7 @@ final class tha extends WidgetContainer implements ButtonListener {
             return;
           }
           if (this.field_z == param2) {
-            qfa.openAccountRegistration((byte) 6);
+            AccountRegistrationLauncher.openAccountRegistration((byte) 6);
             return;
           }
           if (this.field_x != param2) {

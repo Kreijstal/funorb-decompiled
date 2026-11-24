@@ -24,7 +24,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     abstract int getDay(byte param0);
 
     final static RoomDefinition getCourseRoom(int param0, int param1, int param2) {
-        CourseDefinition var5 = cm.field_a[param0];
+        CourseDefinition var5 = CourseStartPacket.field_a[param0];
         CourseDefinition var3 = var5;
         int var4 = 70 / ((param1 - 5) / 61);
         return var5.field_c[param2];
@@ -94,11 +94,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract int year(int param0);
 
-    final static vb playLandingSound(int param0) {
+    final static PcmSamplePlayback playLandingSound(int param0) {
         if (param0 != 141) {
-          return (vb) null;
+          return (PcmSamplePlayback) null;
         }
-        return ValidationState.playMenuSound(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
+        return ValidationState.playMenuSound(255, 141 + MeshMaterialColour.cosmeticRandom.nextBounded(2, param0 ^ 141));
     }
 
     DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {

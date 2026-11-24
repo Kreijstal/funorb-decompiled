@@ -11,7 +11,7 @@ final class WhiteNoiseOperator extends TextureOperator {
         int[] var8 = this.monochromeCache.getRow((byte) 66, param1);
         int[] var3 = var8;
         if (this.monochromeCache.rowMissed) {
-          var4 = sj.textureRowCoords[param1];
+          var4 = FractalNoiseSliceAccumulator.textureRowCoords[param1];
           for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var8[var5] = this.hashNoise(param0 + 1876, LobbyGameWidget.textureColumnCoords[var5], var4) % 4096;
           }

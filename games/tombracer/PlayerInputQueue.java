@@ -197,7 +197,7 @@ final class PlayerInputQueue {
         int var6 = 0;
         RoomDefinition var7 = null;
         int var8 = TombRacer.field_G ? 1 : 0;
-        CourseDefinition[] var9 = cm.field_a;
+        CourseDefinition[] var9 = CourseStartPacket.field_a;
         CourseDefinition[] var2 = var9;
         for (var3 = 0; var3 < var9.length; var3++) {
           var4_ref_qg = var9[var3];
@@ -223,7 +223,7 @@ final class PlayerInputQueue {
         CourseDeathCountPacket var3 = new CourseDeathCountPacket();
         var3.setCourseId(param1, -123);
         var3.setDeathCount(7, param0);
-        hw.sendGamePacket((byte) -111, 1, 79, var3);
+        GamePacketSender.sendGamePacket((byte) -111, 1, 79, var3);
     }
 
     final void clear(boolean param0) {

@@ -239,8 +239,8 @@ final class OpenGlFramebuffer implements Framebuffer {
             throw new IllegalStateException("");
           }
           this.field_f = param0;
-          jaggl.OpenGL.glGenFramebuffersEXT(1, tg.field_b, 0);
-          this.field_b = tg.field_b[0];
+          jaggl.OpenGL.glGenFramebuffersEXT(1, HslToHsvConverter.field_b, 0);
+          this.field_b = HslToHsvConverter.field_b[0];
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

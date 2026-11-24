@@ -14,7 +14,7 @@ final class SoftwareBinaryFont extends GameFont {
         int var26 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        hpa var16_ref;
+        SoftwareScanlineMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -27,7 +27,7 @@ final class SoftwareBinaryFont extends GameFont {
         int[] var28;
         int var25Lifetime1;
         var16 = null;
-        var16_ref = (hpa) (param12);
+        var16_ref = (SoftwareScanlineMask) (param12);
         var28 = var16_ref.field_e;
         var27 = var28;
         var17 = var27;
@@ -191,7 +191,7 @@ final class SoftwareBinaryFont extends GameFont {
         int incrementValue$1 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        hpa var16_ref;
+        SoftwareScanlineMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -209,7 +209,7 @@ final class SoftwareBinaryFont extends GameFont {
         int[] var33;
         int var28Lifetime1;
         var16 = null;
-        var16_ref = (hpa) (param12);
+        var16_ref = (SoftwareScanlineMask) (param12);
         var33 = var16_ref.field_e;
         var32 = var33;
         var17 = var32;

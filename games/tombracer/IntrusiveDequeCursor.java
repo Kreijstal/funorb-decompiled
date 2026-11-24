@@ -128,7 +128,7 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (DelegatingCanvas.field_c == param1) {
-            stackIn_3_0 = sda.field_g;
+            stackIn_3_0 = QueuedPayloadRequest.field_g;
             return stackIn_3_0;
           }
           var2 = (ClipStackEntry) (TitledScrollPanel.field_ub.get((byte) -96, (long)param1.field_a));
@@ -147,7 +147,7 @@ final class IntrusiveDequeCursor {
             IntrusiveDequeCursor.getClipStack((byte) -102, (GraphicsToolkit) null);
           }
           DelegatingCanvas.field_c = param1;
-          sda.field_g = var3;
+          QueuedPayloadRequest.field_g = var3;
           stackIn_14_0 = var3;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

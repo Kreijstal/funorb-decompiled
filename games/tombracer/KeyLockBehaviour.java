@@ -139,14 +139,14 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         if (param0 != 2) {
           KeyLockBehaviour.a(52, -115, -20);
           if (!HeapIndexArray.hasAnyMask540800(-1, param2, param1)) {
-            return vua.e(param1, param2, 13650) ? true : false;
+            return ClippedChildWidget.requiresColorPointerCopy(param1, param2, 13650) ? true : false;
           }
           return true;
         }
         if (HeapIndexArray.hasAnyMask540800(-1, param2, param1)) {
           return true;
         }
-        if (!vua.e(param1, param2, 13650)) {
+        if (!ClippedChildWidget.requiresColorPointerCopy(param1, param2, 13650)) {
           return false;
         }
         return true;

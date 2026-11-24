@@ -11,20 +11,20 @@ final class SecondaryNodeHashTable {
     private DualLinkNode field_a;
     private int field_f;
 
-    final static dh[] queryDisplayModes(int param0, PlatformTaskDispatcher param1) {
+    final static DisplayModeInfo[] queryDisplayModes(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
-        dh[] stackIn_3_0 = null;
-        dh[] stackIn_9_0 = null;
-        dh[] stackIn_14_0 = null;
+        DisplayModeInfo[] stackIn_3_0 = null;
+        DisplayModeInfo[] stackIn_9_0 = null;
+        DisplayModeInfo[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        dh[] var4 = null;
+        DisplayModeInfo[] var4 = null;
         int var6 = 0;
-        dh var7 = null;
+        DisplayModeInfo var7 = null;
         int var8 = 0;
         AsyncRequest var9 = null;
         int[] var10 = null;
@@ -32,7 +32,7 @@ final class SecondaryNodeHashTable {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param1.isFullscreenAvailable((byte) 69)) {
-            stackIn_3_0 = new dh[]{};
+            stackIn_3_0 = new DisplayModeInfo[]{};
             return stackIn_3_0;
           }
           var9 = param1.requestDisplayModes(-111);
@@ -40,16 +40,16 @@ final class SecondaryNodeHashTable {
             TrapSpawner.sleepMillis(0, 10L);
           }
           if (2 == var9.status) {
-            stackIn_9_0 = new dh[]{};
+            stackIn_9_0 = new DisplayModeInfo[]{};
             return stackIn_9_0;
           }
           var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
-          var4 = new dh[var11.length >> 2];
+          var4 = new DisplayModeInfo[var11.length >> 2];
           var6 = 63 / ((param0 - 0) / 46);
           for (var5 = 0; var4.length > var5; var5++) {
-            var7 = new dh();
+            var7 = new DisplayModeInfo();
             var4[var5] = var7;
             var7.field_a = var3[var5 << 2];
             var7.field_c = var3[1 + (var5 << 2)];

@@ -66,7 +66,7 @@ final class NanoTickClock extends GameClock {
         }
         var1 = TileOperator.field_n;
         synchronized (var1) {
-          if (vha.field_b == nt.field_a) {
+          if (vha.field_b == FullscreenFailureReason.field_a) {
             return false;
           }
           MenuEntry.field_h = MessageOverlay.field_o[vha.field_b];

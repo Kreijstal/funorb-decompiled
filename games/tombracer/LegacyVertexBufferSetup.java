@@ -49,7 +49,7 @@ final class LegacyVertexBufferSetup {
         int var6;
         RoomDefinition[] var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        var7 = cm.field_a[param2].field_c;
+        var7 = CourseStartPacket.field_a[param2].field_c;
         var3 = var7;
         for (var4 = param1; var7.length > var4; var4++) {
           var5 = var7[var4];

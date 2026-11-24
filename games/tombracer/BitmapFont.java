@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class BitmapFont extends DualLinkNode {
-    private rka[] field_l;
+    private RasterSprite[] field_l;
     private int[] field_I;
     private int[] field_u;
     private int[] field_C;
@@ -428,7 +428,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        rka var11_ref_rka = null;
+        RasterSprite var11_ref_rka = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -830,7 +830,7 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    final void setInlineSprites(rka[] param0, int[] param1) {
+    final void setInlineSprites(RasterSprite[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();

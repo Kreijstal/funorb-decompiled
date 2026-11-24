@@ -148,7 +148,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 5) {
-          var4_refLifetime1 = uca.requestRemoveFriend(this.field_i, (byte) 102, param2);
+          var4_refLifetime1 = MeshMaterialColour.requestRemoveFriend(this.field_i, (byte) 102, param2);
         } else {
           if (param0 == 6) {
             var4_refLifetime1 = Bzip2State.a(-3, this.field_i, param2);
@@ -244,7 +244,7 @@ final class PlayerContextMenu {
         if (19 != param0) {
           return false;
         }
-        eca.openQuickChatForPlayer((byte) 84, this.field_b, this.field_g, this.field_e, this.field_i);
+        PlayerQuickChatMenuLauncher.openQuickChatForPlayer((byte) 84, this.field_b, this.field_g, this.field_e, this.field_i);
         return true;
     }
 
@@ -277,7 +277,7 @@ final class PlayerContextMenu {
             if (var5 == null &&
               var6 == 0) {
               this.field_f.addItem((byte) -64, 4, LegacyOpenGlFlowingWaterEffect.formatText(92, DirectRenderModel.field_m, new String[]{var7}));
-              this.field_f.addItem((byte) -70, 6, LegacyOpenGlFlowingWaterEffect.formatText(127, mp.field_b, new String[]{var7}));
+              this.field_f.addItem((byte) -70, 6, LegacyOpenGlFlowingWaterEffect.formatText(127, MidiChannelVolumeTargets.field_b, new String[]{var7}));
               if (param0 != null &&
                 2 != param1 &&
                 !DropdownButtonPainter.field_g) {
@@ -332,7 +332,7 @@ final class PlayerContextMenu {
           }
           this.field_b = param0.field_d;
           if (param0.field_d == 0) {
-            if (k.field_A == 0) {
+            if (DropTargetWidget.field_A == 0) {
               this.field_f.addItem((byte) -66, 12, LegacyOpenGlEffect.field_b);
             }
             this.field_f.addItem((byte) -86, 13, LruNodeCache.field_f);
@@ -484,13 +484,13 @@ final class PlayerContextMenu {
           if (param1 != 17) {
             return false;
           }
-          RoomViewRenderer.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+          RoomViewRenderer.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
           return true;
         }
         if (param1 != 17) {
           return false;
         }
-        RoomViewRenderer.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+        RoomViewRenderer.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, QueuedFixedRequest.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
         return true;
     }
 

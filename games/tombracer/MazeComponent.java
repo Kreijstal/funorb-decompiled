@@ -243,7 +243,7 @@ abstract class MazeComponent extends PrefabComponent {
         if (param0 != 0) {
           return (RoomDefinition) null;
         }
-        return sja.field_i[param1];
+        return SelectiveProceduralTextureProvider.field_i[param1];
     }
 
     abstract Trap createFilledCellTrap(int param0, boolean param1, Room param2);
@@ -291,9 +291,9 @@ abstract class MazeComponent extends PrefabComponent {
             stackIn_4_0 = TextureCombineSource.field_e;
           }
           dga.layoutBottomPanels(stackIn_4_0, 199);
-          rm.field_e.a(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
+          rm.field_e.layoutPanels(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
           PlayerCountDisplay.widget.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
-          stackIn_6_0 = uaa.field_b;
+          stackIn_6_0 = ChatMessageColours.field_b;
           stackIn_6_1 = RoomRegion.field_l.field_G;
           if (!UnlockOverlay.field_p) {
             stackIn_7_2 = 0;

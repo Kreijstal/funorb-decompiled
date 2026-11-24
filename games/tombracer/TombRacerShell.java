@@ -17,13 +17,13 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           WallTile.drawLoadingScreen(PortalComponent.A(90), var2, param0 ^ 0);
           return;
         }
-        if (!lla.field_b) {
+        if (!SocialTabbedPanelLayout.field_b) {
           C2SSubmitSettingsPacket.drawLoadingFrame(var2, (byte) 101);
           return;
         }
         if (!MazeSolver.field_e &&
           !TextWidgetPainter.a(109)) {
-          ima.setLoadingProgress(100.0f, WindZoneBehaviour.field_u, -75);
+          ModelTextureProjectionData.setLoadingProgress(100.0f, WindZoneBehaviour.field_u, -75);
           C2SSubmitSettingsPacket.drawLoadingFrame(var2, (byte) 111);
           return;
         }
@@ -59,7 +59,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
             S2CEventPacket.field_c[9] = -1;
             S2CEventPacket.field_c[10] = -1;
             HuffmanCodec.field_c = new Vector();
-            aca.addShellListenerFirst((ShellListener) (this), 19711);
+            QueuedByteShortRequest.addShellListenerFirst((ShellListener) (this), 19711);
           } catch (RuntimeException runtimeException) {
             throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rfa.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
           }
@@ -266,7 +266,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         int var2;
         int var3;
         int var4;
-        cga var5;
+        QueuedFixedRequest var5;
         var4 = TombRacer.field_G ? 1 : 0;
         if (ColourRowCacheEntry.field_f != null &&
           ColourRowCacheEntry.field_f.field_b) {
@@ -287,11 +287,11 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           }
         }
         this.processIncomingPackets(97);
-        if (!lla.field_b) {
+        if (!SocialTabbedPanelLayout.field_b) {
           IdChatTarget.a(TermsLinksPanel.field_y, -2886);
           if (OpenGlCubeTexture.field_l.loadStep(-4171)) {
             OpenGlCubeTexture.field_l.finishLoading((byte) -49);
-            lla.field_b = true;
+            SocialTabbedPanelLayout.field_b = true;
           }
         } else {
           if (!MazeSolver.field_e) {
@@ -310,14 +310,14 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         }
         if (!TextWidgetPainter.a(66)) {
           while (true) {
-            var5 = (cga) (RotaterMountComponent.field_H.removeFirst(119));
+            var5 = (QueuedFixedRequest) (RotaterMountComponent.field_H.removeFirst(119));
             if (var5 == null) {
               break;
             }
-            woa.queueRequest(4, var5, false);
+            PermutationTableCacheEntry.queueRequest(4, var5, false);
           }
         }
-        dra.sendReflectionCheckResponses(param0);
+        ReflectionCheckResponseSender.sendReflectionCheckResponses(param0);
         BridgeModel.flushGamePackets((byte) 120, 0);
         if (uma.b(-1)) {
           var2 = this.updateConnection(8);
@@ -348,7 +348,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 68 % ((param0 - 52) / 40);
-        while (cj.readNextGamePacket(S2CEventPacket.field_c, 0)) {
+        while (PointListEditorPainter.readNextGamePacket(S2CEventPacket.field_c, 0)) {
           if (this.handleGamePacket(MembersUpsellMenu.field_z, WeaveOperator.field_q, (byte) 105)) {
             continue;
           }

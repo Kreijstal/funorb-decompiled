@@ -54,7 +54,7 @@ final class GameAssetLoader implements LoadingStage {
         this.field_e = SoftReferenceCache.openArchive(TooltipRenderer.field_j.field_c, param0 ^ -37);
         ResourceArchive var6 = PitComponent.field_G;
         ResourceArchive var7 = var6;
-        ResourceArchive var3 = ota.field_b;
+        ResourceArchive var3 = CubeTextureSourceBase.field_b;
         LoadingStepList dupTemp$0 = new LoadingStepList(55);
         RidgedNoise3D.field_r = dupTemp$0;
         LoadingStepList var4 = dupTemp$0;
@@ -95,7 +95,7 @@ final class GameAssetLoader implements LoadingStage {
         try {
           var2 = new IntrusiveDeque();
           while (param1.position < param1.payload.length) {
-            var2.addLast((byte) -72, new StringListNode(pe.readStringList(param1, (byte) 73)));
+            var2.addLast((byte) -72, new StringListNode(OpenGlRectangleTexture.readStringList(param1, (byte) 73)));
           }
           var3 = new String[var2.size((byte) -16)][];
           var4 = -92 / ((param0 + 9) / 51);
@@ -123,7 +123,7 @@ final class GameAssetLoader implements LoadingStage {
           if (param1 != 47) {
             this.field_e = (ResourceArchive) null;
           }
-          ima.setLoadingProgress((float)param0, param2, -106);
+          ModelTextureProjectionData.setLoadingProgress((float)param0, param2, -106);
           CharacterChoiceTile.field_j.draw(0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -287,9 +287,9 @@ final class GameAssetLoader implements LoadingStage {
             var6 = var11.readUnsignedByte(255);
             dga.a(var11, 0);
             var12.decode(var11, var6, (byte) 39);
-            mq.field_e = var12.getProfile(79);
+            LegacyOpenGlNormalMapGenerator.field_e = var12.getProfile(79);
             ComponentTargetList.field_e = var12.getFlagBits((byte) -78);
-            toa.field_j = true;
+            QueuedKeyedRequest.field_j = true;
             stackIn_18_0 = "profile loaded";
             return stackIn_18_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -339,7 +339,7 @@ final class GameAssetLoader implements LoadingStage {
         UsernameQueryRequests.setFrameRate(50, param0 ^ -78);
         PlayerViewportLayout.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) LoginMethod.getMenuScreen(0, (byte) 50));
-        ima.setLoadingProgress(100.0f, DateValidationSource.loadingQuipsShort[10], param0 ^ 115);
+        ModelTextureProjectionData.setLoadingProgress(100.0f, DateValidationSource.loadingQuipsShort[10], param0 ^ 115);
         CharacterChoiceTile.field_j.draw(param0 ^ -49);
         FadingDialog.field_C.makeTarget(-19216);
         if (param0 != -49) {
@@ -347,8 +347,8 @@ final class GameAssetLoader implements LoadingStage {
         }
         PbufferEntry.initConsole(0);
         C2SActionPacket.resetFrameTiming(param0 + 16);
-        if (null != mq.field_e) {
-          eda.applyGraphicsMode(mq.field_e.field_g, true);
+        if (null != LegacyOpenGlNormalMapGenerator.field_e) {
+          HardwareVertexNormalAccumulator.applyGraphicsMode(LegacyOpenGlNormalMapGenerator.field_e.field_g, true);
         }
     }
 
@@ -358,12 +358,12 @@ final class GameAssetLoader implements LoadingStage {
         int var5 = 0;
         int incrementValue$1 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        Sprite[][] var2 = new Sprite[haa.field_C.length][];
+        Sprite[][] var2 = new Sprite[FocusProxyWidget.field_C.length][];
         int var3 = 0;
-        for (var4 = 0; haa.field_C.length > var4; var4++) {
-          array$0 = new Sprite[haa.field_C[var4].length];
+        for (var4 = 0; FocusProxyWidget.field_C.length > var4; var4++) {
+          array$0 = new Sprite[FocusProxyWidget.field_C[var4].length];
           var2[var4] = array$0;
-          for (var5 = 0; var5 < haa.field_C[var4].length; var5++) {
+          for (var5 = 0; var5 < FocusProxyWidget.field_C[var4].length; var5++) {
             incrementValue$1 = var3;
             var3++;
             var2[var4][var5] = RoundWinnerPhase.field_m[incrementValue$1];
@@ -372,11 +372,11 @@ final class GameAssetLoader implements LoadingStage {
         if (param0 != -10242) {
           this.finishLoading((byte) 30);
         }
-        if (!dna.field_G) {
+        if (!SkeletonComponentBase.field_G) {
           DropAnimation.field_c = false;
-          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, FullscreenCanvas.field_c, ota.field_b, LoadProfileCommand.field_t, QueuedHint.field_f, var2);
+          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, FullscreenCanvas.field_c, CubeTextureSourceBase.field_b, LoadProfileCommand.field_t, QueuedHint.field_f, var2);
           cq.field_d = PenaltyNotice.field_f;
-          tda.initializeChatHistory(200, (byte) -71);
+          SeededGradientNoise3D.initializeChatHistory(200, (byte) -71);
           fta.field_b = MatchState.field_p;
         }
     }
