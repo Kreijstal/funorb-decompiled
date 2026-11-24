@@ -30,11 +30,11 @@ final class qe extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -384,7 +384,7 @@ final class qe extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 

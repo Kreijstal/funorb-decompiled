@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends od {
+final class wg extends PcmStream {
     private int field_K;
     int[] field_G;
     int[] field_v;
@@ -491,7 +491,7 @@ final class wg extends od {
         }
     }
 
-    final synchronized od a() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -597,11 +597,11 @@ final class wg extends od {
         }
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -623,18 +623,18 @@ final class wg extends od {
               }
               var7 = (int)((-1L + (long)var4_int + (-this.field_B + this.field_A)) / (long)var4_int);
               this.field_B = this.field_B + (long)var4_int * (long)var7;
-              this.field_m.a(param0, param1, var7);
+              this.field_m.mixInto(param0, param1, var7);
               param2 = param2 - var7;
               param1 = param1 + var7;
               this.g(-731);
               if (this.field_u.d()) {
                 continue;
               }
-              this.field_m.a(param0, param1, param2);
+              this.field_m.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_m.a(param0, param1, param2);
+          this.field_m.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -659,8 +659,8 @@ final class wg extends od {
         }
     }
 
-    final synchronized od d() {
-        return (od) ((Object) this.field_m);
+    final synchronized PcmStream firstChildStream() {
+        return (PcmStream) ((Object) this.field_m);
     }
 
     private final synchronized void a(boolean param0, int param1, rm param2, boolean param3) {
@@ -1052,9 +1052,9 @@ final class wg extends od {
           }
           param3.field_v.d(param3.field_k);
           if (param2 != null) {
-            param3.field_v.a(param2, param1, param0);
+            param3.field_v.mixInto(param2, param1, param0);
           } else {
-            param3.field_v.a(param0);
+            param3.field_v.skipFrames(param0);
           }
           if (param3.field_v.e()) {
             this.field_m.field_l.b(param3.field_v);
@@ -1153,7 +1153,7 @@ final class wg extends od {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -1168,7 +1168,7 @@ final class wg extends od {
               var5 = (int)((-1L + (-this.field_B + this.field_A + (long)var2)) / (long)var2);
               this.field_B = this.field_B + (long)var2 * (long)var5;
               param0 = param0 - var5;
-              this.field_m.a(var5);
+              this.field_m.skipFrames(var5);
               this.g(-731);
               if (this.field_u.d()) {
                 continue;
@@ -1178,11 +1178,11 @@ final class wg extends od {
             }
             break;
           }
-          this.field_m.a(param0);
+          this.field_m.skipFrames(param0);
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_m.a(param0);
+          this.field_m.skipFrames(param0);
         }
 
     }

@@ -99,7 +99,7 @@ final class fk extends PcmStream {
         return param1 < 6144 ? -jc.field_b[-param1 + 6144] : jc.field_b[param1 - 6144];
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -215,7 +215,7 @@ final class fk extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -239,7 +239,7 @@ final class fk extends PcmStream {
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
           if (this.field_s <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_w) {
@@ -296,7 +296,7 @@ final class fk extends PcmStream {
           if (256 > this.field_E && (this.field_B != null ||
             this.field_u != null)) {
             if (var4_int == 256) {
-              this.field_v.b(param0, param1, param2);
+              this.field_v.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_t != null &&
@@ -307,8 +307,8 @@ final class fk extends PcmStream {
                   this.field_t = new int[var6];
                   this.field_F = new int[var6];
                 }
-                this.field_v.b(this.field_t, 0, param2);
-                this.field_H.b(this.field_F, 0, param2);
+                this.field_v.mixInto(this.field_t, 0, param2);
+                this.field_H.mixInto(this.field_F, 0, param2);
                 if (!AudioOutput.field_h) {
                   stackIn_48_0 = param1;
                 } else {
@@ -321,7 +321,7 @@ final class fk extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (this.field_F[var8] * var5 + this.field_t[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_H.b(param0, param1, param2);
+                this.field_H.mixInto(param0, param1, param2);
               }
             }
           }
@@ -334,7 +334,7 @@ final class fk extends PcmStream {
               this.field_t = new int[var6];
               this.field_F = new int[var6];
             }
-            this.field_z.b(this.field_t, 0, param2);
+            this.field_z.mixInto(this.field_t, 0, param2);
             if (AudioOutput.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -382,7 +382,7 @@ final class fk extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -393,20 +393,20 @@ final class fk extends PcmStream {
         return ca.a((byte) -123, param1, 1, param2);
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (0 < this.field_r &&
           this.field_B != null) {
-          this.field_v.a(param0);
+          this.field_v.skipFrames(param0);
         }
         if (this.field_r < 1048576 &&
           null != this.field_u) {
-          this.field_H.a(param0);
+          this.field_H.skipFrames(param0);
         }
         if (this.field_E > 0 &&
           this.field_D != null) {
-          this.field_z.a(param0);
+          this.field_z.skipFrames(param0);
         }
         if (this.field_w) {
           if (this.field_y > 0 &&
@@ -498,7 +498,7 @@ final class fk extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstChildStream() {
         return null;
     }
 

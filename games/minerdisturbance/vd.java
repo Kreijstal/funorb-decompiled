@@ -178,17 +178,17 @@ final class vd extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = MinerDisturbance.field_ab;
         if (this.field_t > 0) {
           if (null != this.field_F) {
-            this.field_A.a(param0);
+            this.field_A.skipFrames(param0);
             if (1048576 <= this.field_t) {
               if ((!(0 >= this.field_D)) &&
                 ((this.field_u != null))) {
-                this.field_w.a(param0);
+                this.field_w.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -196,19 +196,19 @@ final class vd extends PcmStream {
               if (null == this.field_E) {
                 if ((!(0 >= this.field_D)) &&
                   ((this.field_u != null))) {
-                  this.field_w.a(param0);
+                  this.field_w.skipFrames(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_J.a(param0);
+                this.field_J.skipFrames(param0);
               }
             }
           } else {
             if (1048576 <= this.field_t) {
               if ((!(0 >= this.field_D)) &&
                 ((this.field_u != null))) {
-                this.field_w.a(param0);
+                this.field_w.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -216,12 +216,12 @@ final class vd extends PcmStream {
               if (null == this.field_E) {
                 if ((!(0 >= this.field_D)) &&
                   ((this.field_u != null))) {
-                  this.field_w.a(param0);
+                  this.field_w.skipFrames(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_J.a(param0);
+                this.field_J.skipFrames(param0);
               }
             }
           }
@@ -229,7 +229,7 @@ final class vd extends PcmStream {
           if (1048576 <= this.field_t) {
             if ((!(0 >= this.field_D)) &&
               ((this.field_u != null))) {
-              this.field_w.a(param0);
+              this.field_w.skipFrames(param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -237,18 +237,18 @@ final class vd extends PcmStream {
             if (null == this.field_E) {
               if ((!(0 >= this.field_D)) &&
                 ((this.field_u != null))) {
-                this.field_w.a(param0);
+                this.field_w.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_J.a(param0);
+              this.field_J.skipFrames(param0);
             }
           }
         }
         if ((decompiledFrameRemainder0) && (0 < this.field_D &&
           this.field_u != null)) {
-          this.field_w.a(param0);
+          this.field_w.skipFrames(param0);
         }
         if (this.field_I) {
           if (this.field_C > 0 &&
@@ -295,11 +295,11 @@ final class vd extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -310,11 +310,11 @@ final class vd extends PcmStream {
         field_r = null;
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -338,7 +338,7 @@ final class vd extends PcmStream {
         var11 = MinerDisturbance.field_ab;
         try {
           if (this.field_B <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_I) {
@@ -404,8 +404,8 @@ final class vd extends PcmStream {
                   this.field_G = new int[var6];
                   this.field_H = new int[var6];
                 }
-                this.field_A.a(this.field_G, 0, param2);
-                this.field_J.a(this.field_H, 0, param2);
+                this.field_A.mixInto(this.field_G, 0, param2);
+                this.field_J.mixInto(this.field_H, 0, param2);
                 if (!AudioOutput.field_u) {
                   stackIn_53_0 = param1;
                 } else {
@@ -418,10 +418,10 @@ final class vd extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_H[var8] * var5 + var4_int * this.field_G[var8] >> 8);
                 }
               } else {
-                this.field_J.a(param0, param1, param2);
+                this.field_J.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_A.a(param0, param1, param2);
+              this.field_A.mixInto(param0, param1, param2);
             }
           }
           if (null != this.field_u &&
@@ -433,7 +433,7 @@ final class vd extends PcmStream {
               this.field_G = new int[var6];
               this.field_H = new int[var6];
             }
-            this.field_w.a(this.field_G, 0, param2);
+            this.field_w.mixInto(this.field_G, 0, param2);
             if (!AudioOutput.field_u) {
               stackIn_66_0 = param1;
             } else {

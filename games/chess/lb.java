@@ -15,7 +15,7 @@ final class lb extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         return (PcmStream) (this.field_o.beginBackward(-18110));
     }
 
@@ -30,11 +30,11 @@ final class lb extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return (PcmStream) (this.field_o.nextBackward((byte) -106));
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         pl var5 = null;
         int var7 = 0;
@@ -72,7 +72,7 @@ final class lb extends PcmStream {
         return;
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 

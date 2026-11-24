@@ -132,17 +132,17 @@ final class se extends PcmStream {
         this.field_p = param1;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = SolKnight.field_L ? 1 : 0;
         if (this.field_l <= 0) {
           if (1048576 > this.field_l &&
             null != this.field_q) {
-            this.field_v.a(param0);
+            this.field_v.skipFrames(param0);
           }
           if (this.field_A > 0 &&
             null != this.field_y) {
-            this.field_u.a(param0);
+            this.field_u.skipFrames(param0);
           }
           if (this.field_o) {
             if (this.field_s > 0 &&
@@ -237,12 +237,12 @@ final class se extends PcmStream {
           }
         } else {
           if (this.field_n != null) {
-            this.field_r.a(param0);
+            this.field_r.skipFrames(param0);
           }
           if (1048576 <= this.field_l) {
             if (this.field_A > 0 &&
               null != this.field_y) {
-              this.field_u.a(param0);
+              this.field_u.skipFrames(param0);
             }
             if (this.field_o) {
               if (this.field_s > 0 &&
@@ -337,11 +337,11 @@ final class se extends PcmStream {
             }
           } else {
             if (null != this.field_q) {
-              this.field_v.a(param0);
+              this.field_v.skipFrames(param0);
             }
             if (this.field_A > 0 &&
               null != this.field_y) {
-              this.field_u.a(param0);
+              this.field_u.skipFrames(param0);
             }
             if (!this.field_o) {
               if (this.field_s == 0) {
@@ -518,7 +518,7 @@ final class se extends PcmStream {
         this.field_n = null;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -542,7 +542,7 @@ final class se extends PcmStream {
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           if (this.field_p <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_o) {
@@ -599,7 +599,7 @@ final class se extends PcmStream {
           if (this.field_A < 256 && (null != this.field_n ||
             this.field_q != null)) {
             if (var4_int == 256) {
-              this.field_r.a(param0, param1, param2);
+              this.field_r.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_w != null &&
@@ -610,8 +610,8 @@ final class se extends PcmStream {
                   this.field_w = new int[var6];
                   this.field_t = new int[var6];
                 }
-                this.field_r.a(this.field_w, 0, param2);
-                this.field_v.a(this.field_t, 0, param2);
+                this.field_r.mixInto(this.field_w, 0, param2);
+                this.field_v.mixInto(this.field_t, 0, param2);
                 if (PcmPlayerService.field_u) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -624,7 +624,7 @@ final class se extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_t[var8] * var5 + this.field_w[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_v.a(param0, param1, param2);
+                this.field_v.mixInto(param0, param1, param2);
               }
             }
           }
@@ -637,7 +637,7 @@ final class se extends PcmStream {
               this.field_w = new int[var6];
               this.field_t = new int[var6];
             }
-            this.field_u.a(this.field_w, 0, param2);
+            this.field_u.mixInto(this.field_w, 0, param2);
             if (!PcmPlayerService.field_u) {
               stackIn_61_0 = param1;
             } else {
@@ -673,18 +673,18 @@ final class se extends PcmStream {
           param1.b(param3, -1, -129);
           param1.b(param2, (byte) -110);
           if (param0 > -61) {
-            this.b();
+            this.nextChildStream();
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "se.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -700,7 +700,7 @@ final class se extends PcmStream {
         throw new Error();
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 

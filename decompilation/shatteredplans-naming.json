@@ -3780,6 +3780,14 @@
       "renamedSymbol": "M:DiskArchiveRequest.clearStatics(I)V"
     },
     {
+      "symbol": "M:al.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 b92cb3cfcf8924b6e7e9888023d41654ab7f00cd6c2ccbe30e51aed83e99700c. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.getSchedulingCost()I"
+    },
+    {
       "symbol": "M:al.a(I)V",
       "originalName": "a",
       "to": "skip",
@@ -3962,6 +3970,14 @@
       "evidence": "Picks the forward mix kernel for the speed, channel layout and gain ramp and mixes into the buffer.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.mixForwardSegment([IIIII)I"
+    },
+    {
+      "symbol": "M:al.c()I",
+      "originalName": "c",
+      "to": "getSchedulingPriority",
+      "evidence": "Return the original PCM scheduling priority:default255,child delegation,raw-volume/position/loop attenuation,or effect/global scaling where implemented. Preserve original signed int overflow,division,absolute-value edge case,upper cap and exceptional paths. Complete original-body SHA256 44966dad8f60f174b3433fdad7946b5c76f1763e1344774e9fadfac30ebf3201. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.getSchedulingPriority()I"
     },
     {
       "symbol": "M:al.c(II)V",
@@ -7132,6 +7148,14 @@
       "renamedSymbol": "M:DraggableWidget.clearStatics(I)V"
     },
     {
+      "symbol": "M:ga.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.getSchedulingCost()I"
+    },
+    {
       "symbol": "M:ga.a(B)V",
       "originalName": "a",
       "to": "tickSequencer",
@@ -8018,6 +8042,14 @@
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NanoFrameTimer.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:h.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 a520cd148a505c1285bc362fa4c7d5ba5836d161b68b8db64667086dea18a1b6. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.getSchedulingCost()I"
     },
     {
       "symbol": "M:h.a(I)V",
@@ -14068,6 +14100,14 @@
       "renamedSymbol": "M:MouseWheelHandler.takeRotation(I)I"
     },
     {
+      "symbol": "M:rc.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicVoiceMixer.getSchedulingCost()I"
+    },
+    {
       "symbol": "M:rc.a(I)V",
       "originalName": "a",
       "to": "skip",
@@ -15124,6 +15164,14 @@
       "renamedSymbol": "M:tm.clearStatics(I)V"
     },
     {
+      "symbol": "M:tn.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Abstract root contract;original declaration SHA256 0bdcf3983847858f9d979fb5ade735852a918242a6f09ba3d4ebd946c28819b7. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.getSchedulingCost()I"
+    },
+    {
       "symbol": "M:tn.a(I)V",
       "originalName": "a",
       "to": "skip",
@@ -15154,6 +15202,14 @@
       "evidence": "Abstract: writes mixed samples into the buffer range.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmStream.fill([III)V"
+    },
+    {
+      "symbol": "M:tn.c()I",
+      "originalName": "c",
+      "to": "getSchedulingPriority",
+      "evidence": "Return the original PCM scheduling priority:default255,child delegation,raw-volume/position/loop attenuation,or effect/global scaling where implemented. Preserve original signed int overflow,division,absolute-value edge case,upper cap and exceptional paths. Complete original-body SHA256 38e862bbc9b70ed7e4079a363a35ac1bdb29105f8efbea66e83a494c7397512f. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.getSchedulingPriority()I"
     },
     {
       "symbol": "M:tn.d()Ltn;",
@@ -16074,6 +16130,14 @@
       "evidence": "Clears the press state. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DropTargetWidget.handleRelease(IIIIILUiWidget;)V"
+    },
+    {
+      "symbol": "M:vk.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStreamMixer.getSchedulingCost()I"
     },
     {
       "symbol": "M:vk.a(I)V",
@@ -72675,7 +72739,7 @@
     },
     {
       "symbol": "L:al.c()I#0",
-      "renamedSymbol": "L:PcmSampleStream.c()I#0",
+      "renamedSymbol": "L:PcmSampleStream.getSchedulingPriority()I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -313905,9 +313969,9 @@
     },
     {
       "symbol": "M:al.a()I",
-      "renamedSymbol": "M:PcmSampleStream.a()I",
+      "renamedSymbol": "M:PcmSampleStream.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "al.java",
         "start": 41937,
@@ -314169,9 +314233,9 @@
     },
     {
       "symbol": "M:al.c()I",
-      "renamedSymbol": "M:PcmSampleStream.c()I",
+      "renamedSymbol": "M:PcmSampleStream.getSchedulingPriority()I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getSchedulingPriority",
       "declaration": {
         "file": "al.java",
         "start": 51084,
@@ -323145,9 +323209,9 @@
     },
     {
       "symbol": "M:ga.a()I",
-      "renamedSymbol": "M:MidiPcmStream.a()I",
+      "renamedSymbol": "M:MidiPcmStream.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "ga.java",
         "start": 55072,
@@ -325257,9 +325321,9 @@
     },
     {
       "symbol": "M:h.a()I",
-      "renamedSymbol": "M:MusicCrossfadeStream.a()I",
+      "renamedSymbol": "M:MusicCrossfadeStream.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "h.java",
         "start": 14575,
@@ -342868,9 +342932,9 @@
     },
     {
       "symbol": "M:rc.a()I",
-      "renamedSymbol": "M:MusicVoiceMixer.a()I",
+      "renamedSymbol": "M:MusicVoiceMixer.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "rc.java",
         "start": 410,
@@ -347290,9 +347354,9 @@
     },
     {
       "symbol": "M:tn.a()I",
-      "renamedSymbol": "M:PcmStream.a()I",
+      "renamedSymbol": "M:PcmStream.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "tn.java",
         "start": 469,
@@ -347345,9 +347409,9 @@
     },
     {
       "symbol": "M:tn.c()I",
-      "renamedSymbol": "M:PcmStream.c()I",
+      "renamedSymbol": "M:PcmStream.getSchedulingPriority()I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getSchedulingPriority",
       "declaration": {
         "file": "tn.java",
         "start": 562,
@@ -350623,9 +350687,9 @@
     },
     {
       "symbol": "M:vk.a()I",
-      "renamedSymbol": "M:PcmStreamMixer.a()I",
+      "renamedSymbol": "M:PcmStreamMixer.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "vk.java",
         "start": 628,
@@ -464178,7 +464242,7 @@
       "original": "al.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "9f2f142bfd1e5a456e149dd79134a2231f46e5e225e8fc3d55a00137bee23a07",
-      "outputSha256": "247ebf6828b9160e85d8dc3ae6f24879690268290e7f010b05275a32d494e5b5",
+      "outputSha256": "aaae30908c525aee3c2e235f89215d36f29445adab5dcaead299ab42110c6af7",
       "edits": [
         {
           "start": 50,
@@ -464930,6 +464994,13 @@
           "renamed": "firstChild"
         },
         {
+          "start": 41937,
+          "end": 41938,
+          "symbol": "M:al.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
+        },
+        {
           "start": 42091,
           "end": 42092,
           "symbol": "M:al.d(II)I",
@@ -465124,6 +465195,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 51084,
+          "end": 51085,
+          "symbol": "M:al.c()I",
+          "original": "c",
+          "renamed": "getSchedulingPriority"
         },
         {
           "start": 51266,
@@ -466380,7 +466458,7 @@
       "original": "ap.java",
       "renamed": "PcmPlayerService.java",
       "inputSha256": "1a484be31430e03949b7c9cbb7c1e8c1ff647170035c01501947095c9547da86",
-      "outputSha256": "3181c4d6cc2451d32a2bae3c13a89582892ab37f1a96a2d939675375d38359fc",
+      "outputSha256": "ed7fdd6ace584a1e3966029f5dbc538de3a4ff435a3002879e2b86072a9abe11",
       "edits": [
         {
           "start": 44,
@@ -466509,12 +466587,26 @@
           "renamed": "addTimedStream"
         },
         {
+          "start": 1456,
+          "end": 1457,
+          "symbol": "M:tn.c()I",
+          "original": "c",
+          "renamed": "getSchedulingPriority"
+        },
+        {
           "start": 1534,
           "end": 1536,
           "symbol": "B:ap.a([II)V#0",
           "original": "L3",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 2564,
+          "end": 2565,
+          "symbol": "M:tn.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 2810,
@@ -466537,6 +466629,13 @@
           "symbol": "M:ap.a(Ltn;I)V",
           "original": "a",
           "renamed": "addTimedStream"
+        },
+        {
+          "start": 3112,
+          "end": 3113,
+          "symbol": "M:tn.c()I",
+          "original": "c",
+          "renamed": "getSchedulingPriority"
         },
         {
           "start": 3170,
@@ -520743,7 +520842,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "041eefe53961c4abd25f181439a897b199eb9f7a09be9ee9cefcf98adcc317be",
+      "outputSha256": "3a235350e8b2945e931f7795df437e31a33c99a9ee1d6835282fb5df48b5934c",
       "edits": [
         {
           "start": 50,
@@ -523453,6 +523552,13 @@
           "symbol": "M:ga.a(III)V",
           "original": "a",
           "renamed": "setFineTuning"
+        },
+        {
+          "start": 55072,
+          "end": 55073,
+          "symbol": "M:ga.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 55225,
@@ -532752,7 +532858,7 @@
       "original": "h.java",
       "renamed": "MusicCrossfadeStream.java",
       "inputSha256": "a729cb5b2c8eb9981959a273f43436a7b1ac1f258a6f73a34078448db5dd32f7",
-      "outputSha256": "a53d2283a028cbac431a7f99eb1497aa379e8f8e34f3d307e0ba4e6649ce6a3c",
+      "outputSha256": "e3f862937007eb731828888731bab59402be6d84677d6ff85100a637472658ab",
       "edits": [
         {
           "start": 50,
@@ -533334,6 +533440,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "MusicTrack"
+        },
+        {
+          "start": 14575,
+          "end": 14576,
+          "symbol": "M:h.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 14616,
@@ -636019,7 +636132,7 @@
       "original": "rc.java",
       "renamed": "MusicVoiceMixer.java",
       "inputSha256": "48be184cd7a7d4ea8aa1228653fffd874a1346ecdf42e6c8bc438172d6a40145",
-      "outputSha256": "91a56efd0a314fc1698d5e46cb9031cbbc23851f94838b8ce097fe61b41d2708",
+      "outputSha256": "68ce75bcdaae78e1b653e2328da6b1d29929b7c93cc03b265afad5aa075a6773",
       "edits": [
         {
           "start": 50,
@@ -636104,6 +636217,13 @@
           "symbol": "M:rc.d()Ltn;",
           "original": "d",
           "renamed": "nextChild"
+        },
+        {
+          "start": 410,
+          "end": 411,
+          "symbol": "M:rc.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 456,
@@ -669518,7 +669638,7 @@
       "original": "tn.java",
       "renamed": "PcmStream.java",
       "inputSha256": "7bead25f8549dd7f46c84a249f2f0a467800d5859fa2310cbc58082df33ce6d0",
-      "outputSha256": "363a6f6b9bb5ca3427b92293d6ef94dfe13e8a2002e5ce7680e00e877a4eb0ab",
+      "outputSha256": "d9f81f75ebd91f30cc71897b4b454ff5cfb5544bb71a1cc859c92e61ad2659d6",
       "edits": [
         {
           "start": 53,
@@ -669598,6 +669718,13 @@
           "renamed": "firstChild"
         },
         {
+          "start": 469,
+          "end": 470,
+          "symbol": "M:tn.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
+        },
+        {
           "start": 488,
           "end": 490,
           "symbol": "C:tn",
@@ -669617,6 +669744,13 @@
           "symbol": "M:tn.<init>()V",
           "original": "tn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 562,
+          "end": 563,
+          "symbol": "M:tn.c()I",
+          "original": "c",
+          "renamed": "getSchedulingPriority"
         }
       ]
     },
@@ -703979,7 +704113,7 @@
       "original": "vk.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "47c5a96f4fba351cd816d4be9b89d2379c2f19008894cbc5f56886fd317d05b2",
-      "outputSha256": "44d99a6d8e67ea5ccd726ed80bf8184d3b012eec28ead3826ce5d6aaaa5869c6",
+      "outputSha256": "c5e551eb1d49a98a9cda72b78e0ec7b84d17ed26150f51d06aa36ac4f46e9372",
       "edits": [
         {
           "start": 50,
@@ -704078,6 +704212,13 @@
           "symbol": "M:pf.a(B)Loh;",
           "original": "a",
           "renamed": "nextForward"
+        },
+        {
+          "start": 628,
+          "end": 629,
+          "symbol": "M:vk.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 682,
@@ -712622,10 +712763,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "bbb861086a816e157d562291dfd54e819a68772c500e7ba2a36d07ea16b69548",
+    "rulesSha256": "d3c660e623de150e98130c221b45b8284c04956f4440eea94dc682e7fa169805",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "0bcc4c630a45bafb700a957d6334cdaf271d59e68da8c97e4864c8cd433cab5d",
+    "outputTreeSha256": "45de1cefa4315082d9144e069001a18ce609c28aa2072d694786a7657c09d99c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

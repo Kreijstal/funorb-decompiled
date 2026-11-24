@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends di {
+final class jg extends PcmStream {
     static String field_l;
     IntrusiveDeque field_k;
     static String[] field_n;
     private lj field_j;
     v field_m;
 
-    final di a() {
+    final PcmStream firstChildStream() {
         he var1 = (he) (this.field_k.beginForward((byte) -75));
         if (var1 == null) {
           return null;
         }
         if (var1.field_l != null) {
-          return (di) ((Object) var1.field_l);
+          return (PcmStream) ((Object) var1.field_l);
         }
-        return this.d();
+        return this.nextChildStream();
     }
 
     private final void a(int param0, he param1, int param2) {
@@ -53,9 +53,9 @@ final class jg extends di {
             }
           }
           if (param2 != -23887) {
-            this.d();
+            this.nextChildStream();
           }
-          param1.field_l.c(param0);
+          param1.field_l.skipFrames(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class jg extends di {
         }
     }
 
-    final di d() {
+    final PcmStream nextChildStream() {
         he var1;
         while (true) {
           var1 = (he) (this.field_k.nextForward(853));
@@ -79,7 +79,7 @@ final class jg extends di {
             return null;
           }
           if (var1.field_l != null) {
-            return (di) ((Object) var1.field_l);
+            return (PcmStream) ((Object) var1.field_l);
           }
         }
     }
@@ -115,7 +115,7 @@ final class jg extends di {
                 param4.field_i = param4.field_i + var7_int * param5;
                 break;
               }
-              param4.field_l.b(param0, param2, var8);
+              param4.field_l.mixInto(param0, param2, var8);
               param4.field_i = param4.field_i + (-1048576 + var8 * var7_int);
               param2 = param2 + var8;
               param5 = param5 - var8;
@@ -139,14 +139,14 @@ final class jg extends di {
                 param4.field_l.d(-1);
               }
               var11.f(var9);
-              var11.b(param0, param2, param1 - param2);
+              var11.mixInto(param0, param2, param1 - param2);
               if (!var11.e()) {
                 continue;
               }
               this.field_m.a(var11);
             }
           }
-          param4.field_l.b(param0, param2, param5);
+          param4.field_l.mixInto(param0, param2, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,17 +168,17 @@ final class jg extends di {
         }
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final void c(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         he var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = OrbDefence.field_D ? 1 : 0;
-        this.field_m.c(param0);
+        this.field_m.skipFrames(param0);
         var3 = (he) (this.field_k.beginForward((byte) 117));
         while (var3 != null) {
           stackIn_4_0 = this.field_j.a(var3, (byte) 90);
@@ -202,7 +202,7 @@ final class jg extends di {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -214,7 +214,7 @@ final class jg extends di {
         int var7 = 0;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          this.field_m.b(param0, param1, param2);
+          this.field_m.mixInto(param0, param1, param2);
           var6 = (he) (this.field_k.beginForward((byte) -96));
           while (var6 != null) {
             if (!this.field_j.a(var6, (byte) 98)) {

@@ -9,7 +9,7 @@ final class kj extends PcmStream {
     static boolean field_o;
     PcmStreamMixer field_m;
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         cb var1;
         int var2;
         var2 = Lexicominos.field_L ? 1 : 0;
@@ -62,7 +62,7 @@ final class kj extends PcmStream {
               param0 = param1.field_E / var4_int;
             }
           }
-          param1.field_C.a(param0);
+          param1.field_C.skipFrames(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class kj extends PcmStream {
                 param3.field_E = param3.field_E + var7_int * param5;
                 break;
               }
-              param3.field_C.b(param4, param0, var8);
+              param3.field_C.mixInto(param4, param0, var8);
               param3.field_E = param3.field_E + (var8 * var7_int - 1048576);
               param0 = param0 + var8;
               param5 = param5 - var8;
@@ -132,14 +132,14 @@ final class kj extends PcmStream {
                 param3.field_C.e(-1);
               }
               var11.h(var9);
-              var11.b(param4, param0, param1 - param0);
+              var11.mixInto(param4, param0, param1 - param0);
               if (!var11.h()) {
                 continue;
               }
               this.field_m.a(var11);
             }
           }
-          param3.field_C.b(param4, param0, param5);
+          param3.field_C.mixInto(param4, param0, param5);
           if (param2 == 100) {
             return;
           }
@@ -165,12 +165,12 @@ final class kj extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         cb var3;
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
-        this.field_m.a(param0);
+        this.field_m.skipFrames(param0);
         var3 = (cb) (this.field_n.beginForward(true));
         while (var3 != null) {
           if (!this.field_l.b(var3, 0)) {
@@ -189,11 +189,11 @@ final class kj extends PcmStream {
         }
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -205,7 +205,7 @@ final class kj extends PcmStream {
         int var7 = 0;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          this.field_m.b(param0, param1, param2);
+          this.field_m.mixInto(param0, param1, param2);
           var6 = (cb) (this.field_n.beginForward(true));
           while (var6 != null) {
             if (!this.field_l.b(var6, 0)) {
@@ -284,13 +284,13 @@ final class kj extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         cb var1 = (cb) (this.field_n.beginForward(true));
         if (var1 == null) {
           return null;
         }
         if (var1.field_C == null) {
-          return this.b();
+          return this.nextChildStream();
         }
         return (PcmStream) ((Object) var1.field_C);
     }

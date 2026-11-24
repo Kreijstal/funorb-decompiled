@@ -120,7 +120,7 @@ final class vl extends PcmStream {
         }
         if (!param1) {
           int[] var6 = (int[]) null;
-          this.a((int[]) null, 120, 45);
+          this.mixInto((int[]) null, 120, 45);
         }
     }
 
@@ -230,7 +230,7 @@ final class vl extends PcmStream {
           }
           param4.field_j.d(param4.field_B);
           if (param2 != null) {
-            param4.field_j.a(param2, param3, param1);
+            param4.field_j.mixInto(param2, param3, param1);
           } else {
             param4.field_j.skip(param1);
           }
@@ -426,7 +426,7 @@ final class vl extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -589,7 +589,7 @@ final class vl extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -777,7 +777,7 @@ final class vl extends PcmStream {
         }
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_B);
     }
 
@@ -842,7 +842,7 @@ final class vl extends PcmStream {
         field_M = null;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -863,7 +863,7 @@ final class vl extends PcmStream {
               } else {
                 var7 = (int)((-1L + (long)var4_int + this.field_J - this.field_N) / (long)var4_int);
                 this.field_N = this.field_N + (long)var7 * (long)var4_int;
-                this.field_B.a(param0, param1, var7);
+                this.field_B.mixInto(param0, param1, var7);
                 this.d(0);
                 param2 = param2 - var7;
                 param1 = param1 + var7;
@@ -873,10 +873,10 @@ final class vl extends PcmStream {
               }
               break;
             }
-            this.field_B.a(param0, param1, param2);
+            this.field_B.mixInto(param0, param1, param2);
             return;
           }
-          this.field_B.a(param0, param1, param2);
+          this.field_B.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

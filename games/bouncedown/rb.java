@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends wf {
+final class rb extends PcmStream {
     private IntrusiveDeque field_n;
     private IntrusiveDeque field_l;
     private int field_m;
     private int field_k;
 
     private final void d(int param0) {
-        wf var2 = (wf) (this.field_n.beginForward((byte) -83));
+        PcmStream var2 = (PcmStream) (this.field_n.beginForward((byte) -83));
         while (var2 != null) {
-          var2.a(param0);
-          var2 = (wf) (this.field_n.nextForward((byte) -102));
+          var2.skipFrames(param0);
+          var2 = (PcmStream) (this.field_n.nextForward((byte) -102));
         }
     }
 
-    final wf d() {
-        return (wf) (this.field_n.beginForward((byte) -99));
+    final PcmStream firstChildStream() {
+        return (PcmStream) (this.field_n.beginForward((byte) -99));
     }
 
     private final void e() {
@@ -32,15 +32,15 @@ final class rb extends wf {
         }
     }
 
-    final wf c() {
-        return (wf) (this.field_n.nextForward((byte) -60));
+    final PcmStream nextChildStream() {
+        return (PcmStream) (this.field_n.nextForward((byte) -60));
     }
 
-    final int b() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         oi var5 = null;
         int var7 = 0;
@@ -78,11 +78,11 @@ final class rb extends wf {
         return;
     }
 
-    final synchronized void a(wf param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_n.addFirst((byte) 83, (IntrusiveNode) (param0));
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         oi var3 = null;
         int var5 = 0;
@@ -153,10 +153,10 @@ final class rb extends wf {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        wf var4 = (wf) (this.field_n.beginForward((byte) -78));
+        PcmStream var4 = (PcmStream) (this.field_n.beginForward((byte) -78));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
-          var4 = (wf) (this.field_n.nextForward((byte) -77));
+          var4.mixOrSkipFrames(param0, param1, param2);
+          var4 = (PcmStream) (this.field_n.nextForward((byte) -77));
         }
     }
 

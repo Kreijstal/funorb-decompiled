@@ -124,10 +124,10 @@ class AudioOutput {
         if (param0.field_i != null) {
           param0.field_i.field_i = 0;
         }
-        PcmStream var1 = param0.b();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           AudioOutput.resetStreamScheduling(var1);
-          var1 = param0.a();
+          var1 = param0.nextChildStream();
         }
     }
 
@@ -329,7 +329,7 @@ class AudioOutput {
           this.field_m <= 0) {
           this.field_m = this.field_m + (field_h >> 4);
           AudioOutput.resetStreamScheduling(this.field_i);
-          this.enqueueByPriority(this.field_i, this.field_i.d());
+          this.enqueueByPriority(this.field_i, this.field_i.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -360,7 +360,7 @@ class AudioOutput {
                       continue;
                     }
                     var11.field_k = true;
-                    var13 = var11.c();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_i = var12.field_i + var13;
@@ -368,12 +368,12 @@ class AudioOutput {
                     if (var4 >= this.field_n) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.d() >> 8);
-                        var14Lifetime2 = var11.a();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_l;

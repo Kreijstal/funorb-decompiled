@@ -66,7 +66,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         if (!param0) {
-          this.b((int[]) null, -89, 102);
+          this.mixInto((int[]) null, -89, 102);
         }
         boolean decompiledFrameCompleted0 = true;
         this.field_u[param2][param1] = null;
@@ -205,7 +205,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -433,7 +433,7 @@ final class MidiPcmStream extends PcmStream {
           var3_int = (param1.field_J * param1.field_w >> 12) + param1.field_s;
           var3_int = var3_int + ((-8192 + this.field_B[param1.field_p]) * this.field_I[param1.field_p] >> 12);
           if (param0 <= 2) {
-            this.b((int[]) null, 108, -85);
+            this.mixInto((int[]) null, 108, -85);
           }
           var4 = param1.field_A;
           if (var4.field_i > 0 && (!(var4.field_h <= 0) ||
@@ -491,7 +491,7 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -515,7 +515,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var7 = (int)(((long)var4_int + this.field_F - this.field_z - 1L) / (long)var4_int);
               this.field_z = this.field_z + (long)var4_int * (long)var7;
-              this.field_R.b(param0, param1, var7);
+              this.field_R.mixInto(param0, param1, var7);
               this.a((byte) -24);
               param1 = param1 + var7;
               param2 = param2 - var7;
@@ -525,11 +525,11 @@ final class MidiPcmStream extends PcmStream {
               if (var8 == 0) {
                 continue;
               }
-              this.field_R.b(param0, param1, param2);
+              this.field_R.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_R.b(param0, param1, param2);
+          this.field_R.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -633,7 +633,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream d() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_R);
     }
 
@@ -691,7 +691,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -976,12 +976,12 @@ final class MidiPcmStream extends PcmStream {
           }
           param3.field_v.f(param3.field_H);
           if (param4 != null) {
-            param3.field_v.b(param4, param1, param2);
+            param3.field_v.mixInto(param4, param1, param2);
             if (var12 != 0) {
-              param3.field_v.a(param2);
+              param3.field_v.skipFrames(param2);
             }
           } else {
-            param3.field_v.a(param2);
+            param3.field_v.skipFrames(param2);
           }
           if (param3.field_v.e()) {
             this.field_R.field_o.b(param3.field_v);
@@ -1323,7 +1323,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -1342,7 +1342,7 @@ final class MidiPcmStream extends PcmStream {
             }
             var5 = (int)((-1L + (long)var2 + this.field_F - this.field_z) / (long)var2);
             this.field_z = this.field_z + (long)var5 * (long)var2;
-            this.field_R.a(var5);
+            this.field_R.skipFrames(var5);
             param0 = param0 - var5;
             this.a((byte) -24);
             if (!this.field_A.g() &&
@@ -1352,13 +1352,13 @@ final class MidiPcmStream extends PcmStream {
             if (var6 == 0) {
               continue;
             }
-            this.field_R.a(param0);
+            this.field_R.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_R.a(param0);
+          this.field_R.skipFrames(param0);
         }
 
     }

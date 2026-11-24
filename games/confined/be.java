@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends gf {
+final class be extends PcmStream {
     private PrimaryNodeDeque field_s;
     private PrimaryNodeDeque field_q;
     private int field_r;
@@ -18,15 +18,15 @@ final class be extends gf {
         throw new RuntimeException();
     }
 
-    final synchronized void a(gf param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_s.addFirst(param0, -1);
     }
 
-    final synchronized void b(gf param0) {
+    final synchronized void b(PcmStream param0) {
         param0.unlink(true);
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -43,10 +43,10 @@ final class be extends gf {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        gf var4 = (gf) (this.field_s.beginForward(86));
+        PcmStream var4 = (PcmStream) (this.field_s.beginForward(86));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
-          var4 = (gf) (this.field_s.nextForward(2123));
+          var4.mixOrSkipFrames(param0, param1, param2);
+          var4 = (PcmStream) (this.field_s.nextForward(2123));
         }
     }
 
@@ -75,7 +75,7 @@ final class be extends gf {
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         bl var5 = null;
         int var7 = 0;
@@ -117,8 +117,8 @@ final class be extends gf {
         this.a(vc.b(param0, param1, param2));
     }
 
-    final gf a() {
-        return (gf) (this.field_s.beginForward(-123));
+    final PcmStream firstChildStream() {
+        return (PcmStream) (this.field_s.beginForward(-123));
     }
 
     private final void a(IntrusiveNode param0, bl param1) {
@@ -140,18 +140,18 @@ final class be extends gf {
     }
 
     private final void c(int param0) {
-        gf var2 = (gf) (this.field_s.beginForward(-119));
+        PcmStream var2 = (PcmStream) (this.field_s.beginForward(-119));
         while (var2 != null) {
-          var2.b(param0);
-          var2 = (gf) (this.field_s.nextForward(2123));
+          var2.skipFrames(param0);
+          var2 = (PcmStream) (this.field_s.nextForward(2123));
         }
     }
 
-    final gf d() {
-        return (gf) (this.field_s.nextForward(2123));
+    final PcmStream nextChildStream() {
+        return (PcmStream) (this.field_s.nextForward(2123));
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         bl var3 = null;
         int var5 = 0;

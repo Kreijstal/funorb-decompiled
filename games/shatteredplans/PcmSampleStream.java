@@ -1129,7 +1129,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         if (this.field_w == 0 &&
           this.field_v == 0) {
           return 0;
@@ -1392,7 +1392,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final int c() {
+    final int getSchedulingPriority() {
         int var1 = this.field_s * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_q == 0) {

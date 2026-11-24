@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li extends je {
+final class li extends PcmStream {
     private int field_w;
     private int field_t;
     private int field_q;
@@ -68,7 +68,7 @@ final class li extends je {
         return param5 >> 1;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -84,7 +84,7 @@ final class li extends je {
         int var10Lifetime1;
         if (this.field_m == 0 &&
           this.field_x == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (ib) (this.field_i);
@@ -269,7 +269,7 @@ final class li extends je {
         this.field_u = param0;
     }
 
-    final je b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -602,7 +602,7 @@ final class li extends je {
         this.a(param0, this.h());
     }
 
-    final je a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -1304,7 +1304,7 @@ final class li extends je {
         return param4 >> 1;
     }
 
-    final int d() {
+    final int getSchedulingPriority() {
         int var1 = this.field_q * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_l == 0) {
@@ -1383,7 +1383,7 @@ final class li extends je {
         return param4 >> 1;
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         if (this.field_m == 0 &&
           this.field_x == 0) {
           return 0;
@@ -1525,7 +1525,7 @@ final class li extends je {
         this.field_x = 0;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;

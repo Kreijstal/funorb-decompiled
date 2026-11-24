@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka extends wf {
+final class ka extends PcmStream {
     static String field_k;
     private pk field_p;
     static mj field_o;
@@ -9,15 +9,15 @@ final class ka extends wf {
     IntrusiveDeque field_m;
     rb field_l;
 
-    final wf d() {
+    final PcmStream firstChildStream() {
         kl var1 = (kl) (this.field_m.beginForward((byte) -52));
         if (var1 == null) {
           return null;
         }
         if (null == var1.field_i) {
-          return this.c();
+          return this.nextChildStream();
         }
-        return (wf) ((Object) var1.field_i);
+        return (PcmStream) ((Object) var1.field_i);
     }
 
     private final void a(int[] param0, int param1, int param2, kl param3, byte param4, int param5) {
@@ -49,7 +49,7 @@ final class ka extends wf {
                 param3.field_u = param3.field_u + param2 * var7_int;
                 break;
               }
-              param3.field_i.a(param0, param5, var8);
+              param3.field_i.mixInto(param0, param5, var8);
               param2 = param2 - var8;
               param3.field_u = param3.field_u + (var8 * var7_int - 1048576);
               param5 = param5 + var8;
@@ -74,18 +74,18 @@ final class ka extends wf {
                 param3.field_i.f(-1);
               }
               var11.i(var9);
-              var11.a(param0, param5, param1 - param5);
+              var11.mixInto(param0, param5, param1 - param5);
               if (!var11.k()) {
                 continue;
               }
               this.field_l.a(var11);
             }
           }
-          param3.field_i.a(param0, param5, param2);
+          param3.field_i.mixInto(param0, param5, param2);
           if (param4 < -54) {
             return;
           }
-          this.a(-79);
+          this.skipFrames(-79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ final class ka extends wf {
           if (param2 >= -58) {
             field_k = (String) null;
           }
-          param0.field_i.a(param1);
+          param0.field_i.skipFrames(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class ka extends wf {
         field_n = 46;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -183,7 +183,7 @@ final class ka extends wf {
         int var7 = 0;
         var7 = Bounce.field_N;
         try {
-          this.field_l.a(param0, param1, param2);
+          this.field_l.mixInto(param0, param1, param2);
           var6 = (kl) (this.field_m.beginForward((byte) -49));
           while (var6 != null) {
             stackIn_4_0 = this.field_p.a(var6, 8335400);
@@ -236,11 +236,11 @@ final class ka extends wf {
         }
     }
 
-    final int b() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final wf c() {
+    final PcmStream nextChildStream() {
         kl var1;
         while (true) {
           var1 = (kl) (this.field_m.nextForward((byte) -94));
@@ -248,18 +248,18 @@ final class ka extends wf {
             return null;
           }
           if (null != var1.field_i) {
-            return (wf) ((Object) var1.field_i);
+            return (PcmStream) ((Object) var1.field_i);
           }
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         kl var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = Bounce.field_N;
-        this.field_l.a(param0);
+        this.field_l.skipFrames(param0);
         var3 = (kl) (this.field_m.beginForward((byte) -91));
         while (var3 != null) {
           stackIn_4_0 = this.field_p.a(var3, 8335400);

@@ -29,10 +29,10 @@ class PcmPlayerService {
         if (param0.field_i != null) {
           param0.field_i.field_h = 0;
         }
-        PcmStream var1 = param0.c();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           PcmPlayerService.resetStreamScheduling(var1);
-          var1 = param0.a();
+          var1 = param0.nextChildStream();
         }
     }
 
@@ -71,7 +71,7 @@ class PcmPlayerService {
           this.field_a = 0;
         }
         if (this.field_i != null) {
-          this.field_i.a(param0);
+          this.field_i.skipFrames(param0);
           return;
         }
     }
@@ -172,7 +172,7 @@ class PcmPlayerService {
           this.field_a <= 0) {
           this.field_a = this.field_a + (field_u >> 4);
           PcmPlayerService.resetStreamScheduling(this.field_i);
-          this.enqueueByPriority(this.field_i, this.field_i.b());
+          this.enqueueByPriority(this.field_i, this.field_i.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -203,7 +203,7 @@ class PcmPlayerService {
                       continue;
                     }
                     var11.field_j = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_h = var12.field_h + var13;
@@ -211,12 +211,12 @@ class PcmPlayerService {
                     if (var4 >= this.field_l) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_k;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.b() >> 8);
-                        var14Lifetime2 = var11.a();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_h;
@@ -258,7 +258,7 @@ class PcmPlayerService {
           this.field_a = 0;
         }
         if (this.field_i != null) {
-          this.field_i.a(param0, 0, param1);
+          this.field_i.mixInto(param0, 0, param1);
         }
         this.field_h = ll.correctedCurrentTimeMillis(1000);
     }

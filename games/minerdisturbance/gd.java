@@ -46,7 +46,7 @@ final class gd extends PcmStream {
                 param3.field_B = param3.field_B + var7_int * param1;
                 break;
               }
-              param3.field_w.a(param4, param0, var8);
+              param3.field_w.mixInto(param4, param0, var8);
               param1 = param1 - var8;
               param0 = param0 + var8;
               param3.field_B = param3.field_B + (-1048576 + var7_int * var8);
@@ -70,14 +70,14 @@ final class gd extends PcmStream {
                 param3.field_w.i(-1);
               }
               var11.g(var9);
-              var11.a(param4, param0, -param0 + param2);
+              var11.mixInto(param4, param0, -param0 + param2);
               if (!var11.j()) {
                 continue;
               }
               this.field_r.b(var11);
             }
           }
-          param3.field_w.a(param4, param0, param1);
+          param3.field_w.mixInto(param4, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,12 +99,12 @@ final class gd extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         cg var3;
         int var4;
         var4 = MinerDisturbance.field_ab;
-        this.field_r.a(param0);
+        this.field_r.skipFrames(param0);
         var3 = (cg) (this.field_v.beginForward(73));
         while (var3 != null) {
           if (!this.field_u.a(var3, -24)) {
@@ -123,7 +123,7 @@ final class gd extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -161,7 +161,7 @@ final class gd extends PcmStream {
               param1 = param2.field_B / var4_int;
             }
           }
-          param2.field_w.a(param1);
+          param2.field_w.skipFrames(param1);
           if (param0 <= 64) {
             var6 = (short[]) null;
             gd.a((CipherPacketBuffer) null, 110, -27, (short[]) null);
@@ -181,7 +181,7 @@ final class gd extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         cg var1_ref = null;
         do {
           var1_ref = (cg) (this.field_v.nextForward((byte) 56));
@@ -271,7 +271,7 @@ final class gd extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         cg var6 = null;
@@ -283,7 +283,7 @@ final class gd extends PcmStream {
         RuntimeException var4 = null;
         var7 = MinerDisturbance.field_ab;
         try {
-          this.field_r.a(param0, param1, param2);
+          this.field_r.mixInto(param0, param1, param2);
           var6 = (cg) (this.field_v.beginForward(90));
           while (var6 != null) {
             if (!this.field_u.a(var6, -75)) {
@@ -343,7 +343,7 @@ final class gd extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         cg var1 = (cg) (this.field_v.beginForward(97));
         if (var1 == null) {
           return null;
@@ -351,7 +351,7 @@ final class gd extends PcmStream {
         if (null != var1.field_w) {
           return (PcmStream) ((Object) var1.field_w);
         }
-        return this.c();
+        return this.nextChildStream();
     }
 
     gd(di param0) {

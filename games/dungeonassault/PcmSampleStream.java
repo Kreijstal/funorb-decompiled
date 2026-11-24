@@ -18,7 +18,7 @@ final class PcmSampleStream extends PcmStream {
     private int field_p;
     private boolean field_n;
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -92,7 +92,7 @@ final class PcmSampleStream extends PcmStream {
         this.a(param0, param1, this.h());
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -265,7 +265,7 @@ final class PcmSampleStream extends PcmStream {
         this.unlink(false);
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -627,7 +627,7 @@ final class PcmSampleStream extends PcmStream {
         this.c(param0 << 6, this.h());
     }
 
-    final int b() {
+    final int getSchedulingPriority() {
         int var1 = this.field_p * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_z == 0) {
@@ -1319,7 +1319,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_u = param0;
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         if (this.field_w == 0 &&
           this.field_s == 0) {
           return 0;
@@ -1327,7 +1327,7 @@ final class PcmSampleStream extends PcmStream {
         return 1;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1343,7 +1343,7 @@ final class PcmSampleStream extends PcmStream {
         int var10Lifetime1;
         if (this.field_w == 0 &&
           this.field_s == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (PcmSample) (this.field_k);

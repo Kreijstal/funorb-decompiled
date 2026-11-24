@@ -376,7 +376,7 @@ final class kd extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -400,7 +400,7 @@ final class kd extends PcmStream {
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (0 >= this.field_z) {
-            this.c(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_x) {
@@ -466,8 +466,8 @@ final class kd extends PcmStream {
                   this.field_o = new int[var6];
                   this.field_m = new int[var6];
                 }
-                this.field_F.b(this.field_m, 0, param2);
-                this.field_C.b(this.field_o, 0, param2);
+                this.field_F.mixInto(this.field_m, 0, param2);
+                this.field_C.mixInto(this.field_o, 0, param2);
                 if (AudioOutput.field_b) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -480,10 +480,10 @@ final class kd extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (this.field_m[var8] * var4_int + var5 * this.field_o[var8] >> 8);
                 }
               } else {
-                this.field_C.b(param0, param1, param2);
+                this.field_C.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_F.b(param0, param1, param2);
+              this.field_F.mixInto(param0, param1, param2);
             }
           }
           if (null != this.field_B) {
@@ -497,7 +497,7 @@ final class kd extends PcmStream {
               this.field_o = new int[var6];
               this.field_m = new int[var6];
             }
-            this.field_n.b(this.field_m, 0, param2);
+            this.field_n.mixInto(this.field_m, 0, param2);
             if (AudioOutput.field_b) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -536,32 +536,32 @@ final class kd extends PcmStream {
         return stackIn_6_0;
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_s > 0 &&
           this.field_p != null) {
-          this.field_F.c(param0);
+          this.field_F.skipFrames(param0);
         }
         if (1048576 > this.field_s &&
           null != this.field_u) {
-          this.field_C.c(param0);
+          this.field_C.skipFrames(param0);
         }
         if (this.field_r > 0 &&
           this.field_B != null) {
-          this.field_n.c(param0);
+          this.field_n.skipFrames(param0);
         }
         if (this.field_x) {
           if (this.field_w > 0 &&

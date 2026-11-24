@@ -24,7 +24,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 

@@ -39,7 +39,7 @@ final class MidiPcmStream extends PcmStream {
         int var4 = 47 % ((param2 - 51) / 61);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         String stackIn_17_2 = null;
         boolean var8 = (AceOfSkies.obfuscationControl);
         try {
@@ -56,7 +56,7 @@ final class MidiPcmStream extends PcmStream {
               }
               int var7 = (int)((this.field_u - this.field_j + ((long)var4_int - 1L)) / (long)var4_int);
               this.field_j = this.field_j + (long)var4_int * (long)var7;
-              this.field_L.b(param0, param1, var7);
+              this.field_L.mixInto(param0, param1, var7);
               param1 = param1 + var7;
               this.a((byte) 53);
               param2 = param2 - var7;
@@ -67,11 +67,11 @@ final class MidiPcmStream extends PcmStream {
               if (!var8) {
                 continue;
               }
-              this.field_L.b(param0, param1, param2);
+              this.field_L.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_L.b(param0, param1, param2);
+          this.field_L.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ final class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -204,7 +204,7 @@ final class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -256,7 +256,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         boolean decompiledFrameCompleted1 = true;
         boolean decompiledFrameCompleted0 = true;
         boolean var6 = (AceOfSkies.obfuscationControl);
@@ -274,7 +274,7 @@ final class MidiPcmStream extends PcmStream {
             }
             int var5 = (int)((this.field_u - this.field_j + (long)var2 - 1L) / (long)var2);
             this.field_j = this.field_j + (long)var5 * (long)var2;
-            this.field_L.a(var5);
+            this.field_L.skipFrames(var5);
             param0 = param0 - var5;
             this.a((byte) 54);
             if (!this.field_M.c() &&
@@ -284,14 +284,14 @@ final class MidiPcmStream extends PcmStream {
             if (!var6) {
               continue;
             }
-            this.field_L.a(param0);
+            this.field_L.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted1 &&
           decompiledFrameCompleted0) {
-          this.field_L.a(param0);
+          this.field_L.skipFrames(param0);
         }
 
     }
@@ -414,7 +414,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_m[param0] = (int)(0.5 + Math.pow(2.0, (double)param1 * 0.00054931640625) * 2097152.0);
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_L);
     }
 
@@ -553,7 +553,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           this.a(param1 ^ -2029711495, true, param0, param2);
           if (param1 != -2029711608) {
-            this.a(43);
+            this.skipFrames(43);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hk.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -618,7 +618,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (decompiledFrameCompleted0 &&
           param1 < 50) {
-          this.b();
+          this.firstChildStream();
         }
 
     }
@@ -1197,12 +1197,12 @@ final class MidiPcmStream extends PcmStream {
           }
           param3.field_e.h(param3.field_i);
           if (param4 == null) {
-            param3.field_e.a(param0);
+            param3.field_e.skipFrames(param0);
             if (var11) {
-              param3.field_e.b(param4, param1, param0);
+              param3.field_e.mixInto(param4, param1, param0);
             }
           } else {
-            param3.field_e.b(param4, param1, param0);
+            param3.field_e.mixInto(param4, param1, param0);
           }
           if (param3.field_e.j()) {
             this.field_L.field_i.addSubstream(param3.field_e);

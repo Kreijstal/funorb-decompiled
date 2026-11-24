@@ -143,7 +143,7 @@ final class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -160,19 +160,19 @@ final class MidiPcmStream extends PcmStream {
             }
             var5 = (int)(((long)var2 + (-this.field_q + this.field_K - 1L)) / (long)var2);
             this.field_q = this.field_q + (long)var5 * (long)var2;
-            this.field_k.a(var5);
+            this.field_k.skipFrames(var5);
             param0 = param0 - var5;
             this.d(-3305);
             if (this.field_z.f()) {
               continue;
             }
-            this.field_k.a(param0);
+            this.field_k.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_k.a(param0);
+          this.field_k.skipFrames(param0);
         }
 
     }
@@ -238,7 +238,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -260,18 +260,18 @@ final class MidiPcmStream extends PcmStream {
               }
               var7 = (int)((-1L + (long)var4_int + (this.field_K - this.field_q)) / (long)var4_int);
               this.field_q = this.field_q + (long)var4_int * (long)var7;
-              this.field_k.a(param0, param1, var7);
+              this.field_k.mixInto(param0, param1, var7);
               param1 = param1 + var7;
               param2 = param2 - var7;
               this.d(-3305);
               if (this.field_z.f()) {
                 continue;
               }
-              this.field_k.a(param0, param1, param2);
+              this.field_k.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_k.a(param0, param1, param2);
+          this.field_k.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -576,9 +576,9 @@ final class MidiPcmStream extends PcmStream {
           }
           param1.field_z.fadeOutAndUnlink(param1.field_r);
           if (param2 == null) {
-            param1.field_z.a(param3);
+            param1.field_z.skipFrames(param3);
           } else {
-            param1.field_z.a(param2, param0, param3);
+            param1.field_z.mixInto(param2, param0, param3);
           }
           if (param1.field_z.e()) {
             this.field_k.field_j.a(param1.field_z);
@@ -652,7 +652,7 @@ final class MidiPcmStream extends PcmStream {
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
           if (param0 > -58) {
-            this.b();
+            this.firstChildStream();
           }
           var5Lifetime1 = (int)((double)(param1.field_f.field_h * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_j + 0.5);
           stackIn_13_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
@@ -986,7 +986,7 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void b(int param0) {
         int var3 = BachelorFridge.field_y;
         if (param0 != -5359) {
-          this.d();
+          this.getSchedulingCost();
         }
         MusicPatch var4 = (MusicPatch) (this.field_m.first(param0 ^ 9776));
         while (var4 != null) {
@@ -1048,7 +1048,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -1135,7 +1135,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_k);
     }
 
@@ -1281,7 +1281,7 @@ final class MidiPcmStream extends PcmStream {
         return this.field_z.f();
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 

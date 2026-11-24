@@ -710,7 +710,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -887,7 +887,7 @@ final class PcmSampleStream extends PcmStream {
         this.setVolumeAndPan(param0, this.i());
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         if (this.field_j == 0 &&
           this.field_n == 0) {
           return 0;
@@ -1097,7 +1097,7 @@ final class PcmSampleStream extends PcmStream {
         this.rampVolumeAndPan(param0, param1, this.i());
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -1340,7 +1340,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1356,7 +1356,7 @@ final class PcmSampleStream extends PcmStream {
         int var10Lifetime1;
         if (this.field_j == 0 &&
           this.field_n == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (PcmSample) (this.field_h);
@@ -1582,7 +1582,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 

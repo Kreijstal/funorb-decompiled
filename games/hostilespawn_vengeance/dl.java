@@ -12,7 +12,7 @@ final class dl extends PcmStream {
     static String field_m;
     wm field_q;
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         tm var1 = null;
         RuntimeException var1_ref = null;
         Object stackIn_2_0 = null;
@@ -29,7 +29,7 @@ final class dl extends PcmStream {
             stackIn_7_0 = var1.field_A;
             return (PcmStream) ((Object) stackIn_7_0);
           }
-          stackIn_9_0 = this.b();
+          stackIn_9_0 = this.nextChildStream();
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class dl extends PcmStream {
         }
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -87,9 +87,9 @@ final class dl extends PcmStream {
             }
           }
           if (param2 != 20891) {
-            this.c();
+            this.getSchedulingCost();
           }
-          param1.field_A.c(param0);
+          param1.field_A.skipFrames(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ final class dl extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         tm var1 = null;
         int var2 = 0;
         Object stackIn_3_0 = null;
@@ -3275,7 +3275,7 @@ final class dl extends PcmStream {
                   break scanLoop1;
                 }
               } else {
-                param2.field_A.b(param1, param4, var8);
+                param2.field_A.mixInto(param1, param4, var8);
                 param5 = param5 - var8;
                 param4 = param4 + var8;
                 param2.field_i = param2.field_i + (-1048576 + var8 * var7_int);
@@ -3302,7 +3302,7 @@ final class dl extends PcmStream {
                 param2.field_A.d(-1);
               }
               var11.h(var9);
-              var11.b(param1, param4, param0 - param4);
+              var11.mixInto(param1, param4, param0 - param4);
               if (var11.m()) {
                 this.field_q.b(var11);
               }
@@ -3314,9 +3314,9 @@ final class dl extends PcmStream {
             param2.field_i = param2.field_i + param5 * var7_int;
           }
           if (param3 != -1) {
-            this.b();
+            this.nextChildStream();
           }
-          param2.field_A.b(param1, param4, param5);
+          param2.field_A.mixInto(param1, param4, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3338,7 +3338,7 @@ final class dl extends PcmStream {
         }
     }
 
-    final void c(int param0) {
+    final void skipFrames(int param0) {
         int var2_int = 0;
         tm var3 = null;
         int var4 = 0;
@@ -3347,7 +3347,7 @@ final class dl extends PcmStream {
         RuntimeException var2 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          this.field_q.c(param0);
+          this.field_q.skipFrames(param0);
           var3 = (tm) (this.field_t.beginForward(-91));
           while (var3 != null) {
             if (var4 != 0) {
@@ -3402,7 +3402,7 @@ final class dl extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -3414,7 +3414,7 @@ final class dl extends PcmStream {
         int var7 = 0;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          this.field_q.b(param0, param1, param2);
+          this.field_q.mixInto(param0, param1, param2);
           var6 = (tm) (this.field_t.beginForward(-62));
           while (null != var6) {
             if (var7 != 0) {

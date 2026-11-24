@@ -11,7 +11,7 @@ final class lh extends PcmStream {
     e field_r;
     static int field_s;
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         hg var1 = (hg) (this.field_m.beginBackward((byte) 51));
         if (var1 == null) {
           return null;
@@ -19,7 +19,7 @@ final class lh extends PcmStream {
         if (null != var1.field_w) {
           return (PcmStream) ((Object) var1.field_w);
         }
-        return this.b();
+        return this.nextChildStream();
     }
 
     final static boolean a(String param0, byte param1) {
@@ -62,7 +62,7 @@ final class lh extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -74,7 +74,7 @@ final class lh extends PcmStream {
         int var7 = 0;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          this.field_r.a(param0, param1, param2);
+          this.field_r.mixInto(param0, param1, param2);
           var6 = (hg) (this.field_m.beginBackward((byte) 51));
           while (var6 != null) {
             if (!this.field_n.b(var6, -1642423728)) {
@@ -108,7 +108,7 @@ final class lh extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -152,7 +152,7 @@ final class lh extends PcmStream {
               param2 = param1.field_C / var4_int;
             }
           }
-          param1.field_w.a(param2);
+          param1.field_w.skipFrames(param2);
           if (param0 < -43) {
             return;
           }
@@ -200,7 +200,7 @@ final class lh extends PcmStream {
                 param2.field_C = param2.field_C + var7_int * param4;
                 break;
               }
-              param2.field_w.a(param0, param3, var8);
+              param2.field_w.mixInto(param0, param3, var8);
               param3 = param3 + var8;
               param4 = param4 - var8;
               param2.field_C = param2.field_C + (var8 * var7_int - 1048576);
@@ -224,14 +224,14 @@ final class lh extends PcmStream {
                 param2.field_w.d(-1);
               }
               var11.e(var9);
-              var11.a(param0, param3, -param3 + param1);
+              var11.mixInto(param0, param3, -param3 + param1);
               if (!var11.h()) {
                 continue;
               }
               this.field_r.a(var11);
             }
           }
-          param2.field_w.a(param0, param3, param4);
+          param2.field_w.mixInto(param0, param3, param4);
           if (param5 == -117) {
             return;
           }
@@ -257,7 +257,7 @@ final class lh extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         hg var1;
         int var2;
         var2 = SolKnight.field_L ? 1 : 0;
@@ -272,13 +272,13 @@ final class lh extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         hg var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = SolKnight.field_L ? 1 : 0;
-        this.field_r.a(param0);
+        this.field_r.skipFrames(param0);
         var3 = (hg) (this.field_m.beginBackward((byte) 51));
         while (var3 != null) {
           stackIn_4_0 = this.field_n.b(var3, -1642423728);

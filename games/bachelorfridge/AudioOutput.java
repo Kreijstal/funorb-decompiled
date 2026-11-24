@@ -65,10 +65,10 @@ class AudioOutput {
         if (param0.field_h != null) {
           param0.field_h.field_f = 0;
         }
-        PcmStream var1 = param0.b();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           AudioOutput.resetStreamScheduling(var1);
-          var1 = param0.a();
+          var1 = param0.nextChildStream();
         }
     }
 
@@ -170,7 +170,7 @@ class AudioOutput {
           this.field_s = 0;
         }
         if (this.field_n != null) {
-          this.field_n.a(param0);
+          this.field_n.skipFrames(param0);
           return;
         }
     }
@@ -238,7 +238,7 @@ class AudioOutput {
                       continue;
                     }
                     var11.field_f = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_f = var12.field_f + var13;
@@ -246,12 +246,12 @@ class AudioOutput {
                     if (var4 >= this.field_b) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_i;
                       while (var14Lifetime2 != null) {
                         this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getPriority() >> 8);
-                        var14Lifetime2 = var11.a();
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_g;
@@ -293,7 +293,7 @@ class AudioOutput {
           this.field_s = 0;
         }
         if (this.field_n != null) {
-          this.field_n.a(param0, 0, param1);
+          this.field_n.mixInto(param0, 0, param1);
         }
         this.field_m = f.correctedCurrentTimeMillis((byte) 73);
     }

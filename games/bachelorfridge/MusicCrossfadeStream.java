@@ -129,17 +129,17 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = BachelorFridge.field_y;
         if (this.field_t > 0) {
           if (this.field_u != null) {
-            this.field_s.a(param0);
+            this.field_s.skipFrames(param0);
             if (this.field_t >= 1048576) {
               if ((!(this.field_l <= 0)) &&
                 ((this.field_v != null))) {
-                this.field_r.a(param0);
+                this.field_r.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -147,19 +147,19 @@ final class MusicCrossfadeStream extends PcmStream {
               if (null == this.field_m) {
                 if ((!(this.field_l <= 0)) &&
                   ((this.field_v != null))) {
-                  this.field_r.a(param0);
+                  this.field_r.skipFrames(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_o.a(param0);
+                this.field_o.skipFrames(param0);
               }
             }
           } else {
             if (this.field_t >= 1048576) {
               if ((!(this.field_l <= 0)) &&
                 ((this.field_v != null))) {
-                this.field_r.a(param0);
+                this.field_r.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -167,12 +167,12 @@ final class MusicCrossfadeStream extends PcmStream {
               if (null == this.field_m) {
                 if ((!(this.field_l <= 0)) &&
                   ((this.field_v != null))) {
-                  this.field_r.a(param0);
+                  this.field_r.skipFrames(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_o.a(param0);
+                this.field_o.skipFrames(param0);
               }
             }
           }
@@ -180,7 +180,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (this.field_t >= 1048576) {
             if ((!(this.field_l <= 0)) &&
               ((this.field_v != null))) {
-              this.field_r.a(param0);
+              this.field_r.skipFrames(param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -188,18 +188,18 @@ final class MusicCrossfadeStream extends PcmStream {
             if (null == this.field_m) {
               if ((!(this.field_l <= 0)) &&
                 ((this.field_v != null))) {
-                this.field_r.a(param0);
+                this.field_r.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_o.a(param0);
+              this.field_o.skipFrames(param0);
             }
           }
         }
         if ((decompiledFrameRemainder0) && (this.field_l > 0 &&
           this.field_v != null)) {
-          this.field_r.a(param0);
+          this.field_r.skipFrames(param0);
         }
         if (this.field_p) {
           if (this.field_w > 0 &&
@@ -246,11 +246,11 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -274,7 +274,7 @@ final class MusicCrossfadeStream extends PcmStream {
         var11 = BachelorFridge.field_y;
         try {
           if (this.field_q <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_p) {
@@ -340,8 +340,8 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_k = new int[var6];
                   this.field_j = new int[var6];
                 }
-                this.field_s.a(this.field_j, 0, param2);
-                this.field_o.a(this.field_k, 0, param2);
+                this.field_s.mixInto(this.field_j, 0, param2);
+                this.field_o.mixInto(this.field_k, 0, param2);
                 if (!AudioOutput.field_q) {
                   stackIn_48_0 = param1;
                 } else {
@@ -354,10 +354,10 @@ final class MusicCrossfadeStream extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_j[var8] + var5 * this.field_k[var8] >> 8);
                 }
               } else {
-                this.field_o.a(param0, param1, param2);
+                this.field_o.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_s.a(param0, param1, param2);
+              this.field_s.mixInto(param0, param1, param2);
             }
           }
           if (this.field_v != null) {
@@ -371,7 +371,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_k = new int[var6];
               this.field_j = new int[var6];
             }
-            this.field_r.a(this.field_j, 0, param2);
+            this.field_r.mixInto(this.field_j, 0, param2);
             if (AudioOutput.field_q) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -401,18 +401,18 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
     final synchronized void a(int param0, boolean param1) {
         if (!param1) {
           int[] var4 = (int[]) null;
-          this.a((int[]) null, 70, 31);
+          this.mixInto((int[]) null, 70, 31);
         }
         this.field_q = param0;
     }
@@ -420,7 +420,7 @@ final class MusicCrossfadeStream extends PcmStream {
     private final void a(int param0, int param1, MidiPcmStream param2, int param3) {
         try {
           if (param3 > 0) {
-            this.d();
+            this.getSchedulingCost();
           }
           param2.a(-1, param0, (byte) -107);
           param2.c(224, param1);

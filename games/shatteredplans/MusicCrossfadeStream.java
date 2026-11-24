@@ -417,7 +417,7 @@ final class MusicCrossfadeStream extends PcmStream {
         this.field_B = param0;
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 

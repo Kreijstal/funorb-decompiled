@@ -348,6 +348,14 @@
       "renamedSymbol": "C:BoundedRandomAccessFile"
     },
     {
+      "symbol": "C:sh",
+      "originalName": "sh",
+      "to": "PcmStream",
+      "evidence": "Abstract PCM stream node:virtual mix/skip,child enumeration,scheduler work cost and priority;retains next scheduled stream,sample,priority andvolatile active flag. Constructor initializes active true;conditional wrapper dispatches mix versus skip. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmStream"
+    },
+    {
       "symbol": "C:sl",
       "originalName": "sl",
       "to": "VorbisCodebook",
@@ -1052,6 +1060,46 @@
       "renamedSymbol": "M:eh.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:ei.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:ei.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Complete original-body SHA256 19a081b84541609a5e45fbd43aa0317e02721054ca55fa9ec2ed4ea37c13c082. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:ei.b([III)V",
+      "originalName": "b",
+      "to": "mixInto",
+      "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Complete original-body SHA256 e3a5df54eb690998f31a1d9f2db77a6ae2d4ec05787c2a9bddd0a12364b74d81. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.mixInto([III)V"
+    },
+    {
+      "symbol": "M:ei.c()Lsh;",
+      "originalName": "c",
+      "to": "nextChildStream",
+      "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Complete original-body SHA256 8e3206f68e80879d581c5df2e63d30570ceaacfa4de14fa89bafaf5b71237483. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:ei.d()Lsh;",
+      "originalName": "d",
+      "to": "firstChildStream",
+      "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Complete original-body SHA256 911bf752f27197d55c1c1a2ee6fbf2d2f0dacddcb6bb0e7b0997b9a4783133ed. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.firstChildStream()LPcmStream;"
+    },
+    {
       "symbol": "M:ej.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -1146,6 +1194,46 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 bb4bae78389dbeba83f36ce37669f69091a4ab4a204f540af2630b100cfe2227.",
       "confidence": "reviewed",
       "renamedSymbol": "M:gj.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:gl.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gl.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:gl.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Complete original-body SHA256 0b021e996626b3017c05bd3f4f8a523a28bb486064c7d94f5fc962c81bbfb072. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gl.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:gl.b([III)V",
+      "originalName": "b",
+      "to": "mixInto",
+      "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Complete original-body SHA256 fe1b2b468fe5c05e5140fc0a67ebc96cb62f414884b6c9ad34adaa60d0ad33a5. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gl.mixInto([III)V"
+    },
+    {
+      "symbol": "M:gl.c()Lsh;",
+      "originalName": "c",
+      "to": "nextChildStream",
+      "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Complete original-body SHA256 0cd0c88459119b295e51360e29c60b2012b3ea27c7caa974057754dec1735232. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gl.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:gl.d()Lsh;",
+      "originalName": "d",
+      "to": "firstChildStream",
+      "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Complete original-body SHA256 d09eb03e9435b06a4e21e1186936cf97278cd13d830e5524e78eadcf66925e1e. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gl.firstChildStream()LPcmStream;"
     },
     {
       "symbol": "M:h.a(II)I",
@@ -1308,6 +1396,54 @@
       "renamedSymbol": "M:ia.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:ie.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 d586e6f8c58efb7790acdd99d542f5643d0dc4d2d570b3cf6556cfe6ac98ee8c. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:ie.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Complete original-body SHA256 8ad432dd1c29f4a2555343b1c7a3088291c6a30b55d22338744acb6c4e7e4d44. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:ie.b()I",
+      "originalName": "b",
+      "to": "getSchedulingPriority",
+      "evidence": "Return the original PCM scheduling priority:default255,child delegation,raw-volume/position/loop attenuation,or effect/global scaling where implemented. Preserve original signed int overflow,division,absolute-value edge case,upper cap and exceptional paths. Complete original-body SHA256 d0bc0316b0d07cd1ac64e2f5552255074e252c591855a3f9c0d387871ead2f4a. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.getSchedulingPriority()I"
+    },
+    {
+      "symbol": "M:ie.b([III)V",
+      "originalName": "b",
+      "to": "mixInto",
+      "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Complete original-body SHA256 ba9efd12dfed830d1e6eeed96d5ebd354018e598fd68770ecf756a11a927cca4. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.mixInto([III)V"
+    },
+    {
+      "symbol": "M:ie.c()Lsh;",
+      "originalName": "c",
+      "to": "nextChildStream",
+      "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Complete original-body SHA256 8e3206f68e80879d581c5df2e63d30570ceaacfa4de14fa89bafaf5b71237483. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:ie.d()Lsh;",
+      "originalName": "d",
+      "to": "firstChildStream",
+      "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Complete original-body SHA256 8e3206f68e80879d581c5df2e63d30570ceaacfa4de14fa89bafaf5b71237483. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.firstChildStream()LPcmStream;"
+    },
+    {
       "symbol": "M:jd.a(Ljava/lang/String;I)Lmk;",
       "originalName": "a",
       "to": "pollAccountNameCheck",
@@ -1378,6 +1514,46 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 0b2ed773bb90da7668ac470b393295417c5c8d2a7d93be844806bc740e81aa2e.",
       "confidence": "reviewed",
       "renamedSymbol": "M:jl.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ke.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ke.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:ke.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Complete original-body SHA256 e7791962e4c479805d415e5ae6bfd480d48f21704c2ae3eef3739a1f9bf844c2. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ke.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:ke.b([III)V",
+      "originalName": "b",
+      "to": "mixInto",
+      "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Complete original-body SHA256 7c34969119eb5b2299b9ef8af1c7a744c06b186e1c2d1c6c350fa7db5b1b597a. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ke.mixInto([III)V"
+    },
+    {
+      "symbol": "M:ke.c()Lsh;",
+      "originalName": "c",
+      "to": "nextChildStream",
+      "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Complete original-body SHA256 5c2aaeebd2a2be09ac575967be6b0a18dc82ccd2a04a055e3da6929adda708bf. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ke.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:ke.d()Lsh;",
+      "originalName": "d",
+      "to": "firstChildStream",
+      "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Complete original-body SHA256 3a4c875841f39e90c84c159981c9f34b897bb0bebd508a8e4416702c1d31c40c. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ke.firstChildStream()LPcmStream;"
     },
     {
       "symbol": "M:kg.a(Ljava/awt/Component;)V",
@@ -1513,7 +1689,7 @@
       "to": "resetStreamScheduling",
       "evidence": "Recursively clear stream active flags and retained sample scheduling positions using the actual first/next-child traversal methods. Original-body SHA256 6d242be4aac077e9142f63e55b84b5a1e56beb58afba9cce77596ba574af21ef. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:AudioOutput.resetStreamScheduling(Lsh;)V"
+      "renamedSymbol": "M:AudioOutput.resetStreamScheduling(LPcmStream;)V"
     },
     {
       "symbol": "M:la.a(Lsh;I)V",
@@ -1521,7 +1697,7 @@
       "to": "enqueueByPriority",
       "evidence": "Append the stream to the priority>>5 bucket via retained head/tail arrays and stream link/priority fields. Original-body SHA256 df65fc11d069e9f78aae8f4ac09361fe30ace70cea5e51f30cec1838e591e74a. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:AudioOutput.enqueueByPriority(Lsh;I)V"
+      "renamedSymbol": "M:AudioOutput.enqueueByPriority(LPcmStream;I)V"
     },
     {
       "symbol": "M:la.a([II)V",
@@ -1553,7 +1729,7 @@
       "to": "setRootStream",
       "evidence": "Assign the retained root PCM stream under the existing synchronization/modifiers. Original-body SHA256 3f2b3b7ae5f9ecd3ca8fdab80d675556ac05fc40ad4cdda942327154e682a042. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:AudioOutput.setRootStream(Lsh;)V"
+      "renamedSymbol": "M:AudioOutput.setRootStream(LPcmStream;)V"
     },
     {
       "symbol": "M:la.c()V",
@@ -2332,6 +2508,62 @@
       "renamedSymbol": "M:se.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:sh.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Abstract root contract;original declaration SHA256 0bdcf3983847858f9d979fb5ade735852a918242a6f09ba3d4ebd946c28819b7. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:sh.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Abstract root contract;original declaration SHA256 bc878ca41889248b200399fe8c14cc1d305ee9f541ae00dfa3b0561ffe5ce888. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:sh.a([III)V",
+      "originalName": "a",
+      "to": "mixOrSkipFrames",
+      "evidence": "Read the retained volatile active flag once at the original branch;when true call the virtual PCM render method with original buffer/offset/count,otherwise call the virtual skip method with original count. Preserve direct dispatch,full count domain and original writes/exceptions. Complete original-body SHA256 b2a1da22b18fa6c89c77e4ae4ef479746ff86ce61c0e771ae71b60bfe8cee904. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.mixOrSkipFrames([III)V"
+    },
+    {
+      "symbol": "M:sh.b()I",
+      "originalName": "b",
+      "to": "getSchedulingPriority",
+      "evidence": "Return the original PCM scheduling priority:default255,child delegation,raw-volume/position/loop attenuation,or effect/global scaling where implemented. Preserve original signed int overflow,division,absolute-value edge case,upper cap and exceptional paths. Complete original-body SHA256 38e862bbc9b70ed7e4079a363a35ac1bdb29105f8efbea66e83a494c7397512f. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.getSchedulingPriority()I"
+    },
+    {
+      "symbol": "M:sh.b([III)V",
+      "originalName": "b",
+      "to": "mixInto",
+      "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Abstract root contract;original declaration SHA256 395f69403070135cd894f4290a68a33c6d9f3f763fbcc0bce8c87dc9cdeae36a. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.mixInto([III)V"
+    },
+    {
+      "symbol": "M:sh.c()Lsh;",
+      "originalName": "c",
+      "to": "nextChildStream",
+      "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Abstract root contract;original declaration SHA256 b3ebf3681141fbe2f64c1f54e7d05c29fa05c3818d26570fbf403e8cc00ee355. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:sh.d()Lsh;",
+      "originalName": "d",
+      "to": "firstChildStream",
+      "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Abstract root contract;original declaration SHA256 72355cf146b88eb9ed77b440c2be3bd2594914157f5d3ec6b8e98a1be78d113b. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.firstChildStream()LPcmStream;"
+    },
+    {
       "symbol": "M:sk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
       "to": "throwUnchecked",
@@ -2410,6 +2642,46 @@
       "evidence": "Exponentiation-by-squaring helper with signed32-bit multiplication and right shifts. Preserve each actual base/exponent/seed-or-terminal/guard parameter arrangement,global control reads,side effects,early returns and exception wrapper;do not substitute Math.pow. Pre-rename body SHA256 03cb78a74363421b2149e3a71319c3b3f09c56cedd3c9e9e4c1549f18c2df744. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:tf.integerPower(III)I"
+    },
+    {
+      "symbol": "M:th.a()I",
+      "originalName": "a",
+      "to": "getSchedulingCost",
+      "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 a520cd148a505c1285bc362fa4c7d5ba5836d161b68b8db64667086dea18a1b6. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:th.a(I)V",
+      "originalName": "a",
+      "to": "skipFrames",
+      "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Complete original-body SHA256 bcb2ecf54ad972902926d4761425a78a84c99b019fc2e284088c6efd466d5ff4. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:th.b([III)V",
+      "originalName": "b",
+      "to": "mixInto",
+      "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Complete original-body SHA256 6c6426112cb4064727259dbb4f91b2b5c66fa7a24d879cbd5cea2bd72d29dd8b. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.mixInto([III)V"
+    },
+    {
+      "symbol": "M:th.c()Lsh;",
+      "originalName": "c",
+      "to": "nextChildStream",
+      "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Complete original-body SHA256 8e3206f68e80879d581c5df2e63d30570ceaacfa4de14fa89bafaf5b71237483. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:th.d()Lsh;",
+      "originalName": "d",
+      "to": "firstChildStream",
+      "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Complete original-body SHA256 8e3206f68e80879d581c5df2e63d30570ceaacfa4de14fa89bafaf5b71237483. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.firstChildStream()LPcmStream;"
     },
     {
       "symbol": "M:ti.a(I)V",
@@ -5683,9 +5955,9 @@
     },
     {
       "symbol": "C:sh",
-      "renamedSymbol": "C:sh",
+      "renamedSymbol": "C:PcmStream",
       "originalName": "sh",
-      "renamedName": "sh",
+      "renamedName": "PcmStream",
       "declaration": {
         "file": "sh.java",
         "start": 53,
@@ -19334,7 +19606,7 @@
     },
     {
       "symbol": "F:la.field_d:[Lsh;",
-      "renamedSymbol": "F:AudioOutput.field_d:[Lsh;",
+      "renamedSymbol": "F:AudioOutput.field_d:[LPcmStream;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -19345,7 +19617,7 @@
     },
     {
       "symbol": "F:la.field_e:[Lsh;",
-      "renamedSymbol": "F:AudioOutput.field_e:[Lsh;",
+      "renamedSymbol": "F:AudioOutput.field_e:[LPcmStream;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -19455,7 +19727,7 @@
     },
     {
       "symbol": "F:la.field_o:Lsh;",
-      "renamedSymbol": "F:AudioOutput.field_o:Lsh;",
+      "renamedSymbol": "F:AudioOutput.field_o:LPcmStream;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -26451,7 +26723,7 @@
     },
     {
       "symbol": "F:sh.field_i:Ljf;",
-      "renamedSymbol": "F:sh.field_i:Ljf;",
+      "renamedSymbol": "F:PcmStream.field_i:Ljf;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -26462,7 +26734,7 @@
     },
     {
       "symbol": "F:sh.field_j:Z",
-      "renamedSymbol": "F:sh.field_j:Z",
+      "renamedSymbol": "F:PcmStream.field_j:Z",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -26473,7 +26745,7 @@
     },
     {
       "symbol": "F:sh.field_k:I",
-      "renamedSymbol": "F:sh.field_k:I",
+      "renamedSymbol": "F:PcmStream.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -26484,7 +26756,7 @@
     },
     {
       "symbol": "F:sh.field_l:Lsh;",
-      "renamedSymbol": "F:sh.field_l:Lsh;",
+      "renamedSymbol": "F:PcmStream.field_l:LPcmStream;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -62091,7 +62363,7 @@
     },
     {
       "symbol": "L:ei.a(I)V#0",
-      "renamedSymbol": "L:ei.a(I)V#0",
+      "renamedSymbol": "L:ei.skipFrames(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -62102,7 +62374,7 @@
     },
     {
       "symbol": "L:ei.a(I)V#1",
-      "renamedSymbol": "L:ei.a(I)V#1",
+      "renamedSymbol": "L:ei.skipFrames(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -62113,7 +62385,7 @@
     },
     {
       "symbol": "L:ei.a(I)V#2",
-      "renamedSymbol": "L:ei.a(I)V#2",
+      "renamedSymbol": "L:ei.skipFrames(I)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -62124,7 +62396,7 @@
     },
     {
       "symbol": "L:ei.a(I)V#3",
-      "renamedSymbol": "L:ei.a(I)V#3",
+      "renamedSymbol": "L:ei.skipFrames(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -62135,7 +62407,7 @@
     },
     {
       "symbol": "L:ei.a(I)V#4",
-      "renamedSymbol": "L:ei.a(I)V#4",
+      "renamedSymbol": "L:ei.skipFrames(I)V#4",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -63609,7 +63881,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#0",
-      "renamedSymbol": "L:ei.b([III)V#0",
+      "renamedSymbol": "L:ei.mixInto([III)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -63620,7 +63892,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#1",
-      "renamedSymbol": "L:ei.b([III)V#1",
+      "renamedSymbol": "L:ei.mixInto([III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -63631,7 +63903,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#2",
-      "renamedSymbol": "L:ei.b([III)V#2",
+      "renamedSymbol": "L:ei.mixInto([III)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -63642,7 +63914,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#3",
-      "renamedSymbol": "L:ei.b([III)V#3",
+      "renamedSymbol": "L:ei.mixInto([III)V#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -63653,7 +63925,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#4",
-      "renamedSymbol": "L:ei.b([III)V#4",
+      "renamedSymbol": "L:ei.mixInto([III)V#4",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -63664,7 +63936,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#5",
-      "renamedSymbol": "L:ei.b([III)V#5",
+      "renamedSymbol": "L:ei.mixInto([III)V#5",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -63675,7 +63947,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#6",
-      "renamedSymbol": "L:ei.b([III)V#6",
+      "renamedSymbol": "L:ei.mixInto([III)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -63686,7 +63958,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#7",
-      "renamedSymbol": "L:ei.b([III)V#7",
+      "renamedSymbol": "L:ei.mixInto([III)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -63697,7 +63969,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#8",
-      "renamedSymbol": "L:ei.b([III)V#8",
+      "renamedSymbol": "L:ei.mixInto([III)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -63708,7 +63980,7 @@
     },
     {
       "symbol": "L:ei.b([III)V#9",
-      "renamedSymbol": "L:ei.b([III)V#9",
+      "renamedSymbol": "L:ei.mixInto([III)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -82826,7 +83098,7 @@
     },
     {
       "symbol": "L:gl.a(I)V#0",
-      "renamedSymbol": "L:gl.a(I)V#0",
+      "renamedSymbol": "L:gl.skipFrames(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -82837,7 +83109,7 @@
     },
     {
       "symbol": "L:gl.a(I)V#1",
-      "renamedSymbol": "L:gl.a(I)V#1",
+      "renamedSymbol": "L:gl.skipFrames(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -82848,7 +83120,7 @@
     },
     {
       "symbol": "L:gl.a(I)V#2",
-      "renamedSymbol": "L:gl.a(I)V#2",
+      "renamedSymbol": "L:gl.skipFrames(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -82859,7 +83131,7 @@
     },
     {
       "symbol": "L:gl.a(I)V#3",
-      "renamedSymbol": "L:gl.a(I)V#3",
+      "renamedSymbol": "L:gl.skipFrames(I)V#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -82870,7 +83142,7 @@
     },
     {
       "symbol": "L:gl.a(I)V#4",
-      "renamedSymbol": "L:gl.a(I)V#4",
+      "renamedSymbol": "L:gl.skipFrames(I)V#4",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -83321,7 +83593,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#0",
-      "renamedSymbol": "L:gl.b([III)V#0",
+      "renamedSymbol": "L:gl.mixInto([III)V#0",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -83332,7 +83604,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#1",
-      "renamedSymbol": "L:gl.b([III)V#1",
+      "renamedSymbol": "L:gl.mixInto([III)V#1",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -83343,7 +83615,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#2",
-      "renamedSymbol": "L:gl.b([III)V#2",
+      "renamedSymbol": "L:gl.mixInto([III)V#2",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -83354,7 +83626,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#3",
-      "renamedSymbol": "L:gl.b([III)V#3",
+      "renamedSymbol": "L:gl.mixInto([III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -83365,7 +83637,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#4",
-      "renamedSymbol": "L:gl.b([III)V#4",
+      "renamedSymbol": "L:gl.mixInto([III)V#4",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -83376,7 +83648,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#5",
-      "renamedSymbol": "L:gl.b([III)V#5",
+      "renamedSymbol": "L:gl.mixInto([III)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -83387,7 +83659,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#6",
-      "renamedSymbol": "L:gl.b([III)V#6",
+      "renamedSymbol": "L:gl.mixInto([III)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -83398,7 +83670,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#7",
-      "renamedSymbol": "L:gl.b([III)V#7",
+      "renamedSymbol": "L:gl.mixInto([III)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -83409,7 +83681,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#8",
-      "renamedSymbol": "L:gl.b([III)V#8",
+      "renamedSymbol": "L:gl.mixInto([III)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -83420,7 +83692,7 @@
     },
     {
       "symbol": "L:gl.b([III)V#9",
-      "renamedSymbol": "L:gl.b([III)V#9",
+      "renamedSymbol": "L:gl.mixInto([III)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -83431,7 +83703,7 @@
     },
     {
       "symbol": "L:gl.c()Lsh;#0",
-      "renamedSymbol": "L:gl.c()Lsh;#0",
+      "renamedSymbol": "L:gl.nextChildStream()LPcmStream;#0",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -83442,7 +83714,7 @@
     },
     {
       "symbol": "L:gl.d()Lsh;#0",
-      "renamedSymbol": "L:gl.d()Lsh;#0",
+      "renamedSymbol": "L:gl.firstChildStream()LPcmStream;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -89800,7 +90072,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#0",
-      "renamedSymbol": "L:ie.a(I)V#0",
+      "renamedSymbol": "L:ie.skipFrames(I)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -89811,7 +90083,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#1",
-      "renamedSymbol": "L:ie.a(I)V#1",
+      "renamedSymbol": "L:ie.skipFrames(I)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -89822,7 +90094,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#2",
-      "renamedSymbol": "L:ie.a(I)V#2",
+      "renamedSymbol": "L:ie.skipFrames(I)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -89833,7 +90105,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#3",
-      "renamedSymbol": "L:ie.a(I)V#3",
+      "renamedSymbol": "L:ie.skipFrames(I)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -89844,7 +90116,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#4",
-      "renamedSymbol": "L:ie.a(I)V#4",
+      "renamedSymbol": "L:ie.skipFrames(I)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -89855,7 +90127,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#5",
-      "renamedSymbol": "L:ie.a(I)V#5",
+      "renamedSymbol": "L:ie.skipFrames(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -89866,7 +90138,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#6",
-      "renamedSymbol": "L:ie.a(I)V#6",
+      "renamedSymbol": "L:ie.skipFrames(I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -89877,7 +90149,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#7",
-      "renamedSymbol": "L:ie.a(I)V#7",
+      "renamedSymbol": "L:ie.skipFrames(I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -89888,7 +90160,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#8",
-      "renamedSymbol": "L:ie.a(I)V#8",
+      "renamedSymbol": "L:ie.skipFrames(I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -89899,7 +90171,7 @@
     },
     {
       "symbol": "L:ie.a(I)V#9",
-      "renamedSymbol": "L:ie.a(I)V#9",
+      "renamedSymbol": "L:ie.skipFrames(I)V#9",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -90515,7 +90787,7 @@
     },
     {
       "symbol": "L:ie.b()I#0",
-      "renamedSymbol": "L:ie.b()I#0",
+      "renamedSymbol": "L:ie.getSchedulingPriority()I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -91054,7 +91326,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#0",
-      "renamedSymbol": "L:ie.b([III)V#0",
+      "renamedSymbol": "L:ie.mixInto([III)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -91065,7 +91337,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#1",
-      "renamedSymbol": "L:ie.b([III)V#1",
+      "renamedSymbol": "L:ie.mixInto([III)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -91076,7 +91348,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#10",
-      "renamedSymbol": "L:ie.b([III)V#10",
+      "renamedSymbol": "L:ie.mixInto([III)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -91087,7 +91359,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#11",
-      "renamedSymbol": "L:ie.b([III)V#11",
+      "renamedSymbol": "L:ie.mixInto([III)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -91098,7 +91370,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#12",
-      "renamedSymbol": "L:ie.b([III)V#12",
+      "renamedSymbol": "L:ie.mixInto([III)V#12",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -91109,7 +91381,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#13",
-      "renamedSymbol": "L:ie.b([III)V#13",
+      "renamedSymbol": "L:ie.mixInto([III)V#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -91120,7 +91392,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#2",
-      "renamedSymbol": "L:ie.b([III)V#2",
+      "renamedSymbol": "L:ie.mixInto([III)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -91131,7 +91403,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#3",
-      "renamedSymbol": "L:ie.b([III)V#3",
+      "renamedSymbol": "L:ie.mixInto([III)V#3",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -91142,7 +91414,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#4",
-      "renamedSymbol": "L:ie.b([III)V#4",
+      "renamedSymbol": "L:ie.mixInto([III)V#4",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -91153,7 +91425,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#5",
-      "renamedSymbol": "L:ie.b([III)V#5",
+      "renamedSymbol": "L:ie.mixInto([III)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -91164,7 +91436,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#6",
-      "renamedSymbol": "L:ie.b([III)V#6",
+      "renamedSymbol": "L:ie.mixInto([III)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -91175,7 +91447,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#7",
-      "renamedSymbol": "L:ie.b([III)V#7",
+      "renamedSymbol": "L:ie.mixInto([III)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -91186,7 +91458,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#8",
-      "renamedSymbol": "L:ie.b([III)V#8",
+      "renamedSymbol": "L:ie.mixInto([III)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -91197,7 +91469,7 @@
     },
     {
       "symbol": "L:ie.b([III)V#9",
-      "renamedSymbol": "L:ie.b([III)V#9",
+      "renamedSymbol": "L:ie.mixInto([III)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -100008,7 +100280,7 @@
     },
     {
       "symbol": "L:ke.a(I)V#0",
-      "renamedSymbol": "L:ke.a(I)V#0",
+      "renamedSymbol": "L:ke.skipFrames(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100019,7 +100291,7 @@
     },
     {
       "symbol": "L:ke.a(I)V#1",
-      "renamedSymbol": "L:ke.a(I)V#1",
+      "renamedSymbol": "L:ke.skipFrames(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -100030,7 +100302,7 @@
     },
     {
       "symbol": "L:ke.a(I)V#2",
-      "renamedSymbol": "L:ke.a(I)V#2",
+      "renamedSymbol": "L:ke.skipFrames(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -100041,7 +100313,7 @@
     },
     {
       "symbol": "L:ke.a(I)V#3",
-      "renamedSymbol": "L:ke.a(I)V#3",
+      "renamedSymbol": "L:ke.skipFrames(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100052,7 +100324,7 @@
     },
     {
       "symbol": "L:ke.a(I)V#4",
-      "renamedSymbol": "L:ke.a(I)V#4",
+      "renamedSymbol": "L:ke.skipFrames(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -100074,7 +100346,7 @@
     },
     {
       "symbol": "L:ke.b([III)V#0",
-      "renamedSymbol": "L:ke.b([III)V#0",
+      "renamedSymbol": "L:ke.mixInto([III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -100085,7 +100357,7 @@
     },
     {
       "symbol": "L:ke.b([III)V#1",
-      "renamedSymbol": "L:ke.b([III)V#1",
+      "renamedSymbol": "L:ke.mixInto([III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -100096,7 +100368,7 @@
     },
     {
       "symbol": "L:ke.b([III)V#2",
-      "renamedSymbol": "L:ke.b([III)V#2",
+      "renamedSymbol": "L:ke.mixInto([III)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -100107,7 +100379,7 @@
     },
     {
       "symbol": "L:ke.b([III)V#3",
-      "renamedSymbol": "L:ke.b([III)V#3",
+      "renamedSymbol": "L:ke.mixInto([III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100118,7 +100390,7 @@
     },
     {
       "symbol": "L:ke.b([III)V#4",
-      "renamedSymbol": "L:ke.b([III)V#4",
+      "renamedSymbol": "L:ke.mixInto([III)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -102010,7 +102282,7 @@
     },
     {
       "symbol": "L:la.a(Lsh;)V#0",
-      "renamedSymbol": "L:AudioOutput.resetStreamScheduling(Lsh;)V#0",
+      "renamedSymbol": "L:AudioOutput.resetStreamScheduling(LPcmStream;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -102021,7 +102293,7 @@
     },
     {
       "symbol": "L:la.a(Lsh;I)V#0",
-      "renamedSymbol": "L:AudioOutput.enqueueByPriority(Lsh;I)V#0",
+      "renamedSymbol": "L:AudioOutput.enqueueByPriority(LPcmStream;I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102032,7 +102304,7 @@
     },
     {
       "symbol": "L:la.a(Lsh;I)V#1",
-      "renamedSymbol": "L:AudioOutput.enqueueByPriority(Lsh;I)V#1",
+      "renamedSymbol": "L:AudioOutput.enqueueByPriority(LPcmStream;I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -137892,7 +138164,7 @@
     },
     {
       "symbol": "L:th.a(I)V#0",
-      "renamedSymbol": "L:th.a(I)V#0",
+      "renamedSymbol": "L:th.skipFrames(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137903,7 +138175,7 @@
     },
     {
       "symbol": "L:th.a(I)V#1",
-      "renamedSymbol": "L:th.a(I)V#1",
+      "renamedSymbol": "L:th.skipFrames(I)V#1",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -138068,7 +138340,7 @@
     },
     {
       "symbol": "L:th.b([III)V#0",
-      "renamedSymbol": "L:th.b([III)V#0",
+      "renamedSymbol": "L:th.mixInto([III)V#0",
       "originalName": "localTemp$0",
       "renamedName": "localTemp$0",
       "declaration": {
@@ -138079,7 +138351,7 @@
     },
     {
       "symbol": "L:th.b([III)V#1",
-      "renamedSymbol": "L:th.b([III)V#1",
+      "renamedSymbol": "L:th.mixInto([III)V#1",
       "originalName": "localTemp$1",
       "renamedName": "localTemp$1",
       "declaration": {
@@ -138090,7 +138362,7 @@
     },
     {
       "symbol": "L:th.b([III)V#10",
-      "renamedSymbol": "L:th.b([III)V#10",
+      "renamedSymbol": "L:th.mixInto([III)V#10",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -138101,7 +138373,7 @@
     },
     {
       "symbol": "L:th.b([III)V#11",
-      "renamedSymbol": "L:th.b([III)V#11",
+      "renamedSymbol": "L:th.mixInto([III)V#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -138112,7 +138384,7 @@
     },
     {
       "symbol": "L:th.b([III)V#12",
-      "renamedSymbol": "L:th.b([III)V#12",
+      "renamedSymbol": "L:th.mixInto([III)V#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -138123,7 +138395,7 @@
     },
     {
       "symbol": "L:th.b([III)V#13",
-      "renamedSymbol": "L:th.b([III)V#13",
+      "renamedSymbol": "L:th.mixInto([III)V#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -138134,7 +138406,7 @@
     },
     {
       "symbol": "L:th.b([III)V#14",
-      "renamedSymbol": "L:th.b([III)V#14",
+      "renamedSymbol": "L:th.mixInto([III)V#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -138145,7 +138417,7 @@
     },
     {
       "symbol": "L:th.b([III)V#15",
-      "renamedSymbol": "L:th.b([III)V#15",
+      "renamedSymbol": "L:th.mixInto([III)V#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -138156,7 +138428,7 @@
     },
     {
       "symbol": "L:th.b([III)V#16",
-      "renamedSymbol": "L:th.b([III)V#16",
+      "renamedSymbol": "L:th.mixInto([III)V#16",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -138167,7 +138439,7 @@
     },
     {
       "symbol": "L:th.b([III)V#17",
-      "renamedSymbol": "L:th.b([III)V#17",
+      "renamedSymbol": "L:th.mixInto([III)V#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -138178,7 +138450,7 @@
     },
     {
       "symbol": "L:th.b([III)V#18",
-      "renamedSymbol": "L:th.b([III)V#18",
+      "renamedSymbol": "L:th.mixInto([III)V#18",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -138189,7 +138461,7 @@
     },
     {
       "symbol": "L:th.b([III)V#19",
-      "renamedSymbol": "L:th.b([III)V#19",
+      "renamedSymbol": "L:th.mixInto([III)V#19",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -138200,7 +138472,7 @@
     },
     {
       "symbol": "L:th.b([III)V#2",
-      "renamedSymbol": "L:th.b([III)V#2",
+      "renamedSymbol": "L:th.mixInto([III)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -138211,7 +138483,7 @@
     },
     {
       "symbol": "L:th.b([III)V#20",
-      "renamedSymbol": "L:th.b([III)V#20",
+      "renamedSymbol": "L:th.mixInto([III)V#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -138222,7 +138494,7 @@
     },
     {
       "symbol": "L:th.b([III)V#3",
-      "renamedSymbol": "L:th.b([III)V#3",
+      "renamedSymbol": "L:th.mixInto([III)V#3",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -138233,7 +138505,7 @@
     },
     {
       "symbol": "L:th.b([III)V#4",
-      "renamedSymbol": "L:th.b([III)V#4",
+      "renamedSymbol": "L:th.mixInto([III)V#4",
       "originalName": "stackIn_49_0",
       "renamedName": "stackIn_49_0",
       "declaration": {
@@ -138244,7 +138516,7 @@
     },
     {
       "symbol": "L:th.b([III)V#5",
-      "renamedSymbol": "L:th.b([III)V#5",
+      "renamedSymbol": "L:th.mixInto([III)V#5",
       "originalName": "stackIn_63_0",
       "renamedName": "stackIn_63_0",
       "declaration": {
@@ -138255,7 +138527,7 @@
     },
     {
       "symbol": "L:th.b([III)V#6",
-      "renamedSymbol": "L:th.b([III)V#6",
+      "renamedSymbol": "L:th.mixInto([III)V#6",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -138266,7 +138538,7 @@
     },
     {
       "symbol": "L:th.b([III)V#7",
-      "renamedSymbol": "L:th.b([III)V#7",
+      "renamedSymbol": "L:th.mixInto([III)V#7",
       "originalName": "stackIn_69_1",
       "renamedName": "stackIn_69_1",
       "declaration": {
@@ -138277,7 +138549,7 @@
     },
     {
       "symbol": "L:th.b([III)V#8",
-      "renamedSymbol": "L:th.b([III)V#8",
+      "renamedSymbol": "L:th.mixInto([III)V#8",
       "originalName": "stackIn_70_2",
       "renamedName": "stackIn_70_2",
       "declaration": {
@@ -138288,7 +138560,7 @@
     },
     {
       "symbol": "L:th.b([III)V#9",
-      "renamedSymbol": "L:th.b([III)V#9",
+      "renamedSymbol": "L:th.mixInto([III)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -159474,9 +159746,9 @@
     },
     {
       "symbol": "M:ei.a()I",
-      "renamedSymbol": "M:ei.a()I",
+      "renamedSymbol": "M:ei.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "ei.java",
         "start": 50444,
@@ -159518,9 +159790,9 @@
     },
     {
       "symbol": "M:ei.a(I)V",
-      "renamedSymbol": "M:ei.a(I)V",
+      "renamedSymbol": "M:ei.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "ei.java",
         "start": 1049,
@@ -159760,9 +160032,9 @@
     },
     {
       "symbol": "M:ei.b([III)V",
-      "renamedSymbol": "M:ei.b([III)V",
+      "renamedSymbol": "M:ei.mixInto([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mixInto",
       "declaration": {
         "file": "ei.java",
         "start": 38296,
@@ -159771,9 +160043,9 @@
     },
     {
       "symbol": "M:ei.c()Lsh;",
-      "renamedSymbol": "M:ei.c()Lsh;",
+      "renamedSymbol": "M:ei.nextChildStream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextChildStream",
       "declaration": {
         "file": "ei.java",
         "start": 3796,
@@ -159804,9 +160076,9 @@
     },
     {
       "symbol": "M:ei.d()Lsh;",
-      "renamedSymbol": "M:ei.d()Lsh;",
+      "renamedSymbol": "M:ei.firstChildStream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "firstChildStream",
       "declaration": {
         "file": "ei.java",
         "start": 7812,
@@ -162653,9 +162925,9 @@
     },
     {
       "symbol": "M:gl.a()I",
-      "renamedSymbol": "M:gl.a()I",
+      "renamedSymbol": "M:gl.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "gl.java",
         "start": 11384,
@@ -162675,9 +162947,9 @@
     },
     {
       "symbol": "M:gl.a(I)V",
-      "renamedSymbol": "M:gl.a(I)V",
+      "renamedSymbol": "M:gl.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "gl.java",
         "start": 2299,
@@ -162719,9 +162991,9 @@
     },
     {
       "symbol": "M:gl.b([III)V",
-      "renamedSymbol": "M:gl.b([III)V",
+      "renamedSymbol": "M:gl.mixInto([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mixInto",
       "declaration": {
         "file": "gl.java",
         "start": 161,
@@ -162730,9 +163002,9 @@
     },
     {
       "symbol": "M:gl.c()Lsh;",
-      "renamedSymbol": "M:gl.c()Lsh;",
+      "renamedSymbol": "M:gl.nextChildStream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextChildStream",
       "declaration": {
         "file": "gl.java",
         "start": 3265,
@@ -162741,9 +163013,9 @@
     },
     {
       "symbol": "M:gl.d()Lsh;",
-      "renamedSymbol": "M:gl.d()Lsh;",
+      "renamedSymbol": "M:gl.firstChildStream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "firstChildStream",
       "declaration": {
         "file": "gl.java",
         "start": 11428,
@@ -164094,9 +164366,9 @@
     },
     {
       "symbol": "M:ie.a()I",
-      "renamedSymbol": "M:ie.a()I",
+      "renamedSymbol": "M:ie.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "ie.java",
         "start": 460,
@@ -164105,9 +164377,9 @@
     },
     {
       "symbol": "M:ie.a(I)V",
-      "renamedSymbol": "M:ie.a(I)V",
+      "renamedSymbol": "M:ie.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "ie.java",
         "start": 41153,
@@ -164248,9 +164520,9 @@
     },
     {
       "symbol": "M:ie.b()I",
-      "renamedSymbol": "M:ie.b()I",
+      "renamedSymbol": "M:ie.getSchedulingPriority()I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getSchedulingPriority",
       "declaration": {
         "file": "ie.java",
         "start": 35658,
@@ -164358,9 +164630,9 @@
     },
     {
       "symbol": "M:ie.b([III)V",
-      "renamedSymbol": "M:ie.b([III)V",
+      "renamedSymbol": "M:ie.mixInto([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mixInto",
       "declaration": {
         "file": "ie.java",
         "start": 3001,
@@ -164380,9 +164652,9 @@
     },
     {
       "symbol": "M:ie.c()Lsh;",
-      "renamedSymbol": "M:ie.c()Lsh;",
+      "renamedSymbol": "M:ie.nextChildStream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextChildStream",
       "declaration": {
         "file": "ie.java",
         "start": 41091,
@@ -164413,9 +164685,9 @@
     },
     {
       "symbol": "M:ie.d()Lsh;",
-      "renamedSymbol": "M:ie.d()Lsh;",
+      "renamedSymbol": "M:ie.firstChildStream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "firstChildStream",
       "declaration": {
         "file": "ie.java",
         "start": 13737,
@@ -166349,9 +166621,9 @@
     },
     {
       "symbol": "M:ke.a()I",
-      "renamedSymbol": "M:ke.a()I",
+      "renamedSymbol": "M:ke.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "ke.java",
         "start": 2409,
@@ -166360,9 +166632,9 @@
     },
     {
       "symbol": "M:ke.a(I)V",
-      "renamedSymbol": "M:ke.a(I)V",
+      "renamedSymbol": "M:ke.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "ke.java",
         "start": 1003,
@@ -166382,7 +166654,7 @@
     },
     {
       "symbol": "M:ke.a(Lsh;)V",
-      "renamedSymbol": "M:ke.a(Lsh;)V",
+      "renamedSymbol": "M:ke.a(LPcmStream;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -166404,9 +166676,9 @@
     },
     {
       "symbol": "M:ke.b([III)V",
-      "renamedSymbol": "M:ke.b([III)V",
+      "renamedSymbol": "M:ke.mixInto([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mixInto",
       "declaration": {
         "file": "ke.java",
         "start": 3363,
@@ -166415,9 +166687,9 @@
     },
     {
       "symbol": "M:ke.c()Lsh;",
-      "renamedSymbol": "M:ke.c()Lsh;",
+      "renamedSymbol": "M:ke.nextChildStream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextChildStream",
       "declaration": {
         "file": "ke.java",
         "start": 3127,
@@ -166437,9 +166709,9 @@
     },
     {
       "symbol": "M:ke.d()Lsh;",
-      "renamedSymbol": "M:ke.d()Lsh;",
+      "renamedSymbol": "M:ke.firstChildStream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "firstChildStream",
       "declaration": {
         "file": "ke.java",
         "start": 2333,
@@ -166877,7 +167149,7 @@
     },
     {
       "symbol": "M:la.a(Lsh;)V",
-      "renamedSymbol": "M:AudioOutput.resetStreamScheduling(Lsh;)V",
+      "renamedSymbol": "M:AudioOutput.resetStreamScheduling(LPcmStream;)V",
       "originalName": "a",
       "renamedName": "resetStreamScheduling",
       "declaration": {
@@ -166888,7 +167160,7 @@
     },
     {
       "symbol": "M:la.a(Lsh;I)V",
-      "renamedSymbol": "M:AudioOutput.enqueueByPriority(Lsh;I)V",
+      "renamedSymbol": "M:AudioOutput.enqueueByPriority(LPcmStream;I)V",
       "originalName": "a",
       "renamedName": "enqueueByPriority",
       "declaration": {
@@ -166932,7 +167204,7 @@
     },
     {
       "symbol": "M:la.b(Lsh;)V",
-      "renamedSymbol": "M:AudioOutput.setRootStream(Lsh;)V",
+      "renamedSymbol": "M:AudioOutput.setRootStream(LPcmStream;)V",
       "originalName": "b",
       "renamedName": "setRootStream",
       "declaration": {
@@ -173477,9 +173749,9 @@
     },
     {
       "symbol": "M:sh.<init>()V",
-      "renamedSymbol": "M:sh.<init>()V",
+      "renamedSymbol": "M:PcmStream.<init>()V",
       "originalName": "sh",
-      "renamedName": "sh",
+      "renamedName": "PcmStream",
       "declaration": {
         "file": "sh.java",
         "start": 552,
@@ -173488,9 +173760,9 @@
     },
     {
       "symbol": "M:sh.a()I",
-      "renamedSymbol": "M:sh.a()I",
+      "renamedSymbol": "M:PcmStream.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "sh.java",
         "start": 267,
@@ -173499,9 +173771,9 @@
     },
     {
       "symbol": "M:sh.a(I)V",
-      "renamedSymbol": "M:sh.a(I)V",
+      "renamedSymbol": "M:PcmStream.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "sh.java",
         "start": 313,
@@ -173510,9 +173782,9 @@
     },
     {
       "symbol": "M:sh.a([III)V",
-      "renamedSymbol": "M:sh.a([III)V",
+      "renamedSymbol": "M:PcmStream.mixOrSkipFrames([III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "mixOrSkipFrames",
       "declaration": {
         "file": "sh.java",
         "start": 344,
@@ -173521,9 +173793,9 @@
     },
     {
       "symbol": "M:sh.b()I",
-      "renamedSymbol": "M:sh.b()I",
+      "renamedSymbol": "M:PcmStream.getSchedulingPriority()I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getSchedulingPriority",
       "declaration": {
         "file": "sh.java",
         "start": 157,
@@ -173532,9 +173804,9 @@
     },
     {
       "symbol": "M:sh.b([III)V",
-      "renamedSymbol": "M:sh.b([III)V",
+      "renamedSymbol": "M:PcmStream.mixInto([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mixInto",
       "declaration": {
         "file": "sh.java",
         "start": 208,
@@ -173543,9 +173815,9 @@
     },
     {
       "symbol": "M:sh.c()Lsh;",
-      "renamedSymbol": "M:sh.c()Lsh;",
+      "renamedSymbol": "M:PcmStream.nextChildStream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextChildStream",
       "declaration": {
         "file": "sh.java",
         "start": 532,
@@ -173554,9 +173826,9 @@
     },
     {
       "symbol": "M:sh.d()Lsh;",
-      "renamedSymbol": "M:sh.d()Lsh;",
+      "renamedSymbol": "M:PcmStream.firstChildStream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "firstChildStream",
       "declaration": {
         "file": "sh.java",
         "start": 289,
@@ -174940,9 +175212,9 @@
     },
     {
       "symbol": "M:th.a()I",
-      "renamedSymbol": "M:th.a()I",
+      "renamedSymbol": "M:th.getSchedulingCost()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSchedulingCost",
       "declaration": {
         "file": "th.java",
         "start": 5097,
@@ -174962,9 +175234,9 @@
     },
     {
       "symbol": "M:th.a(I)V",
-      "renamedSymbol": "M:th.a(I)V",
+      "renamedSymbol": "M:th.skipFrames(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skipFrames",
       "declaration": {
         "file": "th.java",
         "start": 10817,
@@ -175006,9 +175278,9 @@
     },
     {
       "symbol": "M:th.b([III)V",
-      "renamedSymbol": "M:th.b([III)V",
+      "renamedSymbol": "M:th.mixInto([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mixInto",
       "declaration": {
         "file": "th.java",
         "start": 5190,
@@ -175017,9 +175289,9 @@
     },
     {
       "symbol": "M:th.c()Lsh;",
-      "renamedSymbol": "M:th.c()Lsh;",
+      "renamedSymbol": "M:th.nextChildStream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextChildStream",
       "declaration": {
         "file": "th.java",
         "start": 10755,
@@ -175028,9 +175300,9 @@
     },
     {
       "symbol": "M:th.d()Lsh;",
-      "renamedSymbol": "M:th.d()Lsh;",
+      "renamedSymbol": "M:th.firstChildStream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "firstChildStream",
       "declaration": {
         "file": "th.java",
         "start": 5141,
@@ -193860,7 +194132,7 @@
     },
     {
       "symbol": "P:ei.a(I)V#0",
-      "renamedSymbol": "P:ei.a(I)V#0",
+      "renamedSymbol": "P:ei.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194531,7 +194803,7 @@
     },
     {
       "symbol": "P:ei.b([III)V#0",
-      "renamedSymbol": "P:ei.b([III)V#0",
+      "renamedSymbol": "P:ei.mixInto([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194542,7 +194814,7 @@
     },
     {
       "symbol": "P:ei.b([III)V#1",
-      "renamedSymbol": "P:ei.b([III)V#1",
+      "renamedSymbol": "P:ei.mixInto([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -194553,7 +194825,7 @@
     },
     {
       "symbol": "P:ei.b([III)V#2",
-      "renamedSymbol": "P:ei.b([III)V#2",
+      "renamedSymbol": "P:ei.mixInto([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -201604,7 +201876,7 @@
     },
     {
       "symbol": "P:gl.a(I)V#0",
-      "renamedSymbol": "P:gl.a(I)V#0",
+      "renamedSymbol": "P:gl.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201747,7 +202019,7 @@
     },
     {
       "symbol": "P:gl.b([III)V#0",
-      "renamedSymbol": "P:gl.b([III)V#0",
+      "renamedSymbol": "P:gl.mixInto([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201758,7 +202030,7 @@
     },
     {
       "symbol": "P:gl.b([III)V#1",
-      "renamedSymbol": "P:gl.b([III)V#1",
+      "renamedSymbol": "P:gl.mixInto([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201769,7 +202041,7 @@
     },
     {
       "symbol": "P:gl.b([III)V#2",
-      "renamedSymbol": "P:gl.b([III)V#2",
+      "renamedSymbol": "P:gl.mixInto([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -204420,7 +204692,7 @@
     },
     {
       "symbol": "P:ie.a(I)V#0",
-      "renamedSymbol": "P:ie.a(I)V#0",
+      "renamedSymbol": "P:ie.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206543,7 +206815,7 @@
     },
     {
       "symbol": "P:ie.b([III)V#0",
-      "renamedSymbol": "P:ie.b([III)V#0",
+      "renamedSymbol": "P:ie.mixInto([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206554,7 +206826,7 @@
     },
     {
       "symbol": "P:ie.b([III)V#1",
-      "renamedSymbol": "P:ie.b([III)V#1",
+      "renamedSymbol": "P:ie.mixInto([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206565,7 +206837,7 @@
     },
     {
       "symbol": "P:ie.b([III)V#2",
-      "renamedSymbol": "P:ie.b([III)V#2",
+      "renamedSymbol": "P:ie.mixInto([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -211350,7 +211622,7 @@
     },
     {
       "symbol": "P:ke.a(I)V#0",
-      "renamedSymbol": "P:ke.a(I)V#0",
+      "renamedSymbol": "P:ke.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -211383,7 +211655,7 @@
     },
     {
       "symbol": "P:ke.a(Lsh;)V#0",
-      "renamedSymbol": "P:ke.a(Lsh;)V#0",
+      "renamedSymbol": "P:ke.a(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -211405,7 +211677,7 @@
     },
     {
       "symbol": "P:ke.b([III)V#0",
-      "renamedSymbol": "P:ke.b([III)V#0",
+      "renamedSymbol": "P:ke.mixInto([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -211416,7 +211688,7 @@
     },
     {
       "symbol": "P:ke.b([III)V#1",
-      "renamedSymbol": "P:ke.b([III)V#1",
+      "renamedSymbol": "P:ke.mixInto([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -211427,7 +211699,7 @@
     },
     {
       "symbol": "P:ke.b([III)V#2",
-      "renamedSymbol": "P:ke.b([III)V#2",
+      "renamedSymbol": "P:ke.mixInto([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -212087,7 +212359,7 @@
     },
     {
       "symbol": "P:la.a(Lsh;)V#0",
-      "renamedSymbol": "P:AudioOutput.resetStreamScheduling(Lsh;)V#0",
+      "renamedSymbol": "P:AudioOutput.resetStreamScheduling(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212098,7 +212370,7 @@
     },
     {
       "symbol": "P:la.a(Lsh;I)V#0",
-      "renamedSymbol": "P:AudioOutput.enqueueByPriority(Lsh;I)V#0",
+      "renamedSymbol": "P:AudioOutput.enqueueByPriority(LPcmStream;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212109,7 +212381,7 @@
     },
     {
       "symbol": "P:la.a(Lsh;I)V#1",
-      "renamedSymbol": "P:AudioOutput.enqueueByPriority(Lsh;I)V#1",
+      "renamedSymbol": "P:AudioOutput.enqueueByPriority(LPcmStream;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -212153,7 +212425,7 @@
     },
     {
       "symbol": "P:la.b(Lsh;)V#0",
-      "renamedSymbol": "P:AudioOutput.setRootStream(Lsh;)V#0",
+      "renamedSymbol": "P:AudioOutput.setRootStream(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227267,7 +227539,7 @@
     },
     {
       "symbol": "P:sh.a(I)V#0",
-      "renamedSymbol": "P:sh.a(I)V#0",
+      "renamedSymbol": "P:PcmStream.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227278,7 +227550,7 @@
     },
     {
       "symbol": "P:sh.a([III)V#0",
-      "renamedSymbol": "P:sh.a([III)V#0",
+      "renamedSymbol": "P:PcmStream.mixOrSkipFrames([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227289,7 +227561,7 @@
     },
     {
       "symbol": "P:sh.a([III)V#1",
-      "renamedSymbol": "P:sh.a([III)V#1",
+      "renamedSymbol": "P:PcmStream.mixOrSkipFrames([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227300,7 +227572,7 @@
     },
     {
       "symbol": "P:sh.a([III)V#2",
-      "renamedSymbol": "P:sh.a([III)V#2",
+      "renamedSymbol": "P:PcmStream.mixOrSkipFrames([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -227311,7 +227583,7 @@
     },
     {
       "symbol": "P:sh.b([III)V#0",
-      "renamedSymbol": "P:sh.b([III)V#0",
+      "renamedSymbol": "P:PcmStream.mixInto([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227322,7 +227594,7 @@
     },
     {
       "symbol": "P:sh.b([III)V#1",
-      "renamedSymbol": "P:sh.b([III)V#1",
+      "renamedSymbol": "P:PcmStream.mixInto([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227333,7 +227605,7 @@
     },
     {
       "symbol": "P:sh.b([III)V#2",
-      "renamedSymbol": "P:sh.b([III)V#2",
+      "renamedSymbol": "P:PcmStream.mixInto([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -230930,7 +231202,7 @@
     },
     {
       "symbol": "P:th.a(I)V#0",
-      "renamedSymbol": "P:th.a(I)V#0",
+      "renamedSymbol": "P:th.skipFrames(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -231040,7 +231312,7 @@
     },
     {
       "symbol": "P:th.b([III)V#0",
-      "renamedSymbol": "P:th.b([III)V#0",
+      "renamedSymbol": "P:th.mixInto([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -231051,7 +231323,7 @@
     },
     {
       "symbol": "P:th.b([III)V#1",
-      "renamedSymbol": "P:th.b([III)V#1",
+      "renamedSymbol": "P:th.mixInto([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -231062,7 +231334,7 @@
     },
     {
       "symbol": "P:th.b([III)V#2",
-      "renamedSymbol": "P:th.b([III)V#2",
+      "renamedSymbol": "P:th.mixInto([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -243996,14 +244268,98 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "c41dd7d1503d1700ccb1acb02171a21eea50ae3a3ee0a6ba2bacb7333cf30c86",
-      "outputSha256": "a2786f3436c3eb175d7ad8708cd1804e7619545acedcb48acea99fff70c432a4",
+      "outputSha256": "2da40db9f591a227462249a53cd75325994b5574206d53dbc0250a5d51df0992",
       "edits": [
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 1049,
+          "end": 1050,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
         {
           "start": 1313,
           "end": 1315,
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 1739,
+          "end": 1740,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 1921,
+          "end": 1922,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 2025,
+          "end": 2026,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 2528,
+          "end": 2529,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 3793,
+          "end": 3795,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 3796,
+          "end": 3797,
+          "symbol": "M:ei.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 3960,
+          "end": 3961,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 7809,
+          "end": 7811,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 7812,
+          "end": 7813,
+          "symbol": "M:ei.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
+          "start": 7834,
+          "end": 7836,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 15184,
@@ -244545,6 +244901,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 23819,
+          "end": 23820,
+          "symbol": "M:ie.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 23892,
+          "end": 23893,
+          "symbol": "M:ie.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
           "start": 24096,
           "end": 24097,
           "symbol": "M:lh.c(I)V",
@@ -244601,11 +244971,32 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 38296,
+          "end": 38297,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
           "start": 38801,
           "end": 38803,
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 39232,
+          "end": 39233,
+          "symbol": "M:gl.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 39485,
+          "end": 39486,
+          "symbol": "M:gl.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
         },
         {
           "start": 42844,
@@ -244690,6 +245081,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 50444,
+          "end": 50445,
+          "symbol": "M:ei.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         }
       ]
     },
@@ -249536,14 +249934,35 @@
       "original": "gl.java",
       "renamed": "gl.java",
       "inputSha256": "ee4d3d09388f1c521117e485761412969a8a86e0af7c03c633fc097b2922fdf4",
-      "outputSha256": "8e37c99c97e8e37f22f7250f7240e5ce07260e57e1c42f0d2b726ec921cc46e5",
+      "outputSha256": "23df14aced75a6952bf7e449dbe238ce7db102c97da9538e7c1b85b49cdb4c4f",
       "edits": [
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
         {
           "start": 70,
           "end": 72,
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 161,
+          "end": 162,
+          "symbol": "M:gl.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 594,
+          "end": 595,
+          "symbol": "M:ke.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
         },
         {
           "start": 657,
@@ -249560,6 +249979,20 @@
           "renamed": "nextForward"
         },
         {
+          "start": 2299,
+          "end": 2300,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 2464,
+          "end": 2465,
+          "symbol": "M:ke.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
           "start": 2509,
           "end": 2510,
           "symbol": "M:vc.c(B)Llh;",
@@ -249574,11 +250007,32 @@
           "renamed": "nextForward"
         },
         {
+          "start": 3262,
+          "end": 3264,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 3265,
+          "end": 3266,
+          "symbol": "M:gl.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
           "start": 3352,
           "end": 3353,
           "symbol": "M:vc.b(B)Llh;",
           "original": "b",
           "renamed": "nextForward"
+        },
+        {
+          "start": 3500,
+          "end": 3502,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 4167,
@@ -249588,11 +250042,39 @@
           "renamed": "AudioOutput"
         },
         {
+          "start": 5182,
+          "end": 5183,
+          "symbol": "M:ie.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 5271,
+          "end": 5272,
+          "symbol": "M:gl.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 6690,
+          "end": 6691,
+          "symbol": "M:gl.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
           "start": 6868,
           "end": 6870,
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 7151,
+          "end": 7152,
+          "symbol": "M:ie.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
         },
         {
           "start": 7351,
@@ -249602,6 +250084,20 @@
           "renamed": "AudioOutput"
         },
         {
+          "start": 8315,
+          "end": 8316,
+          "symbol": "M:ie.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 8514,
+          "end": 8515,
+          "symbol": "M:ie.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
           "start": 11092,
           "end": 11094,
           "symbol": "C:vc",
@@ -249609,11 +250105,46 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 11384,
+          "end": 11385,
+          "symbol": "M:gl.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 11425,
+          "end": 11427,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 11428,
+          "end": 11429,
+          "symbol": "M:gl.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
           "start": 11471,
           "end": 11472,
           "symbol": "M:vc.c(B)Llh;",
           "original": "c",
           "renamed": "beginForward"
+        },
+        {
+          "start": 11601,
+          "end": 11603,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 11660,
+          "end": 11661,
+          "symbol": "M:gl.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
         }
       ]
     },
@@ -251356,8 +251887,36 @@
       "original": "ie.java",
       "renamed": "ie.java",
       "inputSha256": "7bbe665b167ee10461749e7e4f56e027efc38948b9fd0a2a10b28ce73815bdb0",
-      "outputSha256": "6206a2cf7f423114c10fc2a8cd0da47b3baa3416405e1d8fd97f87f22bc51c0e",
+      "outputSha256": "f95f012c1a1b40fb97d3ed8c315c8f39195a9e091aa7654a06f753cad8ca7611",
       "edits": [
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 460,
+          "end": 461,
+          "symbol": "M:ie.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 3001,
+          "end": 3002,
+          "symbol": "M:ie.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 3421,
+          "end": 3422,
+          "symbol": "M:ie.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
         {
           "start": 3859,
           "end": 3860,
@@ -251387,11 +251946,32 @@
           "renamed": "unlink"
         },
         {
+          "start": 13734,
+          "end": 13736,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 13737,
+          "end": 13738,
+          "symbol": "M:ie.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
           "start": 29960,
           "end": 29961,
           "symbol": "M:lh.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 35658,
+          "end": 35659,
+          "symbol": "M:ie.b()I",
+          "original": "b",
+          "renamed": "getSchedulingPriority"
         },
         {
           "start": 39124,
@@ -251420,6 +252000,27 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 41088,
+          "end": 41090,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 41091,
+          "end": 41092,
+          "symbol": "M:ie.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 41153,
+          "end": 41154,
+          "symbol": "M:ie.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
         },
         {
           "start": 41892,
@@ -253273,8 +253874,15 @@
       "original": "ke.java",
       "renamed": "ke.java",
       "inputSha256": "1abba71f0d37a841e4f6cf37191e02f52b6639fbadf58c045ae19175c190a939",
-      "outputSha256": "0d6009e271dc2013c348903035c38e67980ebe3caee07258d302dd65607cd39d",
+      "outputSha256": "9705f1591c630a42b442401dc65e34bd45cb3dd5384b991b85d805b13d22a983",
       "edits": [
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
         {
           "start": 78,
           "end": 80,
@@ -253318,11 +253926,39 @@
           "renamed": "sentinel"
         },
         {
+          "start": 788,
+          "end": 790,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 799,
+          "end": 801,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
           "start": 817,
           "end": 818,
           "symbol": "M:vc.c(B)Llh;",
           "original": "c",
           "renamed": "beginForward"
+        },
+        {
+          "start": 878,
+          "end": 879,
+          "symbol": "M:sh.a([III)V",
+          "original": "a",
+          "renamed": "mixOrSkipFrames"
+        },
+        {
+          "start": 923,
+          "end": 925,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 941,
@@ -253332,11 +253968,32 @@
           "renamed": "nextForward"
         },
         {
+          "start": 1003,
+          "end": 1004,
+          "symbol": "M:ke.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
           "start": 1644,
           "end": 1645,
           "symbol": "M:vc.c(B)Llh;",
           "original": "c",
           "renamed": "beginForward"
+        },
+        {
+          "start": 2061,
+          "end": 2063,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 2072,
+          "end": 2074,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 2090,
@@ -253346,11 +254003,32 @@
           "renamed": "beginForward"
         },
         {
+          "start": 2151,
+          "end": 2152,
+          "symbol": "M:sh.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 2180,
+          "end": 2182,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
           "start": 2198,
           "end": 2199,
           "symbol": "M:vc.b(B)Llh;",
           "original": "b",
           "renamed": "nextForward"
+        },
+        {
+          "start": 2262,
+          "end": 2264,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 2296,
@@ -253360,11 +254038,39 @@
           "renamed": "addFirst"
         },
         {
+          "start": 2330,
+          "end": 2332,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 2333,
+          "end": 2334,
+          "symbol": "M:ke.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
+          "start": 2355,
+          "end": 2357,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
           "start": 2373,
           "end": 2374,
           "symbol": "M:vc.c(B)Llh;",
           "original": "c",
           "renamed": "beginForward"
+        },
+        {
+          "start": 2409,
+          "end": 2410,
+          "symbol": "M:ke.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 2561,
@@ -253409,6 +254115,27 @@
           "renamed": "sentinel"
         },
         {
+          "start": 3124,
+          "end": 3126,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 3127,
+          "end": 3128,
+          "symbol": "M:ke.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 3149,
+          "end": 3151,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
           "start": 3167,
           "end": 3168,
           "symbol": "M:vc.b(B)Llh;",
@@ -253428,6 +254155,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 3363,
+          "end": 3364,
+          "symbol": "M:ke.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
         },
         {
           "start": 4112,
@@ -254065,7 +254799,7 @@
       "original": "la.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "e1c975f32ef93118e4012024398f995e0c0e14ca25f27fdb07b6a36e5bf1b09f",
-      "outputSha256": "f5b7fdfd8c75b9f68431a6aa8f43651ce403f1ac18e7a55bad19a8265edebd83",
+      "outputSha256": "7d489e1e7dd621d704354aac0732d3b1a3f81bca39e0a9220543059db87c2efc",
       "edits": [
         {
           "start": 44,
@@ -254073,6 +254807,27 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 89,
+          "end": 91,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 504,
+          "end": 506,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 581,
+          "end": 583,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 624,
@@ -254334,6 +255089,20 @@
           "renamed": "enqueueByPriority"
         },
         {
+          "start": 6432,
+          "end": 6434,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 6497,
+          "end": 6499,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
           "start": 6739,
           "end": 6740,
           "symbol": "M:la.h()I",
@@ -254360,6 +255129,48 @@
           "symbol": "M:la.a([II)V",
           "original": "a",
           "renamed": "mixBlock"
+        },
+        {
+          "start": 7337,
+          "end": 7339,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 7396,
+          "end": 7398,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 7451,
+          "end": 7453,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 7492,
+          "end": 7494,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 7595,
+          "end": 7597,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 7622,
+          "end": 7624,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 7736,
@@ -254390,12 +255201,26 @@
           "renamed": "enqueueByPriority"
         },
         {
+          "start": 7999,
+          "end": 8000,
+          "symbol": "M:sh.b()I",
+          "original": "b",
+          "renamed": "getSchedulingPriority"
+        },
+        {
           "start": 8077,
           "end": 8079,
           "symbol": "B:la.a([II)V#0",
           "original": "L3",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 9107,
+          "end": 9108,
+          "symbol": "M:sh.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
         },
         {
           "start": 9353,
@@ -254406,11 +255231,67 @@
           "kind": "label"
         },
         {
+          "start": 9422,
+          "end": 9423,
+          "symbol": "M:sh.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
           "start": 9610,
           "end": 9611,
           "symbol": "M:la.a(Lsh;I)V",
           "original": "a",
           "renamed": "enqueueByPriority"
+        },
+        {
+          "start": 9655,
+          "end": 9656,
+          "symbol": "M:sh.b()I",
+          "original": "b",
+          "renamed": "getSchedulingPriority"
+        },
+        {
+          "start": 9713,
+          "end": 9714,
+          "symbol": "M:sh.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 9914,
+          "end": 9916,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 10138,
+          "end": 10140,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 10799,
+          "end": 10801,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 10836,
+          "end": 10838,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 11066,
+          "end": 11067,
+          "symbol": "M:sh.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
         },
         {
           "start": 11124,
@@ -254455,6 +255336,27 @@
           "renamed": "resetStreamScheduling"
         },
         {
+          "start": 11896,
+          "end": 11898,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 12035,
+          "end": 12037,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 12052,
+          "end": 12053,
+          "symbol": "M:sh.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
           "start": 12098,
           "end": 12100,
           "symbol": "C:la",
@@ -254469,11 +255371,25 @@
           "renamed": "resetStreamScheduling"
         },
         {
+          "start": 12134,
+          "end": 12135,
+          "symbol": "M:sh.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
           "start": 12184,
           "end": 12185,
           "symbol": "M:la.b(Lsh;)V",
           "original": "b",
           "renamed": "setRootStream"
+        },
+        {
+          "start": 12186,
+          "end": 12188,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         },
         {
           "start": 12246,
@@ -254493,6 +255409,13 @@
           "start": 12338,
           "end": 12339,
           "symbol": "M:la.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12529,
+          "end": 12530,
+          "symbol": "M:sh.a(I)V",
           "original": "a",
           "renamed": "skipFrames"
         },
@@ -254537,6 +255460,20 @@
           "symbol": "M:lj.a(B)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 13323,
+          "end": 13325,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 13412,
+          "end": 13414,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
         }
       ]
     },
@@ -264042,16 +264979,114 @@
     },
     {
       "original": "sh.java",
-      "renamed": "sh.java",
+      "renamed": "PcmStream.java",
       "inputSha256": "f3bb718eb50690714fd6ddc8a7a2d714fd2e3c390862a333e34e2d92685e44fc",
-      "outputSha256": "1d5edceea4a8d1d457a4abb7846d900543abc03544a1c10110d4f7e7301e441e",
+      "outputSha256": "494a10d8b9cc35eeb02958daf88d038d95c1178a5c8e03d92b64f4f223dccb39",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
         {
           "start": 64,
           "end": 66,
           "symbol": "C:lh",
           "original": "lh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 73,
+          "end": 75,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 157,
+          "end": 158,
+          "symbol": "M:sh.b()I",
+          "original": "b",
+          "renamed": "getSchedulingPriority"
+        },
+        {
+          "start": 208,
+          "end": 209,
+          "symbol": "M:sh.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 267,
+          "end": 268,
+          "symbol": "M:sh.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 286,
+          "end": 288,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 289,
+          "end": 290,
+          "symbol": "M:sh.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
+          "start": 313,
+          "end": 314,
+          "symbol": "M:sh.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 344,
+          "end": 345,
+          "symbol": "M:sh.a([III)V",
+          "original": "a",
+          "renamed": "mixOrSkipFrames"
+        },
+        {
+          "start": 429,
+          "end": 430,
+          "symbol": "M:sh.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 488,
+          "end": 489,
+          "symbol": "M:sh.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 529,
+          "end": 531,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 532,
+          "end": 533,
+          "symbol": "M:sh.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 552,
+          "end": 554,
+          "symbol": "M:sh.<init>()V",
+          "original": "sh",
+          "renamed": "PcmStream"
         }
       ]
     },
@@ -266473,8 +267508,50 @@
       "original": "th.java",
       "renamed": "th.java",
       "inputSha256": "03385368b56e9e1124c3732918ab98e39f0624ead1e59e17cd7cc5e335ac21ff",
-      "outputSha256": "f947dd1325f7b78a7fedda04cc6195ddff5c8dfb24af2e44a462e9d88dd1d564",
+      "outputSha256": "45c1a701a2a9ae794e91177b51b72d920eca5f4d132a39d4eef877de5aadf7b9",
       "edits": [
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 5097,
+          "end": 5098,
+          "symbol": "M:th.a()I",
+          "original": "a",
+          "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 5138,
+          "end": 5140,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 5141,
+          "end": 5142,
+          "symbol": "M:th.d()Lsh;",
+          "original": "d",
+          "renamed": "firstChildStream"
+        },
+        {
+          "start": 5190,
+          "end": 5191,
+          "symbol": "M:th.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 5943,
+          "end": 5944,
+          "symbol": "M:th.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
         {
           "start": 7499,
           "end": 7501,
@@ -266497,11 +267574,39 @@
           "renamed": "clearInts"
         },
         {
+          "start": 8171,
+          "end": 8172,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 8228,
+          "end": 8229,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
           "start": 8277,
           "end": 8279,
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 8795,
+          "end": 8796,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
+          "start": 8886,
+          "end": 8887,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
         },
         {
           "start": 9152,
@@ -266511,11 +267616,116 @@
           "renamed": "clearInts"
         },
         {
+          "start": 9326,
+          "end": 9327,
+          "symbol": "M:ei.b([III)V",
+          "original": "b",
+          "renamed": "mixInto"
+        },
+        {
           "start": 9370,
           "end": 9372,
           "symbol": "C:la",
           "original": "la",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 10752,
+          "end": 10754,
+          "symbol": "C:sh",
+          "original": "sh",
+          "renamed": "PcmStream"
+        },
+        {
+          "start": 10755,
+          "end": 10756,
+          "symbol": "M:th.c()Lsh;",
+          "original": "c",
+          "renamed": "nextChildStream"
+        },
+        {
+          "start": 10817,
+          "end": 10818,
+          "symbol": "M:th.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 11034,
+          "end": 11035,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 11205,
+          "end": 11206,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 11479,
+          "end": 11480,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 11625,
+          "end": 11626,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 11845,
+          "end": 11846,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12119,
+          "end": 12120,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12265,
+          "end": 12266,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12487,
+          "end": 12488,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12745,
+          "end": 12746,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 12881,
+          "end": 12882,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
+        },
+        {
+          "start": 13050,
+          "end": 13051,
+          "symbol": "M:ei.a(I)V",
+          "original": "a",
+          "renamed": "skipFrames"
         }
       ]
     },
@@ -272312,10 +273522,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/fleacircus"
     },
-    "rulesSha256": "b5be47f44f272aebb3819d68acf995c4686318d7d77b205deed85ff422d3711b",
+    "rulesSha256": "bab7373a83922a0e7df20a6540d4eb76e92acd52cb76a3ae8a5469287719314f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
-    "outputTreeSha256": "e816c9f82cd0cda33ad41bbfe842b3503be4dc0982d36afb3aee19d5478ac50a",
+    "outputTreeSha256": "b214bd05222914a8aa70be1c64147e2a9343946e1d341003cc8c7d602e449548",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

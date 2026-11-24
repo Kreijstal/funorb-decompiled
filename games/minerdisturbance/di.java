@@ -66,11 +66,11 @@ final class di extends PcmStream {
           var5++;
         }
         if (param1 != -21400) {
-          this.b();
+          this.firstChildStream();
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -92,7 +92,7 @@ final class di extends PcmStream {
               }
               var7 = (int)((-1L + this.field_t - (this.field_fb - (long)var4_int)) / (long)var4_int);
               this.field_fb = this.field_fb + (long)var4_int * (long)var7;
-              this.field_z.a(param0, param1, var7);
+              this.field_z.mixInto(param0, param1, var7);
               param2 = param2 - var7;
               this.f(128);
               param1 = param1 + var7;
@@ -101,7 +101,7 @@ final class di extends PcmStream {
               }
             }
           }
-          this.field_z.a(param0, param1, param2);
+          this.field_z.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class di extends PcmStream {
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -336,9 +336,9 @@ final class di extends PcmStream {
           }
           param1.field_w.g(param1.field_M);
           if (param3 == null) {
-            param1.field_w.a(param0);
+            param1.field_w.skipFrames(param0);
           } else {
-            param1.field_w.a(param3, param4, param0);
+            param1.field_w.mixInto(param3, param4, param0);
           }
           if (param1.field_w.j()) {
             this.field_z.field_r.b(param1.field_w);
@@ -383,7 +383,7 @@ final class di extends PcmStream {
         RuntimeException var4 = null;
         try {
           if (param0 != 255) {
-            this.b();
+            this.firstChildStream();
           }
           var4_int = param2.field_D.field_r.length;
           if (param1 &&
@@ -617,7 +617,7 @@ final class di extends PcmStream {
         this.field_P[param1] = param0;
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -657,7 +657,7 @@ final class di extends PcmStream {
           var3 = (cg) (this.field_z.field_v.nextForward((byte) 56));
         }
         if (param1 != -10911) {
-          this.d();
+          this.getSchedulingCost();
         }
     }
 
@@ -675,7 +675,7 @@ final class di extends PcmStream {
         this.c(param0, param1, -73);
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_z);
     }
 
@@ -754,7 +754,7 @@ final class di extends PcmStream {
           var10 = var9;
           var4 = 4096 + this.field_R[param0.field_n] * this.field_S[param0.field_n] >> 13;
           if (param1 >= -32) {
-            this.c();
+            this.nextChildStream();
           }
           var4 = var4 * var4 + 16384 >> 15;
           var4 = 16384 + param0.field_t * var4 >> 15;
@@ -1047,7 +1047,7 @@ final class di extends PcmStream {
     final synchronized void c(int param0, int param1) {
         this.field_r = param0;
         if (param1 != -102) {
-          this.d();
+          this.getSchedulingCost();
         }
     }
 
@@ -1313,7 +1313,7 @@ final class di extends PcmStream {
         field_ab = null;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var6;
@@ -1330,14 +1330,14 @@ final class di extends PcmStream {
             var5 = (int)((-1L + (long)var2 + (this.field_t - this.field_fb)) / (long)var2);
             this.field_fb = this.field_fb + (long)var5 * (long)var2;
             param0 = param0 - var5;
-            this.field_z.a(var5);
+            this.field_z.skipFrames(var5);
             this.f(128);
             if (!this.field_eb.e()) {
               break;
             }
           }
         }
-        this.field_z.a(param0);
+        this.field_z.skipFrames(param0);
     }
 
     private final void a(byte param0, int param1, int param2, int param3) {

@@ -19,7 +19,7 @@ final class oj extends PcmStream {
     private pl field_y;
     private pl field_n;
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -43,7 +43,7 @@ final class oj extends PcmStream {
         var11 = Transmogrify.field_A ? 1 : 0;
         try {
           if (this.field_v <= 0) {
-            this.d(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_t) {
@@ -109,8 +109,8 @@ final class oj extends PcmStream {
                   this.field_q = new int[var6];
                   this.field_r = new int[var6];
                 }
-                this.field_s.b(this.field_q, 0, param2);
-                this.field_k.b(this.field_r, 0, param2);
+                this.field_s.mixInto(this.field_q, 0, param2);
+                this.field_k.mixInto(this.field_r, 0, param2);
                 if (!AudioOutput.field_g) {
                   stackIn_48_0 = param1;
                 } else {
@@ -123,10 +123,10 @@ final class oj extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (this.field_r[var8] * var5 + this.field_q[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_k.b(param0, param1, param2);
+                this.field_k.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_s.b(param0, param1, param2);
+              this.field_s.mixInto(param0, param1, param2);
             }
           }
           if (null != this.field_n &&
@@ -138,7 +138,7 @@ final class oj extends PcmStream {
               this.field_r = new int[var6];
               this.field_q = new int[var6];
             }
-            this.field_l.b(this.field_q, 0, param2);
+            this.field_l.mixInto(this.field_q, 0, param2);
             if (!AudioOutput.field_g) {
               stackIn_62_0 = param1;
             } else {
@@ -177,7 +177,7 @@ final class oj extends PcmStream {
         field_u = null;
     }
 
-    final synchronized int b() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -300,7 +300,7 @@ final class oj extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -319,20 +319,20 @@ final class oj extends PcmStream {
         return null;
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (0 < this.field_o &&
           null != this.field_y) {
-          this.field_s.d(param0);
+          this.field_s.skipFrames(param0);
         }
         if (this.field_o < 1048576 &&
           this.field_w != null) {
-          this.field_k.d(param0);
+          this.field_k.skipFrames(param0);
         }
         if (0 < this.field_x &&
           null != this.field_n) {
-          this.field_l.d(param0);
+          this.field_l.skipFrames(param0);
         }
         if (this.field_t) {
           if (this.field_z > 0) {
@@ -387,7 +387,7 @@ final class oj extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -401,7 +401,7 @@ final class oj extends PcmStream {
     private final void a(int param0, byte param1, lc param2, int param3) {
         try {
           if (param1 > -58) {
-            this.d();
+            this.firstChildStream();
           }
           param2.c(-1, param3, 0);
           param2.a(true, param0);

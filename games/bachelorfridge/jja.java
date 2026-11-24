@@ -7,7 +7,7 @@ final class jja extends PcmStream {
     PcmStreamMixer field_j;
     static String field_m;
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -19,7 +19,7 @@ final class jja extends PcmStream {
         int var7 = 0;
         var7 = BachelorFridge.field_y;
         try {
-          this.field_j.a(param0, param1, param2);
+          this.field_j.mixInto(param0, param1, param2);
           var6 = (MidiNote) (this.field_k.beginForward((byte) 90));
           scanLoop1: while (true) {
             if (var6 == null) {
@@ -87,7 +87,7 @@ final class jja extends PcmStream {
                 param4.field_t = param4.field_t + var7_int * param0;
                 break;
               }
-              param4.field_z.a(param1, param2, var8);
+              param4.field_z.mixInto(param1, param2, var8);
               param0 = param0 - var8;
               param4.field_t = param4.field_t + (-1048576 + var8 * var7_int);
               param2 = param2 + var8;
@@ -112,7 +112,7 @@ final class jja extends PcmStream {
                 param4.field_z.d(-1);
               }
               var11.fadeOutAndUnlink(var9);
-              var11.a(param1, param2, param3 - param2);
+              var11.mixInto(param1, param2, param3 - param2);
               if (!var11.e()) {
                 continue;
               }
@@ -122,7 +122,7 @@ final class jja extends PcmStream {
           if (param5 != 12) {
             return;
           }
-          param4.field_z.a(param1, param2, param0);
+          param4.field_z.mixInto(param1, param2, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,11 +144,11 @@ final class jja extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         MidiNote var1 = (MidiNote) (this.field_k.beginForward((byte) 90));
         if (var1 == null) {
           return null;
@@ -156,7 +156,7 @@ final class jja extends PcmStream {
         if (var1.field_z != null) {
           return (PcmStream) ((Object) var1.field_z);
         }
-        return this.a();
+        return this.nextChildStream();
     }
 
     final static void d(byte param0) {
@@ -166,12 +166,12 @@ final class jja extends PcmStream {
         kka.field_l.e(new ReportAbusePanel(), 33);
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         MidiNote var3;
         int var4;
         int var2;
         var4 = BachelorFridge.field_y;
-        this.field_j.a(param0);
+        this.field_j.skipFrames(param0);
         var3 = (MidiNote) (this.field_k.beginForward((byte) 90));
         scanLoop1: while (true) {
           if (var3 == null) {
@@ -218,7 +218,7 @@ final class jja extends PcmStream {
         field_m = null;
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         MidiNote var1;
         int var2;
         var2 = BachelorFridge.field_y;
@@ -277,7 +277,7 @@ final class jja extends PcmStream {
               param0 = param2.field_t / var4_int;
             }
           }
-          param2.field_z.a(param0);
+          param2.field_z.skipFrames(param0);
           if (param1 >= 18) {
             return;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke extends sh {
+final class ke extends PcmStream {
     private IntrusiveDeque field_n;
     private IntrusiveDeque field_p;
     private int field_o;
@@ -26,14 +26,14 @@ final class ke extends sh {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        sh var4 = (sh) (this.field_n.beginForward((byte) 47));
+        PcmStream var4 = (PcmStream) (this.field_n.beginForward((byte) 47));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
-          var4 = (sh) (this.field_n.nextForward((byte) -105));
+          var4.mixOrSkipFrames(param0, param1, param2);
+          var4 = (PcmStream) (this.field_n.nextForward((byte) -105));
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         vl var3 = null;
         int var5 = 0;
@@ -71,22 +71,22 @@ final class ke extends sh {
     }
 
     private final void d(int param0) {
-        sh var2 = (sh) (this.field_n.beginForward((byte) 47));
+        PcmStream var2 = (PcmStream) (this.field_n.beginForward((byte) 47));
         while (var2 != null) {
-          var2.a(param0);
-          var2 = (sh) (this.field_n.nextForward((byte) -105));
+          var2.skipFrames(param0);
+          var2 = (PcmStream) (this.field_n.nextForward((byte) -105));
         }
     }
 
-    final synchronized void a(sh param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_n.addFirst(true, param0);
     }
 
-    final sh d() {
-        return (sh) (this.field_n.beginForward((byte) 47));
+    final PcmStream firstChildStream() {
+        return (PcmStream) (this.field_n.beginForward((byte) 47));
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -114,8 +114,8 @@ final class ke extends sh {
         }
     }
 
-    final sh c() {
-        return (sh) (this.field_n.nextForward((byte) -105));
+    final PcmStream nextChildStream() {
+        return (PcmStream) (this.field_n.nextForward((byte) -105));
     }
 
     public ke() {
@@ -125,7 +125,7 @@ final class ke extends sh {
         this.field_m = -1;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         vl var5 = null;
         int var7 = 0;

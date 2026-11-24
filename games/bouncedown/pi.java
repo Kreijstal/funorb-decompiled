@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends wf {
+final class pi extends PcmStream {
     private int field_r;
     private int field_u;
     private int field_s;
@@ -18,7 +18,7 @@ final class pi extends wf {
     private int field_m;
     private int field_w;
 
-    final int b() {
+    final int getSchedulingCost() {
         if (this.field_v == 0 &&
           this.field_l == 0) {
           return 0;
@@ -26,7 +26,7 @@ final class pi extends wf {
         return 1;
     }
 
-    final int a() {
+    final int getSchedulingPriority() {
         int var1 = this.field_y * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_o == 0) {
@@ -39,7 +39,7 @@ final class pi extends wf {
         return var1 > 255 ? 255 : var1;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -55,7 +55,7 @@ final class pi extends wf {
         int var10Lifetime1;
         if (this.field_v == 0 &&
           this.field_l == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (ue) (this.field_j);
@@ -220,11 +220,11 @@ final class pi extends wf {
         return;
     }
 
-    final wf c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1648,7 +1648,7 @@ final class pi extends wf {
         this.a(param0, param1 << 6, this.h());
     }
 
-    final wf d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 

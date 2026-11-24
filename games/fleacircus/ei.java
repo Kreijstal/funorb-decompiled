@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends sh {
+final class ei extends PcmStream {
     static String field_N;
     private tk[][] field_D;
     private fd field_G;
@@ -40,7 +40,7 @@ final class ei extends sh {
     private int field_F;
     private boolean field_s;
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var6;
@@ -57,7 +57,7 @@ final class ei extends sh {
               var5 = (int)((-1L + ((long)var2 + this.field_E - this.field_C)) / (long)var2);
               this.field_C = this.field_C + (long)var2 * (long)var5;
               param0 = param0 - var5;
-              this.field_O.a(var5);
+              this.field_O.skipFrames(var5);
               this.g(1);
               if (this.field_G.c()) {
                 continue;
@@ -65,11 +65,11 @@ final class ei extends sh {
             }
             break;
           }
-          this.field_O.a(param0);
+          this.field_O.skipFrames(param0);
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_O.a(param0);
+          this.field_O.skipFrames(param0);
         }
 
     }
@@ -87,7 +87,7 @@ final class ei extends sh {
         try {
           if (param0 != 32) {
             var4 = (int[]) null;
-            this.b((int[]) null, -128, 50);
+            this.mixInto((int[]) null, -128, 50);
           }
           var3_int = this.field_t[param1.field_o];
           if (var3_int < 8192) {
@@ -122,14 +122,14 @@ final class ei extends sh {
         }
     }
 
-    final synchronized sh c() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
     final synchronized boolean d(int param0) {
         if (param0 != 31499) {
           int[] var3 = (int[]) null;
-          this.b((int[]) null, -50, -87);
+          this.mixInto((int[]) null, -50, -87);
         }
         return this.field_G.c();
     }
@@ -235,8 +235,8 @@ final class ei extends sh {
         this.a(param0, (byte) -119, param1);
     }
 
-    final synchronized sh d() {
-        return (sh) ((Object) this.field_O);
+    final synchronized PcmStream firstChildStream() {
+        return (PcmStream) ((Object) this.field_O);
     }
 
     private final void f(int param0, int param1) {
@@ -566,9 +566,9 @@ final class ei extends sh {
           }
           param3.field_k.f(param3.field_u);
           if (param4 != null) {
-            param3.field_k.b(param4, param1, param0);
+            param3.field_k.mixInto(param4, param1, param0);
           } else {
-            param3.field_k.a(param0);
+            param3.field_k.skipFrames(param0);
           }
           if (param3.field_k.i()) {
             this.field_O.field_o.a(param3.field_k);
@@ -969,7 +969,7 @@ final class ei extends sh {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -991,7 +991,7 @@ final class ei extends sh {
               }
               var7 = (int)((-1L - this.field_C + (this.field_E + (long)var4_int)) / (long)var4_int);
               this.field_C = this.field_C + (long)var4_int * (long)var7;
-              this.field_O.b(param0, param1, var7);
+              this.field_O.mixInto(param0, param1, var7);
               param2 = param2 - var7;
               param1 = param1 + var7;
               this.g(1);
@@ -1000,7 +1000,7 @@ final class ei extends sh {
               }
             }
           }
-          this.field_O.b(param0, param1, param2);
+          this.field_O.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1327,7 +1327,7 @@ final class ei extends sh {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 

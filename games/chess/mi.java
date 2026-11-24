@@ -100,7 +100,7 @@ final class mi extends PcmStream {
                 param0.field_x = param0.field_x + var7_int * param3;
                 break;
               }
-              param0.field_j.a(param5, param2, var8);
+              param0.field_j.mixInto(param5, param2, var8);
               param2 = param2 + var8;
               param3 = param3 - var8;
               param0.field_x = param0.field_x + (-1048576 + var8 * var7_int);
@@ -125,7 +125,7 @@ final class mi extends PcmStream {
                 param0.field_j.f(-1);
               }
               var11.d(var9);
-              var11.a(param5, param2, -param2 + param1);
+              var11.mixInto(param5, param2, -param2 + param1);
               if (!var11.g()) {
                 continue;
               }
@@ -135,7 +135,7 @@ final class mi extends PcmStream {
           if (param4 != -2771) {
             this.field_p = (lb) null;
           }
-          param0.field_j.a(param5, param2, param3);
+          param0.field_j.mixInto(param5, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class mi extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -170,7 +170,7 @@ final class mi extends PcmStream {
         int var7 = 0;
         var7 = Chess.field_G;
         try {
-          this.field_p.a(param0, param1, param2);
+          this.field_p.mixInto(param0, param1, param2);
           var6 = (qd) (this.field_x.beginBackward(-18110));
           while (var6 != null) {
             stackIn_4_0 = this.field_w.a((byte) -25, var6);
@@ -327,7 +327,7 @@ final class mi extends PcmStream {
         tg.field_p = false;
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -344,18 +344,18 @@ final class mi extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         qd var1 = (qd) (this.field_x.beginBackward(-18110));
         if (var1 == null) {
           return null;
         }
         if (var1.field_j == null) {
-          return this.b();
+          return this.nextChildStream();
         }
         return (PcmStream) ((Object) var1.field_j);
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         qd var1_ref = null;
         int var2 = Chess.field_G;
         do {

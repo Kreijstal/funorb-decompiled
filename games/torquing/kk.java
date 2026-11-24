@@ -8,11 +8,11 @@ final class kk extends PcmStream {
     private int[] field_p;
     static String field_q;
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -25,19 +25,19 @@ final class kk extends PcmStream {
         field_o = null;
     }
 
-    final PcmStream c() {
+    final PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_r);
     }
 
-    final int d() {
+    final int getSchedulingPriority() {
         return 255 * on.field_c / 160;
     }
 
-    final void a(int param0) {
-        this.field_r.a(param0);
+    final void skipFrames(int param0) {
+        this.field_r.skipFrames(param0);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4_int = 0;
@@ -63,7 +63,7 @@ final class kk extends PcmStream {
           } else {
             this.field_p = new int[var4_int];
           }
-          this.field_r.b(this.field_p, 0, param2);
+          this.field_r.mixInto(this.field_p, 0, param2);
           if (AudioOutput.field_r) {
             param1 = param1 << 1;
           }

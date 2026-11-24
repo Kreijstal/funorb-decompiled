@@ -45,7 +45,7 @@ final class MidiPlayer extends PcmStream {
         this.field_Q[param1] = param2;
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -152,7 +152,7 @@ final class MidiPlayer extends PcmStream {
 
     final synchronized boolean c(byte param0) {
         if (param0 >= -57) {
-          this.a();
+          this.nextChildStream();
         }
         return this.field_P.a();
     }
@@ -457,7 +457,7 @@ final class MidiPlayer extends PcmStream {
         try {
           this.a(param0, 0, true, param2);
           if (param1 != 14526) {
-            this.a();
+            this.nextChildStream();
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "nb.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -927,7 +927,7 @@ final class MidiPlayer extends PcmStream {
         this.b(param0, 8192, -131394585);
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -1060,7 +1060,7 @@ final class MidiPlayer extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_G);
     }
 

@@ -126,7 +126,7 @@ final class hl extends PcmStream {
         return;
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return (PcmStream) (this.field_o.nextForward((byte) 124));
     }
 
@@ -134,7 +134,7 @@ final class hl extends PcmStream {
         param0.unlink(20);
     }
 
-    final int b() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -157,12 +157,12 @@ final class hl extends PcmStream {
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_o.beginForward(-81));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
+          var4.mixOrSkipFrames(param0, param1, param2);
           var4 = (PcmStream) (this.field_o.nextForward((byte) 77));
         }
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return (PcmStream) (this.field_o.beginForward(-125));
     }
 

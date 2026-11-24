@@ -399,9 +399,9 @@ final class db extends PcmStream {
           }
           param1.field_J.h(param1.field_H);
           if (param3 == null) {
-            param1.field_J.a(param2);
+            param1.field_J.skipFrames(param2);
           } else {
-            param1.field_J.b(param3, param0, param2);
+            param1.field_J.mixInto(param3, param0, param2);
           }
           if (param1.field_J.l()) {
             this.field_P.field_z.a(param1.field_J);
@@ -507,7 +507,7 @@ final class db extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -524,14 +524,14 @@ final class db extends PcmStream {
             var5 = (int)(((long)var2 + (this.field_D + (-this.field_r - 1L))) / (long)var2);
             this.field_r = this.field_r + (long)var5 * (long)var2;
             param0 = param0 - var5;
-            this.field_P.a(var5);
+            this.field_P.skipFrames(var5);
             this.e(-29482);
             if (!this.field_I.f()) {
               break;
             }
           }
         }
-        this.field_P.a(param0);
+        this.field_P.skipFrames(param0);
     }
 
     final boolean a(int param0, pe param1) {
@@ -929,7 +929,7 @@ final class db extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -967,7 +967,7 @@ final class db extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -988,7 +988,7 @@ final class db extends PcmStream {
               } else {
                 var7 = (int)((-1L + this.field_D - this.field_r + (long)var4_int) / (long)var4_int);
                 this.field_r = this.field_r + (long)var4_int * (long)var7;
-                this.field_P.b(param0, param1, var7);
+                this.field_P.mixInto(param0, param1, var7);
                 this.e(-29482);
                 param1 = param1 + var7;
                 param2 = param2 - var7;
@@ -998,10 +998,10 @@ final class db extends PcmStream {
               }
               break;
             }
-            this.field_P.b(param0, param1, param2);
+            this.field_P.mixInto(param0, param1, param2);
             return;
           }
-          this.field_P.b(param0, param1, param2);
+          this.field_P.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1017,7 +1017,7 @@ final class db extends PcmStream {
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_P);
     }
 
@@ -1052,7 +1052,7 @@ final class db extends PcmStream {
         }
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -1088,7 +1088,7 @@ final class db extends PcmStream {
         }
         if (param0 != 70) {
           int[] var5 = (int[]) null;
-          this.b((int[]) null, -84, -49);
+          this.mixInto((int[]) null, -84, -49);
         }
     }
 

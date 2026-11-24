@@ -40,7 +40,7 @@ final class hg extends PcmStream {
                 param0.field_m = param0.field_m + param4 * var7_int;
                 break;
               }
-              param0.field_v.b(param1, param3, var8);
+              param0.field_v.mixInto(param1, param3, var8);
               param3 = param3 + var8;
               param0.field_m = param0.field_m + (-1048576 + var8 * var7_int);
               param4 = param4 - var8;
@@ -65,14 +65,14 @@ final class hg extends PcmStream {
                 param0.field_v.e(-1);
               }
               var11.f(var9);
-              var11.b(param1, param3, -param3 + param2);
+              var11.mixInto(param1, param3, -param3 + param2);
               if (!var11.e()) {
                 continue;
               }
               this.field_o.b(var11);
             }
           }
-          param0.field_v.b(param1, param3, param4);
+          param0.field_v.mixInto(param1, param3, param4);
           if (!param5) {
             field_s = 44L;
           }
@@ -376,7 +376,7 @@ final class hg extends PcmStream {
           if (param0 >= -71) {
             field_t = (int[]) null;
           }
-          param1.field_v.a(param2);
+          param1.field_v.skipFrames(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -392,17 +392,17 @@ final class hg extends PcmStream {
         }
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         lp var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = DungeonAssault.field_K;
-        this.field_o.a(param0);
+        this.field_o.skipFrames(param0);
         var3 = (lp) (this.field_q.beginBackward(-24172));
         scanLoop1: while (true) {
           if (var3 == null) {
@@ -429,7 +429,7 @@ final class hg extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         lp var1_ref = null;
         int var2 = DungeonAssault.field_K;
         do {
@@ -456,7 +456,7 @@ final class hg extends PcmStream {
         field_t = null;
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         lp var1 = (lp) (this.field_q.beginBackward(-24172));
         if (var1 == null) {
           return null;
@@ -464,10 +464,10 @@ final class hg extends PcmStream {
         if (null != var1.field_v) {
           return (PcmStream) ((Object) var1.field_v);
         }
-        return this.c();
+        return this.nextChildStream();
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -480,7 +480,7 @@ final class hg extends PcmStream {
         int var7 = 0;
         var7 = DungeonAssault.field_K;
         try {
-          this.field_o.b(param0, param1, param2);
+          this.field_o.mixInto(param0, param1, param2);
           var6 = (lp) (this.field_q.beginBackward(-24172));
           scanLoop1: while (true) {
             if (var6 == null) {

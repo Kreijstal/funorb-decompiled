@@ -304,7 +304,7 @@ final class hl extends PcmStream {
         this.field_s = null;
         this.a(param0, (byte) -87);
         if (param1 != 43) {
-          this.a(-117);
+          this.skipFrames(-117);
         }
     }
 
@@ -521,7 +521,7 @@ final class hl extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -720,7 +720,7 @@ final class hl extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -1155,12 +1155,12 @@ final class hl extends PcmStream {
           }
           param2.field_C.h(param2.field_m);
           if (param0 != null) {
-            param2.field_C.b(param0, param1, param3);
+            param2.field_C.mixInto(param0, param1, param3);
             if (var11 != 0) {
-              param2.field_C.a(param3);
+              param2.field_C.skipFrames(param3);
             }
           } else {
-            param2.field_C.a(param3);
+            param2.field_C.skipFrames(param3);
           }
           if (param2.field_C.h()) {
             this.field_y.field_m.a(param2.field_C);
@@ -1312,11 +1312,11 @@ final class hl extends PcmStream {
         }
     }
 
-    final synchronized PcmStream d() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_y);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1341,7 +1341,7 @@ final class hl extends PcmStream {
               }
               var7 = (int)((this.field_U - this.field_P - (-(long)var4_int + 1L)) / (long)var4_int);
               this.field_P = this.field_P + (long)var4_int * (long)var7;
-              this.field_y.b(param0, param1, var7);
+              this.field_y.mixInto(param0, param1, var7);
               param1 = param1 + var7;
               this.b(-11);
               param2 = param2 - var7;
@@ -1351,11 +1351,11 @@ final class hl extends PcmStream {
               if (var8 == 0) {
                 continue;
               }
-              this.field_y.b(param0, param1, param2);
+              this.field_y.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_y.b(param0, param1, param2);
+          this.field_y.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1382,7 +1382,7 @@ final class hl extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -1401,7 +1401,7 @@ final class hl extends PcmStream {
             }
             var5 = (int)((-1L + this.field_U - (this.field_P - (long)var2)) / (long)var2);
             this.field_P = this.field_P + (long)var2 * (long)var5;
-            this.field_y.a(var5);
+            this.field_y.skipFrames(var5);
             param0 = param0 - var5;
             this.b(-11);
             if (!this.field_n.d() &&
@@ -1411,13 +1411,13 @@ final class hl extends PcmStream {
             if (var6 == 0) {
               continue;
             }
-            this.field_y.a(param0);
+            this.field_y.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_y.a(param0);
+          this.field_y.skipFrames(param0);
         }
 
     }
@@ -1623,7 +1623,7 @@ final class hl extends PcmStream {
           var3_int = (param1.field_v * param1.field_l >> 12) + param1.field_o;
           var3_int = var3_int + (this.field_r[param1.field_z] * (-8192 + this.field_T[param1.field_z]) >> 12);
           if (param0 >= -105) {
-            this.d();
+            this.firstChildStream();
           }
           var4 = param1.field_r;
           if (var4.field_d > 0 && (!(0 >= var4.field_k) ||

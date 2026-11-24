@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class t extends di {
+final class t extends PcmStream {
     private boolean field_o;
     private fj field_w;
     private fj field_l;
@@ -169,7 +169,7 @@ final class t extends di {
         field_q = null;
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -220,11 +220,11 @@ final class t extends di {
         }
     }
 
-    final di d() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final di a() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -235,20 +235,20 @@ final class t extends di {
         this.field_n = param1;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = OrbDefence.field_D ? 1 : 0;
         if (this.field_r > 0 &&
           null != this.field_z) {
-          this.field_s.c(param0);
+          this.field_s.skipFrames(param0);
         }
         if (this.field_r < 1048576 &&
           this.field_l != null) {
-          this.field_v.c(param0);
+          this.field_v.skipFrames(param0);
         }
         if (this.field_m > 0 &&
           this.field_w != null) {
-          this.field_t.c(param0);
+          this.field_t.skipFrames(param0);
         }
         if (this.field_p) {
           if (0 < this.field_x &&
@@ -295,7 +295,7 @@ final class t extends di {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -319,7 +319,7 @@ final class t extends di {
         var11 = OrbDefence.field_D ? 1 : 0;
         try {
           if (this.field_n <= 0) {
-            this.c(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_p) {
@@ -385,8 +385,8 @@ final class t extends di {
                   this.field_u = new int[var6];
                   this.field_y = new int[var6];
                 }
-                this.field_s.b(this.field_y, 0, param2);
-                this.field_v.b(this.field_u, 0, param2);
+                this.field_s.mixInto(this.field_y, 0, param2);
+                this.field_v.mixInto(this.field_u, 0, param2);
                 if (!AudioOutput.field_g) {
                   stackIn_50_0 = param1;
                 } else {
@@ -399,10 +399,10 @@ final class t extends di {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_u[var8] * var5 + this.field_y[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_v.b(param0, param1, param2);
+                this.field_v.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_s.b(param0, param1, param2);
+              this.field_s.mixInto(param0, param1, param2);
             }
           }
           if (this.field_w != null) {
@@ -416,7 +416,7 @@ final class t extends di {
               this.field_y = new int[var6];
               this.field_u = new int[var6];
             }
-            this.field_t.b(this.field_y, 0, param2);
+            this.field_t.mixInto(this.field_y, 0, param2);
             if (AudioOutput.field_g) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;

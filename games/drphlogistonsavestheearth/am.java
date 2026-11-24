@@ -11,11 +11,11 @@ final class am extends PcmStream {
     static String field_m;
     static nh field_o;
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         cc var1;
         int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -30,13 +30,13 @@ final class am extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         cc var1 = (cc) (this.field_q.beginForward(-11151));
         if (var1 == null) {
           return null;
         }
         if (var1.field_D == null) {
-          return this.c();
+          return this.nextChildStream();
         }
         return (PcmStream) ((Object) var1.field_D);
     }
@@ -256,7 +256,7 @@ final class am extends PcmStream {
                 param2.field_i = param2.field_i + param1 * var7_int;
                 break;
               }
-              param2.field_D.b(param4, param0, var8);
+              param2.field_D.mixInto(param4, param0, var8);
               param0 = param0 + var8;
               param2.field_i = param2.field_i + (var8 * var7_int - 1048576);
               param1 = param1 - var8;
@@ -280,14 +280,14 @@ final class am extends PcmStream {
                 param2.field_D.f(-1);
               }
               var11.k(var9);
-              var11.b(param4, param0, param5 - param0);
+              var11.mixInto(param4, param0, param5 - param0);
               if (!var11.g()) {
                 continue;
               }
               this.field_r.a(var11);
             }
           }
-          param2.field_D.b(param4, param0, param1);
+          param2.field_D.mixInto(param4, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,7 +345,7 @@ final class am extends PcmStream {
           if (param0 >= -24) {
             return;
           }
-          param1.field_D.d(param2);
+          param1.field_D.skipFrames(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -361,7 +361,7 @@ final class am extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         cc var6 = null;
@@ -373,7 +373,7 @@ final class am extends PcmStream {
         RuntimeException var4 = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          this.field_r.b(param0, param1, param2);
+          this.field_r.mixInto(param0, param1, param2);
           var6 = (cc) (this.field_q.beginForward(-11151));
           while (var6 != null) {
             if (!this.field_s.a(-128, var6)) {
@@ -416,13 +416,13 @@ final class am extends PcmStream {
         field_n = null;
     }
 
-    final void d(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         cc var3;
         int var4;
         boolean stackIn_3_0 = false;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        this.field_r.d(param0);
+        this.field_r.skipFrames(param0);
         var3 = (cc) (this.field_q.beginForward(-11151));
         while (var3 != null) {
           stackIn_3_0 = this.field_s.a(-124, var3);

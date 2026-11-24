@@ -60,7 +60,7 @@ final class k extends PcmStream {
         return;
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -152,11 +152,11 @@ final class k extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return (PcmStream) (this.field_p.first(2));
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return (PcmStream) (this.field_p.next(10));
     }
 

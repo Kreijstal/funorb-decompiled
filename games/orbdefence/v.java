@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v extends di {
+final class v extends PcmStream {
     private IntrusiveDeque field_m;
     private IntrusiveDeque field_l;
     private int field_j;
@@ -18,7 +18,7 @@ final class v extends di {
         }
     }
 
-    final synchronized void a(di param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_m.addFirst(param0, 9);
     }
 
@@ -35,7 +35,7 @@ final class v extends di {
         }
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         rk var3 = null;
         int var5 = 0;
@@ -73,15 +73,15 @@ final class v extends di {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        di var4 = (di) (this.field_m.beginForward((byte) 120));
+        PcmStream var4 = (PcmStream) (this.field_m.beginForward((byte) 120));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
-          var4 = (di) (this.field_m.nextForward(853));
+          var4.mixOrSkipFrames(param0, param1, param2);
+          var4 = (PcmStream) (this.field_m.nextForward(853));
         }
     }
 
-    final di d() {
-        return (di) (this.field_m.nextForward(853));
+    final PcmStream nextChildStream() {
+        return (PcmStream) (this.field_m.nextForward(853));
     }
 
     private final void a(IntrusiveNode param0, rk param1) {
@@ -102,19 +102,19 @@ final class v extends di {
         return;
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
     private final void d(int param0) {
-        di var2 = (di) (this.field_m.beginForward((byte) 118));
+        PcmStream var2 = (PcmStream) (this.field_m.beginForward((byte) 118));
         while (var2 != null) {
-          var2.c(param0);
-          var2 = (di) (this.field_m.nextForward(853));
+          var2.skipFrames(param0);
+          var2 = (PcmStream) (this.field_m.nextForward(853));
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         rk var5 = null;
         int var7 = 0;
@@ -152,8 +152,8 @@ final class v extends di {
         return;
     }
 
-    final di a() {
-        return (di) (this.field_m.beginForward((byte) 127));
+    final PcmStream firstChildStream() {
+        return (PcmStream) (this.field_m.beginForward((byte) 127));
     }
 
     public v() {

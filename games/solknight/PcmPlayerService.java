@@ -127,7 +127,7 @@ class PcmPlayerService {
           this.field_c <= 0) {
           this.field_c = this.field_c + (field_s >> 4);
           PcmPlayerService.resetStreamScheduling(this.field_f);
-          this.enqueueByPriority(this.field_f, this.field_f.c());
+          this.enqueueByPriority(this.field_f, this.field_f.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -158,7 +158,7 @@ class PcmPlayerService {
                       continue;
                     }
                     var11.field_k = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_h = var12.field_h + var13;
@@ -166,12 +166,12 @@ class PcmPlayerService {
                     if (var4 >= this.field_q) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.a();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
-                        var14Lifetime2 = var11.b();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_i;
@@ -213,7 +213,7 @@ class PcmPlayerService {
           this.field_c = 0;
         }
         if (this.field_f != null) {
-          this.field_f.a(param0, 0, param1);
+          this.field_f.mixInto(param0, 0, param1);
         }
         this.field_e = je.correctedCurrentTimeMillis(1);
     }
@@ -250,7 +250,7 @@ class PcmPlayerService {
           this.field_c = 0;
         }
         if (this.field_f != null) {
-          this.field_f.a(param0);
+          this.field_f.skipFrames(param0);
           return;
         }
     }
@@ -263,10 +263,10 @@ class PcmPlayerService {
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
-        PcmStream var1 = param0.a();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           PcmPlayerService.resetStreamScheduling(var1);
-          var1 = param0.b();
+          var1 = param0.nextChildStream();
         }
     }
 

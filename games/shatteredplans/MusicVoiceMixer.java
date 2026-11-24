@@ -18,7 +18,7 @@ final class MusicVoiceMixer extends PcmStream {
         return this.nextChild();
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 

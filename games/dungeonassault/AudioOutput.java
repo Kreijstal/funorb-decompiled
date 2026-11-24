@@ -184,7 +184,7 @@ class AudioOutput {
           this.field_r <= 0) {
           this.field_r = this.field_r + (field_t >> 4);
           AudioOutput.resetStreamScheduling(this.field_h);
-          this.enqueueByPriority(this.field_h, this.field_h.b());
+          this.enqueueByPriority(this.field_h, this.field_h.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -215,7 +215,7 @@ class AudioOutput {
                       continue;
                     }
                     var11.field_i = true;
-                    var13 = var11.a();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_i = var12.field_i + var13;
@@ -223,12 +223,12 @@ class AudioOutput {
                     if (var4 >= this.field_d) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.d();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.b() >> 8);
-                        var14Lifetime2 = var11.c();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_l;
@@ -270,7 +270,7 @@ class AudioOutput {
           this.field_r = 0;
         }
         if (this.field_h != null) {
-          this.field_h.b(param0, 0, param1);
+          this.field_h.mixInto(param0, 0, param1);
         }
         this.field_b = kd.correctedCurrentTimeMillis(-2456);
     }
@@ -284,10 +284,10 @@ class AudioOutput {
         if (param0.field_k != null) {
           param0.field_k.field_i = 0;
         }
-        PcmStream var1 = param0.d();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           AudioOutput.resetStreamScheduling(var1);
-          var1 = param0.c();
+          var1 = param0.nextChildStream();
         }
     }
 
@@ -374,7 +374,7 @@ class AudioOutput {
           this.field_r = 0;
         }
         if (this.field_h != null) {
-          this.field_h.a(param0);
+          this.field_h.skipFrames(param0);
           return;
         }
     }

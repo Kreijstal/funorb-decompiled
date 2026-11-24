@@ -1425,7 +1425,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 

@@ -135,12 +135,12 @@ final class rq extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         pe var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
-        this.field_z.a(param0);
+        this.field_z.skipFrames(param0);
         var3 = (pe) (this.field_w.beginBackward((byte) 100));
         while (var3 != null) {
           if (!this.field_s.a(-1, var3)) {
@@ -194,7 +194,7 @@ final class rq extends PcmStream {
               param1 = param2.field_o / var4_int;
             }
           }
-          param2.field_J.a(param1);
+          param2.field_J.skipFrames(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -251,7 +251,7 @@ final class rq extends PcmStream {
                 param4.field_o = param4.field_o + param2 * var7_int;
                 break;
               }
-              param4.field_J.b(param1, param0, var8);
+              param4.field_J.mixInto(param1, param0, var8);
               param4.field_o = param4.field_o + (var8 * var7_int - 1048576);
               param0 = param0 + var8;
               param2 = param2 - var8;
@@ -276,14 +276,14 @@ final class rq extends PcmStream {
                 param4.field_J.i(-1);
               }
               var11.h(var9);
-              var11.b(param1, param0, -param0 + param5);
+              var11.mixInto(param1, param0, -param0 + param5);
               if (!var11.l()) {
                 continue;
               }
               this.field_z.a(var11);
             }
           }
-          param4.field_J.b(param1, param0, param2);
+          param4.field_J.mixInto(param1, param0, param2);
           if (param3 < 49) {
             var13 = (Archive) null;
             rq.a((BitmapFont) null, 118, (Archive) null);
@@ -437,7 +437,7 @@ final class rq extends PcmStream {
         var6.e(param3, param2);
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         pe var6 = null;
@@ -450,7 +450,7 @@ final class rq extends PcmStream {
         RuntimeException var4 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          this.field_z.b(param0, param1, param2);
+          this.field_z.mixInto(param0, param1, param2);
           var6 = (pe) (this.field_w.beginBackward((byte) 100));
           while (var6 != null) {
             stackIn_4_0 = this.field_s.a(-1, var6);
@@ -489,7 +489,7 @@ final class rq extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstChildStream() {
         pe var1 = (pe) (this.field_w.beginBackward((byte) 100));
         if (var1 == null) {
           return null;
@@ -497,7 +497,7 @@ final class rq extends PcmStream {
         if (var1.field_J != null) {
           return (PcmStream) ((Object) var1.field_J);
         }
-        return this.a();
+        return this.nextChildStream();
     }
 
     rq(db param0) {
@@ -510,7 +510,7 @@ final class rq extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         pe var1_ref = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
         do {
@@ -529,7 +529,7 @@ final class rq extends PcmStream {
         return ab.field_b;
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 

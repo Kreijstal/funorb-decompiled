@@ -18,7 +18,7 @@ final class ge extends PcmStream {
     private float field_q;
     private float field_A;
 
-    final int a() {
+    final int getSchedulingCost() {
         return 8;
     }
 
@@ -37,9 +37,9 @@ final class ge extends PcmStream {
         this.field_m = (float)((double)this.field_q * Math.sqrt((double)(1.0f - this.field_w) * 0.5));
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         if (this.field_t != null) {
-          this.field_t.a(param0);
+          this.field_t.skipFrames(param0);
         }
     }
 
@@ -49,7 +49,7 @@ final class ge extends PcmStream {
         this.field_m = (float)((double)this.field_q * Math.sqrt((double)(1.0f - this.field_w) * 0.5));
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int incrementValue$0 = 0;
@@ -106,7 +106,7 @@ final class ge extends PcmStream {
             var4 = 256;
           }
           if (this.field_t != null) {
-            this.field_t.b(this.field_z, 0, var4);
+            this.field_t.mixInto(this.field_z, 0, var4);
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
@@ -277,7 +277,7 @@ final class ge extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -285,7 +285,7 @@ final class ge extends PcmStream {
         this.field_A = param0;
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return this.field_t;
     }
 

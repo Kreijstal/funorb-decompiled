@@ -106,7 +106,7 @@ final class ol extends PcmStream {
         }
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -134,13 +134,13 @@ final class ol extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         ha var1 = (ha) (this.field_q.first(2));
         if (var1 == null) {
           return null;
         }
         if (null == var1.field_l) {
-          return this.a();
+          return this.nextChildStream();
         }
         return (PcmStream) ((Object) var1.field_l);
     }
@@ -208,7 +208,7 @@ final class ol extends PcmStream {
           if (param2 == 126) {
             return;
           }
-          this.c();
+          this.getSchedulingCost();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,7 +230,7 @@ final class ol extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         ha var1_ref = null;
         do {
           var1_ref = (ha) (this.field_q.next(10));

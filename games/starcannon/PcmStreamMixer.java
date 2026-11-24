@@ -7,7 +7,7 @@ final class PcmStreamMixer extends PcmStream {
     private int field_m;
     private int field_l;
 
-    final int b() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -22,7 +22,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void d(int param0) {
         PcmStream var2 = (PcmStream) (this.field_k.beginForward(-3905));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skipFrames(param0);
           var2 = (PcmStream) (this.field_k.nextForward(-16913));
         }
     }
@@ -50,11 +50,11 @@ final class PcmStreamMixer extends PcmStream {
         this.b(PcmSampleStream.a(param0, param1, param2));
     }
 
-    final PcmStream c() {
+    final PcmStream firstChildStream() {
         return (PcmStream) (this.field_k.beginForward(-3905));
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         oa var3 = null;
         int var5 = 0;
@@ -91,7 +91,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return (PcmStream) (this.field_k.nextForward(-16913));
     }
 
@@ -102,7 +102,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_k.beginForward(-3905));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
+          var4.mixOrSkipFrames(param0, param1, param2);
           var4 = (PcmStream) (this.field_k.nextForward(-16913));
         }
     }
@@ -130,7 +130,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         oa var5 = null;
         int var7 = 0;

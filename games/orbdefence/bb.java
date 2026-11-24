@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends di {
+final class bb extends PcmStream {
     private int field_r;
     private int field_l;
     private int field_x;
@@ -388,7 +388,7 @@ final class bb extends di {
         return this.field_x < 0 ? -1 : this.field_x;
     }
 
-    final int b() {
+    final int getSchedulingPriority() {
         int var1 = this.field_t * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_l == 0) {
@@ -488,7 +488,7 @@ final class bb extends di {
         this.a(param0, param1, this.l());
     }
 
-    final di a() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -606,7 +606,7 @@ final class bb extends di {
         this.a(param0, this.l());
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         if (this.field_q == 0 &&
           this.field_m == 0) {
           return 0;
@@ -674,7 +674,7 @@ final class bb extends di {
         return null;
     }
 
-    final di d() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -830,7 +830,7 @@ final class bb extends di {
         this.field_u = bb.b(this.field_q, this.field_x);
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1003,7 +1003,7 @@ final class bb extends di {
         this.unlink(57);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1019,7 +1019,7 @@ final class bb extends di {
         int var10Lifetime1;
         if (this.field_q == 0 &&
           this.field_m == 0) {
-          this.c(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (dl) (this.field_h);

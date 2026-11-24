@@ -219,9 +219,9 @@ final class mf extends PcmStream {
           }
           param4.field_w.e(param4.field_t);
           if (param1 == null) {
-            param4.field_w.a(param2);
+            param4.field_w.skipFrames(param2);
           } else {
-            param4.field_w.a(param1, param0, param2);
+            param4.field_w.mixInto(param1, param0, param2);
           }
           if (param4.field_w.h()) {
             this.field_Q.field_r.a(param4.field_w);
@@ -392,7 +392,7 @@ final class mf extends PcmStream {
         return;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -414,7 +414,7 @@ final class mf extends PcmStream {
               }
               var7 = (int)((-1L + ((long)var4_int + (-this.field_s + this.field_E))) / (long)var4_int);
               this.field_s = this.field_s + (long)var7 * (long)var4_int;
-              this.field_Q.a(param0, param1, var7);
+              this.field_Q.mixInto(param0, param1, var7);
               this.c(false);
               param1 = param1 + var7;
               param2 = param2 - var7;
@@ -423,7 +423,7 @@ final class mf extends PcmStream {
               }
             }
           }
-          this.field_Q.a(param0, param1, param2);
+          this.field_Q.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1010,7 +1010,7 @@ final class mf extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -1193,7 +1193,7 @@ final class mf extends PcmStream {
         }
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_Q);
     }
 
@@ -1271,7 +1271,7 @@ final class mf extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var6;
@@ -1287,7 +1287,7 @@ final class mf extends PcmStream {
             } else {
               var5 = (int)((this.field_E - this.field_s - (-(long)var2 + 1L)) / (long)var2);
               this.field_s = this.field_s + (long)var5 * (long)var2;
-              this.field_Q.a(var5);
+              this.field_Q.skipFrames(var5);
               param0 = param0 - var5;
               this.c(false);
               if (this.field_H.d()) {
@@ -1296,16 +1296,16 @@ final class mf extends PcmStream {
             }
             break;
           }
-          this.field_Q.a(param0);
+          this.field_Q.skipFrames(param0);
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_Q.a(param0);
+          this.field_Q.skipFrames(param0);
         }
 
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 

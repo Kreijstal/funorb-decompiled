@@ -56,7 +56,7 @@ class AudioMixer {
           this.field_k <= 0) {
           this.field_k = this.field_k + (field_m >> 4);
           AudioMixer.resetStreamScheduling(this.field_r);
-          this.enqueueByPriority(this.field_r, this.field_r.a());
+          this.enqueueByPriority(this.field_r, this.field_r.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -87,7 +87,7 @@ class AudioMixer {
                       continue;
                     }
                     var11.field_m = true;
-                    var13 = var11.b();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_k = var12.field_k + var13;
@@ -95,12 +95,12 @@ class AudioMixer {
                     if (var4 >= this.field_c) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.d();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_n;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
-                        var14Lifetime2 = var11.c();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_k;
@@ -152,10 +152,10 @@ class AudioMixer {
         if (param0.field_l != null) {
           param0.field_l.field_k = 0;
         }
-        PcmStream var1 = param0.d();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           AudioMixer.resetStreamScheduling(var1);
-          var1 = param0.c();
+          var1 = param0.nextChildStream();
         }
     }
 

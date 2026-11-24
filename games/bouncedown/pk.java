@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends wf {
+final class pk extends PcmStream {
     private int[] field_M;
     private int[] field_k;
     private int[] field_q;
@@ -53,11 +53,11 @@ final class pk extends wf {
         }
     }
 
-    final synchronized int b() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -82,7 +82,7 @@ final class pk extends wf {
               }
               var7 = (int)(((long)var4_int + (this.field_L - this.field_P - 1L)) / (long)var4_int);
               this.field_P = this.field_P + (long)var7 * (long)var4_int;
-              this.field_o.a(param0, param1, var7);
+              this.field_o.mixInto(param0, param1, var7);
               param2 = param2 - var7;
               param1 = param1 + var7;
               this.b((byte) -126);
@@ -92,11 +92,11 @@ final class pk extends wf {
               if (var8 == 0) {
                 continue;
               }
-              this.field_o.a(param0, param1, param2);
+              this.field_o.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_o.a(param0, param1, param2);
+          this.field_o.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -372,7 +372,7 @@ final class pk extends wf {
           stackIn_13_1 = 20974;
         }
         if (stackIn_13_0 != stackIn_13_1) {
-          this.c();
+          this.nextChildStream();
         }
     }
 
@@ -513,12 +513,12 @@ final class pk extends wf {
           }
           param3.field_i.i(param3.field_j);
           if (param0 != null) {
-            param3.field_i.a(param0, param2, param1);
+            param3.field_i.mixInto(param0, param2, param1);
             if (var12 != 0) {
-              param3.field_i.a(param1);
+              param3.field_i.skipFrames(param1);
             }
           } else {
-            param3.field_i.a(param1);
+            param3.field_i.skipFrames(param1);
           }
           if (param3.field_i.k()) {
             this.field_o.field_l.a(param3.field_i);
@@ -560,7 +560,7 @@ final class pk extends wf {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -579,7 +579,7 @@ final class pk extends wf {
             }
             var5 = (int)((-1L + ((long)var2 + (-this.field_P + this.field_L))) / (long)var2);
             this.field_P = this.field_P + (long)var5 * (long)var2;
-            this.field_o.a(var5);
+            this.field_o.skipFrames(var5);
             param0 = param0 - var5;
             this.b((byte) -123);
             if (!this.field_w.d() &&
@@ -589,18 +589,18 @@ final class pk extends wf {
             if (var6 == 0) {
               continue;
             }
-            this.field_o.a(param0);
+            this.field_o.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_o.a(param0);
+          this.field_o.skipFrames(param0);
         }
 
     }
 
-    final synchronized wf c() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -780,8 +780,8 @@ final class pk extends wf {
         }
     }
 
-    final synchronized wf d() {
-        return (wf) ((Object) this.field_o);
+    final synchronized PcmStream firstChildStream() {
+        return (PcmStream) ((Object) this.field_o);
     }
 
     private final void a(boolean param0, int param1, int param2, int param3) {
@@ -1335,7 +1335,7 @@ final class pk extends wf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 53) {
-            this.a(-12);
+            this.skipFrames(-12);
           }
           var3_int = this.field_k[param0.field_E];
           if (var3_int < 8192) {

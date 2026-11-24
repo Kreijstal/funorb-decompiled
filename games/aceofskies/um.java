@@ -9,11 +9,11 @@ final class um extends PcmStream {
     private MidiPcmStream field_l;
     PcmStreamMixer field_i;
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         String stackIn_16_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          this.field_i.b(param0, param1, param2);
+          this.field_i.mixInto(param0, param1, param2);
           MidiNote var6 = (MidiNote) (this.field_k.first(268435455));
           while (var6 != null) {
             boolean stackIn_4_0 = this.field_l.a(0, var6);
@@ -76,7 +76,7 @@ final class um extends PcmStream {
               param1 = param2.field_t / var4_int;
             }
           }
-          param2.field_e.a(param1);
+          param2.field_e.skipFrames(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ final class um extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -155,7 +155,7 @@ final class um extends PcmStream {
         return new s(param0);
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         MidiNote var1 = (MidiNote) (this.field_k.first(268435455));
         if (var1 == null) {
           return null;
@@ -163,12 +163,12 @@ final class um extends PcmStream {
         if (var1.field_e != null) {
           return (PcmStream) ((Object) var1.field_e);
         }
-        return this.a();
+        return this.nextChildStream();
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
-        this.field_i.a(param0);
+        this.field_i.skipFrames(param0);
         MidiNote var3 = (MidiNote) (this.field_k.first(268435455));
         while (var3 != null) {
           boolean stackIn_4_0 = this.field_l.a(0, var3);
@@ -192,7 +192,7 @@ final class um extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         MidiNote var1_ref = null;
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         do {
@@ -269,7 +269,7 @@ final class um extends PcmStream {
                 param0.field_t = param0.field_t + param2 * var7_int;
                 break;
               }
-              param0.field_e.b(param4, param5, var8);
+              param0.field_e.mixInto(param4, param5, var8);
               param2 = param2 - var8;
               param0.field_t = param0.field_t + (var7_int * var8 - 1048576);
               param5 = param5 + var8;
@@ -293,7 +293,7 @@ final class um extends PcmStream {
                 param0.field_e.d(-1);
               }
               var11.h(var9);
-              var11.b(param4, param5, -param5 + param3);
+              var11.mixInto(param4, param5, -param5 + param3);
               if (!var11.j()) {
                 continue;
               }
@@ -301,7 +301,7 @@ final class um extends PcmStream {
             }
           }
           int var7_intLifetime1 = -120 / ((35 - param1) / 48);
-          param0.field_e.b(param4, param5, param2);
+          param0.field_e.mixInto(param4, param5, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

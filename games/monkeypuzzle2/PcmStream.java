@@ -7,27 +7,27 @@ abstract class PcmStream extends IntrusiveNode {
     volatile boolean field_h;
     int field_f;
 
-    abstract void a(int param0);
+    abstract void skipFrames(int param0);
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixOrSkipFrames(int[] param0, int param1, int param2) {
         if (this.field_h) {
-          this.b(param0, param1, param2);
+          this.mixInto(param0, param1, param2);
         } else {
-          this.a(param2);
+          this.skipFrames(param2);
         }
     }
 
-    abstract PcmStream a();
+    abstract PcmStream firstChildStream();
 
-    abstract void b(int[] param0, int param1, int param2);
+    abstract void mixInto(int[] param0, int param1, int param2);
 
-    abstract PcmStream b();
+    abstract PcmStream nextChildStream();
 
-    int c() {
+    int getSchedulingPriority() {
         return 255;
     }
 
-    abstract int d();
+    abstract int getSchedulingCost();
 
     PcmStream() {
         this.field_h = true;

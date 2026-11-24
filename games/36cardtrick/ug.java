@@ -25,7 +25,7 @@ final class ug implements ci {
         }
     }
 
-    final static jg a(je param0, int param1, int param2) {
+    final static jg a(PcmStream param0, int param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
         jg stackIn_3_0 = null;

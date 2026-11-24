@@ -18,17 +18,17 @@ final class gd extends PcmStream {
     private float field_o;
     private sh[] field_t;
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return this.field_s;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void skipFrames(int param0) {
         if (this.field_s != null) {
-          this.field_s.c(param0);
+          this.field_s.skipFrames(param0);
         }
     }
 
@@ -123,7 +123,7 @@ final class gd extends PcmStream {
         return param0;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int incrementValue$0 = 0;
@@ -180,7 +180,7 @@ final class gd extends PcmStream {
             var4 = 256;
           }
           if (this.field_s != null) {
-            this.field_s.b(this.field_u, 0, var4);
+            this.field_s.mixInto(this.field_u, 0, var4);
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
@@ -355,7 +355,7 @@ final class gd extends PcmStream {
         this.field_w = param0;
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 8;
     }
 

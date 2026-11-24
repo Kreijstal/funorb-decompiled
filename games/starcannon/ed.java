@@ -50,11 +50,11 @@ final class ed extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -77,7 +77,7 @@ final class ed extends PcmStream {
           if (param2 <= 0) {
             return;
           }
-          this.field_m.a(param0, param1, param2);
+          this.field_m.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class ed extends PcmStream {
         }
     }
 
-    final int b() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -142,11 +142,11 @@ final class ed extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         if (this.field_l > param0) {
           this.field_l = this.field_l - param0;
           return;
@@ -160,12 +160,12 @@ final class ed extends PcmStream {
         this.previous = null;
         this.next = null;
         if (param0 > 0) {
-          this.field_m.a(param0);
+          this.field_m.skipFrames(param0);
         }
     }
 
-    final int d() {
-        return this.field_m.d();
+    final int getSchedulingPriority() {
+        return this.field_m.getSchedulingPriority();
     }
 
     static {

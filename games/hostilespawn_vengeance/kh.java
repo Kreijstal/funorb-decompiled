@@ -98,7 +98,7 @@ final class kh extends w {
         this.field_Y[param0] = var9 != 0 ? -var8 : var8;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var6 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_1 = 0;
@@ -116,7 +116,7 @@ final class kh extends w {
         try {
           var4_int = this.g(122);
           this.b((byte) -58, var4_int * this.field_W >> 8);
-          super.b(param0, param1, param2);
+          super.mixInto(param0, param1, param2);
           if (!this.field_Z) {
             var5 = 1;
             for (var6 = 0; var6 < 16; var6++) {

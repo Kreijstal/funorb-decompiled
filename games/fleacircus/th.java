@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends sh {
+final class th extends PcmStream {
     static volatile int field_s;
     static String[] field_m;
     private ei field_o;
@@ -148,15 +148,15 @@ final class th extends sh {
         field_m = null;
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
-    final sh d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -180,7 +180,7 @@ final class th extends sh {
         var11 = fleas.field_A ? 1 : 0;
         try {
           if (0 >= this.field_x) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_B) {
@@ -246,8 +246,8 @@ final class th extends sh {
                   this.field_p = new int[var6];
                   this.field_q = new int[var6];
                 }
-                this.field_C.b(this.field_q, 0, param2);
-                this.field_o.b(this.field_p, 0, param2);
+                this.field_C.mixInto(this.field_q, 0, param2);
+                this.field_o.mixInto(this.field_p, 0, param2);
                 if (!AudioOutput.field_h) {
                   stackIn_49_0 = param1;
                 } else {
@@ -260,10 +260,10 @@ final class th extends sh {
                   param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_q[var8] + this.field_p[var8] * var5 >> 8);
                 }
               } else {
-                this.field_o.b(param0, param1, param2);
+                this.field_o.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_C.b(param0, param1, param2);
+              this.field_C.mixInto(param0, param1, param2);
             }
           }
           if (this.field_y != null) {
@@ -277,7 +277,7 @@ final class th extends sh {
               this.field_q = new int[var6];
               this.field_p = new int[var6];
             }
-            this.field_t.b(this.field_q, 0, param2);
+            this.field_t.mixInto(this.field_q, 0, param2);
             if (AudioOutput.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -314,21 +314,21 @@ final class th extends sh {
         }
     }
 
-    final sh c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = fleas.field_A ? 1 : 0;
         if (this.field_E > 0) {
           if (this.field_F != null) {
-            this.field_C.a(param0);
+            this.field_C.skipFrames(param0);
             if (this.field_E >= 1048576) {
               if ((!(0 >= this.field_A)) &&
                 ((null != this.field_y))) {
-                this.field_t.a(param0);
+                this.field_t.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -336,19 +336,19 @@ final class th extends sh {
               if (this.field_r == null) {
                 if ((!(0 >= this.field_A)) &&
                   ((null != this.field_y))) {
-                  this.field_t.a(param0);
+                  this.field_t.skipFrames(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_o.a(param0);
+                this.field_o.skipFrames(param0);
               }
             }
           } else {
             if (this.field_E >= 1048576) {
               if ((!(0 >= this.field_A)) &&
                 ((null != this.field_y))) {
-                this.field_t.a(param0);
+                this.field_t.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -356,12 +356,12 @@ final class th extends sh {
               if (this.field_r == null) {
                 if ((!(0 >= this.field_A)) &&
                   ((null != this.field_y))) {
-                  this.field_t.a(param0);
+                  this.field_t.skipFrames(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_o.a(param0);
+                this.field_o.skipFrames(param0);
               }
             }
           }
@@ -369,7 +369,7 @@ final class th extends sh {
           if (this.field_E >= 1048576) {
             if ((!(0 >= this.field_A)) &&
               ((null != this.field_y))) {
-              this.field_t.a(param0);
+              this.field_t.skipFrames(param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -377,18 +377,18 @@ final class th extends sh {
             if (this.field_r == null) {
               if ((!(0 >= this.field_A)) &&
                 ((null != this.field_y))) {
-                this.field_t.a(param0);
+                this.field_t.skipFrames(param0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_o.a(param0);
+              this.field_o.skipFrames(param0);
             }
           }
         }
         if ((decompiledFrameRemainder0) && (0 < this.field_A &&
           null != this.field_y)) {
-          this.field_t.a(param0);
+          this.field_t.skipFrames(param0);
         }
         if (this.field_B) {
           if (this.field_u > 0 &&

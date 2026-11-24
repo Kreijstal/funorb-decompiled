@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka extends od {
+final class ka extends PcmStream {
     static boolean field_j;
     static int field_n;
     static db field_m;
@@ -9,7 +9,7 @@ final class ka extends od {
     private wg field_o;
     tj field_l;
 
-    final od a() {
+    final PcmStream nextChildStream() {
         pl var1;
         int var2;
         var2 = CrazyCrystals.field_B;
@@ -19,7 +19,7 @@ final class ka extends od {
             return null;
           }
           if (null != var1.field_v) {
-            return (od) ((Object) var1.field_v);
+            return (PcmStream) ((Object) var1.field_v);
           }
         }
     }
@@ -62,7 +62,7 @@ final class ka extends od {
               param1 = param0.field_j / var4_int;
             }
           }
-          param0.field_v.a(param1);
+          param0.field_v.skipFrames(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,22 +78,22 @@ final class ka extends od {
         }
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final od d() {
+    final PcmStream firstChildStream() {
         pl var1 = (pl) (this.field_k.beginForward(32073));
         if (var1 == null) {
           return null;
         }
         if (var1.field_v == null) {
-          return this.a();
+          return this.nextChildStream();
         }
-        return (od) ((Object) var1.field_v);
+        return (PcmStream) ((Object) var1.field_v);
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -105,7 +105,7 @@ final class ka extends od {
         int var7 = 0;
         var7 = CrazyCrystals.field_B;
         try {
-          this.field_l.a(param0, param1, param2);
+          this.field_l.mixInto(param0, param1, param2);
           var6 = (pl) (this.field_k.beginForward(32073));
           scanLoop1: while (true) {
             if (var6 == null) {
@@ -170,7 +170,7 @@ final class ka extends od {
         var12 = CrazyCrystals.field_B;
         try {
           if (param3 != -1048576) {
-            this.a();
+            this.nextChildStream();
           }
           if (0 != (4 & this.field_o.field_E[param1.field_i]) &&
             param1.field_l < 0) {
@@ -181,7 +181,7 @@ final class ka extends od {
                 param1.field_j = param1.field_j + var7_int * param4;
                 break;
               }
-              param1.field_v.a(param0, param2, var8);
+              param1.field_v.mixInto(param0, param2, var8);
               param4 = param4 - var8;
               param2 = param2 + var8;
               param1.field_j = param1.field_j + (-1048576 + var7_int * var8);
@@ -206,14 +206,14 @@ final class ka extends od {
                 param1.field_v.f(-1);
               }
               var11.d(var9);
-              var11.a(param0, param2, param5 - param2);
+              var11.mixInto(param0, param2, param5 - param2);
               if (!var11.e()) {
                 continue;
               }
               this.field_l.b(var11);
             }
           }
-          param1.field_v.a(param0, param2, param4);
+          param1.field_v.mixInto(param0, param2, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,12 +235,12 @@ final class ka extends od {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         pl var3;
         int var4;
         int var2;
         var4 = CrazyCrystals.field_B;
-        this.field_l.a(param0);
+        this.field_l.skipFrames(param0);
         var3 = (pl) (this.field_k.beginForward(32073));
         scanLoop1: while (true) {
           if (var3 == null) {

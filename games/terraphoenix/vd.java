@@ -9,13 +9,13 @@ final class vd extends PcmStream {
     IntrusiveDeque field_n;
     vg field_m;
 
-    final PcmStream c() {
+    final PcmStream firstChildStream() {
         sh var1 = (sh) (this.field_n.beginBackward(9272));
         if (var1 == null) {
           return null;
         }
         if (var1.field_k == null) {
-          return this.a();
+          return this.nextChildStream();
         }
         return (PcmStream) ((Object) var1.field_k);
     }
@@ -43,7 +43,7 @@ final class vd extends PcmStream {
         field_p = (String) null;
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         sh var1;
         while (true) {
           var1 = (sh) (this.field_n.nextBackward((byte) -119));
@@ -56,7 +56,7 @@ final class vd extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -69,7 +69,7 @@ final class vd extends PcmStream {
         int var7 = 0;
         var7 = Terraphoenix.field_V;
         try {
-          this.field_m.a(param0, param1, param2);
+          this.field_m.mixInto(param0, param1, param2);
           var6 = (sh) (this.field_n.beginBackward(9272));
           while (var6 != null) {
             stackIn_4_0 = this.field_q.a(var6, 16384);
@@ -108,12 +108,12 @@ final class vd extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         sh var3;
         int var4;
         var4 = Terraphoenix.field_V;
-        this.field_m.a(param0);
+        this.field_m.skipFrames(param0);
         var3 = (sh) (this.field_n.beginBackward(9272));
         while (var3 != null) {
           if (!this.field_q.a(var3, 16384)) {
@@ -132,7 +132,7 @@ final class vd extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -164,7 +164,7 @@ final class vd extends PcmStream {
                 param0.field_A = param0.field_A + param3 * var7_int;
                 break;
               }
-              param0.field_k.a(param1, param4, var8);
+              param0.field_k.mixInto(param1, param4, var8);
               param3 = param3 - var8;
               param0.field_A = param0.field_A + (var7_int * var8 - 1048576);
               param4 = param4 + var8;
@@ -187,7 +187,7 @@ final class vd extends PcmStream {
                 param0.field_k.g(-1);
               }
               var11.c(var9);
-              var11.a(param1, param4, param2 - param4);
+              var11.mixInto(param1, param4, param2 - param4);
               if (!var11.k()) {
                 continue;
               }
@@ -195,7 +195,7 @@ final class vd extends PcmStream {
             }
           }
           var7_intLifetime1 = -8 % ((-49 - param5) / 44);
-          param0.field_k.a(param1, param4, param3);
+          param0.field_k.mixInto(param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ final class vd extends PcmStream {
           }
           if ((4 & this.field_q.field_q[param2.field_v]) != 0) {
             if (param2.field_h >= 0) {
-              param2.field_k.a(param0);
+              param2.field_k.skipFrames(param0);
               return;
             }
             var4_int = this.field_q.field_D[param2.field_v] / PcmPlayerService.field_u;
@@ -254,7 +254,7 @@ final class vd extends PcmStream {
               param0 = param2.field_A / var4_int;
             }
           }
-          param2.field_k.a(param0);
+          param2.field_k.skipFrames(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

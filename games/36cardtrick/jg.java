@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends je {
+final class jg extends PcmStream {
     private int field_l;
-    private je field_k;
+    private PcmStream field_k;
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         if (this.field_l > param0) {
           this.field_l = this.field_l - param0;
           return;
@@ -19,27 +19,27 @@ final class jg extends je {
         this.previous = null;
         this.next = null;
         if (0 < param0) {
-          this.field_k.a(param0);
+          this.field_k.skipFrames(param0);
         }
     }
 
-    final je a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final int d() {
-        return this.field_k.d();
+    final int getSchedulingPriority() {
+        return this.field_k.getSchedulingPriority();
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final je b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -62,7 +62,7 @@ final class jg extends je {
           if (param2 <= 0) {
             return;
           }
-          this.field_k.a(param0, param1, param2);
+          this.field_k.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class jg extends je {
         }
     }
 
-    jg(je param0, int param1) {
+    jg(PcmStream param0, int param1) {
         try {
           this.field_k = param0;
           this.field_i = this.field_k.field_i;

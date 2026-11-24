@@ -17,17 +17,17 @@ abstract class PcmStream extends IntrusiveNode {
         }
     }
 
-    int d() {
+    int getSchedulingPriority() {
         return 255;
     }
 
     abstract void skip(int param0);
 
-    abstract PcmStream b();
+    abstract PcmStream firstChildStream();
 
-    abstract PcmStream a();
+    abstract PcmStream nextChildStream();
 
-    abstract int c();
+    abstract int getSchedulingCost();
 
     protected PcmStream() {
         this.field_k = true;

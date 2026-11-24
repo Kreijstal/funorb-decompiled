@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends od {
+final class kg extends PcmStream {
     private int field_v;
     private int field_p;
     private int field_o;
@@ -106,7 +106,7 @@ final class kg extends od {
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -122,7 +122,7 @@ final class kg extends od {
         int var10Lifetime1;
         if (this.field_o == 0 &&
           this.field_v == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (ko) (this.field_h);
@@ -724,7 +724,7 @@ final class kg extends od {
         this.a(param0, param1, this.k());
     }
 
-    final od a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -867,7 +867,7 @@ final class kg extends od {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    final int b() {
+    final int getSchedulingPriority() {
         int var1 = this.field_s * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_w == 0) {
@@ -880,7 +880,7 @@ final class kg extends od {
         return var1 > 255 ? 255 : var1;
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         if (this.field_o == 0 &&
           this.field_v == 0) {
           return 0;
@@ -1535,7 +1535,7 @@ final class kg extends od {
         return false;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1708,7 +1708,7 @@ final class kg extends od {
         this.unlink(false);
     }
 
-    final od d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 

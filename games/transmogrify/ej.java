@@ -10,7 +10,7 @@ final class ej extends PcmStream {
     private lc field_o;
     jc field_m;
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         kc var6 = null;
@@ -23,7 +23,7 @@ final class ej extends PcmStream {
         RuntimeException var4 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          this.field_m.b(param0, param1, param2);
+          this.field_m.mixInto(param0, param1, param2);
           var6 = (kc) (this.field_q.beginForward((byte) -95));
           while (null != var6) {
             if (var7 != 0) {
@@ -67,7 +67,7 @@ final class ej extends PcmStream {
         }
     }
 
-    final int b() {
+    final int getSchedulingCost() {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -128,7 +128,7 @@ final class ej extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         kc var1 = null;
         Object stackIn_4_0 = null;
         PcmSampleStream stackIn_9_0 = null;
@@ -214,7 +214,7 @@ final class ej extends PcmStream {
               param2 = param1.field_n / var4_int;
             }
           }
-          param1.field_y.d(param2);
+          param1.field_y.skipFrames(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,7 +259,7 @@ final class ej extends PcmStream {
                   break scanLoop1;
                 }
               } else {
-                param3.field_y.b(param1, param4, var8);
+                param3.field_y.mixInto(param1, param4, var8);
                 param3.field_n = param3.field_n + (var7_int * var8 - 1048576);
                 param4 = param4 + var8;
                 param5 = param5 - var8;
@@ -287,7 +287,7 @@ final class ej extends PcmStream {
                 param3.field_y.h(-1);
               }
               var11.f(var9);
-              var11.b(param1, param4, -param4 + param0);
+              var11.mixInto(param1, param4, -param4 + param0);
               if (var11.e()) {
                 this.field_m.a(var11);
               }
@@ -298,7 +298,7 @@ final class ej extends PcmStream {
             }
             param3.field_n = param3.field_n + var7_int * param5;
           }
-          param3.field_y.b(param1, param4, param5);
+          param3.field_y.mixInto(param1, param4, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -334,7 +334,7 @@ final class ej extends PcmStream {
         }
     }
 
-    final void d(int param0) {
+    final void skipFrames(int param0) {
         int var2_int = 0;
         kc var3 = null;
         int var4 = 0;
@@ -343,7 +343,7 @@ final class ej extends PcmStream {
         RuntimeException var2 = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          this.field_m.d(param0);
+          this.field_m.skipFrames(param0);
           var3 = (kc) (this.field_q.beginForward((byte) -95));
           while (null != var3) {
             if (var4 != 0) {
@@ -616,7 +616,7 @@ final class ej extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         kc var1 = null;
         RuntimeException var1_ref = null;
         Object stackIn_2_0 = null;
@@ -633,7 +633,7 @@ final class ej extends PcmStream {
             stackIn_7_0 = var1.field_y;
             return (PcmStream) ((Object) stackIn_7_0);
           }
-          stackIn_9_0 = this.a();
+          stackIn_9_0 = this.nextChildStream();
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

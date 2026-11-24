@@ -93,17 +93,17 @@ final class uh extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = Lexicominos.field_L ? 1 : 0;
         if (0 >= this.field_w) {
           if (1048576 > this.field_w &&
             this.field_t != null) {
-            this.field_s.a(param0);
+            this.field_s.skipFrames(param0);
           }
           if (this.field_q > 0 &&
             this.field_m != null) {
-            this.field_z.a(param0);
+            this.field_z.skipFrames(param0);
           }
           if (this.field_p) {
             if (this.field_x > 0 &&
@@ -157,12 +157,12 @@ final class uh extends PcmStream {
           return;
         }
         if (this.field_B != null) {
-          this.field_A.a(param0);
+          this.field_A.skipFrames(param0);
         }
         if (1048576 <= this.field_w) {
           if (this.field_q > 0 &&
             this.field_m != null) {
-            this.field_z.a(param0);
+            this.field_z.skipFrames(param0);
           }
           if (this.field_p) {
             if (this.field_x > 0 &&
@@ -216,7 +216,7 @@ final class uh extends PcmStream {
           return;
         }
         if (this.field_t != null) {
-          this.field_s.a(param0);
+          this.field_s.skipFrames(param0);
         }
         if (this.field_q > 0) {
           if (this.field_m == null) {
@@ -271,7 +271,7 @@ final class uh extends PcmStream {
             this.field_B = null;
             return;
           }
-          this.field_z.a(param0);
+          this.field_z.skipFrames(param0);
         }
         if (this.field_p) {
           if (this.field_x > 0 &&
@@ -432,7 +432,7 @@ final class uh extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -452,13 +452,13 @@ final class uh extends PcmStream {
         field_v = null;
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
     final synchronized void a(int param0, int param1) {
         if (param0 != 0) {
-          this.b();
+          this.nextChildStream();
           this.field_u = param1;
           return;
         }
@@ -499,7 +499,7 @@ final class uh extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -523,7 +523,7 @@ final class uh extends PcmStream {
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
           if (this.field_u <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_p) {
@@ -589,8 +589,8 @@ final class uh extends PcmStream {
                   this.field_r = new int[var6];
                   this.field_y = new int[var6];
                 }
-                this.field_A.b(this.field_y, 0, param2);
-                this.field_s.b(this.field_r, 0, param2);
+                this.field_A.mixInto(this.field_y, 0, param2);
+                this.field_s.mixInto(this.field_r, 0, param2);
                 if (!AudioOutput.field_j) {
                   stackIn_47_0 = param1;
                 } else {
@@ -603,10 +603,10 @@ final class uh extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_r[var8] * var5 + var4_int * this.field_y[var8] >> 8);
                 }
               } else {
-                this.field_s.b(param0, param1, param2);
+                this.field_s.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_A.b(param0, param1, param2);
+              this.field_A.mixInto(param0, param1, param2);
             }
           }
           if (this.field_m != null &&
@@ -618,7 +618,7 @@ final class uh extends PcmStream {
               this.field_r = new int[var6];
               this.field_y = new int[var6];
             }
-            this.field_z.b(this.field_y, 0, param2);
+            this.field_z.mixInto(this.field_y, 0, param2);
             if (AudioOutput.field_j) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -657,7 +657,7 @@ final class uh extends PcmStream {
         this.a(var1, (byte) -72, new hl(var1));
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 

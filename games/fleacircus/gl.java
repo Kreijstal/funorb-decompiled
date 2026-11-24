@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends sh {
+final class gl extends PcmStream {
     IntrusiveDeque field_n;
     private ei field_p;
     static bi field_m;
     ke field_o;
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -19,7 +19,7 @@ final class gl extends sh {
         int var7 = 0;
         var7 = fleas.field_A ? 1 : 0;
         try {
-          this.field_o.b(param0, param1, param2);
+          this.field_o.mixInto(param0, param1, param2);
           var6 = (tk) (this.field_n.beginForward((byte) 47));
           while (var6 != null) {
             if (!this.field_p.a(var6, -1)) {
@@ -63,13 +63,13 @@ final class gl extends sh {
         field_m = null;
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         tk var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = fleas.field_A ? 1 : 0;
-        this.field_o.a(param0);
+        this.field_o.skipFrames(param0);
         var3 = (tk) (this.field_n.beginForward((byte) 47));
         while (var3 != null) {
           stackIn_4_0 = this.field_p.a(var3, -1);
@@ -93,7 +93,7 @@ final class gl extends sh {
         }
     }
 
-    final sh c() {
+    final PcmStream nextChildStream() {
         tk var1_ref = null;
         do {
           var1_ref = (tk) (this.field_n.nextForward((byte) -105));
@@ -101,7 +101,7 @@ final class gl extends sh {
             return null;
           }
         } while (null == var1_ref.field_k);
-        return (sh) ((Object) var1_ref.field_k);
+        return (PcmStream) ((Object) var1_ref.field_k);
     }
 
     private final void a(int param0, tk param1, int param2) {
@@ -139,11 +139,11 @@ final class gl extends sh {
               param0 = param1.field_x / var4_int;
             }
           }
-          param1.field_k.a(param0);
+          param1.field_k.skipFrames(param0);
           if (param2 >= 124) {
             return;
           }
-          this.c();
+          this.nextChildStream();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ final class gl extends sh {
         var12 = fleas.field_A ? 1 : 0;
         try {
           if (param3 != -21345) {
-            this.d();
+            this.firstChildStream();
           }
           if ((this.field_p.field_q[param0.field_o] & 4) != 0 &&
             param0.field_q < 0) {
@@ -191,7 +191,7 @@ final class gl extends sh {
                 param0.field_x = param0.field_x + var7_int * param1;
                 break;
               }
-              param0.field_k.b(param2, param4, var8);
+              param0.field_k.mixInto(param2, param4, var8);
               param4 = param4 + var8;
               param1 = param1 - var8;
               param0.field_x = param0.field_x + (-1048576 + var8 * var7_int);
@@ -216,14 +216,14 @@ final class gl extends sh {
                 param0.field_k.g(-1);
               }
               var11.f(var9);
-              var11.b(param2, param4, -param4 + param5);
+              var11.mixInto(param2, param4, -param4 + param5);
               if (!var11.i()) {
                 continue;
               }
               this.field_o.a(var11);
             }
           }
-          param0.field_k.b(param2, param4, param1);
+          param0.field_k.mixInto(param2, param4, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,19 +293,19 @@ final class gl extends sh {
         }
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final sh d() {
+    final PcmStream firstChildStream() {
         tk var1 = (tk) (this.field_n.beginForward((byte) 47));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_k) {
-          return (sh) ((Object) var1.field_k);
+          return (PcmStream) ((Object) var1.field_k);
         }
-        return this.c();
+        return this.nextChildStream();
     }
 
     static {

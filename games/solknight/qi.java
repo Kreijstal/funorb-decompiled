@@ -121,7 +121,7 @@ final class qi extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -316,7 +316,7 @@ final class qi extends PcmStream {
         this.field_o = qi.d(this.field_y, this.field_q);
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         if (this.field_y == 0 &&
           this.field_p == 0) {
           return 0;
@@ -1085,7 +1085,7 @@ final class qi extends PcmStream {
         return this.field_q < 0 ? -1 : this.field_q;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1411,7 +1411,7 @@ final class qi extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1427,7 +1427,7 @@ final class qi extends PcmStream {
         int var10Lifetime1;
         if (this.field_y == 0 &&
           this.field_p == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (sh) (this.field_h);
@@ -1612,7 +1612,7 @@ final class qi extends PcmStream {
         this.field_x = -this.field_x;
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -1711,7 +1711,7 @@ final class qi extends PcmStream {
         return param5;
     }
 
-    final int c() {
+    final int getSchedulingPriority() {
         int var1 = this.field_v * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_s == 0) {

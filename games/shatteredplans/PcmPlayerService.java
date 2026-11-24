@@ -56,7 +56,7 @@ class PcmPlayerService {
           this.field_a <= 0) {
           this.field_a = this.field_a + (field_j >> 4);
           PcmPlayerService.resetStreamScheduling(this.field_k);
-          this.addTimedStream(this.field_k, this.field_k.c());
+          this.addTimedStream(this.field_k, this.field_k.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -87,7 +87,7 @@ class PcmPlayerService {
                       continue;
                     }
                     var11.field_j = true;
-                    var13 = var11.a();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_h = var12.field_h + var13;
@@ -99,7 +99,7 @@ class PcmPlayerService {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_i;
                       while (var14Lifetime2 != null) {
-                        this.addTimedStream(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
+                        this.addTimedStream(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
                         var14Lifetime2 = var11.nextChild();
                       }
                     }

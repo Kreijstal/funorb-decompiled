@@ -111,7 +111,7 @@ final class ug extends PcmStream {
         }
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_H);
     }
 
@@ -253,12 +253,12 @@ final class ug extends PcmStream {
           }
           param3.field_D.k(param3.field_l);
           if (param1 == null) {
-            param3.field_D.d(param4);
+            param3.field_D.skipFrames(param4);
             if (var11 != 0) {
-              param3.field_D.b(param1, param0, param4);
+              param3.field_D.mixInto(param1, param0, param4);
             }
           } else {
-            param3.field_D.b(param1, param0, param4);
+            param3.field_D.mixInto(param1, param0, param4);
           }
           if (param3.field_D.g()) {
             this.field_H.field_r.a(param3.field_D);
@@ -297,7 +297,7 @@ final class ug extends PcmStream {
         int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param1 != -16596) {
-          this.d(-16);
+          this.skipFrames(-16);
         }
         if ((this.field_C[param0] & 2) != 0) {
           var3 = (cc) (this.field_H.field_q.beginForward(param1 + 5445));
@@ -444,7 +444,7 @@ final class ug extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -746,7 +746,7 @@ final class ug extends PcmStream {
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var3 = param0 & 240;
         if (param1 != 32696) {
-          this.d();
+          this.getSchedulingCost();
         }
         if (var3 == 128) {
           var4 = 15 & param0;
@@ -926,7 +926,7 @@ final class ug extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -950,7 +950,7 @@ final class ug extends PcmStream {
               }
               var7 = (int)((-1L + ((long)var4_int + (this.field_P - this.field_J))) / (long)var4_int);
               this.field_J = this.field_J + (long)var7 * (long)var4_int;
-              this.field_H.b(param0, param1, var7);
+              this.field_H.mixInto(param0, param1, var7);
               param2 = param2 - var7;
               param1 = param1 + var7;
               this.g(32675);
@@ -961,11 +961,11 @@ final class ug extends PcmStream {
               if (var8 == 0) {
                 continue;
               }
-              this.field_H.b(param0, param1, param2);
+              this.field_H.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_H.b(param0, param1, param2);
+          this.field_H.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -981,7 +981,7 @@ final class ug extends PcmStream {
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -1195,7 +1195,7 @@ final class ug extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
@@ -1217,7 +1217,7 @@ final class ug extends PcmStream {
             }
             var5 = (int)((-1L + ((long)var2 + (this.field_P - this.field_J))) / (long)var2);
             this.field_J = this.field_J + (long)var2 * (long)var5;
-            this.field_H.d(var5);
+            this.field_H.skipFrames(var5);
             param0 = param0 - var5;
             this.g(32675);
             if (!this.field_R.g() &&
@@ -1227,14 +1227,14 @@ final class ug extends PcmStream {
             if (var6 == 0) {
               continue;
             }
-            this.field_H.d(param0);
+            this.field_H.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if ((decompiledFrameCompleted1) &&
           (decompiledFrameCompleted0)) {
-          this.field_H.d(param0);
+          this.field_H.skipFrames(param0);
         }
 
     }

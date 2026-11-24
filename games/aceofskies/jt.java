@@ -20,23 +20,23 @@ final class jt extends PcmStream {
     private boolean field_w;
     MidiPcmStream field_n;
 
-    final PcmStream a() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_l > 0 &&
           null != this.field_v) {
-          this.field_n.a(param0);
+          this.field_n.skipFrames(param0);
         }
         if (this.field_l < 1048576 &&
           null != this.field_r) {
-          this.field_p.a(param0);
+          this.field_p.skipFrames(param0);
         }
         if (this.field_j > 0 &&
           this.field_k != null) {
-          this.field_y.a(param0);
+          this.field_y.skipFrames(param0);
         }
         if (this.field_m) {
           if (0 < this.field_u &&
@@ -96,7 +96,7 @@ final class jt extends PcmStream {
     private final void a(MidiPcmStream param0, int param1, MidiPcmStream param2) {
         try {
           if (param1 != 9649) {
-            this.b();
+            this.firstChildStream();
           }
           this.field_p = param0;
           this.field_n = param2;
@@ -107,7 +107,7 @@ final class jt extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int stackIn_34_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_64_0 = 0;
@@ -115,7 +115,7 @@ final class jt extends PcmStream {
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_q <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_m) {
@@ -168,7 +168,7 @@ final class jt extends PcmStream {
           if (this.field_j < 256 && (this.field_v != null ||
             null != this.field_r)) {
             if (var4_int == 256) {
-              this.field_n.b(param0, param1, param2);
+              this.field_n.mixInto(param0, param1, param2);
             } else if (var5 != 256) {
               if (null != this.field_i &&
                 this.field_i.length >= var6) {
@@ -178,8 +178,8 @@ final class jt extends PcmStream {
                 this.field_i = new int[var6];
                 this.field_o = new int[var6];
               }
-              this.field_n.b(this.field_i, 0, param2);
-              this.field_p.b(this.field_o, 0, param2);
+              this.field_n.mixInto(this.field_i, 0, param2);
+              this.field_p.mixInto(this.field_o, 0, param2);
               if (AudioOutput.field_r) {
                 int localTemp$0 = param1 << 1;
                 param1 = localTemp$0;
@@ -192,7 +192,7 @@ final class jt extends PcmStream {
                 param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_i[var8] + var5 * this.field_o[var8] >> 8);
               }
             } else {
-              this.field_p.b(param0, param1, param2);
+              this.field_p.mixInto(param0, param1, param2);
             }
           }
           if (this.field_k != null) {
@@ -206,7 +206,7 @@ final class jt extends PcmStream {
               this.field_o = new int[var6];
               this.field_i = new int[var6];
             }
-            this.field_y.b(this.field_i, 0, param2);
+            this.field_y.mixInto(this.field_i, 0, param2);
             if (AudioOutput.field_r) {
               int localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -293,7 +293,7 @@ final class jt extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -395,7 +395,7 @@ final class jt extends PcmStream {
         this.field_q = param1;
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 

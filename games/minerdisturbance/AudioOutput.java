@@ -154,10 +154,10 @@ class AudioOutput {
         if (param0.field_q != null) {
           param0.field_q.field_n = 0;
         }
-        PcmStream var1 = param0.b();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           AudioOutput.resetStreamScheduling(var1);
-          var1 = param0.c();
+          var1 = param0.nextChildStream();
         }
     }
 
@@ -283,7 +283,7 @@ class AudioOutput {
           this.field_c <= 0) {
           this.field_c = this.field_c + (field_r >> 4);
           AudioOutput.resetStreamScheduling(this.field_k);
-          this.enqueueByPriority(this.field_k, this.field_k.a());
+          this.enqueueByPriority(this.field_k, this.field_k.getSchedulingPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -314,7 +314,7 @@ class AudioOutput {
                       continue;
                     }
                     var11.field_n = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_n = var12.field_n + var13;
@@ -322,12 +322,12 @@ class AudioOutput {
                     if (var4 >= this.field_q) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_p;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
-                        var14Lifetime2 = var11.c();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getSchedulingPriority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_o;
@@ -369,7 +369,7 @@ class AudioOutput {
           this.field_c = 0;
         }
         if (this.field_k != null) {
-          this.field_k.a(param0, 0, param1);
+          this.field_k.mixInto(param0, 0, param1);
         }
         this.field_g = sf.correctedCurrentTimeMillis((byte) 107);
     }
@@ -383,7 +383,7 @@ class AudioOutput {
           this.field_c = 0;
         }
         if (this.field_k != null) {
-          this.field_k.a(param0);
+          this.field_k.skipFrames(param0);
           return;
         }
     }

@@ -44,7 +44,7 @@ final class wl extends PcmStream {
           var4 = (qd) (this.field_z.a(true));
         }
         if (param0 != -32499) {
-          this.c();
+          this.firstChildStream();
         }
     }
 
@@ -258,7 +258,7 @@ final class wl extends PcmStream {
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_t);
     }
 
@@ -396,7 +396,7 @@ final class wl extends PcmStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -423,7 +423,7 @@ final class wl extends PcmStream {
         var3 = 115 / ((55 - param1) / 56);
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -442,7 +442,7 @@ final class wl extends PcmStream {
               if (-var5 + this.field_r < 0L) {
                 var7 = (int)((this.field_r - this.field_x - (-(long)var4_int + 1L)) / (long)var4_int);
                 this.field_x = this.field_x + (long)var7 * (long)var4_int;
-                this.field_t.a(param0, param1, var7);
+                this.field_t.mixInto(param0, param1, var7);
                 param1 = param1 + var7;
                 this.a(true);
                 param2 = param2 - var7;
@@ -454,10 +454,10 @@ final class wl extends PcmStream {
               }
               break;
             }
-            this.field_t.a(param0, param1, param2);
+            this.field_t.mixInto(param0, param1, param2);
             return;
           }
-          this.field_t.a(param0, param1, param2);
+          this.field_t.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -601,7 +601,7 @@ final class wl extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var6;
@@ -617,7 +617,7 @@ final class wl extends PcmStream {
             } else {
               var5 = (int)(((long)var2 - this.field_x + (this.field_r - 1L)) / (long)var2);
               this.field_x = this.field_x + (long)var5 * (long)var2;
-              this.field_t.a(var5);
+              this.field_t.skipFrames(var5);
               param0 = param0 - var5;
               this.a(true);
               if (this.field_G.e()) {
@@ -626,11 +626,11 @@ final class wl extends PcmStream {
             }
             break;
           }
-          this.field_t.a(param0);
+          this.field_t.skipFrames(param0);
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_t.a(param0);
+          this.field_t.skipFrames(param0);
         }
 
     }
@@ -872,9 +872,9 @@ final class wl extends PcmStream {
           }
           param3.field_k.c(param3.field_y);
           if (param1 == null) {
-            param3.field_k.a(param2);
+            param3.field_k.skipFrames(param2);
           } else {
-            param3.field_k.a(param1, param4, param2);
+            param3.field_k.mixInto(param1, param4, param2);
           }
           if (param3.field_k.k()) {
             this.field_t.field_m.a(param3.field_k);
@@ -917,7 +917,7 @@ final class wl extends PcmStream {
         field_Q = null;
     }
 
-    final synchronized PcmStream a() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -1319,7 +1319,7 @@ final class wl extends PcmStream {
         int var5Lifetime1;
         try {
           if (param0 < 59) {
-            this.d();
+            this.getSchedulingCost();
           }
           var3_int = param1.field_j + (param1.field_u * param1.field_D >> 12);
           var3_int = var3_int + (this.field_n[param1.field_v] * (this.field_F[param1.field_v] - 8192) >> 12);

@@ -38,15 +38,15 @@ final class tc extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
-    final PcmStream d() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -70,7 +70,7 @@ final class tc extends PcmStream {
         var11 = DungeonAssault.field_K;
         try {
           if (0 >= this.field_t) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_n) {
@@ -127,7 +127,7 @@ final class tc extends PcmStream {
           if (256 > this.field_r && (this.field_o != null ||
             null != this.field_x)) {
             if (var4_int == 256) {
-              this.field_A.b(param0, param1, param2);
+              this.field_A.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_s != null &&
@@ -138,8 +138,8 @@ final class tc extends PcmStream {
                   this.field_s = new int[var6];
                   this.field_y = new int[var6];
                 }
-                this.field_A.b(this.field_s, 0, param2);
-                this.field_B.b(this.field_y, 0, param2);
+                this.field_A.mixInto(this.field_s, 0, param2);
+                this.field_B.mixInto(this.field_y, 0, param2);
                 if (!AudioOutput.field_g) {
                   stackIn_51_0 = param1;
                 } else {
@@ -152,7 +152,7 @@ final class tc extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_s[var8] + this.field_y[var8] * var5 >> 8);
                 }
               } else {
-                this.field_B.b(param0, param1, param2);
+                this.field_B.mixInto(param0, param1, param2);
               }
             }
           }
@@ -167,7 +167,7 @@ final class tc extends PcmStream {
               this.field_y = new int[var6];
               this.field_s = new int[var6];
             }
-            this.field_C.b(this.field_s, 0, param2);
+            this.field_C.mixInto(this.field_s, 0, param2);
             if (!AudioOutput.field_g) {
               stackIn_66_0 = param1;
             } else {
@@ -311,7 +311,7 @@ final class tc extends PcmStream {
 
     final synchronized void a(int param0, int param1) {
         if (param1 != 256) {
-          this.c();
+          this.nextChildStream();
         }
         this.field_t = param0;
     }
@@ -329,24 +329,24 @@ final class tc extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = DungeonAssault.field_K;
         if (0 < this.field_v &&
           this.field_o != null) {
-          this.field_A.a(param0);
+          this.field_A.skipFrames(param0);
         }
         if (this.field_v < 1048576 &&
           null != this.field_x) {
-          this.field_B.a(param0);
+          this.field_B.skipFrames(param0);
         }
         if (0 < this.field_r &&
           this.field_z != null) {
-          this.field_C.a(param0);
+          this.field_C.skipFrames(param0);
         }
         if (this.field_n) {
           if (0 < this.field_p) {

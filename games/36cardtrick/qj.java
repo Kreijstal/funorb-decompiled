@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj extends je {
+final class qj extends PcmStream {
     private IntrusiveDeque field_n;
     private IntrusiveDeque field_m;
     private int field_k;
     private int field_l;
 
     private final void d(int param0) {
-        je var2 = (je) (this.field_n.beginForward((byte) 74));
+        PcmStream var2 = (PcmStream) (this.field_n.beginForward((byte) 74));
         while (var2 != null) {
-          var2.a(param0);
-          var2 = (je) (this.field_n.nextForward((byte) -121));
+          var2.skipFrames(param0);
+          var2 = (PcmStream) (this.field_n.nextForward((byte) -121));
         }
     }
 
@@ -26,8 +26,8 @@ final class qj extends je {
         throw new RuntimeException();
     }
 
-    final je a() {
-        return (je) (this.field_n.nextForward((byte) -95));
+    final PcmStream nextChildStream() {
+        return (PcmStream) (this.field_n.nextForward((byte) -95));
     }
 
     final synchronized void a(sf param0) {
@@ -42,15 +42,15 @@ final class qj extends je {
         throw new RuntimeException();
     }
 
-    final synchronized void b(je param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_n.addFirst(-126, param0);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        je var4 = (je) (this.field_n.beginForward((byte) 74));
+        PcmStream var4 = (PcmStream) (this.field_n.beginForward((byte) 74));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
-          var4 = (je) (this.field_n.nextForward((byte) -95));
+          var4.mixOrSkipFrames(param0, param1, param2);
+          var4 = (PcmStream) (this.field_n.nextForward((byte) -95));
         }
     }
 
@@ -79,11 +79,11 @@ final class qj extends je {
         }
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         sf var3 = null;
         int var5 = 0;
@@ -138,7 +138,7 @@ final class qj extends je {
         return;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         sf var5 = null;
         int var7 = 0;
@@ -176,7 +176,7 @@ final class qj extends je {
         return;
     }
 
-    final synchronized void a(je param0) {
+    final synchronized void a(PcmStream param0) {
         param0.unlink(104);
     }
 
@@ -187,7 +187,7 @@ final class qj extends je {
         this.field_l = -1;
     }
 
-    final je b() {
-        return (je) (this.field_n.beginForward((byte) 74));
+    final PcmStream firstChildStream() {
+        return (PcmStream) (this.field_n.beginForward((byte) 74));
     }
 }

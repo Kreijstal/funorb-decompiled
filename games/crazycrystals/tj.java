@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends od {
+final class tj extends PcmStream {
     private IntrusiveDeque field_l;
     private IntrusiveDeque field_m;
     private int field_k;
@@ -25,11 +25,11 @@ final class tj extends od {
         return;
     }
 
-    final synchronized void a(od param0) {
+    final synchronized void a(PcmStream param0) {
         param0.unlink(false);
     }
 
-    final synchronized void b(od param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_l.addFirst(93, param0);
     }
 
@@ -37,7 +37,7 @@ final class tj extends od {
         this.b(kg.a(param0, param1, param2, param3));
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         rj var5 = null;
         int var7 = 0;
@@ -100,22 +100,22 @@ final class tj extends od {
     }
 
     private final void d(int param0) {
-        od var2 = (od) (this.field_l.beginForward(32073));
+        PcmStream var2 = (PcmStream) (this.field_l.beginForward(32073));
         while (var2 != null) {
-          var2.a(param0);
-          var2 = (od) (this.field_l.nextForward(false));
+          var2.skipFrames(param0);
+          var2 = (PcmStream) (this.field_l.nextForward(false));
         }
     }
 
-    final od d() {
-        return (od) (this.field_l.beginForward(32073));
+    final PcmStream firstChildStream() {
+        return (PcmStream) (this.field_l.beginForward(32073));
     }
 
-    final od a() {
-        return (od) (this.field_l.nextForward(false));
+    final PcmStream nextChildStream() {
+        return (PcmStream) (this.field_l.nextForward(false));
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         rj var3 = null;
         int var5 = 0;
@@ -153,14 +153,14 @@ final class tj extends od {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        od var4 = (od) (this.field_l.beginForward(32073));
+        PcmStream var4 = (PcmStream) (this.field_l.beginForward(32073));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
-          var4 = (od) (this.field_l.nextForward(false));
+          var4.mixOrSkipFrames(param0, param1, param2);
+          var4 = (PcmStream) (this.field_l.nextForward(false));
         }
     }
 
-    final int c() {
+    final int getSchedulingCost() {
         return 0;
     }
 
