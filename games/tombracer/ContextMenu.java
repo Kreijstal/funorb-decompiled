@@ -5,7 +5,7 @@ final class ContextMenu extends UiComponent {
     static int field_Eb;
     private int field_tb;
     private ContextMenuRow[] field_Db;
-    static fta field_yb;
+    static GameSocketState field_yb;
     private int[] field_Fb;
     private int field_Gb;
     private int field_zb;
@@ -185,6 +185,6 @@ final class ContextMenu extends UiComponent {
     }
 
     static {
-        field_yb = new fta();
+        field_yb = new GameSocketState();
     }
 }

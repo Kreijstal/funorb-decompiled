@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ala extends GameScreen {
+final class MultiplayerLobbyScreen extends GameScreen {
     private int field_g;
     static String field_f;
 
     final void onDeactivated(int param0) {
         if (param0 > -102) {
-          ala.releaseStatics(88);
+          MultiplayerLobbyScreen.releaseStatics(88);
         }
     }
 
-    ala() {
+    MultiplayerLobbyScreen() {
         super(-2);
         this.field_g = 0;
     }

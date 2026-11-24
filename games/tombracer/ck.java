@@ -92,7 +92,7 @@ final class ck {
           QueuedByteShortRequest.field_i = param6;
           MirrorMoverLocomotor.field_r = param2;
           DebouncedValidationSource.field_e = param4;
-          no.field_o = param8;
+          AchievementNotificationOverlay.field_o = param8;
           PlayerQuickChatMenuLauncher.field_b = param1;
           DisplayNameForm.field_w = param13;
           SafeZoneBehaviour.field_u = param14;
@@ -268,9 +268,9 @@ final class ck {
                     }
                   }
                   var19_ref_iu = stackIn_61_0;
-                  if (null != no.field_o) {
-                    if (no.field_o[var17_int] != null) {
-                      stackIn_68_0 = no.field_o[var17_int][var18];
+                  if (null != AchievementNotificationOverlay.field_o) {
+                    if (AchievementNotificationOverlay.field_o[var17_int] != null) {
+                      stackIn_68_0 = AchievementNotificationOverlay.field_o[var17_int][var18];
                     } else {
                       stackIn_68_0 = null;
                     }

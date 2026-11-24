@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dua extends MatchOverlay {
+final class CourseProgressMapOverlay extends MatchOverlay {
     static String field_j;
 
     final boolean handleKey(int param0, char param1, byte param2) {
@@ -23,7 +23,7 @@ final class dua extends MatchOverlay {
         return false;
     }
 
-    dua(MatchScreen param0) {
+    CourseProgressMapOverlay(MatchScreen param0) {
         super(param0);
     }
 

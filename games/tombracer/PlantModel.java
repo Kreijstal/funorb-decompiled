@@ -213,7 +213,7 @@ final class PlantModel extends TrapModel {
         try {
           var4 = (ScoreSubmission) (nn.field_a.first(-80));
           while (var4 != null) {
-            mca.writeScoreSubmission(var4, 0, param1);
+            HardwareLightingArrays.writeScoreSubmission(var4, 0, param1);
             var4 = (ScoreSubmission) (nn.field_a.next(111));
           }
           if (param0) {

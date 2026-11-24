@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class goa {
+final class LoginTextValue {
     static String field_c;
     private String field_a;
     private boolean field_b;
 
-    final String a(int param0) {
+    final String getText(int param0) {
         if (param0 != -12851) {
           field_c = (String) null;
           return this.field_a;
@@ -14,11 +14,11 @@ final class goa {
         return this.field_a;
     }
 
-    goa(String param0) {
+    LoginTextValue(String param0) {
         this(param0, false);
     }
 
-    final boolean a(byte param0) {
+    final boolean shouldIncludeInLoginRsaBlock(byte param0) {
         if (param0 != 29) {
           return false;
         }
@@ -29,11 +29,11 @@ final class goa {
         field_c = null;
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          goa.readPackedByteArray(107, -79, (BitPacketBuffer) null, (byte[]) null);
+          LoginTextValue.readPackedByteArray(107, -79, (BitPacketBuffer) null, (byte[]) null);
         }
     }
 
-    goa(String param0, boolean param1) {
+    LoginTextValue(String param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_11_0 = null;

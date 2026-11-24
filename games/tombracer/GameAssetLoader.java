@@ -377,7 +377,7 @@ final class GameAssetLoader implements LoadingStage {
           FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, ControlHelpAndTooltipState.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, FullscreenCanvas.field_c, CubeTextureSourceBase.field_b, LoadProfileCommand.field_t, QueuedHint.field_f, var2);
           GameClockAndLogoResources.field_d = PenaltyNotice.field_f;
           SeededGradientNoise3D.initializeChatHistory(200, (byte) -71);
-          fta.field_b = MatchState.field_p;
+          GameSocketState.field_b = MatchState.field_p;
         }
     }
 

@@ -54,8 +54,8 @@ final class RatingTable extends IntrusiveNode {
         CurrentGraphicsToolkit.intersectClip(-21953, -640 + SoftwareRasterizer.width >> 1, 640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.height);
         if (ProjectionMode.field_a <= 0) {
           if (GameKeyHandler.field_a > param1) {
-            if (null != fta.field_b) {
-              fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
+            if (null != GameSocketState.field_b) {
+              GameSocketState.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
             }
             stackIn_46_0 = C2SRoomResultPacket.field_c;
             stackIn_46_1 = param1 + 118;
@@ -67,8 +67,8 @@ final class RatingTable extends IntrusiveNode {
             ((UiComponent) (Object) stackIn_50_0).drawFullScreen(stackIn_50_1, stackIn_51_2);
           } else {
             if (0 < TextureCombineSource.field_e) {
-              if (null != fta.field_b) {
-                fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
+              if (null != GameSocketState.field_b) {
+                GameSocketState.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
               }
               stackIn_60_0 = C2SRoomResultPacket.field_c;
               stackIn_60_1 = param1 + 118;
@@ -81,8 +81,8 @@ final class RatingTable extends IntrusiveNode {
             }
           }
         } else {
-          if (fta.field_b != null) {
-            fta.field_b.drawOpaque(C2SRoomResultPacket.field_a.field_qb, 0);
+          if (GameSocketState.field_b != null) {
+            GameSocketState.field_b.drawOpaque(C2SRoomResultPacket.field_a.field_qb, 0);
           }
           stackIn_6_0 = C2SRoomResultPacket.field_a;
           stackIn_6_1 = param1 + 80;
@@ -93,8 +93,8 @@ final class RatingTable extends IntrusiveNode {
           stackIn_11_2 = (param0) && (!LegacyOpenGlBloomEffect.field_o);
           ((UiComponent) (Object) stackIn_10_0).drawFullScreen(stackIn_10_1, stackIn_11_2);
           if (GameKeyHandler.field_a > param1) {
-            if (null != fta.field_b) {
-              fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
+            if (null != GameSocketState.field_b) {
+              GameSocketState.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
             }
             stackIn_32_0 = C2SRoomResultPacket.field_c;
             stackIn_32_1 = param1 + 118;
@@ -106,8 +106,8 @@ final class RatingTable extends IntrusiveNode {
             ((UiComponent) (Object) stackIn_36_0).drawFullScreen(stackIn_36_1, stackIn_37_2);
           } else {
             if (0 < TextureCombineSource.field_e) {
-              if (null != fta.field_b) {
-                fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
+              if (null != GameSocketState.field_b) {
+                GameSocketState.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
               }
               stackIn_19_0 = C2SRoomResultPacket.field_c;
               stackIn_19_1 = param1 + 118;

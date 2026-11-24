@@ -242,7 +242,7 @@ final class CourseMapPath extends IntrusiveNode {
           var3 = (String) null;
           CourseMapPath.writeSessionCookie(42, (java.applet.Applet) null, (String) null);
         }
-        stackIn_6_0 = (mca.isCourseAvailable((byte) 6, this.field_i)) && (mca.isCourseAvailable((byte) 6, this.field_g));
+        stackIn_6_0 = (HardwareLightingArrays.isCourseAvailable((byte) 6, this.field_i)) && (HardwareLightingArrays.isCourseAvailable((byte) 6, this.field_g));
         return stackIn_6_0;
     }
 

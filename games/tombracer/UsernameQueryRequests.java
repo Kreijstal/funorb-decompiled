@@ -30,7 +30,7 @@ final class UsernameQueryRequests {
           }
           if (EmptyRoomFactory.accountRequestComplete == ProgressDialogLauncher.usernameQueryState &&
             param1.equals(ChatMessageColours.field_a)) {
-            ProgressDialogLauncher.usernameQueryState = fta.accountRequestIdle;
+            ProgressDialogLauncher.usernameQueryState = GameSocketState.accountRequestIdle;
             stackIn_11_0 = SnakePitModel.field_t;
             return stackIn_11_0;
           }

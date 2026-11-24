@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D {
-    static fta field_m;
+    static GameSocketState field_m;
     static String field_k;
     private int field_l;
     private int field_n;
@@ -71,9 +71,9 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
     }
 
     final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5, byte param6) {
-        goa var7 = null;
+        LoginTextValue var7 = null;
         RuntimeException var7_ref = null;
-        goa var8 = null;
+        LoginTextValue var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -84,10 +84,10 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new goa(param4);
-          var8 = new goa(param2);
+          var7 = new LoginTextValue(param4);
+          var8 = new LoginTextValue(param2);
           if (param6 != 53) {
-            field_m = (fta) null;
+            field_m = (GameSocketState) null;
           }
           stackIn_3_0 = PlayPhase.a(var8, param5, param0, param1, var7, param6 + 48, param3);
           return stackIn_3_0;
@@ -199,7 +199,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
         if (param0 == 0) {
           return;
         }
-        field_m = (fta) null;
+        field_m = (GameSocketState) null;
     }
 
     OpenGlRectangleTexture(HardwareOpenGlToolkit param0, TextureFormat param1, int param2, int param3, float[] param4, int param5, int param6) {
@@ -218,7 +218,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
 
     public final boolean usesNormalizedCoordinates(int param0) {
         if (param0 != -14634) {
-          field_m = (fta) null;
+          field_m = (GameSocketState) null;
           return false;
         }
         return false;
@@ -233,6 +233,6 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements GpuTexture2D
 
     static {
         field_k = "Enter name of player to add to list";
-        field_m = new fta();
+        field_m = new GameSocketState();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class au extends aa {
+final class LegacyOpenGlFontMask extends aa {
     LegacyOpenGlSpriteTexture field_d;
 
     final static void b(boolean param0) {
@@ -48,7 +48,7 @@ final class au extends aa {
         }
     }
 
-    private au() throws Throwable {
+    private LegacyOpenGlFontMask() throws Throwable {
         throw new Error();
     }
 

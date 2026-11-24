@@ -6,7 +6,7 @@ final class RotaterMountComponent extends PrefabComponent {
     static double field_J;
     static IntrusiveDeque field_H;
     static int field_L;
-    static fta field_G;
+    static GameSocketState field_G;
     static UiComponent field_K;
     static int field_I;
 
@@ -232,24 +232,24 @@ final class RotaterMountComponent extends PrefabComponent {
         return true;
     }
 
-    final static goa A(int param0) {
+    final static LoginTextValue A(int param0) {
         String var1 = AccountRequestUsernameSelector.getAccountRequestUsername((byte) -112);
         if (param0 < 46) {
-          return (goa) null;
+          return (LoginTextValue) null;
         }
         if (var1 == null) {
-          return new goa(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
+          return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new goa(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
+          return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
         }
-        return new goa(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
+        return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
     }
 
     static {
         field_J = 0.0;
         field_H = new IntrusiveDeque();
-        field_G = new fta();
+        field_G = new GameSocketState();
     }
 }

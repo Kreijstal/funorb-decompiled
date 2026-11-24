@@ -7,7 +7,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private IntrusiveDeque field_ic;
     ResourceArchive field_I;
     Object field_Ub;
-    static fta field_w;
+    static GameSocketState field_w;
     long field_peer;
     int field_jc;
     HardwareWaterTextures field_Mb;
@@ -677,7 +677,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_rb = 8;
         }
         if (param0 != 11) {
-          field_w = (fta) null;
+          field_w = (GameSocketState) null;
         }
     }
 
@@ -2664,6 +2664,6 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract void bindVertexBuffer(int param0, int param1, VertexStreamBuffer param2);
 
     static {
-        field_w = new fta();
+        field_w = new GameSocketState();
     }
 }

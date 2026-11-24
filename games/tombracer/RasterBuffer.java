@@ -33,9 +33,9 @@ abstract class RasterBuffer {
         SoftwareRasterizer.setTarget(this.field_g, this.field_f, this.field_e);
     }
 
-    final static int a(goa param0, goa param1, int param2) {
+    final static int a(LoginTextValue param0, LoginTextValue param1, int param2) {
         RuntimeException var3 = null;
-        goa var4 = null;
+        LoginTextValue var4 = null;
         String var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -46,8 +46,8 @@ abstract class RasterBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            var4 = (goa) null;
-            RasterBuffer.a((goa) null, (goa) null, -60);
+            var4 = (LoginTextValue) null;
+            RasterBuffer.a((LoginTextValue) null, (LoginTextValue) null, -60);
           }
           var5 = (String) null;
           stackIn_3_0 = PlayPhase.a(param0, (String) null, false, 0, param1, 94, 0);

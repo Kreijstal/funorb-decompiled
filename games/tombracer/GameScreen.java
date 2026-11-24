@@ -191,7 +191,7 @@ abstract class GameScreen {
         BeamSegment.releaseMouseHandler(5);
         if (param0 == 62) {
           RasterizerOperator.closeNetworkAndCacheResources(0);
-          if (bl.b(param0 - 62)) {
+          if (bl.isGameSocketActive(param0 - 62)) {
             ql.field_k.writeCipheredOpcode(1, -2988);
             bl.flushPacketBuffer(0, -1);
           }
@@ -200,7 +200,7 @@ abstract class GameScreen {
         }
         GameScreen.a(-50, false, 79);
         RasterizerOperator.closeNetworkAndCacheResources(0);
-        if (bl.b(param0 - 62)) {
+        if (bl.isGameSocketActive(param0 - 62)) {
           ql.field_k.writeCipheredOpcode(1, -2988);
           bl.flushPacketBuffer(0, -1);
         }

@@ -86,7 +86,7 @@ final class MembersUpsellMenu extends MenuScreen {
         this.field_x.update(true);
         if (PlayerModel.field_b == 1) {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
-            if (mca.isCourseAvailable((byte) 6, var5) &&
+            if (HardwareLightingArrays.isCourseAvailable((byte) 6, var5) &&
               BrickOperator.isCourseAccessible(100, var5)) {
               var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.width() >> 1));
               var7 = this.field_r - (-CourseMapYCoordinates.field_b[var5] - (ConsoleWindow.field_d.height() >> 1));
@@ -153,7 +153,7 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         var3 = 0;
         for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
-          if (mca.isCourseAvailable((byte) 6, var4)) {
+          if (HardwareLightingArrays.isCourseAvailable((byte) 6, var4)) {
             if (MultiplayerLoginMenu.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
@@ -372,7 +372,7 @@ final class MembersUpsellMenu extends MenuScreen {
                   stackIn_43_0 = var9.field_i;
                 }
                 var10 = stackIn_43_0;
-                if (mca.isCourseAvailable((byte) 6, var10) &&
+                if (HardwareLightingArrays.isCourseAvailable((byte) 6, var10) &&
                   BrickOperator.isCourseAccessible(96, var10)) {
                   if (var9.hasBend(true)) {
                     this.field_x.queueWaypoint(-28562, var9.field_k << 16, var9.field_j << 16);

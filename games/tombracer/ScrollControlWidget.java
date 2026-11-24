@@ -747,7 +747,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             var5.field_M = MatchOverlay.readPackedShorts((byte) 74, 16, param0, var5.field_M);
           }
           if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
-            var5.field_q = goa.readPackedByteArray(16, -4854, param0, var5.field_q);
+            var5.field_q = LoginTextValue.readPackedByteArray(16, -4854, param0, var5.field_q);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_q.length; var7++) {
               if ((var5.field_q[var7] & 255) > var6) {

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fta {
+final class GameSocketState {
     static AccountRequestState accountRequestIdle;
     static Sprite field_b;
     static Sprite field_a;
 
     final static int c(int param0) {
         if (param0 > -86) {
-          fta.c(114);
+          GameSocketState.c(114);
           return BeamShooterBehaviour.field_p;
         }
         return BeamShooterBehaviour.field_p;
@@ -113,10 +113,10 @@ final class fta {
         accountRequestIdle = null;
     }
 
-    final boolean a(int param0) {
+    final boolean isActiveConnectionState(int param0) {
         if (param0 != 0) {
           String var3 = (String) null;
-          fta.replaceAll((String) null, (String) null, -76, (String) null);
+          GameSocketState.replaceAll((String) null, (String) null, -76, (String) null);
           if (TestModel.field_o == this) {
             return true;
           }

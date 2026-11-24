@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AdjustedWallClock {
-    static fta field_b;
+    static GameSocketState field_b;
     static float field_c;
     static String field_a;
 
     public static void releaseStatics(byte param0) {
         if (param0 > -7) {
-          field_b = (fta) null;
+          field_b = (GameSocketState) null;
           field_b = null;
           field_a = null;
           return;
@@ -42,7 +42,7 @@ final class AdjustedWallClock {
     }
 
     static {
-        field_b = new fta();
+        field_b = new GameSocketState();
         field_a = "<%0> is already on your ignore list.";
     }
 }

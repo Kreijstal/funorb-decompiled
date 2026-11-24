@@ -115,42 +115,42 @@ abstract class FadingDialog extends WidgetContainer {
           }
           return;
         }
-        if (fta.field_a == null) {
-          fta.field_a = new Sprite(this.field_m, this.field_p);
-          OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
+        if (GameSocketState.field_a == null) {
+          GameSocketState.field_a = new Sprite(this.field_m, this.field_p);
+          OpenGlIndexArray.setRasterTarget(GameSocketState.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           CourseMapWalker.popRasterState(param2 ^ 1);
-          fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
+          GameSocketState.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
-        if (fta.field_a.field_m < this.field_m) {
-          fta.field_a = new Sprite(this.field_m, this.field_p);
-          OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
+        if (GameSocketState.field_a.field_m < this.field_m) {
+          GameSocketState.field_a = new Sprite(this.field_m, this.field_p);
+          OpenGlIndexArray.setRasterTarget(GameSocketState.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           CourseMapWalker.popRasterState(param2 ^ 1);
-          fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
+          GameSocketState.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
-        if (fta.field_a.field_q >= this.field_p) {
-          OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
+        if (GameSocketState.field_a.field_q >= this.field_p) {
+          OpenGlIndexArray.setRasterTarget(GameSocketState.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           CourseMapWalker.popRasterState(param2 ^ 1);
-          fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
+          GameSocketState.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
-        fta.field_a = new Sprite(this.field_m, this.field_p);
-        OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
+        GameSocketState.field_a = new Sprite(this.field_m, this.field_p);
+        OpenGlIndexArray.setRasterTarget(GameSocketState.field_a, (byte) 118);
         SoftwareRasterizer.clear();
         this.drawDialogFrame(0, (byte) -67, 0);
         super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
         CourseMapWalker.popRasterState(param2 ^ 1);
-        fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
+        GameSocketState.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
     }
 
     abstract void drawDialogFrame(int param0, byte param1, int param2);

@@ -28,7 +28,7 @@ final class MatchingEmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (this.validateText((byte) 14, param1) != TextureCombineSource.field_c) {
-            stackIn_10_0 = dua.field_j;
+            stackIn_10_0 = CourseProgressMapOverlay.field_j;
             return stackIn_10_0;
           }
           stackIn_8_0 = PermutationTableCacheEntry.field_l;

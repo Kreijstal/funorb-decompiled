@@ -8,13 +8,13 @@ final class bl {
     static NameEntryPopup field_a;
     static int[] field_c;
 
-    final static boolean b(int param0) {
+    final static boolean isGameSocketActive(int param0) {
         if (param0 != 0) {
           bl.flushPacketBuffer(-92, 118);
           if (null == OpenGlTransform3D.field_e) {
             return false;
           }
-          if (ProceduralTexture.field_p.a(param0 + 0)) {
+          if (ProceduralTexture.field_p.isActiveConnectionState(param0 + 0)) {
             return true;
           }
           return false;
@@ -22,7 +22,7 @@ final class bl {
         if (null == OpenGlTransform3D.field_e) {
           return false;
         }
-        if (ProceduralTexture.field_p.a(param0 + 0)) {
+        if (ProceduralTexture.field_p.isActiveConnectionState(param0 + 0)) {
           return true;
         }
         return false;

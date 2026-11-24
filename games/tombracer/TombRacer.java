@@ -130,7 +130,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
               PlayerViewportLayout.field_a.draw((byte) -28, false);
             } else {
               if (param1 == null) {
-                stackIn_19_0 = (PlayerViewportLayout.field_a instanceof ala) ? 0 : 1;
+                stackIn_19_0 = (PlayerViewportLayout.field_a instanceof MultiplayerLobbyScreen) ? 0 : 1;
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
                   PlayerViewportLayout.field_a.draw((byte) -28, false);
@@ -277,7 +277,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         ViewportManager.releaseStatics(param0 ^ -27015);
         tia.releaseStatics((byte) -125);
         GameScreen.releaseStatics((byte) -104);
-        ala.releaseStatics(0);
+        MultiplayerLobbyScreen.releaseStatics(0);
         MatchScreen.releaseStatics(false);
         FunOrbConsole.releaseConsoleStatics(39);
         DisplayNameValidator.releaseStatics(-1);
@@ -286,7 +286,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         GameWindowAndSpectatorState.releaseStatics((byte) -95);
         InvitationAndMedalResources.releaseStatics(114);
         MessageDialogs.releaseStatics((byte) 0);
-        no.releaseStatics(true);
+        AchievementNotificationOverlay.releaseStatics(true);
         GameAssetLoader.releaseStatics((byte) -35);
         PacketDiagnostics.releaseStatics((byte) 120);
         HuffmanCodec.releaseStatics(param0 ^ 1916);
@@ -317,7 +317,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         PlayerInputQueue.releaseStatics(param0 ^ 11052);
         MatchPhase.releaseStatics(param0 + 3762);
         Player.releaseStatics(-1);
-        goa.releaseStatics(0);
+        LoginTextValue.releaseStatics(0);
         kv.releaseStatics(-31014);
         ChatChannelType.releaseStatics(0);
         ChatTarget.releaseStatics(-12);
@@ -533,7 +533,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         CharacterSelectPhase.releaseStatics(115);
         CharacterSelection.releaseStatics(-12224);
         RoomCompletedScreen.releaseStatics((byte) -77);
-        dua.releaseStatics((byte) -128);
+        CourseProgressMapOverlay.releaseStatics((byte) -128);
         RewardChoicePhase.releaseStatics(6153);
         ResultsPhase.releaseStatics(param0 + 3766);
         RoundWinnerPhase.releaseStatics(0);
@@ -905,7 +905,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         StringCursor.releaseStatics(true);
         ConsoleTokenStream.releaseStatics((byte) -128);
         AvailabilityQuery.releaseStatics(-1);
-        fta.releaseStatics(0);
+        GameSocketState.releaseStatics(0);
         DelayedPacket.releaseStatics(-29867);
         QueuedByteShortRequest.releaseStatics(false);
         MidiChannelVolumeTargets.releaseStatics(9);
@@ -975,7 +975,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         HardwareModelIndexData.releaseStatics((byte) -107);
         HardwareFaceNormal.releaseStatics(false);
         HardwareVertexNormalAccumulator.releaseStatics(45);
-        mca.releaseStatics(0);
+        HardwareLightingArrays.releaseStatics(0);
         ColourRowCacheEntry.releaseStatics(8148);
         MonochromeRowCacheEntry.releaseStatics(0);
         PermutationTableCacheEntry.releaseStatics(-20476);
@@ -1078,7 +1078,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         }
         if (this.field_D == null) {
           if (PlayerViewportLayout.field_a != null &&
-            !(PlayerViewportLayout.field_a instanceof ala)) {
+            !(PlayerViewportLayout.field_a instanceof MultiplayerLobbyScreen)) {
             PlayerViewportLayout.field_a.update(false, false, 15283);
           }
           SpriteTileOperator.field_t.update(true, param1, 15283);

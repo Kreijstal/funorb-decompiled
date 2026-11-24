@@ -22,7 +22,7 @@ final class GreyscaleOperator extends TextureOperator {
         if (EdgeDetectOperator.hasFlag256(param0, param2, param1 ^ -3045) | ((262144 & param2) != 0 ? true : false)) {
           return true;
         }
-        if (!no.a(param0, param2, 36864)) {
+        if (!AchievementNotificationOverlay.a(param0, param2, 36864)) {
           return false;
         }
         return true;

@@ -451,7 +451,7 @@ final class PlayPhase extends MatchPhase {
         CurrentGraphicsToolkit.toolkit.fillCircle(param0, param5, param4, NoiseSliceGenerator.withAlpha(param3, (byte) -115, param1), 2);
     }
 
-    final static int a(goa param0, String param1, boolean param2, int param3, goa param4, int param5, int param6) {
+    final static int a(LoginTextValue param0, String param1, boolean param2, int param3, LoginTextValue param4, int param5, int param6) {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
@@ -496,10 +496,10 @@ final class PlayPhase extends MatchPhase {
             stackIn_3_0 = 113;
             return stackIn_3_0;
           }
-          var14 = param4.a(-12851);
+          var14 = param4.getText(-12851);
           var11_ref_String = var14;
           var11_ref_StringLifetime1 = var14;
-          var8 = param0.a(-12851);
+          var8 = param0.getText(-12851);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (OpenGlTransform3D.field_e == null &&
@@ -540,14 +540,14 @@ final class PlayPhase extends MatchPhase {
               NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -106);
               NoiseSliceGenerator.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
               stackIn_14_0 = NoiseSliceGenerator.field_a;
-              if (!param4.a((byte) 29)) {
+              if (!param4.shouldIncludeInLoginRsaBlock((byte) 29)) {
                 stackIn_15_1 = "";
               } else {
                 stackIn_15_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_14_0).writeVersionedString(stackIn_15_1, (byte) 0);
               stackIn_17_0 = NoiseSliceGenerator.field_a;
-              if (param0.a((byte) 29)) {
+              if (param0.shouldIncludeInLoginRsaBlock((byte) 29)) {
                 stackIn_18_1 = var8;
               } else {
                 stackIn_18_1 = "";
@@ -729,7 +729,7 @@ final class PlayPhase extends MatchPhase {
               this.f(16);
             }
             if (this.screen.field_D) {
-              this.screen.addOverlay(new dua(this.screen), 680);
+              this.screen.addOverlay(new CourseProgressMapOverlay(this.screen), 680);
             }
             TripBeamComponent.playMusicTrack(1, 1);
           }

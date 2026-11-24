@@ -338,7 +338,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         this.field_p = false;
         this.pausedByOverlay = false;
         try {
-          if (param9 >= 0 && (!mca.isCourseAvailable((byte) 6, param9) ||
+          if (param9 >= 0 && (!HardwareLightingArrays.isCourseAvailable((byte) 6, param9) ||
             !BrickOperator.isCourseAccessible(-74, param9))) {
             throw new IllegalStateException("CA:" + param9);
           }

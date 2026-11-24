@@ -249,7 +249,7 @@ abstract class AppletGameShell extends GameApplet {
               CrossedSineBandsOperator.handleHighscoreResponse(-95);
             } else {
               if (var2 == 3) {
-                au.a(3);
+                LegacyOpenGlFontMask.a(3);
               } else {
                 if (var2 == 4) {
                   ScrollPanel.handlePendingRequestReply(0);
@@ -711,7 +711,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (null == ScoreStandings.field_c) {
             ScoreStandings.field_c = GraphicsAndAudioMenu.getPcmStreamMixer((byte) -91);
-            TextureOperator.field_k = fta.c(-93);
+            TextureOperator.field_k = GameSocketState.c(-93);
           }
           MapWaypoint.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;

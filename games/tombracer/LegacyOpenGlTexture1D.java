@@ -4,7 +4,7 @@
 final class LegacyOpenGlTexture1D extends LegacyOpenGlTexture {
     static Object field_m;
     private int field_l;
-    static fta field_n;
+    static GameSocketState field_n;
 
     final void setWrap(int param0, boolean param1) {
         this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
@@ -39,6 +39,6 @@ final class LegacyOpenGlTexture1D extends LegacyOpenGlTexture {
     }
 
     static {
-        field_n = new fta();
+        field_n = new GameSocketState();
     }
 }

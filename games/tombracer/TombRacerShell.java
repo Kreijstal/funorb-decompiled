@@ -130,7 +130,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
             } else {
               if (ResizingDialog.isSelectionMenuOpen(true)) {
                 if (MessagePage.a(119)) {
-                  au.b(false);
+                  LegacyOpenGlFontMask.b(false);
                 } else {
                   var3 = kc.pollKeyEvents(true);
                   if (var3 == 1) {
@@ -164,13 +164,13 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                     }
                   }
                 } else {
-                  au.b(!param0);
+                  LegacyOpenGlFontMask.b(!param0);
                 }
               }
             }
           } else {
             if (MessagePage.a(126)) {
-              au.b(false);
+              LegacyOpenGlFontMask.b(false);
             } else {
               var3 = CourseLayoutFactory.c(107);
               if (var3 != 2) {

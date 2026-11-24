@@ -709,7 +709,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -123, "dob_enterforchat");
                 if (null != var2) {
-                  mca.field_d = BitPackedColour.decodeText((byte) 115, var2);
+                  HardwareLightingArrays.field_d = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -103, "tab_hidechattemporarily");
                 if (null != var2) {
@@ -761,7 +761,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 126, "runescapeclan");
                 if (var2 != null) {
-                  ala.field_f = BitPackedColour.decodeText((byte) 47, var2);
+                  MultiplayerLobbyScreen.field_f = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -67, "rated_membersonly");
                 if (var2 != null) {
@@ -1059,7 +1059,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 127, "login");
                 if (var2 != null) {
-                  goa.field_c = BitPackedColour.decodeText((byte) 94, var2);
+                  LoginTextValue.field_c = BitPackedColour.decodeText((byte) 94, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -42, "goback");
                 if (null != var2) {
@@ -1651,7 +1651,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 104, "create_emailvalid");
                 if (null != var2) {
-                  dua.field_j = BitPackedColour.decodeText((byte) 50, var2);
+                  CourseProgressMapOverlay.field_j = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -24, "create_account_success");
                 if (null != var2) {

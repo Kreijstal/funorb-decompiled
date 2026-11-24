@@ -424,7 +424,7 @@ final class qt {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fta.accountRequestIdle != LegacyOpenGlTexture.registrationRequestState) {
+          if (GameSocketState.accountRequestIdle != LegacyOpenGlTexture.registrationRequestState) {
             return false;
           }
           if (!param1) {

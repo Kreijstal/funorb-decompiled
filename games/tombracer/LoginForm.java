@@ -57,7 +57,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_y = new FocusableWidget(ControllerLocomotor.field_q, (WidgetListener) null);
             this.field_A.field_y = false;
           } else {
-            this.field_B = new FocusableWidget(goa.field_c, (WidgetListener) null);
+            this.field_B = new FocusableWidget(LoginTextValue.field_c, (WidgetListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_w) {

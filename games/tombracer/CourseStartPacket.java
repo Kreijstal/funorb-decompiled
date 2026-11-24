@@ -488,13 +488,13 @@ final class CourseStartPacket implements GamePacket {
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
-                if (null == no.field_o) {
+                if (null == AchievementNotificationOverlay.field_o) {
                   var18_ref = null;
                 } else {
-                  if (null == no.field_o[var7]) {
+                  if (null == AchievementNotificationOverlay.field_o[var7]) {
                     var18_ref = null;
                   } else {
-                    var18_ref = no.field_o[var7][var9];
+                    var18_ref = AchievementNotificationOverlay.field_o[var7][var9];
                   }
                 }
                 if (null == PlayerQuickChatMenuLauncher.field_b) {
@@ -602,7 +602,7 @@ final class CourseStartPacket implements GamePacket {
                 }
                 if (var21 != null) {
                   var21 = "<col=A00000>" + (String) (var21);
-                  var32 = fta.replaceAll((String) (var21), "<br>", 0, "<br><col=A00000>");
+                  var32 = GameSocketState.replaceAll((String) (var21), "<br>", 0, "<br><col=A00000>");
                   if (var20 == null) {
                     var20 = var32;
                   } else {

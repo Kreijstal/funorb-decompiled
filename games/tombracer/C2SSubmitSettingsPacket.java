@@ -45,7 +45,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
           if (param1 < 84) {
             field_c = (String) null;
           }
-          ala.showProgress((byte) -30, TextureTransformMode.field_b, UnlockOverlay.field_l, OpenGlToolkit.field_jc);
+          MultiplayerLobbyScreen.showProgress((byte) -30, TextureTransformMode.field_b, UnlockOverlay.field_l, OpenGlToolkit.field_jc);
           LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dba.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -71,7 +71,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
           if ((55 & param0) != 0) {
             stackIn_4_0 = OpenGlTransform3D.c(param2, param0, -19531);
           } else {
-            stackIn_4_0 = no.a(param0, param2, 36864);
+            stackIn_4_0 = AchievementNotificationOverlay.a(param0, param2, 36864);
           }
           var3 = stackIn_4_0 ? 1 : 0;
           stackIn_7_0 = (0 != (65536 & param2));
@@ -81,7 +81,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         if ((55 & param0) != 0) {
           stackIn_11_0 = OpenGlTransform3D.c(param2, param0, -19531);
         } else {
-          stackIn_11_0 = no.a(param0, param2, 36864);
+          stackIn_11_0 = AchievementNotificationOverlay.a(param0, param2, 36864);
         }
         var3Lifetime1 = stackIn_11_0 ? 1 : 0;
         stackIn_14_0 = (0 != (65536 & param2));

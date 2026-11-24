@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareRasterBlitter {
-    static fta field_a;
+    static GameSocketState field_a;
     static int field_c;
     static QuickChatParamType field_d;
     static String[] field_b;
@@ -34,7 +34,7 @@ final class SoftwareRasterBlitter {
     }
 
     static {
-        field_a = new fta();
+        field_a = new GameSocketState();
         field_d = new QuickChatParamType(7, 0, 1, 1);
         field_b = new String[]{"All scores", "My scores", "Best each"};
     }

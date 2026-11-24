@@ -5,7 +5,7 @@ final class MatchOverlayQueue {
     private IntrusiveDeque field_a;
 
     final void drawCurrent(byte param0) {
-        no var2 = (no) (this.field_a.first(-80));
+        AchievementNotificationOverlay var2 = (AchievementNotificationOverlay) (this.field_a.first(-80));
         if (param0 >= -76) {
           int[] var3 = (int[]) null;
           this.enqueue((byte) -64, (int[]) null);
@@ -259,7 +259,7 @@ final class MatchOverlayQueue {
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            this.field_a.addLast((byte) -104, new no(SecondaryNodeDequeIterator.field_a, var5));
+            this.field_a.addLast((byte) -104, new AchievementNotificationOverlay(SecondaryNodeDequeIterator.field_a, var5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class MatchOverlayQueue {
         if (param0 != -66) {
           return;
         }
-        no var3 = (no) (this.field_a.first(param0 - 14));
+        AchievementNotificationOverlay var3 = (AchievementNotificationOverlay) (this.field_a.first(param0 - 14));
         if (var3 == null) {
           return;
         }

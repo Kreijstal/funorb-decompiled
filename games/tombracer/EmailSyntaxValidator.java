@@ -56,7 +56,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (param0 != -1) {
             field_j = (TextureTransformMode) null;
           }
-          stackIn_7_0 = dua.field_j;
+          stackIn_7_0 = CourseProgressMapOverlay.field_j;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

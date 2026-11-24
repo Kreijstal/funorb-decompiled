@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mca {
+final class HardwareLightingArrays {
     short[] field_a;
     byte[] field_b;
     static String field_d;
@@ -17,7 +17,7 @@ final class mca {
           return true;
         }
         if (param0 != 6) {
-          mca.isCourseAvailable((byte) 65, -116);
+          HardwareLightingArrays.isCourseAvailable((byte) 65, -116);
         }
         if (TextWidgetPainter.a(114)) {
           return false;

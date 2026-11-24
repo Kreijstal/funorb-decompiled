@@ -102,11 +102,11 @@ final class InstructionsScreen extends DropInMenuScreen {
           var9 = 80;
           var10 = 470;
           if (var8 < var5.length) {
-            if (null == no.field_m) {
+            if (null == AchievementNotificationOverlay.field_m) {
               return;
             }
-            if (no.field_m[DialogButtonPainter.field_r].length > var8 &&
-              no.field_m[DialogButtonPainter.field_r][var8] != -1) {
+            if (AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r].length > var8 &&
+              AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r][var8] != -1) {
               var10 -= 60;
               var9 += 60;
             }
@@ -115,40 +115,40 @@ final class InstructionsScreen extends DropInMenuScreen {
             null != var16[var8]) {
             var7 += 30;
             var11 = 0;
-            if (var8 < no.field_m[DialogButtonPainter.field_r].length &&
-              no.field_m[DialogButtonPainter.field_r][var8] == -2) {
+            if (var8 < AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r].length &&
+              AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r][var8] == -2) {
               var11 -= 60;
             }
             RoomEffectTraps.drawLeftTextWithShadow(-1, -22, var7, var16[var8].toUpperCase(), var9 + var11, HardwareVertexNormalAccumulator.field_f, 11288327);
             var7 += 10;
           }
           if (var5.length > var8) {
-            if (var8 < no.field_m[DialogButtonPainter.field_r].length &&
-              0 <= no.field_m[DialogButtonPainter.field_r][var8] &&
-              no.field_p[DialogButtonPainter.field_r][var8] != 3) {
-              var11Lifetime2 = no.field_q[DialogButtonPainter.field_r][var8];
-              if (27 != no.field_u[DialogButtonPainter.field_r][var8]) {
-                if (1 == no.field_p[DialogButtonPainter.field_r][var8]) {
+            if (var8 < AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r].length &&
+              0 <= AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r][var8] &&
+              AchievementNotificationOverlay.field_p[DialogButtonPainter.field_r][var8] != 3) {
+              var11Lifetime2 = AchievementNotificationOverlay.field_q[DialogButtonPainter.field_r][var8];
+              if (27 != AchievementNotificationOverlay.field_u[DialogButtonPainter.field_r][var8]) {
+                if (1 == AchievementNotificationOverlay.field_p[DialogButtonPainter.field_r][var8]) {
                   var12 = 20;
                   var13 = var11Lifetime2;
                   var14 = 4;
-                  ModelPreviewRenderer.drawModelPreview(var13, 512 + no.field_r[DialogButtonPainter.field_r][var8], no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] + var12, -50 + var9);
+                  ModelPreviewRenderer.drawModelPreview(var13, 512 + AchievementNotificationOverlay.field_r[DialogButtonPainter.field_r][var8], AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8] + var12, -50 + var9);
                 }
               } else {
                 var12 = -4;
                 var13 = var11Lifetime2;
-                stackIn_27_0 = (no.field_p[DialogButtonPainter.field_r][var8] == 1) ? 1 : 109;
+                stackIn_27_0 = (AchievementNotificationOverlay.field_p[DialogButtonPainter.field_r][var8] == 1) ? 1 : 109;
                 var14 = stackIn_27_0;
-                ModelPreviewRenderer.drawModelPreview(var13, no.field_r[DialogButtonPainter.field_r][var8], no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var12 + (no.field_k[DialogButtonPainter.field_r][var8] + var7), -50 + var9);
+                ModelPreviewRenderer.drawModelPreview(var13, AchievementNotificationOverlay.field_r[DialogButtonPainter.field_r][var8], AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var12 + (AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8] + var7), -50 + var9);
               }
-              if (no.field_p[DialogButtonPainter.field_r][var8] == 2) {
-                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 1024, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(31, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] - 16, var9 - 50);
-                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 1024, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[DialogButtonPainter.field_r][var8], var9 - 65);
-                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 0, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + (no.field_k[DialogButtonPainter.field_r][var8] + 16), var9 - 34);
-                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 512, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] + 16, -65 + var9);
-                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 1536, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] - 16, -34 + var9);
+              if (AchievementNotificationOverlay.field_p[DialogButtonPainter.field_r][var8] == 2) {
+                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 1024, AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(31, 12166, 1), -1918106173, var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8] - 16, var9 - 50);
+                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 1024, AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, -16 + var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8], var9 - 65);
+                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 0, AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + (AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8] + 16), var9 - 34);
+                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 512, AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8] + 16, -65 + var9);
+                ModelPreviewRenderer.drawModelPreview(var11Lifetime2, 1536, AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8] - 16, -34 + var9);
               }
-              ModelPreviewRenderer.drawModelPreview(var11Lifetime2, no.field_r[DialogButtonPainter.field_r][var8], no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(no.field_u[DialogButtonPainter.field_r][var8], 12166, no.field_m[DialogButtonPainter.field_r][var8]), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8], -50 + var9);
+              ModelPreviewRenderer.drawModelPreview(var11Lifetime2, AchievementNotificationOverlay.field_r[DialogButtonPainter.field_r][var8], AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(AchievementNotificationOverlay.field_u[DialogButtonPainter.field_r][var8], 12166, AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r][var8]), -1918106173, var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8], -50 + var9);
             }
             var11Lifetime2Lifetime1 = TooltipRenderer.field_p.drawWrapped((aa) null, var10, 15, 0, var7, SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), var5[var8], (byte) 99, 640, 0, SinglePlayerCourseGenerator.field_h, var9, 0);
             if (DialogButtonPainter.field_r > 0) {

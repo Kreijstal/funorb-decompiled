@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SecondaryNodeHashTable {
-    static fta field_g;
+    static GameSocketState field_g;
     private DualLinkNode field_c;
     private int field_e;
     private DualLinkNode[] field_d;
@@ -263,6 +263,6 @@ final class SecondaryNodeHashTable {
     }
 
     static {
-        field_g = new fta();
+        field_g = new GameSocketState();
     }
 }

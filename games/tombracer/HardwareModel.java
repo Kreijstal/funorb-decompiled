@@ -43,7 +43,7 @@ final class HardwareModel extends ToolkitModel {
     private short[] field_p;
     private short[] field_kb;
     static String field_bb;
-    private mca field_e;
+    private HardwareLightingArrays field_e;
     private ava[] field_X;
     private int field_n;
     private short[] field_hb;
@@ -2283,7 +2283,7 @@ final class HardwareModel extends ToolkitModel {
         short[] array$5 = null;
         short[] array$6 = null;
         short[] array$7 = null;
-        mca fieldTemp$8 = null;
+        HardwareLightingArrays fieldTemp$8 = null;
         float[] array$9 = null;
         float[] array$10 = null;
         short[] array$11 = null;
@@ -2306,7 +2306,7 @@ final class HardwareModel extends ToolkitModel {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        mca var11_ref_mca = null;
+        HardwareLightingArrays var11_ref_mca = null;
         int var12 = 0;
         int var13 = 0;
         int var11Lifetime1;
@@ -2532,7 +2532,7 @@ final class HardwareModel extends ToolkitModel {
             (decompiledFrameCompleted7)) {
             param0.field_C = this.field_C;
           }
-          if (no.a(this.field_h, param4, 36864)) {
+          if (AchievementNotificationOverlay.a(this.field_h, param4, 36864)) {
             param0.field_E = param2.field_E;
             param0.field_E.field_h = this.field_E.field_h;
             param0.field_E.field_b = true;
@@ -2583,7 +2583,7 @@ final class HardwareModel extends ToolkitModel {
             boolean decompiledFrameRemainder0 = true;
             if (null != this.field_e) {
               if (param2.field_e == null) {
-                param2.field_e = new mca();
+                param2.field_e = new HardwareLightingArrays();
               }
               fieldTemp$8 = param2.field_e;
               param0.field_e = param2.field_e;
@@ -4883,7 +4883,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (param3 ||
             S2CMatchResultPacket.hasFlag2048(this.field_h, this.field_Y, 128)) {
-            this.field_E = new HardwareModelVertexStream(no.a(this.field_h, this.field_Y, 36864));
+            this.field_E = new HardwareModelVertexStream(AchievementNotificationOverlay.a(this.field_h, this.field_Y, 36864));
           }
           if (param3 ||
             HardwareUnlitEffect.a(this.field_h, this.field_Y, 2048)) {

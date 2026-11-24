@@ -6,7 +6,7 @@ final class ProceduralTexture extends DualLinkNode {
     private TextureOperator field_r;
     private TextureOperator field_k;
     private TextureOperator field_m;
-    static fta field_p;
+    static GameSocketState field_p;
     static String field_n;
     private int[] textureIds;
     private int[] spriteIds;
@@ -70,7 +70,7 @@ final class ProceduralTexture extends DualLinkNode {
         field_p = null;
         field_n = null;
         if (param0 > -95) {
-          field_p = (fta) null;
+          field_p = (GameSocketState) null;
         }
     }
 

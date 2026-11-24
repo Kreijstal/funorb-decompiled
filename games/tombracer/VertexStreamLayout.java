@@ -6,7 +6,7 @@ final class VertexStreamLayout {
     static int[][] field_f;
     static ScrollPanel field_d;
     private long field_a;
-    static fta field_c;
+    static GameSocketState field_c;
     static String field_e;
 
     final VertexAttribute get(int param0, int param1) {
@@ -179,7 +179,7 @@ final class VertexStreamLayout {
 
     static {
         field_f = new int[][]{new int[]{0, -1}, new int[]{1, -1}, new int[]{1, 0}, new int[]{1, 1}, new int[]{0, 1}, new int[]{-1, 1}, new int[]{-1, 0}, new int[]{-1, -1}};
-        field_c = new fta();
+        field_c = new GameSocketState();
         field_e = "Icons are heavy, ugly, and probably belong in a museum. Dump these deadweights with <img=8><img=9> or save them for tons of points.";
     }
 }

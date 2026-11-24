@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
-    static ala field_s;
+    static MultiplayerLobbyScreen field_s;
     private int field_u;
     static int field_w;
     static String field_t;
@@ -111,7 +111,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
     }
 
     static {
-        field_s = new ala();
+        field_s = new MultiplayerLobbyScreen();
         field_t = "Show private chat from my friends and opponents";
     }
 }

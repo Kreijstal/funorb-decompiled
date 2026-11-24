@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no extends MatchOverlay {
+final class AchievementNotificationOverlay extends MatchOverlay {
     static int[][] field_k;
     static int[][] field_m;
     static int[][] field_q;
@@ -246,7 +246,7 @@ final class no extends MatchOverlay {
           TextureCombineOperation.field_b = param1;
           DynamicGeometryBuffer.field_c = true;
           if (param2 <= 108) {
-            no.releaseStatics(true);
+            AchievementNotificationOverlay.releaseStatics(true);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "no.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -263,11 +263,11 @@ final class no extends MatchOverlay {
         field_k = (int[][]) null;
         field_q = (int[][]) null;
         if (!param0) {
-          no.charToString((byte) 52, '￐');
+          AchievementNotificationOverlay.charToString((byte) 52, '￐');
         }
     }
 
-    no(MatchScreen param0, int param1) {
+    AchievementNotificationOverlay(MatchScreen param0, int param1) {
         super(param0);
         this.field_t = 0;
         try {

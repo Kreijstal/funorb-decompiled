@@ -11,7 +11,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
     private int field_S;
     private int facingX;
     private boolean field_gb;
-    static fta field_p;
+    static GameSocketState field_p;
     private int deathCause;
     private int lifeStateTimer;
     private Room room;
@@ -4018,7 +4018,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
     }
 
     static {
-        field_p = new fta();
+        field_p = new GameSocketState();
         field_I = new IntrusiveDeque();
         loadingQuips = new String[]{"Banging drums", "Shooting rival", "Uncompressing orchestra", "Performing dramatic piece", "Plotting route to treasure", "Found mum's diary", "Found the Ark", "Escaping mountain fortress", "Ordering MacGuffin", "Getting bored of hieroglyphs...", "Ordering stair lift", "Filling pits with snakes", "Filling pits with lava", "Ordering fragile rope bridges", "Setting dart shooters to kill", "Disregarding historical research", "Pacifying volcano god", "Killing time", "Leaving idols in tomb"};
         field_s = "Bobby-George Totems";

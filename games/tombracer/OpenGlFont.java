@@ -28,11 +28,11 @@ final class OpenGlFont extends GameFont {
     }
 
     final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        au var9;
+        LegacyOpenGlFontMask var9;
         LegacyOpenGlSpriteTexture var10;
         float var11;
         float var12;
-        var9 = (au) (param5);
+        var9 = (LegacyOpenGlFontMask) (param5);
         var10 = var9.field_d;
         this.field_e.prepareGlyphRendering(107);
         this.field_e.bindTexture(true, this.field_d);

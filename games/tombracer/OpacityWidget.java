@@ -63,7 +63,7 @@ final class OpacityWidget extends SingleChildWidget {
         OpenGlSceneLight.field_q[38] = RangeOperator.field_n;
         OpenGlSceneLight.field_q[41] = WidgetStyleLayer.field_e;
         OpenGlSceneLight.field_q[23] = SoftwareRasterBlitter.field_b[0];
-        OpenGlSceneLight.field_q[28] = goa.field_c;
+        OpenGlSceneLight.field_q[28] = LoginTextValue.field_c;
         OpenGlSceneLight.field_q[24] = SoftwareRasterBlitter.field_b[1];
         OpenGlSceneLight.field_q[37] = um.field_k;
         OpenGlSceneLight.field_q[31] = IntPoint.field_b;

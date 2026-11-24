@@ -95,8 +95,8 @@ final class SequencePlayer {
           DefaultRoomObjectRenderer.field_b.complete(-71, false);
           fha.loadCommonUiSprites(true, param1, param0, param4);
           CharacterChoiceFactory.initializeDialogStack(117);
-          LegacyOpenGlTexture.registrationRequestState = fta.accountRequestIdle;
-          ProgressDialogLauncher.usernameQueryState = fta.accountRequestIdle;
+          LegacyOpenGlTexture.registrationRequestState = GameSocketState.accountRequestIdle;
+          ProgressDialogLauncher.usernameQueryState = GameSocketState.accountRequestIdle;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

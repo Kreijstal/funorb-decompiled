@@ -508,7 +508,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             }
             if (var12.field_xb.field_o) {
               if (1 == var12.field_cc) {
-                var34 = ala.field_f;
+                var34 = MultiplayerLobbyScreen.field_f;
               } else {
                 var34 = SocketArchiveNetworkClient.field_w[var12.field_cc];
               }

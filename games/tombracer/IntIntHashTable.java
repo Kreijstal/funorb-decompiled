@@ -93,11 +93,11 @@ final class IntIntHashTable {
         return param1 >= 2048 ? -CookieDateFormatter.field_b[-2048 + param1] : CookieDateFormatter.field_b[2048 - param1];
     }
 
-    final static goa createCredentials(int param0) {
+    final static LoginTextValue createCredentials(int param0) {
         if (param0 != -1) {
           field_b = (String) null;
         }
-        return new goa(ArchiveRequest.a(false), NodeHashTableIterator.b((byte) -107));
+        return new LoginTextValue(ArchiveRequest.a(false), NodeHashTableIterator.b((byte) -107));
     }
 
     final int lookup(int param0, int param1) {

@@ -6,11 +6,11 @@ final class OpenGlVertexLayout extends mna {
     static UiComponent field_e;
 
     final static AccountServiceResult takeRegistrationResponse(int param0) {
-        if (LegacyOpenGlTexture.registrationRequestState == fta.accountRequestIdle) {
+        if (LegacyOpenGlTexture.registrationRequestState == GameSocketState.accountRequestIdle) {
           throw new IllegalStateException();
         }
         if (EmptyRoomFactory.accountRequestComplete == LegacyOpenGlTexture.registrationRequestState) {
-          LegacyOpenGlTexture.registrationRequestState = fta.accountRequestIdle;
+          LegacyOpenGlTexture.registrationRequestState = GameSocketState.accountRequestIdle;
           return PlantModel.field_n;
         }
         if (param0 != 3239) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TestModel extends TrapModel {
-    static fta field_o;
+    static GameSocketState field_o;
     static volatile int field_m;
     static String field_r;
     static String field_n;
@@ -112,7 +112,7 @@ final class TestModel extends TrapModel {
         field_m = 0;
         field_r = "Owner";
         field_n = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
-        field_o = new fta();
+        field_o = new GameSocketState();
         field_p = "<%0> has been removed.";
     }
 }

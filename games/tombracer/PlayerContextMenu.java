@@ -214,7 +214,7 @@ final class PlayerContextMenu {
           PlayerContextMenu.releaseStatics((byte) 36);
         }
         if (param0 == 8) {
-          no.beginPrivateMessage(this.field_i, this.field_g, (byte) 120);
+          AchievementNotificationOverlay.beginPrivateMessage(this.field_i, this.field_g, (byte) 120);
           return true;
         }
         if (param0 == 18) {
