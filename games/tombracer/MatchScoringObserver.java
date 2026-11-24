@@ -239,17 +239,17 @@ class MatchScoringObserver extends SimulationObserver {
             var4_int = param2.getPlayer(-2).getPlayerIndex(param0 + 2);
             if (param2.isConnectorRoom(0) &&
               !this.field_f.isSinglePlayer(param0 - 1876)) {
-              ProxySocketConnector.a(var4_int, 5);
+              ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(var4_int, 5);
             } else {
               RoomMusicController.updateRoomMusic(var4_int, (byte) 116);
             }
-            MatchState.d(param0 ^ -2, var4_int);
+            MatchState.fadeOutViewedPlayerTrapMusic(param0 ^ -2, var4_int);
             var5 = param2.getAllTraps(16);
             var6 = var5;
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
               if (var8.getStatCategory((byte) 3) == 1) {
-                PenaltyNotice.a((byte) -32, var4_int);
+                PenaltyNotice.fadeInViewedPlayerTrapMusic((byte) -32, var4_int);
               }
               if (2 == var8.getStatCategory((byte) 3)) {
                 ComponentMount.fadeInMusicForViewedPlayer(13, var4_int);

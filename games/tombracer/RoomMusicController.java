@@ -22,13 +22,13 @@ final class RoomMusicController {
         if (DoorwayComponent.field_I == 0) {
           MatchProtocol.fadeMusicChannelIn(2, 0);
           DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
-          ProxySocketConnector.a(param0, 5);
+          ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(param0, 5);
           MatchProtocol.fadeMusicChannelIn(MeshMaterialColour.cosmeticRandom.nextBounded(6, 0) + 3, 0);
           return;
         }
         MatchProtocol.fadeMusicChannelIn(1, 0);
         DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
-        ProxySocketConnector.a(param0, 5);
+        ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(param0, 5);
         MatchProtocol.fadeMusicChannelIn(MeshMaterialColour.cosmeticRandom.nextBounded(6, 0) + 3, 0);
     }
 

@@ -56,7 +56,7 @@ abstract class MenuScreen extends GameScreen {
             stackIn_16_0 = param0;
           }
           if (stackIn_16_0 != -28) {
-            discarded$1 = this.f(-3, -5);
+            discarded$1 = this.getMenuSpriteIndex(-3, -5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -371,7 +371,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    private final boolean d(int param0, int param1) {
+    private final boolean usesAlternateMenuSprites(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -675,7 +675,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    private final int f(int param0, int param1) {
+    private final int getMenuSpriteIndex(int param0, int param1) {
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_78_0 = 0;
@@ -1088,7 +1088,7 @@ abstract class MenuScreen extends GameScreen {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             if (param1.length > var9) {
-              this.items[var9] = new MenuEntry(param1[var9], this.getActionLabel(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
+              this.items[var9] = new MenuEntry(param1[var9], this.getActionLabel(param1[var9], (byte) 125), this.getMenuSpriteIndex(0, param1[var9]), this.usesAlternateMenuSprites(-72, param1[var9]));
               this.items[var9].field_b = this.getItemX((byte) 119, var9) + this.getItemRight(var9, (byte) -48) >> 1;
               this.items[var9].reset(1701110401);
               stackIn_43_0 = -38;

@@ -351,7 +351,7 @@ final class TextureCombineOperation {
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           TimeSwitchBehaviour.field_r = 0;
-          RenderScene.a(false);
+          RenderScene.drawAnimatedLogo(false);
           var2 = var1.copy();
           if (param0 != 16777215) {
             field_b = 106L;

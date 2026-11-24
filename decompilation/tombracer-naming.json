@@ -32924,6 +32924,14 @@
       "renamedSymbol": "M:MatchState.usesTreasureOnlyScoring(I)Z"
     },
     {
+      "symbol": "M:ff.d(II)V",
+      "originalName": "d",
+      "to": "fadeOutViewedPlayerTrapMusic",
+      "evidence": "Fade out viewed-player trap-related music layers13,14,15 before the room-entry trap scan selectively enables layers. MatchScreen writes the compared global index from getViewedPlayerIndex;MatchScoringObserver supplies the entered room player index. Preserve viewed-index comparison before nullable-frame test before full-int guard!=0return,then three fade calls108/13,84/14,43/15in order. Do not hoist reads,add a channel-table gate,or infer victory/hazard art labels. Complete original-body SHA256 2eb1161608329443110cd8a8f9a09afbffc31ae23794d533b3b38af0ea644c69. Naming only.3complete original bodies,all5compiler-bound callers,53field declarations/50owned,3supporting classes and8purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchState.fadeOutViewedPlayerTrapMusic(II)V"
+    },
+    {
       "symbol": "M:ff.e(BI)Z",
       "originalName": "e",
       "to": "hasTimedOut",
@@ -59772,6 +59780,14 @@
       "renamedSymbol": "M:MembersUpsellMenu.update(ZZI)V"
     },
     {
+      "symbol": "M:oka.b(BI)V",
+      "originalName": "b",
+      "to": "setAnimatedLogoPartRotation",
+      "evidence": "Set the current animated logo-part rotation matrix from logo tick and part index. HardwareModel loads the referenced TriangleMesh[] from logo.fo3d;RenderScene calls this for bounds/depth sorting and again before each part projection. Preserve piecewise integer math and overflow at5/105/120boundaries,all signed tick/index values,exact per-index pitch/yaw signs,default nonlisted-index behavior,byte<6recursive call(byte90,-70) before subsequent outer work,and matrix publication order. Do not simplify arithmetic or animation curves. Complete original-body SHA256 d3807745738193b7a8bf2960abaa2ff5264f40fa271d4e985b5b0aa88c6c5d6f. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V"
+    },
+    {
       "symbol": "M:oka.b(Z)V",
       "originalName": "b",
       "to": "startSinglePlayer",
@@ -59788,6 +59804,14 @@
       "renamedSymbol": "M:MembersUpsellMenu.activateItem(ZZI)V"
     },
     {
+      "symbol": "M:oka.d(B)Z",
+      "originalName": "d",
+      "to": "isAnimationForced",
+      "evidence": "Query the forced menu-animation mode. In update,true bypasses the resting-counter test and disables the first active-transition flag;false permits the counter to stop at its selected rest value. Existing result is always false. Preserve byte!=-124 call to the wrap hook(-35) before false,including its field_u side effect;do not enable continuous animation. Complete original-body SHA256 ae9afab08ebdce0d70b227cb325f7b9694a1d8627c5bebc1c385a17accf34886. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MembersUpsellMenu.isAnimationForced(B)Z"
+    },
+    {
       "symbol": "M:oka.d(I)V",
       "originalName": "d",
       "to": "releaseStatics",
@@ -59802,6 +59826,14 @@
       "evidence": "Vertical offset of the menu's drop-in and drop-out animation.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MembersUpsellMenu.computeDropOffset(I)I"
+    },
+    {
+      "symbol": "M:oka.f(I)V",
+      "originalName": "f",
+      "to": "onAnimationCycleWrapped",
+      "evidence": "Animation-cycle wrap hook called after update changes field_s from30to-30. Nominal-9 is a no-op;preserve other-int field_u=-72 and the wrong-byte query caller that invokes this with-35. Do not reset counters or perform animation work in the nominal path. Complete original-body SHA256 ed47b495f0de2b7a6253262e4545bc152cbe56c0a68e6d5506bba9de8f357683. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MembersUpsellMenu.onAnimationCycleWrapped(I)V"
     },
     {
       "symbol": "M:oka.g(II)I",
@@ -63612,6 +63644,14 @@
       "renamedSymbol": "M:ProxySocketConnector.connect(I)Ljava/net/Socket;"
     },
     {
+      "symbol": "M:qb.a(II)V",
+      "originalName": "a",
+      "to": "fadeOutViewedPlayerRoomMusicVariants",
+      "evidence": "Fade out viewed-player room-music variants before updateRoomMusic chooses a random variant3through8;connector entry also clears those variants. Preserve index comparison/frame short circuit,then null MusicTrack[] gate. Keep six calls and all signed param1values:it is the actual channel argument of the third call as well as XOR125/80/68guard input for other calls;nominal5 is not a replacement constant. Preserve guard-dependent skip behavior in unchanged callee,overflow-free XORs,bounds failures,partial fades and order;do not normalize channels or interpret full-int param1 as a disposable guard. Complete original-body SHA256 ce475ccf1126ee124561f9d00bcbe0ae65087a2e2d2376d951ea4f13392ac10c. Naming only.3complete original bodies,all5compiler-bound callers,53field declarations/50owned,3supporting classes and8purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(II)V"
+    },
+    {
       "symbol": "M:qb.a(IIIIBIIIII)I",
       "originalName": "a",
       "to": "segmentsIntersect",
@@ -66164,6 +66204,14 @@
       "renamedSymbol": "M:DeviceLostException.headingFromVector(BII)I"
     },
     {
+      "symbol": "M:qw.a(BI)V",
+      "originalName": "a",
+      "to": "fadeInViewedPlayerTrapMusic",
+      "evidence": "Fade in viewed-player trap-related music channel15,requested when the room-entry trap scan encounters stat category1. Preserve wrong-byte!=-32 String nulling BEFORE viewed-player filter,nullable-frame check,duplicated branches and exact fadeMusicChannelIn(15,0). Do not infer a particular hazard/theme from the category or skip cleanup on an unviewed player. Complete original-body SHA256 6d6b35de754bd327ab1432c568d90ce954912d5329f95c083b31125ce0977f8a. Naming only.3complete original bodies,all5compiler-bound callers,53field declarations/50owned,3supporting classes and8purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PenaltyNotice.fadeInViewedPlayerTrapMusic(BI)V"
+    },
+    {
       "symbol": "M:qw.a(I)V",
       "originalName": "a",
       "to": "increaseSoundVolume",
@@ -67082,6 +67130,14 @@
       "evidence": "Trip beam returns 1; time switch returns its total duration. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TouchSwitchBehaviour.getMaxLevel(I)I"
+    },
+    {
+      "symbol": "M:rh.b(II)V",
+      "originalName": "b",
+      "to": "writePendingReplyRequest",
+      "evidence": "Write the request corresponding to queued PendingReply nodes. PendingRequestFactory appends a new node before this writer;reconnect resend traverses that same queue and emits one request per node. Preserve ciphered opcode,byte length1,command2,wrong-int>-98 String nulling before buffer lookup and duplicate packet writes,all opcode/guard values,truncation and partial-buffer failures. Reply dispatch fills8-int data/ready flag before unlink elsewhere;do not invent request payloads or business protocol names. Complete original-body SHA256 c87db4ea50f1dd52fe028a2d0789ae1ba298cba1979daf18588d0f8af2ea2617. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TouchSwitchBehaviour.writePendingReplyRequest(II)V"
     },
     {
       "symbol": "M:rh.c(I)I",
@@ -76828,6 +76884,14 @@
       "renamedSymbol": "M:RenderScene.setRenderTarget(ILCamera;)V"
     },
     {
+      "symbol": "M:uw.a(Z)V",
+      "originalName": "a",
+      "to": "drawAnimatedLogo",
+      "evidence": "Draw the animated multi-part logo from logo.fo3d meshes. Preserve new fixed camera matrix then length/temporary arrays,first-pass bounds and per-part rotation,integer-overflow depth keys,mouse-or-tick light direction,Boolean-true String nulling before normalization,integer sums before sqrt,double casts and truncation,descending max-scan/tie order,INT_MIN consumed sentinels,second rotations,per-draw-order centre offsets,projection before face drawing,all global/alias/exception order and wrapped uw.B diagnostic. No pixel or native/runtime equivalence claim. Complete original-body SHA256 2a56a06fd44ddccbed491e43c2f00d05c8f8e0a91f1ed8327253189a95c96481. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RenderScene.drawAnimatedLogo(Z)V"
+    },
+    {
       "symbol": "M:uw.b(I)V",
       "originalName": "b",
       "to": "clampTargetToBounds",
@@ -81900,12 +81964,28 @@
       "renamedSymbol": "M:MenuScreen.isItemEnabled(II)Z"
     },
     {
+      "symbol": "M:wv.d(II)Z",
+      "originalName": "d",
+      "to": "usesAlternateMenuSprites",
+      "evidence": "Determine alternate menu sprite-set use for action IDs4,13,14,6,30,41. MenuScreen forwards result into MenuEntry fourth constructor argument;MenuEntry stores it in field_l and getSprite uses it to choose HardwareSpecularEffect.field_h versus WidgetStyleLayer.field_k. Preserve all signed action/guard integers,short-circuit test order,duplicated false returns and wrapped diagnostic;do not infer unsupported action labels or asset sizes. Complete original-body SHA256 a69997454600b16d06a696d5d2c7f616b1d000d5363ee13b043c9d691e4b6d99. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuScreen.usesAlternateMenuSprites(II)Z"
+    },
+    {
       "symbol": "M:wv.e(II)I",
       "originalName": "e",
       "to": "getItemHeight",
       "evidence": "Returns the entry height that getItemY subtracts from the item slot position.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuScreen.getItemHeight(II)I"
+    },
+    {
+      "symbol": "M:wv.f(II)I",
+      "originalName": "f",
+      "to": "getMenuSpriteIndex",
+      "evidence": "Choose the menu sprite-array index from menu state and action ID. MenuScreen passes result as MenuEntry third constructor argument;getSprite indexes the selected array with that stored field. Preserve guard!=0 activateItem(false,false,19) before state read,the field_c==0 early1 exception list,14/27return3,complete return2list and default0,including all signed action values and exception wrappers. Do not convert style indices into action IDs. Complete original-body SHA256 5bd41d2b0397df069e50938754de18a781be5a3d07899e0f05bd29a9019c5a84. Naming only.7complete original bodies,all15compiler-bound callers,51field declarations/35owned,4supporting classes and13purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuScreen.getMenuSpriteIndex(II)I"
     },
     {
       "symbol": "M:wv.g(II)I",
@@ -434318,7 +434398,7 @@
     },
     {
       "symbol": "L:oka.b(BI)V#0",
-      "renamedSymbol": "L:MembersUpsellMenu.b(BI)V#0",
+      "renamedSymbol": "L:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -434329,7 +434409,7 @@
     },
     {
       "symbol": "L:oka.b(BI)V#1",
-      "renamedSymbol": "L:MembersUpsellMenu.b(BI)V#1",
+      "renamedSymbol": "L:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -434340,7 +434420,7 @@
     },
     {
       "symbol": "L:oka.b(BI)V#2",
-      "renamedSymbol": "L:MembersUpsellMenu.b(BI)V#2",
+      "renamedSymbol": "L:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -434351,7 +434431,7 @@
     },
     {
       "symbol": "L:oka.b(BI)V#3",
-      "renamedSymbol": "L:MembersUpsellMenu.b(BI)V#3",
+      "renamedSymbol": "L:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -434362,7 +434442,7 @@
     },
     {
       "symbol": "L:oka.b(BI)V#4",
-      "renamedSymbol": "L:MembersUpsellMenu.b(BI)V#4",
+      "renamedSymbol": "L:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -483829,7 +483909,7 @@
     },
     {
       "symbol": "L:rh.b(II)V#0",
-      "renamedSymbol": "L:TouchSwitchBehaviour.b(II)V#0",
+      "renamedSymbol": "L:TouchSwitchBehaviour.writePendingReplyRequest(II)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -483840,7 +483920,7 @@
     },
     {
       "symbol": "L:rh.b(II)V#1",
-      "renamedSymbol": "L:TouchSwitchBehaviour.b(II)V#1",
+      "renamedSymbol": "L:TouchSwitchBehaviour.writePendingReplyRequest(II)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -544549,7 +544629,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#0",
-      "renamedSymbol": "L:RenderScene.a(Z)V#0",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -544560,7 +544640,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#1",
-      "renamedSymbol": "L:RenderScene.a(Z)V#1",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#1",
       "originalName": "var17_int",
       "renamedName": "var17_int",
       "declaration": {
@@ -544571,7 +544651,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#10",
-      "renamedSymbol": "L:RenderScene.a(Z)V#10",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -544582,7 +544662,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#11",
-      "renamedSymbol": "L:RenderScene.a(Z)V#11",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -544593,7 +544673,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#12",
-      "renamedSymbol": "L:RenderScene.a(Z)V#12",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -544604,7 +544684,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#13",
-      "renamedSymbol": "L:RenderScene.a(Z)V#13",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#13",
       "originalName": "var10_int",
       "renamedName": "var10_int",
       "declaration": {
@@ -544615,7 +544695,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#14",
-      "renamedSymbol": "L:RenderScene.a(Z)V#14",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -544626,7 +544706,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#15",
-      "renamedSymbol": "L:RenderScene.a(Z)V#15",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -544637,7 +544717,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#16",
-      "renamedSymbol": "L:RenderScene.a(Z)V#16",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -544648,7 +544728,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#17",
-      "renamedSymbol": "L:RenderScene.a(Z)V#17",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -544659,7 +544739,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#18",
-      "renamedSymbol": "L:RenderScene.a(Z)V#18",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -544670,7 +544750,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#19",
-      "renamedSymbol": "L:RenderScene.a(Z)V#19",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#19",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -544681,7 +544761,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#2",
-      "renamedSymbol": "L:RenderScene.a(Z)V#2",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#2",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -544692,7 +544772,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#20",
-      "renamedSymbol": "L:RenderScene.a(Z)V#20",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#20",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -544703,7 +544783,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#21",
-      "renamedSymbol": "L:RenderScene.a(Z)V#21",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#21",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -544714,7 +544794,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#22",
-      "renamedSymbol": "L:RenderScene.a(Z)V#22",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#22",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -544725,7 +544805,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#23",
-      "renamedSymbol": "L:RenderScene.a(Z)V#23",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#23",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -544736,7 +544816,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#24",
-      "renamedSymbol": "L:RenderScene.a(Z)V#24",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#24",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -544747,7 +544827,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#25",
-      "renamedSymbol": "L:RenderScene.a(Z)V#25",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#25",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -544758,7 +544838,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#26",
-      "renamedSymbol": "L:RenderScene.a(Z)V#26",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#26",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -544769,7 +544849,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#27",
-      "renamedSymbol": "L:RenderScene.a(Z)V#27",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#27",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -544780,7 +544860,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#28",
-      "renamedSymbol": "L:RenderScene.a(Z)V#28",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#28",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -544791,7 +544871,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#29",
-      "renamedSymbol": "L:RenderScene.a(Z)V#29",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#29",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -544802,7 +544882,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#3",
-      "renamedSymbol": "L:RenderScene.a(Z)V#3",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#3",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -544813,7 +544893,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#30",
-      "renamedSymbol": "L:RenderScene.a(Z)V#30",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#30",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -544824,7 +544904,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#31",
-      "renamedSymbol": "L:RenderScene.a(Z)V#31",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#31",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -544835,7 +544915,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#32",
-      "renamedSymbol": "L:RenderScene.a(Z)V#32",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#32",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -544846,7 +544926,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#33",
-      "renamedSymbol": "L:RenderScene.a(Z)V#33",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#33",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -544857,7 +544937,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#34",
-      "renamedSymbol": "L:RenderScene.a(Z)V#34",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#34",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -544868,7 +544948,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#35",
-      "renamedSymbol": "L:RenderScene.a(Z)V#35",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#35",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -544879,7 +544959,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#4",
-      "renamedSymbol": "L:RenderScene.a(Z)V#4",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -544890,7 +544970,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#5",
-      "renamedSymbol": "L:RenderScene.a(Z)V#5",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -544901,7 +544981,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#6",
-      "renamedSymbol": "L:RenderScene.a(Z)V#6",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#6",
       "originalName": "var4_ref_an",
       "renamedName": "var4_ref_an",
       "declaration": {
@@ -544912,7 +544992,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#7",
-      "renamedSymbol": "L:RenderScene.a(Z)V#7",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -544923,7 +545003,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#8",
-      "renamedSymbol": "L:RenderScene.a(Z)V#8",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -544934,7 +545014,7 @@
     },
     {
       "symbol": "L:uw.a(Z)V#9",
-      "renamedSymbol": "L:RenderScene.a(Z)V#9",
+      "renamedSymbol": "L:RenderScene.drawAnimatedLogo(Z)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -582081,7 +582161,7 @@
     },
     {
       "symbol": "L:wv.d(II)Z#0",
-      "renamedSymbol": "L:MenuScreen.d(II)Z#0",
+      "renamedSymbol": "L:MenuScreen.usesAlternateMenuSprites(II)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -582092,7 +582172,7 @@
     },
     {
       "symbol": "L:wv.d(II)Z#1",
-      "renamedSymbol": "L:MenuScreen.d(II)Z#1",
+      "renamedSymbol": "L:MenuScreen.usesAlternateMenuSprites(II)Z#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -582103,7 +582183,7 @@
     },
     {
       "symbol": "L:wv.d(II)Z#2",
-      "renamedSymbol": "L:MenuScreen.d(II)Z#2",
+      "renamedSymbol": "L:MenuScreen.usesAlternateMenuSprites(II)Z#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -582158,7 +582238,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#0",
-      "renamedSymbol": "L:MenuScreen.f(II)I#0",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#0",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -582169,7 +582249,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#1",
-      "renamedSymbol": "L:MenuScreen.f(II)I#1",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#1",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -582180,7 +582260,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#2",
-      "renamedSymbol": "L:MenuScreen.f(II)I#2",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#2",
       "originalName": "stackIn_78_0",
       "renamedName": "stackIn_78_0",
       "declaration": {
@@ -582191,7 +582271,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#3",
-      "renamedSymbol": "L:MenuScreen.f(II)I#3",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#3",
       "originalName": "stackIn_80_0",
       "renamedName": "stackIn_80_0",
       "declaration": {
@@ -582202,7 +582282,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#4",
-      "renamedSymbol": "L:MenuScreen.f(II)I#4",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -582213,7 +582293,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#5",
-      "renamedSymbol": "L:MenuScreen.f(II)I#5",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -582224,7 +582304,7 @@
     },
     {
       "symbol": "L:wv.f(II)I#6",
-      "renamedSymbol": "L:MenuScreen.f(II)I#6",
+      "renamedSymbol": "L:MenuScreen.getMenuSpriteIndex(II)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -616368,9 +616448,9 @@
     },
     {
       "symbol": "M:ff.d(II)V",
-      "renamedSymbol": "M:MatchState.d(II)V",
+      "renamedSymbol": "M:MatchState.fadeOutViewedPlayerTrapMusic(II)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "fadeOutViewedPlayerTrapMusic",
       "declaration": {
         "file": "ff.java",
         "start": 9746,
@@ -662942,9 +663022,9 @@
     },
     {
       "symbol": "M:oka.b(BI)V",
-      "renamedSymbol": "M:MembersUpsellMenu.b(BI)V",
+      "renamedSymbol": "M:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setAnimatedLogoPartRotation",
       "declaration": {
         "file": "oka.java",
         "start": 14138,
@@ -662975,9 +663055,9 @@
     },
     {
       "symbol": "M:oka.d(B)Z",
-      "renamedSymbol": "M:MembersUpsellMenu.d(B)Z",
+      "renamedSymbol": "M:MembersUpsellMenu.isAnimationForced(B)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "isAnimationForced",
       "declaration": {
         "file": "oka.java",
         "start": 7443,
@@ -663008,9 +663088,9 @@
     },
     {
       "symbol": "M:oka.f(I)V",
-      "renamedSymbol": "M:MembersUpsellMenu.f(I)V",
+      "renamedSymbol": "M:MembersUpsellMenu.onAnimationCycleWrapped(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "onAnimationCycleWrapped",
       "declaration": {
         "file": "oka.java",
         "start": 10257,
@@ -669245,9 +669325,9 @@
     },
     {
       "symbol": "M:qb.a(II)V",
-      "renamedSymbol": "M:ProxySocketConnector.a(II)V",
+      "renamedSymbol": "M:ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fadeOutViewedPlayerRoomMusicVariants",
       "declaration": {
         "file": "qb.java",
         "start": 3818,
@@ -673194,9 +673274,9 @@
     },
     {
       "symbol": "M:qw.a(BI)V",
-      "renamedSymbol": "M:PenaltyNotice.a(BI)V",
+      "renamedSymbol": "M:PenaltyNotice.fadeInViewedPlayerTrapMusic(BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fadeInViewedPlayerTrapMusic",
       "declaration": {
         "file": "qw.java",
         "start": 1643,
@@ -674701,9 +674781,9 @@
     },
     {
       "symbol": "M:rh.b(II)V",
-      "renamedSymbol": "M:TouchSwitchBehaviour.b(II)V",
+      "renamedSymbol": "M:TouchSwitchBehaviour.writePendingReplyRequest(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "writePendingReplyRequest",
       "declaration": {
         "file": "rh.java",
         "start": 1412,
@@ -690211,9 +690291,9 @@
     },
     {
       "symbol": "M:uw.a(Z)V",
-      "renamedSymbol": "M:RenderScene.a(Z)V",
+      "renamedSymbol": "M:RenderScene.drawAnimatedLogo(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAnimatedLogo",
       "declaration": {
         "file": "uw.java",
         "start": 4461,
@@ -698340,9 +698420,9 @@
     },
     {
       "symbol": "M:wv.d(II)Z",
-      "renamedSymbol": "M:MenuScreen.d(II)Z",
+      "renamedSymbol": "M:MenuScreen.usesAlternateMenuSprites(II)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "usesAlternateMenuSprites",
       "declaration": {
         "file": "wv.java",
         "start": 13041,
@@ -698362,9 +698442,9 @@
     },
     {
       "symbol": "M:wv.f(II)I",
-      "renamedSymbol": "M:MenuScreen.f(II)I",
+      "renamedSymbol": "M:MenuScreen.getMenuSpriteIndex(II)I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "getMenuSpriteIndex",
       "declaration": {
         "file": "wv.java",
         "start": 22910,
@@ -754385,7 +754465,7 @@
     },
     {
       "symbol": "P:ff.d(II)V#0",
-      "renamedSymbol": "P:MatchState.d(II)V#0",
+      "renamedSymbol": "P:MatchState.fadeOutViewedPlayerTrapMusic(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -754396,7 +754476,7 @@
     },
     {
       "symbol": "P:ff.d(II)V#1",
-      "renamedSymbol": "P:MatchState.d(II)V#1",
+      "renamedSymbol": "P:MatchState.fadeOutViewedPlayerTrapMusic(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -864176,7 +864256,7 @@
     },
     {
       "symbol": "P:oka.b(BI)V#0",
-      "renamedSymbol": "P:MembersUpsellMenu.b(BI)V#0",
+      "renamedSymbol": "P:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -864187,7 +864267,7 @@
     },
     {
       "symbol": "P:oka.b(BI)V#1",
-      "renamedSymbol": "P:MembersUpsellMenu.b(BI)V#1",
+      "renamedSymbol": "P:MembersUpsellMenu.setAnimatedLogoPartRotation(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -864242,7 +864322,7 @@
     },
     {
       "symbol": "P:oka.d(B)Z#0",
-      "renamedSymbol": "P:MembersUpsellMenu.d(B)Z#0",
+      "renamedSymbol": "P:MembersUpsellMenu.isAnimationForced(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -864275,7 +864355,7 @@
     },
     {
       "symbol": "P:oka.f(I)V#0",
-      "renamedSymbol": "P:MembersUpsellMenu.f(I)V#0",
+      "renamedSymbol": "P:MembersUpsellMenu.onAnimationCycleWrapped(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -878586,7 +878666,7 @@
     },
     {
       "symbol": "P:qb.a(II)V#0",
-      "renamedSymbol": "P:ProxySocketConnector.a(II)V#0",
+      "renamedSymbol": "P:ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -878597,7 +878677,7 @@
     },
     {
       "symbol": "P:qb.a(II)V#1",
-      "renamedSymbol": "P:ProxySocketConnector.a(II)V#1",
+      "renamedSymbol": "P:ProxySocketConnector.fadeOutViewedPlayerRoomMusicVariants(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -889124,7 +889204,7 @@
     },
     {
       "symbol": "P:qw.a(BI)V#0",
-      "renamedSymbol": "P:PenaltyNotice.a(BI)V#0",
+      "renamedSymbol": "P:PenaltyNotice.fadeInViewedPlayerTrapMusic(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -889135,7 +889215,7 @@
     },
     {
       "symbol": "P:qw.a(BI)V#1",
-      "renamedSymbol": "P:PenaltyNotice.a(BI)V#1",
+      "renamedSymbol": "P:PenaltyNotice.fadeInViewedPlayerTrapMusic(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -892303,7 +892383,7 @@
     },
     {
       "symbol": "P:rh.b(II)V#0",
-      "renamedSymbol": "P:TouchSwitchBehaviour.b(II)V#0",
+      "renamedSymbol": "P:TouchSwitchBehaviour.writePendingReplyRequest(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -892314,7 +892394,7 @@
     },
     {
       "symbol": "P:rh.b(II)V#1",
-      "renamedSymbol": "P:TouchSwitchBehaviour.b(II)V#1",
+      "renamedSymbol": "P:TouchSwitchBehaviour.writePendingReplyRequest(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -925787,7 +925867,7 @@
     },
     {
       "symbol": "P:uw.a(Z)V#0",
-      "renamedSymbol": "P:RenderScene.a(Z)V#0",
+      "renamedSymbol": "P:RenderScene.drawAnimatedLogo(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -942727,7 +942807,7 @@
     },
     {
       "symbol": "P:wv.d(II)Z#0",
-      "renamedSymbol": "P:MenuScreen.d(II)Z#0",
+      "renamedSymbol": "P:MenuScreen.usesAlternateMenuSprites(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -942738,7 +942818,7 @@
     },
     {
       "symbol": "P:wv.d(II)Z#1",
-      "renamedSymbol": "P:MenuScreen.d(II)Z#1",
+      "renamedSymbol": "P:MenuScreen.usesAlternateMenuSprites(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -942771,7 +942851,7 @@
     },
     {
       "symbol": "P:wv.f(II)I#0",
-      "renamedSymbol": "P:MenuScreen.f(II)I#0",
+      "renamedSymbol": "P:MenuScreen.getMenuSpriteIndex(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -942782,7 +942862,7 @@
     },
     {
       "symbol": "P:wv.f(II)I#1",
-      "renamedSymbol": "P:MenuScreen.f(II)I#1",
+      "renamedSymbol": "P:MenuScreen.getMenuSpriteIndex(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -1038109,7 +1038189,7 @@
       "original": "cna.java",
       "renamed": "PendingRequestFactory.java",
       "inputSha256": "f8e36dcf601851d5b660203c0366c9bb7e697c0c9e17258a8ee663f1a3706ead",
-      "outputSha256": "e05c473b8fc10683af555e2bbd36c12148fddfd45e1d0038c9da00d23270526b",
+      "outputSha256": "9435d58ac65d51cb62954d4e9f082212614cbb4cecc89001e603433506a8d183",
       "edits": [
         {
           "start": 50,
@@ -1038166,6 +1038246,13 @@
           "symbol": "C:rh",
           "original": "rh",
           "renamed": "TouchSwitchBehaviour"
+        },
+        {
+          "start": 299,
+          "end": 300,
+          "symbol": "M:rh.b(II)V",
+          "original": "b",
+          "renamed": "writePendingReplyRequest"
         },
         {
           "start": 394,
@@ -1126447,7 +1126534,7 @@
       "original": "ff.java",
       "renamed": "MatchState.java",
       "inputSha256": "cc83681dac90aa5b7b2608dfb6f3e4f122a9a32da309f948c5d0ba66fdddbe2e",
-      "outputSha256": "203b3eab88ff22a0c0f433d8f1510a890b972b6bf9709dee9da891f5c45a27c2",
+      "outputSha256": "ea84b56d26e0292ba519775ee8cfa974d7dd9fc3d8ef1082d29ce29acebf811e",
       "edits": [
         {
           "start": 71,
@@ -1127785,6 +1127872,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 9746,
+          "end": 9747,
+          "symbol": "M:ff.d(II)V",
+          "original": "d",
+          "renamed": "fadeOutViewedPlayerTrapMusic"
         },
         {
           "start": 9786,
@@ -1174250,7 +1174344,7 @@
       "original": "gga.java",
       "renamed": "FullscreenFailureDialog.java",
       "inputSha256": "6b606fbc212d436126e4043246d4e47916273ff696fad46852affab4e277914c",
-      "outputSha256": "693a58d447d072d903a95d64529b09715221ac08989963444b4801e1c0ea5e05",
+      "outputSha256": "20c12d4a7cb6e635d0b47abe32e5545fa164c9977f6195527ee480e114165cdb",
       "edits": [
         {
           "start": 50,
@@ -1174517,6 +1174611,13 @@
           "symbol": "C:uw",
           "original": "uw",
           "renamed": "RenderScene"
+        },
+        {
+          "start": 2807,
+          "end": 2808,
+          "symbol": "M:uw.a(Z)V",
+          "original": "a",
+          "renamed": "drawAnimatedLogo"
         },
         {
           "start": 2853,
@@ -1229773,7 +1229874,7 @@
       "original": "ica.java",
       "renamed": "TextureCombineOperation.java",
       "inputSha256": "10c39104315be2dc11a78d33f367d38d74c96655b58cddb3053f9b0ee99a1b20",
-      "outputSha256": "8f177e84967489257ea8a0f9d39e6f7051a98451c95b585c90a4d37c916beb45",
+      "outputSha256": "4b4a43b898efe964acec0428e309095ccdfc8c2ea2238941da04b9d62f411b2f",
       "edits": [
         {
           "start": 50,
@@ -1230215,6 +1230316,13 @@
           "symbol": "C:uw",
           "original": "uw",
           "renamed": "RenderScene"
+        },
+        {
+          "start": 14822,
+          "end": 14823,
+          "symbol": "M:uw.a(Z)V",
+          "original": "a",
+          "renamed": "drawAnimatedLogo"
         },
         {
           "start": 14854,
@@ -1351828,7 +1351936,7 @@
       "original": "li.java",
       "renamed": "RoomMusicController.java",
       "inputSha256": "b73520cae89b4772834bd72fc4d560e1b0fbdfc1a0b52449fc06315bdfeefbba",
-      "outputSha256": "567d858fdef46e27f3a596d55a089c352de0d3fdc6e58e443eab0f33ccd2217a",
+      "outputSha256": "956fc18b197a5e783629a0f7b21767eb579f872a3f560f92007366597a422fed",
       "edits": [
         {
           "start": 50,
@@ -1351936,6 +1352044,13 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 531,
+          "end": 532,
+          "symbol": "M:qb.a(II)V",
+          "original": "a",
+          "renamed": "fadeOutViewedPlayerRoomMusicVariants"
+        },
+        {
           "start": 555,
           "end": 556,
           "symbol": "C:v",
@@ -1352004,6 +1352119,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 684,
+          "end": 685,
+          "symbol": "M:qb.a(II)V",
+          "original": "a",
+          "renamed": "fadeOutViewedPlayerRoomMusicVariants"
         },
         {
           "start": 706,
@@ -1426384,7 +1426506,7 @@
       "original": "oka.java",
       "renamed": "MembersUpsellMenu.java",
       "inputSha256": "1e332267f114d0d3ceb213358e99dc825adf02d6c1262244ebaf4d8719fae5d2",
-      "outputSha256": "8216d8edcaef36cdf50f45b0c9359944ef54b37c0e4b04cfa3455971b5f82b45",
+      "outputSha256": "bc52742763308c658f272aadea2b525cb2937474b175ecf7fd21f80c2bc2abef",
       "edits": [
         {
           "start": 50,
@@ -1426443,11 +1426565,39 @@
           "renamed": "update"
         },
         {
+          "start": 778,
+          "end": 779,
+          "symbol": "M:oka.d(B)Z",
+          "original": "d",
+          "renamed": "isAnimationForced"
+        },
+        {
           "start": 937,
           "end": 940,
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 1013,
+          "end": 1014,
+          "symbol": "M:oka.d(B)Z",
+          "original": "d",
+          "renamed": "isAnimationForced"
+        },
+        {
+          "start": 1317,
+          "end": 1318,
+          "symbol": "M:oka.f(I)V",
+          "original": "f",
+          "renamed": "onAnimationCycleWrapped"
+        },
+        {
+          "start": 1756,
+          "end": 1757,
+          "symbol": "M:oka.f(I)V",
+          "original": "f",
+          "renamed": "onAnimationCycleWrapped"
         },
         {
           "start": 2366,
@@ -1427430,6 +1427580,20 @@
           "renamed": "getCanvasWidth"
         },
         {
+          "start": 7443,
+          "end": 7444,
+          "symbol": "M:oka.d(B)Z",
+          "original": "d",
+          "renamed": "isAnimationForced"
+        },
+        {
+          "start": 7505,
+          "end": 7506,
+          "symbol": "M:oka.f(I)V",
+          "original": "f",
+          "renamed": "onAnimationCycleWrapped"
+        },
+        {
           "start": 7567,
           "end": 7568,
           "symbol": "M:oka.a(B)V",
@@ -1427892,6 +1428056,13 @@
           "renamed": "getWidth"
         },
         {
+          "start": 10257,
+          "end": 10258,
+          "symbol": "M:oka.f(I)V",
+          "original": "f",
+          "renamed": "onAnimationCycleWrapped"
+        },
+        {
           "start": 10363,
           "end": 10364,
           "symbol": "M:oka.b(ZZI)V",
@@ -1428109,6 +1428280,13 @@
           "renamed": "getCanvasHeight"
         },
         {
+          "start": 14138,
+          "end": 14139,
+          "symbol": "M:oka.b(BI)V",
+          "original": "b",
+          "renamed": "setAnimatedLogoPartRotation"
+        },
+        {
           "start": 14332,
           "end": 14334,
           "symbol": "C:tl",
@@ -1428121,6 +1428299,13 @@
           "symbol": "C:oka",
           "original": "oka",
           "renamed": "MembersUpsellMenu"
+        },
+        {
+          "start": 14757,
+          "end": 14758,
+          "symbol": "M:oka.b(BI)V",
+          "original": "b",
+          "renamed": "setAnimatedLogoPartRotation"
         },
         {
           "start": 15621,
@@ -1485529,7 +1485714,7 @@
       "original": "qb.java",
       "renamed": "ProxySocketConnector.java",
       "inputSha256": "209272f633a353d2712c49d0d6cf37a8229d384f3cf16b641fde66f181947c64",
-      "outputSha256": "6fc940e417ee2322f302cf538e4ad7ecabac414429c64a5088f652b228b91a8d",
+      "outputSha256": "7d7ba99e0703bbf69db116818f4d325989d466dd5c1891ae11a1a755ca60fe2a",
       "edits": [
         {
           "start": 89,
@@ -1485978,6 +1486163,13 @@
           "symbol": "M:qb.c(B)V",
           "original": "c",
           "renamed": "cycleRendererOptions"
+        },
+        {
+          "start": 3818,
+          "end": 3819,
+          "symbol": "M:qb.a(II)V",
+          "original": "a",
+          "renamed": "fadeOutViewedPlayerRoomMusicVariants"
         },
         {
           "start": 3858,
@@ -1518215,7 +1518407,7 @@
       "original": "qw.java",
       "renamed": "PenaltyNotice.java",
       "inputSha256": "ae7dc16f2918933e8f4a4cef6be0bb2cf66a9a182d3a42048e9b02a804e08209",
-      "outputSha256": "c12db7113dc379a8912129cfbc3239921c34070c3dd9ff56d581e7a7b78870d8",
+      "outputSha256": "94dd232766dc1fd73654af71cb25073023d9ed2513d5e211ffeb330af56f4782",
       "edits": [
         {
           "start": 50,
@@ -1518496,6 +1518688,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1643,
+          "end": 1644,
+          "symbol": "M:qw.a(BI)V",
+          "original": "a",
+          "renamed": "fadeInViewedPlayerTrapMusic"
         },
         {
           "start": 1760,
@@ -1531967,7 +1532166,7 @@
       "original": "rh.java",
       "renamed": "TouchSwitchBehaviour.java",
       "inputSha256": "c093e72419822c45b2b2a3804cd9ff2b96b882dc391145d8dc85a27426d258d9",
-      "outputSha256": "91dc49a7f398afea9dc774b1822467ec856da17ce295d6c22d8504ffc4eac1a9",
+      "outputSha256": "9b244851f92b617e780cb58c6d7ecf6d1aa9adb264fac9baca11305296e75768",
       "edits": [
         {
           "start": 50,
@@ -1532101,6 +1532300,13 @@
           "symbol": "M:rh.a(Z)I",
           "original": "a",
           "renamed": "getTypeId"
+        },
+        {
+          "start": 1412,
+          "end": 1413,
+          "symbol": "M:rh.b(II)V",
+          "original": "b",
+          "renamed": "writePendingReplyRequest"
         },
         {
           "start": 1448,
@@ -1596257,7 +1596463,7 @@
       "original": "tu.java",
       "renamed": "MatchScoringObserver.java",
       "inputSha256": "194f36d2c594904f3cf26e59c0f543a7af247da644130adca19a9f6e7e1a5ece",
-      "outputSha256": "724d79ffc73fbcc02591ae344fd86fbd858f7f91fe7d2f77ad6c5ad1a494fee7",
+      "outputSha256": "74b9481b86896b9f3554d435fca95bbd7320fbf262aa43427b1f0ca09418f84d",
       "edits": [
         {
           "start": 65,
@@ -1597002,6 +1597208,13 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 8894,
+          "end": 8895,
+          "symbol": "M:qb.a(II)V",
+          "original": "a",
+          "renamed": "fadeOutViewedPlayerRoomMusicVariants"
+        },
+        {
           "start": 8945,
           "end": 8947,
           "symbol": "C:li",
@@ -1597023,6 +1597236,13 @@
           "renamed": "MatchState"
         },
         {
+          "start": 9002,
+          "end": 9003,
+          "symbol": "M:ff.d(II)V",
+          "original": "d",
+          "renamed": "fadeOutViewedPlayerTrapMusic"
+        },
+        {
           "start": 9054,
           "end": 9055,
           "symbol": "M:la.n(I)[Lfsa;",
@@ -1597042,6 +1597262,13 @@
           "symbol": "C:qw",
           "original": "qw",
           "renamed": "PenaltyNotice"
+        },
+        {
+          "start": 9238,
+          "end": 9239,
+          "symbol": "M:qw.a(BI)V",
+          "original": "a",
+          "renamed": "fadeInViewedPlayerTrapMusic"
         },
         {
           "start": 9307,
@@ -1598573,7 +1598800,7 @@
       "original": "ua.java",
       "renamed": "S2CNextRoundPacket.java",
       "inputSha256": "e2fd842cb6bc97f4a9e4a992fe61722230f5e8722a349eed9c596af72da962c6",
-      "outputSha256": "65ff5b8ddd6526c370081852903f6fdfdaa053c5f9cee485ea163a97cf6f3817",
+      "outputSha256": "383eee1589f969b9d042e6004492995ddffbf6def8dd0ee902f73e6615c641e9",
       "edits": [
         {
           "start": 50,
@@ -1599267,6 +1599494,13 @@
           "symbol": "C:rh",
           "original": "rh",
           "renamed": "TouchSwitchBehaviour"
+        },
+        {
+          "start": 7767,
+          "end": 7768,
+          "symbol": "M:rh.b(II)V",
+          "original": "b",
+          "renamed": "writePendingReplyRequest"
         },
         {
           "start": 7812,
@@ -1634457,7 +1634691,7 @@
       "original": "uw.java",
       "renamed": "RenderScene.java",
       "inputSha256": "2c6938891f32592d989edd139d95eb288847cd26dbcda14bf2b0f54f0e7522b7",
-      "outputSha256": "2b4c9a14b3dec4425465bafa31f54e08ccf41cd87d826d115b7fc079f4db6719",
+      "outputSha256": "33158c763dd3f0af87f39a97d46bac5cd0654c5c5523a0f468c3ec28fac71f74",
       "edits": [
         {
           "start": 50,
@@ -1635125,6 +1635359,13 @@
           "renamed": "renderTarget"
         },
         {
+          "start": 4461,
+          "end": 4462,
+          "symbol": "M:uw.a(Z)V",
+          "original": "a",
+          "renamed": "drawAnimatedLogo"
+        },
+        {
           "start": 4637,
           "end": 4639,
           "symbol": "C:an",
@@ -1635172,6 +1635413,13 @@
           "symbol": "C:oka",
           "original": "oka",
           "renamed": "MembersUpsellMenu"
+        },
+        {
+          "start": 5834,
+          "end": 5835,
+          "symbol": "M:oka.b(BI)V",
+          "original": "b",
+          "renamed": "setAnimatedLogoPartRotation"
         },
         {
           "start": 6074,
@@ -1635368,6 +1635616,13 @@
           "symbol": "C:oka",
           "original": "oka",
           "renamed": "MembersUpsellMenu"
+        },
+        {
+          "start": 8400,
+          "end": 8401,
+          "symbol": "M:oka.b(BI)V",
+          "original": "b",
+          "renamed": "setAnimatedLogoPartRotation"
         },
         {
           "start": 8485,
@@ -1686164,7 +1686419,7 @@
       "original": "wv.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "1f8857dc3d362a84fbf3ab9af26e90d2770eacabc67c8a8e1df01e8be7183658",
-      "outputSha256": "1aee3e1a66efbe968782e4c9d3b3f8342a37bf98400b4c1a033b34c6a7a220c9",
+      "outputSha256": "8cfb468d953d365721943399b54906db4b7cb8a7b2b4146e161a503ebf2e2e98",
       "edits": [
         {
           "start": 53,
@@ -1686312,6 +1686567,13 @@
           "symbol": "M:fna.a(ZZIZ)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 1890,
+          "end": 1891,
+          "symbol": "M:wv.f(II)I",
+          "original": "f",
+          "renamed": "getMenuSpriteIndex"
         },
         {
           "start": 2143,
@@ -1687452,6 +1687714,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 13041,
+          "end": 13042,
+          "symbol": "M:wv.d(II)Z",
+          "original": "d",
+          "renamed": "usesAlternateMenuSprites"
+        },
+        {
           "start": 13684,
           "end": 13687,
           "symbol": "C:tba",
@@ -1688397,6 +1688666,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 22910,
+          "end": 22911,
+          "symbol": "M:wv.f(II)I",
+          "original": "f",
+          "renamed": "getMenuSpriteIndex"
+        },
+        {
           "start": 23215,
           "end": 23216,
           "symbol": "M:wv.b(ZZI)V",
@@ -1689194,6 +1689470,20 @@
           "symbol": "M:wv.b(IB)Ljava/lang/String;",
           "original": "b",
           "renamed": "getActionLabel"
+        },
+        {
+          "start": 37740,
+          "end": 37741,
+          "symbol": "M:wv.f(II)I",
+          "original": "f",
+          "renamed": "getMenuSpriteIndex"
+        },
+        {
+          "start": 37765,
+          "end": 37766,
+          "symbol": "M:wv.d(II)Z",
+          "original": "d",
+          "renamed": "usesAlternateMenuSprites"
         },
         {
           "start": 37807,
@@ -1693680,10 +1693970,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "8793e178134ffb270305bd66b6b5ee9c533bf28a581f05df9affa10e2df04c26",
+    "rulesSha256": "46aa272ef375f20da4126b37c3165170699f51076d4c59d50945451bb9f1cf5f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "f126c0bb02317823db600c95555f2c407d22a18ef097f50427616eb19782bdec",
+    "outputTreeSha256": "3fc6580d8947edea4c3b8c9e6fe5b719d1ed29b4b64310ff0614af86727f131a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

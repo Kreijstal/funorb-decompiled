@@ -203,7 +203,7 @@ final class S2CNextRoundPacket implements GamePacket {
           }
           var2 = MovingWallComponent.field_N.first(-80);
           while (var2 != null) {
-            TouchSwitchBehaviour.b(param0, param1 ^ -117);
+            TouchSwitchBehaviour.writePendingReplyRequest(param0, param1 ^ -117);
             var2 = MovingWallComponent.field_N.next(param1 + 105);
           }
           return;

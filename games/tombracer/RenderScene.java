@@ -155,7 +155,7 @@ final class RenderScene {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void drawAnimatedLogo(boolean param0) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -201,7 +201,7 @@ final class RenderScene {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_an = GameClockAndLogoResources.field_b[var3];
             var4_ref_an.computeBounds((byte) -117);
-            MembersUpsellMenu.b((byte) 17, var3);
+            MembersUpsellMenu.setAnimatedLogoPartRotation((byte) 17, var3);
             var5 = var4_ref_an.field_i + var4_ref_an.field_z >> 1;
             var6 = var4_ref_an.field_m + var4_ref_an.field_b >> 1;
             var7 = var4_ref_an.field_p + var4_ref_an.field_a >> 1;
@@ -249,7 +249,7 @@ final class RenderScene {
             }
             var21[var16] = -2147483648;
             var17 = GameClockAndLogoResources.field_b[var16];
-            MembersUpsellMenu.b((byte) 86, var16);
+            MembersUpsellMenu.setAnimatedLogoPartRotation((byte) 86, var16);
             for (var18 = 0; var18 < 3; var18++) {
               AudioOutputSetup.field_a[var18] = AudioOutputSetup.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }

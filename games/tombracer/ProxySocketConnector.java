@@ -118,7 +118,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void fadeOutViewedPlayerRoomMusicVariants(int param0, int param1) {
         if (TypeableCharacterPredicate.field_a == param0 &&
           SecondaryNodeDequeIterator.field_a != null) {
           if (MenuEntry.field_j == null) {

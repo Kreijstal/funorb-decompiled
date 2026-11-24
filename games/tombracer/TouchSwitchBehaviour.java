@@ -51,7 +51,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
         return 19;
     }
 
-    final static void b(int param0, int param1) {
+    final static void writePendingReplyRequest(int param0, int param1) {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
         if (param1 <= -98) {

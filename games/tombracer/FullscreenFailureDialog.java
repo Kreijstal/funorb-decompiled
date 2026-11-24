@@ -88,7 +88,7 @@ final class FullscreenFailureDialog extends ResizingDialog implements ButtonList
         OpenGlIndexArray.setRasterTarget(QuickChatMenuLayout.field_a, (byte) 108);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
-        RenderScene.a(false);
+        RenderScene.drawAnimatedLogo(false);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }

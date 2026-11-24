@@ -28,7 +28,7 @@ final class MembersUpsellMenu extends MenuScreen {
         var9 = TombRacer.field_G ? 1 : 0;
         super.update(param0, param1, param2 ^ 0);
         if (param0) {
-          stackIn_6_0 = (!this.d((byte) -124)) ? 1 : 0;
+          stackIn_6_0 = (!this.isAnimationForced((byte) -124)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -37,14 +37,14 @@ final class MembersUpsellMenu extends MenuScreen {
           field_y = (UiComponent[]) null;
         }
         if (0 >= this.field_u) {
-          if (!this.d((byte) -124)) {
+          if (!this.isAnimationForced((byte) -124)) {
             stackIn_18_0 = (param0) ? 0 : -30;
             if (~stackIn_18_0 != ~this.field_s) {
               fieldTemp$0 = this.field_s + 1;
               this.field_s = this.field_s + 1;
               if (fieldTemp$0 == 30) {
                 this.field_s = -30;
-                this.f(-9);
+                this.onAnimationCycleWrapped(-9);
               }
               if (this.field_s == 0) {
                 if (var4 != 0) {
@@ -59,7 +59,7 @@ final class MembersUpsellMenu extends MenuScreen {
             this.field_s = this.field_s + 1;
             if (fieldTemp$0 == 30) {
               this.field_s = -30;
-              this.f(-9);
+              this.onAnimationCycleWrapped(-9);
             }
             if (this.field_s == 0) {
               if (var4 != 0) {
@@ -213,9 +213,9 @@ final class MembersUpsellMenu extends MenuScreen {
         return;
     }
 
-    private final boolean d(byte param0) {
+    private final boolean isAnimationForced(byte param0) {
         if (param0 != -124) {
-          this.f(-35);
+          this.onAnimationCycleWrapped(-35);
         }
         return false;
     }
@@ -283,7 +283,7 @@ final class MembersUpsellMenu extends MenuScreen {
         return this.getItemX((byte) 112, param0) + this.items[param0].getWidth(-163);
     }
 
-    private final void f(int param0) {
+    private final void onAnimationCycleWrapped(int param0) {
         if (param0 != -9) {
           this.field_u = -72;
         }
@@ -419,7 +419,7 @@ final class MembersUpsellMenu extends MenuScreen {
         return -var2 + var3Lifetime1 * var3Lifetime1 * var2 / 900;
     }
 
-    final static void b(byte param0, int param1) {
+    final static void setAnimatedLogoPartRotation(byte param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -443,7 +443,7 @@ final class MembersUpsellMenu extends MenuScreen {
         var4 = 1;
         var5 = 0;
         if (param0 < 6) {
-          MembersUpsellMenu.b((byte) 90, -70);
+          MembersUpsellMenu.setAnimatedLogoPartRotation((byte) 90, -70);
         }
         if (param1 == 1) {
           var5 = 1;

@@ -325,7 +325,7 @@ final class MatchState implements BitDecodableMarker {
         }
     }
 
-    final static void d(int param0, int param1) {
+    final static void fadeOutViewedPlayerTrapMusic(int param0, int param1) {
         if (TypeableCharacterPredicate.field_a == param1) {
           if (null == SecondaryNodeDequeIterator.field_a) {
             return;

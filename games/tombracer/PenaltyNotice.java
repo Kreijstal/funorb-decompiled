@@ -62,7 +62,7 @@ final class PenaltyNotice extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void fadeInViewedPlayerTrapMusic(byte param0, int param1) {
         if (param0 != -32) {
           field_g = (String) null;
           if (param1 != TypeableCharacterPredicate.field_a) {
