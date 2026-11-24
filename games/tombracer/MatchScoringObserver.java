@@ -69,7 +69,7 @@ class MatchScoringObserver extends SimulationObserver {
           param1.addScore(param0 - 15, var8);
           this.field_f.statistics.recordPenalty(param5, param1.getPlayerIndex(0), param0 - 19);
           if (this.field_f.isSinglePlayer(-1878) &&
-            !this.field_f.d(-67) &&
+            !this.field_f.usesTreasureOnlyScoring(-67) &&
             var9_ref != null) {
             var10 = RewardChoicePhase.createTextMessage(-48, var9_ref);
             ToolkitInstance.field_c.addMessage(3, param0 - 15, var10);
@@ -338,7 +338,7 @@ class MatchScoringObserver extends SimulationObserver {
             }
           }
           if (this.field_f.isSinglePlayer(-1878) &&
-            !this.field_f.d(-127)) {
+            !this.field_f.usesTreasureOnlyScoring(-127)) {
             if (0 != var7) {
               var9_ref_jha = RewardChoicePhase.createTextMessage(-89, LegacyOpenGlFlowingWaterEffect.formatText(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {

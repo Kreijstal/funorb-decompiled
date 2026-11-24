@@ -203,7 +203,7 @@ final class Weapon {
               if (this.field_c) {
                 stackIn_31_0 = var23;
                 stackIn_32_1 = !(param9);
-                ((Projectile) (Object) stackIn_31_0).a(stackIn_32_1, true);
+                ((Projectile) (Object) stackIn_31_0).setEffectImmunity(stackIn_32_1, true);
               }
               if (this.field_j) {
                 var23.setExpandsOnImpact(true, true);

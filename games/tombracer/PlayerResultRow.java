@@ -29,7 +29,7 @@ final class PlayerResultRow {
     boolean field_k;
     static String field_s;
 
-    final void a(int param0, int param1, int param2) {
+    final void tickScoreReveal(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -169,7 +169,7 @@ final class PlayerResultRow {
         accountRequestPending = null;
     }
 
-    final void a(double param0, double param1, double param2, boolean param3) {
+    final void setScoreRevealRates(double param0, double param1, double param2, boolean param3) {
         this.field_i = param2;
         this.field_e = param1;
         this.field_g = param0;

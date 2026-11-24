@@ -2935,7 +2935,7 @@ final class ModelTriangleRasterizer {
           this.field_i = stackIn_6_1;
           this.field_r = this.field_i - 1;
           this.field_f = this.field_k.getTextureAlphaMode(param22);
-          this.field_d = this.field_k.d(param22);
+          this.field_d = this.field_k.shouldRepeatTextureCoordinates(param22);
         }
         this.field_l = param18;
         var24 = (float)(param15 >> 24 & 255);
@@ -4830,7 +4830,7 @@ final class ModelTriangleRasterizer {
           this.field_i = stackIn_6_1;
           this.field_r = this.field_i - 1;
           this.field_f = this.field_k.getTextureAlphaMode(param22);
-          this.field_d = this.field_k.d(param22);
+          this.field_d = this.field_k.shouldRepeatTextureCoordinates(param22);
         }
         this.field_l = param18;
         var24 = (float)(param15 >> 24 & 255);

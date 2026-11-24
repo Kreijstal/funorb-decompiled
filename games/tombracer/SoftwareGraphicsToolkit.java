@@ -60,7 +60,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return null;
     }
 
-    final boolean d(int param0) {
+    final boolean shouldRepeatTextureCoordinates(int param0) {
         return this.field_c.metadata((byte) -56, param0).field_b || this.field_c.metadata((byte) 125, param0).field_n;
     }
 

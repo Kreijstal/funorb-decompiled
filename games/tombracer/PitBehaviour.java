@@ -25,7 +25,7 @@ final class PitBehaviour extends Behaviour {
         return param0;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setLavaPit(int param0, boolean param1) {
         if (param0 != 16) {
           this.hashState(-128, 105);
         }

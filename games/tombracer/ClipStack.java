@@ -184,7 +184,7 @@ final class ClipStack {
           if (2 < var7) {
             throw ClipStack.<RuntimeException>throwUnchecked(new Exception("Local: header error: version=" + var7));
           }
-          var28 = SwitchComponent.e(true);
+          var28 = SwitchComponent.createAchievementBitset(true);
           var25 = var28;
           var8 = var25;
           var31 = var8;

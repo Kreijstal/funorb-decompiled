@@ -255,7 +255,7 @@ final class WallTile implements Renderable {
                 this.field_j = true;
               }
               if (decompiledFrameRemainder2) {
-                if (0 == this.field_g.i(-77)) {
+                if (0 == this.field_g.getWallStyle(-77)) {
                   return;
                 }
                 if (this.field_a != 6) {
@@ -319,7 +319,7 @@ final class WallTile implements Renderable {
               }
             }
           }
-          if (0 != this.field_g.i(-77) &&
+          if (0 != this.field_g.getWallStyle(-77) &&
             this.field_a == 6) {
             this.field_o = 0;
           }
@@ -355,7 +355,7 @@ final class WallTile implements Renderable {
                 this.field_j = true;
               }
               if (decompiledFrameRemainder1) {
-                if (0 != this.field_g.i(-77)) {
+                if (0 != this.field_g.getWallStyle(-77)) {
                   if (this.field_a != 6) {
                     return;
                   }
@@ -408,7 +408,7 @@ final class WallTile implements Renderable {
               }
             }
           }
-          if (0 != this.field_g.i(-77) &&
+          if (0 != this.field_g.getWallStyle(-77) &&
             this.field_a == 6) {
             this.field_o = 0;
           }
@@ -458,7 +458,7 @@ final class WallTile implements Renderable {
               this.field_c)) {
               this.field_j = true;
             }
-            if (0 != this.field_g.i(-77) &&
+            if (0 != this.field_g.getWallStyle(-77) &&
               this.field_a == 6) {
               this.field_o = 0;
             }
@@ -476,7 +476,7 @@ final class WallTile implements Renderable {
               this.field_c)) {
               this.field_j = true;
             }
-            if (0 != this.field_g.i(-77) &&
+            if (0 != this.field_g.getWallStyle(-77) &&
               this.field_a == 6) {
               this.field_o = 0;
             }
@@ -493,7 +493,7 @@ final class WallTile implements Renderable {
                 this.field_c)) {
                 this.field_j = true;
               }
-              if (0 != this.field_g.i(-77) &&
+              if (0 != this.field_g.getWallStyle(-77) &&
                 this.field_a == 6) {
                 this.field_o = 0;
               }
@@ -507,7 +507,7 @@ final class WallTile implements Renderable {
           if (param2) {
             if (!this.field_n &&
               !this.field_c) {
-              if (0 != this.field_g.i(-77) &&
+              if (0 != this.field_g.getWallStyle(-77) &&
                 this.field_a == 6) {
                 this.field_o = 0;
               }
@@ -516,7 +516,7 @@ final class WallTile implements Renderable {
             this.field_j = true;
           }
         }
-        if (0 != this.field_g.i(-77)) {
+        if (0 != this.field_g.getWallStyle(-77)) {
           if (this.field_a != 6) {
             return;
           }

@@ -46,7 +46,7 @@ final class UnlockOverlay extends MatchOverlay {
         return true;
     }
 
-    final boolean d(byte param0) {
+    final boolean isComplete(byte param0) {
         if (param0 != -75) {
           this.pausesGame(false);
           return this.field_j;
@@ -98,7 +98,7 @@ final class UnlockOverlay extends MatchOverlay {
         int var4Lifetime1;
         IntArrayRequest.field_h.draw(0, 0);
         if (param0 > -13) {
-          this.d((byte) 83);
+          this.isComplete((byte) 83);
           var2 = LegacyOpenGlWaterTextures.getCanvasWidth(false) - PlayerInputQueue.field_a.width() >> 1;
           var3 = SwitchLinkList.getCanvasHeight(0) - PlayerInputQueue.field_a.height() >> 1;
           if (this.field_m.getKind(16) == 0) {

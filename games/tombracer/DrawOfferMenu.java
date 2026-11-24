@@ -153,14 +153,14 @@ final class DrawOfferMenu extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new UiComponent(0L, (UiComponent) null);
-          var13.field_w = RoomLighting.a(param11, param2, 4);
-          var13.field_C = RoomLighting.a(param1, param10, 4);
-          var13.field_db = RoomLighting.a(param0, param5, 4);
+          var13.field_w = RoomLighting.createSolidBorderNineSlice(param11, param2, 4);
+          var13.field_C = RoomLighting.createSolidBorderNineSlice(param1, param10, 4);
+          var13.field_db = RoomLighting.createSolidBorderNineSlice(param0, param5, 4);
           if (param12 >= -75) {
             field_s = true;
           }
-          var13.field_n = RoomLighting.a(param6, param9, 4);
-          var13.field_M = RoomLighting.a(param7, param8, 4);
+          var13.field_n = RoomLighting.createSolidBorderNineSlice(param6, param9, 4);
+          var13.field_M = RoomLighting.createSolidBorderNineSlice(param7, param8, 4);
           var13.field_H = param4;
           var13.field_ib = param3;
           stackIn_3_0 = var13;

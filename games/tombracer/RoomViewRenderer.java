@@ -67,7 +67,7 @@ final class RoomViewRenderer {
           if (0 > param0) {
             return;
           }
-          if (!param5.f(-12963, param0)) {
+          if (!param5.isPlayerInputCaughtUp(-12963, param0)) {
             return;
           }
           var38 = param5.matchState;

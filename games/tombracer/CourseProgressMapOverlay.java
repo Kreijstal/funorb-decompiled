@@ -86,7 +86,7 @@ final class CourseProgressMapOverlay extends MatchOverlay {
           }
           var3 = 26;
           var4 = 26;
-          if (!this.field_g.d((byte) 113)) {
+          if (!this.field_g.usesCompactCourseMap((byte) 113)) {
             var4 = var4 * 2;
           }
           var23 = this.field_g.getSimulation(0, 0);
@@ -151,7 +151,7 @@ final class CourseProgressMapOverlay extends MatchOverlay {
         }
         var3Lifetime1 = 26;
         var4Lifetime1 = 26;
-        if (!this.field_g.d((byte) 113)) {
+        if (!this.field_g.usesCompactCourseMap((byte) 113)) {
           var4Lifetime1 = var4Lifetime1 * 2;
         }
         var20 = this.field_g.getSimulation(0, 0);

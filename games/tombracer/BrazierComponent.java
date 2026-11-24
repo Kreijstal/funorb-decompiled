@@ -158,8 +158,8 @@ final class BrazierComponent extends PrefabComponent {
           var8 = (LightSourceModel) (var6.createModel(5, 74));
           var8.setElevationOffset(64, 122);
           var8.setLightColour(true, 16633231);
-          var8.b(1, 128);
-          var8.a(0, param1, 1, true);
+          var8.setLightRadius(1, 128);
+          var8.configureLightAnimation(0, param1, 1, true);
           var9.addModel((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;

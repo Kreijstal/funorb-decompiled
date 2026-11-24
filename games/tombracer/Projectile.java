@@ -108,7 +108,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
 
     final boolean isExpired(int param0) {
         if (param0 != 18407) {
-          this.a(false, true);
+          this.setEffectImmunity(false, true);
           return this.expired;
         }
         return this.expired;
@@ -453,7 +453,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
             if (var3_int <= 0) {
               return 0;
             }
-            if (!this.effect.d(6734)) {
+            if (!this.effect.isLightEffect(6734)) {
               this.field_i = 4;
             }
             this.effect.setPreset(29525, param1.getPreset(-344));
@@ -895,7 +895,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return this.x;
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void setEffectImmunity(boolean param0, boolean param1) {
         this.field_l = param1 ? true : false;
         if (!param0) {
           this.createInstance(true);

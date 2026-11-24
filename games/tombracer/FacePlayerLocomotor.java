@@ -120,7 +120,7 @@ final class FacePlayerLocomotor extends Locomotor {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setTurnSpeed(int param0, byte param1) {
         if (param1 < 123) {
           Trap var4 = (Trap) null;
           this.attachToTrap(101, (Trap) null);

@@ -24,7 +24,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         ChatMessage.drawModelAt(0, -83584144, param3, param4, PowerUpItemBehaviour.field_t[6], param2);
     }
 
-    private final boolean b(int param0) {
+    private final boolean isObjectHandlingAnimation(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 < 80) {
           return true;
@@ -82,12 +82,12 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         return this.field_c.isFinished(0);
     }
 
-    private final boolean b(boolean param0) {
+    private final boolean usesFootstepSounds(boolean param0) {
         boolean stackIn_11_0 = false;
         if (!param0) {
           this.setCharacter(-20, -33);
         }
-        stackIn_11_0 = (this.field_f == 29) || (this.field_f == 24) || (this.field_f == 12) || (this.field_f == 15) || (this.field_f == 1) || (this.b(83));
+        stackIn_11_0 = (this.field_f == 29) || (this.field_f == 24) || (this.field_f == 12) || (this.field_f == 15) || (this.field_f == 1) || (this.isObjectHandlingAnimation(83));
         return stackIn_11_0;
     }
 
@@ -264,7 +264,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               (!(this.field_g <= 0))) {
               this.field_g = this.field_g - 1;
               if (var5 != 0) {
-                if (this.f((byte) 62)) {
+                if (this.usesMaleVoice((byte) 62)) {
                   var2.play(new SoundEvent(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
                   var2.play(new SoundEvent(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
                 } else {
@@ -274,7 +274,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               }
             }
           } else {
-            if (this.f((byte) 62)) {
+            if (this.usesMaleVoice((byte) 62)) {
               var2.play(new SoundEvent(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
               if (var5 != 0) {
                 var2.play(new SoundEvent(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
@@ -285,7 +285,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             this.field_g = 50;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.b(true)) {
+          if (this.usesFootstepSounds(true)) {
             if (this.field_f != 24) {
               if (this.field_c.getFrame(param0 - 21463) != 1) {
                 stackIn_35_0 = (17 == this.field_c.getFrame(0)) ? 1 : 0;
@@ -657,7 +657,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 12:
             {
-              if (!this.f((byte) 62)) {
+              if (!this.usesMaleVoice((byte) 62)) {
                 var9.enqueue(-103, new SoundEvent(86, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
                   var9.enqueue(-107, new SoundEvent(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
@@ -673,7 +673,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 13:
             {
               var9.enqueue(-103, new SoundEvent(83, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
-              if (!this.f((byte) 62)) {
+              if (!this.usesMaleVoice((byte) 62)) {
                 var9.enqueue(param0 ^ -124, new SoundEvent(88, this.field_p.getX(param0 - 23), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
                   var9.enqueue(param0 - 143, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
@@ -689,7 +689,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 14:
             {
               var9.enqueue(-128, new SoundEvent(78, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
-              if (this.f((byte) 62)) {
+              if (this.usesMaleVoice((byte) 62)) {
                 var9.enqueue(-103, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
                   var9.enqueue(-116, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
@@ -705,7 +705,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 16:
             {
               var9.enqueue(-106, new SoundEvent(84, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
-              if (!this.f((byte) 62)) {
+              if (!this.usesMaleVoice((byte) 62)) {
                 var9.enqueue(-110, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
                   var9.enqueue(-105, new SoundEvent(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
@@ -721,7 +721,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 17:
             var9.enqueue(-122, new SoundEvent(80, this.field_p.getX(param0 - 23), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
             var4 = 22;
-            if (!this.f((byte) 62)) {
+            if (!this.usesMaleVoice((byte) 62)) {
               var9.enqueue(param0 ^ -78, new SoundEvent(88, this.field_p.getX(param0 ^ 25), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               if (var12 == 0) {
                 break;
@@ -734,7 +734,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 20:
             {
               var9.enqueue(-98, new SoundEvent(78, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
-              if (this.f((byte) 62)) {
+              if (this.usesMaleVoice((byte) 62)) {
                 var9.enqueue(-110, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
                   var9.enqueue(-91, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
@@ -749,7 +749,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 21:
             {
-              if (this.f((byte) 62)) {
+              if (this.usesMaleVoice((byte) 62)) {
                 var9.enqueue(-96, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
                   var9.enqueue(param0 - 148, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
@@ -765,7 +765,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 22:
             var9.enqueue(-124, new SoundEvent(82, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
             var4 = 35;
-            if (this.f((byte) 62)) {
+            if (this.usesMaleVoice((byte) 62)) {
               var9.enqueue(-120, new SoundEvent(87, this.field_p.getX(param0 ^ 25), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
               if (var12 == 0) {
                 break;
@@ -821,7 +821,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         }
     }
 
-    private final boolean f(byte param0) {
+    private final boolean usesMaleVoice(byte param0) {
         boolean stackIn_14_0 = false;
         if (param0 != 62) {
           this.drawPortrait(-102, 87, -37, 69, 88);

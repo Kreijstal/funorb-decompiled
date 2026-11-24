@@ -30,7 +30,7 @@ final class ChatChannelType {
               stackIn_14_0 = -1;
               return stackIn_14_0;
             }
-            if (!CourseStartPacket.field_a[var1_int].a((byte) -47)) {
+            if (!CourseStartPacket.field_a[var1_int].isTutorial((byte) -47)) {
               var1_int++;
               continue;
             }

@@ -7,7 +7,7 @@ final class StatusEffect extends IntrusiveNode {
     private int duration;
     private int kind;
 
-    private final boolean b(int param0) {
+    private final boolean needsTimedTracking(int param0) {
         if (param0 >= 96) {
           return this.kind < 6 ? true : false;
         }
@@ -27,7 +27,7 @@ final class StatusEffect extends IntrusiveNode {
         try {
           param1.writeBits((byte) 2, this.kind, 4);
           if (param0 != -29928) {
-            discarded$0 = this.b(-112);
+            discarded$0 = this.needsTimedTracking(-112);
           }
           param1.writeBits((byte) -5, this.duration / 50, 6);
         } catch (RuntimeException runtimeException) {
@@ -93,7 +93,7 @@ final class StatusEffect extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         int var3_intLifetime1;
         try {
-          if (this.b(97)) {
+          if (this.needsTimedTracking(97)) {
             return false;
           }
           var3_int = this.kind;

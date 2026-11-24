@@ -45,11 +45,11 @@ final class TrackMountComponent extends PrefabComponent {
           var5 = new TrackPlayerLocomotor(param2, param0);
           stackIn_3_0 = (34 != this.getTypeId(12)) ? 0 : 1;
           var6 = stackIn_3_0;
-          var5.b(11050, var6 != 0);
+          var5.setHorizontalTracking(11050, var6 != 0);
           stackIn_5_0 = var5;
           stackIn_5_1 = param1 - 3;
           stackIn_6_2 = (var6 == 0);
-          ((TrackPlayerLocomotor) (Object) stackIn_5_0).c(stackIn_5_1, stackIn_6_2);
+          ((TrackPlayerLocomotor) (Object) stackIn_5_0).setVerticalTracking(stackIn_5_1, stackIn_6_2);
           var5.setSpeed(false, this.field_F);
           var9.addLocomotor(var5, param1 ^ param1);
           var7 = ModelCodecAndSocialPanelState.field_a;

@@ -102,7 +102,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
 
     static {
         field_f = 0;
-        field_e = SwitchComponent.e(true);
+        field_e = SwitchComponent.createAchievementBitset(true);
         field_d = "Solicitation";
     }
 }

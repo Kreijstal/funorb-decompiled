@@ -1088,7 +1088,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           }
         } else {
           this.field_D.update((byte) -109);
-          if (this.field_D.d((byte) -75)) {
+          if (this.field_D.isComplete((byte) -75)) {
             this.field_D = null;
           }
           stackIn_27_0 = (null == this.field_D);
@@ -1329,7 +1329,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
               stackIn_116_0 = this.handleGamePacket(param1, param0, (byte) 111);
               return stackIn_116_0;
             }
-            var33 = SwitchComponent.e(true);
+            var33 = SwitchComponent.createAchievementBitset(true);
             var29 = var33;
             var4 = var29;
             var17 = var4;

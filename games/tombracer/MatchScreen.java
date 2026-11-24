@@ -237,7 +237,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
 
     final void onDeactivated(int param0) {
         if (param0 > -102) {
-          this.c(false);
+          this.usesTreasureOnlyScoring(false);
         }
     }
 
@@ -270,7 +270,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         if (param0 &&
           param1 &&
           !ToolkitInstance.field_c.isPanelActive(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
-          this.c(false))) {
+          this.usesTreasureOnlyScoring(false))) {
           this.actionStates[0][0] = var9[HardwareOpenGlToolkit.field_hd];
           this.actionStates[0][1] = var9[ArbAssemblyProgram.field_a];
           this.actionStates[0][2] = var9[ConsoleToken.field_k];
@@ -684,7 +684,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         }
     }
 
-    final boolean f(int param0, int param1) {
+    final boolean isPlayerInputCaughtUp(int param0, int param1) {
         if (null == this.protocol) {
           return true;
         }
@@ -1264,7 +1264,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           this.field_A = stackIn_34_1;
         }
         if (param0 == 13 &&
-          !this.c(false) && (this.isSpectating((byte) 81) ||
+          !this.usesTreasureOnlyScoring(false) && (this.isSpectating((byte) 81) ||
           null != this.phase &&
           this.phase.allowsChat(param2 ^ -9201))) {
           ConstrainToRectangleLocomotor.showMenuScreen(false, 7, (byte) -92);
@@ -1468,11 +1468,11 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         }
     }
 
-    final boolean c(boolean param0) {
+    final boolean usesTreasureOnlyScoring(boolean param0) {
         if (param0) {
           return true;
         }
-        return this.matchState.d(-108);
+        return this.matchState.usesTreasureOnlyScoring(-108);
     }
 
     private final void setTrackedScore(int param0, int param1) {

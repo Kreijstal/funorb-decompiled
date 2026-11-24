@@ -73,7 +73,7 @@ final class LegacyOpenGlFontMask extends aa {
           var14 = WeaveOperator.field_q;
           var2 = var14.readUnsignedByte(param0 + 252);
           if (var2 == 0) {
-            var11 = SwitchComponent.e(true);
+            var11 = SwitchComponent.createAchievementBitset(true);
             var3 = var11;
             var10 = var11;
             var4 = var10;
@@ -108,7 +108,7 @@ final class LegacyOpenGlFontMask extends aa {
                   DropAnimation.closeGameSocket(60);
                   return;
                 }
-                var15.field_f = SwitchComponent.e(true);
+                var15.field_f = SwitchComponent.createAchievementBitset(true);
                 var15.field_g = true;
                 var15.unlink(42);
               }

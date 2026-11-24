@@ -13,7 +13,7 @@ final class CourseDefinition {
         field_a = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean isTutorial(byte param0) {
         if (param0 > -22) {
           return true;
         }

@@ -128,9 +128,9 @@ final class RoomLighting implements RenderListener {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2) {
+    final static Sprite[] createSolidBorderNineSlice(int param0, int param1, int param2) {
         if (param2 != 4) {
-          RoomLighting.a(17, 31, 46);
+          RoomLighting.createSolidBorderNineSlice(17, 31, 46);
         }
         return CollectedTreasure.createSolidBorderNineSlice((byte) 125, param0, param1, 1);
     }
@@ -147,7 +147,7 @@ final class RoomLighting implements RenderListener {
     public final void afterLayer(RenderLayer param0, int param1, Camera param2, boolean param3) {
         try {
           if (!param3) {
-            RoomLighting.a(112, -118, 127);
+            RoomLighting.createSolidBorderNineSlice(112, -118, 127);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

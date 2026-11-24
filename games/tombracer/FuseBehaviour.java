@@ -51,7 +51,7 @@ final class FuseBehaviour extends Behaviour {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean canIgniteFrom(int param0, int param1, int param2) {
         if (param2 < this.field_u) {
           return false;
         }
@@ -198,7 +198,7 @@ final class FuseBehaviour extends Behaviour {
         }
     }
 
-    private final boolean a(boolean param0, int param1, int param2) {
+    private final boolean canExtinguishFrom(boolean param0, int param1, int param2) {
         if (param1 < this.field_o) {
           return false;
         }
@@ -228,7 +228,7 @@ final class FuseBehaviour extends Behaviour {
           var3_int = param0.type;
           var4 = param0.size;
           if (!this.isBurning(8) &&
-            this.a(113, var3_int, var4)) {
+            this.canIgniteFrom(113, var3_int, var4)) {
             if (this.field_r > 0) {
               this.field_s = this.field_r;
             } else {
@@ -236,7 +236,7 @@ final class FuseBehaviour extends Behaviour {
             }
           }
           if (this.isBurning(8)) {
-            if (!this.a(true, var4, var3_int)) {
+            if (!this.canExtinguishFrom(true, var4, var3_int)) {
               return 0;
             }
             this.field_s = 0;

@@ -111,7 +111,7 @@ final class MatchHud {
         var40 = TombRacer.field_G ? 1 : 0;
         try {
           var8_int = 10;
-          if (param4.f(-12963, param2) &&
+          if (param4.isPlayerInputCaughtUp(-12963, param2) &&
             !param4.isSendWindowFull(-95)) {
             var10 = -94 / ((51 - param3) / 40);
             var9 = param4.matchState;
@@ -173,7 +173,7 @@ final class MatchHud {
               var24 = 0;
               var25 = 16;
               if (!param4.field_D &&
-                !param4.c(false)) {
+                !param4.usesTreasureOnlyScoring(false)) {
                 var26 = LegacyVertexBufferSetup.findCourseRoom(var12.getRoom((byte) 125).getId((byte) -82), 0, param4.getCourseId(-1)).field_h;
                 if (0 == var26) {
                   var26 = 750;
@@ -243,7 +243,7 @@ final class MatchHud {
               var27Lifetime3 = "";
               var28Lifetime1 = HardwareVertexNormalAccumulator.field_f;
               if (!param4.field_D &&
-                !param4.c(false)) {
+                !param4.usesTreasureOnlyScoring(false)) {
                 var27Lifetime4 = Integer.toString(var12.getScore(77));
               } else {
                 var29Lifetime1 = 0;

@@ -175,7 +175,7 @@ final class HazardEffect implements GameStateMarker {
         return 2;
     }
 
-    final boolean d(int param0) {
+    final boolean isLightEffect(int param0) {
         if (param0 != 6734) {
           this.setDeathMessageIndex(94, -61);
           if (this.type != 1) {

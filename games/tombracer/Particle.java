@@ -213,7 +213,7 @@ final class Particle extends PooledObject implements Renderable {
         }
     }
 
-    final int d(int param0) {
+    final int getTextColour(int param0) {
         if (param0 <= 104) {
           return 23;
         }

@@ -176,7 +176,7 @@ final class MonsterModel extends MotionTrackingModel {
           return;
         }
         var2 = this.isMoving(true) ? 1 : 0;
-        var3 = this.b(false);
+        var3 = this.getMotionStateTicks(false);
         var4 = 1;
         var5_int = this.field_x;
         if (0 == var5_int) {

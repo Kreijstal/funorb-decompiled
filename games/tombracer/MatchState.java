@@ -183,7 +183,7 @@ final class MatchState implements BitDecodableMarker {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 <= 62) {
-            this.d(-118);
+            this.usesTreasureOnlyScoring(-118);
           }
           for (var3_int = 0; this.players.length > var3_int; var3_int++) {
             if (BridgeTile.accountNamesMatch(param0, 109, this.playerNames[var3_int])) {
@@ -398,7 +398,7 @@ final class MatchState implements BitDecodableMarker {
         this.awaitingFirstTick = true;
     }
 
-    final boolean g(int param0, int param1) {
+    final boolean hasOfferedRematch(int param0, int param1) {
         if (param0 < 68) {
           return false;
         }
@@ -556,7 +556,7 @@ final class MatchState implements BitDecodableMarker {
         return this.simulations[param1].tick;
     }
 
-    final boolean d(int param0) {
+    final boolean usesTreasureOnlyScoring(int param0) {
         if (param0 > -61) {
           this.declaredWinner = -104;
         }
@@ -603,7 +603,7 @@ final class MatchState implements BitDecodableMarker {
         return this.roundWinner;
     }
 
-    final boolean d(byte param0) {
+    final boolean usesCompactCourseMap(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 < 57) {
           return true;

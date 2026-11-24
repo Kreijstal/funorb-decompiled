@@ -83,9 +83,9 @@ abstract class ShooterComponent extends PrefabComponent {
           var5 = ModelCodecAndSocialPanelState.field_a;
           var6 = (LightSourceModel) (var5.createModel(5, 87));
           var6.setLightColour(true, param3);
-          var6.b(1, 96);
+          var6.setLightRadius(1, 96);
           var6.setElevationOffset(16, 120);
-          var6.a(param1, 0, 1, false);
+          var6.configureLightAnimation(param1, 0, 1, false);
           param0.addModel(param2, (byte) 124, var6);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ge.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

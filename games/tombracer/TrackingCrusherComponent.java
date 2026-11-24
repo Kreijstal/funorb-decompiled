@@ -100,7 +100,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
           var9.addLocomotor(var5, param1 ^ 3);
           var6 = new CrusherBehaviour(param2, param0);
           var6.setTimings(25, 12, 1, 25, 12);
-          var6.b((byte) 127, true);
+          var6.setStopLocomotorsOnTrigger((byte) 127, true);
           var9.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = ModelCodecAndSocialPanelState.field_a;
           var8 = (CrusherModel) (var7.createModel(11, param1 ^ 116));

@@ -213,7 +213,7 @@ abstract class MotionTrackingModel extends TrapModel {
         this.field_r = true;
     }
 
-    final int b(boolean param0) {
+    final int getMotionStateTicks(boolean param0) {
         if (param0) {
           this.field_r = false;
           return this.field_n;

@@ -204,7 +204,7 @@ final class StandingsPhase extends MatchPhase {
               } else {
                 SocketConnector.drawWrappedText(DateInputWidget.field_y.toUpperCase(), 1, TooltipRenderer.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
-              if (this.matchState.g(69, var22)) {
+              if (this.matchState.hasOfferedRematch(69, var22)) {
                 SocketConnector.drawWrappedText(SoundEventPlayer.field_d.toUpperCase(), 1, TooltipRenderer.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {

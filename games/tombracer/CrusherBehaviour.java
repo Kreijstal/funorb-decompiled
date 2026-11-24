@@ -140,7 +140,7 @@ final class CrusherBehaviour extends Behaviour {
         return this.windUpTicks;
     }
 
-    final void b(byte param0, boolean param1) {
+    final void setStopLocomotorsOnTrigger(byte param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (param0 <= 64) {
           this.field_q = -123;

@@ -88,7 +88,7 @@ final class SkeletonComponent extends SkeletonComponentBase {
           var5.setSpeed(false, 98304);
           var12.addLocomotor(var5, 0);
           var6 = new FacePlayerLocomotor(param2, param0);
-          var6.a(256, (byte) 124);
+          var6.setTurnSpeed(256, (byte) 124);
           var12.addLocomotor(var6, 0);
           var7 = new SimpleBlockBehaviour(param2, param0);
           var7.setKillsOnTouch((byte) -114, true);

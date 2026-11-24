@@ -52,7 +52,7 @@ final class PlayPhase extends MatchPhase {
           if (this.matchState.hasFinishedCourse((byte) 90, var3) &&
             !this.field_m) {
             this.field_m = true;
-            if (this.screen.c(false)) {
+            if (this.screen.usesTreasureOnlyScoring(false)) {
               this.screen.addOverlay(new RoomCompletedScreen(this.screen), 680);
             } else {
               this.screen.addOverlay(new FinishOrderOverlay(this.screen), param0 + 600);
@@ -210,7 +210,7 @@ final class PlayPhase extends MatchPhase {
               this.protocol.drawDebugInfo(16);
             }
             if (var3 >= 0 &&
-              this.screen.f(-12963, var3)) {
+              this.screen.isPlayerInputCaughtUp(-12963, var3)) {
               var16 = this.screen.matchState.players[var3];
               var5 = var16.getRoom((byte) 87);
               var6Lifetime1Lifetime2 = var5.getId((byte) -82);
@@ -394,7 +394,7 @@ final class PlayPhase extends MatchPhase {
         int var5;
         int[][] var7;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (!this.screen.c(false) &&
+        if (!this.screen.usesTreasureOnlyScoring(false) &&
           this.matchState.allFinishedRound(0)) {
           if (this.matchState.simulations[0].hasTimedOut(-31170)) {
             this.showMatchResult(0, -2);
@@ -725,7 +725,7 @@ final class PlayPhase extends MatchPhase {
             this.viewports[var4] = new PlayerViewport(this.screen, var4);
           }
           if (!this.screen.isMenuBackgroundDemo((byte) 33)) {
-            if (this.screen.c(false)) {
+            if (this.screen.usesTreasureOnlyScoring(false)) {
               this.f(16);
             }
             if (this.screen.field_D) {

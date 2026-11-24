@@ -166,6 +166,6 @@ final class SimpleConditionBehaviour extends Behaviour {
 
     static {
         field_q = "Played";
-        field_o = SwitchComponent.e(true);
+        field_o = SwitchComponent.createAchievementBitset(true);
     }
 }

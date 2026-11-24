@@ -714,7 +714,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final void b(byte param0, boolean param1) {
+    final void setUseMazeGridCollision(byte param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (param0 < 60) {
           this.openCellTemplate = (Trap) null;

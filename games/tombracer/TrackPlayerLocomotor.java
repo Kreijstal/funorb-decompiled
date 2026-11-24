@@ -134,7 +134,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void setHorizontalTracking(int param0, boolean param1) {
         if (param0 == 11050) {
           this.field_t = param1 ? true : false;
           return;
@@ -162,7 +162,7 @@ final class TrackPlayerLocomotor extends Locomotor {
 
     final void applyConstraint(int param0) {
         if (param0 != 1) {
-          this.c(-53, false);
+          this.setVerticalTracking(-53, false);
         }
     }
 
@@ -172,7 +172,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           param0.writeBits((byte) -127, !this.field_t ? 0 : 1, 1);
           param0.writeBits((byte) -126, !this.field_r ? 0 : 1, 1);
           if (param1 > -78) {
-            this.b(-8, false);
+            this.setHorizontalTracking(-8, false);
           }
           param0.writeBits((byte) -125, this.encodeFixed16(0, this.field_q), 8);
           param0.writeBits((byte) -128, this.field_p >> 16, 10);
@@ -195,7 +195,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         }
     }
 
-    final void c(int param0, boolean param1) {
+    final void setVerticalTracking(int param0, boolean param1) {
         if (param0 == 0) {
           this.field_r = param1 ? true : false;
           return;

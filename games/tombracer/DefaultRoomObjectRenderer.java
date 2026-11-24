@@ -157,7 +157,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               (decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
               var26Lifetime2 = param2.getAge(0) * 255 / param2.getLifetime(true);
-              stackIn_85_0 = (RoomCompletedScreen.c(param1 ^ -25)) ? 15 : 14;
+              stackIn_85_0 = (RoomCompletedScreen.useFlamethrowerParticleModel(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
               var28 = SpawnerBehaviour.getCategoryModel(var27, param1 ^ -12189, 7).copy((byte) 1, 526343, true);
               var28.scale(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
@@ -753,7 +753,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             var12 = 8 + LobbyOverlayAndDateValidationState.field_g.getWrappedWidth(var10, var11);
             var13 = 8 + LobbyOverlayAndDateValidationState.field_g.measureWrappedHeight(var10, var11, 0);
             SecondaryNodeDequeIterator.fillAlphaRect(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
-            DisplayModeInfo.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
+            DisplayModeInfo.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.getTextColour(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -46,7 +46,7 @@ abstract class SwitchComponent extends PrefabComponent {
 
     abstract int getMaxTargets(int param0);
 
-    final static int[] e(boolean param0) {
+    final static int[] createAchievementBitset(boolean param0) {
         if (!param0) {
           return (int[]) null;
         }

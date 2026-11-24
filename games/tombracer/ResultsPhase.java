@@ -744,7 +744,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var21Lifetime2 = stackIn_29_0;
             var31 = var21Lifetime2 * (var15 / 100.0) / 100.0;
-            var18_ref_gsaLifetime1.a(var27, var31, var23, true);
+            var18_ref_gsaLifetime1.setScoreRevealRates(var27, var31, var23, true);
           }
           var17Lifetime2 = 50;
           if (!(0.0 < var7)) {
@@ -843,7 +843,7 @@ final class ResultsPhase extends MatchPhase {
           this.field_s = true;
         }
         for (var4 = 0; this.field_r.length > var4; var4++) {
-          this.field_r[var4].a(0, var3Lifetime1, var4);
+          this.field_r[var4].tickScoreReveal(0, var3Lifetime1, var4);
         }
         stackIn_21_0 = AccountRegistrationPanel.field_w;
         stackIn_21_1 = param0 + 35;

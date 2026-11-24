@@ -12,7 +12,7 @@ final class WindZoneBehaviour extends Behaviour {
     static String field_n;
     private int field_p;
 
-    final void a(int param0, int param1, int param2) {
+    final void setSpeedRange(int param0, int param1, int param2) {
         if (param2 != 19072) {
           this.hashState(120, -24);
         }

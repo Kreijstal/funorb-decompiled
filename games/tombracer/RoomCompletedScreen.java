@@ -64,7 +64,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         return false;
     }
 
-    final static boolean c(int param0) {
+    final static boolean useFlamethrowerParticleModel(int param0) {
         if (param0 != 2) {
           return false;
         }

@@ -1119,7 +1119,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final int i(int param0) {
+    final int getWallStyle(int param0) {
         if (param0 > -28) {
           this.field_u = -21;
         }

@@ -93,7 +93,7 @@ abstract class MazeComponent extends PrefabComponent {
           var6.setWeight((byte) -3, 0);
           var6.setFloating((byte) 17, true);
           var5 = new RandomMazeBehaviour(param2, param0);
-          var5.b((byte) 105, false);
+          var5.setUseMazeGridCollision((byte) 105, false);
           var5.setOpenCellTemplate((byte) -128, this.createOpenCellTrap(param2, false, false));
           var5.setFilledCellTemplate(this.createFilledCellTrap(5, false, param2), (byte) -94);
           var5.setItemTemplate(this.createItemTemplate(false, param2, (byte) -114), 2);

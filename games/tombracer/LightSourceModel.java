@@ -51,7 +51,7 @@ final class LightSourceModel extends TrapModel {
         this.enableLight(false);
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void configureLightAnimation(int param0, int param1, int param2, boolean param3) {
         this.field_r = param3 ? true : false;
         this.field_o = param0;
         this.field_q = param1;
@@ -394,7 +394,7 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setLightRadius(int param0, int param1) {
         this.field_m = param1;
         if (param0 != 1) {
           this.field_q = -24;
