@@ -35,7 +35,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    final static void a(byte param0) {
+    final static void beginPublicChatInput(byte param0) {
         OpenGlUnderwaterEffect.field_q = 0;
         DynamicGeometryBuffer.field_c = true;
         if (param0 <= 31) {

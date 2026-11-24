@@ -377,7 +377,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final static boolean d(int param0, int param1) {
+    final static boolean hasMultiplePlayers(int param0, int param1) {
         int var2 = 74 / ((-6 - param0) / 32);
         return param1 >= 2 ? true : false;
     }

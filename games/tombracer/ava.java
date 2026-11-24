@@ -10,7 +10,7 @@ final class ava {
     private byte field_e;
     int field_c;
 
-    final ava a(int param0, int param1, int param2, int param3) {
+    final ava copyWithVertices(int param0, int param1, int param2, int param3) {
         if (param0 != 0) {
           return (ava) null;
         }
@@ -203,7 +203,7 @@ final class ava {
               var20 = "<img=" + (RoomComponent.field_n + var12.field_Ab - 4) + ">" + var33;
             }
             var12.field_Nb.field_r = var20;
-            if (!var12.f(162)) {
+            if (!var12.isRemovedFromLobby(162)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
@@ -307,7 +307,7 @@ final class ava {
               param0.field_tb.placeBelow(2, (UiComponent) (var11), var12, (byte) -122);
             }
             if (var12.field_y != 0 &&
-              !var12.f(162)) {
+              !var12.isRemovedFromLobby(162)) {
               if (var12.field_Kb.field_y != 0) {
                 RewardChoiceSlot.writeInviteOrAcceptPlayer((byte) 92, param1, var12.field_yb);
               } else {
@@ -319,7 +319,7 @@ final class ava {
               }
             }
             if (var12.field_pb &&
-              !var12.f(162)) {
+              !var12.isRemovedFromLobby(162)) {
               var24Lifetime2 = null;
               if (SimpleConditionBehaviour.field_r == var12.field_yb) {
                 if (var5_int != 0 &&

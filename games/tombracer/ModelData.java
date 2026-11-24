@@ -1440,14 +1440,14 @@ final class ModelData {
                   var16 = this.mergeVertex(var14_ref_oc.field_B[var15_intLifetime2].field_a, (short) var13, var14_ref_oc, 1);
                   var17 = this.mergeVertex(var14_ref_oc.field_B[var15_intLifetime2].field_c, (short) var13, var14_ref_oc, 1);
                   var18 = this.mergeVertex(var14_ref_oc.field_B[var15_intLifetime2].field_b, (short) var13, var14_ref_oc, 1);
-                  this.field_B[var3_intLifetime1] = var14_ref_oc.field_B[var15_intLifetime2].a(0, var17, var18, var16);
+                  this.field_B[var3_intLifetime1] = var14_ref_oc.field_B[var15_intLifetime2].copyWithVertices(0, var17, var18, var16);
                   var3_intLifetime1++;
                 }
               }
               if (null != var14_ref_oc.field_e) {
                 for (var15_intLifetime3 = 0; var14_ref_oc.field_e.length > var15_intLifetime3; var15_intLifetime3++) {
                   var16Lifetime2 = this.mergeVertex(var14_ref_oc.field_e[var15_intLifetime3].field_a, (short) var13, var14_ref_oc, 1);
-                  this.field_e[var4Lifetime1] = var14_ref_oc.field_e[var15_intLifetime3].a(0, var16Lifetime2);
+                  this.field_e[var4Lifetime1] = var14_ref_oc.field_e[var15_intLifetime3].copyWithVertex(0, var16Lifetime2);
                   var4Lifetime1++;
                 }
               }

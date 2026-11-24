@@ -66,7 +66,7 @@ final class rga {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedRectangleRows(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -136,7 +136,7 @@ final class rga {
         }
     }
 
-    final rga a(int param0, int param1) {
+    final rga copyWithVertex(int param0, int param1) {
         if (param0 != 0) {
           ToolkitModel var4 = (ToolkitModel) null;
           rga.copyModel((ToolkitModel) null, (byte) 71, 47);

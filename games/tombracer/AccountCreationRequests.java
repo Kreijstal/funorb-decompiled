@@ -433,7 +433,7 @@ final class AccountCreationRequests {
           var8 = new AccountCreationDialog(DisplayNameValidator.field_a, param5);
           DisplayNameValidator.field_a.pushDialog(var8, 88);
           if (OpacityWidget.hasTuhstatbutCookie(7)) {
-            var8.h(param1);
+            var8.showIneligibleAccountFailure(param1);
             return true;
           }
           LegacyOpenGlTexture.registrationRequestState = PlayerResultRow.accountRequestPending;

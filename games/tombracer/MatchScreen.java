@@ -1258,7 +1258,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           this.phase.handleKey(param1, 25, param0)) {
           return true;
         }
-        if (RasterizerOperator.d(20125) &&
+        if (RasterizerOperator.hasDeveloperPrivileges(20125) &&
           param0 == 88) {
           stackIn_34_1 = !(this.field_A);
           this.field_A = stackIn_34_1;

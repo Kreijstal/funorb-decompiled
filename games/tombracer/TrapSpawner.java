@@ -119,7 +119,7 @@ final class TrapSpawner extends Spawner {
         this.field_a.addTrap(var6Lifetime1, (byte) 32);
     }
 
-    final static void b(boolean param0) {
+    final static void resetArchiveConnectionErrors(boolean param0) {
         StatReportingScoringObserver.field_l.field_a = 0;
         StatReportingScoringObserver.field_l.field_n = 0;
         if (!param0) {

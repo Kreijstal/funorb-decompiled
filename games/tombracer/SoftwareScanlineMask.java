@@ -35,7 +35,7 @@ final class SoftwareScanlineMask extends aa {
           }
           DateInputWidget.openPlayerContextMenu((ScrollPanel) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
           if (0 == param1.field_d &&
-            !MonochromeFillOperator.c(param0 + 2) &&
+            !MonochromeFillOperator.isChatInputOpenForChannel(param0 + 2) &&
             null == C2SChooseRewardPacket.field_a &&
             null == WaveformOperator.field_n) {
             if (!PowerDownItemBehaviour.field_s) {
@@ -48,7 +48,7 @@ final class SoftwareScanlineMask extends aa {
             var7.field_f.addItem((byte) -117, 20, var8);
           }
           if (param1.field_d == 1 &&
-            !MonochromeFillOperator.c(0) &&
+            !MonochromeFillOperator.isChatInputOpenForChannel(0) &&
             C2SChooseRewardPacket.field_a != null &&
             param1.field_e == C2SChooseRewardPacket.field_a.getGameId(0)) {
             if (!PowerDownItemBehaviour.field_s) {

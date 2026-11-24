@@ -110,7 +110,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
             return;
           }
           if (param4 <= LineShape.field_h) {
-            rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
+            rga.fillBorderedRectangleRows(param5, 107, param6, param1, param2, param7, param3, param4);
             return;
           }
           ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
@@ -129,7 +129,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           return;
         }
         if (param4 <= LineShape.field_h) {
-          rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
+          rga.fillBorderedRectangleRows(param5, 107, param6, param1, param2, param7, param3, param4);
           return;
         }
         ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
@@ -202,7 +202,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
     final void tick(int param0) {
         if (param0 != 5418) {
           this.getMaxLevel(27);
-          if (this.field_s.f((byte) -56)) {
+          if (this.field_s.shouldStopBehaviour((byte) -56)) {
             this.stop(false);
             this.field_o.tick(0);
             this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
@@ -212,7 +212,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
           return;
         }
-        if (!this.field_s.f((byte) -56)) {
+        if (!this.field_s.shouldStopBehaviour((byte) -56)) {
           this.field_o.tick(0);
           this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
           return;

@@ -31,7 +31,7 @@ final class PendingReply extends IntrusiveNode {
               var1.field_xb = var1.field_xb - 1;
               if (var1.field_xb == 0) {
                 var1.field_Lb = 0;
-                if (var1.f(param0 ^ 168)) {
+                if (var1.isRemovedFromLobby(param0 ^ 168)) {
                   var1.unlink(19);
                 }
               }
@@ -47,7 +47,7 @@ final class PendingReply extends IntrusiveNode {
               var1_ref.field_zb = var1_ref.field_zb - 1;
               if (var1_ref.field_zb == 0) {
                 var1_ref.field_Ib = 0;
-                if (var1_ref.g(0)) {
+                if (var1_ref.isRemovedFromLobby(0)) {
                   var1_ref.unlink(59);
                 }
               }
@@ -63,7 +63,7 @@ final class PendingReply extends IntrusiveNode {
                 continue;
               }
               var1Lifetime1.field_Lb = 0;
-              if (var1Lifetime1.f(162)) {
+              if (var1Lifetime1.isRemovedFromLobby(162)) {
                 var1Lifetime1.unlink(72);
               }
             }

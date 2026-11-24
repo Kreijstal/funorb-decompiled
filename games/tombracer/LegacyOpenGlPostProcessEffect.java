@@ -26,7 +26,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
 
     abstract void endPass(int param0, byte param1);
 
-    final boolean a(int param0) {
+    final boolean requiresDepthTexture(int param0) {
         if (param0 != 1) {
           this.enabled = true;
           return false;
@@ -50,7 +50,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
 
     abstract void release(byte param0);
 
-    final int c(int param0) {
+    final int getRenderPassCount(int param0) {
         if (param0 != 1) {
           return -49;
         }

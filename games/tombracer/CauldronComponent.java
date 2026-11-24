@@ -29,7 +29,7 @@ final class CauldronComponent extends SwitchComponent {
           var5 = new EffectSwitchBehaviour(param2, param0);
           var5.setTriggeringType(true, 3, (byte) -122);
           var5.setTriggeredBy(true, 4, -81);
-          var5.a(10, 1, 5, param1 - 2032);
+          var5.configureChargeMeter(10, 1, 5, param1 - 2032);
           this.bindSwitchState(var5, (byte) -118);
           var6 = var5.getSwitchState((byte) -101);
           var7 = 25;

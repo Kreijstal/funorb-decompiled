@@ -84,7 +84,7 @@ final class RasterizerOperator extends TextureOperator {
         try {
           var3_int = LegacyOpenGlTurbulentTextureEffect.textureWidth;
           if (param0 != -8883) {
-            RasterizerOperator.d(56);
+            RasterizerOperator.hasDeveloperPrivileges(56);
           }
           var4 = ArchiveNetworkClient.textureHeight;
           TileOperator.setTargetRows(param1, param0 ^ -8901);
@@ -129,7 +129,7 @@ final class RasterizerOperator extends TextureOperator {
 
     final static void clearStatics(byte param0) {
         if (param0 != -128) {
-          RasterizerOperator.d(63);
+          RasterizerOperator.hasDeveloperPrivileges(63);
         }
         GameSocketTraffic.field_a = null;
     }
@@ -235,7 +235,7 @@ final class RasterizerOperator extends TextureOperator {
         return var3;
     }
 
-    final static boolean d(int param0) {
+    final static boolean hasDeveloperPrivileges(int param0) {
         if (param0 != 20125) {
           return true;
         }

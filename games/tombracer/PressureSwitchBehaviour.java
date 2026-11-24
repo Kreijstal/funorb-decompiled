@@ -34,7 +34,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         int var6;
         int var5Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (this.field_n.f((byte) -56)) {
+        if (this.field_n.shouldStopBehaviour((byte) -56)) {
           this.stop(false);
         }
         var2 = 0;

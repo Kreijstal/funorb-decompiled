@@ -8,7 +8,7 @@ final class CollisionGridEntry extends CollisionGridEntryNodeBase {
     static String field_o;
     private Collidable field_n;
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void writeJoinOrAcceptGameRequest(byte param0, int param1, int param2) {
         BitPacketBuffer var3 = CollisionGridEntryNodeBase.field_k;
         var3.writeCipheredOpcode(param1, -2988);
         var3.writeByte(3, 0);

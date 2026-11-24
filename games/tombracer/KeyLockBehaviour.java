@@ -11,7 +11,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
     static String field_o;
 
     final void tick(int param0) {
-        if (this.field_q.f((byte) -56)) {
+        if (this.field_q.shouldStopBehaviour((byte) -56)) {
           this.stop(false);
         }
         if (param0 == 5418) {

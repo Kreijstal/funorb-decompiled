@@ -107,7 +107,7 @@ final class PortalComponent extends PrefabComponent {
         this.field_G = new ComponentTargetList(1, 1);
     }
 
-    final static boolean A(int param0) {
+    final static boolean isCanvasFocusedOrFullscreen(int param0) {
         if (param0 <= 57) {
           field_I = (long[][]) null;
         }

@@ -6,7 +6,7 @@ abstract class NativeResourceNodeBase extends DualLinkNode {
     static String field_l;
     static String field_k;
 
-    final static void a(int param0, boolean param1) {
+    final static void leaveGameOrStopSpectating(int param0, boolean param1) {
         if (param0 != 0) {
           field_l = (String) null;
           if (param1) {
@@ -14,7 +14,7 @@ abstract class NativeResourceNodeBase extends DualLinkNode {
             return;
           }
           if (C2SChooseRewardPacket.field_a != null) {
-            MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.getGameId(param0 ^ 0));
+            MidiVoiceMixer.writeLeaveOrDeclineGameRequest(11, 30, C2SChooseRewardPacket.field_a.getGameId(param0 ^ 0));
           }
           ColouriseOperator.field_q = true;
           return;
@@ -24,7 +24,7 @@ abstract class NativeResourceNodeBase extends DualLinkNode {
           return;
         }
         if (C2SChooseRewardPacket.field_a != null) {
-          MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.getGameId(param0 ^ 0));
+          MidiVoiceMixer.writeLeaveOrDeclineGameRequest(11, 30, C2SChooseRewardPacket.field_a.getGameId(param0 ^ 0));
         }
         ColouriseOperator.field_q = true;
     }
@@ -88,7 +88,7 @@ abstract class NativeResourceNodeBase extends DualLinkNode {
         if (param0 == 11) {
           return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (AudioOutputSetup.field_b << 2);
         }
-        NativeResourceNodeBase.a(87, false);
+        NativeResourceNodeBase.leaveGameOrStopSpectating(87, false);
         return UrlDownloadRequest.field_i + (DropTargetWidget.field_A << 4) + (AudioOutputSetup.field_b << 2);
     }
 

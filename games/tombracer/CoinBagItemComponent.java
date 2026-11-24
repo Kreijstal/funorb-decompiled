@@ -370,7 +370,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
-                    stackOut_126_0 = var18_ref.f(162);
+                    stackOut_126_0 = var18_ref.isRemovedFromLobby(162);
                     stackIn_145_0 = stackOut_126_0 ? 1 : 0;
                     stackIn_127_0 = stackOut_126_0;
                     if (var19 != 0) {
@@ -476,7 +476,7 @@ final class CoinBagItemComponent extends ItemComponent {
           }
           if (null != C2SChooseRewardPacket.field_a) {
             if (0 != NameEntryKeyboardSupport.field_b.field_y) {
-              MidiVoiceMixer.a(param2, 30, C2SChooseRewardPacket.field_a.getGameId(0));
+              MidiVoiceMixer.writeLeaveOrDeclineGameRequest(param2, 30, C2SChooseRewardPacket.field_a.getGameId(0));
             }
             if (GamePacketSender.field_a.field_y != 0) {
               LegacyOpenGlCubeTexture.field_p = true;

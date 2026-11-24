@@ -124,7 +124,7 @@ abstract class AppletGameShell extends GameApplet {
             if (-1 != Trap.field_m &&
               Trap.field_m != 0) {
               Trap.field_m = -1;
-              TrapSpawner.b(true);
+              TrapSpawner.resetArchiveConnectionErrors(true);
             }
             if (param1) {
               TrackingCrusherComponent.field_G = false;
@@ -534,7 +534,7 @@ abstract class AppletGameShell extends GameApplet {
               if (0 == Transform3D.field_c) {
                 discarded$3 = this.pollLoginResponse((byte) -111, false, false);
               } else {
-                IdChatTarget.a(TermsLinksPanel.field_y, -2886);
+                IdChatTarget.pollLoginAction(TermsLinksPanel.field_y, -2886);
               }
             }
           }
@@ -653,7 +653,7 @@ abstract class AppletGameShell extends GameApplet {
           if (-1 != Trap.field_m &&
             Trap.field_m != 0) {
             Trap.field_m = -1;
-            TrapSpawner.b(true);
+            TrapSpawner.resetArchiveConnectionErrors(true);
           }
         }
         if (Trap.field_m == 0 &&

@@ -14,7 +14,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         boolean stackIn_7_0 = false;
         boolean stackIn_12_0 = false;
         boolean stackIn_17_0 = false;
-        if (RasterizerOperator.d(20125)) {
+        if (RasterizerOperator.hasDeveloperPrivileges(20125)) {
           if (1 == param2) {
             ProxySocketConnector.c((byte) -118);
             return true;

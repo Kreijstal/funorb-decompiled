@@ -159,7 +159,7 @@ final class ChatOverlay {
         if (this.panelOpen) {
           return;
         }
-        MonsterModel.j(28191);
+        MonsterModel.beginChatInputTransition(28191);
         int var2 = 4;
         int var3 = 16;
         MazeSolver.layoutChatInputPopup(SwitchLinkList.getCanvasHeight(0) >> 1, 20, var2, -5327, "", var2, var3, var3, LegacyOpenGlWaterTextures.getCanvasWidth(param0) >> 1);

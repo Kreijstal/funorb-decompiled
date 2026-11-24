@@ -14,7 +14,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         int var4 = TombRacer.field_G ? 1 : 0;
         java.awt.Canvas var2 = LegacyOpenGlRidgedWaterEffect.getActiveCanvas((byte) -97);
         if (ColourGradientOperator.isLoginFlowIncomplete(-127)) {
-          WallTile.drawLoadingScreen(PortalComponent.A(90), var2, param0 ^ 0);
+          WallTile.drawLoadingScreen(PortalComponent.isCanvasFocusedOrFullscreen(90), var2, param0 ^ 0);
           return;
         }
         if (!SocialTabbedPanelLayout.field_b) {
@@ -271,7 +271,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         if (ColourRowCacheEntry.field_f != null &&
           ColourRowCacheEntry.field_f.field_b) {
           HardwareOpenGlVertexBuffer.exitFullscreen(0);
-          RandomMazeBehaviour.b(1);
+          RandomMazeBehaviour.refreshFullscreenDialogIfOpen(1);
         }
         stackIn_5_1 = -127;
         stackIn_6_2 = (ColourRowCacheEntry.field_f != null);
@@ -288,7 +288,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         }
         this.processIncomingPackets(97);
         if (!SocialTabbedPanelLayout.field_b) {
-          IdChatTarget.a(TermsLinksPanel.field_y, -2886);
+          IdChatTarget.pollLoginAction(TermsLinksPanel.field_y, -2886);
           if (OpenGlCubeTexture.field_l.loadStep(-4171)) {
             OpenGlCubeTexture.field_l.finishLoading((byte) -49);
             SocialTabbedPanelLayout.field_b = true;

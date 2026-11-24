@@ -131,7 +131,7 @@ final class MonsterModel extends MotionTrackingModel {
         }
     }
 
-    final static void j(int param0) {
+    final static void beginChatInputTransition(int param0) {
         if (param0 != 28191) {
           return;
         }

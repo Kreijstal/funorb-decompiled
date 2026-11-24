@@ -344,7 +344,7 @@ class MidiPcmStream extends PcmStream {
             if (var3 == 224) {
               var4Lifetime1Lifetime2Lifetime2 = 15 & param0;
               var5Lifetime1Lifetime2Lifetime2 = (16256 & param0 >> 9) + ((param0 & 32646) >> 8);
-              this.a(var4Lifetime1Lifetime2Lifetime2, (byte) 109, var5Lifetime1Lifetime2Lifetime2);
+              this.setPitchBend(var4Lifetime1Lifetime2Lifetime2, (byte) 109, var5Lifetime1Lifetime2Lifetime2);
               return;
             }
             var3 = param0 & 255;
@@ -1199,7 +1199,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void setPitchBend(int param0, byte param1, int param2) {
         int discarded$0 = 0;
         this.field_D[param0] = param2;
         if (param1 <= 75) {

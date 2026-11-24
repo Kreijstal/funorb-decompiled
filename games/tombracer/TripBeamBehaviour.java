@@ -129,7 +129,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             this.field_A = stackIn_7_1;
           }
         }
-        if (this.field_C.f((byte) -56)) {
+        if (this.field_C.shouldStopBehaviour((byte) -56)) {
           this.stop(false);
           return;
         }

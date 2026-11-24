@@ -63,7 +63,7 @@ final class MonochromeFillOperator extends TextureOperator {
         return var4;
     }
 
-    final static boolean c(int param0) {
+    final static boolean isChatInputOpenForChannel(int param0) {
         if (!DynamicGeometryBuffer.field_c) {
           return false;
         }

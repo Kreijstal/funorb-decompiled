@@ -17756,6 +17756,14 @@
       "renamedSymbol": "M:MonsterModel.getModelHeading(I)I"
     },
     {
+      "symbol": "M:aka.j(I)V",
+      "originalName": "j",
+      "to": "beginChatInputTransition",
+      "evidence": "Begin chat-input transition using original five retained widgets through existing transition helper. Preserve int28191gate before all widget reads,exact order and identities,constant0and no additional popup opening,focus changes or allocation. Complete original-body SHA256 e440d29a42447147bcd26614333a7730818264946ad2fd5055309f09745cf7e0. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MonsterModel.beginChatInputTransition(I)V"
+    },
+    {
       "symbol": "M:aka.o(B)V",
       "originalName": "o",
       "to": "releaseStatics",
@@ -18906,6 +18914,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ava.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:ava.a(IIII)Lava;",
+      "originalName": "a",
+      "to": "copyWithVertices",
+      "evidence": "Copy triangle attachment with supplied replacement vertex indices while retaining kind and byte priority. Decoder obtains vertices from face arrays;merge constructor remaps those exact indices. Preserve full-int0guard early null return,constructor argument permutation kind,param3,param1,param2,priority,new allocation and reference/exception order. Original class/constructor names and native-facing field descriptors remain unchanged. Complete original-body SHA256 aa6072c5307922ad40bd50d3276bbc563cff016239e06b5ec1b56b895471084d. Naming only. Three complete original bodies,four compiler-bound incoming calls,twelve field declarations/ten owned,two unchanged supporting classes and six constructor/model-remap/raster witnesses reviewed. Preserve descriptors,all integer/byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,allocation/call/exception order,reference aliases and partial writes. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ava.copyWithVertices(IIII)Lava;"
     },
     {
       "symbol": "M:ava.a(Liv;IIZI)V",
@@ -21578,6 +21594,14 @@
       "evidence": "TextInputWidget calls it from notifySubmitted whenever the text is typed, set or cleared.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextInputListener.onTextChanged(LTextInputWidget;I)V"
+    },
+    {
+      "symbol": "M:cda.a(IZ)V",
+      "originalName": "a",
+      "to": "showCurrentScreenMenu",
+      "evidence": "Show menu selected by current GameScreen's retained menu ID through existing showMenuScreen helper. Preserve Boolean forwarding and current-screen dereference before late full-int!=0self-recursion with50,false,including repeated menu changes and failures;do not cache screen/menu ID or discard guard. Complete original-body SHA256 33d0dab9c7639915c648881f9c7c85a93258f93eab23e32619ba54b8bec386af. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MotionTrackingModel.showCurrentScreenMenu(IZ)V"
     },
     {
       "symbol": "M:cda.a(Z)Z",
@@ -29204,6 +29228,14 @@
       "renamedSymbol": "M:EffectSwitchBehaviour.hashState(II)I"
     },
     {
+      "symbol": "M:eia.a(IIII)V",
+      "originalName": "a",
+      "to": "configureChargeMeter",
+      "evidence": "Configure effect-switch charge meter capacity,per-tick decay and activation threshold. Tick decrements charge by decay,clamps to0/capacityand compares threshold;white-light sensor/cauldron use10,1,5. Preserve int-2029gate before writes and assignment order capacity=param0,decay=param1,threshold=param2,all signed/overflow values and no live charge reset. Complete original-body SHA256 a67d1100cdd59cba053d32e677ddf25e01cbe61d035d570b56d4eff6053cc78c. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:EffectSwitchBehaviour.configureChargeMeter(IIII)V"
+    },
+    {
       "symbol": "M:eia.a(IILup;IBI)I",
       "originalName": "a",
       "to": "onAreaEffect",
@@ -30506,6 +30538,14 @@
       "evidence": "Unbinds the current texture. Body matches sumoblitz DirectXGraphicsToolkit.unbindTexture. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HardwareGraphicsToolkit.unbindTexture(I)V"
+    },
+    {
+      "symbol": "M:eo.d(II)Z",
+      "originalName": "d",
+      "to": "hasMultiplePlayers",
+      "evidence": "Report whether supplied player count is at least2. Actual multiplayer lobby supplies current game's player count. Preserve leading full-int guard arithmetic74/((-6-param0)/32),including integer overflow/divide-by-zero before comparison,all signed player counts and exact >=2test;do not add minimum-player enforcement. Complete original-body SHA256 754cba649bd7cb10f2226a42fb49606f2ac042b07f79c3b8283a74b2b7217b07. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareGraphicsToolkit.hasMultiplePlayers(II)Z"
     },
     {
       "symbol": "M:eo.d(IIIIII)V",
@@ -32002,6 +32042,14 @@
       "evidence": "Abstract advance by a sample count without mixing. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiVoiceMixer.skip(I)V"
+    },
+    {
+      "symbol": "M:et.a(III)V",
+      "originalName": "a",
+      "to": "writeLeaveOrDeclineGameRequest",
+      "evidence": "Write game cancellation/leave/decline request. Context action3uses both Decline invitation and Withdraw request labels;current-game exit wrapper uses same writer with game ID. Preserve buffer lookup,ciphered opcode,byte3length,command9,then short target ID with original guard XOR expressions,param1^param1andparam1^-1477662122,all integer domains,truncation and partial packet writes. Complete original-body SHA256 eb8ac390edce9df54057bbee96305db27a3ae824f8af6b1674822daec7697ed2. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiVoiceMixer.writeLeaveOrDeclineGameRequest(III)V"
     },
     {
       "symbol": "M:et.a(IILrta;)V",
@@ -33626,6 +33674,14 @@
       "evidence": "MatchScreen opens chat input on Enter when the current phase allows it. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayPhase.allowsChat(I)Z"
+    },
+    {
+      "symbol": "M:fja.f(I)V",
+      "originalName": "f",
+      "to": "suppressRoundStartBanner",
+      "evidence": "Suppress pending round-start banner by clearing PlayPhase flag checked before showRoundStartBannerwhen match awaits first tick. Constructor uses this in existing nonstandard game mode. Preserve flag write before full-int!=16handleKeycall with original character and integers,including recursive/input effects and partial state;no banner timing change. Complete original-body SHA256 b564cbf0423f6578b672fd5aeb5cf72e4907d8d875523d06ec03506efa816629. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayPhase.suppressRoundStartBanner(I)V"
     },
     {
       "symbol": "M:fja.g(I)V",
@@ -41364,6 +41420,14 @@
       "renamedSymbol": "M:LobbyGameWidget.getGameId(I)I"
     },
     {
+      "symbol": "M:ht.g(I)Z",
+      "originalName": "g",
+      "to": "isRemovedFromLobby",
+      "evidence": "Report game row removed from active lobby queue by negating existing secondary-link membership. Game-row rendering/action gating uses same result. Preserve full-int!=0earlyfalse before membership call and param0^0forwarding;retain reference identity and fresh/unlinked-instance behavior without introducing additional removed flags. Complete original-body SHA256 6ccda83648c29437fb6a141a5c2b2b8e48ec38498f17b0edc925854d579c7cf5. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LobbyGameWidget.isRemovedFromLobby(I)Z"
+    },
+    {
       "symbol": "M:hu.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -43066,6 +43130,14 @@
       "evidence": "Dispatch the filled raster circle to existing clipped or contained core according to all four original inclusive bounds. Preserve argument permutations,overflow/negative-radius behavior,full-int30237guard and recursive wrong-guard path after rendering. Complete original-body SHA256 cd39a385929eb760747604455e68e3b0c1a47f76841770cbf16e3eb94eb7a6f2. Naming only. Complete original body and all21bound incoming-call contexts,72field declarations,eight supporting classes and seven unchanged gamma/size/curve/circle/rights/rounded-rectangle witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ToolkitInstance.fillCircle(IIIII)V"
+    },
+    {
+      "symbol": "M:iqa.a(IIIZ)V",
+      "originalName": "a",
+      "to": "updateQuickChatHelpAndMenu",
+      "evidence": "Update quick-chat help dismissal then quick-chat menu layout/input with supplied Boolean and coordinates. Preserve exact forwarding to processQuickChatHelp(Boolean,true),then layoutQuickChatMenu(param2,byte95,Boolean,param1),followed by late -97/((param0-63)/38)division. Keep all full-int values and effects before possible arithmetic failure. Complete original-body SHA256 b066045498a953902d6ecc518dc6734d54f6cc0596bf2746218b12c5b3dfc4c5. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V"
     },
     {
       "symbol": "M:ir.a(B)V",
@@ -45764,6 +45836,14 @@
       "renamedSymbol": "M:SwitchState.releaseStatics(I)V"
     },
     {
+      "symbol": "M:jma.f(B)Z",
+      "originalName": "f",
+      "to": "shouldStopBehaviour",
+      "evidence": "Query whether switch-owning behavior should stop. All seven bound tick callers invoke Behaviour.stop(false)when true;original normal byte-56returns false and other bytes return true. Preserve complete byte domain and constant results,without adding a stop flag,state reads or mutating associated behavior. Complete original-body SHA256 ba3d6835b32657f91eeac2d9ef309def196aec22fa3d4e483825f18347e178ad. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SwitchState.shouldStopBehaviour(B)Z"
+    },
+    {
       "symbol": "M:jma.f(I)V",
       "originalName": "f",
       "to": "beginPress",
@@ -47034,6 +47114,14 @@
       "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: restores coordinate precision with original(+7)>>4, refreshes software lighting if dirty and invalidates position/bounds as implemented. Preserve lazy flags, exact rounding, debug loops and release ordering. Abstract declaration and animation/position callers reviewed; keep abstract contract and all implementations consistent.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ToolkitModel.finishAnimation()V"
+    },
+    {
+      "symbol": "M:kaa.a(B)V",
+      "originalName": "a",
+      "to": "beginPublicChatInput",
+      "evidence": "Begin public typed chat input by setting channel0and opening existing chat-input popup. Context action14uses this helper;RidgedNoise3Dpopup updater uses same Boolean to gate layout and clears it on cancel/send. Preserve channel write before popup-open flagtrueand byte<=31copyByteRange(-119,null,-9)call,all byte values and partial state before failure;do not add layout or send a message here. Complete original-body SHA256 fb029271bb78a8e9ebca08a49f12abe6a8a1d9489ae4d69d91a39ea2b904e8d7. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LinkPainter.beginPublicChatInput(B)V"
     },
     {
       "symbol": "M:kaa.a(IIZ)Z",
@@ -49948,6 +50036,14 @@
       "renamedSymbol": "M:MidiPcmStream.setMasterVolume(IB)V"
     },
     {
+      "symbol": "M:l.a(IBI)V",
+      "originalName": "a",
+      "to": "setPitchBend",
+      "evidence": "Set raw per-channel MIDI pitch bend. E0message handler forwards decoded bend;reset centers same array at8192and computeNoteSampleStep applies bend-minus8192times range. Preserve array assignment before byte<=75voicePan(-126,null)call,all channel/value/byte domains,bounds/null failures and partial state;no normalization or clamping. Complete original-body SHA256 7792a921e10bddb624956b2ac6a4d4ae0227f4a12e69c8b8067d99c403350031. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setPitchBend(IBI)V"
+    },
+    {
       "symbol": "M:l.a(IBII)V",
       "originalName": "a",
       "to": "handlePolyphonicPressure",
@@ -51994,6 +52090,14 @@
       "evidence": "Writes type, position, size, both flags and the VariantMask.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RoomRegion.encode(BLBitPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:lk.a(I)Z",
+      "originalName": "a",
+      "to": "isRegionExpired",
+      "evidence": "Query region expiration used by RoomRegion.isRenderExpired. Original region never expires and returns false on both int<65and other paths. Preserve full-int guard structure and both false returns;no lifetime counters,link checks or region removal added. Complete original-body SHA256 fe59bf051d037d09335fca3402f0489c839c22bd4edaad4134d78800b7bb0a9a. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoomRegion.isRegionExpired(I)Z"
     },
     {
       "symbol": "M:lk.a(II)V",
@@ -55916,6 +56020,14 @@
       "renamedSymbol": "M:MonochromeFillOperator.decodeParameter(BLPacketBuffer;I)V"
     },
     {
+      "symbol": "M:nga.c(I)Z",
+      "originalName": "c",
+      "to": "isChatInputOpenForChannel",
+      "evidence": "Report whether typed chat-input popup is open for supplied channel. Existing popup updater establishes retained Boolean role. Preserve closed-popup earlyfalse before channel lookup,exact int comparison and original return branches;do not normalize channel IDs or conflate with recipient identity. Complete original-body SHA256 c3044a9066f8f31c89c2fb6e650254bccb73ed8cf957a2f0df73ec468f3f311d. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MonochromeFillOperator.isChatInputOpenForChannel(I)Z"
+    },
+    {
       "symbol": "M:nga.c(II)[I",
       "originalName": "c",
       "to": "getMonochromeRow",
@@ -58884,6 +58996,14 @@
       "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.initialize(B)Z"
     },
     {
+      "symbol": "M:oga.a(I)Z",
+      "originalName": "a",
+      "to": "requiresDepthTexture",
+      "evidence": "Report whether post-process effect requires sampleable depth texture. Chain eagerly ORs query results and selects GL_DEPTH_COMPONENT6402texture versus renderbuffer and depth blit. Original implementation returns false. Preserve full-int!=1enabled=truewrite before false return,all enabled-state effects and eager caller evaluation;no depth allocation or native method rename added. Complete original-body SHA256 1e37d7081d155b036b9b2759132c4a48f0d843b42c49ebeb1075328b88985902. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.requiresDepthTexture(I)Z"
+    },
+    {
       "symbol": "M:oga.a(IB)V",
       "originalName": "a",
       "to": "endPass",
@@ -58938,6 +59058,14 @@
       "evidence": "True once the pass's resources exist.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.isInitialized(B)Z"
+    },
+    {
+      "symbol": "M:oga.c(I)I",
+      "originalName": "c",
+      "to": "getRenderPassCount",
+      "evidence": "Return number of render passes for legacy OpenGL post-process effect. Actual chain calls apply once per returned pass and sums pass counts independently of existing color-format precision query. Preserve full-int1return1and all other inputs return-49,with no change to distinct existing getPassCountalias or any overrides. Complete original-body SHA256 31cc74f020d6e105a24be79bccca3c0a0a0b56b0bfd98937c6841d83aa577032. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.getRenderPassCount(I)I"
     },
     {
       "symbol": "M:oga.d(B)V",
@@ -61628,6 +61756,14 @@
       "renamedSymbol": "M:LobbyPlayerEntry.releaseStatics(B)V"
     },
     {
+      "symbol": "M:pha.f(I)Z",
+      "originalName": "f",
+      "to": "isRemovedFromLobby",
+      "evidence": "Report player row removed from active lobby queue by negating existing secondary-link membership. Inbound removal unlinks that queue while row remains for removal rendering;active row/action consumers use result. Preserve full-int!=162earlyfalse before link access,exact membership call guard0,including fresh/unlinked instances;do not unlink or mutate here. Complete original-body SHA256 522ee33de82e23a7f69c6fbf48a3f41ae2857b2075413d507c1c8c6af0b772e0. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LobbyPlayerEntry.isRemovedFromLobby(I)Z"
+    },
+    {
       "symbol": "M:pi.a(I)I",
       "originalName": "a",
       "to": "getCourse",
@@ -62978,6 +63114,14 @@
       "evidence": "Returns the collidable stored in the grid entry.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CollisionGridEntry.getCollidable(B)LCollidable;"
+    },
+    {
+      "symbol": "M:q.a(BII)V",
+      "originalName": "a",
+      "to": "writeJoinOrAcceptGameRequest",
+      "evidence": "Write join-or-accept-game request. Context action2uses accept-invitation or join labels. Preserve buffer lookup,ciphered opcode,byte3length,command8and target short;byte<-100normal path versus late field_r=truebefore duplicated short write for other byte values. Preserve all IDs/opcodes,short truncation and partial buffer state. Complete original-body SHA256 5ede8492e970a77c2dce528a5e424929a692a92c8def36a7e6acbb9bc0b19036. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CollisionGridEntry.writeJoinOrAcceptGameRequest(BII)V"
     },
     {
       "symbol": "M:q.a(CI)Z",
@@ -65268,6 +65412,14 @@
       "renamedSymbol": "M:SingleChildWidget.handleKeyInput(CLUiWidget;IZ)Z"
     },
     {
+      "symbol": "M:qr.a(I)Z",
+      "originalName": "a",
+      "to": "isUiInputActive",
+      "evidence": "Determine UI input-active state for lobby overlays:fullscreen-or-focus predicate must pass and existing flag8must be clear. Preserve full-int!=0earlytrue before global reads,predicate call guardparam0^108,mask literal8and short circuit. Do not hardcode canvas focus or change original control-flag interpretation. Complete original-body SHA256 4a9b3fa2fd7326ae318ac260c71c00b7599cd1c3cd74970019ba2df224e24e53. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SingleChildWidget.isUiInputActive(I)Z"
+    },
+    {
       "symbol": "M:qr.a(IIII)V",
       "originalName": "a",
       "to": "renderLayer",
@@ -65772,6 +65924,14 @@
       "renamedSymbol": "M:NativeResourceNodeBase.createFullscreenCanvas(IIILPlatformTaskDispatcher;II)LFullscreenCanvas;"
     },
     {
+      "symbol": "M:r.a(IZ)V",
+      "originalName": "a",
+      "to": "leaveGameOrStopSpectating",
+      "evidence": "Leave current game or stop spectating:inputBooleantruewrites spectate request for ID0and returns;falsecancels current game if retained game exists,then sets retained return-to-menu flagtrue. Preserve full-int!=0String nulling before duplicated branch,full-int XOR passed to getGameId,all repeated game-reference reads,queue/buffer writes,short circuits and partial failures. Complete original-body SHA256 07fe6e935ac09424771e52004b3ea818e5c5c29b4488bb2eb10b93a12639bd74. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeResourceNodeBase.leaveGameOrStopSpectating(IZ)V"
+    },
+    {
       "symbol": "M:r.f(I)I",
       "originalName": "f",
       "to": "packSettings",
@@ -66138,6 +66298,14 @@
       "evidence": "Only nulls static fields, like the other releaseStatics cleanup methods.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RasterizerOperator.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:rda.d(I)Z",
+      "originalName": "d",
+      "to": "hasDeveloperPrivileges",
+      "evidence": "Test server-supplied privilege level>=2used for developer/debug controls. Login response sets same level;key handlers gate zoom/debug options with this query. Preserve full-int!=20125earlytrue before field access and exact signed comparison without treating wrong guard as normal permissions validation. Complete original-body SHA256 004008950de9fa22c0fc5f941ec032ef9d00a6336176740e4b9e8cfe11ae314d. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RasterizerOperator.hasDeveloperPrivileges(I)Z"
     },
     {
       "symbol": "M:rda.e(I)V",
@@ -66546,6 +66714,22 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:rga.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:rga.a(II)Lrga;",
+      "originalName": "a",
+      "to": "copyWithVertex",
+      "evidence": "Copy vertex attachment with supplied replacement vertex while retaining original attachment kind. Model decoder and merged-model remap confirm role. Preserve wrong-full-int!=0copyModel(null,byte71,47)call before allocating,new object identity,all integer values and constructor order. Original class/constructor names and native-facing field descriptors remain unchanged. Complete original-body SHA256 eaf9b11304cde57ddfd21399a1eb63be1131825f25b35e81178e5099a10b5c3f. Naming only. Three complete original bodies,four compiler-bound incoming calls,twelve field declarations/ten owned,two unchanged supporting classes and six constructor/model-remap/raster witnesses reviewed. Preserve descriptors,all integer/byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,allocation/call/exception order,reference aliases and partial writes. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rga.copyWithVertex(II)Lrga;"
+    },
+    {
+      "symbol": "M:rga.a(IIIIIIII)V",
+      "originalName": "a",
+      "to": "fillBorderedRectangleRows",
+      "evidence": "Fill unclipped bordered rectangle in original raster rows:top band,bottom band,then middle rows with left border,interior colour and right border. Existing clipping dispatcher and row-fill helper confirm role. Preserve all eight full-int domains,exact inclusive row/exclusive horizontal bounds,thickness arithmetic and overflow,top writes before guard<=97static-release,bottom writes then middle writes,aliases/partial writes,array exceptions and diagnostic wrapper. Do not add clipping,normalize bounds or assume positive thickness. Complete original-body SHA256 832da65fe2eda34ef25487f0c6175730633be6baa62dd9a58ac9ad842dde9acf. Naming only. Three complete original bodies,four compiler-bound incoming calls,twelve field declarations/ten owned,two unchanged supporting classes and six constructor/model-remap/raster witnesses reviewed. Preserve descriptors,all integer/byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,allocation/call/exception order,reference aliases and partial writes. No native/class-name-literal edits;no whole-runtime or pixel equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rga.fillBorderedRectangleRows(IIIIIIII)V"
     },
     {
       "symbol": "M:rga.a(ILjava/lang/String;C)[Ljava/lang/String;",
@@ -68074,6 +68258,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountCreationDialog.releaseStatics(Z)V"
+    },
+    {
+      "symbol": "M:rua.h(Z)V",
+      "originalName": "h",
+      "to": "showIneligibleAccountFailure",
+      "evidence": "Show account-ineligibility failure through existing account-service dialog result helper with category7and freshly created failure reply code248. Exact literal says user is not eligible to create an account,and cookie-based ineligibility path invokes helper. Preserve Boolean forwarding,failure-reply allocation/evaluation before result call,nulls and call/exception order. Complete original-body SHA256 e18cd82c3839280a43888bbfc8753bcfd551eee1a6af58cc691f857f6fc6140d. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationDialog.showIneligibleAccountFailure(Z)V"
     },
     {
       "symbol": "M:rv.a(I)V",
@@ -71450,6 +71642,14 @@
       "evidence": "Returns the channel type whose code ChatOverlay writes for this target. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IdChatTarget.getChannelType(B)LChatChannelType;"
+    },
+    {
+      "symbol": "M:tc.a(II)V",
+      "originalName": "a",
+      "to": "pollLoginAction",
+      "evidence": "Poll existing queued login-action consumer only for second full-int argument-2886,using original -93guard and discarding return. Preserve unused first argument,early return and exact polling call count;do not replace with non-consuming state peek or change socket/login progression. Complete original-body SHA256 859149c75ab2697aed287a06f72e9c77b850101a07a3b5af24b3ec951855ad7a. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IdChatTarget.pollLoginAction(II)V"
     },
     {
       "symbol": "M:tc.a(Luia;Z)V",
@@ -76956,6 +77156,14 @@
       "renamedSymbol": "M:RandomMazeBehaviour.setUseMazeGridCollision(BZ)V"
     },
     {
+      "symbol": "M:vd.b(I)V",
+      "originalName": "b",
+      "to": "refreshFullscreenDialogIfOpen",
+      "evidence": "Refresh fullscreen dialog layout only when existing fullscreen-dialog-open predicate succeeds. Forward supplied full-int argument with falseand4to existing builder. Preserve predicate before builder invocation,early return and all guard-dependent builder behavior;no browser/fullscreen implementation change. Complete original-body SHA256 ed754b86694cc6d14ea65b08166f4770a5f11a42bf94627a6451b481fd43db0c. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RandomMazeBehaviour.refreshFullscreenDialogIfOpen(I)V"
+    },
+    {
       "symbol": "M:vd.b(II)I",
       "originalName": "b",
       "to": "floorLog2Magnitude",
@@ -77588,6 +77796,14 @@
       "renamedSymbol": "M:TrapSpawner.getRendererMode(I)LRendererMode;"
     },
     {
+      "symbol": "M:vja.b(Z)V",
+      "originalName": "b",
+      "to": "resetArchiveConnectionErrors",
+      "evidence": "Reset archive connection failure count and last error code to0on retained ArchiveNetworkClient. Poller reads failure count>=4and last-code values to choose connection errors;login/reconnect callers reset both. Preserve two separate volatile writes and repeated client-reference reads in original order,then Booleanfalse sleepMillis(-52,-43L)call even though negative duration returns;no queue/socket reset added. Complete original-body SHA256 7b076656f8d6fe9f59d9ac4fdefd3f245a1c112314b2eaf6121f5b519f6643af. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrapSpawner.resetArchiveConnectionErrors(Z)V"
+    },
+    {
       "symbol": "M:vk.a(B)Lmva;",
       "originalName": "a",
       "to": "create",
@@ -77626,6 +77842,14 @@
       "evidence": "Drain key events through retained menu navigation/activation,track key13,then map pointer coordinates and return the original selected action. Preserve wrong-full-int<53return95AFTERkey draining butBEFOREpointer work,action2/5or key13cleanup conditions,mode2/no-action countdown using10999L-elapsed and integer division/cast,and original action2plus dialog-rebuild order on expiry. Preserve every input/clock/global-state call and exception order. Complete original-body SHA256 b2e0a411f78cf20635debe881047a40ab94dd0455f3bd71c193e60468764a05c. Naming only. Complete original body and all9bound incoming-call contexts,113field declarations,five supporting classes and eleven map/menu/packet/ignore/formatter witnesses,including the complete unchanged full-int formatter body reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CourseLayoutFactory.pollMenuAction(I)I"
+    },
+    {
+      "symbol": "M:vka.A(I)Z",
+      "originalName": "A",
+      "to": "isCanvasFocusedOrFullscreen",
+      "evidence": "Report active fullscreen canvas or snapshotted AWT canvas focus. GameApplet focus callbacks write source flag and runUpdateTickcopies it under synchronization;non-null fullscreen canvas short-circuits snapshot. Preserve full-int<=57long-array nulling before lookup,repeated field accesses and original snapshot semantics;do not replace with live AWT focus call. Complete original-body SHA256 f74cb43941682600e911ec5a37a836f46ff3302d5f747df47b9f59cac9708119. Naming only.25complete original bodies,all58compiler-bound callers,380field declarations/361owned,24supporting classes and28purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PortalComponent.isCanvasFocusedOrFullscreen(I)Z"
     },
     {
       "symbol": "M:vka.a(ZILla;)Lfsa;",
@@ -250643,7 +250867,7 @@
     },
     {
       "symbol": "L:eo.d(II)Z#0",
-      "renamedSymbol": "L:HardwareGraphicsToolkit.d(II)Z#0",
+      "renamedSymbol": "L:HardwareGraphicsToolkit.hasMultiplePlayers(II)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -255340,7 +255564,7 @@
     },
     {
       "symbol": "L:et.a(III)V#0",
-      "renamedSymbol": "L:MidiVoiceMixer.a(III)V#0",
+      "renamedSymbol": "L:MidiVoiceMixer.writeLeaveOrDeclineGameRequest(III)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -328523,7 +328747,7 @@
     },
     {
       "symbol": "L:iqa.a(IIIZ)V#0",
-      "renamedSymbol": "L:ToolkitInstance.a(IIIZ)V#0",
+      "renamedSymbol": "L:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -353438,7 +353662,7 @@
     },
     {
       "symbol": "L:kaa.a(B)V#0",
-      "renamedSymbol": "L:LinkPainter.a(B)V#0",
+      "renamedSymbol": "L:LinkPainter.beginPublicChatInput(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -379310,7 +379534,7 @@
     },
     {
       "symbol": "L:l.a(IBI)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(IBI)V#0",
+      "renamedSymbol": "L:MidiPcmStream.setPitchBend(IBI)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -452680,7 +452904,7 @@
     },
     {
       "symbol": "L:q.a(BII)V#0",
-      "renamedSymbol": "L:CollisionGridEntry.a(BII)V#0",
+      "renamedSymbol": "L:CollisionGridEntry.writeJoinOrAcceptGameRequest(BII)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -467585,7 +467809,7 @@
     },
     {
       "symbol": "L:qr.a(I)Z#0",
-      "renamedSymbol": "L:SingleChildWidget.a(I)Z#0",
+      "renamedSymbol": "L:SingleChildWidget.isUiInputActive(I)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -482710,7 +482934,7 @@
     },
     {
       "symbol": "L:rga.a(II)Lrga;#0",
-      "renamedSymbol": "L:rga.a(II)Lrga;#0",
+      "renamedSymbol": "L:rga.copyWithVertex(II)Lrga;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -482721,7 +482945,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#0",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#0",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -482732,7 +482956,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#1",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#1",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#1",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -482743,7 +482967,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#10",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#10",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#10",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -482754,7 +482978,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#11",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#11",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -482765,7 +482989,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#2",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#2",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -482776,7 +483000,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#3",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#3",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -482787,7 +483011,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#4",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#4",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -482798,7 +483022,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#5",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#5",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -482809,7 +483033,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#6",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#6",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -482820,7 +483044,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#7",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#7",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -482831,7 +483055,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#8",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#8",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#8",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -482842,7 +483066,7 @@
     },
     {
       "symbol": "L:rga.a(IIIIIIII)V#9",
-      "renamedSymbol": "L:rga.a(IIIIIIII)V#9",
+      "renamedSymbol": "L:rga.fillBorderedRectangleRows(IIIIIIII)V#9",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -592523,9 +592747,9 @@
     },
     {
       "symbol": "M:aka.j(I)V",
-      "renamedSymbol": "M:MonsterModel.j(I)V",
+      "renamedSymbol": "M:MonsterModel.beginChatInputTransition(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "beginChatInputTransition",
       "declaration": {
         "file": "aka.java",
         "start": 4465,
@@ -594371,9 +594595,9 @@
     },
     {
       "symbol": "M:ava.a(IIII)Lava;",
-      "renamedSymbol": "M:ava.a(IIII)Lava;",
+      "renamedSymbol": "M:ava.copyWithVertices(IIII)Lava;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyWithVertices",
       "declaration": {
         "file": "ava.java",
         "start": 220,
@@ -598804,9 +599028,9 @@
     },
     {
       "symbol": "M:cda.a(IZ)V",
-      "renamedSymbol": "M:MotionTrackingModel.a(IZ)V",
+      "renamedSymbol": "M:MotionTrackingModel.showCurrentScreenMenu(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showCurrentScreenMenu",
       "declaration": {
         "file": "cda.java",
         "start": 6755,
@@ -610453,9 +610677,9 @@
     },
     {
       "symbol": "M:eia.a(IIII)V",
-      "renamedSymbol": "M:EffectSwitchBehaviour.a(IIII)V",
+      "renamedSymbol": "M:EffectSwitchBehaviour.configureChargeMeter(IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureChargeMeter",
       "declaration": {
         "file": "eia.java",
         "start": 1592,
@@ -612356,9 +612580,9 @@
     },
     {
       "symbol": "M:eo.d(II)Z",
-      "renamedSymbol": "M:HardwareGraphicsToolkit.d(II)Z",
+      "renamedSymbol": "M:HardwareGraphicsToolkit.hasMultiplePlayers(II)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "hasMultiplePlayers",
       "declaration": {
         "file": "eo.java",
         "start": 10308,
@@ -614567,9 +614791,9 @@
     },
     {
       "symbol": "M:et.a(III)V",
-      "renamedSymbol": "M:MidiVoiceMixer.a(III)V",
+      "renamedSymbol": "M:MidiVoiceMixer.writeLeaveOrDeclineGameRequest(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeLeaveOrDeclineGameRequest",
       "declaration": {
         "file": "et.java",
         "start": 13669,
@@ -617053,9 +617277,9 @@
     },
     {
       "symbol": "M:fja.f(I)V",
-      "renamedSymbol": "M:PlayPhase.f(I)V",
+      "renamedSymbol": "M:PlayPhase.suppressRoundStartBanner(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "suppressRoundStartBanner",
       "declaration": {
         "file": "fja.java",
         "start": 12872,
@@ -629329,9 +629553,9 @@
     },
     {
       "symbol": "M:ht.g(I)Z",
-      "renamedSymbol": "M:LobbyGameWidget.g(I)Z",
+      "renamedSymbol": "M:LobbyGameWidget.isRemovedFromLobby(I)Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "isRemovedFromLobby",
       "declaration": {
         "file": "ht.java",
         "start": 5421,
@@ -632244,9 +632468,9 @@
     },
     {
       "symbol": "M:iqa.a(IIIZ)V",
-      "renamedSymbol": "M:ToolkitInstance.a(IIIZ)V",
+      "renamedSymbol": "M:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateQuickChatHelpAndMenu",
       "declaration": {
         "file": "iqa.java",
         "start": 633,
@@ -640406,9 +640630,9 @@
     },
     {
       "symbol": "M:jma.f(B)Z",
-      "renamedSymbol": "M:SwitchState.f(B)Z",
+      "renamedSymbol": "M:SwitchState.shouldStopBehaviour(B)Z",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "shouldStopBehaviour",
       "declaration": {
         "file": "jma.java",
         "start": 6673,
@@ -642694,9 +642918,9 @@
     },
     {
       "symbol": "M:kaa.a(B)V",
-      "renamedSymbol": "M:LinkPainter.a(B)V",
+      "renamedSymbol": "M:LinkPainter.beginPublicChatInput(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "beginPublicChatInput",
       "declaration": {
         "file": "kaa.java",
         "start": 1360,
@@ -647314,9 +647538,9 @@
     },
     {
       "symbol": "M:l.a(IBI)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IBI)V",
+      "renamedSymbol": "M:MidiPcmStream.setPitchBend(IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setPitchBend",
       "declaration": {
         "file": "l.java",
         "start": 43840,
@@ -650405,9 +650629,9 @@
     },
     {
       "symbol": "M:lk.a(I)Z",
-      "renamedSymbol": "M:RoomRegion.a(I)Z",
+      "renamedSymbol": "M:RoomRegion.isRegionExpired(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isRegionExpired",
       "declaration": {
         "file": "lk.java",
         "start": 402,
@@ -656807,9 +657031,9 @@
     },
     {
       "symbol": "M:nga.c(I)Z",
-      "renamedSymbol": "M:MonochromeFillOperator.c(I)Z",
+      "renamedSymbol": "M:MonochromeFillOperator.isChatInputOpenForChannel(I)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "isChatInputOpenForChannel",
       "declaration": {
         "file": "nga.java",
         "start": 1988,
@@ -661537,9 +661761,9 @@
     },
     {
       "symbol": "M:oga.a(I)Z",
-      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.a(I)Z",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.requiresDepthTexture(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requiresDepthTexture",
       "declaration": {
         "file": "oga.java",
         "start": 650,
@@ -661625,9 +661849,9 @@
     },
     {
       "symbol": "M:oga.c(I)I",
-      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.c(I)I",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.getRenderPassCount(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getRenderPassCount",
       "declaration": {
         "file": "oga.java",
         "start": 1110,
@@ -665959,9 +666183,9 @@
     },
     {
       "symbol": "M:pha.f(I)Z",
-      "renamedSymbol": "M:LobbyPlayerEntry.f(I)Z",
+      "renamedSymbol": "M:LobbyPlayerEntry.isRemovedFromLobby(I)Z",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "isRemovedFromLobby",
       "declaration": {
         "file": "pha.java",
         "start": 2466,
@@ -668291,9 +668515,9 @@
     },
     {
       "symbol": "M:q.a(BII)V",
-      "renamedSymbol": "M:CollisionGridEntry.a(BII)V",
+      "renamedSymbol": "M:CollisionGridEntry.writeJoinOrAcceptGameRequest(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeJoinOrAcceptGameRequest",
       "declaration": {
         "file": "q.java",
         "start": 218,
@@ -671833,9 +672057,9 @@
     },
     {
       "symbol": "M:qr.a(I)Z",
-      "renamedSymbol": "M:SingleChildWidget.a(I)Z",
+      "renamedSymbol": "M:SingleChildWidget.isUiInputActive(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isUiInputActive",
       "declaration": {
         "file": "qr.java",
         "start": 22087,
@@ -672658,9 +672882,9 @@
     },
     {
       "symbol": "M:r.a(IZ)V",
-      "renamedSymbol": "M:NativeResourceNodeBase.a(IZ)V",
+      "renamedSymbol": "M:NativeResourceNodeBase.leaveGameOrStopSpectating(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "leaveGameOrStopSpectating",
       "declaration": {
         "file": "r.java",
         "start": 169,
@@ -673307,9 +673531,9 @@
     },
     {
       "symbol": "M:rda.d(I)Z",
-      "renamedSymbol": "M:RasterizerOperator.d(I)Z",
+      "renamedSymbol": "M:RasterizerOperator.hasDeveloperPrivileges(I)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "hasDeveloperPrivileges",
       "declaration": {
         "file": "rda.java",
         "start": 7671,
@@ -673956,9 +674180,9 @@
     },
     {
       "symbol": "M:rga.a(II)Lrga;",
-      "renamedSymbol": "M:rga.a(II)Lrga;",
+      "renamedSymbol": "M:rga.copyWithVertex(II)Lrga;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyWithVertex",
       "declaration": {
         "file": "rga.java",
         "start": 5233,
@@ -673967,9 +674191,9 @@
     },
     {
       "symbol": "M:rga.a(IIIIIIII)V",
-      "renamedSymbol": "M:rga.a(IIIIIIII)V",
+      "renamedSymbol": "M:rga.fillBorderedRectangleRows(IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fillBorderedRectangleRows",
       "declaration": {
         "file": "rga.java",
         "start": 2294,
@@ -676453,9 +676677,9 @@
     },
     {
       "symbol": "M:rua.h(Z)V",
-      "renamedSymbol": "M:AccountCreationDialog.h(Z)V",
+      "renamedSymbol": "M:AccountCreationDialog.showIneligibleAccountFailure(Z)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "showIneligibleAccountFailure",
       "declaration": {
         "file": "rua.java",
         "start": 1256,
@@ -681920,9 +682144,9 @@
     },
     {
       "symbol": "M:tc.a(II)V",
-      "renamedSymbol": "M:IdChatTarget.a(II)V",
+      "renamedSymbol": "M:IdChatTarget.pollLoginAction(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollLoginAction",
       "declaration": {
         "file": "tc.java",
         "start": 3077,
@@ -690610,9 +690834,9 @@
     },
     {
       "symbol": "M:vd.b(I)V",
-      "renamedSymbol": "M:RandomMazeBehaviour.b(I)V",
+      "renamedSymbol": "M:RandomMazeBehaviour.refreshFullscreenDialogIfOpen(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "refreshFullscreenDialogIfOpen",
       "declaration": {
         "file": "vd.java",
         "start": 25340,
@@ -691655,9 +691879,9 @@
     },
     {
       "symbol": "M:vja.b(Z)V",
-      "renamedSymbol": "M:TrapSpawner.b(Z)V",
+      "renamedSymbol": "M:TrapSpawner.resetArchiveConnectionErrors(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetArchiveConnectionErrors",
       "declaration": {
         "file": "vja.java",
         "start": 3483,
@@ -691743,9 +691967,9 @@
     },
     {
       "symbol": "M:vka.A(I)Z",
-      "renamedSymbol": "M:PortalComponent.A(I)Z",
+      "renamedSymbol": "M:PortalComponent.isCanvasFocusedOrFullscreen(I)Z",
       "originalName": "A",
-      "renamedName": "A",
+      "renamedName": "isCanvasFocusedOrFullscreen",
       "declaration": {
         "file": "vka.java",
         "start": 3135,
@@ -703656,7 +703880,7 @@
     },
     {
       "symbol": "P:aka.j(I)V#0",
-      "renamedSymbol": "P:MonsterModel.j(I)V#0",
+      "renamedSymbol": "P:MonsterModel.beginChatInputTransition(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -708265,7 +708489,7 @@
     },
     {
       "symbol": "P:ava.a(IIII)Lava;#0",
-      "renamedSymbol": "P:ava.a(IIII)Lava;#0",
+      "renamedSymbol": "P:ava.copyWithVertices(IIII)Lava;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -708276,7 +708500,7 @@
     },
     {
       "symbol": "P:ava.a(IIII)Lava;#1",
-      "renamedSymbol": "P:ava.a(IIII)Lava;#1",
+      "renamedSymbol": "P:ava.copyWithVertices(IIII)Lava;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -708287,7 +708511,7 @@
     },
     {
       "symbol": "P:ava.a(IIII)Lava;#2",
-      "renamedSymbol": "P:ava.a(IIII)Lava;#2",
+      "renamedSymbol": "P:ava.copyWithVertices(IIII)Lava;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -708298,7 +708522,7 @@
     },
     {
       "symbol": "P:ava.a(IIII)Lava;#3",
-      "renamedSymbol": "P:ava.a(IIII)Lava;#3",
+      "renamedSymbol": "P:ava.copyWithVertices(IIII)Lava;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -718165,7 +718389,7 @@
     },
     {
       "symbol": "P:cda.a(IZ)V#0",
-      "renamedSymbol": "P:MotionTrackingModel.a(IZ)V#0",
+      "renamedSymbol": "P:MotionTrackingModel.showCurrentScreenMenu(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -718176,7 +718400,7 @@
     },
     {
       "symbol": "P:cda.a(IZ)V#1",
-      "renamedSymbol": "P:MotionTrackingModel.a(IZ)V#1",
+      "renamedSymbol": "P:MotionTrackingModel.showCurrentScreenMenu(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -742629,7 +742853,7 @@
     },
     {
       "symbol": "P:eia.a(IIII)V#0",
-      "renamedSymbol": "P:EffectSwitchBehaviour.a(IIII)V#0",
+      "renamedSymbol": "P:EffectSwitchBehaviour.configureChargeMeter(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -742640,7 +742864,7 @@
     },
     {
       "symbol": "P:eia.a(IIII)V#1",
-      "renamedSymbol": "P:EffectSwitchBehaviour.a(IIII)V#1",
+      "renamedSymbol": "P:EffectSwitchBehaviour.configureChargeMeter(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -742651,7 +742875,7 @@
     },
     {
       "symbol": "P:eia.a(IIII)V#2",
-      "renamedSymbol": "P:EffectSwitchBehaviour.a(IIII)V#2",
+      "renamedSymbol": "P:EffectSwitchBehaviour.configureChargeMeter(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -742662,7 +742886,7 @@
     },
     {
       "symbol": "P:eia.a(IIII)V#3",
-      "renamedSymbol": "P:EffectSwitchBehaviour.a(IIII)V#3",
+      "renamedSymbol": "P:EffectSwitchBehaviour.configureChargeMeter(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -747062,7 +747286,7 @@
     },
     {
       "symbol": "P:eo.d(II)Z#0",
-      "renamedSymbol": "P:HardwareGraphicsToolkit.d(II)Z#0",
+      "renamedSymbol": "P:HardwareGraphicsToolkit.hasMultiplePlayers(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -747073,7 +747297,7 @@
     },
     {
       "symbol": "P:eo.d(II)Z#1",
-      "renamedSymbol": "P:HardwareGraphicsToolkit.d(II)Z#1",
+      "renamedSymbol": "P:HardwareGraphicsToolkit.hasMultiplePlayers(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -751088,7 +751312,7 @@
     },
     {
       "symbol": "P:et.a(III)V#0",
-      "renamedSymbol": "P:MidiVoiceMixer.a(III)V#0",
+      "renamedSymbol": "P:MidiVoiceMixer.writeLeaveOrDeclineGameRequest(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -751099,7 +751323,7 @@
     },
     {
       "symbol": "P:et.a(III)V#1",
-      "renamedSymbol": "P:MidiVoiceMixer.a(III)V#1",
+      "renamedSymbol": "P:MidiVoiceMixer.writeLeaveOrDeclineGameRequest(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -751110,7 +751334,7 @@
     },
     {
       "symbol": "P:et.a(III)V#2",
-      "renamedSymbol": "P:MidiVoiceMixer.a(III)V#2",
+      "renamedSymbol": "P:MidiVoiceMixer.writeLeaveOrDeclineGameRequest(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -756522,7 +756746,7 @@
     },
     {
       "symbol": "P:fja.f(I)V#0",
-      "renamedSymbol": "P:PlayPhase.f(I)V#0",
+      "renamedSymbol": "P:PlayPhase.suppressRoundStartBanner(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -783120,7 +783344,7 @@
     },
     {
       "symbol": "P:ht.g(I)Z#0",
-      "renamedSymbol": "P:LobbyGameWidget.g(I)Z#0",
+      "renamedSymbol": "P:LobbyGameWidget.isRemovedFromLobby(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -790688,7 +790912,7 @@
     },
     {
       "symbol": "P:iqa.a(IIIZ)V#0",
-      "renamedSymbol": "P:ToolkitInstance.a(IIIZ)V#0",
+      "renamedSymbol": "P:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -790699,7 +790923,7 @@
     },
     {
       "symbol": "P:iqa.a(IIIZ)V#1",
-      "renamedSymbol": "P:ToolkitInstance.a(IIIZ)V#1",
+      "renamedSymbol": "P:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -790710,7 +790934,7 @@
     },
     {
       "symbol": "P:iqa.a(IIIZ)V#2",
-      "renamedSymbol": "P:ToolkitInstance.a(IIIZ)V#2",
+      "renamedSymbol": "P:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -790721,7 +790945,7 @@
     },
     {
       "symbol": "P:iqa.a(IIIZ)V#3",
-      "renamedSymbol": "P:ToolkitInstance.a(IIIZ)V#3",
+      "renamedSymbol": "P:ToolkitInstance.updateQuickChatHelpAndMenu(IIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -814151,7 +814375,7 @@
     },
     {
       "symbol": "P:jma.f(B)Z#0",
-      "renamedSymbol": "P:SwitchState.f(B)Z#0",
+      "renamedSymbol": "P:SwitchState.shouldStopBehaviour(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -819233,7 +819457,7 @@
     },
     {
       "symbol": "P:kaa.a(B)V#0",
-      "renamedSymbol": "P:LinkPainter.a(B)V#0",
+      "renamedSymbol": "P:LinkPainter.beginPublicChatInput(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -828836,7 +829060,7 @@
     },
     {
       "symbol": "P:l.a(IBI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setPitchBend(IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -828847,7 +829071,7 @@
     },
     {
       "symbol": "P:l.a(IBI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setPitchBend(IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -828858,7 +829082,7 @@
     },
     {
       "symbol": "P:l.a(IBI)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#2",
+      "renamedSymbol": "P:MidiPcmStream.setPitchBend(IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -836855,7 +837079,7 @@
     },
     {
       "symbol": "P:lk.a(I)Z#0",
-      "renamedSymbol": "P:RoomRegion.a(I)Z#0",
+      "renamedSymbol": "P:RoomRegion.isRegionExpired(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -850583,7 +850807,7 @@
     },
     {
       "symbol": "P:nga.c(I)Z#0",
-      "renamedSymbol": "P:MonochromeFillOperator.c(I)Z#0",
+      "renamedSymbol": "P:MonochromeFillOperator.isChatInputOpenForChannel(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -861968,7 +862192,7 @@
     },
     {
       "symbol": "P:oga.a(I)Z#0",
-      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.a(I)Z#0",
+      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.requiresDepthTexture(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -862122,7 +862346,7 @@
     },
     {
       "symbol": "P:oga.c(I)I#0",
-      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.c(I)I#0",
+      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.getRenderPassCount(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -872011,7 +872235,7 @@
     },
     {
       "symbol": "P:pha.f(I)Z#0",
-      "renamedSymbol": "P:LobbyPlayerEntry.f(I)Z#0",
+      "renamedSymbol": "P:LobbyPlayerEntry.isRemovedFromLobby(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -877192,7 +877416,7 @@
     },
     {
       "symbol": "P:q.a(BII)V#0",
-      "renamedSymbol": "P:CollisionGridEntry.a(BII)V#0",
+      "renamedSymbol": "P:CollisionGridEntry.writeJoinOrAcceptGameRequest(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -877203,7 +877427,7 @@
     },
     {
       "symbol": "P:q.a(BII)V#1",
-      "renamedSymbol": "P:CollisionGridEntry.a(BII)V#1",
+      "renamedSymbol": "P:CollisionGridEntry.writeJoinOrAcceptGameRequest(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -877214,7 +877438,7 @@
     },
     {
       "symbol": "P:q.a(BII)V#2",
-      "renamedSymbol": "P:CollisionGridEntry.a(BII)V#2",
+      "renamedSymbol": "P:CollisionGridEntry.writeJoinOrAcceptGameRequest(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -886894,7 +887118,7 @@
     },
     {
       "symbol": "P:qr.a(I)Z#0",
-      "renamedSymbol": "P:SingleChildWidget.a(I)Z#0",
+      "renamedSymbol": "P:SingleChildWidget.isUiInputActive(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888643,7 +888867,7 @@
     },
     {
       "symbol": "P:r.a(IZ)V#0",
-      "renamedSymbol": "P:NativeResourceNodeBase.a(IZ)V#0",
+      "renamedSymbol": "P:NativeResourceNodeBase.leaveGameOrStopSpectating(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888654,7 +888878,7 @@
     },
     {
       "symbol": "P:r.a(IZ)V#1",
-      "renamedSymbol": "P:NativeResourceNodeBase.a(IZ)V#1",
+      "renamedSymbol": "P:NativeResourceNodeBase.leaveGameOrStopSpectating(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -890227,7 +890451,7 @@
     },
     {
       "symbol": "P:rda.d(I)Z#0",
-      "renamedSymbol": "P:RasterizerOperator.d(I)Z#0",
+      "renamedSymbol": "P:RasterizerOperator.hasDeveloperPrivileges(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -891360,7 +891584,7 @@
     },
     {
       "symbol": "P:rga.a(II)Lrga;#0",
-      "renamedSymbol": "P:rga.a(II)Lrga;#0",
+      "renamedSymbol": "P:rga.copyWithVertex(II)Lrga;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -891371,7 +891595,7 @@
     },
     {
       "symbol": "P:rga.a(II)Lrga;#1",
-      "renamedSymbol": "P:rga.a(II)Lrga;#1",
+      "renamedSymbol": "P:rga.copyWithVertex(II)Lrga;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -891382,7 +891606,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#0",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#0",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -891393,7 +891617,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#1",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#1",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -891404,7 +891628,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#2",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#2",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -891415,7 +891639,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#3",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#3",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -891426,7 +891650,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#4",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#4",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -891437,7 +891661,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#5",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#5",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -891448,7 +891672,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#6",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#6",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -891459,7 +891683,7 @@
     },
     {
       "symbol": "P:rga.a(IIIIIIII)V#7",
-      "renamedSymbol": "P:rga.a(IIIIIIII)V#7",
+      "renamedSymbol": "P:rga.fillBorderedRectangleRows(IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -897597,7 +897821,7 @@
     },
     {
       "symbol": "P:rua.h(Z)V#0",
-      "renamedSymbol": "P:AccountCreationDialog.h(Z)V#0",
+      "renamedSymbol": "P:AccountCreationDialog.showIneligibleAccountFailure(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910005,7 +910229,7 @@
     },
     {
       "symbol": "P:tc.a(II)V#0",
-      "renamedSymbol": "P:IdChatTarget.a(II)V#0",
+      "renamedSymbol": "P:IdChatTarget.pollLoginAction(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910016,7 +910240,7 @@
     },
     {
       "symbol": "P:tc.a(II)V#1",
-      "renamedSymbol": "P:IdChatTarget.a(II)V#1",
+      "renamedSymbol": "P:IdChatTarget.pollLoginAction(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -927627,7 +927851,7 @@
     },
     {
       "symbol": "P:vd.b(I)V#0",
-      "renamedSymbol": "P:RandomMazeBehaviour.b(I)V#0",
+      "renamedSymbol": "P:RandomMazeBehaviour.refreshFullscreenDialogIfOpen(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -929519,7 +929743,7 @@
     },
     {
       "symbol": "P:vja.b(Z)V#0",
-      "renamedSymbol": "P:TrapSpawner.b(Z)V#0",
+      "renamedSymbol": "P:TrapSpawner.resetArchiveConnectionErrors(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -929662,7 +929886,7 @@
     },
     {
       "symbol": "P:vka.A(I)Z#0",
-      "renamedSymbol": "P:PortalComponent.A(I)Z#0",
+      "renamedSymbol": "P:PortalComponent.isCanvasFocusedOrFullscreen(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -943427,7 +943651,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "4122edcab92708d08543fa95f4bb527c29913fcb244923433f66211340e488d9",
+      "outputSha256": "a11d4b6fb0d39b6d0964b02abec2f8b33a88e0477303ec7343176e032b10ddbb",
       "edits": [
         {
           "start": 96,
@@ -943470,6 +943694,13 @@
           "symbol": "C:rda",
           "original": "rda",
           "renamed": "RasterizerOperator"
+        },
+        {
+          "start": 450,
+          "end": 451,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
         },
         {
           "start": 503,
@@ -969347,7 +969578,7 @@
       "original": "aja.java",
       "renamed": "CoinBagItemComponent.java",
       "inputSha256": "b56cd3d95caf7b3a938c3cc25828c85c02c8836a40e30e0c4496ec294b4352ff",
-      "outputSha256": "512dc8aaafc49c9cbd7b8e216647b436823959405fbeac45e6ba29a1ad3c06a2",
+      "outputSha256": "270bc296df31e6d5723776051bcd08493b9ffb3310e79c95c62b42e33a607df7",
       "edits": [
         {
           "start": 50,
@@ -970434,6 +970665,13 @@
           "kind": "label"
         },
         {
+          "start": 14873,
+          "end": 14874,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
+        },
+        {
           "start": 15059,
           "end": 15062,
           "symbol": "B:aja.a(ZIIZZ)V#2",
@@ -970965,6 +971203,13 @@
           "symbol": "C:et",
           "original": "et",
           "renamed": "MidiVoiceMixer"
+        },
+        {
+          "start": 19666,
+          "end": 19667,
+          "symbol": "M:et.a(III)V",
+          "original": "a",
+          "renamed": "writeLeaveOrDeclineGameRequest"
         },
         {
           "start": 19680,
@@ -971596,7 +971841,7 @@
       "original": "aka.java",
       "renamed": "MonsterModel.java",
       "inputSha256": "f6003b2aac73200ae6e1dfb33a24e22e46e1f8094f13ab0c3836da189710f467",
-      "outputSha256": "79fc4a606f7fdcb7ae751e18ee06403bc6c485e345fc34ecd539cc18f539b920",
+      "outputSha256": "090216278af44564178370ae3e07afbafa903003565c79656e9f4834ca053cbb",
       "edits": [
         {
           "start": 50,
@@ -972045,6 +972290,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4465,
+          "end": 4466,
+          "symbol": "M:aka.j(I)V",
+          "original": "j",
+          "renamed": "beginChatInputTransition"
         },
         {
           "start": 4548,
@@ -973313,7 +973565,7 @@
       "original": "ala.java",
       "renamed": "MultiplayerLobbyScreen.java",
       "inputSha256": "75b194c5a4089ea322badf1ccc8a4bdcbf1331acba7ce50bdc862113df2454df",
-      "outputSha256": "4c0ef0d758bde3575135f6af79a47c790e0acce379e4c199494fce3e1b5fc250",
+      "outputSha256": "313487cf2ec9b447600a42852b18db8a3330bb5c01502a069d9237dcdc924817",
       "edits": [
         {
           "start": 50,
@@ -973545,6 +973797,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "HardwareGraphicsToolkit"
+        },
+        {
+          "start": 3021,
+          "end": 3022,
+          "symbol": "M:eo.d(II)Z",
+          "original": "d",
+          "renamed": "hasMultiplePlayers"
         },
         {
           "start": 3027,
@@ -974588,6 +974847,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "SingleChildWidget"
+        },
+        {
+          "start": 10750,
+          "end": 10751,
+          "symbol": "M:qr.a(I)Z",
+          "original": "a",
+          "renamed": "isUiInputActive"
         },
         {
           "start": 10804,
@@ -983784,7 +984050,7 @@
       "original": "ava.java",
       "renamed": "ava.java",
       "inputSha256": "b2156bd584c393e42d8da053f66165e1e2bbfe181f9eef73a4246a3c0a6f0cdc",
-      "outputSha256": "82dc1e9b2c9722d7e0465e81a624034e5509869eb8f5146d953f970e4e2535ff",
+      "outputSha256": "6e354073d5dad58097dbf6ee7b46f23bf59806625fc34231d80c666056005e55",
       "edits": [
         {
           "start": 133,
@@ -983792,6 +984058,13 @@
           "symbol": "C:vp",
           "original": "vp",
           "renamed": "DraggableWidget"
+        },
+        {
+          "start": 220,
+          "end": 221,
+          "symbol": "M:ava.a(IIII)Lava;",
+          "original": "a",
+          "renamed": "copyWithVertices"
         },
         {
           "start": 443,
@@ -984221,6 +984494,13 @@
           "renamed": "RoomComponent"
         },
         {
+          "start": 6981,
+          "end": 6982,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
+        },
+        {
           "start": 8004,
           "end": 8006,
           "symbol": "C:tn",
@@ -984620,6 +984900,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 11702,
+          "end": 11703,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
+        },
+        {
           "start": 11777,
           "end": 11779,
           "symbol": "C:fv",
@@ -984674,6 +984961,13 @@
           "symbol": "M:fn.a(IJI)V",
           "original": "a",
           "renamed": "writeKickOrWithdrawInvitation"
+        },
+        {
+          "start": 12156,
+          "end": 12157,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
         },
         {
           "start": 12221,
@@ -993783,7 +994077,7 @@
       "original": "bh.java",
       "renamed": "PlayTrackCommand.java",
       "inputSha256": "25f301991d04cb9912bee51ba3a13e222af2d62e8faeb4b0c26a0fef77a00cff",
-      "outputSha256": "1ace30d94a0eff7ea77ec58d8df161b86497beca6676cd6dbf56d62bfcdfe91d",
+      "outputSha256": "33d887a1f7d53d1180919558069978798b38656b3a69260c89454e535228c176",
       "edits": [
         {
           "start": 50,
@@ -994675,6 +994969,13 @@
           "renamed": "SoftwareModelBillboardState"
         },
         {
+          "start": 11090,
+          "end": 11091,
+          "symbol": "M:ht.g(I)Z",
+          "original": "g",
+          "renamed": "isRemovedFromLobby"
+        },
+        {
           "start": 11276,
           "end": 11279,
           "symbol": "C:wda",
@@ -995473,6 +995774,13 @@
           "renamed": "ArchiveNetworkClient"
         },
         {
+          "start": 22641,
+          "end": 22642,
+          "symbol": "M:ht.g(I)Z",
+          "original": "g",
+          "renamed": "isRemovedFromLobby"
+        },
+        {
           "start": 22723,
           "end": 22725,
           "symbol": "C:st",
@@ -995513,6 +995821,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "CollisionGridEntry"
+        },
+        {
+          "start": 23084,
+          "end": 23085,
+          "symbol": "M:q.a(BII)V",
+          "original": "a",
+          "renamed": "writeJoinOrAcceptGameRequest"
         },
         {
           "start": 23113,
@@ -997440,7 +997755,7 @@
       "original": "bia.java",
       "renamed": "CauldronComponent.java",
       "inputSha256": "78d236cac34c02eca5c4cd4e4e68ec3586af16e6fd7c0fb2beb4bb3124e56ed1",
-      "outputSha256": "55094a324319dd72c98f83916b15f6514fe2feaa0017c886632f3c5bfe9862bc",
+      "outputSha256": "b1f23faaf5649207b74b63d746a1f9f454b629c554fda7de41e3fd7a66c9fe49",
       "edits": [
         {
           "start": 50,
@@ -997630,6 +997945,13 @@
           "symbol": "M:eia.a(ZII)V",
           "original": "a",
           "renamed": "setTriggeredBy"
+        },
+        {
+          "start": 1044,
+          "end": 1045,
+          "symbol": "M:eia.a(IIII)V",
+          "original": "a",
+          "renamed": "configureChargeMeter"
         },
         {
           "start": 1087,
@@ -1001599,7 +1001921,7 @@
       "original": "bna.java",
       "renamed": "PendingReply.java",
       "inputSha256": "bcd245ecfddc47472b7240fff81d1cf33d4dfa7d00cd080929e1e6e5508b7744",
-      "outputSha256": "03f34e0364b18739a9942b8b4bafec8c9b5b162d3150cfa18f2875c41a60e7a4",
+      "outputSha256": "3ab6bf19a1a8555c7e46916a9fea50c75abfa95cc476a7cd033f091f2f7e0500",
       "edits": [
         {
           "start": 50,
@@ -1001742,6 +1002064,13 @@
           "renamed": "first"
         },
         {
+          "start": 1299,
+          "end": 1300,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
+        },
+        {
           "start": 1341,
           "end": 1342,
           "symbol": "M:vg.p(I)V",
@@ -1001789,6 +1002118,13 @@
           "symbol": "M:vna.f(I)Lvg;",
           "original": "f",
           "renamed": "first"
+        },
+        {
+          "start": 1812,
+          "end": 1813,
+          "symbol": "M:ht.g(I)Z",
+          "original": "g",
+          "renamed": "isRemovedFromLobby"
         },
         {
           "start": 1847,
@@ -1001859,6 +1002195,13 @@
           "symbol": "M:vna.e(I)Lvg;",
           "original": "e",
           "renamed": "next"
+        },
+        {
+          "start": 2416,
+          "end": 2417,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
         },
         {
           "start": 2456,
@@ -1014379,7 +1014722,7 @@
       "original": "cda.java",
       "renamed": "MotionTrackingModel.java",
       "inputSha256": "3429d81c22e5bb2e0680eb6c27a9194782b1ec44c4cb6b99127890870c3cbb5f",
-      "outputSha256": "aeae7fbe829933318d36c77cc1b595ebb6d5c8cdf1ebbafd60da62f02ae2d70f",
+      "outputSha256": "29e486dc860705b93c7ed0940f22feee8317ac585032f2bcb6ae84830eef05c4",
       "edits": [
         {
           "start": 53,
@@ -1014415,6 +1014758,13 @@
           "symbol": "C:cda",
           "original": "cda",
           "renamed": "MotionTrackingModel"
+        },
+        {
+          "start": 423,
+          "end": 424,
+          "symbol": "M:cda.a(IZ)V",
+          "original": "a",
+          "renamed": "showCurrentScreenMenu"
         },
         {
           "start": 526,
@@ -1014676,6 +1015026,13 @@
           "renamed": "moving"
         },
         {
+          "start": 6755,
+          "end": 6756,
+          "symbol": "M:cda.a(IZ)V",
+          "original": "a",
+          "renamed": "showCurrentScreenMenu"
+        },
+        {
           "start": 6795,
           "end": 6798,
           "symbol": "C:ira",
@@ -1014702,6 +1015059,13 @@
           "symbol": "C:cda",
           "original": "cda",
           "renamed": "MotionTrackingModel"
+        },
+        {
+          "start": 6884,
+          "end": 6885,
+          "symbol": "M:cda.a(IZ)V",
+          "original": "a",
+          "renamed": "showCurrentScreenMenu"
         },
         {
           "start": 6919,
@@ -1052456,7 +1052820,7 @@
       "original": "cw.java",
       "renamed": "LegacyPostProcessChain.java",
       "inputSha256": "d11dfd12e224a76be8f4d63fa0973eef1bc4b4fd659a81f842b64a3d6f3a7f87",
-      "outputSha256": "52407abde5713121783bad7d1aa89c08f2a9509a779f90b6fbd53c484b86bb30",
+      "outputSha256": "ea75f1cae7a85f3107fcea76a9b27bbadadfa075c3f36a1a5497177bfd54f3b4",
       "edits": [
         {
           "start": 50,
@@ -1053236,6 +1053600,13 @@
           "renamed": "next"
         },
         {
+          "start": 9024,
+          "end": 9025,
+          "symbol": "M:oga.c(I)I",
+          "original": "c",
+          "renamed": "getRenderPassCount"
+        },
+        {
           "start": 9095,
           "end": 9096,
           "symbol": "M:oga.a(Lrt;IBLrt;)V",
@@ -1053304,6 +1053675,20 @@
           "symbol": "M:oga.b(I)I",
           "original": "b",
           "renamed": "getPassCount"
+        },
+        {
+          "start": 12105,
+          "end": 12106,
+          "symbol": "M:oga.c(I)I",
+          "original": "c",
+          "renamed": "getRenderPassCount"
+        },
+        {
+          "start": 12145,
+          "end": 12146,
+          "symbol": "M:oga.a(I)Z",
+          "original": "a",
+          "renamed": "requiresDepthTexture"
         },
         {
           "start": 12177,
@@ -1072778,7 +1073163,7 @@
       "original": "dja.java",
       "renamed": "PressureSwitchBehaviour.java",
       "inputSha256": "af0cabd8c9bcd8111bccf0b245244b75b5bdff22cd54da32c96fed1d791aea29",
-      "outputSha256": "0b495bb9d282ba9734a8f1d9566282177aaab1eda12df229cae445021537555f",
+      "outputSha256": "79cfca3f685da6ef6f8e65da0e7112555f7d2c048c10c4aa3a50e9f290e1a767",
       "edits": [
         {
           "start": 50,
@@ -1072898,6 +1073283,13 @@
           "symbol": "C:ffa",
           "original": "ffa",
           "renamed": "Collidable"
+        },
+        {
+          "start": 846,
+          "end": 847,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 878,
@@ -1090512,7 +1090904,7 @@
       "original": "eia.java",
       "renamed": "EffectSwitchBehaviour.java",
       "inputSha256": "005c19ac2959e789117f35cb70d519e1de0839ab7faac02729203cb480c6fca8",
-      "outputSha256": "b047fb9c17988d265efde82ae6af977320acf93dd6d351914328027f13396547",
+      "outputSha256": "5b75749ebe3ea11a5a2ac10d09a82ade1a57236984a163279327eb0eacd182e2",
       "edits": [
         {
           "start": 50,
@@ -1090723,6 +1091115,13 @@
           "symbol": "M:jma.a(II)I",
           "original": "a",
           "renamed": "hashState"
+        },
+        {
+          "start": 1592,
+          "end": 1593,
+          "symbol": "M:eia.a(IIII)V",
+          "original": "a",
+          "renamed": "configureChargeMeter"
         },
         {
           "start": 1818,
@@ -1091367,6 +1091766,13 @@
           "symbol": "M:eia.k(I)V",
           "original": "k",
           "renamed": "tick"
+        },
+        {
+          "start": 11969,
+          "end": 11970,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 12001,
@@ -1095220,7 +1095626,7 @@
       "original": "eo.java",
       "renamed": "HardwareGraphicsToolkit.java",
       "inputSha256": "04951f02319c9adfeafb9ac8e4ed8bc5ffdbc08453d0c94ed081510674e0b0f0",
-      "outputSha256": "4fa59e433619a412026587e7df1e1e6b525c30b5135fbbb5be06aecb5f8de2dc",
+      "outputSha256": "637cf35b5d94c561082b8e554e0e1b291cf30fcb4e952208353a0c99304b206f",
       "edits": [
         {
           "start": 74,
@@ -1096173,6 +1096579,13 @@
           "symbol": "M:eo.R(I)V",
           "original": "R",
           "renamed": "invalidateOrthographicProjection"
+        },
+        {
+          "start": 10308,
+          "end": 10309,
+          "symbol": "M:eo.d(II)Z",
+          "original": "d",
+          "renamed": "hasMultiplePlayers"
         },
         {
           "start": 10455,
@@ -1113728,7 +1114141,7 @@
       "original": "et.java",
       "renamed": "MidiVoiceMixer.java",
       "inputSha256": "cd7ede9fc1b0459cfa34485c16caab61023d6bf4fc6dc75a16f957011b2b4e84",
-      "outputSha256": "38cbc8d1ee68f43feca50992036b50e89eaea6e0b2dc5dfec59635a417af093b",
+      "outputSha256": "fab7d748b5a60de3870b322c3ac59e01de08c1d04c9569c032f54efb37a6b4c7",
       "edits": [
         {
           "start": 50,
@@ -1114611,6 +1115024,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 13669,
+          "end": 13670,
+          "symbol": "M:et.a(III)V",
+          "original": "a",
+          "renamed": "writeLeaveOrDeclineGameRequest"
         },
         {
           "start": 13717,
@@ -1134588,7 +1135008,7 @@
       "original": "fja.java",
       "renamed": "PlayPhase.java",
       "inputSha256": "9c67ded2a35321bc2b4518bb96afe3e264ac1fca749a5926de2705f72bf4fa1c",
-      "outputSha256": "cd1168a5e4bc50f9e2035c19c311d2f892aade6fca11978a3fbdc5cd5ae55ccd",
+      "outputSha256": "5bfce9ee1cfc8e885cb466f402991ea23f8c99958f1722062f27d14faebc1a17",
       "edits": [
         {
           "start": 50,
@@ -1136166,6 +1136586,13 @@
           "renamed": "RasterizerOperator"
         },
         {
+          "start": 10928,
+          "end": 10929,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
+        },
+        {
           "start": 10987,
           "end": 10988,
           "symbol": "M:fja.a(IB)V",
@@ -1136367,6 +1136794,13 @@
           "symbol": "M:dt.b(B)V",
           "original": "b",
           "renamed": "dumpState"
+        },
+        {
+          "start": 12872,
+          "end": 12873,
+          "symbol": "M:fja.f(I)V",
+          "original": "f",
+          "renamed": "suppressRoundStartBanner"
         },
         {
           "start": 12961,
@@ -1138292,6 +1138726,13 @@
           "symbol": "M:qh.c(Z)Z",
           "original": "c",
           "renamed": "usesTreasureOnlyScoring"
+        },
+        {
+          "start": 26189,
+          "end": 26190,
+          "symbol": "M:fja.f(I)V",
+          "original": "f",
+          "renamed": "suppressRoundStartBanner"
         },
         {
           "start": 26231,
@@ -1222732,7 +1223173,7 @@
       "original": "hpa.java",
       "renamed": "SoftwareScanlineMask.java",
       "inputSha256": "fa1bd6eb9a3f5e46f13b99cb9699eade5b7db6b5616989d9d3197fe5491844bf",
-      "outputSha256": "f32dcc861f167ff859cb02c7ee70dd9a8ec544af001d555accca0e83954b2c88",
+      "outputSha256": "5a0ca826425bf51544c617af730aba80c7a7dad25fa6235a5693ede0d1b12c11",
       "edits": [
         {
           "start": 50,
@@ -1222819,6 +1223260,13 @@
           "renamed": "MonochromeFillOperator"
         },
         {
+          "start": 1168,
+          "end": 1169,
+          "symbol": "M:nga.c(I)Z",
+          "original": "c",
+          "renamed": "isChatInputOpenForChannel"
+        },
+        {
           "start": 1205,
           "end": 1207,
           "symbol": "C:uu",
@@ -1222887,6 +1223335,13 @@
           "symbol": "C:nga",
           "original": "nga",
           "renamed": "MonochromeFillOperator"
+        },
+        {
+          "start": 1599,
+          "end": 1600,
+          "symbol": "M:nga.c(I)Z",
+          "original": "c",
+          "renamed": "isChatInputOpenForChannel"
         },
         {
           "start": 1619,
@@ -1226197,7 +1226652,7 @@
       "original": "ht.java",
       "renamed": "LobbyGameWidget.java",
       "inputSha256": "fa40b765e4490ee09834401cd18d0d5c506d34c2c06940d6330f3d5df813e19e",
-      "outputSha256": "382f0f8535faa3676be3aac58f098a64aff2fe212669e33818a9200753be3960",
+      "outputSha256": "0e19f21912e533dc3a64c21fff0a3e213ce3ed09ba499f1e046953f4ccd94bc7",
       "edits": [
         {
           "start": 50,
@@ -1226422,6 +1226877,13 @@
           "symbol": "M:od.e(I)J",
           "original": "e",
           "renamed": "getSecondaryKey"
+        },
+        {
+          "start": 5421,
+          "end": 5422,
+          "symbol": "M:ht.g(I)Z",
+          "original": "g",
+          "renamed": "isRemovedFromLobby"
         },
         {
           "start": 5519,
@@ -1235853,7 +1236315,7 @@
       "original": "ila.java",
       "renamed": "ChatOverlay.java",
       "inputSha256": "f3f23f7fa05c309e6e93abab067ba60c42933206972b84fa00e5c180eeb01cac",
-      "outputSha256": "06cb0c7df51446b7d70285e21bb0951e00e1ead63f74fc355e6b49785572f134",
+      "outputSha256": "15c9355b33fb48ae63bdbf667d5fcd7fe2044df1f623bae57827bc751ef34824",
       "edits": [
         {
           "start": 50,
@@ -1236561,6 +1237023,13 @@
           "symbol": "C:aka",
           "original": "aka",
           "renamed": "MonsterModel"
+        },
+        {
+          "start": 4710,
+          "end": 4711,
+          "symbol": "M:aka.j(I)V",
+          "original": "j",
+          "renamed": "beginChatInputTransition"
         },
         {
           "start": 4773,
@@ -1243318,7 +1243787,7 @@
       "original": "iqa.java",
       "renamed": "ToolkitInstance.java",
       "inputSha256": "19ad2a7067f2aca92914b2b6d3fa3d4c370e56a9c135437803237192d01d44a3",
-      "outputSha256": "465ce175156e87ed2e45aacd645104efc635ef91e6ad6f8d0655bb71da27ae8d",
+      "outputSha256": "d297f986e9b72e2cf2aa8fadb5959290652bfa2df4398a0aab3966dfd5c44918",
       "edits": [
         {
           "start": 50,
@@ -1243396,6 +1243865,13 @@
           "symbol": "M:iqa.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 633,
+          "end": 634,
+          "symbol": "M:iqa.a(IIIZ)V",
+          "original": "a",
+          "renamed": "updateQuickChatHelpAndMenu"
         },
         {
           "start": 697,
@@ -1254580,7 +1255056,7 @@
       "original": "jb.java",
       "renamed": "WhiteLightSensorComponent.java",
       "inputSha256": "eb6bc2805a6a6b840b5f1793a07bad20f46a290432bedebce19dd6b4bcda53e5",
-      "outputSha256": "c7d5ee48b8ea7d198b25b1c03434b596c599611169cc03156dd55e902d24f40a",
+      "outputSha256": "137b950ab87332a7ea191c1e828637154dcb1b35ef6ba448dd0fa5ac7be75905",
       "edits": [
         {
           "start": 50,
@@ -1254826,6 +1255302,13 @@
           "symbol": "M:eia.a(ZIB)V",
           "original": "a",
           "renamed": "setTriggeringType"
+        },
+        {
+          "start": 2563,
+          "end": 2564,
+          "symbol": "M:eia.a(IIII)V",
+          "original": "a",
+          "renamed": "configureChargeMeter"
         },
         {
           "start": 2598,
@@ -1288046,7 +1288529,7 @@
       "original": "jma.java",
       "renamed": "SwitchState.java",
       "inputSha256": "b68ae91544400a9763613e5058abb8ad290543a49ad019cd89164518b3296380",
-      "outputSha256": "e83bcfa3a1885726f67ea080ee2ea7fe9ef6a59934ecd5f61ceb4ce100d95267",
+      "outputSha256": "faffdeeda0803b7ca0659e4e6069528555a71bbfae670a0ffbd490f057cf91cb",
       "edits": [
         {
           "start": 50,
@@ -1289020,6 +1289503,13 @@
           "symbol": "F:jma.field_p:Z",
           "original": "field_p",
           "renamed": "on"
+        },
+        {
+          "start": 6673,
+          "end": 6674,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 6804,
@@ -1303218,7 +1303708,7 @@
       "original": "kaa.java",
       "renamed": "LinkPainter.java",
       "inputSha256": "b2d3a7fc7ef60aa72e1b42311595701631b7b5c43ace253a36a06a39701c2f6d",
-      "outputSha256": "0798e546e85495f9550fc0a53c947f65f1547339d43db058e6356dc4223c9750",
+      "outputSha256": "fe5c41d29654ff8f92c6e12cadcf45495e3ace3c60513585901af04a48bb7c8d",
       "edits": [
         {
           "start": 50,
@@ -1303275,6 +1303765,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1360,
+          "end": 1361,
+          "symbol": "M:kaa.a(B)V",
+          "original": "a",
+          "renamed": "beginPublicChatInput"
         },
         {
           "start": 1385,
@@ -1331821,7 +1332318,7 @@
       "original": "l.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "e56f649f2603989f3ec8b95daa188951258795ab268f822dd99ab4e664b32f84",
-      "outputSha256": "1707f844a894d8fa666f217e3740a09ffa9f25aeb91c55eb23deb7d748f386ee",
+      "outputSha256": "bab88eaa0d8416d6e4205e0bffaaa93ceb23ebc838d45b319a980698bbe99733",
       "edits": [
         {
           "start": 44,
@@ -1332265,6 +1332762,13 @@
           "symbol": "M:l.b(III)V",
           "original": "b",
           "renamed": "handleChannelPressure"
+        },
+        {
+          "start": 12612,
+          "end": 12613,
+          "symbol": "M:l.a(IBI)V",
+          "original": "a",
+          "renamed": "setPitchBend"
         },
         {
           "start": 12846,
@@ -1333758,6 +1334262,13 @@
           "symbol": "M:l.b(II)V",
           "original": "b",
           "renamed": "releaseChannelNotes"
+        },
+        {
+          "start": 43840,
+          "end": 43841,
+          "symbol": "M:l.a(IBI)V",
+          "original": "a",
+          "renamed": "setPitchBend"
         },
         {
           "start": 44006,
@@ -1350815,7 +1351326,7 @@
       "original": "lja.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "166a4f92f16110b93fbc35ead7c37279e23464885f24906fca005e7beb74953c",
-      "outputSha256": "a799fcaa19b26ba307ff938c2b0be35df49380bc3b44fe431a13c77d3f278c68",
+      "outputSha256": "f8b5000b63efc0330f5d2096fedba23e32482c3e75309ad9e2bf269a54b92356",
       "edits": [
         {
           "start": 50,
@@ -1351308,11 +1351819,25 @@
           "renamed": "CollisionGridEntry"
         },
         {
+          "start": 5308,
+          "end": 5309,
+          "symbol": "M:q.a(BII)V",
+          "original": "a",
+          "renamed": "writeJoinOrAcceptGameRequest"
+        },
+        {
           "start": 5416,
           "end": 5418,
           "symbol": "C:et",
           "original": "et",
           "renamed": "MidiVoiceMixer"
+        },
+        {
+          "start": 5419,
+          "end": 5420,
+          "symbol": "M:et.a(III)V",
+          "original": "a",
+          "renamed": "writeLeaveOrDeclineGameRequest"
         },
         {
           "start": 5525,
@@ -1351460,6 +1351985,13 @@
           "symbol": "C:kaa",
           "original": "kaa",
           "renamed": "LinkPainter"
+        },
+        {
+          "start": 6874,
+          "end": 6875,
+          "symbol": "M:kaa.a(B)V",
+          "original": "a",
+          "renamed": "beginPublicChatInput"
         },
         {
           "start": 6960,
@@ -1352762,7 +1353294,7 @@
       "original": "lk.java",
       "renamed": "RoomRegion.java",
       "inputSha256": "9c6370591c6a78f1c669b719563491767ca030743f7395fd5d1b14308843b121",
-      "outputSha256": "914a5e910e1fd83832a177cf46266081710e658fee11a6da67547f9c4adeb1a5",
+      "outputSha256": "0734ffef60442cb764f771b71009da036770a88b48beec3a5cb4c44e151ebea0",
       "edits": [
         {
           "start": 50,
@@ -1352875,6 +1353407,13 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 402,
+          "end": 403,
+          "symbol": "M:lk.a(I)Z",
+          "original": "a",
+          "renamed": "isRegionExpired"
         },
         {
           "start": 526,
@@ -1353302,6 +1353841,13 @@
           "symbol": "M:lk.d(B)Z",
           "original": "d",
           "renamed": "isRenderExpired"
+        },
+        {
+          "start": 4495,
+          "end": 4496,
+          "symbol": "M:lk.a(I)Z",
+          "original": "a",
+          "renamed": "isRegionExpired"
         },
         {
           "start": 4530,
@@ -1393411,7 +1393957,7 @@
       "original": "nga.java",
       "renamed": "MonochromeFillOperator.java",
       "inputSha256": "cc35373080bbe76e46886d522da4fba98a4f26c8a47fabd821d6529c040371f7",
-      "outputSha256": "474c6eb68c9925ee1641dd70286c10bae8915035724bbdc53b97fb5f803b8754",
+      "outputSha256": "013927d41e88709a166b85419d63768efebdf590e7a0da47a556c525da4d07e9",
       "edits": [
         {
           "start": 50,
@@ -1393538,6 +1394084,13 @@
           "symbol": "F:ns.field_g:I",
           "original": "field_g",
           "renamed": "textureWidth"
+        },
+        {
+          "start": 1988,
+          "end": 1989,
+          "symbol": "M:nga.c(I)Z",
+          "original": "c",
+          "renamed": "isChatInputOpenForChannel"
         },
         {
           "start": 2017,
@@ -1416188,7 +1416741,7 @@
       "original": "oc.java",
       "renamed": "ModelData.java",
       "inputSha256": "cb2b499f411bfb62971caf451a3c4d7a5aea5c9c6f5aca4f171dcfc3a5e02670",
-      "outputSha256": "3fa08597b9587d4ac66245e8f30df36ac05592c76483d04940a08a0c4882cedf",
+      "outputSha256": "d4aff12e6e4f3f2e8ba5a471d6a83dce57ffa79fa2cb7e93023cca7e4415d5e1",
       "edits": [
         {
           "start": 50,
@@ -1417906,11 +1418459,25 @@
           "renamed": "mergeVertex"
         },
         {
+          "start": 52143,
+          "end": 52144,
+          "symbol": "M:ava.a(IIII)Lava;",
+          "original": "a",
+          "renamed": "copyWithVertices"
+        },
+        {
           "start": 52452,
           "end": 52453,
           "symbol": "M:oc.a(ISLoc;I)I",
           "original": "a",
           "renamed": "mergeVertex"
+        },
+        {
+          "start": 52626,
+          "end": 52627,
+          "symbol": "M:rga.a(II)Lrga;",
+          "original": "a",
+          "renamed": "copyWithVertex"
         },
         {
           "start": 54095,
@@ -1419949,7 +1420516,7 @@
       "original": "oga.java",
       "renamed": "LegacyOpenGlPostProcessEffect.java",
       "inputSha256": "696671fd6f33e7daf9f056520d5dab8e6098ffdaa396291bd9835de6eeddbd8a",
-      "outputSha256": "1e2d4dba63e9c122c7c83db8ad4eada1d007058b0de90cac8c58dd653c8c9f78",
+      "outputSha256": "59a1967078f8e8e0aacf9a81d4434863ad85a37ed0be5c4efcae3f7d3ccb8ac0",
       "edits": [
         {
           "start": 53,
@@ -1420127,6 +1420694,13 @@
           "renamed": "endPass"
         },
         {
+          "start": 650,
+          "end": 651,
+          "symbol": "M:oga.a(I)Z",
+          "original": "a",
+          "renamed": "requiresDepthTexture"
+        },
+        {
           "start": 708,
           "end": 715,
           "symbol": "F:oga.field_h:Z",
@@ -1420174,6 +1420748,13 @@
           "symbol": "M:oga.d(B)V",
           "original": "d",
           "renamed": "release"
+        },
+        {
+          "start": 1110,
+          "end": 1111,
+          "symbol": "M:oga.c(I)I",
+          "original": "c",
+          "renamed": "getRenderPassCount"
         },
         {
           "start": 1214,
@@ -1467404,7 +1467985,7 @@
       "original": "pha.java",
       "renamed": "LobbyPlayerEntry.java",
       "inputSha256": "398ca9ab7ee9c0af9200fb1c0fee59faae2f1b38985c21f3590685ea5dda277c",
-      "outputSha256": "104892bd480bba0dd9c93d4ecd7e4fa51262a09f19bccca740d087824a3b619b",
+      "outputSha256": "585679b8b51ac3e1a58c638d918bdaae6a6654677b3efd732538d6e7f6b6b8e3",
       "edits": [
         {
           "start": 50,
@@ -1467566,6 +1468147,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2466,
+          "end": 2467,
+          "symbol": "M:pha.f(I)Z",
+          "original": "f",
+          "renamed": "isRemovedFromLobby"
         },
         {
           "start": 2566,
@@ -1481871,7 +1482459,7 @@
       "original": "q.java",
       "renamed": "CollisionGridEntry.java",
       "inputSha256": "21898a318c3c6c84e210af518cbb324c72d86d67c4aec7169e1ad84f55a609a8",
-      "outputSha256": "cd7f71545a6fa86319c9b940ed0ecd2f4c1fce7776b7c08b28c21b44f3aa1e0f",
+      "outputSha256": "1f44464bb57230498d8a055c43b630c341c60953187573459a21d9f48e457af2",
       "edits": [
         {
           "start": 50,
@@ -1481893,6 +1482481,13 @@
           "symbol": "C:ffa",
           "original": "ffa",
           "renamed": "Collidable"
+        },
+        {
+          "start": 218,
+          "end": 219,
+          "symbol": "M:q.a(BII)V",
+          "original": "a",
+          "renamed": "writeJoinOrAcceptGameRequest"
         },
         {
           "start": 267,
@@ -1487444,7 +1488039,7 @@
       "original": "qh.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "297deb7b6be6c8d5c3ced20a65c12c6f29d1cdf537d06d984c0ca4a0ed3f8ddc",
-      "outputSha256": "4759f75c5dc0ce81253545d1afe0cd6e26105187e2639a67f63e2c2745e12af4",
+      "outputSha256": "a0bee6ec7afe71702299d120b7d2937cf62bed3563c3d632f648efdb0d1516da",
       "edits": [
         {
           "start": 71,
@@ -1492949,6 +1493544,13 @@
           "renamed": "RasterizerOperator"
         },
         {
+          "start": 39880,
+          "end": 39881,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
+        },
+        {
           "start": 40053,
           "end": 40054,
           "symbol": "M:qh.c(Z)Z",
@@ -1497482,7 +1498084,7 @@
       "original": "qka.java",
       "renamed": "StandingsPhase.java",
       "inputSha256": "e0e1f72bc8c3e27c1d426ef2fbfc3b379d2697ff04afc4818285c35e2f55a781",
-      "outputSha256": "d377a32c08986f13dbfebea4d505908cc3413a34bc7ad8b6adae2b1602b45412",
+      "outputSha256": "1b692e7f7838d7358df3557a14dabddde8dbb7a5788d22b438c6877c933014e0",
       "edits": [
         {
           "start": 50,
@@ -1499723,6 +1500325,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "NativeResourceNodeBase"
+        },
+        {
+          "start": 13421,
+          "end": 13422,
+          "symbol": "M:r.a(IZ)V",
+          "original": "a",
+          "renamed": "leaveGameOrStopSpectating"
         },
         {
           "start": 13431,
@@ -1506269,7 +1506878,7 @@
       "original": "qr.java",
       "renamed": "SingleChildWidget.java",
       "inputSha256": "eef4dd698df27a5966dc477c33764aea7e5f463e144355bf0d45648a7fdaaf46",
-      "outputSha256": "fd834b5563d81e4d82d8feef3fbcc28562b624d934b86c6f7706bfff2033c03b",
+      "outputSha256": "512da7a8858110f0e0bc41205a0d426153e16b5763cceb3bb41072d4ebc7b73a",
       "edits": [
         {
           "start": 74,
@@ -1506361,6 +1506970,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "SingleChildWidget"
+        },
+        {
+          "start": 546,
+          "end": 547,
+          "symbol": "M:qr.a(I)Z",
+          "original": "a",
+          "renamed": "isUiInputActive"
         },
         {
           "start": 651,
@@ -1510451,11 +1511067,25 @@
           "renamed": "S2CProfileUpdatePacket"
         },
         {
+          "start": 22087,
+          "end": 22088,
+          "symbol": "M:qr.a(I)Z",
+          "original": "a",
+          "renamed": "isUiInputActive"
+        },
+        {
           "start": 22223,
           "end": 22226,
           "symbol": "C:vka",
           "original": "vka",
           "renamed": "PortalComponent"
+        },
+        {
+          "start": 22227,
+          "end": 22228,
+          "symbol": "M:vka.A(I)Z",
+          "original": "A",
+          "renamed": "isCanvasFocusedOrFullscreen"
         },
         {
           "start": 22253,
@@ -1511908,7 +1512538,7 @@
       "original": "qt.java",
       "renamed": "AccountCreationRequests.java",
       "inputSha256": "f5cbb30fd05912cba1b4cfbc3d7ab519bc9ce6a328453136f0ad646bad42c118",
-      "outputSha256": "68ebc33c144d03648f50bf1b8e06b1d1715d7d872fd6554cf967a9b2186699b1",
+      "outputSha256": "053f97c9a9940c8efd4ec4bdce1a63926037e77e1ce4eb2e822478ad78dc06cf",
       "edits": [
         {
           "start": 50,
@@ -1514065,6 +1514695,13 @@
           "symbol": "M:rg.f(I)Z",
           "original": "f",
           "renamed": "hasTuhstatbutCookie"
+        },
+        {
+          "start": 15879,
+          "end": 15880,
+          "symbol": "M:rua.h(Z)V",
+          "original": "h",
+          "renamed": "showIneligibleAccountFailure"
         },
         {
           "start": 15937,
@@ -1516682,7 +1517319,7 @@
       "original": "r.java",
       "renamed": "NativeResourceNodeBase.java",
       "inputSha256": "2982691642bd0344ca4d2a1af08f8167d075089e228c8bb8d183ebe4cc040714",
-      "outputSha256": "1064263560927a22caa30fd121e91244dee9464a0d7e37fef61b9cdfa6f1baa4",
+      "outputSha256": "574d28decb46054746b9c04fd908869f701756b71f5d03218e06bc13d3d72d93",
       "edits": [
         {
           "start": 53,
@@ -1516704,6 +1517341,13 @@
           "symbol": "C:ica",
           "original": "ica",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 169,
+          "end": 170,
+          "symbol": "M:r.a(IZ)V",
+          "original": "a",
+          "renamed": "leaveGameOrStopSpectating"
         },
         {
           "start": 299,
@@ -1516732,6 +1517376,13 @@
           "symbol": "C:et",
           "original": "et",
           "renamed": "MidiVoiceMixer"
+        },
+        {
+          "start": 402,
+          "end": 403,
+          "symbol": "M:et.a(III)V",
+          "original": "a",
+          "renamed": "writeLeaveOrDeclineGameRequest"
         },
         {
           "start": 412,
@@ -1516781,6 +1517432,13 @@
           "symbol": "C:et",
           "original": "et",
           "renamed": "MidiVoiceMixer"
+        },
+        {
+          "start": 636,
+          "end": 637,
+          "symbol": "M:et.a(III)V",
+          "original": "a",
+          "renamed": "writeLeaveOrDeclineGameRequest"
         },
         {
           "start": 646,
@@ -1516949,6 +1517607,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "NativeResourceNodeBase"
+        },
+        {
+          "start": 2903,
+          "end": 2904,
+          "symbol": "M:r.a(IZ)V",
+          "original": "a",
+          "renamed": "leaveGameOrStopSpectating"
         },
         {
           "start": 2932,
@@ -1521011,7 +1521676,7 @@
       "original": "rda.java",
       "renamed": "RasterizerOperator.java",
       "inputSha256": "4dcd6843604c9a62def04fc9a0e5b971f33ba197073814cd23ef55ccf45a6278",
-      "outputSha256": "5f0f2aece649102eb8e966d1fd64624d27a76d821bddbeb5afef42bd5486658c",
+      "outputSha256": "c8a107d7a12ee36272cb5352e0eb8b7c9873893c43bf5b12b6fa7b2e2b49ac1a",
       "edits": [
         {
           "start": 69,
@@ -1521224,6 +1521889,13 @@
           "renamed": "RasterizerOperator"
         },
         {
+          "start": 2971,
+          "end": 2972,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
+        },
+        {
           "start": 3007,
           "end": 3010,
           "symbol": "C:qda",
@@ -1521362,6 +1522034,13 @@
           "symbol": "C:rda",
           "original": "rda",
           "renamed": "RasterizerOperator"
+        },
+        {
+          "start": 4474,
+          "end": 4475,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
         },
         {
           "start": 4499,
@@ -1521698,6 +1522377,13 @@
           "symbol": "M:sea.c(II)I",
           "original": "c",
           "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 7671,
+          "end": 7672,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
         },
         {
           "start": 7766,
@@ -1524340,7 +1525026,7 @@
       "original": "rfa.java",
       "renamed": "TombRacerShell.java",
       "inputSha256": "ee9239156511db1a79e1fc580e5d6f6c90add2ec0e44a464a7b8f3c9337f80a6",
-      "outputSha256": "bc09374fbad2f8fabe5e7d5294115de31ebdd7c750790fdf565fd87da71a33a3",
+      "outputSha256": "2fd403cd6f119f2d82c0564980a1ed4299d1b274518f9e786164796ade183d10",
       "edits": [
         {
           "start": 74,
@@ -1524439,6 +1525125,13 @@
           "symbol": "C:vka",
           "original": "vka",
           "renamed": "PortalComponent"
+        },
+        {
+          "start": 413,
+          "end": 414,
+          "symbol": "M:vka.A(I)Z",
+          "original": "A",
+          "renamed": "isCanvasFocusedOrFullscreen"
         },
         {
           "start": 480,
@@ -1525400,6 +1526093,13 @@
           "renamed": "RandomMazeBehaviour"
         },
         {
+          "start": 8190,
+          "end": 8191,
+          "symbol": "M:vd.b(I)V",
+          "original": "b",
+          "renamed": "refreshFullscreenDialogIfOpen"
+        },
+        {
           "start": 8257,
           "end": 8259,
           "symbol": "C:dq",
@@ -1525496,6 +1526196,13 @@
           "symbol": "C:tc",
           "original": "tc",
           "renamed": "IdChatTarget"
+        },
+        {
+          "start": 8614,
+          "end": 8615,
+          "symbol": "M:tc.a(II)V",
+          "original": "a",
+          "renamed": "pollLoginAction"
         },
         {
           "start": 8616,
@@ -1529697,7 +1530404,7 @@
       "original": "rga.java",
       "renamed": "rga.java",
       "inputSha256": "d4634abd41882e6543d1ec5138f063b6bed3beac35ddf908a4137eb09ac448c2",
-      "outputSha256": "49a4391be0535aeec876d9a2a8dabd6a37a7af4ae75adf7e1666a2d033da55d4",
+      "outputSha256": "83bd1d1ff283042a15582be84b46db0d3b7f1ebc69e454fb5e73dcca80458d14",
       "edits": [
         {
           "start": 148,
@@ -1529747,6 +1530454,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2294,
+          "end": 2295,
+          "symbol": "M:rga.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "fillBorderedRectangleRows"
         },
         {
           "start": 2916,
@@ -1529910,6 +1530624,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 5233,
+          "end": 5234,
+          "symbol": "M:rga.a(II)Lrga;",
+          "original": "a",
+          "renamed": "copyWithVertex"
+        },
+        {
           "start": 5298,
           "end": 5300,
           "symbol": "C:ka",
@@ -1529985,7 +1530706,7 @@
       "original": "rh.java",
       "renamed": "TouchSwitchBehaviour.java",
       "inputSha256": "c093e72419822c45b2b2a3804cd9ff2b96b882dc391145d8dc85a27426d258d9",
-      "outputSha256": "a4daf936b32b93d7f09470766704194b9c0233e07cfb32d7de7e8bfc9b6b43f3",
+      "outputSha256": "91dc49a7f398afea9dc774b1822467ec856da17ce295d6c22d8504ffc4eac1a9",
       "edits": [
         {
           "start": 50,
@@ -1530294,6 +1531015,13 @@
           "symbol": "M:rh.k(I)V",
           "original": "k",
           "renamed": "tick"
+        },
+        {
+          "start": 2728,
+          "end": 2729,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 2760,
@@ -1533689,7 +1534417,7 @@
       "original": "rk.java",
       "renamed": "ProgressBarWidget.java",
       "inputSha256": "285a43c6b6c51489dcd0aed3b304bab61e9ce9d37f0f8546bd4d734157d41cb6",
-      "outputSha256": "1286d238b2f7c92a60f09aeef1f3e1d9a78f0107688f75a5aa81d6d6e435e49f",
+      "outputSha256": "16313bd76797be1fa207d37b1451b0a712b70f916f6c792ca8ec84b1b80af453",
       "edits": [
         {
           "start": 50,
@@ -1534040,6 +1534768,13 @@
           "symbol": "C:iqa",
           "original": "iqa",
           "renamed": "ToolkitInstance"
+        },
+        {
+          "start": 4438,
+          "end": 4439,
+          "symbol": "M:iqa.a(IIIZ)V",
+          "original": "a",
+          "renamed": "updateQuickChatHelpAndMenu"
         },
         {
           "start": 4485,
@@ -1546814,7 +1547549,7 @@
       "original": "rua.java",
       "renamed": "AccountCreationDialog.java",
       "inputSha256": "05b7565e70155092524ecbfc75a2399511ecba2cea6a3289a7e2d7db1cf35e72",
-      "outputSha256": "47112cf2d86154b6cb6c9759b6c88ec69b1a8415827d283e7bb7e399d083c932",
+      "outputSha256": "dd834dfb47ebe0c66939259f2fdc26f1b4b9ec0c803f6d25d99dc94992b7e188",
       "edits": [
         {
           "start": 50,
@@ -1546990,6 +1547725,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1256,
+          "end": 1257,
+          "symbol": "M:rua.h(Z)V",
+          "original": "h",
+          "renamed": "showIneligibleAccountFailure"
         },
         {
           "start": 1289,
@@ -1561420,7 +1562162,7 @@
       "original": "sm.java",
       "renamed": "KeyLockBehaviour.java",
       "inputSha256": "39be85676a5154d7ed93d3cd4c7958767b30924215a7e9732b1be5e780704c7f",
-      "outputSha256": "2609e05630ab20d870416e264d2e5b9424050c885c46bb16ac97b2c60693ca07",
+      "outputSha256": "230ed450f22a5df572f0b4809348c2e37d8fbdda669f636f4ad3fcebe8d4f168",
       "edits": [
         {
           "start": 50,
@@ -1561463,6 +1562205,13 @@
           "symbol": "M:sm.k(I)V",
           "original": "k",
           "renamed": "tick"
+        },
+        {
+          "start": 321,
+          "end": 322,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 353,
@@ -1578463,7 +1579212,7 @@
       "original": "tc.java",
       "renamed": "IdChatTarget.java",
       "inputSha256": "3dd7261123788e94ae3507e9fdf3a803318cc08eaa755e657c9500e954f637e1",
-      "outputSha256": "6570fa010daa117388c355af783cea8015a5e2150d0bdd171da401460652c42c",
+      "outputSha256": "a83bab078146a4c36384cfd7d87fdb5099b5780b28835d1c87b8ee7a17f5093d",
       "edits": [
         {
           "start": 44,
@@ -1578744,6 +1579493,13 @@
           "symbol": "M:hs.a(ZB)V",
           "original": "a",
           "renamed": "drawQuickChatHelp"
+        },
+        {
+          "start": 3077,
+          "end": 3078,
+          "symbol": "M:tc.a(II)V",
+          "original": "a",
+          "renamed": "pollLoginAction"
         },
         {
           "start": 3172,
@@ -1583676,7 +1584432,7 @@
       "original": "tl.java",
       "renamed": "TimeSwitchBehaviour.java",
       "inputSha256": "d357b4a165d3a7cff64eeea2e5b7b0ccdf57daedfd55d8f6d91c712ab04b23fb",
-      "outputSha256": "59a9585bb21ee364831a00314683463f484edfa44238da11ece7cd1da4aecc22",
+      "outputSha256": "14b63a4c69535287239814b58540099e890b40643ee17cdd4035cd42db4ca1c1",
       "edits": [
         {
           "start": 50,
@@ -1583987,6 +1584743,13 @@
           "renamed": "LineShape"
         },
         {
+          "start": 3802,
+          "end": 3803,
+          "symbol": "M:rga.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "fillBorderedRectangleRows"
+        },
+        {
           "start": 3908,
           "end": 3911,
           "symbol": "C:pra",
@@ -1584069,6 +1584832,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "LineShape"
+        },
+        {
+          "start": 4475,
+          "end": 4476,
+          "symbol": "M:rga.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "fillBorderedRectangleRows"
         },
         {
           "start": 4575,
@@ -1584295,6 +1585065,13 @@
           "renamed": "getMaxLevel"
         },
         {
+          "start": 6573,
+          "end": 6574,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
+        },
+        {
           "start": 6607,
           "end": 6608,
           "symbol": "M:nv.c(Z)V",
@@ -1584342,6 +1585119,13 @@
           "symbol": "M:mg.c(I)Z",
           "original": "c",
           "renamed": "hasToggled"
+        },
+        {
+          "start": 6879,
+          "end": 6880,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 6919,
@@ -1602797,7 +1603581,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "345bc296ead4c52b21c1aaa0443caa43cc8e25bc9f0cc1cef3077a628d02070e",
+      "outputSha256": "f35d48acae3b0d460fae9b7e2992fa407f8eef7748418dd41730e6926b399c93",
       "edits": [
         {
           "start": 53,
@@ -1603456,6 +1604240,13 @@
           "symbol": "C:vja",
           "original": "vja",
           "renamed": "TrapSpawner"
+        },
+        {
+          "start": 3542,
+          "end": 3543,
+          "symbol": "M:vja.b(Z)V",
+          "original": "b",
+          "renamed": "resetArchiveConnectionErrors"
         },
         {
           "start": 3605,
@@ -1605173,6 +1605964,13 @@
           "renamed": "IdChatTarget"
         },
         {
+          "start": 17028,
+          "end": 17029,
+          "symbol": "M:tc.a(II)V",
+          "original": "a",
+          "renamed": "pollLoginAction"
+        },
+        {
           "start": 17030,
           "end": 17032,
           "symbol": "C:pg",
@@ -1605913,6 +1606711,13 @@
           "symbol": "C:vja",
           "original": "vja",
           "renamed": "TrapSpawner"
+        },
+        {
+          "start": 20728,
+          "end": 20729,
+          "symbol": "M:vja.b(Z)V",
+          "original": "b",
+          "renamed": "resetArchiveConnectionErrors"
         },
         {
           "start": 20771,
@@ -1637703,7 +1638508,7 @@
       "original": "vd.java",
       "renamed": "RandomMazeBehaviour.java",
       "inputSha256": "c9284857857d90d374e8bc84fce8cf10df722ea63384fb85ff348e55d8f3d087",
-      "outputSha256": "e9210884073e1985686b65cd2e557168f04790b1341521aadc49bb7d89318439",
+      "outputSha256": "a088539ce9741ea2345e6df935d6d235df2ed6d53e2d19e96f0fad698f2118e2",
       "edits": [
         {
           "start": 50,
@@ -1639937,6 +1640742,13 @@
           "symbol": "C:fsa",
           "original": "fsa",
           "renamed": "Trap"
+        },
+        {
+          "start": 25340,
+          "end": 25341,
+          "symbol": "M:vd.b(I)V",
+          "original": "b",
+          "renamed": "refreshFullscreenDialogIfOpen"
         },
         {
           "start": 25369,
@@ -1645297,7 +1646109,7 @@
       "original": "vja.java",
       "renamed": "TrapSpawner.java",
       "inputSha256": "55bc4f6b8825b0d0ec12b32b11069cfc71a4aec83de37af2d3f43cf51815fb2b",
-      "outputSha256": "f9810ef1f3266ab9999a33350802aa9b5b16eb60d0785fb2e82746601f964f03",
+      "outputSha256": "82bea48771b3bf08b78659f5fe7581016ef1475e0d0914c05c0b5c4623b774b1",
       "edits": [
         {
           "start": 50,
@@ -1645839,6 +1646651,13 @@
           "renamed": "addTrap"
         },
         {
+          "start": 3483,
+          "end": 3484,
+          "symbol": "M:vja.b(Z)V",
+          "original": "b",
+          "renamed": "resetArchiveConnectionErrors"
+        },
+        {
           "start": 3511,
           "end": 3513,
           "symbol": "C:wg",
@@ -1646328,7 +1647147,7 @@
       "original": "vka.java",
       "renamed": "PortalComponent.java",
       "inputSha256": "b8c9b2ca816c6fbaef1e8002858f0b55d2b664bf6100ad22fc9bfe37c83c16e5",
-      "outputSha256": "f3353de300e37d139fe617e461653b4da792696464e8d0687eaf32644ea3e404",
+      "outputSha256": "3280a750b938407c72a9e1e3092376542d65db4f698be7bad56a4eb6feb84ae5",
       "edits": [
         {
           "start": 50,
@@ -1646679,6 +1647498,13 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 3135,
+          "end": 3136,
+          "symbol": "M:vka.A(I)Z",
+          "original": "A",
+          "renamed": "isCanvasFocusedOrFullscreen"
         },
         {
           "start": 3241,
@@ -1667583,7 +1668409,7 @@
       "original": "wh.java",
       "renamed": "TripBeamBehaviour.java",
       "inputSha256": "4a2bc2b8f41fba3e5f41a2bf61fb614a9b19f8ba56ca4b971ef4e6ed50453249",
-      "outputSha256": "377abda62f352ddb67f4002990585b8d919025789214ba978a6b4e128abf04b4",
+      "outputSha256": "fd0922599ff9b5d753f14fa953b93e42478d5e480b3ad707b822b895f7dcd009",
       "edits": [
         {
           "start": 50,
@@ -1667948,6 +1668774,13 @@
           "symbol": "M:mg.c(I)Z",
           "original": "c",
           "renamed": "hasToggled"
+        },
+        {
+          "start": 3434,
+          "end": 3435,
+          "symbol": "M:jma.f(B)Z",
+          "original": "f",
+          "renamed": "shouldStopBehaviour"
         },
         {
           "start": 3466,
@@ -1683713,7 +1684546,7 @@
       "original": "wv.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "1f8857dc3d362a84fbf3ab9af26e90d2770eacabc67c8a8e1df01e8be7183658",
-      "outputSha256": "6dd4f12aa18fb7af6f932707f3e5a4846ebe5d0cedc8af9bd92fe7cf8489609a",
+      "outputSha256": "63c8db726b684e28f94176394c2635b0d1f08f718a2079ac880e1ceefac2c309",
       "edits": [
         {
           "start": 53,
@@ -1685260,6 +1686093,13 @@
           "renamed": "NativeResourceNodeBase"
         },
         {
+          "start": 16959,
+          "end": 16960,
+          "symbol": "M:r.a(IZ)V",
+          "original": "a",
+          "renamed": "leaveGameOrStopSpectating"
+        },
+        {
           "start": 16964,
           "end": 16967,
           "symbol": "C:rba",
@@ -1686156,6 +1686996,13 @@
           "renamed": "RasterizerOperator"
         },
         {
+          "start": 27089,
+          "end": 27090,
+          "symbol": "M:rda.d(I)Z",
+          "original": "d",
+          "renamed": "hasDeveloperPrivileges"
+        },
+        {
           "start": 27141,
           "end": 27144,
           "symbol": "C:bla",
@@ -1686553,6 +1687400,13 @@
           "symbol": "C:cda",
           "original": "cda",
           "renamed": "MotionTrackingModel"
+        },
+        {
+          "start": 34218,
+          "end": 34219,
+          "symbol": "M:cda.a(IZ)V",
+          "original": "a",
+          "renamed": "showCurrentScreenMenu"
         },
         {
           "start": 34449,
@@ -1691194,10 +1692048,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "4ad5076598fef7ffd80c8896e4450bc1853b50bb7e93a7dc778eebc33fc85b83",
+    "rulesSha256": "5b06eafc568987663037cbe1a46118c46de3064d4026e6823727e581a26e63c1",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "50056dfa7814c6a2074d1cf3645f676c254f7f5fc72bbf25cb86c91e5e5c8aac",
+    "outputTreeSha256": "051536ce4490b4978bcf8cef7dcad8e4ccb91e76610bfacb1a0852f83aeaf353",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

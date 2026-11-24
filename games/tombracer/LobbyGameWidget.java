@@ -188,7 +188,7 @@ final class LobbyGameWidget extends UiComponent {
         return (int)this.getSecondaryKey(0);
     }
 
-    final boolean g(int param0) {
+    final boolean isRemovedFromLobby(int param0) {
         if (param0 != 0) {
           return false;
         }

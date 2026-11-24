@@ -81,7 +81,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
           var10.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new EffectSwitchBehaviour(param2, param0);
           var5.setTriggeringType(true, 2, (byte) -122);
-          var5.a(10, 1, 5, -2029);
+          var5.configureChargeMeter(10, 1, 5, -2029);
           this.bindSwitchState(var5, (byte) -61);
           var6 = var5.getSwitchState((byte) -69);
           var7 = 25;

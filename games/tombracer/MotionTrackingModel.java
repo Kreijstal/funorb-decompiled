@@ -15,7 +15,7 @@ abstract class MotionTrackingModel extends TrapModel {
 
     public static void releaseStatics(byte param0) {
         if (param0 < 0) {
-          MotionTrackingModel.a(-97, true);
+          MotionTrackingModel.showCurrentScreenMenu(-97, true);
           field_u = null;
           return;
         }
@@ -201,10 +201,10 @@ abstract class MotionTrackingModel extends TrapModel {
         this.field_v = var5Lifetime1;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void showCurrentScreenMenu(int param0, boolean param1) {
         ConstrainToRectangleLocomotor.showMenuScreen(param1, SpriteTileOperator.field_t.field_d, (byte) -100);
         if (param0 != 0) {
-          MotionTrackingModel.a(50, false);
+          MotionTrackingModel.showCurrentScreenMenu(50, false);
         }
     }
 

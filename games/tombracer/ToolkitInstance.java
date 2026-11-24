@@ -27,7 +27,7 @@ final class ToolkitInstance {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void updateQuickChatHelpAndMenu(int param0, int param1, int param2, boolean param3) {
         DialogStack.processQuickChatHelp(param3, true);
         QuickChatMenuLayout.layoutQuickChatMenu(param2, (byte) 95, param3, param1);
         int var4 = -97 / ((param0 - 63) / 38);

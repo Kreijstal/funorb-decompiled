@@ -95,7 +95,7 @@ class IdChatTarget extends ChatTarget {
         TextureFilter.drawQuickChatHelp(param0, (byte) -91);
     }
 
-    final static void a(int param0, int param1) {
+    final static void pollLoginAction(int param0, int param1) {
         if (param1 != -2886) {
           return;
         }

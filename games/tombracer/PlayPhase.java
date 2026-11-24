@@ -279,7 +279,7 @@ final class PlayPhase extends MatchPhase {
         boolean stackIn_23_1 = false;
         MessageOverlay var5;
         PlayerSimulation var6;
-        if (RasterizerOperator.d(20125)) {
+        if (RasterizerOperator.hasDeveloperPrivileges(20125)) {
           if (param2 == 28) {
             this.setZoomOverride(-1, (byte) -109);
             TextureCombineOperation.field_a = true;
@@ -347,7 +347,7 @@ final class PlayPhase extends MatchPhase {
         return false;
     }
 
-    private final void f(int param0) {
+    private final void suppressRoundStartBanner(int param0) {
         this.field_o = false;
         if (param0 != 16) {
           this.handleKey('ﾝ', -29, -124);
@@ -726,7 +726,7 @@ final class PlayPhase extends MatchPhase {
           }
           if (!this.screen.isMenuBackgroundDemo((byte) 33)) {
             if (this.screen.usesTreasureOnlyScoring(false)) {
-              this.f(16);
+              this.suppressRoundStartBanner(16);
             }
             if (this.screen.field_D) {
               this.screen.addOverlay(new CourseProgressMapOverlay(this.screen), 680);

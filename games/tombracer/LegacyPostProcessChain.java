@@ -267,7 +267,7 @@ final class LegacyPostProcessChain {
         var4 = (LegacyOpenGlPostProcessEffect) (this.field_j.first(-80));
         while (var4 != null) {
           var5 = (LegacyOpenGlPostProcessEffect) (this.field_j.next(125));
-          var6 = var4.c(1);
+          var6 = var4.getRenderPassCount(1);
           for (var7 = 0; var6 > var7; var7++) {
             var4.apply(this.field_r[var2Lifetime1], var7, (byte) -100, this.field_m);
             if (var5 == null &&
@@ -342,8 +342,8 @@ final class LegacyPostProcessChain {
           if (var6 > var3) {
             var3 = var6;
           }
-          var4 = var4 + var9.c(1);
-          var2 = var2 != 0 | var9.a(1) ? 1 : 0;
+          var4 = var4 + var9.getRenderPassCount(1);
+          var2 = var2 != 0 | var9.requiresDepthTexture(1) ? 1 : 0;
           var9 = (LegacyOpenGlPostProcessEffect) (this.field_j.next(107));
         }
         if (var3 != 2) {

@@ -35,7 +35,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
         }
     }
 
-    final void h(boolean param0) {
+    final void showIneligibleAccountFailure(boolean param0) {
         this.showAccountServiceResult(7, param0, LegacyVertexBufferSetup.createAccountFailureReply(RatingsScreen.field_v, 248, (byte) 114));
     }
 

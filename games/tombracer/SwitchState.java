@@ -277,7 +277,7 @@ final class SwitchState implements GameStateMarker {
         return this.on;
     }
 
-    final boolean f(byte param0) {
+    final boolean shouldStopBehaviour(byte param0) {
         if (param0 != -56) {
           return true;
         }

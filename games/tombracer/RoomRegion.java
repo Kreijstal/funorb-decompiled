@@ -14,7 +14,7 @@ final class RoomRegion extends IntrusiveNode implements RoomObjectMarker, Render
     private int width;
     static UiComponent field_l;
 
-    private final boolean a(int param0) {
+    private final boolean isRegionExpired(int param0) {
         if (param0 < 65) {
           return false;
         }
@@ -136,7 +136,7 @@ final class RoomRegion extends IntrusiveNode implements RoomObjectMarker, Render
         if (param0 != 48) {
           return false;
         }
-        return this.a(72);
+        return this.isRegionExpired(72);
     }
 
     public final int getRenderY(byte param0) {

@@ -18,7 +18,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
         if (param0 != 458752) {
-          SingleChildWidget.a(95);
+          SingleChildWidget.isUiInputActive(95);
         }
         stackIn_5_0 = ((458752 & param2) != 0);
         stackIn_10_0 = !(!stackIn_5_0 | QueuedFixedRequest.hasAnyMask34(param2, -83, param1)) || (C2SChooseRewardPacket.requiresPositionStreamCopy(true, param2, param1));
@@ -476,12 +476,12 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         S2CProfileUpdatePacket.field_d = true;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isUiInputActive(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           return true;
         }
-        stackIn_6_0 = (PortalComponent.A(param0 ^ 108)) && ((8 & HiscoresScreen.field_C) == 0);
+        stackIn_6_0 = (PortalComponent.isCanvasFocusedOrFullscreen(param0 ^ 108)) && ((8 & HiscoresScreen.field_C) == 0);
         return stackIn_6_0;
     }
 

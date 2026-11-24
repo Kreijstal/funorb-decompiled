@@ -326,7 +326,7 @@ final class StandingsPhase extends MatchPhase {
         if (param1 == 0) {
           this.screen.endMatch(false, true, 0);
           if (this.screen.field_D) {
-            NativeResourceNodeBase.a(0, this.screen.isSpectating((byte) 120));
+            NativeResourceNodeBase.leaveGameOrStopSpectating(0, this.screen.isSpectating((byte) 120));
           } else {
             C2SActionPacket.field_j = -1;
           }

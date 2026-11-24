@@ -53,7 +53,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         return this.field_q.hashState(89, param0);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void configureChargeMeter(int param0, int param1, int param2, int param3) {
         if (param3 != -2029) {
           return;
         }
@@ -355,7 +355,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
     }
 
     final void tick(int param0) {
-        if (this.field_q.f((byte) -56)) {
+        if (this.field_q.shouldStopBehaviour((byte) -56)) {
           this.stop(false);
         }
         this.field_s = this.field_s - this.field_n;

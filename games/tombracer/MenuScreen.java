@@ -488,7 +488,7 @@ abstract class MenuScreen extends GameScreen {
             if (var7 == 33) {
               if (null != SecondaryNodeDequeIterator.field_a) {
                 SecondaryNodeDequeIterator.field_a.endMatch(param1, true, 0);
-                NativeResourceNodeBase.a(0, SecondaryNodeDequeIterator.field_a.isSpectating((byte) 86));
+                NativeResourceNodeBase.leaveGameOrStopSpectating(0, SecondaryNodeDequeIterator.field_a.isSpectating((byte) 86));
               }
               return true;
             }
@@ -805,7 +805,7 @@ abstract class MenuScreen extends GameScreen {
           if (param2 != 1) {
             this.firstItemY = 76;
           }
-          if (RasterizerOperator.d(20125) &&
+          if (RasterizerOperator.hasDeveloperPrivileges(20125) &&
             39 == param0) {
             CoinItemComponent.createMenuScreens(GameClockAndLogoResources.field_d, (byte) -128);
           }
@@ -989,7 +989,7 @@ abstract class MenuScreen extends GameScreen {
           if (param0 != -6) {
             field_j = 79;
           }
-          MotionTrackingModel.a(0, false);
+          MotionTrackingModel.showCurrentScreenMenu(0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

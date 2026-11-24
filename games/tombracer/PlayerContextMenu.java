@@ -179,10 +179,10 @@ final class PlayerContextMenu {
             HardwareAnimatedWaterEffect.writeKickOrWithdrawInvitation(param2, this.field_g, -120);
           } else {
             if (param1 == 2) {
-              CollisionGridEntry.a((byte) -123, param2, this.field_k);
+              CollisionGridEntry.writeJoinOrAcceptGameRequest((byte) -123, param2, this.field_k);
             } else {
               if (param1 == 3) {
-                MidiVoiceMixer.a(param2, 30, this.field_k);
+                MidiVoiceMixer.writeLeaveOrDeclineGameRequest(param2, 30, this.field_k);
               } else {
                 if (param1 == 10) {
                   LegacyOpenGlRidgedWaterEffect.writeSpectateGameRequest(param2, false, this.field_k);
@@ -234,7 +234,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 14) {
-          LinkPainter.a((byte) 118);
+          LinkPainter.beginPublicChatInput((byte) 118);
           return true;
         }
         if (param0 == 20) {

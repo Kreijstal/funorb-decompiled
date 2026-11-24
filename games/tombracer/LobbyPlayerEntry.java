@@ -79,7 +79,7 @@ final class LobbyPlayerEntry extends UiComponent {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isRemovedFromLobby(int param0) {
         if (param0 != 162) {
           return false;
         }

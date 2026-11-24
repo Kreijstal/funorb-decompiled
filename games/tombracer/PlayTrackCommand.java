@@ -304,7 +304,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             var12.field_G = SoftwareModelBillboardState.field_i.field_tb.field_G;
             var31 = 0;
             var32 = var12.field_tb;
-            if (!var12.g(0)) {
+            if (!var12.isRemovedFromLobby(0)) {
               boolean decompiledFrameRemainder1 = true;
               if (var12.field_ec) {
                 if (var12.field_Kb >= 0) {
@@ -545,7 +545,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_y != 0 &&
-              !var12.g(param1 + 0)) {
+              !var12.isRemovedFromLobby(param1 + 0)) {
               if (var12.field_Nb.field_y == 0) {
                 ImageProducerRasterBuffer.openLobbyGameContextMenu((byte) -62, var12, param2, var32);
               } else {
@@ -556,7 +556,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  CollisionGridEntry.a((byte) -111, param5, var12.getGameId(param1 ^ 0));
+                  CollisionGridEntry.writeJoinOrAcceptGameRequest((byte) -111, param5, var12.getGameId(param1 ^ 0));
                 }
               }
             }

@@ -96,7 +96,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
     }
 
     final void tick(int param0) {
-        if (this.field_p.f((byte) -56)) {
+        if (this.field_p.shouldStopBehaviour((byte) -56)) {
           this.stop(false);
           this.field_p.setInput((byte) -14, this.isTouchingPlayer(8031));
           if (param0 != 5418) {
