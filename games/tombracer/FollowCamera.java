@@ -120,7 +120,7 @@ final class FollowCamera implements Camera {
         return (2048 & param1) != 0 ? true : false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void onViewportCentreSet(int param0, int param1, int param2) {
         if (param0 != -30023) {
           this.setBounds(46, (byte) 61, 4, -69, -91);
         }

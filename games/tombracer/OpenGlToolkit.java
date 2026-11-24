@@ -1897,7 +1897,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 throw new RuntimeException("");
               }
             }
-            CanvasImageBuffer.a(true, (byte) 99, false);
+            CanvasImageBuffer.requestRandomizedColourPalettes(true, (byte) 99, false);
             this.field_Ob = true;
             this.field_hd = new LegacyTextureCache(this, this.field_c);
             this.initializeDeviceResources((byte) 124);

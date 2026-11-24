@@ -40,7 +40,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
           }
           NativeReleaseQueue.acquire(false);
           this.MA(this.field_c, 0, 0);
-          CanvasImageBuffer.a(true, (byte) 98, false);
+          CanvasImageBuffer.requestRandomizedColourPalettes(true, (byte) 98, false);
           this.field_h = true;
           this.field_i = (Transform3D) ((Object) new NativeTransform3D());
           this.setTransform(new NativeTransform3D());

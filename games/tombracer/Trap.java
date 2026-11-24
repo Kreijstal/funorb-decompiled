@@ -1571,7 +1571,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (!param0.a((byte) 70)) {
+          if (!param0.allowsMissingPart((byte) 70)) {
             var3 = param0.getPart(-100);
             if ((var3 != null &&
               this == var3.getTrap((byte) 74)) &&

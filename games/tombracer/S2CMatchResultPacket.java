@@ -41,7 +41,7 @@ final class S2CMatchResultPacket implements GamePacket {
     public final void encode(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
-            S2CMatchResultPacket.a(-117, 42);
+            S2CMatchResultPacket.normalizePlayerInputMask(-117, 42);
           }
           param1.beginBitWrite(8);
           param1.writeBits((byte) 105, 2 + this.winnerIndex, 4);
@@ -58,7 +58,7 @@ final class S2CMatchResultPacket implements GamePacket {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int normalizePlayerInputMask(int param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;

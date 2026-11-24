@@ -83,7 +83,7 @@ final class ClampOperator extends TextureOperator {
         this.field_m = 4096;
     }
 
-    final static void d(byte param0) {
+    final static void onReconnectLoadingFrame(byte param0) {
         if (param0 != 96) {
           field_o = (String) null;
         }

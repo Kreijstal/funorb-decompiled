@@ -129,7 +129,7 @@ final class DefaultTileRenderable extends TileRenderable {
             return;
           }
           if (var2 == 1) {
-            this.b(false);
+            this.chooseSeededTileModel(false);
             return;
           }
           return;
@@ -140,7 +140,7 @@ final class DefaultTileRenderable extends TileRenderable {
           return;
         }
         if (var2Lifetime1 == 1) {
-          this.b(false);
+          this.chooseSeededTileModel(false);
           return;
         }
     }
@@ -379,7 +379,7 @@ final class DefaultTileRenderable extends TileRenderable {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void chooseSeededTileModel(boolean param0) {
         if (this.field_k < 50) {
           this.field_m = 16;
           if (param0) {

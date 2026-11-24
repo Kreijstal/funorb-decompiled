@@ -824,7 +824,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
     public final void moveTo(int param0, int param1, int param2) {
         this.room.collisionGrid.remove((Collidable) (this), (byte) 98);
         this.setXY(param1, param0, (byte) 114);
-        this.g((byte) -99);
+        this.onMovementUpdate((byte) -99);
         this.effect.field_g = null;
         if (param2 == 2) {
           this.room.collisionGrid.insert((Collidable) (this), param2 + 7071);
@@ -1023,7 +1023,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         int var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        this.g((byte) -99);
+        this.onMovementUpdate((byte) -99);
         this.teleportState.update(param0 + 87);
         if (param1) {
           if (this.isFromPlayer((byte) -118)) {
@@ -1430,7 +1430,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         }
     }
 
-    private final void g(byte param0) {
+    private final void onMovementUpdate(byte param0) {
         if (param0 != -99) {
           this.velocityY = 18;
         }

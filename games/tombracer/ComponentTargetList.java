@@ -403,7 +403,7 @@ final class ComponentTargetList {
         MenuScreen.field_j = 0;
     }
 
-    final static void b(byte param0) {
+    final static void ensureRandomizedHsvPalette(byte param0) {
         int incrementValue$0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
@@ -515,7 +515,7 @@ final class ComponentTargetList {
               }
               stackIn_26_0Lifetime1 = param0;
               if (stackIn_26_0Lifetime1 != 58) {
-                ComponentTargetList.b((byte) 1);
+                ComponentTargetList.ensureRandomizedHsvPalette((byte) 1);
               }
               return;
             }
@@ -538,7 +538,7 @@ final class ComponentTargetList {
 
     final static int getTopDialogId(boolean param0) {
         if (param0) {
-          ComponentTargetList.b((byte) -68);
+          ComponentTargetList.ensureRandomizedHsvPalette((byte) -68);
           if (!SnakePitTile.hasVisibleDialog(param0)) {
             return -1;
           }

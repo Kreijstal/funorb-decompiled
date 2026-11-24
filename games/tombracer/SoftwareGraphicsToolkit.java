@@ -1394,7 +1394,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.field_A = new SoftwareTransform3D();
           this.createContexts(1);
           this.bindContextToCurrentThread(0);
-          CanvasImageBuffer.a(true, (byte) 100, true);
+          CanvasImageBuffer.requestRandomizedColourPalettes(true, (byte) 100, true);
           this.field_E = true;
           this.field_j = (int)AdjustedWallClock.currentTimeMillis((byte) -107);
         } catch (Throwable throwable) {

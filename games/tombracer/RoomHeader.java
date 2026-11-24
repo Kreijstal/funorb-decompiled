@@ -10,11 +10,11 @@ final class RoomHeader {
     private boolean field_a;
     static MidiPcmStream field_e;
 
-    final int c(int param0) {
+    final int getCourseRoomSortKey(int param0) {
         if (param0 == 1) {
           return !this.field_a ? this.field_f : this.field_b;
         }
-        this.c(-33);
+        this.getCourseRoomSortKey(-33);
         return !this.field_a ? this.field_f : this.field_b;
     }
 
@@ -86,7 +86,7 @@ final class RoomHeader {
         }
     }
 
-    final int b(byte param0) {
+    final int getRoomSortKey(byte param0) {
         if (param0 > -44) {
           return 74;
         }

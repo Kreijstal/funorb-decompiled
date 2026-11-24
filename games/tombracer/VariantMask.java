@@ -37,7 +37,7 @@ final class VariantMask {
         this.flags.setAll(true, 106);
     }
 
-    final static void b(byte param0) {
+    final static void resetTrapConstructionIds(byte param0) {
         RoomComponentFactory.field_b = 0;
         if (param0 != 55) {
           field_d = (ToolkitSprite) null;
@@ -59,7 +59,7 @@ final class VariantMask {
         try {
           PitModel.field_n.removeSubstream(param0.field_f);
           if (param1 != -42) {
-            VariantMask.b((byte) -90);
+            VariantMask.resetTrapConstructionIds((byte) -90);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bca.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

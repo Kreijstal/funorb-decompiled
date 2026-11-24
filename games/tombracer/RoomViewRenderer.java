@@ -128,10 +128,10 @@ final class RoomViewRenderer {
             var26 = var11;
           }
           var16_ref.setViewport(43, param1 + var26, param1, param3, var27 + (param3 - 64 * var20));
-          var16_ref.a(-30023, param1 + var26 / 2, param3 + var27 / 2);
+          var16_ref.onViewportCentreSet(-30023, param1 + var26 / 2, param3 + var27 / 2);
           var28 = var16_ref.getX(-30661);
           var29 = var16_ref.getY((byte) 70);
-          param5.soundPlayers[param0].a(var29 << 16, 50, var28 << 16);
+          param5.soundPlayers[param0].onCameraPositionUpdated(var29 << 16, 50, var28 << 16);
           param5.soundPlayers[param0].setListenerPosition(var9.getY(9648), var9.getX(3), 89);
           var22 = var28 << 2;
           var23 = var29 << 2;

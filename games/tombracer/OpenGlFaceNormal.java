@@ -48,13 +48,13 @@ final class OpenGlFaceNormal {
               var15 = DateInputWidget.getCourseRoom(var4, 91, var6);
               if (-1 != var15.field_a ||
                 var15.field_e.isConnector(-25584)) {
-                var8 = var15.field_e.c(1);
+                var8 = var15.field_e.getCourseRoomSortKey(1);
                 if (var8 > 0) {
                   var9 = 0;
                   var10 = 0;
                   while (var16.size(-1) > var10) {
                     var11 = (RoomDefinition) (var16.get(true, var10));
-                    var12 = var11.field_e.c(1);
+                    var12 = var11.field_e.getCourseRoomSortKey(1);
                     if (var8 >= var12 && (var8 != var12 ||
                       !(var11.field_a > var15.field_a))) {
                       var10++;

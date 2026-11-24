@@ -231,7 +231,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void onCameraPositionUpdated(int param0, int param1, int param2) {
         if (param1 < 9) {
           this.playing = (IntrusiveDeque) null;
         }

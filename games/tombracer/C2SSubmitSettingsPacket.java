@@ -40,7 +40,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
     final static void drawLoadingFrame(java.awt.Canvas param0, byte param1) {
         try {
           if (Transform3D.field_c == 11) {
-            ClampOperator.d((byte) 96);
+            ClampOperator.onReconnectLoadingFrame((byte) 96);
           }
           if (param1 < 84) {
             field_c = (String) null;

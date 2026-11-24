@@ -177,7 +177,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ComponentTargetList.b(B)V#0"
+      "renamedSymbol": "B:ComponentTargetList.ensureRandomizedHsvPalette(B)V#0"
     },
     {
       "symbol": "B:fga.a(BCI)Z#0",
@@ -17308,6 +17308,14 @@
       "renamedSymbol": "M:FollowCamera.setBounds(IBIII)V"
     },
     {
+      "symbol": "M:ag.a(III)V",
+      "originalName": "a",
+      "to": "onViewportCentreSet",
+      "evidence": "Viewport-centre hook invoked immediately after setViewport with the calculated centre and before camera-position reads. Nominal int-30023 is a no-op;the two coordinates are unused. Preserve int!=-30023 call to five-argument camera update with fixed46,byte61,4,-69,-91,all integer domains and exception order;do not add centre storage. Complete original-body SHA256 03e413b33df72e9346a35a2de614a1f74b1f62d8b94abdae0dee362fde28010f. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FollowCamera.onViewportCentreSet(III)V"
+    },
+    {
       "symbol": "M:ag.a(IIII)V",
       "originalName": "a",
       "to": "nudge",
@@ -18780,6 +18788,14 @@
       "renamedSymbol": "M:RectangleShape.listTrackNames(I)Ljava/lang/String;"
     },
     {
+      "symbol": "M:au.a(I)V",
+      "originalName": "a",
+      "to": "readQueuedRequestReply",
+      "evidence": "Read reply variants0,1,2 for the queued request lists,dispatched by AppletGameShell message group3. Variant0 allocates8ints then reads an unsigned count and that many signed ints before fetching the first PendingReply;assigns array and ready flag before unlink. Variant1 unlinks the first fixed request without assigning data;variant2 assigns a fresh zeroed8-int result and readiness before unlink. Missing queue entries close the socket;unknown variant reports A1 diagnostic before close. Preserve full-int param0+252 and XOR63,all aliases/discarded locals,bounds/partial reads,allocations,calls,queue order and wrapped diagnostics;do not merge branches. Complete original-body SHA256 2f2e252fcb5072e5502e5d7c04535d16ca99032dcebbd01e7bc72b330affa228. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LegacyOpenGlFontMask.readQueuedRequestReply(I)V"
+    },
+    {
       "symbol": "M:aua.a(Lff;I)Ltu;",
       "originalName": "a",
       "to": "createScoringObserver",
@@ -19338,6 +19354,14 @@
       "evidence": "Removes the stream's mixer substream.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VariantMask.removeSoundStream(LPcmSamplePlayback;B)V"
+    },
+    {
+      "symbol": "M:bca.b(B)V",
+      "originalName": "b",
+      "to": "resetTrapConstructionIds",
+      "evidence": "Reset the trap construction-ID sequence to zero. Room rebuild calls it before decoding components;Trap constructor copies the counter then increments it. Preserve zero assignment before wrong-byte!=55 sprite nulling,all byte values and unrelated wrong-guard sound-stream-removal call. Do not conflate with the separate trapIdAllocator. Complete original-body SHA256 8b675f0203e17db943b003696d995b54fe70eaa248fc68e47995aa14c3e64c9a. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VariantMask.resetTrapConstructionIds(B)V"
     },
     {
       "symbol": "M:bca.b(I)V",
@@ -26908,6 +26932,14 @@
       "renamedSymbol": "M:GameScreen.releaseInput(B)V"
     },
     {
+      "symbol": "M:dg.a(B)Z",
+      "originalName": "a",
+      "to": "allowsMissingPart",
+      "evidence": "Query whether a model permits a missing TrapPart. isFinished allows a live body without a part on the true branch;Trap model-attachment filtering also skips its part-owner/stopped check on true. Existing result is always true after guard arithmetic. Preserve -53/((byte+10)/59),unused local,all exceptions and the wrong-guard getRoom caller;do not add a part or change lifetime rules. Complete original-body SHA256 a9f07a8b923f0f47e499481fdc30f343e31a680880b37eae49bfcd3706cee3e7. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrapModel.allowsMissingPart(B)Z"
+    },
+    {
       "symbol": "M:dg.a(BI)V",
       "originalName": "a",
       "to": "onRemoved",
@@ -31620,6 +31652,14 @@
       "renamedSymbol": "M:Projectile.getAngle(Z)I"
     },
     {
+      "symbol": "M:ep.g(B)V",
+      "originalName": "g",
+      "to": "onMovementUpdate",
+      "evidence": "Projectile movement-update hook invoked both after setXY during moveTo and at the start of tick before teleport-state update. Preserve byte!=-99 private integer assignment18 and normal no-op;do not reset movement,effect,lifetime or collision state. Complete original-body SHA256 db9d4273040a0d57e1ef85ee350f55895476379d059507d05e4165fbe06a2cb2. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Projectile.onMovementUpdate(B)V"
+    },
+    {
       "symbol": "M:ep.g(I)I",
       "originalName": "g",
       "to": "getAge",
@@ -32370,6 +32410,14 @@
       "evidence": "Returns the id of the top visible dialog or -1.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ComponentTargetList.getTopDialogId(Z)I"
+    },
+    {
+      "symbol": "M:f.b(B)V",
+      "originalName": "b",
+      "to": "ensureRandomizedHsvPalette",
+      "evidence": "Lazily allocate and populate the65536-entry randomized-gamma HSV colour table. Its hue/saturation/value six-sector equations use512outer bins and128value bins,then three float-to-double pow calls with one random gamma. Preserve allocation/publication before flag check,global TombRacer flag path leaving a zero-filled cache,random sampling timing,all float/double operation/cast order,integer packing including negative alpha term,label/loop flow,cache identity and late byte!=58 recursion after a filled table. Do not replace with HSL math or regenerate an existing table. Complete original-body SHA256 2bc51caf6a654b6fad0919bb9dc990d9a242d7864e2287854415df90e5c2d7cb. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ComponentTargetList.ensureRandomizedHsvPalette(B)V"
     },
     {
       "symbol": "M:f.b(I)V",
@@ -34396,12 +34444,28 @@
       "renamedSymbol": "M:RoomHeader.decodeBinaryFont([BB)LBinaryBitmapFont;"
     },
     {
+      "symbol": "M:fq.b(B)I",
+      "originalName": "b",
+      "to": "getRoomSortKey",
+      "evidence": "Read the room-header key used by the RoomDefinition array partition comparator. Preserve byte>-44 early74 before field read and the encoded8-bit field/default10;do not invent difficulty or clamp the key. Complete original-body SHA256 34503a2f538732cb4dc8c8a2ba8a88a25cc74b4898c9cd60083ec22ab3c7b027. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoomHeader.getRoomSortKey(B)I"
+    },
+    {
       "symbol": "M:fq.b(I)V",
       "originalName": "b",
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RoomHeader.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:fq.c(I)I",
+      "originalName": "c",
+      "to": "getCourseRoomSortKey",
+      "evidence": "Read the course-room ordering key used while collecting and sorting course definitions. Select the first header sort key for connectors,otherwise the alternate8-bit field. Preserve int!=1 recursive self-call(-33) BEFORE any flag/field read and duplicated ternary,including stack overflow;retain constructor version gates and missing-field defaults. Complete original-body SHA256 efe82d05b0c1f1be7b70a0ab6c6124500a678af4051a543b82b9f8436134db4a. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoomHeader.getCourseRoomSortKey(I)I"
     },
     {
       "symbol": "M:fqa.A(I)V",
@@ -42370,6 +42434,14 @@
       "evidence": "Creates the pixel storage for the canvas at the given width and height.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CanvasImageBuffer.initialize(Ljava/awt/Canvas;III)V"
+    },
+    {
+      "symbol": "M:ija.a(ZBZ)V",
+      "originalName": "a",
+      "to": "requestRandomizedColourPalettes",
+      "evidence": "Request randomized colour palettes independently for two Boolean flags. Third argument requests HSV:increment MapWaypoint counter then selected HSV ensure;first argument requests existing HSL table:increment Kaleidoscope counter then its ensure. Toolkit constructors use true/false or true/true combinations. Preserve HSV-before-HSL order,overflow,counter changes before lazy allocation,and byte<=79 recursive false,byte60,false call before any duplicated work;do not invalidate or recreate existing tables. Complete original-body SHA256 200762d871ba32be0e16e3b60a10766287302133a1291bd1aee12999153d5d97. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasImageBuffer.requestRandomizedColourPalettes(ZBZ)V"
     },
     {
       "symbol": "M:ik.a(B)V",
@@ -51692,6 +51764,14 @@
       "renamedSymbol": "M:S2CMatchResultPacket.releaseStatics(B)V"
     },
     {
+      "symbol": "M:lf.a(II)I",
+      "originalName": "a",
+      "to": "normalizePlayerInputMask",
+      "evidence": "Normalize a player input mask before local queueing and protocol submission. Cancel conflicting1/2and4/8directions;128or256suppress1,2,4,8,16,32while retaining64and selected high action. Crucially,param1 is an arbitrary full-int mask operand in param0&param1,whose result is emitted as bit4;normal caller passes4,but all other mask values and overflow-free bit tests remain valid input. Preserve branch-specific packing,all signed input domains,unused stack locals and absence of high-bit passthrough;do not simplify the second argument into a constant or guard. Complete original-body SHA256 bd372fea078425e8df0a3cfeea1720dfc34047c16a32d27f9e591224d60e1b07. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:S2CMatchResultPacket.normalizePlayerInputMask(II)I"
+    },
+    {
       "symbol": "M:lf.a(III)Z",
       "originalName": "a",
       "to": "hasFlag2048",
@@ -53674,6 +53754,14 @@
       "evidence": "Player returns x, Projectile returns x and Room returns width / 2. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DefaultTileRenderable.getRenderX(B)I"
+    },
+    {
+      "symbol": "M:mba.b(Z)V",
+      "originalName": "b",
+      "to": "chooseSeededTileModel",
+      "evidence": "Choose tile model index16or17 according to seeded value<50. Seed value is taken from the room seeded RNG or copied from the neighbouring even-grid tile;render indexes ToolkitModel[] with this field. Tile type1 selects this helper. Preserve model index assignment before Boolean-true chooseFloorSprite(byte-45) fallback,duplicated returns,full seed values and all fallback side effects;do not infer pit/floor art identity or substitute a sprite asset. Complete original-body SHA256 25ad11d607bbc3a98b60b44de3554a02d316a345caa0dc77521954da18d7da0d. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DefaultTileRenderable.chooseSeededTileModel(Z)V"
     },
     {
       "symbol": "M:mba.c(B)I",
@@ -63564,6 +63652,14 @@
       "renamedSymbol": "M:ProxySocketConnector.releaseStatics(B)V"
     },
     {
+      "symbol": "M:qb.c(B)V",
+      "originalName": "c",
+      "to": "cycleRendererOptions",
+      "evidence": "Cycle the current renderer option through the six exact option-object identities. Privileged key1 invokes it;each branch sets a one-element ToolkitCandidate[] then all paths call System.gc. Re-read current option afterwards and recursively cycle with byte-127 if inherited field_c is false. Preserve initial option read before wrong-byte>-90 field_f=50,six identity comparisons,array allocation/casts,unknown-option path,gc,recursive/nontermination/null effects and stale/native failure behavior. Do not promise availability or change renderer policy. Complete original-body SHA256 44fe862bb5277a5eafb766148c92bd7624c4e633256e32a9a3f863808f4d28ae. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.cycleRendererOptions(B)V"
+    },
+    {
       "symbol": "M:qba.a(III)Z",
       "originalName": "a",
       "to": "hasAnyMask50560",
@@ -66810,6 +66906,14 @@
       "evidence": "Abstract hook GameApplet.runDrawPass calls after the fps bookkeeping. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TombRacerShell.draw(I)V"
+    },
+    {
+      "symbol": "M:rfa.c(Z)V",
+      "originalName": "c",
+      "to": "onOverlayFrameConsumed",
+      "evidence": "Shell hook on frames consumed by overlay listeners:drawOverlay callbacks clear the shared fallback flag,then this hook is invoked with true. Preserve Boolean-false static String nulling and nominal no-op;do not draw or swap buffers here. Complete original-body SHA256 7ddd3322c05d03b366bd2b1896c6cf4e82fb31b58bc1333adaeece0fe255a3fa. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TombRacerShell.onOverlayFrameConsumed(Z)V"
     },
     {
       "symbol": "M:rfa.h(B)Z",
@@ -79452,6 +79556,14 @@
       "renamedSymbol": "M:SoundEventPlayer.triggersFollowUpSound(II)Z"
     },
     {
+      "symbol": "M:w.a(III)V",
+      "originalName": "a",
+      "to": "onCameraPositionUpdated",
+      "evidence": "Sound-player camera-position hook receives camera Y/X shifted16 before the actual listener position setter. Nominal guard50 is a no-op. Preserve guard<9 playing-deque nulling,all unused coordinate values,and caller order;do not merge it with listener position or introduce audio movement. Complete original-body SHA256 2a5fba111c3d42e4e7e7999bd04996354e48bbd8f925ef50eb02e7335efa724e. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEventPlayer.onCameraPositionUpdated(III)V"
+    },
+    {
       "symbol": "M:w.a(IZ)V",
       "originalName": "a",
       "to": "playQueuedEvents",
@@ -80564,6 +80676,14 @@
       "renamedSymbol": "M:ClampOperator.getMonochromeRow(II)[I"
     },
     {
+      "symbol": "M:wja.d(B)V",
+      "originalName": "d",
+      "to": "onReconnectLoadingFrame",
+      "evidence": "Hook before the loading frame for reconnect state11. The reconnect login setter establishes that state. Preserve byte!=96 static String nulling,normal no-op,and drawLoadingFrame ordering before showProgress and framebuffer presentation. Complete original-body SHA256 9d98e030253d462d29ecf7ad7dd454414cf6865ee65db964b16d9275fe75be73. Naming only.9complete original bodies,all16compiler-bound callers,72field declarations/71owned,8supporting classes and14purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ClampOperator.onReconnectLoadingFrame(B)V"
+    },
+    {
       "symbol": "M:wk.a(B)V",
       "originalName": "a",
       "to": "refreshReportedHeapLimit",
@@ -80746,6 +80866,14 @@
       "evidence": "Each subclass returns the id readBehaviour maps to it (DarknessBehaviour 3, VortexBehaviour 27, ...). Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SpawnerBehaviour.getTypeId(Z)I"
+    },
+    {
+      "symbol": "M:wma.a(ZI)V",
+      "originalName": "a",
+      "to": "drawFullscreenPanelAndTooltip",
+      "evidence": "Draw the fullscreen panel with the supplied Boolean,then draw current non-null tooltip. Actual game panel render calls guard0. Preserve int!=0 recursive false,4 call before duplicate drawing,nullable tooltip test and second field read,all guard/Boolean values,draw order and exceptions. Do not add layout,presentation or fullscreen API behavior. Complete original-body SHA256 aa3b80d63c1e742ee8f24e33e9c2bb5d8c06551b8f5dec2ecc5a4be45b8445fe. Naming only.7complete original bodies,all21compiler-bound callers,47field declarations/29owned,7supporting classes and17purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SpawnerBehaviour.drawFullscreenPanelAndTooltip(ZI)V"
     },
     {
       "symbol": "M:wma.a(ZLfsa;)V",
@@ -82454,7 +82582,7 @@
     },
     {
       "symbol": "B:f.b(B)V#0",
-      "renamedSymbol": "B:ComponentTargetList.b(B)V#0",
+      "renamedSymbol": "B:ComponentTargetList.ensureRandomizedHsvPalette(B)V#0",
       "originalName": "L1",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -186745,7 +186873,7 @@
     },
     {
       "symbol": "L:au.a(I)V#0",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#0",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -186756,7 +186884,7 @@
     },
     {
       "symbol": "L:au.a(I)V#1",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#1",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -186767,7 +186895,7 @@
     },
     {
       "symbol": "L:au.a(I)V#10",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#10",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -186778,7 +186906,7 @@
     },
     {
       "symbol": "L:au.a(I)V#11",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#11",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -186789,7 +186917,7 @@
     },
     {
       "symbol": "L:au.a(I)V#12",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#12",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -186800,7 +186928,7 @@
     },
     {
       "symbol": "L:au.a(I)V#13",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#13",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -186811,7 +186939,7 @@
     },
     {
       "symbol": "L:au.a(I)V#14",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#14",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#14",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -186822,7 +186950,7 @@
     },
     {
       "symbol": "L:au.a(I)V#15",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#15",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -186833,7 +186961,7 @@
     },
     {
       "symbol": "L:au.a(I)V#2",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#2",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -186844,7 +186972,7 @@
     },
     {
       "symbol": "L:au.a(I)V#3",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#3",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -186855,7 +186983,7 @@
     },
     {
       "symbol": "L:au.a(I)V#4",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#4",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -186866,7 +186994,7 @@
     },
     {
       "symbol": "L:au.a(I)V#5",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#5",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -186877,7 +187005,7 @@
     },
     {
       "symbol": "L:au.a(I)V#6",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#6",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -186888,7 +187016,7 @@
     },
     {
       "symbol": "L:au.a(I)V#7",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#7",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -186899,7 +187027,7 @@
     },
     {
       "symbol": "L:au.a(I)V#8",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#8",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -186910,7 +187038,7 @@
     },
     {
       "symbol": "L:au.a(I)V#9",
-      "renamedSymbol": "L:LegacyOpenGlFontMask.a(I)V#9",
+      "renamedSymbol": "L:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -232208,7 +232336,7 @@
     },
     {
       "symbol": "L:dg.a(B)Z#0",
-      "renamedSymbol": "L:TrapModel.a(B)Z#0",
+      "renamedSymbol": "L:TrapModel.allowsMissingPart(B)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -257959,7 +258087,7 @@
     },
     {
       "symbol": "L:f.b(B)V#0",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#0",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -257970,7 +258098,7 @@
     },
     {
       "symbol": "L:f.b(B)V#1",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#1",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -257981,7 +258109,7 @@
     },
     {
       "symbol": "L:f.b(B)V#10",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#10",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -257992,7 +258120,7 @@
     },
     {
       "symbol": "L:f.b(B)V#11",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#11",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -258003,7 +258131,7 @@
     },
     {
       "symbol": "L:f.b(B)V#12",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#12",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -258014,7 +258142,7 @@
     },
     {
       "symbol": "L:f.b(B)V#13",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#13",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -258025,7 +258153,7 @@
     },
     {
       "symbol": "L:f.b(B)V#14",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#14",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -258036,7 +258164,7 @@
     },
     {
       "symbol": "L:f.b(B)V#15",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#15",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -258047,7 +258175,7 @@
     },
     {
       "symbol": "L:f.b(B)V#16",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#16",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -258058,7 +258186,7 @@
     },
     {
       "symbol": "L:f.b(B)V#17",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#17",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -258069,7 +258197,7 @@
     },
     {
       "symbol": "L:f.b(B)V#18",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#18",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -258080,7 +258208,7 @@
     },
     {
       "symbol": "L:f.b(B)V#19",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#19",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -258091,7 +258219,7 @@
     },
     {
       "symbol": "L:f.b(B)V#2",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#2",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#2",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -258102,7 +258230,7 @@
     },
     {
       "symbol": "L:f.b(B)V#20",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#20",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -258113,7 +258241,7 @@
     },
     {
       "symbol": "L:f.b(B)V#21",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#21",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#21",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -258124,7 +258252,7 @@
     },
     {
       "symbol": "L:f.b(B)V#22",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#22",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#22",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -258135,7 +258263,7 @@
     },
     {
       "symbol": "L:f.b(B)V#23",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#23",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -258146,7 +258274,7 @@
     },
     {
       "symbol": "L:f.b(B)V#24",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#24",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -258157,7 +258285,7 @@
     },
     {
       "symbol": "L:f.b(B)V#25",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#25",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#25",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -258168,7 +258296,7 @@
     },
     {
       "symbol": "L:f.b(B)V#26",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#26",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#26",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -258179,7 +258307,7 @@
     },
     {
       "symbol": "L:f.b(B)V#27",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#27",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#27",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -258190,7 +258318,7 @@
     },
     {
       "symbol": "L:f.b(B)V#28",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#28",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#28",
       "originalName": "stackIn_26_0Lifetime1",
       "renamedName": "stackIn_26_0Lifetime1",
       "declaration": {
@@ -258201,7 +258329,7 @@
     },
     {
       "symbol": "L:f.b(B)V#29",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#29",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#29",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -258212,7 +258340,7 @@
     },
     {
       "symbol": "L:f.b(B)V#3",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#3",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#3",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -258223,7 +258351,7 @@
     },
     {
       "symbol": "L:f.b(B)V#4",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#4",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -258234,7 +258362,7 @@
     },
     {
       "symbol": "L:f.b(B)V#5",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#5",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#5",
       "originalName": "var1_double",
       "renamedName": "var1_double",
       "declaration": {
@@ -258245,7 +258373,7 @@
     },
     {
       "symbol": "L:f.b(B)V#6",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#6",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#6",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -258256,7 +258384,7 @@
     },
     {
       "symbol": "L:f.b(B)V#7",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#7",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -258267,7 +258395,7 @@
     },
     {
       "symbol": "L:f.b(B)V#8",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#8",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -258278,7 +258406,7 @@
     },
     {
       "symbol": "L:f.b(B)V#9",
-      "renamedSymbol": "L:ComponentTargetList.b(B)V#9",
+      "renamedSymbol": "L:ComponentTargetList.ensureRandomizedHsvPalette(B)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -388243,7 +388371,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#0",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#0",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -388254,7 +388382,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#1",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#1",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -388265,7 +388393,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#10",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#10",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -388276,7 +388404,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#11",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#11",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -388287,7 +388415,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#12",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#12",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -388298,7 +388426,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#13",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#13",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -388309,7 +388437,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#14",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#14",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -388320,7 +388448,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#15",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#15",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -388331,7 +388459,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#16",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#16",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#16",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -388342,7 +388470,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#17",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#17",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#17",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -388353,7 +388481,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#18",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#18",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#18",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -388364,7 +388492,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#19",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#19",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#19",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -388375,7 +388503,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#2",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#2",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -388386,7 +388514,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#3",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#3",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -388397,7 +388525,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#4",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#4",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -388408,7 +388536,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#5",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#5",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#5",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -388419,7 +388547,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#6",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#6",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#6",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -388430,7 +388558,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#7",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#7",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#7",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -388441,7 +388569,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#8",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#8",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#8",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -388452,7 +388580,7 @@
     },
     {
       "symbol": "L:lf.a(II)I#9",
-      "renamedSymbol": "L:S2CMatchResultPacket.a(II)I#9",
+      "renamedSymbol": "L:S2CMatchResultPacket.normalizePlayerInputMask(II)I#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -454859,7 +454987,7 @@
     },
     {
       "symbol": "L:qb.c(B)V#0",
-      "renamedSymbol": "L:ProxySocketConnector.c(B)V#0",
+      "renamedSymbol": "L:ProxySocketConnector.cycleRendererOptions(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -454870,7 +454998,7 @@
     },
     {
       "symbol": "L:qb.c(B)V#1",
-      "renamedSymbol": "L:ProxySocketConnector.c(B)V#1",
+      "renamedSymbol": "L:ProxySocketConnector.cycleRendererOptions(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -592260,9 +592388,9 @@
     },
     {
       "symbol": "M:ag.a(III)V",
-      "renamedSymbol": "M:FollowCamera.a(III)V",
+      "renamedSymbol": "M:FollowCamera.onViewportCentreSet(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onViewportCentreSet",
       "declaration": {
         "file": "ag.java",
         "start": 3651,
@@ -594614,9 +594742,9 @@
     },
     {
       "symbol": "M:au.a(I)V",
-      "renamedSymbol": "M:LegacyOpenGlFontMask.a(I)V",
+      "renamedSymbol": "M:LegacyOpenGlFontMask.readQueuedRequestReply(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readQueuedRequestReply",
       "declaration": {
         "file": "au.java",
         "start": 1392,
@@ -595538,9 +595666,9 @@
     },
     {
       "symbol": "M:bca.b(B)V",
-      "renamedSymbol": "M:VariantMask.b(B)V",
+      "renamedSymbol": "M:VariantMask.resetTrapConstructionIds(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetTrapConstructionIds",
       "declaration": {
         "file": "bca.java",
         "start": 872,
@@ -607220,9 +607348,9 @@
     },
     {
       "symbol": "M:dg.a(B)Z",
-      "renamedSymbol": "M:TrapModel.a(B)Z",
+      "renamedSymbol": "M:TrapModel.allowsMissingPart(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "allowsMissingPart",
       "declaration": {
         "file": "dg.java",
         "start": 26537,
@@ -614271,9 +614399,9 @@
     },
     {
       "symbol": "M:ep.g(B)V",
-      "renamedSymbol": "M:Projectile.g(B)V",
+      "renamedSymbol": "M:Projectile.onMovementUpdate(B)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "onMovementUpdate",
       "declaration": {
         "file": "ep.java",
         "start": 47216,
@@ -615459,9 +615587,9 @@
     },
     {
       "symbol": "M:f.b(B)V",
-      "renamedSymbol": "M:ComponentTargetList.b(B)V",
+      "renamedSymbol": "M:ComponentTargetList.ensureRandomizedHsvPalette(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "ensureRandomizedHsvPalette",
       "declaration": {
         "file": "f.java",
         "start": 12160,
@@ -618594,9 +618722,9 @@
     },
     {
       "symbol": "M:fq.b(B)I",
-      "renamedSymbol": "M:RoomHeader.b(B)I",
+      "renamedSymbol": "M:RoomHeader.getRoomSortKey(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getRoomSortKey",
       "declaration": {
         "file": "fq.java",
         "start": 2865,
@@ -618616,9 +618744,9 @@
     },
     {
       "symbol": "M:fq.c(I)I",
-      "renamedSymbol": "M:RoomHeader.c(I)I",
+      "renamedSymbol": "M:RoomHeader.getCourseRoomSortKey(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getCourseRoomSortKey",
       "declaration": {
         "file": "fq.java",
         "start": 243,
@@ -631387,9 +631515,9 @@
     },
     {
       "symbol": "M:ija.a(ZBZ)V",
-      "renamedSymbol": "M:CanvasImageBuffer.a(ZBZ)V",
+      "renamedSymbol": "M:CanvasImageBuffer.requestRandomizedColourPalettes(ZBZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestRandomizedColourPalettes",
       "declaration": {
         "file": "ija.java",
         "start": 305,
@@ -650043,9 +650171,9 @@
     },
     {
       "symbol": "M:lf.a(II)I",
-      "renamedSymbol": "M:S2CMatchResultPacket.a(II)I",
+      "renamedSymbol": "M:S2CMatchResultPacket.normalizePlayerInputMask(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "normalizePlayerInputMask",
       "declaration": {
         "file": "lf.java",
         "start": 1881,
@@ -653200,9 +653328,9 @@
     },
     {
       "symbol": "M:mba.b(Z)V",
-      "renamedSymbol": "M:DefaultTileRenderable.b(Z)V",
+      "renamedSymbol": "M:DefaultTileRenderable.chooseSeededTileModel(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "chooseSeededTileModel",
       "declaration": {
         "file": "mba.java",
         "start": 10297,
@@ -669183,9 +669311,9 @@
     },
     {
       "symbol": "M:qb.c(B)V",
-      "renamedSymbol": "M:ProxySocketConnector.c(B)V",
+      "renamedSymbol": "M:ProxySocketConnector.cycleRendererOptions(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "cycleRendererOptions",
       "declaration": {
         "file": "qb.java",
         "start": 2643,
@@ -674276,9 +674404,9 @@
     },
     {
       "symbol": "M:rfa.c(Z)V",
-      "renamedSymbol": "M:TombRacerShell.c(Z)V",
+      "renamedSymbol": "M:TombRacerShell.onOverlayFrameConsumed(Z)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "onOverlayFrameConsumed",
       "declaration": {
         "file": "rfa.java",
         "start": 2111,
@@ -694428,9 +694556,9 @@
     },
     {
       "symbol": "M:w.a(III)V",
-      "renamedSymbol": "M:SoundEventPlayer.a(III)V",
+      "renamedSymbol": "M:SoundEventPlayer.onCameraPositionUpdated(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onCameraPositionUpdated",
       "declaration": {
         "file": "w.java",
         "start": 8008,
@@ -696265,9 +696393,9 @@
     },
     {
       "symbol": "M:wja.d(B)V",
-      "renamedSymbol": "M:ClampOperator.d(B)V",
+      "renamedSymbol": "M:ClampOperator.onReconnectLoadingFrame(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "onReconnectLoadingFrame",
       "declaration": {
         "file": "wja.java",
         "start": 2961,
@@ -696595,9 +696723,9 @@
     },
     {
       "symbol": "M:wma.a(ZI)V",
-      "renamedSymbol": "M:SpawnerBehaviour.a(ZI)V",
+      "renamedSymbol": "M:SpawnerBehaviour.drawFullscreenPanelAndTooltip(ZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawFullscreenPanelAndTooltip",
       "declaration": {
         "file": "wma.java",
         "start": 4920,
@@ -702282,7 +702410,7 @@
     },
     {
       "symbol": "P:ag.a(III)V#0",
-      "renamedSymbol": "P:FollowCamera.a(III)V#0",
+      "renamedSymbol": "P:FollowCamera.onViewportCentreSet(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702293,7 +702421,7 @@
     },
     {
       "symbol": "P:ag.a(III)V#1",
-      "renamedSymbol": "P:FollowCamera.a(III)V#1",
+      "renamedSymbol": "P:FollowCamera.onViewportCentreSet(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -702304,7 +702432,7 @@
     },
     {
       "symbol": "P:ag.a(III)V#2",
-      "renamedSymbol": "P:FollowCamera.a(III)V#2",
+      "renamedSymbol": "P:FollowCamera.onViewportCentreSet(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -708123,7 +708251,7 @@
     },
     {
       "symbol": "P:au.a(I)V#0",
-      "renamedSymbol": "P:LegacyOpenGlFontMask.a(I)V#0",
+      "renamedSymbol": "P:LegacyOpenGlFontMask.readQueuedRequestReply(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -710444,7 +710572,7 @@
     },
     {
       "symbol": "P:bca.b(B)V#0",
-      "renamedSymbol": "P:VariantMask.b(B)V#0",
+      "renamedSymbol": "P:VariantMask.resetTrapConstructionIds(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -735348,7 +735476,7 @@
     },
     {
       "symbol": "P:dg.a(B)Z#0",
-      "renamedSymbol": "P:TrapModel.a(B)Z#0",
+      "renamedSymbol": "P:TrapModel.allowsMissingPart(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -750198,7 +750326,7 @@
     },
     {
       "symbol": "P:ep.g(B)V#0",
-      "renamedSymbol": "P:Projectile.g(B)V#0",
+      "renamedSymbol": "P:Projectile.onMovementUpdate(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -752596,7 +752724,7 @@
     },
     {
       "symbol": "P:f.b(B)V#0",
-      "renamedSymbol": "P:ComponentTargetList.b(B)V#0",
+      "renamedSymbol": "P:ComponentTargetList.ensureRandomizedHsvPalette(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -759196,7 +759324,7 @@
     },
     {
       "symbol": "P:fq.b(B)I#0",
-      "renamedSymbol": "P:RoomHeader.b(B)I#0",
+      "renamedSymbol": "P:RoomHeader.getRoomSortKey(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -759218,7 +759346,7 @@
     },
     {
       "symbol": "P:fq.c(I)I#0",
-      "renamedSymbol": "P:RoomHeader.c(I)I#0",
+      "renamedSymbol": "P:RoomHeader.getCourseRoomSortKey(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -787807,7 +787935,7 @@
     },
     {
       "symbol": "P:ija.a(ZBZ)V#0",
-      "renamedSymbol": "P:CanvasImageBuffer.a(ZBZ)V#0",
+      "renamedSymbol": "P:CanvasImageBuffer.requestRandomizedColourPalettes(ZBZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -787818,7 +787946,7 @@
     },
     {
       "symbol": "P:ija.a(ZBZ)V#1",
-      "renamedSymbol": "P:CanvasImageBuffer.a(ZBZ)V#1",
+      "renamedSymbol": "P:CanvasImageBuffer.requestRandomizedColourPalettes(ZBZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -787829,7 +787957,7 @@
     },
     {
       "symbol": "P:ija.a(ZBZ)V#2",
-      "renamedSymbol": "P:CanvasImageBuffer.a(ZBZ)V#2",
+      "renamedSymbol": "P:CanvasImageBuffer.requestRandomizedColourPalettes(ZBZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -835316,7 +835444,7 @@
     },
     {
       "symbol": "P:lf.a(II)I#0",
-      "renamedSymbol": "P:S2CMatchResultPacket.a(II)I#0",
+      "renamedSymbol": "P:S2CMatchResultPacket.normalizePlayerInputMask(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -835327,7 +835455,7 @@
     },
     {
       "symbol": "P:lf.a(II)I#1",
-      "renamedSymbol": "P:S2CMatchResultPacket.a(II)I#1",
+      "renamedSymbol": "P:S2CMatchResultPacket.normalizePlayerInputMask(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -842114,7 +842242,7 @@
     },
     {
       "symbol": "P:mba.b(Z)V#0",
-      "renamedSymbol": "P:DefaultTileRenderable.b(Z)V#0",
+      "renamedSymbol": "P:DefaultTileRenderable.chooseSeededTileModel(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -878700,7 +878828,7 @@
     },
     {
       "symbol": "P:qb.c(B)V#0",
-      "renamedSymbol": "P:ProxySocketConnector.c(B)V#0",
+      "renamedSymbol": "P:ProxySocketConnector.cycleRendererOptions(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -891625,7 +891753,7 @@
     },
     {
       "symbol": "P:rfa.c(Z)V#0",
-      "renamedSymbol": "P:TombRacerShell.c(Z)V#0",
+      "renamedSymbol": "P:TombRacerShell.onOverlayFrameConsumed(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -935306,7 +935434,7 @@
     },
     {
       "symbol": "P:w.a(III)V#0",
-      "renamedSymbol": "P:SoundEventPlayer.a(III)V#0",
+      "renamedSymbol": "P:SoundEventPlayer.onCameraPositionUpdated(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -935317,7 +935445,7 @@
     },
     {
       "symbol": "P:w.a(III)V#1",
-      "renamedSymbol": "P:SoundEventPlayer.a(III)V#1",
+      "renamedSymbol": "P:SoundEventPlayer.onCameraPositionUpdated(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -935328,7 +935456,7 @@
     },
     {
       "symbol": "P:w.a(III)V#2",
-      "renamedSymbol": "P:SoundEventPlayer.a(III)V#2",
+      "renamedSymbol": "P:SoundEventPlayer.onCameraPositionUpdated(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -938947,7 +939075,7 @@
     },
     {
       "symbol": "P:wja.d(B)V#0",
-      "renamedSymbol": "P:ClampOperator.d(B)V#0",
+      "renamedSymbol": "P:ClampOperator.onReconnectLoadingFrame(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939739,7 +939867,7 @@
     },
     {
       "symbol": "P:wma.a(ZI)V#0",
-      "renamedSymbol": "P:SpawnerBehaviour.a(ZI)V#0",
+      "renamedSymbol": "P:SpawnerBehaviour.drawFullscreenPanelAndTooltip(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939750,7 +939878,7 @@
     },
     {
       "symbol": "P:wma.a(ZI)V#1",
-      "renamedSymbol": "P:SpawnerBehaviour.a(ZI)V#1",
+      "renamedSymbol": "P:SpawnerBehaviour.drawFullscreenPanelAndTooltip(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -943923,7 +944051,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "5a8bfa7bbd728a42846d8292b904e603437c1b235e7803c6ea7c6d0777285771",
+      "outputSha256": "7d1e1dabcad4d4daed97f3b6636c4855fc0ce22659e14a486eb26009e89b7d7f",
       "edits": [
         {
           "start": 96,
@@ -943980,6 +944108,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 506,
+          "end": 507,
+          "symbol": "M:qb.c(B)V",
+          "original": "c",
+          "renamed": "cycleRendererOptions"
         },
         {
           "start": 616,
@@ -944575,6 +944710,13 @@
           "symbol": "C:wma",
           "original": "wma",
           "renamed": "SpawnerBehaviour"
+        },
+        {
+          "start": 4772,
+          "end": 4773,
+          "symbol": "M:wma.a(ZI)V",
+          "original": "a",
+          "renamed": "drawFullscreenPanelAndTooltip"
         },
         {
           "start": 4806,
@@ -966876,7 +967018,7 @@
       "original": "ag.java",
       "renamed": "FollowCamera.java",
       "inputSha256": "2ac327ac89a0a2fa10fee2d813c6a43058a9277cffa331be83ad255a34a94875",
-      "outputSha256": "4685540d39d2ec59329152cd6f82e47a93a2aaede81841d1eae9fcb0e7e0bfdf",
+      "outputSha256": "b5095d3365998b0573ee8499a96d76d89c8d9b3c5e761537072721fb136e9819",
       "edits": [
         {
           "start": 50,
@@ -967374,6 +967516,13 @@
           "symbol": "M:ag.b(III)Z",
           "original": "b",
           "renamed": "hasFlag2048"
+        },
+        {
+          "start": 3651,
+          "end": 3652,
+          "symbol": "M:ag.a(III)V",
+          "original": "a",
+          "renamed": "onViewportCentreSet"
         },
         {
           "start": 3738,
@@ -982541,7 +982690,7 @@
       "original": "au.java",
       "renamed": "LegacyOpenGlFontMask.java",
       "inputSha256": "d286a85f336500abc7137fc869eda0c4e86c4de9966d2d76b301cf4782d20ddb",
-      "outputSha256": "ef9c34acc0787d6e3732d198e3c54703a1b5246853343ec433a97d4fcf8ba142",
+      "outputSha256": "20a0cb575008727a3968d3bfe8a122d950a5bba1e2a3dd756eec5c71658f3704",
       "edits": [
         {
           "start": 50,
@@ -982808,6 +982957,13 @@
           "symbol": "M:au.<init>()V",
           "original": "au",
           "renamed": "LegacyOpenGlFontMask"
+        },
+        {
+          "start": 1392,
+          "end": 1393,
+          "symbol": "M:au.a(I)V",
+          "original": "a",
+          "renamed": "readQueuedRequestReply"
         },
         {
           "start": 1611,
@@ -989125,7 +989281,7 @@
       "original": "bca.java",
       "renamed": "VariantMask.java",
       "inputSha256": "dba3ce5f5558c3b1ff70cd566ba8bd9053df43ceb6f00501bdc9fce0f27e1a01",
-      "outputSha256": "9b1bb75d3fae1a8275e6eb27087c0db55b0699a97a1b5970e1da597668c9c50a",
+      "outputSha256": "3b55ed041bd47d1f0bde85264f17322daca460651f8c4c455cf015400fb94425",
       "edits": [
         {
           "start": 50,
@@ -989275,6 +989431,13 @@
           "renamed": "setAll"
         },
         {
+          "start": 872,
+          "end": 873,
+          "symbol": "M:bca.b(B)V",
+          "original": "b",
+          "renamed": "resetTrapConstructionIds"
+        },
+        {
           "start": 897,
           "end": 899,
           "symbol": "C:rn",
@@ -989371,6 +989534,13 @@
           "symbol": "C:bca",
           "original": "bca",
           "renamed": "VariantMask"
+        },
+        {
+          "start": 1525,
+          "end": 1526,
+          "symbol": "M:bca.b(B)V",
+          "original": "b",
+          "renamed": "resetTrapConstructionIds"
         },
         {
           "start": 1622,
@@ -1026463,7 +1026633,7 @@
       "original": "cka.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "6ac9fb8d7ca9f3fd523ba26d424b59e3f403240ec044c34e1b63cd73f48ef1c8",
-      "outputSha256": "16804658b42c35579909a06e3d7f0dc96e94e2017733bec73cfd697f92c7a27a",
+      "outputSha256": "5eb1d01c42cf0a19b2f0a8f45422d8e7d450c0f36ee7d5ae86f890fa69894d01",
       "edits": [
         {
           "start": 71,
@@ -1030416,6 +1030586,13 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "CanvasImageBuffer"
+        },
+        {
+          "start": 63547,
+          "end": 63548,
+          "symbol": "M:ija.a(ZBZ)V",
+          "original": "a",
+          "renamed": "requestRandomizedColourPalettes"
         },
         {
           "start": 63640,
@@ -1058410,7 +1058587,7 @@
       "original": "dba.java",
       "renamed": "C2SSubmitSettingsPacket.java",
       "inputSha256": "40880b386fd9a9c727dc04176d108b91cfda7f6a92e240c122924a54cb40abe8",
-      "outputSha256": "e2021aabe04798b5a1ca6cb74d02128f991b407823fea055fbdd7bf304bd1fb5",
+      "outputSha256": "88ea0f82336b7cdd9cece668545d0bec328f9567db2524e95eb1f6efd589b838",
       "edits": [
         {
           "start": 50,
@@ -1058600,6 +1058777,13 @@
           "symbol": "C:wja",
           "original": "wja",
           "renamed": "ClampOperator"
+        },
+        {
+          "start": 1194,
+          "end": 1195,
+          "symbol": "M:wja.d(B)V",
+          "original": "d",
+          "renamed": "onReconnectLoadingFrame"
         },
         {
           "start": 1308,
@@ -1066063,7 +1066247,7 @@
       "original": "dg.java",
       "renamed": "TrapModel.java",
       "inputSha256": "1d795992e33753a7469df2c8acda1b00ee413d8530d0fc9bd5d1ab3d21101e56",
-      "outputSha256": "3485fda015c59480058c5a161c11d526474475502cc1ac6c12b7e7ecdbc9b8c8",
+      "outputSha256": "93379feac495b37c21d9837937f796146cb55c472d2994f0782c27b7f3d2c292",
       "edits": [
         {
           "start": 53,
@@ -1068615,6 +1068799,13 @@
           "renamed": "isFinished"
         },
         {
+          "start": 20473,
+          "end": 20474,
+          "symbol": "M:dg.a(B)Z",
+          "original": "a",
+          "renamed": "allowsMissingPart"
+        },
+        {
           "start": 20516,
           "end": 20523,
           "symbol": "F:dg.field_k:Lgr;",
@@ -1068956,6 +1069147,13 @@
           "symbol": "M:dg.a(I)Lla;",
           "original": "a",
           "renamed": "getRoom"
+        },
+        {
+          "start": 23334,
+          "end": 23335,
+          "symbol": "M:dg.a(B)Z",
+          "original": "a",
+          "renamed": "allowsMissingPart"
         },
         {
           "start": 23369,
@@ -1069306,6 +1069504,13 @@
           "symbol": "F:dg.field_f:I",
           "original": "field_f",
           "renamed": "elevationOffset"
+        },
+        {
+          "start": 26537,
+          "end": 26538,
+          "symbol": "M:dg.a(B)Z",
+          "original": "a",
+          "renamed": "allowsMissingPart"
         },
         {
           "start": 26638,
@@ -1096143,7 +1096348,7 @@
       "original": "eo.java",
       "renamed": "HardwareGraphicsToolkit.java",
       "inputSha256": "04951f02319c9adfeafb9ac8e4ed8bc5ffdbc08453d0c94ed081510674e0b0f0",
-      "outputSha256": "637cf35b5d94c561082b8e554e0e1b291cf30fcb4e952208353a0c99304b206f",
+      "outputSha256": "d2f4d7fe9661fda9a1d6a2e651b1edc1ed45536c05bfbdb770a4e6b548c29cd8",
       "edits": [
         {
           "start": 74,
@@ -1101967,6 +1102172,13 @@
           "renamed": "CanvasImageBuffer"
         },
         {
+          "start": 62891,
+          "end": 62892,
+          "symbol": "M:ija.a(ZBZ)V",
+          "original": "a",
+          "renamed": "requestRandomizedColourPalettes"
+        },
+        {
           "start": 62993,
           "end": 62995,
           "symbol": "C:kp",
@@ -1103856,7 +1104068,7 @@
       "original": "ep.java",
       "renamed": "Projectile.java",
       "inputSha256": "ce5106fb47d460875d742a5d1b383d4a8b9dfd58ba6e6437c2ef202d9d0a9ee3",
-      "outputSha256": "ffb6ed5a9f9d860495d19bc64c40d057ca7e672a7d917fd77ec2e4d4225ed933",
+      "outputSha256": "05a2d509767578160a6f1d40af4e748e99a194dabd0ba99ecb33ad878fadc645",
       "edits": [
         {
           "start": 50,
@@ -1107758,6 +1107970,13 @@
           "renamed": "setXY"
         },
         {
+          "start": 25083,
+          "end": 25084,
+          "symbol": "M:ep.g(B)V",
+          "original": "g",
+          "renamed": "onMovementUpdate"
+        },
+        {
           "start": 25111,
           "end": 25118,
           "symbol": "F:ep.field_t:Lup;",
@@ -1108498,6 +1108717,13 @@
           "symbol": "C:hr",
           "original": "hr",
           "renamed": "Particle"
+        },
+        {
+          "start": 31322,
+          "end": 31323,
+          "symbol": "M:ep.g(B)V",
+          "original": "g",
+          "renamed": "onMovementUpdate"
         },
         {
           "start": 31350,
@@ -1110850,6 +1111076,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 47216,
+          "end": 47217,
+          "symbol": "M:ep.g(B)V",
+          "original": "g",
+          "renamed": "onMovementUpdate"
         },
         {
           "start": 47277,
@@ -1116652,7 +1116885,7 @@
       "original": "f.java",
       "renamed": "ComponentTargetList.java",
       "inputSha256": "4ab0ac011e015e8932ebb10f4f2bb6c1592be49b9cc06cb1b799f60b158f1ea3",
-      "outputSha256": "eba135115280a87afc420658bd0f562429a5861d7a171845a9b3e6cbfa22b02c",
+      "outputSha256": "dc9602ee11c45cd89da1f07da8c982b018567a8603b8d2f41288ec33e4e4b0dc",
       "edits": [
         {
           "start": 71,
@@ -1117244,6 +1117477,13 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 12160,
+          "end": 12161,
+          "symbol": "M:f.b(B)V",
+          "original": "b",
+          "renamed": "ensureRandomizedHsvPalette"
+        },
+        {
           "start": 13075,
           "end": 13077,
           "symbol": "C:bt",
@@ -1117288,6 +1117528,13 @@
           "renamed": "ComponentTargetList"
         },
         {
+          "start": 16354,
+          "end": 16355,
+          "symbol": "M:f.b(B)V",
+          "original": "b",
+          "renamed": "ensureRandomizedHsvPalette"
+        },
+        {
           "start": 16649,
           "end": 16652,
           "symbol": "C:tba",
@@ -1117321,6 +1117568,13 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 16961,
+          "end": 16962,
+          "symbol": "M:f.b(B)V",
+          "original": "b",
+          "renamed": "ensureRandomizedHsvPalette"
         },
         {
           "start": 16991,
@@ -1134873,7 +1135127,7 @@
       "original": "fj.java",
       "renamed": "RoomViewRenderer.java",
       "inputSha256": "ff6a13da7dd267e2066d74d43694ad36ce77b2a265f292c9c3f1feb30af40abb",
-      "outputSha256": "e58003b574f4c1d3eb01d63cafe5b63d94150a65d95174c0c4b9145f8ecfbce2",
+      "outputSha256": "dc53f95a2337fcc49cf09621b376dfc7125a195bc5b2784da13683b47fcdc2ad",
       "edits": [
         {
           "start": 50,
@@ -1135163,6 +1135417,13 @@
           "renamed": "setViewport"
         },
         {
+          "start": 3605,
+          "end": 3606,
+          "symbol": "M:ag.a(III)V",
+          "original": "a",
+          "renamed": "onViewportCentreSet"
+        },
+        {
           "start": 3684,
           "end": 3685,
           "symbol": "M:ag.c(I)I",
@@ -1135182,6 +1135443,13 @@
           "symbol": "F:qh.field_g:[Lw;",
           "original": "field_g",
           "renamed": "soundPlayers"
+        },
+        {
+          "start": 3770,
+          "end": 3771,
+          "symbol": "M:w.a(III)V",
+          "original": "a",
+          "renamed": "onCameraPositionUpdated"
         },
         {
           "start": 3820,
@@ -1148054,7 +1148322,7 @@
       "original": "fq.java",
       "renamed": "RoomHeader.java",
       "inputSha256": "f67a346db42753038db8ae6b3d968bf9b5aa2c6a305bd5608b945020e7ec37a6",
-      "outputSha256": "089120c771479d262540b04e7b03b4287b9f52e7a7173af090370b0069aa80ac",
+      "outputSha256": "5de4b0fc9acf421f52611caa2f659958d1b8e6a575389b704737abfb1d0bbe8a",
       "edits": [
         {
           "start": 50,
@@ -1148076,6 +1148344,20 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 243,
+          "end": 244,
+          "symbol": "M:fq.c(I)I",
+          "original": "c",
+          "renamed": "getCourseRoomSortKey"
+        },
+        {
+          "start": 371,
+          "end": 372,
+          "symbol": "M:fq.c(I)I",
+          "original": "c",
+          "renamed": "getCourseRoomSortKey"
         },
         {
           "start": 469,
@@ -1148342,6 +1148624,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2865,
+          "end": 2866,
+          "symbol": "M:fq.b(B)I",
+          "original": "b",
+          "renamed": "getRoomSortKey"
         },
         {
           "start": 2995,
@@ -1149767,7 +1150056,7 @@
       "original": "fsa.java",
       "renamed": "Trap.java",
       "inputSha256": "1034078d241b213e09e0736d236bee026ca2bd6e138efd3b5b3295df3a02c180",
-      "outputSha256": "880dfbd3dba0d8928082d384c8574f0de98aface212127c1d90077cf3ae5111b",
+      "outputSha256": "81724587668ec0a7e40cd24f7f242bead1dfbc8ea73cac603ba0d6f8b7cb16a4",
       "edits": [
         {
           "start": 50,
@@ -1156810,6 +1157099,13 @@
           "symbol": "C:gr",
           "original": "gr",
           "renamed": "TrapPart"
+        },
+        {
+          "start": 49430,
+          "end": 49431,
+          "symbol": "M:dg.a(B)Z",
+          "original": "a",
+          "renamed": "allowsMissingPart"
         },
         {
           "start": 49472,
@@ -1235526,7 +1235822,7 @@
       "original": "ija.java",
       "renamed": "CanvasImageBuffer.java",
       "inputSha256": "3315f091ecd48d7c580864b366d9eec14e6ec283918452ef54c5e7e89d14b78b",
-      "outputSha256": "b47e5d8f4fac4680f478cc5cf727ced9308f380713824e4f73ac2c17486c503e",
+      "outputSha256": "ba645d0c145acb206f495e601f4e64be3cb58054c40dcff54148903dcca33ad9",
       "edits": [
         {
           "start": 53,
@@ -1235571,6 +1235867,13 @@
           "renamed": "drawRegion"
         },
         {
+          "start": 305,
+          "end": 306,
+          "symbol": "M:ija.a(ZBZ)V",
+          "original": "a",
+          "renamed": "requestRandomizedColourPalettes"
+        },
+        {
           "start": 417,
           "end": 419,
           "symbol": "C:wk",
@@ -1235590,6 +1235893,13 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 460,
+          "end": 461,
+          "symbol": "M:f.b(B)V",
+          "original": "b",
+          "renamed": "ensureRandomizedHsvPalette"
         },
         {
           "start": 522,
@@ -1235627,6 +1235937,13 @@
           "renamed": "CanvasImageBuffer"
         },
         {
+          "start": 627,
+          "end": 628,
+          "symbol": "M:ija.a(ZBZ)V",
+          "original": "a",
+          "renamed": "requestRandomizedColourPalettes"
+        },
+        {
           "start": 687,
           "end": 689,
           "symbol": "C:wk",
@@ -1235646,6 +1235963,13 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 728,
+          "end": 729,
+          "symbol": "M:f.b(B)V",
+          "original": "b",
+          "renamed": "ensureRandomizedHsvPalette"
         },
         {
           "start": 784,
@@ -1335715,7 +1336039,7 @@
       "original": "la.java",
       "renamed": "Room.java",
       "inputSha256": "8faa19b96925d404db650c9bd9afd4c1c3c9c8fd6d073e07c5e5d38b07c89e15",
-      "outputSha256": "771c023faea0c0126e132a6d7f545eaaa7ee4654247eefe4954e81ab4e4faf3b",
+      "outputSha256": "2c61bb9d78e6151ecf99eeaba39b70bef5c78ad1134e54ba9ff665d7f24a256c",
       "edits": [
         {
           "start": 50,
@@ -1340756,6 +1341080,13 @@
           "symbol": "C:bca",
           "original": "bca",
           "renamed": "VariantMask"
+        },
+        {
+          "start": 33749,
+          "end": 33750,
+          "symbol": "M:bca.b(B)V",
+          "original": "b",
+          "renamed": "resetTrapConstructionIds"
         },
         {
           "start": 33783,
@@ -1348460,7 +1348791,7 @@
       "original": "lf.java",
       "renamed": "S2CMatchResultPacket.java",
       "inputSha256": "39ba4d74b4ee973515de6b3f7edf39959888ec1747e4cf0e7d20d1f18f196c89",
-      "outputSha256": "55f4502a7fc5e012ae3c165ce095b79a0a5ec2f5b37e4a44cb0273276cf1fb17",
+      "outputSha256": "818718cd23d4a97f1ff6a2dacef0a1fbb279c027aaa985750bdbb63bb3e2a4ff",
       "edits": [
         {
           "start": 50,
@@ -1348645,6 +1348976,13 @@
           "renamed": "S2CMatchResultPacket"
         },
         {
+          "start": 1380,
+          "end": 1381,
+          "symbol": "M:lf.a(II)I",
+          "original": "a",
+          "renamed": "normalizePlayerInputMask"
+        },
+        {
           "start": 1422,
           "end": 1423,
           "symbol": "M:kh.i(I)V",
@@ -1348692,6 +1349030,13 @@
           "symbol": "M:lf.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 1881,
+          "end": 1882,
+          "symbol": "M:lf.a(II)I",
+          "original": "a",
+          "renamed": "normalizePlayerInputMask"
         }
       ]
     },
@@ -1365642,7 +1365987,7 @@
       "original": "mba.java",
       "renamed": "DefaultTileRenderable.java",
       "inputSha256": "ff53dc93e9851116d3a8cd44c703b498516a0c6339c0612a8dce4649d3a465a3",
-      "outputSha256": "73819b34a23ec06f41733853f5b81909fbe072778c6521d4b7c6480bf73fcc7a",
+      "outputSha256": "ee5194c9a58109d5fc0039177fb15ce5987292a4556a5bcf9fa0c50859fb120b",
       "edits": [
         {
           "start": 50,
@@ -1366002,6 +1366347,13 @@
           "renamed": "chooseFloorSprite"
         },
         {
+          "start": 3439,
+          "end": 3440,
+          "symbol": "M:mba.b(Z)V",
+          "original": "b",
+          "renamed": "chooseSeededTileModel"
+        },
+        {
           "start": 3538,
           "end": 3545,
           "symbol": "F:uq.field_e:Lpca;",
@@ -1366021,6 +1366373,13 @@
           "symbol": "M:mba.h(B)V",
           "original": "h",
           "renamed": "chooseFloorSprite"
+        },
+        {
+          "start": 3696,
+          "end": 3697,
+          "symbol": "M:mba.b(Z)V",
+          "original": "b",
+          "renamed": "chooseSeededTileModel"
         },
         {
           "start": 3764,
@@ -1366623,6 +1366982,13 @@
           "symbol": "M:mba.a(B)V",
           "original": "a",
           "renamed": "chooseEdgeSprite"
+        },
+        {
+          "start": 10297,
+          "end": 10298,
+          "symbol": "M:mba.b(Z)V",
+          "original": "b",
+          "renamed": "chooseSeededTileModel"
         },
         {
           "start": 10420,
@@ -1413264,7 +1413630,7 @@
       "original": "oa.java",
       "renamed": "NativeSoftwareGraphicsToolkit.java",
       "inputSha256": "9838c278ba3d73f0164d8b674fa243aee2bf549fdc9f39e91a1e5b132efb9099",
-      "outputSha256": "91d35d2d653072cfdf6df4e3d4b816fdc94f98f6977749af915eaf03632a0788",
+      "outputSha256": "8c3f8df3170d77524df13aa9563b907d6a278db996dc4cc1165b1bbe62d0329d",
       "edits": [
         {
           "start": 50,
@@ -1413405,6 +1413771,13 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "CanvasImageBuffer"
+        },
+        {
+          "start": 1236,
+          "end": 1237,
+          "symbol": "M:ija.a(ZBZ)V",
+          "original": "a",
+          "renamed": "requestRandomizedColourPalettes"
         },
         {
           "start": 1320,
@@ -1473912,7 +1474285,7 @@
       "original": "po.java",
       "renamed": "CachedTextLayout.java",
       "inputSha256": "cbe02e0b8104dda6d35dd4b7b62769bfcf96a6be5226f5131b47d2802d05208a",
-      "outputSha256": "cd33d7a31d45acebed142e3c96d05b7fe6c3f532de77354889355f702469c617",
+      "outputSha256": "9af18e025d565075316ae141ad9df9af1fe8057e8a72e4936d567ebfea5f69cf",
       "edits": [
         {
           "start": 50,
@@ -1473976,6 +1474349,20 @@
           "symbol": "M:csa.a(III[Lg;)V",
           "original": "a",
           "renamed": "swapRoomDefinitions"
+        },
+        {
+          "start": 1145,
+          "end": 1146,
+          "symbol": "M:fq.b(B)I",
+          "original": "b",
+          "renamed": "getRoomSortKey"
+        },
+        {
+          "start": 1175,
+          "end": 1176,
+          "symbol": "M:fq.b(B)I",
+          "original": "b",
+          "renamed": "getRoomSortKey"
         },
         {
           "start": 1207,
@@ -1485142,7 +1485529,7 @@
       "original": "qb.java",
       "renamed": "ProxySocketConnector.java",
       "inputSha256": "209272f633a353d2712c49d0d6cf37a8229d384f3cf16b641fde66f181947c64",
-      "outputSha256": "26866a7c2e921772c4ae8de50bbb3b11ac76d2606f57f88f11724c5d5ddd9966",
+      "outputSha256": "6fc940e417ee2322f302cf538e4ad7ecabac414429c64a5088f652b228b91a8d",
       "edits": [
         {
           "start": 89,
@@ -1485283,6 +1485670,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2643,
+          "end": 2644,
+          "symbol": "M:qb.c(B)V",
+          "original": "c",
+          "renamed": "cycleRendererOptions"
         },
         {
           "start": 2668,
@@ -1485577,6 +1485971,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 3763,
+          "end": 3764,
+          "symbol": "M:qb.c(B)V",
+          "original": "c",
+          "renamed": "cycleRendererOptions"
         },
         {
           "start": 3858,
@@ -1485885,6 +1486286,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 13856,
+          "end": 13857,
+          "symbol": "M:qb.c(B)V",
+          "original": "c",
+          "renamed": "cycleRendererOptions"
         },
         {
           "start": 14998,
@@ -1488857,7 +1489265,7 @@
       "original": "qh.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "297deb7b6be6c8d5c3ced20a65c12c6f29d1cdf537d06d984c0ca4a0ed3f8ddc",
-      "outputSha256": "a0bee6ec7afe71702299d120b7d2937cf62bed3563c3d632f648efdb0d1516da",
+      "outputSha256": "4b1887b0dbb1e020916e04757f36e91e921a528d40c0592bae45b90c56f3bc1a",
       "edits": [
         {
           "start": 71,
@@ -1493688,6 +1494096,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "S2CMatchResultPacket"
+        },
+        {
+          "start": 35427,
+          "end": 35428,
+          "symbol": "M:lf.a(II)I",
+          "original": "a",
+          "renamed": "normalizePlayerInputMask"
         },
         {
           "start": 35464,
@@ -1525851,7 +1526266,7 @@
       "original": "rfa.java",
       "renamed": "TombRacerShell.java",
       "inputSha256": "ee9239156511db1a79e1fc580e5d6f6c90add2ec0e44a464a7b8f3c9337f80a6",
-      "outputSha256": "1caff282789dc3ff72410b632f9a2659f220187cdc3580d078dfc76b832835bf",
+      "outputSha256": "a5077248ed750141e05eba9d082e12b52aeb9bbc7c45a3aef6f0d0c26110acb5",
       "edits": [
         {
           "start": 74,
@@ -1526078,6 +1526493,13 @@
           "renamed": "PendingRequestFactory"
         },
         {
+          "start": 980,
+          "end": 981,
+          "symbol": "M:rfa.c(Z)V",
+          "original": "c",
+          "renamed": "onOverlayFrameConsumed"
+        },
+        {
           "start": 1016,
           "end": 1019,
           "symbol": "C:pka",
@@ -1526237,6 +1526659,13 @@
           "symbol": "M:rfa.<init>()V",
           "original": "rfa",
           "renamed": "TombRacerShell"
+        },
+        {
+          "start": 2111,
+          "end": 2112,
+          "symbol": "M:rfa.c(Z)V",
+          "original": "c",
+          "renamed": "onOverlayFrameConsumed"
         },
         {
           "start": 2231,
@@ -1556820,7 +1557249,7 @@
       "original": "sfa.java",
       "renamed": "SoftwareGraphicsToolkit.java",
       "inputSha256": "90d0446d6752c8be5dfc9273c2995f335067d1d6375e3476d2f90f8120e85d3c",
-      "outputSha256": "22ec7e423fb22f04308ac6bb8f748d1159bfe66fe5513077cedb9759d27fc515",
+      "outputSha256": "405f9dc7d6e4762327e6eb0389e2656413449063e5b6105326e0489156bf1cab",
       "edits": [
         {
           "start": 50,
@@ -1558326,6 +1558755,13 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "CanvasImageBuffer"
+        },
+        {
+          "start": 47740,
+          "end": 47741,
+          "symbol": "M:ija.a(ZBZ)V",
+          "original": "a",
+          "renamed": "requestRandomizedColourPalettes"
         },
         {
           "start": 47828,
@@ -1604539,7 +1604975,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "36de242d94817325b056024449148c19c949a2ca412643ad667c1f42adb0529c",
+      "outputSha256": "c8e1592f358f9a15ed8bd042d94cd92577950e4db128a069dcde5cf75be91f5e",
       "edits": [
         {
           "start": 53,
@@ -1605856,6 +1606292,13 @@
           "symbol": "C:au",
           "original": "au",
           "renamed": "LegacyOpenGlFontMask"
+        },
+        {
+          "start": 7489,
+          "end": 7490,
+          "symbol": "M:au.a(I)V",
+          "original": "a",
+          "renamed": "readQueuedRequestReply"
         },
         {
           "start": 7569,
@@ -1623791,7 +1624234,7 @@
       "original": "uo.java",
       "renamed": "OpenGlFaceNormal.java",
       "inputSha256": "3abc64944a20cb6dab4b0d816a56f7b71db2d3acfc6d51a65f886ec54b9d6b52",
-      "outputSha256": "69f5a21eec1386e66d9afb2e35924a733fa2aa839e1901e18c72df779efbdd2c",
+      "outputSha256": "5517a7d77b8836daffb79c5722ac2df851ea6c44a286ff12330d0f0a19454114",
       "edits": [
         {
           "start": 50,
@@ -1623913,6 +1624356,13 @@
           "renamed": "isConnector"
         },
         {
+          "start": 1338,
+          "end": 1339,
+          "symbol": "M:fq.c(I)I",
+          "original": "c",
+          "renamed": "getCourseRoomSortKey"
+        },
+        {
           "start": 1464,
           "end": 1465,
           "symbol": "M:ub.a(I)I",
@@ -1623932,6 +1624382,13 @@
           "symbol": "M:ub.a(ZI)Ljava/lang/Object;",
           "original": "a",
           "renamed": "get"
+        },
+        {
+          "start": 1579,
+          "end": 1580,
+          "symbol": "M:fq.c(I)I",
+          "original": "c",
+          "renamed": "getCourseRoomSortKey"
         },
         {
           "start": 1814,
@@ -1662709,7 +1663166,7 @@
       "original": "w.java",
       "renamed": "SoundEventPlayer.java",
       "inputSha256": "2e65810e30af567bc92c43292137bdbc35d8fcd8adbcbe155d7c40ac4fd1153d",
-      "outputSha256": "0319d263a2b943128b19eeaada78d12c2e6fdbb52eedef6d0631feea86b02274",
+      "outputSha256": "22568d3fd3cd53f8e55a4fe0125d8f8b1e6f43aaa505c54487e3b3dd786dfe36",
       "edits": [
         {
           "start": 50,
@@ -1663564,6 +1664021,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 8008,
+          "end": 8009,
+          "symbol": "M:w.a(III)V",
+          "original": "a",
+          "renamed": "onCameraPositionUpdated"
         },
         {
           "start": 8089,
@@ -1674139,7 +1674603,7 @@
       "original": "wja.java",
       "renamed": "ClampOperator.java",
       "inputSha256": "84485101b1c4e3c797e785b3c525c1f596cc49e607bf90bea61df8a936f6fed8",
-      "outputSha256": "086e2a3be1680bde1dd34a31bdee48859263dee72bf04800ee87adfc157d676f",
+      "outputSha256": "2c0a0ce71a0128cddc8a26aef60516009d61894553a130b1c11cb84f2355ff52",
       "edits": [
         {
           "start": 50,
@@ -1674385,6 +1674849,13 @@
           "symbol": "M:wja.<init>()V",
           "original": "wja",
           "renamed": "ClampOperator"
+        },
+        {
+          "start": 2961,
+          "end": 2962,
+          "symbol": "M:wja.d(B)V",
+          "original": "d",
+          "renamed": "onReconnectLoadingFrame"
         },
         {
           "start": 3076,
@@ -1676331,7 +1676802,7 @@
       "original": "wma.java",
       "renamed": "SpawnerBehaviour.java",
       "inputSha256": "de4b48c158bd4a45c519103d729f6227728e2cb918104048f0184707e76107a6",
-      "outputSha256": "2f6a0c692aafdc104ca74a54fe97a456ffc68f77b9bbd0beb1f8bb56fc9950f6",
+      "outputSha256": "79871d47bd9e8cdddfdaf2d6e61af09d62c1266caf4e44899bac5fbdb7288343",
       "edits": [
         {
           "start": 50,
@@ -1676402,6 +1676873,13 @@
           "symbol": "C:wma",
           "original": "wma",
           "renamed": "SpawnerBehaviour"
+        },
+        {
+          "start": 359,
+          "end": 360,
+          "symbol": "M:wma.a(ZI)V",
+          "original": "a",
+          "renamed": "drawFullscreenPanelAndTooltip"
         },
         {
           "start": 388,
@@ -1676964,6 +1677442,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 4920,
+          "end": 4921,
+          "symbol": "M:wma.a(ZI)V",
+          "original": "a",
+          "renamed": "drawFullscreenPanelAndTooltip"
+        },
+        {
           "start": 4989,
           "end": 4991,
           "symbol": "C:hh",
@@ -1677011,6 +1677496,13 @@
           "symbol": "C:wma",
           "original": "wma",
           "renamed": "SpawnerBehaviour"
+        },
+        {
+          "start": 5133,
+          "end": 5134,
+          "symbol": "M:wma.a(ZI)V",
+          "original": "a",
+          "renamed": "drawFullscreenPanelAndTooltip"
         },
         {
           "start": 5154,
@@ -1677067,6 +1677559,13 @@
           "symbol": "C:wma",
           "original": "wma",
           "renamed": "SpawnerBehaviour"
+        },
+        {
+          "start": 5365,
+          "end": 5366,
+          "symbol": "M:wma.a(ZI)V",
+          "original": "a",
+          "renamed": "drawFullscreenPanelAndTooltip"
         },
         {
           "start": 5410,
@@ -1693181,10 +1693680,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "36c9324e53cc0258e11c9ff8f652e7d878ab33b771678bed42cf1afa577017fe",
+    "rulesSha256": "8793e178134ffb270305bd66b6b5ee9c533bf28a581f05df9affa10e2df04c26",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "f98cf0850b68579cf8f2205dca7980473e3bc2e7ec304ddbac1ac41ec8bd611c",
+    "outputTreeSha256": "f126c0bb02317823db600c95555f2c407d22a18ef097f50427616eb19782bdec",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

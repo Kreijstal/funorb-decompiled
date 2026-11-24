@@ -16,7 +16,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         boolean stackIn_17_0 = false;
         if (RasterizerOperator.hasDeveloperPrivileges(20125)) {
           if (1 == param2) {
-            ProxySocketConnector.c((byte) -118);
+            ProxySocketConnector.cycleRendererOptions((byte) -118);
             return true;
           }
           if (param2 == 2) {
@@ -154,7 +154,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
             if (ToolkitInstance.field_c.isPanelActive(-8832)) {
               SoftwareRasterizer.clear();
               stackIn_33_0 = ((this.field_E & 8) == 0);
-              SpawnerBehaviour.a(stackIn_33_0, 0);
+              SpawnerBehaviour.drawFullscreenPanelAndTooltip(stackIn_33_0, 0);
               SoftwareRasterBlitter.blitSoftwareRasterRegion(CurrentGraphicsToolkit.toolkit, param2 ^ 17);
             }
           }

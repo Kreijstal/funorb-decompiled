@@ -12,7 +12,7 @@ final class SpawnerBehaviour extends Behaviour {
         if (param1 == 12166) {
           return ScoreSubmission.getModelForCategory(param0, false, false, 2, param2);
         }
-        SpawnerBehaviour.a(true, -97);
+        SpawnerBehaviour.drawFullscreenPanelAndTooltip(true, -97);
         return ScoreSubmission.getModelForCategory(param0, false, false, 2, param2);
     }
 
@@ -163,7 +163,7 @@ final class SpawnerBehaviour extends Behaviour {
         return param2 >> -param1 + 16;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawFullscreenPanelAndTooltip(boolean param0, int param1) {
         if (param1 == 0) {
           FullscreenUiDrawing.drawFullscreenPanel(40, param0);
           if (null != ArchiveNetworkClient.field_b) {
@@ -171,7 +171,7 @@ final class SpawnerBehaviour extends Behaviour {
           }
           return;
         }
-        SpawnerBehaviour.a(false, 4);
+        SpawnerBehaviour.drawFullscreenPanelAndTooltip(false, 4);
         FullscreenUiDrawing.drawFullscreenPanel(40, param0);
         if (null != ArchiveNetworkClient.field_b) {
           TrackPlayerLocomotor.drawTooltip(-65, ArchiveNetworkClient.field_b);
@@ -181,7 +181,7 @@ final class SpawnerBehaviour extends Behaviour {
     public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 <= 123) {
-          SpawnerBehaviour.a(true, -91);
+          SpawnerBehaviour.drawFullscreenPanelAndTooltip(true, -91);
         }
     }
 

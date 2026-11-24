@@ -9,11 +9,11 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
 
     abstract void drawRegion(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7);
 
-    final static void a(boolean param0, byte param1, boolean param2) {
+    final static void requestRandomizedColourPalettes(boolean param0, byte param1, boolean param2) {
         if (param1 > 79) {
           if (param2) {
             MapWaypoint.field_m = MapWaypoint.field_m + 1;
-            ComponentTargetList.b((byte) 58);
+            ComponentTargetList.ensureRandomizedHsvPalette((byte) 58);
           }
           if (param0) {
             KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;
@@ -21,10 +21,10 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
           }
           return;
         }
-        CanvasImageBuffer.a(false, (byte) 60, false);
+        CanvasImageBuffer.requestRandomizedColourPalettes(false, (byte) 60, false);
         if (param2) {
           MapWaypoint.field_m = MapWaypoint.field_m + 1;
-          ComponentTargetList.b((byte) 58);
+          ComponentTargetList.ensureRandomizedHsvPalette((byte) 58);
         }
         if (param0) {
           KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;

@@ -81,7 +81,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void c(byte param0) {
+    final static void cycleRendererOptions(byte param0) {
         RendererOption var1;
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
@@ -114,7 +114,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
         System.gc();
         if (!LegacyOpenGlBloomEffect.getCurrentRendererOption(false).field_c) {
-          ProxySocketConnector.c((byte) -127);
+          ProxySocketConnector.cycleRendererOptions((byte) -127);
         }
     }
 
@@ -356,7 +356,7 @@ final class ProxySocketConnector extends SocketConnector {
           var6.flush();
           var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var13.getInputStream())));
           if (param0 < 11) {
-            ProxySocketConnector.c((byte) -97);
+            ProxySocketConnector.cycleRendererOptions((byte) -97);
           }
           boolean decompiledFrameRemainder0 = true;
           var8 = var7.readLine();

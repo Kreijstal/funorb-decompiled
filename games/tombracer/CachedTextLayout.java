@@ -35,7 +35,7 @@ final class CachedTextLayout extends TextBlockLayout {
             return stackIn_3_0;
           }
           for (var7 = param2; param0 > var7; var7++) {
-            if (param4[var7].field_e.b((byte) -98) <= var5.field_e.b((byte) -105)) {
+            if (param4[var7].field_e.getRoomSortKey((byte) -98) <= var5.field_e.getRoomSortKey((byte) -105)) {
               RoomComponent.swapRoomDefinitions(var6, 2097152, var7, param4);
               var6++;
             }

@@ -52,7 +52,7 @@ final class LegacyOpenGlFontMask extends aa {
         throw new Error();
     }
 
-    final static void a(int param0) {
+    final static void readQueuedRequestReply(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

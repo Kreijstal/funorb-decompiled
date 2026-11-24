@@ -1057,7 +1057,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
         var2 = this.scene;
         this.scene = null;
         this.trapIdAllocator.reset((byte) -69);
-        VariantMask.b((byte) 55);
+        VariantMask.resetTrapConstructionIds((byte) 55);
         var3 = this.data;
         var3.position = 0;
         var3.beginBitAccess((byte) -64);

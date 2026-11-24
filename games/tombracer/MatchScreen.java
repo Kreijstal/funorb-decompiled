@@ -1130,7 +1130,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         if (param0) {
           this.overlays = (IntrusiveDeque) null;
         }
-        var3 = S2CMatchResultPacket.a(var3, 4);
+        var3 = S2CMatchResultPacket.normalizePlayerInputMask(var3, 4);
         if (null == this.inputQueues) {
           this.inputQueues = new PlayerInputQueue[this.matchState.playerCount];
           for (var4 = 0; var4 < this.matchState.playerCount; var4++) {

@@ -35,7 +35,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           ((ShellListener) (HuffmanCodec.field_c.elementAt(var3))).drawOverlay(param0 + 1);
         }
         if (!PendingRequestFactory.field_a) {
-          this.c(true);
+          this.onOverlayFrameConsumed(true);
         } else {
           DialogOverlayDrawing.drawDialogOverlays(false);
           LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, var2);
@@ -73,7 +73,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
     protected TombRacerShell() {
     }
 
-    private final void c(boolean param0) {
+    private final void onOverlayFrameConsumed(boolean param0) {
         if (!param0) {
           field_B = (String) null;
         }

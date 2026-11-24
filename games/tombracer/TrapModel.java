@@ -596,7 +596,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, GameStateM
     private final boolean isFinished(byte param0) {
         int var2;
         var2 = -58 % ((-38 - param0) / 60);
-        if (this.a((byte) 74)) {
+        if (this.allowsMissingPart((byte) 74)) {
           if (null != this.part &&
             this.part.isStopped((byte) 87)) {
             return true;
@@ -692,7 +692,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, GameStateM
 
     final Room getRoom(int param0) {
         if (param0 < 12) {
-          this.a((byte) -118);
+          this.allowsMissingPart((byte) -118);
           if (this.body != null) {
             return this.body.getRoom((byte) 116);
           }
@@ -798,7 +798,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, GameStateM
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean allowsMissingPart(byte param0) {
         int var2 = -53 / ((param0 + 10) / 59);
         return true;
     }

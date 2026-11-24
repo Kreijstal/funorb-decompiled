@@ -249,7 +249,7 @@ abstract class AppletGameShell extends GameApplet {
               CrossedSineBandsOperator.handleHighscoreResponse(-95);
             } else {
               if (var2 == 3) {
-                LegacyOpenGlFontMask.a(3);
+                LegacyOpenGlFontMask.readQueuedRequestReply(3);
               } else {
                 if (var2 == 4) {
                   ScrollPanel.handlePendingRequestReply(0);
